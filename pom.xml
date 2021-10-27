@@ -26,7 +26,7 @@
     <oltu-version>1.0.1</oltu-version>
     <junit-version>4.13.1</junit-version>
     <openapi.generator.maven.plugin.groupId>com.smartx</openapi.generator.maven.plugin.groupId>
-    <openapi.generator.maven.plugin.library>native</openapi.generator.maven.plugin.library>
+    <openapi.generator.maven.plugin.library>okhttp-gson</openapi.generator.maven.plugin.library>
     <openapi.generator.maven.plugin.ignoreFileOverride>${project.basedir}/.openapiignore</openapi.generator.maven.plugin.ignoreFileOverride>
   </properties>
 
