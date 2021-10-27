@@ -1,0 +1,19 @@
+
+
+# ClusterConnectorErrorCode
+
+## Enum
+
+
+* `FAILED` (value: `"LOAD_CLUSTER_FAILED"`)
+
+* `NETWORK_ERROR` (value: `"LOAD_CLUSTER_NETWORK_ERROR"`)
+
+* `NOT_FOUND` (value: `"LOAD_CLUSTER_NOT_FOUND"`)
+
+* `UNAUTHORIZED` (value: `"LOAD_CLUSTER_UNAUTHORIZED"`)
+
+* `UNHEALTHY` (value: `"LOAD_CLUSTER_UNHEALTHY"`)
+
+
+

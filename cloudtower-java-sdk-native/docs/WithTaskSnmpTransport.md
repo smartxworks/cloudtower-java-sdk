@@ -1,0 +1,14 @@
+
+
+# WithTaskSnmpTransport
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**taskId** | **String** |  |  [optional]
+**data** | [**SnmpTransport**](SnmpTransport.md) |  | 
+
+
+

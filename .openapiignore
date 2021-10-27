@@ -1,0 +1,14 @@
+# ignore travis file
+.travis.yml
+# ignore gradle file
+build.gradle
+build.sbt
+gradle.properties
+gradlew
+gradlew.bat
+settings.gradle
+gradle\*
+# git push
+git_push.sh
+# android manifest
+AndroidManifest.xml

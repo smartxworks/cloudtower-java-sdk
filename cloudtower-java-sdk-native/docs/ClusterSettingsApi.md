@@ -1,0 +1,312 @@
+# ClusterSettingsApi
+
+All URIs are relative to *http://localhost/v2/api*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getClusterSettingses**](ClusterSettingsApi.md#getClusterSettingses) | **POST** /get-cluster-settingses | 
+[**getClusterSettingsesWithHttpInfo**](ClusterSettingsApi.md#getClusterSettingsesWithHttpInfo) | **POST** /get-cluster-settingses | 
+[**getClusterSettingsesConnection**](ClusterSettingsApi.md#getClusterSettingsesConnection) | **POST** /get-cluster-settingses-connection | 
+[**getClusterSettingsesConnectionWithHttpInfo**](ClusterSettingsApi.md#getClusterSettingsesConnectionWithHttpInfo) | **POST** /get-cluster-settingses-connection | 
+
+
+
+## getClusterSettingses
+
+> List<ClusterSettings> getClusterSettingses(contentLanguage, getClusterSettingsesRequestBody)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.smartx.tower.ApiClient;
+import com.smartx.tower.ApiException;
+import com.smartx.tower.Configuration;
+import com.smartx.tower.auth.*;
+import com.smartx.tower.models.*;
+import com.smartx.tower.api.ClusterSettingsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost/v2/api");
+        
+        // Configure API key authorization: Authorization
+        ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+        Authorization.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Authorization.setApiKeyPrefix("Token");
+
+        ClusterSettingsApi apiInstance = new ClusterSettingsApi(defaultClient);
+        String contentLanguage = "zh-CN"; // String | 
+        GetClusterSettingsesRequestBody getClusterSettingsesRequestBody = new GetClusterSettingsesRequestBody(); // GetClusterSettingsesRequestBody | 
+        try {
+            List<ClusterSettings> result = apiInstance.getClusterSettingses(contentLanguage, getClusterSettingsesRequestBody);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ClusterSettingsApi#getClusterSettingses");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
+ **getClusterSettingsesRequestBody** | [**GetClusterSettingsesRequestBody**](GetClusterSettingsesRequestBody.md)|  |
+
+### Return type
+
+[**List&lt;ClusterSettings&gt;**](ClusterSettings.md)
+
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Ok |  -  |
+| **400** |  |  -  |
+
+## getClusterSettingsesWithHttpInfo
+
+> ApiResponse<List<ClusterSettings>> getClusterSettingses getClusterSettingsesWithHttpInfo(contentLanguage, getClusterSettingsesRequestBody)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.smartx.tower.ApiClient;
+import com.smartx.tower.ApiException;
+import com.smartx.tower.ApiResponse;
+import com.smartx.tower.Configuration;
+import com.smartx.tower.auth.*;
+import com.smartx.tower.models.*;
+import com.smartx.tower.api.ClusterSettingsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost/v2/api");
+        
+        // Configure API key authorization: Authorization
+        ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+        Authorization.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Authorization.setApiKeyPrefix("Token");
+
+        ClusterSettingsApi apiInstance = new ClusterSettingsApi(defaultClient);
+        String contentLanguage = "zh-CN"; // String | 
+        GetClusterSettingsesRequestBody getClusterSettingsesRequestBody = new GetClusterSettingsesRequestBody(); // GetClusterSettingsesRequestBody | 
+        try {
+            ApiResponse<List<ClusterSettings>> response = apiInstance.getClusterSettingsesWithHttpInfo(contentLanguage, getClusterSettingsesRequestBody);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ClusterSettingsApi#getClusterSettingses");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
+ **getClusterSettingsesRequestBody** | [**GetClusterSettingsesRequestBody**](GetClusterSettingsesRequestBody.md)|  |
+
+### Return type
+
+ApiResponse<[**List&lt;ClusterSettings&gt;**](ClusterSettings.md)>
+
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Ok |  -  |
+| **400** |  |  -  |
+
+
+## getClusterSettingsesConnection
+
+> ClusterSettingsConnection getClusterSettingsesConnection(contentLanguage, getClusterSettingsesConnectionRequestBody)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.smartx.tower.ApiClient;
+import com.smartx.tower.ApiException;
+import com.smartx.tower.Configuration;
+import com.smartx.tower.auth.*;
+import com.smartx.tower.models.*;
+import com.smartx.tower.api.ClusterSettingsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost/v2/api");
+        
+        // Configure API key authorization: Authorization
+        ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+        Authorization.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Authorization.setApiKeyPrefix("Token");
+
+        ClusterSettingsApi apiInstance = new ClusterSettingsApi(defaultClient);
+        String contentLanguage = "zh-CN"; // String | 
+        GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody = new GetClusterSettingsesConnectionRequestBody(); // GetClusterSettingsesConnectionRequestBody | 
+        try {
+            ClusterSettingsConnection result = apiInstance.getClusterSettingsesConnection(contentLanguage, getClusterSettingsesConnectionRequestBody);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ClusterSettingsApi#getClusterSettingsesConnection");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
+ **getClusterSettingsesConnectionRequestBody** | [**GetClusterSettingsesConnectionRequestBody**](GetClusterSettingsesConnectionRequestBody.md)|  |
+
+### Return type
+
+[**ClusterSettingsConnection**](ClusterSettingsConnection.md)
+
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Ok |  -  |
+| **400** |  |  -  |
+
+## getClusterSettingsesConnectionWithHttpInfo
+
+> ApiResponse<ClusterSettingsConnection> getClusterSettingsesConnection getClusterSettingsesConnectionWithHttpInfo(contentLanguage, getClusterSettingsesConnectionRequestBody)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.smartx.tower.ApiClient;
+import com.smartx.tower.ApiException;
+import com.smartx.tower.ApiResponse;
+import com.smartx.tower.Configuration;
+import com.smartx.tower.auth.*;
+import com.smartx.tower.models.*;
+import com.smartx.tower.api.ClusterSettingsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost/v2/api");
+        
+        // Configure API key authorization: Authorization
+        ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+        Authorization.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Authorization.setApiKeyPrefix("Token");
+
+        ClusterSettingsApi apiInstance = new ClusterSettingsApi(defaultClient);
+        String contentLanguage = "zh-CN"; // String | 
+        GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody = new GetClusterSettingsesConnectionRequestBody(); // GetClusterSettingsesConnectionRequestBody | 
+        try {
+            ApiResponse<ClusterSettingsConnection> response = apiInstance.getClusterSettingsesConnectionWithHttpInfo(contentLanguage, getClusterSettingsesConnectionRequestBody);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ClusterSettingsApi#getClusterSettingsesConnection");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
+ **getClusterSettingsesConnectionRequestBody** | [**GetClusterSettingsesConnectionRequestBody**](GetClusterSettingsesConnectionRequestBody.md)|  |
+
+### Return type
+
+ApiResponse<[**ClusterSettingsConnection**](ClusterSettingsConnection.md)>
+
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Ok |  -  |
+| **400** |  |  -  |
+

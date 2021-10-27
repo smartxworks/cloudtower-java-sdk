@@ -1,0 +1,15 @@
+
+
+# NvmfNamespaceSnapshotCreationParams
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**nvmfSubsystemId** | **String** |  | 
+**name** | **String** |  | 
+**nvmfNamespaceId** | **String** |  | 
+
+
+
