@@ -2,7 +2,7 @@
 
 Tower SDK API
 - API version: 1.7.0
-  - Build date: 2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]
+  - Build date: 2021-11-01T11:03:49.484369+08:00[Asia/Shanghai]
 
 cloudtower operation API and SDK
 
