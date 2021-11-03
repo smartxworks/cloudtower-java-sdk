@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createSnmpTransport
 
-> List&lt;WithTaskSnmpTransport&gt; createSnmpTransport(contentLanguage, snmpTransportCreationParams)
+> List&lt;WithTaskSnmpTransport&gt; createSnmpTransport(snmpTransportCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTransportApi apiInstance = new SnmpTransportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<SnmpTransportCreationParams> snmpTransportCreationParams = Arrays.asList(); // List<SnmpTransportCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnmpTransport> result = apiInstance.createSnmpTransport(contentLanguage, snmpTransportCreationParams);
+            List<WithTaskSnmpTransport> result = apiInstance.createSnmpTransport(snmpTransportCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTransportApi#createSnmpTransport");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snmpTransportCreationParams** | [**List&lt;SnmpTransportCreationParams&gt;**](SnmpTransportCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteSnmpTransport
 
-> List&lt;WithTaskDeleteSnmpTransport&gt; deleteSnmpTransport(contentLanguage, snmpTransportDeletionParams)
+> List&lt;WithTaskDeleteSnmpTransport&gt; deleteSnmpTransport(snmpTransportDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTransportApi apiInstance = new SnmpTransportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnmpTransportDeletionParams snmpTransportDeletionParams = new SnmpTransportDeletionParams(); // SnmpTransportDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteSnmpTransport> result = apiInstance.deleteSnmpTransport(contentLanguage, snmpTransportDeletionParams);
+            List<WithTaskDeleteSnmpTransport> result = apiInstance.deleteSnmpTransport(snmpTransportDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTransportApi#deleteSnmpTransport");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snmpTransportDeletionParams** | [**SnmpTransportDeletionParams**](SnmpTransportDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getSnmpTransports
 
-> List&lt;SnmpTransport&gt; getSnmpTransports(contentLanguage, getSnmpTransportsRequestBody)
+> List&lt;SnmpTransport&gt; getSnmpTransports(getSnmpTransportsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTransportApi apiInstance = new SnmpTransportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnmpTransportsRequestBody getSnmpTransportsRequestBody = new GetSnmpTransportsRequestBody(); // GetSnmpTransportsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SnmpTransport> result = apiInstance.getSnmpTransports(contentLanguage, getSnmpTransportsRequestBody);
+            List<SnmpTransport> result = apiInstance.getSnmpTransports(getSnmpTransportsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTransportApi#getSnmpTransports");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnmpTransportsRequestBody** | [**GetSnmpTransportsRequestBody**](GetSnmpTransportsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getSnmpTransportsConnection
 
-> SnmpTransportConnection getSnmpTransportsConnection(contentLanguage, getSnmpTransportsConnectionRequestBody)
+> SnmpTransportConnection getSnmpTransportsConnection(getSnmpTransportsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTransportApi apiInstance = new SnmpTransportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody = new GetSnmpTransportsConnectionRequestBody(); // GetSnmpTransportsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SnmpTransportConnection result = apiInstance.getSnmpTransportsConnection(contentLanguage, getSnmpTransportsConnectionRequestBody);
+            SnmpTransportConnection result = apiInstance.getSnmpTransportsConnection(getSnmpTransportsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTransportApi#getSnmpTransportsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnmpTransportsConnectionRequestBody** | [**GetSnmpTransportsConnectionRequestBody**](GetSnmpTransportsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateSnmpTransport
 
-> List&lt;WithTaskSnmpTransport&gt; updateSnmpTransport(contentLanguage, snmpTransportUpdationParams)
+> List&lt;WithTaskSnmpTransport&gt; updateSnmpTransport(snmpTransportUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTransportApi apiInstance = new SnmpTransportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnmpTransportUpdationParams snmpTransportUpdationParams = new SnmpTransportUpdationParams(); // SnmpTransportUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnmpTransport> result = apiInstance.updateSnmpTransport(contentLanguage, snmpTransportUpdationParams);
+            List<WithTaskSnmpTransport> result = apiInstance.updateSnmpTransport(snmpTransportUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTransportApi#updateSnmpTransport");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snmpTransportUpdationParams** | [**SnmpTransportUpdationParams**](SnmpTransportUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

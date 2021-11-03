@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## getNics
 
-> List&lt;Nic&gt; getNics(contentLanguage, getNicsRequestBody)
+> List&lt;Nic&gt; getNics(getNicsRequestBody, contentLanguage)
 
 
 
@@ -39,10 +39,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NicApi apiInstance = new NicApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNicsRequestBody getNicsRequestBody = new GetNicsRequestBody(); // GetNicsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Nic> result = apiInstance.getNics(contentLanguage, getNicsRequestBody);
+            List<Nic> result = apiInstance.getNics(getNicsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NicApi#getNics");
@@ -60,8 +60,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNicsRequestBody** | [**GetNicsRequestBody**](GetNicsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## getNicsConnection
 
-> NicConnection getNicsConnection(contentLanguage, getNicsConnectionRequestBody)
+> NicConnection getNicsConnection(getNicsConnectionRequestBody, contentLanguage)
 
 
 
@@ -113,10 +113,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NicApi apiInstance = new NicApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNicsConnectionRequestBody getNicsConnectionRequestBody = new GetNicsConnectionRequestBody(); // GetNicsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NicConnection result = apiInstance.getNicsConnection(contentLanguage, getNicsConnectionRequestBody);
+            NicConnection result = apiInstance.getNicsConnection(getNicsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NicApi#getNicsConnection");
@@ -134,8 +134,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNicsConnectionRequestBody** | [**GetNicsConnectionRequestBody**](GetNicsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## updateNic
 
-> List&lt;WithTaskNic&gt; updateNic(contentLanguage, nicUpdationParams)
+> List&lt;WithTaskNic&gt; updateNic(nicUpdationParams, contentLanguage)
 
 
 
@@ -187,10 +187,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NicApi apiInstance = new NicApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NicUpdationParams nicUpdationParams = new NicUpdationParams(); // NicUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNic> result = apiInstance.updateNic(contentLanguage, nicUpdationParams);
+            List<WithTaskNic> result = apiInstance.updateNic(nicUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NicApi#updateNic");
@@ -208,8 +208,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nicUpdationParams** | [**NicUpdationParams**](NicUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

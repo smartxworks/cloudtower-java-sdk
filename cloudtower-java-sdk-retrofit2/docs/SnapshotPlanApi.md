@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## createSnapshotPlan
 
-> List&lt;WithTaskSnapshotPlan&gt; createSnapshotPlan(contentLanguage, snapshotPlanCreationParams)
+> List&lt;WithTaskSnapshotPlan&gt; createSnapshotPlan(snapshotPlanCreationParams, contentLanguage)
 
 
 
@@ -44,10 +44,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<SnapshotPlanCreationParams> snapshotPlanCreationParams = Arrays.asList(); // List<SnapshotPlanCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotPlan> result = apiInstance.createSnapshotPlan(contentLanguage, snapshotPlanCreationParams);
+            List<WithTaskSnapshotPlan> result = apiInstance.createSnapshotPlan(snapshotPlanCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#createSnapshotPlan");
@@ -65,8 +65,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotPlanCreationParams** | [**List&lt;SnapshotPlanCreationParams&gt;**](SnapshotPlanCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## deleteSnapshotPlan
 
-> List&lt;WithTaskDeleteSnapshotPlan&gt; deleteSnapshotPlan(contentLanguage, snapshotPlanDeletionParams)
+> List&lt;WithTaskDeleteSnapshotPlan&gt; deleteSnapshotPlan(snapshotPlanDeletionParams, contentLanguage)
 
 
 
@@ -118,10 +118,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotPlanDeletionParams snapshotPlanDeletionParams = new SnapshotPlanDeletionParams(); // SnapshotPlanDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteSnapshotPlan> result = apiInstance.deleteSnapshotPlan(contentLanguage, snapshotPlanDeletionParams);
+            List<WithTaskDeleteSnapshotPlan> result = apiInstance.deleteSnapshotPlan(snapshotPlanDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#deleteSnapshotPlan");
@@ -139,8 +139,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotPlanDeletionParams** | [**SnapshotPlanDeletionParams**](SnapshotPlanDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## executeSnapshotPlan
 
-> List&lt;WithTaskSnapshotPlan&gt; executeSnapshotPlan(contentLanguage, snapshotPlanExecutionParams)
+> List&lt;WithTaskSnapshotPlan&gt; executeSnapshotPlan(snapshotPlanExecutionParams, contentLanguage)
 
 
 
@@ -192,10 +192,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotPlanExecutionParams snapshotPlanExecutionParams = new SnapshotPlanExecutionParams(); // SnapshotPlanExecutionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotPlan> result = apiInstance.executeSnapshotPlan(contentLanguage, snapshotPlanExecutionParams);
+            List<WithTaskSnapshotPlan> result = apiInstance.executeSnapshotPlan(snapshotPlanExecutionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#executeSnapshotPlan");
@@ -213,8 +213,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotPlanExecutionParams** | [**SnapshotPlanExecutionParams**](SnapshotPlanExecutionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ## getSnapshotPlans
 
-> List&lt;SnapshotPlan&gt; getSnapshotPlans(contentLanguage, getSnapshotPlansRequestBody)
+> List&lt;SnapshotPlan&gt; getSnapshotPlans(getSnapshotPlansRequestBody, contentLanguage)
 
 
 
@@ -266,10 +266,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnapshotPlansRequestBody getSnapshotPlansRequestBody = new GetSnapshotPlansRequestBody(); // GetSnapshotPlansRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SnapshotPlan> result = apiInstance.getSnapshotPlans(contentLanguage, getSnapshotPlansRequestBody);
+            List<SnapshotPlan> result = apiInstance.getSnapshotPlans(getSnapshotPlansRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#getSnapshotPlans");
@@ -287,8 +287,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnapshotPlansRequestBody** | [**GetSnapshotPlansRequestBody**](GetSnapshotPlansRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 ## getSnapshotPlansConnection
 
-> SnapshotPlanConnection getSnapshotPlansConnection(contentLanguage, getSnapshotPlansConnectionRequestBody)
+> SnapshotPlanConnection getSnapshotPlansConnection(getSnapshotPlansConnectionRequestBody, contentLanguage)
 
 
 
@@ -340,10 +340,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody = new GetSnapshotPlansConnectionRequestBody(); // GetSnapshotPlansConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SnapshotPlanConnection result = apiInstance.getSnapshotPlansConnection(contentLanguage, getSnapshotPlansConnectionRequestBody);
+            SnapshotPlanConnection result = apiInstance.getSnapshotPlansConnection(getSnapshotPlansConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#getSnapshotPlansConnection");
@@ -361,8 +361,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnapshotPlansConnectionRequestBody** | [**GetSnapshotPlansConnectionRequestBody**](GetSnapshotPlansConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ## resumeSnapshotPlan
 
-> List&lt;WithTaskSnapshotPlan&gt; resumeSnapshotPlan(contentLanguage, snapshotPlanResumeParams)
+> List&lt;WithTaskSnapshotPlan&gt; resumeSnapshotPlan(snapshotPlanResumeParams, contentLanguage)
 
 
 
@@ -414,10 +414,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotPlanResumeParams snapshotPlanResumeParams = new SnapshotPlanResumeParams(); // SnapshotPlanResumeParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotPlan> result = apiInstance.resumeSnapshotPlan(contentLanguage, snapshotPlanResumeParams);
+            List<WithTaskSnapshotPlan> result = apiInstance.resumeSnapshotPlan(snapshotPlanResumeParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#resumeSnapshotPlan");
@@ -435,8 +435,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotPlanResumeParams** | [**SnapshotPlanResumeParams**](SnapshotPlanResumeParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ## suspendSnapshotPlan
 
-> List&lt;WithTaskSnapshotPlan&gt; suspendSnapshotPlan(contentLanguage, snapshotPlanSuspendedParams)
+> List&lt;WithTaskSnapshotPlan&gt; suspendSnapshotPlan(snapshotPlanSuspendedParams, contentLanguage)
 
 
 
@@ -488,10 +488,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotPlanSuspendedParams snapshotPlanSuspendedParams = new SnapshotPlanSuspendedParams(); // SnapshotPlanSuspendedParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotPlan> result = apiInstance.suspendSnapshotPlan(contentLanguage, snapshotPlanSuspendedParams);
+            List<WithTaskSnapshotPlan> result = apiInstance.suspendSnapshotPlan(snapshotPlanSuspendedParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#suspendSnapshotPlan");
@@ -509,8 +509,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotPlanSuspendedParams** | [**SnapshotPlanSuspendedParams**](SnapshotPlanSuspendedParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ## updateSnapshotPlan
 
-> List&lt;WithTaskSnapshotPlan&gt; updateSnapshotPlan(contentLanguage, snapshotPlanUpdationParams)
+> List&lt;WithTaskSnapshotPlan&gt; updateSnapshotPlan(snapshotPlanUpdationParams, contentLanguage)
 
 
 
@@ -562,10 +562,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanApi apiInstance = new SnapshotPlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotPlanUpdationParams snapshotPlanUpdationParams = new SnapshotPlanUpdationParams(); // SnapshotPlanUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotPlan> result = apiInstance.updateSnapshotPlan(contentLanguage, snapshotPlanUpdationParams);
+            List<WithTaskSnapshotPlan> result = apiInstance.updateSnapshotPlan(snapshotPlanUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanApi#updateSnapshotPlan");
@@ -583,8 +583,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotPlanUpdationParams** | [**SnapshotPlanUpdationParams**](SnapshotPlanUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

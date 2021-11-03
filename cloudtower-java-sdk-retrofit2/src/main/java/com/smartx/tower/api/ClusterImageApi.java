@@ -23,8 +23,8 @@ public interface ClusterImageApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterImagesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ClusterImage&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ClusterImageApi {
   })
   @POST("get-cluster-images")
   Call<List<ClusterImage>> getClusterImages(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterImagesRequestBody getClusterImagesRequestBody
+    @retrofit2.http.Body GetClusterImagesRequestBody getClusterImagesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterImagesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ClusterImageConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ClusterImageApi {
   })
   @POST("get-cluster-images-connection")
   Call<ClusterImageConnection> getClusterImagesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody
+    @retrofit2.http.Body GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

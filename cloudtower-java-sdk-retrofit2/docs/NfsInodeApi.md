@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getNfsInodes
 
-> List&lt;NfsInode&gt; getNfsInodes(contentLanguage, getNfsInodesRequestBody)
+> List&lt;NfsInode&gt; getNfsInodes(getNfsInodesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsInodeApi apiInstance = new NfsInodeApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNfsInodesRequestBody getNfsInodesRequestBody = new GetNfsInodesRequestBody(); // GetNfsInodesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<NfsInode> result = apiInstance.getNfsInodes(contentLanguage, getNfsInodesRequestBody);
+            List<NfsInode> result = apiInstance.getNfsInodes(getNfsInodesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsInodeApi#getNfsInodes");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNfsInodesRequestBody** | [**GetNfsInodesRequestBody**](GetNfsInodesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getNfsInodesConnection
 
-> NfsInodeConnection getNfsInodesConnection(contentLanguage, getNfsInodesConnectionRequestBody)
+> NfsInodeConnection getNfsInodesConnection(getNfsInodesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsInodeApi apiInstance = new NfsInodeApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody = new GetNfsInodesConnectionRequestBody(); // GetNfsInodesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NfsInodeConnection result = apiInstance.getNfsInodesConnection(contentLanguage, getNfsInodesConnectionRequestBody);
+            NfsInodeConnection result = apiInstance.getNfsInodesConnection(getNfsInodesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsInodeApi#getNfsInodesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNfsInodesConnectionRequestBody** | [**GetNfsInodesConnectionRequestBody**](GetNfsInodesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **localCreatedAt** | **String** |  | 
 **name** | **String** |  | 
-**pvcName** | **String** |  | 
+**packageInfo** | **Object** |  | 
 **size** | **Double** |  | 
 **uploadTask** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
 **version** | **String** |  | 

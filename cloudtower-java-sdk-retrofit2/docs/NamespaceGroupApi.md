@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createNamespaceGroup
 
-> List&lt;WithTaskNamespaceGroup&gt; createNamespaceGroup(contentLanguage, namespaceGroupCreationParams)
+> List&lt;WithTaskNamespaceGroup&gt; createNamespaceGroup(namespaceGroupCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NamespaceGroupApi apiInstance = new NamespaceGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<NamespaceGroupCreationParams> namespaceGroupCreationParams = Arrays.asList(); // List<NamespaceGroupCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNamespaceGroup> result = apiInstance.createNamespaceGroup(contentLanguage, namespaceGroupCreationParams);
+            List<WithTaskNamespaceGroup> result = apiInstance.createNamespaceGroup(namespaceGroupCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NamespaceGroupApi#createNamespaceGroup");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **namespaceGroupCreationParams** | [**List&lt;NamespaceGroupCreationParams&gt;**](NamespaceGroupCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteNamespaceGroup
 
-> List&lt;WithTaskDeleteNamespaceGroup&gt; deleteNamespaceGroup(contentLanguage, namespaceGroupDeletionParams)
+> List&lt;WithTaskDeleteNamespaceGroup&gt; deleteNamespaceGroup(namespaceGroupDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NamespaceGroupApi apiInstance = new NamespaceGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NamespaceGroupDeletionParams namespaceGroupDeletionParams = new NamespaceGroupDeletionParams(); // NamespaceGroupDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteNamespaceGroup> result = apiInstance.deleteNamespaceGroup(contentLanguage, namespaceGroupDeletionParams);
+            List<WithTaskDeleteNamespaceGroup> result = apiInstance.deleteNamespaceGroup(namespaceGroupDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NamespaceGroupApi#deleteNamespaceGroup");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **namespaceGroupDeletionParams** | [**NamespaceGroupDeletionParams**](NamespaceGroupDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getNamespaceGroups
 
-> List&lt;NamespaceGroup&gt; getNamespaceGroups(contentLanguage, getNamespaceGroupsRequestBody)
+> List&lt;NamespaceGroup&gt; getNamespaceGroups(getNamespaceGroupsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NamespaceGroupApi apiInstance = new NamespaceGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody = new GetNamespaceGroupsRequestBody(); // GetNamespaceGroupsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<NamespaceGroup> result = apiInstance.getNamespaceGroups(contentLanguage, getNamespaceGroupsRequestBody);
+            List<NamespaceGroup> result = apiInstance.getNamespaceGroups(getNamespaceGroupsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NamespaceGroupApi#getNamespaceGroups");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNamespaceGroupsRequestBody** | [**GetNamespaceGroupsRequestBody**](GetNamespaceGroupsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getNamespaceGroupsConnection
 
-> NamespaceGroupConnection getNamespaceGroupsConnection(contentLanguage, getNamespaceGroupsConnectionRequestBody)
+> NamespaceGroupConnection getNamespaceGroupsConnection(getNamespaceGroupsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NamespaceGroupApi apiInstance = new NamespaceGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody = new GetNamespaceGroupsConnectionRequestBody(); // GetNamespaceGroupsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NamespaceGroupConnection result = apiInstance.getNamespaceGroupsConnection(contentLanguage, getNamespaceGroupsConnectionRequestBody);
+            NamespaceGroupConnection result = apiInstance.getNamespaceGroupsConnection(getNamespaceGroupsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NamespaceGroupApi#getNamespaceGroupsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNamespaceGroupsConnectionRequestBody** | [**GetNamespaceGroupsConnectionRequestBody**](GetNamespaceGroupsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateNamespaceGroup
 
-> List&lt;WithTaskNamespaceGroup&gt; updateNamespaceGroup(contentLanguage, namespaceGroupUpdationParams)
+> List&lt;WithTaskNamespaceGroup&gt; updateNamespaceGroup(namespaceGroupUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NamespaceGroupApi apiInstance = new NamespaceGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NamespaceGroupUpdationParams namespaceGroupUpdationParams = new NamespaceGroupUpdationParams(); // NamespaceGroupUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNamespaceGroup> result = apiInstance.updateNamespaceGroup(contentLanguage, namespaceGroupUpdationParams);
+            List<WithTaskNamespaceGroup> result = apiInstance.updateNamespaceGroup(namespaceGroupUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NamespaceGroupApi#updateNamespaceGroup");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **namespaceGroupUpdationParams** | [**NamespaceGroupUpdationParams**](NamespaceGroupUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

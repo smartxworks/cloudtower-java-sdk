@@ -21,8 +21,8 @@ public interface IscsiConnectionApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiConnectionsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;IscsiConnection&gt;&gt;
    */
   @Headers({
@@ -30,7 +30,7 @@ public interface IscsiConnectionApi {
   })
   @POST("get-iscsi-connections")
   Call<List<IscsiConnection>> getIscsiConnections(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiConnectionsRequestBody getIscsiConnectionsRequestBody
+    @retrofit2.http.Body GetIscsiConnectionsRequestBody getIscsiConnectionsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

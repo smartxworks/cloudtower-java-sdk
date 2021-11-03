@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## getLicenses
 
-> List&lt;License&gt; getLicenses(contentLanguage, getLicensesRequestBody)
+> List&lt;License&gt; getLicenses(getLicensesRequestBody, contentLanguage)
 
 
 
@@ -39,10 +39,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LicenseApi apiInstance = new LicenseApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetLicensesRequestBody getLicensesRequestBody = new GetLicensesRequestBody(); // GetLicensesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<License> result = apiInstance.getLicenses(contentLanguage, getLicensesRequestBody);
+            List<License> result = apiInstance.getLicenses(getLicensesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LicenseApi#getLicenses");
@@ -60,8 +60,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getLicensesRequestBody** | [**GetLicensesRequestBody**](GetLicensesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## getLicensesConnection
 
-> LicenseConnection getLicensesConnection(contentLanguage, getLicensesConnectionRequestBody)
+> LicenseConnection getLicensesConnection(getLicensesConnectionRequestBody, contentLanguage)
 
 
 
@@ -113,10 +113,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LicenseApi apiInstance = new LicenseApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetLicensesConnectionRequestBody getLicensesConnectionRequestBody = new GetLicensesConnectionRequestBody(); // GetLicensesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            LicenseConnection result = apiInstance.getLicensesConnection(contentLanguage, getLicensesConnectionRequestBody);
+            LicenseConnection result = apiInstance.getLicensesConnection(getLicensesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LicenseApi#getLicensesConnection");
@@ -134,8 +134,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getLicensesConnectionRequestBody** | [**GetLicensesConnectionRequestBody**](GetLicensesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## updateDeploy
 
-> WithTaskLicense updateDeploy(contentLanguage, licenseUpdationParams)
+> WithTaskLicense updateDeploy(licenseUpdationParams, contentLanguage)
 
 
 
@@ -187,10 +187,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LicenseApi apiInstance = new LicenseApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         LicenseUpdationParams licenseUpdationParams = new LicenseUpdationParams(); // LicenseUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            WithTaskLicense result = apiInstance.updateDeploy(contentLanguage, licenseUpdationParams);
+            WithTaskLicense result = apiInstance.updateDeploy(licenseUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LicenseApi#updateDeploy");
@@ -208,8 +208,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **licenseUpdationParams** | [**LicenseUpdationParams**](LicenseUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

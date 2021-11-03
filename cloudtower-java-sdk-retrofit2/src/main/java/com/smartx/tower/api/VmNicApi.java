@@ -23,8 +23,8 @@ public interface VmNicApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmNicsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmNic&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface VmNicApi {
   })
   @POST("get-vm-nics")
   Call<List<VmNic>> getVmNics(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmNicsRequestBody getVmNicsRequestBody
+    @retrofit2.http.Body GetVmNicsRequestBody getVmNicsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmNicsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmNicConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface VmNicApi {
   })
   @POST("get-vm-nics-connection")
   Call<VmNicConnection> getVmNicsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody
+    @retrofit2.http.Body GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

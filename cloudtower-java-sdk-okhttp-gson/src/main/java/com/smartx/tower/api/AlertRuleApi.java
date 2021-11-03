@@ -59,8 +59,8 @@ public class AlertRuleApi {
 
     /**
      * Build call for getAlertRules
-     * @param contentLanguage  (required)
      * @param getAlertRulesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertRulesCall(String contentLanguage, GetAlertRulesRequestBody getAlertRulesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAlertRulesCall(GetAlertRulesRequestBody getAlertRulesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getAlertRulesRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class AlertRuleApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAlertRulesValidateBeforeCall(String contentLanguage, GetAlertRulesRequestBody getAlertRulesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getAlertRules(Async)");
-        }
+    private okhttp3.Call getAlertRulesValidateBeforeCall(GetAlertRulesRequestBody getAlertRulesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getAlertRulesRequestBody' is set
         if (getAlertRulesRequestBody == null) {
@@ -119,7 +114,7 @@ public class AlertRuleApi {
         }
         
 
-        okhttp3.Call localVarCall = getAlertRulesCall(contentLanguage, getAlertRulesRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertRulesCall(getAlertRulesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class AlertRuleApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertRulesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;AlertRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<AlertRule> getAlertRules(String contentLanguage, GetAlertRulesRequestBody getAlertRulesRequestBody) throws ApiException {
-        ApiResponse<List<AlertRule>> localVarResp = getAlertRulesWithHttpInfo(contentLanguage, getAlertRulesRequestBody);
+    public List<AlertRule> getAlertRules(GetAlertRulesRequestBody getAlertRulesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<AlertRule>> localVarResp = getAlertRulesWithHttpInfo(getAlertRulesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertRulesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;AlertRule&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<AlertRule>> getAlertRulesWithHttpInfo(String contentLanguage, GetAlertRulesRequestBody getAlertRulesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getAlertRulesValidateBeforeCall(contentLanguage, getAlertRulesRequestBody, null);
+    public ApiResponse<List<AlertRule>> getAlertRulesWithHttpInfo(GetAlertRulesRequestBody getAlertRulesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getAlertRulesValidateBeforeCall(getAlertRulesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<AlertRule>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class AlertRuleApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getAlertRulesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertRulesAsync(String contentLanguage, GetAlertRulesRequestBody getAlertRulesRequestBody, final ApiCallback<List<AlertRule>> _callback) throws ApiException {
+    public okhttp3.Call getAlertRulesAsync(GetAlertRulesRequestBody getAlertRulesRequestBody, String contentLanguage, final ApiCallback<List<AlertRule>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAlertRulesValidateBeforeCall(contentLanguage, getAlertRulesRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertRulesValidateBeforeCall(getAlertRulesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<AlertRule>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getAlertRulesConnection
-     * @param contentLanguage  (required)
      * @param getAlertRulesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertRulesConnectionCall(String contentLanguage, GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAlertRulesConnectionCall(GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getAlertRulesConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class AlertRuleApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAlertRulesConnectionValidateBeforeCall(String contentLanguage, GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getAlertRulesConnection(Async)");
-        }
+    private okhttp3.Call getAlertRulesConnectionValidateBeforeCall(GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getAlertRulesConnectionRequestBody' is set
         if (getAlertRulesConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class AlertRuleApi {
         }
         
 
-        okhttp3.Call localVarCall = getAlertRulesConnectionCall(contentLanguage, getAlertRulesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertRulesConnectionCall(getAlertRulesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class AlertRuleApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertRulesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return AlertRuleConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public AlertRuleConnection getAlertRulesConnection(String contentLanguage, GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody) throws ApiException {
-        ApiResponse<AlertRuleConnection> localVarResp = getAlertRulesConnectionWithHttpInfo(contentLanguage, getAlertRulesConnectionRequestBody);
+    public AlertRuleConnection getAlertRulesConnection(GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<AlertRuleConnection> localVarResp = getAlertRulesConnectionWithHttpInfo(getAlertRulesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertRulesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;AlertRuleConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AlertRuleConnection> getAlertRulesConnectionWithHttpInfo(String contentLanguage, GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getAlertRulesConnectionValidateBeforeCall(contentLanguage, getAlertRulesConnectionRequestBody, null);
+    public ApiResponse<AlertRuleConnection> getAlertRulesConnectionWithHttpInfo(GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getAlertRulesConnectionValidateBeforeCall(getAlertRulesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<AlertRuleConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class AlertRuleApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getAlertRulesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class AlertRuleApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertRulesConnectionAsync(String contentLanguage, GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, final ApiCallback<AlertRuleConnection> _callback) throws ApiException {
+    public okhttp3.Call getAlertRulesConnectionAsync(GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, String contentLanguage, final ApiCallback<AlertRuleConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAlertRulesConnectionValidateBeforeCall(contentLanguage, getAlertRulesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertRulesConnectionValidateBeforeCall(getAlertRulesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<AlertRuleConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -23,8 +23,8 @@ public interface SvtImageApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSvtImagesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SvtImage&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface SvtImageApi {
   })
   @POST("get-svt-images")
   Call<List<SvtImage>> getSvtImages(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSvtImagesRequestBody getSvtImagesRequestBody
+    @retrofit2.http.Body GetSvtImagesRequestBody getSvtImagesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSvtImagesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SvtImageConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface SvtImageApi {
   })
   @POST("get-svt-images-connection")
   Call<SvtImageConnection> getSvtImagesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody
+    @retrofit2.http.Body GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

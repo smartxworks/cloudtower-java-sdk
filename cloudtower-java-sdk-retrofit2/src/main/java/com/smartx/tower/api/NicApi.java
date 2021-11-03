@@ -25,8 +25,8 @@ public interface NicApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNicsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Nic&gt;&gt;
    */
   @Headers({
@@ -34,14 +34,14 @@ public interface NicApi {
   })
   @POST("get-nics")
   Call<List<Nic>> getNics(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNicsRequestBody getNicsRequestBody
+    @retrofit2.http.Body GetNicsRequestBody getNicsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNicsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NicConnection&gt;
    */
   @Headers({
@@ -49,14 +49,14 @@ public interface NicApi {
   })
   @POST("get-nics-connection")
   Call<NicConnection> getNicsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNicsConnectionRequestBody getNicsConnectionRequestBody
+    @retrofit2.http.Body GetNicsConnectionRequestBody getNicsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nicUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNic&gt;&gt;
    */
   @Headers({
@@ -64,7 +64,7 @@ public interface NicApi {
   })
   @POST("update-nic")
   Call<List<WithTaskNic>> updateNic(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NicUpdationParams nicUpdationParams
+    @retrofit2.http.Body NicUpdationParams nicUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

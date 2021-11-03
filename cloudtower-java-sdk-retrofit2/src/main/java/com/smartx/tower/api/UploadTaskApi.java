@@ -23,8 +23,8 @@ public interface UploadTaskApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUploadTasksRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;UploadTask&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface UploadTaskApi {
   })
   @POST("get-upload-tasks")
   Call<List<UploadTask>> getUploadTasks(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUploadTasksRequestBody getUploadTasksRequestBody
+    @retrofit2.http.Body GetUploadTasksRequestBody getUploadTasksRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUploadTasksConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;UploadTaskConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface UploadTaskApi {
   })
   @POST("get-upload-tasks-connection")
   Call<UploadTaskConnection> getUploadTasksConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody
+    @retrofit2.http.Body GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -64,8 +64,8 @@ public class VmTemplateApi {
 
     /**
      * Build call for cloneVmTemplateFromVm
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cloneVmTemplateFromVmCall(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call cloneVmTemplateFromVmCall(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmTemplateCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class VmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call cloneVmTemplateFromVmValidateBeforeCall(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling cloneVmTemplateFromVm(Async)");
-        }
+    private okhttp3.Call cloneVmTemplateFromVmValidateBeforeCall(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmTemplateCreationParams' is set
         if (vmTemplateCreationParams == null) {
@@ -124,7 +119,7 @@ public class VmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = cloneVmTemplateFromVmCall(contentLanguage, vmTemplateCreationParams, _callback);
+        okhttp3.Call localVarCall = cloneVmTemplateFromVmCall(vmTemplateCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class VmTemplateApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmTemplate> cloneVmTemplateFromVm(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmTemplate>> localVarResp = cloneVmTemplateFromVmWithHttpInfo(contentLanguage, vmTemplateCreationParams);
+    public List<WithTaskVmTemplate> cloneVmTemplateFromVm(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmTemplate>> localVarResp = cloneVmTemplateFromVmWithHttpInfo(vmTemplateCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmTemplate>> cloneVmTemplateFromVmWithHttpInfo(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = cloneVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateCreationParams, null);
+    public ApiResponse<List<WithTaskVmTemplate>> cloneVmTemplateFromVmWithHttpInfo(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = cloneVmTemplateFromVmValidateBeforeCall(vmTemplateCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class VmTemplateApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cloneVmTemplateFromVmAsync(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams, final ApiCallback<List<WithTaskVmTemplate>> _callback) throws ApiException {
+    public okhttp3.Call cloneVmTemplateFromVmAsync(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVmTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = cloneVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateCreationParams, _callback);
+        okhttp3.Call localVarCall = cloneVmTemplateFromVmValidateBeforeCall(vmTemplateCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for convertVmTemplateFromVm
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call convertVmTemplateFromVmCall(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call convertVmTemplateFromVmCall(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmTemplateCreationParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class VmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call convertVmTemplateFromVmValidateBeforeCall(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling convertVmTemplateFromVm(Async)");
-        }
+    private okhttp3.Call convertVmTemplateFromVmValidateBeforeCall(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmTemplateCreationParams' is set
         if (vmTemplateCreationParams == null) {
@@ -252,7 +242,7 @@ public class VmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = convertVmTemplateFromVmCall(contentLanguage, vmTemplateCreationParams, _callback);
+        okhttp3.Call localVarCall = convertVmTemplateFromVmCall(vmTemplateCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class VmTemplateApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmTemplate> convertVmTemplateFromVm(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmTemplate>> localVarResp = convertVmTemplateFromVmWithHttpInfo(contentLanguage, vmTemplateCreationParams);
+    public List<WithTaskVmTemplate> convertVmTemplateFromVm(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmTemplate>> localVarResp = convertVmTemplateFromVmWithHttpInfo(vmTemplateCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmTemplate>> convertVmTemplateFromVmWithHttpInfo(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = convertVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateCreationParams, null);
+    public ApiResponse<List<WithTaskVmTemplate>> convertVmTemplateFromVmWithHttpInfo(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = convertVmTemplateFromVmValidateBeforeCall(vmTemplateCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class VmTemplateApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call convertVmTemplateFromVmAsync(String contentLanguage, List<VmTemplateCreationParams> vmTemplateCreationParams, final ApiCallback<List<WithTaskVmTemplate>> _callback) throws ApiException {
+    public okhttp3.Call convertVmTemplateFromVmAsync(List<VmTemplateCreationParams> vmTemplateCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVmTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = convertVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateCreationParams, _callback);
+        okhttp3.Call localVarCall = convertVmTemplateFromVmValidateBeforeCall(vmTemplateCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVmTemplateFromVm
-     * @param contentLanguage  (required)
      * @param vmTemplateDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmTemplateFromVmCall(String contentLanguage, VmTemplateDeletionParams vmTemplateDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmTemplateFromVmCall(VmTemplateDeletionParams vmTemplateDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmTemplateDeletionParams;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class VmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmTemplateFromVmValidateBeforeCall(String contentLanguage, VmTemplateDeletionParams vmTemplateDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteVmTemplateFromVm(Async)");
-        }
+    private okhttp3.Call deleteVmTemplateFromVmValidateBeforeCall(VmTemplateDeletionParams vmTemplateDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmTemplateDeletionParams' is set
         if (vmTemplateDeletionParams == null) {
@@ -380,7 +365,7 @@ public class VmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVmTemplateFromVmCall(contentLanguage, vmTemplateDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmTemplateFromVmCall(vmTemplateDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class VmTemplateApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVmTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVmTemplate> deleteVmTemplateFromVm(String contentLanguage, VmTemplateDeletionParams vmTemplateDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVmTemplate>> localVarResp = deleteVmTemplateFromVmWithHttpInfo(contentLanguage, vmTemplateDeletionParams);
+    public List<WithTaskDeleteVmTemplate> deleteVmTemplateFromVm(VmTemplateDeletionParams vmTemplateDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVmTemplate>> localVarResp = deleteVmTemplateFromVmWithHttpInfo(vmTemplateDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVmTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVmTemplate>> deleteVmTemplateFromVmWithHttpInfo(String contentLanguage, VmTemplateDeletionParams vmTemplateDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteVmTemplate>> deleteVmTemplateFromVmWithHttpInfo(VmTemplateDeletionParams vmTemplateDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteVmTemplateFromVmValidateBeforeCall(vmTemplateDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class VmTemplateApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmTemplateFromVmAsync(String contentLanguage, VmTemplateDeletionParams vmTemplateDeletionParams, final ApiCallback<List<WithTaskDeleteVmTemplate>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmTemplateFromVmAsync(VmTemplateDeletionParams vmTemplateDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVmTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmTemplateFromVmValidateBeforeCall(vmTemplateDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmTemplates
-     * @param contentLanguage  (required)
      * @param getVmTemplatesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmTemplatesCall(String contentLanguage, GetVmTemplatesRequestBody getVmTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmTemplatesCall(GetVmTemplatesRequestBody getVmTemplatesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmTemplatesRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class VmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmTemplatesValidateBeforeCall(String contentLanguage, GetVmTemplatesRequestBody getVmTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmTemplates(Async)");
-        }
+    private okhttp3.Call getVmTemplatesValidateBeforeCall(GetVmTemplatesRequestBody getVmTemplatesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmTemplatesRequestBody' is set
         if (getVmTemplatesRequestBody == null) {
@@ -508,7 +488,7 @@ public class VmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmTemplatesCall(contentLanguage, getVmTemplatesRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmTemplatesCall(getVmTemplatesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class VmTemplateApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmTemplatesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmTemplate> getVmTemplates(String contentLanguage, GetVmTemplatesRequestBody getVmTemplatesRequestBody) throws ApiException {
-        ApiResponse<List<VmTemplate>> localVarResp = getVmTemplatesWithHttpInfo(contentLanguage, getVmTemplatesRequestBody);
+    public List<VmTemplate> getVmTemplates(GetVmTemplatesRequestBody getVmTemplatesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<VmTemplate>> localVarResp = getVmTemplatesWithHttpInfo(getVmTemplatesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmTemplatesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmTemplate>> getVmTemplatesWithHttpInfo(String contentLanguage, GetVmTemplatesRequestBody getVmTemplatesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmTemplatesValidateBeforeCall(contentLanguage, getVmTemplatesRequestBody, null);
+    public ApiResponse<List<VmTemplate>> getVmTemplatesWithHttpInfo(GetVmTemplatesRequestBody getVmTemplatesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmTemplatesValidateBeforeCall(getVmTemplatesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<VmTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class VmTemplateApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmTemplatesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmTemplatesAsync(String contentLanguage, GetVmTemplatesRequestBody getVmTemplatesRequestBody, final ApiCallback<List<VmTemplate>> _callback) throws ApiException {
+    public okhttp3.Call getVmTemplatesAsync(GetVmTemplatesRequestBody getVmTemplatesRequestBody, String contentLanguage, final ApiCallback<List<VmTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmTemplatesValidateBeforeCall(contentLanguage, getVmTemplatesRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmTemplatesValidateBeforeCall(getVmTemplatesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<VmTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmTemplatesConnection
-     * @param contentLanguage  (required)
      * @param getVmTemplatesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmTemplatesConnectionCall(String contentLanguage, GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmTemplatesConnectionCall(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmTemplatesConnectionRequestBody;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class VmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmTemplatesConnectionValidateBeforeCall(String contentLanguage, GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmTemplatesConnection(Async)");
-        }
+    private okhttp3.Call getVmTemplatesConnectionValidateBeforeCall(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmTemplatesConnectionRequestBody' is set
         if (getVmTemplatesConnectionRequestBody == null) {
@@ -636,7 +611,7 @@ public class VmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmTemplatesConnectionCall(contentLanguage, getVmTemplatesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmTemplatesConnectionCall(getVmTemplatesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class VmTemplateApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmTemplatesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VmTemplateConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmTemplateConnection getVmTemplatesConnection(String contentLanguage, GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody) throws ApiException {
-        ApiResponse<VmTemplateConnection> localVarResp = getVmTemplatesConnectionWithHttpInfo(contentLanguage, getVmTemplatesConnectionRequestBody);
+    public VmTemplateConnection getVmTemplatesConnection(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VmTemplateConnection> localVarResp = getVmTemplatesConnectionWithHttpInfo(getVmTemplatesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmTemplatesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmTemplateConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmTemplateConnection> getVmTemplatesConnectionWithHttpInfo(String contentLanguage, GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmTemplatesConnectionValidateBeforeCall(contentLanguage, getVmTemplatesConnectionRequestBody, null);
+    public ApiResponse<VmTemplateConnection> getVmTemplatesConnectionWithHttpInfo(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmTemplatesConnectionValidateBeforeCall(getVmTemplatesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VmTemplateConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class VmTemplateApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmTemplatesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,17 +670,17 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmTemplatesConnectionAsync(String contentLanguage, GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, final ApiCallback<VmTemplateConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmTemplatesConnectionAsync(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback<VmTemplateConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmTemplatesConnectionValidateBeforeCall(contentLanguage, getVmTemplatesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmTemplatesConnectionValidateBeforeCall(getVmTemplatesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VmTemplateConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateVmTemplateFromVm
-     * @param contentLanguage  (required)
      * @param vmTemplateUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -716,7 +691,7 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmTemplateFromVmCall(String contentLanguage, VmTemplateUpdationParams vmTemplateUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVmTemplateFromVmCall(VmTemplateUpdationParams vmTemplateUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmTemplateUpdationParams;
 
         // create path and map variables
@@ -751,12 +726,7 @@ public class VmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVmTemplateFromVmValidateBeforeCall(String contentLanguage, VmTemplateUpdationParams vmTemplateUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateVmTemplateFromVm(Async)");
-        }
+    private okhttp3.Call updateVmTemplateFromVmValidateBeforeCall(VmTemplateUpdationParams vmTemplateUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmTemplateUpdationParams' is set
         if (vmTemplateUpdationParams == null) {
@@ -764,7 +734,7 @@ public class VmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = updateVmTemplateFromVmCall(contentLanguage, vmTemplateUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVmTemplateFromVmCall(vmTemplateUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -772,8 +742,8 @@ public class VmTemplateApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -783,16 +753,16 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmTemplate> updateVmTemplateFromVm(String contentLanguage, VmTemplateUpdationParams vmTemplateUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmTemplate>> localVarResp = updateVmTemplateFromVmWithHttpInfo(contentLanguage, vmTemplateUpdationParams);
+    public List<WithTaskVmTemplate> updateVmTemplateFromVm(VmTemplateUpdationParams vmTemplateUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmTemplate>> localVarResp = updateVmTemplateFromVmWithHttpInfo(vmTemplateUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -802,8 +772,8 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmTemplate>> updateVmTemplateFromVmWithHttpInfo(String contentLanguage, VmTemplateUpdationParams vmTemplateUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateUpdationParams, null);
+    public ApiResponse<List<WithTaskVmTemplate>> updateVmTemplateFromVmWithHttpInfo(VmTemplateUpdationParams vmTemplateUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateVmTemplateFromVmValidateBeforeCall(vmTemplateUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -811,8 +781,8 @@ public class VmTemplateApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmTemplateUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -823,9 +793,9 @@ public class VmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmTemplateFromVmAsync(String contentLanguage, VmTemplateUpdationParams vmTemplateUpdationParams, final ApiCallback<List<WithTaskVmTemplate>> _callback) throws ApiException {
+    public okhttp3.Call updateVmTemplateFromVmAsync(VmTemplateUpdationParams vmTemplateUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVmTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateVmTemplateFromVmValidateBeforeCall(contentLanguage, vmTemplateUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVmTemplateFromVmValidateBeforeCall(vmTemplateUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

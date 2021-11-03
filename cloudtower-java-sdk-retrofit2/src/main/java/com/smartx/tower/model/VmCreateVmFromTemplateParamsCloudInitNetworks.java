@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * VmCreateVmFromTemplateParamsCloudInitNetworks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:54.291904700+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:48:29.490085800+08:00[Asia/Shanghai]")
 public class VmCreateVmFromTemplateParamsCloudInitNetworks {
   public static final String SERIALIZED_NAME_ROUTES = "routes";
   @SerializedName(SERIALIZED_NAME_ROUTES)

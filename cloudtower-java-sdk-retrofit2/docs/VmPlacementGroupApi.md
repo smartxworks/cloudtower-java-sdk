@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createVmPlacementGroup
 
-> List&lt;WithTaskVmPlacementGroup&gt; createVmPlacementGroup(contentLanguage, vmPlacementGroupCreationParams)
+> List&lt;WithTaskVmPlacementGroup&gt; createVmPlacementGroup(vmPlacementGroupCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmPlacementGroupApi apiInstance = new VmPlacementGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams = Arrays.asList(); // List<VmPlacementGroupCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmPlacementGroup> result = apiInstance.createVmPlacementGroup(contentLanguage, vmPlacementGroupCreationParams);
+            List<WithTaskVmPlacementGroup> result = apiInstance.createVmPlacementGroup(vmPlacementGroupCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmPlacementGroupApi#createVmPlacementGroup");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmPlacementGroupCreationParams** | [**List&lt;VmPlacementGroupCreationParams&gt;**](VmPlacementGroupCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteVmPlacementGroup
 
-> List&lt;WithTaskDeleteVmPlacementGroup&gt; deleteVmPlacementGroup(contentLanguage, vmPlacementGroupDeletionParams)
+> List&lt;WithTaskDeleteVmPlacementGroup&gt; deleteVmPlacementGroup(vmPlacementGroupDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmPlacementGroupApi apiInstance = new VmPlacementGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams = new VmPlacementGroupDeletionParams(); // VmPlacementGroupDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVmPlacementGroup> result = apiInstance.deleteVmPlacementGroup(contentLanguage, vmPlacementGroupDeletionParams);
+            List<WithTaskDeleteVmPlacementGroup> result = apiInstance.deleteVmPlacementGroup(vmPlacementGroupDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmPlacementGroupApi#deleteVmPlacementGroup");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmPlacementGroupDeletionParams** | [**VmPlacementGroupDeletionParams**](VmPlacementGroupDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getVmPlacementGroups
 
-> List&lt;VmPlacementGroup&gt; getVmPlacementGroups(contentLanguage, getVmPlacementGroupsRequestBody)
+> List&lt;VmPlacementGroup&gt; getVmPlacementGroups(getVmPlacementGroupsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmPlacementGroupApi apiInstance = new VmPlacementGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody = new GetVmPlacementGroupsRequestBody(); // GetVmPlacementGroupsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmPlacementGroup> result = apiInstance.getVmPlacementGroups(contentLanguage, getVmPlacementGroupsRequestBody);
+            List<VmPlacementGroup> result = apiInstance.getVmPlacementGroups(getVmPlacementGroupsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmPlacementGroupApi#getVmPlacementGroups");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmPlacementGroupsRequestBody** | [**GetVmPlacementGroupsRequestBody**](GetVmPlacementGroupsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getVmPlacementGroupsConnection
 
-> VmPlacementGroupConnection getVmPlacementGroupsConnection(contentLanguage, getVmPlacementGroupsConnectionRequestBody)
+> VmPlacementGroupConnection getVmPlacementGroupsConnection(getVmPlacementGroupsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmPlacementGroupApi apiInstance = new VmPlacementGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody = new GetVmPlacementGroupsConnectionRequestBody(); // GetVmPlacementGroupsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmPlacementGroupConnection result = apiInstance.getVmPlacementGroupsConnection(contentLanguage, getVmPlacementGroupsConnectionRequestBody);
+            VmPlacementGroupConnection result = apiInstance.getVmPlacementGroupsConnection(getVmPlacementGroupsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmPlacementGroupApi#getVmPlacementGroupsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmPlacementGroupsConnectionRequestBody** | [**GetVmPlacementGroupsConnectionRequestBody**](GetVmPlacementGroupsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateVmPlacementGroup
 
-> List&lt;WithTaskVmPlacementGroup&gt; updateVmPlacementGroup(contentLanguage, vmPlacementGroupUpdationParams)
+> List&lt;WithTaskVmPlacementGroup&gt; updateVmPlacementGroup(vmPlacementGroupUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmPlacementGroupApi apiInstance = new VmPlacementGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams = new VmPlacementGroupUpdationParams(); // VmPlacementGroupUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmPlacementGroup> result = apiInstance.updateVmPlacementGroup(contentLanguage, vmPlacementGroupUpdationParams);
+            List<WithTaskVmPlacementGroup> result = apiInstance.updateVmPlacementGroup(vmPlacementGroupUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmPlacementGroupApi#updateVmPlacementGroup");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmPlacementGroupUpdationParams** | [**VmPlacementGroupUpdationParams**](VmPlacementGroupUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

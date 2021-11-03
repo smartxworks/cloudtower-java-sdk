@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getClusterUpgradeHistories
 
-> List&lt;ClusterUpgradeHistory&gt; getClusterUpgradeHistories(contentLanguage, getClusterUpgradeHistoriesRequestBody)
+> List&lt;ClusterUpgradeHistory&gt; getClusterUpgradeHistories(getClusterUpgradeHistoriesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterUpgradeHistoryApi apiInstance = new ClusterUpgradeHistoryApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody = new GetClusterUpgradeHistoriesRequestBody(); // GetClusterUpgradeHistoriesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ClusterUpgradeHistory> result = apiInstance.getClusterUpgradeHistories(contentLanguage, getClusterUpgradeHistoriesRequestBody);
+            List<ClusterUpgradeHistory> result = apiInstance.getClusterUpgradeHistories(getClusterUpgradeHistoriesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterUpgradeHistoryApi#getClusterUpgradeHistories");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterUpgradeHistoriesRequestBody** | [**GetClusterUpgradeHistoriesRequestBody**](GetClusterUpgradeHistoriesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getClusterUpgradeHistoriesConnection
 
-> ClusterUpgradeHistoryConnection getClusterUpgradeHistoriesConnection(contentLanguage, getClusterUpgradeHistoriesConnectionRequestBody)
+> ClusterUpgradeHistoryConnection getClusterUpgradeHistoriesConnection(getClusterUpgradeHistoriesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterUpgradeHistoryApi apiInstance = new ClusterUpgradeHistoryApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody = new GetClusterUpgradeHistoriesConnectionRequestBody(); // GetClusterUpgradeHistoriesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ClusterUpgradeHistoryConnection result = apiInstance.getClusterUpgradeHistoriesConnection(contentLanguage, getClusterUpgradeHistoriesConnectionRequestBody);
+            ClusterUpgradeHistoryConnection result = apiInstance.getClusterUpgradeHistoriesConnection(getClusterUpgradeHistoriesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterUpgradeHistoryApi#getClusterUpgradeHistoriesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterUpgradeHistoriesConnectionRequestBody** | [**GetClusterUpgradeHistoriesConnectionRequestBody**](GetClusterUpgradeHistoriesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

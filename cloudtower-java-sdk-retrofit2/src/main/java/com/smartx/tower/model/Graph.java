@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * Graph
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:54.291904700+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:48:29.490085800+08:00[Asia/Shanghai]")
 public class Graph {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -58,6 +58,10 @@ public class Graph {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_INSTANCE_IDS = "instance_ids";
+  @SerializedName(SERIALIZED_NAME_INSTANCE_IDS)
+  private List<String> instanceIds = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -264,6 +268,34 @@ public class Graph {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+  public Graph instanceIds(List<String> instanceIds) {
+    
+    this.instanceIds = instanceIds;
+    return this;
+  }
+
+  public Graph addInstanceIdsItem(String instanceIdsItem) {
+    this.instanceIds.add(instanceIdsItem);
+    return this;
+  }
+
+   /**
+   * Get instanceIds
+   * @return instanceIds
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<String> getInstanceIds() {
+    return instanceIds;
+  }
+
+
+  public void setInstanceIds(List<String> instanceIds) {
+    this.instanceIds = instanceIds;
   }
 
 
@@ -782,6 +814,7 @@ public class Graph {
         Objects.equals(this.entityAsyncStatus, graph.entityAsyncStatus) &&
         Objects.equals(this.hosts, graph.hosts) &&
         Objects.equals(this.id, graph.id) &&
+        Objects.equals(this.instanceIds, graph.instanceIds) &&
         Objects.equals(this.localId, graph.localId) &&
         Objects.equals(this.luns, graph.luns) &&
         Objects.equals(this.metricCount, graph.metricCount) &&
@@ -809,7 +842,7 @@ public class Graph {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, disks, entityAsyncStatus, hosts, id, localId, luns, metricCount, metricName, metricType, namespaces, network, nics, resourceType, service, targets, title, type, view, vmNics, vms, vmVolumes, witnesses, zones);
+    return Objects.hash(cluster, disks, entityAsyncStatus, hosts, id, instanceIds, localId, luns, metricCount, metricName, metricType, namespaces, network, nics, resourceType, service, targets, title, type, view, vmNics, vms, vmVolumes, witnesses, zones);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -828,6 +861,7 @@ public class Graph {
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    hosts: ").append(toIndentedString(hosts)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    instanceIds: ").append(toIndentedString(instanceIds)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
     sb.append("    luns: ").append(toIndentedString(luns)).append("\n");
     sb.append("    metricCount: ").append(toIndentedString(metricCount)).append("\n");

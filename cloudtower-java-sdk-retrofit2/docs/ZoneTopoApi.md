@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getZoneTopoes
 
-> List&lt;ZoneTopo&gt; getZoneTopoes(contentLanguage, getZoneTopoesRequestBody)
+> List&lt;ZoneTopo&gt; getZoneTopoes(getZoneTopoesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ZoneTopoApi apiInstance = new ZoneTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetZoneTopoesRequestBody getZoneTopoesRequestBody = new GetZoneTopoesRequestBody(); // GetZoneTopoesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ZoneTopo> result = apiInstance.getZoneTopoes(contentLanguage, getZoneTopoesRequestBody);
+            List<ZoneTopo> result = apiInstance.getZoneTopoes(getZoneTopoesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ZoneTopoApi#getZoneTopoes");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getZoneTopoesRequestBody** | [**GetZoneTopoesRequestBody**](GetZoneTopoesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getZoneTopoesConnection
 
-> ZoneTopoConnection getZoneTopoesConnection(contentLanguage, getZoneTopoesConnectionRequestBody)
+> ZoneTopoConnection getZoneTopoesConnection(getZoneTopoesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ZoneTopoApi apiInstance = new ZoneTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody = new GetZoneTopoesConnectionRequestBody(); // GetZoneTopoesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ZoneTopoConnection result = apiInstance.getZoneTopoesConnection(contentLanguage, getZoneTopoesConnectionRequestBody);
+            ZoneTopoConnection result = apiInstance.getZoneTopoesConnection(getZoneTopoesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ZoneTopoApi#getZoneTopoesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getZoneTopoesConnectionRequestBody** | [**GetZoneTopoesConnectionRequestBody**](GetZoneTopoesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

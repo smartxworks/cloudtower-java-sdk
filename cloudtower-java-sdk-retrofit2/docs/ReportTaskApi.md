@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getReportTasks
 
-> List&lt;ReportTask&gt; getReportTasks(contentLanguage, getReportTasksRequestBody)
+> List&lt;ReportTask&gt; getReportTasks(getReportTasksRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTaskApi apiInstance = new ReportTaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetReportTasksRequestBody getReportTasksRequestBody = new GetReportTasksRequestBody(); // GetReportTasksRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ReportTask> result = apiInstance.getReportTasks(contentLanguage, getReportTasksRequestBody);
+            List<ReportTask> result = apiInstance.getReportTasks(getReportTasksRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTaskApi#getReportTasks");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getReportTasksRequestBody** | [**GetReportTasksRequestBody**](GetReportTasksRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getReportTasksConnection
 
-> ReportTaskConnection getReportTasksConnection(contentLanguage, getReportTasksConnectionRequestBody)
+> ReportTaskConnection getReportTasksConnection(getReportTasksConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTaskApi apiInstance = new ReportTaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody = new GetReportTasksConnectionRequestBody(); // GetReportTasksConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ReportTaskConnection result = apiInstance.getReportTasksConnection(contentLanguage, getReportTasksConnectionRequestBody);
+            ReportTaskConnection result = apiInstance.getReportTasksConnection(getReportTasksConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTaskApi#getReportTasksConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getReportTasksConnectionRequestBody** | [**GetReportTasksConnectionRequestBody**](GetReportTasksConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

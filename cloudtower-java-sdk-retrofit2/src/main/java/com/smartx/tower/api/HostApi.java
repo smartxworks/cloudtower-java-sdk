@@ -28,8 +28,8 @@ public interface HostApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param hostCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskBatchHosts&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface HostApi {
   })
   @POST("create-host")
   Call<List<WithTaskBatchHosts>> createHost(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<HostCreationParams> hostCreationParams
+    @retrofit2.http.Body List<HostCreationParams> hostCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getHostsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Host&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface HostApi {
   })
   @POST("get-hosts")
   Call<List<Host>> getHosts(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetHostsRequestBody getHostsRequestBody
+    @retrofit2.http.Body GetHostsRequestBody getHostsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getHostsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;HostConnection&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface HostApi {
   })
   @POST("get-hosts-connection")
   Call<HostConnection> getHostsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetHostsConnectionRequestBody getHostsConnectionRequestBody
+    @retrofit2.http.Body GetHostsConnectionRequestBody getHostsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param triggerDiskBlinkParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskHost&gt;&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface HostApi {
   })
   @POST("trigger-disk-blink")
   Call<List<WithTaskHost>> triggerDiskBlink(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<TriggerDiskBlinkParams> triggerDiskBlinkParams
+    @retrofit2.http.Body List<TriggerDiskBlinkParams> triggerDiskBlinkParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param hostUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskHost&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface HostApi {
   })
   @POST("update-host")
   Call<List<WithTaskHost>> updateHost(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body HostUpdationParams hostUpdationParams
+    @retrofit2.http.Body HostUpdationParams hostUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

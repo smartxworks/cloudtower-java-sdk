@@ -29,26 +29,26 @@ public interface ElfImageApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param file  (required)
    * @param clusterId  (required)
    * @param name  (required)
    * @param size  (required)
    * @param description  (required)
    * @param uploadTaskId  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;UploadTask&gt;&gt;
    */
   @retrofit2.http.Multipart
   @POST("upload-elf-image")
   Call<List<UploadTask>> createElfImage(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Part MultipartBody.Part file, @retrofit2.http.Part("cluster_id") String clusterId, @retrofit2.http.Part("name") String name, @retrofit2.http.Part("size") String size, @retrofit2.http.Part("description") String description, @retrofit2.http.Part("upload_task_id") String uploadTaskId
+    @retrofit2.http.Part MultipartBody.Part file, @retrofit2.http.Part("cluster_id") String clusterId, @retrofit2.http.Part("name") String name, @retrofit2.http.Part("size") String size, @retrofit2.http.Part("description") String description, @retrofit2.http.Part("upload_task_id") String uploadTaskId, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param elfImageDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteElfImage&gt;&gt;
    */
   @Headers({
@@ -56,14 +56,14 @@ public interface ElfImageApi {
   })
   @POST("delete-elf-image")
   Call<List<WithTaskDeleteElfImage>> deleteElfImage(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ElfImageDeletionParams elfImageDeletionParams
+    @retrofit2.http.Body ElfImageDeletionParams elfImageDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getElfImagesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ElfImage&gt;&gt;
    */
   @Headers({
@@ -71,14 +71,14 @@ public interface ElfImageApi {
   })
   @POST("get-elf-images")
   Call<List<ElfImage>> getElfImages(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetElfImagesRequestBody getElfImagesRequestBody
+    @retrofit2.http.Body GetElfImagesRequestBody getElfImagesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getElfImagesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ElfImageConnection&gt;
    */
   @Headers({
@@ -86,14 +86,14 @@ public interface ElfImageApi {
   })
   @POST("get-elf-images-connection")
   Call<ElfImageConnection> getElfImagesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody
+    @retrofit2.http.Body GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param elfImageUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskElfImage&gt;&gt;
    */
   @Headers({
@@ -101,7 +101,7 @@ public interface ElfImageApi {
   })
   @POST("update-elf-image")
   Call<List<WithTaskElfImage>> updateElfImage(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ElfImageUpdationParams elfImageUpdationParams
+    @retrofit2.http.Body ElfImageUpdationParams elfImageUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -24,8 +24,8 @@ public interface NodeTopoApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNodeTopoesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;NodeTopo&gt;&gt;
    */
   @Headers({
@@ -33,14 +33,14 @@ public interface NodeTopoApi {
   })
   @POST("get-node-topoes")
   Call<List<NodeTopo>> getNodeTopoes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNodeTopoesRequestBody getNodeTopoesRequestBody
+    @retrofit2.http.Body GetNodeTopoesRequestBody getNodeTopoesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNodeTopoesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NodeTopoConnection&gt;
    */
   @Headers({
@@ -48,14 +48,14 @@ public interface NodeTopoApi {
   })
   @POST("get-node-topoes-connection")
   Call<NodeTopoConnection> getNodeTopoesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody
+    @retrofit2.http.Body GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param requestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNodeTopo&gt;&gt;
    */
   @Headers({
@@ -63,7 +63,7 @@ public interface NodeTopoApi {
   })
   @POST("move-node-topo")
   Call<List<WithTaskNodeTopo>> updateNodeTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<Object> requestBody
+    @retrofit2.http.Body List<Object> requestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

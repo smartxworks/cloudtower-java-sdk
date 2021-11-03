@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createOrganization
 
-> List&lt;WithTaskOrganization&gt; createOrganization(contentLanguage, organizationCreationParams)
+> List&lt;WithTaskOrganization&gt; createOrganization(organizationCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         OrganizationApi apiInstance = new OrganizationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<OrganizationCreationParams> organizationCreationParams = Arrays.asList(); // List<OrganizationCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskOrganization> result = apiInstance.createOrganization(contentLanguage, organizationCreationParams);
+            List<WithTaskOrganization> result = apiInstance.createOrganization(organizationCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrganizationApi#createOrganization");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **organizationCreationParams** | [**List&lt;OrganizationCreationParams&gt;**](OrganizationCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteOrganization
 
-> List&lt;WithTaskDeleteOrganization&gt; deleteOrganization(contentLanguage, organizationDeletionParams)
+> List&lt;WithTaskDeleteOrganization&gt; deleteOrganization(organizationDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         OrganizationApi apiInstance = new OrganizationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         OrganizationDeletionParams organizationDeletionParams = new OrganizationDeletionParams(); // OrganizationDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteOrganization> result = apiInstance.deleteOrganization(contentLanguage, organizationDeletionParams);
+            List<WithTaskDeleteOrganization> result = apiInstance.deleteOrganization(organizationDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrganizationApi#deleteOrganization");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **organizationDeletionParams** | [**OrganizationDeletionParams**](OrganizationDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizations
 
-> List&lt;Organization&gt; getOrganizations(contentLanguage, getOrganizationsRequestBody)
+> List&lt;Organization&gt; getOrganizations(getOrganizationsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         OrganizationApi apiInstance = new OrganizationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetOrganizationsRequestBody getOrganizationsRequestBody = new GetOrganizationsRequestBody(); // GetOrganizationsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Organization> result = apiInstance.getOrganizations(contentLanguage, getOrganizationsRequestBody);
+            List<Organization> result = apiInstance.getOrganizations(getOrganizationsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrganizationApi#getOrganizations");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getOrganizationsRequestBody** | [**GetOrganizationsRequestBody**](GetOrganizationsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationsConnection
 
-> OrganizationConnection getOrganizationsConnection(contentLanguage, getOrganizationsConnectionRequestBody)
+> OrganizationConnection getOrganizationsConnection(getOrganizationsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         OrganizationApi apiInstance = new OrganizationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody = new GetOrganizationsConnectionRequestBody(); // GetOrganizationsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            OrganizationConnection result = apiInstance.getOrganizationsConnection(contentLanguage, getOrganizationsConnectionRequestBody);
+            OrganizationConnection result = apiInstance.getOrganizationsConnection(getOrganizationsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrganizationApi#getOrganizationsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getOrganizationsConnectionRequestBody** | [**GetOrganizationsConnectionRequestBody**](GetOrganizationsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateOrganization
 
-> List&lt;WithTaskOrganization&gt; updateOrganization(contentLanguage, organizationUpdationParams)
+> List&lt;WithTaskOrganization&gt; updateOrganization(organizationUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         OrganizationApi apiInstance = new OrganizationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         OrganizationUpdationParams organizationUpdationParams = new OrganizationUpdationParams(); // OrganizationUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskOrganization> result = apiInstance.updateOrganization(contentLanguage, organizationUpdationParams);
+            List<WithTaskOrganization> result = apiInstance.updateOrganization(organizationUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrganizationApi#updateOrganization");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **organizationUpdationParams** | [**OrganizationUpdationParams**](OrganizationUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

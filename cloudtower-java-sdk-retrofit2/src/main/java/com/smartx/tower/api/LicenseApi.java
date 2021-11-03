@@ -25,8 +25,8 @@ public interface LicenseApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getLicensesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;License&gt;&gt;
    */
   @Headers({
@@ -34,14 +34,14 @@ public interface LicenseApi {
   })
   @POST("get-licenses")
   Call<List<License>> getLicenses(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetLicensesRequestBody getLicensesRequestBody
+    @retrofit2.http.Body GetLicensesRequestBody getLicensesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getLicensesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;LicenseConnection&gt;
    */
   @Headers({
@@ -49,14 +49,14 @@ public interface LicenseApi {
   })
   @POST("get-licenses-connection")
   Call<LicenseConnection> getLicensesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetLicensesConnectionRequestBody getLicensesConnectionRequestBody
+    @retrofit2.http.Body GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param licenseUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;WithTaskLicense&gt;
    */
   @Headers({
@@ -64,7 +64,7 @@ public interface LicenseApi {
   })
   @POST("update-license")
   Call<WithTaskLicense> updateDeploy(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body LicenseUpdationParams licenseUpdationParams
+    @retrofit2.http.Body LicenseUpdationParams licenseUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

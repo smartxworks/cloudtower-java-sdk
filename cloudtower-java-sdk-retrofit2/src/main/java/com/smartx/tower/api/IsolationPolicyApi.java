@@ -23,8 +23,8 @@ public interface IsolationPolicyApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIsolationPoliciesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;IsolationPolicy&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface IsolationPolicyApi {
   })
   @POST("get-isolation-policies")
   Call<List<IsolationPolicy>> getIsolationPolicies(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody
+    @retrofit2.http.Body GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIsolationPoliciesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;IsolationPolicyConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface IsolationPolicyApi {
   })
   @POST("get-isolation-policies-connection")
   Call<IsolationPolicyConnection> getIsolationPoliciesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody
+    @retrofit2.http.Body GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

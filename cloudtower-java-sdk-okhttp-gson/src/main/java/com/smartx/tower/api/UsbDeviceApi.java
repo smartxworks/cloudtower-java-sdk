@@ -62,8 +62,8 @@ public class UsbDeviceApi {
 
     /**
      * Build call for getUsbDevices
-     * @param contentLanguage  (required)
      * @param getUsbDevicesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -74,7 +74,7 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsbDevicesCall(String contentLanguage, GetUsbDevicesRequestBody getUsbDevicesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUsbDevicesCall(GetUsbDevicesRequestBody getUsbDevicesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getUsbDevicesRequestBody;
 
         // create path and map variables
@@ -109,12 +109,7 @@ public class UsbDeviceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUsbDevicesValidateBeforeCall(String contentLanguage, GetUsbDevicesRequestBody getUsbDevicesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getUsbDevices(Async)");
-        }
+    private okhttp3.Call getUsbDevicesValidateBeforeCall(GetUsbDevicesRequestBody getUsbDevicesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUsbDevicesRequestBody' is set
         if (getUsbDevicesRequestBody == null) {
@@ -122,7 +117,7 @@ public class UsbDeviceApi {
         }
         
 
-        okhttp3.Call localVarCall = getUsbDevicesCall(contentLanguage, getUsbDevicesRequestBody, _callback);
+        okhttp3.Call localVarCall = getUsbDevicesCall(getUsbDevicesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -130,8 +125,8 @@ public class UsbDeviceApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUsbDevicesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;UsbDevice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -141,16 +136,16 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<UsbDevice> getUsbDevices(String contentLanguage, GetUsbDevicesRequestBody getUsbDevicesRequestBody) throws ApiException {
-        ApiResponse<List<UsbDevice>> localVarResp = getUsbDevicesWithHttpInfo(contentLanguage, getUsbDevicesRequestBody);
+    public List<UsbDevice> getUsbDevices(GetUsbDevicesRequestBody getUsbDevicesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<UsbDevice>> localVarResp = getUsbDevicesWithHttpInfo(getUsbDevicesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUsbDevicesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;UsbDevice&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -160,8 +155,8 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UsbDevice>> getUsbDevicesWithHttpInfo(String contentLanguage, GetUsbDevicesRequestBody getUsbDevicesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getUsbDevicesValidateBeforeCall(contentLanguage, getUsbDevicesRequestBody, null);
+    public ApiResponse<List<UsbDevice>> getUsbDevicesWithHttpInfo(GetUsbDevicesRequestBody getUsbDevicesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getUsbDevicesValidateBeforeCall(getUsbDevicesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<UsbDevice>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -169,8 +164,8 @@ public class UsbDeviceApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getUsbDevicesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -181,17 +176,17 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsbDevicesAsync(String contentLanguage, GetUsbDevicesRequestBody getUsbDevicesRequestBody, final ApiCallback<List<UsbDevice>> _callback) throws ApiException {
+    public okhttp3.Call getUsbDevicesAsync(GetUsbDevicesRequestBody getUsbDevicesRequestBody, String contentLanguage, final ApiCallback<List<UsbDevice>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUsbDevicesValidateBeforeCall(contentLanguage, getUsbDevicesRequestBody, _callback);
+        okhttp3.Call localVarCall = getUsbDevicesValidateBeforeCall(getUsbDevicesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<UsbDevice>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getUsbDevicesConnection
-     * @param contentLanguage  (required)
      * @param getUsbDevicesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -202,7 +197,7 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsbDevicesConnectionCall(String contentLanguage, GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUsbDevicesConnectionCall(GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getUsbDevicesConnectionRequestBody;
 
         // create path and map variables
@@ -237,12 +232,7 @@ public class UsbDeviceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUsbDevicesConnectionValidateBeforeCall(String contentLanguage, GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getUsbDevicesConnection(Async)");
-        }
+    private okhttp3.Call getUsbDevicesConnectionValidateBeforeCall(GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUsbDevicesConnectionRequestBody' is set
         if (getUsbDevicesConnectionRequestBody == null) {
@@ -250,7 +240,7 @@ public class UsbDeviceApi {
         }
         
 
-        okhttp3.Call localVarCall = getUsbDevicesConnectionCall(contentLanguage, getUsbDevicesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getUsbDevicesConnectionCall(getUsbDevicesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -258,8 +248,8 @@ public class UsbDeviceApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUsbDevicesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return UsbDeviceConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -269,16 +259,16 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public UsbDeviceConnection getUsbDevicesConnection(String contentLanguage, GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody) throws ApiException {
-        ApiResponse<UsbDeviceConnection> localVarResp = getUsbDevicesConnectionWithHttpInfo(contentLanguage, getUsbDevicesConnectionRequestBody);
+    public UsbDeviceConnection getUsbDevicesConnection(GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<UsbDeviceConnection> localVarResp = getUsbDevicesConnectionWithHttpInfo(getUsbDevicesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUsbDevicesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;UsbDeviceConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -288,8 +278,8 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UsbDeviceConnection> getUsbDevicesConnectionWithHttpInfo(String contentLanguage, GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getUsbDevicesConnectionValidateBeforeCall(contentLanguage, getUsbDevicesConnectionRequestBody, null);
+    public ApiResponse<UsbDeviceConnection> getUsbDevicesConnectionWithHttpInfo(GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getUsbDevicesConnectionValidateBeforeCall(getUsbDevicesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<UsbDeviceConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -297,8 +287,8 @@ public class UsbDeviceApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getUsbDevicesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -309,17 +299,17 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsbDevicesConnectionAsync(String contentLanguage, GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, final ApiCallback<UsbDeviceConnection> _callback) throws ApiException {
+    public okhttp3.Call getUsbDevicesConnectionAsync(GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, String contentLanguage, final ApiCallback<UsbDeviceConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUsbDevicesConnectionValidateBeforeCall(contentLanguage, getUsbDevicesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getUsbDevicesConnectionValidateBeforeCall(getUsbDevicesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<UsbDeviceConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for mountUsbDevice
-     * @param contentLanguage  (required)
      * @param usbDeviceMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -330,7 +320,7 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call mountUsbDeviceCall(String contentLanguage, UsbDeviceMountParams usbDeviceMountParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call mountUsbDeviceCall(UsbDeviceMountParams usbDeviceMountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = usbDeviceMountParams;
 
         // create path and map variables
@@ -365,12 +355,7 @@ public class UsbDeviceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call mountUsbDeviceValidateBeforeCall(String contentLanguage, UsbDeviceMountParams usbDeviceMountParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling mountUsbDevice(Async)");
-        }
+    private okhttp3.Call mountUsbDeviceValidateBeforeCall(UsbDeviceMountParams usbDeviceMountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'usbDeviceMountParams' is set
         if (usbDeviceMountParams == null) {
@@ -378,7 +363,7 @@ public class UsbDeviceApi {
         }
         
 
-        okhttp3.Call localVarCall = mountUsbDeviceCall(contentLanguage, usbDeviceMountParams, _callback);
+        okhttp3.Call localVarCall = mountUsbDeviceCall(usbDeviceMountParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -386,8 +371,8 @@ public class UsbDeviceApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param usbDeviceMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskUsbDevice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -397,16 +382,16 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskUsbDevice> mountUsbDevice(String contentLanguage, UsbDeviceMountParams usbDeviceMountParams) throws ApiException {
-        ApiResponse<List<WithTaskUsbDevice>> localVarResp = mountUsbDeviceWithHttpInfo(contentLanguage, usbDeviceMountParams);
+    public List<WithTaskUsbDevice> mountUsbDevice(UsbDeviceMountParams usbDeviceMountParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskUsbDevice>> localVarResp = mountUsbDeviceWithHttpInfo(usbDeviceMountParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param usbDeviceMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskUsbDevice&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -416,8 +401,8 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskUsbDevice>> mountUsbDeviceWithHttpInfo(String contentLanguage, UsbDeviceMountParams usbDeviceMountParams) throws ApiException {
-        okhttp3.Call localVarCall = mountUsbDeviceValidateBeforeCall(contentLanguage, usbDeviceMountParams, null);
+    public ApiResponse<List<WithTaskUsbDevice>> mountUsbDeviceWithHttpInfo(UsbDeviceMountParams usbDeviceMountParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = mountUsbDeviceValidateBeforeCall(usbDeviceMountParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskUsbDevice>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -425,8 +410,8 @@ public class UsbDeviceApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param usbDeviceMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -437,17 +422,17 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call mountUsbDeviceAsync(String contentLanguage, UsbDeviceMountParams usbDeviceMountParams, final ApiCallback<List<WithTaskUsbDevice>> _callback) throws ApiException {
+    public okhttp3.Call mountUsbDeviceAsync(UsbDeviceMountParams usbDeviceMountParams, String contentLanguage, final ApiCallback<List<WithTaskUsbDevice>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = mountUsbDeviceValidateBeforeCall(contentLanguage, usbDeviceMountParams, _callback);
+        okhttp3.Call localVarCall = mountUsbDeviceValidateBeforeCall(usbDeviceMountParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskUsbDevice>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for unmountUsbDevice
-     * @param contentLanguage  (required)
      * @param usbDeviceUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -458,7 +443,7 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call unmountUsbDeviceCall(String contentLanguage, UsbDeviceUnmountParams usbDeviceUnmountParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call unmountUsbDeviceCall(UsbDeviceUnmountParams usbDeviceUnmountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = usbDeviceUnmountParams;
 
         // create path and map variables
@@ -493,12 +478,7 @@ public class UsbDeviceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call unmountUsbDeviceValidateBeforeCall(String contentLanguage, UsbDeviceUnmountParams usbDeviceUnmountParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling unmountUsbDevice(Async)");
-        }
+    private okhttp3.Call unmountUsbDeviceValidateBeforeCall(UsbDeviceUnmountParams usbDeviceUnmountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'usbDeviceUnmountParams' is set
         if (usbDeviceUnmountParams == null) {
@@ -506,7 +486,7 @@ public class UsbDeviceApi {
         }
         
 
-        okhttp3.Call localVarCall = unmountUsbDeviceCall(contentLanguage, usbDeviceUnmountParams, _callback);
+        okhttp3.Call localVarCall = unmountUsbDeviceCall(usbDeviceUnmountParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -514,8 +494,8 @@ public class UsbDeviceApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param usbDeviceUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskUsbDevice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -525,16 +505,16 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskUsbDevice> unmountUsbDevice(String contentLanguage, UsbDeviceUnmountParams usbDeviceUnmountParams) throws ApiException {
-        ApiResponse<List<WithTaskUsbDevice>> localVarResp = unmountUsbDeviceWithHttpInfo(contentLanguage, usbDeviceUnmountParams);
+    public List<WithTaskUsbDevice> unmountUsbDevice(UsbDeviceUnmountParams usbDeviceUnmountParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskUsbDevice>> localVarResp = unmountUsbDeviceWithHttpInfo(usbDeviceUnmountParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param usbDeviceUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskUsbDevice&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -544,8 +524,8 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskUsbDevice>> unmountUsbDeviceWithHttpInfo(String contentLanguage, UsbDeviceUnmountParams usbDeviceUnmountParams) throws ApiException {
-        okhttp3.Call localVarCall = unmountUsbDeviceValidateBeforeCall(contentLanguage, usbDeviceUnmountParams, null);
+    public ApiResponse<List<WithTaskUsbDevice>> unmountUsbDeviceWithHttpInfo(UsbDeviceUnmountParams usbDeviceUnmountParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = unmountUsbDeviceValidateBeforeCall(usbDeviceUnmountParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskUsbDevice>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -553,8 +533,8 @@ public class UsbDeviceApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param usbDeviceUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -565,9 +545,9 @@ public class UsbDeviceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call unmountUsbDeviceAsync(String contentLanguage, UsbDeviceUnmountParams usbDeviceUnmountParams, final ApiCallback<List<WithTaskUsbDevice>> _callback) throws ApiException {
+    public okhttp3.Call unmountUsbDeviceAsync(UsbDeviceUnmountParams usbDeviceUnmountParams, String contentLanguage, final ApiCallback<List<WithTaskUsbDevice>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = unmountUsbDeviceValidateBeforeCall(contentLanguage, usbDeviceUnmountParams, _callback);
+        okhttp3.Call localVarCall = unmountUsbDeviceValidateBeforeCall(usbDeviceUnmountParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskUsbDevice>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

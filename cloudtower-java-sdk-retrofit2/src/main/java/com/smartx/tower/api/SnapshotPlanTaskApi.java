@@ -23,8 +23,8 @@ public interface SnapshotPlanTaskApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnapshotPlanTasksRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SnapshotPlanTask&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface SnapshotPlanTaskApi {
   })
   @POST("get-snapshot-plan-tasks")
   Call<List<SnapshotPlanTask>> getSnapshotPlanTasks(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnapshotPlanTasksRequestBody getSnapshotPlanTasksRequestBody
+    @retrofit2.http.Body GetSnapshotPlanTasksRequestBody getSnapshotPlanTasksRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnapshotPlanTasksConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SnapshotPlanTaskConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface SnapshotPlanTaskApi {
   })
   @POST("get-snapshot-plan-tasks-connection")
   Call<SnapshotPlanTaskConnection> getSnapshotPlanTasksConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnapshotPlanTasksConnectionRequestBody getSnapshotPlanTasksConnectionRequestBody
+    @retrofit2.http.Body GetSnapshotPlanTasksConnectionRequestBody getSnapshotPlanTasksConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

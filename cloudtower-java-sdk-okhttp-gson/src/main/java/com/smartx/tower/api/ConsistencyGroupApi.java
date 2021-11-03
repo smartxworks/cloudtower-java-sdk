@@ -64,8 +64,8 @@ public class ConsistencyGroupApi {
 
     /**
      * Build call for createConsistencyGroup
-     * @param contentLanguage  (required)
      * @param consistencyGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createConsistencyGroupCall(String contentLanguage, List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createConsistencyGroupCall(List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = consistencyGroupCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class ConsistencyGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createConsistencyGroupValidateBeforeCall(String contentLanguage, List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createConsistencyGroup(Async)");
-        }
+    private okhttp3.Call createConsistencyGroupValidateBeforeCall(List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consistencyGroupCreationParams' is set
         if (consistencyGroupCreationParams == null) {
@@ -124,7 +119,7 @@ public class ConsistencyGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = createConsistencyGroupCall(contentLanguage, consistencyGroupCreationParams, _callback);
+        okhttp3.Call localVarCall = createConsistencyGroupCall(consistencyGroupCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class ConsistencyGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskConsistencyGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskConsistencyGroup> createConsistencyGroup(String contentLanguage, List<ConsistencyGroupCreationParams> consistencyGroupCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskConsistencyGroup>> localVarResp = createConsistencyGroupWithHttpInfo(contentLanguage, consistencyGroupCreationParams);
+    public List<WithTaskConsistencyGroup> createConsistencyGroup(List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskConsistencyGroup>> localVarResp = createConsistencyGroupWithHttpInfo(consistencyGroupCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskConsistencyGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskConsistencyGroup>> createConsistencyGroupWithHttpInfo(String contentLanguage, List<ConsistencyGroupCreationParams> consistencyGroupCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createConsistencyGroupValidateBeforeCall(contentLanguage, consistencyGroupCreationParams, null);
+    public ApiResponse<List<WithTaskConsistencyGroup>> createConsistencyGroupWithHttpInfo(List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createConsistencyGroupValidateBeforeCall(consistencyGroupCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class ConsistencyGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createConsistencyGroupAsync(String contentLanguage, List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, final ApiCallback<List<WithTaskConsistencyGroup>> _callback) throws ApiException {
+    public okhttp3.Call createConsistencyGroupAsync(List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, String contentLanguage, final ApiCallback<List<WithTaskConsistencyGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createConsistencyGroupValidateBeforeCall(contentLanguage, consistencyGroupCreationParams, _callback);
+        okhttp3.Call localVarCall = createConsistencyGroupValidateBeforeCall(consistencyGroupCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteConsistencyGroup
-     * @param contentLanguage  (required)
      * @param consistencyGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteConsistencyGroupCall(String contentLanguage, ConsistencyGroupDeletionParams consistencyGroupDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteConsistencyGroupCall(ConsistencyGroupDeletionParams consistencyGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = consistencyGroupDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class ConsistencyGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteConsistencyGroupValidateBeforeCall(String contentLanguage, ConsistencyGroupDeletionParams consistencyGroupDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteConsistencyGroup(Async)");
-        }
+    private okhttp3.Call deleteConsistencyGroupValidateBeforeCall(ConsistencyGroupDeletionParams consistencyGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consistencyGroupDeletionParams' is set
         if (consistencyGroupDeletionParams == null) {
@@ -252,7 +242,7 @@ public class ConsistencyGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteConsistencyGroupCall(contentLanguage, consistencyGroupDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteConsistencyGroupCall(consistencyGroupDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class ConsistencyGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteConsistencyGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteConsistencyGroup> deleteConsistencyGroup(String contentLanguage, ConsistencyGroupDeletionParams consistencyGroupDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteConsistencyGroup>> localVarResp = deleteConsistencyGroupWithHttpInfo(contentLanguage, consistencyGroupDeletionParams);
+    public List<WithTaskDeleteConsistencyGroup> deleteConsistencyGroup(ConsistencyGroupDeletionParams consistencyGroupDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteConsistencyGroup>> localVarResp = deleteConsistencyGroupWithHttpInfo(consistencyGroupDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteConsistencyGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteConsistencyGroup>> deleteConsistencyGroupWithHttpInfo(String contentLanguage, ConsistencyGroupDeletionParams consistencyGroupDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteConsistencyGroupValidateBeforeCall(contentLanguage, consistencyGroupDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteConsistencyGroup>> deleteConsistencyGroupWithHttpInfo(ConsistencyGroupDeletionParams consistencyGroupDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteConsistencyGroupValidateBeforeCall(consistencyGroupDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteConsistencyGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class ConsistencyGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteConsistencyGroupAsync(String contentLanguage, ConsistencyGroupDeletionParams consistencyGroupDeletionParams, final ApiCallback<List<WithTaskDeleteConsistencyGroup>> _callback) throws ApiException {
+    public okhttp3.Call deleteConsistencyGroupAsync(ConsistencyGroupDeletionParams consistencyGroupDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteConsistencyGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteConsistencyGroupValidateBeforeCall(contentLanguage, consistencyGroupDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteConsistencyGroupValidateBeforeCall(consistencyGroupDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteConsistencyGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getConsistencyGroups
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupsCall(String contentLanguage, GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupsCall(GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getConsistencyGroupsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class ConsistencyGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConsistencyGroupsValidateBeforeCall(String contentLanguage, GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getConsistencyGroups(Async)");
-        }
+    private okhttp3.Call getConsistencyGroupsValidateBeforeCall(GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getConsistencyGroupsRequestBody' is set
         if (getConsistencyGroupsRequestBody == null) {
@@ -380,7 +365,7 @@ public class ConsistencyGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getConsistencyGroupsCall(contentLanguage, getConsistencyGroupsRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupsCall(getConsistencyGroupsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class ConsistencyGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ConsistencyGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ConsistencyGroup> getConsistencyGroups(String contentLanguage, GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody) throws ApiException {
-        ApiResponse<List<ConsistencyGroup>> localVarResp = getConsistencyGroupsWithHttpInfo(contentLanguage, getConsistencyGroupsRequestBody);
+    public List<ConsistencyGroup> getConsistencyGroups(GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ConsistencyGroup>> localVarResp = getConsistencyGroupsWithHttpInfo(getConsistencyGroupsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ConsistencyGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ConsistencyGroup>> getConsistencyGroupsWithHttpInfo(String contentLanguage, GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getConsistencyGroupsValidateBeforeCall(contentLanguage, getConsistencyGroupsRequestBody, null);
+    public ApiResponse<List<ConsistencyGroup>> getConsistencyGroupsWithHttpInfo(GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getConsistencyGroupsValidateBeforeCall(getConsistencyGroupsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ConsistencyGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class ConsistencyGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupsAsync(String contentLanguage, GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, final ApiCallback<List<ConsistencyGroup>> _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupsAsync(GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, String contentLanguage, final ApiCallback<List<ConsistencyGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getConsistencyGroupsValidateBeforeCall(contentLanguage, getConsistencyGroupsRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupsValidateBeforeCall(getConsistencyGroupsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ConsistencyGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getConsistencyGroupsConnection
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupsConnectionCall(String contentLanguage, GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupsConnectionCall(GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getConsistencyGroupsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class ConsistencyGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConsistencyGroupsConnectionValidateBeforeCall(String contentLanguage, GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getConsistencyGroupsConnection(Async)");
-        }
+    private okhttp3.Call getConsistencyGroupsConnectionValidateBeforeCall(GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getConsistencyGroupsConnectionRequestBody' is set
         if (getConsistencyGroupsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class ConsistencyGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getConsistencyGroupsConnectionCall(contentLanguage, getConsistencyGroupsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupsConnectionCall(getConsistencyGroupsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class ConsistencyGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ConsistencyGroupConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ConsistencyGroupConnection getConsistencyGroupsConnection(String contentLanguage, GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody) throws ApiException {
-        ApiResponse<ConsistencyGroupConnection> localVarResp = getConsistencyGroupsConnectionWithHttpInfo(contentLanguage, getConsistencyGroupsConnectionRequestBody);
+    public ConsistencyGroupConnection getConsistencyGroupsConnection(GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ConsistencyGroupConnection> localVarResp = getConsistencyGroupsConnectionWithHttpInfo(getConsistencyGroupsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ConsistencyGroupConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ConsistencyGroupConnection> getConsistencyGroupsConnectionWithHttpInfo(String contentLanguage, GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getConsistencyGroupsConnectionValidateBeforeCall(contentLanguage, getConsistencyGroupsConnectionRequestBody, null);
+    public ApiResponse<ConsistencyGroupConnection> getConsistencyGroupsConnectionWithHttpInfo(GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getConsistencyGroupsConnectionValidateBeforeCall(getConsistencyGroupsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ConsistencyGroupConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class ConsistencyGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupsConnectionAsync(String contentLanguage, GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, final ApiCallback<ConsistencyGroupConnection> _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupsConnectionAsync(GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, String contentLanguage, final ApiCallback<ConsistencyGroupConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getConsistencyGroupsConnectionValidateBeforeCall(contentLanguage, getConsistencyGroupsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupsConnectionValidateBeforeCall(getConsistencyGroupsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ConsistencyGroupConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateConsistencyGroup
-     * @param contentLanguage  (required)
      * @param consistencyGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateConsistencyGroupCall(String contentLanguage, ConsistencyGroupUpdationParams consistencyGroupUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateConsistencyGroupCall(ConsistencyGroupUpdationParams consistencyGroupUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = consistencyGroupUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class ConsistencyGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateConsistencyGroupValidateBeforeCall(String contentLanguage, ConsistencyGroupUpdationParams consistencyGroupUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateConsistencyGroup(Async)");
-        }
+    private okhttp3.Call updateConsistencyGroupValidateBeforeCall(ConsistencyGroupUpdationParams consistencyGroupUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consistencyGroupUpdationParams' is set
         if (consistencyGroupUpdationParams == null) {
@@ -636,7 +611,7 @@ public class ConsistencyGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = updateConsistencyGroupCall(contentLanguage, consistencyGroupUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateConsistencyGroupCall(consistencyGroupUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class ConsistencyGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskConsistencyGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskConsistencyGroup> updateConsistencyGroup(String contentLanguage, ConsistencyGroupUpdationParams consistencyGroupUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskConsistencyGroup>> localVarResp = updateConsistencyGroupWithHttpInfo(contentLanguage, consistencyGroupUpdationParams);
+    public List<WithTaskConsistencyGroup> updateConsistencyGroup(ConsistencyGroupUpdationParams consistencyGroupUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskConsistencyGroup>> localVarResp = updateConsistencyGroupWithHttpInfo(consistencyGroupUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskConsistencyGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskConsistencyGroup>> updateConsistencyGroupWithHttpInfo(String contentLanguage, ConsistencyGroupUpdationParams consistencyGroupUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateConsistencyGroupValidateBeforeCall(contentLanguage, consistencyGroupUpdationParams, null);
+    public ApiResponse<List<WithTaskConsistencyGroup>> updateConsistencyGroupWithHttpInfo(ConsistencyGroupUpdationParams consistencyGroupUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateConsistencyGroupValidateBeforeCall(consistencyGroupUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class ConsistencyGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class ConsistencyGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateConsistencyGroupAsync(String contentLanguage, ConsistencyGroupUpdationParams consistencyGroupUpdationParams, final ApiCallback<List<WithTaskConsistencyGroup>> _callback) throws ApiException {
+    public okhttp3.Call updateConsistencyGroupAsync(ConsistencyGroupUpdationParams consistencyGroupUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskConsistencyGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateConsistencyGroupValidateBeforeCall(contentLanguage, consistencyGroupUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateConsistencyGroupValidateBeforeCall(consistencyGroupUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

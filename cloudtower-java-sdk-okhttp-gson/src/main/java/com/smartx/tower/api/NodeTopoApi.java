@@ -60,8 +60,8 @@ public class NodeTopoApi {
 
     /**
      * Build call for getNodeTopoes
-     * @param contentLanguage  (required)
      * @param getNodeTopoesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -72,7 +72,7 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNodeTopoesCall(String contentLanguage, GetNodeTopoesRequestBody getNodeTopoesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNodeTopoesCall(GetNodeTopoesRequestBody getNodeTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNodeTopoesRequestBody;
 
         // create path and map variables
@@ -107,12 +107,7 @@ public class NodeTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNodeTopoesValidateBeforeCall(String contentLanguage, GetNodeTopoesRequestBody getNodeTopoesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNodeTopoes(Async)");
-        }
+    private okhttp3.Call getNodeTopoesValidateBeforeCall(GetNodeTopoesRequestBody getNodeTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNodeTopoesRequestBody' is set
         if (getNodeTopoesRequestBody == null) {
@@ -120,7 +115,7 @@ public class NodeTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getNodeTopoesCall(contentLanguage, getNodeTopoesRequestBody, _callback);
+        okhttp3.Call localVarCall = getNodeTopoesCall(getNodeTopoesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -128,8 +123,8 @@ public class NodeTopoApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNodeTopoesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;NodeTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -139,16 +134,16 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<NodeTopo> getNodeTopoes(String contentLanguage, GetNodeTopoesRequestBody getNodeTopoesRequestBody) throws ApiException {
-        ApiResponse<List<NodeTopo>> localVarResp = getNodeTopoesWithHttpInfo(contentLanguage, getNodeTopoesRequestBody);
+    public List<NodeTopo> getNodeTopoes(GetNodeTopoesRequestBody getNodeTopoesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<NodeTopo>> localVarResp = getNodeTopoesWithHttpInfo(getNodeTopoesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNodeTopoesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;NodeTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -158,8 +153,8 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<NodeTopo>> getNodeTopoesWithHttpInfo(String contentLanguage, GetNodeTopoesRequestBody getNodeTopoesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNodeTopoesValidateBeforeCall(contentLanguage, getNodeTopoesRequestBody, null);
+    public ApiResponse<List<NodeTopo>> getNodeTopoesWithHttpInfo(GetNodeTopoesRequestBody getNodeTopoesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNodeTopoesValidateBeforeCall(getNodeTopoesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<NodeTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -167,8 +162,8 @@ public class NodeTopoApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNodeTopoesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -179,17 +174,17 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNodeTopoesAsync(String contentLanguage, GetNodeTopoesRequestBody getNodeTopoesRequestBody, final ApiCallback<List<NodeTopo>> _callback) throws ApiException {
+    public okhttp3.Call getNodeTopoesAsync(GetNodeTopoesRequestBody getNodeTopoesRequestBody, String contentLanguage, final ApiCallback<List<NodeTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNodeTopoesValidateBeforeCall(contentLanguage, getNodeTopoesRequestBody, _callback);
+        okhttp3.Call localVarCall = getNodeTopoesValidateBeforeCall(getNodeTopoesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<NodeTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNodeTopoesConnection
-     * @param contentLanguage  (required)
      * @param getNodeTopoesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -200,7 +195,7 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNodeTopoesConnectionCall(String contentLanguage, GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNodeTopoesConnectionCall(GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNodeTopoesConnectionRequestBody;
 
         // create path and map variables
@@ -235,12 +230,7 @@ public class NodeTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNodeTopoesConnectionValidateBeforeCall(String contentLanguage, GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNodeTopoesConnection(Async)");
-        }
+    private okhttp3.Call getNodeTopoesConnectionValidateBeforeCall(GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNodeTopoesConnectionRequestBody' is set
         if (getNodeTopoesConnectionRequestBody == null) {
@@ -248,7 +238,7 @@ public class NodeTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getNodeTopoesConnectionCall(contentLanguage, getNodeTopoesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNodeTopoesConnectionCall(getNodeTopoesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -256,8 +246,8 @@ public class NodeTopoApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNodeTopoesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return NodeTopoConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -267,16 +257,16 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NodeTopoConnection getNodeTopoesConnection(String contentLanguage, GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody) throws ApiException {
-        ApiResponse<NodeTopoConnection> localVarResp = getNodeTopoesConnectionWithHttpInfo(contentLanguage, getNodeTopoesConnectionRequestBody);
+    public NodeTopoConnection getNodeTopoesConnection(GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<NodeTopoConnection> localVarResp = getNodeTopoesConnectionWithHttpInfo(getNodeTopoesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNodeTopoesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NodeTopoConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -286,8 +276,8 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NodeTopoConnection> getNodeTopoesConnectionWithHttpInfo(String contentLanguage, GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNodeTopoesConnectionValidateBeforeCall(contentLanguage, getNodeTopoesConnectionRequestBody, null);
+    public ApiResponse<NodeTopoConnection> getNodeTopoesConnectionWithHttpInfo(GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNodeTopoesConnectionValidateBeforeCall(getNodeTopoesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<NodeTopoConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -295,8 +285,8 @@ public class NodeTopoApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNodeTopoesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -307,17 +297,17 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNodeTopoesConnectionAsync(String contentLanguage, GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, final ApiCallback<NodeTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getNodeTopoesConnectionAsync(GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody, String contentLanguage, final ApiCallback<NodeTopoConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNodeTopoesConnectionValidateBeforeCall(contentLanguage, getNodeTopoesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNodeTopoesConnectionValidateBeforeCall(getNodeTopoesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<NodeTopoConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateNodeTopo
-     * @param contentLanguage  (required)
      * @param requestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -328,7 +318,7 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNodeTopoCall(String contentLanguage, List<Object> requestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNodeTopoCall(List<Object> requestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = requestBody;
 
         // create path and map variables
@@ -363,12 +353,7 @@ public class NodeTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNodeTopoValidateBeforeCall(String contentLanguage, List<Object> requestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateNodeTopo(Async)");
-        }
+    private okhttp3.Call updateNodeTopoValidateBeforeCall(List<Object> requestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'requestBody' is set
         if (requestBody == null) {
@@ -376,7 +361,7 @@ public class NodeTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = updateNodeTopoCall(contentLanguage, requestBody, _callback);
+        okhttp3.Call localVarCall = updateNodeTopoCall(requestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -384,8 +369,8 @@ public class NodeTopoApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param requestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNodeTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -395,16 +380,16 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNodeTopo> updateNodeTopo(String contentLanguage, List<Object> requestBody) throws ApiException {
-        ApiResponse<List<WithTaskNodeTopo>> localVarResp = updateNodeTopoWithHttpInfo(contentLanguage, requestBody);
+    public List<WithTaskNodeTopo> updateNodeTopo(List<Object> requestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskNodeTopo>> localVarResp = updateNodeTopoWithHttpInfo(requestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param requestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNodeTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -414,8 +399,8 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNodeTopo>> updateNodeTopoWithHttpInfo(String contentLanguage, List<Object> requestBody) throws ApiException {
-        okhttp3.Call localVarCall = updateNodeTopoValidateBeforeCall(contentLanguage, requestBody, null);
+    public ApiResponse<List<WithTaskNodeTopo>> updateNodeTopoWithHttpInfo(List<Object> requestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateNodeTopoValidateBeforeCall(requestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNodeTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -423,8 +408,8 @@ public class NodeTopoApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param requestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -435,9 +420,9 @@ public class NodeTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNodeTopoAsync(String contentLanguage, List<Object> requestBody, final ApiCallback<List<WithTaskNodeTopo>> _callback) throws ApiException {
+    public okhttp3.Call updateNodeTopoAsync(List<Object> requestBody, String contentLanguage, final ApiCallback<List<WithTaskNodeTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNodeTopoValidateBeforeCall(contentLanguage, requestBody, _callback);
+        okhttp3.Call localVarCall = updateNodeTopoValidateBeforeCall(requestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNodeTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

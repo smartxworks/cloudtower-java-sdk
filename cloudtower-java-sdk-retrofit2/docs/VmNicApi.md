@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getVmNics
 
-> List&lt;VmNic&gt; getVmNics(contentLanguage, getVmNicsRequestBody)
+> List&lt;VmNic&gt; getVmNics(getVmNicsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmNicApi apiInstance = new VmNicApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmNicsRequestBody getVmNicsRequestBody = new GetVmNicsRequestBody(); // GetVmNicsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmNic> result = apiInstance.getVmNics(contentLanguage, getVmNicsRequestBody);
+            List<VmNic> result = apiInstance.getVmNics(getVmNicsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmNicApi#getVmNics");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmNicsRequestBody** | [**GetVmNicsRequestBody**](GetVmNicsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getVmNicsConnection
 
-> VmNicConnection getVmNicsConnection(contentLanguage, getVmNicsConnectionRequestBody)
+> VmNicConnection getVmNicsConnection(getVmNicsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmNicApi apiInstance = new VmNicApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody = new GetVmNicsConnectionRequestBody(); // GetVmNicsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmNicConnection result = apiInstance.getVmNicsConnection(contentLanguage, getVmNicsConnectionRequestBody);
+            VmNicConnection result = apiInstance.getVmNicsConnection(getVmNicsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmNicApi#getVmNicsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmNicsConnectionRequestBody** | [**GetVmNicsConnectionRequestBody**](GetVmNicsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -59,8 +59,8 @@ public class SecurityPolicyApi {
 
     /**
      * Build call for getSecurityPolicies
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSecurityPoliciesCall(String contentLanguage, GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesCall(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSecurityPoliciesRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class SecurityPolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSecurityPoliciesValidateBeforeCall(String contentLanguage, GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSecurityPolicies(Async)");
-        }
+    private okhttp3.Call getSecurityPoliciesValidateBeforeCall(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSecurityPoliciesRequestBody' is set
         if (getSecurityPoliciesRequestBody == null) {
@@ -119,7 +114,7 @@ public class SecurityPolicyApi {
         }
         
 
-        okhttp3.Call localVarCall = getSecurityPoliciesCall(contentLanguage, getSecurityPoliciesRequestBody, _callback);
+        okhttp3.Call localVarCall = getSecurityPoliciesCall(getSecurityPoliciesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class SecurityPolicyApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SecurityPolicy&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SecurityPolicy> getSecurityPolicies(String contentLanguage, GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody) throws ApiException {
-        ApiResponse<List<SecurityPolicy>> localVarResp = getSecurityPoliciesWithHttpInfo(contentLanguage, getSecurityPoliciesRequestBody);
+    public List<SecurityPolicy> getSecurityPolicies(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<SecurityPolicy>> localVarResp = getSecurityPoliciesWithHttpInfo(getSecurityPoliciesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SecurityPolicy&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SecurityPolicy>> getSecurityPoliciesWithHttpInfo(String contentLanguage, GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSecurityPoliciesValidateBeforeCall(contentLanguage, getSecurityPoliciesRequestBody, null);
+    public ApiResponse<List<SecurityPolicy>> getSecurityPoliciesWithHttpInfo(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSecurityPoliciesValidateBeforeCall(getSecurityPoliciesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<SecurityPolicy>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class SecurityPolicyApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSecurityPoliciesAsync(String contentLanguage, GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, final ApiCallback<List<SecurityPolicy>> _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesAsync(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, String contentLanguage, final ApiCallback<List<SecurityPolicy>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSecurityPoliciesValidateBeforeCall(contentLanguage, getSecurityPoliciesRequestBody, _callback);
+        okhttp3.Call localVarCall = getSecurityPoliciesValidateBeforeCall(getSecurityPoliciesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<SecurityPolicy>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSecurityPoliciesConnection
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSecurityPoliciesConnectionCall(String contentLanguage, GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesConnectionCall(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSecurityPoliciesConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class SecurityPolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSecurityPoliciesConnectionValidateBeforeCall(String contentLanguage, GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSecurityPoliciesConnection(Async)");
-        }
+    private okhttp3.Call getSecurityPoliciesConnectionValidateBeforeCall(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSecurityPoliciesConnectionRequestBody' is set
         if (getSecurityPoliciesConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class SecurityPolicyApi {
         }
         
 
-        okhttp3.Call localVarCall = getSecurityPoliciesConnectionCall(contentLanguage, getSecurityPoliciesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSecurityPoliciesConnectionCall(getSecurityPoliciesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class SecurityPolicyApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return SecurityPolicyConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SecurityPolicyConnection getSecurityPoliciesConnection(String contentLanguage, GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody) throws ApiException {
-        ApiResponse<SecurityPolicyConnection> localVarResp = getSecurityPoliciesConnectionWithHttpInfo(contentLanguage, getSecurityPoliciesConnectionRequestBody);
+    public SecurityPolicyConnection getSecurityPoliciesConnection(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<SecurityPolicyConnection> localVarResp = getSecurityPoliciesConnectionWithHttpInfo(getSecurityPoliciesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SecurityPolicyConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SecurityPolicyConnection> getSecurityPoliciesConnectionWithHttpInfo(String contentLanguage, GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSecurityPoliciesConnectionValidateBeforeCall(contentLanguage, getSecurityPoliciesConnectionRequestBody, null);
+    public ApiResponse<SecurityPolicyConnection> getSecurityPoliciesConnectionWithHttpInfo(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSecurityPoliciesConnectionValidateBeforeCall(getSecurityPoliciesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<SecurityPolicyConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class SecurityPolicyApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class SecurityPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSecurityPoliciesConnectionAsync(String contentLanguage, GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, final ApiCallback<SecurityPolicyConnection> _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesConnectionAsync(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, String contentLanguage, final ApiCallback<SecurityPolicyConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSecurityPoliciesConnectionValidateBeforeCall(contentLanguage, getSecurityPoliciesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSecurityPoliciesConnectionValidateBeforeCall(getSecurityPoliciesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<SecurityPolicyConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

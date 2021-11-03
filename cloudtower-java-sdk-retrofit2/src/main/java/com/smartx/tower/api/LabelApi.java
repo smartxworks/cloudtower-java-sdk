@@ -29,8 +29,8 @@ public interface LabelApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param addLabelsToResourcesParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskLabel&gt;&gt;
    */
   @Headers({
@@ -38,14 +38,14 @@ public interface LabelApi {
   })
   @POST("add-labels-to-resources")
   Call<List<WithTaskLabel>> addLabelsToResources(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body AddLabelsToResourcesParams addLabelsToResourcesParams
+    @retrofit2.http.Body AddLabelsToResourcesParams addLabelsToResourcesParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param labelCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskLabel&gt;&gt;
    */
   @Headers({
@@ -53,14 +53,14 @@ public interface LabelApi {
   })
   @POST("create-label")
   Call<List<WithTaskLabel>> createLabel(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<LabelCreationParams> labelCreationParams
+    @retrofit2.http.Body List<LabelCreationParams> labelCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param labelDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteLabel&gt;&gt;
    */
   @Headers({
@@ -68,14 +68,14 @@ public interface LabelApi {
   })
   @POST("delete-label")
   Call<List<WithTaskDeleteLabel>> deleteLabel(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body LabelDeletionParams labelDeletionParams
+    @retrofit2.http.Body LabelDeletionParams labelDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getLabelsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Label&gt;&gt;
    */
   @Headers({
@@ -83,14 +83,14 @@ public interface LabelApi {
   })
   @POST("get-labels")
   Call<List<Label>> getLabels(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetLabelsRequestBody getLabelsRequestBody
+    @retrofit2.http.Body GetLabelsRequestBody getLabelsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getLabelsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;LabelConnection&gt;
    */
   @Headers({
@@ -98,14 +98,14 @@ public interface LabelApi {
   })
   @POST("get-labels-connection")
   Call<LabelConnection> getLabelsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetLabelsConnectionRequestBody getLabelsConnectionRequestBody
+    @retrofit2.http.Body GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param body  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskLabel&gt;&gt;
    */
   @Headers({
@@ -113,14 +113,14 @@ public interface LabelApi {
   })
   @POST("remove-labels-from-resources")
   Call<List<WithTaskLabel>> removeLabelsFromResources(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body AddLabelsToResourcesParams body
+    @retrofit2.http.Body AddLabelsToResourcesParams body, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param labelUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskLabel&gt;&gt;
    */
   @Headers({
@@ -128,7 +128,7 @@ public interface LabelApi {
   })
   @POST("update-label")
   Call<List<WithTaskLabel>> updateLabel(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body LabelUpdationParams labelUpdationParams
+    @retrofit2.http.Body LabelUpdationParams labelUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

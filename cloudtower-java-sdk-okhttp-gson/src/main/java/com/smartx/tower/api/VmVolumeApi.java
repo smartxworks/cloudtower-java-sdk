@@ -63,8 +63,8 @@ public class VmVolumeApi {
 
     /**
      * Build call for createVmVolume
-     * @param contentLanguage  (required)
      * @param vmVolumeCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -75,7 +75,7 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmVolumeCall(String contentLanguage, List<VmVolumeCreationParams> vmVolumeCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVmVolumeCall(List<VmVolumeCreationParams> vmVolumeCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmVolumeCreationParams;
 
         // create path and map variables
@@ -110,12 +110,7 @@ public class VmVolumeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVmVolumeValidateBeforeCall(String contentLanguage, List<VmVolumeCreationParams> vmVolumeCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVmVolume(Async)");
-        }
+    private okhttp3.Call createVmVolumeValidateBeforeCall(List<VmVolumeCreationParams> vmVolumeCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmVolumeCreationParams' is set
         if (vmVolumeCreationParams == null) {
@@ -123,7 +118,7 @@ public class VmVolumeApi {
         }
         
 
-        okhttp3.Call localVarCall = createVmVolumeCall(contentLanguage, vmVolumeCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmVolumeCall(vmVolumeCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -131,8 +126,8 @@ public class VmVolumeApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVolumeCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmVolume&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -142,16 +137,16 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmVolume> createVmVolume(String contentLanguage, List<VmVolumeCreationParams> vmVolumeCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmVolume>> localVarResp = createVmVolumeWithHttpInfo(contentLanguage, vmVolumeCreationParams);
+    public List<WithTaskVmVolume> createVmVolume(List<VmVolumeCreationParams> vmVolumeCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmVolume>> localVarResp = createVmVolumeWithHttpInfo(vmVolumeCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVolumeCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmVolume&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -161,8 +156,8 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmVolume>> createVmVolumeWithHttpInfo(String contentLanguage, List<VmVolumeCreationParams> vmVolumeCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVmVolumeValidateBeforeCall(contentLanguage, vmVolumeCreationParams, null);
+    public ApiResponse<List<WithTaskVmVolume>> createVmVolumeWithHttpInfo(List<VmVolumeCreationParams> vmVolumeCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVmVolumeValidateBeforeCall(vmVolumeCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmVolume>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -170,8 +165,8 @@ public class VmVolumeApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmVolumeCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -182,17 +177,17 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmVolumeAsync(String contentLanguage, List<VmVolumeCreationParams> vmVolumeCreationParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
+    public okhttp3.Call createVmVolumeAsync(List<VmVolumeCreationParams> vmVolumeCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVmVolumeValidateBeforeCall(contentLanguage, vmVolumeCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmVolumeValidateBeforeCall(vmVolumeCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmVolume>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVmVolumeFromVm
-     * @param contentLanguage  (required)
      * @param vmVolumeDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -203,7 +198,7 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmVolumeFromVmCall(String contentLanguage, VmVolumeDeletionParams vmVolumeDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmVolumeFromVmCall(VmVolumeDeletionParams vmVolumeDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmVolumeDeletionParams;
 
         // create path and map variables
@@ -238,12 +233,7 @@ public class VmVolumeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmVolumeFromVmValidateBeforeCall(String contentLanguage, VmVolumeDeletionParams vmVolumeDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteVmVolumeFromVm(Async)");
-        }
+    private okhttp3.Call deleteVmVolumeFromVmValidateBeforeCall(VmVolumeDeletionParams vmVolumeDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmVolumeDeletionParams' is set
         if (vmVolumeDeletionParams == null) {
@@ -251,7 +241,7 @@ public class VmVolumeApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVmVolumeFromVmCall(contentLanguage, vmVolumeDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmVolumeFromVmCall(vmVolumeDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -259,8 +249,8 @@ public class VmVolumeApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVolumeDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVmVolume&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -270,16 +260,16 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVmVolume> deleteVmVolumeFromVm(String contentLanguage, VmVolumeDeletionParams vmVolumeDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVmVolume>> localVarResp = deleteVmVolumeFromVmWithHttpInfo(contentLanguage, vmVolumeDeletionParams);
+    public List<WithTaskDeleteVmVolume> deleteVmVolumeFromVm(VmVolumeDeletionParams vmVolumeDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVmVolume>> localVarResp = deleteVmVolumeFromVmWithHttpInfo(vmVolumeDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVolumeDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVmVolume&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -289,8 +279,8 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVmVolume>> deleteVmVolumeFromVmWithHttpInfo(String contentLanguage, VmVolumeDeletionParams vmVolumeDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmVolumeFromVmValidateBeforeCall(contentLanguage, vmVolumeDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteVmVolume>> deleteVmVolumeFromVmWithHttpInfo(VmVolumeDeletionParams vmVolumeDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteVmVolumeFromVmValidateBeforeCall(vmVolumeDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmVolume>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -298,8 +288,8 @@ public class VmVolumeApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmVolumeDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -310,17 +300,17 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmVolumeFromVmAsync(String contentLanguage, VmVolumeDeletionParams vmVolumeDeletionParams, final ApiCallback<List<WithTaskDeleteVmVolume>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmVolumeFromVmAsync(VmVolumeDeletionParams vmVolumeDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVmVolume>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmVolumeFromVmValidateBeforeCall(contentLanguage, vmVolumeDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmVolumeFromVmValidateBeforeCall(vmVolumeDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmVolume>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmVolumes
-     * @param contentLanguage  (required)
      * @param getVmVolumesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -331,7 +321,7 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmVolumesCall(String contentLanguage, GetVmVolumesRequestBody getVmVolumesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmVolumesCall(GetVmVolumesRequestBody getVmVolumesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmVolumesRequestBody;
 
         // create path and map variables
@@ -366,12 +356,7 @@ public class VmVolumeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmVolumesValidateBeforeCall(String contentLanguage, GetVmVolumesRequestBody getVmVolumesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmVolumes(Async)");
-        }
+    private okhttp3.Call getVmVolumesValidateBeforeCall(GetVmVolumesRequestBody getVmVolumesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmVolumesRequestBody' is set
         if (getVmVolumesRequestBody == null) {
@@ -379,7 +364,7 @@ public class VmVolumeApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmVolumesCall(contentLanguage, getVmVolumesRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmVolumesCall(getVmVolumesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -387,8 +372,8 @@ public class VmVolumeApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmVolumesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmVolume&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -398,16 +383,16 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmVolume> getVmVolumes(String contentLanguage, GetVmVolumesRequestBody getVmVolumesRequestBody) throws ApiException {
-        ApiResponse<List<VmVolume>> localVarResp = getVmVolumesWithHttpInfo(contentLanguage, getVmVolumesRequestBody);
+    public List<VmVolume> getVmVolumes(GetVmVolumesRequestBody getVmVolumesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<VmVolume>> localVarResp = getVmVolumesWithHttpInfo(getVmVolumesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmVolumesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmVolume&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -417,8 +402,8 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmVolume>> getVmVolumesWithHttpInfo(String contentLanguage, GetVmVolumesRequestBody getVmVolumesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmVolumesValidateBeforeCall(contentLanguage, getVmVolumesRequestBody, null);
+    public ApiResponse<List<VmVolume>> getVmVolumesWithHttpInfo(GetVmVolumesRequestBody getVmVolumesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmVolumesValidateBeforeCall(getVmVolumesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<VmVolume>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -426,8 +411,8 @@ public class VmVolumeApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmVolumesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -438,17 +423,17 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmVolumesAsync(String contentLanguage, GetVmVolumesRequestBody getVmVolumesRequestBody, final ApiCallback<List<VmVolume>> _callback) throws ApiException {
+    public okhttp3.Call getVmVolumesAsync(GetVmVolumesRequestBody getVmVolumesRequestBody, String contentLanguage, final ApiCallback<List<VmVolume>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmVolumesValidateBeforeCall(contentLanguage, getVmVolumesRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmVolumesValidateBeforeCall(getVmVolumesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<VmVolume>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmVolumesConnection
-     * @param contentLanguage  (required)
      * @param getVmVolumesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -459,7 +444,7 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmVolumesConnectionCall(String contentLanguage, GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmVolumesConnectionCall(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmVolumesConnectionRequestBody;
 
         // create path and map variables
@@ -494,12 +479,7 @@ public class VmVolumeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmVolumesConnectionValidateBeforeCall(String contentLanguage, GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmVolumesConnection(Async)");
-        }
+    private okhttp3.Call getVmVolumesConnectionValidateBeforeCall(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmVolumesConnectionRequestBody' is set
         if (getVmVolumesConnectionRequestBody == null) {
@@ -507,7 +487,7 @@ public class VmVolumeApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmVolumesConnectionCall(contentLanguage, getVmVolumesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmVolumesConnectionCall(getVmVolumesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -515,8 +495,8 @@ public class VmVolumeApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmVolumesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VmVolumeConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -526,16 +506,16 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmVolumeConnection getVmVolumesConnection(String contentLanguage, GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody) throws ApiException {
-        ApiResponse<VmVolumeConnection> localVarResp = getVmVolumesConnectionWithHttpInfo(contentLanguage, getVmVolumesConnectionRequestBody);
+    public VmVolumeConnection getVmVolumesConnection(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VmVolumeConnection> localVarResp = getVmVolumesConnectionWithHttpInfo(getVmVolumesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmVolumesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmVolumeConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -545,8 +525,8 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmVolumeConnection> getVmVolumesConnectionWithHttpInfo(String contentLanguage, GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmVolumesConnectionValidateBeforeCall(contentLanguage, getVmVolumesConnectionRequestBody, null);
+    public ApiResponse<VmVolumeConnection> getVmVolumesConnectionWithHttpInfo(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmVolumesConnectionValidateBeforeCall(getVmVolumesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VmVolumeConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -554,8 +534,8 @@ public class VmVolumeApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmVolumesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -566,9 +546,9 @@ public class VmVolumeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmVolumesConnectionAsync(String contentLanguage, GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, final ApiCallback<VmVolumeConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmVolumesConnectionAsync(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, String contentLanguage, final ApiCallback<VmVolumeConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmVolumesConnectionValidateBeforeCall(contentLanguage, getVmVolumesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmVolumesConnectionValidateBeforeCall(getVmVolumesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VmVolumeConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

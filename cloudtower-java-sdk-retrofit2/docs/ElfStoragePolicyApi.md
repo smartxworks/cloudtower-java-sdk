@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getElfStoragePolicies
 
-> List&lt;ElfStoragePolicy&gt; getElfStoragePolicies(contentLanguage, getElfStoragePoliciesRequestBody)
+> List&lt;ElfStoragePolicy&gt; getElfStoragePolicies(getElfStoragePoliciesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfStoragePolicyApi apiInstance = new ElfStoragePolicyApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody = new GetElfStoragePoliciesRequestBody(); // GetElfStoragePoliciesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ElfStoragePolicy> result = apiInstance.getElfStoragePolicies(contentLanguage, getElfStoragePoliciesRequestBody);
+            List<ElfStoragePolicy> result = apiInstance.getElfStoragePolicies(getElfStoragePoliciesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfStoragePolicyApi#getElfStoragePolicies");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getElfStoragePoliciesRequestBody** | [**GetElfStoragePoliciesRequestBody**](GetElfStoragePoliciesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getElfStoragePoliciesConnection
 
-> ElfStoragePolicyConnection getElfStoragePoliciesConnection(contentLanguage, getElfStoragePoliciesConnectionRequestBody)
+> ElfStoragePolicyConnection getElfStoragePoliciesConnection(getElfStoragePoliciesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfStoragePolicyApi apiInstance = new ElfStoragePolicyApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody = new GetElfStoragePoliciesConnectionRequestBody(); // GetElfStoragePoliciesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ElfStoragePolicyConnection result = apiInstance.getElfStoragePoliciesConnection(contentLanguage, getElfStoragePoliciesConnectionRequestBody);
+            ElfStoragePolicyConnection result = apiInstance.getElfStoragePoliciesConnection(getElfStoragePoliciesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfStoragePolicyApi#getElfStoragePoliciesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getElfStoragePoliciesConnectionRequestBody** | [**GetElfStoragePoliciesConnectionRequestBody**](GetElfStoragePoliciesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

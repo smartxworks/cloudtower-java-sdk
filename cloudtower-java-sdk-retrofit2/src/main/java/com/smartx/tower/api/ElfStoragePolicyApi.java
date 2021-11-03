@@ -23,8 +23,8 @@ public interface ElfStoragePolicyApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getElfStoragePoliciesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ElfStoragePolicy&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ElfStoragePolicyApi {
   })
   @POST("get-elf-storage-policies")
   Call<List<ElfStoragePolicy>> getElfStoragePolicies(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody
+    @retrofit2.http.Body GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getElfStoragePoliciesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ElfStoragePolicyConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ElfStoragePolicyApi {
   })
   @POST("get-elf-storage-policies-connection")
   Call<ElfStoragePolicyConnection> getElfStoragePoliciesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody
+    @retrofit2.http.Body GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

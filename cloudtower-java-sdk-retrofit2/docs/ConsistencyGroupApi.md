@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createConsistencyGroup
 
-> List&lt;WithTaskConsistencyGroup&gt; createConsistencyGroup(contentLanguage, consistencyGroupCreationParams)
+> List&lt;WithTaskConsistencyGroup&gt; createConsistencyGroup(consistencyGroupCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupApi apiInstance = new ConsistencyGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<ConsistencyGroupCreationParams> consistencyGroupCreationParams = Arrays.asList(); // List<ConsistencyGroupCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskConsistencyGroup> result = apiInstance.createConsistencyGroup(contentLanguage, consistencyGroupCreationParams);
+            List<WithTaskConsistencyGroup> result = apiInstance.createConsistencyGroup(consistencyGroupCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupApi#createConsistencyGroup");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **consistencyGroupCreationParams** | [**List&lt;ConsistencyGroupCreationParams&gt;**](ConsistencyGroupCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteConsistencyGroup
 
-> List&lt;WithTaskDeleteConsistencyGroup&gt; deleteConsistencyGroup(contentLanguage, consistencyGroupDeletionParams)
+> List&lt;WithTaskDeleteConsistencyGroup&gt; deleteConsistencyGroup(consistencyGroupDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupApi apiInstance = new ConsistencyGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ConsistencyGroupDeletionParams consistencyGroupDeletionParams = new ConsistencyGroupDeletionParams(); // ConsistencyGroupDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteConsistencyGroup> result = apiInstance.deleteConsistencyGroup(contentLanguage, consistencyGroupDeletionParams);
+            List<WithTaskDeleteConsistencyGroup> result = apiInstance.deleteConsistencyGroup(consistencyGroupDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupApi#deleteConsistencyGroup");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **consistencyGroupDeletionParams** | [**ConsistencyGroupDeletionParams**](ConsistencyGroupDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getConsistencyGroups
 
-> List&lt;ConsistencyGroup&gt; getConsistencyGroups(contentLanguage, getConsistencyGroupsRequestBody)
+> List&lt;ConsistencyGroup&gt; getConsistencyGroups(getConsistencyGroupsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupApi apiInstance = new ConsistencyGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody = new GetConsistencyGroupsRequestBody(); // GetConsistencyGroupsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ConsistencyGroup> result = apiInstance.getConsistencyGroups(contentLanguage, getConsistencyGroupsRequestBody);
+            List<ConsistencyGroup> result = apiInstance.getConsistencyGroups(getConsistencyGroupsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupApi#getConsistencyGroups");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getConsistencyGroupsRequestBody** | [**GetConsistencyGroupsRequestBody**](GetConsistencyGroupsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getConsistencyGroupsConnection
 
-> ConsistencyGroupConnection getConsistencyGroupsConnection(contentLanguage, getConsistencyGroupsConnectionRequestBody)
+> ConsistencyGroupConnection getConsistencyGroupsConnection(getConsistencyGroupsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupApi apiInstance = new ConsistencyGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody = new GetConsistencyGroupsConnectionRequestBody(); // GetConsistencyGroupsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ConsistencyGroupConnection result = apiInstance.getConsistencyGroupsConnection(contentLanguage, getConsistencyGroupsConnectionRequestBody);
+            ConsistencyGroupConnection result = apiInstance.getConsistencyGroupsConnection(getConsistencyGroupsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupApi#getConsistencyGroupsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getConsistencyGroupsConnectionRequestBody** | [**GetConsistencyGroupsConnectionRequestBody**](GetConsistencyGroupsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateConsistencyGroup
 
-> List&lt;WithTaskConsistencyGroup&gt; updateConsistencyGroup(contentLanguage, consistencyGroupUpdationParams)
+> List&lt;WithTaskConsistencyGroup&gt; updateConsistencyGroup(consistencyGroupUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupApi apiInstance = new ConsistencyGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ConsistencyGroupUpdationParams consistencyGroupUpdationParams = new ConsistencyGroupUpdationParams(); // ConsistencyGroupUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskConsistencyGroup> result = apiInstance.updateConsistencyGroup(contentLanguage, consistencyGroupUpdationParams);
+            List<WithTaskConsistencyGroup> result = apiInstance.updateConsistencyGroup(consistencyGroupUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupApi#updateConsistencyGroup");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **consistencyGroupUpdationParams** | [**ConsistencyGroupUpdationParams**](ConsistencyGroupUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

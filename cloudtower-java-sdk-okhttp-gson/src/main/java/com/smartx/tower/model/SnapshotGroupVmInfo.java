@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * SnapshotGroupVmInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class SnapshotGroupVmInfo {
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_STATUS = "vm_snapshot_status";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_STATUS)

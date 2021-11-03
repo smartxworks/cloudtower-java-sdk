@@ -59,8 +59,8 @@ public class ElfDataStoreApi {
 
     /**
      * Build call for getElfDataStores
-     * @param contentLanguage  (required)
      * @param getElfDataStoresRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfDataStoresCall(String contentLanguage, GetElfDataStoresRequestBody getElfDataStoresRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getElfDataStoresCall(GetElfDataStoresRequestBody getElfDataStoresRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getElfDataStoresRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class ElfDataStoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getElfDataStoresValidateBeforeCall(String contentLanguage, GetElfDataStoresRequestBody getElfDataStoresRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getElfDataStores(Async)");
-        }
+    private okhttp3.Call getElfDataStoresValidateBeforeCall(GetElfDataStoresRequestBody getElfDataStoresRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getElfDataStoresRequestBody' is set
         if (getElfDataStoresRequestBody == null) {
@@ -119,7 +114,7 @@ public class ElfDataStoreApi {
         }
         
 
-        okhttp3.Call localVarCall = getElfDataStoresCall(contentLanguage, getElfDataStoresRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfDataStoresCall(getElfDataStoresRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class ElfDataStoreApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfDataStoresRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ElfDataStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ElfDataStore> getElfDataStores(String contentLanguage, GetElfDataStoresRequestBody getElfDataStoresRequestBody) throws ApiException {
-        ApiResponse<List<ElfDataStore>> localVarResp = getElfDataStoresWithHttpInfo(contentLanguage, getElfDataStoresRequestBody);
+    public List<ElfDataStore> getElfDataStores(GetElfDataStoresRequestBody getElfDataStoresRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ElfDataStore>> localVarResp = getElfDataStoresWithHttpInfo(getElfDataStoresRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfDataStoresRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ElfDataStore&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ElfDataStore>> getElfDataStoresWithHttpInfo(String contentLanguage, GetElfDataStoresRequestBody getElfDataStoresRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getElfDataStoresValidateBeforeCall(contentLanguage, getElfDataStoresRequestBody, null);
+    public ApiResponse<List<ElfDataStore>> getElfDataStoresWithHttpInfo(GetElfDataStoresRequestBody getElfDataStoresRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getElfDataStoresValidateBeforeCall(getElfDataStoresRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ElfDataStore>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class ElfDataStoreApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getElfDataStoresRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfDataStoresAsync(String contentLanguage, GetElfDataStoresRequestBody getElfDataStoresRequestBody, final ApiCallback<List<ElfDataStore>> _callback) throws ApiException {
+    public okhttp3.Call getElfDataStoresAsync(GetElfDataStoresRequestBody getElfDataStoresRequestBody, String contentLanguage, final ApiCallback<List<ElfDataStore>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getElfDataStoresValidateBeforeCall(contentLanguage, getElfDataStoresRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfDataStoresValidateBeforeCall(getElfDataStoresRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ElfDataStore>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getElfDataStoresConnection
-     * @param contentLanguage  (required)
      * @param getElfDataStoresConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfDataStoresConnectionCall(String contentLanguage, GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getElfDataStoresConnectionCall(GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getElfDataStoresConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class ElfDataStoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getElfDataStoresConnectionValidateBeforeCall(String contentLanguage, GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getElfDataStoresConnection(Async)");
-        }
+    private okhttp3.Call getElfDataStoresConnectionValidateBeforeCall(GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getElfDataStoresConnectionRequestBody' is set
         if (getElfDataStoresConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class ElfDataStoreApi {
         }
         
 
-        okhttp3.Call localVarCall = getElfDataStoresConnectionCall(contentLanguage, getElfDataStoresConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfDataStoresConnectionCall(getElfDataStoresConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class ElfDataStoreApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfDataStoresConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ElfDataStoreConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ElfDataStoreConnection getElfDataStoresConnection(String contentLanguage, GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody) throws ApiException {
-        ApiResponse<ElfDataStoreConnection> localVarResp = getElfDataStoresConnectionWithHttpInfo(contentLanguage, getElfDataStoresConnectionRequestBody);
+    public ElfDataStoreConnection getElfDataStoresConnection(GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ElfDataStoreConnection> localVarResp = getElfDataStoresConnectionWithHttpInfo(getElfDataStoresConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfDataStoresConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ElfDataStoreConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ElfDataStoreConnection> getElfDataStoresConnectionWithHttpInfo(String contentLanguage, GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getElfDataStoresConnectionValidateBeforeCall(contentLanguage, getElfDataStoresConnectionRequestBody, null);
+    public ApiResponse<ElfDataStoreConnection> getElfDataStoresConnectionWithHttpInfo(GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getElfDataStoresConnectionValidateBeforeCall(getElfDataStoresConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ElfDataStoreConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class ElfDataStoreApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getElfDataStoresConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class ElfDataStoreApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfDataStoresConnectionAsync(String contentLanguage, GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, final ApiCallback<ElfDataStoreConnection> _callback) throws ApiException {
+    public okhttp3.Call getElfDataStoresConnectionAsync(GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, String contentLanguage, final ApiCallback<ElfDataStoreConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getElfDataStoresConnectionValidateBeforeCall(contentLanguage, getElfDataStoresConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfDataStoresConnectionValidateBeforeCall(getElfDataStoresConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ElfDataStoreConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

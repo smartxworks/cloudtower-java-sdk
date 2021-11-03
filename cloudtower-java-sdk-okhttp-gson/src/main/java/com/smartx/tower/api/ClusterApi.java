@@ -65,8 +65,8 @@ public class ClusterApi {
 
     /**
      * Build call for connectCluster
-     * @param contentLanguage  (required)
      * @param clusterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -77,7 +77,7 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectClusterCall(String contentLanguage, List<ClusterCreationParams> clusterCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectClusterCall(List<ClusterCreationParams> clusterCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterCreationParams;
 
         // create path and map variables
@@ -112,12 +112,7 @@ public class ClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectClusterValidateBeforeCall(String contentLanguage, List<ClusterCreationParams> clusterCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling connectCluster(Async)");
-        }
+    private okhttp3.Call connectClusterValidateBeforeCall(List<ClusterCreationParams> clusterCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterCreationParams' is set
         if (clusterCreationParams == null) {
@@ -125,7 +120,7 @@ public class ClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = connectClusterCall(contentLanguage, clusterCreationParams, _callback);
+        okhttp3.Call localVarCall = connectClusterCall(clusterCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -133,8 +128,8 @@ public class ClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -144,16 +139,16 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskCluster> connectCluster(String contentLanguage, List<ClusterCreationParams> clusterCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskCluster>> localVarResp = connectClusterWithHttpInfo(contentLanguage, clusterCreationParams);
+    public List<WithTaskCluster> connectCluster(List<ClusterCreationParams> clusterCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskCluster>> localVarResp = connectClusterWithHttpInfo(clusterCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskCluster&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -163,8 +158,8 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskCluster>> connectClusterWithHttpInfo(String contentLanguage, List<ClusterCreationParams> clusterCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = connectClusterValidateBeforeCall(contentLanguage, clusterCreationParams, null);
+    public ApiResponse<List<WithTaskCluster>> connectClusterWithHttpInfo(List<ClusterCreationParams> clusterCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = connectClusterValidateBeforeCall(clusterCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskCluster>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -172,8 +167,8 @@ public class ClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -184,17 +179,17 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectClusterAsync(String contentLanguage, List<ClusterCreationParams> clusterCreationParams, final ApiCallback<List<WithTaskCluster>> _callback) throws ApiException {
+    public okhttp3.Call connectClusterAsync(List<ClusterCreationParams> clusterCreationParams, String contentLanguage, final ApiCallback<List<WithTaskCluster>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = connectClusterValidateBeforeCall(contentLanguage, clusterCreationParams, _callback);
+        okhttp3.Call localVarCall = connectClusterValidateBeforeCall(clusterCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskCluster>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteCluster
-     * @param contentLanguage  (required)
      * @param clusterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -205,7 +200,7 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteClusterCall(String contentLanguage, ClusterDeletionParams clusterDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteClusterCall(ClusterDeletionParams clusterDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterDeletionParams;
 
         // create path and map variables
@@ -240,12 +235,7 @@ public class ClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteClusterValidateBeforeCall(String contentLanguage, ClusterDeletionParams clusterDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteCluster(Async)");
-        }
+    private okhttp3.Call deleteClusterValidateBeforeCall(ClusterDeletionParams clusterDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterDeletionParams' is set
         if (clusterDeletionParams == null) {
@@ -253,7 +243,7 @@ public class ClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteClusterCall(contentLanguage, clusterDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteClusterCall(clusterDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -261,8 +251,8 @@ public class ClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -272,16 +262,16 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteCluster> deleteCluster(String contentLanguage, ClusterDeletionParams clusterDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteCluster>> localVarResp = deleteClusterWithHttpInfo(contentLanguage, clusterDeletionParams);
+    public List<WithTaskDeleteCluster> deleteCluster(ClusterDeletionParams clusterDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteCluster>> localVarResp = deleteClusterWithHttpInfo(clusterDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteCluster&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -291,8 +281,8 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteCluster>> deleteClusterWithHttpInfo(String contentLanguage, ClusterDeletionParams clusterDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteClusterValidateBeforeCall(contentLanguage, clusterDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteCluster>> deleteClusterWithHttpInfo(ClusterDeletionParams clusterDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteClusterValidateBeforeCall(clusterDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteCluster>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -300,8 +290,8 @@ public class ClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -312,17 +302,17 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteClusterAsync(String contentLanguage, ClusterDeletionParams clusterDeletionParams, final ApiCallback<List<WithTaskDeleteCluster>> _callback) throws ApiException {
+    public okhttp3.Call deleteClusterAsync(ClusterDeletionParams clusterDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteCluster>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteClusterValidateBeforeCall(contentLanguage, clusterDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteClusterValidateBeforeCall(clusterDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteCluster>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getClusters
-     * @param contentLanguage  (required)
      * @param getClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -333,7 +323,7 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClustersCall(String contentLanguage, GetClustersRequestBody getClustersRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClustersCall(GetClustersRequestBody getClustersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getClustersRequestBody;
 
         // create path and map variables
@@ -368,12 +358,7 @@ public class ClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClustersValidateBeforeCall(String contentLanguage, GetClustersRequestBody getClustersRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getClusters(Async)");
-        }
+    private okhttp3.Call getClustersValidateBeforeCall(GetClustersRequestBody getClustersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClustersRequestBody' is set
         if (getClustersRequestBody == null) {
@@ -381,7 +366,7 @@ public class ClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = getClustersCall(contentLanguage, getClustersRequestBody, _callback);
+        okhttp3.Call localVarCall = getClustersCall(getClustersRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -389,8 +374,8 @@ public class ClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Cluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -400,16 +385,16 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Cluster> getClusters(String contentLanguage, GetClustersRequestBody getClustersRequestBody) throws ApiException {
-        ApiResponse<List<Cluster>> localVarResp = getClustersWithHttpInfo(contentLanguage, getClustersRequestBody);
+    public List<Cluster> getClusters(GetClustersRequestBody getClustersRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Cluster>> localVarResp = getClustersWithHttpInfo(getClustersRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Cluster&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -419,8 +404,8 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Cluster>> getClustersWithHttpInfo(String contentLanguage, GetClustersRequestBody getClustersRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getClustersValidateBeforeCall(contentLanguage, getClustersRequestBody, null);
+    public ApiResponse<List<Cluster>> getClustersWithHttpInfo(GetClustersRequestBody getClustersRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getClustersValidateBeforeCall(getClustersRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Cluster>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -428,8 +413,8 @@ public class ClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -440,17 +425,17 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClustersAsync(String contentLanguage, GetClustersRequestBody getClustersRequestBody, final ApiCallback<List<Cluster>> _callback) throws ApiException {
+    public okhttp3.Call getClustersAsync(GetClustersRequestBody getClustersRequestBody, String contentLanguage, final ApiCallback<List<Cluster>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClustersValidateBeforeCall(contentLanguage, getClustersRequestBody, _callback);
+        okhttp3.Call localVarCall = getClustersValidateBeforeCall(getClustersRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Cluster>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getClustersConnection
-     * @param contentLanguage  (required)
      * @param getClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -461,7 +446,7 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClustersConnectionCall(String contentLanguage, GetClustersConnectionRequestBody getClustersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClustersConnectionCall(GetClustersConnectionRequestBody getClustersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getClustersConnectionRequestBody;
 
         // create path and map variables
@@ -496,12 +481,7 @@ public class ClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClustersConnectionValidateBeforeCall(String contentLanguage, GetClustersConnectionRequestBody getClustersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getClustersConnection(Async)");
-        }
+    private okhttp3.Call getClustersConnectionValidateBeforeCall(GetClustersConnectionRequestBody getClustersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClustersConnectionRequestBody' is set
         if (getClustersConnectionRequestBody == null) {
@@ -509,7 +489,7 @@ public class ClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = getClustersConnectionCall(contentLanguage, getClustersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getClustersConnectionCall(getClustersConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -517,8 +497,8 @@ public class ClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ClusterConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -528,16 +508,16 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ClusterConnection getClustersConnection(String contentLanguage, GetClustersConnectionRequestBody getClustersConnectionRequestBody) throws ApiException {
-        ApiResponse<ClusterConnection> localVarResp = getClustersConnectionWithHttpInfo(contentLanguage, getClustersConnectionRequestBody);
+    public ClusterConnection getClustersConnection(GetClustersConnectionRequestBody getClustersConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ClusterConnection> localVarResp = getClustersConnectionWithHttpInfo(getClustersConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ClusterConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -547,8 +527,8 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterConnection> getClustersConnectionWithHttpInfo(String contentLanguage, GetClustersConnectionRequestBody getClustersConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getClustersConnectionValidateBeforeCall(contentLanguage, getClustersConnectionRequestBody, null);
+    public ApiResponse<ClusterConnection> getClustersConnectionWithHttpInfo(GetClustersConnectionRequestBody getClustersConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getClustersConnectionValidateBeforeCall(getClustersConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ClusterConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -556,8 +536,8 @@ public class ClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -568,17 +548,17 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClustersConnectionAsync(String contentLanguage, GetClustersConnectionRequestBody getClustersConnectionRequestBody, final ApiCallback<ClusterConnection> _callback) throws ApiException {
+    public okhttp3.Call getClustersConnectionAsync(GetClustersConnectionRequestBody getClustersConnectionRequestBody, String contentLanguage, final ApiCallback<ClusterConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClustersConnectionValidateBeforeCall(contentLanguage, getClustersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getClustersConnectionValidateBeforeCall(getClustersConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ClusterConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateCluster
-     * @param contentLanguage  (required)
      * @param clusterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -589,7 +569,7 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateClusterCall(String contentLanguage, ClusterUpdationParams clusterUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateClusterCall(ClusterUpdationParams clusterUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterUpdationParams;
 
         // create path and map variables
@@ -624,12 +604,7 @@ public class ClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateClusterValidateBeforeCall(String contentLanguage, ClusterUpdationParams clusterUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateCluster(Async)");
-        }
+    private okhttp3.Call updateClusterValidateBeforeCall(ClusterUpdationParams clusterUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterUpdationParams' is set
         if (clusterUpdationParams == null) {
@@ -637,7 +612,7 @@ public class ClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = updateClusterCall(contentLanguage, clusterUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateClusterCall(clusterUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -645,8 +620,8 @@ public class ClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -656,16 +631,16 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskCluster> updateCluster(String contentLanguage, ClusterUpdationParams clusterUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskCluster>> localVarResp = updateClusterWithHttpInfo(contentLanguage, clusterUpdationParams);
+    public List<WithTaskCluster> updateCluster(ClusterUpdationParams clusterUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskCluster>> localVarResp = updateClusterWithHttpInfo(clusterUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskCluster&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -675,8 +650,8 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskCluster>> updateClusterWithHttpInfo(String contentLanguage, ClusterUpdationParams clusterUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateClusterValidateBeforeCall(contentLanguage, clusterUpdationParams, null);
+    public ApiResponse<List<WithTaskCluster>> updateClusterWithHttpInfo(ClusterUpdationParams clusterUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateClusterValidateBeforeCall(clusterUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskCluster>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -684,8 +659,8 @@ public class ClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -696,17 +671,17 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateClusterAsync(String contentLanguage, ClusterUpdationParams clusterUpdationParams, final ApiCallback<List<WithTaskCluster>> _callback) throws ApiException {
+    public okhttp3.Call updateClusterAsync(ClusterUpdationParams clusterUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskCluster>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateClusterValidateBeforeCall(contentLanguage, clusterUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateClusterValidateBeforeCall(clusterUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskCluster>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateClusterLicense
-     * @param contentLanguage  (required)
      * @param clusterLicenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -717,7 +692,7 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateClusterLicenseCall(String contentLanguage, ClusterLicenseUpdationParams clusterLicenseUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateClusterLicenseCall(ClusterLicenseUpdationParams clusterLicenseUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterLicenseUpdationParams;
 
         // create path and map variables
@@ -752,12 +727,7 @@ public class ClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateClusterLicenseValidateBeforeCall(String contentLanguage, ClusterLicenseUpdationParams clusterLicenseUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateClusterLicense(Async)");
-        }
+    private okhttp3.Call updateClusterLicenseValidateBeforeCall(ClusterLicenseUpdationParams clusterLicenseUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterLicenseUpdationParams' is set
         if (clusterLicenseUpdationParams == null) {
@@ -765,7 +735,7 @@ public class ClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = updateClusterLicenseCall(contentLanguage, clusterLicenseUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateClusterLicenseCall(clusterLicenseUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -773,8 +743,8 @@ public class ClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterLicenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -784,16 +754,16 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskCluster> updateClusterLicense(String contentLanguage, ClusterLicenseUpdationParams clusterLicenseUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskCluster>> localVarResp = updateClusterLicenseWithHttpInfo(contentLanguage, clusterLicenseUpdationParams);
+    public List<WithTaskCluster> updateClusterLicense(ClusterLicenseUpdationParams clusterLicenseUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskCluster>> localVarResp = updateClusterLicenseWithHttpInfo(clusterLicenseUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterLicenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskCluster&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -803,8 +773,8 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskCluster>> updateClusterLicenseWithHttpInfo(String contentLanguage, ClusterLicenseUpdationParams clusterLicenseUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateClusterLicenseValidateBeforeCall(contentLanguage, clusterLicenseUpdationParams, null);
+    public ApiResponse<List<WithTaskCluster>> updateClusterLicenseWithHttpInfo(ClusterLicenseUpdationParams clusterLicenseUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateClusterLicenseValidateBeforeCall(clusterLicenseUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskCluster>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -812,8 +782,8 @@ public class ClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterLicenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -824,9 +794,9 @@ public class ClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateClusterLicenseAsync(String contentLanguage, ClusterLicenseUpdationParams clusterLicenseUpdationParams, final ApiCallback<List<WithTaskCluster>> _callback) throws ApiException {
+    public okhttp3.Call updateClusterLicenseAsync(ClusterLicenseUpdationParams clusterLicenseUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskCluster>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateClusterLicenseValidateBeforeCall(contentLanguage, clusterLicenseUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateClusterLicenseValidateBeforeCall(clusterLicenseUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskCluster>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

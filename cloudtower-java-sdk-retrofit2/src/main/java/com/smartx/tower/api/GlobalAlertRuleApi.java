@@ -26,8 +26,8 @@ public interface GlobalAlertRuleApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getGlobalAlertRulesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;GlobalAlertRule&gt;&gt;
    */
   @Headers({
@@ -35,14 +35,14 @@ public interface GlobalAlertRuleApi {
   })
   @POST("get-global-alert-rules")
   Call<List<GlobalAlertRule>> getGlobalAlertRules(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody
+    @retrofit2.http.Body GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getGlobalAlertRulesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;GlobalAlertRuleConnection&gt;
    */
   @Headers({
@@ -50,14 +50,14 @@ public interface GlobalAlertRuleApi {
   })
   @POST("get-global-alert-rules-connection")
   Call<GlobalAlertRuleConnection> getGlobalAlertRulesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody
+    @retrofit2.http.Body GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param customizeAlertRuleUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskGlobalAlertRule&gt;&gt;
    */
   @Headers({
@@ -65,14 +65,14 @@ public interface GlobalAlertRuleApi {
   })
   @POST("update-customize-alert-rule")
   Call<List<WithTaskGlobalAlertRule>> updateCustomizeAlertRule(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams
+    @retrofit2.http.Body CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param globalAlertRuleUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskGlobalAlertRule&gt;&gt;
    */
   @Headers({
@@ -80,7 +80,7 @@ public interface GlobalAlertRuleApi {
   })
   @POST("update-global-alert-rule")
   Call<List<WithTaskGlobalAlertRule>> updateGlobalAlertRule(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams
+    @retrofit2.http.Body GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

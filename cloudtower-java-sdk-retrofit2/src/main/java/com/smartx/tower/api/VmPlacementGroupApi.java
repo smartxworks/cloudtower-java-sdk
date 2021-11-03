@@ -28,8 +28,8 @@ public interface VmPlacementGroupApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmPlacementGroupCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmPlacementGroup&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface VmPlacementGroupApi {
   })
   @POST("create-vm-placement-group")
   Call<List<WithTaskVmPlacementGroup>> createVmPlacementGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams
+    @retrofit2.http.Body List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmPlacementGroupDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVmPlacementGroup&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface VmPlacementGroupApi {
   })
   @POST("delete-vm-placement-group")
   Call<List<WithTaskDeleteVmPlacementGroup>> deleteVmPlacementGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams
+    @retrofit2.http.Body VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmPlacementGroupsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmPlacementGroup&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface VmPlacementGroupApi {
   })
   @POST("get-vm-placement-groups")
   Call<List<VmPlacementGroup>> getVmPlacementGroups(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody
+    @retrofit2.http.Body GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmPlacementGroupsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmPlacementGroupConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface VmPlacementGroupApi {
   })
   @POST("get-vm-placement-groups-connection")
   Call<VmPlacementGroupConnection> getVmPlacementGroupsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody
+    @retrofit2.http.Body GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmPlacementGroupUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmPlacementGroup&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface VmPlacementGroupApi {
   })
   @POST("update-vm-placement-group")
   Call<List<WithTaskVmPlacementGroup>> updateVmPlacementGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams
+    @retrofit2.http.Body VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -64,8 +64,8 @@ public class VmPlacementGroupApi {
 
     /**
      * Build call for createVmPlacementGroup
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmPlacementGroupCall(String contentLanguage, List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVmPlacementGroupCall(List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmPlacementGroupCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class VmPlacementGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVmPlacementGroupValidateBeforeCall(String contentLanguage, List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVmPlacementGroup(Async)");
-        }
+    private okhttp3.Call createVmPlacementGroupValidateBeforeCall(List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmPlacementGroupCreationParams' is set
         if (vmPlacementGroupCreationParams == null) {
@@ -124,7 +119,7 @@ public class VmPlacementGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = createVmPlacementGroupCall(contentLanguage, vmPlacementGroupCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmPlacementGroupCall(vmPlacementGroupCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class VmPlacementGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmPlacementGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmPlacementGroup> createVmPlacementGroup(String contentLanguage, List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmPlacementGroup>> localVarResp = createVmPlacementGroupWithHttpInfo(contentLanguage, vmPlacementGroupCreationParams);
+    public List<WithTaskVmPlacementGroup> createVmPlacementGroup(List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmPlacementGroup>> localVarResp = createVmPlacementGroupWithHttpInfo(vmPlacementGroupCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmPlacementGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmPlacementGroup>> createVmPlacementGroupWithHttpInfo(String contentLanguage, List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVmPlacementGroupValidateBeforeCall(contentLanguage, vmPlacementGroupCreationParams, null);
+    public ApiResponse<List<WithTaskVmPlacementGroup>> createVmPlacementGroupWithHttpInfo(List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVmPlacementGroupValidateBeforeCall(vmPlacementGroupCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmPlacementGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class VmPlacementGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmPlacementGroupAsync(String contentLanguage, List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, final ApiCallback<List<WithTaskVmPlacementGroup>> _callback) throws ApiException {
+    public okhttp3.Call createVmPlacementGroupAsync(List<VmPlacementGroupCreationParams> vmPlacementGroupCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVmPlacementGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVmPlacementGroupValidateBeforeCall(contentLanguage, vmPlacementGroupCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmPlacementGroupValidateBeforeCall(vmPlacementGroupCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmPlacementGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVmPlacementGroup
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmPlacementGroupCall(String contentLanguage, VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmPlacementGroupCall(VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmPlacementGroupDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class VmPlacementGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmPlacementGroupValidateBeforeCall(String contentLanguage, VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteVmPlacementGroup(Async)");
-        }
+    private okhttp3.Call deleteVmPlacementGroupValidateBeforeCall(VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmPlacementGroupDeletionParams' is set
         if (vmPlacementGroupDeletionParams == null) {
@@ -252,7 +242,7 @@ public class VmPlacementGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVmPlacementGroupCall(contentLanguage, vmPlacementGroupDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmPlacementGroupCall(vmPlacementGroupDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class VmPlacementGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVmPlacementGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVmPlacementGroup> deleteVmPlacementGroup(String contentLanguage, VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVmPlacementGroup>> localVarResp = deleteVmPlacementGroupWithHttpInfo(contentLanguage, vmPlacementGroupDeletionParams);
+    public List<WithTaskDeleteVmPlacementGroup> deleteVmPlacementGroup(VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVmPlacementGroup>> localVarResp = deleteVmPlacementGroupWithHttpInfo(vmPlacementGroupDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVmPlacementGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVmPlacementGroup>> deleteVmPlacementGroupWithHttpInfo(String contentLanguage, VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmPlacementGroupValidateBeforeCall(contentLanguage, vmPlacementGroupDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteVmPlacementGroup>> deleteVmPlacementGroupWithHttpInfo(VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteVmPlacementGroupValidateBeforeCall(vmPlacementGroupDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmPlacementGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class VmPlacementGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmPlacementGroupAsync(String contentLanguage, VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, final ApiCallback<List<WithTaskDeleteVmPlacementGroup>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmPlacementGroupAsync(VmPlacementGroupDeletionParams vmPlacementGroupDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVmPlacementGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmPlacementGroupValidateBeforeCall(contentLanguage, vmPlacementGroupDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmPlacementGroupValidateBeforeCall(vmPlacementGroupDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmPlacementGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmPlacementGroups
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmPlacementGroupsCall(String contentLanguage, GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmPlacementGroupsCall(GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmPlacementGroupsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class VmPlacementGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmPlacementGroupsValidateBeforeCall(String contentLanguage, GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmPlacementGroups(Async)");
-        }
+    private okhttp3.Call getVmPlacementGroupsValidateBeforeCall(GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmPlacementGroupsRequestBody' is set
         if (getVmPlacementGroupsRequestBody == null) {
@@ -380,7 +365,7 @@ public class VmPlacementGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmPlacementGroupsCall(contentLanguage, getVmPlacementGroupsRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmPlacementGroupsCall(getVmPlacementGroupsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class VmPlacementGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmPlacementGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmPlacementGroup> getVmPlacementGroups(String contentLanguage, GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody) throws ApiException {
-        ApiResponse<List<VmPlacementGroup>> localVarResp = getVmPlacementGroupsWithHttpInfo(contentLanguage, getVmPlacementGroupsRequestBody);
+    public List<VmPlacementGroup> getVmPlacementGroups(GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<VmPlacementGroup>> localVarResp = getVmPlacementGroupsWithHttpInfo(getVmPlacementGroupsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmPlacementGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmPlacementGroup>> getVmPlacementGroupsWithHttpInfo(String contentLanguage, GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmPlacementGroupsValidateBeforeCall(contentLanguage, getVmPlacementGroupsRequestBody, null);
+    public ApiResponse<List<VmPlacementGroup>> getVmPlacementGroupsWithHttpInfo(GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmPlacementGroupsValidateBeforeCall(getVmPlacementGroupsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<VmPlacementGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class VmPlacementGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmPlacementGroupsAsync(String contentLanguage, GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, final ApiCallback<List<VmPlacementGroup>> _callback) throws ApiException {
+    public okhttp3.Call getVmPlacementGroupsAsync(GetVmPlacementGroupsRequestBody getVmPlacementGroupsRequestBody, String contentLanguage, final ApiCallback<List<VmPlacementGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmPlacementGroupsValidateBeforeCall(contentLanguage, getVmPlacementGroupsRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmPlacementGroupsValidateBeforeCall(getVmPlacementGroupsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<VmPlacementGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmPlacementGroupsConnection
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmPlacementGroupsConnectionCall(String contentLanguage, GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmPlacementGroupsConnectionCall(GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmPlacementGroupsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class VmPlacementGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmPlacementGroupsConnectionValidateBeforeCall(String contentLanguage, GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmPlacementGroupsConnection(Async)");
-        }
+    private okhttp3.Call getVmPlacementGroupsConnectionValidateBeforeCall(GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmPlacementGroupsConnectionRequestBody' is set
         if (getVmPlacementGroupsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class VmPlacementGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmPlacementGroupsConnectionCall(contentLanguage, getVmPlacementGroupsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmPlacementGroupsConnectionCall(getVmPlacementGroupsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class VmPlacementGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VmPlacementGroupConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmPlacementGroupConnection getVmPlacementGroupsConnection(String contentLanguage, GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody) throws ApiException {
-        ApiResponse<VmPlacementGroupConnection> localVarResp = getVmPlacementGroupsConnectionWithHttpInfo(contentLanguage, getVmPlacementGroupsConnectionRequestBody);
+    public VmPlacementGroupConnection getVmPlacementGroupsConnection(GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VmPlacementGroupConnection> localVarResp = getVmPlacementGroupsConnectionWithHttpInfo(getVmPlacementGroupsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmPlacementGroupConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmPlacementGroupConnection> getVmPlacementGroupsConnectionWithHttpInfo(String contentLanguage, GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmPlacementGroupsConnectionValidateBeforeCall(contentLanguage, getVmPlacementGroupsConnectionRequestBody, null);
+    public ApiResponse<VmPlacementGroupConnection> getVmPlacementGroupsConnectionWithHttpInfo(GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmPlacementGroupsConnectionValidateBeforeCall(getVmPlacementGroupsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VmPlacementGroupConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class VmPlacementGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmPlacementGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmPlacementGroupsConnectionAsync(String contentLanguage, GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, final ApiCallback<VmPlacementGroupConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmPlacementGroupsConnectionAsync(GetVmPlacementGroupsConnectionRequestBody getVmPlacementGroupsConnectionRequestBody, String contentLanguage, final ApiCallback<VmPlacementGroupConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmPlacementGroupsConnectionValidateBeforeCall(contentLanguage, getVmPlacementGroupsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmPlacementGroupsConnectionValidateBeforeCall(getVmPlacementGroupsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VmPlacementGroupConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateVmPlacementGroup
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmPlacementGroupCall(String contentLanguage, VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVmPlacementGroupCall(VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmPlacementGroupUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class VmPlacementGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVmPlacementGroupValidateBeforeCall(String contentLanguage, VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateVmPlacementGroup(Async)");
-        }
+    private okhttp3.Call updateVmPlacementGroupValidateBeforeCall(VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmPlacementGroupUpdationParams' is set
         if (vmPlacementGroupUpdationParams == null) {
@@ -636,7 +611,7 @@ public class VmPlacementGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = updateVmPlacementGroupCall(contentLanguage, vmPlacementGroupUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVmPlacementGroupCall(vmPlacementGroupUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class VmPlacementGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmPlacementGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmPlacementGroup> updateVmPlacementGroup(String contentLanguage, VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmPlacementGroup>> localVarResp = updateVmPlacementGroupWithHttpInfo(contentLanguage, vmPlacementGroupUpdationParams);
+    public List<WithTaskVmPlacementGroup> updateVmPlacementGroup(VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmPlacementGroup>> localVarResp = updateVmPlacementGroupWithHttpInfo(vmPlacementGroupUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmPlacementGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmPlacementGroup>> updateVmPlacementGroupWithHttpInfo(String contentLanguage, VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateVmPlacementGroupValidateBeforeCall(contentLanguage, vmPlacementGroupUpdationParams, null);
+    public ApiResponse<List<WithTaskVmPlacementGroup>> updateVmPlacementGroupWithHttpInfo(VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateVmPlacementGroupValidateBeforeCall(vmPlacementGroupUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmPlacementGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class VmPlacementGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmPlacementGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class VmPlacementGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmPlacementGroupAsync(String contentLanguage, VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, final ApiCallback<List<WithTaskVmPlacementGroup>> _callback) throws ApiException {
+    public okhttp3.Call updateVmPlacementGroupAsync(VmPlacementGroupUpdationParams vmPlacementGroupUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVmPlacementGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateVmPlacementGroupValidateBeforeCall(contentLanguage, vmPlacementGroupUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVmPlacementGroupValidateBeforeCall(vmPlacementGroupUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmPlacementGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

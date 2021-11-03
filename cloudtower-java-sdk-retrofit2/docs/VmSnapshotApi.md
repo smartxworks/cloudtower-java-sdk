@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createVmSnapshot
 
-> List&lt;WithTaskVmSnapshot&gt; createVmSnapshot(contentLanguage, vmSnapshotCreationParams)
+> List&lt;WithTaskVmSnapshot&gt; createVmSnapshot(vmSnapshotCreationParams, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmSnapshotApi apiInstance = new VmSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmSnapshotCreationParams vmSnapshotCreationParams = new VmSnapshotCreationParams(); // VmSnapshotCreationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmSnapshot> result = apiInstance.createVmSnapshot(contentLanguage, vmSnapshotCreationParams);
+            List<WithTaskVmSnapshot> result = apiInstance.createVmSnapshot(vmSnapshotCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmSnapshotApi#createVmSnapshot");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmSnapshotCreationParams** | [**VmSnapshotCreationParams**](VmSnapshotCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## deleteVmSnapshot
 
-> List&lt;WithTaskDeleteVmSnapshot&gt; deleteVmSnapshot(contentLanguage, vmSnapshotDeletionParams)
+> List&lt;WithTaskDeleteVmSnapshot&gt; deleteVmSnapshot(vmSnapshotDeletionParams, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmSnapshotApi apiInstance = new VmSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmSnapshotDeletionParams vmSnapshotDeletionParams = new VmSnapshotDeletionParams(); // VmSnapshotDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVmSnapshot> result = apiInstance.deleteVmSnapshot(contentLanguage, vmSnapshotDeletionParams);
+            List<WithTaskDeleteVmSnapshot> result = apiInstance.deleteVmSnapshot(vmSnapshotDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmSnapshotApi#deleteVmSnapshot");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmSnapshotDeletionParams** | [**VmSnapshotDeletionParams**](VmSnapshotDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## getVmSnapshots
 
-> List&lt;VmSnapshot&gt; getVmSnapshots(contentLanguage, getVmSnapshotsRequestBody)
+> List&lt;VmSnapshot&gt; getVmSnapshots(getVmSnapshotsRequestBody, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmSnapshotApi apiInstance = new VmSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmSnapshotsRequestBody getVmSnapshotsRequestBody = new GetVmSnapshotsRequestBody(); // GetVmSnapshotsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmSnapshot> result = apiInstance.getVmSnapshots(contentLanguage, getVmSnapshotsRequestBody);
+            List<VmSnapshot> result = apiInstance.getVmSnapshots(getVmSnapshotsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmSnapshotApi#getVmSnapshots");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmSnapshotsRequestBody** | [**GetVmSnapshotsRequestBody**](GetVmSnapshotsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## getVmSnapshotsConnection
 
-> VmSnapshotConnection getVmSnapshotsConnection(contentLanguage, getVmSnapshotsConnectionRequestBody)
+> VmSnapshotConnection getVmSnapshotsConnection(getVmSnapshotsConnectionRequestBody, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmSnapshotApi apiInstance = new VmSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody = new GetVmSnapshotsConnectionRequestBody(); // GetVmSnapshotsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmSnapshotConnection result = apiInstance.getVmSnapshotsConnection(contentLanguage, getVmSnapshotsConnectionRequestBody);
+            VmSnapshotConnection result = apiInstance.getVmSnapshotsConnection(getVmSnapshotsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmSnapshotApi#getVmSnapshotsConnection");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmSnapshotsConnectionRequestBody** | [**GetVmSnapshotsConnectionRequestBody**](GetVmSnapshotsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

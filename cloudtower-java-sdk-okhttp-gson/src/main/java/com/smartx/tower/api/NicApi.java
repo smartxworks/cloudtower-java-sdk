@@ -61,8 +61,8 @@ public class NicApi {
 
     /**
      * Build call for getNics
-     * @param contentLanguage  (required)
      * @param getNicsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -73,7 +73,7 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNicsCall(String contentLanguage, GetNicsRequestBody getNicsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNicsCall(GetNicsRequestBody getNicsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNicsRequestBody;
 
         // create path and map variables
@@ -108,12 +108,7 @@ public class NicApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNicsValidateBeforeCall(String contentLanguage, GetNicsRequestBody getNicsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNics(Async)");
-        }
+    private okhttp3.Call getNicsValidateBeforeCall(GetNicsRequestBody getNicsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNicsRequestBody' is set
         if (getNicsRequestBody == null) {
@@ -121,7 +116,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = getNicsCall(contentLanguage, getNicsRequestBody, _callback);
+        okhttp3.Call localVarCall = getNicsCall(getNicsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -129,8 +124,8 @@ public class NicApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNicsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -140,16 +135,16 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Nic> getNics(String contentLanguage, GetNicsRequestBody getNicsRequestBody) throws ApiException {
-        ApiResponse<List<Nic>> localVarResp = getNicsWithHttpInfo(contentLanguage, getNicsRequestBody);
+    public List<Nic> getNics(GetNicsRequestBody getNicsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Nic>> localVarResp = getNicsWithHttpInfo(getNicsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNicsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Nic&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -159,8 +154,8 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Nic>> getNicsWithHttpInfo(String contentLanguage, GetNicsRequestBody getNicsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNicsValidateBeforeCall(contentLanguage, getNicsRequestBody, null);
+    public ApiResponse<List<Nic>> getNicsWithHttpInfo(GetNicsRequestBody getNicsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNicsValidateBeforeCall(getNicsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Nic>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -168,8 +163,8 @@ public class NicApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNicsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -180,17 +175,17 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNicsAsync(String contentLanguage, GetNicsRequestBody getNicsRequestBody, final ApiCallback<List<Nic>> _callback) throws ApiException {
+    public okhttp3.Call getNicsAsync(GetNicsRequestBody getNicsRequestBody, String contentLanguage, final ApiCallback<List<Nic>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNicsValidateBeforeCall(contentLanguage, getNicsRequestBody, _callback);
+        okhttp3.Call localVarCall = getNicsValidateBeforeCall(getNicsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Nic>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNicsConnection
-     * @param contentLanguage  (required)
      * @param getNicsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -201,7 +196,7 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNicsConnectionCall(String contentLanguage, GetNicsConnectionRequestBody getNicsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNicsConnectionCall(GetNicsConnectionRequestBody getNicsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNicsConnectionRequestBody;
 
         // create path and map variables
@@ -236,12 +231,7 @@ public class NicApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNicsConnectionValidateBeforeCall(String contentLanguage, GetNicsConnectionRequestBody getNicsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNicsConnection(Async)");
-        }
+    private okhttp3.Call getNicsConnectionValidateBeforeCall(GetNicsConnectionRequestBody getNicsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNicsConnectionRequestBody' is set
         if (getNicsConnectionRequestBody == null) {
@@ -249,7 +239,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = getNicsConnectionCall(contentLanguage, getNicsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNicsConnectionCall(getNicsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -257,8 +247,8 @@ public class NicApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNicsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return NicConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -268,16 +258,16 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NicConnection getNicsConnection(String contentLanguage, GetNicsConnectionRequestBody getNicsConnectionRequestBody) throws ApiException {
-        ApiResponse<NicConnection> localVarResp = getNicsConnectionWithHttpInfo(contentLanguage, getNicsConnectionRequestBody);
+    public NicConnection getNicsConnection(GetNicsConnectionRequestBody getNicsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<NicConnection> localVarResp = getNicsConnectionWithHttpInfo(getNicsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNicsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NicConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -287,8 +277,8 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NicConnection> getNicsConnectionWithHttpInfo(String contentLanguage, GetNicsConnectionRequestBody getNicsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNicsConnectionValidateBeforeCall(contentLanguage, getNicsConnectionRequestBody, null);
+    public ApiResponse<NicConnection> getNicsConnectionWithHttpInfo(GetNicsConnectionRequestBody getNicsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNicsConnectionValidateBeforeCall(getNicsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<NicConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -296,8 +286,8 @@ public class NicApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNicsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -308,17 +298,17 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNicsConnectionAsync(String contentLanguage, GetNicsConnectionRequestBody getNicsConnectionRequestBody, final ApiCallback<NicConnection> _callback) throws ApiException {
+    public okhttp3.Call getNicsConnectionAsync(GetNicsConnectionRequestBody getNicsConnectionRequestBody, String contentLanguage, final ApiCallback<NicConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNicsConnectionValidateBeforeCall(contentLanguage, getNicsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNicsConnectionValidateBeforeCall(getNicsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<NicConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateNic
-     * @param contentLanguage  (required)
      * @param nicUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -329,7 +319,7 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNicCall(String contentLanguage, NicUpdationParams nicUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNicCall(NicUpdationParams nicUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = nicUpdationParams;
 
         // create path and map variables
@@ -364,12 +354,7 @@ public class NicApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNicValidateBeforeCall(String contentLanguage, NicUpdationParams nicUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateNic(Async)");
-        }
+    private okhttp3.Call updateNicValidateBeforeCall(NicUpdationParams nicUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nicUpdationParams' is set
         if (nicUpdationParams == null) {
@@ -377,7 +362,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = updateNicCall(contentLanguage, nicUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateNicCall(nicUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -385,8 +370,8 @@ public class NicApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param nicUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -396,16 +381,16 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNic> updateNic(String contentLanguage, NicUpdationParams nicUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskNic>> localVarResp = updateNicWithHttpInfo(contentLanguage, nicUpdationParams);
+    public List<WithTaskNic> updateNic(NicUpdationParams nicUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskNic>> localVarResp = updateNicWithHttpInfo(nicUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param nicUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNic&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -415,8 +400,8 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNic>> updateNicWithHttpInfo(String contentLanguage, NicUpdationParams nicUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateNicValidateBeforeCall(contentLanguage, nicUpdationParams, null);
+    public ApiResponse<List<WithTaskNic>> updateNicWithHttpInfo(NicUpdationParams nicUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateNicValidateBeforeCall(nicUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNic>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -424,8 +409,8 @@ public class NicApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param nicUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -436,9 +421,9 @@ public class NicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNicAsync(String contentLanguage, NicUpdationParams nicUpdationParams, final ApiCallback<List<WithTaskNic>> _callback) throws ApiException {
+    public okhttp3.Call updateNicAsync(NicUpdationParams nicUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskNic>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNicValidateBeforeCall(contentLanguage, nicUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateNicValidateBeforeCall(nicUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNic>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

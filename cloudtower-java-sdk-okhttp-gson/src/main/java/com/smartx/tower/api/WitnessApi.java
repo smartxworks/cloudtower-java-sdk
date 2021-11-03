@@ -59,8 +59,8 @@ public class WitnessApi {
 
     /**
      * Build call for getWitnesses
-     * @param contentLanguage  (required)
      * @param getWitnessesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getWitnessesCall(String contentLanguage, GetWitnessesRequestBody getWitnessesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getWitnessesCall(GetWitnessesRequestBody getWitnessesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getWitnessesRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class WitnessApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getWitnessesValidateBeforeCall(String contentLanguage, GetWitnessesRequestBody getWitnessesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getWitnesses(Async)");
-        }
+    private okhttp3.Call getWitnessesValidateBeforeCall(GetWitnessesRequestBody getWitnessesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getWitnessesRequestBody' is set
         if (getWitnessesRequestBody == null) {
@@ -119,7 +114,7 @@ public class WitnessApi {
         }
         
 
-        okhttp3.Call localVarCall = getWitnessesCall(contentLanguage, getWitnessesRequestBody, _callback);
+        okhttp3.Call localVarCall = getWitnessesCall(getWitnessesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class WitnessApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getWitnessesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Witness&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Witness> getWitnesses(String contentLanguage, GetWitnessesRequestBody getWitnessesRequestBody) throws ApiException {
-        ApiResponse<List<Witness>> localVarResp = getWitnessesWithHttpInfo(contentLanguage, getWitnessesRequestBody);
+    public List<Witness> getWitnesses(GetWitnessesRequestBody getWitnessesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Witness>> localVarResp = getWitnessesWithHttpInfo(getWitnessesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getWitnessesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Witness&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Witness>> getWitnessesWithHttpInfo(String contentLanguage, GetWitnessesRequestBody getWitnessesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getWitnessesValidateBeforeCall(contentLanguage, getWitnessesRequestBody, null);
+    public ApiResponse<List<Witness>> getWitnessesWithHttpInfo(GetWitnessesRequestBody getWitnessesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getWitnessesValidateBeforeCall(getWitnessesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Witness>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class WitnessApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getWitnessesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getWitnessesAsync(String contentLanguage, GetWitnessesRequestBody getWitnessesRequestBody, final ApiCallback<List<Witness>> _callback) throws ApiException {
+    public okhttp3.Call getWitnessesAsync(GetWitnessesRequestBody getWitnessesRequestBody, String contentLanguage, final ApiCallback<List<Witness>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getWitnessesValidateBeforeCall(contentLanguage, getWitnessesRequestBody, _callback);
+        okhttp3.Call localVarCall = getWitnessesValidateBeforeCall(getWitnessesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Witness>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getWitnessesConnection
-     * @param contentLanguage  (required)
      * @param getWitnessesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getWitnessesConnectionCall(String contentLanguage, GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getWitnessesConnectionCall(GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getWitnessesConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class WitnessApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getWitnessesConnectionValidateBeforeCall(String contentLanguage, GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getWitnessesConnection(Async)");
-        }
+    private okhttp3.Call getWitnessesConnectionValidateBeforeCall(GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getWitnessesConnectionRequestBody' is set
         if (getWitnessesConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class WitnessApi {
         }
         
 
-        okhttp3.Call localVarCall = getWitnessesConnectionCall(contentLanguage, getWitnessesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getWitnessesConnectionCall(getWitnessesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class WitnessApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getWitnessesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return WitnessConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public WitnessConnection getWitnessesConnection(String contentLanguage, GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody) throws ApiException {
-        ApiResponse<WitnessConnection> localVarResp = getWitnessesConnectionWithHttpInfo(contentLanguage, getWitnessesConnectionRequestBody);
+    public WitnessConnection getWitnessesConnection(GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<WitnessConnection> localVarResp = getWitnessesConnectionWithHttpInfo(getWitnessesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getWitnessesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;WitnessConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<WitnessConnection> getWitnessesConnectionWithHttpInfo(String contentLanguage, GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getWitnessesConnectionValidateBeforeCall(contentLanguage, getWitnessesConnectionRequestBody, null);
+    public ApiResponse<WitnessConnection> getWitnessesConnectionWithHttpInfo(GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getWitnessesConnectionValidateBeforeCall(getWitnessesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<WitnessConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class WitnessApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getWitnessesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class WitnessApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getWitnessesConnectionAsync(String contentLanguage, GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, final ApiCallback<WitnessConnection> _callback) throws ApiException {
+    public okhttp3.Call getWitnessesConnectionAsync(GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, String contentLanguage, final ApiCallback<WitnessConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getWitnessesConnectionValidateBeforeCall(contentLanguage, getWitnessesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getWitnessesConnectionValidateBeforeCall(getWitnessesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<WitnessConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -23,8 +23,8 @@ public interface ApplicationApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getApplicationsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Application&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ApplicationApi {
   })
   @POST("get-applications")
   Call<List<Application>> getApplications(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetApplicationsRequestBody getApplicationsRequestBody
+    @retrofit2.http.Body GetApplicationsRequestBody getApplicationsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getApplicationsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ApplicationConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ApplicationApi {
   })
   @POST("get-applications-connection")
   Call<ApplicationConnection> getApplicationsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody
+    @retrofit2.http.Body GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getClusterTopoes
 
-> List&lt;ClusterTopo&gt; getClusterTopoes(contentLanguage, getClusterTopoesRequestBody)
+> List&lt;ClusterTopo&gt; getClusterTopoes(getClusterTopoesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterTopoApi apiInstance = new ClusterTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterTopoesRequestBody getClusterTopoesRequestBody = new GetClusterTopoesRequestBody(); // GetClusterTopoesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ClusterTopo> result = apiInstance.getClusterTopoes(contentLanguage, getClusterTopoesRequestBody);
+            List<ClusterTopo> result = apiInstance.getClusterTopoes(getClusterTopoesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterTopoApi#getClusterTopoes");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterTopoesRequestBody** | [**GetClusterTopoesRequestBody**](GetClusterTopoesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getClusterTopoesConnection
 
-> ClusterTopoConnection getClusterTopoesConnection(contentLanguage, getClusterTopoesConnectionRequestBody)
+> ClusterTopoConnection getClusterTopoesConnection(getClusterTopoesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterTopoApi apiInstance = new ClusterTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody = new GetClusterTopoesConnectionRequestBody(); // GetClusterTopoesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ClusterTopoConnection result = apiInstance.getClusterTopoesConnection(contentLanguage, getClusterTopoesConnectionRequestBody);
+            ClusterTopoConnection result = apiInstance.getClusterTopoesConnection(getClusterTopoesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterTopoApi#getClusterTopoesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterTopoesConnectionRequestBody** | [**GetClusterTopoesConnectionRequestBody**](GetClusterTopoesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -30,8 +30,8 @@ public interface UserApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param userCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskUser&gt;&gt;
    */
   @Headers({
@@ -39,14 +39,14 @@ public interface UserApi {
   })
   @POST("create-user")
   Call<List<WithTaskUser>> createUser(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<UserCreationParams> userCreationParams
+    @retrofit2.http.Body List<UserCreationParams> userCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param userDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteUser&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface UserApi {
   })
   @POST("delete-user")
   Call<List<WithTaskDeleteUser>> deleteUser(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body UserDeletionParams userDeletionParams
+    @retrofit2.http.Body UserDeletionParams userDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUsersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;User&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface UserApi {
   })
   @POST("get-users")
   Call<List<User>> getUsers(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUsersRequestBody getUsersRequestBody
+    @retrofit2.http.Body GetUsersRequestBody getUsersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUsersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;UserConnection&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface UserApi {
   })
   @POST("get-users-connection")
   Call<UserConnection> getUsersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUsersConnectionRequestBody getUsersConnectionRequestBody
+    @retrofit2.http.Body GetUsersConnectionRequestBody getUsersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param loginInput  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;WithTaskTokenString&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface UserApi {
   })
   @POST("login")
   Call<WithTaskTokenString> login(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body LoginInput loginInput
+    @retrofit2.http.Body LoginInput loginInput, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param userUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskUser&gt;&gt;
    */
   @Headers({
@@ -114,7 +114,7 @@ public interface UserApi {
   })
   @POST("update-user")
   Call<List<WithTaskUser>> updateUser(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body UserUpdationParams userUpdationParams
+    @retrofit2.http.Body UserUpdationParams userUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

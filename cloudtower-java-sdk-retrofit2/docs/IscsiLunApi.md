@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## cloneIscsiLunFromSnapshot
 
-> List&lt;WithTaskIscsiLun&gt; cloneIscsiLunFromSnapshot(contentLanguage, iscsiLunCloneParams)
+> List&lt;WithTaskIscsiLun&gt; cloneIscsiLunFromSnapshot(iscsiLunCloneParams, contentLanguage)
 
 
 
@@ -43,10 +43,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<IscsiLunCloneParams> iscsiLunCloneParams = Arrays.asList(); // List<IscsiLunCloneParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiLun> result = apiInstance.cloneIscsiLunFromSnapshot(contentLanguage, iscsiLunCloneParams);
+            List<WithTaskIscsiLun> result = apiInstance.cloneIscsiLunFromSnapshot(iscsiLunCloneParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#cloneIscsiLunFromSnapshot");
@@ -64,8 +64,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunCloneParams** | [**List&lt;IscsiLunCloneParams&gt;**](IscsiLunCloneParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## createIscsiLun
 
-> List&lt;WithTaskIscsiLun&gt; createIscsiLun(contentLanguage, iscsiLunCreationParams)
+> List&lt;WithTaskIscsiLun&gt; createIscsiLun(iscsiLunCreationParams, contentLanguage)
 
 
 
@@ -117,10 +117,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<IscsiLunCreationParams> iscsiLunCreationParams = Arrays.asList(); // List<IscsiLunCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiLun> result = apiInstance.createIscsiLun(contentLanguage, iscsiLunCreationParams);
+            List<WithTaskIscsiLun> result = apiInstance.createIscsiLun(iscsiLunCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#createIscsiLun");
@@ -138,8 +138,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunCreationParams** | [**List&lt;IscsiLunCreationParams&gt;**](IscsiLunCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## deleteIscsiLun
 
-> List&lt;WithTaskDeleteIscsiLun&gt; deleteIscsiLun(contentLanguage, iscsiLunDeletionParams)
+> List&lt;WithTaskDeleteIscsiLun&gt; deleteIscsiLun(iscsiLunDeletionParams, contentLanguage)
 
 
 
@@ -191,10 +191,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         IscsiLunDeletionParams iscsiLunDeletionParams = new IscsiLunDeletionParams(); // IscsiLunDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteIscsiLun> result = apiInstance.deleteIscsiLun(contentLanguage, iscsiLunDeletionParams);
+            List<WithTaskDeleteIscsiLun> result = apiInstance.deleteIscsiLun(iscsiLunDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#deleteIscsiLun");
@@ -212,8 +212,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunDeletionParams** | [**IscsiLunDeletionParams**](IscsiLunDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ## getIscsiLuns
 
-> List&lt;IscsiLun&gt; getIscsiLuns(contentLanguage, getIscsiLunsRequestBody)
+> List&lt;IscsiLun&gt; getIscsiLuns(getIscsiLunsRequestBody, contentLanguage)
 
 
 
@@ -265,10 +265,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiLunsRequestBody getIscsiLunsRequestBody = new GetIscsiLunsRequestBody(); // GetIscsiLunsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<IscsiLun> result = apiInstance.getIscsiLuns(contentLanguage, getIscsiLunsRequestBody);
+            List<IscsiLun> result = apiInstance.getIscsiLuns(getIscsiLunsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#getIscsiLuns");
@@ -286,8 +286,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiLunsRequestBody** | [**GetIscsiLunsRequestBody**](GetIscsiLunsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## getIscsiLunsConnection
 
-> IscsiLunConnection getIscsiLunsConnection(contentLanguage, getIscsiLunsConnectionRequestBody)
+> IscsiLunConnection getIscsiLunsConnection(getIscsiLunsConnectionRequestBody, contentLanguage)
 
 
 
@@ -339,10 +339,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody = new GetIscsiLunsConnectionRequestBody(); // GetIscsiLunsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            IscsiLunConnection result = apiInstance.getIscsiLunsConnection(contentLanguage, getIscsiLunsConnectionRequestBody);
+            IscsiLunConnection result = apiInstance.getIscsiLunsConnection(getIscsiLunsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#getIscsiLunsConnection");
@@ -360,8 +360,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiLunsConnectionRequestBody** | [**GetIscsiLunsConnectionRequestBody**](GetIscsiLunsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## rollbackIscsiLunFromSnapshot
 
-> List&lt;WithTaskIscsiLun&gt; rollbackIscsiLunFromSnapshot(contentLanguage, iscsiLunRollbackParams)
+> List&lt;WithTaskIscsiLun&gt; rollbackIscsiLunFromSnapshot(iscsiLunRollbackParams, contentLanguage)
 
 
 
@@ -413,10 +413,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<IscsiLunRollbackParams> iscsiLunRollbackParams = Arrays.asList(); // List<IscsiLunRollbackParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiLun> result = apiInstance.rollbackIscsiLunFromSnapshot(contentLanguage, iscsiLunRollbackParams);
+            List<WithTaskIscsiLun> result = apiInstance.rollbackIscsiLunFromSnapshot(iscsiLunRollbackParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#rollbackIscsiLunFromSnapshot");
@@ -434,8 +434,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunRollbackParams** | [**List&lt;IscsiLunRollbackParams&gt;**](IscsiLunRollbackParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ## updateIscsiLun
 
-> List&lt;WithTaskIscsiLun&gt; updateIscsiLun(contentLanguage, iscsiLunUpdationParams)
+> List&lt;WithTaskIscsiLun&gt; updateIscsiLun(iscsiLunUpdationParams, contentLanguage)
 
 
 
@@ -487,10 +487,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunApi apiInstance = new IscsiLunApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         IscsiLunUpdationParams iscsiLunUpdationParams = new IscsiLunUpdationParams(); // IscsiLunUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiLun> result = apiInstance.updateIscsiLun(contentLanguage, iscsiLunUpdationParams);
+            List<WithTaskIscsiLun> result = apiInstance.updateIscsiLun(iscsiLunUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunApi#updateIscsiLun");
@@ -508,8 +508,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunUpdationParams** | [**IscsiLunUpdationParams**](IscsiLunUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

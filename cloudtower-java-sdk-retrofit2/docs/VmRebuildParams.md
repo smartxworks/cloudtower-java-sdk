@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **description** | **String** |  |  [optional]
 **name** | **String** |  | 
 **hostId** | **String** |  |  [optional]
-**clusterId** | **String** |  | 
+**clusterId** | **String** |  |  [optional]
 
 
 

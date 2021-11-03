@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createUser
 
-> List&lt;WithTaskUser&gt; createUser(contentLanguage, userCreationParams)
+> List&lt;WithTaskUser&gt; createUser(userCreationParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<UserCreationParams> userCreationParams = Arrays.asList(); // List<UserCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskUser> result = apiInstance.createUser(contentLanguage, userCreationParams);
+            List<WithTaskUser> result = apiInstance.createUser(userCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#createUser");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **userCreationParams** | [**List&lt;UserCreationParams&gt;**](UserCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## deleteUser
 
-> List&lt;WithTaskDeleteUser&gt; deleteUser(contentLanguage, userDeletionParams)
+> List&lt;WithTaskDeleteUser&gt; deleteUser(userDeletionParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         UserDeletionParams userDeletionParams = new UserDeletionParams(); // UserDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteUser> result = apiInstance.deleteUser(contentLanguage, userDeletionParams);
+            List<WithTaskDeleteUser> result = apiInstance.deleteUser(userDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#deleteUser");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **userDeletionParams** | [**UserDeletionParams**](UserDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## getUsers
 
-> List&lt;User&gt; getUsers(contentLanguage, getUsersRequestBody)
+> List&lt;User&gt; getUsers(getUsersRequestBody, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUsersRequestBody getUsersRequestBody = new GetUsersRequestBody(); // GetUsersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<User> result = apiInstance.getUsers(contentLanguage, getUsersRequestBody);
+            List<User> result = apiInstance.getUsers(getUsersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#getUsers");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUsersRequestBody** | [**GetUsersRequestBody**](GetUsersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getUsersConnection
 
-> UserConnection getUsersConnection(contentLanguage, getUsersConnectionRequestBody)
+> UserConnection getUsersConnection(getUsersConnectionRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUsersConnectionRequestBody getUsersConnectionRequestBody = new GetUsersConnectionRequestBody(); // GetUsersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            UserConnection result = apiInstance.getUsersConnection(contentLanguage, getUsersConnectionRequestBody);
+            UserConnection result = apiInstance.getUsersConnection(getUsersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#getUsersConnection");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUsersConnectionRequestBody** | [**GetUsersConnectionRequestBody**](GetUsersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## login
 
-> WithTaskTokenString login(contentLanguage, loginInput)
+> WithTaskTokenString login(loginInput, contentLanguage)
 
 
 
@@ -331,10 +331,10 @@ public class Example {
         defaultClient.setBasePath("http://localhost/v2/api");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         LoginInput loginInput = new LoginInput(); // LoginInput | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            WithTaskTokenString result = apiInstance.login(contentLanguage, loginInput);
+            WithTaskTokenString result = apiInstance.login(loginInput, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#login");
@@ -352,8 +352,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **loginInput** | [**LoginInput**](LoginInput.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -378,7 +378,7 @@ No authorization required
 
 ## updateUser
 
-> List&lt;WithTaskUser&gt; updateUser(contentLanguage, userUpdationParams)
+> List&lt;WithTaskUser&gt; updateUser(userUpdationParams, contentLanguage)
 
 
 
@@ -405,10 +405,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         UserUpdationParams userUpdationParams = new UserUpdationParams(); // UserUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskUser> result = apiInstance.updateUser(contentLanguage, userUpdationParams);
+            List<WithTaskUser> result = apiInstance.updateUser(userUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#updateUser");
@@ -426,8 +426,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **userUpdationParams** | [**UserUpdationParams**](UserUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

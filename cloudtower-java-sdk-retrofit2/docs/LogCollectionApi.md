@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getLogCollections
 
-> List&lt;LogCollection&gt; getLogCollections(contentLanguage, getLogCollectionsRequestBody)
+> List&lt;LogCollection&gt; getLogCollections(getLogCollectionsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LogCollectionApi apiInstance = new LogCollectionApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetLogCollectionsRequestBody getLogCollectionsRequestBody = new GetLogCollectionsRequestBody(); // GetLogCollectionsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<LogCollection> result = apiInstance.getLogCollections(contentLanguage, getLogCollectionsRequestBody);
+            List<LogCollection> result = apiInstance.getLogCollections(getLogCollectionsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LogCollectionApi#getLogCollections");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getLogCollectionsRequestBody** | [**GetLogCollectionsRequestBody**](GetLogCollectionsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getLogCollectionsConnection
 
-> LogCollectionConnection getLogCollectionsConnection(contentLanguage, getLogCollectionsConnectionRequestBody)
+> LogCollectionConnection getLogCollectionsConnection(getLogCollectionsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LogCollectionApi apiInstance = new LogCollectionApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody = new GetLogCollectionsConnectionRequestBody(); // GetLogCollectionsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            LogCollectionConnection result = apiInstance.getLogCollectionsConnection(contentLanguage, getLogCollectionsConnectionRequestBody);
+            LogCollectionConnection result = apiInstance.getLogCollectionsConnection(getLogCollectionsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LogCollectionApi#getLogCollectionsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getLogCollectionsConnectionRequestBody** | [**GetLogCollectionsConnectionRequestBody**](GetLogCollectionsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

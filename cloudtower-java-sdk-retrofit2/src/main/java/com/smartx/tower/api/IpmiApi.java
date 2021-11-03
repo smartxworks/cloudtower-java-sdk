@@ -21,8 +21,8 @@ public interface IpmiApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIpmisRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Ipmi&gt;&gt;
    */
   @Headers({
@@ -30,7 +30,7 @@ public interface IpmiApi {
   })
   @POST("get-ipmis")
   Call<List<Ipmi>> getIpmis(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIpmisRequestBody getIpmisRequestBody
+    @retrofit2.http.Body GetIpmisRequestBody getIpmisRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

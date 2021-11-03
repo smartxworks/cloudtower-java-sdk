@@ -40,7 +40,7 @@ Method | HTTP request | Description
 
 ## addVmCdRom
 
-> List&lt;WithTaskVm&gt; addVmCdRom(contentLanguage, vmAddCdRomParams)
+> List&lt;WithTaskVm&gt; addVmCdRom(vmAddCdRomParams, contentLanguage)
 
 
 
@@ -67,10 +67,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmAddCdRomParams vmAddCdRomParams = new VmAddCdRomParams(); // VmAddCdRomParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.addVmCdRom(contentLanguage, vmAddCdRomParams);
+            List<WithTaskVm> result = apiInstance.addVmCdRom(vmAddCdRomParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#addVmCdRom");
@@ -88,8 +88,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmAddCdRomParams** | [**VmAddCdRomParams**](VmAddCdRomParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## addVmDisk
 
-> List&lt;WithTaskVm&gt; addVmDisk(contentLanguage, vmAddDiskParams)
+> List&lt;WithTaskVm&gt; addVmDisk(vmAddDiskParams, contentLanguage)
 
 
 
@@ -141,10 +141,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmAddDiskParams vmAddDiskParams = new VmAddDiskParams(); // VmAddDiskParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.addVmDisk(contentLanguage, vmAddDiskParams);
+            List<WithTaskVm> result = apiInstance.addVmDisk(vmAddDiskParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#addVmDisk");
@@ -162,8 +162,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmAddDiskParams** | [**VmAddDiskParams**](VmAddDiskParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ## addVmNic
 
-> List&lt;WithTaskVm&gt; addVmNic(contentLanguage, vmAddNicParams)
+> List&lt;WithTaskVm&gt; addVmNic(vmAddNicParams, contentLanguage)
 
 
 
@@ -215,10 +215,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmAddNicParams vmAddNicParams = new VmAddNicParams(); // VmAddNicParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.addVmNic(contentLanguage, vmAddNicParams);
+            List<WithTaskVm> result = apiInstance.addVmNic(vmAddNicParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#addVmNic");
@@ -236,8 +236,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmAddNicParams** | [**VmAddNicParams**](VmAddNicParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 ## addVmToFolder
 
-> List&lt;WithTaskVm&gt; addVmToFolder(contentLanguage, vmAddFolderParams)
+> List&lt;WithTaskVm&gt; addVmToFolder(vmAddFolderParams, contentLanguage)
 
 
 
@@ -289,10 +289,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmAddFolderParams vmAddFolderParams = new VmAddFolderParams(); // VmAddFolderParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.addVmToFolder(contentLanguage, vmAddFolderParams);
+            List<WithTaskVm> result = apiInstance.addVmToFolder(vmAddFolderParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#addVmToFolder");
@@ -310,8 +310,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmAddFolderParams** | [**VmAddFolderParams**](VmAddFolderParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ## cloneVm
 
-> List&lt;WithTaskVm&gt; cloneVm(contentLanguage, vmCloneParams)
+> List&lt;WithTaskVm&gt; cloneVm(vmCloneParams, contentLanguage)
 
 
 
@@ -363,10 +363,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmCloneParams> vmCloneParams = Arrays.asList(); // List<VmCloneParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.cloneVm(contentLanguage, vmCloneParams);
+            List<WithTaskVm> result = apiInstance.cloneVm(vmCloneParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#cloneVm");
@@ -384,8 +384,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmCloneParams** | [**List&lt;VmCloneParams&gt;**](VmCloneParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
 
 ## convertVmTemplateToVm
 
-> List&lt;WithTaskVm&gt; convertVmTemplateToVm(contentLanguage, convertVmTemplateToVmParams)
+> List&lt;WithTaskVm&gt; convertVmTemplateToVm(convertVmTemplateToVmParams, contentLanguage)
 
 
 
@@ -437,10 +437,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<ConvertVmTemplateToVmParams> convertVmTemplateToVmParams = Arrays.asList(); // List<ConvertVmTemplateToVmParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.convertVmTemplateToVm(contentLanguage, convertVmTemplateToVmParams);
+            List<WithTaskVm> result = apiInstance.convertVmTemplateToVm(convertVmTemplateToVmParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#convertVmTemplateToVm");
@@ -458,8 +458,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **convertVmTemplateToVmParams** | [**List&lt;ConvertVmTemplateToVmParams&gt;**](ConvertVmTemplateToVmParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ## createVm
 
-> List&lt;WithTaskVm&gt; createVm(contentLanguage, vmCreationParams)
+> List&lt;WithTaskVm&gt; createVm(vmCreationParams, contentLanguage)
 
 
 
@@ -511,10 +511,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmCreationParams> vmCreationParams = Arrays.asList(); // List<VmCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.createVm(contentLanguage, vmCreationParams);
+            List<WithTaskVm> result = apiInstance.createVm(vmCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#createVm");
@@ -532,8 +532,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmCreationParams** | [**List&lt;VmCreationParams&gt;**](VmCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 ## createVmFromTemplate
 
-> List&lt;WithTaskVm&gt; createVmFromTemplate(contentLanguage, vmCreateVmFromTemplateParams)
+> List&lt;WithTaskVm&gt; createVmFromTemplate(vmCreateVmFromTemplateParams, contentLanguage)
 
 
 
@@ -585,10 +585,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmCreateVmFromTemplateParams> vmCreateVmFromTemplateParams = Arrays.asList(); // List<VmCreateVmFromTemplateParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.createVmFromTemplate(contentLanguage, vmCreateVmFromTemplateParams);
+            List<WithTaskVm> result = apiInstance.createVmFromTemplate(vmCreateVmFromTemplateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#createVmFromTemplate");
@@ -606,8 +606,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmCreateVmFromTemplateParams** | [**List&lt;VmCreateVmFromTemplateParams&gt;**](VmCreateVmFromTemplateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -632,7 +632,7 @@ Name | Type | Description  | Notes
 
 ## deleteVm
 
-> List&lt;InlineResponse200&gt; deleteVm(contentLanguage, vmOperateParams)
+> List&lt;InlineResponse200&gt; deleteVm(vmOperateParams, contentLanguage)
 
 
 
@@ -659,10 +659,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<InlineResponse200> result = apiInstance.deleteVm(contentLanguage, vmOperateParams);
+            List<InlineResponse200> result = apiInstance.deleteVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#deleteVm");
@@ -680,8 +680,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -706,7 +706,7 @@ Name | Type | Description  | Notes
 
 ## forceRestartVm
 
-> List&lt;WithTaskVm&gt; forceRestartVm(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; forceRestartVm(vmOperateParams, contentLanguage)
 
 
 
@@ -733,10 +733,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.forceRestartVm(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.forceRestartVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#forceRestartVm");
@@ -754,8 +754,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -780,7 +780,7 @@ Name | Type | Description  | Notes
 
 ## forceShutDownVm
 
-> List&lt;WithTaskVm&gt; forceShutDownVm(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; forceShutDownVm(vmOperateParams, contentLanguage)
 
 
 
@@ -807,10 +807,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.forceShutDownVm(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.forceShutDownVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#forceShutDownVm");
@@ -828,8 +828,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -854,7 +854,7 @@ Name | Type | Description  | Notes
 
 ## getVms
 
-> List&lt;Vm&gt; getVms(contentLanguage, getVmsRequestBody)
+> List&lt;Vm&gt; getVms(getVmsRequestBody, contentLanguage)
 
 
 
@@ -881,10 +881,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmsRequestBody getVmsRequestBody = new GetVmsRequestBody(); // GetVmsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Vm> result = apiInstance.getVms(contentLanguage, getVmsRequestBody);
+            List<Vm> result = apiInstance.getVms(getVmsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#getVms");
@@ -902,8 +902,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmsRequestBody** | [**GetVmsRequestBody**](GetVmsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -928,7 +928,7 @@ Name | Type | Description  | Notes
 
 ## getVmsConnection
 
-> VmConnection getVmsConnection(contentLanguage, getVmsConnectionRequestBody)
+> VmConnection getVmsConnection(getVmsConnectionRequestBody, contentLanguage)
 
 
 
@@ -955,10 +955,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmsConnectionRequestBody getVmsConnectionRequestBody = new GetVmsConnectionRequestBody(); // GetVmsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmConnection result = apiInstance.getVmsConnection(contentLanguage, getVmsConnectionRequestBody);
+            VmConnection result = apiInstance.getVmsConnection(getVmsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#getVmsConnection");
@@ -976,8 +976,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmsConnectionRequestBody** | [**GetVmsConnectionRequestBody**](GetVmsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
 
 ## installVmtools
 
-> List&lt;WithTaskVm&gt; installVmtools(contentLanguage, installVmtoolsParams)
+> List&lt;WithTaskVm&gt; installVmtools(installVmtoolsParams, contentLanguage)
 
 
 
@@ -1029,10 +1029,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         InstallVmtoolsParams installVmtoolsParams = new InstallVmtoolsParams(); // InstallVmtoolsParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.installVmtools(contentLanguage, installVmtoolsParams);
+            List<WithTaskVm> result = apiInstance.installVmtools(installVmtoolsParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#installVmtools");
@@ -1050,8 +1050,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **installVmtoolsParams** | [**InstallVmtoolsParams**](InstallVmtoolsParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1076,7 +1076,7 @@ Name | Type | Description  | Notes
 
 ## migRateVm
 
-> List&lt;WithTaskVm&gt; migRateVm(contentLanguage, vmMigrateParams)
+> List&lt;WithTaskVm&gt; migRateVm(vmMigrateParams, contentLanguage)
 
 
 
@@ -1103,10 +1103,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmMigrateParams vmMigrateParams = new VmMigrateParams(); // VmMigrateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.migRateVm(contentLanguage, vmMigrateParams);
+            List<WithTaskVm> result = apiInstance.migRateVm(vmMigrateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#migRateVm");
@@ -1124,8 +1124,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmMigrateParams** | [**VmMigrateParams**](VmMigrateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1150,7 +1150,7 @@ Name | Type | Description  | Notes
 
 ## moveVmToRecycleBin
 
-> List&lt;InlineResponse200&gt; moveVmToRecycleBin(contentLanguage, vmOperateParams)
+> List&lt;InlineResponse200&gt; moveVmToRecycleBin(vmOperateParams, contentLanguage)
 
 
 
@@ -1177,10 +1177,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<InlineResponse200> result = apiInstance.moveVmToRecycleBin(contentLanguage, vmOperateParams);
+            List<InlineResponse200> result = apiInstance.moveVmToRecycleBin(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#moveVmToRecycleBin");
@@ -1198,8 +1198,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1224,7 +1224,7 @@ Name | Type | Description  | Notes
 
 ## rebuildVm
 
-> List&lt;WithTaskVm&gt; rebuildVm(contentLanguage, vmRebuildParams)
+> List&lt;WithTaskVm&gt; rebuildVm(vmRebuildParams, contentLanguage)
 
 
 
@@ -1251,10 +1251,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmRebuildParams> vmRebuildParams = Arrays.asList(); // List<VmRebuildParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.rebuildVm(contentLanguage, vmRebuildParams);
+            List<WithTaskVm> result = apiInstance.rebuildVm(vmRebuildParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#rebuildVm");
@@ -1272,8 +1272,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmRebuildParams** | [**List&lt;VmRebuildParams&gt;**](VmRebuildParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1298,7 +1298,7 @@ Name | Type | Description  | Notes
 
 ## recoverVmFromRecycleBin
 
-> List&lt;InlineResponse200&gt; recoverVmFromRecycleBin(contentLanguage, vmOperateParams)
+> List&lt;InlineResponse200&gt; recoverVmFromRecycleBin(vmOperateParams, contentLanguage)
 
 
 
@@ -1325,10 +1325,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<InlineResponse200> result = apiInstance.recoverVmFromRecycleBin(contentLanguage, vmOperateParams);
+            List<InlineResponse200> result = apiInstance.recoverVmFromRecycleBin(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#recoverVmFromRecycleBin");
@@ -1346,8 +1346,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1372,7 +1372,7 @@ Name | Type | Description  | Notes
 
 ## removeVmCdRom
 
-> List&lt;WithTaskVm&gt; removeVmCdRom(contentLanguage, vmRemoveCdRomParams)
+> List&lt;WithTaskVm&gt; removeVmCdRom(vmRemoveCdRomParams, contentLanguage)
 
 
 
@@ -1399,10 +1399,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmRemoveCdRomParams vmRemoveCdRomParams = new VmRemoveCdRomParams(); // VmRemoveCdRomParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.removeVmCdRom(contentLanguage, vmRemoveCdRomParams);
+            List<WithTaskVm> result = apiInstance.removeVmCdRom(vmRemoveCdRomParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#removeVmCdRom");
@@ -1420,8 +1420,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmRemoveCdRomParams** | [**VmRemoveCdRomParams**](VmRemoveCdRomParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1446,7 +1446,7 @@ Name | Type | Description  | Notes
 
 ## removeVmDisk
 
-> List&lt;WithTaskVm&gt; removeVmDisk(contentLanguage, vmRemoveDiskParams)
+> List&lt;WithTaskVm&gt; removeVmDisk(vmRemoveDiskParams, contentLanguage)
 
 
 
@@ -1473,10 +1473,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmRemoveDiskParams vmRemoveDiskParams = new VmRemoveDiskParams(); // VmRemoveDiskParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.removeVmDisk(contentLanguage, vmRemoveDiskParams);
+            List<WithTaskVm> result = apiInstance.removeVmDisk(vmRemoveDiskParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#removeVmDisk");
@@ -1494,8 +1494,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmRemoveDiskParams** | [**VmRemoveDiskParams**](VmRemoveDiskParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1520,7 +1520,7 @@ Name | Type | Description  | Notes
 
 ## removeVmNic
 
-> List&lt;WithTaskVm&gt; removeVmNic(contentLanguage, vmRemoveNicParams)
+> List&lt;WithTaskVm&gt; removeVmNic(vmRemoveNicParams, contentLanguage)
 
 
 
@@ -1547,10 +1547,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmRemoveNicParams vmRemoveNicParams = new VmRemoveNicParams(); // VmRemoveNicParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.removeVmNic(contentLanguage, vmRemoveNicParams);
+            List<WithTaskVm> result = apiInstance.removeVmNic(vmRemoveNicParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#removeVmNic");
@@ -1568,8 +1568,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmRemoveNicParams** | [**VmRemoveNicParams**](VmRemoveNicParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1594,7 +1594,7 @@ Name | Type | Description  | Notes
 
 ## removeVmToFolder
 
-> List&lt;WithTaskVm&gt; removeVmToFolder(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; removeVmToFolder(vmOperateParams, contentLanguage)
 
 
 
@@ -1621,10 +1621,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.removeVmToFolder(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.removeVmToFolder(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#removeVmToFolder");
@@ -1642,8 +1642,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1668,7 +1668,7 @@ Name | Type | Description  | Notes
 
 ## restartVm
 
-> List&lt;WithTaskVm&gt; restartVm(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; restartVm(vmOperateParams, contentLanguage)
 
 
 
@@ -1695,10 +1695,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.restartVm(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.restartVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#restartVm");
@@ -1716,8 +1716,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1742,7 +1742,7 @@ Name | Type | Description  | Notes
 
 ## resumeVm
 
-> List&lt;WithTaskVm&gt; resumeVm(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; resumeVm(vmOperateParams, contentLanguage)
 
 
 
@@ -1769,10 +1769,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.resumeVm(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.resumeVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#resumeVm");
@@ -1790,8 +1790,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1816,7 +1816,7 @@ Name | Type | Description  | Notes
 
 ## rollbackVm
 
-> List&lt;WithTaskVm&gt; rollbackVm(contentLanguage, vmRollbackParams)
+> List&lt;WithTaskVm&gt; rollbackVm(vmRollbackParams, contentLanguage)
 
 
 
@@ -1843,10 +1843,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmRollbackParams vmRollbackParams = new VmRollbackParams(); // VmRollbackParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.rollbackVm(contentLanguage, vmRollbackParams);
+            List<WithTaskVm> result = apiInstance.rollbackVm(vmRollbackParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#rollbackVm");
@@ -1864,8 +1864,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmRollbackParams** | [**VmRollbackParams**](VmRollbackParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1890,7 +1890,7 @@ Name | Type | Description  | Notes
 
 ## shutDownVm
 
-> List&lt;WithTaskVm&gt; shutDownVm(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; shutDownVm(vmOperateParams, contentLanguage)
 
 
 
@@ -1917,10 +1917,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.shutDownVm(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.shutDownVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#shutDownVm");
@@ -1938,8 +1938,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -1964,7 +1964,7 @@ Name | Type | Description  | Notes
 
 ## startVm
 
-> List&lt;WithTaskVm&gt; startVm(contentLanguage, vmStartParams)
+> List&lt;WithTaskVm&gt; startVm(vmStartParams, contentLanguage)
 
 
 
@@ -1991,10 +1991,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmStartParams vmStartParams = new VmStartParams(); // VmStartParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.startVm(contentLanguage, vmStartParams);
+            List<WithTaskVm> result = apiInstance.startVm(vmStartParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#startVm");
@@ -2012,8 +2012,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmStartParams** | [**VmStartParams**](VmStartParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -2038,7 +2038,7 @@ Name | Type | Description  | Notes
 
 ## suspendVm
 
-> List&lt;WithTaskVm&gt; suspendVm(contentLanguage, vmOperateParams)
+> List&lt;WithTaskVm&gt; suspendVm(vmOperateParams, contentLanguage)
 
 
 
@@ -2065,10 +2065,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.suspendVm(contentLanguage, vmOperateParams);
+            List<WithTaskVm> result = apiInstance.suspendVm(vmOperateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#suspendVm");
@@ -2086,8 +2086,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmOperateParams** | [**VmOperateParams**](VmOperateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -2112,7 +2112,7 @@ Name | Type | Description  | Notes
 
 ## updateVm
 
-> List&lt;WithTaskVm&gt; updateVm(contentLanguage, vmUpdateParams)
+> List&lt;WithTaskVm&gt; updateVm(vmUpdateParams, contentLanguage)
 
 
 
@@ -2139,10 +2139,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmUpdateParams vmUpdateParams = new VmUpdateParams(); // VmUpdateParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.updateVm(contentLanguage, vmUpdateParams);
+            List<WithTaskVm> result = apiInstance.updateVm(vmUpdateParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#updateVm");
@@ -2160,8 +2160,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmUpdateParams** | [**VmUpdateParams**](VmUpdateParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -2186,7 +2186,7 @@ Name | Type | Description  | Notes
 
 ## updateVmDisk
 
-> List&lt;WithTaskVm&gt; updateVmDisk(contentLanguage, vmUpdateDiskParams)
+> List&lt;WithTaskVm&gt; updateVmDisk(vmUpdateDiskParams, contentLanguage)
 
 
 
@@ -2213,10 +2213,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmUpdateDiskParams vmUpdateDiskParams = new VmUpdateDiskParams(); // VmUpdateDiskParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.updateVmDisk(contentLanguage, vmUpdateDiskParams);
+            List<WithTaskVm> result = apiInstance.updateVmDisk(vmUpdateDiskParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#updateVmDisk");
@@ -2234,8 +2234,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmUpdateDiskParams** | [**VmUpdateDiskParams**](VmUpdateDiskParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -2260,7 +2260,7 @@ Name | Type | Description  | Notes
 
 ## updateVmNic
 
-> List&lt;WithTaskVm&gt; updateVmNic(contentLanguage, vmUpdateNicParams)
+> List&lt;WithTaskVm&gt; updateVmNic(vmUpdateNicParams, contentLanguage)
 
 
 
@@ -2287,10 +2287,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmApi apiInstance = new VmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmUpdateNicParams vmUpdateNicParams = new VmUpdateNicParams(); // VmUpdateNicParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVm> result = apiInstance.updateVmNic(contentLanguage, vmUpdateNicParams);
+            List<WithTaskVm> result = apiInstance.updateVmNic(vmUpdateNicParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmApi#updateVmNic");
@@ -2308,8 +2308,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmUpdateNicParams** | [**VmUpdateNicParams**](VmUpdateNicParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

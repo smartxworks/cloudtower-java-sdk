@@ -23,8 +23,8 @@ public interface EverouteLicenseApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEverouteLicensesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;EverouteLicense&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface EverouteLicenseApi {
   })
   @POST("get-everoute-licenses")
   Call<List<EverouteLicense>> getEverouteLicenses(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEverouteLicensesRequestBody getEverouteLicensesRequestBody
+    @retrofit2.http.Body GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEverouteLicensesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;EverouteLicenseConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface EverouteLicenseApi {
   })
   @POST("get-everoute-licenses-connection")
   Call<EverouteLicenseConnection> getEverouteLicensesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody
+    @retrofit2.http.Body GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

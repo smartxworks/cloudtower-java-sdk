@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getVcenterAccounts
 
-> List&lt;VcenterAccount&gt; getVcenterAccounts(contentLanguage, getVcenterAccountsRequestBody)
+> List&lt;VcenterAccount&gt; getVcenterAccounts(getVcenterAccountsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VcenterAccountApi apiInstance = new VcenterAccountApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVcenterAccountsRequestBody getVcenterAccountsRequestBody = new GetVcenterAccountsRequestBody(); // GetVcenterAccountsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VcenterAccount> result = apiInstance.getVcenterAccounts(contentLanguage, getVcenterAccountsRequestBody);
+            List<VcenterAccount> result = apiInstance.getVcenterAccounts(getVcenterAccountsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VcenterAccountApi#getVcenterAccounts");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVcenterAccountsRequestBody** | [**GetVcenterAccountsRequestBody**](GetVcenterAccountsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getVcenterAccountsConnection
 
-> VcenterAccountConnection getVcenterAccountsConnection(contentLanguage, getVcenterAccountsConnectionRequestBody)
+> VcenterAccountConnection getVcenterAccountsConnection(getVcenterAccountsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VcenterAccountApi apiInstance = new VcenterAccountApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody = new GetVcenterAccountsConnectionRequestBody(); // GetVcenterAccountsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VcenterAccountConnection result = apiInstance.getVcenterAccountsConnection(contentLanguage, getVcenterAccountsConnectionRequestBody);
+            VcenterAccountConnection result = apiInstance.getVcenterAccountsConnection(getVcenterAccountsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VcenterAccountApi#getVcenterAccountsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVcenterAccountsConnectionRequestBody** | [**GetVcenterAccountsConnectionRequestBody**](GetVcenterAccountsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -23,8 +23,8 @@ public interface ClusterTopoApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterTopoesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ClusterTopo&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ClusterTopoApi {
   })
   @POST("get-cluster-topoes")
   Call<List<ClusterTopo>> getClusterTopoes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterTopoesRequestBody getClusterTopoesRequestBody
+    @retrofit2.http.Body GetClusterTopoesRequestBody getClusterTopoesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterTopoesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ClusterTopoConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ClusterTopoApi {
   })
   @POST("get-cluster-topoes-connection")
   Call<ClusterTopoConnection> getClusterTopoesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody
+    @retrofit2.http.Body GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

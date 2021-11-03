@@ -26,8 +26,8 @@ public interface UsbDeviceApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUsbDevicesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;UsbDevice&gt;&gt;
    */
   @Headers({
@@ -35,14 +35,14 @@ public interface UsbDeviceApi {
   })
   @POST("get-usb-devices")
   Call<List<UsbDevice>> getUsbDevices(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUsbDevicesRequestBody getUsbDevicesRequestBody
+    @retrofit2.http.Body GetUsbDevicesRequestBody getUsbDevicesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUsbDevicesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;UsbDeviceConnection&gt;
    */
   @Headers({
@@ -50,14 +50,14 @@ public interface UsbDeviceApi {
   })
   @POST("get-usb-devices-connection")
   Call<UsbDeviceConnection> getUsbDevicesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody
+    @retrofit2.http.Body GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param usbDeviceMountParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskUsbDevice&gt;&gt;
    */
   @Headers({
@@ -65,14 +65,14 @@ public interface UsbDeviceApi {
   })
   @POST("mount-usb-device")
   Call<List<WithTaskUsbDevice>> mountUsbDevice(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body UsbDeviceMountParams usbDeviceMountParams
+    @retrofit2.http.Body UsbDeviceMountParams usbDeviceMountParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param usbDeviceUnmountParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskUsbDevice&gt;&gt;
    */
   @Headers({
@@ -80,7 +80,7 @@ public interface UsbDeviceApi {
   })
   @POST("unmount-usb-device")
   Call<List<WithTaskUsbDevice>> unmountUsbDevice(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body UsbDeviceUnmountParams usbDeviceUnmountParams
+    @retrofit2.http.Body UsbDeviceUnmountParams usbDeviceUnmountParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

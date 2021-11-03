@@ -64,8 +64,8 @@ public class SnmpTrapReceiverApi {
 
     /**
      * Build call for createSnmpTrapReceiver
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createSnmpTrapReceiverCall(String contentLanguage, List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createSnmpTrapReceiverCall(List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = snmpTrapReceiverCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class SnmpTrapReceiverApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createSnmpTrapReceiverValidateBeforeCall(String contentLanguage, List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createSnmpTrapReceiver(Async)");
-        }
+    private okhttp3.Call createSnmpTrapReceiverValidateBeforeCall(List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snmpTrapReceiverCreationParams' is set
         if (snmpTrapReceiverCreationParams == null) {
@@ -124,7 +119,7 @@ public class SnmpTrapReceiverApi {
         }
         
 
-        okhttp3.Call localVarCall = createSnmpTrapReceiverCall(contentLanguage, snmpTrapReceiverCreationParams, _callback);
+        okhttp3.Call localVarCall = createSnmpTrapReceiverCall(snmpTrapReceiverCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class SnmpTrapReceiverApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnmpTrapReceiver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnmpTrapReceiver> createSnmpTrapReceiver(String contentLanguage, List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskSnmpTrapReceiver>> localVarResp = createSnmpTrapReceiverWithHttpInfo(contentLanguage, snmpTrapReceiverCreationParams);
+    public List<WithTaskSnmpTrapReceiver> createSnmpTrapReceiver(List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskSnmpTrapReceiver>> localVarResp = createSnmpTrapReceiverWithHttpInfo(snmpTrapReceiverCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnmpTrapReceiver&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnmpTrapReceiver>> createSnmpTrapReceiverWithHttpInfo(String contentLanguage, List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createSnmpTrapReceiverValidateBeforeCall(contentLanguage, snmpTrapReceiverCreationParams, null);
+    public ApiResponse<List<WithTaskSnmpTrapReceiver>> createSnmpTrapReceiverWithHttpInfo(List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createSnmpTrapReceiverValidateBeforeCall(snmpTrapReceiverCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTrapReceiver>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class SnmpTrapReceiverApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createSnmpTrapReceiverAsync(String contentLanguage, List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, final ApiCallback<List<WithTaskSnmpTrapReceiver>> _callback) throws ApiException {
+    public okhttp3.Call createSnmpTrapReceiverAsync(List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, String contentLanguage, final ApiCallback<List<WithTaskSnmpTrapReceiver>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createSnmpTrapReceiverValidateBeforeCall(contentLanguage, snmpTrapReceiverCreationParams, _callback);
+        okhttp3.Call localVarCall = createSnmpTrapReceiverValidateBeforeCall(snmpTrapReceiverCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTrapReceiver>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteSnmpTrapReceiver
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnmpTrapReceiverCall(String contentLanguage, SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteSnmpTrapReceiverCall(SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = snmpTrapReceiverDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class SnmpTrapReceiverApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteSnmpTrapReceiverValidateBeforeCall(String contentLanguage, SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteSnmpTrapReceiver(Async)");
-        }
+    private okhttp3.Call deleteSnmpTrapReceiverValidateBeforeCall(SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snmpTrapReceiverDeletionParams' is set
         if (snmpTrapReceiverDeletionParams == null) {
@@ -252,7 +242,7 @@ public class SnmpTrapReceiverApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteSnmpTrapReceiverCall(contentLanguage, snmpTrapReceiverDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteSnmpTrapReceiverCall(snmpTrapReceiverDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class SnmpTrapReceiverApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteSnmpTrapReceiver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteSnmpTrapReceiver> deleteSnmpTrapReceiver(String contentLanguage, SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteSnmpTrapReceiver>> localVarResp = deleteSnmpTrapReceiverWithHttpInfo(contentLanguage, snmpTrapReceiverDeletionParams);
+    public List<WithTaskDeleteSnmpTrapReceiver> deleteSnmpTrapReceiver(SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteSnmpTrapReceiver>> localVarResp = deleteSnmpTrapReceiverWithHttpInfo(snmpTrapReceiverDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteSnmpTrapReceiver&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteSnmpTrapReceiver>> deleteSnmpTrapReceiverWithHttpInfo(String contentLanguage, SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteSnmpTrapReceiverValidateBeforeCall(contentLanguage, snmpTrapReceiverDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteSnmpTrapReceiver>> deleteSnmpTrapReceiverWithHttpInfo(SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteSnmpTrapReceiverValidateBeforeCall(snmpTrapReceiverDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnmpTrapReceiver>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class SnmpTrapReceiverApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnmpTrapReceiverAsync(String contentLanguage, SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, final ApiCallback<List<WithTaskDeleteSnmpTrapReceiver>> _callback) throws ApiException {
+    public okhttp3.Call deleteSnmpTrapReceiverAsync(SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteSnmpTrapReceiver>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteSnmpTrapReceiverValidateBeforeCall(contentLanguage, snmpTrapReceiverDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteSnmpTrapReceiverValidateBeforeCall(snmpTrapReceiverDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnmpTrapReceiver>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSnmpTrapReceivers
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTrapReceiversCall(String contentLanguage, GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnmpTrapReceiversCall(GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSnmpTrapReceiversRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class SnmpTrapReceiverApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnmpTrapReceiversValidateBeforeCall(String contentLanguage, GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSnmpTrapReceivers(Async)");
-        }
+    private okhttp3.Call getSnmpTrapReceiversValidateBeforeCall(GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnmpTrapReceiversRequestBody' is set
         if (getSnmpTrapReceiversRequestBody == null) {
@@ -380,7 +365,7 @@ public class SnmpTrapReceiverApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnmpTrapReceiversCall(contentLanguage, getSnmpTrapReceiversRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTrapReceiversCall(getSnmpTrapReceiversRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class SnmpTrapReceiverApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SnmpTrapReceiver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SnmpTrapReceiver> getSnmpTrapReceivers(String contentLanguage, GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody) throws ApiException {
-        ApiResponse<List<SnmpTrapReceiver>> localVarResp = getSnmpTrapReceiversWithHttpInfo(contentLanguage, getSnmpTrapReceiversRequestBody);
+    public List<SnmpTrapReceiver> getSnmpTrapReceivers(GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<SnmpTrapReceiver>> localVarResp = getSnmpTrapReceiversWithHttpInfo(getSnmpTrapReceiversRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SnmpTrapReceiver&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SnmpTrapReceiver>> getSnmpTrapReceiversWithHttpInfo(String contentLanguage, GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSnmpTrapReceiversValidateBeforeCall(contentLanguage, getSnmpTrapReceiversRequestBody, null);
+    public ApiResponse<List<SnmpTrapReceiver>> getSnmpTrapReceiversWithHttpInfo(GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSnmpTrapReceiversValidateBeforeCall(getSnmpTrapReceiversRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<SnmpTrapReceiver>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class SnmpTrapReceiverApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTrapReceiversAsync(String contentLanguage, GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, final ApiCallback<List<SnmpTrapReceiver>> _callback) throws ApiException {
+    public okhttp3.Call getSnmpTrapReceiversAsync(GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, String contentLanguage, final ApiCallback<List<SnmpTrapReceiver>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnmpTrapReceiversValidateBeforeCall(contentLanguage, getSnmpTrapReceiversRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTrapReceiversValidateBeforeCall(getSnmpTrapReceiversRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<SnmpTrapReceiver>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSnmpTrapReceiversConnection
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTrapReceiversConnectionCall(String contentLanguage, GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnmpTrapReceiversConnectionCall(GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSnmpTrapReceiversConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class SnmpTrapReceiverApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnmpTrapReceiversConnectionValidateBeforeCall(String contentLanguage, GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSnmpTrapReceiversConnection(Async)");
-        }
+    private okhttp3.Call getSnmpTrapReceiversConnectionValidateBeforeCall(GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnmpTrapReceiversConnectionRequestBody' is set
         if (getSnmpTrapReceiversConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class SnmpTrapReceiverApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnmpTrapReceiversConnectionCall(contentLanguage, getSnmpTrapReceiversConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTrapReceiversConnectionCall(getSnmpTrapReceiversConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class SnmpTrapReceiverApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return SnmpTrapReceiverConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SnmpTrapReceiverConnection getSnmpTrapReceiversConnection(String contentLanguage, GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody) throws ApiException {
-        ApiResponse<SnmpTrapReceiverConnection> localVarResp = getSnmpTrapReceiversConnectionWithHttpInfo(contentLanguage, getSnmpTrapReceiversConnectionRequestBody);
+    public SnmpTrapReceiverConnection getSnmpTrapReceiversConnection(GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<SnmpTrapReceiverConnection> localVarResp = getSnmpTrapReceiversConnectionWithHttpInfo(getSnmpTrapReceiversConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SnmpTrapReceiverConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SnmpTrapReceiverConnection> getSnmpTrapReceiversConnectionWithHttpInfo(String contentLanguage, GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSnmpTrapReceiversConnectionValidateBeforeCall(contentLanguage, getSnmpTrapReceiversConnectionRequestBody, null);
+    public ApiResponse<SnmpTrapReceiverConnection> getSnmpTrapReceiversConnectionWithHttpInfo(GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSnmpTrapReceiversConnectionValidateBeforeCall(getSnmpTrapReceiversConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<SnmpTrapReceiverConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class SnmpTrapReceiverApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTrapReceiversConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTrapReceiversConnectionAsync(String contentLanguage, GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, final ApiCallback<SnmpTrapReceiverConnection> _callback) throws ApiException {
+    public okhttp3.Call getSnmpTrapReceiversConnectionAsync(GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, String contentLanguage, final ApiCallback<SnmpTrapReceiverConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnmpTrapReceiversConnectionValidateBeforeCall(contentLanguage, getSnmpTrapReceiversConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTrapReceiversConnectionValidateBeforeCall(getSnmpTrapReceiversConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<SnmpTrapReceiverConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateSnmpTrapReceiver
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateSnmpTrapReceiverCall(String contentLanguage, SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateSnmpTrapReceiverCall(SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = snmpTrapReceiverUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class SnmpTrapReceiverApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateSnmpTrapReceiverValidateBeforeCall(String contentLanguage, SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateSnmpTrapReceiver(Async)");
-        }
+    private okhttp3.Call updateSnmpTrapReceiverValidateBeforeCall(SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snmpTrapReceiverUpdationParams' is set
         if (snmpTrapReceiverUpdationParams == null) {
@@ -636,7 +611,7 @@ public class SnmpTrapReceiverApi {
         }
         
 
-        okhttp3.Call localVarCall = updateSnmpTrapReceiverCall(contentLanguage, snmpTrapReceiverUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateSnmpTrapReceiverCall(snmpTrapReceiverUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class SnmpTrapReceiverApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnmpTrapReceiver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnmpTrapReceiver> updateSnmpTrapReceiver(String contentLanguage, SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskSnmpTrapReceiver>> localVarResp = updateSnmpTrapReceiverWithHttpInfo(contentLanguage, snmpTrapReceiverUpdationParams);
+    public List<WithTaskSnmpTrapReceiver> updateSnmpTrapReceiver(SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskSnmpTrapReceiver>> localVarResp = updateSnmpTrapReceiverWithHttpInfo(snmpTrapReceiverUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnmpTrapReceiver&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnmpTrapReceiver>> updateSnmpTrapReceiverWithHttpInfo(String contentLanguage, SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateSnmpTrapReceiverValidateBeforeCall(contentLanguage, snmpTrapReceiverUpdationParams, null);
+    public ApiResponse<List<WithTaskSnmpTrapReceiver>> updateSnmpTrapReceiverWithHttpInfo(SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateSnmpTrapReceiverValidateBeforeCall(snmpTrapReceiverUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTrapReceiver>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class SnmpTrapReceiverApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param snmpTrapReceiverUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class SnmpTrapReceiverApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateSnmpTrapReceiverAsync(String contentLanguage, SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, final ApiCallback<List<WithTaskSnmpTrapReceiver>> _callback) throws ApiException {
+    public okhttp3.Call updateSnmpTrapReceiverAsync(SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskSnmpTrapReceiver>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateSnmpTrapReceiverValidateBeforeCall(contentLanguage, snmpTrapReceiverUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateSnmpTrapReceiverValidateBeforeCall(snmpTrapReceiverUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTrapReceiver>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

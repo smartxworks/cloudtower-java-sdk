@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createRole
 
-> List&lt;WithTaskUserRoleNext&gt; createRole(contentLanguage, roleCreationParams)
+> List&lt;WithTaskUserRoleNext&gt; createRole(roleCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserRoleNextApi apiInstance = new UserRoleNextApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<RoleCreationParams> roleCreationParams = Arrays.asList(); // List<RoleCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskUserRoleNext> result = apiInstance.createRole(contentLanguage, roleCreationParams);
+            List<WithTaskUserRoleNext> result = apiInstance.createRole(roleCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserRoleNextApi#createRole");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **roleCreationParams** | [**List&lt;RoleCreationParams&gt;**](RoleCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteRole
 
-> List&lt;WithTaskDeleteRole&gt; deleteRole(contentLanguage, roleDeletionParams)
+> List&lt;WithTaskDeleteRole&gt; deleteRole(roleDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserRoleNextApi apiInstance = new UserRoleNextApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         RoleDeletionParams roleDeletionParams = new RoleDeletionParams(); // RoleDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteRole> result = apiInstance.deleteRole(contentLanguage, roleDeletionParams);
+            List<WithTaskDeleteRole> result = apiInstance.deleteRole(roleDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserRoleNextApi#deleteRole");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **roleDeletionParams** | [**RoleDeletionParams**](RoleDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getUserRoleNexts
 
-> List&lt;UserRoleNext&gt; getUserRoleNexts(contentLanguage, getUserRoleNextsRequestBody)
+> List&lt;UserRoleNext&gt; getUserRoleNexts(getUserRoleNextsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserRoleNextApi apiInstance = new UserRoleNextApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUserRoleNextsRequestBody getUserRoleNextsRequestBody = new GetUserRoleNextsRequestBody(); // GetUserRoleNextsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<UserRoleNext> result = apiInstance.getUserRoleNexts(contentLanguage, getUserRoleNextsRequestBody);
+            List<UserRoleNext> result = apiInstance.getUserRoleNexts(getUserRoleNextsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserRoleNextApi#getUserRoleNexts");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUserRoleNextsRequestBody** | [**GetUserRoleNextsRequestBody**](GetUserRoleNextsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getUserRoleNextsConnection
 
-> UserRoleNextConnection getUserRoleNextsConnection(contentLanguage, getUserRoleNextsConnectionRequestBody)
+> UserRoleNextConnection getUserRoleNextsConnection(getUserRoleNextsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserRoleNextApi apiInstance = new UserRoleNextApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody = new GetUserRoleNextsConnectionRequestBody(); // GetUserRoleNextsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            UserRoleNextConnection result = apiInstance.getUserRoleNextsConnection(contentLanguage, getUserRoleNextsConnectionRequestBody);
+            UserRoleNextConnection result = apiInstance.getUserRoleNextsConnection(getUserRoleNextsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserRoleNextApi#getUserRoleNextsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUserRoleNextsConnectionRequestBody** | [**GetUserRoleNextsConnectionRequestBody**](GetUserRoleNextsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateRole
 
-> List&lt;WithTaskUserRoleNext&gt; updateRole(contentLanguage, roleUpdationParams)
+> List&lt;WithTaskUserRoleNext&gt; updateRole(roleUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserRoleNextApi apiInstance = new UserRoleNextApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         RoleUpdationParams roleUpdationParams = new RoleUpdationParams(); // RoleUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskUserRoleNext> result = apiInstance.updateRole(contentLanguage, roleUpdationParams);
+            List<WithTaskUserRoleNext> result = apiInstance.updateRole(roleUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserRoleNextApi#updateRole");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **roleUpdationParams** | [**RoleUpdationParams**](RoleUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

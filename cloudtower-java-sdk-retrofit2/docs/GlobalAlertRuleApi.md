@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## getGlobalAlertRules
 
-> List&lt;GlobalAlertRule&gt; getGlobalAlertRules(contentLanguage, getGlobalAlertRulesRequestBody)
+> List&lt;GlobalAlertRule&gt; getGlobalAlertRules(getGlobalAlertRulesRequestBody, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalAlertRuleApi apiInstance = new GlobalAlertRuleApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody = new GetGlobalAlertRulesRequestBody(); // GetGlobalAlertRulesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<GlobalAlertRule> result = apiInstance.getGlobalAlertRules(contentLanguage, getGlobalAlertRulesRequestBody);
+            List<GlobalAlertRule> result = apiInstance.getGlobalAlertRules(getGlobalAlertRulesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalAlertRuleApi#getGlobalAlertRules");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getGlobalAlertRulesRequestBody** | [**GetGlobalAlertRulesRequestBody**](GetGlobalAlertRulesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## getGlobalAlertRulesConnection
 
-> GlobalAlertRuleConnection getGlobalAlertRulesConnection(contentLanguage, getGlobalAlertRulesConnectionRequestBody)
+> GlobalAlertRuleConnection getGlobalAlertRulesConnection(getGlobalAlertRulesConnectionRequestBody, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalAlertRuleApi apiInstance = new GlobalAlertRuleApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody = new GetGlobalAlertRulesConnectionRequestBody(); // GetGlobalAlertRulesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            GlobalAlertRuleConnection result = apiInstance.getGlobalAlertRulesConnection(contentLanguage, getGlobalAlertRulesConnectionRequestBody);
+            GlobalAlertRuleConnection result = apiInstance.getGlobalAlertRulesConnection(getGlobalAlertRulesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalAlertRuleApi#getGlobalAlertRulesConnection");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getGlobalAlertRulesConnectionRequestBody** | [**GetGlobalAlertRulesConnectionRequestBody**](GetGlobalAlertRulesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## updateCustomizeAlertRule
 
-> List&lt;WithTaskGlobalAlertRule&gt; updateCustomizeAlertRule(contentLanguage, customizeAlertRuleUpdationParams)
+> List&lt;WithTaskGlobalAlertRule&gt; updateCustomizeAlertRule(customizeAlertRuleUpdationParams, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalAlertRuleApi apiInstance = new GlobalAlertRuleApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams = new CustomizeAlertRuleUpdationParams(); // CustomizeAlertRuleUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskGlobalAlertRule> result = apiInstance.updateCustomizeAlertRule(contentLanguage, customizeAlertRuleUpdationParams);
+            List<WithTaskGlobalAlertRule> result = apiInstance.updateCustomizeAlertRule(customizeAlertRuleUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalAlertRuleApi#updateCustomizeAlertRule");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **customizeAlertRuleUpdationParams** | [**CustomizeAlertRuleUpdationParams**](CustomizeAlertRuleUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## updateGlobalAlertRule
 
-> List&lt;WithTaskGlobalAlertRule&gt; updateGlobalAlertRule(contentLanguage, globalAlertRuleUpdationParams)
+> List&lt;WithTaskGlobalAlertRule&gt; updateGlobalAlertRule(globalAlertRuleUpdationParams, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalAlertRuleApi apiInstance = new GlobalAlertRuleApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams = new GlobalAlertRuleUpdationParams(); // GlobalAlertRuleUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskGlobalAlertRule> result = apiInstance.updateGlobalAlertRule(contentLanguage, globalAlertRuleUpdationParams);
+            List<WithTaskGlobalAlertRule> result = apiInstance.updateGlobalAlertRule(globalAlertRuleUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalAlertRuleApi#updateGlobalAlertRule");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **globalAlertRuleUpdationParams** | [**GlobalAlertRuleUpdationParams**](GlobalAlertRuleUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

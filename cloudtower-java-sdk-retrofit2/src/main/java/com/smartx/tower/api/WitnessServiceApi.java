@@ -21,8 +21,8 @@ public interface WitnessServiceApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getWitnessServicesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WitnessService&gt;&gt;
    */
   @Headers({
@@ -30,7 +30,7 @@ public interface WitnessServiceApi {
   })
   @POST("get-witness-services")
   Call<List<WitnessService>> getWitnessServices(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetWitnessServicesRequestBody getWitnessServicesRequestBody
+    @retrofit2.http.Body GetWitnessServicesRequestBody getWitnessServicesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

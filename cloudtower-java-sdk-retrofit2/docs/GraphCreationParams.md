@@ -7,6 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**instanceIds** | **List&lt;String&gt;** |  |  [optional]
 **network** | **NetworkType** |  |  [optional]
 **service** | **String** |  |  [optional]
 **metricType** | **MetricType** |  |  [optional]

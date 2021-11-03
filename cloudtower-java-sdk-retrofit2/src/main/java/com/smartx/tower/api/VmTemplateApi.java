@@ -28,8 +28,8 @@ public interface VmTemplateApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmTemplateCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmTemplate&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface VmTemplateApi {
   })
   @POST("clone-vm-template-from-vm")
   Call<List<WithTaskVmTemplate>> cloneVmTemplateFromVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmTemplateCreationParams> vmTemplateCreationParams
+    @retrofit2.http.Body List<VmTemplateCreationParams> vmTemplateCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmTemplateCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmTemplate&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface VmTemplateApi {
   })
   @POST("convert-vm-template-from-vm")
   Call<List<WithTaskVmTemplate>> convertVmTemplateFromVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmTemplateCreationParams> vmTemplateCreationParams
+    @retrofit2.http.Body List<VmTemplateCreationParams> vmTemplateCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmTemplateDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVmTemplate&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface VmTemplateApi {
   })
   @POST("delete-vm-template")
   Call<List<WithTaskDeleteVmTemplate>> deleteVmTemplateFromVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmTemplateDeletionParams vmTemplateDeletionParams
+    @retrofit2.http.Body VmTemplateDeletionParams vmTemplateDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmTemplatesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmTemplate&gt;&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface VmTemplateApi {
   })
   @POST("get-vm-templates")
   Call<List<VmTemplate>> getVmTemplates(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmTemplatesRequestBody getVmTemplatesRequestBody
+    @retrofit2.http.Body GetVmTemplatesRequestBody getVmTemplatesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmTemplatesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmTemplateConnection&gt;
    */
   @Headers({
@@ -97,14 +97,14 @@ public interface VmTemplateApi {
   })
   @POST("get-vm-templates-connection")
   Call<VmTemplateConnection> getVmTemplatesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody
+    @retrofit2.http.Body GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmTemplateUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmTemplate&gt;&gt;
    */
   @Headers({
@@ -112,7 +112,7 @@ public interface VmTemplateApi {
   })
   @POST("update-vm-template")
   Call<List<WithTaskVmTemplate>> updateVmTemplateFromVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmTemplateUpdationParams vmTemplateUpdationParams
+    @retrofit2.http.Body VmTemplateUpdationParams vmTemplateUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

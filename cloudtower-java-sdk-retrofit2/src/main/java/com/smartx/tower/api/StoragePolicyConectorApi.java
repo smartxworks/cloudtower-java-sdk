@@ -21,8 +21,8 @@ public interface StoragePolicyConectorApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getStoragePoliciesConnectorRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;StoragePolicyConector&gt;&gt;
    */
   @Headers({
@@ -30,7 +30,7 @@ public interface StoragePolicyConectorApi {
   })
   @POST("get-storage-policies-connector")
   Call<List<StoragePolicyConector>> getStoragePoliciesConnector(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody
+    @retrofit2.http.Body GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

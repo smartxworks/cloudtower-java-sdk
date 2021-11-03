@@ -57,8 +57,8 @@ public class ImageConnectorApi {
 
     /**
      * Build call for getImagesConnector
-     * @param contentLanguage  (required)
      * @param getImagesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -69,7 +69,7 @@ public class ImageConnectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getImagesConnectorCall(String contentLanguage, GetImagesConnectorRequestBody getImagesConnectorRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getImagesConnectorCall(GetImagesConnectorRequestBody getImagesConnectorRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getImagesConnectorRequestBody;
 
         // create path and map variables
@@ -104,12 +104,7 @@ public class ImageConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getImagesConnectorValidateBeforeCall(String contentLanguage, GetImagesConnectorRequestBody getImagesConnectorRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getImagesConnector(Async)");
-        }
+    private okhttp3.Call getImagesConnectorValidateBeforeCall(GetImagesConnectorRequestBody getImagesConnectorRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getImagesConnectorRequestBody' is set
         if (getImagesConnectorRequestBody == null) {
@@ -117,7 +112,7 @@ public class ImageConnectorApi {
         }
         
 
-        okhttp3.Call localVarCall = getImagesConnectorCall(contentLanguage, getImagesConnectorRequestBody, _callback);
+        okhttp3.Call localVarCall = getImagesConnectorCall(getImagesConnectorRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -125,8 +120,8 @@ public class ImageConnectorApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getImagesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ImageConnector&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -136,16 +131,16 @@ public class ImageConnectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ImageConnector> getImagesConnector(String contentLanguage, GetImagesConnectorRequestBody getImagesConnectorRequestBody) throws ApiException {
-        ApiResponse<List<ImageConnector>> localVarResp = getImagesConnectorWithHttpInfo(contentLanguage, getImagesConnectorRequestBody);
+    public List<ImageConnector> getImagesConnector(GetImagesConnectorRequestBody getImagesConnectorRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ImageConnector>> localVarResp = getImagesConnectorWithHttpInfo(getImagesConnectorRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getImagesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ImageConnector&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -155,8 +150,8 @@ public class ImageConnectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ImageConnector>> getImagesConnectorWithHttpInfo(String contentLanguage, GetImagesConnectorRequestBody getImagesConnectorRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getImagesConnectorValidateBeforeCall(contentLanguage, getImagesConnectorRequestBody, null);
+    public ApiResponse<List<ImageConnector>> getImagesConnectorWithHttpInfo(GetImagesConnectorRequestBody getImagesConnectorRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getImagesConnectorValidateBeforeCall(getImagesConnectorRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ImageConnector>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -164,8 +159,8 @@ public class ImageConnectorApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getImagesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -176,9 +171,9 @@ public class ImageConnectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getImagesConnectorAsync(String contentLanguage, GetImagesConnectorRequestBody getImagesConnectorRequestBody, final ApiCallback<List<ImageConnector>> _callback) throws ApiException {
+    public okhttp3.Call getImagesConnectorAsync(GetImagesConnectorRequestBody getImagesConnectorRequestBody, String contentLanguage, final ApiCallback<List<ImageConnector>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getImagesConnectorValidateBeforeCall(contentLanguage, getImagesConnectorRequestBody, _callback);
+        okhttp3.Call localVarCall = getImagesConnectorValidateBeforeCall(getImagesConnectorRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ImageConnector>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

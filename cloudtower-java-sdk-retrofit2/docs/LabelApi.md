@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## addLabelsToResources
 
-> List&lt;WithTaskLabel&gt; addLabelsToResources(contentLanguage, addLabelsToResourcesParams)
+> List&lt;WithTaskLabel&gt; addLabelsToResources(addLabelsToResourcesParams, contentLanguage)
 
 
 
@@ -43,10 +43,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         AddLabelsToResourcesParams addLabelsToResourcesParams = new AddLabelsToResourcesParams(); // AddLabelsToResourcesParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskLabel> result = apiInstance.addLabelsToResources(contentLanguage, addLabelsToResourcesParams);
+            List<WithTaskLabel> result = apiInstance.addLabelsToResources(addLabelsToResourcesParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#addLabelsToResources");
@@ -64,8 +64,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **addLabelsToResourcesParams** | [**AddLabelsToResourcesParams**](AddLabelsToResourcesParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## createLabel
 
-> List&lt;WithTaskLabel&gt; createLabel(contentLanguage, labelCreationParams)
+> List&lt;WithTaskLabel&gt; createLabel(labelCreationParams, contentLanguage)
 
 
 
@@ -117,10 +117,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<LabelCreationParams> labelCreationParams = Arrays.asList(); // List<LabelCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskLabel> result = apiInstance.createLabel(contentLanguage, labelCreationParams);
+            List<WithTaskLabel> result = apiInstance.createLabel(labelCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#createLabel");
@@ -138,8 +138,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **labelCreationParams** | [**List&lt;LabelCreationParams&gt;**](LabelCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## deleteLabel
 
-> List&lt;WithTaskDeleteLabel&gt; deleteLabel(contentLanguage, labelDeletionParams)
+> List&lt;WithTaskDeleteLabel&gt; deleteLabel(labelDeletionParams, contentLanguage)
 
 
 
@@ -191,10 +191,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         LabelDeletionParams labelDeletionParams = new LabelDeletionParams(); // LabelDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteLabel> result = apiInstance.deleteLabel(contentLanguage, labelDeletionParams);
+            List<WithTaskDeleteLabel> result = apiInstance.deleteLabel(labelDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#deleteLabel");
@@ -212,8 +212,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **labelDeletionParams** | [**LabelDeletionParams**](LabelDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ## getLabels
 
-> List&lt;Label&gt; getLabels(contentLanguage, getLabelsRequestBody)
+> List&lt;Label&gt; getLabels(getLabelsRequestBody, contentLanguage)
 
 
 
@@ -265,10 +265,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetLabelsRequestBody getLabelsRequestBody = new GetLabelsRequestBody(); // GetLabelsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Label> result = apiInstance.getLabels(contentLanguage, getLabelsRequestBody);
+            List<Label> result = apiInstance.getLabels(getLabelsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#getLabels");
@@ -286,8 +286,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getLabelsRequestBody** | [**GetLabelsRequestBody**](GetLabelsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## getLabelsConnection
 
-> LabelConnection getLabelsConnection(contentLanguage, getLabelsConnectionRequestBody)
+> LabelConnection getLabelsConnection(getLabelsConnectionRequestBody, contentLanguage)
 
 
 
@@ -339,10 +339,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetLabelsConnectionRequestBody getLabelsConnectionRequestBody = new GetLabelsConnectionRequestBody(); // GetLabelsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            LabelConnection result = apiInstance.getLabelsConnection(contentLanguage, getLabelsConnectionRequestBody);
+            LabelConnection result = apiInstance.getLabelsConnection(getLabelsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#getLabelsConnection");
@@ -360,8 +360,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getLabelsConnectionRequestBody** | [**GetLabelsConnectionRequestBody**](GetLabelsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## removeLabelsFromResources
 
-> List&lt;WithTaskLabel&gt; removeLabelsFromResources(contentLanguage, body)
+> List&lt;WithTaskLabel&gt; removeLabelsFromResources(body, contentLanguage)
 
 
 
@@ -413,10 +413,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         AddLabelsToResourcesParams body = new AddLabelsToResourcesParams(); // AddLabelsToResourcesParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskLabel> result = apiInstance.removeLabelsFromResources(contentLanguage, body);
+            List<WithTaskLabel> result = apiInstance.removeLabelsFromResources(body, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#removeLabelsFromResources");
@@ -434,8 +434,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **body** | **AddLabelsToResourcesParams**|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ## updateLabel
 
-> List&lt;WithTaskLabel&gt; updateLabel(contentLanguage, labelUpdationParams)
+> List&lt;WithTaskLabel&gt; updateLabel(labelUpdationParams, contentLanguage)
 
 
 
@@ -487,10 +487,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         LabelApi apiInstance = new LabelApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         LabelUpdationParams labelUpdationParams = new LabelUpdationParams(); // LabelUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskLabel> result = apiInstance.updateLabel(contentLanguage, labelUpdationParams);
+            List<WithTaskLabel> result = apiInstance.updateLabel(labelUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LabelApi#updateLabel");
@@ -508,8 +508,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **labelUpdationParams** | [**LabelUpdationParams**](LabelUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

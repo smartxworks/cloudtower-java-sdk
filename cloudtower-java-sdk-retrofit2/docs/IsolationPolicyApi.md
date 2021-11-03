@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getIsolationPolicies
 
-> List&lt;IsolationPolicy&gt; getIsolationPolicies(contentLanguage, getIsolationPoliciesRequestBody)
+> List&lt;IsolationPolicy&gt; getIsolationPolicies(getIsolationPoliciesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IsolationPolicyApi apiInstance = new IsolationPolicyApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody = new GetIsolationPoliciesRequestBody(); // GetIsolationPoliciesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<IsolationPolicy> result = apiInstance.getIsolationPolicies(contentLanguage, getIsolationPoliciesRequestBody);
+            List<IsolationPolicy> result = apiInstance.getIsolationPolicies(getIsolationPoliciesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IsolationPolicyApi#getIsolationPolicies");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIsolationPoliciesRequestBody** | [**GetIsolationPoliciesRequestBody**](GetIsolationPoliciesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getIsolationPoliciesConnection
 
-> IsolationPolicyConnection getIsolationPoliciesConnection(contentLanguage, getIsolationPoliciesConnectionRequestBody)
+> IsolationPolicyConnection getIsolationPoliciesConnection(getIsolationPoliciesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IsolationPolicyApi apiInstance = new IsolationPolicyApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody = new GetIsolationPoliciesConnectionRequestBody(); // GetIsolationPoliciesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            IsolationPolicyConnection result = apiInstance.getIsolationPoliciesConnection(contentLanguage, getIsolationPoliciesConnectionRequestBody);
+            IsolationPolicyConnection result = apiInstance.getIsolationPoliciesConnection(getIsolationPoliciesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IsolationPolicyApi#getIsolationPoliciesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIsolationPoliciesConnectionRequestBody** | [**GetIsolationPoliciesConnectionRequestBody**](GetIsolationPoliciesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

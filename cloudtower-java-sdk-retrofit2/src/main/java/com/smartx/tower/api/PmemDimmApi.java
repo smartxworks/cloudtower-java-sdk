@@ -23,8 +23,8 @@ public interface PmemDimmApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getPmemDimmsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;PmemDimm&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface PmemDimmApi {
   })
   @POST("get-pmem-dimms")
   Call<List<PmemDimm>> getPmemDimms(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetPmemDimmsRequestBody getPmemDimmsRequestBody
+    @retrofit2.http.Body GetPmemDimmsRequestBody getPmemDimmsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getPmemDimmsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;PmemDimmConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface PmemDimmApi {
   })
   @POST("get-pmem-dimms-connection")
   Call<PmemDimmConnection> getPmemDimmsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody
+    @retrofit2.http.Body GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

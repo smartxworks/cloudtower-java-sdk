@@ -23,8 +23,8 @@ public interface ZoneApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getZonesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Zone&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ZoneApi {
   })
   @POST("get-zones")
   Call<List<Zone>> getZones(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetZonesRequestBody getZonesRequestBody
+    @retrofit2.http.Body GetZonesRequestBody getZonesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getZonesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ZoneConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ZoneApi {
   })
   @POST("get-zones-connection")
   Call<ZoneConnection> getZonesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetZonesConnectionRequestBody getZonesConnectionRequestBody
+    @retrofit2.http.Body GetZonesConnectionRequestBody getZonesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

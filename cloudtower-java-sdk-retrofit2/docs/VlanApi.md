@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createVmVlan
 
-> List&lt;WithTaskVlan&gt; createVmVlan(contentLanguage, vmVlanCreationParams)
+> List&lt;WithTaskVlan&gt; createVmVlan(vmVlanCreationParams, contentLanguage)
 
 
 
@@ -43,10 +43,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmVlanCreationParams> vmVlanCreationParams = Arrays.asList(); // List<VmVlanCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVlan> result = apiInstance.createVmVlan(contentLanguage, vmVlanCreationParams);
+            List<WithTaskVlan> result = apiInstance.createVmVlan(vmVlanCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#createVmVlan");
@@ -64,8 +64,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmVlanCreationParams** | [**List&lt;VmVlanCreationParams&gt;**](VmVlanCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## deleteVlan
 
-> List&lt;WithTaskDeleteVlan&gt; deleteVlan(contentLanguage, vlanDeletionParams)
+> List&lt;WithTaskDeleteVlan&gt; deleteVlan(vlanDeletionParams, contentLanguage)
 
 
 
@@ -117,10 +117,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VlanDeletionParams vlanDeletionParams = new VlanDeletionParams(); // VlanDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVlan> result = apiInstance.deleteVlan(contentLanguage, vlanDeletionParams);
+            List<WithTaskDeleteVlan> result = apiInstance.deleteVlan(vlanDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#deleteVlan");
@@ -138,8 +138,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vlanDeletionParams** | [**VlanDeletionParams**](VlanDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## getVlans
 
-> List&lt;Vlan&gt; getVlans(contentLanguage, getVlansRequestBody)
+> List&lt;Vlan&gt; getVlans(getVlansRequestBody, contentLanguage)
 
 
 
@@ -191,10 +191,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVlansRequestBody getVlansRequestBody = new GetVlansRequestBody(); // GetVlansRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Vlan> result = apiInstance.getVlans(contentLanguage, getVlansRequestBody);
+            List<Vlan> result = apiInstance.getVlans(getVlansRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#getVlans");
@@ -212,8 +212,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVlansRequestBody** | [**GetVlansRequestBody**](GetVlansRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ## getVlansConnection
 
-> VlanConnection getVlansConnection(contentLanguage, getVlansConnectionRequestBody)
+> VlanConnection getVlansConnection(getVlansConnectionRequestBody, contentLanguage)
 
 
 
@@ -265,10 +265,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVlansConnectionRequestBody getVlansConnectionRequestBody = new GetVlansConnectionRequestBody(); // GetVlansConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VlanConnection result = apiInstance.getVlansConnection(contentLanguage, getVlansConnectionRequestBody);
+            VlanConnection result = apiInstance.getVlansConnection(getVlansConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#getVlansConnection");
@@ -286,8 +286,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVlansConnectionRequestBody** | [**GetVlansConnectionRequestBody**](GetVlansConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## updateManagementVlan
 
-> List&lt;WithTaskVlan&gt; updateManagementVlan(contentLanguage, managementVlanUpdationParams)
+> List&lt;WithTaskVlan&gt; updateManagementVlan(managementVlanUpdationParams, contentLanguage)
 
 
 
@@ -339,10 +339,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ManagementVlanUpdationParams managementVlanUpdationParams = new ManagementVlanUpdationParams(); // ManagementVlanUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVlan> result = apiInstance.updateManagementVlan(contentLanguage, managementVlanUpdationParams);
+            List<WithTaskVlan> result = apiInstance.updateManagementVlan(managementVlanUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#updateManagementVlan");
@@ -360,8 +360,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **managementVlanUpdationParams** | [**ManagementVlanUpdationParams**](ManagementVlanUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## updateMigrationVlan
 
-> List&lt;WithTaskVlan&gt; updateMigrationVlan(contentLanguage, migrationVlanUpdationParams)
+> List&lt;WithTaskVlan&gt; updateMigrationVlan(migrationVlanUpdationParams, contentLanguage)
 
 
 
@@ -413,10 +413,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         MigrationVlanUpdationParams migrationVlanUpdationParams = new MigrationVlanUpdationParams(); // MigrationVlanUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVlan> result = apiInstance.updateMigrationVlan(contentLanguage, migrationVlanUpdationParams);
+            List<WithTaskVlan> result = apiInstance.updateMigrationVlan(migrationVlanUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#updateMigrationVlan");
@@ -434,8 +434,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **migrationVlanUpdationParams** | [**MigrationVlanUpdationParams**](MigrationVlanUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ## updateVlan
 
-> List&lt;WithTaskVlan&gt; updateVlan(contentLanguage, vmVlanUpdationParams)
+> List&lt;WithTaskVlan&gt; updateVlan(vmVlanUpdationParams, contentLanguage)
 
 
 
@@ -487,10 +487,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VlanApi apiInstance = new VlanApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmVlanUpdationParams vmVlanUpdationParams = new VmVlanUpdationParams(); // VmVlanUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVlan> result = apiInstance.updateVlan(contentLanguage, vmVlanUpdationParams);
+            List<WithTaskVlan> result = apiInstance.updateVlan(vmVlanUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VlanApi#updateVlan");
@@ -508,8 +508,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmVlanUpdationParams** | [**VmVlanUpdationParams**](VmVlanUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getPmemDimms
 
-> List&lt;PmemDimm&gt; getPmemDimms(contentLanguage, getPmemDimmsRequestBody)
+> List&lt;PmemDimm&gt; getPmemDimms(getPmemDimmsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         PmemDimmApi apiInstance = new PmemDimmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetPmemDimmsRequestBody getPmemDimmsRequestBody = new GetPmemDimmsRequestBody(); // GetPmemDimmsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<PmemDimm> result = apiInstance.getPmemDimms(contentLanguage, getPmemDimmsRequestBody);
+            List<PmemDimm> result = apiInstance.getPmemDimms(getPmemDimmsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PmemDimmApi#getPmemDimms");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getPmemDimmsRequestBody** | [**GetPmemDimmsRequestBody**](GetPmemDimmsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getPmemDimmsConnection
 
-> PmemDimmConnection getPmemDimmsConnection(contentLanguage, getPmemDimmsConnectionRequestBody)
+> PmemDimmConnection getPmemDimmsConnection(getPmemDimmsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         PmemDimmApi apiInstance = new PmemDimmApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody = new GetPmemDimmsConnectionRequestBody(); // GetPmemDimmsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            PmemDimmConnection result = apiInstance.getPmemDimmsConnection(contentLanguage, getPmemDimmsConnectionRequestBody);
+            PmemDimmConnection result = apiInstance.getPmemDimmsConnection(getPmemDimmsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PmemDimmApi#getPmemDimmsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getPmemDimmsConnectionRequestBody** | [**GetPmemDimmsConnectionRequestBody**](GetPmemDimmsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

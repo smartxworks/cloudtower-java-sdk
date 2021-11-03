@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getElfDataStores
 
-> List&lt;ElfDataStore&gt; getElfDataStores(contentLanguage, getElfDataStoresRequestBody)
+> List&lt;ElfDataStore&gt; getElfDataStores(getElfDataStoresRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfDataStoreApi apiInstance = new ElfDataStoreApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetElfDataStoresRequestBody getElfDataStoresRequestBody = new GetElfDataStoresRequestBody(); // GetElfDataStoresRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ElfDataStore> result = apiInstance.getElfDataStores(contentLanguage, getElfDataStoresRequestBody);
+            List<ElfDataStore> result = apiInstance.getElfDataStores(getElfDataStoresRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfDataStoreApi#getElfDataStores");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getElfDataStoresRequestBody** | [**GetElfDataStoresRequestBody**](GetElfDataStoresRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getElfDataStoresConnection
 
-> ElfDataStoreConnection getElfDataStoresConnection(contentLanguage, getElfDataStoresConnectionRequestBody)
+> ElfDataStoreConnection getElfDataStoresConnection(getElfDataStoresConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfDataStoreApi apiInstance = new ElfDataStoreApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody = new GetElfDataStoresConnectionRequestBody(); // GetElfDataStoresConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ElfDataStoreConnection result = apiInstance.getElfDataStoresConnection(contentLanguage, getElfDataStoresConnectionRequestBody);
+            ElfDataStoreConnection result = apiInstance.getElfDataStoresConnection(getElfDataStoresConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfDataStoreApi#getElfDataStoresConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getElfDataStoresConnectionRequestBody** | [**GetElfDataStoresConnectionRequestBody**](GetElfDataStoresConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

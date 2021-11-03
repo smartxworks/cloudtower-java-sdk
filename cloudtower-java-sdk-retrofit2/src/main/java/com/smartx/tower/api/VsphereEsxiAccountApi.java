@@ -23,8 +23,8 @@ public interface VsphereEsxiAccountApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVsphereEsxiAccountsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VsphereEsxiAccount&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface VsphereEsxiAccountApi {
   })
   @POST("get-vsphere-esxi-accounts")
   Call<List<VsphereEsxiAccount>> getVsphereEsxiAccounts(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody
+    @retrofit2.http.Body GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVsphereEsxiAccountsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VsphereEsxiAccountConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface VsphereEsxiAccountApi {
   })
   @POST("get-vsphere-esxi-accounts-connection")
   Call<VsphereEsxiAccountConnection> getVsphereEsxiAccountsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody
+    @retrofit2.http.Body GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

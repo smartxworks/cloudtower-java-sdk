@@ -23372,8 +23372,6 @@
           "Failed",
           "Pending",
           "Running",
-          "ScaleDown",
-          "ScaleUp",
           "Terminating",
           "Updating",
           "Upgrading"
@@ -50337,6 +50335,10 @@
               "version": {
                 "type": "string"
               },
+              "retryCount": {
+                "type": "number",
+                "format": "double"
+              },
               "reason": {
                 "type": "string"
               },
@@ -50356,6 +50358,58 @@
                   "numberHealth": {
                     "type": "number",
                     "format": "double"
+                  },
+                  "manageVDSes": {
+                    "items": {
+                      "properties": {
+                        "vdsID": {
+                          "type": "string"
+                        },
+                        "vds": {
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "id"
+                          ],
+                          "type": "object"
+                        },
+                        "retryCount": {
+                          "type": "number",
+                          "format": "double"
+                        },
+                        "reason": {
+                          "type": "string"
+                        },
+                        "phase": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/EverouteClusterPhase"
+                            }
+                          ],
+                          "nullable": true
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "vdsID",
+                        "vds",
+                        "retryCount",
+                        "reason",
+                        "message"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array",
+                    "nullable": true
                   },
                   "instances": {
                     "items": {
@@ -50377,6 +50431,17 @@
                             "id"
                           ],
                           "type": "object"
+                        },
+                        "reason": {
+                          "type": "string"
+                        },
+                        "phase": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/EverouteClusterPhase"
+                            }
+                          ],
+                          "nullable": true
                         },
                         "metrics": {
                           "properties": {
@@ -50405,14 +50470,23 @@
                           "type": "object",
                           "nullable": true
                         },
+                        "message": {
+                          "type": "string"
+                        },
                         "isHealth": {
                           "type": "boolean"
+                        },
+                        "ipAddr": {
+                          "type": "string"
                         }
                       },
                       "required": [
                         "vmID",
                         "vm",
-                        "isHealth"
+                        "reason",
+                        "message",
+                        "isHealth",
+                        "ipAddr"
                       ],
                       "type": "object"
                     },
@@ -50441,6 +50515,25 @@
                 "type": "object",
                 "nullable": true
               },
+              "conditions": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "lastProbeTime": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "lastProbeTime"
+                  ],
+                  "type": "object"
+                },
+                "type": "array",
+                "nullable": true
+              },
               "agents": {
                 "properties": {
                   "numberHealth": {
@@ -50450,8 +50543,25 @@
                   "instances": {
                     "items": {
                       "properties": {
+                        "reason": {
+                          "type": "string"
+                        },
+                        "phase": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/EverouteClusterPhase"
+                            }
+                          ],
+                          "nullable": true
+                        },
+                        "message": {
+                          "type": "string"
+                        },
                         "isHealth": {
                           "type": "boolean"
+                        },
+                        "ipAddr": {
+                          "type": "string"
                         },
                         "hostID": {
                           "type": "string"
@@ -50473,7 +50583,10 @@
                         }
                       },
                       "required": [
+                        "reason",
+                        "message",
                         "isHealth",
+                        "ipAddr",
                         "hostID",
                         "host"
                       ],
@@ -50507,6 +50620,7 @@
             },
             "required": [
               "version",
+              "retryCount",
               "reason",
               "message"
             ],
@@ -51213,8 +51327,9 @@
           "name": {
             "type": "string"
           },
-          "pvc_name": {
-            "type": "string"
+          "package_info": {
+            "properties": {},
+            "type": "object"
           },
           "size": {
             "type": "number",
@@ -51242,7 +51357,7 @@
           "id",
           "local_created_at",
           "name",
-          "pvc_name",
+          "package_info",
           "size",
           "version"
         ],
@@ -51265,8 +51380,8 @@
           "local_created_at_DESC",
           "name_ASC",
           "name_DESC",
-          "pvc_name_ASC",
-          "pvc_name_DESC",
+          "package_info_ASC",
+          "package_info_DESC",
           "size_ASC",
           "size_DESC",
           "updatedAt_ASC",
@@ -51581,68 +51696,6 @@
               "$ref": "#/components/schemas/EveroutePackageWhereInput"
             },
             "type": "array",
-            "nullable": true
-          },
-          "pvc_name": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_contains": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_ends_with": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_gt": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_gte": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_in": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "pvc_name_lt": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_lte": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_not": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_not_contains": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_not_ends_with": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_not_in": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "nullable": true
-          },
-          "pvc_name_not_starts_with": {
-            "type": "string",
-            "nullable": true
-          },
-          "pvc_name_starts_with": {
-            "type": "string",
             "nullable": true
           },
           "size": {
@@ -52463,6 +52516,12 @@
           "id": {
             "type": "string"
           },
+          "instance_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
           "local_id": {
             "type": "string"
           },
@@ -52663,6 +52722,7 @@
         },
         "required": [
           "id",
+          "instance_ids",
           "local_id",
           "metric_count",
           "metric_name",
@@ -69225,6 +69285,7 @@
         "enum": [
           "CLUSTER_IMAGE",
           "CLUSTER_IMAGE_META",
+          "CONTENT_LIBRARY_IMAGE",
           "ELF_IMAGE",
           "EVEROUTE_PACKAGE",
           "MONITOR_IMAGE",
@@ -77205,6 +77266,12 @@
       },
       "GraphCreationParams": {
         "properties": {
+          "instance_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
           "network": {
             "$ref": "#/components/schemas/NetworkType"
           },
@@ -77258,6 +77325,12 @@
         "properties": {
           "data": {
             "properties": {
+              "instance_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
               "luns": {
                 "$ref": "#/components/schemas/IscsiLunWhereInput"
               },
@@ -81640,7 +81713,6 @@
           }
         },
         "required": [
-          "cluster_id",
           "cloud_init_supported",
           "vm_id",
           "name"
@@ -82280,8 +82352,7 @@
         "required": [
           "is_full_copy",
           "template_id",
-          "name",
-          "cluster_id"
+          "name"
         ],
         "type": "object"
       },
@@ -82374,8 +82445,7 @@
         },
         "required": [
           "src_vm_id",
-          "name",
-          "cluster_id"
+          "name"
         ],
         "type": "object"
       },
@@ -82453,8 +82523,7 @@
         },
         "required": [
           "rebuild_from_snapshot_id",
-          "name",
-          "cluster_id"
+          "name"
         ],
         "type": "object"
       },
@@ -82953,8 +83022,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83012,8 +83082,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83074,8 +83145,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83133,8 +83205,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83195,8 +83268,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83254,8 +83328,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83316,8 +83391,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83375,8 +83451,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83437,8 +83514,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83496,8 +83574,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83558,8 +83637,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83617,8 +83697,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83679,8 +83760,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83738,8 +83820,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83800,8 +83883,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83859,8 +83943,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83921,8 +84006,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -83980,8 +84066,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84042,8 +84129,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84101,8 +84189,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84163,8 +84252,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84222,8 +84312,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84284,8 +84375,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84343,8 +84435,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84405,8 +84498,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84464,8 +84558,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84526,8 +84621,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84585,8 +84681,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84647,8 +84744,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84706,8 +84804,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84768,8 +84867,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84830,8 +84930,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84889,8 +84990,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -84951,8 +85053,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85010,8 +85113,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85072,8 +85176,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85131,8 +85236,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85193,8 +85299,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85252,8 +85359,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85314,8 +85422,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85373,8 +85482,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85435,8 +85545,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85494,8 +85605,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85556,8 +85668,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85615,8 +85728,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85677,8 +85791,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85736,8 +85851,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85798,8 +85914,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85857,8 +85974,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85919,8 +86037,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -85978,8 +86097,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86040,8 +86160,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86099,8 +86220,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86161,8 +86283,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86220,8 +86343,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86282,8 +86406,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86344,8 +86469,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86406,8 +86532,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86465,8 +86592,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86527,8 +86655,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86586,8 +86715,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86648,8 +86778,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86707,8 +86838,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86769,8 +86901,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86828,8 +86961,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86890,8 +87024,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -86949,8 +87084,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87011,8 +87147,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87070,8 +87207,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87132,8 +87270,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87191,8 +87330,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87253,8 +87393,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87312,8 +87453,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87374,8 +87516,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87433,8 +87576,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87495,8 +87639,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87554,8 +87699,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87616,8 +87762,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87675,8 +87822,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87737,8 +87885,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87796,8 +87945,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87858,8 +88008,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87917,8 +88068,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -87979,8 +88131,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88038,8 +88191,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88100,8 +88254,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88159,8 +88314,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88221,8 +88377,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88280,8 +88437,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88342,8 +88500,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88401,8 +88560,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88463,8 +88623,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88522,8 +88683,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88584,8 +88746,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88643,8 +88806,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88705,8 +88869,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88764,8 +88929,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88826,8 +88992,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88885,8 +89052,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -88947,8 +89115,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89006,8 +89175,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89068,8 +89238,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89127,8 +89298,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89189,8 +89361,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89248,8 +89421,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89310,8 +89484,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89369,8 +89544,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89431,8 +89607,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89490,8 +89667,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89552,8 +89730,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89611,8 +89790,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89673,8 +89853,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89732,8 +89913,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89794,8 +89976,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89856,8 +90039,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89915,8 +90099,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -89977,8 +90162,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90036,8 +90222,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90098,8 +90285,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90157,8 +90345,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90219,8 +90408,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90278,8 +90468,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90340,8 +90531,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90399,8 +90591,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90461,8 +90654,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90520,8 +90714,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90582,8 +90777,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90641,8 +90837,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90703,8 +90900,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90762,8 +90960,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90824,8 +91023,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90883,8 +91083,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -90945,8 +91146,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91004,8 +91206,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91066,8 +91269,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91125,8 +91329,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91187,8 +91392,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91246,8 +91452,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91308,8 +91515,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91367,8 +91575,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91429,8 +91638,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91488,8 +91698,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91550,8 +91761,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91609,8 +91821,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91671,8 +91884,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91730,8 +91944,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91792,8 +92007,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91851,8 +92067,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91913,8 +92130,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -91972,8 +92190,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92034,8 +92253,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92093,8 +92313,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92155,8 +92376,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92214,8 +92436,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92276,8 +92499,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92335,8 +92559,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92397,8 +92622,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92456,8 +92682,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92518,8 +92745,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92577,8 +92805,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92639,8 +92868,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92701,8 +92931,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92760,8 +92991,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92822,8 +93054,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92881,8 +93114,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -92943,8 +93177,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93005,8 +93240,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93067,8 +93303,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93129,8 +93366,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93194,8 +93432,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93256,8 +93495,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93318,8 +93558,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93380,8 +93621,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93445,8 +93687,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93507,8 +93750,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93569,8 +93813,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93631,8 +93876,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93696,8 +93942,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93758,8 +94005,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93820,8 +94068,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93885,8 +94134,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -93947,8 +94197,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94009,8 +94260,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94074,8 +94326,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94136,8 +94389,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94198,8 +94452,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94260,8 +94515,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94322,8 +94578,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94387,8 +94644,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94449,8 +94707,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94511,8 +94770,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94576,8 +94836,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94638,8 +94899,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94700,8 +94962,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94765,8 +95028,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94830,8 +95094,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94892,8 +95157,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -94957,8 +95223,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95019,8 +95286,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95084,8 +95352,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95146,8 +95415,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95208,8 +95478,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95273,8 +95544,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95338,8 +95610,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95403,8 +95676,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95465,8 +95739,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95527,8 +95802,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95618,8 +95894,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95680,8 +95957,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95742,8 +96020,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95807,8 +96086,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95869,8 +96149,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95931,8 +96212,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -95993,8 +96275,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96052,8 +96335,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96114,8 +96398,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96179,8 +96464,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96241,8 +96527,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96303,8 +96590,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96368,8 +96656,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96430,8 +96719,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96492,8 +96782,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96554,8 +96845,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96616,8 +96908,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96681,8 +96974,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96743,8 +97037,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96808,8 +97103,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96870,8 +97166,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96932,8 +97229,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -96997,8 +97295,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97059,8 +97358,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97121,8 +97421,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97180,8 +97481,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97242,8 +97544,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97307,8 +97610,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97369,8 +97673,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97431,8 +97736,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97496,8 +97802,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97558,8 +97865,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97617,8 +97925,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97679,8 +97988,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97741,8 +98051,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97803,8 +98114,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97865,8 +98177,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97930,8 +98243,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -97992,8 +98306,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98054,8 +98369,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98116,8 +98432,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98181,8 +98498,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98243,8 +98561,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98305,8 +98624,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98367,8 +98687,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98432,8 +98753,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98494,8 +98816,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98556,8 +98879,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98621,8 +98945,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98683,8 +99008,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98745,8 +99071,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98807,8 +99134,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98869,8 +99197,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98931,8 +99260,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -98996,8 +99326,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99058,8 +99389,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99120,8 +99452,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99185,8 +99518,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99247,8 +99581,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99309,8 +99644,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99371,8 +99707,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99426,8 +99763,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99488,8 +99826,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99553,8 +99892,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99615,8 +99955,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99677,8 +100018,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99742,8 +100084,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99807,8 +100150,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99872,8 +100216,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99934,8 +100279,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -99996,8 +100342,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100061,8 +100408,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100123,8 +100471,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100185,8 +100534,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100250,8 +100600,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100312,8 +100663,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100374,8 +100726,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100436,8 +100789,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100498,8 +100852,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100563,8 +100918,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100625,8 +100981,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100687,8 +101044,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100752,8 +101110,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100814,8 +101173,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100876,8 +101236,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -100938,8 +101299,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101000,8 +101362,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101065,8 +101428,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101130,8 +101494,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101192,8 +101557,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101254,8 +101620,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101319,8 +101686,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101381,8 +101749,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101446,8 +101815,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101511,8 +101881,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101576,8 +101947,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101641,8 +102013,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101706,8 +102079,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101768,8 +102142,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101848,8 +102223,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -101928,8 +102304,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102008,8 +102385,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102070,8 +102448,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102132,8 +102511,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102194,8 +102574,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102256,8 +102637,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102318,8 +102700,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102380,8 +102763,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102442,8 +102826,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102504,8 +102889,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102566,8 +102952,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102628,8 +103015,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102690,8 +103078,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102752,8 +103141,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102814,8 +103204,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102876,8 +103267,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -102938,8 +103330,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -103000,8 +103393,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -103062,8 +103456,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -103124,8 +103519,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",
@@ -103186,8 +103582,9 @@
           {
             "in": "header",
             "name": "content-language",
-            "required": true,
+            "required": false,
             "schema": {
+              "default": "en-US",
               "type": "string",
               "enum": [
                 "zh-CN",

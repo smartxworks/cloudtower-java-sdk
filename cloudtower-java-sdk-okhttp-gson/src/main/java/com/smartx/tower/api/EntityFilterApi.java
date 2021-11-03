@@ -64,8 +64,8 @@ public class EntityFilterApi {
 
     /**
      * Build call for createEntityFilter
-     * @param contentLanguage  (required)
      * @param entityFilterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createEntityFilterCall(String contentLanguage, List<EntityFilterCreationParams> entityFilterCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createEntityFilterCall(List<EntityFilterCreationParams> entityFilterCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = entityFilterCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class EntityFilterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createEntityFilterValidateBeforeCall(String contentLanguage, List<EntityFilterCreationParams> entityFilterCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createEntityFilter(Async)");
-        }
+    private okhttp3.Call createEntityFilterValidateBeforeCall(List<EntityFilterCreationParams> entityFilterCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'entityFilterCreationParams' is set
         if (entityFilterCreationParams == null) {
@@ -124,7 +119,7 @@ public class EntityFilterApi {
         }
         
 
-        okhttp3.Call localVarCall = createEntityFilterCall(contentLanguage, entityFilterCreationParams, _callback);
+        okhttp3.Call localVarCall = createEntityFilterCall(entityFilterCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class EntityFilterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskEntityFilter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskEntityFilter> createEntityFilter(String contentLanguage, List<EntityFilterCreationParams> entityFilterCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskEntityFilter>> localVarResp = createEntityFilterWithHttpInfo(contentLanguage, entityFilterCreationParams);
+    public List<WithTaskEntityFilter> createEntityFilter(List<EntityFilterCreationParams> entityFilterCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskEntityFilter>> localVarResp = createEntityFilterWithHttpInfo(entityFilterCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskEntityFilter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskEntityFilter>> createEntityFilterWithHttpInfo(String contentLanguage, List<EntityFilterCreationParams> entityFilterCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createEntityFilterValidateBeforeCall(contentLanguage, entityFilterCreationParams, null);
+    public ApiResponse<List<WithTaskEntityFilter>> createEntityFilterWithHttpInfo(List<EntityFilterCreationParams> entityFilterCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createEntityFilterValidateBeforeCall(entityFilterCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskEntityFilter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class EntityFilterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createEntityFilterAsync(String contentLanguage, List<EntityFilterCreationParams> entityFilterCreationParams, final ApiCallback<List<WithTaskEntityFilter>> _callback) throws ApiException {
+    public okhttp3.Call createEntityFilterAsync(List<EntityFilterCreationParams> entityFilterCreationParams, String contentLanguage, final ApiCallback<List<WithTaskEntityFilter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createEntityFilterValidateBeforeCall(contentLanguage, entityFilterCreationParams, _callback);
+        okhttp3.Call localVarCall = createEntityFilterValidateBeforeCall(entityFilterCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskEntityFilter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteEntityFilter
-     * @param contentLanguage  (required)
      * @param entityFilterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteEntityFilterCall(String contentLanguage, EntityFilterDeletionParams entityFilterDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteEntityFilterCall(EntityFilterDeletionParams entityFilterDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = entityFilterDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class EntityFilterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteEntityFilterValidateBeforeCall(String contentLanguage, EntityFilterDeletionParams entityFilterDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteEntityFilter(Async)");
-        }
+    private okhttp3.Call deleteEntityFilterValidateBeforeCall(EntityFilterDeletionParams entityFilterDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'entityFilterDeletionParams' is set
         if (entityFilterDeletionParams == null) {
@@ -252,7 +242,7 @@ public class EntityFilterApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteEntityFilterCall(contentLanguage, entityFilterDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteEntityFilterCall(entityFilterDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class EntityFilterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteEntityFilter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteEntityFilter> deleteEntityFilter(String contentLanguage, EntityFilterDeletionParams entityFilterDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteEntityFilter>> localVarResp = deleteEntityFilterWithHttpInfo(contentLanguage, entityFilterDeletionParams);
+    public List<WithTaskDeleteEntityFilter> deleteEntityFilter(EntityFilterDeletionParams entityFilterDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteEntityFilter>> localVarResp = deleteEntityFilterWithHttpInfo(entityFilterDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteEntityFilter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteEntityFilter>> deleteEntityFilterWithHttpInfo(String contentLanguage, EntityFilterDeletionParams entityFilterDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteEntityFilterValidateBeforeCall(contentLanguage, entityFilterDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteEntityFilter>> deleteEntityFilterWithHttpInfo(EntityFilterDeletionParams entityFilterDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteEntityFilterValidateBeforeCall(entityFilterDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteEntityFilter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class EntityFilterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteEntityFilterAsync(String contentLanguage, EntityFilterDeletionParams entityFilterDeletionParams, final ApiCallback<List<WithTaskDeleteEntityFilter>> _callback) throws ApiException {
+    public okhttp3.Call deleteEntityFilterAsync(EntityFilterDeletionParams entityFilterDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteEntityFilter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteEntityFilterValidateBeforeCall(contentLanguage, entityFilterDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteEntityFilterValidateBeforeCall(entityFilterDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteEntityFilter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEntityFilters
-     * @param contentLanguage  (required)
      * @param getEntityFiltersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEntityFiltersCall(String contentLanguage, GetEntityFiltersRequestBody getEntityFiltersRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEntityFiltersCall(GetEntityFiltersRequestBody getEntityFiltersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getEntityFiltersRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class EntityFilterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEntityFiltersValidateBeforeCall(String contentLanguage, GetEntityFiltersRequestBody getEntityFiltersRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getEntityFilters(Async)");
-        }
+    private okhttp3.Call getEntityFiltersValidateBeforeCall(GetEntityFiltersRequestBody getEntityFiltersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEntityFiltersRequestBody' is set
         if (getEntityFiltersRequestBody == null) {
@@ -380,7 +365,7 @@ public class EntityFilterApi {
         }
         
 
-        okhttp3.Call localVarCall = getEntityFiltersCall(contentLanguage, getEntityFiltersRequestBody, _callback);
+        okhttp3.Call localVarCall = getEntityFiltersCall(getEntityFiltersRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class EntityFilterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEntityFiltersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;EntityFilter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<EntityFilter> getEntityFilters(String contentLanguage, GetEntityFiltersRequestBody getEntityFiltersRequestBody) throws ApiException {
-        ApiResponse<List<EntityFilter>> localVarResp = getEntityFiltersWithHttpInfo(contentLanguage, getEntityFiltersRequestBody);
+    public List<EntityFilter> getEntityFilters(GetEntityFiltersRequestBody getEntityFiltersRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<EntityFilter>> localVarResp = getEntityFiltersWithHttpInfo(getEntityFiltersRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEntityFiltersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;EntityFilter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<EntityFilter>> getEntityFiltersWithHttpInfo(String contentLanguage, GetEntityFiltersRequestBody getEntityFiltersRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEntityFiltersValidateBeforeCall(contentLanguage, getEntityFiltersRequestBody, null);
+    public ApiResponse<List<EntityFilter>> getEntityFiltersWithHttpInfo(GetEntityFiltersRequestBody getEntityFiltersRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getEntityFiltersValidateBeforeCall(getEntityFiltersRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<EntityFilter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class EntityFilterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getEntityFiltersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEntityFiltersAsync(String contentLanguage, GetEntityFiltersRequestBody getEntityFiltersRequestBody, final ApiCallback<List<EntityFilter>> _callback) throws ApiException {
+    public okhttp3.Call getEntityFiltersAsync(GetEntityFiltersRequestBody getEntityFiltersRequestBody, String contentLanguage, final ApiCallback<List<EntityFilter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEntityFiltersValidateBeforeCall(contentLanguage, getEntityFiltersRequestBody, _callback);
+        okhttp3.Call localVarCall = getEntityFiltersValidateBeforeCall(getEntityFiltersRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<EntityFilter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEntityFiltersConnection
-     * @param contentLanguage  (required)
      * @param getEntityFiltersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEntityFiltersConnectionCall(String contentLanguage, GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEntityFiltersConnectionCall(GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getEntityFiltersConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class EntityFilterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEntityFiltersConnectionValidateBeforeCall(String contentLanguage, GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getEntityFiltersConnection(Async)");
-        }
+    private okhttp3.Call getEntityFiltersConnectionValidateBeforeCall(GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEntityFiltersConnectionRequestBody' is set
         if (getEntityFiltersConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class EntityFilterApi {
         }
         
 
-        okhttp3.Call localVarCall = getEntityFiltersConnectionCall(contentLanguage, getEntityFiltersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getEntityFiltersConnectionCall(getEntityFiltersConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class EntityFilterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEntityFiltersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return EntityFilterConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public EntityFilterConnection getEntityFiltersConnection(String contentLanguage, GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody) throws ApiException {
-        ApiResponse<EntityFilterConnection> localVarResp = getEntityFiltersConnectionWithHttpInfo(contentLanguage, getEntityFiltersConnectionRequestBody);
+    public EntityFilterConnection getEntityFiltersConnection(GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<EntityFilterConnection> localVarResp = getEntityFiltersConnectionWithHttpInfo(getEntityFiltersConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEntityFiltersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;EntityFilterConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EntityFilterConnection> getEntityFiltersConnectionWithHttpInfo(String contentLanguage, GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEntityFiltersConnectionValidateBeforeCall(contentLanguage, getEntityFiltersConnectionRequestBody, null);
+    public ApiResponse<EntityFilterConnection> getEntityFiltersConnectionWithHttpInfo(GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getEntityFiltersConnectionValidateBeforeCall(getEntityFiltersConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<EntityFilterConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class EntityFilterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getEntityFiltersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEntityFiltersConnectionAsync(String contentLanguage, GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, final ApiCallback<EntityFilterConnection> _callback) throws ApiException {
+    public okhttp3.Call getEntityFiltersConnectionAsync(GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, String contentLanguage, final ApiCallback<EntityFilterConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEntityFiltersConnectionValidateBeforeCall(contentLanguage, getEntityFiltersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getEntityFiltersConnectionValidateBeforeCall(getEntityFiltersConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<EntityFilterConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateEntityFilter
-     * @param contentLanguage  (required)
      * @param entityFilterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateEntityFilterCall(String contentLanguage, EntityFilterUpdationParams entityFilterUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateEntityFilterCall(EntityFilterUpdationParams entityFilterUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = entityFilterUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class EntityFilterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateEntityFilterValidateBeforeCall(String contentLanguage, EntityFilterUpdationParams entityFilterUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateEntityFilter(Async)");
-        }
+    private okhttp3.Call updateEntityFilterValidateBeforeCall(EntityFilterUpdationParams entityFilterUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'entityFilterUpdationParams' is set
         if (entityFilterUpdationParams == null) {
@@ -636,7 +611,7 @@ public class EntityFilterApi {
         }
         
 
-        okhttp3.Call localVarCall = updateEntityFilterCall(contentLanguage, entityFilterUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateEntityFilterCall(entityFilterUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class EntityFilterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskEntityFilter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskEntityFilter> updateEntityFilter(String contentLanguage, EntityFilterUpdationParams entityFilterUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskEntityFilter>> localVarResp = updateEntityFilterWithHttpInfo(contentLanguage, entityFilterUpdationParams);
+    public List<WithTaskEntityFilter> updateEntityFilter(EntityFilterUpdationParams entityFilterUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskEntityFilter>> localVarResp = updateEntityFilterWithHttpInfo(entityFilterUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskEntityFilter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskEntityFilter>> updateEntityFilterWithHttpInfo(String contentLanguage, EntityFilterUpdationParams entityFilterUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateEntityFilterValidateBeforeCall(contentLanguage, entityFilterUpdationParams, null);
+    public ApiResponse<List<WithTaskEntityFilter>> updateEntityFilterWithHttpInfo(EntityFilterUpdationParams entityFilterUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateEntityFilterValidateBeforeCall(entityFilterUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskEntityFilter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class EntityFilterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param entityFilterUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class EntityFilterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateEntityFilterAsync(String contentLanguage, EntityFilterUpdationParams entityFilterUpdationParams, final ApiCallback<List<WithTaskEntityFilter>> _callback) throws ApiException {
+    public okhttp3.Call updateEntityFilterAsync(EntityFilterUpdationParams entityFilterUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskEntityFilter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateEntityFilterValidateBeforeCall(contentLanguage, entityFilterUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateEntityFilterValidateBeforeCall(entityFilterUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskEntityFilter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

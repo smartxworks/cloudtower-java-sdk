@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getSvtImages
 
-> List&lt;SvtImage&gt; getSvtImages(contentLanguage, getSvtImagesRequestBody)
+> List&lt;SvtImage&gt; getSvtImages(getSvtImagesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SvtImageApi apiInstance = new SvtImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSvtImagesRequestBody getSvtImagesRequestBody = new GetSvtImagesRequestBody(); // GetSvtImagesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SvtImage> result = apiInstance.getSvtImages(contentLanguage, getSvtImagesRequestBody);
+            List<SvtImage> result = apiInstance.getSvtImages(getSvtImagesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SvtImageApi#getSvtImages");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSvtImagesRequestBody** | [**GetSvtImagesRequestBody**](GetSvtImagesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getSvtImagesConnection
 
-> SvtImageConnection getSvtImagesConnection(contentLanguage, getSvtImagesConnectionRequestBody)
+> SvtImageConnection getSvtImagesConnection(getSvtImagesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SvtImageApi apiInstance = new SvtImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody = new GetSvtImagesConnectionRequestBody(); // GetSvtImagesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SvtImageConnection result = apiInstance.getSvtImagesConnection(contentLanguage, getSvtImagesConnectionRequestBody);
+            SvtImageConnection result = apiInstance.getSvtImagesConnection(getSvtImagesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SvtImageApi#getSvtImagesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSvtImagesConnectionRequestBody** | [**GetSvtImagesConnectionRequestBody**](GetSvtImagesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

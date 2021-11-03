@@ -23,8 +23,8 @@ public interface EverouteClusterApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEverouteClustersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;EverouteCluster&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface EverouteClusterApi {
   })
   @POST("get-everoute-clusters")
   Call<List<EverouteCluster>> getEverouteClusters(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEverouteClustersRequestBody getEverouteClustersRequestBody
+    @retrofit2.http.Body GetEverouteClustersRequestBody getEverouteClustersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEverouteClustersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;EverouteClusterConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface EverouteClusterApi {
   })
   @POST("get-everoute-clusters-connection")
   Call<EverouteClusterConnection> getEverouteClustersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody
+    @retrofit2.http.Body GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

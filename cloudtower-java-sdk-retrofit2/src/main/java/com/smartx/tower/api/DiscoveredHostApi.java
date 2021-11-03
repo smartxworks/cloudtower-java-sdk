@@ -21,8 +21,8 @@ public interface DiscoveredHostApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDiscoverHostsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;DiscoveredHost&gt;&gt;
    */
   @Headers({
@@ -30,7 +30,7 @@ public interface DiscoveredHostApi {
   })
   @POST("get-discover-hosts")
   Call<List<DiscoveredHost>> getDiscoverHosts(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDiscoverHostsRequestBody getDiscoverHostsRequestBody
+    @retrofit2.http.Body GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

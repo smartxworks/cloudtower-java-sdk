@@ -23,8 +23,8 @@ public interface TaskApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getTasksRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Task&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface TaskApi {
   })
   @POST("get-tasks")
   Call<List<Task>> getTasks(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetTasksRequestBody getTasksRequestBody
+    @retrofit2.http.Body GetTasksRequestBody getTasksRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getTasksConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;TaskConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface TaskApi {
   })
   @POST("get-tasks-connection")
   Call<TaskConnection> getTasksConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetTasksConnectionRequestBody getTasksConnectionRequestBody
+    @retrofit2.http.Body GetTasksConnectionRequestBody getTasksConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

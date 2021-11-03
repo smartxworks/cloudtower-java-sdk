@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * VmRebuildParams
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:54.291904700+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:48:29.490085800+08:00[Asia/Shanghai]")
 public class VmRebuildParams {
   public static final String SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID = "rebuild_from_snapshot_id";
   @SerializedName(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID)
@@ -600,8 +600,8 @@ public class VmRebuildParams {
    * Get clusterId
    * @return clusterId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getClusterId() {
     return clusterId;

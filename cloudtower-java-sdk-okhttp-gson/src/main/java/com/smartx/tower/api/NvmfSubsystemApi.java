@@ -59,8 +59,8 @@ public class NvmfSubsystemApi {
 
     /**
      * Build call for getNvmfSubsystems
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfSubsystemsCall(String contentLanguage, GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsCall(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNvmfSubsystemsRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class NvmfSubsystemApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNvmfSubsystemsValidateBeforeCall(String contentLanguage, GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNvmfSubsystems(Async)");
-        }
+    private okhttp3.Call getNvmfSubsystemsValidateBeforeCall(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNvmfSubsystemsRequestBody' is set
         if (getNvmfSubsystemsRequestBody == null) {
@@ -119,7 +114,7 @@ public class NvmfSubsystemApi {
         }
         
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsCall(contentLanguage, getNvmfSubsystemsRequestBody, _callback);
+        okhttp3.Call localVarCall = getNvmfSubsystemsCall(getNvmfSubsystemsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class NvmfSubsystemApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;NvmfSubsystem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<NvmfSubsystem> getNvmfSubsystems(String contentLanguage, GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody) throws ApiException {
-        ApiResponse<List<NvmfSubsystem>> localVarResp = getNvmfSubsystemsWithHttpInfo(contentLanguage, getNvmfSubsystemsRequestBody);
+    public List<NvmfSubsystem> getNvmfSubsystems(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<NvmfSubsystem>> localVarResp = getNvmfSubsystemsWithHttpInfo(getNvmfSubsystemsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;NvmfSubsystem&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<NvmfSubsystem>> getNvmfSubsystemsWithHttpInfo(String contentLanguage, GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNvmfSubsystemsValidateBeforeCall(contentLanguage, getNvmfSubsystemsRequestBody, null);
+    public ApiResponse<List<NvmfSubsystem>> getNvmfSubsystemsWithHttpInfo(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNvmfSubsystemsValidateBeforeCall(getNvmfSubsystemsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<NvmfSubsystem>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class NvmfSubsystemApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfSubsystemsAsync(String contentLanguage, GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback<List<NvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsAsync(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, String contentLanguage, final ApiCallback<List<NvmfSubsystem>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsValidateBeforeCall(contentLanguage, getNvmfSubsystemsRequestBody, _callback);
+        okhttp3.Call localVarCall = getNvmfSubsystemsValidateBeforeCall(getNvmfSubsystemsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<NvmfSubsystem>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNvmfSubsystemsConnection
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfSubsystemsConnectionCall(String contentLanguage, GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsConnectionCall(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNvmfSubsystemsConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class NvmfSubsystemApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNvmfSubsystemsConnectionValidateBeforeCall(String contentLanguage, GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNvmfSubsystemsConnection(Async)");
-        }
+    private okhttp3.Call getNvmfSubsystemsConnectionValidateBeforeCall(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNvmfSubsystemsConnectionRequestBody' is set
         if (getNvmfSubsystemsConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class NvmfSubsystemApi {
         }
         
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionCall(contentLanguage, getNvmfSubsystemsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionCall(getNvmfSubsystemsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class NvmfSubsystemApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return NvmfSubsystemConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NvmfSubsystemConnection getNvmfSubsystemsConnection(String contentLanguage, GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody) throws ApiException {
-        ApiResponse<NvmfSubsystemConnection> localVarResp = getNvmfSubsystemsConnectionWithHttpInfo(contentLanguage, getNvmfSubsystemsConnectionRequestBody);
+    public NvmfSubsystemConnection getNvmfSubsystemsConnection(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<NvmfSubsystemConnection> localVarResp = getNvmfSubsystemsConnectionWithHttpInfo(getNvmfSubsystemsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NvmfSubsystemConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NvmfSubsystemConnection> getNvmfSubsystemsConnectionWithHttpInfo(String contentLanguage, GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionValidateBeforeCall(contentLanguage, getNvmfSubsystemsConnectionRequestBody, null);
+    public ApiResponse<NvmfSubsystemConnection> getNvmfSubsystemsConnectionWithHttpInfo(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionValidateBeforeCall(getNvmfSubsystemsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<NvmfSubsystemConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class NvmfSubsystemApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class NvmfSubsystemApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfSubsystemsConnectionAsync(String contentLanguage, GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, final ApiCallback<NvmfSubsystemConnection> _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsConnectionAsync(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, String contentLanguage, final ApiCallback<NvmfSubsystemConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionValidateBeforeCall(contentLanguage, getNvmfSubsystemsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionValidateBeforeCall(getNvmfSubsystemsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<NvmfSubsystemConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

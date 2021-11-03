@@ -24,8 +24,8 @@ public interface DefaultApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nvmfSubsystemCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNvmfSubsystem&gt;&gt;
    */
   @Headers({
@@ -33,14 +33,14 @@ public interface DefaultApi {
   })
   @POST("create-nvmf-subsystem")
   Call<List<WithTaskNvmfSubsystem>> createNvmfSubsystem(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams
+    @retrofit2.http.Body List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nvmfSubsystemDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteNvmfSubsystem&gt;&gt;
    */
   @Headers({
@@ -48,14 +48,14 @@ public interface DefaultApi {
   })
   @POST("delete-nvmf-subsystem")
   Call<List<WithTaskDeleteNvmfSubsystem>> deleteNvmfSubsystem(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams
+    @retrofit2.http.Body NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nvmfSubsystemUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNvmfSubsystem&gt;&gt;
    */
   @Headers({
@@ -63,7 +63,7 @@ public interface DefaultApi {
   })
   @POST("update-nvmf-subsystem")
   Call<List<WithTaskNvmfSubsystem>> updateNvmfSubsystem(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams
+    @retrofit2.http.Body NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

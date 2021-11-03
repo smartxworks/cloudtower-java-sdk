@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createConsistencyGroupSnapshot
 
-> List&lt;WithTaskConsistencyGroupSnapshot&gt; createConsistencyGroupSnapshot(contentLanguage, consistencyGroupSnapshotCreationParams)
+> List&lt;WithTaskConsistencyGroupSnapshot&gt; createConsistencyGroupSnapshot(consistencyGroupSnapshotCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupSnapshotApi apiInstance = new ConsistencyGroupSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams = Arrays.asList(); // List<ConsistencyGroupSnapshotCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskConsistencyGroupSnapshot> result = apiInstance.createConsistencyGroupSnapshot(contentLanguage, consistencyGroupSnapshotCreationParams);
+            List<WithTaskConsistencyGroupSnapshot> result = apiInstance.createConsistencyGroupSnapshot(consistencyGroupSnapshotCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupSnapshotApi#createConsistencyGroupSnapshot");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **consistencyGroupSnapshotCreationParams** | [**List&lt;ConsistencyGroupSnapshotCreationParams&gt;**](ConsistencyGroupSnapshotCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteConsistencyGroupSnapshot
 
-> List&lt;WithTaskDeleteConsistencyGroupSnapshot&gt; deleteConsistencyGroupSnapshot(contentLanguage, consistencyGroupSnapshotDeletionParams)
+> List&lt;WithTaskDeleteConsistencyGroupSnapshot&gt; deleteConsistencyGroupSnapshot(consistencyGroupSnapshotDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupSnapshotApi apiInstance = new ConsistencyGroupSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams = new ConsistencyGroupSnapshotDeletionParams(); // ConsistencyGroupSnapshotDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteConsistencyGroupSnapshot> result = apiInstance.deleteConsistencyGroupSnapshot(contentLanguage, consistencyGroupSnapshotDeletionParams);
+            List<WithTaskDeleteConsistencyGroupSnapshot> result = apiInstance.deleteConsistencyGroupSnapshot(consistencyGroupSnapshotDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupSnapshotApi#deleteConsistencyGroupSnapshot");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **consistencyGroupSnapshotDeletionParams** | [**ConsistencyGroupSnapshotDeletionParams**](ConsistencyGroupSnapshotDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getConsistencyGroupSnapshots
 
-> List&lt;ConsistencyGroupSnapshot&gt; getConsistencyGroupSnapshots(contentLanguage, getConsistencyGroupSnapshotsRequestBody)
+> List&lt;ConsistencyGroupSnapshot&gt; getConsistencyGroupSnapshots(getConsistencyGroupSnapshotsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupSnapshotApi apiInstance = new ConsistencyGroupSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody = new GetConsistencyGroupSnapshotsRequestBody(); // GetConsistencyGroupSnapshotsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ConsistencyGroupSnapshot> result = apiInstance.getConsistencyGroupSnapshots(contentLanguage, getConsistencyGroupSnapshotsRequestBody);
+            List<ConsistencyGroupSnapshot> result = apiInstance.getConsistencyGroupSnapshots(getConsistencyGroupSnapshotsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupSnapshotApi#getConsistencyGroupSnapshots");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getConsistencyGroupSnapshotsRequestBody** | [**GetConsistencyGroupSnapshotsRequestBody**](GetConsistencyGroupSnapshotsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getConsistencyGroupSnapshotsConnection
 
-> ConsistencyGroupSnapshotConnection getConsistencyGroupSnapshotsConnection(contentLanguage, getConsistencyGroupSnapshotsConnectionRequestBody)
+> ConsistencyGroupSnapshotConnection getConsistencyGroupSnapshotsConnection(getConsistencyGroupSnapshotsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupSnapshotApi apiInstance = new ConsistencyGroupSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody = new GetConsistencyGroupSnapshotsConnectionRequestBody(); // GetConsistencyGroupSnapshotsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ConsistencyGroupSnapshotConnection result = apiInstance.getConsistencyGroupSnapshotsConnection(contentLanguage, getConsistencyGroupSnapshotsConnectionRequestBody);
+            ConsistencyGroupSnapshotConnection result = apiInstance.getConsistencyGroupSnapshotsConnection(getConsistencyGroupSnapshotsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupSnapshotApi#getConsistencyGroupSnapshotsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getConsistencyGroupSnapshotsConnectionRequestBody** | [**GetConsistencyGroupSnapshotsConnectionRequestBody**](GetConsistencyGroupSnapshotsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateConsistencyGroupSnapshot
 
-> List&lt;WithTaskConsistencyGroupSnapshot&gt; updateConsistencyGroupSnapshot(contentLanguage, consistencyGroupSnapshotUpdationParams)
+> List&lt;WithTaskConsistencyGroupSnapshot&gt; updateConsistencyGroupSnapshot(consistencyGroupSnapshotUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ConsistencyGroupSnapshotApi apiInstance = new ConsistencyGroupSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams = new ConsistencyGroupSnapshotUpdationParams(); // ConsistencyGroupSnapshotUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskConsistencyGroupSnapshot> result = apiInstance.updateConsistencyGroupSnapshot(contentLanguage, consistencyGroupSnapshotUpdationParams);
+            List<WithTaskConsistencyGroupSnapshot> result = apiInstance.updateConsistencyGroupSnapshot(consistencyGroupSnapshotUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ConsistencyGroupSnapshotApi#updateConsistencyGroupSnapshot");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **consistencyGroupSnapshotUpdationParams** | [**ConsistencyGroupSnapshotUpdationParams**](ConsistencyGroupSnapshotUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

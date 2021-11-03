@@ -33,9 +33,9 @@
 
 * `NAME_DESC` (value: `"name_DESC"`)
 
-* `PVC_NAME_ASC` (value: `"pvc_name_ASC"`)
+* `PACKAGE_INFO_ASC` (value: `"package_info_ASC"`)
 
-* `PVC_NAME_DESC` (value: `"pvc_name_DESC"`)
+* `PACKAGE_INFO_DESC` (value: `"package_info_DESC"`)
 
 * `SIZE_ASC` (value: `"size_ASC"`)
 

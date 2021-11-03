@@ -23,8 +23,8 @@ public interface NfsInodeApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNfsInodesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;NfsInode&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface NfsInodeApi {
   })
   @POST("get-nfs-inodes")
   Call<List<NfsInode>> getNfsInodes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNfsInodesRequestBody getNfsInodesRequestBody
+    @retrofit2.http.Body GetNfsInodesRequestBody getNfsInodesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNfsInodesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NfsInodeConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface NfsInodeApi {
   })
   @POST("get-nfs-inodes-connection")
   Call<NfsInodeConnection> getNfsInodesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody
+    @retrofit2.http.Body GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

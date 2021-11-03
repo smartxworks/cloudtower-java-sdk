@@ -28,8 +28,8 @@ public interface OrganizationApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param organizationCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskOrganization&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface OrganizationApi {
   })
   @POST("create-organization")
   Call<List<WithTaskOrganization>> createOrganization(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<OrganizationCreationParams> organizationCreationParams
+    @retrofit2.http.Body List<OrganizationCreationParams> organizationCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param organizationDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteOrganization&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface OrganizationApi {
   })
   @POST("delete-organization")
   Call<List<WithTaskDeleteOrganization>> deleteOrganization(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body OrganizationDeletionParams organizationDeletionParams
+    @retrofit2.http.Body OrganizationDeletionParams organizationDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getOrganizationsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Organization&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface OrganizationApi {
   })
   @POST("get-organizations")
   Call<List<Organization>> getOrganizations(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetOrganizationsRequestBody getOrganizationsRequestBody
+    @retrofit2.http.Body GetOrganizationsRequestBody getOrganizationsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getOrganizationsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;OrganizationConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface OrganizationApi {
   })
   @POST("get-organizations-connection")
   Call<OrganizationConnection> getOrganizationsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody
+    @retrofit2.http.Body GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param organizationUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskOrganization&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface OrganizationApi {
   })
   @POST("update-organization")
   Call<List<WithTaskOrganization>> updateOrganization(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body OrganizationUpdationParams organizationUpdationParams
+    @retrofit2.http.Body OrganizationUpdationParams organizationUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

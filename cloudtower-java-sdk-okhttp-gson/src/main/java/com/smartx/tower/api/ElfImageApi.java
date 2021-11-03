@@ -65,13 +65,13 @@ public class ElfImageApi {
 
     /**
      * Build call for createElfImage
-     * @param contentLanguage  (required)
      * @param file  (required)
      * @param clusterId  (required)
      * @param name  (required)
      * @param size  (required)
      * @param description  (required)
      * @param uploadTaskId  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -82,7 +82,7 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createElfImageCall(String contentLanguage, File file, String clusterId, String name, String size, String description, String uploadTaskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createElfImageCall(File file, String clusterId, String name, String size, String description, String uploadTaskId, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -141,12 +141,7 @@ public class ElfImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createElfImageValidateBeforeCall(String contentLanguage, File file, String clusterId, String name, String size, String description, String uploadTaskId, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createElfImage(Async)");
-        }
+    private okhttp3.Call createElfImageValidateBeforeCall(File file, String clusterId, String name, String size, String description, String uploadTaskId, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'file' is set
         if (file == null) {
@@ -179,7 +174,7 @@ public class ElfImageApi {
         }
         
 
-        okhttp3.Call localVarCall = createElfImageCall(contentLanguage, file, clusterId, name, size, description, uploadTaskId, _callback);
+        okhttp3.Call localVarCall = createElfImageCall(file, clusterId, name, size, description, uploadTaskId, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -187,13 +182,13 @@ public class ElfImageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param file  (required)
      * @param clusterId  (required)
      * @param name  (required)
      * @param size  (required)
      * @param description  (required)
      * @param uploadTaskId  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;UploadTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -203,21 +198,21 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<UploadTask> createElfImage(String contentLanguage, File file, String clusterId, String name, String size, String description, String uploadTaskId) throws ApiException {
-        ApiResponse<List<UploadTask>> localVarResp = createElfImageWithHttpInfo(contentLanguage, file, clusterId, name, size, description, uploadTaskId);
+    public List<UploadTask> createElfImage(File file, String clusterId, String name, String size, String description, String uploadTaskId, String contentLanguage) throws ApiException {
+        ApiResponse<List<UploadTask>> localVarResp = createElfImageWithHttpInfo(file, clusterId, name, size, description, uploadTaskId, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param file  (required)
      * @param clusterId  (required)
      * @param name  (required)
      * @param size  (required)
      * @param description  (required)
      * @param uploadTaskId  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;UploadTask&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -227,8 +222,8 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UploadTask>> createElfImageWithHttpInfo(String contentLanguage, File file, String clusterId, String name, String size, String description, String uploadTaskId) throws ApiException {
-        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(contentLanguage, file, clusterId, name, size, description, uploadTaskId, null);
+    public ApiResponse<List<UploadTask>> createElfImageWithHttpInfo(File file, String clusterId, String name, String size, String description, String uploadTaskId, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(file, clusterId, name, size, description, uploadTaskId, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -236,13 +231,13 @@ public class ElfImageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param file  (required)
      * @param clusterId  (required)
      * @param name  (required)
      * @param size  (required)
      * @param description  (required)
      * @param uploadTaskId  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -253,17 +248,17 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createElfImageAsync(String contentLanguage, File file, String clusterId, String name, String size, String description, String uploadTaskId, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
+    public okhttp3.Call createElfImageAsync(File file, String clusterId, String name, String size, String description, String uploadTaskId, String contentLanguage, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(contentLanguage, file, clusterId, name, size, description, uploadTaskId, _callback);
+        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(file, clusterId, name, size, description, uploadTaskId, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteElfImage
-     * @param contentLanguage  (required)
      * @param elfImageDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -274,7 +269,7 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteElfImageCall(String contentLanguage, ElfImageDeletionParams elfImageDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteElfImageCall(ElfImageDeletionParams elfImageDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = elfImageDeletionParams;
 
         // create path and map variables
@@ -309,12 +304,7 @@ public class ElfImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteElfImageValidateBeforeCall(String contentLanguage, ElfImageDeletionParams elfImageDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteElfImage(Async)");
-        }
+    private okhttp3.Call deleteElfImageValidateBeforeCall(ElfImageDeletionParams elfImageDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'elfImageDeletionParams' is set
         if (elfImageDeletionParams == null) {
@@ -322,7 +312,7 @@ public class ElfImageApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteElfImageCall(contentLanguage, elfImageDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteElfImageCall(elfImageDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -330,8 +320,8 @@ public class ElfImageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param elfImageDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteElfImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -341,16 +331,16 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteElfImage> deleteElfImage(String contentLanguage, ElfImageDeletionParams elfImageDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteElfImage>> localVarResp = deleteElfImageWithHttpInfo(contentLanguage, elfImageDeletionParams);
+    public List<WithTaskDeleteElfImage> deleteElfImage(ElfImageDeletionParams elfImageDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteElfImage>> localVarResp = deleteElfImageWithHttpInfo(elfImageDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param elfImageDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteElfImage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -360,8 +350,8 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteElfImage>> deleteElfImageWithHttpInfo(String contentLanguage, ElfImageDeletionParams elfImageDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteElfImageValidateBeforeCall(contentLanguage, elfImageDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteElfImage>> deleteElfImageWithHttpInfo(ElfImageDeletionParams elfImageDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteElfImageValidateBeforeCall(elfImageDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteElfImage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -369,8 +359,8 @@ public class ElfImageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param elfImageDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -381,17 +371,17 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteElfImageAsync(String contentLanguage, ElfImageDeletionParams elfImageDeletionParams, final ApiCallback<List<WithTaskDeleteElfImage>> _callback) throws ApiException {
+    public okhttp3.Call deleteElfImageAsync(ElfImageDeletionParams elfImageDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteElfImage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteElfImageValidateBeforeCall(contentLanguage, elfImageDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteElfImageValidateBeforeCall(elfImageDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteElfImage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getElfImages
-     * @param contentLanguage  (required)
      * @param getElfImagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -402,7 +392,7 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfImagesCall(String contentLanguage, GetElfImagesRequestBody getElfImagesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getElfImagesCall(GetElfImagesRequestBody getElfImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getElfImagesRequestBody;
 
         // create path and map variables
@@ -437,12 +427,7 @@ public class ElfImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getElfImagesValidateBeforeCall(String contentLanguage, GetElfImagesRequestBody getElfImagesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getElfImages(Async)");
-        }
+    private okhttp3.Call getElfImagesValidateBeforeCall(GetElfImagesRequestBody getElfImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getElfImagesRequestBody' is set
         if (getElfImagesRequestBody == null) {
@@ -450,7 +435,7 @@ public class ElfImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getElfImagesCall(contentLanguage, getElfImagesRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfImagesCall(getElfImagesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -458,8 +443,8 @@ public class ElfImageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfImagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ElfImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,16 +454,16 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ElfImage> getElfImages(String contentLanguage, GetElfImagesRequestBody getElfImagesRequestBody) throws ApiException {
-        ApiResponse<List<ElfImage>> localVarResp = getElfImagesWithHttpInfo(contentLanguage, getElfImagesRequestBody);
+    public List<ElfImage> getElfImages(GetElfImagesRequestBody getElfImagesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ElfImage>> localVarResp = getElfImagesWithHttpInfo(getElfImagesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfImagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ElfImage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -488,8 +473,8 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ElfImage>> getElfImagesWithHttpInfo(String contentLanguage, GetElfImagesRequestBody getElfImagesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getElfImagesValidateBeforeCall(contentLanguage, getElfImagesRequestBody, null);
+    public ApiResponse<List<ElfImage>> getElfImagesWithHttpInfo(GetElfImagesRequestBody getElfImagesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getElfImagesValidateBeforeCall(getElfImagesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ElfImage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -497,8 +482,8 @@ public class ElfImageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getElfImagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -509,17 +494,17 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfImagesAsync(String contentLanguage, GetElfImagesRequestBody getElfImagesRequestBody, final ApiCallback<List<ElfImage>> _callback) throws ApiException {
+    public okhttp3.Call getElfImagesAsync(GetElfImagesRequestBody getElfImagesRequestBody, String contentLanguage, final ApiCallback<List<ElfImage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getElfImagesValidateBeforeCall(contentLanguage, getElfImagesRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfImagesValidateBeforeCall(getElfImagesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ElfImage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getElfImagesConnection
-     * @param contentLanguage  (required)
      * @param getElfImagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -530,7 +515,7 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfImagesConnectionCall(String contentLanguage, GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getElfImagesConnectionCall(GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getElfImagesConnectionRequestBody;
 
         // create path and map variables
@@ -565,12 +550,7 @@ public class ElfImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getElfImagesConnectionValidateBeforeCall(String contentLanguage, GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getElfImagesConnection(Async)");
-        }
+    private okhttp3.Call getElfImagesConnectionValidateBeforeCall(GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getElfImagesConnectionRequestBody' is set
         if (getElfImagesConnectionRequestBody == null) {
@@ -578,7 +558,7 @@ public class ElfImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getElfImagesConnectionCall(contentLanguage, getElfImagesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfImagesConnectionCall(getElfImagesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -586,8 +566,8 @@ public class ElfImageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfImagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ElfImageConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -597,16 +577,16 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ElfImageConnection getElfImagesConnection(String contentLanguage, GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody) throws ApiException {
-        ApiResponse<ElfImageConnection> localVarResp = getElfImagesConnectionWithHttpInfo(contentLanguage, getElfImagesConnectionRequestBody);
+    public ElfImageConnection getElfImagesConnection(GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ElfImageConnection> localVarResp = getElfImagesConnectionWithHttpInfo(getElfImagesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfImagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ElfImageConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -616,8 +596,8 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ElfImageConnection> getElfImagesConnectionWithHttpInfo(String contentLanguage, GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getElfImagesConnectionValidateBeforeCall(contentLanguage, getElfImagesConnectionRequestBody, null);
+    public ApiResponse<ElfImageConnection> getElfImagesConnectionWithHttpInfo(GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getElfImagesConnectionValidateBeforeCall(getElfImagesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ElfImageConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -625,8 +605,8 @@ public class ElfImageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getElfImagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -637,17 +617,17 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfImagesConnectionAsync(String contentLanguage, GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, final ApiCallback<ElfImageConnection> _callback) throws ApiException {
+    public okhttp3.Call getElfImagesConnectionAsync(GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody, String contentLanguage, final ApiCallback<ElfImageConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getElfImagesConnectionValidateBeforeCall(contentLanguage, getElfImagesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfImagesConnectionValidateBeforeCall(getElfImagesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ElfImageConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateElfImage
-     * @param contentLanguage  (required)
      * @param elfImageUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -658,7 +638,7 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateElfImageCall(String contentLanguage, ElfImageUpdationParams elfImageUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateElfImageCall(ElfImageUpdationParams elfImageUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = elfImageUpdationParams;
 
         // create path and map variables
@@ -693,12 +673,7 @@ public class ElfImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateElfImageValidateBeforeCall(String contentLanguage, ElfImageUpdationParams elfImageUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateElfImage(Async)");
-        }
+    private okhttp3.Call updateElfImageValidateBeforeCall(ElfImageUpdationParams elfImageUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'elfImageUpdationParams' is set
         if (elfImageUpdationParams == null) {
@@ -706,7 +681,7 @@ public class ElfImageApi {
         }
         
 
-        okhttp3.Call localVarCall = updateElfImageCall(contentLanguage, elfImageUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateElfImageCall(elfImageUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -714,8 +689,8 @@ public class ElfImageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param elfImageUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskElfImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -725,16 +700,16 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskElfImage> updateElfImage(String contentLanguage, ElfImageUpdationParams elfImageUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskElfImage>> localVarResp = updateElfImageWithHttpInfo(contentLanguage, elfImageUpdationParams);
+    public List<WithTaskElfImage> updateElfImage(ElfImageUpdationParams elfImageUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskElfImage>> localVarResp = updateElfImageWithHttpInfo(elfImageUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param elfImageUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskElfImage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -744,8 +719,8 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskElfImage>> updateElfImageWithHttpInfo(String contentLanguage, ElfImageUpdationParams elfImageUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateElfImageValidateBeforeCall(contentLanguage, elfImageUpdationParams, null);
+    public ApiResponse<List<WithTaskElfImage>> updateElfImageWithHttpInfo(ElfImageUpdationParams elfImageUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateElfImageValidateBeforeCall(elfImageUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskElfImage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -753,8 +728,8 @@ public class ElfImageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param elfImageUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -765,9 +740,9 @@ public class ElfImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateElfImageAsync(String contentLanguage, ElfImageUpdationParams elfImageUpdationParams, final ApiCallback<List<WithTaskElfImage>> _callback) throws ApiException {
+    public okhttp3.Call updateElfImageAsync(ElfImageUpdationParams elfImageUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskElfImage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateElfImageValidateBeforeCall(contentLanguage, elfImageUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateElfImageValidateBeforeCall(elfImageUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskElfImage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getEveroutePackages
 
-> List&lt;EveroutePackage&gt; getEveroutePackages(contentLanguage, getEveroutePackagesRequestBody)
+> List&lt;EveroutePackage&gt; getEveroutePackages(getEveroutePackagesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EveroutePackageApi apiInstance = new EveroutePackageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEveroutePackagesRequestBody getEveroutePackagesRequestBody = new GetEveroutePackagesRequestBody(); // GetEveroutePackagesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<EveroutePackage> result = apiInstance.getEveroutePackages(contentLanguage, getEveroutePackagesRequestBody);
+            List<EveroutePackage> result = apiInstance.getEveroutePackages(getEveroutePackagesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EveroutePackageApi#getEveroutePackages");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEveroutePackagesRequestBody** | [**GetEveroutePackagesRequestBody**](GetEveroutePackagesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getEveroutePackagesConnection
 
-> EveroutePackageConnection getEveroutePackagesConnection(contentLanguage, getEveroutePackagesConnectionRequestBody)
+> EveroutePackageConnection getEveroutePackagesConnection(getEveroutePackagesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EveroutePackageApi apiInstance = new EveroutePackageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody = new GetEveroutePackagesConnectionRequestBody(); // GetEveroutePackagesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            EveroutePackageConnection result = apiInstance.getEveroutePackagesConnection(contentLanguage, getEveroutePackagesConnectionRequestBody);
+            EveroutePackageConnection result = apiInstance.getEveroutePackagesConnection(getEveroutePackagesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EveroutePackageApi#getEveroutePackagesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEveroutePackagesConnectionRequestBody** | [**GetEveroutePackagesConnectionRequestBody**](GetEveroutePackagesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -30,11 +30,6 @@
     <openapi.generator.maven.plugin.ignoreFileOverride>${project.basedir}/.openapiignore</openapi.generator.maven.plugin.ignoreFileOverride>
   </properties>
 
-  <modules>
-    <module>cloudtower-java-sdk-retrofit2</module>
-    <module>cloudtower-java-sdk-retrofit2</module>
-  </modules>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -56,7 +51,9 @@
               <includes>
                 <include>cloudtower-java-sdk-*/**</include>
               </includes>
-              <excludes></excludes>
+              <excludes>
+                <excludes>cloudtower-java-sdk-*/src/test/**</excludes>
+              </excludes>
             </fileset>
           </filesets>
         </configuration>

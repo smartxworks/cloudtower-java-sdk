@@ -28,8 +28,8 @@ public interface ViewApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param viewCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskView&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface ViewApi {
   })
   @POST("create-view")
   Call<List<WithTaskView>> createView(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<ViewCreationParams> viewCreationParams
+    @retrofit2.http.Body List<ViewCreationParams> viewCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param viewDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteView&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface ViewApi {
   })
   @POST("delete-view")
   Call<List<WithTaskDeleteView>> deleteView(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ViewDeletionParams viewDeletionParams
+    @retrofit2.http.Body ViewDeletionParams viewDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getViewsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;View&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface ViewApi {
   })
   @POST("get-views")
   Call<List<View>> getViews(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetViewsRequestBody getViewsRequestBody
+    @retrofit2.http.Body GetViewsRequestBody getViewsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getViewsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ViewConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface ViewApi {
   })
   @POST("get-views-connection")
   Call<ViewConnection> getViewsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetViewsConnectionRequestBody getViewsConnectionRequestBody
+    @retrofit2.http.Body GetViewsConnectionRequestBody getViewsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param viewUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskView&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface ViewApi {
   })
   @POST("update-view")
   Call<List<WithTaskView>> updateView(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ViewUpdationParams viewUpdationParams
+    @retrofit2.http.Body ViewUpdationParams viewUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

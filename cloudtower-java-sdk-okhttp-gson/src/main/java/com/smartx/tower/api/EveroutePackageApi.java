@@ -59,8 +59,8 @@ public class EveroutePackageApi {
 
     /**
      * Build call for getEveroutePackages
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEveroutePackagesCall(String contentLanguage, GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEveroutePackagesCall(GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getEveroutePackagesRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class EveroutePackageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEveroutePackagesValidateBeforeCall(String contentLanguage, GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getEveroutePackages(Async)");
-        }
+    private okhttp3.Call getEveroutePackagesValidateBeforeCall(GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEveroutePackagesRequestBody' is set
         if (getEveroutePackagesRequestBody == null) {
@@ -119,7 +114,7 @@ public class EveroutePackageApi {
         }
         
 
-        okhttp3.Call localVarCall = getEveroutePackagesCall(contentLanguage, getEveroutePackagesRequestBody, _callback);
+        okhttp3.Call localVarCall = getEveroutePackagesCall(getEveroutePackagesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class EveroutePackageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;EveroutePackage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<EveroutePackage> getEveroutePackages(String contentLanguage, GetEveroutePackagesRequestBody getEveroutePackagesRequestBody) throws ApiException {
-        ApiResponse<List<EveroutePackage>> localVarResp = getEveroutePackagesWithHttpInfo(contentLanguage, getEveroutePackagesRequestBody);
+    public List<EveroutePackage> getEveroutePackages(GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<EveroutePackage>> localVarResp = getEveroutePackagesWithHttpInfo(getEveroutePackagesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;EveroutePackage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<EveroutePackage>> getEveroutePackagesWithHttpInfo(String contentLanguage, GetEveroutePackagesRequestBody getEveroutePackagesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEveroutePackagesValidateBeforeCall(contentLanguage, getEveroutePackagesRequestBody, null);
+    public ApiResponse<List<EveroutePackage>> getEveroutePackagesWithHttpInfo(GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getEveroutePackagesValidateBeforeCall(getEveroutePackagesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<EveroutePackage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class EveroutePackageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEveroutePackagesAsync(String contentLanguage, GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, final ApiCallback<List<EveroutePackage>> _callback) throws ApiException {
+    public okhttp3.Call getEveroutePackagesAsync(GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, String contentLanguage, final ApiCallback<List<EveroutePackage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEveroutePackagesValidateBeforeCall(contentLanguage, getEveroutePackagesRequestBody, _callback);
+        okhttp3.Call localVarCall = getEveroutePackagesValidateBeforeCall(getEveroutePackagesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<EveroutePackage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEveroutePackagesConnection
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEveroutePackagesConnectionCall(String contentLanguage, GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEveroutePackagesConnectionCall(GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getEveroutePackagesConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class EveroutePackageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEveroutePackagesConnectionValidateBeforeCall(String contentLanguage, GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getEveroutePackagesConnection(Async)");
-        }
+    private okhttp3.Call getEveroutePackagesConnectionValidateBeforeCall(GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEveroutePackagesConnectionRequestBody' is set
         if (getEveroutePackagesConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class EveroutePackageApi {
         }
         
 
-        okhttp3.Call localVarCall = getEveroutePackagesConnectionCall(contentLanguage, getEveroutePackagesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getEveroutePackagesConnectionCall(getEveroutePackagesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class EveroutePackageApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return EveroutePackageConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public EveroutePackageConnection getEveroutePackagesConnection(String contentLanguage, GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody) throws ApiException {
-        ApiResponse<EveroutePackageConnection> localVarResp = getEveroutePackagesConnectionWithHttpInfo(contentLanguage, getEveroutePackagesConnectionRequestBody);
+    public EveroutePackageConnection getEveroutePackagesConnection(GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<EveroutePackageConnection> localVarResp = getEveroutePackagesConnectionWithHttpInfo(getEveroutePackagesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;EveroutePackageConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EveroutePackageConnection> getEveroutePackagesConnectionWithHttpInfo(String contentLanguage, GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEveroutePackagesConnectionValidateBeforeCall(contentLanguage, getEveroutePackagesConnectionRequestBody, null);
+    public ApiResponse<EveroutePackageConnection> getEveroutePackagesConnectionWithHttpInfo(GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getEveroutePackagesConnectionValidateBeforeCall(getEveroutePackagesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<EveroutePackageConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class EveroutePackageApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getEveroutePackagesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class EveroutePackageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEveroutePackagesConnectionAsync(String contentLanguage, GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, final ApiCallback<EveroutePackageConnection> _callback) throws ApiException {
+    public okhttp3.Call getEveroutePackagesConnectionAsync(GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, String contentLanguage, final ApiCallback<EveroutePackageConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEveroutePackagesConnectionValidateBeforeCall(contentLanguage, getEveroutePackagesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getEveroutePackagesConnectionValidateBeforeCall(getEveroutePackagesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<EveroutePackageConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createGraph
 
-> List&lt;WithTaskGraph&gt; createGraph(contentLanguage, graphCreationParams)
+> List&lt;WithTaskGraph&gt; createGraph(graphCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GraphApi apiInstance = new GraphApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<GraphCreationParams> graphCreationParams = Arrays.asList(); // List<GraphCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskGraph> result = apiInstance.createGraph(contentLanguage, graphCreationParams);
+            List<WithTaskGraph> result = apiInstance.createGraph(graphCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GraphApi#createGraph");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **graphCreationParams** | [**List&lt;GraphCreationParams&gt;**](GraphCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteGraph
 
-> List&lt;WithTaskDeleteGraph&gt; deleteGraph(contentLanguage, graphDeletionParams)
+> List&lt;WithTaskDeleteGraph&gt; deleteGraph(graphDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GraphApi apiInstance = new GraphApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GraphDeletionParams graphDeletionParams = new GraphDeletionParams(); // GraphDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteGraph> result = apiInstance.deleteGraph(contentLanguage, graphDeletionParams);
+            List<WithTaskDeleteGraph> result = apiInstance.deleteGraph(graphDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GraphApi#deleteGraph");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **graphDeletionParams** | [**GraphDeletionParams**](GraphDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getGraphs
 
-> List&lt;Graph&gt; getGraphs(contentLanguage, getGraphsRequestBody)
+> List&lt;Graph&gt; getGraphs(getGraphsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GraphApi apiInstance = new GraphApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetGraphsRequestBody getGraphsRequestBody = new GetGraphsRequestBody(); // GetGraphsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Graph> result = apiInstance.getGraphs(contentLanguage, getGraphsRequestBody);
+            List<Graph> result = apiInstance.getGraphs(getGraphsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GraphApi#getGraphs");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getGraphsRequestBody** | [**GetGraphsRequestBody**](GetGraphsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getGraphsConnection
 
-> GraphConnection getGraphsConnection(contentLanguage, getGraphsConnectionRequestBody)
+> GraphConnection getGraphsConnection(getGraphsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GraphApi apiInstance = new GraphApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetGraphsConnectionRequestBody getGraphsConnectionRequestBody = new GetGraphsConnectionRequestBody(); // GetGraphsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            GraphConnection result = apiInstance.getGraphsConnection(contentLanguage, getGraphsConnectionRequestBody);
+            GraphConnection result = apiInstance.getGraphsConnection(getGraphsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GraphApi#getGraphsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getGraphsConnectionRequestBody** | [**GetGraphsConnectionRequestBody**](GetGraphsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateGraph
 
-> List&lt;WithTaskGraph&gt; updateGraph(contentLanguage, graphUpdationParams)
+> List&lt;WithTaskGraph&gt; updateGraph(graphUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GraphApi apiInstance = new GraphApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GraphUpdationParams graphUpdationParams = new GraphUpdationParams(); // GraphUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskGraph> result = apiInstance.updateGraph(contentLanguage, graphUpdationParams);
+            List<WithTaskGraph> result = apiInstance.updateGraph(graphUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GraphApi#updateGraph");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **graphUpdationParams** | [**GraphUpdationParams**](GraphUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

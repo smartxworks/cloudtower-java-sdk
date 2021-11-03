@@ -28,8 +28,8 @@ public interface GraphApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param graphCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskGraph&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface GraphApi {
   })
   @POST("create-graph")
   Call<List<WithTaskGraph>> createGraph(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<GraphCreationParams> graphCreationParams
+    @retrofit2.http.Body List<GraphCreationParams> graphCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param graphDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteGraph&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface GraphApi {
   })
   @POST("delete-graph")
   Call<List<WithTaskDeleteGraph>> deleteGraph(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GraphDeletionParams graphDeletionParams
+    @retrofit2.http.Body GraphDeletionParams graphDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getGraphsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Graph&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface GraphApi {
   })
   @POST("get-graphs")
   Call<List<Graph>> getGraphs(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetGraphsRequestBody getGraphsRequestBody
+    @retrofit2.http.Body GetGraphsRequestBody getGraphsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getGraphsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;GraphConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface GraphApi {
   })
   @POST("get-graphs-connection")
   Call<GraphConnection> getGraphsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetGraphsConnectionRequestBody getGraphsConnectionRequestBody
+    @retrofit2.http.Body GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param graphUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskGraph&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface GraphApi {
   })
   @POST("update-graph")
   Call<List<WithTaskGraph>> updateGraph(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GraphUpdationParams graphUpdationParams
+    @retrofit2.http.Body GraphUpdationParams graphUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

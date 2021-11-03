@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getTasks
 
-> List&lt;Task&gt; getTasks(contentLanguage, getTasksRequestBody)
+> List&lt;Task&gt; getTasks(getTasksRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         TaskApi apiInstance = new TaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetTasksRequestBody getTasksRequestBody = new GetTasksRequestBody(); // GetTasksRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Task> result = apiInstance.getTasks(contentLanguage, getTasksRequestBody);
+            List<Task> result = apiInstance.getTasks(getTasksRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TaskApi#getTasks");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getTasksRequestBody** | [**GetTasksRequestBody**](GetTasksRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getTasksConnection
 
-> TaskConnection getTasksConnection(contentLanguage, getTasksConnectionRequestBody)
+> TaskConnection getTasksConnection(getTasksConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         TaskApi apiInstance = new TaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetTasksConnectionRequestBody getTasksConnectionRequestBody = new GetTasksConnectionRequestBody(); // GetTasksConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            TaskConnection result = apiInstance.getTasksConnection(contentLanguage, getTasksConnectionRequestBody);
+            TaskConnection result = apiInstance.getTasksConnection(getTasksConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TaskApi#getTasksConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getTasksConnectionRequestBody** | [**GetTasksConnectionRequestBody**](GetTasksConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

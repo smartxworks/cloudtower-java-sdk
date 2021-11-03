@@ -28,8 +28,8 @@ public interface ConsistencyGroupApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param consistencyGroupCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskConsistencyGroup&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface ConsistencyGroupApi {
   })
   @POST("create-consistency-group")
   Call<List<WithTaskConsistencyGroup>> createConsistencyGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<ConsistencyGroupCreationParams> consistencyGroupCreationParams
+    @retrofit2.http.Body List<ConsistencyGroupCreationParams> consistencyGroupCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param consistencyGroupDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteConsistencyGroup&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface ConsistencyGroupApi {
   })
   @POST("delete-consistency-group")
   Call<List<WithTaskDeleteConsistencyGroup>> deleteConsistencyGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ConsistencyGroupDeletionParams consistencyGroupDeletionParams
+    @retrofit2.http.Body ConsistencyGroupDeletionParams consistencyGroupDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getConsistencyGroupsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ConsistencyGroup&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface ConsistencyGroupApi {
   })
   @POST("get-consistency-groups")
   Call<List<ConsistencyGroup>> getConsistencyGroups(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody
+    @retrofit2.http.Body GetConsistencyGroupsRequestBody getConsistencyGroupsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getConsistencyGroupsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ConsistencyGroupConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface ConsistencyGroupApi {
   })
   @POST("get-consistency-groups-connection")
   Call<ConsistencyGroupConnection> getConsistencyGroupsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody
+    @retrofit2.http.Body GetConsistencyGroupsConnectionRequestBody getConsistencyGroupsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param consistencyGroupUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskConsistencyGroup&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface ConsistencyGroupApi {
   })
   @POST("update-consistency-group")
   Call<List<WithTaskConsistencyGroup>> updateConsistencyGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ConsistencyGroupUpdationParams consistencyGroupUpdationParams
+    @retrofit2.http.Body ConsistencyGroupUpdationParams consistencyGroupUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

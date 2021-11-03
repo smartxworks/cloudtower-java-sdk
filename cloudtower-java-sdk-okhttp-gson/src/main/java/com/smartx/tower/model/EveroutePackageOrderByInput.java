@@ -57,9 +57,9 @@ public enum EveroutePackageOrderByInput {
   
   NAME_DESC("name_DESC"),
   
-  PVC_NAME_ASC("pvc_name_ASC"),
+  PACKAGE_INFO_ASC("package_info_ASC"),
   
-  PVC_NAME_DESC("pvc_name_DESC"),
+  PACKAGE_INFO_DESC("package_info_DESC"),
   
   SIZE_ASC("size_ASC"),
   

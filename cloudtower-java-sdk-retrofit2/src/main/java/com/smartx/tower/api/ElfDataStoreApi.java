@@ -23,8 +23,8 @@ public interface ElfDataStoreApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getElfDataStoresRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ElfDataStore&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ElfDataStoreApi {
   })
   @POST("get-elf-data-stores")
   Call<List<ElfDataStore>> getElfDataStores(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetElfDataStoresRequestBody getElfDataStoresRequestBody
+    @retrofit2.http.Body GetElfDataStoresRequestBody getElfDataStoresRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getElfDataStoresConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ElfDataStoreConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ElfDataStoreApi {
   })
   @POST("get-elf-data-stores-connection")
   Call<ElfDataStoreConnection> getElfDataStoresConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody
+    @retrofit2.http.Body GetElfDataStoresConnectionRequestBody getElfDataStoresConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

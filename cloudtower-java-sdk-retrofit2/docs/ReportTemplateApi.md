@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createReportTemplate
 
-> List&lt;WithTaskReportTemplate&gt; createReportTemplate(contentLanguage, reportTemplateCreationParams)
+> List&lt;WithTaskReportTemplate&gt; createReportTemplate(reportTemplateCreationParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTemplateApi apiInstance = new ReportTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<ReportTemplateCreationParams> reportTemplateCreationParams = Arrays.asList(); // List<ReportTemplateCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskReportTemplate> result = apiInstance.createReportTemplate(contentLanguage, reportTemplateCreationParams);
+            List<WithTaskReportTemplate> result = apiInstance.createReportTemplate(reportTemplateCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTemplateApi#createReportTemplate");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **reportTemplateCreationParams** | [**List&lt;ReportTemplateCreationParams&gt;**](ReportTemplateCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## deleteReportTemplate
 
-> List&lt;WithTaskDeleteReportTemplate&gt; deleteReportTemplate(contentLanguage, reportTemplateDeletionParams)
+> List&lt;WithTaskDeleteReportTemplate&gt; deleteReportTemplate(reportTemplateDeletionParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTemplateApi apiInstance = new ReportTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ReportTemplateDeletionParams reportTemplateDeletionParams = new ReportTemplateDeletionParams(); // ReportTemplateDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteReportTemplate> result = apiInstance.deleteReportTemplate(contentLanguage, reportTemplateDeletionParams);
+            List<WithTaskDeleteReportTemplate> result = apiInstance.deleteReportTemplate(reportTemplateDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTemplateApi#deleteReportTemplate");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **reportTemplateDeletionParams** | [**ReportTemplateDeletionParams**](ReportTemplateDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## generateFromReportTemplate
 
-> List&lt;WithTaskReportTask&gt; generateFromReportTemplate(contentLanguage, reporteTemplateGenerationParams)
+> List&lt;WithTaskReportTask&gt; generateFromReportTemplate(reporteTemplateGenerationParams, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTemplateApi apiInstance = new ReportTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ReporteTemplateGenerationParams reporteTemplateGenerationParams = new ReporteTemplateGenerationParams(); // ReporteTemplateGenerationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskReportTask> result = apiInstance.generateFromReportTemplate(contentLanguage, reporteTemplateGenerationParams);
+            List<WithTaskReportTask> result = apiInstance.generateFromReportTemplate(reporteTemplateGenerationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTemplateApi#generateFromReportTemplate");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **reporteTemplateGenerationParams** | [**ReporteTemplateGenerationParams**](ReporteTemplateGenerationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getReportTemplates
 
-> List&lt;ReportTemplate&gt; getReportTemplates(contentLanguage, getReportTemplatesRequestBody)
+> List&lt;ReportTemplate&gt; getReportTemplates(getReportTemplatesRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTemplateApi apiInstance = new ReportTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetReportTemplatesRequestBody getReportTemplatesRequestBody = new GetReportTemplatesRequestBody(); // GetReportTemplatesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ReportTemplate> result = apiInstance.getReportTemplates(contentLanguage, getReportTemplatesRequestBody);
+            List<ReportTemplate> result = apiInstance.getReportTemplates(getReportTemplatesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTemplateApi#getReportTemplates");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getReportTemplatesRequestBody** | [**GetReportTemplatesRequestBody**](GetReportTemplatesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## getReportTemplatesConnection
 
-> ReportTemplateConnection getReportTemplatesConnection(contentLanguage, getReportTemplatesConnectionRequestBody)
+> ReportTemplateConnection getReportTemplatesConnection(getReportTemplatesConnectionRequestBody, contentLanguage)
 
 
 
@@ -338,10 +338,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTemplateApi apiInstance = new ReportTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody = new GetReportTemplatesConnectionRequestBody(); // GetReportTemplatesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ReportTemplateConnection result = apiInstance.getReportTemplatesConnection(contentLanguage, getReportTemplatesConnectionRequestBody);
+            ReportTemplateConnection result = apiInstance.getReportTemplatesConnection(getReportTemplatesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTemplateApi#getReportTemplatesConnection");
@@ -359,8 +359,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getReportTemplatesConnectionRequestBody** | [**GetReportTemplatesConnectionRequestBody**](GetReportTemplatesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## updateReportTemplate
 
-> List&lt;WithTaskReportTemplate&gt; updateReportTemplate(contentLanguage, reportTemplateUpdationParams)
+> List&lt;WithTaskReportTemplate&gt; updateReportTemplate(reportTemplateUpdationParams, contentLanguage)
 
 
 
@@ -412,10 +412,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ReportTemplateApi apiInstance = new ReportTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ReportTemplateUpdationParams reportTemplateUpdationParams = new ReportTemplateUpdationParams(); // ReportTemplateUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskReportTemplate> result = apiInstance.updateReportTemplate(contentLanguage, reportTemplateUpdationParams);
+            List<WithTaskReportTemplate> result = apiInstance.updateReportTemplate(reportTemplateUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReportTemplateApi#updateReportTemplate");
@@ -433,8 +433,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **reportTemplateUpdationParams** | [**ReportTemplateUpdationParams**](ReportTemplateUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -25,8 +25,8 @@ public interface AlertApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getAlertsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Alert&gt;&gt;
    */
   @Headers({
@@ -34,14 +34,14 @@ public interface AlertApi {
   })
   @POST("get-alerts")
   Call<List<Alert>> getAlerts(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetAlertsRequestBody getAlertsRequestBody
+    @retrofit2.http.Body GetAlertsRequestBody getAlertsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getAlertsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;AlertConnection&gt;
    */
   @Headers({
@@ -49,14 +49,14 @@ public interface AlertApi {
   })
   @POST("get-alerts-connection")
   Call<AlertConnection> getAlertsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetAlertsConnectionRequestBody getAlertsConnectionRequestBody
+    @retrofit2.http.Body GetAlertsConnectionRequestBody getAlertsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param resolveAlertParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskAlert&gt;&gt;
    */
   @Headers({
@@ -64,7 +64,7 @@ public interface AlertApi {
   })
   @POST("resolve-alert")
   Call<List<WithTaskAlert>> resolveAlert(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ResolveAlertParams resolveAlertParams
+    @retrofit2.http.Body ResolveAlertParams resolveAlertParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

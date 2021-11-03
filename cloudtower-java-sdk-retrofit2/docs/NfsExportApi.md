@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createNfsExport
 
-> List&lt;WithTaskNfsExport&gt; createNfsExport(contentLanguage, nfsExportCreationParams)
+> List&lt;WithTaskNfsExport&gt; createNfsExport(nfsExportCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsExportApi apiInstance = new NfsExportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<NfsExportCreationParams> nfsExportCreationParams = Arrays.asList(); // List<NfsExportCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNfsExport> result = apiInstance.createNfsExport(contentLanguage, nfsExportCreationParams);
+            List<WithTaskNfsExport> result = apiInstance.createNfsExport(nfsExportCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsExportApi#createNfsExport");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nfsExportCreationParams** | [**List&lt;NfsExportCreationParams&gt;**](NfsExportCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteNfsExport
 
-> List&lt;WithTaskDeleteNfsExport&gt; deleteNfsExport(contentLanguage, nfsExportDeletionParams)
+> List&lt;WithTaskDeleteNfsExport&gt; deleteNfsExport(nfsExportDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsExportApi apiInstance = new NfsExportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NfsExportDeletionParams nfsExportDeletionParams = new NfsExportDeletionParams(); // NfsExportDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteNfsExport> result = apiInstance.deleteNfsExport(contentLanguage, nfsExportDeletionParams);
+            List<WithTaskDeleteNfsExport> result = apiInstance.deleteNfsExport(nfsExportDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsExportApi#deleteNfsExport");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nfsExportDeletionParams** | [**NfsExportDeletionParams**](NfsExportDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getNfsExports
 
-> List&lt;NfsExport&gt; getNfsExports(contentLanguage, getNfsExportsRequestBody)
+> List&lt;NfsExport&gt; getNfsExports(getNfsExportsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsExportApi apiInstance = new NfsExportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNfsExportsRequestBody getNfsExportsRequestBody = new GetNfsExportsRequestBody(); // GetNfsExportsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<NfsExport> result = apiInstance.getNfsExports(contentLanguage, getNfsExportsRequestBody);
+            List<NfsExport> result = apiInstance.getNfsExports(getNfsExportsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsExportApi#getNfsExports");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNfsExportsRequestBody** | [**GetNfsExportsRequestBody**](GetNfsExportsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getNfsExportsConnection
 
-> NfsExportConnection getNfsExportsConnection(contentLanguage, getNfsExportsConnectionRequestBody)
+> NfsExportConnection getNfsExportsConnection(getNfsExportsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsExportApi apiInstance = new NfsExportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody = new GetNfsExportsConnectionRequestBody(); // GetNfsExportsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NfsExportConnection result = apiInstance.getNfsExportsConnection(contentLanguage, getNfsExportsConnectionRequestBody);
+            NfsExportConnection result = apiInstance.getNfsExportsConnection(getNfsExportsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsExportApi#getNfsExportsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNfsExportsConnectionRequestBody** | [**GetNfsExportsConnectionRequestBody**](GetNfsExportsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateNfsExport
 
-> List&lt;WithTaskNfsExport&gt; updateNfsExport(contentLanguage, nfsExportUpdationParams)
+> List&lt;WithTaskNfsExport&gt; updateNfsExport(nfsExportUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NfsExportApi apiInstance = new NfsExportApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NfsExportUpdationParams nfsExportUpdationParams = new NfsExportUpdationParams(); // NfsExportUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNfsExport> result = apiInstance.updateNfsExport(contentLanguage, nfsExportUpdationParams);
+            List<WithTaskNfsExport> result = apiInstance.updateNfsExport(nfsExportUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NfsExportApi#updateNfsExport");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nfsExportUpdationParams** | [**NfsExportUpdationParams**](NfsExportUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -23,8 +23,8 @@ public interface VmEntityFilterResultApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmEntityFilterResultsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmEntityFilterResult&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface VmEntityFilterResultApi {
   })
   @POST("get-vm-entity-filter-results")
   Call<List<VmEntityFilterResult>> getVmEntityFilterResults(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody
+    @retrofit2.http.Body GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmEntityFilterResultsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmEntityFilterResultConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface VmEntityFilterResultApi {
   })
   @POST("get-vm-entity-filter-results-connection")
   Call<VmEntityFilterResultConnection> getVmEntityFilterResultsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody
+    @retrofit2.http.Body GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

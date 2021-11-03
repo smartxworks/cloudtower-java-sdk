@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EverouteClusterStatusControllersInstances;
+import com.smartx.tower.model.EverouteClusterStatusControllersManageVDSes;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -31,11 +32,15 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * EverouteClusterStatusControllers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class EverouteClusterStatusControllers {
   public static final String SERIALIZED_NAME_NUMBER_HEALTH = "numberHealth";
   @SerializedName(SERIALIZED_NAME_NUMBER_HEALTH)
   private Double numberHealth;
+
+  public static final String SERIALIZED_NAME_MANAGE_V_D_SES = "manageVDSes";
+  @SerializedName(SERIALIZED_NAME_MANAGE_V_D_SES)
+  private List<EverouteClusterStatusControllersManageVDSes> manageVDSes = null;
 
   public static final String SERIALIZED_NAME_INSTANCES = "instances";
   @SerializedName(SERIALIZED_NAME_INSTANCES)
@@ -74,6 +79,37 @@ public class EverouteClusterStatusControllers {
 
   public void setNumberHealth(Double numberHealth) {
     this.numberHealth = numberHealth;
+  }
+
+
+  public EverouteClusterStatusControllers manageVDSes(List<EverouteClusterStatusControllersManageVDSes> manageVDSes) {
+    
+    this.manageVDSes = manageVDSes;
+    return this;
+  }
+
+  public EverouteClusterStatusControllers addManageVDSesItem(EverouteClusterStatusControllersManageVDSes manageVDSesItem) {
+    if (this.manageVDSes == null) {
+      this.manageVDSes = new ArrayList<EverouteClusterStatusControllersManageVDSes>();
+    }
+    this.manageVDSes.add(manageVDSesItem);
+    return this;
+  }
+
+   /**
+   * Get manageVDSes
+   * @return manageVDSes
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EverouteClusterStatusControllersManageVDSes> getManageVDSes() {
+    return manageVDSes;
+  }
+
+
+  public void setManageVDSes(List<EverouteClusterStatusControllersManageVDSes> manageVDSes) {
+    this.manageVDSes = manageVDSes;
   }
 
 
@@ -187,6 +223,7 @@ public class EverouteClusterStatusControllers {
     }
     EverouteClusterStatusControllers everouteClusterStatusControllers = (EverouteClusterStatusControllers) o;
     return Objects.equals(this.numberHealth, everouteClusterStatusControllers.numberHealth) &&
+        Objects.equals(this.manageVDSes, everouteClusterStatusControllers.manageVDSes) &&
         Objects.equals(this.instances, everouteClusterStatusControllers.instances) &&
         Objects.equals(this.expectNumber, everouteClusterStatusControllers.expectNumber) &&
         Objects.equals(this.elfClusterNumber, everouteClusterStatusControllers.elfClusterNumber) &&
@@ -199,7 +236,7 @@ public class EverouteClusterStatusControllers {
 
   @Override
   public int hashCode() {
-    return Objects.hash(numberHealth, instances, expectNumber, elfClusterNumber, currentNumber);
+    return Objects.hash(numberHealth, manageVDSes, instances, expectNumber, elfClusterNumber, currentNumber);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -214,6 +251,7 @@ public class EverouteClusterStatusControllers {
     StringBuilder sb = new StringBuilder();
     sb.append("class EverouteClusterStatusControllers {\n");
     sb.append("    numberHealth: ").append(toIndentedString(numberHealth)).append("\n");
+    sb.append("    manageVDSes: ").append(toIndentedString(manageVDSes)).append("\n");
     sb.append("    instances: ").append(toIndentedString(instances)).append("\n");
     sb.append("    expectNumber: ").append(toIndentedString(expectNumber)).append("\n");
     sb.append("    elfClusterNumber: ").append(toIndentedString(elfClusterNumber)).append("\n");

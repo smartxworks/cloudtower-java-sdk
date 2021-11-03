@@ -23,8 +23,8 @@ public interface ReportTaskApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getReportTasksRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ReportTask&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ReportTaskApi {
   })
   @POST("get-report-tasks")
   Call<List<ReportTask>> getReportTasks(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetReportTasksRequestBody getReportTasksRequestBody
+    @retrofit2.http.Body GetReportTasksRequestBody getReportTasksRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getReportTasksConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ReportTaskConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ReportTaskApi {
   })
   @POST("get-report-tasks-connection")
   Call<ReportTaskConnection> getReportTasksConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody
+    @retrofit2.http.Body GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

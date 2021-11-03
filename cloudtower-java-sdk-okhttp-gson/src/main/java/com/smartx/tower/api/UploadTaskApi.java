@@ -59,8 +59,8 @@ public class UploadTaskApi {
 
     /**
      * Build call for getUploadTasks
-     * @param contentLanguage  (required)
      * @param getUploadTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUploadTasksCall(String contentLanguage, GetUploadTasksRequestBody getUploadTasksRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUploadTasksCall(GetUploadTasksRequestBody getUploadTasksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getUploadTasksRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class UploadTaskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUploadTasksValidateBeforeCall(String contentLanguage, GetUploadTasksRequestBody getUploadTasksRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getUploadTasks(Async)");
-        }
+    private okhttp3.Call getUploadTasksValidateBeforeCall(GetUploadTasksRequestBody getUploadTasksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUploadTasksRequestBody' is set
         if (getUploadTasksRequestBody == null) {
@@ -119,7 +114,7 @@ public class UploadTaskApi {
         }
         
 
-        okhttp3.Call localVarCall = getUploadTasksCall(contentLanguage, getUploadTasksRequestBody, _callback);
+        okhttp3.Call localVarCall = getUploadTasksCall(getUploadTasksRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class UploadTaskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUploadTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;UploadTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<UploadTask> getUploadTasks(String contentLanguage, GetUploadTasksRequestBody getUploadTasksRequestBody) throws ApiException {
-        ApiResponse<List<UploadTask>> localVarResp = getUploadTasksWithHttpInfo(contentLanguage, getUploadTasksRequestBody);
+    public List<UploadTask> getUploadTasks(GetUploadTasksRequestBody getUploadTasksRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<UploadTask>> localVarResp = getUploadTasksWithHttpInfo(getUploadTasksRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUploadTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;UploadTask&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UploadTask>> getUploadTasksWithHttpInfo(String contentLanguage, GetUploadTasksRequestBody getUploadTasksRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getUploadTasksValidateBeforeCall(contentLanguage, getUploadTasksRequestBody, null);
+    public ApiResponse<List<UploadTask>> getUploadTasksWithHttpInfo(GetUploadTasksRequestBody getUploadTasksRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getUploadTasksValidateBeforeCall(getUploadTasksRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class UploadTaskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getUploadTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUploadTasksAsync(String contentLanguage, GetUploadTasksRequestBody getUploadTasksRequestBody, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
+    public okhttp3.Call getUploadTasksAsync(GetUploadTasksRequestBody getUploadTasksRequestBody, String contentLanguage, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUploadTasksValidateBeforeCall(contentLanguage, getUploadTasksRequestBody, _callback);
+        okhttp3.Call localVarCall = getUploadTasksValidateBeforeCall(getUploadTasksRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getUploadTasksConnection
-     * @param contentLanguage  (required)
      * @param getUploadTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUploadTasksConnectionCall(String contentLanguage, GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUploadTasksConnectionCall(GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getUploadTasksConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class UploadTaskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUploadTasksConnectionValidateBeforeCall(String contentLanguage, GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getUploadTasksConnection(Async)");
-        }
+    private okhttp3.Call getUploadTasksConnectionValidateBeforeCall(GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUploadTasksConnectionRequestBody' is set
         if (getUploadTasksConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class UploadTaskApi {
         }
         
 
-        okhttp3.Call localVarCall = getUploadTasksConnectionCall(contentLanguage, getUploadTasksConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getUploadTasksConnectionCall(getUploadTasksConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class UploadTaskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUploadTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return UploadTaskConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public UploadTaskConnection getUploadTasksConnection(String contentLanguage, GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody) throws ApiException {
-        ApiResponse<UploadTaskConnection> localVarResp = getUploadTasksConnectionWithHttpInfo(contentLanguage, getUploadTasksConnectionRequestBody);
+    public UploadTaskConnection getUploadTasksConnection(GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<UploadTaskConnection> localVarResp = getUploadTasksConnectionWithHttpInfo(getUploadTasksConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getUploadTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;UploadTaskConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UploadTaskConnection> getUploadTasksConnectionWithHttpInfo(String contentLanguage, GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getUploadTasksConnectionValidateBeforeCall(contentLanguage, getUploadTasksConnectionRequestBody, null);
+    public ApiResponse<UploadTaskConnection> getUploadTasksConnectionWithHttpInfo(GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getUploadTasksConnectionValidateBeforeCall(getUploadTasksConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<UploadTaskConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class UploadTaskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getUploadTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class UploadTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUploadTasksConnectionAsync(String contentLanguage, GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, final ApiCallback<UploadTaskConnection> _callback) throws ApiException {
+    public okhttp3.Call getUploadTasksConnectionAsync(GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody, String contentLanguage, final ApiCallback<UploadTaskConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUploadTasksConnectionValidateBeforeCall(contentLanguage, getUploadTasksConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getUploadTasksConnectionValidateBeforeCall(getUploadTasksConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<UploadTaskConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

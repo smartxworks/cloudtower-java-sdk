@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getVmEntityFilterResults
 
-> List&lt;VmEntityFilterResult&gt; getVmEntityFilterResults(contentLanguage, getVmEntityFilterResultsRequestBody)
+> List&lt;VmEntityFilterResult&gt; getVmEntityFilterResults(getVmEntityFilterResultsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmEntityFilterResultApi apiInstance = new VmEntityFilterResultApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody = new GetVmEntityFilterResultsRequestBody(); // GetVmEntityFilterResultsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmEntityFilterResult> result = apiInstance.getVmEntityFilterResults(contentLanguage, getVmEntityFilterResultsRequestBody);
+            List<VmEntityFilterResult> result = apiInstance.getVmEntityFilterResults(getVmEntityFilterResultsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmEntityFilterResultApi#getVmEntityFilterResults");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmEntityFilterResultsRequestBody** | [**GetVmEntityFilterResultsRequestBody**](GetVmEntityFilterResultsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getVmEntityFilterResultsConnection
 
-> VmEntityFilterResultConnection getVmEntityFilterResultsConnection(contentLanguage, getVmEntityFilterResultsConnectionRequestBody)
+> VmEntityFilterResultConnection getVmEntityFilterResultsConnection(getVmEntityFilterResultsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmEntityFilterResultApi apiInstance = new VmEntityFilterResultApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody = new GetVmEntityFilterResultsConnectionRequestBody(); // GetVmEntityFilterResultsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmEntityFilterResultConnection result = apiInstance.getVmEntityFilterResultsConnection(contentLanguage, getVmEntityFilterResultsConnectionRequestBody);
+            VmEntityFilterResultConnection result = apiInstance.getVmEntityFilterResultsConnection(getVmEntityFilterResultsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmEntityFilterResultApi#getVmEntityFilterResultsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmEntityFilterResultsConnectionRequestBody** | [**GetVmEntityFilterResultsConnectionRequestBody**](GetVmEntityFilterResultsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

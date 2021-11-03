@@ -28,8 +28,8 @@ public interface DatacenterApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param datacenterCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDatacenter&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface DatacenterApi {
   })
   @POST("create-datacenter")
   Call<List<WithTaskDatacenter>> createDatacenter(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<DatacenterCreationParams> datacenterCreationParams
+    @retrofit2.http.Body List<DatacenterCreationParams> datacenterCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param datacenterDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteDatacenter&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface DatacenterApi {
   })
   @POST("delete-datacenter")
   Call<List<WithTaskDeleteDatacenter>> deleteDatacenter(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body DatacenterDeletionParams datacenterDeletionParams
+    @retrofit2.http.Body DatacenterDeletionParams datacenterDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDatacentersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Datacenter&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface DatacenterApi {
   })
   @POST("get-datacenters")
   Call<List<Datacenter>> getDatacenters(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDatacentersRequestBody getDatacentersRequestBody
+    @retrofit2.http.Body GetDatacentersRequestBody getDatacentersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDatacentersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;DatacenterConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface DatacenterApi {
   })
   @POST("get-datacenters-connection")
   Call<DatacenterConnection> getDatacentersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody
+    @retrofit2.http.Body GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param datacenterUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDatacenter&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface DatacenterApi {
   })
   @POST("update-datacenter")
   Call<List<WithTaskDatacenter>> updateDatacenter(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body DatacenterUpdationParams datacenterUpdationParams
+    @retrofit2.http.Body DatacenterUpdationParams datacenterUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

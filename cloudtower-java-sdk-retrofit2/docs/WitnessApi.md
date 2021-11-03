@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getWitnesses
 
-> List&lt;Witness&gt; getWitnesses(contentLanguage, getWitnessesRequestBody)
+> List&lt;Witness&gt; getWitnesses(getWitnessesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         WitnessApi apiInstance = new WitnessApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetWitnessesRequestBody getWitnessesRequestBody = new GetWitnessesRequestBody(); // GetWitnessesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Witness> result = apiInstance.getWitnesses(contentLanguage, getWitnessesRequestBody);
+            List<Witness> result = apiInstance.getWitnesses(getWitnessesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WitnessApi#getWitnesses");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getWitnessesRequestBody** | [**GetWitnessesRequestBody**](GetWitnessesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getWitnessesConnection
 
-> WitnessConnection getWitnessesConnection(contentLanguage, getWitnessesConnectionRequestBody)
+> WitnessConnection getWitnessesConnection(getWitnessesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         WitnessApi apiInstance = new WitnessApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody = new GetWitnessesConnectionRequestBody(); // GetWitnessesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            WitnessConnection result = apiInstance.getWitnessesConnection(contentLanguage, getWitnessesConnectionRequestBody);
+            WitnessConnection result = apiInstance.getWitnessesConnection(getWitnessesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WitnessApi#getWitnessesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getWitnessesConnectionRequestBody** | [**GetWitnessesConnectionRequestBody**](GetWitnessesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

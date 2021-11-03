@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createIscsiLunSnapshot
 
-> List&lt;WithTaskIscsiLunSnapshot&gt; createIscsiLunSnapshot(contentLanguage, iscsiLunSnapshotCreationParams)
+> List&lt;WithTaskIscsiLunSnapshot&gt; createIscsiLunSnapshot(iscsiLunSnapshotCreationParams, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunSnapshotApi apiInstance = new IscsiLunSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams = Arrays.asList(); // List<IscsiLunSnapshotCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiLunSnapshot> result = apiInstance.createIscsiLunSnapshot(contentLanguage, iscsiLunSnapshotCreationParams);
+            List<WithTaskIscsiLunSnapshot> result = apiInstance.createIscsiLunSnapshot(iscsiLunSnapshotCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunSnapshotApi#createIscsiLunSnapshot");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunSnapshotCreationParams** | [**List&lt;IscsiLunSnapshotCreationParams&gt;**](IscsiLunSnapshotCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## deleteIscsiLunSnapshot
 
-> List&lt;WithTaskDeleteIscsiLunSnapshot&gt; deleteIscsiLunSnapshot(contentLanguage, iscsiLunSnapshotDeletionParams)
+> List&lt;WithTaskDeleteIscsiLunSnapshot&gt; deleteIscsiLunSnapshot(iscsiLunSnapshotDeletionParams, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunSnapshotApi apiInstance = new IscsiLunSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams = new IscsiLunSnapshotDeletionParams(); // IscsiLunSnapshotDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteIscsiLunSnapshot> result = apiInstance.deleteIscsiLunSnapshot(contentLanguage, iscsiLunSnapshotDeletionParams);
+            List<WithTaskDeleteIscsiLunSnapshot> result = apiInstance.deleteIscsiLunSnapshot(iscsiLunSnapshotDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunSnapshotApi#deleteIscsiLunSnapshot");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiLunSnapshotDeletionParams** | [**IscsiLunSnapshotDeletionParams**](IscsiLunSnapshotDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## getIscsiLunSnapshots
 
-> List&lt;IscsiLunSnapshot&gt; getIscsiLunSnapshots(contentLanguage, getIscsiLunSnapshotsRequestBody)
+> List&lt;IscsiLunSnapshot&gt; getIscsiLunSnapshots(getIscsiLunSnapshotsRequestBody, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunSnapshotApi apiInstance = new IscsiLunSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody = new GetIscsiLunSnapshotsRequestBody(); // GetIscsiLunSnapshotsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<IscsiLunSnapshot> result = apiInstance.getIscsiLunSnapshots(contentLanguage, getIscsiLunSnapshotsRequestBody);
+            List<IscsiLunSnapshot> result = apiInstance.getIscsiLunSnapshots(getIscsiLunSnapshotsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunSnapshotApi#getIscsiLunSnapshots");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiLunSnapshotsRequestBody** | [**GetIscsiLunSnapshotsRequestBody**](GetIscsiLunSnapshotsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## getIscsiLunSnapshotsConnection
 
-> IscsiLunSnapshotConnection getIscsiLunSnapshotsConnection(contentLanguage, getIscsiLunSnapshotsConnectionRequestBody)
+> IscsiLunSnapshotConnection getIscsiLunSnapshotsConnection(getIscsiLunSnapshotsConnectionRequestBody, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiLunSnapshotApi apiInstance = new IscsiLunSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody = new GetIscsiLunSnapshotsConnectionRequestBody(); // GetIscsiLunSnapshotsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            IscsiLunSnapshotConnection result = apiInstance.getIscsiLunSnapshotsConnection(contentLanguage, getIscsiLunSnapshotsConnectionRequestBody);
+            IscsiLunSnapshotConnection result = apiInstance.getIscsiLunSnapshotsConnection(getIscsiLunSnapshotsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiLunSnapshotApi#getIscsiLunSnapshotsConnection");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiLunSnapshotsConnectionRequestBody** | [**GetIscsiLunSnapshotsConnectionRequestBody**](GetIscsiLunSnapshotsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

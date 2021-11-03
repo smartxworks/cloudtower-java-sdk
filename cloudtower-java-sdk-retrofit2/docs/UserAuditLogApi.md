@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getUserAuditLogs
 
-> List&lt;UserAuditLog&gt; getUserAuditLogs(contentLanguage, getUserAuditLogsRequestBody)
+> List&lt;UserAuditLog&gt; getUserAuditLogs(getUserAuditLogsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserAuditLogApi apiInstance = new UserAuditLogApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUserAuditLogsRequestBody getUserAuditLogsRequestBody = new GetUserAuditLogsRequestBody(); // GetUserAuditLogsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<UserAuditLog> result = apiInstance.getUserAuditLogs(contentLanguage, getUserAuditLogsRequestBody);
+            List<UserAuditLog> result = apiInstance.getUserAuditLogs(getUserAuditLogsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserAuditLogApi#getUserAuditLogs");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUserAuditLogsRequestBody** | [**GetUserAuditLogsRequestBody**](GetUserAuditLogsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getUserAuditLogsConnection
 
-> UserAuditLogConnection getUserAuditLogsConnection(contentLanguage, getUserAuditLogsConnectionRequestBody)
+> UserAuditLogConnection getUserAuditLogsConnection(getUserAuditLogsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UserAuditLogApi apiInstance = new UserAuditLogApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUserAuditLogsConnectionRequestBody getUserAuditLogsConnectionRequestBody = new GetUserAuditLogsConnectionRequestBody(); // GetUserAuditLogsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            UserAuditLogConnection result = apiInstance.getUserAuditLogsConnection(contentLanguage, getUserAuditLogsConnectionRequestBody);
+            UserAuditLogConnection result = apiInstance.getUserAuditLogsConnection(getUserAuditLogsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserAuditLogApi#getUserAuditLogsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUserAuditLogsConnectionRequestBody** | [**GetUserAuditLogsConnectionRequestBody**](GetUserAuditLogsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getVmDisks
 
-> List&lt;VmDisk&gt; getVmDisks(contentLanguage, getVmDisksRequestBody)
+> List&lt;VmDisk&gt; getVmDisks(getVmDisksRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmDiskApi apiInstance = new VmDiskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmDisksRequestBody getVmDisksRequestBody = new GetVmDisksRequestBody(); // GetVmDisksRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmDisk> result = apiInstance.getVmDisks(contentLanguage, getVmDisksRequestBody);
+            List<VmDisk> result = apiInstance.getVmDisks(getVmDisksRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmDiskApi#getVmDisks");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmDisksRequestBody** | [**GetVmDisksRequestBody**](GetVmDisksRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getVmDisksConnection
 
-> VmDiskConnection getVmDisksConnection(contentLanguage, getVmDisksConnectionRequestBody)
+> VmDiskConnection getVmDisksConnection(getVmDisksConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmDiskApi apiInstance = new VmDiskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody = new GetVmDisksConnectionRequestBody(); // GetVmDisksConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmDiskConnection result = apiInstance.getVmDisksConnection(contentLanguage, getVmDisksConnectionRequestBody);
+            VmDiskConnection result = apiInstance.getVmDisksConnection(getVmDisksConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmDiskApi#getVmDisksConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmDisksConnectionRequestBody** | [**GetVmDisksConnectionRequestBody**](GetVmDisksConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

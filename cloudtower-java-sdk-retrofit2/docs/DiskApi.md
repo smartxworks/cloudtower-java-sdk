@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## getDisks
 
-> List&lt;Disk&gt; getDisks(contentLanguage, getDisksRequestBody)
+> List&lt;Disk&gt; getDisks(getDisksRequestBody, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DiskApi apiInstance = new DiskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDisksRequestBody getDisksRequestBody = new GetDisksRequestBody(); // GetDisksRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Disk> result = apiInstance.getDisks(contentLanguage, getDisksRequestBody);
+            List<Disk> result = apiInstance.getDisks(getDisksRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DiskApi#getDisks");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDisksRequestBody** | [**GetDisksRequestBody**](GetDisksRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## getDisksConnection
 
-> DiskConnection getDisksConnection(contentLanguage, getDisksConnectionRequestBody)
+> DiskConnection getDisksConnection(getDisksConnectionRequestBody, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DiskApi apiInstance = new DiskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDisksConnectionRequestBody getDisksConnectionRequestBody = new GetDisksConnectionRequestBody(); // GetDisksConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            DiskConnection result = apiInstance.getDisksConnection(contentLanguage, getDisksConnectionRequestBody);
+            DiskConnection result = apiInstance.getDisksConnection(getDisksConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DiskApi#getDisksConnection");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDisksConnectionRequestBody** | [**GetDisksConnectionRequestBody**](GetDisksConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## mountDisk
 
-> List&lt;WithTaskDisk&gt; mountDisk(contentLanguage, diskMountParams)
+> List&lt;WithTaskDisk&gt; mountDisk(diskMountParams, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DiskApi apiInstance = new DiskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         DiskMountParams diskMountParams = new DiskMountParams(); // DiskMountParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDisk> result = apiInstance.mountDisk(contentLanguage, diskMountParams);
+            List<WithTaskDisk> result = apiInstance.mountDisk(diskMountParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DiskApi#mountDisk");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **diskMountParams** | [**DiskMountParams**](DiskMountParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## unmountDisk
 
-> List&lt;WithTaskDisk&gt; unmountDisk(contentLanguage, diskUnmountParams)
+> List&lt;WithTaskDisk&gt; unmountDisk(diskUnmountParams, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DiskApi apiInstance = new DiskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         DiskUnmountParams diskUnmountParams = new DiskUnmountParams(); // DiskUnmountParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDisk> result = apiInstance.unmountDisk(contentLanguage, diskUnmountParams);
+            List<WithTaskDisk> result = apiInstance.unmountDisk(diskUnmountParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DiskApi#unmountDisk");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **diskUnmountParams** | [**DiskUnmountParams**](DiskUnmountParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createVmFolder
 
-> List&lt;WithTaskVmFolder&gt; createVmFolder(contentLanguage, vmFolderCreationParams)
+> List&lt;WithTaskVmFolder&gt; createVmFolder(vmFolderCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmFolderApi apiInstance = new VmFolderApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmFolderCreationParams> vmFolderCreationParams = Arrays.asList(); // List<VmFolderCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmFolder> result = apiInstance.createVmFolder(contentLanguage, vmFolderCreationParams);
+            List<WithTaskVmFolder> result = apiInstance.createVmFolder(vmFolderCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmFolderApi#createVmFolder");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmFolderCreationParams** | [**List&lt;VmFolderCreationParams&gt;**](VmFolderCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteVmFolder
 
-> List&lt;WithTaskDeleteVmFolder&gt; deleteVmFolder(contentLanguage, vmFolderDeletionParams)
+> List&lt;WithTaskDeleteVmFolder&gt; deleteVmFolder(vmFolderDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmFolderApi apiInstance = new VmFolderApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmFolderDeletionParams vmFolderDeletionParams = new VmFolderDeletionParams(); // VmFolderDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVmFolder> result = apiInstance.deleteVmFolder(contentLanguage, vmFolderDeletionParams);
+            List<WithTaskDeleteVmFolder> result = apiInstance.deleteVmFolder(vmFolderDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmFolderApi#deleteVmFolder");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmFolderDeletionParams** | [**VmFolderDeletionParams**](VmFolderDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getVmFolders
 
-> List&lt;VmFolder&gt; getVmFolders(contentLanguage, getVmFoldersRequestBody)
+> List&lt;VmFolder&gt; getVmFolders(getVmFoldersRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmFolderApi apiInstance = new VmFolderApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmFoldersRequestBody getVmFoldersRequestBody = new GetVmFoldersRequestBody(); // GetVmFoldersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmFolder> result = apiInstance.getVmFolders(contentLanguage, getVmFoldersRequestBody);
+            List<VmFolder> result = apiInstance.getVmFolders(getVmFoldersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmFolderApi#getVmFolders");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmFoldersRequestBody** | [**GetVmFoldersRequestBody**](GetVmFoldersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getVmFoldersConnection
 
-> VmFolderConnection getVmFoldersConnection(contentLanguage, getVmFoldersConnectionRequestBody)
+> VmFolderConnection getVmFoldersConnection(getVmFoldersConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmFolderApi apiInstance = new VmFolderApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody = new GetVmFoldersConnectionRequestBody(); // GetVmFoldersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmFolderConnection result = apiInstance.getVmFoldersConnection(contentLanguage, getVmFoldersConnectionRequestBody);
+            VmFolderConnection result = apiInstance.getVmFoldersConnection(getVmFoldersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmFolderApi#getVmFoldersConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmFoldersConnectionRequestBody** | [**GetVmFoldersConnectionRequestBody**](GetVmFoldersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateVmFolder
 
-> List&lt;WithTaskVmFolder&gt; updateVmFolder(contentLanguage, vmFolderUpdationParams)
+> List&lt;WithTaskVmFolder&gt; updateVmFolder(vmFolderUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmFolderApi apiInstance = new VmFolderApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmFolderUpdationParams vmFolderUpdationParams = new VmFolderUpdationParams(); // VmFolderUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmFolder> result = apiInstance.updateVmFolder(contentLanguage, vmFolderUpdationParams);
+            List<WithTaskVmFolder> result = apiInstance.updateVmFolder(vmFolderUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmFolderApi#updateVmFolder");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmFolderUpdationParams** | [**VmFolderUpdationParams**](VmFolderUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

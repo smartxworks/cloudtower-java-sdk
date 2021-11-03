@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getEverouteLicenses
 
-> List&lt;EverouteLicense&gt; getEverouteLicenses(contentLanguage, getEverouteLicensesRequestBody)
+> List&lt;EverouteLicense&gt; getEverouteLicenses(getEverouteLicensesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EverouteLicenseApi apiInstance = new EverouteLicenseApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEverouteLicensesRequestBody getEverouteLicensesRequestBody = new GetEverouteLicensesRequestBody(); // GetEverouteLicensesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<EverouteLicense> result = apiInstance.getEverouteLicenses(contentLanguage, getEverouteLicensesRequestBody);
+            List<EverouteLicense> result = apiInstance.getEverouteLicenses(getEverouteLicensesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EverouteLicenseApi#getEverouteLicenses");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEverouteLicensesRequestBody** | [**GetEverouteLicensesRequestBody**](GetEverouteLicensesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getEverouteLicensesConnection
 
-> EverouteLicenseConnection getEverouteLicensesConnection(contentLanguage, getEverouteLicensesConnectionRequestBody)
+> EverouteLicenseConnection getEverouteLicensesConnection(getEverouteLicensesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EverouteLicenseApi apiInstance = new EverouteLicenseApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody = new GetEverouteLicensesConnectionRequestBody(); // GetEverouteLicensesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            EverouteLicenseConnection result = apiInstance.getEverouteLicensesConnection(contentLanguage, getEverouteLicensesConnectionRequestBody);
+            EverouteLicenseConnection result = apiInstance.getEverouteLicensesConnection(getEverouteLicensesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EverouteLicenseApi#getEverouteLicensesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEverouteLicensesConnectionRequestBody** | [**GetEverouteLicensesConnectionRequestBody**](GetEverouteLicensesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -57,8 +57,8 @@ public class IpmiApi {
 
     /**
      * Build call for getIpmis
-     * @param contentLanguage  (required)
      * @param getIpmisRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -69,7 +69,7 @@ public class IpmiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIpmisCall(String contentLanguage, GetIpmisRequestBody getIpmisRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIpmisCall(GetIpmisRequestBody getIpmisRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getIpmisRequestBody;
 
         // create path and map variables
@@ -104,12 +104,7 @@ public class IpmiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIpmisValidateBeforeCall(String contentLanguage, GetIpmisRequestBody getIpmisRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getIpmis(Async)");
-        }
+    private okhttp3.Call getIpmisValidateBeforeCall(GetIpmisRequestBody getIpmisRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIpmisRequestBody' is set
         if (getIpmisRequestBody == null) {
@@ -117,7 +112,7 @@ public class IpmiApi {
         }
         
 
-        okhttp3.Call localVarCall = getIpmisCall(contentLanguage, getIpmisRequestBody, _callback);
+        okhttp3.Call localVarCall = getIpmisCall(getIpmisRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -125,8 +120,8 @@ public class IpmiApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIpmisRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Ipmi&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -136,16 +131,16 @@ public class IpmiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Ipmi> getIpmis(String contentLanguage, GetIpmisRequestBody getIpmisRequestBody) throws ApiException {
-        ApiResponse<List<Ipmi>> localVarResp = getIpmisWithHttpInfo(contentLanguage, getIpmisRequestBody);
+    public List<Ipmi> getIpmis(GetIpmisRequestBody getIpmisRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Ipmi>> localVarResp = getIpmisWithHttpInfo(getIpmisRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIpmisRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Ipmi&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -155,8 +150,8 @@ public class IpmiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Ipmi>> getIpmisWithHttpInfo(String contentLanguage, GetIpmisRequestBody getIpmisRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getIpmisValidateBeforeCall(contentLanguage, getIpmisRequestBody, null);
+    public ApiResponse<List<Ipmi>> getIpmisWithHttpInfo(GetIpmisRequestBody getIpmisRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getIpmisValidateBeforeCall(getIpmisRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Ipmi>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -164,8 +159,8 @@ public class IpmiApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getIpmisRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -176,9 +171,9 @@ public class IpmiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIpmisAsync(String contentLanguage, GetIpmisRequestBody getIpmisRequestBody, final ApiCallback<List<Ipmi>> _callback) throws ApiException {
+    public okhttp3.Call getIpmisAsync(GetIpmisRequestBody getIpmisRequestBody, String contentLanguage, final ApiCallback<List<Ipmi>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIpmisValidateBeforeCall(contentLanguage, getIpmisRequestBody, _callback);
+        okhttp3.Call localVarCall = getIpmisValidateBeforeCall(getIpmisRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Ipmi>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

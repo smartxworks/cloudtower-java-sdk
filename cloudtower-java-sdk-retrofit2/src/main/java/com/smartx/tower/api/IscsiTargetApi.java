@@ -28,8 +28,8 @@ public interface IscsiTargetApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiTargetCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiTarget&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface IscsiTargetApi {
   })
   @POST("create-iscsi-target")
   Call<List<WithTaskIscsiTarget>> createIscsiTarget(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<IscsiTargetCreationParams> iscsiTargetCreationParams
+    @retrofit2.http.Body List<IscsiTargetCreationParams> iscsiTargetCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiTargetDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteIscsiTarget&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface IscsiTargetApi {
   })
   @POST("delete-iscsi-target")
   Call<List<WithTaskDeleteIscsiTarget>> deleteIscsiTarget(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body IscsiTargetDeletionParams iscsiTargetDeletionParams
+    @retrofit2.http.Body IscsiTargetDeletionParams iscsiTargetDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiTargetsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;IscsiTarget&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface IscsiTargetApi {
   })
   @POST("get-iscsi-targets")
   Call<List<IscsiTarget>> getIscsiTargets(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiTargetsRequestBody getIscsiTargetsRequestBody
+    @retrofit2.http.Body GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiTargetsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;IscsiTargetConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface IscsiTargetApi {
   })
   @POST("get-iscsi-targets-connection")
   Call<IscsiTargetConnection> getIscsiTargetsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody
+    @retrofit2.http.Body GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiTargetUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiTarget&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface IscsiTargetApi {
   })
   @POST("update-iscsi-target")
   Call<List<WithTaskIscsiTarget>> updateIscsiTarget(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body IscsiTargetUpdationParams iscsiTargetUpdationParams
+    @retrofit2.http.Body IscsiTargetUpdationParams iscsiTargetUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

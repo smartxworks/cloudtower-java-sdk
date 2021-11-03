@@ -21,18 +21,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.EverouteClusterPhase;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * EverouteClusterStatusAgentsInstances
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class EverouteClusterStatusAgentsInstances {
+  public static final String SERIALIZED_NAME_REASON = "reason";
+  @SerializedName(SERIALIZED_NAME_REASON)
+  private String reason;
+
+  public static final String SERIALIZED_NAME_PHASE = "phase";
+  @SerializedName(SERIALIZED_NAME_PHASE)
+  private EverouteClusterPhase phase;
+
+  public static final String SERIALIZED_NAME_MESSAGE = "message";
+  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  private String message;
+
   public static final String SERIALIZED_NAME_IS_HEALTH = "isHealth";
   @SerializedName(SERIALIZED_NAME_IS_HEALTH)
   private Boolean isHealth;
+
+  public static final String SERIALIZED_NAME_IP_ADDR = "ipAddr";
+  @SerializedName(SERIALIZED_NAME_IP_ADDR)
+  private String ipAddr;
 
   public static final String SERIALIZED_NAME_HOST_I_D = "hostID";
   @SerializedName(SERIALIZED_NAME_HOST_I_D)
@@ -41,6 +59,75 @@ public class EverouteClusterStatusAgentsInstances {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
   private AlertRuleCluster host;
+
+
+  public EverouteClusterStatusAgentsInstances reason(String reason) {
+    
+    this.reason = reason;
+    return this;
+  }
+
+   /**
+   * Get reason
+   * @return reason
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getReason() {
+    return reason;
+  }
+
+
+  public void setReason(String reason) {
+    this.reason = reason;
+  }
+
+
+  public EverouteClusterStatusAgentsInstances phase(EverouteClusterPhase phase) {
+    
+    this.phase = phase;
+    return this;
+  }
+
+   /**
+   * Get phase
+   * @return phase
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EverouteClusterPhase getPhase() {
+    return phase;
+  }
+
+
+  public void setPhase(EverouteClusterPhase phase) {
+    this.phase = phase;
+  }
+
+
+  public EverouteClusterStatusAgentsInstances message(String message) {
+    
+    this.message = message;
+    return this;
+  }
+
+   /**
+   * Get message
+   * @return message
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getMessage() {
+    return message;
+  }
+
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
 
   public EverouteClusterStatusAgentsInstances isHealth(Boolean isHealth) {
@@ -63,6 +150,29 @@ public class EverouteClusterStatusAgentsInstances {
 
   public void setIsHealth(Boolean isHealth) {
     this.isHealth = isHealth;
+  }
+
+
+  public EverouteClusterStatusAgentsInstances ipAddr(String ipAddr) {
+    
+    this.ipAddr = ipAddr;
+    return this;
+  }
+
+   /**
+   * Get ipAddr
+   * @return ipAddr
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getIpAddr() {
+    return ipAddr;
+  }
+
+
+  public void setIpAddr(String ipAddr) {
+    this.ipAddr = ipAddr;
   }
 
 
@@ -121,21 +231,40 @@ public class EverouteClusterStatusAgentsInstances {
       return false;
     }
     EverouteClusterStatusAgentsInstances everouteClusterStatusAgentsInstances = (EverouteClusterStatusAgentsInstances) o;
-    return Objects.equals(this.isHealth, everouteClusterStatusAgentsInstances.isHealth) &&
+    return Objects.equals(this.reason, everouteClusterStatusAgentsInstances.reason) &&
+        Objects.equals(this.phase, everouteClusterStatusAgentsInstances.phase) &&
+        Objects.equals(this.message, everouteClusterStatusAgentsInstances.message) &&
+        Objects.equals(this.isHealth, everouteClusterStatusAgentsInstances.isHealth) &&
+        Objects.equals(this.ipAddr, everouteClusterStatusAgentsInstances.ipAddr) &&
         Objects.equals(this.hostID, everouteClusterStatusAgentsInstances.hostID) &&
         Objects.equals(this.host, everouteClusterStatusAgentsInstances.host);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(isHealth, hostID, host);
+    return Objects.hash(reason, phase, message, isHealth, ipAddr, hostID, host);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EverouteClusterStatusAgentsInstances {\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    isHealth: ").append(toIndentedString(isHealth)).append("\n");
+    sb.append("    ipAddr: ").append(toIndentedString(ipAddr)).append("\n");
     sb.append("    hostID: ").append(toIndentedString(hostID)).append("\n");
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("}");

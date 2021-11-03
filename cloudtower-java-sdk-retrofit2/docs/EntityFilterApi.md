@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createEntityFilter
 
-> List&lt;WithTaskEntityFilter&gt; createEntityFilter(contentLanguage, entityFilterCreationParams)
+> List&lt;WithTaskEntityFilter&gt; createEntityFilter(entityFilterCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EntityFilterApi apiInstance = new EntityFilterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<EntityFilterCreationParams> entityFilterCreationParams = Arrays.asList(); // List<EntityFilterCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskEntityFilter> result = apiInstance.createEntityFilter(contentLanguage, entityFilterCreationParams);
+            List<WithTaskEntityFilter> result = apiInstance.createEntityFilter(entityFilterCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EntityFilterApi#createEntityFilter");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **entityFilterCreationParams** | [**List&lt;EntityFilterCreationParams&gt;**](EntityFilterCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteEntityFilter
 
-> List&lt;WithTaskDeleteEntityFilter&gt; deleteEntityFilter(contentLanguage, entityFilterDeletionParams)
+> List&lt;WithTaskDeleteEntityFilter&gt; deleteEntityFilter(entityFilterDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EntityFilterApi apiInstance = new EntityFilterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         EntityFilterDeletionParams entityFilterDeletionParams = new EntityFilterDeletionParams(); // EntityFilterDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteEntityFilter> result = apiInstance.deleteEntityFilter(contentLanguage, entityFilterDeletionParams);
+            List<WithTaskDeleteEntityFilter> result = apiInstance.deleteEntityFilter(entityFilterDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EntityFilterApi#deleteEntityFilter");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **entityFilterDeletionParams** | [**EntityFilterDeletionParams**](EntityFilterDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getEntityFilters
 
-> List&lt;EntityFilter&gt; getEntityFilters(contentLanguage, getEntityFiltersRequestBody)
+> List&lt;EntityFilter&gt; getEntityFilters(getEntityFiltersRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EntityFilterApi apiInstance = new EntityFilterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEntityFiltersRequestBody getEntityFiltersRequestBody = new GetEntityFiltersRequestBody(); // GetEntityFiltersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<EntityFilter> result = apiInstance.getEntityFilters(contentLanguage, getEntityFiltersRequestBody);
+            List<EntityFilter> result = apiInstance.getEntityFilters(getEntityFiltersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EntityFilterApi#getEntityFilters");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEntityFiltersRequestBody** | [**GetEntityFiltersRequestBody**](GetEntityFiltersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getEntityFiltersConnection
 
-> EntityFilterConnection getEntityFiltersConnection(contentLanguage, getEntityFiltersConnectionRequestBody)
+> EntityFilterConnection getEntityFiltersConnection(getEntityFiltersConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EntityFilterApi apiInstance = new EntityFilterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody = new GetEntityFiltersConnectionRequestBody(); // GetEntityFiltersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            EntityFilterConnection result = apiInstance.getEntityFiltersConnection(contentLanguage, getEntityFiltersConnectionRequestBody);
+            EntityFilterConnection result = apiInstance.getEntityFiltersConnection(getEntityFiltersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EntityFilterApi#getEntityFiltersConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEntityFiltersConnectionRequestBody** | [**GetEntityFiltersConnectionRequestBody**](GetEntityFiltersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateEntityFilter
 
-> List&lt;WithTaskEntityFilter&gt; updateEntityFilter(contentLanguage, entityFilterUpdationParams)
+> List&lt;WithTaskEntityFilter&gt; updateEntityFilter(entityFilterUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EntityFilterApi apiInstance = new EntityFilterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         EntityFilterUpdationParams entityFilterUpdationParams = new EntityFilterUpdationParams(); // EntityFilterUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskEntityFilter> result = apiInstance.updateEntityFilter(contentLanguage, entityFilterUpdationParams);
+            List<WithTaskEntityFilter> result = apiInstance.updateEntityFilter(entityFilterUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EntityFilterApi#updateEntityFilter");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **entityFilterUpdationParams** | [**EntityFilterUpdationParams**](EntityFilterUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

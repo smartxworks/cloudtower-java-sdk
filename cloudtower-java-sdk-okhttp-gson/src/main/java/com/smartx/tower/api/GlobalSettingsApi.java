@@ -66,8 +66,8 @@ public class GlobalSettingsApi {
 
     /**
      * Build call for createClusterRecycleBinSetting
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -78,7 +78,7 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createClusterRecycleBinSettingCall(String contentLanguage, ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createClusterRecycleBinSettingCall(ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterRecycleBinCreationParams;
 
         // create path and map variables
@@ -113,12 +113,7 @@ public class GlobalSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createClusterRecycleBinSettingValidateBeforeCall(String contentLanguage, ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createClusterRecycleBinSetting(Async)");
-        }
+    private okhttp3.Call createClusterRecycleBinSettingValidateBeforeCall(ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterRecycleBinCreationParams' is set
         if (clusterRecycleBinCreationParams == null) {
@@ -126,7 +121,7 @@ public class GlobalSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = createClusterRecycleBinSettingCall(contentLanguage, clusterRecycleBinCreationParams, _callback);
+        okhttp3.Call localVarCall = createClusterRecycleBinSettingCall(clusterRecycleBinCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -134,8 +129,8 @@ public class GlobalSettingsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskClusterSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -145,16 +140,16 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskClusterSettings> createClusterRecycleBinSetting(String contentLanguage, ClusterRecycleBinCreationParams clusterRecycleBinCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskClusterSettings>> localVarResp = createClusterRecycleBinSettingWithHttpInfo(contentLanguage, clusterRecycleBinCreationParams);
+    public List<WithTaskClusterSettings> createClusterRecycleBinSetting(ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskClusterSettings>> localVarResp = createClusterRecycleBinSettingWithHttpInfo(clusterRecycleBinCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskClusterSettings&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -164,8 +159,8 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskClusterSettings>> createClusterRecycleBinSettingWithHttpInfo(String contentLanguage, ClusterRecycleBinCreationParams clusterRecycleBinCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createClusterRecycleBinSettingValidateBeforeCall(contentLanguage, clusterRecycleBinCreationParams, null);
+    public ApiResponse<List<WithTaskClusterSettings>> createClusterRecycleBinSettingWithHttpInfo(ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createClusterRecycleBinSettingValidateBeforeCall(clusterRecycleBinCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskClusterSettings>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -173,8 +168,8 @@ public class GlobalSettingsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -185,17 +180,17 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createClusterRecycleBinSettingAsync(String contentLanguage, ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, final ApiCallback<List<WithTaskClusterSettings>> _callback) throws ApiException {
+    public okhttp3.Call createClusterRecycleBinSettingAsync(ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, String contentLanguage, final ApiCallback<List<WithTaskClusterSettings>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createClusterRecycleBinSettingValidateBeforeCall(contentLanguage, clusterRecycleBinCreationParams, _callback);
+        okhttp3.Call localVarCall = createClusterRecycleBinSettingValidateBeforeCall(clusterRecycleBinCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskClusterSettings>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteClusterRecycleBinSetting
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -206,7 +201,7 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteClusterRecycleBinSettingCall(String contentLanguage, ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteClusterRecycleBinSettingCall(ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterRecycleBinDeletionParams;
 
         // create path and map variables
@@ -241,12 +236,7 @@ public class GlobalSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteClusterRecycleBinSettingValidateBeforeCall(String contentLanguage, ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteClusterRecycleBinSetting(Async)");
-        }
+    private okhttp3.Call deleteClusterRecycleBinSettingValidateBeforeCall(ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterRecycleBinDeletionParams' is set
         if (clusterRecycleBinDeletionParams == null) {
@@ -254,7 +244,7 @@ public class GlobalSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteClusterRecycleBinSettingCall(contentLanguage, clusterRecycleBinDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteClusterRecycleBinSettingCall(clusterRecycleBinDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -262,8 +252,8 @@ public class GlobalSettingsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteClusterRecycleBin&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -273,16 +263,16 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteClusterRecycleBin> deleteClusterRecycleBinSetting(String contentLanguage, ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteClusterRecycleBin>> localVarResp = deleteClusterRecycleBinSettingWithHttpInfo(contentLanguage, clusterRecycleBinDeletionParams);
+    public List<WithTaskDeleteClusterRecycleBin> deleteClusterRecycleBinSetting(ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteClusterRecycleBin>> localVarResp = deleteClusterRecycleBinSettingWithHttpInfo(clusterRecycleBinDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteClusterRecycleBin&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -292,8 +282,8 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteClusterRecycleBin>> deleteClusterRecycleBinSettingWithHttpInfo(String contentLanguage, ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteClusterRecycleBinSettingValidateBeforeCall(contentLanguage, clusterRecycleBinDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteClusterRecycleBin>> deleteClusterRecycleBinSettingWithHttpInfo(ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteClusterRecycleBinSettingValidateBeforeCall(clusterRecycleBinDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteClusterRecycleBin>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -301,8 +291,8 @@ public class GlobalSettingsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -313,17 +303,17 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteClusterRecycleBinSettingAsync(String contentLanguage, ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, final ApiCallback<List<WithTaskDeleteClusterRecycleBin>> _callback) throws ApiException {
+    public okhttp3.Call deleteClusterRecycleBinSettingAsync(ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteClusterRecycleBin>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteClusterRecycleBinSettingValidateBeforeCall(contentLanguage, clusterRecycleBinDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteClusterRecycleBinSettingValidateBeforeCall(clusterRecycleBinDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteClusterRecycleBin>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getGlobalSettingses
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -334,7 +324,7 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGlobalSettingsesCall(String contentLanguage, GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGlobalSettingsesCall(GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getGlobalSettingsesRequestBody;
 
         // create path and map variables
@@ -369,12 +359,7 @@ public class GlobalSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGlobalSettingsesValidateBeforeCall(String contentLanguage, GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getGlobalSettingses(Async)");
-        }
+    private okhttp3.Call getGlobalSettingsesValidateBeforeCall(GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getGlobalSettingsesRequestBody' is set
         if (getGlobalSettingsesRequestBody == null) {
@@ -382,7 +367,7 @@ public class GlobalSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = getGlobalSettingsesCall(contentLanguage, getGlobalSettingsesRequestBody, _callback);
+        okhttp3.Call localVarCall = getGlobalSettingsesCall(getGlobalSettingsesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -390,8 +375,8 @@ public class GlobalSettingsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;GlobalSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -401,16 +386,16 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<GlobalSettings> getGlobalSettingses(String contentLanguage, GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody) throws ApiException {
-        ApiResponse<List<GlobalSettings>> localVarResp = getGlobalSettingsesWithHttpInfo(contentLanguage, getGlobalSettingsesRequestBody);
+    public List<GlobalSettings> getGlobalSettingses(GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<GlobalSettings>> localVarResp = getGlobalSettingsesWithHttpInfo(getGlobalSettingsesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;GlobalSettings&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -420,8 +405,8 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<GlobalSettings>> getGlobalSettingsesWithHttpInfo(String contentLanguage, GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getGlobalSettingsesValidateBeforeCall(contentLanguage, getGlobalSettingsesRequestBody, null);
+    public ApiResponse<List<GlobalSettings>> getGlobalSettingsesWithHttpInfo(GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getGlobalSettingsesValidateBeforeCall(getGlobalSettingsesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<GlobalSettings>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -429,8 +414,8 @@ public class GlobalSettingsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -441,17 +426,17 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGlobalSettingsesAsync(String contentLanguage, GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, final ApiCallback<List<GlobalSettings>> _callback) throws ApiException {
+    public okhttp3.Call getGlobalSettingsesAsync(GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, String contentLanguage, final ApiCallback<List<GlobalSettings>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGlobalSettingsesValidateBeforeCall(contentLanguage, getGlobalSettingsesRequestBody, _callback);
+        okhttp3.Call localVarCall = getGlobalSettingsesValidateBeforeCall(getGlobalSettingsesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<GlobalSettings>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getGlobalSettingsesConnection
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -462,7 +447,7 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGlobalSettingsesConnectionCall(String contentLanguage, GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGlobalSettingsesConnectionCall(GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getGlobalSettingsesConnectionRequestBody;
 
         // create path and map variables
@@ -497,12 +482,7 @@ public class GlobalSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGlobalSettingsesConnectionValidateBeforeCall(String contentLanguage, GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getGlobalSettingsesConnection(Async)");
-        }
+    private okhttp3.Call getGlobalSettingsesConnectionValidateBeforeCall(GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getGlobalSettingsesConnectionRequestBody' is set
         if (getGlobalSettingsesConnectionRequestBody == null) {
@@ -510,7 +490,7 @@ public class GlobalSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = getGlobalSettingsesConnectionCall(contentLanguage, getGlobalSettingsesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getGlobalSettingsesConnectionCall(getGlobalSettingsesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -518,8 +498,8 @@ public class GlobalSettingsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return GlobalSettingsConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -529,16 +509,16 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public GlobalSettingsConnection getGlobalSettingsesConnection(String contentLanguage, GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody) throws ApiException {
-        ApiResponse<GlobalSettingsConnection> localVarResp = getGlobalSettingsesConnectionWithHttpInfo(contentLanguage, getGlobalSettingsesConnectionRequestBody);
+    public GlobalSettingsConnection getGlobalSettingsesConnection(GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<GlobalSettingsConnection> localVarResp = getGlobalSettingsesConnectionWithHttpInfo(getGlobalSettingsesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;GlobalSettingsConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -548,8 +528,8 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GlobalSettingsConnection> getGlobalSettingsesConnectionWithHttpInfo(String contentLanguage, GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getGlobalSettingsesConnectionValidateBeforeCall(contentLanguage, getGlobalSettingsesConnectionRequestBody, null);
+    public ApiResponse<GlobalSettingsConnection> getGlobalSettingsesConnectionWithHttpInfo(GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getGlobalSettingsesConnectionValidateBeforeCall(getGlobalSettingsesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<GlobalSettingsConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -557,8 +537,8 @@ public class GlobalSettingsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getGlobalSettingsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -569,17 +549,17 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGlobalSettingsesConnectionAsync(String contentLanguage, GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, final ApiCallback<GlobalSettingsConnection> _callback) throws ApiException {
+    public okhttp3.Call getGlobalSettingsesConnectionAsync(GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, String contentLanguage, final ApiCallback<GlobalSettingsConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGlobalSettingsesConnectionValidateBeforeCall(contentLanguage, getGlobalSettingsesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getGlobalSettingsesConnectionValidateBeforeCall(getGlobalSettingsesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<GlobalSettingsConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateClusterRecycleBinSetting
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -590,7 +570,7 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateClusterRecycleBinSettingCall(String contentLanguage, ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateClusterRecycleBinSettingCall(ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = clusterRecycleBinUpdationParams;
 
         // create path and map variables
@@ -625,12 +605,7 @@ public class GlobalSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateClusterRecycleBinSettingValidateBeforeCall(String contentLanguage, ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateClusterRecycleBinSetting(Async)");
-        }
+    private okhttp3.Call updateClusterRecycleBinSettingValidateBeforeCall(ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'clusterRecycleBinUpdationParams' is set
         if (clusterRecycleBinUpdationParams == null) {
@@ -638,7 +613,7 @@ public class GlobalSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = updateClusterRecycleBinSettingCall(contentLanguage, clusterRecycleBinUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateClusterRecycleBinSettingCall(clusterRecycleBinUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -646,8 +621,8 @@ public class GlobalSettingsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskClusterSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -657,16 +632,16 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskClusterSettings> updateClusterRecycleBinSetting(String contentLanguage, ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskClusterSettings>> localVarResp = updateClusterRecycleBinSettingWithHttpInfo(contentLanguage, clusterRecycleBinUpdationParams);
+    public List<WithTaskClusterSettings> updateClusterRecycleBinSetting(ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskClusterSettings>> localVarResp = updateClusterRecycleBinSettingWithHttpInfo(clusterRecycleBinUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskClusterSettings&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -676,8 +651,8 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskClusterSettings>> updateClusterRecycleBinSettingWithHttpInfo(String contentLanguage, ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateClusterRecycleBinSettingValidateBeforeCall(contentLanguage, clusterRecycleBinUpdationParams, null);
+    public ApiResponse<List<WithTaskClusterSettings>> updateClusterRecycleBinSettingWithHttpInfo(ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateClusterRecycleBinSettingValidateBeforeCall(clusterRecycleBinUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskClusterSettings>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -685,8 +660,8 @@ public class GlobalSettingsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param clusterRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -697,17 +672,17 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateClusterRecycleBinSettingAsync(String contentLanguage, ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, final ApiCallback<List<WithTaskClusterSettings>> _callback) throws ApiException {
+    public okhttp3.Call updateClusterRecycleBinSettingAsync(ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskClusterSettings>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateClusterRecycleBinSettingValidateBeforeCall(contentLanguage, clusterRecycleBinUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateClusterRecycleBinSettingValidateBeforeCall(clusterRecycleBinUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskClusterSettings>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateGlobalRecycleBinSetting
-     * @param contentLanguage  (required)
      * @param globalRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -718,7 +693,7 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateGlobalRecycleBinSettingCall(String contentLanguage, GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateGlobalRecycleBinSettingCall(GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = globalRecycleBinUpdationParams;
 
         // create path and map variables
@@ -753,12 +728,7 @@ public class GlobalSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateGlobalRecycleBinSettingValidateBeforeCall(String contentLanguage, GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateGlobalRecycleBinSetting(Async)");
-        }
+    private okhttp3.Call updateGlobalRecycleBinSettingValidateBeforeCall(GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'globalRecycleBinUpdationParams' is set
         if (globalRecycleBinUpdationParams == null) {
@@ -766,7 +736,7 @@ public class GlobalSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = updateGlobalRecycleBinSettingCall(contentLanguage, globalRecycleBinUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateGlobalRecycleBinSettingCall(globalRecycleBinUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -774,8 +744,8 @@ public class GlobalSettingsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param globalRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return WithTaskGlobalSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -785,16 +755,16 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public WithTaskGlobalSettings updateGlobalRecycleBinSetting(String contentLanguage, GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams) throws ApiException {
-        ApiResponse<WithTaskGlobalSettings> localVarResp = updateGlobalRecycleBinSettingWithHttpInfo(contentLanguage, globalRecycleBinUpdationParams);
+    public WithTaskGlobalSettings updateGlobalRecycleBinSetting(GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<WithTaskGlobalSettings> localVarResp = updateGlobalRecycleBinSettingWithHttpInfo(globalRecycleBinUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param globalRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;WithTaskGlobalSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -804,8 +774,8 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<WithTaskGlobalSettings> updateGlobalRecycleBinSettingWithHttpInfo(String contentLanguage, GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateGlobalRecycleBinSettingValidateBeforeCall(contentLanguage, globalRecycleBinUpdationParams, null);
+    public ApiResponse<WithTaskGlobalSettings> updateGlobalRecycleBinSettingWithHttpInfo(GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateGlobalRecycleBinSettingValidateBeforeCall(globalRecycleBinUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<WithTaskGlobalSettings>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -813,8 +783,8 @@ public class GlobalSettingsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param globalRecycleBinUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -825,9 +795,9 @@ public class GlobalSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateGlobalRecycleBinSettingAsync(String contentLanguage, GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, final ApiCallback<WithTaskGlobalSettings> _callback) throws ApiException {
+    public okhttp3.Call updateGlobalRecycleBinSettingAsync(GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, String contentLanguage, final ApiCallback<WithTaskGlobalSettings> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateGlobalRecycleBinSettingValidateBeforeCall(contentLanguage, globalRecycleBinUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateGlobalRecycleBinSettingValidateBeforeCall(globalRecycleBinUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<WithTaskGlobalSettings>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

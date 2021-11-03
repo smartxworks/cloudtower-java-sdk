@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getAlertRules
 
-> List&lt;AlertRule&gt; getAlertRules(contentLanguage, getAlertRulesRequestBody)
+> List&lt;AlertRule&gt; getAlertRules(getAlertRulesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertRuleApi apiInstance = new AlertRuleApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetAlertRulesRequestBody getAlertRulesRequestBody = new GetAlertRulesRequestBody(); // GetAlertRulesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<AlertRule> result = apiInstance.getAlertRules(contentLanguage, getAlertRulesRequestBody);
+            List<AlertRule> result = apiInstance.getAlertRules(getAlertRulesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertRuleApi#getAlertRules");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getAlertRulesRequestBody** | [**GetAlertRulesRequestBody**](GetAlertRulesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getAlertRulesConnection
 
-> AlertRuleConnection getAlertRulesConnection(contentLanguage, getAlertRulesConnectionRequestBody)
+> AlertRuleConnection getAlertRulesConnection(getAlertRulesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertRuleApi apiInstance = new AlertRuleApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody = new GetAlertRulesConnectionRequestBody(); // GetAlertRulesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            AlertRuleConnection result = apiInstance.getAlertRulesConnection(contentLanguage, getAlertRulesConnectionRequestBody);
+            AlertRuleConnection result = apiInstance.getAlertRulesConnection(getAlertRulesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertRuleApi#getAlertRulesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getAlertRulesConnectionRequestBody** | [**GetAlertRulesConnectionRequestBody**](GetAlertRulesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

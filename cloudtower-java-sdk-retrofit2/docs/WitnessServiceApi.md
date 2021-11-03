@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getWitnessServices
 
-> List&lt;WitnessService&gt; getWitnessServices(contentLanguage, getWitnessServicesRequestBody)
+> List&lt;WitnessService&gt; getWitnessServices(getWitnessServicesRequestBody, contentLanguage)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         WitnessServiceApi apiInstance = new WitnessServiceApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetWitnessServicesRequestBody getWitnessServicesRequestBody = new GetWitnessServicesRequestBody(); // GetWitnessServicesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WitnessService> result = apiInstance.getWitnessServices(contentLanguage, getWitnessServicesRequestBody);
+            List<WitnessService> result = apiInstance.getWitnessServices(getWitnessServicesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WitnessServiceApi#getWitnessServices");
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getWitnessServicesRequestBody** | [**GetWitnessServicesRequestBody**](GetWitnessServicesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

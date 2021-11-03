@@ -23,8 +23,8 @@ public interface AlertNotifierApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getAlertNotifiersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;AlertNotifier&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface AlertNotifierApi {
   })
   @POST("get-alert-notifiers")
   Call<List<AlertNotifier>> getAlertNotifiers(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetAlertNotifiersRequestBody getAlertNotifiersRequestBody
+    @retrofit2.http.Body GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getAlertNotifiersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;AlertNotifierConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface AlertNotifierApi {
   })
   @POST("get-alert-notifiers-connection")
   Call<AlertNotifierConnection> getAlertNotifiersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody
+    @retrofit2.http.Body GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getContentLibraryImages
 
-> List&lt;ContentLibraryImage&gt; getContentLibraryImages(contentLanguage, getContentLibraryImagesRequestBody)
+> List&lt;ContentLibraryImage&gt; getContentLibraryImages(getContentLibraryImagesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ContentLibraryImageApi apiInstance = new ContentLibraryImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody = new GetContentLibraryImagesRequestBody(); // GetContentLibraryImagesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ContentLibraryImage> result = apiInstance.getContentLibraryImages(contentLanguage, getContentLibraryImagesRequestBody);
+            List<ContentLibraryImage> result = apiInstance.getContentLibraryImages(getContentLibraryImagesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ContentLibraryImageApi#getContentLibraryImages");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getContentLibraryImagesRequestBody** | [**GetContentLibraryImagesRequestBody**](GetContentLibraryImagesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getContentLibraryImagesConnection
 
-> ContentLibraryImageConnection getContentLibraryImagesConnection(contentLanguage, getContentLibraryImagesConnectionRequestBody)
+> ContentLibraryImageConnection getContentLibraryImagesConnection(getContentLibraryImagesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ContentLibraryImageApi apiInstance = new ContentLibraryImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody = new GetContentLibraryImagesConnectionRequestBody(); // GetContentLibraryImagesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ContentLibraryImageConnection result = apiInstance.getContentLibraryImagesConnection(contentLanguage, getContentLibraryImagesConnectionRequestBody);
+            ContentLibraryImageConnection result = apiInstance.getContentLibraryImagesConnection(getContentLibraryImagesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ContentLibraryImageApi#getContentLibraryImagesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getContentLibraryImagesConnectionRequestBody** | [**GetContentLibraryImagesConnectionRequestBody**](GetContentLibraryImagesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

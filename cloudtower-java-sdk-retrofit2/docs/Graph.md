@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **hosts** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
 **id** | **String** |  | 
+**instanceIds** | **List&lt;String&gt;** |  | 
 **localId** | **String** |  | 
 **luns** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
 **metricCount** | **Double** |  | 

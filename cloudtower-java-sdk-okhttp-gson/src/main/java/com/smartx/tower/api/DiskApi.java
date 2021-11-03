@@ -62,8 +62,8 @@ public class DiskApi {
 
     /**
      * Build call for getDisks
-     * @param contentLanguage  (required)
      * @param getDisksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -74,7 +74,7 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDisksCall(String contentLanguage, GetDisksRequestBody getDisksRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDisksCall(GetDisksRequestBody getDisksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getDisksRequestBody;
 
         // create path and map variables
@@ -109,12 +109,7 @@ public class DiskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDisksValidateBeforeCall(String contentLanguage, GetDisksRequestBody getDisksRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getDisks(Async)");
-        }
+    private okhttp3.Call getDisksValidateBeforeCall(GetDisksRequestBody getDisksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDisksRequestBody' is set
         if (getDisksRequestBody == null) {
@@ -122,7 +117,7 @@ public class DiskApi {
         }
         
 
-        okhttp3.Call localVarCall = getDisksCall(contentLanguage, getDisksRequestBody, _callback);
+        okhttp3.Call localVarCall = getDisksCall(getDisksRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -130,8 +125,8 @@ public class DiskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getDisksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Disk&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -141,16 +136,16 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Disk> getDisks(String contentLanguage, GetDisksRequestBody getDisksRequestBody) throws ApiException {
-        ApiResponse<List<Disk>> localVarResp = getDisksWithHttpInfo(contentLanguage, getDisksRequestBody);
+    public List<Disk> getDisks(GetDisksRequestBody getDisksRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Disk>> localVarResp = getDisksWithHttpInfo(getDisksRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getDisksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Disk&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -160,8 +155,8 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Disk>> getDisksWithHttpInfo(String contentLanguage, GetDisksRequestBody getDisksRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getDisksValidateBeforeCall(contentLanguage, getDisksRequestBody, null);
+    public ApiResponse<List<Disk>> getDisksWithHttpInfo(GetDisksRequestBody getDisksRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getDisksValidateBeforeCall(getDisksRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Disk>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -169,8 +164,8 @@ public class DiskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getDisksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -181,17 +176,17 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDisksAsync(String contentLanguage, GetDisksRequestBody getDisksRequestBody, final ApiCallback<List<Disk>> _callback) throws ApiException {
+    public okhttp3.Call getDisksAsync(GetDisksRequestBody getDisksRequestBody, String contentLanguage, final ApiCallback<List<Disk>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDisksValidateBeforeCall(contentLanguage, getDisksRequestBody, _callback);
+        okhttp3.Call localVarCall = getDisksValidateBeforeCall(getDisksRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Disk>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getDisksConnection
-     * @param contentLanguage  (required)
      * @param getDisksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -202,7 +197,7 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDisksConnectionCall(String contentLanguage, GetDisksConnectionRequestBody getDisksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDisksConnectionCall(GetDisksConnectionRequestBody getDisksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getDisksConnectionRequestBody;
 
         // create path and map variables
@@ -237,12 +232,7 @@ public class DiskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDisksConnectionValidateBeforeCall(String contentLanguage, GetDisksConnectionRequestBody getDisksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getDisksConnection(Async)");
-        }
+    private okhttp3.Call getDisksConnectionValidateBeforeCall(GetDisksConnectionRequestBody getDisksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDisksConnectionRequestBody' is set
         if (getDisksConnectionRequestBody == null) {
@@ -250,7 +240,7 @@ public class DiskApi {
         }
         
 
-        okhttp3.Call localVarCall = getDisksConnectionCall(contentLanguage, getDisksConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getDisksConnectionCall(getDisksConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -258,8 +248,8 @@ public class DiskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getDisksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return DiskConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -269,16 +259,16 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public DiskConnection getDisksConnection(String contentLanguage, GetDisksConnectionRequestBody getDisksConnectionRequestBody) throws ApiException {
-        ApiResponse<DiskConnection> localVarResp = getDisksConnectionWithHttpInfo(contentLanguage, getDisksConnectionRequestBody);
+    public DiskConnection getDisksConnection(GetDisksConnectionRequestBody getDisksConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<DiskConnection> localVarResp = getDisksConnectionWithHttpInfo(getDisksConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getDisksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;DiskConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -288,8 +278,8 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DiskConnection> getDisksConnectionWithHttpInfo(String contentLanguage, GetDisksConnectionRequestBody getDisksConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getDisksConnectionValidateBeforeCall(contentLanguage, getDisksConnectionRequestBody, null);
+    public ApiResponse<DiskConnection> getDisksConnectionWithHttpInfo(GetDisksConnectionRequestBody getDisksConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getDisksConnectionValidateBeforeCall(getDisksConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<DiskConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -297,8 +287,8 @@ public class DiskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getDisksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -309,17 +299,17 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDisksConnectionAsync(String contentLanguage, GetDisksConnectionRequestBody getDisksConnectionRequestBody, final ApiCallback<DiskConnection> _callback) throws ApiException {
+    public okhttp3.Call getDisksConnectionAsync(GetDisksConnectionRequestBody getDisksConnectionRequestBody, String contentLanguage, final ApiCallback<DiskConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDisksConnectionValidateBeforeCall(contentLanguage, getDisksConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getDisksConnectionValidateBeforeCall(getDisksConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<DiskConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for mountDisk
-     * @param contentLanguage  (required)
      * @param diskMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -330,7 +320,7 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call mountDiskCall(String contentLanguage, DiskMountParams diskMountParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call mountDiskCall(DiskMountParams diskMountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = diskMountParams;
 
         // create path and map variables
@@ -365,12 +355,7 @@ public class DiskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call mountDiskValidateBeforeCall(String contentLanguage, DiskMountParams diskMountParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling mountDisk(Async)");
-        }
+    private okhttp3.Call mountDiskValidateBeforeCall(DiskMountParams diskMountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'diskMountParams' is set
         if (diskMountParams == null) {
@@ -378,7 +363,7 @@ public class DiskApi {
         }
         
 
-        okhttp3.Call localVarCall = mountDiskCall(contentLanguage, diskMountParams, _callback);
+        okhttp3.Call localVarCall = mountDiskCall(diskMountParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -386,8 +371,8 @@ public class DiskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param diskMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDisk&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -397,16 +382,16 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDisk> mountDisk(String contentLanguage, DiskMountParams diskMountParams) throws ApiException {
-        ApiResponse<List<WithTaskDisk>> localVarResp = mountDiskWithHttpInfo(contentLanguage, diskMountParams);
+    public List<WithTaskDisk> mountDisk(DiskMountParams diskMountParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDisk>> localVarResp = mountDiskWithHttpInfo(diskMountParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param diskMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDisk&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -416,8 +401,8 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDisk>> mountDiskWithHttpInfo(String contentLanguage, DiskMountParams diskMountParams) throws ApiException {
-        okhttp3.Call localVarCall = mountDiskValidateBeforeCall(contentLanguage, diskMountParams, null);
+    public ApiResponse<List<WithTaskDisk>> mountDiskWithHttpInfo(DiskMountParams diskMountParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = mountDiskValidateBeforeCall(diskMountParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDisk>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -425,8 +410,8 @@ public class DiskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param diskMountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -437,17 +422,17 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call mountDiskAsync(String contentLanguage, DiskMountParams diskMountParams, final ApiCallback<List<WithTaskDisk>> _callback) throws ApiException {
+    public okhttp3.Call mountDiskAsync(DiskMountParams diskMountParams, String contentLanguage, final ApiCallback<List<WithTaskDisk>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = mountDiskValidateBeforeCall(contentLanguage, diskMountParams, _callback);
+        okhttp3.Call localVarCall = mountDiskValidateBeforeCall(diskMountParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDisk>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for unmountDisk
-     * @param contentLanguage  (required)
      * @param diskUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -458,7 +443,7 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call unmountDiskCall(String contentLanguage, DiskUnmountParams diskUnmountParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call unmountDiskCall(DiskUnmountParams diskUnmountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = diskUnmountParams;
 
         // create path and map variables
@@ -493,12 +478,7 @@ public class DiskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call unmountDiskValidateBeforeCall(String contentLanguage, DiskUnmountParams diskUnmountParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling unmountDisk(Async)");
-        }
+    private okhttp3.Call unmountDiskValidateBeforeCall(DiskUnmountParams diskUnmountParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'diskUnmountParams' is set
         if (diskUnmountParams == null) {
@@ -506,7 +486,7 @@ public class DiskApi {
         }
         
 
-        okhttp3.Call localVarCall = unmountDiskCall(contentLanguage, diskUnmountParams, _callback);
+        okhttp3.Call localVarCall = unmountDiskCall(diskUnmountParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -514,8 +494,8 @@ public class DiskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param diskUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDisk&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -525,16 +505,16 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDisk> unmountDisk(String contentLanguage, DiskUnmountParams diskUnmountParams) throws ApiException {
-        ApiResponse<List<WithTaskDisk>> localVarResp = unmountDiskWithHttpInfo(contentLanguage, diskUnmountParams);
+    public List<WithTaskDisk> unmountDisk(DiskUnmountParams diskUnmountParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDisk>> localVarResp = unmountDiskWithHttpInfo(diskUnmountParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param diskUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDisk&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -544,8 +524,8 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDisk>> unmountDiskWithHttpInfo(String contentLanguage, DiskUnmountParams diskUnmountParams) throws ApiException {
-        okhttp3.Call localVarCall = unmountDiskValidateBeforeCall(contentLanguage, diskUnmountParams, null);
+    public ApiResponse<List<WithTaskDisk>> unmountDiskWithHttpInfo(DiskUnmountParams diskUnmountParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = unmountDiskValidateBeforeCall(diskUnmountParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDisk>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -553,8 +533,8 @@ public class DiskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param diskUnmountParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -565,9 +545,9 @@ public class DiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call unmountDiskAsync(String contentLanguage, DiskUnmountParams diskUnmountParams, final ApiCallback<List<WithTaskDisk>> _callback) throws ApiException {
+    public okhttp3.Call unmountDiskAsync(DiskUnmountParams diskUnmountParams, String contentLanguage, final ApiCallback<List<WithTaskDisk>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = unmountDiskValidateBeforeCall(contentLanguage, diskUnmountParams, _callback);
+        okhttp3.Call localVarCall = unmountDiskValidateBeforeCall(diskUnmountParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDisk>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

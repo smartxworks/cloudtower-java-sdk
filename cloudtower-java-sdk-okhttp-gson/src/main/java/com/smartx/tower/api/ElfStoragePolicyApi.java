@@ -59,8 +59,8 @@ public class ElfStoragePolicyApi {
 
     /**
      * Build call for getElfStoragePolicies
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfStoragePoliciesCall(String contentLanguage, GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getElfStoragePoliciesCall(GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getElfStoragePoliciesRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class ElfStoragePolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getElfStoragePoliciesValidateBeforeCall(String contentLanguage, GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getElfStoragePolicies(Async)");
-        }
+    private okhttp3.Call getElfStoragePoliciesValidateBeforeCall(GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getElfStoragePoliciesRequestBody' is set
         if (getElfStoragePoliciesRequestBody == null) {
@@ -119,7 +114,7 @@ public class ElfStoragePolicyApi {
         }
         
 
-        okhttp3.Call localVarCall = getElfStoragePoliciesCall(contentLanguage, getElfStoragePoliciesRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfStoragePoliciesCall(getElfStoragePoliciesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class ElfStoragePolicyApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ElfStoragePolicy&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ElfStoragePolicy> getElfStoragePolicies(String contentLanguage, GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody) throws ApiException {
-        ApiResponse<List<ElfStoragePolicy>> localVarResp = getElfStoragePoliciesWithHttpInfo(contentLanguage, getElfStoragePoliciesRequestBody);
+    public List<ElfStoragePolicy> getElfStoragePolicies(GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ElfStoragePolicy>> localVarResp = getElfStoragePoliciesWithHttpInfo(getElfStoragePoliciesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ElfStoragePolicy&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ElfStoragePolicy>> getElfStoragePoliciesWithHttpInfo(String contentLanguage, GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getElfStoragePoliciesValidateBeforeCall(contentLanguage, getElfStoragePoliciesRequestBody, null);
+    public ApiResponse<List<ElfStoragePolicy>> getElfStoragePoliciesWithHttpInfo(GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getElfStoragePoliciesValidateBeforeCall(getElfStoragePoliciesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ElfStoragePolicy>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class ElfStoragePolicyApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfStoragePoliciesAsync(String contentLanguage, GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, final ApiCallback<List<ElfStoragePolicy>> _callback) throws ApiException {
+    public okhttp3.Call getElfStoragePoliciesAsync(GetElfStoragePoliciesRequestBody getElfStoragePoliciesRequestBody, String contentLanguage, final ApiCallback<List<ElfStoragePolicy>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getElfStoragePoliciesValidateBeforeCall(contentLanguage, getElfStoragePoliciesRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfStoragePoliciesValidateBeforeCall(getElfStoragePoliciesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ElfStoragePolicy>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getElfStoragePoliciesConnection
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfStoragePoliciesConnectionCall(String contentLanguage, GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getElfStoragePoliciesConnectionCall(GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getElfStoragePoliciesConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class ElfStoragePolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getElfStoragePoliciesConnectionValidateBeforeCall(String contentLanguage, GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getElfStoragePoliciesConnection(Async)");
-        }
+    private okhttp3.Call getElfStoragePoliciesConnectionValidateBeforeCall(GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getElfStoragePoliciesConnectionRequestBody' is set
         if (getElfStoragePoliciesConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class ElfStoragePolicyApi {
         }
         
 
-        okhttp3.Call localVarCall = getElfStoragePoliciesConnectionCall(contentLanguage, getElfStoragePoliciesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfStoragePoliciesConnectionCall(getElfStoragePoliciesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class ElfStoragePolicyApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ElfStoragePolicyConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ElfStoragePolicyConnection getElfStoragePoliciesConnection(String contentLanguage, GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody) throws ApiException {
-        ApiResponse<ElfStoragePolicyConnection> localVarResp = getElfStoragePoliciesConnectionWithHttpInfo(contentLanguage, getElfStoragePoliciesConnectionRequestBody);
+    public ElfStoragePolicyConnection getElfStoragePoliciesConnection(GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ElfStoragePolicyConnection> localVarResp = getElfStoragePoliciesConnectionWithHttpInfo(getElfStoragePoliciesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ElfStoragePolicyConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ElfStoragePolicyConnection> getElfStoragePoliciesConnectionWithHttpInfo(String contentLanguage, GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getElfStoragePoliciesConnectionValidateBeforeCall(contentLanguage, getElfStoragePoliciesConnectionRequestBody, null);
+    public ApiResponse<ElfStoragePolicyConnection> getElfStoragePoliciesConnectionWithHttpInfo(GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getElfStoragePoliciesConnectionValidateBeforeCall(getElfStoragePoliciesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ElfStoragePolicyConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class ElfStoragePolicyApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getElfStoragePoliciesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class ElfStoragePolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getElfStoragePoliciesConnectionAsync(String contentLanguage, GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, final ApiCallback<ElfStoragePolicyConnection> _callback) throws ApiException {
+    public okhttp3.Call getElfStoragePoliciesConnectionAsync(GetElfStoragePoliciesConnectionRequestBody getElfStoragePoliciesConnectionRequestBody, String contentLanguage, final ApiCallback<ElfStoragePolicyConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getElfStoragePoliciesConnectionValidateBeforeCall(contentLanguage, getElfStoragePoliciesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getElfStoragePoliciesConnectionValidateBeforeCall(getElfStoragePoliciesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ElfStoragePolicyConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getVsphereEsxiAccounts
 
-> List&lt;VsphereEsxiAccount&gt; getVsphereEsxiAccounts(contentLanguage, getVsphereEsxiAccountsRequestBody)
+> List&lt;VsphereEsxiAccount&gt; getVsphereEsxiAccounts(getVsphereEsxiAccountsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VsphereEsxiAccountApi apiInstance = new VsphereEsxiAccountApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody = new GetVsphereEsxiAccountsRequestBody(); // GetVsphereEsxiAccountsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VsphereEsxiAccount> result = apiInstance.getVsphereEsxiAccounts(contentLanguage, getVsphereEsxiAccountsRequestBody);
+            List<VsphereEsxiAccount> result = apiInstance.getVsphereEsxiAccounts(getVsphereEsxiAccountsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VsphereEsxiAccountApi#getVsphereEsxiAccounts");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVsphereEsxiAccountsRequestBody** | [**GetVsphereEsxiAccountsRequestBody**](GetVsphereEsxiAccountsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getVsphereEsxiAccountsConnection
 
-> VsphereEsxiAccountConnection getVsphereEsxiAccountsConnection(contentLanguage, getVsphereEsxiAccountsConnectionRequestBody)
+> VsphereEsxiAccountConnection getVsphereEsxiAccountsConnection(getVsphereEsxiAccountsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VsphereEsxiAccountApi apiInstance = new VsphereEsxiAccountApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody = new GetVsphereEsxiAccountsConnectionRequestBody(); // GetVsphereEsxiAccountsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VsphereEsxiAccountConnection result = apiInstance.getVsphereEsxiAccountsConnection(contentLanguage, getVsphereEsxiAccountsConnectionRequestBody);
+            VsphereEsxiAccountConnection result = apiInstance.getVsphereEsxiAccountsConnection(getVsphereEsxiAccountsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VsphereEsxiAccountApi#getVsphereEsxiAccountsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVsphereEsxiAccountsConnectionRequestBody** | [**GetVsphereEsxiAccountsConnectionRequestBody**](GetVsphereEsxiAccountsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

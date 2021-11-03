@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getMigrateTransmitters
 
-> List&lt;MigrateTransmitter&gt; getMigrateTransmitters(contentLanguage, getMigrateTransmittersRequestBody)
+> List&lt;MigrateTransmitter&gt; getMigrateTransmitters(getMigrateTransmittersRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         MigrateTransmitterApi apiInstance = new MigrateTransmitterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody = new GetMigrateTransmittersRequestBody(); // GetMigrateTransmittersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<MigrateTransmitter> result = apiInstance.getMigrateTransmitters(contentLanguage, getMigrateTransmittersRequestBody);
+            List<MigrateTransmitter> result = apiInstance.getMigrateTransmitters(getMigrateTransmittersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling MigrateTransmitterApi#getMigrateTransmitters");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getMigrateTransmittersRequestBody** | [**GetMigrateTransmittersRequestBody**](GetMigrateTransmittersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getMigrateTransmittersConnection
 
-> MigrateTransmitterConnection getMigrateTransmittersConnection(contentLanguage, getMigrateTransmittersConnectionRequestBody)
+> MigrateTransmitterConnection getMigrateTransmittersConnection(getMigrateTransmittersConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         MigrateTransmitterApi apiInstance = new MigrateTransmitterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody = new GetMigrateTransmittersConnectionRequestBody(); // GetMigrateTransmittersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            MigrateTransmitterConnection result = apiInstance.getMigrateTransmittersConnection(contentLanguage, getMigrateTransmittersConnectionRequestBody);
+            MigrateTransmitterConnection result = apiInstance.getMigrateTransmittersConnection(getMigrateTransmittersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling MigrateTransmitterApi#getMigrateTransmittersConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getMigrateTransmittersConnectionRequestBody** | [**GetMigrateTransmittersConnectionRequestBody**](GetMigrateTransmittersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

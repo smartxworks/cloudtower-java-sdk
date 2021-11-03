@@ -30,8 +30,8 @@ public interface IscsiLunApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunCloneParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiLun&gt;&gt;
    */
   @Headers({
@@ -39,14 +39,14 @@ public interface IscsiLunApi {
   })
   @POST("clone-iscsi-lun-from-snapshot")
   Call<List<WithTaskIscsiLun>> cloneIscsiLunFromSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<IscsiLunCloneParams> iscsiLunCloneParams
+    @retrofit2.http.Body List<IscsiLunCloneParams> iscsiLunCloneParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiLun&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface IscsiLunApi {
   })
   @POST("create-iscsi-lun")
   Call<List<WithTaskIscsiLun>> createIscsiLun(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<IscsiLunCreationParams> iscsiLunCreationParams
+    @retrofit2.http.Body List<IscsiLunCreationParams> iscsiLunCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteIscsiLun&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface IscsiLunApi {
   })
   @POST("delete-iscsi-lun")
   Call<List<WithTaskDeleteIscsiLun>> deleteIscsiLun(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body IscsiLunDeletionParams iscsiLunDeletionParams
+    @retrofit2.http.Body IscsiLunDeletionParams iscsiLunDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiLunsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;IscsiLun&gt;&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface IscsiLunApi {
   })
   @POST("get-iscsi-luns")
   Call<List<IscsiLun>> getIscsiLuns(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiLunsRequestBody getIscsiLunsRequestBody
+    @retrofit2.http.Body GetIscsiLunsRequestBody getIscsiLunsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiLunsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;IscsiLunConnection&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface IscsiLunApi {
   })
   @POST("get-iscsi-luns-connection")
   Call<IscsiLunConnection> getIscsiLunsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody
+    @retrofit2.http.Body GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunRollbackParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiLun&gt;&gt;
    */
   @Headers({
@@ -114,14 +114,14 @@ public interface IscsiLunApi {
   })
   @POST("rollback-iscsi-lun-from-snapshot")
   Call<List<WithTaskIscsiLun>> rollbackIscsiLunFromSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<IscsiLunRollbackParams> iscsiLunRollbackParams
+    @retrofit2.http.Body List<IscsiLunRollbackParams> iscsiLunRollbackParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiLun&gt;&gt;
    */
   @Headers({
@@ -129,7 +129,7 @@ public interface IscsiLunApi {
   })
   @POST("update-iscsi-lun")
   Call<List<WithTaskIscsiLun>> updateIscsiLun(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body IscsiLunUpdationParams iscsiLunUpdationParams
+    @retrofit2.http.Body IscsiLunUpdationParams iscsiLunUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

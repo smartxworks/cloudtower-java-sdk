@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createIscsiTarget
 
-> List&lt;WithTaskIscsiTarget&gt; createIscsiTarget(contentLanguage, iscsiTargetCreationParams)
+> List&lt;WithTaskIscsiTarget&gt; createIscsiTarget(iscsiTargetCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiTargetApi apiInstance = new IscsiTargetApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<IscsiTargetCreationParams> iscsiTargetCreationParams = Arrays.asList(); // List<IscsiTargetCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiTarget> result = apiInstance.createIscsiTarget(contentLanguage, iscsiTargetCreationParams);
+            List<WithTaskIscsiTarget> result = apiInstance.createIscsiTarget(iscsiTargetCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiTargetApi#createIscsiTarget");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiTargetCreationParams** | [**List&lt;IscsiTargetCreationParams&gt;**](IscsiTargetCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteIscsiTarget
 
-> List&lt;WithTaskDeleteIscsiTarget&gt; deleteIscsiTarget(contentLanguage, iscsiTargetDeletionParams)
+> List&lt;WithTaskDeleteIscsiTarget&gt; deleteIscsiTarget(iscsiTargetDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiTargetApi apiInstance = new IscsiTargetApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         IscsiTargetDeletionParams iscsiTargetDeletionParams = new IscsiTargetDeletionParams(); // IscsiTargetDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteIscsiTarget> result = apiInstance.deleteIscsiTarget(contentLanguage, iscsiTargetDeletionParams);
+            List<WithTaskDeleteIscsiTarget> result = apiInstance.deleteIscsiTarget(iscsiTargetDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiTargetApi#deleteIscsiTarget");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiTargetDeletionParams** | [**IscsiTargetDeletionParams**](IscsiTargetDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getIscsiTargets
 
-> List&lt;IscsiTarget&gt; getIscsiTargets(contentLanguage, getIscsiTargetsRequestBody)
+> List&lt;IscsiTarget&gt; getIscsiTargets(getIscsiTargetsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiTargetApi apiInstance = new IscsiTargetApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiTargetsRequestBody getIscsiTargetsRequestBody = new GetIscsiTargetsRequestBody(); // GetIscsiTargetsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<IscsiTarget> result = apiInstance.getIscsiTargets(contentLanguage, getIscsiTargetsRequestBody);
+            List<IscsiTarget> result = apiInstance.getIscsiTargets(getIscsiTargetsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiTargetApi#getIscsiTargets");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiTargetsRequestBody** | [**GetIscsiTargetsRequestBody**](GetIscsiTargetsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getIscsiTargetsConnection
 
-> IscsiTargetConnection getIscsiTargetsConnection(contentLanguage, getIscsiTargetsConnectionRequestBody)
+> IscsiTargetConnection getIscsiTargetsConnection(getIscsiTargetsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiTargetApi apiInstance = new IscsiTargetApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody = new GetIscsiTargetsConnectionRequestBody(); // GetIscsiTargetsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            IscsiTargetConnection result = apiInstance.getIscsiTargetsConnection(contentLanguage, getIscsiTargetsConnectionRequestBody);
+            IscsiTargetConnection result = apiInstance.getIscsiTargetsConnection(getIscsiTargetsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiTargetApi#getIscsiTargetsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiTargetsConnectionRequestBody** | [**GetIscsiTargetsConnectionRequestBody**](GetIscsiTargetsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateIscsiTarget
 
-> List&lt;WithTaskIscsiTarget&gt; updateIscsiTarget(contentLanguage, iscsiTargetUpdationParams)
+> List&lt;WithTaskIscsiTarget&gt; updateIscsiTarget(iscsiTargetUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiTargetApi apiInstance = new IscsiTargetApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         IscsiTargetUpdationParams iscsiTargetUpdationParams = new IscsiTargetUpdationParams(); // IscsiTargetUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskIscsiTarget> result = apiInstance.updateIscsiTarget(contentLanguage, iscsiTargetUpdationParams);
+            List<WithTaskIscsiTarget> result = apiInstance.updateIscsiTarget(iscsiTargetUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiTargetApi#updateIscsiTarget");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **iscsiTargetUpdationParams** | [**IscsiTargetUpdationParams**](IscsiTargetUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

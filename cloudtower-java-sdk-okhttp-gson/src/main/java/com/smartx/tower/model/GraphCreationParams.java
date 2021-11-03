@@ -32,8 +32,12 @@ import java.util.List;
 /**
  * GraphCreationParams
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class GraphCreationParams {
+  public static final String SERIALIZED_NAME_INSTANCE_IDS = "instance_ids";
+  @SerializedName(SERIALIZED_NAME_INSTANCE_IDS)
+  private List<String> instanceIds = null;
+
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
   private NetworkType network;
@@ -77,6 +81,37 @@ public class GraphCreationParams {
   public static final String SERIALIZED_NAME_METRIC_NAME = "metric_name";
   @SerializedName(SERIALIZED_NAME_METRIC_NAME)
   private String metricName;
+
+
+  public GraphCreationParams instanceIds(List<String> instanceIds) {
+    
+    this.instanceIds = instanceIds;
+    return this;
+  }
+
+  public GraphCreationParams addInstanceIdsItem(String instanceIdsItem) {
+    if (this.instanceIds == null) {
+      this.instanceIds = new ArrayList<String>();
+    }
+    this.instanceIds.add(instanceIdsItem);
+    return this;
+  }
+
+   /**
+   * Get instanceIds
+   * @return instanceIds
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getInstanceIds() {
+    return instanceIds;
+  }
+
+
+  public void setInstanceIds(List<String> instanceIds) {
+    this.instanceIds = instanceIds;
+  }
 
 
   public GraphCreationParams network(NetworkType network) {
@@ -346,7 +381,8 @@ public class GraphCreationParams {
       return false;
     }
     GraphCreationParams graphCreationParams = (GraphCreationParams) o;
-    return Objects.equals(this.network, graphCreationParams.network) &&
+    return Objects.equals(this.instanceIds, graphCreationParams.instanceIds) &&
+        Objects.equals(this.network, graphCreationParams.network) &&
         Objects.equals(this.service, graphCreationParams.service) &&
         Objects.equals(this.metricType, graphCreationParams.metricType) &&
         Objects.equals(this.metricCount, graphCreationParams.metricCount) &&
@@ -361,13 +397,14 @@ public class GraphCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(network, service, metricType, metricCount, type, resourceType, viewId, title, clusterId, connectId, metricName);
+    return Objects.hash(instanceIds, network, service, metricType, metricCount, type, resourceType, viewId, title, clusterId, connectId, metricName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphCreationParams {\n");
+    sb.append("    instanceIds: ").append(toIndentedString(instanceIds)).append("\n");
     sb.append("    network: ").append(toIndentedString(network)).append("\n");
     sb.append("    service: ").append(toIndentedString(service)).append("\n");
     sb.append("    metricType: ").append(toIndentedString(metricType)).append("\n");

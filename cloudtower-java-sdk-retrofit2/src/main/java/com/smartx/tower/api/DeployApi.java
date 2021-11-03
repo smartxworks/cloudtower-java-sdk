@@ -23,8 +23,8 @@ public interface DeployApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDeploysRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Deploy&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface DeployApi {
   })
   @POST("get-deploys")
   Call<List<Deploy>> getDeploys(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDeploysRequestBody getDeploysRequestBody
+    @retrofit2.http.Body GetDeploysRequestBody getDeploysRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDeploysConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;DeployConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface DeployApi {
   })
   @POST("get-deploys-connection")
   Call<DeployConnection> getDeploysConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDeploysConnectionRequestBody getDeploysConnectionRequestBody
+    @retrofit2.http.Body GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createRackTopo
 
-> List&lt;WithTaskRackTopo&gt; createRackTopo(contentLanguage, rackTopoCreationParams)
+> List&lt;WithTaskRackTopo&gt; createRackTopo(rackTopoCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         RackTopoApi apiInstance = new RackTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<RackTopoCreationParams> rackTopoCreationParams = Arrays.asList(); // List<RackTopoCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskRackTopo> result = apiInstance.createRackTopo(contentLanguage, rackTopoCreationParams);
+            List<WithTaskRackTopo> result = apiInstance.createRackTopo(rackTopoCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling RackTopoApi#createRackTopo");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **rackTopoCreationParams** | [**List&lt;RackTopoCreationParams&gt;**](RackTopoCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteRackTopo
 
-> List&lt;WithTaskDeleteRackTopo&gt; deleteRackTopo(contentLanguage, rackTopoDeletionParams)
+> List&lt;WithTaskDeleteRackTopo&gt; deleteRackTopo(rackTopoDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         RackTopoApi apiInstance = new RackTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         RackTopoDeletionParams rackTopoDeletionParams = new RackTopoDeletionParams(); // RackTopoDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteRackTopo> result = apiInstance.deleteRackTopo(contentLanguage, rackTopoDeletionParams);
+            List<WithTaskDeleteRackTopo> result = apiInstance.deleteRackTopo(rackTopoDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling RackTopoApi#deleteRackTopo");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **rackTopoDeletionParams** | [**RackTopoDeletionParams**](RackTopoDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getRackTopoes
 
-> List&lt;RackTopo&gt; getRackTopoes(contentLanguage, getRackTopoesRequestBody)
+> List&lt;RackTopo&gt; getRackTopoes(getRackTopoesRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         RackTopoApi apiInstance = new RackTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetRackTopoesRequestBody getRackTopoesRequestBody = new GetRackTopoesRequestBody(); // GetRackTopoesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<RackTopo> result = apiInstance.getRackTopoes(contentLanguage, getRackTopoesRequestBody);
+            List<RackTopo> result = apiInstance.getRackTopoes(getRackTopoesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling RackTopoApi#getRackTopoes");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getRackTopoesRequestBody** | [**GetRackTopoesRequestBody**](GetRackTopoesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getRackTopoesConnection
 
-> RackTopoConnection getRackTopoesConnection(contentLanguage, getRackTopoesConnectionRequestBody)
+> RackTopoConnection getRackTopoesConnection(getRackTopoesConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         RackTopoApi apiInstance = new RackTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody = new GetRackTopoesConnectionRequestBody(); // GetRackTopoesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            RackTopoConnection result = apiInstance.getRackTopoesConnection(contentLanguage, getRackTopoesConnectionRequestBody);
+            RackTopoConnection result = apiInstance.getRackTopoesConnection(getRackTopoesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling RackTopoApi#getRackTopoesConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getRackTopoesConnectionRequestBody** | [**GetRackTopoesConnectionRequestBody**](GetRackTopoesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateRackTopo
 
-> List&lt;WithTaskRackTopo&gt; updateRackTopo(contentLanguage, rackTopoUpdationParams)
+> List&lt;WithTaskRackTopo&gt; updateRackTopo(rackTopoUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         RackTopoApi apiInstance = new RackTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         RackTopoUpdationParams rackTopoUpdationParams = new RackTopoUpdationParams(); // RackTopoUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskRackTopo> result = apiInstance.updateRackTopo(contentLanguage, rackTopoUpdationParams);
+            List<WithTaskRackTopo> result = apiInstance.updateRackTopo(rackTopoUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling RackTopoApi#updateRackTopo");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **rackTopoUpdationParams** | [**RackTopoUpdationParams**](RackTopoUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

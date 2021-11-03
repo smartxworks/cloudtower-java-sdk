@@ -23,8 +23,8 @@ public interface VmDiskApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmDisksRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmDisk&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface VmDiskApi {
   })
   @POST("get-vm-disks")
   Call<List<VmDisk>> getVmDisks(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmDisksRequestBody getVmDisksRequestBody
+    @retrofit2.http.Body GetVmDisksRequestBody getVmDisksRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmDisksConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmDiskConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface VmDiskApi {
   })
   @POST("get-vm-disks-connection")
   Call<VmDiskConnection> getVmDisksConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody
+    @retrofit2.http.Body GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

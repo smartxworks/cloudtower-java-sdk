@@ -23,8 +23,8 @@ public interface UserAuditLogApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUserAuditLogsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;UserAuditLog&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface UserAuditLogApi {
   })
   @POST("get-user-audit-logs")
   Call<List<UserAuditLog>> getUserAuditLogs(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUserAuditLogsRequestBody getUserAuditLogsRequestBody
+    @retrofit2.http.Body GetUserAuditLogsRequestBody getUserAuditLogsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUserAuditLogsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;UserAuditLogConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface UserAuditLogApi {
   })
   @POST("get-user-audit-logs-connection")
   Call<UserAuditLogConnection> getUserAuditLogsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUserAuditLogsConnectionRequestBody getUserAuditLogsConnectionRequestBody
+    @retrofit2.http.Body GetUserAuditLogsConnectionRequestBody getUserAuditLogsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

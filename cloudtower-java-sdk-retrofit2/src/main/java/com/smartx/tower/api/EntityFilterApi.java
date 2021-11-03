@@ -28,8 +28,8 @@ public interface EntityFilterApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param entityFilterCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskEntityFilter&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface EntityFilterApi {
   })
   @POST("create-entity-filter")
   Call<List<WithTaskEntityFilter>> createEntityFilter(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<EntityFilterCreationParams> entityFilterCreationParams
+    @retrofit2.http.Body List<EntityFilterCreationParams> entityFilterCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param entityFilterDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteEntityFilter&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface EntityFilterApi {
   })
   @POST("delete-entity-filter")
   Call<List<WithTaskDeleteEntityFilter>> deleteEntityFilter(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body EntityFilterDeletionParams entityFilterDeletionParams
+    @retrofit2.http.Body EntityFilterDeletionParams entityFilterDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEntityFiltersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;EntityFilter&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface EntityFilterApi {
   })
   @POST("get-entity-filters")
   Call<List<EntityFilter>> getEntityFilters(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEntityFiltersRequestBody getEntityFiltersRequestBody
+    @retrofit2.http.Body GetEntityFiltersRequestBody getEntityFiltersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEntityFiltersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;EntityFilterConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface EntityFilterApi {
   })
   @POST("get-entity-filters-connection")
   Call<EntityFilterConnection> getEntityFiltersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody
+    @retrofit2.http.Body GetEntityFiltersConnectionRequestBody getEntityFiltersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param entityFilterUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskEntityFilter&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface EntityFilterApi {
   })
   @POST("update-entity-filter")
   Call<List<WithTaskEntityFilter>> updateEntityFilter(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body EntityFilterUpdationParams entityFilterUpdationParams
+    @retrofit2.http.Body EntityFilterUpdationParams entityFilterUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

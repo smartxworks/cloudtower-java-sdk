@@ -64,8 +64,8 @@ public class ViewApi {
 
     /**
      * Build call for createView
-     * @param contentLanguage  (required)
      * @param viewCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createViewCall(String contentLanguage, List<ViewCreationParams> viewCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createViewCall(List<ViewCreationParams> viewCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = viewCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class ViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createViewValidateBeforeCall(String contentLanguage, List<ViewCreationParams> viewCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createView(Async)");
-        }
+    private okhttp3.Call createViewValidateBeforeCall(List<ViewCreationParams> viewCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'viewCreationParams' is set
         if (viewCreationParams == null) {
@@ -124,7 +119,7 @@ public class ViewApi {
         }
         
 
-        okhttp3.Call localVarCall = createViewCall(contentLanguage, viewCreationParams, _callback);
+        okhttp3.Call localVarCall = createViewCall(viewCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class ViewApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param viewCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskView> createView(String contentLanguage, List<ViewCreationParams> viewCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskView>> localVarResp = createViewWithHttpInfo(contentLanguage, viewCreationParams);
+    public List<WithTaskView> createView(List<ViewCreationParams> viewCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskView>> localVarResp = createViewWithHttpInfo(viewCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param viewCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskView&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskView>> createViewWithHttpInfo(String contentLanguage, List<ViewCreationParams> viewCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createViewValidateBeforeCall(contentLanguage, viewCreationParams, null);
+    public ApiResponse<List<WithTaskView>> createViewWithHttpInfo(List<ViewCreationParams> viewCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createViewValidateBeforeCall(viewCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskView>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class ViewApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param viewCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createViewAsync(String contentLanguage, List<ViewCreationParams> viewCreationParams, final ApiCallback<List<WithTaskView>> _callback) throws ApiException {
+    public okhttp3.Call createViewAsync(List<ViewCreationParams> viewCreationParams, String contentLanguage, final ApiCallback<List<WithTaskView>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createViewValidateBeforeCall(contentLanguage, viewCreationParams, _callback);
+        okhttp3.Call localVarCall = createViewValidateBeforeCall(viewCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskView>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteView
-     * @param contentLanguage  (required)
      * @param viewDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteViewCall(String contentLanguage, ViewDeletionParams viewDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteViewCall(ViewDeletionParams viewDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = viewDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class ViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteViewValidateBeforeCall(String contentLanguage, ViewDeletionParams viewDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteView(Async)");
-        }
+    private okhttp3.Call deleteViewValidateBeforeCall(ViewDeletionParams viewDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'viewDeletionParams' is set
         if (viewDeletionParams == null) {
@@ -252,7 +242,7 @@ public class ViewApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteViewCall(contentLanguage, viewDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteViewCall(viewDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class ViewApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param viewDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteView> deleteView(String contentLanguage, ViewDeletionParams viewDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteView>> localVarResp = deleteViewWithHttpInfo(contentLanguage, viewDeletionParams);
+    public List<WithTaskDeleteView> deleteView(ViewDeletionParams viewDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteView>> localVarResp = deleteViewWithHttpInfo(viewDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param viewDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteView&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteView>> deleteViewWithHttpInfo(String contentLanguage, ViewDeletionParams viewDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteViewValidateBeforeCall(contentLanguage, viewDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteView>> deleteViewWithHttpInfo(ViewDeletionParams viewDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteViewValidateBeforeCall(viewDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteView>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class ViewApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param viewDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteViewAsync(String contentLanguage, ViewDeletionParams viewDeletionParams, final ApiCallback<List<WithTaskDeleteView>> _callback) throws ApiException {
+    public okhttp3.Call deleteViewAsync(ViewDeletionParams viewDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteView>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteViewValidateBeforeCall(contentLanguage, viewDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteViewValidateBeforeCall(viewDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteView>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getViews
-     * @param contentLanguage  (required)
      * @param getViewsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getViewsCall(String contentLanguage, GetViewsRequestBody getViewsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getViewsCall(GetViewsRequestBody getViewsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getViewsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class ViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getViewsValidateBeforeCall(String contentLanguage, GetViewsRequestBody getViewsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getViews(Async)");
-        }
+    private okhttp3.Call getViewsValidateBeforeCall(GetViewsRequestBody getViewsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getViewsRequestBody' is set
         if (getViewsRequestBody == null) {
@@ -380,7 +365,7 @@ public class ViewApi {
         }
         
 
-        okhttp3.Call localVarCall = getViewsCall(contentLanguage, getViewsRequestBody, _callback);
+        okhttp3.Call localVarCall = getViewsCall(getViewsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class ViewApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getViewsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;View&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<View> getViews(String contentLanguage, GetViewsRequestBody getViewsRequestBody) throws ApiException {
-        ApiResponse<List<View>> localVarResp = getViewsWithHttpInfo(contentLanguage, getViewsRequestBody);
+    public List<View> getViews(GetViewsRequestBody getViewsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<View>> localVarResp = getViewsWithHttpInfo(getViewsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getViewsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;View&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<View>> getViewsWithHttpInfo(String contentLanguage, GetViewsRequestBody getViewsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getViewsValidateBeforeCall(contentLanguage, getViewsRequestBody, null);
+    public ApiResponse<List<View>> getViewsWithHttpInfo(GetViewsRequestBody getViewsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getViewsValidateBeforeCall(getViewsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<View>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class ViewApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getViewsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getViewsAsync(String contentLanguage, GetViewsRequestBody getViewsRequestBody, final ApiCallback<List<View>> _callback) throws ApiException {
+    public okhttp3.Call getViewsAsync(GetViewsRequestBody getViewsRequestBody, String contentLanguage, final ApiCallback<List<View>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getViewsValidateBeforeCall(contentLanguage, getViewsRequestBody, _callback);
+        okhttp3.Call localVarCall = getViewsValidateBeforeCall(getViewsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<View>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getViewsConnection
-     * @param contentLanguage  (required)
      * @param getViewsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getViewsConnectionCall(String contentLanguage, GetViewsConnectionRequestBody getViewsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getViewsConnectionCall(GetViewsConnectionRequestBody getViewsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getViewsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class ViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getViewsConnectionValidateBeforeCall(String contentLanguage, GetViewsConnectionRequestBody getViewsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getViewsConnection(Async)");
-        }
+    private okhttp3.Call getViewsConnectionValidateBeforeCall(GetViewsConnectionRequestBody getViewsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getViewsConnectionRequestBody' is set
         if (getViewsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class ViewApi {
         }
         
 
-        okhttp3.Call localVarCall = getViewsConnectionCall(contentLanguage, getViewsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getViewsConnectionCall(getViewsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class ViewApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getViewsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ViewConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ViewConnection getViewsConnection(String contentLanguage, GetViewsConnectionRequestBody getViewsConnectionRequestBody) throws ApiException {
-        ApiResponse<ViewConnection> localVarResp = getViewsConnectionWithHttpInfo(contentLanguage, getViewsConnectionRequestBody);
+    public ViewConnection getViewsConnection(GetViewsConnectionRequestBody getViewsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ViewConnection> localVarResp = getViewsConnectionWithHttpInfo(getViewsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getViewsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ViewConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ViewConnection> getViewsConnectionWithHttpInfo(String contentLanguage, GetViewsConnectionRequestBody getViewsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getViewsConnectionValidateBeforeCall(contentLanguage, getViewsConnectionRequestBody, null);
+    public ApiResponse<ViewConnection> getViewsConnectionWithHttpInfo(GetViewsConnectionRequestBody getViewsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getViewsConnectionValidateBeforeCall(getViewsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ViewConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class ViewApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getViewsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getViewsConnectionAsync(String contentLanguage, GetViewsConnectionRequestBody getViewsConnectionRequestBody, final ApiCallback<ViewConnection> _callback) throws ApiException {
+    public okhttp3.Call getViewsConnectionAsync(GetViewsConnectionRequestBody getViewsConnectionRequestBody, String contentLanguage, final ApiCallback<ViewConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getViewsConnectionValidateBeforeCall(contentLanguage, getViewsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getViewsConnectionValidateBeforeCall(getViewsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ViewConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateView
-     * @param contentLanguage  (required)
      * @param viewUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateViewCall(String contentLanguage, ViewUpdationParams viewUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateViewCall(ViewUpdationParams viewUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = viewUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class ViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateViewValidateBeforeCall(String contentLanguage, ViewUpdationParams viewUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateView(Async)");
-        }
+    private okhttp3.Call updateViewValidateBeforeCall(ViewUpdationParams viewUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'viewUpdationParams' is set
         if (viewUpdationParams == null) {
@@ -636,7 +611,7 @@ public class ViewApi {
         }
         
 
-        okhttp3.Call localVarCall = updateViewCall(contentLanguage, viewUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateViewCall(viewUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class ViewApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param viewUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskView> updateView(String contentLanguage, ViewUpdationParams viewUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskView>> localVarResp = updateViewWithHttpInfo(contentLanguage, viewUpdationParams);
+    public List<WithTaskView> updateView(ViewUpdationParams viewUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskView>> localVarResp = updateViewWithHttpInfo(viewUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param viewUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskView&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskView>> updateViewWithHttpInfo(String contentLanguage, ViewUpdationParams viewUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateViewValidateBeforeCall(contentLanguage, viewUpdationParams, null);
+    public ApiResponse<List<WithTaskView>> updateViewWithHttpInfo(ViewUpdationParams viewUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateViewValidateBeforeCall(viewUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskView>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class ViewApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param viewUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class ViewApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateViewAsync(String contentLanguage, ViewUpdationParams viewUpdationParams, final ApiCallback<List<WithTaskView>> _callback) throws ApiException {
+    public okhttp3.Call updateViewAsync(ViewUpdationParams viewUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskView>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateViewValidateBeforeCall(contentLanguage, viewUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateViewValidateBeforeCall(viewUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskView>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

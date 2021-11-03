@@ -23,8 +23,8 @@ public interface VcenterAccountApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVcenterAccountsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VcenterAccount&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface VcenterAccountApi {
   })
   @POST("get-vcenter-accounts")
   Call<List<VcenterAccount>> getVcenterAccounts(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVcenterAccountsRequestBody getVcenterAccountsRequestBody
+    @retrofit2.http.Body GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVcenterAccountsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VcenterAccountConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface VcenterAccountApi {
   })
   @POST("get-vcenter-accounts-connection")
   Call<VcenterAccountConnection> getVcenterAccountsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody
+    @retrofit2.http.Body GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

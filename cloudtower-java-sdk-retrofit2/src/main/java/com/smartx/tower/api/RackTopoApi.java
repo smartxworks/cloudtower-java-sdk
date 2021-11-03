@@ -28,8 +28,8 @@ public interface RackTopoApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param rackTopoCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskRackTopo&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface RackTopoApi {
   })
   @POST("create-rack-topo")
   Call<List<WithTaskRackTopo>> createRackTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<RackTopoCreationParams> rackTopoCreationParams
+    @retrofit2.http.Body List<RackTopoCreationParams> rackTopoCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param rackTopoDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteRackTopo&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface RackTopoApi {
   })
   @POST("delete-rack-topo")
   Call<List<WithTaskDeleteRackTopo>> deleteRackTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body RackTopoDeletionParams rackTopoDeletionParams
+    @retrofit2.http.Body RackTopoDeletionParams rackTopoDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getRackTopoesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;RackTopo&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface RackTopoApi {
   })
   @POST("get-rack-topoes")
   Call<List<RackTopo>> getRackTopoes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetRackTopoesRequestBody getRackTopoesRequestBody
+    @retrofit2.http.Body GetRackTopoesRequestBody getRackTopoesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getRackTopoesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;RackTopoConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface RackTopoApi {
   })
   @POST("get-rack-topoes-connection")
   Call<RackTopoConnection> getRackTopoesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody
+    @retrofit2.http.Body GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param rackTopoUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskRackTopo&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface RackTopoApi {
   })
   @POST("update-rack-topo")
   Call<List<WithTaskRackTopo>> updateRackTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body RackTopoUpdationParams rackTopoUpdationParams
+    @retrofit2.http.Body RackTopoUpdationParams rackTopoUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

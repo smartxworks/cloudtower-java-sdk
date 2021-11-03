@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getSecurityPolicies
 
-> List&lt;SecurityPolicy&gt; getSecurityPolicies(contentLanguage, getSecurityPoliciesRequestBody)
+> List&lt;SecurityPolicy&gt; getSecurityPolicies(getSecurityPoliciesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SecurityPolicyApi apiInstance = new SecurityPolicyApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody = new GetSecurityPoliciesRequestBody(); // GetSecurityPoliciesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SecurityPolicy> result = apiInstance.getSecurityPolicies(contentLanguage, getSecurityPoliciesRequestBody);
+            List<SecurityPolicy> result = apiInstance.getSecurityPolicies(getSecurityPoliciesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SecurityPolicyApi#getSecurityPolicies");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSecurityPoliciesRequestBody** | [**GetSecurityPoliciesRequestBody**](GetSecurityPoliciesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getSecurityPoliciesConnection
 
-> SecurityPolicyConnection getSecurityPoliciesConnection(contentLanguage, getSecurityPoliciesConnectionRequestBody)
+> SecurityPolicyConnection getSecurityPoliciesConnection(getSecurityPoliciesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SecurityPolicyApi apiInstance = new SecurityPolicyApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody = new GetSecurityPoliciesConnectionRequestBody(); // GetSecurityPoliciesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SecurityPolicyConnection result = apiInstance.getSecurityPoliciesConnection(contentLanguage, getSecurityPoliciesConnectionRequestBody);
+            SecurityPolicyConnection result = apiInstance.getSecurityPoliciesConnection(getSecurityPoliciesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SecurityPolicyApi#getSecurityPoliciesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSecurityPoliciesConnectionRequestBody** | [**GetSecurityPoliciesConnectionRequestBody**](GetSecurityPoliciesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

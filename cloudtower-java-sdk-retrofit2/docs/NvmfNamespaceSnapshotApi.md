@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createNvmfNamespaceSnapshot
 
-> List&lt;WithTaskNvmfNamespaceSnapshot&gt; createNvmfNamespaceSnapshot(contentLanguage, nvmfNamespaceSnapshotCreationParams)
+> List&lt;WithTaskNvmfNamespaceSnapshot&gt; createNvmfNamespaceSnapshot(nvmfNamespaceSnapshotCreationParams, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NvmfNamespaceSnapshotApi apiInstance = new NvmfNamespaceSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<NvmfNamespaceSnapshotCreationParams> nvmfNamespaceSnapshotCreationParams = Arrays.asList(); // List<NvmfNamespaceSnapshotCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNvmfNamespaceSnapshot> result = apiInstance.createNvmfNamespaceSnapshot(contentLanguage, nvmfNamespaceSnapshotCreationParams);
+            List<WithTaskNvmfNamespaceSnapshot> result = apiInstance.createNvmfNamespaceSnapshot(nvmfNamespaceSnapshotCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NvmfNamespaceSnapshotApi#createNvmfNamespaceSnapshot");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nvmfNamespaceSnapshotCreationParams** | [**List&lt;NvmfNamespaceSnapshotCreationParams&gt;**](NvmfNamespaceSnapshotCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## deleteNvmfNamespaceSnapshot
 
-> List&lt;WithTaskDeleteNvmfNamespaceSnapshot&gt; deleteNvmfNamespaceSnapshot(contentLanguage, nvmfNamespaceSnapshotDeletionParams)
+> List&lt;WithTaskDeleteNvmfNamespaceSnapshot&gt; deleteNvmfNamespaceSnapshot(nvmfNamespaceSnapshotDeletionParams, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NvmfNamespaceSnapshotApi apiInstance = new NvmfNamespaceSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NvmfNamespaceSnapshotDeletionParams nvmfNamespaceSnapshotDeletionParams = new NvmfNamespaceSnapshotDeletionParams(); // NvmfNamespaceSnapshotDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteNvmfNamespaceSnapshot> result = apiInstance.deleteNvmfNamespaceSnapshot(contentLanguage, nvmfNamespaceSnapshotDeletionParams);
+            List<WithTaskDeleteNvmfNamespaceSnapshot> result = apiInstance.deleteNvmfNamespaceSnapshot(nvmfNamespaceSnapshotDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NvmfNamespaceSnapshotApi#deleteNvmfNamespaceSnapshot");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nvmfNamespaceSnapshotDeletionParams** | [**NvmfNamespaceSnapshotDeletionParams**](NvmfNamespaceSnapshotDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## getNvmfNamespaceSnapshots
 
-> List&lt;NvmfNamespaceSnapshot&gt; getNvmfNamespaceSnapshots(contentLanguage, getNvmfNamespaceSnapshotsRequestBody)
+> List&lt;NvmfNamespaceSnapshot&gt; getNvmfNamespaceSnapshots(getNvmfNamespaceSnapshotsRequestBody, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NvmfNamespaceSnapshotApi apiInstance = new NvmfNamespaceSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNvmfNamespaceSnapshotsRequestBody getNvmfNamespaceSnapshotsRequestBody = new GetNvmfNamespaceSnapshotsRequestBody(); // GetNvmfNamespaceSnapshotsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<NvmfNamespaceSnapshot> result = apiInstance.getNvmfNamespaceSnapshots(contentLanguage, getNvmfNamespaceSnapshotsRequestBody);
+            List<NvmfNamespaceSnapshot> result = apiInstance.getNvmfNamespaceSnapshots(getNvmfNamespaceSnapshotsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NvmfNamespaceSnapshotApi#getNvmfNamespaceSnapshots");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNvmfNamespaceSnapshotsRequestBody** | [**GetNvmfNamespaceSnapshotsRequestBody**](GetNvmfNamespaceSnapshotsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## getNvmfNamespaceSnapshotsConnection
 
-> NvmfNamespaceSnapshotConnection getNvmfNamespaceSnapshotsConnection(contentLanguage, getNvmfNamespaceSnapshotsConnectionRequestBody)
+> NvmfNamespaceSnapshotConnection getNvmfNamespaceSnapshotsConnection(getNvmfNamespaceSnapshotsConnectionRequestBody, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NvmfNamespaceSnapshotApi apiInstance = new NvmfNamespaceSnapshotApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNvmfNamespaceSnapshotsConnectionRequestBody getNvmfNamespaceSnapshotsConnectionRequestBody = new GetNvmfNamespaceSnapshotsConnectionRequestBody(); // GetNvmfNamespaceSnapshotsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NvmfNamespaceSnapshotConnection result = apiInstance.getNvmfNamespaceSnapshotsConnection(contentLanguage, getNvmfNamespaceSnapshotsConnectionRequestBody);
+            NvmfNamespaceSnapshotConnection result = apiInstance.getNvmfNamespaceSnapshotsConnection(getNvmfNamespaceSnapshotsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NvmfNamespaceSnapshotApi#getNvmfNamespaceSnapshotsConnection");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNvmfNamespaceSnapshotsConnectionRequestBody** | [**GetNvmfNamespaceSnapshotsConnectionRequestBody**](GetNvmfNamespaceSnapshotsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

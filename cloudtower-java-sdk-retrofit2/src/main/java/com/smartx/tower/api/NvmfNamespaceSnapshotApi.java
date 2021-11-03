@@ -27,8 +27,8 @@ public interface NvmfNamespaceSnapshotApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nvmfNamespaceSnapshotCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNvmfNamespaceSnapshot&gt;&gt;
    */
   @Headers({
@@ -36,14 +36,14 @@ public interface NvmfNamespaceSnapshotApi {
   })
   @POST("create-nvmf-namespace-snapshot")
   Call<List<WithTaskNvmfNamespaceSnapshot>> createNvmfNamespaceSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<NvmfNamespaceSnapshotCreationParams> nvmfNamespaceSnapshotCreationParams
+    @retrofit2.http.Body List<NvmfNamespaceSnapshotCreationParams> nvmfNamespaceSnapshotCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nvmfNamespaceSnapshotDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteNvmfNamespaceSnapshot&gt;&gt;
    */
   @Headers({
@@ -51,14 +51,14 @@ public interface NvmfNamespaceSnapshotApi {
   })
   @POST("delete-nvmf-namespace-snapshot")
   Call<List<WithTaskDeleteNvmfNamespaceSnapshot>> deleteNvmfNamespaceSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NvmfNamespaceSnapshotDeletionParams nvmfNamespaceSnapshotDeletionParams
+    @retrofit2.http.Body NvmfNamespaceSnapshotDeletionParams nvmfNamespaceSnapshotDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNvmfNamespaceSnapshotsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;NvmfNamespaceSnapshot&gt;&gt;
    */
   @Headers({
@@ -66,14 +66,14 @@ public interface NvmfNamespaceSnapshotApi {
   })
   @POST("get-nvmf-namespace-snapshots")
   Call<List<NvmfNamespaceSnapshot>> getNvmfNamespaceSnapshots(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNvmfNamespaceSnapshotsRequestBody getNvmfNamespaceSnapshotsRequestBody
+    @retrofit2.http.Body GetNvmfNamespaceSnapshotsRequestBody getNvmfNamespaceSnapshotsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNvmfNamespaceSnapshotsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NvmfNamespaceSnapshotConnection&gt;
    */
   @Headers({
@@ -81,7 +81,7 @@ public interface NvmfNamespaceSnapshotApi {
   })
   @POST("get-nvmf-namespace-snapshots-connection")
   Call<NvmfNamespaceSnapshotConnection> getNvmfNamespaceSnapshotsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNvmfNamespaceSnapshotsConnectionRequestBody getNvmfNamespaceSnapshotsConnectionRequestBody
+    @retrofit2.http.Body GetNvmfNamespaceSnapshotsConnectionRequestBody getNvmfNamespaceSnapshotsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

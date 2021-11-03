@@ -23,8 +23,8 @@ public interface WitnessApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getWitnessesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Witness&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface WitnessApi {
   })
   @POST("get-witnesses")
   Call<List<Witness>> getWitnesses(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetWitnessesRequestBody getWitnessesRequestBody
+    @retrofit2.http.Body GetWitnessesRequestBody getWitnessesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getWitnessesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;WitnessConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface WitnessApi {
   })
   @POST("get-witnesses-connection")
   Call<WitnessConnection> getWitnessesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody
+    @retrofit2.http.Body GetWitnessesConnectionRequestBody getWitnessesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

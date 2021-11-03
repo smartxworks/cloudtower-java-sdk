@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## cloneSnapshotGroup
 
-> List&lt;WithTaskSnapshotGroup&gt; cloneSnapshotGroup(contentLanguage, snapshotGroupCloneParams)
+> List&lt;WithTaskSnapshotGroup&gt; cloneSnapshotGroup(snapshotGroupCloneParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotGroupApi apiInstance = new SnapshotGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<SnapshotGroupCloneParams> snapshotGroupCloneParams = Arrays.asList(); // List<SnapshotGroupCloneParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotGroup> result = apiInstance.cloneSnapshotGroup(contentLanguage, snapshotGroupCloneParams);
+            List<WithTaskSnapshotGroup> result = apiInstance.cloneSnapshotGroup(snapshotGroupCloneParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotGroupApi#cloneSnapshotGroup");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotGroupCloneParams** | [**List&lt;SnapshotGroupCloneParams&gt;**](SnapshotGroupCloneParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## deleteSnapshotGroup
 
-> List&lt;WithTaskDeleteSnapshotGroup&gt; deleteSnapshotGroup(contentLanguage, snapshotGroupDeletionParams)
+> List&lt;WithTaskDeleteSnapshotGroup&gt; deleteSnapshotGroup(snapshotGroupDeletionParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotGroupApi apiInstance = new SnapshotGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotGroupDeletionParams snapshotGroupDeletionParams = new SnapshotGroupDeletionParams(); // SnapshotGroupDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteSnapshotGroup> result = apiInstance.deleteSnapshotGroup(contentLanguage, snapshotGroupDeletionParams);
+            List<WithTaskDeleteSnapshotGroup> result = apiInstance.deleteSnapshotGroup(snapshotGroupDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotGroupApi#deleteSnapshotGroup");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotGroupDeletionParams** | [**SnapshotGroupDeletionParams**](SnapshotGroupDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## getSnapshotGroups
 
-> List&lt;SnapshotGroup&gt; getSnapshotGroups(contentLanguage, getSnapshotGroupsRequestBody)
+> List&lt;SnapshotGroup&gt; getSnapshotGroups(getSnapshotGroupsRequestBody, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotGroupApi apiInstance = new SnapshotGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody = new GetSnapshotGroupsRequestBody(); // GetSnapshotGroupsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SnapshotGroup> result = apiInstance.getSnapshotGroups(contentLanguage, getSnapshotGroupsRequestBody);
+            List<SnapshotGroup> result = apiInstance.getSnapshotGroups(getSnapshotGroupsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotGroupApi#getSnapshotGroups");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnapshotGroupsRequestBody** | [**GetSnapshotGroupsRequestBody**](GetSnapshotGroupsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getSnapshotGroupsConnection
 
-> SnapshotGroupConnection getSnapshotGroupsConnection(contentLanguage, getSnapshotGroupsConnectionRequestBody)
+> SnapshotGroupConnection getSnapshotGroupsConnection(getSnapshotGroupsConnectionRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotGroupApi apiInstance = new SnapshotGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody = new GetSnapshotGroupsConnectionRequestBody(); // GetSnapshotGroupsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SnapshotGroupConnection result = apiInstance.getSnapshotGroupsConnection(contentLanguage, getSnapshotGroupsConnectionRequestBody);
+            SnapshotGroupConnection result = apiInstance.getSnapshotGroupsConnection(getSnapshotGroupsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotGroupApi#getSnapshotGroupsConnection");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnapshotGroupsConnectionRequestBody** | [**GetSnapshotGroupsConnectionRequestBody**](GetSnapshotGroupsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## keepSnapshotGroup
 
-> List&lt;WithTaskSnapshotGroup&gt; keepSnapshotGroup(contentLanguage, snapshotGroupKeepParams)
+> List&lt;WithTaskSnapshotGroup&gt; keepSnapshotGroup(snapshotGroupKeepParams, contentLanguage)
 
 
 
@@ -338,10 +338,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotGroupApi apiInstance = new SnapshotGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotGroupKeepParams snapshotGroupKeepParams = new SnapshotGroupKeepParams(); // SnapshotGroupKeepParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotGroup> result = apiInstance.keepSnapshotGroup(contentLanguage, snapshotGroupKeepParams);
+            List<WithTaskSnapshotGroup> result = apiInstance.keepSnapshotGroup(snapshotGroupKeepParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotGroupApi#keepSnapshotGroup");
@@ -359,8 +359,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotGroupKeepParams** | [**SnapshotGroupKeepParams**](SnapshotGroupKeepParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## rollbackSnapshotGroup
 
-> List&lt;WithTaskSnapshotGroup&gt; rollbackSnapshotGroup(contentLanguage, snapshotGroupRollbackParams)
+> List&lt;WithTaskSnapshotGroup&gt; rollbackSnapshotGroup(snapshotGroupRollbackParams, contentLanguage)
 
 
 
@@ -412,10 +412,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotGroupApi apiInstance = new SnapshotGroupApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnapshotGroupRollbackParams snapshotGroupRollbackParams = new SnapshotGroupRollbackParams(); // SnapshotGroupRollbackParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnapshotGroup> result = apiInstance.rollbackSnapshotGroup(contentLanguage, snapshotGroupRollbackParams);
+            List<WithTaskSnapshotGroup> result = apiInstance.rollbackSnapshotGroup(snapshotGroupRollbackParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotGroupApi#rollbackSnapshotGroup");
@@ -433,8 +433,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snapshotGroupRollbackParams** | [**SnapshotGroupRollbackParams**](SnapshotGroupRollbackParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

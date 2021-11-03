@@ -28,8 +28,8 @@ public interface VmFolderApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmFolderCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmFolder&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface VmFolderApi {
   })
   @POST("create-vm-folder")
   Call<List<WithTaskVmFolder>> createVmFolder(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmFolderCreationParams> vmFolderCreationParams
+    @retrofit2.http.Body List<VmFolderCreationParams> vmFolderCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmFolderDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVmFolder&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface VmFolderApi {
   })
   @POST("delete-vm-folder")
   Call<List<WithTaskDeleteVmFolder>> deleteVmFolder(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmFolderDeletionParams vmFolderDeletionParams
+    @retrofit2.http.Body VmFolderDeletionParams vmFolderDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmFoldersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmFolder&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface VmFolderApi {
   })
   @POST("get-vm-folders")
   Call<List<VmFolder>> getVmFolders(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmFoldersRequestBody getVmFoldersRequestBody
+    @retrofit2.http.Body GetVmFoldersRequestBody getVmFoldersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmFoldersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmFolderConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface VmFolderApi {
   })
   @POST("get-vm-folders-connection")
   Call<VmFolderConnection> getVmFoldersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody
+    @retrofit2.http.Body GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmFolderUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmFolder&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface VmFolderApi {
   })
   @POST("update-vm-folder")
   Call<List<WithTaskVmFolder>> updateVmFolder(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmFolderUpdationParams vmFolderUpdationParams
+    @retrofit2.http.Body VmFolderUpdationParams vmFolderUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

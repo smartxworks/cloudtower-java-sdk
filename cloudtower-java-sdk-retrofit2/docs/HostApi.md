@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createHost
 
-> List&lt;WithTaskBatchHosts&gt; createHost(contentLanguage, hostCreationParams)
+> List&lt;WithTaskBatchHosts&gt; createHost(hostCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         HostApi apiInstance = new HostApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<HostCreationParams> hostCreationParams = Arrays.asList(); // List<HostCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskBatchHosts> result = apiInstance.createHost(contentLanguage, hostCreationParams);
+            List<WithTaskBatchHosts> result = apiInstance.createHost(hostCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling HostApi#createHost");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **hostCreationParams** | [**List&lt;HostCreationParams&gt;**](HostCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## getHosts
 
-> List&lt;Host&gt; getHosts(contentLanguage, getHostsRequestBody)
+> List&lt;Host&gt; getHosts(getHostsRequestBody, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         HostApi apiInstance = new HostApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetHostsRequestBody getHostsRequestBody = new GetHostsRequestBody(); // GetHostsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Host> result = apiInstance.getHosts(contentLanguage, getHostsRequestBody);
+            List<Host> result = apiInstance.getHosts(getHostsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling HostApi#getHosts");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getHostsRequestBody** | [**GetHostsRequestBody**](GetHostsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getHostsConnection
 
-> HostConnection getHostsConnection(contentLanguage, getHostsConnectionRequestBody)
+> HostConnection getHostsConnection(getHostsConnectionRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         HostApi apiInstance = new HostApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetHostsConnectionRequestBody getHostsConnectionRequestBody = new GetHostsConnectionRequestBody(); // GetHostsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            HostConnection result = apiInstance.getHostsConnection(contentLanguage, getHostsConnectionRequestBody);
+            HostConnection result = apiInstance.getHostsConnection(getHostsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling HostApi#getHostsConnection");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getHostsConnectionRequestBody** | [**GetHostsConnectionRequestBody**](GetHostsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## triggerDiskBlink
 
-> List&lt;WithTaskHost&gt; triggerDiskBlink(contentLanguage, triggerDiskBlinkParams)
+> List&lt;WithTaskHost&gt; triggerDiskBlink(triggerDiskBlinkParams, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         HostApi apiInstance = new HostApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<TriggerDiskBlinkParams> triggerDiskBlinkParams = Arrays.asList(); // List<TriggerDiskBlinkParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskHost> result = apiInstance.triggerDiskBlink(contentLanguage, triggerDiskBlinkParams);
+            List<WithTaskHost> result = apiInstance.triggerDiskBlink(triggerDiskBlinkParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling HostApi#triggerDiskBlink");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **triggerDiskBlinkParams** | [**List&lt;TriggerDiskBlinkParams&gt;**](TriggerDiskBlinkParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateHost
 
-> List&lt;WithTaskHost&gt; updateHost(contentLanguage, hostUpdationParams)
+> List&lt;WithTaskHost&gt; updateHost(hostUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         HostApi apiInstance = new HostApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         HostUpdationParams hostUpdationParams = new HostUpdationParams(); // HostUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskHost> result = apiInstance.updateHost(contentLanguage, hostUpdationParams);
+            List<WithTaskHost> result = apiInstance.updateHost(hostUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling HostApi#updateHost");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **hostUpdationParams** | [**HostUpdationParams**](HostUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

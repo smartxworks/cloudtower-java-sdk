@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## cloneVmTemplateFromVm
 
-> List&lt;WithTaskVmTemplate&gt; cloneVmTemplateFromVm(contentLanguage, vmTemplateCreationParams)
+> List&lt;WithTaskVmTemplate&gt; cloneVmTemplateFromVm(vmTemplateCreationParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmTemplateApi apiInstance = new VmTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmTemplateCreationParams> vmTemplateCreationParams = Arrays.asList(); // List<VmTemplateCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmTemplate> result = apiInstance.cloneVmTemplateFromVm(contentLanguage, vmTemplateCreationParams);
+            List<WithTaskVmTemplate> result = apiInstance.cloneVmTemplateFromVm(vmTemplateCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmTemplateApi#cloneVmTemplateFromVm");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmTemplateCreationParams** | [**List&lt;VmTemplateCreationParams&gt;**](VmTemplateCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## convertVmTemplateFromVm
 
-> List&lt;WithTaskVmTemplate&gt; convertVmTemplateFromVm(contentLanguage, vmTemplateCreationParams)
+> List&lt;WithTaskVmTemplate&gt; convertVmTemplateFromVm(vmTemplateCreationParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmTemplateApi apiInstance = new VmTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmTemplateCreationParams> vmTemplateCreationParams = Arrays.asList(); // List<VmTemplateCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmTemplate> result = apiInstance.convertVmTemplateFromVm(contentLanguage, vmTemplateCreationParams);
+            List<WithTaskVmTemplate> result = apiInstance.convertVmTemplateFromVm(vmTemplateCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmTemplateApi#convertVmTemplateFromVm");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmTemplateCreationParams** | [**List&lt;VmTemplateCreationParams&gt;**](VmTemplateCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## deleteVmTemplateFromVm
 
-> List&lt;WithTaskDeleteVmTemplate&gt; deleteVmTemplateFromVm(contentLanguage, vmTemplateDeletionParams)
+> List&lt;WithTaskDeleteVmTemplate&gt; deleteVmTemplateFromVm(vmTemplateDeletionParams, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmTemplateApi apiInstance = new VmTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmTemplateDeletionParams vmTemplateDeletionParams = new VmTemplateDeletionParams(); // VmTemplateDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVmTemplate> result = apiInstance.deleteVmTemplateFromVm(contentLanguage, vmTemplateDeletionParams);
+            List<WithTaskDeleteVmTemplate> result = apiInstance.deleteVmTemplateFromVm(vmTemplateDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmTemplateApi#deleteVmTemplateFromVm");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmTemplateDeletionParams** | [**VmTemplateDeletionParams**](VmTemplateDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getVmTemplates
 
-> List&lt;VmTemplate&gt; getVmTemplates(contentLanguage, getVmTemplatesRequestBody)
+> List&lt;VmTemplate&gt; getVmTemplates(getVmTemplatesRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmTemplateApi apiInstance = new VmTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmTemplatesRequestBody getVmTemplatesRequestBody = new GetVmTemplatesRequestBody(); // GetVmTemplatesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmTemplate> result = apiInstance.getVmTemplates(contentLanguage, getVmTemplatesRequestBody);
+            List<VmTemplate> result = apiInstance.getVmTemplates(getVmTemplatesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmTemplateApi#getVmTemplates");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmTemplatesRequestBody** | [**GetVmTemplatesRequestBody**](GetVmTemplatesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## getVmTemplatesConnection
 
-> VmTemplateConnection getVmTemplatesConnection(contentLanguage, getVmTemplatesConnectionRequestBody)
+> VmTemplateConnection getVmTemplatesConnection(getVmTemplatesConnectionRequestBody, contentLanguage)
 
 
 
@@ -338,10 +338,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmTemplateApi apiInstance = new VmTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody = new GetVmTemplatesConnectionRequestBody(); // GetVmTemplatesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmTemplateConnection result = apiInstance.getVmTemplatesConnection(contentLanguage, getVmTemplatesConnectionRequestBody);
+            VmTemplateConnection result = apiInstance.getVmTemplatesConnection(getVmTemplatesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmTemplateApi#getVmTemplatesConnection");
@@ -359,8 +359,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmTemplatesConnectionRequestBody** | [**GetVmTemplatesConnectionRequestBody**](GetVmTemplatesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## updateVmTemplateFromVm
 
-> List&lt;WithTaskVmTemplate&gt; updateVmTemplateFromVm(contentLanguage, vmTemplateUpdationParams)
+> List&lt;WithTaskVmTemplate&gt; updateVmTemplateFromVm(vmTemplateUpdationParams, contentLanguage)
 
 
 
@@ -412,10 +412,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmTemplateApi apiInstance = new VmTemplateApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmTemplateUpdationParams vmTemplateUpdationParams = new VmTemplateUpdationParams(); // VmTemplateUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmTemplate> result = apiInstance.updateVmTemplateFromVm(contentLanguage, vmTemplateUpdationParams);
+            List<WithTaskVmTemplate> result = apiInstance.updateVmTemplateFromVm(vmTemplateUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmTemplateApi#updateVmTemplateFromVm");
@@ -433,8 +433,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmTemplateUpdationParams** | [**VmTemplateUpdationParams**](VmTemplateUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

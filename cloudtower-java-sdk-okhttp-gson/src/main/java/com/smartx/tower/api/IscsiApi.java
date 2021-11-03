@@ -57,8 +57,8 @@ public class IscsiApi {
 
     /**
      * Build call for getIscsiConnectionsConnection
-     * @param contentLanguage  (required)
      * @param getIscsiConnectionsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -69,7 +69,7 @@ public class IscsiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiConnectionsConnectionCall(String contentLanguage, GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIscsiConnectionsConnectionCall(GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getIscsiConnectionsConnectionRequestBody;
 
         // create path and map variables
@@ -104,12 +104,7 @@ public class IscsiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIscsiConnectionsConnectionValidateBeforeCall(String contentLanguage, GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getIscsiConnectionsConnection(Async)");
-        }
+    private okhttp3.Call getIscsiConnectionsConnectionValidateBeforeCall(GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIscsiConnectionsConnectionRequestBody' is set
         if (getIscsiConnectionsConnectionRequestBody == null) {
@@ -117,7 +112,7 @@ public class IscsiApi {
         }
         
 
-        okhttp3.Call localVarCall = getIscsiConnectionsConnectionCall(contentLanguage, getIscsiConnectionsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getIscsiConnectionsConnectionCall(getIscsiConnectionsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -125,8 +120,8 @@ public class IscsiApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiConnectionsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return IscsiConnectionConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -136,16 +131,16 @@ public class IscsiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public IscsiConnectionConnection getIscsiConnectionsConnection(String contentLanguage, GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody) throws ApiException {
-        ApiResponse<IscsiConnectionConnection> localVarResp = getIscsiConnectionsConnectionWithHttpInfo(contentLanguage, getIscsiConnectionsConnectionRequestBody);
+    public IscsiConnectionConnection getIscsiConnectionsConnection(GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<IscsiConnectionConnection> localVarResp = getIscsiConnectionsConnectionWithHttpInfo(getIscsiConnectionsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiConnectionsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;IscsiConnectionConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -155,8 +150,8 @@ public class IscsiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IscsiConnectionConnection> getIscsiConnectionsConnectionWithHttpInfo(String contentLanguage, GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getIscsiConnectionsConnectionValidateBeforeCall(contentLanguage, getIscsiConnectionsConnectionRequestBody, null);
+    public ApiResponse<IscsiConnectionConnection> getIscsiConnectionsConnectionWithHttpInfo(GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getIscsiConnectionsConnectionValidateBeforeCall(getIscsiConnectionsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<IscsiConnectionConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -164,8 +159,8 @@ public class IscsiApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiConnectionsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -176,9 +171,9 @@ public class IscsiApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiConnectionsConnectionAsync(String contentLanguage, GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, final ApiCallback<IscsiConnectionConnection> _callback) throws ApiException {
+    public okhttp3.Call getIscsiConnectionsConnectionAsync(GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody, String contentLanguage, final ApiCallback<IscsiConnectionConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIscsiConnectionsConnectionValidateBeforeCall(contentLanguage, getIscsiConnectionsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getIscsiConnectionsConnectionValidateBeforeCall(getIscsiConnectionsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<IscsiConnectionConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

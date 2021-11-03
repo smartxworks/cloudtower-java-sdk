@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getStoragePoliciesConnector
 
-> List&lt;StoragePolicyConector&gt; getStoragePoliciesConnector(contentLanguage, getStoragePoliciesConnectorRequestBody)
+> List&lt;StoragePolicyConector&gt; getStoragePoliciesConnector(getStoragePoliciesConnectorRequestBody, contentLanguage)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         StoragePolicyConectorApi apiInstance = new StoragePolicyConectorApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody = new GetStoragePoliciesConnectorRequestBody(); // GetStoragePoliciesConnectorRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<StoragePolicyConector> result = apiInstance.getStoragePoliciesConnector(contentLanguage, getStoragePoliciesConnectorRequestBody);
+            List<StoragePolicyConector> result = apiInstance.getStoragePoliciesConnector(getStoragePoliciesConnectorRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling StoragePolicyConectorApi#getStoragePoliciesConnector");
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getStoragePoliciesConnectorRequestBody** | [**GetStoragePoliciesConnectorRequestBody**](GetStoragePoliciesConnectorRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

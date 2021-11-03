@@ -59,8 +59,8 @@ public class SystemAuditLogApi {
 
     /**
      * Build call for getSystemAuditLogs
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSystemAuditLogsCall(String contentLanguage, GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSystemAuditLogsCall(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSystemAuditLogsRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class SystemAuditLogApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSystemAuditLogsValidateBeforeCall(String contentLanguage, GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSystemAuditLogs(Async)");
-        }
+    private okhttp3.Call getSystemAuditLogsValidateBeforeCall(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSystemAuditLogsRequestBody' is set
         if (getSystemAuditLogsRequestBody == null) {
@@ -119,7 +114,7 @@ public class SystemAuditLogApi {
         }
         
 
-        okhttp3.Call localVarCall = getSystemAuditLogsCall(contentLanguage, getSystemAuditLogsRequestBody, _callback);
+        okhttp3.Call localVarCall = getSystemAuditLogsCall(getSystemAuditLogsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class SystemAuditLogApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SystemAuditLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SystemAuditLog> getSystemAuditLogs(String contentLanguage, GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody) throws ApiException {
-        ApiResponse<List<SystemAuditLog>> localVarResp = getSystemAuditLogsWithHttpInfo(contentLanguage, getSystemAuditLogsRequestBody);
+    public List<SystemAuditLog> getSystemAuditLogs(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<SystemAuditLog>> localVarResp = getSystemAuditLogsWithHttpInfo(getSystemAuditLogsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SystemAuditLog&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SystemAuditLog>> getSystemAuditLogsWithHttpInfo(String contentLanguage, GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSystemAuditLogsValidateBeforeCall(contentLanguage, getSystemAuditLogsRequestBody, null);
+    public ApiResponse<List<SystemAuditLog>> getSystemAuditLogsWithHttpInfo(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSystemAuditLogsValidateBeforeCall(getSystemAuditLogsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<SystemAuditLog>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class SystemAuditLogApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSystemAuditLogsAsync(String contentLanguage, GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, final ApiCallback<List<SystemAuditLog>> _callback) throws ApiException {
+    public okhttp3.Call getSystemAuditLogsAsync(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, String contentLanguage, final ApiCallback<List<SystemAuditLog>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSystemAuditLogsValidateBeforeCall(contentLanguage, getSystemAuditLogsRequestBody, _callback);
+        okhttp3.Call localVarCall = getSystemAuditLogsValidateBeforeCall(getSystemAuditLogsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<SystemAuditLog>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSystemAuditLogsConnection
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSystemAuditLogsConnectionCall(String contentLanguage, GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSystemAuditLogsConnectionCall(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSystemAuditLogsConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class SystemAuditLogApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSystemAuditLogsConnectionValidateBeforeCall(String contentLanguage, GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSystemAuditLogsConnection(Async)");
-        }
+    private okhttp3.Call getSystemAuditLogsConnectionValidateBeforeCall(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSystemAuditLogsConnectionRequestBody' is set
         if (getSystemAuditLogsConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class SystemAuditLogApi {
         }
         
 
-        okhttp3.Call localVarCall = getSystemAuditLogsConnectionCall(contentLanguage, getSystemAuditLogsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSystemAuditLogsConnectionCall(getSystemAuditLogsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class SystemAuditLogApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return SystemAuditLogConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SystemAuditLogConnection getSystemAuditLogsConnection(String contentLanguage, GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody) throws ApiException {
-        ApiResponse<SystemAuditLogConnection> localVarResp = getSystemAuditLogsConnectionWithHttpInfo(contentLanguage, getSystemAuditLogsConnectionRequestBody);
+    public SystemAuditLogConnection getSystemAuditLogsConnection(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<SystemAuditLogConnection> localVarResp = getSystemAuditLogsConnectionWithHttpInfo(getSystemAuditLogsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SystemAuditLogConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SystemAuditLogConnection> getSystemAuditLogsConnectionWithHttpInfo(String contentLanguage, GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSystemAuditLogsConnectionValidateBeforeCall(contentLanguage, getSystemAuditLogsConnectionRequestBody, null);
+    public ApiResponse<SystemAuditLogConnection> getSystemAuditLogsConnectionWithHttpInfo(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSystemAuditLogsConnectionValidateBeforeCall(getSystemAuditLogsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<SystemAuditLogConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class SystemAuditLogApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSystemAuditLogsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class SystemAuditLogApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSystemAuditLogsConnectionAsync(String contentLanguage, GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, final ApiCallback<SystemAuditLogConnection> _callback) throws ApiException {
+    public okhttp3.Call getSystemAuditLogsConnectionAsync(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, String contentLanguage, final ApiCallback<SystemAuditLogConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSystemAuditLogsConnectionValidateBeforeCall(contentLanguage, getSystemAuditLogsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSystemAuditLogsConnectionValidateBeforeCall(getSystemAuditLogsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<SystemAuditLogConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

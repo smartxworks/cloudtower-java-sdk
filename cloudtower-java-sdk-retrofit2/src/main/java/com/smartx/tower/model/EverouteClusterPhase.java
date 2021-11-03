@@ -35,10 +35,6 @@ public enum EverouteClusterPhase {
   
   RUNNING("Running"),
   
-  SCALEDOWN("ScaleDown"),
-  
-  SCALEUP("ScaleUp"),
-  
   TERMINATING("Terminating"),
   
   UPDATING("Updating"),

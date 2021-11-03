@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getDiscoverHosts
 
-> List&lt;DiscoveredHost&gt; getDiscoverHosts(contentLanguage, getDiscoverHostsRequestBody)
+> List&lt;DiscoveredHost&gt; getDiscoverHosts(getDiscoverHostsRequestBody, contentLanguage)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DiscoveredHostApi apiInstance = new DiscoveredHostApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDiscoverHostsRequestBody getDiscoverHostsRequestBody = new GetDiscoverHostsRequestBody(); // GetDiscoverHostsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<DiscoveredHost> result = apiInstance.getDiscoverHosts(contentLanguage, getDiscoverHostsRequestBody);
+            List<DiscoveredHost> result = apiInstance.getDiscoverHosts(getDiscoverHostsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DiscoveredHostApi#getDiscoverHosts");
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDiscoverHostsRequestBody** | [**GetDiscoverHostsRequestBody**](GetDiscoverHostsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

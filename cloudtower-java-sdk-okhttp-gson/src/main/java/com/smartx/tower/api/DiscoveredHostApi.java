@@ -57,8 +57,8 @@ public class DiscoveredHostApi {
 
     /**
      * Build call for getDiscoverHosts
-     * @param contentLanguage  (required)
      * @param getDiscoverHostsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -69,7 +69,7 @@ public class DiscoveredHostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDiscoverHostsCall(String contentLanguage, GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDiscoverHostsCall(GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getDiscoverHostsRequestBody;
 
         // create path and map variables
@@ -104,12 +104,7 @@ public class DiscoveredHostApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDiscoverHostsValidateBeforeCall(String contentLanguage, GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getDiscoverHosts(Async)");
-        }
+    private okhttp3.Call getDiscoverHostsValidateBeforeCall(GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDiscoverHostsRequestBody' is set
         if (getDiscoverHostsRequestBody == null) {
@@ -117,7 +112,7 @@ public class DiscoveredHostApi {
         }
         
 
-        okhttp3.Call localVarCall = getDiscoverHostsCall(contentLanguage, getDiscoverHostsRequestBody, _callback);
+        okhttp3.Call localVarCall = getDiscoverHostsCall(getDiscoverHostsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -125,8 +120,8 @@ public class DiscoveredHostApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getDiscoverHostsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;DiscoveredHost&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -136,16 +131,16 @@ public class DiscoveredHostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<DiscoveredHost> getDiscoverHosts(String contentLanguage, GetDiscoverHostsRequestBody getDiscoverHostsRequestBody) throws ApiException {
-        ApiResponse<List<DiscoveredHost>> localVarResp = getDiscoverHostsWithHttpInfo(contentLanguage, getDiscoverHostsRequestBody);
+    public List<DiscoveredHost> getDiscoverHosts(GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<DiscoveredHost>> localVarResp = getDiscoverHostsWithHttpInfo(getDiscoverHostsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getDiscoverHostsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;DiscoveredHost&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -155,8 +150,8 @@ public class DiscoveredHostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<DiscoveredHost>> getDiscoverHostsWithHttpInfo(String contentLanguage, GetDiscoverHostsRequestBody getDiscoverHostsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getDiscoverHostsValidateBeforeCall(contentLanguage, getDiscoverHostsRequestBody, null);
+    public ApiResponse<List<DiscoveredHost>> getDiscoverHostsWithHttpInfo(GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getDiscoverHostsValidateBeforeCall(getDiscoverHostsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<DiscoveredHost>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -164,8 +159,8 @@ public class DiscoveredHostApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getDiscoverHostsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -176,9 +171,9 @@ public class DiscoveredHostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDiscoverHostsAsync(String contentLanguage, GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, final ApiCallback<List<DiscoveredHost>> _callback) throws ApiException {
+    public okhttp3.Call getDiscoverHostsAsync(GetDiscoverHostsRequestBody getDiscoverHostsRequestBody, String contentLanguage, final ApiCallback<List<DiscoveredHost>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDiscoverHostsValidateBeforeCall(contentLanguage, getDiscoverHostsRequestBody, _callback);
+        okhttp3.Call localVarCall = getDiscoverHostsValidateBeforeCall(getDiscoverHostsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<DiscoveredHost>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

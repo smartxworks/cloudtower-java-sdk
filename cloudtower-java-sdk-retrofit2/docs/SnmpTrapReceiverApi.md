@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createSnmpTrapReceiver
 
-> List&lt;WithTaskSnmpTrapReceiver&gt; createSnmpTrapReceiver(contentLanguage, snmpTrapReceiverCreationParams)
+> List&lt;WithTaskSnmpTrapReceiver&gt; createSnmpTrapReceiver(snmpTrapReceiverCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTrapReceiverApi apiInstance = new SnmpTrapReceiverApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams = Arrays.asList(); // List<SnmpTrapReceiverCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnmpTrapReceiver> result = apiInstance.createSnmpTrapReceiver(contentLanguage, snmpTrapReceiverCreationParams);
+            List<WithTaskSnmpTrapReceiver> result = apiInstance.createSnmpTrapReceiver(snmpTrapReceiverCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTrapReceiverApi#createSnmpTrapReceiver");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snmpTrapReceiverCreationParams** | [**List&lt;SnmpTrapReceiverCreationParams&gt;**](SnmpTrapReceiverCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteSnmpTrapReceiver
 
-> List&lt;WithTaskDeleteSnmpTrapReceiver&gt; deleteSnmpTrapReceiver(contentLanguage, snmpTrapReceiverDeletionParams)
+> List&lt;WithTaskDeleteSnmpTrapReceiver&gt; deleteSnmpTrapReceiver(snmpTrapReceiverDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTrapReceiverApi apiInstance = new SnmpTrapReceiverApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams = new SnmpTrapReceiverDeletionParams(); // SnmpTrapReceiverDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteSnmpTrapReceiver> result = apiInstance.deleteSnmpTrapReceiver(contentLanguage, snmpTrapReceiverDeletionParams);
+            List<WithTaskDeleteSnmpTrapReceiver> result = apiInstance.deleteSnmpTrapReceiver(snmpTrapReceiverDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTrapReceiverApi#deleteSnmpTrapReceiver");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snmpTrapReceiverDeletionParams** | [**SnmpTrapReceiverDeletionParams**](SnmpTrapReceiverDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getSnmpTrapReceivers
 
-> List&lt;SnmpTrapReceiver&gt; getSnmpTrapReceivers(contentLanguage, getSnmpTrapReceiversRequestBody)
+> List&lt;SnmpTrapReceiver&gt; getSnmpTrapReceivers(getSnmpTrapReceiversRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTrapReceiverApi apiInstance = new SnmpTrapReceiverApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody = new GetSnmpTrapReceiversRequestBody(); // GetSnmpTrapReceiversRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SnmpTrapReceiver> result = apiInstance.getSnmpTrapReceivers(contentLanguage, getSnmpTrapReceiversRequestBody);
+            List<SnmpTrapReceiver> result = apiInstance.getSnmpTrapReceivers(getSnmpTrapReceiversRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTrapReceiverApi#getSnmpTrapReceivers");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnmpTrapReceiversRequestBody** | [**GetSnmpTrapReceiversRequestBody**](GetSnmpTrapReceiversRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getSnmpTrapReceiversConnection
 
-> SnmpTrapReceiverConnection getSnmpTrapReceiversConnection(contentLanguage, getSnmpTrapReceiversConnectionRequestBody)
+> SnmpTrapReceiverConnection getSnmpTrapReceiversConnection(getSnmpTrapReceiversConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTrapReceiverApi apiInstance = new SnmpTrapReceiverApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody = new GetSnmpTrapReceiversConnectionRequestBody(); // GetSnmpTrapReceiversConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SnmpTrapReceiverConnection result = apiInstance.getSnmpTrapReceiversConnection(contentLanguage, getSnmpTrapReceiversConnectionRequestBody);
+            SnmpTrapReceiverConnection result = apiInstance.getSnmpTrapReceiversConnection(getSnmpTrapReceiversConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTrapReceiverApi#getSnmpTrapReceiversConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnmpTrapReceiversConnectionRequestBody** | [**GetSnmpTrapReceiversConnectionRequestBody**](GetSnmpTrapReceiversConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateSnmpTrapReceiver
 
-> List&lt;WithTaskSnmpTrapReceiver&gt; updateSnmpTrapReceiver(contentLanguage, snmpTrapReceiverUpdationParams)
+> List&lt;WithTaskSnmpTrapReceiver&gt; updateSnmpTrapReceiver(snmpTrapReceiverUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnmpTrapReceiverApi apiInstance = new SnmpTrapReceiverApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams = new SnmpTrapReceiverUpdationParams(); // SnmpTrapReceiverUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskSnmpTrapReceiver> result = apiInstance.updateSnmpTrapReceiver(contentLanguage, snmpTrapReceiverUpdationParams);
+            List<WithTaskSnmpTrapReceiver> result = apiInstance.updateSnmpTrapReceiver(snmpTrapReceiverUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnmpTrapReceiverApi#updateSnmpTrapReceiver");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **snmpTrapReceiverUpdationParams** | [**SnmpTrapReceiverUpdationParams**](SnmpTrapReceiverUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

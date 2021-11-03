@@ -23,8 +23,8 @@ public interface ZoneTopoApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getZoneTopoesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ZoneTopo&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ZoneTopoApi {
   })
   @POST("get-zone-topoes")
   Call<List<ZoneTopo>> getZoneTopoes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetZoneTopoesRequestBody getZoneTopoesRequestBody
+    @retrofit2.http.Body GetZoneTopoesRequestBody getZoneTopoesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getZoneTopoesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ZoneTopoConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ZoneTopoApi {
   })
   @POST("get-zone-topoes-connection")
   Call<ZoneTopoConnection> getZoneTopoesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody
+    @retrofit2.http.Body GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

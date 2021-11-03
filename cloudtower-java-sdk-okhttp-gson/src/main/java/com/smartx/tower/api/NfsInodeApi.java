@@ -59,8 +59,8 @@ public class NfsInodeApi {
 
     /**
      * Build call for getNfsInodes
-     * @param contentLanguage  (required)
      * @param getNfsInodesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsInodesCall(String contentLanguage, GetNfsInodesRequestBody getNfsInodesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNfsInodesCall(GetNfsInodesRequestBody getNfsInodesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNfsInodesRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class NfsInodeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNfsInodesValidateBeforeCall(String contentLanguage, GetNfsInodesRequestBody getNfsInodesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNfsInodes(Async)");
-        }
+    private okhttp3.Call getNfsInodesValidateBeforeCall(GetNfsInodesRequestBody getNfsInodesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNfsInodesRequestBody' is set
         if (getNfsInodesRequestBody == null) {
@@ -119,7 +114,7 @@ public class NfsInodeApi {
         }
         
 
-        okhttp3.Call localVarCall = getNfsInodesCall(contentLanguage, getNfsInodesRequestBody, _callback);
+        okhttp3.Call localVarCall = getNfsInodesCall(getNfsInodesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class NfsInodeApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNfsInodesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;NfsInode&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<NfsInode> getNfsInodes(String contentLanguage, GetNfsInodesRequestBody getNfsInodesRequestBody) throws ApiException {
-        ApiResponse<List<NfsInode>> localVarResp = getNfsInodesWithHttpInfo(contentLanguage, getNfsInodesRequestBody);
+    public List<NfsInode> getNfsInodes(GetNfsInodesRequestBody getNfsInodesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<NfsInode>> localVarResp = getNfsInodesWithHttpInfo(getNfsInodesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNfsInodesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;NfsInode&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<NfsInode>> getNfsInodesWithHttpInfo(String contentLanguage, GetNfsInodesRequestBody getNfsInodesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNfsInodesValidateBeforeCall(contentLanguage, getNfsInodesRequestBody, null);
+    public ApiResponse<List<NfsInode>> getNfsInodesWithHttpInfo(GetNfsInodesRequestBody getNfsInodesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNfsInodesValidateBeforeCall(getNfsInodesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<NfsInode>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class NfsInodeApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNfsInodesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsInodesAsync(String contentLanguage, GetNfsInodesRequestBody getNfsInodesRequestBody, final ApiCallback<List<NfsInode>> _callback) throws ApiException {
+    public okhttp3.Call getNfsInodesAsync(GetNfsInodesRequestBody getNfsInodesRequestBody, String contentLanguage, final ApiCallback<List<NfsInode>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNfsInodesValidateBeforeCall(contentLanguage, getNfsInodesRequestBody, _callback);
+        okhttp3.Call localVarCall = getNfsInodesValidateBeforeCall(getNfsInodesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<NfsInode>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNfsInodesConnection
-     * @param contentLanguage  (required)
      * @param getNfsInodesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsInodesConnectionCall(String contentLanguage, GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNfsInodesConnectionCall(GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNfsInodesConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class NfsInodeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNfsInodesConnectionValidateBeforeCall(String contentLanguage, GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNfsInodesConnection(Async)");
-        }
+    private okhttp3.Call getNfsInodesConnectionValidateBeforeCall(GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNfsInodesConnectionRequestBody' is set
         if (getNfsInodesConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class NfsInodeApi {
         }
         
 
-        okhttp3.Call localVarCall = getNfsInodesConnectionCall(contentLanguage, getNfsInodesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNfsInodesConnectionCall(getNfsInodesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class NfsInodeApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNfsInodesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return NfsInodeConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NfsInodeConnection getNfsInodesConnection(String contentLanguage, GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody) throws ApiException {
-        ApiResponse<NfsInodeConnection> localVarResp = getNfsInodesConnectionWithHttpInfo(contentLanguage, getNfsInodesConnectionRequestBody);
+    public NfsInodeConnection getNfsInodesConnection(GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<NfsInodeConnection> localVarResp = getNfsInodesConnectionWithHttpInfo(getNfsInodesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNfsInodesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NfsInodeConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NfsInodeConnection> getNfsInodesConnectionWithHttpInfo(String contentLanguage, GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNfsInodesConnectionValidateBeforeCall(contentLanguage, getNfsInodesConnectionRequestBody, null);
+    public ApiResponse<NfsInodeConnection> getNfsInodesConnectionWithHttpInfo(GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNfsInodesConnectionValidateBeforeCall(getNfsInodesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<NfsInodeConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class NfsInodeApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNfsInodesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class NfsInodeApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsInodesConnectionAsync(String contentLanguage, GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, final ApiCallback<NfsInodeConnection> _callback) throws ApiException {
+    public okhttp3.Call getNfsInodesConnectionAsync(GetNfsInodesConnectionRequestBody getNfsInodesConnectionRequestBody, String contentLanguage, final ApiCallback<NfsInodeConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNfsInodesConnectionValidateBeforeCall(contentLanguage, getNfsInodesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNfsInodesConnectionValidateBeforeCall(getNfsInodesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<NfsInodeConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -66,8 +66,8 @@ public class VdsApi {
 
     /**
      * Build call for createVds
-     * @param contentLanguage  (required)
      * @param vdsCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -78,7 +78,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVdsCall(String contentLanguage, List<VdsCreationParams> vdsCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVdsCall(List<VdsCreationParams> vdsCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vdsCreationParams;
 
         // create path and map variables
@@ -113,12 +113,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVdsValidateBeforeCall(String contentLanguage, List<VdsCreationParams> vdsCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVds(Async)");
-        }
+    private okhttp3.Call createVdsValidateBeforeCall(List<VdsCreationParams> vdsCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vdsCreationParams' is set
         if (vdsCreationParams == null) {
@@ -126,7 +121,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = createVdsCall(contentLanguage, vdsCreationParams, _callback);
+        okhttp3.Call localVarCall = createVdsCall(vdsCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -134,8 +129,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVds&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -145,16 +140,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVds> createVds(String contentLanguage, List<VdsCreationParams> vdsCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVds>> localVarResp = createVdsWithHttpInfo(contentLanguage, vdsCreationParams);
+    public List<WithTaskVds> createVds(List<VdsCreationParams> vdsCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVds>> localVarResp = createVdsWithHttpInfo(vdsCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVds&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -164,8 +159,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVds>> createVdsWithHttpInfo(String contentLanguage, List<VdsCreationParams> vdsCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVdsValidateBeforeCall(contentLanguage, vdsCreationParams, null);
+    public ApiResponse<List<WithTaskVds>> createVdsWithHttpInfo(List<VdsCreationParams> vdsCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVdsValidateBeforeCall(vdsCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -173,8 +168,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -185,17 +180,17 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVdsAsync(String contentLanguage, List<VdsCreationParams> vdsCreationParams, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
+    public okhttp3.Call createVdsAsync(List<VdsCreationParams> vdsCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVdsValidateBeforeCall(contentLanguage, vdsCreationParams, _callback);
+        okhttp3.Call localVarCall = createVdsValidateBeforeCall(vdsCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for createVdsWithAccessVlan
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMAccessVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -206,7 +201,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVdsWithAccessVlanCall(String contentLanguage, List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVdsWithAccessVlanCall(List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vdsCreationWithMAccessVlanParams;
 
         // create path and map variables
@@ -241,12 +236,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVdsWithAccessVlanValidateBeforeCall(String contentLanguage, List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVdsWithAccessVlan(Async)");
-        }
+    private okhttp3.Call createVdsWithAccessVlanValidateBeforeCall(List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vdsCreationWithMAccessVlanParams' is set
         if (vdsCreationWithMAccessVlanParams == null) {
@@ -254,7 +244,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = createVdsWithAccessVlanCall(contentLanguage, vdsCreationWithMAccessVlanParams, _callback);
+        okhttp3.Call localVarCall = createVdsWithAccessVlanCall(vdsCreationWithMAccessVlanParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -262,8 +252,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMAccessVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVds&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -273,16 +263,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVds> createVdsWithAccessVlan(String contentLanguage, List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams) throws ApiException {
-        ApiResponse<List<WithTaskVds>> localVarResp = createVdsWithAccessVlanWithHttpInfo(contentLanguage, vdsCreationWithMAccessVlanParams);
+    public List<WithTaskVds> createVdsWithAccessVlan(List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVds>> localVarResp = createVdsWithAccessVlanWithHttpInfo(vdsCreationWithMAccessVlanParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMAccessVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVds&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -292,8 +282,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVds>> createVdsWithAccessVlanWithHttpInfo(String contentLanguage, List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams) throws ApiException {
-        okhttp3.Call localVarCall = createVdsWithAccessVlanValidateBeforeCall(contentLanguage, vdsCreationWithMAccessVlanParams, null);
+    public ApiResponse<List<WithTaskVds>> createVdsWithAccessVlanWithHttpInfo(List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVdsWithAccessVlanValidateBeforeCall(vdsCreationWithMAccessVlanParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -301,8 +291,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMAccessVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -313,17 +303,17 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVdsWithAccessVlanAsync(String contentLanguage, List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
+    public okhttp3.Call createVdsWithAccessVlanAsync(List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, String contentLanguage, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVdsWithAccessVlanValidateBeforeCall(contentLanguage, vdsCreationWithMAccessVlanParams, _callback);
+        okhttp3.Call localVarCall = createVdsWithAccessVlanValidateBeforeCall(vdsCreationWithMAccessVlanParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for createVdsWithMigrateVlan
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMigrateVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -334,7 +324,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVdsWithMigrateVlanCall(String contentLanguage, List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVdsWithMigrateVlanCall(List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vdsCreationWithMigrateVlanParams;
 
         // create path and map variables
@@ -369,12 +359,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVdsWithMigrateVlanValidateBeforeCall(String contentLanguage, List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVdsWithMigrateVlan(Async)");
-        }
+    private okhttp3.Call createVdsWithMigrateVlanValidateBeforeCall(List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vdsCreationWithMigrateVlanParams' is set
         if (vdsCreationWithMigrateVlanParams == null) {
@@ -382,7 +367,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = createVdsWithMigrateVlanCall(contentLanguage, vdsCreationWithMigrateVlanParams, _callback);
+        okhttp3.Call localVarCall = createVdsWithMigrateVlanCall(vdsCreationWithMigrateVlanParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -390,8 +375,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMigrateVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVds&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -401,16 +386,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVds> createVdsWithMigrateVlan(String contentLanguage, List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams) throws ApiException {
-        ApiResponse<List<WithTaskVds>> localVarResp = createVdsWithMigrateVlanWithHttpInfo(contentLanguage, vdsCreationWithMigrateVlanParams);
+    public List<WithTaskVds> createVdsWithMigrateVlan(List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVds>> localVarResp = createVdsWithMigrateVlanWithHttpInfo(vdsCreationWithMigrateVlanParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMigrateVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVds&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -420,8 +405,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVds>> createVdsWithMigrateVlanWithHttpInfo(String contentLanguage, List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams) throws ApiException {
-        okhttp3.Call localVarCall = createVdsWithMigrateVlanValidateBeforeCall(contentLanguage, vdsCreationWithMigrateVlanParams, null);
+    public ApiResponse<List<WithTaskVds>> createVdsWithMigrateVlanWithHttpInfo(List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVdsWithMigrateVlanValidateBeforeCall(vdsCreationWithMigrateVlanParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -429,8 +414,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vdsCreationWithMigrateVlanParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -441,17 +426,17 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVdsWithMigrateVlanAsync(String contentLanguage, List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
+    public okhttp3.Call createVdsWithMigrateVlanAsync(List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, String contentLanguage, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVdsWithMigrateVlanValidateBeforeCall(contentLanguage, vdsCreationWithMigrateVlanParams, _callback);
+        okhttp3.Call localVarCall = createVdsWithMigrateVlanValidateBeforeCall(vdsCreationWithMigrateVlanParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVds
-     * @param contentLanguage  (required)
      * @param vdsDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -462,7 +447,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVdsCall(String contentLanguage, VdsDeletionParams vdsDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVdsCall(VdsDeletionParams vdsDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vdsDeletionParams;
 
         // create path and map variables
@@ -497,12 +482,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVdsValidateBeforeCall(String contentLanguage, VdsDeletionParams vdsDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteVds(Async)");
-        }
+    private okhttp3.Call deleteVdsValidateBeforeCall(VdsDeletionParams vdsDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vdsDeletionParams' is set
         if (vdsDeletionParams == null) {
@@ -510,7 +490,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVdsCall(contentLanguage, vdsDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVdsCall(vdsDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -518,8 +498,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVds&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -529,16 +509,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVds> deleteVds(String contentLanguage, VdsDeletionParams vdsDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVds>> localVarResp = deleteVdsWithHttpInfo(contentLanguage, vdsDeletionParams);
+    public List<WithTaskDeleteVds> deleteVds(VdsDeletionParams vdsDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVds>> localVarResp = deleteVdsWithHttpInfo(vdsDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVds&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -548,8 +528,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVds>> deleteVdsWithHttpInfo(String contentLanguage, VdsDeletionParams vdsDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVdsValidateBeforeCall(contentLanguage, vdsDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteVds>> deleteVdsWithHttpInfo(VdsDeletionParams vdsDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteVdsValidateBeforeCall(vdsDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVds>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -557,8 +537,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vdsDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -569,17 +549,17 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVdsAsync(String contentLanguage, VdsDeletionParams vdsDeletionParams, final ApiCallback<List<WithTaskDeleteVds>> _callback) throws ApiException {
+    public okhttp3.Call deleteVdsAsync(VdsDeletionParams vdsDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVds>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVdsValidateBeforeCall(contentLanguage, vdsDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVdsValidateBeforeCall(vdsDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVds>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVdses
-     * @param contentLanguage  (required)
      * @param getVdsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -590,7 +570,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVdsesCall(String contentLanguage, GetVdsesRequestBody getVdsesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVdsesCall(GetVdsesRequestBody getVdsesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVdsesRequestBody;
 
         // create path and map variables
@@ -625,12 +605,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVdsesValidateBeforeCall(String contentLanguage, GetVdsesRequestBody getVdsesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVdses(Async)");
-        }
+    private okhttp3.Call getVdsesValidateBeforeCall(GetVdsesRequestBody getVdsesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVdsesRequestBody' is set
         if (getVdsesRequestBody == null) {
@@ -638,7 +613,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = getVdsesCall(contentLanguage, getVdsesRequestBody, _callback);
+        okhttp3.Call localVarCall = getVdsesCall(getVdsesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -646,8 +621,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVdsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Vds&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -657,16 +632,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Vds> getVdses(String contentLanguage, GetVdsesRequestBody getVdsesRequestBody) throws ApiException {
-        ApiResponse<List<Vds>> localVarResp = getVdsesWithHttpInfo(contentLanguage, getVdsesRequestBody);
+    public List<Vds> getVdses(GetVdsesRequestBody getVdsesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Vds>> localVarResp = getVdsesWithHttpInfo(getVdsesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVdsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Vds&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -676,8 +651,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Vds>> getVdsesWithHttpInfo(String contentLanguage, GetVdsesRequestBody getVdsesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVdsesValidateBeforeCall(contentLanguage, getVdsesRequestBody, null);
+    public ApiResponse<List<Vds>> getVdsesWithHttpInfo(GetVdsesRequestBody getVdsesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVdsesValidateBeforeCall(getVdsesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Vds>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -685,8 +660,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVdsesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -697,17 +672,17 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVdsesAsync(String contentLanguage, GetVdsesRequestBody getVdsesRequestBody, final ApiCallback<List<Vds>> _callback) throws ApiException {
+    public okhttp3.Call getVdsesAsync(GetVdsesRequestBody getVdsesRequestBody, String contentLanguage, final ApiCallback<List<Vds>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVdsesValidateBeforeCall(contentLanguage, getVdsesRequestBody, _callback);
+        okhttp3.Call localVarCall = getVdsesValidateBeforeCall(getVdsesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Vds>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVdsesConnection
-     * @param contentLanguage  (required)
      * @param getVdsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -718,7 +693,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVdsesConnectionCall(String contentLanguage, GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVdsesConnectionCall(GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVdsesConnectionRequestBody;
 
         // create path and map variables
@@ -753,12 +728,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVdsesConnectionValidateBeforeCall(String contentLanguage, GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVdsesConnection(Async)");
-        }
+    private okhttp3.Call getVdsesConnectionValidateBeforeCall(GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVdsesConnectionRequestBody' is set
         if (getVdsesConnectionRequestBody == null) {
@@ -766,7 +736,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = getVdsesConnectionCall(contentLanguage, getVdsesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVdsesConnectionCall(getVdsesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -774,8 +744,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVdsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VdsConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -785,16 +755,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VdsConnection getVdsesConnection(String contentLanguage, GetVdsesConnectionRequestBody getVdsesConnectionRequestBody) throws ApiException {
-        ApiResponse<VdsConnection> localVarResp = getVdsesConnectionWithHttpInfo(contentLanguage, getVdsesConnectionRequestBody);
+    public VdsConnection getVdsesConnection(GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VdsConnection> localVarResp = getVdsesConnectionWithHttpInfo(getVdsesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVdsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VdsConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -804,8 +774,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VdsConnection> getVdsesConnectionWithHttpInfo(String contentLanguage, GetVdsesConnectionRequestBody getVdsesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVdsesConnectionValidateBeforeCall(contentLanguage, getVdsesConnectionRequestBody, null);
+    public ApiResponse<VdsConnection> getVdsesConnectionWithHttpInfo(GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVdsesConnectionValidateBeforeCall(getVdsesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VdsConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -813,8 +783,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVdsesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -825,17 +795,17 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVdsesConnectionAsync(String contentLanguage, GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, final ApiCallback<VdsConnection> _callback) throws ApiException {
+    public okhttp3.Call getVdsesConnectionAsync(GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, String contentLanguage, final ApiCallback<VdsConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVdsesConnectionValidateBeforeCall(contentLanguage, getVdsesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVdsesConnectionValidateBeforeCall(getVdsesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VdsConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateVds
-     * @param contentLanguage  (required)
      * @param vdsUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -846,7 +816,7 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVdsCall(String contentLanguage, VdsUpdationParams vdsUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVdsCall(VdsUpdationParams vdsUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vdsUpdationParams;
 
         // create path and map variables
@@ -881,12 +851,7 @@ public class VdsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVdsValidateBeforeCall(String contentLanguage, VdsUpdationParams vdsUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateVds(Async)");
-        }
+    private okhttp3.Call updateVdsValidateBeforeCall(VdsUpdationParams vdsUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vdsUpdationParams' is set
         if (vdsUpdationParams == null) {
@@ -894,7 +859,7 @@ public class VdsApi {
         }
         
 
-        okhttp3.Call localVarCall = updateVdsCall(contentLanguage, vdsUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVdsCall(vdsUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -902,8 +867,8 @@ public class VdsApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVds&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -913,16 +878,16 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVds> updateVds(String contentLanguage, VdsUpdationParams vdsUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVds>> localVarResp = updateVdsWithHttpInfo(contentLanguage, vdsUpdationParams);
+    public List<WithTaskVds> updateVds(VdsUpdationParams vdsUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVds>> localVarResp = updateVdsWithHttpInfo(vdsUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vdsUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVds&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -932,8 +897,8 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVds>> updateVdsWithHttpInfo(String contentLanguage, VdsUpdationParams vdsUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateVdsValidateBeforeCall(contentLanguage, vdsUpdationParams, null);
+    public ApiResponse<List<WithTaskVds>> updateVdsWithHttpInfo(VdsUpdationParams vdsUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateVdsValidateBeforeCall(vdsUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -941,8 +906,8 @@ public class VdsApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vdsUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -953,9 +918,9 @@ public class VdsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVdsAsync(String contentLanguage, VdsUpdationParams vdsUpdationParams, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
+    public okhttp3.Call updateVdsAsync(VdsUpdationParams vdsUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVds>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateVdsValidateBeforeCall(contentLanguage, vdsUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVdsValidateBeforeCall(vdsUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVds>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

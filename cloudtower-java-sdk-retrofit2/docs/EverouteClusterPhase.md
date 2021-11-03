@@ -11,10 +11,6 @@
 
 * `RUNNING` (value: `"Running"`)
 
-* `SCALEDOWN` (value: `"ScaleDown"`)
-
-* `SCALEUP` (value: `"ScaleUp"`)
-
 * `TERMINATING` (value: `"Terminating"`)
 
 * `UPDATING` (value: `"Updating"`)

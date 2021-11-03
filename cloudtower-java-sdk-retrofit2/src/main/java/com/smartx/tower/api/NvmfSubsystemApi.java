@@ -23,8 +23,8 @@ public interface NvmfSubsystemApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNvmfSubsystemsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;NvmfSubsystem&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface NvmfSubsystemApi {
   })
   @POST("get-nvmf-subsystems")
   Call<List<NvmfSubsystem>> getNvmfSubsystems(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody
+    @retrofit2.http.Body GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNvmfSubsystemsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NvmfSubsystemConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface NvmfSubsystemApi {
   })
   @POST("get-nvmf-subsystems-connection")
   Call<NvmfSubsystemConnection> getNvmfSubsystemsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody
+    @retrofit2.http.Body GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -64,8 +64,8 @@ public class SnmpTransportApi {
 
     /**
      * Build call for createSnmpTransport
-     * @param contentLanguage  (required)
      * @param snmpTransportCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createSnmpTransportCall(String contentLanguage, List<SnmpTransportCreationParams> snmpTransportCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createSnmpTransportCall(List<SnmpTransportCreationParams> snmpTransportCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = snmpTransportCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class SnmpTransportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createSnmpTransportValidateBeforeCall(String contentLanguage, List<SnmpTransportCreationParams> snmpTransportCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createSnmpTransport(Async)");
-        }
+    private okhttp3.Call createSnmpTransportValidateBeforeCall(List<SnmpTransportCreationParams> snmpTransportCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snmpTransportCreationParams' is set
         if (snmpTransportCreationParams == null) {
@@ -124,7 +119,7 @@ public class SnmpTransportApi {
         }
         
 
-        okhttp3.Call localVarCall = createSnmpTransportCall(contentLanguage, snmpTransportCreationParams, _callback);
+        okhttp3.Call localVarCall = createSnmpTransportCall(snmpTransportCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class SnmpTransportApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnmpTransport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnmpTransport> createSnmpTransport(String contentLanguage, List<SnmpTransportCreationParams> snmpTransportCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskSnmpTransport>> localVarResp = createSnmpTransportWithHttpInfo(contentLanguage, snmpTransportCreationParams);
+    public List<WithTaskSnmpTransport> createSnmpTransport(List<SnmpTransportCreationParams> snmpTransportCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskSnmpTransport>> localVarResp = createSnmpTransportWithHttpInfo(snmpTransportCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnmpTransport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnmpTransport>> createSnmpTransportWithHttpInfo(String contentLanguage, List<SnmpTransportCreationParams> snmpTransportCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createSnmpTransportValidateBeforeCall(contentLanguage, snmpTransportCreationParams, null);
+    public ApiResponse<List<WithTaskSnmpTransport>> createSnmpTransportWithHttpInfo(List<SnmpTransportCreationParams> snmpTransportCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createSnmpTransportValidateBeforeCall(snmpTransportCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTransport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class SnmpTransportApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createSnmpTransportAsync(String contentLanguage, List<SnmpTransportCreationParams> snmpTransportCreationParams, final ApiCallback<List<WithTaskSnmpTransport>> _callback) throws ApiException {
+    public okhttp3.Call createSnmpTransportAsync(List<SnmpTransportCreationParams> snmpTransportCreationParams, String contentLanguage, final ApiCallback<List<WithTaskSnmpTransport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createSnmpTransportValidateBeforeCall(contentLanguage, snmpTransportCreationParams, _callback);
+        okhttp3.Call localVarCall = createSnmpTransportValidateBeforeCall(snmpTransportCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTransport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteSnmpTransport
-     * @param contentLanguage  (required)
      * @param snmpTransportDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnmpTransportCall(String contentLanguage, SnmpTransportDeletionParams snmpTransportDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteSnmpTransportCall(SnmpTransportDeletionParams snmpTransportDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = snmpTransportDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class SnmpTransportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteSnmpTransportValidateBeforeCall(String contentLanguage, SnmpTransportDeletionParams snmpTransportDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteSnmpTransport(Async)");
-        }
+    private okhttp3.Call deleteSnmpTransportValidateBeforeCall(SnmpTransportDeletionParams snmpTransportDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snmpTransportDeletionParams' is set
         if (snmpTransportDeletionParams == null) {
@@ -252,7 +242,7 @@ public class SnmpTransportApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteSnmpTransportCall(contentLanguage, snmpTransportDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteSnmpTransportCall(snmpTransportDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class SnmpTransportApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteSnmpTransport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteSnmpTransport> deleteSnmpTransport(String contentLanguage, SnmpTransportDeletionParams snmpTransportDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteSnmpTransport>> localVarResp = deleteSnmpTransportWithHttpInfo(contentLanguage, snmpTransportDeletionParams);
+    public List<WithTaskDeleteSnmpTransport> deleteSnmpTransport(SnmpTransportDeletionParams snmpTransportDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteSnmpTransport>> localVarResp = deleteSnmpTransportWithHttpInfo(snmpTransportDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteSnmpTransport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteSnmpTransport>> deleteSnmpTransportWithHttpInfo(String contentLanguage, SnmpTransportDeletionParams snmpTransportDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteSnmpTransportValidateBeforeCall(contentLanguage, snmpTransportDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteSnmpTransport>> deleteSnmpTransportWithHttpInfo(SnmpTransportDeletionParams snmpTransportDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteSnmpTransportValidateBeforeCall(snmpTransportDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnmpTransport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class SnmpTransportApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnmpTransportAsync(String contentLanguage, SnmpTransportDeletionParams snmpTransportDeletionParams, final ApiCallback<List<WithTaskDeleteSnmpTransport>> _callback) throws ApiException {
+    public okhttp3.Call deleteSnmpTransportAsync(SnmpTransportDeletionParams snmpTransportDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteSnmpTransport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteSnmpTransportValidateBeforeCall(contentLanguage, snmpTransportDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteSnmpTransportValidateBeforeCall(snmpTransportDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnmpTransport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSnmpTransports
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTransportsCall(String contentLanguage, GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnmpTransportsCall(GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSnmpTransportsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class SnmpTransportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnmpTransportsValidateBeforeCall(String contentLanguage, GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSnmpTransports(Async)");
-        }
+    private okhttp3.Call getSnmpTransportsValidateBeforeCall(GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnmpTransportsRequestBody' is set
         if (getSnmpTransportsRequestBody == null) {
@@ -380,7 +365,7 @@ public class SnmpTransportApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnmpTransportsCall(contentLanguage, getSnmpTransportsRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTransportsCall(getSnmpTransportsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class SnmpTransportApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SnmpTransport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SnmpTransport> getSnmpTransports(String contentLanguage, GetSnmpTransportsRequestBody getSnmpTransportsRequestBody) throws ApiException {
-        ApiResponse<List<SnmpTransport>> localVarResp = getSnmpTransportsWithHttpInfo(contentLanguage, getSnmpTransportsRequestBody);
+    public List<SnmpTransport> getSnmpTransports(GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<SnmpTransport>> localVarResp = getSnmpTransportsWithHttpInfo(getSnmpTransportsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SnmpTransport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SnmpTransport>> getSnmpTransportsWithHttpInfo(String contentLanguage, GetSnmpTransportsRequestBody getSnmpTransportsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSnmpTransportsValidateBeforeCall(contentLanguage, getSnmpTransportsRequestBody, null);
+    public ApiResponse<List<SnmpTransport>> getSnmpTransportsWithHttpInfo(GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSnmpTransportsValidateBeforeCall(getSnmpTransportsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<SnmpTransport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class SnmpTransportApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTransportsAsync(String contentLanguage, GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, final ApiCallback<List<SnmpTransport>> _callback) throws ApiException {
+    public okhttp3.Call getSnmpTransportsAsync(GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, String contentLanguage, final ApiCallback<List<SnmpTransport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnmpTransportsValidateBeforeCall(contentLanguage, getSnmpTransportsRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTransportsValidateBeforeCall(getSnmpTransportsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<SnmpTransport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSnmpTransportsConnection
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTransportsConnectionCall(String contentLanguage, GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnmpTransportsConnectionCall(GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getSnmpTransportsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class SnmpTransportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnmpTransportsConnectionValidateBeforeCall(String contentLanguage, GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getSnmpTransportsConnection(Async)");
-        }
+    private okhttp3.Call getSnmpTransportsConnectionValidateBeforeCall(GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnmpTransportsConnectionRequestBody' is set
         if (getSnmpTransportsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class SnmpTransportApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnmpTransportsConnectionCall(contentLanguage, getSnmpTransportsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTransportsConnectionCall(getSnmpTransportsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class SnmpTransportApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return SnmpTransportConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SnmpTransportConnection getSnmpTransportsConnection(String contentLanguage, GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody) throws ApiException {
-        ApiResponse<SnmpTransportConnection> localVarResp = getSnmpTransportsConnectionWithHttpInfo(contentLanguage, getSnmpTransportsConnectionRequestBody);
+    public SnmpTransportConnection getSnmpTransportsConnection(GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<SnmpTransportConnection> localVarResp = getSnmpTransportsConnectionWithHttpInfo(getSnmpTransportsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SnmpTransportConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SnmpTransportConnection> getSnmpTransportsConnectionWithHttpInfo(String contentLanguage, GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSnmpTransportsConnectionValidateBeforeCall(contentLanguage, getSnmpTransportsConnectionRequestBody, null);
+    public ApiResponse<SnmpTransportConnection> getSnmpTransportsConnectionWithHttpInfo(GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getSnmpTransportsConnectionValidateBeforeCall(getSnmpTransportsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<SnmpTransportConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class SnmpTransportApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getSnmpTransportsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnmpTransportsConnectionAsync(String contentLanguage, GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, final ApiCallback<SnmpTransportConnection> _callback) throws ApiException {
+    public okhttp3.Call getSnmpTransportsConnectionAsync(GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, String contentLanguage, final ApiCallback<SnmpTransportConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnmpTransportsConnectionValidateBeforeCall(contentLanguage, getSnmpTransportsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getSnmpTransportsConnectionValidateBeforeCall(getSnmpTransportsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<SnmpTransportConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateSnmpTransport
-     * @param contentLanguage  (required)
      * @param snmpTransportUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateSnmpTransportCall(String contentLanguage, SnmpTransportUpdationParams snmpTransportUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateSnmpTransportCall(SnmpTransportUpdationParams snmpTransportUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = snmpTransportUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class SnmpTransportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateSnmpTransportValidateBeforeCall(String contentLanguage, SnmpTransportUpdationParams snmpTransportUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateSnmpTransport(Async)");
-        }
+    private okhttp3.Call updateSnmpTransportValidateBeforeCall(SnmpTransportUpdationParams snmpTransportUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snmpTransportUpdationParams' is set
         if (snmpTransportUpdationParams == null) {
@@ -636,7 +611,7 @@ public class SnmpTransportApi {
         }
         
 
-        okhttp3.Call localVarCall = updateSnmpTransportCall(contentLanguage, snmpTransportUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateSnmpTransportCall(snmpTransportUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class SnmpTransportApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnmpTransport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnmpTransport> updateSnmpTransport(String contentLanguage, SnmpTransportUpdationParams snmpTransportUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskSnmpTransport>> localVarResp = updateSnmpTransportWithHttpInfo(contentLanguage, snmpTransportUpdationParams);
+    public List<WithTaskSnmpTransport> updateSnmpTransport(SnmpTransportUpdationParams snmpTransportUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskSnmpTransport>> localVarResp = updateSnmpTransportWithHttpInfo(snmpTransportUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnmpTransport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnmpTransport>> updateSnmpTransportWithHttpInfo(String contentLanguage, SnmpTransportUpdationParams snmpTransportUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateSnmpTransportValidateBeforeCall(contentLanguage, snmpTransportUpdationParams, null);
+    public ApiResponse<List<WithTaskSnmpTransport>> updateSnmpTransportWithHttpInfo(SnmpTransportUpdationParams snmpTransportUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateSnmpTransportValidateBeforeCall(snmpTransportUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTransport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class SnmpTransportApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param snmpTransportUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class SnmpTransportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateSnmpTransportAsync(String contentLanguage, SnmpTransportUpdationParams snmpTransportUpdationParams, final ApiCallback<List<WithTaskSnmpTransport>> _callback) throws ApiException {
+    public okhttp3.Call updateSnmpTransportAsync(SnmpTransportUpdationParams snmpTransportUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskSnmpTransport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateSnmpTransportValidateBeforeCall(contentLanguage, snmpTransportUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateSnmpTransportValidateBeforeCall(snmpTransportUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnmpTransport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

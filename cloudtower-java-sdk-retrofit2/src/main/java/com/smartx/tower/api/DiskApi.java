@@ -26,8 +26,8 @@ public interface DiskApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDisksRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Disk&gt;&gt;
    */
   @Headers({
@@ -35,14 +35,14 @@ public interface DiskApi {
   })
   @POST("get-disks")
   Call<List<Disk>> getDisks(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDisksRequestBody getDisksRequestBody
+    @retrofit2.http.Body GetDisksRequestBody getDisksRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getDisksConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;DiskConnection&gt;
    */
   @Headers({
@@ -50,14 +50,14 @@ public interface DiskApi {
   })
   @POST("get-disks-connection")
   Call<DiskConnection> getDisksConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetDisksConnectionRequestBody getDisksConnectionRequestBody
+    @retrofit2.http.Body GetDisksConnectionRequestBody getDisksConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param diskMountParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDisk&gt;&gt;
    */
   @Headers({
@@ -65,14 +65,14 @@ public interface DiskApi {
   })
   @POST("mount-disk")
   Call<List<WithTaskDisk>> mountDisk(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body DiskMountParams diskMountParams
+    @retrofit2.http.Body DiskMountParams diskMountParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param diskUnmountParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDisk&gt;&gt;
    */
   @Headers({
@@ -80,7 +80,7 @@ public interface DiskApi {
   })
   @POST("unmount-disk")
   Call<List<WithTaskDisk>> unmountDisk(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body DiskUnmountParams diskUnmountParams
+    @retrofit2.http.Body DiskUnmountParams diskUnmountParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -23,8 +23,8 @@ public interface EveroutePackageApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEveroutePackagesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;EveroutePackage&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface EveroutePackageApi {
   })
   @POST("get-everoute-packages")
   Call<List<EveroutePackage>> getEveroutePackages(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEveroutePackagesRequestBody getEveroutePackagesRequestBody
+    @retrofit2.http.Body GetEveroutePackagesRequestBody getEveroutePackagesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getEveroutePackagesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;EveroutePackageConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface EveroutePackageApi {
   })
   @POST("get-everoute-packages-connection")
   Call<EveroutePackageConnection> getEveroutePackagesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody
+    @retrofit2.http.Body GetEveroutePackagesConnectionRequestBody getEveroutePackagesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

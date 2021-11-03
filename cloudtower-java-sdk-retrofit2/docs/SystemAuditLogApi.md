@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getSystemAuditLogs
 
-> List&lt;SystemAuditLog&gt; getSystemAuditLogs(contentLanguage, getSystemAuditLogsRequestBody)
+> List&lt;SystemAuditLog&gt; getSystemAuditLogs(getSystemAuditLogsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SystemAuditLogApi apiInstance = new SystemAuditLogApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody = new GetSystemAuditLogsRequestBody(); // GetSystemAuditLogsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SystemAuditLog> result = apiInstance.getSystemAuditLogs(contentLanguage, getSystemAuditLogsRequestBody);
+            List<SystemAuditLog> result = apiInstance.getSystemAuditLogs(getSystemAuditLogsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SystemAuditLogApi#getSystemAuditLogs");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSystemAuditLogsRequestBody** | [**GetSystemAuditLogsRequestBody**](GetSystemAuditLogsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getSystemAuditLogsConnection
 
-> SystemAuditLogConnection getSystemAuditLogsConnection(contentLanguage, getSystemAuditLogsConnectionRequestBody)
+> SystemAuditLogConnection getSystemAuditLogsConnection(getSystemAuditLogsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SystemAuditLogApi apiInstance = new SystemAuditLogApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody = new GetSystemAuditLogsConnectionRequestBody(); // GetSystemAuditLogsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SystemAuditLogConnection result = apiInstance.getSystemAuditLogsConnection(contentLanguage, getSystemAuditLogsConnectionRequestBody);
+            SystemAuditLogConnection result = apiInstance.getSystemAuditLogsConnection(getSystemAuditLogsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SystemAuditLogApi#getSystemAuditLogsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSystemAuditLogsConnectionRequestBody** | [**GetSystemAuditLogsConnectionRequestBody**](GetSystemAuditLogsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

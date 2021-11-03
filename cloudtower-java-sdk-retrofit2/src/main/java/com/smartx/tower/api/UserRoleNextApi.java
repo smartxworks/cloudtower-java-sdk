@@ -28,8 +28,8 @@ public interface UserRoleNextApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param roleCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskUserRoleNext&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface UserRoleNextApi {
   })
   @POST("create-role")
   Call<List<WithTaskUserRoleNext>> createRole(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<RoleCreationParams> roleCreationParams
+    @retrofit2.http.Body List<RoleCreationParams> roleCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param roleDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteRole&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface UserRoleNextApi {
   })
   @POST("delete-role")
   Call<List<WithTaskDeleteRole>> deleteRole(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body RoleDeletionParams roleDeletionParams
+    @retrofit2.http.Body RoleDeletionParams roleDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUserRoleNextsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;UserRoleNext&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface UserRoleNextApi {
   })
   @POST("get-user-role-nexts")
   Call<List<UserRoleNext>> getUserRoleNexts(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUserRoleNextsRequestBody getUserRoleNextsRequestBody
+    @retrofit2.http.Body GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getUserRoleNextsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;UserRoleNextConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface UserRoleNextApi {
   })
   @POST("get-user-role-nexts-connection")
   Call<UserRoleNextConnection> getUserRoleNextsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody
+    @retrofit2.http.Body GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param roleUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskUserRoleNext&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface UserRoleNextApi {
   })
   @POST("update-role")
   Call<List<WithTaskUserRoleNext>> updateRole(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body RoleUpdationParams roleUpdationParams
+    @retrofit2.http.Body RoleUpdationParams roleUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

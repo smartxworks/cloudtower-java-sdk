@@ -23,8 +23,8 @@ public interface ClusterUpgradeHistoryApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterUpgradeHistoriesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ClusterUpgradeHistory&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ClusterUpgradeHistoryApi {
   })
   @POST("get-cluster-upgrade-histories")
   Call<List<ClusterUpgradeHistory>> getClusterUpgradeHistories(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody
+    @retrofit2.http.Body GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterUpgradeHistoriesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ClusterUpgradeHistoryConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ClusterUpgradeHistoryApi {
   })
   @POST("get-cluster-upgrade-histories-connection")
   Call<ClusterUpgradeHistoryConnection> getClusterUpgradeHistoriesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody
+    @retrofit2.http.Body GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

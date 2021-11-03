@@ -23,8 +23,8 @@ public interface LogCollectionApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getLogCollectionsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;LogCollection&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface LogCollectionApi {
   })
   @POST("get-log-collections")
   Call<List<LogCollection>> getLogCollections(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetLogCollectionsRequestBody getLogCollectionsRequestBody
+    @retrofit2.http.Body GetLogCollectionsRequestBody getLogCollectionsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getLogCollectionsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;LogCollectionConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface LogCollectionApi {
   })
   @POST("get-log-collections-connection")
   Call<LogCollectionConnection> getLogCollectionsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody
+    @retrofit2.http.Body GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

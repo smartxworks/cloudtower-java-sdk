@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getIscsiConnectionsConnection
 
-> IscsiConnectionConnection getIscsiConnectionsConnection(contentLanguage, getIscsiConnectionsConnectionRequestBody)
+> IscsiConnectionConnection getIscsiConnectionsConnection(getIscsiConnectionsConnectionRequestBody, contentLanguage)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IscsiApi apiInstance = new IscsiApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIscsiConnectionsConnectionRequestBody getIscsiConnectionsConnectionRequestBody = new GetIscsiConnectionsConnectionRequestBody(); // GetIscsiConnectionsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            IscsiConnectionConnection result = apiInstance.getIscsiConnectionsConnection(contentLanguage, getIscsiConnectionsConnectionRequestBody);
+            IscsiConnectionConnection result = apiInstance.getIscsiConnectionsConnection(getIscsiConnectionsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IscsiApi#getIscsiConnectionsConnection");
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIscsiConnectionsConnectionRequestBody** | [**GetIscsiConnectionsConnectionRequestBody**](GetIscsiConnectionsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

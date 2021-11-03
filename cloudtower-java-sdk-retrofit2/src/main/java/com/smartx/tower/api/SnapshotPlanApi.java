@@ -31,8 +31,8 @@ public interface SnapshotPlanApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotPlanCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -40,14 +40,14 @@ public interface SnapshotPlanApi {
   })
   @POST("create-snapshot-plan")
   Call<List<WithTaskSnapshotPlan>> createSnapshotPlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<SnapshotPlanCreationParams> snapshotPlanCreationParams
+    @retrofit2.http.Body List<SnapshotPlanCreationParams> snapshotPlanCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotPlanDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteSnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -55,14 +55,14 @@ public interface SnapshotPlanApi {
   })
   @POST("delete-snapshot-plan")
   Call<List<WithTaskDeleteSnapshotPlan>> deleteSnapshotPlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotPlanDeletionParams snapshotPlanDeletionParams
+    @retrofit2.http.Body SnapshotPlanDeletionParams snapshotPlanDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotPlanExecutionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -70,14 +70,14 @@ public interface SnapshotPlanApi {
   })
   @POST("execute-snapshot-plan")
   Call<List<WithTaskSnapshotPlan>> executeSnapshotPlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotPlanExecutionParams snapshotPlanExecutionParams
+    @retrofit2.http.Body SnapshotPlanExecutionParams snapshotPlanExecutionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnapshotPlansRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -85,14 +85,14 @@ public interface SnapshotPlanApi {
   })
   @POST("get-snapshot-plans")
   Call<List<SnapshotPlan>> getSnapshotPlans(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnapshotPlansRequestBody getSnapshotPlansRequestBody
+    @retrofit2.http.Body GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnapshotPlansConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SnapshotPlanConnection&gt;
    */
   @Headers({
@@ -100,14 +100,14 @@ public interface SnapshotPlanApi {
   })
   @POST("get-snapshot-plans-connection")
   Call<SnapshotPlanConnection> getSnapshotPlansConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody
+    @retrofit2.http.Body GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotPlanResumeParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -115,14 +115,14 @@ public interface SnapshotPlanApi {
   })
   @POST("resume-snapshot-plan")
   Call<List<WithTaskSnapshotPlan>> resumeSnapshotPlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotPlanResumeParams snapshotPlanResumeParams
+    @retrofit2.http.Body SnapshotPlanResumeParams snapshotPlanResumeParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotPlanSuspendedParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -130,14 +130,14 @@ public interface SnapshotPlanApi {
   })
   @POST("suspend-snapshot-plan")
   Call<List<WithTaskSnapshotPlan>> suspendSnapshotPlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotPlanSuspendedParams snapshotPlanSuspendedParams
+    @retrofit2.http.Body SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotPlanUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
    */
   @Headers({
@@ -145,7 +145,7 @@ public interface SnapshotPlanApi {
   })
   @POST("update-snapshot-plan")
   Call<List<WithTaskSnapshotPlan>> updateSnapshotPlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotPlanUpdationParams snapshotPlanUpdationParams
+    @retrofit2.http.Body SnapshotPlanUpdationParams snapshotPlanUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

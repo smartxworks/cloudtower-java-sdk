@@ -57,8 +57,8 @@ public class StoragePolicyConectorApi {
 
     /**
      * Build call for getStoragePoliciesConnector
-     * @param contentLanguage  (required)
      * @param getStoragePoliciesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -69,7 +69,7 @@ public class StoragePolicyConectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getStoragePoliciesConnectorCall(String contentLanguage, GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getStoragePoliciesConnectorCall(GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getStoragePoliciesConnectorRequestBody;
 
         // create path and map variables
@@ -104,12 +104,7 @@ public class StoragePolicyConectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getStoragePoliciesConnectorValidateBeforeCall(String contentLanguage, GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getStoragePoliciesConnector(Async)");
-        }
+    private okhttp3.Call getStoragePoliciesConnectorValidateBeforeCall(GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getStoragePoliciesConnectorRequestBody' is set
         if (getStoragePoliciesConnectorRequestBody == null) {
@@ -117,7 +112,7 @@ public class StoragePolicyConectorApi {
         }
         
 
-        okhttp3.Call localVarCall = getStoragePoliciesConnectorCall(contentLanguage, getStoragePoliciesConnectorRequestBody, _callback);
+        okhttp3.Call localVarCall = getStoragePoliciesConnectorCall(getStoragePoliciesConnectorRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -125,8 +120,8 @@ public class StoragePolicyConectorApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getStoragePoliciesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;StoragePolicyConector&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -136,16 +131,16 @@ public class StoragePolicyConectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<StoragePolicyConector> getStoragePoliciesConnector(String contentLanguage, GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody) throws ApiException {
-        ApiResponse<List<StoragePolicyConector>> localVarResp = getStoragePoliciesConnectorWithHttpInfo(contentLanguage, getStoragePoliciesConnectorRequestBody);
+    public List<StoragePolicyConector> getStoragePoliciesConnector(GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<StoragePolicyConector>> localVarResp = getStoragePoliciesConnectorWithHttpInfo(getStoragePoliciesConnectorRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getStoragePoliciesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;StoragePolicyConector&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -155,8 +150,8 @@ public class StoragePolicyConectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<StoragePolicyConector>> getStoragePoliciesConnectorWithHttpInfo(String contentLanguage, GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getStoragePoliciesConnectorValidateBeforeCall(contentLanguage, getStoragePoliciesConnectorRequestBody, null);
+    public ApiResponse<List<StoragePolicyConector>> getStoragePoliciesConnectorWithHttpInfo(GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getStoragePoliciesConnectorValidateBeforeCall(getStoragePoliciesConnectorRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<StoragePolicyConector>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -164,8 +159,8 @@ public class StoragePolicyConectorApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getStoragePoliciesConnectorRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -176,9 +171,9 @@ public class StoragePolicyConectorApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getStoragePoliciesConnectorAsync(String contentLanguage, GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, final ApiCallback<List<StoragePolicyConector>> _callback) throws ApiException {
+    public okhttp3.Call getStoragePoliciesConnectorAsync(GetStoragePoliciesConnectorRequestBody getStoragePoliciesConnectorRequestBody, String contentLanguage, final ApiCallback<List<StoragePolicyConector>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getStoragePoliciesConnectorValidateBeforeCall(contentLanguage, getStoragePoliciesConnectorRequestBody, _callback);
+        okhttp3.Call localVarCall = getStoragePoliciesConnectorValidateBeforeCall(getStoragePoliciesConnectorRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<StoragePolicyConector>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

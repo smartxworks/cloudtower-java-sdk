@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createClusterRecycleBinSetting
 
-> List&lt;WithTaskClusterSettings&gt; createClusterRecycleBinSetting(contentLanguage, clusterRecycleBinCreationParams)
+> List&lt;WithTaskClusterSettings&gt; createClusterRecycleBinSetting(clusterRecycleBinCreationParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalSettingsApi apiInstance = new GlobalSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ClusterRecycleBinCreationParams clusterRecycleBinCreationParams = new ClusterRecycleBinCreationParams(); // ClusterRecycleBinCreationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskClusterSettings> result = apiInstance.createClusterRecycleBinSetting(contentLanguage, clusterRecycleBinCreationParams);
+            List<WithTaskClusterSettings> result = apiInstance.createClusterRecycleBinSetting(clusterRecycleBinCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalSettingsApi#createClusterRecycleBinSetting");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterRecycleBinCreationParams** | [**ClusterRecycleBinCreationParams**](ClusterRecycleBinCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## deleteClusterRecycleBinSetting
 
-> List&lt;WithTaskDeleteClusterRecycleBin&gt; deleteClusterRecycleBinSetting(contentLanguage, clusterRecycleBinDeletionParams)
+> List&lt;WithTaskDeleteClusterRecycleBin&gt; deleteClusterRecycleBinSetting(clusterRecycleBinDeletionParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalSettingsApi apiInstance = new GlobalSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams = new ClusterRecycleBinDeletionParams(); // ClusterRecycleBinDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteClusterRecycleBin> result = apiInstance.deleteClusterRecycleBinSetting(contentLanguage, clusterRecycleBinDeletionParams);
+            List<WithTaskDeleteClusterRecycleBin> result = apiInstance.deleteClusterRecycleBinSetting(clusterRecycleBinDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalSettingsApi#deleteClusterRecycleBinSetting");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterRecycleBinDeletionParams** | [**ClusterRecycleBinDeletionParams**](ClusterRecycleBinDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## getGlobalSettingses
 
-> List&lt;GlobalSettings&gt; getGlobalSettingses(contentLanguage, getGlobalSettingsesRequestBody)
+> List&lt;GlobalSettings&gt; getGlobalSettingses(getGlobalSettingsesRequestBody, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalSettingsApi apiInstance = new GlobalSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody = new GetGlobalSettingsesRequestBody(); // GetGlobalSettingsesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<GlobalSettings> result = apiInstance.getGlobalSettingses(contentLanguage, getGlobalSettingsesRequestBody);
+            List<GlobalSettings> result = apiInstance.getGlobalSettingses(getGlobalSettingsesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalSettingsApi#getGlobalSettingses");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getGlobalSettingsesRequestBody** | [**GetGlobalSettingsesRequestBody**](GetGlobalSettingsesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getGlobalSettingsesConnection
 
-> GlobalSettingsConnection getGlobalSettingsesConnection(contentLanguage, getGlobalSettingsesConnectionRequestBody)
+> GlobalSettingsConnection getGlobalSettingsesConnection(getGlobalSettingsesConnectionRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalSettingsApi apiInstance = new GlobalSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody = new GetGlobalSettingsesConnectionRequestBody(); // GetGlobalSettingsesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            GlobalSettingsConnection result = apiInstance.getGlobalSettingsesConnection(contentLanguage, getGlobalSettingsesConnectionRequestBody);
+            GlobalSettingsConnection result = apiInstance.getGlobalSettingsesConnection(getGlobalSettingsesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalSettingsApi#getGlobalSettingsesConnection");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getGlobalSettingsesConnectionRequestBody** | [**GetGlobalSettingsesConnectionRequestBody**](GetGlobalSettingsesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## updateClusterRecycleBinSetting
 
-> List&lt;WithTaskClusterSettings&gt; updateClusterRecycleBinSetting(contentLanguage, clusterRecycleBinUpdationParams)
+> List&lt;WithTaskClusterSettings&gt; updateClusterRecycleBinSetting(clusterRecycleBinUpdationParams, contentLanguage)
 
 
 
@@ -338,10 +338,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalSettingsApi apiInstance = new GlobalSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams = new ClusterRecycleBinUpdationParams(); // ClusterRecycleBinUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskClusterSettings> result = apiInstance.updateClusterRecycleBinSetting(contentLanguage, clusterRecycleBinUpdationParams);
+            List<WithTaskClusterSettings> result = apiInstance.updateClusterRecycleBinSetting(clusterRecycleBinUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalSettingsApi#updateClusterRecycleBinSetting");
@@ -359,8 +359,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterRecycleBinUpdationParams** | [**ClusterRecycleBinUpdationParams**](ClusterRecycleBinUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## updateGlobalRecycleBinSetting
 
-> WithTaskGlobalSettings updateGlobalRecycleBinSetting(contentLanguage, globalRecycleBinUpdationParams)
+> WithTaskGlobalSettings updateGlobalRecycleBinSetting(globalRecycleBinUpdationParams, contentLanguage)
 
 
 
@@ -412,10 +412,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         GlobalSettingsApi apiInstance = new GlobalSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams = new GlobalRecycleBinUpdationParams(); // GlobalRecycleBinUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            WithTaskGlobalSettings result = apiInstance.updateGlobalRecycleBinSetting(contentLanguage, globalRecycleBinUpdationParams);
+            WithTaskGlobalSettings result = apiInstance.updateGlobalRecycleBinSetting(globalRecycleBinUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GlobalSettingsApi#updateGlobalRecycleBinSetting");
@@ -433,8 +433,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **globalRecycleBinUpdationParams** | [**GlobalRecycleBinUpdationParams**](GlobalRecycleBinUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

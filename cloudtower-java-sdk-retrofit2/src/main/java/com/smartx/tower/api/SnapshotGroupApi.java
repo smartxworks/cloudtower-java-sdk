@@ -29,8 +29,8 @@ public interface SnapshotGroupApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotGroupCloneParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotGroup&gt;&gt;
    */
   @Headers({
@@ -38,14 +38,14 @@ public interface SnapshotGroupApi {
   })
   @POST("clone-snapshot-group")
   Call<List<WithTaskSnapshotGroup>> cloneSnapshotGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<SnapshotGroupCloneParams> snapshotGroupCloneParams
+    @retrofit2.http.Body List<SnapshotGroupCloneParams> snapshotGroupCloneParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotGroupDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteSnapshotGroup&gt;&gt;
    */
   @Headers({
@@ -53,14 +53,14 @@ public interface SnapshotGroupApi {
   })
   @POST("delete-snapshot-group")
   Call<List<WithTaskDeleteSnapshotGroup>> deleteSnapshotGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotGroupDeletionParams snapshotGroupDeletionParams
+    @retrofit2.http.Body SnapshotGroupDeletionParams snapshotGroupDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnapshotGroupsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SnapshotGroup&gt;&gt;
    */
   @Headers({
@@ -68,14 +68,14 @@ public interface SnapshotGroupApi {
   })
   @POST("get-snapshot-groups")
   Call<List<SnapshotGroup>> getSnapshotGroups(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody
+    @retrofit2.http.Body GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnapshotGroupsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SnapshotGroupConnection&gt;
    */
   @Headers({
@@ -83,14 +83,14 @@ public interface SnapshotGroupApi {
   })
   @POST("get-snapshot-groups-connection")
   Call<SnapshotGroupConnection> getSnapshotGroupsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody
+    @retrofit2.http.Body GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotGroupKeepParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotGroup&gt;&gt;
    */
   @Headers({
@@ -98,14 +98,14 @@ public interface SnapshotGroupApi {
   })
   @POST("keep-snapshot-group")
   Call<List<WithTaskSnapshotGroup>> keepSnapshotGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotGroupKeepParams snapshotGroupKeepParams
+    @retrofit2.http.Body SnapshotGroupKeepParams snapshotGroupKeepParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snapshotGroupRollbackParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnapshotGroup&gt;&gt;
    */
   @Headers({
@@ -113,7 +113,7 @@ public interface SnapshotGroupApi {
   })
   @POST("rollback-snapshot-group")
   Call<List<WithTaskSnapshotGroup>> rollbackSnapshotGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnapshotGroupRollbackParams snapshotGroupRollbackParams
+    @retrofit2.http.Body SnapshotGroupRollbackParams snapshotGroupRollbackParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

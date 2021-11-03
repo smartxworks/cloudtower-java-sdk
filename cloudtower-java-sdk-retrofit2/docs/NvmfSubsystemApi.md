@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getNvmfSubsystems
 
-> List&lt;NvmfSubsystem&gt; getNvmfSubsystems(contentLanguage, getNvmfSubsystemsRequestBody)
+> List&lt;NvmfSubsystem&gt; getNvmfSubsystems(getNvmfSubsystemsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NvmfSubsystemApi apiInstance = new NvmfSubsystemApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody = new GetNvmfSubsystemsRequestBody(); // GetNvmfSubsystemsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<NvmfSubsystem> result = apiInstance.getNvmfSubsystems(contentLanguage, getNvmfSubsystemsRequestBody);
+            List<NvmfSubsystem> result = apiInstance.getNvmfSubsystems(getNvmfSubsystemsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NvmfSubsystemApi#getNvmfSubsystems");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNvmfSubsystemsRequestBody** | [**GetNvmfSubsystemsRequestBody**](GetNvmfSubsystemsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getNvmfSubsystemsConnection
 
-> NvmfSubsystemConnection getNvmfSubsystemsConnection(contentLanguage, getNvmfSubsystemsConnectionRequestBody)
+> NvmfSubsystemConnection getNvmfSubsystemsConnection(getNvmfSubsystemsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NvmfSubsystemApi apiInstance = new NvmfSubsystemApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody = new GetNvmfSubsystemsConnectionRequestBody(); // GetNvmfSubsystemsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NvmfSubsystemConnection result = apiInstance.getNvmfSubsystemsConnection(contentLanguage, getNvmfSubsystemsConnectionRequestBody);
+            NvmfSubsystemConnection result = apiInstance.getNvmfSubsystemsConnection(getNvmfSubsystemsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NvmfSubsystemApi#getNvmfSubsystemsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNvmfSubsystemsConnectionRequestBody** | [**GetNvmfSubsystemsConnectionRequestBody**](GetNvmfSubsystemsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

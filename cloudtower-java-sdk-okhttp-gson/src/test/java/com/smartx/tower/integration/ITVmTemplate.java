@@ -33,7 +33,7 @@ public class ITVmTemplate extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(Utils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
   }
 
 

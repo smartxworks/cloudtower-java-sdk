@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getApplications
 
-> List&lt;Application&gt; getApplications(contentLanguage, getApplicationsRequestBody)
+> List&lt;Application&gt; getApplications(getApplicationsRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ApplicationApi apiInstance = new ApplicationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetApplicationsRequestBody getApplicationsRequestBody = new GetApplicationsRequestBody(); // GetApplicationsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Application> result = apiInstance.getApplications(contentLanguage, getApplicationsRequestBody);
+            List<Application> result = apiInstance.getApplications(getApplicationsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApplicationApi#getApplications");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getApplicationsRequestBody** | [**GetApplicationsRequestBody**](GetApplicationsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getApplicationsConnection
 
-> ApplicationConnection getApplicationsConnection(contentLanguage, getApplicationsConnectionRequestBody)
+> ApplicationConnection getApplicationsConnection(getApplicationsConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ApplicationApi apiInstance = new ApplicationApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody = new GetApplicationsConnectionRequestBody(); // GetApplicationsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ApplicationConnection result = apiInstance.getApplicationsConnection(contentLanguage, getApplicationsConnectionRequestBody);
+            ApplicationConnection result = apiInstance.getApplicationsConnection(getApplicationsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApplicationApi#getApplicationsConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getApplicationsConnectionRequestBody** | [**GetApplicationsConnectionRequestBody**](GetApplicationsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

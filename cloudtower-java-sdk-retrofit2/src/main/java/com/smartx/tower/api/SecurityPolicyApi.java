@@ -23,8 +23,8 @@ public interface SecurityPolicyApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSecurityPoliciesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SecurityPolicy&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface SecurityPolicyApi {
   })
   @POST("get-security-policies")
   Call<List<SecurityPolicy>> getSecurityPolicies(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody
+    @retrofit2.http.Body GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSecurityPoliciesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SecurityPolicyConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface SecurityPolicyApi {
   })
   @POST("get-security-policies-connection")
   Call<SecurityPolicyConnection> getSecurityPoliciesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody
+    @retrofit2.http.Body GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

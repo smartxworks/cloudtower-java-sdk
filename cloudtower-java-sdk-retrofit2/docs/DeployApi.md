@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getDeploys
 
-> List&lt;Deploy&gt; getDeploys(contentLanguage, getDeploysRequestBody)
+> List&lt;Deploy&gt; getDeploys(getDeploysRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DeployApi apiInstance = new DeployApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDeploysRequestBody getDeploysRequestBody = new GetDeploysRequestBody(); // GetDeploysRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Deploy> result = apiInstance.getDeploys(contentLanguage, getDeploysRequestBody);
+            List<Deploy> result = apiInstance.getDeploys(getDeploysRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DeployApi#getDeploys");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDeploysRequestBody** | [**GetDeploysRequestBody**](GetDeploysRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getDeploysConnection
 
-> DeployConnection getDeploysConnection(contentLanguage, getDeploysConnectionRequestBody)
+> DeployConnection getDeploysConnection(getDeploysConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DeployApi apiInstance = new DeployApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDeploysConnectionRequestBody getDeploysConnectionRequestBody = new GetDeploysConnectionRequestBody(); // GetDeploysConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            DeployConnection result = apiInstance.getDeploysConnection(contentLanguage, getDeploysConnectionRequestBody);
+            DeployConnection result = apiInstance.getDeploysConnection(getDeploysConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DeployApi#getDeploysConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDeploysConnectionRequestBody** | [**GetDeploysConnectionRequestBody**](GetDeploysConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -59,8 +59,8 @@ public class EverouteClusterApi {
 
     /**
      * Build call for getEverouteClusters
-     * @param contentLanguage  (required)
      * @param getEverouteClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteClustersCall(String contentLanguage, GetEverouteClustersRequestBody getEverouteClustersRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEverouteClustersCall(GetEverouteClustersRequestBody getEverouteClustersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getEverouteClustersRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class EverouteClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEverouteClustersValidateBeforeCall(String contentLanguage, GetEverouteClustersRequestBody getEverouteClustersRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getEverouteClusters(Async)");
-        }
+    private okhttp3.Call getEverouteClustersValidateBeforeCall(GetEverouteClustersRequestBody getEverouteClustersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEverouteClustersRequestBody' is set
         if (getEverouteClustersRequestBody == null) {
@@ -119,7 +114,7 @@ public class EverouteClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = getEverouteClustersCall(contentLanguage, getEverouteClustersRequestBody, _callback);
+        okhttp3.Call localVarCall = getEverouteClustersCall(getEverouteClustersRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class EverouteClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEverouteClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;EverouteCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<EverouteCluster> getEverouteClusters(String contentLanguage, GetEverouteClustersRequestBody getEverouteClustersRequestBody) throws ApiException {
-        ApiResponse<List<EverouteCluster>> localVarResp = getEverouteClustersWithHttpInfo(contentLanguage, getEverouteClustersRequestBody);
+    public List<EverouteCluster> getEverouteClusters(GetEverouteClustersRequestBody getEverouteClustersRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<EverouteCluster>> localVarResp = getEverouteClustersWithHttpInfo(getEverouteClustersRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEverouteClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;EverouteCluster&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<EverouteCluster>> getEverouteClustersWithHttpInfo(String contentLanguage, GetEverouteClustersRequestBody getEverouteClustersRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEverouteClustersValidateBeforeCall(contentLanguage, getEverouteClustersRequestBody, null);
+    public ApiResponse<List<EverouteCluster>> getEverouteClustersWithHttpInfo(GetEverouteClustersRequestBody getEverouteClustersRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getEverouteClustersValidateBeforeCall(getEverouteClustersRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<EverouteCluster>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class EverouteClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getEverouteClustersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteClustersAsync(String contentLanguage, GetEverouteClustersRequestBody getEverouteClustersRequestBody, final ApiCallback<List<EverouteCluster>> _callback) throws ApiException {
+    public okhttp3.Call getEverouteClustersAsync(GetEverouteClustersRequestBody getEverouteClustersRequestBody, String contentLanguage, final ApiCallback<List<EverouteCluster>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEverouteClustersValidateBeforeCall(contentLanguage, getEverouteClustersRequestBody, _callback);
+        okhttp3.Call localVarCall = getEverouteClustersValidateBeforeCall(getEverouteClustersRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<EverouteCluster>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEverouteClustersConnection
-     * @param contentLanguage  (required)
      * @param getEverouteClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteClustersConnectionCall(String contentLanguage, GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEverouteClustersConnectionCall(GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getEverouteClustersConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class EverouteClusterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEverouteClustersConnectionValidateBeforeCall(String contentLanguage, GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getEverouteClustersConnection(Async)");
-        }
+    private okhttp3.Call getEverouteClustersConnectionValidateBeforeCall(GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEverouteClustersConnectionRequestBody' is set
         if (getEverouteClustersConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class EverouteClusterApi {
         }
         
 
-        okhttp3.Call localVarCall = getEverouteClustersConnectionCall(contentLanguage, getEverouteClustersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getEverouteClustersConnectionCall(getEverouteClustersConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class EverouteClusterApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEverouteClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return EverouteClusterConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public EverouteClusterConnection getEverouteClustersConnection(String contentLanguage, GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody) throws ApiException {
-        ApiResponse<EverouteClusterConnection> localVarResp = getEverouteClustersConnectionWithHttpInfo(contentLanguage, getEverouteClustersConnectionRequestBody);
+    public EverouteClusterConnection getEverouteClustersConnection(GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<EverouteClusterConnection> localVarResp = getEverouteClustersConnectionWithHttpInfo(getEverouteClustersConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getEverouteClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;EverouteClusterConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EverouteClusterConnection> getEverouteClustersConnectionWithHttpInfo(String contentLanguage, GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEverouteClustersConnectionValidateBeforeCall(contentLanguage, getEverouteClustersConnectionRequestBody, null);
+    public ApiResponse<EverouteClusterConnection> getEverouteClustersConnectionWithHttpInfo(GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getEverouteClustersConnectionValidateBeforeCall(getEverouteClustersConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<EverouteClusterConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class EverouteClusterApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getEverouteClustersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class EverouteClusterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteClustersConnectionAsync(String contentLanguage, GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, final ApiCallback<EverouteClusterConnection> _callback) throws ApiException {
+    public okhttp3.Call getEverouteClustersConnectionAsync(GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody, String contentLanguage, final ApiCallback<EverouteClusterConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEverouteClustersConnectionValidateBeforeCall(contentLanguage, getEverouteClustersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getEverouteClustersConnectionValidateBeforeCall(getEverouteClustersConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<EverouteClusterConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

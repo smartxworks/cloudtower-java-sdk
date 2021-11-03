@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## connectCluster
 
-> List&lt;WithTaskCluster&gt; connectCluster(contentLanguage, clusterCreationParams)
+> List&lt;WithTaskCluster&gt; connectCluster(clusterCreationParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterApi apiInstance = new ClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<ClusterCreationParams> clusterCreationParams = Arrays.asList(); // List<ClusterCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskCluster> result = apiInstance.connectCluster(contentLanguage, clusterCreationParams);
+            List<WithTaskCluster> result = apiInstance.connectCluster(clusterCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterApi#connectCluster");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterCreationParams** | [**List&lt;ClusterCreationParams&gt;**](ClusterCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## deleteCluster
 
-> List&lt;WithTaskDeleteCluster&gt; deleteCluster(contentLanguage, clusterDeletionParams)
+> List&lt;WithTaskDeleteCluster&gt; deleteCluster(clusterDeletionParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterApi apiInstance = new ClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ClusterDeletionParams clusterDeletionParams = new ClusterDeletionParams(); // ClusterDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteCluster> result = apiInstance.deleteCluster(contentLanguage, clusterDeletionParams);
+            List<WithTaskDeleteCluster> result = apiInstance.deleteCluster(clusterDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterApi#deleteCluster");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterDeletionParams** | [**ClusterDeletionParams**](ClusterDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## getClusters
 
-> List&lt;Cluster&gt; getClusters(contentLanguage, getClustersRequestBody)
+> List&lt;Cluster&gt; getClusters(getClustersRequestBody, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterApi apiInstance = new ClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClustersRequestBody getClustersRequestBody = new GetClustersRequestBody(); // GetClustersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Cluster> result = apiInstance.getClusters(contentLanguage, getClustersRequestBody);
+            List<Cluster> result = apiInstance.getClusters(getClustersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterApi#getClusters");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClustersRequestBody** | [**GetClustersRequestBody**](GetClustersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getClustersConnection
 
-> ClusterConnection getClustersConnection(contentLanguage, getClustersConnectionRequestBody)
+> ClusterConnection getClustersConnection(getClustersConnectionRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterApi apiInstance = new ClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClustersConnectionRequestBody getClustersConnectionRequestBody = new GetClustersConnectionRequestBody(); // GetClustersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ClusterConnection result = apiInstance.getClustersConnection(contentLanguage, getClustersConnectionRequestBody);
+            ClusterConnection result = apiInstance.getClustersConnection(getClustersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterApi#getClustersConnection");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClustersConnectionRequestBody** | [**GetClustersConnectionRequestBody**](GetClustersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## updateCluster
 
-> List&lt;WithTaskCluster&gt; updateCluster(contentLanguage, clusterUpdationParams)
+> List&lt;WithTaskCluster&gt; updateCluster(clusterUpdationParams, contentLanguage)
 
 
 
@@ -338,10 +338,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterApi apiInstance = new ClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ClusterUpdationParams clusterUpdationParams = new ClusterUpdationParams(); // ClusterUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskCluster> result = apiInstance.updateCluster(contentLanguage, clusterUpdationParams);
+            List<WithTaskCluster> result = apiInstance.updateCluster(clusterUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterApi#updateCluster");
@@ -359,8 +359,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterUpdationParams** | [**ClusterUpdationParams**](ClusterUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## updateClusterLicense
 
-> List&lt;WithTaskCluster&gt; updateClusterLicense(contentLanguage, clusterLicenseUpdationParams)
+> List&lt;WithTaskCluster&gt; updateClusterLicense(clusterLicenseUpdationParams, contentLanguage)
 
 
 
@@ -412,10 +412,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterApi apiInstance = new ClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ClusterLicenseUpdationParams clusterLicenseUpdationParams = new ClusterLicenseUpdationParams(); // ClusterLicenseUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskCluster> result = apiInstance.updateClusterLicense(contentLanguage, clusterLicenseUpdationParams);
+            List<WithTaskCluster> result = apiInstance.updateClusterLicense(clusterLicenseUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterApi#updateClusterLicense");
@@ -433,8 +433,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **clusterLicenseUpdationParams** | [**ClusterLicenseUpdationParams**](ClusterLicenseUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

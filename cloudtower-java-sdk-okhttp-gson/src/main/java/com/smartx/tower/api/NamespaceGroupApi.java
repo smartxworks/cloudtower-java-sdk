@@ -64,8 +64,8 @@ public class NamespaceGroupApi {
 
     /**
      * Build call for createNamespaceGroup
-     * @param contentLanguage  (required)
      * @param namespaceGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNamespaceGroupCall(String contentLanguage, List<NamespaceGroupCreationParams> namespaceGroupCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createNamespaceGroupCall(List<NamespaceGroupCreationParams> namespaceGroupCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = namespaceGroupCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class NamespaceGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createNamespaceGroupValidateBeforeCall(String contentLanguage, List<NamespaceGroupCreationParams> namespaceGroupCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createNamespaceGroup(Async)");
-        }
+    private okhttp3.Call createNamespaceGroupValidateBeforeCall(List<NamespaceGroupCreationParams> namespaceGroupCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'namespaceGroupCreationParams' is set
         if (namespaceGroupCreationParams == null) {
@@ -124,7 +119,7 @@ public class NamespaceGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = createNamespaceGroupCall(contentLanguage, namespaceGroupCreationParams, _callback);
+        okhttp3.Call localVarCall = createNamespaceGroupCall(namespaceGroupCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class NamespaceGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNamespaceGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNamespaceGroup> createNamespaceGroup(String contentLanguage, List<NamespaceGroupCreationParams> namespaceGroupCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskNamespaceGroup>> localVarResp = createNamespaceGroupWithHttpInfo(contentLanguage, namespaceGroupCreationParams);
+    public List<WithTaskNamespaceGroup> createNamespaceGroup(List<NamespaceGroupCreationParams> namespaceGroupCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskNamespaceGroup>> localVarResp = createNamespaceGroupWithHttpInfo(namespaceGroupCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNamespaceGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNamespaceGroup>> createNamespaceGroupWithHttpInfo(String contentLanguage, List<NamespaceGroupCreationParams> namespaceGroupCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createNamespaceGroupValidateBeforeCall(contentLanguage, namespaceGroupCreationParams, null);
+    public ApiResponse<List<WithTaskNamespaceGroup>> createNamespaceGroupWithHttpInfo(List<NamespaceGroupCreationParams> namespaceGroupCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createNamespaceGroupValidateBeforeCall(namespaceGroupCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNamespaceGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class NamespaceGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNamespaceGroupAsync(String contentLanguage, List<NamespaceGroupCreationParams> namespaceGroupCreationParams, final ApiCallback<List<WithTaskNamespaceGroup>> _callback) throws ApiException {
+    public okhttp3.Call createNamespaceGroupAsync(List<NamespaceGroupCreationParams> namespaceGroupCreationParams, String contentLanguage, final ApiCallback<List<WithTaskNamespaceGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createNamespaceGroupValidateBeforeCall(contentLanguage, namespaceGroupCreationParams, _callback);
+        okhttp3.Call localVarCall = createNamespaceGroupValidateBeforeCall(namespaceGroupCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNamespaceGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteNamespaceGroup
-     * @param contentLanguage  (required)
      * @param namespaceGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNamespaceGroupCall(String contentLanguage, NamespaceGroupDeletionParams namespaceGroupDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteNamespaceGroupCall(NamespaceGroupDeletionParams namespaceGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = namespaceGroupDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class NamespaceGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteNamespaceGroupValidateBeforeCall(String contentLanguage, NamespaceGroupDeletionParams namespaceGroupDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteNamespaceGroup(Async)");
-        }
+    private okhttp3.Call deleteNamespaceGroupValidateBeforeCall(NamespaceGroupDeletionParams namespaceGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'namespaceGroupDeletionParams' is set
         if (namespaceGroupDeletionParams == null) {
@@ -252,7 +242,7 @@ public class NamespaceGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteNamespaceGroupCall(contentLanguage, namespaceGroupDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteNamespaceGroupCall(namespaceGroupDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class NamespaceGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteNamespaceGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteNamespaceGroup> deleteNamespaceGroup(String contentLanguage, NamespaceGroupDeletionParams namespaceGroupDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteNamespaceGroup>> localVarResp = deleteNamespaceGroupWithHttpInfo(contentLanguage, namespaceGroupDeletionParams);
+    public List<WithTaskDeleteNamespaceGroup> deleteNamespaceGroup(NamespaceGroupDeletionParams namespaceGroupDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteNamespaceGroup>> localVarResp = deleteNamespaceGroupWithHttpInfo(namespaceGroupDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteNamespaceGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteNamespaceGroup>> deleteNamespaceGroupWithHttpInfo(String contentLanguage, NamespaceGroupDeletionParams namespaceGroupDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteNamespaceGroupValidateBeforeCall(contentLanguage, namespaceGroupDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteNamespaceGroup>> deleteNamespaceGroupWithHttpInfo(NamespaceGroupDeletionParams namespaceGroupDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteNamespaceGroupValidateBeforeCall(namespaceGroupDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNamespaceGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class NamespaceGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNamespaceGroupAsync(String contentLanguage, NamespaceGroupDeletionParams namespaceGroupDeletionParams, final ApiCallback<List<WithTaskDeleteNamespaceGroup>> _callback) throws ApiException {
+    public okhttp3.Call deleteNamespaceGroupAsync(NamespaceGroupDeletionParams namespaceGroupDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteNamespaceGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteNamespaceGroupValidateBeforeCall(contentLanguage, namespaceGroupDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteNamespaceGroupValidateBeforeCall(namespaceGroupDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNamespaceGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNamespaceGroups
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNamespaceGroupsCall(String contentLanguage, GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNamespaceGroupsCall(GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNamespaceGroupsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class NamespaceGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNamespaceGroupsValidateBeforeCall(String contentLanguage, GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNamespaceGroups(Async)");
-        }
+    private okhttp3.Call getNamespaceGroupsValidateBeforeCall(GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNamespaceGroupsRequestBody' is set
         if (getNamespaceGroupsRequestBody == null) {
@@ -380,7 +365,7 @@ public class NamespaceGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getNamespaceGroupsCall(contentLanguage, getNamespaceGroupsRequestBody, _callback);
+        okhttp3.Call localVarCall = getNamespaceGroupsCall(getNamespaceGroupsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class NamespaceGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;NamespaceGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<NamespaceGroup> getNamespaceGroups(String contentLanguage, GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody) throws ApiException {
-        ApiResponse<List<NamespaceGroup>> localVarResp = getNamespaceGroupsWithHttpInfo(contentLanguage, getNamespaceGroupsRequestBody);
+    public List<NamespaceGroup> getNamespaceGroups(GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<NamespaceGroup>> localVarResp = getNamespaceGroupsWithHttpInfo(getNamespaceGroupsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;NamespaceGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<NamespaceGroup>> getNamespaceGroupsWithHttpInfo(String contentLanguage, GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNamespaceGroupsValidateBeforeCall(contentLanguage, getNamespaceGroupsRequestBody, null);
+    public ApiResponse<List<NamespaceGroup>> getNamespaceGroupsWithHttpInfo(GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNamespaceGroupsValidateBeforeCall(getNamespaceGroupsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<NamespaceGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class NamespaceGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNamespaceGroupsAsync(String contentLanguage, GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, final ApiCallback<List<NamespaceGroup>> _callback) throws ApiException {
+    public okhttp3.Call getNamespaceGroupsAsync(GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, String contentLanguage, final ApiCallback<List<NamespaceGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNamespaceGroupsValidateBeforeCall(contentLanguage, getNamespaceGroupsRequestBody, _callback);
+        okhttp3.Call localVarCall = getNamespaceGroupsValidateBeforeCall(getNamespaceGroupsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<NamespaceGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNamespaceGroupsConnection
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNamespaceGroupsConnectionCall(String contentLanguage, GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNamespaceGroupsConnectionCall(GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getNamespaceGroupsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class NamespaceGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNamespaceGroupsConnectionValidateBeforeCall(String contentLanguage, GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getNamespaceGroupsConnection(Async)");
-        }
+    private okhttp3.Call getNamespaceGroupsConnectionValidateBeforeCall(GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNamespaceGroupsConnectionRequestBody' is set
         if (getNamespaceGroupsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class NamespaceGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getNamespaceGroupsConnectionCall(contentLanguage, getNamespaceGroupsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNamespaceGroupsConnectionCall(getNamespaceGroupsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class NamespaceGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return NamespaceGroupConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NamespaceGroupConnection getNamespaceGroupsConnection(String contentLanguage, GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody) throws ApiException {
-        ApiResponse<NamespaceGroupConnection> localVarResp = getNamespaceGroupsConnectionWithHttpInfo(contentLanguage, getNamespaceGroupsConnectionRequestBody);
+    public NamespaceGroupConnection getNamespaceGroupsConnection(GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<NamespaceGroupConnection> localVarResp = getNamespaceGroupsConnectionWithHttpInfo(getNamespaceGroupsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NamespaceGroupConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NamespaceGroupConnection> getNamespaceGroupsConnectionWithHttpInfo(String contentLanguage, GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNamespaceGroupsConnectionValidateBeforeCall(contentLanguage, getNamespaceGroupsConnectionRequestBody, null);
+    public ApiResponse<NamespaceGroupConnection> getNamespaceGroupsConnectionWithHttpInfo(GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getNamespaceGroupsConnectionValidateBeforeCall(getNamespaceGroupsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<NamespaceGroupConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class NamespaceGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getNamespaceGroupsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNamespaceGroupsConnectionAsync(String contentLanguage, GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, final ApiCallback<NamespaceGroupConnection> _callback) throws ApiException {
+    public okhttp3.Call getNamespaceGroupsConnectionAsync(GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, String contentLanguage, final ApiCallback<NamespaceGroupConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNamespaceGroupsConnectionValidateBeforeCall(contentLanguage, getNamespaceGroupsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getNamespaceGroupsConnectionValidateBeforeCall(getNamespaceGroupsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<NamespaceGroupConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateNamespaceGroup
-     * @param contentLanguage  (required)
      * @param namespaceGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNamespaceGroupCall(String contentLanguage, NamespaceGroupUpdationParams namespaceGroupUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNamespaceGroupCall(NamespaceGroupUpdationParams namespaceGroupUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = namespaceGroupUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class NamespaceGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNamespaceGroupValidateBeforeCall(String contentLanguage, NamespaceGroupUpdationParams namespaceGroupUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateNamespaceGroup(Async)");
-        }
+    private okhttp3.Call updateNamespaceGroupValidateBeforeCall(NamespaceGroupUpdationParams namespaceGroupUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'namespaceGroupUpdationParams' is set
         if (namespaceGroupUpdationParams == null) {
@@ -636,7 +611,7 @@ public class NamespaceGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = updateNamespaceGroupCall(contentLanguage, namespaceGroupUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateNamespaceGroupCall(namespaceGroupUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class NamespaceGroupApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNamespaceGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNamespaceGroup> updateNamespaceGroup(String contentLanguage, NamespaceGroupUpdationParams namespaceGroupUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskNamespaceGroup>> localVarResp = updateNamespaceGroupWithHttpInfo(contentLanguage, namespaceGroupUpdationParams);
+    public List<WithTaskNamespaceGroup> updateNamespaceGroup(NamespaceGroupUpdationParams namespaceGroupUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskNamespaceGroup>> localVarResp = updateNamespaceGroupWithHttpInfo(namespaceGroupUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNamespaceGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNamespaceGroup>> updateNamespaceGroupWithHttpInfo(String contentLanguage, NamespaceGroupUpdationParams namespaceGroupUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateNamespaceGroupValidateBeforeCall(contentLanguage, namespaceGroupUpdationParams, null);
+    public ApiResponse<List<WithTaskNamespaceGroup>> updateNamespaceGroupWithHttpInfo(NamespaceGroupUpdationParams namespaceGroupUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateNamespaceGroupValidateBeforeCall(namespaceGroupUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNamespaceGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class NamespaceGroupApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param namespaceGroupUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class NamespaceGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNamespaceGroupAsync(String contentLanguage, NamespaceGroupUpdationParams namespaceGroupUpdationParams, final ApiCallback<List<WithTaskNamespaceGroup>> _callback) throws ApiException {
+    public okhttp3.Call updateNamespaceGroupAsync(NamespaceGroupUpdationParams namespaceGroupUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskNamespaceGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNamespaceGroupValidateBeforeCall(contentLanguage, namespaceGroupUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateNamespaceGroupValidateBeforeCall(namespaceGroupUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNamespaceGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

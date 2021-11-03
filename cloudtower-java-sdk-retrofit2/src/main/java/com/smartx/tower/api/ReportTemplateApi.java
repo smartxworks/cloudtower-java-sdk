@@ -30,8 +30,8 @@ public interface ReportTemplateApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param reportTemplateCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskReportTemplate&gt;&gt;
    */
   @Headers({
@@ -39,14 +39,14 @@ public interface ReportTemplateApi {
   })
   @POST("create-report-template")
   Call<List<WithTaskReportTemplate>> createReportTemplate(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<ReportTemplateCreationParams> reportTemplateCreationParams
+    @retrofit2.http.Body List<ReportTemplateCreationParams> reportTemplateCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param reportTemplateDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteReportTemplate&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface ReportTemplateApi {
   })
   @POST("delete-report-template")
   Call<List<WithTaskDeleteReportTemplate>> deleteReportTemplate(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ReportTemplateDeletionParams reportTemplateDeletionParams
+    @retrofit2.http.Body ReportTemplateDeletionParams reportTemplateDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param reporteTemplateGenerationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskReportTask&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface ReportTemplateApi {
   })
   @POST("generate-from-report-template")
   Call<List<WithTaskReportTask>> generateFromReportTemplate(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ReporteTemplateGenerationParams reporteTemplateGenerationParams
+    @retrofit2.http.Body ReporteTemplateGenerationParams reporteTemplateGenerationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getReportTemplatesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ReportTemplate&gt;&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface ReportTemplateApi {
   })
   @POST("get-report-templates")
   Call<List<ReportTemplate>> getReportTemplates(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetReportTemplatesRequestBody getReportTemplatesRequestBody
+    @retrofit2.http.Body GetReportTemplatesRequestBody getReportTemplatesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getReportTemplatesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ReportTemplateConnection&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface ReportTemplateApi {
   })
   @POST("get-report-templates-connection")
   Call<ReportTemplateConnection> getReportTemplatesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody
+    @retrofit2.http.Body GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param reportTemplateUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskReportTemplate&gt;&gt;
    */
   @Headers({
@@ -114,7 +114,7 @@ public interface ReportTemplateApi {
   })
   @POST("update-report-template")
   Call<List<WithTaskReportTemplate>> updateReportTemplate(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ReportTemplateUpdationParams reportTemplateUpdationParams
+    @retrofit2.http.Body ReportTemplateUpdationParams reportTemplateUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

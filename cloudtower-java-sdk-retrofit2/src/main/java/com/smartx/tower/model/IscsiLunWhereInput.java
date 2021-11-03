@@ -34,7 +34,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * IscsiLunWhereInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:54.291904700+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:48:29.490085800+08:00[Asia/Shanghai]")
 public class IscsiLunWhereInput {
   public static final String SERIALIZED_NAME_ALLOWED_INITIATORS = "allowed_initiators";
   @SerializedName(SERIALIZED_NAME_ALLOWED_INITIATORS)

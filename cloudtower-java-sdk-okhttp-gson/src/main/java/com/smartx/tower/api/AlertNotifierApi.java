@@ -59,8 +59,8 @@ public class AlertNotifierApi {
 
     /**
      * Build call for getAlertNotifiers
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertNotifiersCall(String contentLanguage, GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAlertNotifiersCall(GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getAlertNotifiersRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class AlertNotifierApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAlertNotifiersValidateBeforeCall(String contentLanguage, GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getAlertNotifiers(Async)");
-        }
+    private okhttp3.Call getAlertNotifiersValidateBeforeCall(GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getAlertNotifiersRequestBody' is set
         if (getAlertNotifiersRequestBody == null) {
@@ -119,7 +114,7 @@ public class AlertNotifierApi {
         }
         
 
-        okhttp3.Call localVarCall = getAlertNotifiersCall(contentLanguage, getAlertNotifiersRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertNotifiersCall(getAlertNotifiersRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class AlertNotifierApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;AlertNotifier&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<AlertNotifier> getAlertNotifiers(String contentLanguage, GetAlertNotifiersRequestBody getAlertNotifiersRequestBody) throws ApiException {
-        ApiResponse<List<AlertNotifier>> localVarResp = getAlertNotifiersWithHttpInfo(contentLanguage, getAlertNotifiersRequestBody);
+    public List<AlertNotifier> getAlertNotifiers(GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<AlertNotifier>> localVarResp = getAlertNotifiersWithHttpInfo(getAlertNotifiersRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;AlertNotifier&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<AlertNotifier>> getAlertNotifiersWithHttpInfo(String contentLanguage, GetAlertNotifiersRequestBody getAlertNotifiersRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getAlertNotifiersValidateBeforeCall(contentLanguage, getAlertNotifiersRequestBody, null);
+    public ApiResponse<List<AlertNotifier>> getAlertNotifiersWithHttpInfo(GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getAlertNotifiersValidateBeforeCall(getAlertNotifiersRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<AlertNotifier>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class AlertNotifierApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertNotifiersAsync(String contentLanguage, GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, final ApiCallback<List<AlertNotifier>> _callback) throws ApiException {
+    public okhttp3.Call getAlertNotifiersAsync(GetAlertNotifiersRequestBody getAlertNotifiersRequestBody, String contentLanguage, final ApiCallback<List<AlertNotifier>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAlertNotifiersValidateBeforeCall(contentLanguage, getAlertNotifiersRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertNotifiersValidateBeforeCall(getAlertNotifiersRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<AlertNotifier>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getAlertNotifiersConnection
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertNotifiersConnectionCall(String contentLanguage, GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAlertNotifiersConnectionCall(GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getAlertNotifiersConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class AlertNotifierApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAlertNotifiersConnectionValidateBeforeCall(String contentLanguage, GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getAlertNotifiersConnection(Async)");
-        }
+    private okhttp3.Call getAlertNotifiersConnectionValidateBeforeCall(GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getAlertNotifiersConnectionRequestBody' is set
         if (getAlertNotifiersConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class AlertNotifierApi {
         }
         
 
-        okhttp3.Call localVarCall = getAlertNotifiersConnectionCall(contentLanguage, getAlertNotifiersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertNotifiersConnectionCall(getAlertNotifiersConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class AlertNotifierApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return AlertNotifierConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public AlertNotifierConnection getAlertNotifiersConnection(String contentLanguage, GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody) throws ApiException {
-        ApiResponse<AlertNotifierConnection> localVarResp = getAlertNotifiersConnectionWithHttpInfo(contentLanguage, getAlertNotifiersConnectionRequestBody);
+    public AlertNotifierConnection getAlertNotifiersConnection(GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<AlertNotifierConnection> localVarResp = getAlertNotifiersConnectionWithHttpInfo(getAlertNotifiersConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;AlertNotifierConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AlertNotifierConnection> getAlertNotifiersConnectionWithHttpInfo(String contentLanguage, GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getAlertNotifiersConnectionValidateBeforeCall(contentLanguage, getAlertNotifiersConnectionRequestBody, null);
+    public ApiResponse<AlertNotifierConnection> getAlertNotifiersConnectionWithHttpInfo(GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getAlertNotifiersConnectionValidateBeforeCall(getAlertNotifiersConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<AlertNotifierConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class AlertNotifierApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getAlertNotifiersConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class AlertNotifierApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAlertNotifiersConnectionAsync(String contentLanguage, GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, final ApiCallback<AlertNotifierConnection> _callback) throws ApiException {
+    public okhttp3.Call getAlertNotifiersConnectionAsync(GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody, String contentLanguage, final ApiCallback<AlertNotifierConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAlertNotifiersConnectionValidateBeforeCall(contentLanguage, getAlertNotifiersConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getAlertNotifiersConnectionValidateBeforeCall(getAlertNotifiersConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<AlertNotifierConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getAlertNotifiers
 
-> List&lt;AlertNotifier&gt; getAlertNotifiers(contentLanguage, getAlertNotifiersRequestBody)
+> List&lt;AlertNotifier&gt; getAlertNotifiers(getAlertNotifiersRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertNotifierApi apiInstance = new AlertNotifierApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetAlertNotifiersRequestBody getAlertNotifiersRequestBody = new GetAlertNotifiersRequestBody(); // GetAlertNotifiersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<AlertNotifier> result = apiInstance.getAlertNotifiers(contentLanguage, getAlertNotifiersRequestBody);
+            List<AlertNotifier> result = apiInstance.getAlertNotifiers(getAlertNotifiersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertNotifierApi#getAlertNotifiers");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getAlertNotifiersRequestBody** | [**GetAlertNotifiersRequestBody**](GetAlertNotifiersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getAlertNotifiersConnection
 
-> AlertNotifierConnection getAlertNotifiersConnection(contentLanguage, getAlertNotifiersConnectionRequestBody)
+> AlertNotifierConnection getAlertNotifiersConnection(getAlertNotifiersConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertNotifierApi apiInstance = new AlertNotifierApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetAlertNotifiersConnectionRequestBody getAlertNotifiersConnectionRequestBody = new GetAlertNotifiersConnectionRequestBody(); // GetAlertNotifiersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            AlertNotifierConnection result = apiInstance.getAlertNotifiersConnection(contentLanguage, getAlertNotifiersConnectionRequestBody);
+            AlertNotifierConnection result = apiInstance.getAlertNotifiersConnection(getAlertNotifiersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertNotifierApi#getAlertNotifiersConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getAlertNotifiersConnectionRequestBody** | [**GetAlertNotifiersConnectionRequestBody**](GetAlertNotifiersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

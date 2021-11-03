@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createVmVolume
 
-> List&lt;WithTaskVmVolume&gt; createVmVolume(contentLanguage, vmVolumeCreationParams)
+> List&lt;WithTaskVmVolume&gt; createVmVolume(vmVolumeCreationParams, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmVolumeApi apiInstance = new VmVolumeApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VmVolumeCreationParams> vmVolumeCreationParams = Arrays.asList(); // List<VmVolumeCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVmVolume> result = apiInstance.createVmVolume(contentLanguage, vmVolumeCreationParams);
+            List<WithTaskVmVolume> result = apiInstance.createVmVolume(vmVolumeCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmVolumeApi#createVmVolume");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmVolumeCreationParams** | [**List&lt;VmVolumeCreationParams&gt;**](VmVolumeCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## deleteVmVolumeFromVm
 
-> List&lt;WithTaskDeleteVmVolume&gt; deleteVmVolumeFromVm(contentLanguage, vmVolumeDeletionParams)
+> List&lt;WithTaskDeleteVmVolume&gt; deleteVmVolumeFromVm(vmVolumeDeletionParams, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmVolumeApi apiInstance = new VmVolumeApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VmVolumeDeletionParams vmVolumeDeletionParams = new VmVolumeDeletionParams(); // VmVolumeDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVmVolume> result = apiInstance.deleteVmVolumeFromVm(contentLanguage, vmVolumeDeletionParams);
+            List<WithTaskDeleteVmVolume> result = apiInstance.deleteVmVolumeFromVm(vmVolumeDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmVolumeApi#deleteVmVolumeFromVm");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vmVolumeDeletionParams** | [**VmVolumeDeletionParams**](VmVolumeDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## getVmVolumes
 
-> List&lt;VmVolume&gt; getVmVolumes(contentLanguage, getVmVolumesRequestBody)
+> List&lt;VmVolume&gt; getVmVolumes(getVmVolumesRequestBody, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmVolumeApi apiInstance = new VmVolumeApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmVolumesRequestBody getVmVolumesRequestBody = new GetVmVolumesRequestBody(); // GetVmVolumesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<VmVolume> result = apiInstance.getVmVolumes(contentLanguage, getVmVolumesRequestBody);
+            List<VmVolume> result = apiInstance.getVmVolumes(getVmVolumesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmVolumeApi#getVmVolumes");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmVolumesRequestBody** | [**GetVmVolumesRequestBody**](GetVmVolumesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## getVmVolumesConnection
 
-> VmVolumeConnection getVmVolumesConnection(contentLanguage, getVmVolumesConnectionRequestBody)
+> VmVolumeConnection getVmVolumesConnection(getVmVolumesConnectionRequestBody, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VmVolumeApi apiInstance = new VmVolumeApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody = new GetVmVolumesConnectionRequestBody(); // GetVmVolumesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VmVolumeConnection result = apiInstance.getVmVolumesConnection(contentLanguage, getVmVolumesConnectionRequestBody);
+            VmVolumeConnection result = apiInstance.getVmVolumesConnection(getVmVolumesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VmVolumeApi#getVmVolumesConnection");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVmVolumesConnectionRequestBody** | [**GetVmVolumesConnectionRequestBody**](GetVmVolumesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

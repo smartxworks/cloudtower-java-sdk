@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createBrickTopo
 
-> List&lt;WithTaskBrickTopo&gt; createBrickTopo(contentLanguage, brickTopoCreationParams)
+> List&lt;WithTaskBrickTopo&gt; createBrickTopo(brickTopoCreationParams, contentLanguage)
 
 
 
@@ -42,10 +42,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         BrickTopoApi apiInstance = new BrickTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<BrickTopoCreationParams> brickTopoCreationParams = Arrays.asList(); // List<BrickTopoCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskBrickTopo> result = apiInstance.createBrickTopo(contentLanguage, brickTopoCreationParams);
+            List<WithTaskBrickTopo> result = apiInstance.createBrickTopo(brickTopoCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BrickTopoApi#createBrickTopo");
@@ -63,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **brickTopoCreationParams** | [**List&lt;BrickTopoCreationParams&gt;**](BrickTopoCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## deleteBrickTopo
 
-> List&lt;WithTaskDeleteBrickTopo&gt; deleteBrickTopo(contentLanguage, brickTopoDeletionParams)
+> List&lt;WithTaskDeleteBrickTopo&gt; deleteBrickTopo(brickTopoDeletionParams, contentLanguage)
 
 
 
@@ -116,10 +116,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         BrickTopoApi apiInstance = new BrickTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         BrickTopoDeletionParams brickTopoDeletionParams = new BrickTopoDeletionParams(); // BrickTopoDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteBrickTopo> result = apiInstance.deleteBrickTopo(contentLanguage, brickTopoDeletionParams);
+            List<WithTaskDeleteBrickTopo> result = apiInstance.deleteBrickTopo(brickTopoDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BrickTopoApi#deleteBrickTopo");
@@ -137,8 +137,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **brickTopoDeletionParams** | [**BrickTopoDeletionParams**](BrickTopoDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## getBrickTopoes
 
-> List&lt;BrickTopo&gt; getBrickTopoes(contentLanguage, getBrickTopoesRequestBody)
+> List&lt;BrickTopo&gt; getBrickTopoes(getBrickTopoesRequestBody, contentLanguage)
 
 
 
@@ -190,10 +190,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         BrickTopoApi apiInstance = new BrickTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetBrickTopoesRequestBody getBrickTopoesRequestBody = new GetBrickTopoesRequestBody(); // GetBrickTopoesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<BrickTopo> result = apiInstance.getBrickTopoes(contentLanguage, getBrickTopoesRequestBody);
+            List<BrickTopo> result = apiInstance.getBrickTopoes(getBrickTopoesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BrickTopoApi#getBrickTopoes");
@@ -211,8 +211,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getBrickTopoesRequestBody** | [**GetBrickTopoesRequestBody**](GetBrickTopoesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## getBrickTopoesConnection
 
-> BrickTopoConnection getBrickTopoesConnection(contentLanguage, getBrickTopoesConnectionRequestBody)
+> BrickTopoConnection getBrickTopoesConnection(getBrickTopoesConnectionRequestBody, contentLanguage)
 
 
 
@@ -264,10 +264,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         BrickTopoApi apiInstance = new BrickTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody = new GetBrickTopoesConnectionRequestBody(); // GetBrickTopoesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            BrickTopoConnection result = apiInstance.getBrickTopoesConnection(contentLanguage, getBrickTopoesConnectionRequestBody);
+            BrickTopoConnection result = apiInstance.getBrickTopoesConnection(getBrickTopoesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BrickTopoApi#getBrickTopoesConnection");
@@ -285,8 +285,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getBrickTopoesConnectionRequestBody** | [**GetBrickTopoesConnectionRequestBody**](GetBrickTopoesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## moveBrickTopo
 
-> List&lt;WithTaskBrickTopo&gt; moveBrickTopo(contentLanguage, brickTopoMoveParams)
+> List&lt;WithTaskBrickTopo&gt; moveBrickTopo(brickTopoMoveParams, contentLanguage)
 
 
 
@@ -338,10 +338,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         BrickTopoApi apiInstance = new BrickTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         BrickTopoMoveParams brickTopoMoveParams = new BrickTopoMoveParams(); // BrickTopoMoveParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskBrickTopo> result = apiInstance.moveBrickTopo(contentLanguage, brickTopoMoveParams);
+            List<WithTaskBrickTopo> result = apiInstance.moveBrickTopo(brickTopoMoveParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BrickTopoApi#moveBrickTopo");
@@ -359,8 +359,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **brickTopoMoveParams** | [**BrickTopoMoveParams**](BrickTopoMoveParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## updateBrickTopo
 
-> List&lt;WithTaskBrickTopo&gt; updateBrickTopo(contentLanguage, brickTopoUpdationParams)
+> List&lt;WithTaskBrickTopo&gt; updateBrickTopo(brickTopoUpdationParams, contentLanguage)
 
 
 
@@ -412,10 +412,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         BrickTopoApi apiInstance = new BrickTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         BrickTopoUpdationParams brickTopoUpdationParams = new BrickTopoUpdationParams(); // BrickTopoUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskBrickTopo> result = apiInstance.updateBrickTopo(contentLanguage, brickTopoUpdationParams);
+            List<WithTaskBrickTopo> result = apiInstance.updateBrickTopo(brickTopoUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BrickTopoApi#updateBrickTopo");
@@ -433,8 +433,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **brickTopoUpdationParams** | [**BrickTopoUpdationParams**](BrickTopoUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

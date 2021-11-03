@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getIpmis
 
-> List&lt;Ipmi&gt; getIpmis(contentLanguage, getIpmisRequestBody)
+> List&lt;Ipmi&gt; getIpmis(getIpmisRequestBody, contentLanguage)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         IpmiApi apiInstance = new IpmiApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetIpmisRequestBody getIpmisRequestBody = new GetIpmisRequestBody(); // GetIpmisRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Ipmi> result = apiInstance.getIpmis(contentLanguage, getIpmisRequestBody);
+            List<Ipmi> result = apiInstance.getIpmis(getIpmisRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IpmiApi#getIpmis");
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getIpmisRequestBody** | [**GetIpmisRequestBody**](GetIpmisRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

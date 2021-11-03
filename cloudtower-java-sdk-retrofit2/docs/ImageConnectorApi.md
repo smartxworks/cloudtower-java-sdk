@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getImagesConnector
 
-> List&lt;ImageConnector&gt; getImagesConnector(contentLanguage, getImagesConnectorRequestBody)
+> List&lt;ImageConnector&gt; getImagesConnector(getImagesConnectorRequestBody, contentLanguage)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ImageConnectorApi apiInstance = new ImageConnectorApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetImagesConnectorRequestBody getImagesConnectorRequestBody = new GetImagesConnectorRequestBody(); // GetImagesConnectorRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ImageConnector> result = apiInstance.getImagesConnector(contentLanguage, getImagesConnectorRequestBody);
+            List<ImageConnector> result = apiInstance.getImagesConnector(getImagesConnectorRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ImageConnectorApi#getImagesConnector");
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getImagesConnectorRequestBody** | [**GetImagesConnectorRequestBody**](GetImagesConnectorRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

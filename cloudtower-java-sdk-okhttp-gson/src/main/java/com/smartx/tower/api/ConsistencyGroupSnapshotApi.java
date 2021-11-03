@@ -64,8 +64,8 @@ public class ConsistencyGroupSnapshotApi {
 
     /**
      * Build call for createConsistencyGroupSnapshot
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createConsistencyGroupSnapshotCall(String contentLanguage, List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createConsistencyGroupSnapshotCall(List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = consistencyGroupSnapshotCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class ConsistencyGroupSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createConsistencyGroupSnapshotValidateBeforeCall(String contentLanguage, List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createConsistencyGroupSnapshot(Async)");
-        }
+    private okhttp3.Call createConsistencyGroupSnapshotValidateBeforeCall(List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consistencyGroupSnapshotCreationParams' is set
         if (consistencyGroupSnapshotCreationParams == null) {
@@ -124,7 +119,7 @@ public class ConsistencyGroupSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = createConsistencyGroupSnapshotCall(contentLanguage, consistencyGroupSnapshotCreationParams, _callback);
+        okhttp3.Call localVarCall = createConsistencyGroupSnapshotCall(consistencyGroupSnapshotCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskConsistencyGroupSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskConsistencyGroupSnapshot> createConsistencyGroupSnapshot(String contentLanguage, List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskConsistencyGroupSnapshot>> localVarResp = createConsistencyGroupSnapshotWithHttpInfo(contentLanguage, consistencyGroupSnapshotCreationParams);
+    public List<WithTaskConsistencyGroupSnapshot> createConsistencyGroupSnapshot(List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskConsistencyGroupSnapshot>> localVarResp = createConsistencyGroupSnapshotWithHttpInfo(consistencyGroupSnapshotCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskConsistencyGroupSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskConsistencyGroupSnapshot>> createConsistencyGroupSnapshotWithHttpInfo(String contentLanguage, List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createConsistencyGroupSnapshotValidateBeforeCall(contentLanguage, consistencyGroupSnapshotCreationParams, null);
+    public ApiResponse<List<WithTaskConsistencyGroupSnapshot>> createConsistencyGroupSnapshotWithHttpInfo(List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createConsistencyGroupSnapshotValidateBeforeCall(consistencyGroupSnapshotCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroupSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createConsistencyGroupSnapshotAsync(String contentLanguage, List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, final ApiCallback<List<WithTaskConsistencyGroupSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call createConsistencyGroupSnapshotAsync(List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, String contentLanguage, final ApiCallback<List<WithTaskConsistencyGroupSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createConsistencyGroupSnapshotValidateBeforeCall(contentLanguage, consistencyGroupSnapshotCreationParams, _callback);
+        okhttp3.Call localVarCall = createConsistencyGroupSnapshotValidateBeforeCall(consistencyGroupSnapshotCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroupSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteConsistencyGroupSnapshot
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteConsistencyGroupSnapshotCall(String contentLanguage, ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteConsistencyGroupSnapshotCall(ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = consistencyGroupSnapshotDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class ConsistencyGroupSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteConsistencyGroupSnapshotValidateBeforeCall(String contentLanguage, ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteConsistencyGroupSnapshot(Async)");
-        }
+    private okhttp3.Call deleteConsistencyGroupSnapshotValidateBeforeCall(ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consistencyGroupSnapshotDeletionParams' is set
         if (consistencyGroupSnapshotDeletionParams == null) {
@@ -252,7 +242,7 @@ public class ConsistencyGroupSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteConsistencyGroupSnapshotCall(contentLanguage, consistencyGroupSnapshotDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteConsistencyGroupSnapshotCall(consistencyGroupSnapshotDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteConsistencyGroupSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteConsistencyGroupSnapshot> deleteConsistencyGroupSnapshot(String contentLanguage, ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteConsistencyGroupSnapshot>> localVarResp = deleteConsistencyGroupSnapshotWithHttpInfo(contentLanguage, consistencyGroupSnapshotDeletionParams);
+    public List<WithTaskDeleteConsistencyGroupSnapshot> deleteConsistencyGroupSnapshot(ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteConsistencyGroupSnapshot>> localVarResp = deleteConsistencyGroupSnapshotWithHttpInfo(consistencyGroupSnapshotDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteConsistencyGroupSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteConsistencyGroupSnapshot>> deleteConsistencyGroupSnapshotWithHttpInfo(String contentLanguage, ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteConsistencyGroupSnapshotValidateBeforeCall(contentLanguage, consistencyGroupSnapshotDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteConsistencyGroupSnapshot>> deleteConsistencyGroupSnapshotWithHttpInfo(ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteConsistencyGroupSnapshotValidateBeforeCall(consistencyGroupSnapshotDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteConsistencyGroupSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteConsistencyGroupSnapshotAsync(String contentLanguage, ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, final ApiCallback<List<WithTaskDeleteConsistencyGroupSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call deleteConsistencyGroupSnapshotAsync(ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteConsistencyGroupSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteConsistencyGroupSnapshotValidateBeforeCall(contentLanguage, consistencyGroupSnapshotDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteConsistencyGroupSnapshotValidateBeforeCall(consistencyGroupSnapshotDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteConsistencyGroupSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getConsistencyGroupSnapshots
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupSnapshotsCall(String contentLanguage, GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupSnapshotsCall(GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getConsistencyGroupSnapshotsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class ConsistencyGroupSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConsistencyGroupSnapshotsValidateBeforeCall(String contentLanguage, GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getConsistencyGroupSnapshots(Async)");
-        }
+    private okhttp3.Call getConsistencyGroupSnapshotsValidateBeforeCall(GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getConsistencyGroupSnapshotsRequestBody' is set
         if (getConsistencyGroupSnapshotsRequestBody == null) {
@@ -380,7 +365,7 @@ public class ConsistencyGroupSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsCall(contentLanguage, getConsistencyGroupSnapshotsRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsCall(getConsistencyGroupSnapshotsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ConsistencyGroupSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ConsistencyGroupSnapshot> getConsistencyGroupSnapshots(String contentLanguage, GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody) throws ApiException {
-        ApiResponse<List<ConsistencyGroupSnapshot>> localVarResp = getConsistencyGroupSnapshotsWithHttpInfo(contentLanguage, getConsistencyGroupSnapshotsRequestBody);
+    public List<ConsistencyGroupSnapshot> getConsistencyGroupSnapshots(GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ConsistencyGroupSnapshot>> localVarResp = getConsistencyGroupSnapshotsWithHttpInfo(getConsistencyGroupSnapshotsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ConsistencyGroupSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ConsistencyGroupSnapshot>> getConsistencyGroupSnapshotsWithHttpInfo(String contentLanguage, GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsValidateBeforeCall(contentLanguage, getConsistencyGroupSnapshotsRequestBody, null);
+    public ApiResponse<List<ConsistencyGroupSnapshot>> getConsistencyGroupSnapshotsWithHttpInfo(GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsValidateBeforeCall(getConsistencyGroupSnapshotsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ConsistencyGroupSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupSnapshotsAsync(String contentLanguage, GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, final ApiCallback<List<ConsistencyGroupSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupSnapshotsAsync(GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, String contentLanguage, final ApiCallback<List<ConsistencyGroupSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsValidateBeforeCall(contentLanguage, getConsistencyGroupSnapshotsRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsValidateBeforeCall(getConsistencyGroupSnapshotsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ConsistencyGroupSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getConsistencyGroupSnapshotsConnection
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupSnapshotsConnectionCall(String contentLanguage, GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupSnapshotsConnectionCall(GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getConsistencyGroupSnapshotsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class ConsistencyGroupSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConsistencyGroupSnapshotsConnectionValidateBeforeCall(String contentLanguage, GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getConsistencyGroupSnapshotsConnection(Async)");
-        }
+    private okhttp3.Call getConsistencyGroupSnapshotsConnectionValidateBeforeCall(GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getConsistencyGroupSnapshotsConnectionRequestBody' is set
         if (getConsistencyGroupSnapshotsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class ConsistencyGroupSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsConnectionCall(contentLanguage, getConsistencyGroupSnapshotsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsConnectionCall(getConsistencyGroupSnapshotsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ConsistencyGroupSnapshotConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ConsistencyGroupSnapshotConnection getConsistencyGroupSnapshotsConnection(String contentLanguage, GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody) throws ApiException {
-        ApiResponse<ConsistencyGroupSnapshotConnection> localVarResp = getConsistencyGroupSnapshotsConnectionWithHttpInfo(contentLanguage, getConsistencyGroupSnapshotsConnectionRequestBody);
+    public ConsistencyGroupSnapshotConnection getConsistencyGroupSnapshotsConnection(GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ConsistencyGroupSnapshotConnection> localVarResp = getConsistencyGroupSnapshotsConnectionWithHttpInfo(getConsistencyGroupSnapshotsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ConsistencyGroupSnapshotConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ConsistencyGroupSnapshotConnection> getConsistencyGroupSnapshotsConnectionWithHttpInfo(String contentLanguage, GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsConnectionValidateBeforeCall(contentLanguage, getConsistencyGroupSnapshotsConnectionRequestBody, null);
+    public ApiResponse<ConsistencyGroupSnapshotConnection> getConsistencyGroupSnapshotsConnectionWithHttpInfo(GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsConnectionValidateBeforeCall(getConsistencyGroupSnapshotsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ConsistencyGroupSnapshotConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getConsistencyGroupSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsistencyGroupSnapshotsConnectionAsync(String contentLanguage, GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, final ApiCallback<ConsistencyGroupSnapshotConnection> _callback) throws ApiException {
+    public okhttp3.Call getConsistencyGroupSnapshotsConnectionAsync(GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback<ConsistencyGroupSnapshotConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsConnectionValidateBeforeCall(contentLanguage, getConsistencyGroupSnapshotsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getConsistencyGroupSnapshotsConnectionValidateBeforeCall(getConsistencyGroupSnapshotsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ConsistencyGroupSnapshotConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateConsistencyGroupSnapshot
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateConsistencyGroupSnapshotCall(String contentLanguage, ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateConsistencyGroupSnapshotCall(ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = consistencyGroupSnapshotUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class ConsistencyGroupSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateConsistencyGroupSnapshotValidateBeforeCall(String contentLanguage, ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateConsistencyGroupSnapshot(Async)");
-        }
+    private okhttp3.Call updateConsistencyGroupSnapshotValidateBeforeCall(ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consistencyGroupSnapshotUpdationParams' is set
         if (consistencyGroupSnapshotUpdationParams == null) {
@@ -636,7 +611,7 @@ public class ConsistencyGroupSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = updateConsistencyGroupSnapshotCall(contentLanguage, consistencyGroupSnapshotUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateConsistencyGroupSnapshotCall(consistencyGroupSnapshotUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskConsistencyGroupSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskConsistencyGroupSnapshot> updateConsistencyGroupSnapshot(String contentLanguage, ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskConsistencyGroupSnapshot>> localVarResp = updateConsistencyGroupSnapshotWithHttpInfo(contentLanguage, consistencyGroupSnapshotUpdationParams);
+    public List<WithTaskConsistencyGroupSnapshot> updateConsistencyGroupSnapshot(ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskConsistencyGroupSnapshot>> localVarResp = updateConsistencyGroupSnapshotWithHttpInfo(consistencyGroupSnapshotUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskConsistencyGroupSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskConsistencyGroupSnapshot>> updateConsistencyGroupSnapshotWithHttpInfo(String contentLanguage, ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateConsistencyGroupSnapshotValidateBeforeCall(contentLanguage, consistencyGroupSnapshotUpdationParams, null);
+    public ApiResponse<List<WithTaskConsistencyGroupSnapshot>> updateConsistencyGroupSnapshotWithHttpInfo(ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateConsistencyGroupSnapshotValidateBeforeCall(consistencyGroupSnapshotUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroupSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class ConsistencyGroupSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param consistencyGroupSnapshotUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class ConsistencyGroupSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateConsistencyGroupSnapshotAsync(String contentLanguage, ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, final ApiCallback<List<WithTaskConsistencyGroupSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call updateConsistencyGroupSnapshotAsync(ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskConsistencyGroupSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateConsistencyGroupSnapshotValidateBeforeCall(contentLanguage, consistencyGroupSnapshotUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateConsistencyGroupSnapshotValidateBeforeCall(consistencyGroupSnapshotUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskConsistencyGroupSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

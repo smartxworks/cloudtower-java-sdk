@@ -23,8 +23,8 @@ public interface ClusterSettingsApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterSettingsesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ClusterSettings&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ClusterSettingsApi {
   })
   @POST("get-cluster-settingses")
   Call<List<ClusterSettings>> getClusterSettingses(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterSettingsesRequestBody getClusterSettingsesRequestBody
+    @retrofit2.http.Body GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClusterSettingsesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ClusterSettingsConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ClusterSettingsApi {
   })
   @POST("get-cluster-settingses-connection")
   Call<ClusterSettingsConnection> getClusterSettingsesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody
+    @retrofit2.http.Body GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

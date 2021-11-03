@@ -7,6 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**instanceIds** | **List&lt;String&gt;** |  |  [optional]
 **luns** | [**IscsiLunWhereInput**](IscsiLunWhereInput.md) |  |  [optional]
 **vmNics** | [**VmNicWhereInput**](VmNicWhereInput.md) |  |  [optional]
 **nics** | [**NicWhereInput**](NicWhereInput.md) |  |  [optional]

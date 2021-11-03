@@ -66,8 +66,8 @@ public class VlanApi {
 
     /**
      * Build call for createVmVlan
-     * @param contentLanguage  (required)
      * @param vmVlanCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -78,7 +78,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmVlanCall(String contentLanguage, List<VmVlanCreationParams> vmVlanCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVmVlanCall(List<VmVlanCreationParams> vmVlanCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmVlanCreationParams;
 
         // create path and map variables
@@ -113,12 +113,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVmVlanValidateBeforeCall(String contentLanguage, List<VmVlanCreationParams> vmVlanCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVmVlan(Async)");
-        }
+    private okhttp3.Call createVmVlanValidateBeforeCall(List<VmVlanCreationParams> vmVlanCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmVlanCreationParams' is set
         if (vmVlanCreationParams == null) {
@@ -126,7 +121,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = createVmVlanCall(contentLanguage, vmVlanCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmVlanCall(vmVlanCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -134,8 +129,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVlanCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -145,16 +140,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVlan> createVmVlan(String contentLanguage, List<VmVlanCreationParams> vmVlanCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVlan>> localVarResp = createVmVlanWithHttpInfo(contentLanguage, vmVlanCreationParams);
+    public List<WithTaskVlan> createVmVlan(List<VmVlanCreationParams> vmVlanCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVlan>> localVarResp = createVmVlanWithHttpInfo(vmVlanCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVlanCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -164,8 +159,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVlan>> createVmVlanWithHttpInfo(String contentLanguage, List<VmVlanCreationParams> vmVlanCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVmVlanValidateBeforeCall(contentLanguage, vmVlanCreationParams, null);
+    public ApiResponse<List<WithTaskVlan>> createVmVlanWithHttpInfo(List<VmVlanCreationParams> vmVlanCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVmVlanValidateBeforeCall(vmVlanCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -173,8 +168,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmVlanCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -185,17 +180,17 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmVlanAsync(String contentLanguage, List<VmVlanCreationParams> vmVlanCreationParams, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
+    public okhttp3.Call createVmVlanAsync(List<VmVlanCreationParams> vmVlanCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVmVlanValidateBeforeCall(contentLanguage, vmVlanCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmVlanValidateBeforeCall(vmVlanCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVlan
-     * @param contentLanguage  (required)
      * @param vlanDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -206,7 +201,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVlanCall(String contentLanguage, VlanDeletionParams vlanDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVlanCall(VlanDeletionParams vlanDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vlanDeletionParams;
 
         // create path and map variables
@@ -241,12 +236,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVlanValidateBeforeCall(String contentLanguage, VlanDeletionParams vlanDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteVlan(Async)");
-        }
+    private okhttp3.Call deleteVlanValidateBeforeCall(VlanDeletionParams vlanDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vlanDeletionParams' is set
         if (vlanDeletionParams == null) {
@@ -254,7 +244,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVlanCall(contentLanguage, vlanDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVlanCall(vlanDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -262,8 +252,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vlanDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -273,16 +263,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVlan> deleteVlan(String contentLanguage, VlanDeletionParams vlanDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVlan>> localVarResp = deleteVlanWithHttpInfo(contentLanguage, vlanDeletionParams);
+    public List<WithTaskDeleteVlan> deleteVlan(VlanDeletionParams vlanDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVlan>> localVarResp = deleteVlanWithHttpInfo(vlanDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vlanDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -292,8 +282,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVlan>> deleteVlanWithHttpInfo(String contentLanguage, VlanDeletionParams vlanDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVlanValidateBeforeCall(contentLanguage, vlanDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteVlan>> deleteVlanWithHttpInfo(VlanDeletionParams vlanDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteVlanValidateBeforeCall(vlanDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -301,8 +291,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vlanDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -313,17 +303,17 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVlanAsync(String contentLanguage, VlanDeletionParams vlanDeletionParams, final ApiCallback<List<WithTaskDeleteVlan>> _callback) throws ApiException {
+    public okhttp3.Call deleteVlanAsync(VlanDeletionParams vlanDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVlanValidateBeforeCall(contentLanguage, vlanDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVlanValidateBeforeCall(vlanDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVlans
-     * @param contentLanguage  (required)
      * @param getVlansRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -334,7 +324,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVlansCall(String contentLanguage, GetVlansRequestBody getVlansRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVlansCall(GetVlansRequestBody getVlansRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVlansRequestBody;
 
         // create path and map variables
@@ -369,12 +359,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVlansValidateBeforeCall(String contentLanguage, GetVlansRequestBody getVlansRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVlans(Async)");
-        }
+    private okhttp3.Call getVlansValidateBeforeCall(GetVlansRequestBody getVlansRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVlansRequestBody' is set
         if (getVlansRequestBody == null) {
@@ -382,7 +367,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = getVlansCall(contentLanguage, getVlansRequestBody, _callback);
+        okhttp3.Call localVarCall = getVlansCall(getVlansRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -390,8 +375,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVlansRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Vlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -401,16 +386,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Vlan> getVlans(String contentLanguage, GetVlansRequestBody getVlansRequestBody) throws ApiException {
-        ApiResponse<List<Vlan>> localVarResp = getVlansWithHttpInfo(contentLanguage, getVlansRequestBody);
+    public List<Vlan> getVlans(GetVlansRequestBody getVlansRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<Vlan>> localVarResp = getVlansWithHttpInfo(getVlansRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVlansRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Vlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -420,8 +405,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Vlan>> getVlansWithHttpInfo(String contentLanguage, GetVlansRequestBody getVlansRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVlansValidateBeforeCall(contentLanguage, getVlansRequestBody, null);
+    public ApiResponse<List<Vlan>> getVlansWithHttpInfo(GetVlansRequestBody getVlansRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVlansValidateBeforeCall(getVlansRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<Vlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -429,8 +414,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVlansRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -441,17 +426,17 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVlansAsync(String contentLanguage, GetVlansRequestBody getVlansRequestBody, final ApiCallback<List<Vlan>> _callback) throws ApiException {
+    public okhttp3.Call getVlansAsync(GetVlansRequestBody getVlansRequestBody, String contentLanguage, final ApiCallback<List<Vlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVlansValidateBeforeCall(contentLanguage, getVlansRequestBody, _callback);
+        okhttp3.Call localVarCall = getVlansValidateBeforeCall(getVlansRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<Vlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVlansConnection
-     * @param contentLanguage  (required)
      * @param getVlansConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -462,7 +447,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVlansConnectionCall(String contentLanguage, GetVlansConnectionRequestBody getVlansConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVlansConnectionCall(GetVlansConnectionRequestBody getVlansConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVlansConnectionRequestBody;
 
         // create path and map variables
@@ -497,12 +482,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVlansConnectionValidateBeforeCall(String contentLanguage, GetVlansConnectionRequestBody getVlansConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVlansConnection(Async)");
-        }
+    private okhttp3.Call getVlansConnectionValidateBeforeCall(GetVlansConnectionRequestBody getVlansConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVlansConnectionRequestBody' is set
         if (getVlansConnectionRequestBody == null) {
@@ -510,7 +490,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = getVlansConnectionCall(contentLanguage, getVlansConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVlansConnectionCall(getVlansConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -518,8 +498,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVlansConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VlanConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -529,16 +509,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VlanConnection getVlansConnection(String contentLanguage, GetVlansConnectionRequestBody getVlansConnectionRequestBody) throws ApiException {
-        ApiResponse<VlanConnection> localVarResp = getVlansConnectionWithHttpInfo(contentLanguage, getVlansConnectionRequestBody);
+    public VlanConnection getVlansConnection(GetVlansConnectionRequestBody getVlansConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VlanConnection> localVarResp = getVlansConnectionWithHttpInfo(getVlansConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVlansConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VlanConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -548,8 +528,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VlanConnection> getVlansConnectionWithHttpInfo(String contentLanguage, GetVlansConnectionRequestBody getVlansConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVlansConnectionValidateBeforeCall(contentLanguage, getVlansConnectionRequestBody, null);
+    public ApiResponse<VlanConnection> getVlansConnectionWithHttpInfo(GetVlansConnectionRequestBody getVlansConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVlansConnectionValidateBeforeCall(getVlansConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VlanConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -557,8 +537,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVlansConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -569,17 +549,17 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVlansConnectionAsync(String contentLanguage, GetVlansConnectionRequestBody getVlansConnectionRequestBody, final ApiCallback<VlanConnection> _callback) throws ApiException {
+    public okhttp3.Call getVlansConnectionAsync(GetVlansConnectionRequestBody getVlansConnectionRequestBody, String contentLanguage, final ApiCallback<VlanConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVlansConnectionValidateBeforeCall(contentLanguage, getVlansConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVlansConnectionValidateBeforeCall(getVlansConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VlanConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateManagementVlan
-     * @param contentLanguage  (required)
      * @param managementVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -590,7 +570,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateManagementVlanCall(String contentLanguage, ManagementVlanUpdationParams managementVlanUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateManagementVlanCall(ManagementVlanUpdationParams managementVlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = managementVlanUpdationParams;
 
         // create path and map variables
@@ -625,12 +605,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateManagementVlanValidateBeforeCall(String contentLanguage, ManagementVlanUpdationParams managementVlanUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateManagementVlan(Async)");
-        }
+    private okhttp3.Call updateManagementVlanValidateBeforeCall(ManagementVlanUpdationParams managementVlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'managementVlanUpdationParams' is set
         if (managementVlanUpdationParams == null) {
@@ -638,7 +613,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = updateManagementVlanCall(contentLanguage, managementVlanUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateManagementVlanCall(managementVlanUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -646,8 +621,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param managementVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -657,16 +632,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVlan> updateManagementVlan(String contentLanguage, ManagementVlanUpdationParams managementVlanUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVlan>> localVarResp = updateManagementVlanWithHttpInfo(contentLanguage, managementVlanUpdationParams);
+    public List<WithTaskVlan> updateManagementVlan(ManagementVlanUpdationParams managementVlanUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVlan>> localVarResp = updateManagementVlanWithHttpInfo(managementVlanUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param managementVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -676,8 +651,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVlan>> updateManagementVlanWithHttpInfo(String contentLanguage, ManagementVlanUpdationParams managementVlanUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateManagementVlanValidateBeforeCall(contentLanguage, managementVlanUpdationParams, null);
+    public ApiResponse<List<WithTaskVlan>> updateManagementVlanWithHttpInfo(ManagementVlanUpdationParams managementVlanUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateManagementVlanValidateBeforeCall(managementVlanUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -685,8 +660,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param managementVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -697,17 +672,17 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateManagementVlanAsync(String contentLanguage, ManagementVlanUpdationParams managementVlanUpdationParams, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
+    public okhttp3.Call updateManagementVlanAsync(ManagementVlanUpdationParams managementVlanUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateManagementVlanValidateBeforeCall(contentLanguage, managementVlanUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateManagementVlanValidateBeforeCall(managementVlanUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateMigrationVlan
-     * @param contentLanguage  (required)
      * @param migrationVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -718,7 +693,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateMigrationVlanCall(String contentLanguage, MigrationVlanUpdationParams migrationVlanUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateMigrationVlanCall(MigrationVlanUpdationParams migrationVlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = migrationVlanUpdationParams;
 
         // create path and map variables
@@ -753,12 +728,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateMigrationVlanValidateBeforeCall(String contentLanguage, MigrationVlanUpdationParams migrationVlanUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateMigrationVlan(Async)");
-        }
+    private okhttp3.Call updateMigrationVlanValidateBeforeCall(MigrationVlanUpdationParams migrationVlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'migrationVlanUpdationParams' is set
         if (migrationVlanUpdationParams == null) {
@@ -766,7 +736,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = updateMigrationVlanCall(contentLanguage, migrationVlanUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateMigrationVlanCall(migrationVlanUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -774,8 +744,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param migrationVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -785,16 +755,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVlan> updateMigrationVlan(String contentLanguage, MigrationVlanUpdationParams migrationVlanUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVlan>> localVarResp = updateMigrationVlanWithHttpInfo(contentLanguage, migrationVlanUpdationParams);
+    public List<WithTaskVlan> updateMigrationVlan(MigrationVlanUpdationParams migrationVlanUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVlan>> localVarResp = updateMigrationVlanWithHttpInfo(migrationVlanUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param migrationVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -804,8 +774,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVlan>> updateMigrationVlanWithHttpInfo(String contentLanguage, MigrationVlanUpdationParams migrationVlanUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateMigrationVlanValidateBeforeCall(contentLanguage, migrationVlanUpdationParams, null);
+    public ApiResponse<List<WithTaskVlan>> updateMigrationVlanWithHttpInfo(MigrationVlanUpdationParams migrationVlanUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateMigrationVlanValidateBeforeCall(migrationVlanUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -813,8 +783,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param migrationVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -825,17 +795,17 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateMigrationVlanAsync(String contentLanguage, MigrationVlanUpdationParams migrationVlanUpdationParams, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
+    public okhttp3.Call updateMigrationVlanAsync(MigrationVlanUpdationParams migrationVlanUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateMigrationVlanValidateBeforeCall(contentLanguage, migrationVlanUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateMigrationVlanValidateBeforeCall(migrationVlanUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateVlan
-     * @param contentLanguage  (required)
      * @param vmVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -846,7 +816,7 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVlanCall(String contentLanguage, VmVlanUpdationParams vmVlanUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVlanCall(VmVlanUpdationParams vmVlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmVlanUpdationParams;
 
         // create path and map variables
@@ -881,12 +851,7 @@ public class VlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVlanValidateBeforeCall(String contentLanguage, VmVlanUpdationParams vmVlanUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateVlan(Async)");
-        }
+    private okhttp3.Call updateVlanValidateBeforeCall(VmVlanUpdationParams vmVlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmVlanUpdationParams' is set
         if (vmVlanUpdationParams == null) {
@@ -894,7 +859,7 @@ public class VlanApi {
         }
         
 
-        okhttp3.Call localVarCall = updateVlanCall(contentLanguage, vmVlanUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVlanCall(vmVlanUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -902,8 +867,8 @@ public class VlanApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -913,16 +878,16 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVlan> updateVlan(String contentLanguage, VmVlanUpdationParams vmVlanUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVlan>> localVarResp = updateVlanWithHttpInfo(contentLanguage, vmVlanUpdationParams);
+    public List<WithTaskVlan> updateVlan(VmVlanUpdationParams vmVlanUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVlan>> localVarResp = updateVlanWithHttpInfo(vmVlanUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -932,8 +897,8 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVlan>> updateVlanWithHttpInfo(String contentLanguage, VmVlanUpdationParams vmVlanUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateVlanValidateBeforeCall(contentLanguage, vmVlanUpdationParams, null);
+    public ApiResponse<List<WithTaskVlan>> updateVlanWithHttpInfo(VmVlanUpdationParams vmVlanUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateVlanValidateBeforeCall(vmVlanUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -941,8 +906,8 @@ public class VlanApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmVlanUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -953,9 +918,9 @@ public class VlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVlanAsync(String contentLanguage, VmVlanUpdationParams vmVlanUpdationParams, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
+    public okhttp3.Call updateVlanAsync(VmVlanUpdationParams vmVlanUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateVlanValidateBeforeCall(contentLanguage, vmVlanUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateVlanValidateBeforeCall(vmVlanUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

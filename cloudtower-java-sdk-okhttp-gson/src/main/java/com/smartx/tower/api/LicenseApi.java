@@ -61,8 +61,8 @@ public class LicenseApi {
 
     /**
      * Build call for getLicenses
-     * @param contentLanguage  (required)
      * @param getLicensesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -73,7 +73,7 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLicensesCall(String contentLanguage, GetLicensesRequestBody getLicensesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLicensesCall(GetLicensesRequestBody getLicensesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getLicensesRequestBody;
 
         // create path and map variables
@@ -108,12 +108,7 @@ public class LicenseApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLicensesValidateBeforeCall(String contentLanguage, GetLicensesRequestBody getLicensesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getLicenses(Async)");
-        }
+    private okhttp3.Call getLicensesValidateBeforeCall(GetLicensesRequestBody getLicensesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getLicensesRequestBody' is set
         if (getLicensesRequestBody == null) {
@@ -121,7 +116,7 @@ public class LicenseApi {
         }
         
 
-        okhttp3.Call localVarCall = getLicensesCall(contentLanguage, getLicensesRequestBody, _callback);
+        okhttp3.Call localVarCall = getLicensesCall(getLicensesRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -129,8 +124,8 @@ public class LicenseApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getLicensesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;License&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -140,16 +135,16 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<License> getLicenses(String contentLanguage, GetLicensesRequestBody getLicensesRequestBody) throws ApiException {
-        ApiResponse<List<License>> localVarResp = getLicensesWithHttpInfo(contentLanguage, getLicensesRequestBody);
+    public List<License> getLicenses(GetLicensesRequestBody getLicensesRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<License>> localVarResp = getLicensesWithHttpInfo(getLicensesRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getLicensesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;License&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -159,8 +154,8 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<License>> getLicensesWithHttpInfo(String contentLanguage, GetLicensesRequestBody getLicensesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getLicensesValidateBeforeCall(contentLanguage, getLicensesRequestBody, null);
+    public ApiResponse<List<License>> getLicensesWithHttpInfo(GetLicensesRequestBody getLicensesRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getLicensesValidateBeforeCall(getLicensesRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<License>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -168,8 +163,8 @@ public class LicenseApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getLicensesRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -180,17 +175,17 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLicensesAsync(String contentLanguage, GetLicensesRequestBody getLicensesRequestBody, final ApiCallback<List<License>> _callback) throws ApiException {
+    public okhttp3.Call getLicensesAsync(GetLicensesRequestBody getLicensesRequestBody, String contentLanguage, final ApiCallback<List<License>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getLicensesValidateBeforeCall(contentLanguage, getLicensesRequestBody, _callback);
+        okhttp3.Call localVarCall = getLicensesValidateBeforeCall(getLicensesRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<License>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getLicensesConnection
-     * @param contentLanguage  (required)
      * @param getLicensesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -201,7 +196,7 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLicensesConnectionCall(String contentLanguage, GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLicensesConnectionCall(GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getLicensesConnectionRequestBody;
 
         // create path and map variables
@@ -236,12 +231,7 @@ public class LicenseApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLicensesConnectionValidateBeforeCall(String contentLanguage, GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getLicensesConnection(Async)");
-        }
+    private okhttp3.Call getLicensesConnectionValidateBeforeCall(GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getLicensesConnectionRequestBody' is set
         if (getLicensesConnectionRequestBody == null) {
@@ -249,7 +239,7 @@ public class LicenseApi {
         }
         
 
-        okhttp3.Call localVarCall = getLicensesConnectionCall(contentLanguage, getLicensesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getLicensesConnectionCall(getLicensesConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -257,8 +247,8 @@ public class LicenseApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getLicensesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return LicenseConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -268,16 +258,16 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public LicenseConnection getLicensesConnection(String contentLanguage, GetLicensesConnectionRequestBody getLicensesConnectionRequestBody) throws ApiException {
-        ApiResponse<LicenseConnection> localVarResp = getLicensesConnectionWithHttpInfo(contentLanguage, getLicensesConnectionRequestBody);
+    public LicenseConnection getLicensesConnection(GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<LicenseConnection> localVarResp = getLicensesConnectionWithHttpInfo(getLicensesConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getLicensesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;LicenseConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -287,8 +277,8 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<LicenseConnection> getLicensesConnectionWithHttpInfo(String contentLanguage, GetLicensesConnectionRequestBody getLicensesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getLicensesConnectionValidateBeforeCall(contentLanguage, getLicensesConnectionRequestBody, null);
+    public ApiResponse<LicenseConnection> getLicensesConnectionWithHttpInfo(GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getLicensesConnectionValidateBeforeCall(getLicensesConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<LicenseConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -296,8 +286,8 @@ public class LicenseApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getLicensesConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -308,17 +298,17 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLicensesConnectionAsync(String contentLanguage, GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, final ApiCallback<LicenseConnection> _callback) throws ApiException {
+    public okhttp3.Call getLicensesConnectionAsync(GetLicensesConnectionRequestBody getLicensesConnectionRequestBody, String contentLanguage, final ApiCallback<LicenseConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getLicensesConnectionValidateBeforeCall(contentLanguage, getLicensesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getLicensesConnectionValidateBeforeCall(getLicensesConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<LicenseConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateDeploy
-     * @param contentLanguage  (required)
      * @param licenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -329,7 +319,7 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDeployCall(String contentLanguage, LicenseUpdationParams licenseUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateDeployCall(LicenseUpdationParams licenseUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = licenseUpdationParams;
 
         // create path and map variables
@@ -364,12 +354,7 @@ public class LicenseApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateDeployValidateBeforeCall(String contentLanguage, LicenseUpdationParams licenseUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateDeploy(Async)");
-        }
+    private okhttp3.Call updateDeployValidateBeforeCall(LicenseUpdationParams licenseUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'licenseUpdationParams' is set
         if (licenseUpdationParams == null) {
@@ -377,7 +362,7 @@ public class LicenseApi {
         }
         
 
-        okhttp3.Call localVarCall = updateDeployCall(contentLanguage, licenseUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateDeployCall(licenseUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -385,8 +370,8 @@ public class LicenseApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param licenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return WithTaskLicense
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -396,16 +381,16 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public WithTaskLicense updateDeploy(String contentLanguage, LicenseUpdationParams licenseUpdationParams) throws ApiException {
-        ApiResponse<WithTaskLicense> localVarResp = updateDeployWithHttpInfo(contentLanguage, licenseUpdationParams);
+    public WithTaskLicense updateDeploy(LicenseUpdationParams licenseUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<WithTaskLicense> localVarResp = updateDeployWithHttpInfo(licenseUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param licenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;WithTaskLicense&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -415,8 +400,8 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<WithTaskLicense> updateDeployWithHttpInfo(String contentLanguage, LicenseUpdationParams licenseUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateDeployValidateBeforeCall(contentLanguage, licenseUpdationParams, null);
+    public ApiResponse<WithTaskLicense> updateDeployWithHttpInfo(LicenseUpdationParams licenseUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateDeployValidateBeforeCall(licenseUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<WithTaskLicense>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -424,8 +409,8 @@ public class LicenseApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param licenseUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -436,9 +421,9 @@ public class LicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDeployAsync(String contentLanguage, LicenseUpdationParams licenseUpdationParams, final ApiCallback<WithTaskLicense> _callback) throws ApiException {
+    public okhttp3.Call updateDeployAsync(LicenseUpdationParams licenseUpdationParams, String contentLanguage, final ApiCallback<WithTaskLicense> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateDeployValidateBeforeCall(contentLanguage, licenseUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateDeployValidateBeforeCall(licenseUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<WithTaskLicense>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

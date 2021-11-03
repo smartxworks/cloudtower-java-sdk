@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createElfImage
 
-> List&lt;UploadTask&gt; createElfImage(contentLanguage, file, clusterId, name, size, description, uploadTaskId)
+> List&lt;UploadTask&gt; createElfImage(file, clusterId, name, size, description, uploadTaskId, contentLanguage)
 
 
 
@@ -41,15 +41,15 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfImageApi apiInstance = new ElfImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         File file = new File("/path/to/file"); // File | 
         String clusterId = "clusterId_example"; // String | 
         String name = "name_example"; // String | 
         String size = "size_example"; // String | 
         String description = "description_example"; // String | 
         String uploadTaskId = "uploadTaskId_example"; // String | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<UploadTask> result = apiInstance.createElfImage(contentLanguage, file, clusterId, name, size, description, uploadTaskId);
+            List<UploadTask> result = apiInstance.createElfImage(file, clusterId, name, size, description, uploadTaskId, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfImageApi#createElfImage");
@@ -67,13 +67,13 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **file** | **File**|  |
  **clusterId** | **String**|  |
  **name** | **String**|  |
  **size** | **String**|  |
  **description** | **String**|  |
  **uploadTaskId** | **String**|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ## deleteElfImage
 
-> List&lt;WithTaskDeleteElfImage&gt; deleteElfImage(contentLanguage, elfImageDeletionParams)
+> List&lt;WithTaskDeleteElfImage&gt; deleteElfImage(elfImageDeletionParams, contentLanguage)
 
 
 
@@ -125,10 +125,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfImageApi apiInstance = new ElfImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ElfImageDeletionParams elfImageDeletionParams = new ElfImageDeletionParams(); // ElfImageDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteElfImage> result = apiInstance.deleteElfImage(contentLanguage, elfImageDeletionParams);
+            List<WithTaskDeleteElfImage> result = apiInstance.deleteElfImage(elfImageDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfImageApi#deleteElfImage");
@@ -146,8 +146,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **elfImageDeletionParams** | [**ElfImageDeletionParams**](ElfImageDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ## getElfImages
 
-> List&lt;ElfImage&gt; getElfImages(contentLanguage, getElfImagesRequestBody)
+> List&lt;ElfImage&gt; getElfImages(getElfImagesRequestBody, contentLanguage)
 
 
 
@@ -199,10 +199,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfImageApi apiInstance = new ElfImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetElfImagesRequestBody getElfImagesRequestBody = new GetElfImagesRequestBody(); // GetElfImagesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ElfImage> result = apiInstance.getElfImages(contentLanguage, getElfImagesRequestBody);
+            List<ElfImage> result = apiInstance.getElfImages(getElfImagesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfImageApi#getElfImages");
@@ -220,8 +220,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getElfImagesRequestBody** | [**GetElfImagesRequestBody**](GetElfImagesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ## getElfImagesConnection
 
-> ElfImageConnection getElfImagesConnection(contentLanguage, getElfImagesConnectionRequestBody)
+> ElfImageConnection getElfImagesConnection(getElfImagesConnectionRequestBody, contentLanguage)
 
 
 
@@ -273,10 +273,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfImageApi apiInstance = new ElfImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetElfImagesConnectionRequestBody getElfImagesConnectionRequestBody = new GetElfImagesConnectionRequestBody(); // GetElfImagesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ElfImageConnection result = apiInstance.getElfImagesConnection(contentLanguage, getElfImagesConnectionRequestBody);
+            ElfImageConnection result = apiInstance.getElfImagesConnection(getElfImagesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfImageApi#getElfImagesConnection");
@@ -294,8 +294,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getElfImagesConnectionRequestBody** | [**GetElfImagesConnectionRequestBody**](GetElfImagesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ## updateElfImage
 
-> List&lt;WithTaskElfImage&gt; updateElfImage(contentLanguage, elfImageUpdationParams)
+> List&lt;WithTaskElfImage&gt; updateElfImage(elfImageUpdationParams, contentLanguage)
 
 
 
@@ -347,10 +347,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ElfImageApi apiInstance = new ElfImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ElfImageUpdationParams elfImageUpdationParams = new ElfImageUpdationParams(); // ElfImageUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskElfImage> result = apiInstance.updateElfImage(contentLanguage, elfImageUpdationParams);
+            List<WithTaskElfImage> result = apiInstance.updateElfImage(elfImageUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ElfImageApi#updateElfImage");
@@ -368,8 +368,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **elfImageUpdationParams** | [**ElfImageUpdationParams**](ElfImageUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

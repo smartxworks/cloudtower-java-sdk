@@ -30,8 +30,8 @@ public interface GlobalSettingsApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterRecycleBinCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskClusterSettings&gt;&gt;
    */
   @Headers({
@@ -39,14 +39,14 @@ public interface GlobalSettingsApi {
   })
   @POST("create-cluster-recycle-bin-setting")
   Call<List<WithTaskClusterSettings>> createClusterRecycleBinSetting(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ClusterRecycleBinCreationParams clusterRecycleBinCreationParams
+    @retrofit2.http.Body ClusterRecycleBinCreationParams clusterRecycleBinCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterRecycleBinDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteClusterRecycleBin&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface GlobalSettingsApi {
   })
   @POST("delete-cluster-recycle-bin-setting")
   Call<List<WithTaskDeleteClusterRecycleBin>> deleteClusterRecycleBinSetting(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams
+    @retrofit2.http.Body ClusterRecycleBinDeletionParams clusterRecycleBinDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getGlobalSettingsesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;GlobalSettings&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface GlobalSettingsApi {
   })
   @POST("get-global-settingses")
   Call<List<GlobalSettings>> getGlobalSettingses(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody
+    @retrofit2.http.Body GetGlobalSettingsesRequestBody getGlobalSettingsesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getGlobalSettingsesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;GlobalSettingsConnection&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface GlobalSettingsApi {
   })
   @POST("get-global-settingses-connection")
   Call<GlobalSettingsConnection> getGlobalSettingsesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody
+    @retrofit2.http.Body GetGlobalSettingsesConnectionRequestBody getGlobalSettingsesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterRecycleBinUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskClusterSettings&gt;&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface GlobalSettingsApi {
   })
   @POST("update-cluster-recycle-bin-setting")
   Call<List<WithTaskClusterSettings>> updateClusterRecycleBinSetting(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams
+    @retrofit2.http.Body ClusterRecycleBinUpdationParams clusterRecycleBinUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param globalRecycleBinUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;WithTaskGlobalSettings&gt;
    */
   @Headers({
@@ -114,7 +114,7 @@ public interface GlobalSettingsApi {
   })
   @POST("update-global-recycle-bin-setting")
   Call<WithTaskGlobalSettings> updateGlobalRecycleBinSetting(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams
+    @retrofit2.http.Body GlobalRecycleBinUpdationParams globalRecycleBinUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

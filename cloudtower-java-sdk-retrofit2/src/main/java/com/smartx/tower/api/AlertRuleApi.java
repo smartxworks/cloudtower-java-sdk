@@ -23,8 +23,8 @@ public interface AlertRuleApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getAlertRulesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;AlertRule&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface AlertRuleApi {
   })
   @POST("get-alert-rules")
   Call<List<AlertRule>> getAlertRules(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetAlertRulesRequestBody getAlertRulesRequestBody
+    @retrofit2.http.Body GetAlertRulesRequestBody getAlertRulesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getAlertRulesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;AlertRuleConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface AlertRuleApi {
   })
   @POST("get-alert-rules-connection")
   Call<AlertRuleConnection> getAlertRulesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody
+    @retrofit2.http.Body GetAlertRulesConnectionRequestBody getAlertRulesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createView
 
-> List&lt;WithTaskView&gt; createView(contentLanguage, viewCreationParams)
+> List&lt;WithTaskView&gt; createView(viewCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ViewApi apiInstance = new ViewApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<ViewCreationParams> viewCreationParams = Arrays.asList(); // List<ViewCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskView> result = apiInstance.createView(contentLanguage, viewCreationParams);
+            List<WithTaskView> result = apiInstance.createView(viewCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ViewApi#createView");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **viewCreationParams** | [**List&lt;ViewCreationParams&gt;**](ViewCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteView
 
-> List&lt;WithTaskDeleteView&gt; deleteView(contentLanguage, viewDeletionParams)
+> List&lt;WithTaskDeleteView&gt; deleteView(viewDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ViewApi apiInstance = new ViewApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ViewDeletionParams viewDeletionParams = new ViewDeletionParams(); // ViewDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteView> result = apiInstance.deleteView(contentLanguage, viewDeletionParams);
+            List<WithTaskDeleteView> result = apiInstance.deleteView(viewDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ViewApi#deleteView");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **viewDeletionParams** | [**ViewDeletionParams**](ViewDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getViews
 
-> List&lt;View&gt; getViews(contentLanguage, getViewsRequestBody)
+> List&lt;View&gt; getViews(getViewsRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ViewApi apiInstance = new ViewApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetViewsRequestBody getViewsRequestBody = new GetViewsRequestBody(); // GetViewsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<View> result = apiInstance.getViews(contentLanguage, getViewsRequestBody);
+            List<View> result = apiInstance.getViews(getViewsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ViewApi#getViews");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getViewsRequestBody** | [**GetViewsRequestBody**](GetViewsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getViewsConnection
 
-> ViewConnection getViewsConnection(contentLanguage, getViewsConnectionRequestBody)
+> ViewConnection getViewsConnection(getViewsConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ViewApi apiInstance = new ViewApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetViewsConnectionRequestBody getViewsConnectionRequestBody = new GetViewsConnectionRequestBody(); // GetViewsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ViewConnection result = apiInstance.getViewsConnection(contentLanguage, getViewsConnectionRequestBody);
+            ViewConnection result = apiInstance.getViewsConnection(getViewsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ViewApi#getViewsConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getViewsConnectionRequestBody** | [**GetViewsConnectionRequestBody**](GetViewsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateView
 
-> List&lt;WithTaskView&gt; updateView(contentLanguage, viewUpdationParams)
+> List&lt;WithTaskView&gt; updateView(viewUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ViewApi apiInstance = new ViewApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ViewUpdationParams viewUpdationParams = new ViewUpdationParams(); // ViewUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskView> result = apiInstance.updateView(contentLanguage, viewUpdationParams);
+            List<WithTaskView> result = apiInstance.updateView(viewUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ViewApi#updateView");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **viewUpdationParams** | [**ViewUpdationParams**](ViewUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

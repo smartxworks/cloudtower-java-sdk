@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clusterId** | **String** |  | 
+**clusterId** | **String** |  |  [optional]
 **cloudInitSupported** | **Boolean** |  | 
 **vmId** | **String** |  | 
 **description** | **String** |  |  [optional]

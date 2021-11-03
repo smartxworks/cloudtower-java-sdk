@@ -23,8 +23,8 @@ public interface MigrateTransmitterApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getMigrateTransmittersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;MigrateTransmitter&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface MigrateTransmitterApi {
   })
   @POST("get-migrate-transmitters")
   Call<List<MigrateTransmitter>> getMigrateTransmitters(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody
+    @retrofit2.http.Body GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getMigrateTransmittersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;MigrateTransmitterConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface MigrateTransmitterApi {
   })
   @POST("get-migrate-transmitters-connection")
   Call<MigrateTransmitterConnection> getMigrateTransmittersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody
+    @retrofit2.http.Body GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

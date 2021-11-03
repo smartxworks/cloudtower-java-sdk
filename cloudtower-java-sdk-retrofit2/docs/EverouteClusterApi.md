@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getEverouteClusters
 
-> List&lt;EverouteCluster&gt; getEverouteClusters(contentLanguage, getEverouteClustersRequestBody)
+> List&lt;EverouteCluster&gt; getEverouteClusters(getEverouteClustersRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EverouteClusterApi apiInstance = new EverouteClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEverouteClustersRequestBody getEverouteClustersRequestBody = new GetEverouteClustersRequestBody(); // GetEverouteClustersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<EverouteCluster> result = apiInstance.getEverouteClusters(contentLanguage, getEverouteClustersRequestBody);
+            List<EverouteCluster> result = apiInstance.getEverouteClusters(getEverouteClustersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EverouteClusterApi#getEverouteClusters");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEverouteClustersRequestBody** | [**GetEverouteClustersRequestBody**](GetEverouteClustersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getEverouteClustersConnection
 
-> EverouteClusterConnection getEverouteClustersConnection(contentLanguage, getEverouteClustersConnectionRequestBody)
+> EverouteClusterConnection getEverouteClustersConnection(getEverouteClustersConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         EverouteClusterApi apiInstance = new EverouteClusterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetEverouteClustersConnectionRequestBody getEverouteClustersConnectionRequestBody = new GetEverouteClustersConnectionRequestBody(); // GetEverouteClustersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            EverouteClusterConnection result = apiInstance.getEverouteClustersConnection(contentLanguage, getEverouteClustersConnectionRequestBody);
+            EverouteClusterConnection result = apiInstance.getEverouteClustersConnection(getEverouteClustersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EverouteClusterApi#getEverouteClustersConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getEverouteClustersConnectionRequestBody** | [**GetEverouteClustersConnectionRequestBody**](GetEverouteClustersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

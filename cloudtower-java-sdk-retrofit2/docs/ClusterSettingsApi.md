@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getClusterSettingses
 
-> List&lt;ClusterSettings&gt; getClusterSettingses(contentLanguage, getClusterSettingsesRequestBody)
+> List&lt;ClusterSettings&gt; getClusterSettingses(getClusterSettingsesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterSettingsApi apiInstance = new ClusterSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterSettingsesRequestBody getClusterSettingsesRequestBody = new GetClusterSettingsesRequestBody(); // GetClusterSettingsesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ClusterSettings> result = apiInstance.getClusterSettingses(contentLanguage, getClusterSettingsesRequestBody);
+            List<ClusterSettings> result = apiInstance.getClusterSettingses(getClusterSettingsesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterSettingsApi#getClusterSettingses");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterSettingsesRequestBody** | [**GetClusterSettingsesRequestBody**](GetClusterSettingsesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getClusterSettingsesConnection
 
-> ClusterSettingsConnection getClusterSettingsesConnection(contentLanguage, getClusterSettingsesConnectionRequestBody)
+> ClusterSettingsConnection getClusterSettingsesConnection(getClusterSettingsesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterSettingsApi apiInstance = new ClusterSettingsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody = new GetClusterSettingsesConnectionRequestBody(); // GetClusterSettingsesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ClusterSettingsConnection result = apiInstance.getClusterSettingsesConnection(contentLanguage, getClusterSettingsesConnectionRequestBody);
+            ClusterSettingsConnection result = apiInstance.getClusterSettingsesConnection(getClusterSettingsesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterSettingsApi#getClusterSettingsesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterSettingsesConnectionRequestBody** | [**GetClusterSettingsesConnectionRequestBody**](GetClusterSettingsesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

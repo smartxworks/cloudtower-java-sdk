@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## getAlerts
 
-> List&lt;Alert&gt; getAlerts(contentLanguage, getAlertsRequestBody)
+> List&lt;Alert&gt; getAlerts(getAlertsRequestBody, contentLanguage)
 
 
 
@@ -39,10 +39,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertApi apiInstance = new AlertApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetAlertsRequestBody getAlertsRequestBody = new GetAlertsRequestBody(); // GetAlertsRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Alert> result = apiInstance.getAlerts(contentLanguage, getAlertsRequestBody);
+            List<Alert> result = apiInstance.getAlerts(getAlertsRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertApi#getAlerts");
@@ -60,8 +60,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getAlertsRequestBody** | [**GetAlertsRequestBody**](GetAlertsRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## getAlertsConnection
 
-> AlertConnection getAlertsConnection(contentLanguage, getAlertsConnectionRequestBody)
+> AlertConnection getAlertsConnection(getAlertsConnectionRequestBody, contentLanguage)
 
 
 
@@ -113,10 +113,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertApi apiInstance = new AlertApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetAlertsConnectionRequestBody getAlertsConnectionRequestBody = new GetAlertsConnectionRequestBody(); // GetAlertsConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            AlertConnection result = apiInstance.getAlertsConnection(contentLanguage, getAlertsConnectionRequestBody);
+            AlertConnection result = apiInstance.getAlertsConnection(getAlertsConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertApi#getAlertsConnection");
@@ -134,8 +134,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getAlertsConnectionRequestBody** | [**GetAlertsConnectionRequestBody**](GetAlertsConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## resolveAlert
 
-> List&lt;WithTaskAlert&gt; resolveAlert(contentLanguage, resolveAlertParams)
+> List&lt;WithTaskAlert&gt; resolveAlert(resolveAlertParams, contentLanguage)
 
 
 
@@ -187,10 +187,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         AlertApi apiInstance = new AlertApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         ResolveAlertParams resolveAlertParams = new ResolveAlertParams(); // ResolveAlertParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskAlert> result = apiInstance.resolveAlert(contentLanguage, resolveAlertParams);
+            List<WithTaskAlert> result = apiInstance.resolveAlert(resolveAlertParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AlertApi#resolveAlert");
@@ -208,8 +208,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **resolveAlertParams** | [**ResolveAlertParams**](ResolveAlertParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -28,8 +28,8 @@ public interface NamespaceGroupApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param namespaceGroupCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNamespaceGroup&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface NamespaceGroupApi {
   })
   @POST("create-namespace-group")
   Call<List<WithTaskNamespaceGroup>> createNamespaceGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<NamespaceGroupCreationParams> namespaceGroupCreationParams
+    @retrofit2.http.Body List<NamespaceGroupCreationParams> namespaceGroupCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param namespaceGroupDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteNamespaceGroup&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface NamespaceGroupApi {
   })
   @POST("delete-namespace-group")
   Call<List<WithTaskDeleteNamespaceGroup>> deleteNamespaceGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NamespaceGroupDeletionParams namespaceGroupDeletionParams
+    @retrofit2.http.Body NamespaceGroupDeletionParams namespaceGroupDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNamespaceGroupsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;NamespaceGroup&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface NamespaceGroupApi {
   })
   @POST("get-namespace-groups")
   Call<List<NamespaceGroup>> getNamespaceGroups(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody
+    @retrofit2.http.Body GetNamespaceGroupsRequestBody getNamespaceGroupsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNamespaceGroupsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NamespaceGroupConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface NamespaceGroupApi {
   })
   @POST("get-namespace-groups-connection")
   Call<NamespaceGroupConnection> getNamespaceGroupsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody
+    @retrofit2.http.Body GetNamespaceGroupsConnectionRequestBody getNamespaceGroupsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param namespaceGroupUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNamespaceGroup&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface NamespaceGroupApi {
   })
   @POST("update-namespace-group")
   Call<List<WithTaskNamespaceGroup>> updateNamespaceGroup(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NamespaceGroupUpdationParams namespaceGroupUpdationParams
+    @retrofit2.http.Body NamespaceGroupUpdationParams namespaceGroupUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

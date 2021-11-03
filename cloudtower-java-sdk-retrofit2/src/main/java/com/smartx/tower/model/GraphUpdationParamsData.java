@@ -40,8 +40,12 @@ import java.util.List;
 /**
  * GraphUpdationParamsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:54.291904700+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:48:29.490085800+08:00[Asia/Shanghai]")
 public class GraphUpdationParamsData {
+  public static final String SERIALIZED_NAME_INSTANCE_IDS = "instance_ids";
+  @SerializedName(SERIALIZED_NAME_INSTANCE_IDS)
+  private List<String> instanceIds = null;
+
   public static final String SERIALIZED_NAME_LUNS = "luns";
   @SerializedName(SERIALIZED_NAME_LUNS)
   private IscsiLunWhereInput luns;
@@ -109,6 +113,37 @@ public class GraphUpdationParamsData {
   public static final String SERIALIZED_NAME_CONNECT_ID = "connect_id";
   @SerializedName(SERIALIZED_NAME_CONNECT_ID)
   private List<String> connectId = null;
+
+
+  public GraphUpdationParamsData instanceIds(List<String> instanceIds) {
+    
+    this.instanceIds = instanceIds;
+    return this;
+  }
+
+  public GraphUpdationParamsData addInstanceIdsItem(String instanceIdsItem) {
+    if (this.instanceIds == null) {
+      this.instanceIds = new ArrayList<String>();
+    }
+    this.instanceIds.add(instanceIdsItem);
+    return this;
+  }
+
+   /**
+   * Get instanceIds
+   * @return instanceIds
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getInstanceIds() {
+    return instanceIds;
+  }
+
+
+  public void setInstanceIds(List<String> instanceIds) {
+    this.instanceIds = instanceIds;
+  }
 
 
   public GraphUpdationParamsData luns(IscsiLunWhereInput luns) {
@@ -519,7 +554,8 @@ public class GraphUpdationParamsData {
       return false;
     }
     GraphUpdationParamsData graphUpdationParamsData = (GraphUpdationParamsData) o;
-    return Objects.equals(this.luns, graphUpdationParamsData.luns) &&
+    return Objects.equals(this.instanceIds, graphUpdationParamsData.instanceIds) &&
+        Objects.equals(this.luns, graphUpdationParamsData.luns) &&
         Objects.equals(this.vmNics, graphUpdationParamsData.vmNics) &&
         Objects.equals(this.nics, graphUpdationParamsData.nics) &&
         Objects.equals(this.disks, graphUpdationParamsData.disks) &&
@@ -540,13 +576,14 @@ public class GraphUpdationParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(luns, vmNics, nics, disks, vmVolumes, vms, hosts, network, cluster, service, metricType, metricCount, type, resourceType, title, metricName, connectId);
+    return Objects.hash(instanceIds, luns, vmNics, nics, disks, vmVolumes, vms, hosts, network, cluster, service, metricType, metricCount, type, resourceType, title, metricName, connectId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphUpdationParamsData {\n");
+    sb.append("    instanceIds: ").append(toIndentedString(instanceIds)).append("\n");
     sb.append("    luns: ").append(toIndentedString(luns)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    nics: ").append(toIndentedString(nics)).append("\n");

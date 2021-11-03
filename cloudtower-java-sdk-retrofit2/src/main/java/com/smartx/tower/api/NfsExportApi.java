@@ -28,8 +28,8 @@ public interface NfsExportApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nfsExportCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNfsExport&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface NfsExportApi {
   })
   @POST("create-nfs-export")
   Call<List<WithTaskNfsExport>> createNfsExport(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<NfsExportCreationParams> nfsExportCreationParams
+    @retrofit2.http.Body List<NfsExportCreationParams> nfsExportCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nfsExportDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteNfsExport&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface NfsExportApi {
   })
   @POST("delete-nfs-export")
   Call<List<WithTaskDeleteNfsExport>> deleteNfsExport(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NfsExportDeletionParams nfsExportDeletionParams
+    @retrofit2.http.Body NfsExportDeletionParams nfsExportDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNfsExportsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;NfsExport&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface NfsExportApi {
   })
   @POST("get-nfs-exports")
   Call<List<NfsExport>> getNfsExports(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNfsExportsRequestBody getNfsExportsRequestBody
+    @retrofit2.http.Body GetNfsExportsRequestBody getNfsExportsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getNfsExportsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;NfsExportConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface NfsExportApi {
   })
   @POST("get-nfs-exports-connection")
   Call<NfsExportConnection> getNfsExportsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody
+    @retrofit2.http.Body GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param nfsExportUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskNfsExport&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface NfsExportApi {
   })
   @POST("update-nfs-export")
   Call<List<WithTaskNfsExport>> updateNfsExport(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body NfsExportUpdationParams nfsExportUpdationParams
+    @retrofit2.http.Body NfsExportUpdationParams nfsExportUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

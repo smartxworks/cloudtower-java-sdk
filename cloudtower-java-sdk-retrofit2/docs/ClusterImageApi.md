@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getClusterImages
 
-> List&lt;ClusterImage&gt; getClusterImages(contentLanguage, getClusterImagesRequestBody)
+> List&lt;ClusterImage&gt; getClusterImages(getClusterImagesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterImageApi apiInstance = new ClusterImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterImagesRequestBody getClusterImagesRequestBody = new GetClusterImagesRequestBody(); // GetClusterImagesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<ClusterImage> result = apiInstance.getClusterImages(contentLanguage, getClusterImagesRequestBody);
+            List<ClusterImage> result = apiInstance.getClusterImages(getClusterImagesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterImageApi#getClusterImages");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterImagesRequestBody** | [**GetClusterImagesRequestBody**](GetClusterImagesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getClusterImagesConnection
 
-> ClusterImageConnection getClusterImagesConnection(contentLanguage, getClusterImagesConnectionRequestBody)
+> ClusterImageConnection getClusterImagesConnection(getClusterImagesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ClusterImageApi apiInstance = new ClusterImageApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody = new GetClusterImagesConnectionRequestBody(); // GetClusterImagesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ClusterImageConnection result = apiInstance.getClusterImagesConnection(contentLanguage, getClusterImagesConnectionRequestBody);
+            ClusterImageConnection result = apiInstance.getClusterImagesConnection(getClusterImagesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClusterImageApi#getClusterImagesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getClusterImagesConnectionRequestBody** | [**GetClusterImagesConnectionRequestBody**](GetClusterImagesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

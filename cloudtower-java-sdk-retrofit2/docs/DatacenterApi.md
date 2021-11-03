@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createDatacenter
 
-> List&lt;WithTaskDatacenter&gt; createDatacenter(contentLanguage, datacenterCreationParams)
+> List&lt;WithTaskDatacenter&gt; createDatacenter(datacenterCreationParams, contentLanguage)
 
 
 
@@ -41,10 +41,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DatacenterApi apiInstance = new DatacenterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<DatacenterCreationParams> datacenterCreationParams = Arrays.asList(); // List<DatacenterCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDatacenter> result = apiInstance.createDatacenter(contentLanguage, datacenterCreationParams);
+            List<WithTaskDatacenter> result = apiInstance.createDatacenter(datacenterCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DatacenterApi#createDatacenter");
@@ -62,8 +62,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **datacenterCreationParams** | [**List&lt;DatacenterCreationParams&gt;**](DatacenterCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## deleteDatacenter
 
-> List&lt;WithTaskDeleteDatacenter&gt; deleteDatacenter(contentLanguage, datacenterDeletionParams)
+> List&lt;WithTaskDeleteDatacenter&gt; deleteDatacenter(datacenterDeletionParams, contentLanguage)
 
 
 
@@ -115,10 +115,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DatacenterApi apiInstance = new DatacenterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         DatacenterDeletionParams datacenterDeletionParams = new DatacenterDeletionParams(); // DatacenterDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteDatacenter> result = apiInstance.deleteDatacenter(contentLanguage, datacenterDeletionParams);
+            List<WithTaskDeleteDatacenter> result = apiInstance.deleteDatacenter(datacenterDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DatacenterApi#deleteDatacenter");
@@ -136,8 +136,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **datacenterDeletionParams** | [**DatacenterDeletionParams**](DatacenterDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getDatacenters
 
-> List&lt;Datacenter&gt; getDatacenters(contentLanguage, getDatacentersRequestBody)
+> List&lt;Datacenter&gt; getDatacenters(getDatacentersRequestBody, contentLanguage)
 
 
 
@@ -189,10 +189,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DatacenterApi apiInstance = new DatacenterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDatacentersRequestBody getDatacentersRequestBody = new GetDatacentersRequestBody(); // GetDatacentersRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Datacenter> result = apiInstance.getDatacenters(contentLanguage, getDatacentersRequestBody);
+            List<Datacenter> result = apiInstance.getDatacenters(getDatacentersRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DatacenterApi#getDatacenters");
@@ -210,8 +210,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDatacentersRequestBody** | [**GetDatacentersRequestBody**](GetDatacentersRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## getDatacentersConnection
 
-> DatacenterConnection getDatacentersConnection(contentLanguage, getDatacentersConnectionRequestBody)
+> DatacenterConnection getDatacentersConnection(getDatacentersConnectionRequestBody, contentLanguage)
 
 
 
@@ -263,10 +263,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DatacenterApi apiInstance = new DatacenterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody = new GetDatacentersConnectionRequestBody(); // GetDatacentersConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            DatacenterConnection result = apiInstance.getDatacentersConnection(contentLanguage, getDatacentersConnectionRequestBody);
+            DatacenterConnection result = apiInstance.getDatacentersConnection(getDatacentersConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DatacenterApi#getDatacentersConnection");
@@ -284,8 +284,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getDatacentersConnectionRequestBody** | [**GetDatacentersConnectionRequestBody**](GetDatacentersConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## updateDatacenter
 
-> List&lt;WithTaskDatacenter&gt; updateDatacenter(contentLanguage, datacenterUpdationParams)
+> List&lt;WithTaskDatacenter&gt; updateDatacenter(datacenterUpdationParams, contentLanguage)
 
 
 
@@ -337,10 +337,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DatacenterApi apiInstance = new DatacenterApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         DatacenterUpdationParams datacenterUpdationParams = new DatacenterUpdationParams(); // DatacenterUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDatacenter> result = apiInstance.updateDatacenter(contentLanguage, datacenterUpdationParams);
+            List<WithTaskDatacenter> result = apiInstance.updateDatacenter(datacenterUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DatacenterApi#updateDatacenter");
@@ -358,8 +358,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **datacenterUpdationParams** | [**DatacenterUpdationParams**](DatacenterUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

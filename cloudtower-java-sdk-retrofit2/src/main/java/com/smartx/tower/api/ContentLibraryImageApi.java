@@ -23,8 +23,8 @@ public interface ContentLibraryImageApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getContentLibraryImagesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ContentLibraryImage&gt;&gt;
    */
   @Headers({
@@ -32,14 +32,14 @@ public interface ContentLibraryImageApi {
   })
   @POST("get-content-library-images")
   Call<List<ContentLibraryImage>> getContentLibraryImages(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody
+    @retrofit2.http.Body GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getContentLibraryImagesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ContentLibraryImageConnection&gt;
    */
   @Headers({
@@ -47,7 +47,7 @@ public interface ContentLibraryImageApi {
   })
   @POST("get-content-library-images-connection")
   Call<ContentLibraryImageConnection> getContentLibraryImagesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody
+    @retrofit2.http.Body GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -63,8 +63,8 @@ public class VmSnapshotApi {
 
     /**
      * Build call for createVmSnapshot
-     * @param contentLanguage  (required)
      * @param vmSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -75,7 +75,7 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmSnapshotCall(String contentLanguage, VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVmSnapshotCall(VmSnapshotCreationParams vmSnapshotCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmSnapshotCreationParams;
 
         // create path and map variables
@@ -110,12 +110,7 @@ public class VmSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVmSnapshotValidateBeforeCall(String contentLanguage, VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createVmSnapshot(Async)");
-        }
+    private okhttp3.Call createVmSnapshotValidateBeforeCall(VmSnapshotCreationParams vmSnapshotCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmSnapshotCreationParams' is set
         if (vmSnapshotCreationParams == null) {
@@ -123,7 +118,7 @@ public class VmSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = createVmSnapshotCall(contentLanguage, vmSnapshotCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmSnapshotCall(vmSnapshotCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -131,8 +126,8 @@ public class VmSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -142,16 +137,16 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmSnapshot> createVmSnapshot(String contentLanguage, VmSnapshotCreationParams vmSnapshotCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmSnapshot>> localVarResp = createVmSnapshotWithHttpInfo(contentLanguage, vmSnapshotCreationParams);
+    public List<WithTaskVmSnapshot> createVmSnapshot(VmSnapshotCreationParams vmSnapshotCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskVmSnapshot>> localVarResp = createVmSnapshotWithHttpInfo(vmSnapshotCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -161,8 +156,8 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmSnapshot>> createVmSnapshotWithHttpInfo(String contentLanguage, VmSnapshotCreationParams vmSnapshotCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVmSnapshotValidateBeforeCall(contentLanguage, vmSnapshotCreationParams, null);
+    public ApiResponse<List<WithTaskVmSnapshot>> createVmSnapshotWithHttpInfo(VmSnapshotCreationParams vmSnapshotCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createVmSnapshotValidateBeforeCall(vmSnapshotCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -170,8 +165,8 @@ public class VmSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmSnapshotCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -182,17 +177,17 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmSnapshotAsync(String contentLanguage, VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback<List<WithTaskVmSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call createVmSnapshotAsync(VmSnapshotCreationParams vmSnapshotCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVmSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVmSnapshotValidateBeforeCall(contentLanguage, vmSnapshotCreationParams, _callback);
+        okhttp3.Call localVarCall = createVmSnapshotValidateBeforeCall(vmSnapshotCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVmSnapshot
-     * @param contentLanguage  (required)
      * @param vmSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -203,7 +198,7 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmSnapshotCall(String contentLanguage, VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmSnapshotCall(VmSnapshotDeletionParams vmSnapshotDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = vmSnapshotDeletionParams;
 
         // create path and map variables
@@ -238,12 +233,7 @@ public class VmSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmSnapshotValidateBeforeCall(String contentLanguage, VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteVmSnapshot(Async)");
-        }
+    private okhttp3.Call deleteVmSnapshotValidateBeforeCall(VmSnapshotDeletionParams vmSnapshotDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmSnapshotDeletionParams' is set
         if (vmSnapshotDeletionParams == null) {
@@ -251,7 +241,7 @@ public class VmSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVmSnapshotCall(contentLanguage, vmSnapshotDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmSnapshotCall(vmSnapshotDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -259,8 +249,8 @@ public class VmSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVmSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -270,16 +260,16 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVmSnapshot> deleteVmSnapshot(String contentLanguage, VmSnapshotDeletionParams vmSnapshotDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVmSnapshot>> localVarResp = deleteVmSnapshotWithHttpInfo(contentLanguage, vmSnapshotDeletionParams);
+    public List<WithTaskDeleteVmSnapshot> deleteVmSnapshot(VmSnapshotDeletionParams vmSnapshotDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVmSnapshot>> localVarResp = deleteVmSnapshotWithHttpInfo(vmSnapshotDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param vmSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVmSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -289,8 +279,8 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVmSnapshot>> deleteVmSnapshotWithHttpInfo(String contentLanguage, VmSnapshotDeletionParams vmSnapshotDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmSnapshotValidateBeforeCall(contentLanguage, vmSnapshotDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteVmSnapshot>> deleteVmSnapshotWithHttpInfo(VmSnapshotDeletionParams vmSnapshotDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteVmSnapshotValidateBeforeCall(vmSnapshotDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -298,8 +288,8 @@ public class VmSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param vmSnapshotDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -310,17 +300,17 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmSnapshotAsync(String contentLanguage, VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback<List<WithTaskDeleteVmSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmSnapshotAsync(VmSnapshotDeletionParams vmSnapshotDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVmSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmSnapshotValidateBeforeCall(contentLanguage, vmSnapshotDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteVmSnapshotValidateBeforeCall(vmSnapshotDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmSnapshots
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -331,7 +321,7 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmSnapshotsCall(String contentLanguage, GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsCall(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmSnapshotsRequestBody;
 
         // create path and map variables
@@ -366,12 +356,7 @@ public class VmSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmSnapshotsValidateBeforeCall(String contentLanguage, GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmSnapshots(Async)");
-        }
+    private okhttp3.Call getVmSnapshotsValidateBeforeCall(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmSnapshotsRequestBody' is set
         if (getVmSnapshotsRequestBody == null) {
@@ -379,7 +364,7 @@ public class VmSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmSnapshotsCall(contentLanguage, getVmSnapshotsRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmSnapshotsCall(getVmSnapshotsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -387,8 +372,8 @@ public class VmSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -398,16 +383,16 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmSnapshot> getVmSnapshots(String contentLanguage, GetVmSnapshotsRequestBody getVmSnapshotsRequestBody) throws ApiException {
-        ApiResponse<List<VmSnapshot>> localVarResp = getVmSnapshotsWithHttpInfo(contentLanguage, getVmSnapshotsRequestBody);
+    public List<VmSnapshot> getVmSnapshots(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<VmSnapshot>> localVarResp = getVmSnapshotsWithHttpInfo(getVmSnapshotsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -417,8 +402,8 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmSnapshot>> getVmSnapshotsWithHttpInfo(String contentLanguage, GetVmSnapshotsRequestBody getVmSnapshotsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmSnapshotsValidateBeforeCall(contentLanguage, getVmSnapshotsRequestBody, null);
+    public ApiResponse<List<VmSnapshot>> getVmSnapshotsWithHttpInfo(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmSnapshotsValidateBeforeCall(getVmSnapshotsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<VmSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -426,8 +411,8 @@ public class VmSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -438,17 +423,17 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmSnapshotsAsync(String contentLanguage, GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback<List<VmSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsAsync(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, String contentLanguage, final ApiCallback<List<VmSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmSnapshotsValidateBeforeCall(contentLanguage, getVmSnapshotsRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmSnapshotsValidateBeforeCall(getVmSnapshotsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<VmSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmSnapshotsConnection
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -459,7 +444,7 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmSnapshotsConnectionCall(String contentLanguage, GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsConnectionCall(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVmSnapshotsConnectionRequestBody;
 
         // create path and map variables
@@ -494,12 +479,7 @@ public class VmSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmSnapshotsConnectionValidateBeforeCall(String contentLanguage, GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVmSnapshotsConnection(Async)");
-        }
+    private okhttp3.Call getVmSnapshotsConnectionValidateBeforeCall(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmSnapshotsConnectionRequestBody' is set
         if (getVmSnapshotsConnectionRequestBody == null) {
@@ -507,7 +487,7 @@ public class VmSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmSnapshotsConnectionCall(contentLanguage, getVmSnapshotsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmSnapshotsConnectionCall(getVmSnapshotsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -515,8 +495,8 @@ public class VmSnapshotApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VmSnapshotConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -526,16 +506,16 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmSnapshotConnection getVmSnapshotsConnection(String contentLanguage, GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody) throws ApiException {
-        ApiResponse<VmSnapshotConnection> localVarResp = getVmSnapshotsConnectionWithHttpInfo(contentLanguage, getVmSnapshotsConnectionRequestBody);
+    public VmSnapshotConnection getVmSnapshotsConnection(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VmSnapshotConnection> localVarResp = getVmSnapshotsConnectionWithHttpInfo(getVmSnapshotsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmSnapshotConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -545,8 +525,8 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmSnapshotConnection> getVmSnapshotsConnectionWithHttpInfo(String contentLanguage, GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmSnapshotsConnectionValidateBeforeCall(contentLanguage, getVmSnapshotsConnectionRequestBody, null);
+    public ApiResponse<VmSnapshotConnection> getVmSnapshotsConnectionWithHttpInfo(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVmSnapshotsConnectionValidateBeforeCall(getVmSnapshotsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VmSnapshotConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -554,8 +534,8 @@ public class VmSnapshotApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVmSnapshotsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -566,9 +546,9 @@ public class VmSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmSnapshotsConnectionAsync(String contentLanguage, GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, final ApiCallback<VmSnapshotConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsConnectionAsync(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback<VmSnapshotConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmSnapshotsConnectionValidateBeforeCall(contentLanguage, getVmSnapshotsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVmSnapshotsConnectionValidateBeforeCall(getVmSnapshotsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VmSnapshotConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

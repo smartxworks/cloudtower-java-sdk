@@ -22,20 +22,27 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EverouteClusterPhase;
 import com.smartx.tower.model.EverouteClusterStatusAgents;
+import com.smartx.tower.model.EverouteClusterStatusConditions;
 import com.smartx.tower.model.EverouteClusterStatusControllers;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * EverouteClusterStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class EverouteClusterStatus {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
   private String version;
+
+  public static final String SERIALIZED_NAME_RETRY_COUNT = "retryCount";
+  @SerializedName(SERIALIZED_NAME_RETRY_COUNT)
+  private Double retryCount;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
   @SerializedName(SERIALIZED_NAME_REASON)
@@ -52,6 +59,10 @@ public class EverouteClusterStatus {
   public static final String SERIALIZED_NAME_CONTROLLERS = "controllers";
   @SerializedName(SERIALIZED_NAME_CONTROLLERS)
   private EverouteClusterStatusControllers controllers;
+
+  public static final String SERIALIZED_NAME_CONDITIONS = "conditions";
+  @SerializedName(SERIALIZED_NAME_CONDITIONS)
+  private List<EverouteClusterStatusConditions> conditions = null;
 
   public static final String SERIALIZED_NAME_AGENTS = "agents";
   @SerializedName(SERIALIZED_NAME_AGENTS)
@@ -78,6 +89,29 @@ public class EverouteClusterStatus {
 
   public void setVersion(String version) {
     this.version = version;
+  }
+
+
+  public EverouteClusterStatus retryCount(Double retryCount) {
+    
+    this.retryCount = retryCount;
+    return this;
+  }
+
+   /**
+   * Get retryCount
+   * @return retryCount
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Double getRetryCount() {
+    return retryCount;
+  }
+
+
+  public void setRetryCount(Double retryCount) {
+    this.retryCount = retryCount;
   }
 
 
@@ -173,6 +207,37 @@ public class EverouteClusterStatus {
   }
 
 
+  public EverouteClusterStatus conditions(List<EverouteClusterStatusConditions> conditions) {
+    
+    this.conditions = conditions;
+    return this;
+  }
+
+  public EverouteClusterStatus addConditionsItem(EverouteClusterStatusConditions conditionsItem) {
+    if (this.conditions == null) {
+      this.conditions = new ArrayList<EverouteClusterStatusConditions>();
+    }
+    this.conditions.add(conditionsItem);
+    return this;
+  }
+
+   /**
+   * Get conditions
+   * @return conditions
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EverouteClusterStatusConditions> getConditions() {
+    return conditions;
+  }
+
+
+  public void setConditions(List<EverouteClusterStatusConditions> conditions) {
+    this.conditions = conditions;
+  }
+
+
   public EverouteClusterStatus agents(EverouteClusterStatusAgents agents) {
     
     this.agents = agents;
@@ -206,10 +271,12 @@ public class EverouteClusterStatus {
     }
     EverouteClusterStatus everouteClusterStatus = (EverouteClusterStatus) o;
     return Objects.equals(this.version, everouteClusterStatus.version) &&
+        Objects.equals(this.retryCount, everouteClusterStatus.retryCount) &&
         Objects.equals(this.reason, everouteClusterStatus.reason) &&
         Objects.equals(this.phase, everouteClusterStatus.phase) &&
         Objects.equals(this.message, everouteClusterStatus.message) &&
         Objects.equals(this.controllers, everouteClusterStatus.controllers) &&
+        Objects.equals(this.conditions, everouteClusterStatus.conditions) &&
         Objects.equals(this.agents, everouteClusterStatus.agents);
   }
 
@@ -219,7 +286,7 @@ public class EverouteClusterStatus {
 
   @Override
   public int hashCode() {
-    return Objects.hash(version, reason, phase, message, controllers, agents);
+    return Objects.hash(version, retryCount, reason, phase, message, controllers, conditions, agents);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -234,10 +301,12 @@ public class EverouteClusterStatus {
     StringBuilder sb = new StringBuilder();
     sb.append("class EverouteClusterStatus {\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    retryCount: ").append(toIndentedString(retryCount)).append("\n");
     sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
     sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    controllers: ").append(toIndentedString(controllers)).append("\n");
+    sb.append("    conditions: ").append(toIndentedString(conditions)).append("\n");
     sb.append("    agents: ").append(toIndentedString(agents)).append("\n");
     sb.append("}");
     return sb.toString();

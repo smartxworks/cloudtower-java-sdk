@@ -29,8 +29,8 @@ public interface ClusterApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskCluster&gt;&gt;
    */
   @Headers({
@@ -38,14 +38,14 @@ public interface ClusterApi {
   })
   @POST("connect-cluster")
   Call<List<WithTaskCluster>> connectCluster(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<ClusterCreationParams> clusterCreationParams
+    @retrofit2.http.Body List<ClusterCreationParams> clusterCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteCluster&gt;&gt;
    */
   @Headers({
@@ -53,14 +53,14 @@ public interface ClusterApi {
   })
   @POST("delete-cluster")
   Call<List<WithTaskDeleteCluster>> deleteCluster(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ClusterDeletionParams clusterDeletionParams
+    @retrofit2.http.Body ClusterDeletionParams clusterDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClustersRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Cluster&gt;&gt;
    */
   @Headers({
@@ -68,14 +68,14 @@ public interface ClusterApi {
   })
   @POST("get-clusters")
   Call<List<Cluster>> getClusters(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClustersRequestBody getClustersRequestBody
+    @retrofit2.http.Body GetClustersRequestBody getClustersRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getClustersConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ClusterConnection&gt;
    */
   @Headers({
@@ -83,14 +83,14 @@ public interface ClusterApi {
   })
   @POST("get-clusters-connection")
   Call<ClusterConnection> getClustersConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetClustersConnectionRequestBody getClustersConnectionRequestBody
+    @retrofit2.http.Body GetClustersConnectionRequestBody getClustersConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskCluster&gt;&gt;
    */
   @Headers({
@@ -98,14 +98,14 @@ public interface ClusterApi {
   })
   @POST("update-cluster")
   Call<List<WithTaskCluster>> updateCluster(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ClusterUpdationParams clusterUpdationParams
+    @retrofit2.http.Body ClusterUpdationParams clusterUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param clusterLicenseUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskCluster&gt;&gt;
    */
   @Headers({
@@ -113,7 +113,7 @@ public interface ClusterApi {
   })
   @POST("update-cluster-license")
   Call<List<WithTaskCluster>> updateClusterLicense(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ClusterLicenseUpdationParams clusterLicenseUpdationParams
+    @retrofit2.http.Body ClusterLicenseUpdationParams clusterLicenseUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

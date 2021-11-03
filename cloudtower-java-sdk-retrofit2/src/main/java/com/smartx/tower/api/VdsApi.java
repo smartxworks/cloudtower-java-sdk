@@ -30,8 +30,8 @@ public interface VdsApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vdsCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVds&gt;&gt;
    */
   @Headers({
@@ -39,14 +39,14 @@ public interface VdsApi {
   })
   @POST("create-vds")
   Call<List<WithTaskVds>> createVds(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VdsCreationParams> vdsCreationParams
+    @retrofit2.http.Body List<VdsCreationParams> vdsCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vdsCreationWithMAccessVlanParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVds&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface VdsApi {
   })
   @POST("create-vds-with-access-vlan")
   Call<List<WithTaskVds>> createVdsWithAccessVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams
+    @retrofit2.http.Body List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vdsCreationWithMigrateVlanParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVds&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface VdsApi {
   })
   @POST("create-vds-with-migrate-vlan")
   Call<List<WithTaskVds>> createVdsWithMigrateVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams
+    @retrofit2.http.Body List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vdsDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVds&gt;&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface VdsApi {
   })
   @POST("delete-vds")
   Call<List<WithTaskDeleteVds>> deleteVds(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VdsDeletionParams vdsDeletionParams
+    @retrofit2.http.Body VdsDeletionParams vdsDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVdsesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Vds&gt;&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface VdsApi {
   })
   @POST("get-vdses")
   Call<List<Vds>> getVdses(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVdsesRequestBody getVdsesRequestBody
+    @retrofit2.http.Body GetVdsesRequestBody getVdsesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVdsesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VdsConnection&gt;
    */
   @Headers({
@@ -114,14 +114,14 @@ public interface VdsApi {
   })
   @POST("get-vdses-connection")
   Call<VdsConnection> getVdsesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVdsesConnectionRequestBody getVdsesConnectionRequestBody
+    @retrofit2.http.Body GetVdsesConnectionRequestBody getVdsesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vdsUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVds&gt;&gt;
    */
   @Headers({
@@ -129,7 +129,7 @@ public interface VdsApi {
   })
   @POST("update-vds")
   Call<List<WithTaskVds>> updateVds(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VdsUpdationParams vdsUpdationParams
+    @retrofit2.http.Body VdsUpdationParams vdsUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

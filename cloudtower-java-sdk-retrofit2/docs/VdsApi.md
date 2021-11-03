@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createVds
 
-> List&lt;WithTaskVds&gt; createVds(contentLanguage, vdsCreationParams)
+> List&lt;WithTaskVds&gt; createVds(vdsCreationParams, contentLanguage)
 
 
 
@@ -43,10 +43,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VdsCreationParams> vdsCreationParams = Arrays.asList(); // List<VdsCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVds> result = apiInstance.createVds(contentLanguage, vdsCreationParams);
+            List<WithTaskVds> result = apiInstance.createVds(vdsCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#createVds");
@@ -64,8 +64,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vdsCreationParams** | [**List&lt;VdsCreationParams&gt;**](VdsCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## createVdsWithAccessVlan
 
-> List&lt;WithTaskVds&gt; createVdsWithAccessVlan(contentLanguage, vdsCreationWithMAccessVlanParams)
+> List&lt;WithTaskVds&gt; createVdsWithAccessVlan(vdsCreationWithMAccessVlanParams, contentLanguage)
 
 
 
@@ -117,10 +117,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VdsCreationWithMAccessVlanParams> vdsCreationWithMAccessVlanParams = Arrays.asList(); // List<VdsCreationWithMAccessVlanParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVds> result = apiInstance.createVdsWithAccessVlan(contentLanguage, vdsCreationWithMAccessVlanParams);
+            List<WithTaskVds> result = apiInstance.createVdsWithAccessVlan(vdsCreationWithMAccessVlanParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#createVdsWithAccessVlan");
@@ -138,8 +138,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vdsCreationWithMAccessVlanParams** | [**List&lt;VdsCreationWithMAccessVlanParams&gt;**](VdsCreationWithMAccessVlanParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## createVdsWithMigrateVlan
 
-> List&lt;WithTaskVds&gt; createVdsWithMigrateVlan(contentLanguage, vdsCreationWithMigrateVlanParams)
+> List&lt;WithTaskVds&gt; createVdsWithMigrateVlan(vdsCreationWithMigrateVlanParams, contentLanguage)
 
 
 
@@ -191,10 +191,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<VdsCreationWithMigrateVlanParams> vdsCreationWithMigrateVlanParams = Arrays.asList(); // List<VdsCreationWithMigrateVlanParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVds> result = apiInstance.createVdsWithMigrateVlan(contentLanguage, vdsCreationWithMigrateVlanParams);
+            List<WithTaskVds> result = apiInstance.createVdsWithMigrateVlan(vdsCreationWithMigrateVlanParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#createVdsWithMigrateVlan");
@@ -212,8 +212,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vdsCreationWithMigrateVlanParams** | [**List&lt;VdsCreationWithMigrateVlanParams&gt;**](VdsCreationWithMigrateVlanParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ## deleteVds
 
-> List&lt;WithTaskDeleteVds&gt; deleteVds(contentLanguage, vdsDeletionParams)
+> List&lt;WithTaskDeleteVds&gt; deleteVds(vdsDeletionParams, contentLanguage)
 
 
 
@@ -265,10 +265,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VdsDeletionParams vdsDeletionParams = new VdsDeletionParams(); // VdsDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteVds> result = apiInstance.deleteVds(contentLanguage, vdsDeletionParams);
+            List<WithTaskDeleteVds> result = apiInstance.deleteVds(vdsDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#deleteVds");
@@ -286,8 +286,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vdsDeletionParams** | [**VdsDeletionParams**](VdsDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## getVdses
 
-> List&lt;Vds&gt; getVdses(contentLanguage, getVdsesRequestBody)
+> List&lt;Vds&gt; getVdses(getVdsesRequestBody, contentLanguage)
 
 
 
@@ -339,10 +339,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVdsesRequestBody getVdsesRequestBody = new GetVdsesRequestBody(); // GetVdsesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Vds> result = apiInstance.getVdses(contentLanguage, getVdsesRequestBody);
+            List<Vds> result = apiInstance.getVdses(getVdsesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#getVdses");
@@ -360,8 +360,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVdsesRequestBody** | [**GetVdsesRequestBody**](GetVdsesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## getVdsesConnection
 
-> VdsConnection getVdsesConnection(contentLanguage, getVdsesConnectionRequestBody)
+> VdsConnection getVdsesConnection(getVdsesConnectionRequestBody, contentLanguage)
 
 
 
@@ -413,10 +413,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetVdsesConnectionRequestBody getVdsesConnectionRequestBody = new GetVdsesConnectionRequestBody(); // GetVdsesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            VdsConnection result = apiInstance.getVdsesConnection(contentLanguage, getVdsesConnectionRequestBody);
+            VdsConnection result = apiInstance.getVdsesConnection(getVdsesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#getVdsesConnection");
@@ -434,8 +434,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getVdsesConnectionRequestBody** | [**GetVdsesConnectionRequestBody**](GetVdsesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ## updateVds
 
-> List&lt;WithTaskVds&gt; updateVds(contentLanguage, vdsUpdationParams)
+> List&lt;WithTaskVds&gt; updateVds(vdsUpdationParams, contentLanguage)
 
 
 
@@ -487,10 +487,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         VdsApi apiInstance = new VdsApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         VdsUpdationParams vdsUpdationParams = new VdsUpdationParams(); // VdsUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskVds> result = apiInstance.updateVds(contentLanguage, vdsUpdationParams);
+            List<WithTaskVds> result = apiInstance.updateVds(vdsUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling VdsApi#updateVds");
@@ -508,8 +508,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **vdsUpdationParams** | [**VdsUpdationParams**](VdsUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

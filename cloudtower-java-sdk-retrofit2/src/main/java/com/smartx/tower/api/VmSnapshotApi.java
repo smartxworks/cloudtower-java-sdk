@@ -27,8 +27,8 @@ public interface VmSnapshotApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmSnapshotCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmSnapshot&gt;&gt;
    */
   @Headers({
@@ -36,14 +36,14 @@ public interface VmSnapshotApi {
   })
   @POST("create-vm-snapshot")
   Call<List<WithTaskVmSnapshot>> createVmSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmSnapshotCreationParams vmSnapshotCreationParams
+    @retrofit2.http.Body VmSnapshotCreationParams vmSnapshotCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmSnapshotDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVmSnapshot&gt;&gt;
    */
   @Headers({
@@ -51,14 +51,14 @@ public interface VmSnapshotApi {
   })
   @POST("delete-vm-snapshot")
   Call<List<WithTaskDeleteVmSnapshot>> deleteVmSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmSnapshotDeletionParams vmSnapshotDeletionParams
+    @retrofit2.http.Body VmSnapshotDeletionParams vmSnapshotDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmSnapshotsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmSnapshot&gt;&gt;
    */
   @Headers({
@@ -66,14 +66,14 @@ public interface VmSnapshotApi {
   })
   @POST("get-vm-snapshots")
   Call<List<VmSnapshot>> getVmSnapshots(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmSnapshotsRequestBody getVmSnapshotsRequestBody
+    @retrofit2.http.Body GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmSnapshotsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmSnapshotConnection&gt;
    */
   @Headers({
@@ -81,7 +81,7 @@ public interface VmSnapshotApi {
   })
   @POST("get-vm-snapshots-connection")
   Call<VmSnapshotConnection> getVmSnapshotsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody
+    @retrofit2.http.Body GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

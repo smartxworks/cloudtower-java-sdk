@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * EveroutePackage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class EveroutePackage {
   public static final String SERIALIZED_NAME_ARCH = "arch";
   @SerializedName(SERIALIZED_NAME_ARCH)
@@ -57,9 +57,9 @@ public class EveroutePackage {
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_PVC_NAME = "pvc_name";
-  @SerializedName(SERIALIZED_NAME_PVC_NAME)
-  private String pvcName;
+  public static final String SERIALIZED_NAME_PACKAGE_INFO = "package_info";
+  @SerializedName(SERIALIZED_NAME_PACKAGE_INFO)
+  private Object packageInfo;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
@@ -212,26 +212,26 @@ public class EveroutePackage {
   }
 
 
-  public EveroutePackage pvcName(String pvcName) {
+  public EveroutePackage packageInfo(Object packageInfo) {
     
-    this.pvcName = pvcName;
+    this.packageInfo = packageInfo;
     return this;
   }
 
    /**
-   * Get pvcName
-   * @return pvcName
+   * Get packageInfo
+   * @return packageInfo
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getPvcName() {
-    return pvcName;
+  public Object getPackageInfo() {
+    return packageInfo;
   }
 
 
-  public void setPvcName(String pvcName) {
-    this.pvcName = pvcName;
+  public void setPackageInfo(Object packageInfo) {
+    this.packageInfo = packageInfo;
   }
 
 
@@ -319,7 +319,7 @@ public class EveroutePackage {
         Objects.equals(this.id, everoutePackage.id) &&
         Objects.equals(this.localCreatedAt, everoutePackage.localCreatedAt) &&
         Objects.equals(this.name, everoutePackage.name) &&
-        Objects.equals(this.pvcName, everoutePackage.pvcName) &&
+        Objects.equals(this.packageInfo, everoutePackage.packageInfo) &&
         Objects.equals(this.size, everoutePackage.size) &&
         Objects.equals(this.uploadTask, everoutePackage.uploadTask) &&
         Objects.equals(this.version, everoutePackage.version);
@@ -331,7 +331,7 @@ public class EveroutePackage {
 
   @Override
   public int hashCode() {
-    return Objects.hash(arch, description, entityAsyncStatus, id, localCreatedAt, name, pvcName, size, uploadTask, version);
+    return Objects.hash(arch, description, entityAsyncStatus, id, localCreatedAt, name, packageInfo, size, uploadTask, version);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -351,7 +351,7 @@ public class EveroutePackage {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    localCreatedAt: ").append(toIndentedString(localCreatedAt)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    pvcName: ").append(toIndentedString(pvcName)).append("\n");
+    sb.append("    packageInfo: ").append(toIndentedString(packageInfo)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    uploadTask: ").append(toIndentedString(uploadTask)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");

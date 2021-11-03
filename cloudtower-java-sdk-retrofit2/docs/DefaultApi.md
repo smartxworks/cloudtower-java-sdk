@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createNvmfSubsystem
 
-> List&lt;WithTaskNvmfSubsystem&gt; createNvmfSubsystem(contentLanguage, nvmfSubsystemCreationParams)
+> List&lt;WithTaskNvmfSubsystem&gt; createNvmfSubsystem(nvmfSubsystemCreationParams, contentLanguage)
 
 
 
@@ -39,10 +39,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams = Arrays.asList(); // List<NvmfSubsystemCreationParams> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNvmfSubsystem> result = apiInstance.createNvmfSubsystem(contentLanguage, nvmfSubsystemCreationParams);
+            List<WithTaskNvmfSubsystem> result = apiInstance.createNvmfSubsystem(nvmfSubsystemCreationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#createNvmfSubsystem");
@@ -60,8 +60,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nvmfSubsystemCreationParams** | [**List&lt;NvmfSubsystemCreationParams&gt;**](NvmfSubsystemCreationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## deleteNvmfSubsystem
 
-> List&lt;WithTaskDeleteNvmfSubsystem&gt; deleteNvmfSubsystem(contentLanguage, nvmfSubsystemDeletionParams)
+> List&lt;WithTaskDeleteNvmfSubsystem&gt; deleteNvmfSubsystem(nvmfSubsystemDeletionParams, contentLanguage)
 
 
 
@@ -113,10 +113,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams = new NvmfSubsystemDeletionParams(); // NvmfSubsystemDeletionParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskDeleteNvmfSubsystem> result = apiInstance.deleteNvmfSubsystem(contentLanguage, nvmfSubsystemDeletionParams);
+            List<WithTaskDeleteNvmfSubsystem> result = apiInstance.deleteNvmfSubsystem(nvmfSubsystemDeletionParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#deleteNvmfSubsystem");
@@ -134,8 +134,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nvmfSubsystemDeletionParams** | [**NvmfSubsystemDeletionParams**](NvmfSubsystemDeletionParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## updateNvmfSubsystem
 
-> List&lt;WithTaskNvmfSubsystem&gt; updateNvmfSubsystem(contentLanguage, nvmfSubsystemUpdationParams)
+> List&lt;WithTaskNvmfSubsystem&gt; updateNvmfSubsystem(nvmfSubsystemUpdationParams, contentLanguage)
 
 
 
@@ -187,10 +187,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams = new NvmfSubsystemUpdationParams(); // NvmfSubsystemUpdationParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNvmfSubsystem> result = apiInstance.updateNvmfSubsystem(contentLanguage, nvmfSubsystemUpdationParams);
+            List<WithTaskNvmfSubsystem> result = apiInstance.updateNvmfSubsystem(nvmfSubsystemUpdationParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#updateNvmfSubsystem");
@@ -208,8 +208,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **nvmfSubsystemUpdationParams** | [**NvmfSubsystemUpdationParams**](NvmfSubsystemUpdationParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -29,8 +29,8 @@ public interface BrickTopoApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param brickTopoCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskBrickTopo&gt;&gt;
    */
   @Headers({
@@ -38,14 +38,14 @@ public interface BrickTopoApi {
   })
   @POST("create-brick-topo")
   Call<List<WithTaskBrickTopo>> createBrickTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<BrickTopoCreationParams> brickTopoCreationParams
+    @retrofit2.http.Body List<BrickTopoCreationParams> brickTopoCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param brickTopoDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteBrickTopo&gt;&gt;
    */
   @Headers({
@@ -53,14 +53,14 @@ public interface BrickTopoApi {
   })
   @POST("delete-brick-topo")
   Call<List<WithTaskDeleteBrickTopo>> deleteBrickTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body BrickTopoDeletionParams brickTopoDeletionParams
+    @retrofit2.http.Body BrickTopoDeletionParams brickTopoDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getBrickTopoesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;BrickTopo&gt;&gt;
    */
   @Headers({
@@ -68,14 +68,14 @@ public interface BrickTopoApi {
   })
   @POST("get-brick-topoes")
   Call<List<BrickTopo>> getBrickTopoes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetBrickTopoesRequestBody getBrickTopoesRequestBody
+    @retrofit2.http.Body GetBrickTopoesRequestBody getBrickTopoesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getBrickTopoesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;BrickTopoConnection&gt;
    */
   @Headers({
@@ -83,14 +83,14 @@ public interface BrickTopoApi {
   })
   @POST("get-brick-topoes-connection")
   Call<BrickTopoConnection> getBrickTopoesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody
+    @retrofit2.http.Body GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param brickTopoMoveParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskBrickTopo&gt;&gt;
    */
   @Headers({
@@ -98,14 +98,14 @@ public interface BrickTopoApi {
   })
   @POST("move-brick-topo")
   Call<List<WithTaskBrickTopo>> moveBrickTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body BrickTopoMoveParams brickTopoMoveParams
+    @retrofit2.http.Body BrickTopoMoveParams brickTopoMoveParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param brickTopoUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskBrickTopo&gt;&gt;
    */
   @Headers({
@@ -113,7 +113,7 @@ public interface BrickTopoApi {
   })
   @POST("update-brick-topo")
   Call<List<WithTaskBrickTopo>> updateBrickTopo(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body BrickTopoUpdationParams brickTopoUpdationParams
+    @retrofit2.http.Body BrickTopoUpdationParams brickTopoUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

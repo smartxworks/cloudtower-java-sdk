@@ -21,8 +21,8 @@ public interface ImageConnectorApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getImagesConnectorRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ImageConnector&gt;&gt;
    */
   @Headers({
@@ -30,7 +30,7 @@ public interface ImageConnectorApi {
   })
   @POST("get-images-connector")
   Call<List<ImageConnector>> getImagesConnector(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetImagesConnectorRequestBody getImagesConnectorRequestBody
+    @retrofit2.http.Body GetImagesConnectorRequestBody getImagesConnectorRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

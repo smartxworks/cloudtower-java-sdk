@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## getUsbDevices
 
-> List&lt;UsbDevice&gt; getUsbDevices(contentLanguage, getUsbDevicesRequestBody)
+> List&lt;UsbDevice&gt; getUsbDevices(getUsbDevicesRequestBody, contentLanguage)
 
 
 
@@ -40,10 +40,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UsbDeviceApi apiInstance = new UsbDeviceApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUsbDevicesRequestBody getUsbDevicesRequestBody = new GetUsbDevicesRequestBody(); // GetUsbDevicesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<UsbDevice> result = apiInstance.getUsbDevices(contentLanguage, getUsbDevicesRequestBody);
+            List<UsbDevice> result = apiInstance.getUsbDevices(getUsbDevicesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UsbDeviceApi#getUsbDevices");
@@ -61,8 +61,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUsbDevicesRequestBody** | [**GetUsbDevicesRequestBody**](GetUsbDevicesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## getUsbDevicesConnection
 
-> UsbDeviceConnection getUsbDevicesConnection(contentLanguage, getUsbDevicesConnectionRequestBody)
+> UsbDeviceConnection getUsbDevicesConnection(getUsbDevicesConnectionRequestBody, contentLanguage)
 
 
 
@@ -114,10 +114,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UsbDeviceApi apiInstance = new UsbDeviceApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUsbDevicesConnectionRequestBody getUsbDevicesConnectionRequestBody = new GetUsbDevicesConnectionRequestBody(); // GetUsbDevicesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            UsbDeviceConnection result = apiInstance.getUsbDevicesConnection(contentLanguage, getUsbDevicesConnectionRequestBody);
+            UsbDeviceConnection result = apiInstance.getUsbDevicesConnection(getUsbDevicesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UsbDeviceApi#getUsbDevicesConnection");
@@ -135,8 +135,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUsbDevicesConnectionRequestBody** | [**GetUsbDevicesConnectionRequestBody**](GetUsbDevicesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## mountUsbDevice
 
-> List&lt;WithTaskUsbDevice&gt; mountUsbDevice(contentLanguage, usbDeviceMountParams)
+> List&lt;WithTaskUsbDevice&gt; mountUsbDevice(usbDeviceMountParams, contentLanguage)
 
 
 
@@ -188,10 +188,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UsbDeviceApi apiInstance = new UsbDeviceApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         UsbDeviceMountParams usbDeviceMountParams = new UsbDeviceMountParams(); // UsbDeviceMountParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskUsbDevice> result = apiInstance.mountUsbDevice(contentLanguage, usbDeviceMountParams);
+            List<WithTaskUsbDevice> result = apiInstance.mountUsbDevice(usbDeviceMountParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UsbDeviceApi#mountUsbDevice");
@@ -209,8 +209,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **usbDeviceMountParams** | [**UsbDeviceMountParams**](UsbDeviceMountParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## unmountUsbDevice
 
-> List&lt;WithTaskUsbDevice&gt; unmountUsbDevice(contentLanguage, usbDeviceUnmountParams)
+> List&lt;WithTaskUsbDevice&gt; unmountUsbDevice(usbDeviceUnmountParams, contentLanguage)
 
 
 
@@ -262,10 +262,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UsbDeviceApi apiInstance = new UsbDeviceApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         UsbDeviceUnmountParams usbDeviceUnmountParams = new UsbDeviceUnmountParams(); // UsbDeviceUnmountParams | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskUsbDevice> result = apiInstance.unmountUsbDevice(contentLanguage, usbDeviceUnmountParams);
+            List<WithTaskUsbDevice> result = apiInstance.unmountUsbDevice(usbDeviceUnmountParams, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UsbDeviceApi#unmountUsbDevice");
@@ -283,8 +283,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **usbDeviceUnmountParams** | [**UsbDeviceUnmountParams**](UsbDeviceUnmountParams.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

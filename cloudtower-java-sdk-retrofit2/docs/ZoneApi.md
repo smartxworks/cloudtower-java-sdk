@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getZones
 
-> List&lt;Zone&gt; getZones(contentLanguage, getZonesRequestBody)
+> List&lt;Zone&gt; getZones(getZonesRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ZoneApi apiInstance = new ZoneApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetZonesRequestBody getZonesRequestBody = new GetZonesRequestBody(); // GetZonesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<Zone> result = apiInstance.getZones(contentLanguage, getZonesRequestBody);
+            List<Zone> result = apiInstance.getZones(getZonesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ZoneApi#getZones");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getZonesRequestBody** | [**GetZonesRequestBody**](GetZonesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getZonesConnection
 
-> ZoneConnection getZonesConnection(contentLanguage, getZonesConnectionRequestBody)
+> ZoneConnection getZonesConnection(getZonesConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         ZoneApi apiInstance = new ZoneApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetZonesConnectionRequestBody getZonesConnectionRequestBody = new GetZonesConnectionRequestBody(); // GetZonesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            ZoneConnection result = apiInstance.getZonesConnection(contentLanguage, getZonesConnectionRequestBody);
+            ZoneConnection result = apiInstance.getZonesConnection(getZonesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ZoneApi#getZonesConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getZonesConnectionRequestBody** | [**GetZonesConnectionRequestBody**](GetZonesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

@@ -1,0 +1,21 @@
+
+
+# VmVolumeElfStoragePolicyType
+
+## Enum
+
+
+* `_1_THICK_PROVISION` (value: `"REPLICA_1_THICK_PROVISION"`)
+
+* `_1_THIN_PROVISION` (value: `"REPLICA_1_THIN_PROVISION"`)
+
+* `_2_THICK_PROVISION` (value: `"REPLICA_2_THICK_PROVISION"`)
+
+* `_2_THIN_PROVISION` (value: `"REPLICA_2_THIN_PROVISION"`)
+
+* `_3_THICK_PROVISION` (value: `"REPLICA_3_THICK_PROVISION"`)
+
+* `_3_THIN_PROVISION` (value: `"REPLICA_3_THIN_PROVISION"`)
+
+
+

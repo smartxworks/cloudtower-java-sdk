@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getUploadTasks
 
-> List&lt;UploadTask&gt; getUploadTasks(contentLanguage, getUploadTasksRequestBody)
+> List&lt;UploadTask&gt; getUploadTasks(getUploadTasksRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UploadTaskApi apiInstance = new UploadTaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUploadTasksRequestBody getUploadTasksRequestBody = new GetUploadTasksRequestBody(); // GetUploadTasksRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<UploadTask> result = apiInstance.getUploadTasks(contentLanguage, getUploadTasksRequestBody);
+            List<UploadTask> result = apiInstance.getUploadTasks(getUploadTasksRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UploadTaskApi#getUploadTasks");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUploadTasksRequestBody** | [**GetUploadTasksRequestBody**](GetUploadTasksRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getUploadTasksConnection
 
-> UploadTaskConnection getUploadTasksConnection(contentLanguage, getUploadTasksConnectionRequestBody)
+> UploadTaskConnection getUploadTasksConnection(getUploadTasksConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         UploadTaskApi apiInstance = new UploadTaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetUploadTasksConnectionRequestBody getUploadTasksConnectionRequestBody = new GetUploadTasksConnectionRequestBody(); // GetUploadTasksConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            UploadTaskConnection result = apiInstance.getUploadTasksConnection(contentLanguage, getUploadTasksConnectionRequestBody);
+            UploadTaskConnection result = apiInstance.getUploadTasksConnection(getUploadTasksConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UploadTaskApi#getUploadTasksConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getUploadTasksConnectionRequestBody** | [**GetUploadTasksConnectionRequestBody**](GetUploadTasksConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

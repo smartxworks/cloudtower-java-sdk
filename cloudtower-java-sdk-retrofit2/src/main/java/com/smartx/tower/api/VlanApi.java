@@ -30,8 +30,8 @@ public interface VlanApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmVlanCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVlan&gt;&gt;
    */
   @Headers({
@@ -39,14 +39,14 @@ public interface VlanApi {
   })
   @POST("create-vm-vlan")
   Call<List<WithTaskVlan>> createVmVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmVlanCreationParams> vmVlanCreationParams
+    @retrofit2.http.Body List<VmVlanCreationParams> vmVlanCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vlanDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVlan&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface VlanApi {
   })
   @POST("delete-vm-vlan")
   Call<List<WithTaskDeleteVlan>> deleteVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VlanDeletionParams vlanDeletionParams
+    @retrofit2.http.Body VlanDeletionParams vlanDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVlansRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Vlan&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface VlanApi {
   })
   @POST("get-vlans")
   Call<List<Vlan>> getVlans(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVlansRequestBody getVlansRequestBody
+    @retrofit2.http.Body GetVlansRequestBody getVlansRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVlansConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VlanConnection&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface VlanApi {
   })
   @POST("get-vlans-connection")
   Call<VlanConnection> getVlansConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVlansConnectionRequestBody getVlansConnectionRequestBody
+    @retrofit2.http.Body GetVlansConnectionRequestBody getVlansConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param managementVlanUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVlan&gt;&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface VlanApi {
   })
   @POST("update-management-vlan")
   Call<List<WithTaskVlan>> updateManagementVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ManagementVlanUpdationParams managementVlanUpdationParams
+    @retrofit2.http.Body ManagementVlanUpdationParams managementVlanUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param migrationVlanUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVlan&gt;&gt;
    */
   @Headers({
@@ -114,14 +114,14 @@ public interface VlanApi {
   })
   @POST("update-migration-vlan")
   Call<List<WithTaskVlan>> updateMigrationVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body MigrationVlanUpdationParams migrationVlanUpdationParams
+    @retrofit2.http.Body MigrationVlanUpdationParams migrationVlanUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmVlanUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVlan&gt;&gt;
    */
   @Headers({
@@ -129,7 +129,7 @@ public interface VlanApi {
   })
   @POST("update-vm-vlan")
   Call<List<WithTaskVlan>> updateVlan(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmVlanUpdationParams vmVlanUpdationParams
+    @retrofit2.http.Body VmVlanUpdationParams vmVlanUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

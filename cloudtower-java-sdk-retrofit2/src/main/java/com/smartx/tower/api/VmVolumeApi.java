@@ -27,8 +27,8 @@ public interface VmVolumeApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmVolumeCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVmVolume&gt;&gt;
    */
   @Headers({
@@ -36,14 +36,14 @@ public interface VmVolumeApi {
   })
   @POST("create-vm-volume")
   Call<List<WithTaskVmVolume>> createVmVolume(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmVolumeCreationParams> vmVolumeCreationParams
+    @retrofit2.http.Body List<VmVolumeCreationParams> vmVolumeCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmVolumeDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteVmVolume&gt;&gt;
    */
   @Headers({
@@ -51,14 +51,14 @@ public interface VmVolumeApi {
   })
   @POST("delete-vm-volume")
   Call<List<WithTaskDeleteVmVolume>> deleteVmVolumeFromVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmVolumeDeletionParams vmVolumeDeletionParams
+    @retrofit2.http.Body VmVolumeDeletionParams vmVolumeDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmVolumesRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;VmVolume&gt;&gt;
    */
   @Headers({
@@ -66,14 +66,14 @@ public interface VmVolumeApi {
   })
   @POST("get-vm-volumes")
   Call<List<VmVolume>> getVmVolumes(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmVolumesRequestBody getVmVolumesRequestBody
+    @retrofit2.http.Body GetVmVolumesRequestBody getVmVolumesRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmVolumesConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmVolumeConnection&gt;
    */
   @Headers({
@@ -81,7 +81,7 @@ public interface VmVolumeApi {
   })
   @POST("get-vm-volumes-connection")
   Call<VmVolumeConnection> getVmVolumesConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody
+    @retrofit2.http.Body GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

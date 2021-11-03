@@ -64,8 +64,8 @@ public class IscsiTargetApi {
 
     /**
      * Build call for createIscsiTarget
-     * @param contentLanguage  (required)
      * @param iscsiTargetCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -76,7 +76,7 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createIscsiTargetCall(String contentLanguage, List<IscsiTargetCreationParams> iscsiTargetCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createIscsiTargetCall(List<IscsiTargetCreationParams> iscsiTargetCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = iscsiTargetCreationParams;
 
         // create path and map variables
@@ -111,12 +111,7 @@ public class IscsiTargetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createIscsiTargetValidateBeforeCall(String contentLanguage, List<IscsiTargetCreationParams> iscsiTargetCreationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling createIscsiTarget(Async)");
-        }
+    private okhttp3.Call createIscsiTargetValidateBeforeCall(List<IscsiTargetCreationParams> iscsiTargetCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'iscsiTargetCreationParams' is set
         if (iscsiTargetCreationParams == null) {
@@ -124,7 +119,7 @@ public class IscsiTargetApi {
         }
         
 
-        okhttp3.Call localVarCall = createIscsiTargetCall(contentLanguage, iscsiTargetCreationParams, _callback);
+        okhttp3.Call localVarCall = createIscsiTargetCall(iscsiTargetCreationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -132,8 +127,8 @@ public class IscsiTargetApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskIscsiTarget&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,16 +138,16 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskIscsiTarget> createIscsiTarget(String contentLanguage, List<IscsiTargetCreationParams> iscsiTargetCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskIscsiTarget>> localVarResp = createIscsiTargetWithHttpInfo(contentLanguage, iscsiTargetCreationParams);
+    public List<WithTaskIscsiTarget> createIscsiTarget(List<IscsiTargetCreationParams> iscsiTargetCreationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskIscsiTarget>> localVarResp = createIscsiTargetWithHttpInfo(iscsiTargetCreationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskIscsiTarget&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,8 +157,8 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskIscsiTarget>> createIscsiTargetWithHttpInfo(String contentLanguage, List<IscsiTargetCreationParams> iscsiTargetCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createIscsiTargetValidateBeforeCall(contentLanguage, iscsiTargetCreationParams, null);
+    public ApiResponse<List<WithTaskIscsiTarget>> createIscsiTargetWithHttpInfo(List<IscsiTargetCreationParams> iscsiTargetCreationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = createIscsiTargetValidateBeforeCall(iscsiTargetCreationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskIscsiTarget>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -171,8 +166,8 @@ public class IscsiTargetApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetCreationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,17 +178,17 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createIscsiTargetAsync(String contentLanguage, List<IscsiTargetCreationParams> iscsiTargetCreationParams, final ApiCallback<List<WithTaskIscsiTarget>> _callback) throws ApiException {
+    public okhttp3.Call createIscsiTargetAsync(List<IscsiTargetCreationParams> iscsiTargetCreationParams, String contentLanguage, final ApiCallback<List<WithTaskIscsiTarget>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createIscsiTargetValidateBeforeCall(contentLanguage, iscsiTargetCreationParams, _callback);
+        okhttp3.Call localVarCall = createIscsiTargetValidateBeforeCall(iscsiTargetCreationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskIscsiTarget>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteIscsiTarget
-     * @param contentLanguage  (required)
      * @param iscsiTargetDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -204,7 +199,7 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteIscsiTargetCall(String contentLanguage, IscsiTargetDeletionParams iscsiTargetDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteIscsiTargetCall(IscsiTargetDeletionParams iscsiTargetDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = iscsiTargetDeletionParams;
 
         // create path and map variables
@@ -239,12 +234,7 @@ public class IscsiTargetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteIscsiTargetValidateBeforeCall(String contentLanguage, IscsiTargetDeletionParams iscsiTargetDeletionParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling deleteIscsiTarget(Async)");
-        }
+    private okhttp3.Call deleteIscsiTargetValidateBeforeCall(IscsiTargetDeletionParams iscsiTargetDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'iscsiTargetDeletionParams' is set
         if (iscsiTargetDeletionParams == null) {
@@ -252,7 +242,7 @@ public class IscsiTargetApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteIscsiTargetCall(contentLanguage, iscsiTargetDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteIscsiTargetCall(iscsiTargetDeletionParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -260,8 +250,8 @@ public class IscsiTargetApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteIscsiTarget&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,16 +261,16 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteIscsiTarget> deleteIscsiTarget(String contentLanguage, IscsiTargetDeletionParams iscsiTargetDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteIscsiTarget>> localVarResp = deleteIscsiTargetWithHttpInfo(contentLanguage, iscsiTargetDeletionParams);
+    public List<WithTaskDeleteIscsiTarget> deleteIscsiTarget(IscsiTargetDeletionParams iscsiTargetDeletionParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteIscsiTarget>> localVarResp = deleteIscsiTargetWithHttpInfo(iscsiTargetDeletionParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteIscsiTarget&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -290,8 +280,8 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteIscsiTarget>> deleteIscsiTargetWithHttpInfo(String contentLanguage, IscsiTargetDeletionParams iscsiTargetDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteIscsiTargetValidateBeforeCall(contentLanguage, iscsiTargetDeletionParams, null);
+    public ApiResponse<List<WithTaskDeleteIscsiTarget>> deleteIscsiTargetWithHttpInfo(IscsiTargetDeletionParams iscsiTargetDeletionParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = deleteIscsiTargetValidateBeforeCall(iscsiTargetDeletionParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteIscsiTarget>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -299,8 +289,8 @@ public class IscsiTargetApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetDeletionParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,17 +301,17 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteIscsiTargetAsync(String contentLanguage, IscsiTargetDeletionParams iscsiTargetDeletionParams, final ApiCallback<List<WithTaskDeleteIscsiTarget>> _callback) throws ApiException {
+    public okhttp3.Call deleteIscsiTargetAsync(IscsiTargetDeletionParams iscsiTargetDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteIscsiTarget>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteIscsiTargetValidateBeforeCall(contentLanguage, iscsiTargetDeletionParams, _callback);
+        okhttp3.Call localVarCall = deleteIscsiTargetValidateBeforeCall(iscsiTargetDeletionParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteIscsiTarget>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getIscsiTargets
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -332,7 +322,7 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiTargetsCall(String contentLanguage, GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIscsiTargetsCall(GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getIscsiTargetsRequestBody;
 
         // create path and map variables
@@ -367,12 +357,7 @@ public class IscsiTargetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIscsiTargetsValidateBeforeCall(String contentLanguage, GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getIscsiTargets(Async)");
-        }
+    private okhttp3.Call getIscsiTargetsValidateBeforeCall(GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIscsiTargetsRequestBody' is set
         if (getIscsiTargetsRequestBody == null) {
@@ -380,7 +365,7 @@ public class IscsiTargetApi {
         }
         
 
-        okhttp3.Call localVarCall = getIscsiTargetsCall(contentLanguage, getIscsiTargetsRequestBody, _callback);
+        okhttp3.Call localVarCall = getIscsiTargetsCall(getIscsiTargetsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -388,8 +373,8 @@ public class IscsiTargetApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;IscsiTarget&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -399,16 +384,16 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<IscsiTarget> getIscsiTargets(String contentLanguage, GetIscsiTargetsRequestBody getIscsiTargetsRequestBody) throws ApiException {
-        ApiResponse<List<IscsiTarget>> localVarResp = getIscsiTargetsWithHttpInfo(contentLanguage, getIscsiTargetsRequestBody);
+    public List<IscsiTarget> getIscsiTargets(GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<IscsiTarget>> localVarResp = getIscsiTargetsWithHttpInfo(getIscsiTargetsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;IscsiTarget&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +403,8 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<IscsiTarget>> getIscsiTargetsWithHttpInfo(String contentLanguage, GetIscsiTargetsRequestBody getIscsiTargetsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getIscsiTargetsValidateBeforeCall(contentLanguage, getIscsiTargetsRequestBody, null);
+    public ApiResponse<List<IscsiTarget>> getIscsiTargetsWithHttpInfo(GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getIscsiTargetsValidateBeforeCall(getIscsiTargetsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<IscsiTarget>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -427,8 +412,8 @@ public class IscsiTargetApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -439,17 +424,17 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiTargetsAsync(String contentLanguage, GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, final ApiCallback<List<IscsiTarget>> _callback) throws ApiException {
+    public okhttp3.Call getIscsiTargetsAsync(GetIscsiTargetsRequestBody getIscsiTargetsRequestBody, String contentLanguage, final ApiCallback<List<IscsiTarget>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIscsiTargetsValidateBeforeCall(contentLanguage, getIscsiTargetsRequestBody, _callback);
+        okhttp3.Call localVarCall = getIscsiTargetsValidateBeforeCall(getIscsiTargetsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<IscsiTarget>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getIscsiTargetsConnection
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +445,7 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiTargetsConnectionCall(String contentLanguage, GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIscsiTargetsConnectionCall(GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getIscsiTargetsConnectionRequestBody;
 
         // create path and map variables
@@ -495,12 +480,7 @@ public class IscsiTargetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIscsiTargetsConnectionValidateBeforeCall(String contentLanguage, GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getIscsiTargetsConnection(Async)");
-        }
+    private okhttp3.Call getIscsiTargetsConnectionValidateBeforeCall(GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIscsiTargetsConnectionRequestBody' is set
         if (getIscsiTargetsConnectionRequestBody == null) {
@@ -508,7 +488,7 @@ public class IscsiTargetApi {
         }
         
 
-        okhttp3.Call localVarCall = getIscsiTargetsConnectionCall(contentLanguage, getIscsiTargetsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getIscsiTargetsConnectionCall(getIscsiTargetsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -516,8 +496,8 @@ public class IscsiTargetApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return IscsiTargetConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -527,16 +507,16 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public IscsiTargetConnection getIscsiTargetsConnection(String contentLanguage, GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody) throws ApiException {
-        ApiResponse<IscsiTargetConnection> localVarResp = getIscsiTargetsConnectionWithHttpInfo(contentLanguage, getIscsiTargetsConnectionRequestBody);
+    public IscsiTargetConnection getIscsiTargetsConnection(GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<IscsiTargetConnection> localVarResp = getIscsiTargetsConnectionWithHttpInfo(getIscsiTargetsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;IscsiTargetConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -546,8 +526,8 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IscsiTargetConnection> getIscsiTargetsConnectionWithHttpInfo(String contentLanguage, GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getIscsiTargetsConnectionValidateBeforeCall(contentLanguage, getIscsiTargetsConnectionRequestBody, null);
+    public ApiResponse<IscsiTargetConnection> getIscsiTargetsConnectionWithHttpInfo(GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getIscsiTargetsConnectionValidateBeforeCall(getIscsiTargetsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<IscsiTargetConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -555,8 +535,8 @@ public class IscsiTargetApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getIscsiTargetsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,17 +547,17 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiTargetsConnectionAsync(String contentLanguage, GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, final ApiCallback<IscsiTargetConnection> _callback) throws ApiException {
+    public okhttp3.Call getIscsiTargetsConnectionAsync(GetIscsiTargetsConnectionRequestBody getIscsiTargetsConnectionRequestBody, String contentLanguage, final ApiCallback<IscsiTargetConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIscsiTargetsConnectionValidateBeforeCall(contentLanguage, getIscsiTargetsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getIscsiTargetsConnectionValidateBeforeCall(getIscsiTargetsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<IscsiTargetConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateIscsiTarget
-     * @param contentLanguage  (required)
      * @param iscsiTargetUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -588,7 +568,7 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateIscsiTargetCall(String contentLanguage, IscsiTargetUpdationParams iscsiTargetUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateIscsiTargetCall(IscsiTargetUpdationParams iscsiTargetUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = iscsiTargetUpdationParams;
 
         // create path and map variables
@@ -623,12 +603,7 @@ public class IscsiTargetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateIscsiTargetValidateBeforeCall(String contentLanguage, IscsiTargetUpdationParams iscsiTargetUpdationParams, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling updateIscsiTarget(Async)");
-        }
+    private okhttp3.Call updateIscsiTargetValidateBeforeCall(IscsiTargetUpdationParams iscsiTargetUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'iscsiTargetUpdationParams' is set
         if (iscsiTargetUpdationParams == null) {
@@ -636,7 +611,7 @@ public class IscsiTargetApi {
         }
         
 
-        okhttp3.Call localVarCall = updateIscsiTargetCall(contentLanguage, iscsiTargetUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateIscsiTargetCall(iscsiTargetUpdationParams, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -644,8 +619,8 @@ public class IscsiTargetApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskIscsiTarget&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -655,16 +630,16 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskIscsiTarget> updateIscsiTarget(String contentLanguage, IscsiTargetUpdationParams iscsiTargetUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskIscsiTarget>> localVarResp = updateIscsiTargetWithHttpInfo(contentLanguage, iscsiTargetUpdationParams);
+    public List<WithTaskIscsiTarget> updateIscsiTarget(IscsiTargetUpdationParams iscsiTargetUpdationParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskIscsiTarget>> localVarResp = updateIscsiTargetWithHttpInfo(iscsiTargetUpdationParams, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskIscsiTarget&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -674,8 +649,8 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskIscsiTarget>> updateIscsiTargetWithHttpInfo(String contentLanguage, IscsiTargetUpdationParams iscsiTargetUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateIscsiTargetValidateBeforeCall(contentLanguage, iscsiTargetUpdationParams, null);
+    public ApiResponse<List<WithTaskIscsiTarget>> updateIscsiTargetWithHttpInfo(IscsiTargetUpdationParams iscsiTargetUpdationParams, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = updateIscsiTargetValidateBeforeCall(iscsiTargetUpdationParams, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<WithTaskIscsiTarget>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -683,8 +658,8 @@ public class IscsiTargetApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param iscsiTargetUpdationParams  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -695,9 +670,9 @@ public class IscsiTargetApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateIscsiTargetAsync(String contentLanguage, IscsiTargetUpdationParams iscsiTargetUpdationParams, final ApiCallback<List<WithTaskIscsiTarget>> _callback) throws ApiException {
+    public okhttp3.Call updateIscsiTargetAsync(IscsiTargetUpdationParams iscsiTargetUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskIscsiTarget>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateIscsiTargetValidateBeforeCall(contentLanguage, iscsiTargetUpdationParams, _callback);
+        okhttp3.Call localVarCall = updateIscsiTargetValidateBeforeCall(iscsiTargetUpdationParams, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskIscsiTarget>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

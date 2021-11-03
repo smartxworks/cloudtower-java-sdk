@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getSnapshotPlanTasks
 
-> List&lt;SnapshotPlanTask&gt; getSnapshotPlanTasks(contentLanguage, getSnapshotPlanTasksRequestBody)
+> List&lt;SnapshotPlanTask&gt; getSnapshotPlanTasks(getSnapshotPlanTasksRequestBody, contentLanguage)
 
 
 
@@ -38,10 +38,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanTaskApi apiInstance = new SnapshotPlanTaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnapshotPlanTasksRequestBody getSnapshotPlanTasksRequestBody = new GetSnapshotPlanTasksRequestBody(); // GetSnapshotPlanTasksRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<SnapshotPlanTask> result = apiInstance.getSnapshotPlanTasks(contentLanguage, getSnapshotPlanTasksRequestBody);
+            List<SnapshotPlanTask> result = apiInstance.getSnapshotPlanTasks(getSnapshotPlanTasksRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanTaskApi#getSnapshotPlanTasks");
@@ -59,8 +59,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnapshotPlanTasksRequestBody** | [**GetSnapshotPlanTasksRequestBody**](GetSnapshotPlanTasksRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## getSnapshotPlanTasksConnection
 
-> SnapshotPlanTaskConnection getSnapshotPlanTasksConnection(contentLanguage, getSnapshotPlanTasksConnectionRequestBody)
+> SnapshotPlanTaskConnection getSnapshotPlanTasksConnection(getSnapshotPlanTasksConnectionRequestBody, contentLanguage)
 
 
 
@@ -112,10 +112,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         SnapshotPlanTaskApi apiInstance = new SnapshotPlanTaskApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetSnapshotPlanTasksConnectionRequestBody getSnapshotPlanTasksConnectionRequestBody = new GetSnapshotPlanTasksConnectionRequestBody(); // GetSnapshotPlanTasksConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            SnapshotPlanTaskConnection result = apiInstance.getSnapshotPlanTasksConnection(contentLanguage, getSnapshotPlanTasksConnectionRequestBody);
+            SnapshotPlanTaskConnection result = apiInstance.getSnapshotPlanTasksConnection(getSnapshotPlanTasksConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SnapshotPlanTaskApi#getSnapshotPlanTasksConnection");
@@ -133,8 +133,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getSnapshotPlanTasksConnectionRequestBody** | [**GetSnapshotPlanTasksConnectionRequestBody**](GetSnapshotPlanTasksConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

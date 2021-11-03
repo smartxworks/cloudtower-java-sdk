@@ -28,8 +28,8 @@ public interface SnmpTransportApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snmpTransportCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnmpTransport&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface SnmpTransportApi {
   })
   @POST("create-snmp-transport")
   Call<List<WithTaskSnmpTransport>> createSnmpTransport(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<SnmpTransportCreationParams> snmpTransportCreationParams
+    @retrofit2.http.Body List<SnmpTransportCreationParams> snmpTransportCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snmpTransportDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteSnmpTransport&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface SnmpTransportApi {
   })
   @POST("delete-snmp-transport")
   Call<List<WithTaskDeleteSnmpTransport>> deleteSnmpTransport(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnmpTransportDeletionParams snmpTransportDeletionParams
+    @retrofit2.http.Body SnmpTransportDeletionParams snmpTransportDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnmpTransportsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SnmpTransport&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface SnmpTransportApi {
   })
   @POST("get-snmp-transports")
   Call<List<SnmpTransport>> getSnmpTransports(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnmpTransportsRequestBody getSnmpTransportsRequestBody
+    @retrofit2.http.Body GetSnmpTransportsRequestBody getSnmpTransportsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnmpTransportsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SnmpTransportConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface SnmpTransportApi {
   })
   @POST("get-snmp-transports-connection")
   Call<SnmpTransportConnection> getSnmpTransportsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody
+    @retrofit2.http.Body GetSnmpTransportsConnectionRequestBody getSnmpTransportsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snmpTransportUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnmpTransport&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface SnmpTransportApi {
   })
   @POST("update-snmp-transport")
   Call<List<WithTaskSnmpTransport>> updateSnmpTransport(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnmpTransportUpdationParams snmpTransportUpdationParams
+    @retrofit2.http.Body SnmpTransportUpdationParams snmpTransportUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

@@ -28,8 +28,8 @@ public interface SnmpTrapReceiverApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snmpTrapReceiverCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnmpTrapReceiver&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface SnmpTrapReceiverApi {
   })
   @POST("create-snmp-trap-receiver")
   Call<List<WithTaskSnmpTrapReceiver>> createSnmpTrapReceiver(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams
+    @retrofit2.http.Body List<SnmpTrapReceiverCreationParams> snmpTrapReceiverCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snmpTrapReceiverDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteSnmpTrapReceiver&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface SnmpTrapReceiverApi {
   })
   @POST("delete-snmp-trap-receiver")
   Call<List<WithTaskDeleteSnmpTrapReceiver>> deleteSnmpTrapReceiver(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams
+    @retrofit2.http.Body SnmpTrapReceiverDeletionParams snmpTrapReceiverDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnmpTrapReceiversRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;SnmpTrapReceiver&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface SnmpTrapReceiverApi {
   })
   @POST("get-snmp-trap-receivers")
   Call<List<SnmpTrapReceiver>> getSnmpTrapReceivers(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody
+    @retrofit2.http.Body GetSnmpTrapReceiversRequestBody getSnmpTrapReceiversRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getSnmpTrapReceiversConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;SnmpTrapReceiverConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface SnmpTrapReceiverApi {
   })
   @POST("get-snmp-trap-receivers-connection")
   Call<SnmpTrapReceiverConnection> getSnmpTrapReceiversConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody
+    @retrofit2.http.Body GetSnmpTrapReceiversConnectionRequestBody getSnmpTrapReceiversConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param snmpTrapReceiverUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskSnmpTrapReceiver&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface SnmpTrapReceiverApi {
   })
   @POST("update-snmp-trap-receiver")
   Call<List<WithTaskSnmpTrapReceiver>> updateSnmpTrapReceiver(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams
+    @retrofit2.http.Body SnmpTrapReceiverUpdationParams snmpTrapReceiverUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

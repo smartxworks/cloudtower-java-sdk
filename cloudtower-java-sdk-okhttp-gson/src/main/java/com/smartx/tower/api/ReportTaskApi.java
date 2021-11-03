@@ -59,8 +59,8 @@ public class ReportTaskApi {
 
     /**
      * Build call for getReportTasks
-     * @param contentLanguage  (required)
      * @param getReportTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTasksCall(String contentLanguage, GetReportTasksRequestBody getReportTasksRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getReportTasksCall(GetReportTasksRequestBody getReportTasksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getReportTasksRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class ReportTaskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getReportTasksValidateBeforeCall(String contentLanguage, GetReportTasksRequestBody getReportTasksRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getReportTasks(Async)");
-        }
+    private okhttp3.Call getReportTasksValidateBeforeCall(GetReportTasksRequestBody getReportTasksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getReportTasksRequestBody' is set
         if (getReportTasksRequestBody == null) {
@@ -119,7 +114,7 @@ public class ReportTaskApi {
         }
         
 
-        okhttp3.Call localVarCall = getReportTasksCall(contentLanguage, getReportTasksRequestBody, _callback);
+        okhttp3.Call localVarCall = getReportTasksCall(getReportTasksRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class ReportTaskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getReportTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ReportTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ReportTask> getReportTasks(String contentLanguage, GetReportTasksRequestBody getReportTasksRequestBody) throws ApiException {
-        ApiResponse<List<ReportTask>> localVarResp = getReportTasksWithHttpInfo(contentLanguage, getReportTasksRequestBody);
+    public List<ReportTask> getReportTasks(GetReportTasksRequestBody getReportTasksRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<ReportTask>> localVarResp = getReportTasksWithHttpInfo(getReportTasksRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getReportTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ReportTask&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ReportTask>> getReportTasksWithHttpInfo(String contentLanguage, GetReportTasksRequestBody getReportTasksRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getReportTasksValidateBeforeCall(contentLanguage, getReportTasksRequestBody, null);
+    public ApiResponse<List<ReportTask>> getReportTasksWithHttpInfo(GetReportTasksRequestBody getReportTasksRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getReportTasksValidateBeforeCall(getReportTasksRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<ReportTask>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class ReportTaskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getReportTasksRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTasksAsync(String contentLanguage, GetReportTasksRequestBody getReportTasksRequestBody, final ApiCallback<List<ReportTask>> _callback) throws ApiException {
+    public okhttp3.Call getReportTasksAsync(GetReportTasksRequestBody getReportTasksRequestBody, String contentLanguage, final ApiCallback<List<ReportTask>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getReportTasksValidateBeforeCall(contentLanguage, getReportTasksRequestBody, _callback);
+        okhttp3.Call localVarCall = getReportTasksValidateBeforeCall(getReportTasksRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<ReportTask>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getReportTasksConnection
-     * @param contentLanguage  (required)
      * @param getReportTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTasksConnectionCall(String contentLanguage, GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getReportTasksConnectionCall(GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getReportTasksConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class ReportTaskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getReportTasksConnectionValidateBeforeCall(String contentLanguage, GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getReportTasksConnection(Async)");
-        }
+    private okhttp3.Call getReportTasksConnectionValidateBeforeCall(GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getReportTasksConnectionRequestBody' is set
         if (getReportTasksConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class ReportTaskApi {
         }
         
 
-        okhttp3.Call localVarCall = getReportTasksConnectionCall(contentLanguage, getReportTasksConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getReportTasksConnectionCall(getReportTasksConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class ReportTaskApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getReportTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ReportTaskConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ReportTaskConnection getReportTasksConnection(String contentLanguage, GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody) throws ApiException {
-        ApiResponse<ReportTaskConnection> localVarResp = getReportTasksConnectionWithHttpInfo(contentLanguage, getReportTasksConnectionRequestBody);
+    public ReportTaskConnection getReportTasksConnection(GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<ReportTaskConnection> localVarResp = getReportTasksConnectionWithHttpInfo(getReportTasksConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getReportTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ReportTaskConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ReportTaskConnection> getReportTasksConnectionWithHttpInfo(String contentLanguage, GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getReportTasksConnectionValidateBeforeCall(contentLanguage, getReportTasksConnectionRequestBody, null);
+    public ApiResponse<ReportTaskConnection> getReportTasksConnectionWithHttpInfo(GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getReportTasksConnectionValidateBeforeCall(getReportTasksConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<ReportTaskConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class ReportTaskApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getReportTasksConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class ReportTaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTasksConnectionAsync(String contentLanguage, GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, final ApiCallback<ReportTaskConnection> _callback) throws ApiException {
+    public okhttp3.Call getReportTasksConnectionAsync(GetReportTasksConnectionRequestBody getReportTasksConnectionRequestBody, String contentLanguage, final ApiCallback<ReportTaskConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getReportTasksConnectionValidateBeforeCall(contentLanguage, getReportTasksConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getReportTasksConnectionValidateBeforeCall(getReportTasksConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<ReportTaskConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

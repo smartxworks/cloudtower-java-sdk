@@ -20,7 +20,7 @@ import com.smartx.tower.model.DiskFunction;
 /**
  * MaybeDiskFunction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-27T19:23:12.632307300+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
 public class MaybeDiskFunction {
 
   @Override

@@ -59,8 +59,8 @@ public class VsphereEsxiAccountApi {
 
     /**
      * Build call for getVsphereEsxiAccounts
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVsphereEsxiAccountsCall(String contentLanguage, GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVsphereEsxiAccountsCall(GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVsphereEsxiAccountsRequestBody;
 
         // create path and map variables
@@ -106,12 +106,7 @@ public class VsphereEsxiAccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVsphereEsxiAccountsValidateBeforeCall(String contentLanguage, GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVsphereEsxiAccounts(Async)");
-        }
+    private okhttp3.Call getVsphereEsxiAccountsValidateBeforeCall(GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVsphereEsxiAccountsRequestBody' is set
         if (getVsphereEsxiAccountsRequestBody == null) {
@@ -119,7 +114,7 @@ public class VsphereEsxiAccountApi {
         }
         
 
-        okhttp3.Call localVarCall = getVsphereEsxiAccountsCall(contentLanguage, getVsphereEsxiAccountsRequestBody, _callback);
+        okhttp3.Call localVarCall = getVsphereEsxiAccountsCall(getVsphereEsxiAccountsRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -127,8 +122,8 @@ public class VsphereEsxiAccountApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VsphereEsxiAccount&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,16 +133,16 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VsphereEsxiAccount> getVsphereEsxiAccounts(String contentLanguage, GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody) throws ApiException {
-        ApiResponse<List<VsphereEsxiAccount>> localVarResp = getVsphereEsxiAccountsWithHttpInfo(contentLanguage, getVsphereEsxiAccountsRequestBody);
+    public List<VsphereEsxiAccount> getVsphereEsxiAccounts(GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<List<VsphereEsxiAccount>> localVarResp = getVsphereEsxiAccountsWithHttpInfo(getVsphereEsxiAccountsRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VsphereEsxiAccount&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +152,8 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VsphereEsxiAccount>> getVsphereEsxiAccountsWithHttpInfo(String contentLanguage, GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVsphereEsxiAccountsValidateBeforeCall(contentLanguage, getVsphereEsxiAccountsRequestBody, null);
+    public ApiResponse<List<VsphereEsxiAccount>> getVsphereEsxiAccountsWithHttpInfo(GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVsphereEsxiAccountsValidateBeforeCall(getVsphereEsxiAccountsRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<List<VsphereEsxiAccount>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -166,8 +161,8 @@ public class VsphereEsxiAccountApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,17 +173,17 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVsphereEsxiAccountsAsync(String contentLanguage, GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, final ApiCallback<List<VsphereEsxiAccount>> _callback) throws ApiException {
+    public okhttp3.Call getVsphereEsxiAccountsAsync(GetVsphereEsxiAccountsRequestBody getVsphereEsxiAccountsRequestBody, String contentLanguage, final ApiCallback<List<VsphereEsxiAccount>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVsphereEsxiAccountsValidateBeforeCall(contentLanguage, getVsphereEsxiAccountsRequestBody, _callback);
+        okhttp3.Call localVarCall = getVsphereEsxiAccountsValidateBeforeCall(getVsphereEsxiAccountsRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<List<VsphereEsxiAccount>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVsphereEsxiAccountsConnection
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -199,7 +194,7 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVsphereEsxiAccountsConnectionCall(String contentLanguage, GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVsphereEsxiAccountsConnectionCall(GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = getVsphereEsxiAccountsConnectionRequestBody;
 
         // create path and map variables
@@ -234,12 +229,7 @@ public class VsphereEsxiAccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVsphereEsxiAccountsConnectionValidateBeforeCall(String contentLanguage, GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'contentLanguage' is set
-        if (contentLanguage == null) {
-            throw new ApiException("Missing the required parameter 'contentLanguage' when calling getVsphereEsxiAccountsConnection(Async)");
-        }
+    private okhttp3.Call getVsphereEsxiAccountsConnectionValidateBeforeCall(GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVsphereEsxiAccountsConnectionRequestBody' is set
         if (getVsphereEsxiAccountsConnectionRequestBody == null) {
@@ -247,7 +237,7 @@ public class VsphereEsxiAccountApi {
         }
         
 
-        okhttp3.Call localVarCall = getVsphereEsxiAccountsConnectionCall(contentLanguage, getVsphereEsxiAccountsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVsphereEsxiAccountsConnectionCall(getVsphereEsxiAccountsConnectionRequestBody, contentLanguage, _callback);
         return localVarCall;
 
     }
@@ -255,8 +245,8 @@ public class VsphereEsxiAccountApi {
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return VsphereEsxiAccountConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -266,16 +256,16 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VsphereEsxiAccountConnection getVsphereEsxiAccountsConnection(String contentLanguage, GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody) throws ApiException {
-        ApiResponse<VsphereEsxiAccountConnection> localVarResp = getVsphereEsxiAccountsConnectionWithHttpInfo(contentLanguage, getVsphereEsxiAccountsConnectionRequestBody);
+    public VsphereEsxiAccountConnection getVsphereEsxiAccountsConnection(GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, String contentLanguage) throws ApiException {
+        ApiResponse<VsphereEsxiAccountConnection> localVarResp = getVsphereEsxiAccountsConnectionWithHttpInfo(getVsphereEsxiAccountsConnectionRequestBody, contentLanguage);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VsphereEsxiAccountConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -285,8 +275,8 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VsphereEsxiAccountConnection> getVsphereEsxiAccountsConnectionWithHttpInfo(String contentLanguage, GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVsphereEsxiAccountsConnectionValidateBeforeCall(contentLanguage, getVsphereEsxiAccountsConnectionRequestBody, null);
+    public ApiResponse<VsphereEsxiAccountConnection> getVsphereEsxiAccountsConnectionWithHttpInfo(GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, String contentLanguage) throws ApiException {
+        okhttp3.Call localVarCall = getVsphereEsxiAccountsConnectionValidateBeforeCall(getVsphereEsxiAccountsConnectionRequestBody, contentLanguage, null);
         Type localVarReturnType = new TypeToken<VsphereEsxiAccountConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -294,8 +284,8 @@ public class VsphereEsxiAccountApi {
     /**
      *  (asynchronously)
      * 
-     * @param contentLanguage  (required)
      * @param getVsphereEsxiAccountsConnectionRequestBody  (required)
+     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -306,9 +296,9 @@ public class VsphereEsxiAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVsphereEsxiAccountsConnectionAsync(String contentLanguage, GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, final ApiCallback<VsphereEsxiAccountConnection> _callback) throws ApiException {
+    public okhttp3.Call getVsphereEsxiAccountsConnectionAsync(GetVsphereEsxiAccountsConnectionRequestBody getVsphereEsxiAccountsConnectionRequestBody, String contentLanguage, final ApiCallback<VsphereEsxiAccountConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVsphereEsxiAccountsConnectionValidateBeforeCall(contentLanguage, getVsphereEsxiAccountsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall = getVsphereEsxiAccountsConnectionValidateBeforeCall(getVsphereEsxiAccountsConnectionRequestBody, contentLanguage, _callback);
         Type localVarReturnType = new TypeToken<VsphereEsxiAccountConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

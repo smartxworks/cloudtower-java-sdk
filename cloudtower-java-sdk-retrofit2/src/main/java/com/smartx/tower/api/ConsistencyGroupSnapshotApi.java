@@ -28,8 +28,8 @@ public interface ConsistencyGroupSnapshotApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param consistencyGroupSnapshotCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskConsistencyGroupSnapshot&gt;&gt;
    */
   @Headers({
@@ -37,14 +37,14 @@ public interface ConsistencyGroupSnapshotApi {
   })
   @POST("create-consistency-snapshot-group")
   Call<List<WithTaskConsistencyGroupSnapshot>> createConsistencyGroupSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams
+    @retrofit2.http.Body List<ConsistencyGroupSnapshotCreationParams> consistencyGroupSnapshotCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param consistencyGroupSnapshotDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteConsistencyGroupSnapshot&gt;&gt;
    */
   @Headers({
@@ -52,14 +52,14 @@ public interface ConsistencyGroupSnapshotApi {
   })
   @POST("delete-consistency-snapshot-group")
   Call<List<WithTaskDeleteConsistencyGroupSnapshot>> deleteConsistencyGroupSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams
+    @retrofit2.http.Body ConsistencyGroupSnapshotDeletionParams consistencyGroupSnapshotDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getConsistencyGroupSnapshotsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;ConsistencyGroupSnapshot&gt;&gt;
    */
   @Headers({
@@ -67,14 +67,14 @@ public interface ConsistencyGroupSnapshotApi {
   })
   @POST("get-consistency-group-snapshots")
   Call<List<ConsistencyGroupSnapshot>> getConsistencyGroupSnapshots(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody
+    @retrofit2.http.Body GetConsistencyGroupSnapshotsRequestBody getConsistencyGroupSnapshotsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getConsistencyGroupSnapshotsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;ConsistencyGroupSnapshotConnection&gt;
    */
   @Headers({
@@ -82,14 +82,14 @@ public interface ConsistencyGroupSnapshotApi {
   })
   @POST("get-consistency-group-snapshots-connection")
   Call<ConsistencyGroupSnapshotConnection> getConsistencyGroupSnapshotsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody
+    @retrofit2.http.Body GetConsistencyGroupSnapshotsConnectionRequestBody getConsistencyGroupSnapshotsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param consistencyGroupSnapshotUpdationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskConsistencyGroupSnapshot&gt;&gt;
    */
   @Headers({
@@ -97,7 +97,7 @@ public interface ConsistencyGroupSnapshotApi {
   })
   @POST("rollback-consistency-snapshot-group")
   Call<List<WithTaskConsistencyGroupSnapshot>> updateConsistencyGroupSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams
+    @retrofit2.http.Body ConsistencyGroupSnapshotUpdationParams consistencyGroupSnapshotUpdationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

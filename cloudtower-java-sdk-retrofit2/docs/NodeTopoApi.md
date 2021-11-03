@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## getNodeTopoes
 
-> List&lt;NodeTopo&gt; getNodeTopoes(contentLanguage, getNodeTopoesRequestBody)
+> List&lt;NodeTopo&gt; getNodeTopoes(getNodeTopoesRequestBody, contentLanguage)
 
 
 
@@ -39,10 +39,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NodeTopoApi apiInstance = new NodeTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNodeTopoesRequestBody getNodeTopoesRequestBody = new GetNodeTopoesRequestBody(); // GetNodeTopoesRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<NodeTopo> result = apiInstance.getNodeTopoes(contentLanguage, getNodeTopoesRequestBody);
+            List<NodeTopo> result = apiInstance.getNodeTopoes(getNodeTopoesRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NodeTopoApi#getNodeTopoes");
@@ -60,8 +60,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNodeTopoesRequestBody** | [**GetNodeTopoesRequestBody**](GetNodeTopoesRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## getNodeTopoesConnection
 
-> NodeTopoConnection getNodeTopoesConnection(contentLanguage, getNodeTopoesConnectionRequestBody)
+> NodeTopoConnection getNodeTopoesConnection(getNodeTopoesConnectionRequestBody, contentLanguage)
 
 
 
@@ -113,10 +113,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NodeTopoApi apiInstance = new NodeTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         GetNodeTopoesConnectionRequestBody getNodeTopoesConnectionRequestBody = new GetNodeTopoesConnectionRequestBody(); // GetNodeTopoesConnectionRequestBody | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            NodeTopoConnection result = apiInstance.getNodeTopoesConnection(contentLanguage, getNodeTopoesConnectionRequestBody);
+            NodeTopoConnection result = apiInstance.getNodeTopoesConnection(getNodeTopoesConnectionRequestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NodeTopoApi#getNodeTopoesConnection");
@@ -134,8 +134,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **getNodeTopoesConnectionRequestBody** | [**GetNodeTopoesConnectionRequestBody**](GetNodeTopoesConnectionRequestBody.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## updateNodeTopo
 
-> List&lt;WithTaskNodeTopo&gt; updateNodeTopo(contentLanguage, requestBody)
+> List&lt;WithTaskNodeTopo&gt; updateNodeTopo(requestBody, contentLanguage)
 
 
 
@@ -187,10 +187,10 @@ public class Example {
         //Authorization.setApiKeyPrefix("Token");
 
         NodeTopoApi apiInstance = new NodeTopoApi(defaultClient);
-        String contentLanguage = "zh-CN"; // String | 
         List<Object> requestBody = null; // List<Object> | 
+        String contentLanguage = "zh-CN"; // String | 
         try {
-            List<WithTaskNodeTopo> result = apiInstance.updateNodeTopo(contentLanguage, requestBody);
+            List<WithTaskNodeTopo> result = apiInstance.updateNodeTopo(requestBody, contentLanguage);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NodeTopoApi#updateNodeTopo");
@@ -208,8 +208,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contentLanguage** | **String**|  | [enum: zh-CN, en-US]
  **requestBody** | [**List&lt;Object&gt;**](Object.md)|  |
+ **contentLanguage** | **String**|  | [optional] [default to en-US] [enum: zh-CN, en-US]
 
 ### Return type
 

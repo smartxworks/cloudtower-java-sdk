@@ -45,8 +45,8 @@ public interface VmApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmAddCdRomParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -54,14 +54,14 @@ public interface VmApi {
   })
   @POST("add-vm-cd-rom")
   Call<List<WithTaskVm>> addVmCdRom(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmAddCdRomParams vmAddCdRomParams
+    @retrofit2.http.Body VmAddCdRomParams vmAddCdRomParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmAddDiskParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -69,14 +69,14 @@ public interface VmApi {
   })
   @POST("add-vm-disk")
   Call<List<WithTaskVm>> addVmDisk(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmAddDiskParams vmAddDiskParams
+    @retrofit2.http.Body VmAddDiskParams vmAddDiskParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmAddNicParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -84,14 +84,14 @@ public interface VmApi {
   })
   @POST("add-vm-nic")
   Call<List<WithTaskVm>> addVmNic(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmAddNicParams vmAddNicParams
+    @retrofit2.http.Body VmAddNicParams vmAddNicParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmAddFolderParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -99,14 +99,14 @@ public interface VmApi {
   })
   @POST("add-vm-to-folder")
   Call<List<WithTaskVm>> addVmToFolder(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmAddFolderParams vmAddFolderParams
+    @retrofit2.http.Body VmAddFolderParams vmAddFolderParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmCloneParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -114,14 +114,14 @@ public interface VmApi {
   })
   @POST("clone-vm")
   Call<List<WithTaskVm>> cloneVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmCloneParams> vmCloneParams
+    @retrofit2.http.Body List<VmCloneParams> vmCloneParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param convertVmTemplateToVmParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -129,14 +129,14 @@ public interface VmApi {
   })
   @POST("convert-vm-template-to-vm")
   Call<List<WithTaskVm>> convertVmTemplateToVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<ConvertVmTemplateToVmParams> convertVmTemplateToVmParams
+    @retrofit2.http.Body List<ConvertVmTemplateToVmParams> convertVmTemplateToVmParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -144,14 +144,14 @@ public interface VmApi {
   })
   @POST("create-vm")
   Call<List<WithTaskVm>> createVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmCreationParams> vmCreationParams
+    @retrofit2.http.Body List<VmCreationParams> vmCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmCreateVmFromTemplateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -159,14 +159,14 @@ public interface VmApi {
   })
   @POST("create-vm-from-template")
   Call<List<WithTaskVm>> createVmFromTemplate(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmCreateVmFromTemplateParams> vmCreateVmFromTemplateParams
+    @retrofit2.http.Body List<VmCreateVmFromTemplateParams> vmCreateVmFromTemplateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;InlineResponse200&gt;&gt;
    */
   @Headers({
@@ -174,14 +174,14 @@ public interface VmApi {
   })
   @POST("delete-vm")
   Call<List<InlineResponse200>> deleteVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -189,14 +189,14 @@ public interface VmApi {
   })
   @POST("force-restart-vm")
   Call<List<WithTaskVm>> forceRestartVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -204,14 +204,14 @@ public interface VmApi {
   })
   @POST("poweroff-vm")
   Call<List<WithTaskVm>> forceShutDownVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;Vm&gt;&gt;
    */
   @Headers({
@@ -219,14 +219,14 @@ public interface VmApi {
   })
   @POST("get-vms")
   Call<List<Vm>> getVms(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmsRequestBody getVmsRequestBody
+    @retrofit2.http.Body GetVmsRequestBody getVmsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getVmsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;VmConnection&gt;
    */
   @Headers({
@@ -234,14 +234,14 @@ public interface VmApi {
   })
   @POST("get-vms-connection")
   Call<VmConnection> getVmsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetVmsConnectionRequestBody getVmsConnectionRequestBody
+    @retrofit2.http.Body GetVmsConnectionRequestBody getVmsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param installVmtoolsParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -249,14 +249,14 @@ public interface VmApi {
   })
   @POST("install-vmtools")
   Call<List<WithTaskVm>> installVmtools(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body InstallVmtoolsParams installVmtoolsParams
+    @retrofit2.http.Body InstallVmtoolsParams installVmtoolsParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmMigrateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -264,14 +264,14 @@ public interface VmApi {
   })
   @POST("migrate-vm")
   Call<List<WithTaskVm>> migRateVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmMigrateParams vmMigrateParams
+    @retrofit2.http.Body VmMigrateParams vmMigrateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;InlineResponse200&gt;&gt;
    */
   @Headers({
@@ -279,14 +279,14 @@ public interface VmApi {
   })
   @POST("move-vm-to-recycle")
   Call<List<InlineResponse200>> moveVmToRecycleBin(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmRebuildParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -294,14 +294,14 @@ public interface VmApi {
   })
   @POST("rebuild-vm-from-snapshot")
   Call<List<WithTaskVm>> rebuildVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<VmRebuildParams> vmRebuildParams
+    @retrofit2.http.Body List<VmRebuildParams> vmRebuildParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;InlineResponse200&gt;&gt;
    */
   @Headers({
@@ -309,14 +309,14 @@ public interface VmApi {
   })
   @POST("recover-vm-from-recycle")
   Call<List<InlineResponse200>> recoverVmFromRecycleBin(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmRemoveCdRomParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -324,14 +324,14 @@ public interface VmApi {
   })
   @POST("remove-vm-cd-rom")
   Call<List<WithTaskVm>> removeVmCdRom(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmRemoveCdRomParams vmRemoveCdRomParams
+    @retrofit2.http.Body VmRemoveCdRomParams vmRemoveCdRomParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmRemoveDiskParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -339,14 +339,14 @@ public interface VmApi {
   })
   @POST("remove-vm-disk")
   Call<List<WithTaskVm>> removeVmDisk(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmRemoveDiskParams vmRemoveDiskParams
+    @retrofit2.http.Body VmRemoveDiskParams vmRemoveDiskParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmRemoveNicParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -354,14 +354,14 @@ public interface VmApi {
   })
   @POST("remove-vm-nic")
   Call<List<WithTaskVm>> removeVmNic(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmRemoveNicParams vmRemoveNicParams
+    @retrofit2.http.Body VmRemoveNicParams vmRemoveNicParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -369,14 +369,14 @@ public interface VmApi {
   })
   @POST("remove-vm-from-folder")
   Call<List<WithTaskVm>> removeVmToFolder(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -384,14 +384,14 @@ public interface VmApi {
   })
   @POST("restart-vm")
   Call<List<WithTaskVm>> restartVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -399,14 +399,14 @@ public interface VmApi {
   })
   @POST("resume-vm")
   Call<List<WithTaskVm>> resumeVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmRollbackParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -414,14 +414,14 @@ public interface VmApi {
   })
   @POST("rollback-vm")
   Call<List<WithTaskVm>> rollbackVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmRollbackParams vmRollbackParams
+    @retrofit2.http.Body VmRollbackParams vmRollbackParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -429,14 +429,14 @@ public interface VmApi {
   })
   @POST("shutdown-vm")
   Call<List<WithTaskVm>> shutDownVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmStartParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -444,14 +444,14 @@ public interface VmApi {
   })
   @POST("start-vm")
   Call<List<WithTaskVm>> startVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmStartParams vmStartParams
+    @retrofit2.http.Body VmStartParams vmStartParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmOperateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -459,14 +459,14 @@ public interface VmApi {
   })
   @POST("suspend-vm")
   Call<List<WithTaskVm>> suspendVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmOperateParams vmOperateParams
+    @retrofit2.http.Body VmOperateParams vmOperateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmUpdateParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -474,14 +474,14 @@ public interface VmApi {
   })
   @POST("update-vm-basic-info")
   Call<List<WithTaskVm>> updateVm(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmUpdateParams vmUpdateParams
+    @retrofit2.http.Body VmUpdateParams vmUpdateParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmUpdateDiskParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -489,14 +489,14 @@ public interface VmApi {
   })
   @POST("update-vm-disk")
   Call<List<WithTaskVm>> updateVmDisk(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmUpdateDiskParams vmUpdateDiskParams
+    @retrofit2.http.Body VmUpdateDiskParams vmUpdateDiskParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param vmUpdateNicParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskVm&gt;&gt;
    */
   @Headers({
@@ -504,7 +504,7 @@ public interface VmApi {
   })
   @POST("update-vm-nic")
   Call<List<WithTaskVm>> updateVmNic(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body VmUpdateNicParams vmUpdateNicParams
+    @retrofit2.http.Body VmUpdateNicParams vmUpdateNicParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }

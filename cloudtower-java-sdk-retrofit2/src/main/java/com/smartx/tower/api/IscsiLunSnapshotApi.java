@@ -27,8 +27,8 @@ public interface IscsiLunSnapshotApi {
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunSnapshotCreationParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskIscsiLunSnapshot&gt;&gt;
    */
   @Headers({
@@ -36,14 +36,14 @@ public interface IscsiLunSnapshotApi {
   })
   @POST("create-iscsi-lun-snapshot")
   Call<List<WithTaskIscsiLunSnapshot>> createIscsiLunSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams
+    @retrofit2.http.Body List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param iscsiLunSnapshotDeletionParams  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;WithTaskDeleteIscsiLunSnapshot&gt;&gt;
    */
   @Headers({
@@ -51,14 +51,14 @@ public interface IscsiLunSnapshotApi {
   })
   @POST("delete-iscsi-lun-snapshot")
   Call<List<WithTaskDeleteIscsiLunSnapshot>> deleteIscsiLunSnapshot(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams
+    @retrofit2.http.Body IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiLunSnapshotsRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;List&lt;IscsiLunSnapshot&gt;&gt;
    */
   @Headers({
@@ -66,14 +66,14 @@ public interface IscsiLunSnapshotApi {
   })
   @POST("get-iscsi-lun-snapshots")
   Call<List<IscsiLunSnapshot>> getIscsiLunSnapshots(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody
+    @retrofit2.http.Body GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
   /**
    * 
    * 
-   * @param contentLanguage  (required)
    * @param getIscsiLunSnapshotsConnectionRequestBody  (required)
+   * @param contentLanguage  (optional, default to en-US)
    * @return Call&lt;IscsiLunSnapshotConnection&gt;
    */
   @Headers({
@@ -81,7 +81,7 @@ public interface IscsiLunSnapshotApi {
   })
   @POST("get-iscsi-lun-snapshots-connection")
   Call<IscsiLunSnapshotConnection> getIscsiLunSnapshotsConnection(
-    @retrofit2.http.Header("content-language") String contentLanguage, @retrofit2.http.Body GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody
+    @retrofit2.http.Body GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, @retrofit2.http.Header("content-language") String contentLanguage
   );
 
 }
