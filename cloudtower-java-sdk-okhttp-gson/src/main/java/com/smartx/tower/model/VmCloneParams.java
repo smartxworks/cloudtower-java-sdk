@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * VmCloneParams
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmCloneParams {
   public static final String SERIALIZED_NAME_SRC_VM_ID = "src_vm_id";
   @SerializedName(SERIALIZED_NAME_SRC_VM_ID)
@@ -79,7 +79,7 @@ public class VmCloneParams {
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<Object> vmNics = null;
+  private List<VmNicParams> vmNics = null;
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
@@ -352,15 +352,15 @@ public class VmCloneParams {
   }
 
 
-  public VmCloneParams vmNics(List<Object> vmNics) {
+  public VmCloneParams vmNics(List<VmNicParams> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public VmCloneParams addVmNicsItem(Object vmNicsItem) {
+  public VmCloneParams addVmNicsItem(VmNicParams vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<Object>();
+      this.vmNics = new ArrayList<VmNicParams>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -373,12 +373,12 @@ public class VmCloneParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getVmNics() {
+  public List<VmNicParams> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<Object> vmNics) {
+  public void setVmNics(List<VmNicParams> vmNics) {
     this.vmNics = vmNics;
   }
 

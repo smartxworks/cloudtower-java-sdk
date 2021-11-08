@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.UploadTaskApi;
 import com.smartx.tower.model.*;
 
-public class ITUploadTask extends IT {
+public class ITUploadTask extends ITBase {
   UploadTaskApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITUploadTask extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITUploadTask extends IT {
   public void getUploadTasks(String payload) {
     try {
       // parse params from json payload
-      GetUploadTasksRequestBody params = gson.fromJson(payload, GetUploadTasksRequestBody.class);
+      GetUploadTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetUploadTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<UploadTask> result = api.getUploadTasks("zh-CN", params);
+      List<UploadTask> result = api.getUploadTasks(params, contentLanguage);
       assertThat(result).as("check result of getUploadTasks").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITUploadTask extends IT {
   public void getUploadTasksConnection(String payload) {
     try {
       // parse params from json payload
-      GetUploadTasksConnectionRequestBody params = gson.fromJson(payload, GetUploadTasksConnectionRequestBody.class);
+      GetUploadTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUploadTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      UploadTaskConnection result = api.getUploadTasksConnection("zh-CN", params);
+      UploadTaskConnection result = api.getUploadTasksConnection(params, contentLanguage);
       assertThat(result).as("check result of getUploadTasksConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

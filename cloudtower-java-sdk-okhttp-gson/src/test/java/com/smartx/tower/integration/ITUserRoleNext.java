@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.UserRoleNextApi;
 import com.smartx.tower.model.*;
 
-public class ITUserRoleNext extends IT {
+public class ITUserRoleNext extends ITBase {
   UserRoleNextApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,59 +34,20 @@ public class ITUserRoleNext extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getUserRoleNexts(String payload) {
-    try {
-      // parse params from json payload
-      GetUserRoleNextsRequestBody params = gson.fromJson(payload, GetUserRoleNextsRequestBody.class);
-      // do some modify to params(optional)
-      List<UserRoleNext> result = api.getUserRoleNexts("zh-CN", params);
-      assertThat(result).as("check result of getUserRoleNexts").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getUserRoleNextsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetUserRoleNextsConnectionRequestBody params = gson.fromJson(payload, GetUserRoleNextsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      UserRoleNextConnection result = api.getUserRoleNextsConnection("zh-CN", params);
-      assertThat(result).as("check result of getUserRoleNextsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createRole(String payload) {
     try {
       // parse params from json payload
-      List<RoleCreationParams> params = gson.fromJson(payload, List.class);
+      List<RoleCreationParams> params = gson.fromJson(payload, new TypeToken<List<RoleCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUserRoleNext> result = api.createRole("zh-CN", params);
+      List<WithTaskUserRoleNext> result = api.createRole(params, contentLanguage);
       assertThat(result).as("check result of createRole").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateRole(String payload) {
-    try {
-      // parse params from json payload
-      RoleUpdationParams params = gson.fromJson(payload, RoleUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskUserRoleNext> result = api.updateRole("zh-CN", params);
-      assertThat(result).as("check result of updateRole").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -93,12 +55,51 @@ public class ITUserRoleNext extends IT {
   public void deleteRole(String payload) {
     try {
       // parse params from json payload
-      RoleDeletionParams params = gson.fromJson(payload, RoleDeletionParams.class);
+      RoleDeletionParams params = gson.fromJson(payload, new TypeToken<RoleDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteRole> result = api.deleteRole("zh-CN", params);
+      List<WithTaskDeleteRole> result = api.deleteRole(params, contentLanguage);
       assertThat(result).as("check result of deleteRole").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getUserRoleNexts(String payload) {
+    try {
+      // parse params from json payload
+      GetUserRoleNextsRequestBody params = gson.fromJson(payload, new TypeToken<GetUserRoleNextsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<UserRoleNext> result = api.getUserRoleNexts(params, contentLanguage);
+      assertThat(result).as("check result of getUserRoleNexts").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getUserRoleNextsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetUserRoleNextsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUserRoleNextsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      UserRoleNextConnection result = api.getUserRoleNextsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getUserRoleNextsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateRole(String payload) {
+    try {
+      // parse params from json payload
+      RoleUpdationParams params = gson.fromJson(payload, new TypeToken<RoleUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskUserRoleNext> result = api.updateRole(params, contentLanguage);
+      assertThat(result).as("check result of updateRole").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

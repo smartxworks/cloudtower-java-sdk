@@ -181,6 +181,10 @@
 
 * `TOTAL_CPU_HZ_DESC` (value: `"total_cpu_hz_DESC"`)
 
+* `TOTAL_CPU_SOCKETS_ASC` (value: `"total_cpu_sockets_ASC"`)
+
+* `TOTAL_CPU_SOCKETS_DESC` (value: `"total_cpu_sockets_DESC"`)
+
 * `TOTAL_DATA_CAPACITY_ASC` (value: `"total_data_capacity_ASC"`)
 
 * `TOTAL_DATA_CAPACITY_DESC` (value: `"total_data_capacity_DESC"`)

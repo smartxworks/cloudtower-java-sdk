@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.MigrateTransmitterApi;
 import com.smartx.tower.model.*;
 
-public class ITMigrateTransmitter extends IT {
+public class ITMigrateTransmitter extends ITBase {
   MigrateTransmitterApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITMigrateTransmitter extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITMigrateTransmitter extends IT {
   public void getMigrateTransmitters(String payload) {
     try {
       // parse params from json payload
-      GetMigrateTransmittersRequestBody params = gson.fromJson(payload, GetMigrateTransmittersRequestBody.class);
+      GetMigrateTransmittersRequestBody params = gson.fromJson(payload, new TypeToken<GetMigrateTransmittersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<MigrateTransmitter> result = api.getMigrateTransmitters("zh-CN", params);
+      List<MigrateTransmitter> result = api.getMigrateTransmitters(params, contentLanguage);
       assertThat(result).as("check result of getMigrateTransmitters").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITMigrateTransmitter extends IT {
   public void getMigrateTransmittersConnection(String payload) {
     try {
       // parse params from json payload
-      GetMigrateTransmittersConnectionRequestBody params = gson.fromJson(payload, GetMigrateTransmittersConnectionRequestBody.class);
+      GetMigrateTransmittersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetMigrateTransmittersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      MigrateTransmitterConnection result = api.getMigrateTransmittersConnection("zh-CN", params);
+      MigrateTransmitterConnection result = api.getMigrateTransmittersConnection(params, contentLanguage);
       assertThat(result).as("check result of getMigrateTransmittersConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

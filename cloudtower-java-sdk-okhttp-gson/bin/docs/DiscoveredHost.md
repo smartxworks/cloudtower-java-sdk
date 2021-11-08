@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **isOsInRaid1** | **Boolean** |  |  [optional]
 **product** | **String** |  |  [optional]
 **serial** | **String** |  | 
+**sockets** | **Double** |  | 
 **version** | **String** |  | 
 
 

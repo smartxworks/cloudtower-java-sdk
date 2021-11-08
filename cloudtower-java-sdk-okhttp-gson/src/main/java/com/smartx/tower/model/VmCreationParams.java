@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * VmCreationParams
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmCreationParams {
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -75,7 +75,7 @@ public class VmCreationParams {
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<Object> vmNics = new ArrayList<Object>();
+  private List<VmNicParams> vmNics = new ArrayList<VmNicParams>();
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
@@ -325,13 +325,13 @@ public class VmCreationParams {
   }
 
 
-  public VmCreationParams vmNics(List<Object> vmNics) {
+  public VmCreationParams vmNics(List<VmNicParams> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public VmCreationParams addVmNicsItem(Object vmNicsItem) {
+  public VmCreationParams addVmNicsItem(VmNicParams vmNicsItem) {
     this.vmNics.add(vmNicsItem);
     return this;
   }
@@ -343,12 +343,12 @@ public class VmCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Object> getVmNics() {
+  public List<VmNicParams> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<Object> vmNics) {
+  public void setVmNics(List<VmNicParams> vmNics) {
     this.vmNics = vmNics;
   }
 

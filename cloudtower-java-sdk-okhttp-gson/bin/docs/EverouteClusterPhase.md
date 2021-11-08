@@ -5,9 +5,11 @@
 ## Enum
 
 
+* `ASSOCIATED` (value: `"Associated"`)
+
 * `FAILED` (value: `"Failed"`)
 
-* `PENDING` (value: `"Pending"`)
+* `INIT` (value: `"Init"`)
 
 * `RUNNING` (value: `"Running"`)
 

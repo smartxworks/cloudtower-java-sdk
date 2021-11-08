@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.AlertApi;
 import com.smartx.tower.model.*;
 
-public class ITAlert extends IT {
+public class ITAlert extends ITBase {
   AlertApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,43 +34,54 @@ public class ITAlert extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, String>>() {
+    }.getType());
   }
 
-  @Test(dataProvider = "payload", priority = 0)
+  @Test(dataProvider = "payload")
   public void getAlerts(String payload) {
     try {
-      List<Alert> alerts = api.getAlerts("zh-CN", gson.fromJson(payload, GetAlertsRequestBody.class));
-      assertThat(alerts).as("check result of getAlerts").isNotNull();
+      // parse params from json payload
+      GetAlertsRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertsRequestBody>() {
+      }.getType());
+      // do some modify to params(optional)
+      List<Alert> result = api.getAlerts(params, contentLanguage);
+      assertThat(result).as("check result of getAlerts").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(priority = 2)
-  public void resolveAlert() {
-    try {
-      List<Alert> notResolved = api.getAlerts("zh-CN",
-          new GetAlertsRequestBody().first(1.0).where(new AlertWhereInput().ended(false)));
-      if (notResolved.size() == 0) {
-        return;
-      }
-      ResolveAlertParams params = new ResolveAlertParams().where(new AlertWhereInput().id(notResolved.get(0).getId()));
-      List<WithTaskAlert> alerts = api.resolveAlert("zh-CN", params);
-      assertThat(alerts).as("check result of resolveAlert").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload", priority = 1)
+  @Test(dataProvider = "payload")
   public void getAlertsConnection(String payload) {
     try {
-      AlertConnection connections = api.getAlertsConnection("zh-CN",
-          gson.fromJson(payload, GetAlertsConnectionRequestBody.class));
-      assertThat(connections).as("try to get alert connections").isNotNull();
+      // parse params from json payload
+      GetAlertsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertsConnectionRequestBody>() {
+      }.getType());
+      // do some modify to params(optional)
+      AlertConnection result = api.getAlertsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getAlertsConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
+
+  @Test(dataProvider = "payload")
+  public void resolveAlert(String payload) {
+    try {
+      Alert alertNotEnded = getData("firstAlertNotEnded", Alert.class);
+      // parse params from json payload
+      ResolveAlertParams params = gson.fromJson(payload, new TypeToken<ResolveAlertParams>() {
+      }.getType());
+      AlertWhereInput where = new AlertWhereInput();
+      where.setId(alertNotEnded.getId());
+      params.setWhere(where);
+      // do some modify to params(optional)
+      List<WithTaskAlert> result = api.resolveAlert(params, contentLanguage);
+      assertThat(result).as("check result of resolveAlert").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
 }

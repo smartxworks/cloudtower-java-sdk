@@ -4,22 +4,6 @@ import ejs from "ejs";
 import { parse, ClassBodyDeclarationContext } from "java-ast";
 import log from "loglevel";
 
-const mapFunctionOrder = (name: string) => {
-  const f3 = name.slice(0, 3);
-  const f6 = name.slice(0, 6);
-
-  if (f3 === "get") {
-    return -5;
-  } else if (f6 === "update") {
-    return 0;
-  } else if (f6 === "delete") {
-    return 10;
-  } else if (f6 === "create") {
-    return -1;
-  }
-  return 1;
-};
-
 const template = fs.readFileSync("it.okhttp3-gson.template.ejs").toString();
 
 const debug = !!~process.argv.indexOf("--debug");
@@ -71,20 +55,9 @@ for (const file of fs.readdirSync(apiFolder)) {
             payload: functionToTest
               .getChild(2)
               .getChild(1)
-              .getChild(2)
-              .getChild(0).text,
-            payloadClass: functionToTest
-              .getChild(2)
-              .getChild(1)
-              .getChild(2)
+              .getChild(0)
               .getChild(0).text,
           };
-          if (/.+<.+>/.test(funcArgs.payload)) {
-            funcArgs["payloadClass"] = funcArgs.payload.slice(
-              0,
-              funcArgs.payload.indexOf("<")
-            );
-          }
           functions.push(funcArgs);
         }
       }
@@ -92,9 +65,7 @@ for (const file of fs.readdirSync(apiFolder)) {
   } else {
     log.warn(`unsupported file, no ast tree founded`);
   }
-  functions.sort((a, b) => {
-    return mapFunctionOrder(a.name) - mapFunctionOrder(b.name);
-  });
+
   fs.writeFile(
     targetFile,
     ejs.render(template, {

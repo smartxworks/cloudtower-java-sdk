@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,52 +15,52 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.VmDiskApi;
 import com.smartx.tower.model.*;
 
-public class ITVmDisk extends IT {
-  VmDiskApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+public class ITVmDisk extends ITBase {
+  VmDiskApi vmDiskApi = null;
+  HashMap<String, Object> vmDiskPayloads = new HashMap<>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "vmDiskPayload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = vmDiskPayloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
   public void getService() throws IOException {
-    api = new VmDiskApi(client);
+    vmDiskApi = new VmDiskApi(client);
     // get payloads from resource file
     InputStream stream = getClass().getResourceAsStream("/VmDisk.json");
     if (stream == null) {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    vmDiskPayloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vmDiskPayload")
   public void getVmDisks(String payload) {
     try {
       // parse params from json payload
-      GetVmDisksRequestBody params = gson.fromJson(payload, GetVmDisksRequestBody.class);
+      GetVmDisksRequestBody params = gson.fromJson(payload, new TypeToken<GetVmDisksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VmDisk> result = api.getVmDisks("zh-CN", params);
+      List<VmDisk> result = vmDiskApi.getVmDisks(params, contentLanguage);
       assertThat(result).as("check result of getVmDisks").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vmDiskPayload")
   public void getVmDisksConnection(String payload) {
     try {
       // parse params from json payload
-      GetVmDisksConnectionRequestBody params = gson.fromJson(payload, GetVmDisksConnectionRequestBody.class);
+      GetVmDisksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmDisksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VmDiskConnection result = api.getVmDisksConnection("zh-CN", params);
+      VmDiskConnection result = vmDiskApi.getVmDisksConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmDisksConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

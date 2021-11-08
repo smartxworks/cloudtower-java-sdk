@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.WitnessApi;
 import com.smartx.tower.model.*;
 
-public class ITWitness extends IT {
+public class ITWitness extends ITBase {
   WitnessApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITWitness extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITWitness extends IT {
   public void getWitnesses(String payload) {
     try {
       // parse params from json payload
-      GetWitnessesRequestBody params = gson.fromJson(payload, GetWitnessesRequestBody.class);
+      GetWitnessesRequestBody params = gson.fromJson(payload, new TypeToken<GetWitnessesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Witness> result = api.getWitnesses("zh-CN", params);
+      List<Witness> result = api.getWitnesses(params, contentLanguage);
       assertThat(result).as("check result of getWitnesses").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITWitness extends IT {
   public void getWitnessesConnection(String payload) {
     try {
       // parse params from json payload
-      GetWitnessesConnectionRequestBody params = gson.fromJson(payload, GetWitnessesConnectionRequestBody.class);
+      GetWitnessesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetWitnessesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      WitnessConnection result = api.getWitnessesConnection("zh-CN", params);
+      WitnessConnection result = api.getWitnessesConnection(params, contentLanguage);
       assertThat(result).as("check result of getWitnessesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

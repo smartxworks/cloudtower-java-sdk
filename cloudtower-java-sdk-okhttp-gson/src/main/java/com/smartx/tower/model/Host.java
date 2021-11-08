@@ -36,7 +36,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * Host
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Host {
   public static final String SERIALIZED_NAME_ACCESS_IP = "access_ip";
   @SerializedName(SERIALIZED_NAME_ACCESS_IP)
@@ -245,6 +245,10 @@ public class Host {
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
   private Double totalCpuHz;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
+  private Double totalCpuSockets;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
@@ -1538,6 +1542,29 @@ public class Host {
   }
 
 
+  public Host totalCpuSockets(Double totalCpuSockets) {
+    
+    this.totalCpuSockets = totalCpuSockets;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSockets
+   * @return totalCpuSockets
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSockets() {
+    return totalCpuSockets;
+  }
+
+
+  public void setTotalCpuSockets(Double totalCpuSockets) {
+    this.totalCpuSockets = totalCpuSockets;
+  }
+
+
   public Host totalDataCapacity(Double totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
@@ -1891,6 +1918,7 @@ public class Host {
         Objects.equals(this.totalCacheCapacity, host.totalCacheCapacity) &&
         Objects.equals(this.totalCpuCores, host.totalCpuCores) &&
         Objects.equals(this.totalCpuHz, host.totalCpuHz) &&
+        Objects.equals(this.totalCpuSockets, host.totalCpuSockets) &&
         Objects.equals(this.totalDataCapacity, host.totalDataCapacity) &&
         Objects.equals(this.totalMemoryBytes, host.totalMemoryBytes) &&
         Objects.equals(this.usbDevices, host.usbDevices) &&
@@ -1911,7 +1939,7 @@ public class Host {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessIp, allocatableMemoryBytes, chunkId, cluster, compatibleCpuModels, cpuBrand, cpuFanSpeed, cpuFanSpeedUnit, cpuHzPerCore, cpuModel, cpuTemperatureCelsius, dataIp, disks, failureDataSpace, hddDataCapacity, hddDiskCount, id, ipmi, isOsInRaid1, labels, localId, lsmCapDiskSafeUmount, managementIp, model, name, nestedVirtualization, nicCount, nics, nodeTopoLocalId, osMemoryBytes, osVersion, pmemDimmCapacity, pmemDimmCount, pmemDimms, pmemDiskCount, provisionedCpuCores, provisionedMemoryBytes, runningPauseVmMemoryBytes, runningVmNum, scvmCpu, scvmMemory, scvmName, serial, ssdDataCapacity, ssdDiskCount, state, status, stoppedVmNum, suspendedVmNum, totalCacheCapacity, totalCpuCores, totalCpuHz, totalDataCapacity, totalMemoryBytes, usbDevices, usedCpuHz, usedDataSpace, usedMemoryBytes, vmNum, vmotionIp, vms, vsphereEsxiAccount, withFasterSsdAsCache, zone);
+    return Objects.hash(accessIp, allocatableMemoryBytes, chunkId, cluster, compatibleCpuModels, cpuBrand, cpuFanSpeed, cpuFanSpeedUnit, cpuHzPerCore, cpuModel, cpuTemperatureCelsius, dataIp, disks, failureDataSpace, hddDataCapacity, hddDiskCount, id, ipmi, isOsInRaid1, labels, localId, lsmCapDiskSafeUmount, managementIp, model, name, nestedVirtualization, nicCount, nics, nodeTopoLocalId, osMemoryBytes, osVersion, pmemDimmCapacity, pmemDimmCount, pmemDimms, pmemDiskCount, provisionedCpuCores, provisionedMemoryBytes, runningPauseVmMemoryBytes, runningVmNum, scvmCpu, scvmMemory, scvmName, serial, ssdDataCapacity, ssdDiskCount, state, status, stoppedVmNum, suspendedVmNum, totalCacheCapacity, totalCpuCores, totalCpuHz, totalCpuSockets, totalDataCapacity, totalMemoryBytes, usbDevices, usedCpuHz, usedDataSpace, usedMemoryBytes, vmNum, vmotionIp, vms, vsphereEsxiAccount, withFasterSsdAsCache, zone);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1977,6 +2005,7 @@ public class Host {
     sb.append("    totalCacheCapacity: ").append(toIndentedString(totalCacheCapacity)).append("\n");
     sb.append("    totalCpuCores: ").append(toIndentedString(totalCpuCores)).append("\n");
     sb.append("    totalCpuHz: ").append(toIndentedString(totalCpuHz)).append("\n");
+    sb.append("    totalCpuSockets: ").append(toIndentedString(totalCpuSockets)).append("\n");
     sb.append("    totalDataCapacity: ").append(toIndentedString(totalDataCapacity)).append("\n");
     sb.append("    totalMemoryBytes: ").append(toIndentedString(totalMemoryBytes)).append("\n");
     sb.append("    usbDevices: ").append(toIndentedString(usbDevices)).append("\n");

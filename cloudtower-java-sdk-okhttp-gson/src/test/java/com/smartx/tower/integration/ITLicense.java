@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.LicenseApi;
 import com.smartx.tower.model.*;
 
-public class ITLicense extends IT {
+public class ITLicense extends ITBase {
   LicenseApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITLicense extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITLicense extends IT {
   public void getLicenses(String payload) {
     try {
       // parse params from json payload
-      GetLicensesRequestBody params = gson.fromJson(payload, GetLicensesRequestBody.class);
+      GetLicensesRequestBody params = gson.fromJson(payload, new TypeToken<GetLicensesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<License> result = api.getLicenses("zh-CN", params);
+      List<License> result = api.getLicenses(params, contentLanguage);
       assertThat(result).as("check result of getLicenses").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITLicense extends IT {
   public void getLicensesConnection(String payload) {
     try {
       // parse params from json payload
-      GetLicensesConnectionRequestBody params = gson.fromJson(payload, GetLicensesConnectionRequestBody.class);
+      GetLicensesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetLicensesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      LicenseConnection result = api.getLicensesConnection("zh-CN", params);
+      LicenseConnection result = api.getLicensesConnection(params, contentLanguage);
       assertThat(result).as("check result of getLicensesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -67,12 +68,12 @@ public class ITLicense extends IT {
   public void updateDeploy(String payload) {
     try {
       // parse params from json payload
-      LicenseUpdationParams params = gson.fromJson(payload, LicenseUpdationParams.class);
+      LicenseUpdationParams params = gson.fromJson(payload, new TypeToken<LicenseUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      WithTaskLicense result = api.updateDeploy("zh-CN", params);
+      WithTaskLicense result = api.updateDeploy(params, contentLanguage);
       assertThat(result).as("check result of updateDeploy").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

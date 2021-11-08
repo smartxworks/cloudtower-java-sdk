@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.GraphApi;
 import com.smartx.tower.model.*;
 
-public class ITGraph extends IT {
+public class ITGraph extends ITBase {
   GraphApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,59 +34,20 @@ public class ITGraph extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getGraphs(String payload) {
-    try {
-      // parse params from json payload
-      GetGraphsRequestBody params = gson.fromJson(payload, GetGraphsRequestBody.class);
-      // do some modify to params(optional)
-      List<Graph> result = api.getGraphs("zh-CN", params);
-      assertThat(result).as("check result of getGraphs").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getGraphsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetGraphsConnectionRequestBody params = gson.fromJson(payload, GetGraphsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      GraphConnection result = api.getGraphsConnection("zh-CN", params);
-      assertThat(result).as("check result of getGraphsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createGraph(String payload) {
     try {
       // parse params from json payload
-      List<GraphCreationParams> params = gson.fromJson(payload, List.class);
+      List<GraphCreationParams> params = gson.fromJson(payload, new TypeToken<List<GraphCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskGraph> result = api.createGraph("zh-CN", params);
+      List<WithTaskGraph> result = api.createGraph(params, contentLanguage);
       assertThat(result).as("check result of createGraph").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateGraph(String payload) {
-    try {
-      // parse params from json payload
-      GraphUpdationParams params = gson.fromJson(payload, GraphUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskGraph> result = api.updateGraph("zh-CN", params);
-      assertThat(result).as("check result of updateGraph").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -93,12 +55,51 @@ public class ITGraph extends IT {
   public void deleteGraph(String payload) {
     try {
       // parse params from json payload
-      GraphDeletionParams params = gson.fromJson(payload, GraphDeletionParams.class);
+      GraphDeletionParams params = gson.fromJson(payload, new TypeToken<GraphDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteGraph> result = api.deleteGraph("zh-CN", params);
+      List<WithTaskDeleteGraph> result = api.deleteGraph(params, contentLanguage);
       assertThat(result).as("check result of deleteGraph").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getGraphs(String payload) {
+    try {
+      // parse params from json payload
+      GetGraphsRequestBody params = gson.fromJson(payload, new TypeToken<GetGraphsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<Graph> result = api.getGraphs(params, contentLanguage);
+      assertThat(result).as("check result of getGraphs").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getGraphsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetGraphsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetGraphsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      GraphConnection result = api.getGraphsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getGraphsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateGraph(String payload) {
+    try {
+      // parse params from json payload
+      GraphUpdationParams params = gson.fromJson(payload, new TypeToken<GraphUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskGraph> result = api.updateGraph(params, contentLanguage);
+      assertThat(result).as("check result of updateGraph").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

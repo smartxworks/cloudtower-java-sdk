@@ -29,9 +29,11 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(EverouteClusterPhase.Adapter.class)
 public enum EverouteClusterPhase {
   
+  ASSOCIATED("Associated"),
+  
   FAILED("Failed"),
   
-  PENDING("Pending"),
+  INIT("Init"),
   
   RUNNING("Running"),
   

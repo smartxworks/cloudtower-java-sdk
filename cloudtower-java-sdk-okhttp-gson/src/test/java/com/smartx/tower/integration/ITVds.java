@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.VdsApi;
 import com.smartx.tower.model.*;
 
-public class ITVds extends IT {
+public class ITVds extends ITBase {
   VdsApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,46 +34,20 @@ public class ITVds extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getVdses(String payload) {
-    try {
-      // parse params from json payload
-      GetVdsesRequestBody params = gson.fromJson(payload, GetVdsesRequestBody.class);
-      // do some modify to params(optional)
-      List<Vds> result = api.getVdses("zh-CN", params);
-      assertThat(result).as("check result of getVdses").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getVdsesConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetVdsesConnectionRequestBody params = gson.fromJson(payload, GetVdsesConnectionRequestBody.class);
-      // do some modify to params(optional)
-      VdsConnection result = api.getVdsesConnection("zh-CN", params);
-      assertThat(result).as("check result of getVdsesConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createVds(String payload) {
     try {
       // parse params from json payload
-      List<VdsCreationParams> params = gson.fromJson(payload, List.class);
+      List<VdsCreationParams> params = gson.fromJson(payload, new TypeToken<List<VdsCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.createVds("zh-CN", params);
+      List<WithTaskVds> result = api.createVds(params, contentLanguage);
       assertThat(result).as("check result of createVds").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -80,12 +55,12 @@ public class ITVds extends IT {
   public void createVdsWithAccessVlan(String payload) {
     try {
       // parse params from json payload
-      List<VdsCreationWithMAccessVlanParams> params = gson.fromJson(payload, List.class);
+      List<VdsCreationWithMAccessVlanParams> params = gson.fromJson(payload, new TypeToken<List<VdsCreationWithMAccessVlanParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.createVdsWithAccessVlan("zh-CN", params);
+      List<WithTaskVds> result = api.createVdsWithAccessVlan(params, contentLanguage);
       assertThat(result).as("check result of createVdsWithAccessVlan").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -93,25 +68,12 @@ public class ITVds extends IT {
   public void createVdsWithMigrateVlan(String payload) {
     try {
       // parse params from json payload
-      List<VdsCreationWithMigrateVlanParams> params = gson.fromJson(payload, List.class);
+      List<VdsCreationWithMigrateVlanParams> params = gson.fromJson(payload, new TypeToken<List<VdsCreationWithMigrateVlanParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.createVdsWithMigrateVlan("zh-CN", params);
+      List<WithTaskVds> result = api.createVdsWithMigrateVlan(params, contentLanguage);
       assertThat(result).as("check result of createVdsWithMigrateVlan").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateVds(String payload) {
-    try {
-      // parse params from json payload
-      VdsUpdationParams params = gson.fromJson(payload, VdsUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskVds> result = api.updateVds("zh-CN", params);
-      assertThat(result).as("check result of updateVds").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -119,12 +81,51 @@ public class ITVds extends IT {
   public void deleteVds(String payload) {
     try {
       // parse params from json payload
-      VdsDeletionParams params = gson.fromJson(payload, VdsDeletionParams.class);
+      VdsDeletionParams params = gson.fromJson(payload, new TypeToken<VdsDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteVds> result = api.deleteVds("zh-CN", params);
+      List<WithTaskDeleteVds> result = api.deleteVds(params, contentLanguage);
       assertThat(result).as("check result of deleteVds").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getVdses(String payload) {
+    try {
+      // parse params from json payload
+      GetVdsesRequestBody params = gson.fromJson(payload, new TypeToken<GetVdsesRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<Vds> result = api.getVdses(params, contentLanguage);
+      assertThat(result).as("check result of getVdses").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getVdsesConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetVdsesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVdsesConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      VdsConnection result = api.getVdsesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getVdsesConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateVds(String payload) {
+    try {
+      // parse params from json payload
+      VdsUpdationParams params = gson.fromJson(payload, new TypeToken<VdsUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskVds> result = api.updateVds(params, contentLanguage);
+      assertThat(result).as("check result of updateVds").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

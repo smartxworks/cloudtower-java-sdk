@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.ZoneApi;
 import com.smartx.tower.model.*;
 
-public class ITZone extends IT {
+public class ITZone extends ITBase {
   ZoneApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITZone extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITZone extends IT {
   public void getZones(String payload) {
     try {
       // parse params from json payload
-      GetZonesRequestBody params = gson.fromJson(payload, GetZonesRequestBody.class);
+      GetZonesRequestBody params = gson.fromJson(payload, new TypeToken<GetZonesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Zone> result = api.getZones("zh-CN", params);
+      List<Zone> result = api.getZones(params, contentLanguage);
       assertThat(result).as("check result of getZones").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITZone extends IT {
   public void getZonesConnection(String payload) {
     try {
       // parse params from json payload
-      GetZonesConnectionRequestBody params = gson.fromJson(payload, GetZonesConnectionRequestBody.class);
+      GetZonesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetZonesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ZoneConnection result = api.getZonesConnection("zh-CN", params);
+      ZoneConnection result = api.getZonesConnection(params, contentLanguage);
       assertThat(result).as("check result of getZonesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

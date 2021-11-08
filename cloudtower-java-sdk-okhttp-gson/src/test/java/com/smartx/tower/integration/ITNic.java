@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.NicApi;
 import com.smartx.tower.model.*;
 
-public class ITNic extends IT {
+public class ITNic extends ITBase {
   NicApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITNic extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITNic extends IT {
   public void getNics(String payload) {
     try {
       // parse params from json payload
-      GetNicsRequestBody params = gson.fromJson(payload, GetNicsRequestBody.class);
+      GetNicsRequestBody params = gson.fromJson(payload, new TypeToken<GetNicsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Nic> result = api.getNics("zh-CN", params);
+      List<Nic> result = api.getNics(params, contentLanguage);
       assertThat(result).as("check result of getNics").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITNic extends IT {
   public void getNicsConnection(String payload) {
     try {
       // parse params from json payload
-      GetNicsConnectionRequestBody params = gson.fromJson(payload, GetNicsConnectionRequestBody.class);
+      GetNicsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNicsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NicConnection result = api.getNicsConnection("zh-CN", params);
+      NicConnection result = api.getNicsConnection(params, contentLanguage);
       assertThat(result).as("check result of getNicsConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -67,12 +68,12 @@ public class ITNic extends IT {
   public void updateNic(String payload) {
     try {
       // parse params from json payload
-      NicUpdationParams params = gson.fromJson(payload, NicUpdationParams.class);
+      NicUpdationParams params = gson.fromJson(payload, new TypeToken<NicUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNic> result = api.updateNic("zh-CN", params);
+      List<WithTaskNic> result = api.updateNic(params, contentLanguage);
       assertThat(result).as("check result of updateNic").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

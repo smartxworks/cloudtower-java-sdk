@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.IscsiLunSnapshotApi;
 import com.smartx.tower.model.*;
 
-public class ITIscsiLunSnapshot extends IT {
+public class ITIscsiLunSnapshot extends ITBase {
   IscsiLunSnapshotApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,46 +34,20 @@ public class ITIscsiLunSnapshot extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getIscsiLunSnapshots(String payload) {
-    try {
-      // parse params from json payload
-      GetIscsiLunSnapshotsRequestBody params = gson.fromJson(payload, GetIscsiLunSnapshotsRequestBody.class);
-      // do some modify to params(optional)
-      List<IscsiLunSnapshot> result = api.getIscsiLunSnapshots("zh-CN", params);
-      assertThat(result).as("check result of getIscsiLunSnapshots").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getIscsiLunSnapshotsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetIscsiLunSnapshotsConnectionRequestBody params = gson.fromJson(payload, GetIscsiLunSnapshotsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      IscsiLunSnapshotConnection result = api.getIscsiLunSnapshotsConnection("zh-CN", params);
-      assertThat(result).as("check result of getIscsiLunSnapshotsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createIscsiLunSnapshot(String payload) {
     try {
       // parse params from json payload
-      List<IscsiLunSnapshotCreationParams> params = gson.fromJson(payload, List.class);
+      List<IscsiLunSnapshotCreationParams> params = gson.fromJson(payload, new TypeToken<List<IscsiLunSnapshotCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskIscsiLunSnapshot> result = api.createIscsiLunSnapshot("zh-CN", params);
+      List<WithTaskIscsiLunSnapshot> result = api.createIscsiLunSnapshot(params, contentLanguage);
       assertThat(result).as("check result of createIscsiLunSnapshot").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -80,12 +55,38 @@ public class ITIscsiLunSnapshot extends IT {
   public void deleteIscsiLunSnapshot(String payload) {
     try {
       // parse params from json payload
-      IscsiLunSnapshotDeletionParams params = gson.fromJson(payload, IscsiLunSnapshotDeletionParams.class);
+      IscsiLunSnapshotDeletionParams params = gson.fromJson(payload, new TypeToken<IscsiLunSnapshotDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteIscsiLunSnapshot> result = api.deleteIscsiLunSnapshot("zh-CN", params);
+      List<WithTaskDeleteIscsiLunSnapshot> result = api.deleteIscsiLunSnapshot(params, contentLanguage);
       assertThat(result).as("check result of deleteIscsiLunSnapshot").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getIscsiLunSnapshots(String payload) {
+    try {
+      // parse params from json payload
+      GetIscsiLunSnapshotsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiLunSnapshotsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<IscsiLunSnapshot> result = api.getIscsiLunSnapshots(params, contentLanguage);
+      assertThat(result).as("check result of getIscsiLunSnapshots").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getIscsiLunSnapshotsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetIscsiLunSnapshotsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiLunSnapshotsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      IscsiLunSnapshotConnection result = api.getIscsiLunSnapshotsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getIscsiLunSnapshotsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

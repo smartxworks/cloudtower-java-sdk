@@ -22,3 +22,7 @@ build
 
 # exclude release jar and pom
 !dist/**/*.jar
+
+# exclude vscode settings
+.vscode/settings.json
+**/.vscode/settings.json

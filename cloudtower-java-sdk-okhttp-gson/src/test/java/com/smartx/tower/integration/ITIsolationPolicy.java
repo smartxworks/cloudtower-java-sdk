@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.IsolationPolicyApi;
 import com.smartx.tower.model.*;
 
-public class ITIsolationPolicy extends IT {
+public class ITIsolationPolicy extends ITBase {
   IsolationPolicyApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITIsolationPolicy extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITIsolationPolicy extends IT {
   public void getIsolationPolicies(String payload) {
     try {
       // parse params from json payload
-      GetIsolationPoliciesRequestBody params = gson.fromJson(payload, GetIsolationPoliciesRequestBody.class);
+      GetIsolationPoliciesRequestBody params = gson.fromJson(payload, new TypeToken<GetIsolationPoliciesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<IsolationPolicy> result = api.getIsolationPolicies("zh-CN", params);
+      List<IsolationPolicy> result = api.getIsolationPolicies(params, contentLanguage);
       assertThat(result).as("check result of getIsolationPolicies").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITIsolationPolicy extends IT {
   public void getIsolationPoliciesConnection(String payload) {
     try {
       // parse params from json payload
-      GetIsolationPoliciesConnectionRequestBody params = gson.fromJson(payload, GetIsolationPoliciesConnectionRequestBody.class);
+      GetIsolationPoliciesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetIsolationPoliciesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      IsolationPolicyConnection result = api.getIsolationPoliciesConnection("zh-CN", params);
+      IsolationPolicyConnection result = api.getIsolationPoliciesConnection(params, contentLanguage);
       assertThat(result).as("check result of getIsolationPoliciesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

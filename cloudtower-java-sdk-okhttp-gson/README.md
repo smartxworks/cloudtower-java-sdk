@@ -2,7 +2,6 @@
 
 Tower SDK API
 - API version: 1.7.0
-  - Build date: 2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]
 
 cloudtower operation API and SDK
 
@@ -659,10 +658,10 @@ Class | Method | HTTP request | Description
  - [EverouteClusterStatus](docs/EverouteClusterStatus.md)
  - [EverouteClusterStatusAgents](docs/EverouteClusterStatusAgents.md)
  - [EverouteClusterStatusAgentsInstances](docs/EverouteClusterStatusAgentsInstances.md)
+ - [EverouteClusterStatusAgentsManageVDSes](docs/EverouteClusterStatusAgentsManageVDSes.md)
  - [EverouteClusterStatusConditions](docs/EverouteClusterStatusConditions.md)
  - [EverouteClusterStatusControllers](docs/EverouteClusterStatusControllers.md)
  - [EverouteClusterStatusControllersInstances](docs/EverouteClusterStatusControllersInstances.md)
- - [EverouteClusterStatusControllersManageVDSes](docs/EverouteClusterStatusControllersManageVDSes.md)
  - [EverouteClusterStatusControllersMetrics](docs/EverouteClusterStatusControllersMetrics.md)
  - [EverouteClusterWhereInput](docs/EverouteClusterWhereInput.md)
  - [EverouteLicense](docs/EverouteLicense.md)

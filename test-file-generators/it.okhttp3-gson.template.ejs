@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +15,7 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.<%- api.name %>Api;
 import com.smartx.tower.model.*;
 
-public class IT<%- api.name %> extends IT {
+public class IT<%- api.name %> extends ITBase {
   <%- api.name %>Api api = null;
   HashMap<String, String> payloads = new HashMap<String, String>();
 
@@ -33,7 +34,7 @@ public class IT<%- api.name %> extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(Utils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, String>>() {}.getType());
   }
 
 <% for(const func of functions){%>
@@ -41,9 +42,9 @@ public class IT<%- api.name %> extends IT {
   public void <%- func.name %>(String payload) {
     try {
       // parse params from json payload
-      <%- func.payload %> params = gson.fromJson(payload, <%- func.payloadClass %>.class);
+      <%- func.payload %> params = gson.fromJson(payload, new TypeToken<<%- func.payload %>>() {}.getType());
       // do some modify to params(optional)
-      <%- func.return %> result = api.<%- func.name %>("zh-CN", params);
+      <%- func.return %> result = api.<%- func.name %>(params, contentLanguage);
       assertThat(result).as("check result of <%- func.name %>").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getMessage()).isFalse();

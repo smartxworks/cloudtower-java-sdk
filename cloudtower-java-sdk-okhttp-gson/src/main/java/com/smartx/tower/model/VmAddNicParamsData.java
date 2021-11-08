@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -29,40 +28,38 @@ import java.util.List;
 /**
  * VmAddNicParamsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmAddNicParamsData {
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<Object> vmNics = new ArrayList<Object>();
+  private List<VmNicParams> vmNics = new ArrayList<VmNicParams>();
 
+  public VmAddNicParamsData vmNics(List<VmNicParams> vmNics) {
 
-  public VmAddNicParamsData vmNics(List<Object> vmNics) {
-    
     this.vmNics = vmNics;
     return this;
   }
 
-  public VmAddNicParamsData addVmNicsItem(Object vmNicsItem) {
+  public VmAddNicParamsData addVmNicsItem(VmNicParams vmNicsItem) {
     this.vmNics.add(vmNicsItem);
     return this;
   }
 
-   /**
+  /**
    * Get vmNics
+   * 
    * @return vmNics
-  **/
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Object> getVmNics() {
+  public List<VmNicParams> getVmNics() {
     return vmNics;
   }
 
-
-  public void setVmNics(List<Object> vmNics) {
+  public void setVmNics(List<VmNicParams> vmNics) {
     this.vmNics = vmNics;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -102,4 +99,3 @@ public class VmAddNicParamsData {
   }
 
 }
-

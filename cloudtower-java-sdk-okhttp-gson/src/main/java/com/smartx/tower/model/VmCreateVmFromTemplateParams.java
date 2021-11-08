@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * VmCreateVmFromTemplateParams
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmCreateVmFromTemplateParams {
   public static final String SERIALIZED_NAME_CLOUD_INIT = "cloud_init";
   @SerializedName(SERIALIZED_NAME_CLOUD_INIT)
@@ -88,7 +88,7 @@ public class VmCreateVmFromTemplateParams {
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<Object> vmNics = null;
+  private List<VmNicParams> vmNics = null;
 
   public static final String SERIALIZED_NAME_DISK_OPERATE = "disk_operate";
   @SerializedName(SERIALIZED_NAME_DISK_OPERATE)
@@ -407,15 +407,15 @@ public class VmCreateVmFromTemplateParams {
   }
 
 
-  public VmCreateVmFromTemplateParams vmNics(List<Object> vmNics) {
+  public VmCreateVmFromTemplateParams vmNics(List<VmNicParams> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public VmCreateVmFromTemplateParams addVmNicsItem(Object vmNicsItem) {
+  public VmCreateVmFromTemplateParams addVmNicsItem(VmNicParams vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<Object>();
+      this.vmNics = new ArrayList<VmNicParams>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -428,12 +428,12 @@ public class VmCreateVmFromTemplateParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getVmNics() {
+  public List<VmNicParams> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<Object> vmNics) {
+  public void setVmNics(List<VmNicParams> vmNics) {
     this.vmNics = vmNics;
   }
 

@@ -1,0 +1,7 @@
+{
+  "endpoint": "http://192.168.95.127/v2/api",
+  "username": "tester",
+  "password": "!QAZ2wsx",
+  "usersource": "LOCAL",
+  "contentLanguage": "en-US"
+}

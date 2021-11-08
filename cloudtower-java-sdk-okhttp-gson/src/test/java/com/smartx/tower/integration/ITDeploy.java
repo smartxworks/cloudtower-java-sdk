@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.DeployApi;
 import com.smartx.tower.model.*;
 
-public class ITDeploy extends IT {
+public class ITDeploy extends ITBase {
   DeployApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITDeploy extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITDeploy extends IT {
   public void getDeploys(String payload) {
     try {
       // parse params from json payload
-      GetDeploysRequestBody params = gson.fromJson(payload, GetDeploysRequestBody.class);
+      GetDeploysRequestBody params = gson.fromJson(payload, new TypeToken<GetDeploysRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Deploy> result = api.getDeploys("zh-CN", params);
+      List<Deploy> result = api.getDeploys(params, contentLanguage);
       assertThat(result).as("check result of getDeploys").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITDeploy extends IT {
   public void getDeploysConnection(String payload) {
     try {
       // parse params from json payload
-      GetDeploysConnectionRequestBody params = gson.fromJson(payload, GetDeploysConnectionRequestBody.class);
+      GetDeploysConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetDeploysConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      DeployConnection result = api.getDeploysConnection("zh-CN", params);
+      DeployConnection result = api.getDeploysConnection(params, contentLanguage);
       assertThat(result).as("check result of getDeploysConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

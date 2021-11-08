@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.UserAuditLogApi;
 import com.smartx.tower.model.*;
 
-public class ITUserAuditLog extends IT {
+public class ITUserAuditLog extends ITBase {
   UserAuditLogApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITUserAuditLog extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITUserAuditLog extends IT {
   public void getUserAuditLogs(String payload) {
     try {
       // parse params from json payload
-      GetUserAuditLogsRequestBody params = gson.fromJson(payload, GetUserAuditLogsRequestBody.class);
+      GetUserAuditLogsRequestBody params = gson.fromJson(payload, new TypeToken<GetUserAuditLogsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<UserAuditLog> result = api.getUserAuditLogs("zh-CN", params);
+      List<UserAuditLog> result = api.getUserAuditLogs(params, contentLanguage);
       assertThat(result).as("check result of getUserAuditLogs").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITUserAuditLog extends IT {
   public void getUserAuditLogsConnection(String payload) {
     try {
       // parse params from json payload
-      GetUserAuditLogsConnectionRequestBody params = gson.fromJson(payload, GetUserAuditLogsConnectionRequestBody.class);
+      GetUserAuditLogsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUserAuditLogsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      UserAuditLogConnection result = api.getUserAuditLogsConnection("zh-CN", params);
+      UserAuditLogConnection result = api.getUserAuditLogsConnection(params, contentLanguage);
       assertThat(result).as("check result of getUserAuditLogsConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

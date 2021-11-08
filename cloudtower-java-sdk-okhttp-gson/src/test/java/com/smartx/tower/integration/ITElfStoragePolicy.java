@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.ElfStoragePolicyApi;
 import com.smartx.tower.model.*;
 
-public class ITElfStoragePolicy extends IT {
+public class ITElfStoragePolicy extends ITBase {
   ElfStoragePolicyApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITElfStoragePolicy extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITElfStoragePolicy extends IT {
   public void getElfStoragePolicies(String payload) {
     try {
       // parse params from json payload
-      GetElfStoragePoliciesRequestBody params = gson.fromJson(payload, GetElfStoragePoliciesRequestBody.class);
+      GetElfStoragePoliciesRequestBody params = gson.fromJson(payload, new TypeToken<GetElfStoragePoliciesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ElfStoragePolicy> result = api.getElfStoragePolicies("zh-CN", params);
+      List<ElfStoragePolicy> result = api.getElfStoragePolicies(params, contentLanguage);
       assertThat(result).as("check result of getElfStoragePolicies").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITElfStoragePolicy extends IT {
   public void getElfStoragePoliciesConnection(String payload) {
     try {
       // parse params from json payload
-      GetElfStoragePoliciesConnectionRequestBody params = gson.fromJson(payload, GetElfStoragePoliciesConnectionRequestBody.class);
+      GetElfStoragePoliciesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetElfStoragePoliciesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ElfStoragePolicyConnection result = api.getElfStoragePoliciesConnection("zh-CN", params);
+      ElfStoragePolicyConnection result = api.getElfStoragePoliciesConnection(params, contentLanguage);
       assertThat(result).as("check result of getElfStoragePoliciesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

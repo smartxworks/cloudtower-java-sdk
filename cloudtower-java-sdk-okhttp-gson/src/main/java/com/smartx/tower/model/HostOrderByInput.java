@@ -205,6 +205,10 @@ public enum HostOrderByInput {
   
   TOTAL_CPU_HZ_DESC("total_cpu_hz_DESC"),
   
+  TOTAL_CPU_SOCKETS_ASC("total_cpu_sockets_ASC"),
+  
+  TOTAL_CPU_SOCKETS_DESC("total_cpu_sockets_DESC"),
+  
   TOTAL_DATA_CAPACITY_ASC("total_data_capacity_ASC"),
   
   TOTAL_DATA_CAPACITY_DESC("total_data_capacity_DESC"),

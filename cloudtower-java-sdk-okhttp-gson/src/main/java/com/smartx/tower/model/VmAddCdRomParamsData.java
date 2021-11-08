@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -29,40 +28,38 @@ import java.util.List;
 /**
  * VmAddCdRomParamsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmAddCdRomParamsData {
   public static final String SERIALIZED_NAME_VM_CD_ROMS = "vm_cd_roms";
   @SerializedName(SERIALIZED_NAME_VM_CD_ROMS)
-  private List<Object> vmCdRoms = new ArrayList<Object>();
+  private List<VmCdRomParams> vmCdRoms = new ArrayList<VmCdRomParams>();
 
+  public VmAddCdRomParamsData vmCdRoms(List<VmCdRomParams> vmCdRoms) {
 
-  public VmAddCdRomParamsData vmCdRoms(List<Object> vmCdRoms) {
-    
     this.vmCdRoms = vmCdRoms;
     return this;
   }
 
-  public VmAddCdRomParamsData addVmCdRomsItem(Object vmCdRomsItem) {
+  public VmAddCdRomParamsData addVmCdRomsItem(VmCdRomParams vmCdRomsItem) {
     this.vmCdRoms.add(vmCdRomsItem);
     return this;
   }
 
-   /**
+  /**
    * Get vmCdRoms
+   * 
    * @return vmCdRoms
-  **/
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Object> getVmCdRoms() {
+  public List<VmCdRomParams> getVmCdRoms() {
     return vmCdRoms;
   }
 
-
-  public void setVmCdRoms(List<Object> vmCdRoms) {
+  public void setVmCdRoms(List<VmCdRomParams> vmCdRoms) {
     this.vmCdRoms = vmCdRoms;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -102,4 +99,3 @@ public class VmAddCdRomParamsData {
   }
 
 }
-

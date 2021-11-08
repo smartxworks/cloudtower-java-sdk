@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.VlanApi;
 import com.smartx.tower.model.*;
 
-public class ITVlan extends IT {
+public class ITVlan extends ITBase {
   VlanApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,85 +34,20 @@ public class ITVlan extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getVlans(String payload) {
-    try {
-      // parse params from json payload
-      GetVlansRequestBody params = gson.fromJson(payload, GetVlansRequestBody.class);
-      // do some modify to params(optional)
-      List<Vlan> result = api.getVlans("zh-CN", params);
-      assertThat(result).as("check result of getVlans").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getVlansConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetVlansConnectionRequestBody params = gson.fromJson(payload, GetVlansConnectionRequestBody.class);
-      // do some modify to params(optional)
-      VlanConnection result = api.getVlansConnection("zh-CN", params);
-      assertThat(result).as("check result of getVlansConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createVmVlan(String payload) {
     try {
       // parse params from json payload
-      List<VmVlanCreationParams> params = gson.fromJson(payload, List.class);
+      List<VmVlanCreationParams> params = gson.fromJson(payload, new TypeToken<List<VmVlanCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVlan> result = api.createVmVlan("zh-CN", params);
+      List<WithTaskVlan> result = api.createVmVlan(params, contentLanguage);
       assertThat(result).as("check result of createVmVlan").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateManagementVlan(String payload) {
-    try {
-      // parse params from json payload
-      ManagementVlanUpdationParams params = gson.fromJson(payload, ManagementVlanUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskVlan> result = api.updateManagementVlan("zh-CN", params);
-      assertThat(result).as("check result of updateManagementVlan").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateMigrationVlan(String payload) {
-    try {
-      // parse params from json payload
-      MigrationVlanUpdationParams params = gson.fromJson(payload, MigrationVlanUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskVlan> result = api.updateMigrationVlan("zh-CN", params);
-      assertThat(result).as("check result of updateMigrationVlan").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateVlan(String payload) {
-    try {
-      // parse params from json payload
-      VmVlanUpdationParams params = gson.fromJson(payload, VmVlanUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskVlan> result = api.updateVlan("zh-CN", params);
-      assertThat(result).as("check result of updateVlan").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -119,12 +55,77 @@ public class ITVlan extends IT {
   public void deleteVlan(String payload) {
     try {
       // parse params from json payload
-      VlanDeletionParams params = gson.fromJson(payload, VlanDeletionParams.class);
+      VlanDeletionParams params = gson.fromJson(payload, new TypeToken<VlanDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteVlan> result = api.deleteVlan("zh-CN", params);
+      List<WithTaskDeleteVlan> result = api.deleteVlan(params, contentLanguage);
       assertThat(result).as("check result of deleteVlan").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getVlans(String payload) {
+    try {
+      // parse params from json payload
+      GetVlansRequestBody params = gson.fromJson(payload, new TypeToken<GetVlansRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<Vlan> result = api.getVlans(params, contentLanguage);
+      assertThat(result).as("check result of getVlans").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getVlansConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetVlansConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVlansConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      VlanConnection result = api.getVlansConnection(params, contentLanguage);
+      assertThat(result).as("check result of getVlansConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateManagementVlan(String payload) {
+    try {
+      // parse params from json payload
+      ManagementVlanUpdationParams params = gson.fromJson(payload, new TypeToken<ManagementVlanUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskVlan> result = api.updateManagementVlan(params, contentLanguage);
+      assertThat(result).as("check result of updateManagementVlan").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateMigrationVlan(String payload) {
+    try {
+      // parse params from json payload
+      MigrationVlanUpdationParams params = gson.fromJson(payload, new TypeToken<MigrationVlanUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskVlan> result = api.updateMigrationVlan(params, contentLanguage);
+      assertThat(result).as("check result of updateMigrationVlan").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateVlan(String payload) {
+    try {
+      // parse params from json payload
+      VmVlanUpdationParams params = gson.fromJson(payload, new TypeToken<VmVlanUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskVlan> result = api.updateVlan(params, contentLanguage);
+      assertThat(result).as("check result of updateVlan").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

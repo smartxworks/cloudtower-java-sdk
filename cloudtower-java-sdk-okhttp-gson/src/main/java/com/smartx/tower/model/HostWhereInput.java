@@ -43,7 +43,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * HostWhereInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class HostWhereInput {
   public static final String SERIALIZED_NAME_ACCESS_IP = "access_ip";
   @SerializedName(SERIALIZED_NAME_ACCESS_IP)
@@ -1704,6 +1704,38 @@ public class HostWhereInput {
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN = "total_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN)
   private List<Double> totalCpuHzNotIn = null;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
+  private Double totalCpuSockets;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GT = "total_cpu_sockets_gt";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GT)
+  private Double totalCpuSocketsGt;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GTE = "total_cpu_sockets_gte";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GTE)
+  private Double totalCpuSocketsGte;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_IN = "total_cpu_sockets_in";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_IN)
+  private List<Double> totalCpuSocketsIn = null;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LT = "total_cpu_sockets_lt";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LT)
+  private Double totalCpuSocketsLt;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LTE = "total_cpu_sockets_lte";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LTE)
+  private Double totalCpuSocketsLte;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT = "total_cpu_sockets_not";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT)
+  private Double totalCpuSocketsNot;
+
+  public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT_IN = "total_cpu_sockets_not_in";
+  @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT_IN)
+  private List<Double> totalCpuSocketsNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
@@ -12203,6 +12235,206 @@ public class HostWhereInput {
   }
 
 
+  public HostWhereInput totalCpuSockets(Double totalCpuSockets) {
+    
+    this.totalCpuSockets = totalCpuSockets;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSockets
+   * @return totalCpuSockets
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSockets() {
+    return totalCpuSockets;
+  }
+
+
+  public void setTotalCpuSockets(Double totalCpuSockets) {
+    this.totalCpuSockets = totalCpuSockets;
+  }
+
+
+  public HostWhereInput totalCpuSocketsGt(Double totalCpuSocketsGt) {
+    
+    this.totalCpuSocketsGt = totalCpuSocketsGt;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsGt
+   * @return totalCpuSocketsGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSocketsGt() {
+    return totalCpuSocketsGt;
+  }
+
+
+  public void setTotalCpuSocketsGt(Double totalCpuSocketsGt) {
+    this.totalCpuSocketsGt = totalCpuSocketsGt;
+  }
+
+
+  public HostWhereInput totalCpuSocketsGte(Double totalCpuSocketsGte) {
+    
+    this.totalCpuSocketsGte = totalCpuSocketsGte;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsGte
+   * @return totalCpuSocketsGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSocketsGte() {
+    return totalCpuSocketsGte;
+  }
+
+
+  public void setTotalCpuSocketsGte(Double totalCpuSocketsGte) {
+    this.totalCpuSocketsGte = totalCpuSocketsGte;
+  }
+
+
+  public HostWhereInput totalCpuSocketsIn(List<Double> totalCpuSocketsIn) {
+    
+    this.totalCpuSocketsIn = totalCpuSocketsIn;
+    return this;
+  }
+
+  public HostWhereInput addTotalCpuSocketsInItem(Double totalCpuSocketsInItem) {
+    if (this.totalCpuSocketsIn == null) {
+      this.totalCpuSocketsIn = new ArrayList<Double>();
+    }
+    this.totalCpuSocketsIn.add(totalCpuSocketsInItem);
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsIn
+   * @return totalCpuSocketsIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getTotalCpuSocketsIn() {
+    return totalCpuSocketsIn;
+  }
+
+
+  public void setTotalCpuSocketsIn(List<Double> totalCpuSocketsIn) {
+    this.totalCpuSocketsIn = totalCpuSocketsIn;
+  }
+
+
+  public HostWhereInput totalCpuSocketsLt(Double totalCpuSocketsLt) {
+    
+    this.totalCpuSocketsLt = totalCpuSocketsLt;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsLt
+   * @return totalCpuSocketsLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSocketsLt() {
+    return totalCpuSocketsLt;
+  }
+
+
+  public void setTotalCpuSocketsLt(Double totalCpuSocketsLt) {
+    this.totalCpuSocketsLt = totalCpuSocketsLt;
+  }
+
+
+  public HostWhereInput totalCpuSocketsLte(Double totalCpuSocketsLte) {
+    
+    this.totalCpuSocketsLte = totalCpuSocketsLte;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsLte
+   * @return totalCpuSocketsLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSocketsLte() {
+    return totalCpuSocketsLte;
+  }
+
+
+  public void setTotalCpuSocketsLte(Double totalCpuSocketsLte) {
+    this.totalCpuSocketsLte = totalCpuSocketsLte;
+  }
+
+
+  public HostWhereInput totalCpuSocketsNot(Double totalCpuSocketsNot) {
+    
+    this.totalCpuSocketsNot = totalCpuSocketsNot;
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsNot
+   * @return totalCpuSocketsNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getTotalCpuSocketsNot() {
+    return totalCpuSocketsNot;
+  }
+
+
+  public void setTotalCpuSocketsNot(Double totalCpuSocketsNot) {
+    this.totalCpuSocketsNot = totalCpuSocketsNot;
+  }
+
+
+  public HostWhereInput totalCpuSocketsNotIn(List<Double> totalCpuSocketsNotIn) {
+    
+    this.totalCpuSocketsNotIn = totalCpuSocketsNotIn;
+    return this;
+  }
+
+  public HostWhereInput addTotalCpuSocketsNotInItem(Double totalCpuSocketsNotInItem) {
+    if (this.totalCpuSocketsNotIn == null) {
+      this.totalCpuSocketsNotIn = new ArrayList<Double>();
+    }
+    this.totalCpuSocketsNotIn.add(totalCpuSocketsNotInItem);
+    return this;
+  }
+
+   /**
+   * Get totalCpuSocketsNotIn
+   * @return totalCpuSocketsNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getTotalCpuSocketsNotIn() {
+    return totalCpuSocketsNotIn;
+  }
+
+
+  public void setTotalCpuSocketsNotIn(List<Double> totalCpuSocketsNotIn) {
+    this.totalCpuSocketsNotIn = totalCpuSocketsNotIn;
+  }
+
+
   public HostWhereInput totalDataCapacity(Double totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
@@ -14395,6 +14627,14 @@ public class HostWhereInput {
         Objects.equals(this.totalCpuHzLte, hostWhereInput.totalCpuHzLte) &&
         Objects.equals(this.totalCpuHzNot, hostWhereInput.totalCpuHzNot) &&
         Objects.equals(this.totalCpuHzNotIn, hostWhereInput.totalCpuHzNotIn) &&
+        Objects.equals(this.totalCpuSockets, hostWhereInput.totalCpuSockets) &&
+        Objects.equals(this.totalCpuSocketsGt, hostWhereInput.totalCpuSocketsGt) &&
+        Objects.equals(this.totalCpuSocketsGte, hostWhereInput.totalCpuSocketsGte) &&
+        Objects.equals(this.totalCpuSocketsIn, hostWhereInput.totalCpuSocketsIn) &&
+        Objects.equals(this.totalCpuSocketsLt, hostWhereInput.totalCpuSocketsLt) &&
+        Objects.equals(this.totalCpuSocketsLte, hostWhereInput.totalCpuSocketsLte) &&
+        Objects.equals(this.totalCpuSocketsNot, hostWhereInput.totalCpuSocketsNot) &&
+        Objects.equals(this.totalCpuSocketsNotIn, hostWhereInput.totalCpuSocketsNotIn) &&
         Objects.equals(this.totalDataCapacity, hostWhereInput.totalDataCapacity) &&
         Objects.equals(this.totalDataCapacityGt, hostWhereInput.totalDataCapacityGt) &&
         Objects.equals(this.totalDataCapacityGte, hostWhereInput.totalDataCapacityGte) &&
@@ -14475,7 +14715,7 @@ public class HostWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessIp, accessIpContains, accessIpEndsWith, accessIpGt, accessIpGte, accessIpIn, accessIpLt, accessIpLte, accessIpNot, accessIpNotContains, accessIpNotEndsWith, accessIpNotIn, accessIpNotStartsWith, accessIpStartsWith, allocatableMemoryBytes, allocatableMemoryBytesGt, allocatableMemoryBytesGte, allocatableMemoryBytesIn, allocatableMemoryBytesLt, allocatableMemoryBytesLte, allocatableMemoryBytesNot, allocatableMemoryBytesNotIn, AND, chunkId, chunkIdContains, chunkIdEndsWith, chunkIdGt, chunkIdGte, chunkIdIn, chunkIdLt, chunkIdLte, chunkIdNot, chunkIdNotContains, chunkIdNotEndsWith, chunkIdNotIn, chunkIdNotStartsWith, chunkIdStartsWith, cluster, cpuBrand, cpuBrandContains, cpuBrandEndsWith, cpuBrandGt, cpuBrandGte, cpuBrandIn, cpuBrandLt, cpuBrandLte, cpuBrandNot, cpuBrandNotContains, cpuBrandNotEndsWith, cpuBrandNotIn, cpuBrandNotStartsWith, cpuBrandStartsWith, cpuFanSpeedUnit, cpuFanSpeedUnitIn, cpuFanSpeedUnitNot, cpuFanSpeedUnitNotIn, cpuHzPerCore, cpuHzPerCoreGt, cpuHzPerCoreGte, cpuHzPerCoreIn, cpuHzPerCoreLt, cpuHzPerCoreLte, cpuHzPerCoreNot, cpuHzPerCoreNotIn, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, dataIp, dataIpContains, dataIpEndsWith, dataIpGt, dataIpGte, dataIpIn, dataIpLt, dataIpLte, dataIpNot, dataIpNotContains, dataIpNotEndsWith, dataIpNotIn, dataIpNotStartsWith, dataIpStartsWith, disksEvery, disksNone, disksSome, failureDataSpace, failureDataSpaceGt, failureDataSpaceGte, failureDataSpaceIn, failureDataSpaceLt, failureDataSpaceLte, failureDataSpaceNot, failureDataSpaceNotIn, hddDataCapacity, hddDataCapacityGt, hddDataCapacityGte, hddDataCapacityIn, hddDataCapacityLt, hddDataCapacityLte, hddDataCapacityNot, hddDataCapacityNotIn, hddDiskCount, hddDiskCountGt, hddDiskCountGte, hddDiskCountIn, hddDiskCountLt, hddDiskCountLte, hddDiskCountNot, hddDiskCountNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipmi, isOsInRaid1, isOsInRaid1Not, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lsmCapDiskSafeUmount, lsmCapDiskSafeUmountNot, managementIp, managementIpContains, managementIpEndsWith, managementIpGt, managementIpGte, managementIpIn, managementIpLt, managementIpLte, managementIpNot, managementIpNotContains, managementIpNotEndsWith, managementIpNotIn, managementIpNotStartsWith, managementIpStartsWith, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nicCount, nicCountGt, nicCountGte, nicCountIn, nicCountLt, nicCountLte, nicCountNot, nicCountNotIn, nicsEvery, nicsNone, nicsSome, nodeTopoLocalId, nodeTopoLocalIdContains, nodeTopoLocalIdEndsWith, nodeTopoLocalIdGt, nodeTopoLocalIdGte, nodeTopoLocalIdIn, nodeTopoLocalIdLt, nodeTopoLocalIdLte, nodeTopoLocalIdNot, nodeTopoLocalIdNotContains, nodeTopoLocalIdNotEndsWith, nodeTopoLocalIdNotIn, nodeTopoLocalIdNotStartsWith, nodeTopoLocalIdStartsWith, NOT, OR, osMemoryBytes, osMemoryBytesGt, osMemoryBytesGte, osMemoryBytesIn, osMemoryBytesLt, osMemoryBytesLte, osMemoryBytesNot, osMemoryBytesNotIn, osVersion, osVersionContains, osVersionEndsWith, osVersionGt, osVersionGte, osVersionIn, osVersionLt, osVersionLte, osVersionNot, osVersionNotContains, osVersionNotEndsWith, osVersionNotIn, osVersionNotStartsWith, osVersionStartsWith, pmemDimmCapacity, pmemDimmCapacityGt, pmemDimmCapacityGte, pmemDimmCapacityIn, pmemDimmCapacityLt, pmemDimmCapacityLte, pmemDimmCapacityNot, pmemDimmCapacityNotIn, pmemDimmCount, pmemDimmCountGt, pmemDimmCountGte, pmemDimmCountIn, pmemDimmCountLt, pmemDimmCountLte, pmemDimmCountNot, pmemDimmCountNotIn, pmemDimmsEvery, pmemDimmsNone, pmemDimmsSome, pmemDiskCount, pmemDiskCountGt, pmemDiskCountGte, pmemDiskCountIn, pmemDiskCountLt, pmemDiskCountLte, pmemDiskCountNot, pmemDiskCountNotIn, provisionedCpuCores, provisionedCpuCoresGt, provisionedCpuCoresGte, provisionedCpuCoresIn, provisionedCpuCoresLt, provisionedCpuCoresLte, provisionedCpuCoresNot, provisionedCpuCoresNotIn, provisionedMemoryBytes, provisionedMemoryBytesGt, provisionedMemoryBytesGte, provisionedMemoryBytesIn, provisionedMemoryBytesLt, provisionedMemoryBytesLte, provisionedMemoryBytesNot, provisionedMemoryBytesNotIn, runningPauseVmMemoryBytes, runningPauseVmMemoryBytesGt, runningPauseVmMemoryBytesGte, runningPauseVmMemoryBytesIn, runningPauseVmMemoryBytesLt, runningPauseVmMemoryBytesLte, runningPauseVmMemoryBytesNot, runningPauseVmMemoryBytesNotIn, runningVmNum, runningVmNumGt, runningVmNumGte, runningVmNumIn, runningVmNumLt, runningVmNumLte, runningVmNumNot, runningVmNumNotIn, scvmCpu, scvmCpuGt, scvmCpuGte, scvmCpuIn, scvmCpuLt, scvmCpuLte, scvmCpuNot, scvmCpuNotIn, scvmMemory, scvmMemoryGt, scvmMemoryGte, scvmMemoryIn, scvmMemoryLt, scvmMemoryLte, scvmMemoryNot, scvmMemoryNotIn, scvmName, scvmNameContains, scvmNameEndsWith, scvmNameGt, scvmNameGte, scvmNameIn, scvmNameLt, scvmNameLte, scvmNameNot, scvmNameNotContains, scvmNameNotEndsWith, scvmNameNotIn, scvmNameNotStartsWith, scvmNameStartsWith, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, ssdDataCapacity, ssdDataCapacityGt, ssdDataCapacityGte, ssdDataCapacityIn, ssdDataCapacityLt, ssdDataCapacityLte, ssdDataCapacityNot, ssdDataCapacityNotIn, ssdDiskCount, ssdDiskCountGt, ssdDiskCountGte, ssdDiskCountIn, ssdDiskCountLt, ssdDiskCountLte, ssdDiskCountNot, ssdDiskCountNotIn, state, stateIn, stateNot, stateNotIn, status, statusIn, statusNot, statusNotIn, stoppedVmNum, stoppedVmNumGt, stoppedVmNumGte, stoppedVmNumIn, stoppedVmNumLt, stoppedVmNumLte, stoppedVmNumNot, stoppedVmNumNotIn, suspendedVmNum, suspendedVmNumGt, suspendedVmNumGte, suspendedVmNumIn, suspendedVmNumLt, suspendedVmNumLte, suspendedVmNumNot, suspendedVmNumNotIn, totalCacheCapacity, totalCacheCapacityGt, totalCacheCapacityGte, totalCacheCapacityIn, totalCacheCapacityLt, totalCacheCapacityLte, totalCacheCapacityNot, totalCacheCapacityNotIn, totalCpuCores, totalCpuCoresGt, totalCpuCoresGte, totalCpuCoresIn, totalCpuCoresLt, totalCpuCoresLte, totalCpuCoresNot, totalCpuCoresNotIn, totalCpuHz, totalCpuHzGt, totalCpuHzGte, totalCpuHzIn, totalCpuHzLt, totalCpuHzLte, totalCpuHzNot, totalCpuHzNotIn, totalDataCapacity, totalDataCapacityGt, totalDataCapacityGte, totalDataCapacityIn, totalDataCapacityLt, totalDataCapacityLte, totalDataCapacityNot, totalDataCapacityNotIn, totalMemoryBytes, totalMemoryBytesGt, totalMemoryBytesGte, totalMemoryBytesIn, totalMemoryBytesLt, totalMemoryBytesLte, totalMemoryBytesNot, totalMemoryBytesNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, usedCpuHz, usedCpuHzGt, usedCpuHzGte, usedCpuHzIn, usedCpuHzLt, usedCpuHzLte, usedCpuHzNot, usedCpuHzNotIn, usedDataSpace, usedDataSpaceGt, usedDataSpaceGte, usedDataSpaceIn, usedDataSpaceLt, usedDataSpaceLte, usedDataSpaceNot, usedDataSpaceNotIn, usedMemoryBytes, usedMemoryBytesGt, usedMemoryBytesGte, usedMemoryBytesIn, usedMemoryBytesLt, usedMemoryBytesLte, usedMemoryBytesNot, usedMemoryBytesNotIn, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmotionIp, vmotionIpContains, vmotionIpEndsWith, vmotionIpGt, vmotionIpGte, vmotionIpIn, vmotionIpLt, vmotionIpLte, vmotionIpNot, vmotionIpNotContains, vmotionIpNotEndsWith, vmotionIpNotIn, vmotionIpNotStartsWith, vmotionIpStartsWith, vmsEvery, vmsNone, vmsSome, vsphereEsxiAccount, withFasterSsdAsCache, withFasterSsdAsCacheNot, zone);
+    return Objects.hash(accessIp, accessIpContains, accessIpEndsWith, accessIpGt, accessIpGte, accessIpIn, accessIpLt, accessIpLte, accessIpNot, accessIpNotContains, accessIpNotEndsWith, accessIpNotIn, accessIpNotStartsWith, accessIpStartsWith, allocatableMemoryBytes, allocatableMemoryBytesGt, allocatableMemoryBytesGte, allocatableMemoryBytesIn, allocatableMemoryBytesLt, allocatableMemoryBytesLte, allocatableMemoryBytesNot, allocatableMemoryBytesNotIn, AND, chunkId, chunkIdContains, chunkIdEndsWith, chunkIdGt, chunkIdGte, chunkIdIn, chunkIdLt, chunkIdLte, chunkIdNot, chunkIdNotContains, chunkIdNotEndsWith, chunkIdNotIn, chunkIdNotStartsWith, chunkIdStartsWith, cluster, cpuBrand, cpuBrandContains, cpuBrandEndsWith, cpuBrandGt, cpuBrandGte, cpuBrandIn, cpuBrandLt, cpuBrandLte, cpuBrandNot, cpuBrandNotContains, cpuBrandNotEndsWith, cpuBrandNotIn, cpuBrandNotStartsWith, cpuBrandStartsWith, cpuFanSpeedUnit, cpuFanSpeedUnitIn, cpuFanSpeedUnitNot, cpuFanSpeedUnitNotIn, cpuHzPerCore, cpuHzPerCoreGt, cpuHzPerCoreGte, cpuHzPerCoreIn, cpuHzPerCoreLt, cpuHzPerCoreLte, cpuHzPerCoreNot, cpuHzPerCoreNotIn, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, dataIp, dataIpContains, dataIpEndsWith, dataIpGt, dataIpGte, dataIpIn, dataIpLt, dataIpLte, dataIpNot, dataIpNotContains, dataIpNotEndsWith, dataIpNotIn, dataIpNotStartsWith, dataIpStartsWith, disksEvery, disksNone, disksSome, failureDataSpace, failureDataSpaceGt, failureDataSpaceGte, failureDataSpaceIn, failureDataSpaceLt, failureDataSpaceLte, failureDataSpaceNot, failureDataSpaceNotIn, hddDataCapacity, hddDataCapacityGt, hddDataCapacityGte, hddDataCapacityIn, hddDataCapacityLt, hddDataCapacityLte, hddDataCapacityNot, hddDataCapacityNotIn, hddDiskCount, hddDiskCountGt, hddDiskCountGte, hddDiskCountIn, hddDiskCountLt, hddDiskCountLte, hddDiskCountNot, hddDiskCountNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipmi, isOsInRaid1, isOsInRaid1Not, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lsmCapDiskSafeUmount, lsmCapDiskSafeUmountNot, managementIp, managementIpContains, managementIpEndsWith, managementIpGt, managementIpGte, managementIpIn, managementIpLt, managementIpLte, managementIpNot, managementIpNotContains, managementIpNotEndsWith, managementIpNotIn, managementIpNotStartsWith, managementIpStartsWith, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nicCount, nicCountGt, nicCountGte, nicCountIn, nicCountLt, nicCountLte, nicCountNot, nicCountNotIn, nicsEvery, nicsNone, nicsSome, nodeTopoLocalId, nodeTopoLocalIdContains, nodeTopoLocalIdEndsWith, nodeTopoLocalIdGt, nodeTopoLocalIdGte, nodeTopoLocalIdIn, nodeTopoLocalIdLt, nodeTopoLocalIdLte, nodeTopoLocalIdNot, nodeTopoLocalIdNotContains, nodeTopoLocalIdNotEndsWith, nodeTopoLocalIdNotIn, nodeTopoLocalIdNotStartsWith, nodeTopoLocalIdStartsWith, NOT, OR, osMemoryBytes, osMemoryBytesGt, osMemoryBytesGte, osMemoryBytesIn, osMemoryBytesLt, osMemoryBytesLte, osMemoryBytesNot, osMemoryBytesNotIn, osVersion, osVersionContains, osVersionEndsWith, osVersionGt, osVersionGte, osVersionIn, osVersionLt, osVersionLte, osVersionNot, osVersionNotContains, osVersionNotEndsWith, osVersionNotIn, osVersionNotStartsWith, osVersionStartsWith, pmemDimmCapacity, pmemDimmCapacityGt, pmemDimmCapacityGte, pmemDimmCapacityIn, pmemDimmCapacityLt, pmemDimmCapacityLte, pmemDimmCapacityNot, pmemDimmCapacityNotIn, pmemDimmCount, pmemDimmCountGt, pmemDimmCountGte, pmemDimmCountIn, pmemDimmCountLt, pmemDimmCountLte, pmemDimmCountNot, pmemDimmCountNotIn, pmemDimmsEvery, pmemDimmsNone, pmemDimmsSome, pmemDiskCount, pmemDiskCountGt, pmemDiskCountGte, pmemDiskCountIn, pmemDiskCountLt, pmemDiskCountLte, pmemDiskCountNot, pmemDiskCountNotIn, provisionedCpuCores, provisionedCpuCoresGt, provisionedCpuCoresGte, provisionedCpuCoresIn, provisionedCpuCoresLt, provisionedCpuCoresLte, provisionedCpuCoresNot, provisionedCpuCoresNotIn, provisionedMemoryBytes, provisionedMemoryBytesGt, provisionedMemoryBytesGte, provisionedMemoryBytesIn, provisionedMemoryBytesLt, provisionedMemoryBytesLte, provisionedMemoryBytesNot, provisionedMemoryBytesNotIn, runningPauseVmMemoryBytes, runningPauseVmMemoryBytesGt, runningPauseVmMemoryBytesGte, runningPauseVmMemoryBytesIn, runningPauseVmMemoryBytesLt, runningPauseVmMemoryBytesLte, runningPauseVmMemoryBytesNot, runningPauseVmMemoryBytesNotIn, runningVmNum, runningVmNumGt, runningVmNumGte, runningVmNumIn, runningVmNumLt, runningVmNumLte, runningVmNumNot, runningVmNumNotIn, scvmCpu, scvmCpuGt, scvmCpuGte, scvmCpuIn, scvmCpuLt, scvmCpuLte, scvmCpuNot, scvmCpuNotIn, scvmMemory, scvmMemoryGt, scvmMemoryGte, scvmMemoryIn, scvmMemoryLt, scvmMemoryLte, scvmMemoryNot, scvmMemoryNotIn, scvmName, scvmNameContains, scvmNameEndsWith, scvmNameGt, scvmNameGte, scvmNameIn, scvmNameLt, scvmNameLte, scvmNameNot, scvmNameNotContains, scvmNameNotEndsWith, scvmNameNotIn, scvmNameNotStartsWith, scvmNameStartsWith, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, ssdDataCapacity, ssdDataCapacityGt, ssdDataCapacityGte, ssdDataCapacityIn, ssdDataCapacityLt, ssdDataCapacityLte, ssdDataCapacityNot, ssdDataCapacityNotIn, ssdDiskCount, ssdDiskCountGt, ssdDiskCountGte, ssdDiskCountIn, ssdDiskCountLt, ssdDiskCountLte, ssdDiskCountNot, ssdDiskCountNotIn, state, stateIn, stateNot, stateNotIn, status, statusIn, statusNot, statusNotIn, stoppedVmNum, stoppedVmNumGt, stoppedVmNumGte, stoppedVmNumIn, stoppedVmNumLt, stoppedVmNumLte, stoppedVmNumNot, stoppedVmNumNotIn, suspendedVmNum, suspendedVmNumGt, suspendedVmNumGte, suspendedVmNumIn, suspendedVmNumLt, suspendedVmNumLte, suspendedVmNumNot, suspendedVmNumNotIn, totalCacheCapacity, totalCacheCapacityGt, totalCacheCapacityGte, totalCacheCapacityIn, totalCacheCapacityLt, totalCacheCapacityLte, totalCacheCapacityNot, totalCacheCapacityNotIn, totalCpuCores, totalCpuCoresGt, totalCpuCoresGte, totalCpuCoresIn, totalCpuCoresLt, totalCpuCoresLte, totalCpuCoresNot, totalCpuCoresNotIn, totalCpuHz, totalCpuHzGt, totalCpuHzGte, totalCpuHzIn, totalCpuHzLt, totalCpuHzLte, totalCpuHzNot, totalCpuHzNotIn, totalCpuSockets, totalCpuSocketsGt, totalCpuSocketsGte, totalCpuSocketsIn, totalCpuSocketsLt, totalCpuSocketsLte, totalCpuSocketsNot, totalCpuSocketsNotIn, totalDataCapacity, totalDataCapacityGt, totalDataCapacityGte, totalDataCapacityIn, totalDataCapacityLt, totalDataCapacityLte, totalDataCapacityNot, totalDataCapacityNotIn, totalMemoryBytes, totalMemoryBytesGt, totalMemoryBytesGte, totalMemoryBytesIn, totalMemoryBytesLt, totalMemoryBytesLte, totalMemoryBytesNot, totalMemoryBytesNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, usedCpuHz, usedCpuHzGt, usedCpuHzGte, usedCpuHzIn, usedCpuHzLt, usedCpuHzLte, usedCpuHzNot, usedCpuHzNotIn, usedDataSpace, usedDataSpaceGt, usedDataSpaceGte, usedDataSpaceIn, usedDataSpaceLt, usedDataSpaceLte, usedDataSpaceNot, usedDataSpaceNotIn, usedMemoryBytes, usedMemoryBytesGt, usedMemoryBytesGte, usedMemoryBytesIn, usedMemoryBytesLt, usedMemoryBytesLte, usedMemoryBytesNot, usedMemoryBytesNotIn, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmotionIp, vmotionIpContains, vmotionIpEndsWith, vmotionIpGt, vmotionIpGte, vmotionIpIn, vmotionIpLt, vmotionIpLte, vmotionIpNot, vmotionIpNotContains, vmotionIpNotEndsWith, vmotionIpNotIn, vmotionIpNotStartsWith, vmotionIpStartsWith, vmsEvery, vmsNone, vmsSome, vsphereEsxiAccount, withFasterSsdAsCache, withFasterSsdAsCacheNot, zone);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -14904,6 +15144,14 @@ public class HostWhereInput {
     sb.append("    totalCpuHzLte: ").append(toIndentedString(totalCpuHzLte)).append("\n");
     sb.append("    totalCpuHzNot: ").append(toIndentedString(totalCpuHzNot)).append("\n");
     sb.append("    totalCpuHzNotIn: ").append(toIndentedString(totalCpuHzNotIn)).append("\n");
+    sb.append("    totalCpuSockets: ").append(toIndentedString(totalCpuSockets)).append("\n");
+    sb.append("    totalCpuSocketsGt: ").append(toIndentedString(totalCpuSocketsGt)).append("\n");
+    sb.append("    totalCpuSocketsGte: ").append(toIndentedString(totalCpuSocketsGte)).append("\n");
+    sb.append("    totalCpuSocketsIn: ").append(toIndentedString(totalCpuSocketsIn)).append("\n");
+    sb.append("    totalCpuSocketsLt: ").append(toIndentedString(totalCpuSocketsLt)).append("\n");
+    sb.append("    totalCpuSocketsLte: ").append(toIndentedString(totalCpuSocketsLte)).append("\n");
+    sb.append("    totalCpuSocketsNot: ").append(toIndentedString(totalCpuSocketsNot)).append("\n");
+    sb.append("    totalCpuSocketsNotIn: ").append(toIndentedString(totalCpuSocketsNotIn)).append("\n");
     sb.append("    totalDataCapacity: ").append(toIndentedString(totalDataCapacity)).append("\n");
     sb.append("    totalDataCapacityGt: ").append(toIndentedString(totalDataCapacityGt)).append("\n");
     sb.append("    totalDataCapacityGte: ").append(toIndentedString(totalDataCapacityGte)).append("\n");

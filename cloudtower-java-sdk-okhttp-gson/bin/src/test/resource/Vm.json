@@ -1,0 +1,22 @@
+{
+  "createVm": [
+    {
+      "name": "tower-api-test-vm",
+      "cpu_sockets": 1,
+      "cpu_cores": 1,
+      "memory": 4294967296,
+      "ha": true,
+      "vcpu": 1,
+      "status": "STOPPED",
+      "firmware": "BIOS",
+      "vm_disks": {
+        "mount_cd_roms": [
+          {
+            "boot": 1,
+            "index": 1
+          }
+        ]
+      }
+    }
+  ]
+}

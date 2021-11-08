@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 **totalCacheCapacity** | **Double** |  |  [optional]
 **totalCpuCores** | **Double** |  | 
 **totalCpuHz** | **Double** |  | 
+**totalCpuSockets** | **Double** |  |  [optional]
 **totalDataCapacity** | **Double** |  | 
 **totalMemoryBytes** | **Double** |  | 
 **usbDevices** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]

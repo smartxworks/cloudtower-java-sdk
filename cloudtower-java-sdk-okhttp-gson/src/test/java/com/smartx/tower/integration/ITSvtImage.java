@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.SvtImageApi;
 import com.smartx.tower.model.*;
 
-public class ITSvtImage extends IT {
+public class ITSvtImage extends ITBase {
   SvtImageApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITSvtImage extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITSvtImage extends IT {
   public void getSvtImages(String payload) {
     try {
       // parse params from json payload
-      GetSvtImagesRequestBody params = gson.fromJson(payload, GetSvtImagesRequestBody.class);
+      GetSvtImagesRequestBody params = gson.fromJson(payload, new TypeToken<GetSvtImagesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SvtImage> result = api.getSvtImages("zh-CN", params);
+      List<SvtImage> result = api.getSvtImages(params, contentLanguage);
       assertThat(result).as("check result of getSvtImages").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITSvtImage extends IT {
   public void getSvtImagesConnection(String payload) {
     try {
       // parse params from json payload
-      GetSvtImagesConnectionRequestBody params = gson.fromJson(payload, GetSvtImagesConnectionRequestBody.class);
+      GetSvtImagesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSvtImagesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SvtImageConnection result = api.getSvtImagesConnection("zh-CN", params);
+      SvtImageConnection result = api.getSvtImagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getSvtImagesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

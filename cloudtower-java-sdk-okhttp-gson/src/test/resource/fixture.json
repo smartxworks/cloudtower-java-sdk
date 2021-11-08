@@ -1,0 +1,31 @@
+{
+  "firstAlertNotEnded": {
+    "where": {
+      "ended": false,
+      "cluster": {
+        "connect_state_not_in": ["DISCONNECTED", "REMOVING"]
+      }
+    },
+    "first": 1
+  },
+  "firstGlobalAlertRule": {
+    "first": 1
+  },
+  "defaultCluster": {
+    "where": {
+      "name": "nestedcluster-sdk-testX20211103175908"
+    }
+  },
+  "defaultVlan": {
+    "where": {
+      "name": "default",
+      "vds": {
+        "cluster": {
+          "name": "nestedcluster-sdk-testX20211103175908",
+          "connect_state_not_in": ["DISCONNECTED", "REMOVING"]
+        },
+        "internal": false
+      }
+    }
+  }
+}

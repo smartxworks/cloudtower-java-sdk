@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.LabelApi;
 import com.smartx.tower.model.*;
 
-public class ITLabel extends IT {
+public class ITLabel extends ITBase {
   LabelApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,33 +34,20 @@ public class ITLabel extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
   @Test(dataProvider = "payload")
-  public void getLabels(String payload) {
+  public void addLabelsToResources(String payload) {
     try {
       // parse params from json payload
-      GetLabelsRequestBody params = gson.fromJson(payload, GetLabelsRequestBody.class);
+      AddLabelsToResourcesParams params = gson.fromJson(payload, new TypeToken<AddLabelsToResourcesParams>() {}.getType());
       // do some modify to params(optional)
-      List<Label> result = api.getLabels("zh-CN", params);
-      assertThat(result).as("check result of getLabels").isNotNull();
+      List<WithTaskLabel> result = api.addLabelsToResources(params, contentLanguage);
+      assertThat(result).as("check result of addLabelsToResources").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getLabelsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetLabelsConnectionRequestBody params = gson.fromJson(payload, GetLabelsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      LabelConnection result = api.getLabelsConnection("zh-CN", params);
-      assertThat(result).as("check result of getLabelsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -67,51 +55,12 @@ public class ITLabel extends IT {
   public void createLabel(String payload) {
     try {
       // parse params from json payload
-      List<LabelCreationParams> params = gson.fromJson(payload, List.class);
+      List<LabelCreationParams> params = gson.fromJson(payload, new TypeToken<List<LabelCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskLabel> result = api.createLabel("zh-CN", params);
+      List<WithTaskLabel> result = api.createLabel(params, contentLanguage);
       assertThat(result).as("check result of createLabel").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateLabel(String payload) {
-    try {
-      // parse params from json payload
-      LabelUpdationParams params = gson.fromJson(payload, LabelUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskLabel> result = api.updateLabel("zh-CN", params);
-      assertThat(result).as("check result of updateLabel").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void addLabelsToResources(String payload) {
-    try {
-      // parse params from json payload
-      AddLabelsToResourcesParams params = gson.fromJson(payload, AddLabelsToResourcesParams.class);
-      // do some modify to params(optional)
-      List<WithTaskLabel> result = api.addLabelsToResources("zh-CN", params);
-      assertThat(result).as("check result of addLabelsToResources").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void removeLabelsFromResources(String payload) {
-    try {
-      // parse params from json payload
-      AddLabelsToResourcesParams params = gson.fromJson(payload, AddLabelsToResourcesParams.class);
-      // do some modify to params(optional)
-      List<WithTaskLabel> result = api.removeLabelsFromResources("zh-CN", params);
-      assertThat(result).as("check result of removeLabelsFromResources").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -119,12 +68,64 @@ public class ITLabel extends IT {
   public void deleteLabel(String payload) {
     try {
       // parse params from json payload
-      LabelDeletionParams params = gson.fromJson(payload, LabelDeletionParams.class);
+      LabelDeletionParams params = gson.fromJson(payload, new TypeToken<LabelDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteLabel> result = api.deleteLabel("zh-CN", params);
+      List<WithTaskDeleteLabel> result = api.deleteLabel(params, contentLanguage);
       assertThat(result).as("check result of deleteLabel").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getLabels(String payload) {
+    try {
+      // parse params from json payload
+      GetLabelsRequestBody params = gson.fromJson(payload, new TypeToken<GetLabelsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<Label> result = api.getLabels(params, contentLanguage);
+      assertThat(result).as("check result of getLabels").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getLabelsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetLabelsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetLabelsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      LabelConnection result = api.getLabelsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getLabelsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void removeLabelsFromResources(String payload) {
+    try {
+      // parse params from json payload
+      AddLabelsToResourcesParams params = gson.fromJson(payload, new TypeToken<AddLabelsToResourcesParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskLabel> result = api.removeLabelsFromResources(params, contentLanguage);
+      assertThat(result).as("check result of removeLabelsFromResources").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateLabel(String payload) {
+    try {
+      // parse params from json payload
+      LabelUpdationParams params = gson.fromJson(payload, new TypeToken<LabelUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskLabel> result = api.updateLabel(params, contentLanguage);
+      assertThat(result).as("check result of updateLabel").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

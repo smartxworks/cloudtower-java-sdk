@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.GlobalSettingsApi;
 import com.smartx.tower.model.*;
 
-public class ITGlobalSettings extends IT {
+public class ITGlobalSettings extends ITBase {
   GlobalSettingsApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,72 +34,20 @@ public class ITGlobalSettings extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getGlobalSettingses(String payload) {
-    try {
-      // parse params from json payload
-      GetGlobalSettingsesRequestBody params = gson.fromJson(payload, GetGlobalSettingsesRequestBody.class);
-      // do some modify to params(optional)
-      List<GlobalSettings> result = api.getGlobalSettingses("zh-CN", params);
-      assertThat(result).as("check result of getGlobalSettingses").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getGlobalSettingsesConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetGlobalSettingsesConnectionRequestBody params = gson.fromJson(payload, GetGlobalSettingsesConnectionRequestBody.class);
-      // do some modify to params(optional)
-      GlobalSettingsConnection result = api.getGlobalSettingsesConnection("zh-CN", params);
-      assertThat(result).as("check result of getGlobalSettingsesConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createClusterRecycleBinSetting(String payload) {
     try {
       // parse params from json payload
-      ClusterRecycleBinCreationParams params = gson.fromJson(payload, ClusterRecycleBinCreationParams.class);
+      ClusterRecycleBinCreationParams params = gson.fromJson(payload, new TypeToken<ClusterRecycleBinCreationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskClusterSettings> result = api.createClusterRecycleBinSetting("zh-CN", params);
+      List<WithTaskClusterSettings> result = api.createClusterRecycleBinSetting(params, contentLanguage);
       assertThat(result).as("check result of createClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateClusterRecycleBinSetting(String payload) {
-    try {
-      // parse params from json payload
-      ClusterRecycleBinUpdationParams params = gson.fromJson(payload, ClusterRecycleBinUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskClusterSettings> result = api.updateClusterRecycleBinSetting("zh-CN", params);
-      assertThat(result).as("check result of updateClusterRecycleBinSetting").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateGlobalRecycleBinSetting(String payload) {
-    try {
-      // parse params from json payload
-      GlobalRecycleBinUpdationParams params = gson.fromJson(payload, GlobalRecycleBinUpdationParams.class);
-      // do some modify to params(optional)
-      WithTaskGlobalSettings result = api.updateGlobalRecycleBinSetting("zh-CN", params);
-      assertThat(result).as("check result of updateGlobalRecycleBinSetting").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -106,12 +55,64 @@ public class ITGlobalSettings extends IT {
   public void deleteClusterRecycleBinSetting(String payload) {
     try {
       // parse params from json payload
-      ClusterRecycleBinDeletionParams params = gson.fromJson(payload, ClusterRecycleBinDeletionParams.class);
+      ClusterRecycleBinDeletionParams params = gson.fromJson(payload, new TypeToken<ClusterRecycleBinDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteClusterRecycleBin> result = api.deleteClusterRecycleBinSetting("zh-CN", params);
+      List<WithTaskDeleteClusterRecycleBin> result = api.deleteClusterRecycleBinSetting(params, contentLanguage);
       assertThat(result).as("check result of deleteClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getGlobalSettingses(String payload) {
+    try {
+      // parse params from json payload
+      GetGlobalSettingsesRequestBody params = gson.fromJson(payload, new TypeToken<GetGlobalSettingsesRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<GlobalSettings> result = api.getGlobalSettingses(params, contentLanguage);
+      assertThat(result).as("check result of getGlobalSettingses").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getGlobalSettingsesConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetGlobalSettingsesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetGlobalSettingsesConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      GlobalSettingsConnection result = api.getGlobalSettingsesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getGlobalSettingsesConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateClusterRecycleBinSetting(String payload) {
+    try {
+      // parse params from json payload
+      ClusterRecycleBinUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterRecycleBinUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskClusterSettings> result = api.updateClusterRecycleBinSetting(params, contentLanguage);
+      assertThat(result).as("check result of updateClusterRecycleBinSetting").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateGlobalRecycleBinSetting(String payload) {
+    try {
+      // parse params from json payload
+      GlobalRecycleBinUpdationParams params = gson.fromJson(payload, new TypeToken<GlobalRecycleBinUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      WithTaskGlobalSettings result = api.updateGlobalRecycleBinSetting(params, contentLanguage);
+      assertThat(result).as("check result of updateGlobalRecycleBinSetting").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

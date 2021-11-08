@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.SnmpTransportApi;
 import com.smartx.tower.model.*;
 
-public class ITSnmpTransport extends IT {
+public class ITSnmpTransport extends ITBase {
   SnmpTransportApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,59 +34,20 @@ public class ITSnmpTransport extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getSnmpTransports(String payload) {
-    try {
-      // parse params from json payload
-      GetSnmpTransportsRequestBody params = gson.fromJson(payload, GetSnmpTransportsRequestBody.class);
-      // do some modify to params(optional)
-      List<SnmpTransport> result = api.getSnmpTransports("zh-CN", params);
-      assertThat(result).as("check result of getSnmpTransports").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getSnmpTransportsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetSnmpTransportsConnectionRequestBody params = gson.fromJson(payload, GetSnmpTransportsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      SnmpTransportConnection result = api.getSnmpTransportsConnection("zh-CN", params);
-      assertThat(result).as("check result of getSnmpTransportsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createSnmpTransport(String payload) {
     try {
       // parse params from json payload
-      List<SnmpTransportCreationParams> params = gson.fromJson(payload, List.class);
+      List<SnmpTransportCreationParams> params = gson.fromJson(payload, new TypeToken<List<SnmpTransportCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnmpTransport> result = api.createSnmpTransport("zh-CN", params);
+      List<WithTaskSnmpTransport> result = api.createSnmpTransport(params, contentLanguage);
       assertThat(result).as("check result of createSnmpTransport").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateSnmpTransport(String payload) {
-    try {
-      // parse params from json payload
-      SnmpTransportUpdationParams params = gson.fromJson(payload, SnmpTransportUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskSnmpTransport> result = api.updateSnmpTransport("zh-CN", params);
-      assertThat(result).as("check result of updateSnmpTransport").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -93,12 +55,51 @@ public class ITSnmpTransport extends IT {
   public void deleteSnmpTransport(String payload) {
     try {
       // parse params from json payload
-      SnmpTransportDeletionParams params = gson.fromJson(payload, SnmpTransportDeletionParams.class);
+      SnmpTransportDeletionParams params = gson.fromJson(payload, new TypeToken<SnmpTransportDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteSnmpTransport> result = api.deleteSnmpTransport("zh-CN", params);
+      List<WithTaskDeleteSnmpTransport> result = api.deleteSnmpTransport(params, contentLanguage);
       assertThat(result).as("check result of deleteSnmpTransport").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getSnmpTransports(String payload) {
+    try {
+      // parse params from json payload
+      GetSnmpTransportsRequestBody params = gson.fromJson(payload, new TypeToken<GetSnmpTransportsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<SnmpTransport> result = api.getSnmpTransports(params, contentLanguage);
+      assertThat(result).as("check result of getSnmpTransports").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getSnmpTransportsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetSnmpTransportsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSnmpTransportsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      SnmpTransportConnection result = api.getSnmpTransportsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getSnmpTransportsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateSnmpTransport(String payload) {
+    try {
+      // parse params from json payload
+      SnmpTransportUpdationParams params = gson.fromJson(payload, new TypeToken<SnmpTransportUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskSnmpTransport> result = api.updateSnmpTransport(params, contentLanguage);
+      assertThat(result).as("check result of updateSnmpTransport").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

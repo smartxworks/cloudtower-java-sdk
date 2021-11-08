@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.ClusterImageApi;
 import com.smartx.tower.model.*;
 
-public class ITClusterImage extends IT {
+public class ITClusterImage extends ITBase {
   ClusterImageApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITClusterImage extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITClusterImage extends IT {
   public void getClusterImages(String payload) {
     try {
       // parse params from json payload
-      GetClusterImagesRequestBody params = gson.fromJson(payload, GetClusterImagesRequestBody.class);
+      GetClusterImagesRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterImagesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ClusterImage> result = api.getClusterImages("zh-CN", params);
+      List<ClusterImage> result = api.getClusterImages(params, contentLanguage);
       assertThat(result).as("check result of getClusterImages").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITClusterImage extends IT {
   public void getClusterImagesConnection(String payload) {
     try {
       // parse params from json payload
-      GetClusterImagesConnectionRequestBody params = gson.fromJson(payload, GetClusterImagesConnectionRequestBody.class);
+      GetClusterImagesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterImagesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ClusterImageConnection result = api.getClusterImagesConnection("zh-CN", params);
+      ClusterImageConnection result = api.getClusterImagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getClusterImagesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

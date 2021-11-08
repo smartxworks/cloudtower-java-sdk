@@ -240,10 +240,10 @@ docs/EverouteClusterPhase.md
 docs/EverouteClusterStatus.md
 docs/EverouteClusterStatusAgents.md
 docs/EverouteClusterStatusAgentsInstances.md
+docs/EverouteClusterStatusAgentsManageVDSes.md
 docs/EverouteClusterStatusConditions.md
 docs/EverouteClusterStatusControllers.md
 docs/EverouteClusterStatusControllersInstances.md
-docs/EverouteClusterStatusControllersManageVDSes.md
 docs/EverouteClusterStatusControllersMetrics.md
 docs/EverouteClusterWhereInput.md
 docs/EverouteLicense.md
@@ -1395,10 +1395,10 @@ src/main/java/com/smartx/tower/model/EverouteClusterPhase.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatus.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatusAgents.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatusAgentsInstances.java
+src/main/java/com/smartx/tower/model/EverouteClusterStatusAgentsManageVDSes.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatusConditions.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatusControllers.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatusControllersInstances.java
-src/main/java/com/smartx/tower/model/EverouteClusterStatusControllersManageVDSes.java
 src/main/java/com/smartx/tower/model/EverouteClusterStatusControllersMetrics.java
 src/main/java/com/smartx/tower/model/EverouteClusterWhereInput.java
 src/main/java/com/smartx/tower/model/EverouteLicense.java

@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.TaskApi;
 import com.smartx.tower.model.*;
 
-public class ITTask extends IT {
+public class ITTask extends ITBase {
   TaskApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITTask extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITTask extends IT {
   public void getTasks(String payload) {
     try {
       // parse params from json payload
-      GetTasksRequestBody params = gson.fromJson(payload, GetTasksRequestBody.class);
+      GetTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Task> result = api.getTasks("zh-CN", params);
+      List<Task> result = api.getTasks(params, contentLanguage);
       assertThat(result).as("check result of getTasks").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITTask extends IT {
   public void getTasksConnection(String payload) {
     try {
       // parse params from json payload
-      GetTasksConnectionRequestBody params = gson.fromJson(payload, GetTasksConnectionRequestBody.class);
+      GetTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      TaskConnection result = api.getTasksConnection("zh-CN", params);
+      TaskConnection result = api.getTasksConnection(params, contentLanguage);
       assertThat(result).as("check result of getTasksConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

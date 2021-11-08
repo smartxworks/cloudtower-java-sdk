@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.IscsiConnectionApi;
 import com.smartx.tower.model.*;
 
-public class ITIscsiConnection extends IT {
+public class ITIscsiConnection extends ITBase {
   IscsiConnectionApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITIscsiConnection extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITIscsiConnection extends IT {
   public void getIscsiConnections(String payload) {
     try {
       // parse params from json payload
-      GetIscsiConnectionsRequestBody params = gson.fromJson(payload, GetIscsiConnectionsRequestBody.class);
+      GetIscsiConnectionsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiConnectionsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<IscsiConnection> result = api.getIscsiConnections("zh-CN", params);
+      List<IscsiConnection> result = api.getIscsiConnections(params, contentLanguage);
       assertThat(result).as("check result of getIscsiConnections").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

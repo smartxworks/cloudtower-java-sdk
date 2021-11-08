@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.NvmfNamespaceApi;
 import com.smartx.tower.model.*;
 
-public class ITNvmfNamespace extends IT {
+public class ITNvmfNamespace extends ITBase {
   NvmfNamespaceApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,33 +34,20 @@ public class ITNvmfNamespace extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
   @Test(dataProvider = "payload")
-  public void getNvmfNamespaces(String payload) {
+  public void cloneNvmfNamespaceFromSnapshot(String payload) {
     try {
       // parse params from json payload
-      GetNvmfNamespacesRequestBody params = gson.fromJson(payload, GetNvmfNamespacesRequestBody.class);
+      List<NvmfNamespaceCloneParams> params = gson.fromJson(payload, new TypeToken<List<NvmfNamespaceCloneParams>>() {}.getType());
       // do some modify to params(optional)
-      List<NvmfNamespace> result = api.getNvmfNamespaces("zh-CN", params);
-      assertThat(result).as("check result of getNvmfNamespaces").isNotNull();
+      List<WithTaskNvmfNamespace> result = api.cloneNvmfNamespaceFromSnapshot(params, contentLanguage);
+      assertThat(result).as("check result of cloneNvmfNamespaceFromSnapshot").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getNvmfNamespacesConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetNvmfNamespacesConnectionRequestBody params = gson.fromJson(payload, GetNvmfNamespacesConnectionRequestBody.class);
-      // do some modify to params(optional)
-      NvmfNamespaceConnection result = api.getNvmfNamespacesConnection("zh-CN", params);
-      assertThat(result).as("check result of getNvmfNamespacesConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -67,51 +55,12 @@ public class ITNvmfNamespace extends IT {
   public void createNvmfNamespace(String payload) {
     try {
       // parse params from json payload
-      List<NvmfNamespaceCreationParams> params = gson.fromJson(payload, List.class);
+      List<NvmfNamespaceCreationParams> params = gson.fromJson(payload, new TypeToken<List<NvmfNamespaceCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNvmfNamespace> result = api.createNvmfNamespace("zh-CN", params);
+      List<WithTaskNvmfNamespace> result = api.createNvmfNamespace(params, contentLanguage);
       assertThat(result).as("check result of createNvmfNamespace").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateNvmfNamespace(String payload) {
-    try {
-      // parse params from json payload
-      NvmfNamespaceUpdationParams params = gson.fromJson(payload, NvmfNamespaceUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskNvmfNamespace> result = api.updateNvmfNamespace("zh-CN", params);
-      assertThat(result).as("check result of updateNvmfNamespace").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void cloneNvmfNamespaceFromSnapshot(String payload) {
-    try {
-      // parse params from json payload
-      List<NvmfNamespaceCloneParams> params = gson.fromJson(payload, List.class);
-      // do some modify to params(optional)
-      List<WithTaskNvmfNamespace> result = api.cloneNvmfNamespaceFromSnapshot("zh-CN", params);
-      assertThat(result).as("check result of cloneNvmfNamespaceFromSnapshot").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void rollbackNvmfNamespaceFromSnapshot(String payload) {
-    try {
-      // parse params from json payload
-      List<NvmfNamespaceRollbackParams> params = gson.fromJson(payload, List.class);
-      // do some modify to params(optional)
-      List<WithTaskNvmfNamespace> result = api.rollbackNvmfNamespaceFromSnapshot("zh-CN", params);
-      assertThat(result).as("check result of rollbackNvmfNamespaceFromSnapshot").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -119,12 +68,64 @@ public class ITNvmfNamespace extends IT {
   public void deleteNvmfNamespace(String payload) {
     try {
       // parse params from json payload
-      NvmfNamespaceDeletionParams params = gson.fromJson(payload, NvmfNamespaceDeletionParams.class);
+      NvmfNamespaceDeletionParams params = gson.fromJson(payload, new TypeToken<NvmfNamespaceDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteNvmfNamespace> result = api.deleteNvmfNamespace("zh-CN", params);
+      List<WithTaskDeleteNvmfNamespace> result = api.deleteNvmfNamespace(params, contentLanguage);
       assertThat(result).as("check result of deleteNvmfNamespace").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getNvmfNamespaces(String payload) {
+    try {
+      // parse params from json payload
+      GetNvmfNamespacesRequestBody params = gson.fromJson(payload, new TypeToken<GetNvmfNamespacesRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<NvmfNamespace> result = api.getNvmfNamespaces(params, contentLanguage);
+      assertThat(result).as("check result of getNvmfNamespaces").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getNvmfNamespacesConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetNvmfNamespacesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNvmfNamespacesConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      NvmfNamespaceConnection result = api.getNvmfNamespacesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getNvmfNamespacesConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void rollbackNvmfNamespaceFromSnapshot(String payload) {
+    try {
+      // parse params from json payload
+      List<NvmfNamespaceRollbackParams> params = gson.fromJson(payload, new TypeToken<List<NvmfNamespaceRollbackParams>>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskNvmfNamespace> result = api.rollbackNvmfNamespaceFromSnapshot(params, contentLanguage);
+      assertThat(result).as("check result of rollbackNvmfNamespaceFromSnapshot").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateNvmfNamespace(String payload) {
+    try {
+      // parse params from json payload
+      NvmfNamespaceUpdationParams params = gson.fromJson(payload, new TypeToken<NvmfNamespaceUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskNvmfNamespace> result = api.updateNvmfNamespace(params, contentLanguage);
+      assertThat(result).as("check result of updateNvmfNamespace").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

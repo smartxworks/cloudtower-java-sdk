@@ -3,53 +3,65 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.List;
 
 import com.smartx.tower.ApiException;
 import com.smartx.tower.api.AlertRuleApi;
 import com.smartx.tower.model.*;
 
-public class ITAlertRule extends IT {
+public class ITAlertRule extends ITBase {
   AlertRuleApi api = null;
+  HashMap<String, Object> payloads = new HashMap<>();
 
-  @DataProvider(name = "alert-payload")
+  @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    switch (m.getName()) {
-    case "getAlertRules":
-      return new Object[][] { { "{}" } };
-    case "getAlertRulesConnection":
-      return new Object[][] { { "{}" } };
-    case "resolveAlert":
-      return new Object[][] { { String.format("{\"where\":{\"id\":%s}}", "ckvg1uwes0uez0820g80v5mfb") } };
-    }
-    return null;
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
-  public void getService() {
+  public void getService() throws IOException {
     api = new AlertRuleApi(client);
+    // get payloads from resource file
+    InputStream stream = getClass().getResourceAsStream("/AlertRule.json");
+    if (stream == null) {
+      return;
+    }
+    // convert payloads string as map
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-  @Test(dataProvider = "alert-payload")
+
+  @Test(dataProvider = "payload")
   public void getAlertRules(String payload) {
     try {
-      List<AlertRule> alerts = api.getAlertRules("zh-CN", gson.fromJson(payload, GetAlertRulesRequestBody.class));
-      assertThat(alerts).as("try to get alert rule").isNotNull();
+      // parse params from json payload
+      GetAlertRulesRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertRulesRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<AlertRule> result = api.getAlertRules(params, contentLanguage);
+      assertThat(result).as("check result of getAlertRules").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "alert-payload")
+  @Test(dataProvider = "payload")
   public void getAlertRulesConnection(String payload) {
     try {
-      AlertRuleConnection connections = api.getAlertRulesConnection("zh-CN",
-          gson.fromJson(payload, GetAlertRulesConnectionRequestBody.class));
-      assertThat(connections).as("try to get alert rule connection").isNotNull();
+      // parse params from json payload
+      GetAlertRulesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertRulesConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      AlertRuleConnection result = api.getAlertRulesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getAlertRulesConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
+
 }

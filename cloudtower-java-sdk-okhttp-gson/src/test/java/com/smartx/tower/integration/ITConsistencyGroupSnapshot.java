@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.ConsistencyGroupSnapshotApi;
 import com.smartx.tower.model.*;
 
-public class ITConsistencyGroupSnapshot extends IT {
+public class ITConsistencyGroupSnapshot extends ITBase {
   ConsistencyGroupSnapshotApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,59 +34,20 @@ public class ITConsistencyGroupSnapshot extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getConsistencyGroupSnapshots(String payload) {
-    try {
-      // parse params from json payload
-      GetConsistencyGroupSnapshotsRequestBody params = gson.fromJson(payload, GetConsistencyGroupSnapshotsRequestBody.class);
-      // do some modify to params(optional)
-      List<ConsistencyGroupSnapshot> result = api.getConsistencyGroupSnapshots("zh-CN", params);
-      assertThat(result).as("check result of getConsistencyGroupSnapshots").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getConsistencyGroupSnapshotsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetConsistencyGroupSnapshotsConnectionRequestBody params = gson.fromJson(payload, GetConsistencyGroupSnapshotsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      ConsistencyGroupSnapshotConnection result = api.getConsistencyGroupSnapshotsConnection("zh-CN", params);
-      assertThat(result).as("check result of getConsistencyGroupSnapshotsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createConsistencyGroupSnapshot(String payload) {
     try {
       // parse params from json payload
-      List<ConsistencyGroupSnapshotCreationParams> params = gson.fromJson(payload, List.class);
+      List<ConsistencyGroupSnapshotCreationParams> params = gson.fromJson(payload, new TypeToken<List<ConsistencyGroupSnapshotCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskConsistencyGroupSnapshot> result = api.createConsistencyGroupSnapshot("zh-CN", params);
+      List<WithTaskConsistencyGroupSnapshot> result = api.createConsistencyGroupSnapshot(params, contentLanguage);
       assertThat(result).as("check result of createConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateConsistencyGroupSnapshot(String payload) {
-    try {
-      // parse params from json payload
-      ConsistencyGroupSnapshotUpdationParams params = gson.fromJson(payload, ConsistencyGroupSnapshotUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskConsistencyGroupSnapshot> result = api.updateConsistencyGroupSnapshot("zh-CN", params);
-      assertThat(result).as("check result of updateConsistencyGroupSnapshot").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -93,12 +55,51 @@ public class ITConsistencyGroupSnapshot extends IT {
   public void deleteConsistencyGroupSnapshot(String payload) {
     try {
       // parse params from json payload
-      ConsistencyGroupSnapshotDeletionParams params = gson.fromJson(payload, ConsistencyGroupSnapshotDeletionParams.class);
+      ConsistencyGroupSnapshotDeletionParams params = gson.fromJson(payload, new TypeToken<ConsistencyGroupSnapshotDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteConsistencyGroupSnapshot> result = api.deleteConsistencyGroupSnapshot("zh-CN", params);
+      List<WithTaskDeleteConsistencyGroupSnapshot> result = api.deleteConsistencyGroupSnapshot(params, contentLanguage);
       assertThat(result).as("check result of deleteConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getConsistencyGroupSnapshots(String payload) {
+    try {
+      // parse params from json payload
+      GetConsistencyGroupSnapshotsRequestBody params = gson.fromJson(payload, new TypeToken<GetConsistencyGroupSnapshotsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<ConsistencyGroupSnapshot> result = api.getConsistencyGroupSnapshots(params, contentLanguage);
+      assertThat(result).as("check result of getConsistencyGroupSnapshots").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getConsistencyGroupSnapshotsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetConsistencyGroupSnapshotsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetConsistencyGroupSnapshotsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      ConsistencyGroupSnapshotConnection result = api.getConsistencyGroupSnapshotsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getConsistencyGroupSnapshotsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateConsistencyGroupSnapshot(String payload) {
+    try {
+      // parse params from json payload
+      ConsistencyGroupSnapshotUpdationParams params = gson.fromJson(payload, new TypeToken<ConsistencyGroupSnapshotUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskConsistencyGroupSnapshot> result = api.updateConsistencyGroupSnapshot(params, contentLanguage);
+      assertThat(result).as("check result of updateConsistencyGroupSnapshot").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

@@ -29,26 +29,26 @@ import java.util.List;
 /**
  * VmAddDiskParamsDataVmDisks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmAddDiskParamsDataVmDisks {
   public static final String SERIALIZED_NAME_MOUNT_DISKS = "mount_disks";
   @SerializedName(SERIALIZED_NAME_MOUNT_DISKS)
-  private List<Object> mountDisks = null;
+  private List<MountDisksParams> mountDisks = null;
 
   public static final String SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS = "mount_new_create_disks";
   @SerializedName(SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS)
-  private List<Object> mountNewCreateDisks = null;
+  private List<MountNewCreateDisksParams> mountNewCreateDisks = null;
 
 
-  public VmAddDiskParamsDataVmDisks mountDisks(List<Object> mountDisks) {
+  public VmAddDiskParamsDataVmDisks mountDisks(List<MountDisksParams> mountDisks) {
     
     this.mountDisks = mountDisks;
     return this;
   }
 
-  public VmAddDiskParamsDataVmDisks addMountDisksItem(Object mountDisksItem) {
+  public VmAddDiskParamsDataVmDisks addMountDisksItem(MountDisksParams mountDisksItem) {
     if (this.mountDisks == null) {
-      this.mountDisks = new ArrayList<Object>();
+      this.mountDisks = new ArrayList<MountDisksParams>();
     }
     this.mountDisks.add(mountDisksItem);
     return this;
@@ -61,25 +61,25 @@ public class VmAddDiskParamsDataVmDisks {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getMountDisks() {
+  public List<MountDisksParams> getMountDisks() {
     return mountDisks;
   }
 
 
-  public void setMountDisks(List<Object> mountDisks) {
+  public void setMountDisks(List<MountDisksParams> mountDisks) {
     this.mountDisks = mountDisks;
   }
 
 
-  public VmAddDiskParamsDataVmDisks mountNewCreateDisks(List<Object> mountNewCreateDisks) {
+  public VmAddDiskParamsDataVmDisks mountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
     
     this.mountNewCreateDisks = mountNewCreateDisks;
     return this;
   }
 
-  public VmAddDiskParamsDataVmDisks addMountNewCreateDisksItem(Object mountNewCreateDisksItem) {
+  public VmAddDiskParamsDataVmDisks addMountNewCreateDisksItem(MountNewCreateDisksParams mountNewCreateDisksItem) {
     if (this.mountNewCreateDisks == null) {
-      this.mountNewCreateDisks = new ArrayList<Object>();
+      this.mountNewCreateDisks = new ArrayList<MountNewCreateDisksParams>();
     }
     this.mountNewCreateDisks.add(mountNewCreateDisksItem);
     return this;
@@ -92,12 +92,12 @@ public class VmAddDiskParamsDataVmDisks {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getMountNewCreateDisks() {
+  public List<MountNewCreateDisksParams> getMountNewCreateDisks() {
     return mountNewCreateDisks;
   }
 
 
-  public void setMountNewCreateDisks(List<Object> mountNewCreateDisks) {
+  public void setMountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
     this.mountNewCreateDisks = mountNewCreateDisks;
   }
 

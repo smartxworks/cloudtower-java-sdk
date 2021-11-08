@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.SnapshotPlanTaskApi;
 import com.smartx.tower.model.*;
 
-public class ITSnapshotPlanTask extends IT {
+public class ITSnapshotPlanTask extends ITBase {
   SnapshotPlanTaskApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITSnapshotPlanTask extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITSnapshotPlanTask extends IT {
   public void getSnapshotPlanTasks(String payload) {
     try {
       // parse params from json payload
-      GetSnapshotPlanTasksRequestBody params = gson.fromJson(payload, GetSnapshotPlanTasksRequestBody.class);
+      GetSnapshotPlanTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetSnapshotPlanTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SnapshotPlanTask> result = api.getSnapshotPlanTasks("zh-CN", params);
+      List<SnapshotPlanTask> result = api.getSnapshotPlanTasks(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotPlanTasks").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITSnapshotPlanTask extends IT {
   public void getSnapshotPlanTasksConnection(String payload) {
     try {
       // parse params from json payload
-      GetSnapshotPlanTasksConnectionRequestBody params = gson.fromJson(payload, GetSnapshotPlanTasksConnectionRequestBody.class);
+      GetSnapshotPlanTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSnapshotPlanTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SnapshotPlanTaskConnection result = api.getSnapshotPlanTasksConnection("zh-CN", params);
+      SnapshotPlanTaskConnection result = api.getSnapshotPlanTasksConnection(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotPlanTasksConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

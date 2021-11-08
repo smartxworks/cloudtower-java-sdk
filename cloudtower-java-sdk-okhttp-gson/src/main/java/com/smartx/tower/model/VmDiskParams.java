@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -29,113 +28,109 @@ import java.util.List;
 /**
  * VmDiskParams
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VmDiskParams {
   public static final String SERIALIZED_NAME_MOUNT_CD_ROMS = "mount_cd_roms";
   @SerializedName(SERIALIZED_NAME_MOUNT_CD_ROMS)
-  private List<Object> mountCdRoms = null;
+  private List<VmCdRomParams> mountCdRoms = null;
 
   public static final String SERIALIZED_NAME_MOUNT_DISKS = "mount_disks";
   @SerializedName(SERIALIZED_NAME_MOUNT_DISKS)
-  private List<Object> mountDisks = null;
+  private List<MountDisksParams> mountDisks = null;
 
   public static final String SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS = "mount_new_create_disks";
   @SerializedName(SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS)
-  private List<Object> mountNewCreateDisks = null;
+  private List<MountNewCreateDisksParams> mountNewCreateDisks = null;
 
+  public VmDiskParams mountCdRoms(List<VmCdRomParams> mountCdRoms) {
 
-  public VmDiskParams mountCdRoms(List<Object> mountCdRoms) {
-    
     this.mountCdRoms = mountCdRoms;
     return this;
   }
 
-  public VmDiskParams addMountCdRomsItem(Object mountCdRomsItem) {
+  public VmDiskParams addMountCdRomsItem(VmCdRomParams mountCdRomsItem) {
     if (this.mountCdRoms == null) {
-      this.mountCdRoms = new ArrayList<Object>();
+      this.mountCdRoms = new ArrayList<VmCdRomParams>();
     }
     this.mountCdRoms.add(mountCdRomsItem);
     return this;
   }
 
-   /**
+  /**
    * Get mountCdRoms
+   * 
    * @return mountCdRoms
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getMountCdRoms() {
+  public List<VmCdRomParams> getMountCdRoms() {
     return mountCdRoms;
   }
 
-
-  public void setMountCdRoms(List<Object> mountCdRoms) {
+  public void setMountCdRoms(List<VmCdRomParams> mountCdRoms) {
     this.mountCdRoms = mountCdRoms;
   }
 
+  public VmDiskParams mountDisks(List<MountDisksParams> mountDisks) {
 
-  public VmDiskParams mountDisks(List<Object> mountDisks) {
-    
     this.mountDisks = mountDisks;
     return this;
   }
 
-  public VmDiskParams addMountDisksItem(Object mountDisksItem) {
+  public VmDiskParams addMountDisksItem(MountDisksParams mountDisksItem) {
     if (this.mountDisks == null) {
-      this.mountDisks = new ArrayList<Object>();
+      this.mountDisks = new ArrayList<MountDisksParams>();
     }
     this.mountDisks.add(mountDisksItem);
     return this;
   }
 
-   /**
+  /**
    * Get mountDisks
+   * 
    * @return mountDisks
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getMountDisks() {
+  public List<MountDisksParams> getMountDisks() {
     return mountDisks;
   }
 
-
-  public void setMountDisks(List<Object> mountDisks) {
+  public void setMountDisks(List<MountDisksParams> mountDisks) {
     this.mountDisks = mountDisks;
   }
 
+  public VmDiskParams mountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
 
-  public VmDiskParams mountNewCreateDisks(List<Object> mountNewCreateDisks) {
-    
     this.mountNewCreateDisks = mountNewCreateDisks;
     return this;
   }
 
-  public VmDiskParams addMountNewCreateDisksItem(Object mountNewCreateDisksItem) {
+  public VmDiskParams addMountNewCreateDisksItem(MountNewCreateDisksParams mountNewCreateDisksItem) {
     if (this.mountNewCreateDisks == null) {
-      this.mountNewCreateDisks = new ArrayList<Object>();
+      this.mountNewCreateDisks = new ArrayList<MountNewCreateDisksParams>();
     }
     this.mountNewCreateDisks.add(mountNewCreateDisksItem);
     return this;
   }
 
-   /**
+  /**
    * Get mountNewCreateDisks
+   * 
    * @return mountNewCreateDisks
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getMountNewCreateDisks() {
+  public List<MountNewCreateDisksParams> getMountNewCreateDisks() {
     return mountNewCreateDisks;
   }
 
-
-  public void setMountNewCreateDisks(List<Object> mountNewCreateDisks) {
+  public void setMountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
     this.mountNewCreateDisks = mountNewCreateDisks;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -146,9 +141,9 @@ public class VmDiskParams {
       return false;
     }
     VmDiskParams vmDiskParams = (VmDiskParams) o;
-    return Objects.equals(this.mountCdRoms, vmDiskParams.mountCdRoms) &&
-        Objects.equals(this.mountDisks, vmDiskParams.mountDisks) &&
-        Objects.equals(this.mountNewCreateDisks, vmDiskParams.mountNewCreateDisks);
+    return Objects.equals(this.mountCdRoms, vmDiskParams.mountCdRoms)
+        && Objects.equals(this.mountDisks, vmDiskParams.mountDisks)
+        && Objects.equals(this.mountNewCreateDisks, vmDiskParams.mountNewCreateDisks);
   }
 
   @Override
@@ -179,4 +174,3 @@ public class VmDiskParams {
   }
 
 }
-

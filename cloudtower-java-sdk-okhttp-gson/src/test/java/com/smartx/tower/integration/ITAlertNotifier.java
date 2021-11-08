@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.AlertNotifierApi;
 import com.smartx.tower.model.*;
 
-public class ITAlertNotifier extends IT {
+public class ITAlertNotifier extends ITBase {
   AlertNotifierApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITAlertNotifier extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITAlertNotifier extends IT {
   public void getAlertNotifiers(String payload) {
     try {
       // parse params from json payload
-      GetAlertNotifiersRequestBody params = gson.fromJson(payload, GetAlertNotifiersRequestBody.class);
+      GetAlertNotifiersRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertNotifiersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<AlertNotifier> result = api.getAlertNotifiers("zh-CN", params);
+      List<AlertNotifier> result = api.getAlertNotifiers(params, contentLanguage);
       assertThat(result).as("check result of getAlertNotifiers").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITAlertNotifier extends IT {
   public void getAlertNotifiersConnection(String payload) {
     try {
       // parse params from json payload
-      GetAlertNotifiersConnectionRequestBody params = gson.fromJson(payload, GetAlertNotifiersConnectionRequestBody.class);
+      GetAlertNotifiersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertNotifiersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      AlertNotifierConnection result = api.getAlertNotifiersConnection("zh-CN", params);
+      AlertNotifierConnection result = api.getAlertNotifiersConnection(params, contentLanguage);
       assertThat(result).as("check result of getAlertNotifiersConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

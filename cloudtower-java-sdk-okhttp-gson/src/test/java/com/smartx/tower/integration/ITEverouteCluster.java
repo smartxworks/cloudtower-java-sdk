@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.EverouteClusterApi;
 import com.smartx.tower.model.*;
 
-public class ITEverouteCluster extends IT {
+public class ITEverouteCluster extends ITBase {
   EverouteClusterApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITEverouteCluster extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITEverouteCluster extends IT {
   public void getEverouteClusters(String payload) {
     try {
       // parse params from json payload
-      GetEverouteClustersRequestBody params = gson.fromJson(payload, GetEverouteClustersRequestBody.class);
+      GetEverouteClustersRequestBody params = gson.fromJson(payload, new TypeToken<GetEverouteClustersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<EverouteCluster> result = api.getEverouteClusters("zh-CN", params);
+      List<EverouteCluster> result = api.getEverouteClusters(params, contentLanguage);
       assertThat(result).as("check result of getEverouteClusters").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITEverouteCluster extends IT {
   public void getEverouteClustersConnection(String payload) {
     try {
       // parse params from json payload
-      GetEverouteClustersConnectionRequestBody params = gson.fromJson(payload, GetEverouteClustersConnectionRequestBody.class);
+      GetEverouteClustersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetEverouteClustersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      EverouteClusterConnection result = api.getEverouteClustersConnection("zh-CN", params);
+      EverouteClusterConnection result = api.getEverouteClustersConnection(params, contentLanguage);
       assertThat(result).as("check result of getEverouteClustersConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

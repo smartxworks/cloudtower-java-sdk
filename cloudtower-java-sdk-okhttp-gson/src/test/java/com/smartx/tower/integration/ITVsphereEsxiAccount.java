@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.VsphereEsxiAccountApi;
 import com.smartx.tower.model.*;
 
-public class ITVsphereEsxiAccount extends IT {
+public class ITVsphereEsxiAccount extends ITBase {
   VsphereEsxiAccountApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITVsphereEsxiAccount extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITVsphereEsxiAccount extends IT {
   public void getVsphereEsxiAccounts(String payload) {
     try {
       // parse params from json payload
-      GetVsphereEsxiAccountsRequestBody params = gson.fromJson(payload, GetVsphereEsxiAccountsRequestBody.class);
+      GetVsphereEsxiAccountsRequestBody params = gson.fromJson(payload, new TypeToken<GetVsphereEsxiAccountsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VsphereEsxiAccount> result = api.getVsphereEsxiAccounts("zh-CN", params);
+      List<VsphereEsxiAccount> result = api.getVsphereEsxiAccounts(params, contentLanguage);
       assertThat(result).as("check result of getVsphereEsxiAccounts").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITVsphereEsxiAccount extends IT {
   public void getVsphereEsxiAccountsConnection(String payload) {
     try {
       // parse params from json payload
-      GetVsphereEsxiAccountsConnectionRequestBody params = gson.fromJson(payload, GetVsphereEsxiAccountsConnectionRequestBody.class);
+      GetVsphereEsxiAccountsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVsphereEsxiAccountsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VsphereEsxiAccountConnection result = api.getVsphereEsxiAccountsConnection("zh-CN", params);
+      VsphereEsxiAccountConnection result = api.getVsphereEsxiAccountsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVsphereEsxiAccountsConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.LogCollectionApi;
 import com.smartx.tower.model.*;
 
-public class ITLogCollection extends IT {
+public class ITLogCollection extends ITBase {
   LogCollectionApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITLogCollection extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITLogCollection extends IT {
   public void getLogCollections(String payload) {
     try {
       // parse params from json payload
-      GetLogCollectionsRequestBody params = gson.fromJson(payload, GetLogCollectionsRequestBody.class);
+      GetLogCollectionsRequestBody params = gson.fromJson(payload, new TypeToken<GetLogCollectionsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<LogCollection> result = api.getLogCollections("zh-CN", params);
+      List<LogCollection> result = api.getLogCollections(params, contentLanguage);
       assertThat(result).as("check result of getLogCollections").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITLogCollection extends IT {
   public void getLogCollectionsConnection(String payload) {
     try {
       // parse params from json payload
-      GetLogCollectionsConnectionRequestBody params = gson.fromJson(payload, GetLogCollectionsConnectionRequestBody.class);
+      GetLogCollectionsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetLogCollectionsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      LogCollectionConnection result = api.getLogCollectionsConnection("zh-CN", params);
+      LogCollectionConnection result = api.getLogCollectionsConnection(params, contentLanguage);
       assertThat(result).as("check result of getLogCollectionsConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

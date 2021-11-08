@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DiscoveredHost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T10:47:43.783335+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DiscoveredHost {
   public static final String SERIALIZED_NAME_ALL_FLASH = "all_flash";
   @SerializedName(SERIALIZED_NAME_ALL_FLASH)
@@ -82,6 +82,10 @@ public class DiscoveredHost {
   public static final String SERIALIZED_NAME_SERIAL = "serial";
   @SerializedName(SERIALIZED_NAME_SERIAL)
   private String serial;
+
+  public static final String SERIALIZED_NAME_SOCKETS = "sockets";
+  @SerializedName(SERIALIZED_NAME_SOCKETS)
+  private Double sockets;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -382,6 +386,29 @@ public class DiscoveredHost {
   }
 
 
+  public DiscoveredHost sockets(Double sockets) {
+    
+    this.sockets = sockets;
+    return this;
+  }
+
+   /**
+   * Get sockets
+   * @return sockets
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Double getSockets() {
+    return sockets;
+  }
+
+
+  public void setSockets(Double sockets) {
+    this.sockets = sockets;
+  }
+
+
   public DiscoveredHost version(String version) {
     
     this.version = version;
@@ -426,6 +453,7 @@ public class DiscoveredHost {
         Objects.equals(this.isOsInRaid1, discoveredHost.isOsInRaid1) &&
         Objects.equals(this.product, discoveredHost.product) &&
         Objects.equals(this.serial, discoveredHost.serial) &&
+        Objects.equals(this.sockets, discoveredHost.sockets) &&
         Objects.equals(this.version, discoveredHost.version);
   }
 
@@ -435,7 +463,7 @@ public class DiscoveredHost {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allFlash, deployed, dimms, disks, hostIp, hostUuid, hostname, ifaces, ipmiIp, isOsInRaid1, product, serial, version);
+    return Objects.hash(allFlash, deployed, dimms, disks, hostIp, hostUuid, hostname, ifaces, ipmiIp, isOsInRaid1, product, serial, sockets, version);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -461,6 +489,7 @@ public class DiscoveredHost {
     sb.append("    isOsInRaid1: ").append(toIndentedString(isOsInRaid1)).append("\n");
     sb.append("    product: ").append(toIndentedString(product)).append("\n");
     sb.append("    serial: ").append(toIndentedString(serial)).append("\n");
+    sb.append("    sockets: ").append(toIndentedString(sockets)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("}");
     return sb.toString();

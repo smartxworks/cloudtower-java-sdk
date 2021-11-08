@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.DiskApi;
 import com.smartx.tower.model.*;
 
-public class ITDisk extends IT {
+public class ITDisk extends ITBase {
   DiskApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,7 +34,7 @@ public class ITDisk extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -41,12 +42,12 @@ public class ITDisk extends IT {
   public void getDisks(String payload) {
     try {
       // parse params from json payload
-      GetDisksRequestBody params = gson.fromJson(payload, GetDisksRequestBody.class);
+      GetDisksRequestBody params = gson.fromJson(payload, new TypeToken<GetDisksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Disk> result = api.getDisks("zh-CN", params);
+      List<Disk> result = api.getDisks(params, contentLanguage);
       assertThat(result).as("check result of getDisks").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -54,12 +55,12 @@ public class ITDisk extends IT {
   public void getDisksConnection(String payload) {
     try {
       // parse params from json payload
-      GetDisksConnectionRequestBody params = gson.fromJson(payload, GetDisksConnectionRequestBody.class);
+      GetDisksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetDisksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      DiskConnection result = api.getDisksConnection("zh-CN", params);
+      DiskConnection result = api.getDisksConnection(params, contentLanguage);
       assertThat(result).as("check result of getDisksConnection").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -67,12 +68,12 @@ public class ITDisk extends IT {
   public void mountDisk(String payload) {
     try {
       // parse params from json payload
-      DiskMountParams params = gson.fromJson(payload, DiskMountParams.class);
+      DiskMountParams params = gson.fromJson(payload, new TypeToken<DiskMountParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDisk> result = api.mountDisk("zh-CN", params);
+      List<WithTaskDisk> result = api.mountDisk(params, contentLanguage);
       assertThat(result).as("check result of mountDisk").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -80,12 +81,12 @@ public class ITDisk extends IT {
   public void unmountDisk(String payload) {
     try {
       // parse params from json payload
-      DiskUnmountParams params = gson.fromJson(payload, DiskUnmountParams.class);
+      DiskUnmountParams params = gson.fromJson(payload, new TypeToken<DiskUnmountParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDisk> result = api.unmountDisk("zh-CN", params);
+      List<WithTaskDisk> result = api.unmountDisk(params, contentLanguage);
       assertThat(result).as("check result of unmountDisk").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 

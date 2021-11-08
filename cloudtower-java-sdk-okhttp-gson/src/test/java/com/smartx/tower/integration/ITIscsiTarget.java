@@ -3,6 +3,7 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +15,14 @@ import com.smartx.tower.ApiException;
 import com.smartx.tower.api.IscsiTargetApi;
 import com.smartx.tower.model.*;
 
-public class ITIscsiTarget extends IT {
+public class ITIscsiTarget extends ITBase {
   IscsiTargetApi api = null;
-  HashMap<String, String> payloads = new HashMap<String, String>();
+  HashMap<String, Object> payloads = new HashMap<>();
 
   @DataProvider(name = "payload")
   Object[][] data(Method m) {
-    String payload = payloads.get(m.getName());
-    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload } };
+    Object payload = payloads.get(m.getName());
+    return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
@@ -33,59 +34,20 @@ public class ITIscsiTarget extends IT {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), HashMap.class);
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-
-  @Test(dataProvider = "payload")
-  public void getIscsiTargets(String payload) {
-    try {
-      // parse params from json payload
-      GetIscsiTargetsRequestBody params = gson.fromJson(payload, GetIscsiTargetsRequestBody.class);
-      // do some modify to params(optional)
-      List<IscsiTarget> result = api.getIscsiTargets("zh-CN", params);
-      assertThat(result).as("check result of getIscsiTargets").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void getIscsiTargetsConnection(String payload) {
-    try {
-      // parse params from json payload
-      GetIscsiTargetsConnectionRequestBody params = gson.fromJson(payload, GetIscsiTargetsConnectionRequestBody.class);
-      // do some modify to params(optional)
-      IscsiTargetConnection result = api.getIscsiTargetsConnection("zh-CN", params);
-      assertThat(result).as("check result of getIscsiTargetsConnection").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
 
   @Test(dataProvider = "payload")
   public void createIscsiTarget(String payload) {
     try {
       // parse params from json payload
-      List<IscsiTargetCreationParams> params = gson.fromJson(payload, List.class);
+      List<IscsiTargetCreationParams> params = gson.fromJson(payload, new TypeToken<List<IscsiTargetCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskIscsiTarget> result = api.createIscsiTarget("zh-CN", params);
+      List<WithTaskIscsiTarget> result = api.createIscsiTarget(params, contentLanguage);
       assertThat(result).as("check result of createIscsiTarget").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "payload")
-  public void updateIscsiTarget(String payload) {
-    try {
-      // parse params from json payload
-      IscsiTargetUpdationParams params = gson.fromJson(payload, IscsiTargetUpdationParams.class);
-      // do some modify to params(optional)
-      List<WithTaskIscsiTarget> result = api.updateIscsiTarget("zh-CN", params);
-      assertThat(result).as("check result of updateIscsiTarget").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
@@ -93,12 +55,51 @@ public class ITIscsiTarget extends IT {
   public void deleteIscsiTarget(String payload) {
     try {
       // parse params from json payload
-      IscsiTargetDeletionParams params = gson.fromJson(payload, IscsiTargetDeletionParams.class);
+      IscsiTargetDeletionParams params = gson.fromJson(payload, new TypeToken<IscsiTargetDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteIscsiTarget> result = api.deleteIscsiTarget("zh-CN", params);
+      List<WithTaskDeleteIscsiTarget> result = api.deleteIscsiTarget(params, contentLanguage);
       assertThat(result).as("check result of deleteIscsiTarget").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getMessage()).isFalse();
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getIscsiTargets(String payload) {
+    try {
+      // parse params from json payload
+      GetIscsiTargetsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiTargetsRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      List<IscsiTarget> result = api.getIscsiTargets(params, contentLanguage);
+      assertThat(result).as("check result of getIscsiTargets").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void getIscsiTargetsConnection(String payload) {
+    try {
+      // parse params from json payload
+      GetIscsiTargetsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiTargetsConnectionRequestBody>() {}.getType());
+      // do some modify to params(optional)
+      IscsiTargetConnection result = api.getIscsiTargetsConnection(params, contentLanguage);
+      assertThat(result).as("check result of getIscsiTargetsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "payload")
+  public void updateIscsiTarget(String payload) {
+    try {
+      // parse params from json payload
+      IscsiTargetUpdationParams params = gson.fromJson(payload, new TypeToken<IscsiTargetUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskIscsiTarget> result = api.updateIscsiTarget(params, contentLanguage);
+      assertThat(result).as("check result of updateIscsiTarget").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
