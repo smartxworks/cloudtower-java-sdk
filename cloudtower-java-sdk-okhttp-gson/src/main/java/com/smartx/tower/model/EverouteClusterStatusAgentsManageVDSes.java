@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EverouteClusterPhase;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +38,7 @@ public class EverouteClusterStatusAgentsManageVDSes {
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
-  private AlertRuleCluster vds;
+  private NameIdPair vds;
 
   public static final String SERIALIZED_NAME_RETRY_COUNT = "retryCount";
   @SerializedName(SERIALIZED_NAME_RETRY_COUNT)
@@ -80,7 +80,7 @@ public class EverouteClusterStatusAgentsManageVDSes {
   }
 
 
-  public EverouteClusterStatusAgentsManageVDSes vds(AlertRuleCluster vds) {
+  public EverouteClusterStatusAgentsManageVDSes vds(NameIdPair vds) {
     
     this.vds = vds;
     return this;
@@ -93,12 +93,12 @@ public class EverouteClusterStatusAgentsManageVDSes {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVds() {
+  public NameIdPair getVds() {
     return vds;
   }
 
 
-  public void setVds(AlertRuleCluster vds) {
+  public void setVds(NameIdPair vds) {
     this.vds = vds;
   }
 

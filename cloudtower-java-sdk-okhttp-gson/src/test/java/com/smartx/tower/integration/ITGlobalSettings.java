@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITGlobalSettings extends ITBase {
   GlobalSettingsApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "globalSettingsPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITGlobalSettings extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "globalSettingsPayload")
   public void createClusterRecycleBinSetting(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITGlobalSettings extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "globalSettingsPayload")
   public void deleteClusterRecycleBinSetting(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITGlobalSettings extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "globalSettingsPayload")
   public void getGlobalSettingses(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITGlobalSettings extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "globalSettingsPayload")
   public void getGlobalSettingsesConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITGlobalSettings extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "globalSettingsPayload")
   public void updateClusterRecycleBinSetting(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITGlobalSettings extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "globalSettingsPayload")
   public void updateGlobalRecycleBinSetting(String payload) {
     try {
       // parse params from json payload

@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.NicDriverState;
@@ -51,7 +50,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_IBDEV = "ibdev";
   @SerializedName(SERIALIZED_NAME_IBDEV)
@@ -139,7 +138,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
-  private AlertDisk vds;
+  private NameIdPair vds;
 
 
   public Nic driver(String driver) {
@@ -211,7 +210,7 @@ public class Nic {
   }
 
 
-  public Nic host(AlertRuleCluster host) {
+  public Nic host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -224,12 +223,12 @@ public class Nic {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 
@@ -725,7 +724,7 @@ public class Nic {
   }
 
 
-  public Nic vds(AlertDisk vds) {
+  public Nic vds(NameIdPair vds) {
     
     this.vds = vds;
     return this;
@@ -738,12 +737,12 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getVds() {
+  public NameIdPair getVds() {
     return vds;
   }
 
 
-  public void setVds(AlertDisk vds) {
+  public void setVds(NameIdPair vds) {
     this.vds = vds;
   }
 

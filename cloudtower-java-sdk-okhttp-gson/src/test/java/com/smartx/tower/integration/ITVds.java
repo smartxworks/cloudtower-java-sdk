@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITVds extends ITBase {
   VdsApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "vdsPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITVds extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void createVds(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITVds extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void createVdsWithAccessVlan(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITVds extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void createVdsWithMigrateVlan(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITVds extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void deleteVds(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITVds extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void getVdses(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITVds extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void getVdsesConnection(String payload) {
     try {
       // parse params from json payload
@@ -116,7 +116,7 @@ public class ITVds extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vdsPayload")
   public void updateVds(String payload) {
     try {
       // parse params from json payload

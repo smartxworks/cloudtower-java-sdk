@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITSnapshotPlan extends ITBase {
   SnapshotPlanApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "snapshotPlanPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITSnapshotPlan extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void createSnapshotPlan(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void deleteSnapshotPlan(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void executeSnapshotPlan(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void getSnapshotPlans(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void getSnapshotPlansConnection(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void resumeSnapshotPlan(String payload) {
     try {
       // parse params from json payload
@@ -116,7 +116,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void suspendSnapshotPlan(String payload) {
     try {
       // parse params from json payload
@@ -129,7 +129,7 @@ public class ITSnapshotPlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotPlanPayload")
   public void updateSnapshotPlan(String payload) {
     try {
       // parse params from json payload

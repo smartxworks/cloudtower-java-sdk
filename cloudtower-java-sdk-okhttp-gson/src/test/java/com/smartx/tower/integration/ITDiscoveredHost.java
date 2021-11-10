@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITDiscoveredHost extends ITBase {
   DiscoveredHostApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "discoveredHostPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITDiscoveredHost extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "discoveredHostPayload")
   public void getDiscoverHosts(String payload) {
     try {
       // parse params from json payload

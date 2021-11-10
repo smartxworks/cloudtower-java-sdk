@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,11 +35,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ZoneTopo {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CLUSTER_TOPO = "cluster_topo";
   @SerializedName(SERIALIZED_NAME_CLUSTER_TOPO)
-  private AlertRuleCluster clusterTopo;
+  private NameIdPair clusterTopo;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -51,10 +51,10 @@ public class ZoneTopo {
 
   public static final String SERIALIZED_NAME_RACK_TOPOES = "rack_topoes";
   @SerializedName(SERIALIZED_NAME_RACK_TOPOES)
-  private List<AlertRuleCluster> rackTopoes = null;
+  private List<NameIdPair> rackTopoes = null;
 
 
-  public ZoneTopo cluster(AlertRuleCluster cluster) {
+  public ZoneTopo cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -67,17 +67,17 @@ public class ZoneTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public ZoneTopo clusterTopo(AlertRuleCluster clusterTopo) {
+  public ZoneTopo clusterTopo(NameIdPair clusterTopo) {
     
     this.clusterTopo = clusterTopo;
     return this;
@@ -90,12 +90,12 @@ public class ZoneTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getClusterTopo() {
+  public NameIdPair getClusterTopo() {
     return clusterTopo;
   }
 
 
-  public void setClusterTopo(AlertRuleCluster clusterTopo) {
+  public void setClusterTopo(NameIdPair clusterTopo) {
     this.clusterTopo = clusterTopo;
   }
 
@@ -146,15 +146,15 @@ public class ZoneTopo {
   }
 
 
-  public ZoneTopo rackTopoes(List<AlertRuleCluster> rackTopoes) {
+  public ZoneTopo rackTopoes(List<NameIdPair> rackTopoes) {
     
     this.rackTopoes = rackTopoes;
     return this;
   }
 
-  public ZoneTopo addRackTopoesItem(AlertRuleCluster rackTopoesItem) {
+  public ZoneTopo addRackTopoesItem(NameIdPair rackTopoesItem) {
     if (this.rackTopoes == null) {
-      this.rackTopoes = new ArrayList<AlertRuleCluster>();
+      this.rackTopoes = new ArrayList<NameIdPair>();
     }
     this.rackTopoes.add(rackTopoesItem);
     return this;
@@ -167,12 +167,12 @@ public class ZoneTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getRackTopoes() {
+  public List<NameIdPair> getRackTopoes() {
     return rackTopoes;
   }
 
 
-  public void setRackTopoes(List<AlertRuleCluster> rackTopoes) {
+  public void setRackTopoes(List<NameIdPair> rackTopoes) {
     this.rackTopoes = rackTopoes;
   }
 

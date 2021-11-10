@@ -3,62 +3,93 @@ package com.smartx.tower.integration;
 import static org.assertj.core.api.Assertions.*;
 
 import org.testng.annotations.*;
+
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import com.smartx.tower.ApiException;
+import com.smartx.tower.api.VmApi;
 import com.smartx.tower.api.VmSnapshotApi;
 import com.smartx.tower.model.*;
 
 public class ITVmSnapshot extends ITBase {
-  VmSnapshotApi vmSnapshotApi = null;
-  HashMap<String, Object> vmSnapshotPayloads = new HashMap<>();
+  VmSnapshotApi api = null;
+  VmApi vmApi = null;
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
+
+  Cluster cluster = null;
 
   @DataProvider(name = "vmSnapshotPayload")
   Object[][] data(Method m) {
-    Object payload = vmSnapshotPayloads.get(m.getName());
+    Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
-  public void getService() throws IOException {
-    vmSnapshotApi = new VmSnapshotApi(client);
-    // get payloads from resource file
+  public void getService() throws JsonSyntaxException, IOException {
+    api = new VmSnapshotApi(client);
+    vmApi = new VmApi(client);
+
     InputStream stream = getClass().getResourceAsStream("/VmSnapshot.json");
-    if (stream == null) {
-      return;
+    if (stream != null) {
+      payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {
+      }.getType());
     }
-    // convert payloads string as map
-    vmSnapshotPayloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
+  Vm vm = null;
 
-  @Test(dataProvider = "vmSnapshotPayload")
+  @BeforeMethod(groups = { "need_vm" })
+  public void createVm() throws ApiException, IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException {
+    List<VmCreationParams> params = new ArrayList<>();
+    Vlan vlan = getData("defaultVlan", Vlan.class);
+    cluster = getData("defaultCluster", Cluster.class);
+    params.add(new VmCreationParams().name("tower-api-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1.0)
+        .cpuSockets(1.0).memory(4294967296.0).ha(true).vcpu(1.0).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+        .clusterId(cluster.getId())
+        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1.0).index(1.0)))
+        .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
+    vm = vmApi.createVm(params, contentLanguage).get(0).getData();
+    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+        new TypeToken<List<Vm>>() {
+        }.getClass(), GetVmsRequestBody.class);
+  }
+
+  @AfterMethod(groups = { "need_vm" }, alwaysRun = true)
+  public void deleteVm() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException, ApiException, InterruptedException {
+    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+        new TypeToken<List<Vm>>() {
+        }.getClass(), GetVmsRequestBody.class);
+    vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
+    waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+        new TypeToken<List<Vm>>() {
+        }.getClass(), GetVmsRequestBody.class);
+  }
+
+  @Test(dataProvider = "vmSnapshotPayload", groups = { "need_vm" })
   public void createVmSnapshot(String payload) {
     try {
       // parse params from json payload
-      VmSnapshotCreationParams params = gson.fromJson(payload, new TypeToken<VmSnapshotCreationParams>() {}.getType());
+      VmSnapshotCreationParams params = gson.fromJson(payload, new TypeToken<VmSnapshotCreationParams>() {
+      }.getType());
+      params.addDataItem(new VmSnapshotCreationParamsData().vmId(vm.getId())
+          .name("tower-api-test-snapshot" + System.currentTimeMillis()));
       // do some modify to params(optional)
-      List<WithTaskVmSnapshot> result = vmSnapshotApi.createVmSnapshot(params, contentLanguage);
+      List<WithTaskVmSnapshot> result = api.createVmSnapshot(params, contentLanguage);
       assertThat(result).as("check result of createVmSnapshot").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getResponseBody()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "vmSnapshotPayload")
-  public void deleteVmSnapshot(String payload) {
-    try {
-      // parse params from json payload
-      VmSnapshotDeletionParams params = gson.fromJson(payload, new TypeToken<VmSnapshotDeletionParams>() {}.getType());
-      // do some modify to params(optional)
-      List<WithTaskDeleteVmSnapshot> result = vmSnapshotApi.deleteVmSnapshot(params, contentLanguage);
-      assertThat(result).as("check result of deleteVmSnapshot").isNotNull();
+      VmSnapshot snapshot = result.get(0).getData();
+      api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId())),
+          contentLanguage);
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
@@ -68,9 +99,10 @@ public class ITVmSnapshot extends ITBase {
   public void getVmSnapshots(String payload) {
     try {
       // parse params from json payload
-      GetVmSnapshotsRequestBody params = gson.fromJson(payload, new TypeToken<GetVmSnapshotsRequestBody>() {}.getType());
+      GetVmSnapshotsRequestBody params = gson.fromJson(payload, new TypeToken<GetVmSnapshotsRequestBody>() {
+      }.getType());
       // do some modify to params(optional)
-      List<VmSnapshot> result = vmSnapshotApi.getVmSnapshots(params, contentLanguage);
+      List<VmSnapshot> result = api.getVmSnapshots(params, contentLanguage);
       assertThat(result).as("check result of getVmSnapshots").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
@@ -81,10 +113,81 @@ public class ITVmSnapshot extends ITBase {
   public void getVmSnapshotsConnection(String payload) {
     try {
       // parse params from json payload
-      GetVmSnapshotsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmSnapshotsConnectionRequestBody>() {}.getType());
+      GetVmSnapshotsConnectionRequestBody params = gson.fromJson(payload,
+          new TypeToken<GetVmSnapshotsConnectionRequestBody>() {
+          }.getType());
       // do some modify to params(optional)
-      VmSnapshotConnection result = vmSnapshotApi.getVmSnapshotsConnection(params, contentLanguage);
+      VmSnapshotConnection result = api.getVmSnapshotsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmSnapshotsConnection").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  VmSnapshot snapshot = null;
+
+  @BeforeMethod(onlyForGroups = { "need_vm_snapshot" }, dependsOnMethods = { "createVm" })
+  public void createSnapShot() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException, ApiException, InterruptedException {
+    VmSnapshotCreationParams params = new VmSnapshotCreationParams();
+    params.addDataItem(new VmSnapshotCreationParamsData().vmId(vm.getId())
+        .name("tower-api-test-snapshot" + System.currentTimeMillis()));
+    // do some modify to params(optional)
+    List<WithTaskVmSnapshot> result = api.createVmSnapshot(params, contentLanguage);
+    assertThat(result).as("check result of createVmSnapshot").isNotNull();
+    snapshot = result.get(0).getData();
+    waitForResourceAsyncStatus(new GetVmSnapshotsRequestBody().where(new VmSnapshotWhereInput().id(snapshot.getId())),
+        api, "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
+        }.getClass(), GetVmSnapshotsRequestBody.class);
+  }
+
+  @AfterMethod(alwaysRun = true, onlyForGroups = { "need_vm_snapshot" })
+  public void deleteSnapShot() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException, ApiException, InterruptedException {
+    waitForResourceAsyncStatus(new GetVmSnapshotsRequestBody().where(new VmSnapshotWhereInput().id(snapshot.getId())),
+        api, "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
+        }.getClass(), GetVmSnapshotsRequestBody.class);
+    api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId())),
+        contentLanguage);
+    waitForResourceDeletion(new GetVmSnapshotsRequestBody().where(new VmSnapshotWhereInput().id(snapshot.getId())), api,
+        "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
+        }.getClass(), GetVmSnapshotsRequestBody.class);
+    snapshot = null;
+  }
+
+  @Test(groups = { "need_vm_snapshot" })
+  public void rebuildVm() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException, InterruptedException {
+    try {
+      // parse params from json payload
+      List<VmRebuildParams> params = new ArrayList<>();
+      params.add(new VmRebuildParams().clusterId(cluster.getId())
+          .name("tower-api-test-rebuild-vm" + System.currentTimeMillis()).rebuildFromSnapshotId(snapshot.getId()));
+      // do some modify to params(optional)
+      List<WithTaskVm> result = vmApi.rebuildVm(params, contentLanguage);
+      assertThat(result).as("check result of rebuildVm").isNotNull();
+      Vm vm = result.get(0).getData();
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
+      waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(groups = { "need_vm_snapshot" })
+  public void rollbackVm() {
+    try {
+      // parse params from json payload
+      VmRollbackParams params = new VmRollbackParams();
+      params.data(new VmRollbackParamsData().snapshotId(snapshot.getId())).where(new VmWhereInput().id(vm.getId()));
+      // do some modify to params(optional)
+      List<WithTaskVm> result = vmApi.rollbackVm(params, contentLanguage);
+      assertThat(result).as("check result of rollbackVm").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }

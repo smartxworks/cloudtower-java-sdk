@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITDisk extends ITBase {
   DiskApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "diskPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITDisk extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "diskPayload")
   public void getDisks(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITDisk extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "diskPayload")
   public void getDisksConnection(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITDisk extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "diskPayload")
   public void mountDisk(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITDisk extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "diskPayload")
   public void unmountDisk(String payload) {
     try {
       // parse params from json payload

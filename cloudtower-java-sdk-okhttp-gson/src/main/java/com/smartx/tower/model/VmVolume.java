@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import io.swagger.annotations.ApiModel;
@@ -38,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VmVolume {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -74,7 +73,7 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_LUN = "lun";
   @SerializedName(SERIALIZED_NAME_LUN)
-  private AlertDisk lun;
+  private NameIdPair lun;
 
   public static final String SERIALIZED_NAME_MOUNTING = "mounting";
   @SerializedName(SERIALIZED_NAME_MOUNTING)
@@ -105,7 +104,7 @@ public class VmVolume {
   private List<BrickTopoPowers> vmDisks = null;
 
 
-  public VmVolume cluster(AlertRuleCluster cluster) {
+  public VmVolume cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -118,12 +117,12 @@ public class VmVolume {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -320,7 +319,7 @@ public class VmVolume {
   }
 
 
-  public VmVolume lun(AlertDisk lun) {
+  public VmVolume lun(NameIdPair lun) {
     
     this.lun = lun;
     return this;
@@ -333,12 +332,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getLun() {
+  public NameIdPair getLun() {
     return lun;
   }
 
 
-  public void setLun(AlertDisk lun) {
+  public void setLun(NameIdPair lun) {
     this.lun = lun;
   }
 

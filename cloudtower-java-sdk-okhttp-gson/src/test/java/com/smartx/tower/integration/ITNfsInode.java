@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITNfsInode extends ITBase {
   NfsInodeApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "nfsInodePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITNfsInode extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsInodePayload")
   public void getNfsInodes(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITNfsInode extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsInodePayload")
   public void getNfsInodesConnection(String payload) {
     try {
       // parse params from json payload

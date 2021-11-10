@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.IscsiTargetInitiatorChaps;
@@ -86,7 +86,7 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -174,7 +174,7 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_LUNS = "luns";
   @SerializedName(SERIALIZED_NAME_LUNS)
-  private List<AlertRuleCluster> luns = null;
+  private List<NameIdPair> luns = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -473,7 +473,7 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget cluster(AlertRuleCluster cluster) {
+  public IscsiTarget cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -486,12 +486,12 @@ public class IscsiTarget {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -995,15 +995,15 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget luns(List<AlertRuleCluster> luns) {
+  public IscsiTarget luns(List<NameIdPair> luns) {
     
     this.luns = luns;
     return this;
   }
 
-  public IscsiTarget addLunsItem(AlertRuleCluster lunsItem) {
+  public IscsiTarget addLunsItem(NameIdPair lunsItem) {
     if (this.luns == null) {
-      this.luns = new ArrayList<AlertRuleCluster>();
+      this.luns = new ArrayList<NameIdPair>();
     }
     this.luns.add(lunsItem);
     return this;
@@ -1016,12 +1016,12 @@ public class IscsiTarget {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getLuns() {
+  public List<NameIdPair> getLuns() {
     return luns;
   }
 
 
-  public void setLuns(List<AlertRuleCluster> luns) {
+  public void setLuns(List<NameIdPair> luns) {
     this.luns = luns;
   }
 

@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NetworkType;
@@ -43,7 +42,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -51,7 +50,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private AlertDisk everouteCluster;
+  private NameIdPair everouteCluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -75,7 +74,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<AlertRuleCluster> nics = null;
+  private List<NameIdPair> nics = null;
 
   public static final String SERIALIZED_NAME_OVSBR_NAME = "ovsbr_name";
   @SerializedName(SERIALIZED_NAME_OVSBR_NAME)
@@ -87,7 +86,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_VLANS = "vlans";
   @SerializedName(SERIALIZED_NAME_VLANS)
-  private List<AlertRuleCluster> vlans = null;
+  private List<NameIdPair> vlans = null;
 
   public static final String SERIALIZED_NAME_VLANS_NUM = "vlans_num";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM)
@@ -117,7 +116,7 @@ public class Vds {
   }
 
 
-  public Vds cluster(AlertRuleCluster cluster) {
+  public Vds cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -130,12 +129,12 @@ public class Vds {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -163,7 +162,7 @@ public class Vds {
   }
 
 
-  public Vds everouteCluster(AlertDisk everouteCluster) {
+  public Vds everouteCluster(NameIdPair everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -176,12 +175,12 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getEverouteCluster() {
+  public NameIdPair getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(AlertDisk everouteCluster) {
+  public void setEverouteCluster(NameIdPair everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -309,15 +308,15 @@ public class Vds {
   }
 
 
-  public Vds nics(List<AlertRuleCluster> nics) {
+  public Vds nics(List<NameIdPair> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Vds addNicsItem(AlertRuleCluster nicsItem) {
+  public Vds addNicsItem(NameIdPair nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<AlertRuleCluster>();
+      this.nics = new ArrayList<NameIdPair>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -330,12 +329,12 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNics() {
+  public List<NameIdPair> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<AlertRuleCluster> nics) {
+  public void setNics(List<NameIdPair> nics) {
     this.nics = nics;
   }
 
@@ -386,15 +385,15 @@ public class Vds {
   }
 
 
-  public Vds vlans(List<AlertRuleCluster> vlans) {
+  public Vds vlans(List<NameIdPair> vlans) {
     
     this.vlans = vlans;
     return this;
   }
 
-  public Vds addVlansItem(AlertRuleCluster vlansItem) {
+  public Vds addVlansItem(NameIdPair vlansItem) {
     if (this.vlans == null) {
-      this.vlans = new ArrayList<AlertRuleCluster>();
+      this.vlans = new ArrayList<NameIdPair>();
     }
     this.vlans.add(vlansItem);
     return this;
@@ -407,12 +406,12 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVlans() {
+  public List<NameIdPair> getVlans() {
     return vlans;
   }
 
 
-  public void setVlans(List<AlertRuleCluster> vlans) {
+  public void setVlans(List<NameIdPair> vlans) {
     this.vlans = vlans;
   }
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * AlertRuleCluster
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class AlertRuleCluster {
+public class NameIdPair {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -38,7 +38,7 @@ public class AlertRuleCluster {
   private String id;
 
 
-  public AlertRuleCluster name(String name) {
+  public NameIdPair name(String name) {
     
     this.name = name;
     return this;
@@ -61,7 +61,7 @@ public class AlertRuleCluster {
   }
 
 
-  public AlertRuleCluster id(String id) {
+  public NameIdPair id(String id) {
     
     this.id = id;
     return this;
@@ -92,7 +92,7 @@ public class AlertRuleCluster {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AlertRuleCluster alertRuleCluster = (AlertRuleCluster) o;
+    NameIdPair alertRuleCluster = (NameIdPair) o;
     return Objects.equals(this.name, alertRuleCluster.name) &&
         Objects.equals(this.id, alertRuleCluster.id);
   }

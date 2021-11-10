@@ -21,8 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.Architecture;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.ClusterConnectorErrorCode;
@@ -64,7 +63,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUPS = "consistency_groups";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUPS)
-  private List<AlertRuleCluster> consistencyGroups = null;
+  private List<NameIdPair> consistencyGroups = null;
 
   public static final String SERIALIZED_NAME_CURRENT_CPU_MODEL = "current_cpu_model";
   @SerializedName(SERIALIZED_NAME_CURRENT_CPU_MODEL)
@@ -72,7 +71,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
   @SerializedName(SERIALIZED_NAME_DATACENTERS)
-  private List<AlertRuleCluster> datacenters = null;
+  private List<NameIdPair> datacenters = null;
 
   public static final String SERIALIZED_NAME_DISCONNECTED_DATE = "disconnected_date";
   @SerializedName(SERIALIZED_NAME_DISCONNECTED_DATE)
@@ -92,7 +91,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private AlertDisk everouteCluster;
+  private NameIdPair everouteCluster;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -112,7 +111,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<AlertRuleCluster> hosts = null;
+  private List<NameIdPair> hosts = null;
 
   public static final String SERIALIZED_NAME_HYPERVISOR = "hypervisor";
   @SerializedName(SERIALIZED_NAME_HYPERVISOR)
@@ -340,7 +339,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_VDSES = "vdses";
   @SerializedName(SERIALIZED_NAME_VDSES)
-  private List<AlertRuleCluster> vdses = null;
+  private List<NameIdPair> vdses = null;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -352,7 +351,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_VM_FOLDERS = "vm_folders";
   @SerializedName(SERIALIZED_NAME_VM_FOLDERS)
-  private List<AlertRuleCluster> vmFolders = null;
+  private List<NameIdPair> vmFolders = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -360,15 +359,15 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<AlertRuleCluster> vmTemplates = null;
+  private List<NameIdPair> vmTemplates = null;
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
   public static final String SERIALIZED_NAME_WITNESS = "witness";
   @SerializedName(SERIALIZED_NAME_WITNESS)
-  private AlertDisk witness;
+  private NameIdPair witness;
 
   public static final String SERIALIZED_NAME_ZONES = "zones";
   @SerializedName(SERIALIZED_NAME_ZONES)
@@ -475,15 +474,15 @@ public class Cluster {
   }
 
 
-  public Cluster consistencyGroups(List<AlertRuleCluster> consistencyGroups) {
+  public Cluster consistencyGroups(List<NameIdPair> consistencyGroups) {
     
     this.consistencyGroups = consistencyGroups;
     return this;
   }
 
-  public Cluster addConsistencyGroupsItem(AlertRuleCluster consistencyGroupsItem) {
+  public Cluster addConsistencyGroupsItem(NameIdPair consistencyGroupsItem) {
     if (this.consistencyGroups == null) {
-      this.consistencyGroups = new ArrayList<AlertRuleCluster>();
+      this.consistencyGroups = new ArrayList<NameIdPair>();
     }
     this.consistencyGroups.add(consistencyGroupsItem);
     return this;
@@ -496,12 +495,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getConsistencyGroups() {
+  public List<NameIdPair> getConsistencyGroups() {
     return consistencyGroups;
   }
 
 
-  public void setConsistencyGroups(List<AlertRuleCluster> consistencyGroups) {
+  public void setConsistencyGroups(List<NameIdPair> consistencyGroups) {
     this.consistencyGroups = consistencyGroups;
   }
 
@@ -529,15 +528,15 @@ public class Cluster {
   }
 
 
-  public Cluster datacenters(List<AlertRuleCluster> datacenters) {
+  public Cluster datacenters(List<NameIdPair> datacenters) {
     
     this.datacenters = datacenters;
     return this;
   }
 
-  public Cluster addDatacentersItem(AlertRuleCluster datacentersItem) {
+  public Cluster addDatacentersItem(NameIdPair datacentersItem) {
     if (this.datacenters == null) {
-      this.datacenters = new ArrayList<AlertRuleCluster>();
+      this.datacenters = new ArrayList<NameIdPair>();
     }
     this.datacenters.add(datacentersItem);
     return this;
@@ -550,12 +549,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getDatacenters() {
+  public List<NameIdPair> getDatacenters() {
     return datacenters;
   }
 
 
-  public void setDatacenters(List<AlertRuleCluster> datacenters) {
+  public void setDatacenters(List<NameIdPair> datacenters) {
     this.datacenters = datacenters;
   }
 
@@ -657,7 +656,7 @@ public class Cluster {
   }
 
 
-  public Cluster everouteCluster(AlertDisk everouteCluster) {
+  public Cluster everouteCluster(NameIdPair everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -670,12 +669,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getEverouteCluster() {
+  public NameIdPair getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(AlertDisk everouteCluster) {
+  public void setEverouteCluster(NameIdPair everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -772,15 +771,15 @@ public class Cluster {
   }
 
 
-  public Cluster hosts(List<AlertRuleCluster> hosts) {
+  public Cluster hosts(List<NameIdPair> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Cluster addHostsItem(AlertRuleCluster hostsItem) {
+  public Cluster addHostsItem(NameIdPair hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<AlertRuleCluster>();
+      this.hosts = new ArrayList<NameIdPair>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -793,12 +792,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getHosts() {
+  public List<NameIdPair> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<AlertRuleCluster> hosts) {
+  public void setHosts(List<NameIdPair> hosts) {
     this.hosts = hosts;
   }
 
@@ -2114,15 +2113,15 @@ public class Cluster {
   }
 
 
-  public Cluster vdses(List<AlertRuleCluster> vdses) {
+  public Cluster vdses(List<NameIdPair> vdses) {
     
     this.vdses = vdses;
     return this;
   }
 
-  public Cluster addVdsesItem(AlertRuleCluster vdsesItem) {
+  public Cluster addVdsesItem(NameIdPair vdsesItem) {
     if (this.vdses == null) {
-      this.vdses = new ArrayList<AlertRuleCluster>();
+      this.vdses = new ArrayList<NameIdPair>();
     }
     this.vdses.add(vdsesItem);
     return this;
@@ -2135,12 +2134,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVdses() {
+  public List<NameIdPair> getVdses() {
     return vdses;
   }
 
 
-  public void setVdses(List<AlertRuleCluster> vdses) {
+  public void setVdses(List<NameIdPair> vdses) {
     this.vdses = vdses;
   }
 
@@ -2191,15 +2190,15 @@ public class Cluster {
   }
 
 
-  public Cluster vmFolders(List<AlertRuleCluster> vmFolders) {
+  public Cluster vmFolders(List<NameIdPair> vmFolders) {
     
     this.vmFolders = vmFolders;
     return this;
   }
 
-  public Cluster addVmFoldersItem(AlertRuleCluster vmFoldersItem) {
+  public Cluster addVmFoldersItem(NameIdPair vmFoldersItem) {
     if (this.vmFolders == null) {
-      this.vmFolders = new ArrayList<AlertRuleCluster>();
+      this.vmFolders = new ArrayList<NameIdPair>();
     }
     this.vmFolders.add(vmFoldersItem);
     return this;
@@ -2212,12 +2211,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmFolders() {
+  public List<NameIdPair> getVmFolders() {
     return vmFolders;
   }
 
 
-  public void setVmFolders(List<AlertRuleCluster> vmFolders) {
+  public void setVmFolders(List<NameIdPair> vmFolders) {
     this.vmFolders = vmFolders;
   }
 
@@ -2245,15 +2244,15 @@ public class Cluster {
   }
 
 
-  public Cluster vmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public Cluster vmTemplates(List<NameIdPair> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public Cluster addVmTemplatesItem(AlertRuleCluster vmTemplatesItem) {
+  public Cluster addVmTemplatesItem(NameIdPair vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<AlertRuleCluster>();
+      this.vmTemplates = new ArrayList<NameIdPair>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -2266,25 +2265,25 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmTemplates() {
+  public List<NameIdPair> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public void setVmTemplates(List<NameIdPair> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 
 
-  public Cluster vms(List<AlertRuleCluster> vms) {
+  public Cluster vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Cluster addVmsItem(AlertRuleCluster vmsItem) {
+  public Cluster addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -2297,17 +2296,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 
 
-  public Cluster witness(AlertDisk witness) {
+  public Cluster witness(NameIdPair witness) {
     
     this.witness = witness;
     return this;
@@ -2320,12 +2319,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getWitness() {
+  public NameIdPair getWitness() {
     return witness;
   }
 
 
-  public void setWitness(AlertDisk witness) {
+  public void setWitness(NameIdPair witness) {
     this.witness = witness;
   }
 

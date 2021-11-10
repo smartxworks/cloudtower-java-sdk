@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITNfsExport extends ITBase {
   NfsExportApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "nfsExportPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITNfsExport extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsExportPayload")
   public void createNfsExport(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITNfsExport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsExportPayload")
   public void deleteNfsExport(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITNfsExport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsExportPayload")
   public void getNfsExports(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITNfsExport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsExportPayload")
   public void getNfsExportsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITNfsExport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nfsExportPayload")
   public void updateNfsExport(String payload) {
     try {
       // parse params from json payload

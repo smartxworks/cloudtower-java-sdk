@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITReportTemplate extends ITBase {
   ReportTemplateApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "reportTemplatePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITReportTemplate extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "reportTemplatePayload")
   public void createReportTemplate(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITReportTemplate extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "reportTemplatePayload")
   public void deleteReportTemplate(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITReportTemplate extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "reportTemplatePayload")
   public void generateFromReportTemplate(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITReportTemplate extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "reportTemplatePayload")
   public void getReportTemplates(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITReportTemplate extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "reportTemplatePayload")
   public void getReportTemplatesConnection(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITReportTemplate extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "reportTemplatePayload")
   public void updateReportTemplate(String payload) {
     try {
       // parse params from json payload

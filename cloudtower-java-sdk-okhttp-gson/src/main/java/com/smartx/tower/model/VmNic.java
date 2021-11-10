@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.VmNicModel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -71,7 +70,7 @@ public class VmNic {
 
   public static final String SERIALIZED_NAME_NIC = "nic";
   @SerializedName(SERIALIZED_NAME_NIC)
-  private AlertDisk nic;
+  private NameIdPair nic;
 
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
@@ -83,11 +82,11 @@ public class VmNic {
 
   public static final String SERIALIZED_NAME_VLAN = "vlan";
   @SerializedName(SERIALIZED_NAME_VLAN)
-  private AlertDisk vlan;
+  private NameIdPair vlan;
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertRuleCluster vm;
+  private NameIdPair vm;
 
 
   public VmNic enabled(Boolean enabled) {
@@ -297,7 +296,7 @@ public class VmNic {
   }
 
 
-  public VmNic nic(AlertDisk nic) {
+  public VmNic nic(NameIdPair nic) {
     
     this.nic = nic;
     return this;
@@ -310,12 +309,12 @@ public class VmNic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getNic() {
+  public NameIdPair getNic() {
     return nic;
   }
 
 
-  public void setNic(AlertDisk nic) {
+  public void setNic(NameIdPair nic) {
     this.nic = nic;
   }
 
@@ -366,7 +365,7 @@ public class VmNic {
   }
 
 
-  public VmNic vlan(AlertDisk vlan) {
+  public VmNic vlan(NameIdPair vlan) {
     
     this.vlan = vlan;
     return this;
@@ -379,17 +378,17 @@ public class VmNic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getVlan() {
+  public NameIdPair getVlan() {
     return vlan;
   }
 
 
-  public void setVlan(AlertDisk vlan) {
+  public void setVlan(NameIdPair vlan) {
     this.vlan = vlan;
   }
 
 
-  public VmNic vm(AlertRuleCluster vm) {
+  public VmNic vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -402,12 +401,12 @@ public class VmNic {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertRuleCluster vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 

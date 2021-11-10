@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITNvmfNamespace extends ITBase {
   NvmfNamespaceApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "nvmfNamespacePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITNvmfNamespace extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void cloneNvmfNamespaceFromSnapshot(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITNvmfNamespace extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void createNvmfNamespace(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITNvmfNamespace extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void deleteNvmfNamespace(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITNvmfNamespace extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void getNvmfNamespaces(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITNvmfNamespace extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void getNvmfNamespacesConnection(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITNvmfNamespace extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void rollbackNvmfNamespaceFromSnapshot(String payload) {
     try {
       // parse params from json payload
@@ -116,7 +116,7 @@ public class ITNvmfNamespace extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "nvmfNamespacePayload")
   public void updateNvmfNamespace(String payload) {
     try {
       // parse params from json payload

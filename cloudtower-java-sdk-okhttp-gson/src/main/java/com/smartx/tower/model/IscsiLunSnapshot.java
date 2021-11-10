@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -38,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class IscsiLunSnapshot {
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT = "consistency_group_snapshot";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
-  private AlertDisk consistencyGroupSnapshot;
+  private NameIdPair consistencyGroupSnapshot;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -50,11 +49,11 @@ public class IscsiLunSnapshot {
 
   public static final String SERIALIZED_NAME_ISCSI_LUN = "iscsi_lun";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN)
-  private AlertDisk iscsiLun;
+  private NameIdPair iscsiLun;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
-  private AlertRuleCluster iscsiTarget;
+  private NameIdPair iscsiTarget;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
@@ -77,7 +76,7 @@ public class IscsiLunSnapshot {
   private Double uniqueSize;
 
 
-  public IscsiLunSnapshot consistencyGroupSnapshot(AlertDisk consistencyGroupSnapshot) {
+  public IscsiLunSnapshot consistencyGroupSnapshot(NameIdPair consistencyGroupSnapshot) {
     
     this.consistencyGroupSnapshot = consistencyGroupSnapshot;
     return this;
@@ -90,12 +89,12 @@ public class IscsiLunSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getConsistencyGroupSnapshot() {
+  public NameIdPair getConsistencyGroupSnapshot() {
     return consistencyGroupSnapshot;
   }
 
 
-  public void setConsistencyGroupSnapshot(AlertDisk consistencyGroupSnapshot) {
+  public void setConsistencyGroupSnapshot(NameIdPair consistencyGroupSnapshot) {
     this.consistencyGroupSnapshot = consistencyGroupSnapshot;
   }
 
@@ -146,7 +145,7 @@ public class IscsiLunSnapshot {
   }
 
 
-  public IscsiLunSnapshot iscsiLun(AlertDisk iscsiLun) {
+  public IscsiLunSnapshot iscsiLun(NameIdPair iscsiLun) {
     
     this.iscsiLun = iscsiLun;
     return this;
@@ -159,17 +158,17 @@ public class IscsiLunSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getIscsiLun() {
+  public NameIdPair getIscsiLun() {
     return iscsiLun;
   }
 
 
-  public void setIscsiLun(AlertDisk iscsiLun) {
+  public void setIscsiLun(NameIdPair iscsiLun) {
     this.iscsiLun = iscsiLun;
   }
 
 
-  public IscsiLunSnapshot iscsiTarget(AlertRuleCluster iscsiTarget) {
+  public IscsiLunSnapshot iscsiTarget(NameIdPair iscsiTarget) {
     
     this.iscsiTarget = iscsiTarget;
     return this;
@@ -182,12 +181,12 @@ public class IscsiLunSnapshot {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getIscsiTarget() {
+  public NameIdPair getIscsiTarget() {
     return iscsiTarget;
   }
 
 
-  public void setIscsiTarget(AlertRuleCluster iscsiTarget) {
+  public void setIscsiTarget(NameIdPair iscsiTarget) {
     this.iscsiTarget = iscsiTarget;
   }
 

@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -38,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ConsistencyGroupSnapshot {
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP = "consistency_group";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP)
-  private AlertDisk consistencyGroup;
+  private NameIdPair consistencyGroup;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -50,7 +49,7 @@ public class ConsistencyGroupSnapshot {
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS = "Iscsi_lun_snapshots";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS)
-  private List<AlertRuleCluster> iscsiLunSnapshots = null;
+  private List<NameIdPair> iscsiLunSnapshots = null;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
@@ -70,14 +69,14 @@ public class ConsistencyGroupSnapshot {
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS = "nvmf_namespace_snapshots";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS)
-  private List<AlertRuleCluster> nvmfNamespaceSnapshots = null;
+  private List<NameIdPair> nvmfNamespaceSnapshots = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Double uniqueSize;
 
 
-  public ConsistencyGroupSnapshot consistencyGroup(AlertDisk consistencyGroup) {
+  public ConsistencyGroupSnapshot consistencyGroup(NameIdPair consistencyGroup) {
     
     this.consistencyGroup = consistencyGroup;
     return this;
@@ -90,12 +89,12 @@ public class ConsistencyGroupSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getConsistencyGroup() {
+  public NameIdPair getConsistencyGroup() {
     return consistencyGroup;
   }
 
 
-  public void setConsistencyGroup(AlertDisk consistencyGroup) {
+  public void setConsistencyGroup(NameIdPair consistencyGroup) {
     this.consistencyGroup = consistencyGroup;
   }
 
@@ -146,15 +145,15 @@ public class ConsistencyGroupSnapshot {
   }
 
 
-  public ConsistencyGroupSnapshot iscsiLunSnapshots(List<AlertRuleCluster> iscsiLunSnapshots) {
+  public ConsistencyGroupSnapshot iscsiLunSnapshots(List<NameIdPair> iscsiLunSnapshots) {
     
     this.iscsiLunSnapshots = iscsiLunSnapshots;
     return this;
   }
 
-  public ConsistencyGroupSnapshot addIscsiLunSnapshotsItem(AlertRuleCluster iscsiLunSnapshotsItem) {
+  public ConsistencyGroupSnapshot addIscsiLunSnapshotsItem(NameIdPair iscsiLunSnapshotsItem) {
     if (this.iscsiLunSnapshots == null) {
-      this.iscsiLunSnapshots = new ArrayList<AlertRuleCluster>();
+      this.iscsiLunSnapshots = new ArrayList<NameIdPair>();
     }
     this.iscsiLunSnapshots.add(iscsiLunSnapshotsItem);
     return this;
@@ -167,12 +166,12 @@ public class ConsistencyGroupSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getIscsiLunSnapshots() {
+  public List<NameIdPair> getIscsiLunSnapshots() {
     return iscsiLunSnapshots;
   }
 
 
-  public void setIscsiLunSnapshots(List<AlertRuleCluster> iscsiLunSnapshots) {
+  public void setIscsiLunSnapshots(List<NameIdPair> iscsiLunSnapshots) {
     this.iscsiLunSnapshots = iscsiLunSnapshots;
   }
 
@@ -277,15 +276,15 @@ public class ConsistencyGroupSnapshot {
   }
 
 
-  public ConsistencyGroupSnapshot nvmfNamespaceSnapshots(List<AlertRuleCluster> nvmfNamespaceSnapshots) {
+  public ConsistencyGroupSnapshot nvmfNamespaceSnapshots(List<NameIdPair> nvmfNamespaceSnapshots) {
     
     this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
     return this;
   }
 
-  public ConsistencyGroupSnapshot addNvmfNamespaceSnapshotsItem(AlertRuleCluster nvmfNamespaceSnapshotsItem) {
+  public ConsistencyGroupSnapshot addNvmfNamespaceSnapshotsItem(NameIdPair nvmfNamespaceSnapshotsItem) {
     if (this.nvmfNamespaceSnapshots == null) {
-      this.nvmfNamespaceSnapshots = new ArrayList<AlertRuleCluster>();
+      this.nvmfNamespaceSnapshots = new ArrayList<NameIdPair>();
     }
     this.nvmfNamespaceSnapshots.add(nvmfNamespaceSnapshotsItem);
     return this;
@@ -298,12 +297,12 @@ public class ConsistencyGroupSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNvmfNamespaceSnapshots() {
+  public List<NameIdPair> getNvmfNamespaceSnapshots() {
     return nvmfNamespaceSnapshots;
   }
 
 
-  public void setNvmfNamespaceSnapshots(List<AlertRuleCluster> nvmfNamespaceSnapshots) {
+  public void setNvmfNamespaceSnapshots(List<NameIdPair> nvmfNamespaceSnapshots) {
     this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
   }
 

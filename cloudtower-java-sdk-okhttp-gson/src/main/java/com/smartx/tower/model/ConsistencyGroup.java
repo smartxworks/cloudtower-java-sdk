@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -37,11 +37,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ConsistencyGroup {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS = "consistency_group_snapshots";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS)
-  private List<AlertRuleCluster> consistencyGroupSnapshots = null;
+  private List<NameIdPair> consistencyGroupSnapshots = null;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -57,7 +57,7 @@ public class ConsistencyGroup {
 
   public static final String SERIALIZED_NAME_ISCSI_LUNS = "iscsi_luns";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUNS)
-  private List<AlertRuleCluster> iscsiLuns = null;
+  private List<NameIdPair> iscsiLuns = null;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
@@ -77,14 +77,14 @@ public class ConsistencyGroup {
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<AlertRuleCluster> namespaces = null;
+  private List<NameIdPair> namespaces = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Double uniqueSize;
 
 
-  public ConsistencyGroup cluster(AlertRuleCluster cluster) {
+  public ConsistencyGroup cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -97,25 +97,25 @@ public class ConsistencyGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public ConsistencyGroup consistencyGroupSnapshots(List<AlertRuleCluster> consistencyGroupSnapshots) {
+  public ConsistencyGroup consistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
     
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
     return this;
   }
 
-  public ConsistencyGroup addConsistencyGroupSnapshotsItem(AlertRuleCluster consistencyGroupSnapshotsItem) {
+  public ConsistencyGroup addConsistencyGroupSnapshotsItem(NameIdPair consistencyGroupSnapshotsItem) {
     if (this.consistencyGroupSnapshots == null) {
-      this.consistencyGroupSnapshots = new ArrayList<AlertRuleCluster>();
+      this.consistencyGroupSnapshots = new ArrayList<NameIdPair>();
     }
     this.consistencyGroupSnapshots.add(consistencyGroupSnapshotsItem);
     return this;
@@ -128,12 +128,12 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getConsistencyGroupSnapshots() {
+  public List<NameIdPair> getConsistencyGroupSnapshots() {
     return consistencyGroupSnapshots;
   }
 
 
-  public void setConsistencyGroupSnapshots(List<AlertRuleCluster> consistencyGroupSnapshots) {
+  public void setConsistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
   }
 
@@ -207,15 +207,15 @@ public class ConsistencyGroup {
   }
 
 
-  public ConsistencyGroup iscsiLuns(List<AlertRuleCluster> iscsiLuns) {
+  public ConsistencyGroup iscsiLuns(List<NameIdPair> iscsiLuns) {
     
     this.iscsiLuns = iscsiLuns;
     return this;
   }
 
-  public ConsistencyGroup addIscsiLunsItem(AlertRuleCluster iscsiLunsItem) {
+  public ConsistencyGroup addIscsiLunsItem(NameIdPair iscsiLunsItem) {
     if (this.iscsiLuns == null) {
-      this.iscsiLuns = new ArrayList<AlertRuleCluster>();
+      this.iscsiLuns = new ArrayList<NameIdPair>();
     }
     this.iscsiLuns.add(iscsiLunsItem);
     return this;
@@ -228,12 +228,12 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getIscsiLuns() {
+  public List<NameIdPair> getIscsiLuns() {
     return iscsiLuns;
   }
 
 
-  public void setIscsiLuns(List<AlertRuleCluster> iscsiLuns) {
+  public void setIscsiLuns(List<NameIdPair> iscsiLuns) {
     this.iscsiLuns = iscsiLuns;
   }
 
@@ -338,15 +338,15 @@ public class ConsistencyGroup {
   }
 
 
-  public ConsistencyGroup namespaces(List<AlertRuleCluster> namespaces) {
+  public ConsistencyGroup namespaces(List<NameIdPair> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public ConsistencyGroup addNamespacesItem(AlertRuleCluster namespacesItem) {
+  public ConsistencyGroup addNamespacesItem(NameIdPair namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<AlertRuleCluster>();
+      this.namespaces = new ArrayList<NameIdPair>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -359,12 +359,12 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNamespaces() {
+  public List<NameIdPair> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<AlertRuleCluster> namespaces) {
+  public void setNamespaces(List<NameIdPair> namespaces) {
     this.namespaces = namespaces;
   }
 

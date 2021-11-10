@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EverouteClusterPhase;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -58,7 +58,7 @@ public class EverouteClusterStatusAgentsInstances {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
 
   public EverouteClusterStatusAgentsInstances reason(String reason) {
@@ -199,7 +199,7 @@ public class EverouteClusterStatusAgentsInstances {
   }
 
 
-  public EverouteClusterStatusAgentsInstances host(AlertRuleCluster host) {
+  public EverouteClusterStatusAgentsInstances host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -212,12 +212,12 @@ public class EverouteClusterStatusAgentsInstances {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 

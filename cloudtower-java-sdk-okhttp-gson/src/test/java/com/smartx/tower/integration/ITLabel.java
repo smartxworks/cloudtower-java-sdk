@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITLabel extends ITBase {
   LabelApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "labelPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITLabel extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void addLabelsToResources(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITLabel extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void createLabel(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITLabel extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void deleteLabel(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITLabel extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void getLabels(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITLabel extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void getLabelsConnection(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITLabel extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void removeLabelsFromResources(String payload) {
     try {
       // parse params from json payload
@@ -116,7 +116,7 @@ public class ITLabel extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "labelPayload")
   public void updateLabel(String payload) {
     try {
       // parse params from json payload

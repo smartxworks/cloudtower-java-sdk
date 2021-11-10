@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.ApplicationState;
 import com.smartx.tower.model.ApplicationType;
 import io.swagger.annotations.ApiModel;
@@ -35,7 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Application {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "error_message";
   @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
@@ -86,7 +86,7 @@ public class Application {
   private Double volumeSize;
 
 
-  public Application cluster(AlertRuleCluster cluster) {
+  public Application cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -99,12 +99,12 @@ public class Application {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 

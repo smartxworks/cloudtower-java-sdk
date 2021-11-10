@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityFilterRules;
 import com.smartx.tower.model.EntityType;
 import com.smartx.tower.model.FilterStatus;
@@ -42,7 +42,7 @@ public class EntityFilter {
 
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<AlertRuleCluster> clusters = null;
+  private List<NameIdPair> clusters = null;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entity_type";
   @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
@@ -54,7 +54,7 @@ public class EntityFilter {
 
   public static final String SERIALIZED_NAME_EXEC_FAILED_CLUSTER = "exec_failed_cluster";
   @SerializedName(SERIALIZED_NAME_EXEC_FAILED_CLUSTER)
-  private List<AlertRuleCluster> execFailedCluster = null;
+  private List<NameIdPair> execFailedCluster = null;
 
   public static final String SERIALIZED_NAME_FILTER_ERROR = "filter_error";
   @SerializedName(SERIALIZED_NAME_FILTER_ERROR)
@@ -112,15 +112,15 @@ public class EntityFilter {
   }
 
 
-  public EntityFilter clusters(List<AlertRuleCluster> clusters) {
+  public EntityFilter clusters(List<NameIdPair> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public EntityFilter addClustersItem(AlertRuleCluster clustersItem) {
+  public EntityFilter addClustersItem(NameIdPair clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<AlertRuleCluster>();
+      this.clusters = new ArrayList<NameIdPair>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -133,12 +133,12 @@ public class EntityFilter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getClusters() {
+  public List<NameIdPair> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<AlertRuleCluster> clusters) {
+  public void setClusters(List<NameIdPair> clusters) {
     this.clusters = clusters;
   }
 
@@ -194,15 +194,15 @@ public class EntityFilter {
   }
 
 
-  public EntityFilter execFailedCluster(List<AlertRuleCluster> execFailedCluster) {
+  public EntityFilter execFailedCluster(List<NameIdPair> execFailedCluster) {
     
     this.execFailedCluster = execFailedCluster;
     return this;
   }
 
-  public EntityFilter addExecFailedClusterItem(AlertRuleCluster execFailedClusterItem) {
+  public EntityFilter addExecFailedClusterItem(NameIdPair execFailedClusterItem) {
     if (this.execFailedCluster == null) {
-      this.execFailedCluster = new ArrayList<AlertRuleCluster>();
+      this.execFailedCluster = new ArrayList<NameIdPair>();
     }
     this.execFailedCluster.add(execFailedClusterItem);
     return this;
@@ -215,12 +215,12 @@ public class EntityFilter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getExecFailedCluster() {
+  public List<NameIdPair> getExecFailedCluster() {
     return execFailedCluster;
   }
 
 
-  public void setExecFailedCluster(List<AlertRuleCluster> execFailedCluster) {
+  public void setExecFailedCluster(List<NameIdPair> execFailedCluster) {
     this.execFailedCluster = execFailedCluster;
   }
 

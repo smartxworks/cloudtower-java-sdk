@@ -21,8 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -39,11 +38,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ElfImage {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertDisk cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE = "content_library_image";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE)
-  private AlertDisk contentLibraryImage;
+  private NameIdPair contentLibraryImage;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -91,14 +90,14 @@ public class ElfImage {
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<AlertRuleCluster> vmSnapshots = null;
+  private List<NameIdPair> vmSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<AlertRuleCluster> vmTemplates = null;
+  private List<NameIdPair> vmTemplates = null;
 
 
-  public ElfImage cluster(AlertDisk cluster) {
+  public ElfImage cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -111,17 +110,17 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertDisk cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public ElfImage contentLibraryImage(AlertDisk contentLibraryImage) {
+  public ElfImage contentLibraryImage(NameIdPair contentLibraryImage) {
     
     this.contentLibraryImage = contentLibraryImage;
     return this;
@@ -134,12 +133,12 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getContentLibraryImage() {
+  public NameIdPair getContentLibraryImage() {
     return contentLibraryImage;
   }
 
 
-  public void setContentLibraryImage(AlertDisk contentLibraryImage) {
+  public void setContentLibraryImage(NameIdPair contentLibraryImage) {
     this.contentLibraryImage = contentLibraryImage;
   }
 
@@ -413,15 +412,15 @@ public class ElfImage {
   }
 
 
-  public ElfImage vmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public ElfImage vmSnapshots(List<NameIdPair> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public ElfImage addVmSnapshotsItem(AlertRuleCluster vmSnapshotsItem) {
+  public ElfImage addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<AlertRuleCluster>();
+      this.vmSnapshots = new ArrayList<NameIdPair>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -434,25 +433,25 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmSnapshots() {
+  public List<NameIdPair> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 
 
-  public ElfImage vmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public ElfImage vmTemplates(List<NameIdPair> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public ElfImage addVmTemplatesItem(AlertRuleCluster vmTemplatesItem) {
+  public ElfImage addVmTemplatesItem(NameIdPair vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<AlertRuleCluster>();
+      this.vmTemplates = new ArrayList<NameIdPair>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -465,12 +464,12 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmTemplates() {
+  public List<NameIdPair> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public void setVmTemplates(List<NameIdPair> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 

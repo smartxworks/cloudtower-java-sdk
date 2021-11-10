@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -40,7 +40,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<AlertRuleCluster> clusters = null;
+  private List<NameIdPair> clusters = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM = "consistency_group_num";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM)
@@ -52,11 +52,11 @@ public class Label {
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS = "consistency_group_snapshots";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS)
-  private List<AlertRuleCluster> consistencyGroupSnapshots = null;
+  private List<NameIdPair> consistencyGroupSnapshots = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUPS = "consistency_groups";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUPS)
-  private List<AlertRuleCluster> consistencyGroups = null;
+  private List<NameIdPair> consistencyGroups = null;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM = "content_library_image_num";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM)
@@ -64,7 +64,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES = "content_library_images";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES)
-  private List<AlertRuleCluster> contentLibraryImages = null;
+  private List<NameIdPair> contentLibraryImages = null;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -76,7 +76,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
   @SerializedName(SERIALIZED_NAME_DATACENTERS)
-  private List<AlertRuleCluster> datacenters = null;
+  private List<NameIdPair> datacenters = null;
 
   public static final String SERIALIZED_NAME_DISK_NUM = "disk_num";
   @SerializedName(SERIALIZED_NAME_DISK_NUM)
@@ -84,7 +84,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<AlertRuleCluster> disks = null;
+  private List<NameIdPair> disks = null;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM = "elf_image_num";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM)
@@ -92,7 +92,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_ELF_IMAGES = "elf_images";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES)
-  private List<AlertRuleCluster> elfImages = null;
+  private List<NameIdPair> elfImages = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
@@ -100,7 +100,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<AlertRuleCluster> hosts = null;
+  private List<NameIdPair> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -116,11 +116,11 @@ public class Label {
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS = "iscsi_lun_snapshots";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS)
-  private List<AlertRuleCluster> iscsiLunSnapshots = null;
+  private List<NameIdPair> iscsiLunSnapshots = null;
 
   public static final String SERIALIZED_NAME_ISCSI_LUNS = "iscsi_luns";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUNS)
-  private List<AlertRuleCluster> iscsiLuns = null;
+  private List<NameIdPair> iscsiLuns = null;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM = "iscsi_target_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM)
@@ -128,7 +128,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGETS = "iscsi_targets";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGETS)
-  private List<AlertRuleCluster> iscsiTargets = null;
+  private List<NameIdPair> iscsiTargets = null;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICIES = "isolation_policies";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES)
@@ -148,7 +148,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUPS = "namespace_groups";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUPS)
-  private List<AlertRuleCluster> namespaceGroups = null;
+  private List<NameIdPair> namespaceGroups = null;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM = "nfs_export_num";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM)
@@ -156,7 +156,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NFS_EXPORTS = "nfs_exports";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORTS)
-  private List<AlertRuleCluster> nfsExports = null;
+  private List<NameIdPair> nfsExports = null;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM = "nfs_inode_num";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM)
@@ -164,7 +164,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NFS_INODES = "nfs_inodes";
   @SerializedName(SERIALIZED_NAME_NFS_INODES)
-  private List<AlertRuleCluster> nfsInodes = null;
+  private List<NameIdPair> nfsInodes = null;
 
   public static final String SERIALIZED_NAME_NIC_NUM = "nic_num";
   @SerializedName(SERIALIZED_NAME_NIC_NUM)
@@ -172,7 +172,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<AlertRuleCluster> nics = null;
+  private List<NameIdPair> nics = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM = "nvmf_namespace_num";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM)
@@ -184,11 +184,11 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS = "nvmf_namespace_snapshots";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS)
-  private List<AlertRuleCluster> nvmfNamespaceSnapshots = null;
+  private List<NameIdPair> nvmfNamespaceSnapshots = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACES = "nvmf_namespaces";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACES)
-  private List<AlertRuleCluster> nvmfNamespaces = null;
+  private List<NameIdPair> nvmfNamespaces = null;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM = "nvmf_subsystem_num";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM)
@@ -196,11 +196,11 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEMS = "nvmf_subsystems";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEMS)
-  private List<AlertRuleCluster> nvmfSubsystems = null;
+  private List<NameIdPair> nvmfSubsystems = null;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICIES = "security_policies";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES)
-  private List<AlertRuleCluster> securityPolicies = null;
+  private List<NameIdPair> securityPolicies = null;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM = "security_policy_num";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM)
@@ -224,11 +224,11 @@ public class Label {
 
   public static final String SERIALIZED_NAME_VDSES = "vdses";
   @SerializedName(SERIALIZED_NAME_VDSES)
-  private List<AlertRuleCluster> vdses = null;
+  private List<NameIdPair> vdses = null;
 
   public static final String SERIALIZED_NAME_VLANS = "vlans";
   @SerializedName(SERIALIZED_NAME_VLANS)
-  private List<AlertRuleCluster> vlans = null;
+  private List<NameIdPair> vlans = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -240,7 +240,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<AlertRuleCluster> vmSnapshots = null;
+  private List<NameIdPair> vmSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM = "vm_template_num";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM)
@@ -248,7 +248,7 @@ public class Label {
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<AlertRuleCluster> vmTemplates = null;
+  private List<NameIdPair> vmTemplates = null;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM = "vm_vlan_num";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM)
@@ -260,11 +260,11 @@ public class Label {
 
   public static final String SERIALIZED_NAME_VM_VOLUMES = "vm_volumes";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES)
-  private List<AlertRuleCluster> vmVolumes = null;
+  private List<NameIdPair> vmVolumes = null;
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
 
   public Label clusterNum(Double clusterNum) {
@@ -290,15 +290,15 @@ public class Label {
   }
 
 
-  public Label clusters(List<AlertRuleCluster> clusters) {
+  public Label clusters(List<NameIdPair> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public Label addClustersItem(AlertRuleCluster clustersItem) {
+  public Label addClustersItem(NameIdPair clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<AlertRuleCluster>();
+      this.clusters = new ArrayList<NameIdPair>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -311,12 +311,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getClusters() {
+  public List<NameIdPair> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<AlertRuleCluster> clusters) {
+  public void setClusters(List<NameIdPair> clusters) {
     this.clusters = clusters;
   }
 
@@ -367,15 +367,15 @@ public class Label {
   }
 
 
-  public Label consistencyGroupSnapshots(List<AlertRuleCluster> consistencyGroupSnapshots) {
+  public Label consistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
     
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
     return this;
   }
 
-  public Label addConsistencyGroupSnapshotsItem(AlertRuleCluster consistencyGroupSnapshotsItem) {
+  public Label addConsistencyGroupSnapshotsItem(NameIdPair consistencyGroupSnapshotsItem) {
     if (this.consistencyGroupSnapshots == null) {
-      this.consistencyGroupSnapshots = new ArrayList<AlertRuleCluster>();
+      this.consistencyGroupSnapshots = new ArrayList<NameIdPair>();
     }
     this.consistencyGroupSnapshots.add(consistencyGroupSnapshotsItem);
     return this;
@@ -388,25 +388,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getConsistencyGroupSnapshots() {
+  public List<NameIdPair> getConsistencyGroupSnapshots() {
     return consistencyGroupSnapshots;
   }
 
 
-  public void setConsistencyGroupSnapshots(List<AlertRuleCluster> consistencyGroupSnapshots) {
+  public void setConsistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
   }
 
 
-  public Label consistencyGroups(List<AlertRuleCluster> consistencyGroups) {
+  public Label consistencyGroups(List<NameIdPair> consistencyGroups) {
     
     this.consistencyGroups = consistencyGroups;
     return this;
   }
 
-  public Label addConsistencyGroupsItem(AlertRuleCluster consistencyGroupsItem) {
+  public Label addConsistencyGroupsItem(NameIdPair consistencyGroupsItem) {
     if (this.consistencyGroups == null) {
-      this.consistencyGroups = new ArrayList<AlertRuleCluster>();
+      this.consistencyGroups = new ArrayList<NameIdPair>();
     }
     this.consistencyGroups.add(consistencyGroupsItem);
     return this;
@@ -419,12 +419,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getConsistencyGroups() {
+  public List<NameIdPair> getConsistencyGroups() {
     return consistencyGroups;
   }
 
 
-  public void setConsistencyGroups(List<AlertRuleCluster> consistencyGroups) {
+  public void setConsistencyGroups(List<NameIdPair> consistencyGroups) {
     this.consistencyGroups = consistencyGroups;
   }
 
@@ -452,15 +452,15 @@ public class Label {
   }
 
 
-  public Label contentLibraryImages(List<AlertRuleCluster> contentLibraryImages) {
+  public Label contentLibraryImages(List<NameIdPair> contentLibraryImages) {
     
     this.contentLibraryImages = contentLibraryImages;
     return this;
   }
 
-  public Label addContentLibraryImagesItem(AlertRuleCluster contentLibraryImagesItem) {
+  public Label addContentLibraryImagesItem(NameIdPair contentLibraryImagesItem) {
     if (this.contentLibraryImages == null) {
-      this.contentLibraryImages = new ArrayList<AlertRuleCluster>();
+      this.contentLibraryImages = new ArrayList<NameIdPair>();
     }
     this.contentLibraryImages.add(contentLibraryImagesItem);
     return this;
@@ -473,12 +473,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getContentLibraryImages() {
+  public List<NameIdPair> getContentLibraryImages() {
     return contentLibraryImages;
   }
 
 
-  public void setContentLibraryImages(List<AlertRuleCluster> contentLibraryImages) {
+  public void setContentLibraryImages(List<NameIdPair> contentLibraryImages) {
     this.contentLibraryImages = contentLibraryImages;
   }
 
@@ -529,15 +529,15 @@ public class Label {
   }
 
 
-  public Label datacenters(List<AlertRuleCluster> datacenters) {
+  public Label datacenters(List<NameIdPair> datacenters) {
     
     this.datacenters = datacenters;
     return this;
   }
 
-  public Label addDatacentersItem(AlertRuleCluster datacentersItem) {
+  public Label addDatacentersItem(NameIdPair datacentersItem) {
     if (this.datacenters == null) {
-      this.datacenters = new ArrayList<AlertRuleCluster>();
+      this.datacenters = new ArrayList<NameIdPair>();
     }
     this.datacenters.add(datacentersItem);
     return this;
@@ -550,12 +550,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getDatacenters() {
+  public List<NameIdPair> getDatacenters() {
     return datacenters;
   }
 
 
-  public void setDatacenters(List<AlertRuleCluster> datacenters) {
+  public void setDatacenters(List<NameIdPair> datacenters) {
     this.datacenters = datacenters;
   }
 
@@ -583,15 +583,15 @@ public class Label {
   }
 
 
-  public Label disks(List<AlertRuleCluster> disks) {
+  public Label disks(List<NameIdPair> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public Label addDisksItem(AlertRuleCluster disksItem) {
+  public Label addDisksItem(NameIdPair disksItem) {
     if (this.disks == null) {
-      this.disks = new ArrayList<AlertRuleCluster>();
+      this.disks = new ArrayList<NameIdPair>();
     }
     this.disks.add(disksItem);
     return this;
@@ -604,12 +604,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getDisks() {
+  public List<NameIdPair> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<AlertRuleCluster> disks) {
+  public void setDisks(List<NameIdPair> disks) {
     this.disks = disks;
   }
 
@@ -637,15 +637,15 @@ public class Label {
   }
 
 
-  public Label elfImages(List<AlertRuleCluster> elfImages) {
+  public Label elfImages(List<NameIdPair> elfImages) {
     
     this.elfImages = elfImages;
     return this;
   }
 
-  public Label addElfImagesItem(AlertRuleCluster elfImagesItem) {
+  public Label addElfImagesItem(NameIdPair elfImagesItem) {
     if (this.elfImages == null) {
-      this.elfImages = new ArrayList<AlertRuleCluster>();
+      this.elfImages = new ArrayList<NameIdPair>();
     }
     this.elfImages.add(elfImagesItem);
     return this;
@@ -658,12 +658,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getElfImages() {
+  public List<NameIdPair> getElfImages() {
     return elfImages;
   }
 
 
-  public void setElfImages(List<AlertRuleCluster> elfImages) {
+  public void setElfImages(List<NameIdPair> elfImages) {
     this.elfImages = elfImages;
   }
 
@@ -691,15 +691,15 @@ public class Label {
   }
 
 
-  public Label hosts(List<AlertRuleCluster> hosts) {
+  public Label hosts(List<NameIdPair> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Label addHostsItem(AlertRuleCluster hostsItem) {
+  public Label addHostsItem(NameIdPair hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<AlertRuleCluster>();
+      this.hosts = new ArrayList<NameIdPair>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -712,12 +712,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getHosts() {
+  public List<NameIdPair> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<AlertRuleCluster> hosts) {
+  public void setHosts(List<NameIdPair> hosts) {
     this.hosts = hosts;
   }
 
@@ -791,15 +791,15 @@ public class Label {
   }
 
 
-  public Label iscsiLunSnapshots(List<AlertRuleCluster> iscsiLunSnapshots) {
+  public Label iscsiLunSnapshots(List<NameIdPair> iscsiLunSnapshots) {
     
     this.iscsiLunSnapshots = iscsiLunSnapshots;
     return this;
   }
 
-  public Label addIscsiLunSnapshotsItem(AlertRuleCluster iscsiLunSnapshotsItem) {
+  public Label addIscsiLunSnapshotsItem(NameIdPair iscsiLunSnapshotsItem) {
     if (this.iscsiLunSnapshots == null) {
-      this.iscsiLunSnapshots = new ArrayList<AlertRuleCluster>();
+      this.iscsiLunSnapshots = new ArrayList<NameIdPair>();
     }
     this.iscsiLunSnapshots.add(iscsiLunSnapshotsItem);
     return this;
@@ -812,25 +812,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getIscsiLunSnapshots() {
+  public List<NameIdPair> getIscsiLunSnapshots() {
     return iscsiLunSnapshots;
   }
 
 
-  public void setIscsiLunSnapshots(List<AlertRuleCluster> iscsiLunSnapshots) {
+  public void setIscsiLunSnapshots(List<NameIdPair> iscsiLunSnapshots) {
     this.iscsiLunSnapshots = iscsiLunSnapshots;
   }
 
 
-  public Label iscsiLuns(List<AlertRuleCluster> iscsiLuns) {
+  public Label iscsiLuns(List<NameIdPair> iscsiLuns) {
     
     this.iscsiLuns = iscsiLuns;
     return this;
   }
 
-  public Label addIscsiLunsItem(AlertRuleCluster iscsiLunsItem) {
+  public Label addIscsiLunsItem(NameIdPair iscsiLunsItem) {
     if (this.iscsiLuns == null) {
-      this.iscsiLuns = new ArrayList<AlertRuleCluster>();
+      this.iscsiLuns = new ArrayList<NameIdPair>();
     }
     this.iscsiLuns.add(iscsiLunsItem);
     return this;
@@ -843,12 +843,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getIscsiLuns() {
+  public List<NameIdPair> getIscsiLuns() {
     return iscsiLuns;
   }
 
 
-  public void setIscsiLuns(List<AlertRuleCluster> iscsiLuns) {
+  public void setIscsiLuns(List<NameIdPair> iscsiLuns) {
     this.iscsiLuns = iscsiLuns;
   }
 
@@ -876,15 +876,15 @@ public class Label {
   }
 
 
-  public Label iscsiTargets(List<AlertRuleCluster> iscsiTargets) {
+  public Label iscsiTargets(List<NameIdPair> iscsiTargets) {
     
     this.iscsiTargets = iscsiTargets;
     return this;
   }
 
-  public Label addIscsiTargetsItem(AlertRuleCluster iscsiTargetsItem) {
+  public Label addIscsiTargetsItem(NameIdPair iscsiTargetsItem) {
     if (this.iscsiTargets == null) {
-      this.iscsiTargets = new ArrayList<AlertRuleCluster>();
+      this.iscsiTargets = new ArrayList<NameIdPair>();
     }
     this.iscsiTargets.add(iscsiTargetsItem);
     return this;
@@ -897,12 +897,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getIscsiTargets() {
+  public List<NameIdPair> getIscsiTargets() {
     return iscsiTargets;
   }
 
 
-  public void setIscsiTargets(List<AlertRuleCluster> iscsiTargets) {
+  public void setIscsiTargets(List<NameIdPair> iscsiTargets) {
     this.iscsiTargets = iscsiTargets;
   }
 
@@ -1007,15 +1007,15 @@ public class Label {
   }
 
 
-  public Label namespaceGroups(List<AlertRuleCluster> namespaceGroups) {
+  public Label namespaceGroups(List<NameIdPair> namespaceGroups) {
     
     this.namespaceGroups = namespaceGroups;
     return this;
   }
 
-  public Label addNamespaceGroupsItem(AlertRuleCluster namespaceGroupsItem) {
+  public Label addNamespaceGroupsItem(NameIdPair namespaceGroupsItem) {
     if (this.namespaceGroups == null) {
-      this.namespaceGroups = new ArrayList<AlertRuleCluster>();
+      this.namespaceGroups = new ArrayList<NameIdPair>();
     }
     this.namespaceGroups.add(namespaceGroupsItem);
     return this;
@@ -1028,12 +1028,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNamespaceGroups() {
+  public List<NameIdPair> getNamespaceGroups() {
     return namespaceGroups;
   }
 
 
-  public void setNamespaceGroups(List<AlertRuleCluster> namespaceGroups) {
+  public void setNamespaceGroups(List<NameIdPair> namespaceGroups) {
     this.namespaceGroups = namespaceGroups;
   }
 
@@ -1061,15 +1061,15 @@ public class Label {
   }
 
 
-  public Label nfsExports(List<AlertRuleCluster> nfsExports) {
+  public Label nfsExports(List<NameIdPair> nfsExports) {
     
     this.nfsExports = nfsExports;
     return this;
   }
 
-  public Label addNfsExportsItem(AlertRuleCluster nfsExportsItem) {
+  public Label addNfsExportsItem(NameIdPair nfsExportsItem) {
     if (this.nfsExports == null) {
-      this.nfsExports = new ArrayList<AlertRuleCluster>();
+      this.nfsExports = new ArrayList<NameIdPair>();
     }
     this.nfsExports.add(nfsExportsItem);
     return this;
@@ -1082,12 +1082,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNfsExports() {
+  public List<NameIdPair> getNfsExports() {
     return nfsExports;
   }
 
 
-  public void setNfsExports(List<AlertRuleCluster> nfsExports) {
+  public void setNfsExports(List<NameIdPair> nfsExports) {
     this.nfsExports = nfsExports;
   }
 
@@ -1115,15 +1115,15 @@ public class Label {
   }
 
 
-  public Label nfsInodes(List<AlertRuleCluster> nfsInodes) {
+  public Label nfsInodes(List<NameIdPair> nfsInodes) {
     
     this.nfsInodes = nfsInodes;
     return this;
   }
 
-  public Label addNfsInodesItem(AlertRuleCluster nfsInodesItem) {
+  public Label addNfsInodesItem(NameIdPair nfsInodesItem) {
     if (this.nfsInodes == null) {
-      this.nfsInodes = new ArrayList<AlertRuleCluster>();
+      this.nfsInodes = new ArrayList<NameIdPair>();
     }
     this.nfsInodes.add(nfsInodesItem);
     return this;
@@ -1136,12 +1136,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNfsInodes() {
+  public List<NameIdPair> getNfsInodes() {
     return nfsInodes;
   }
 
 
-  public void setNfsInodes(List<AlertRuleCluster> nfsInodes) {
+  public void setNfsInodes(List<NameIdPair> nfsInodes) {
     this.nfsInodes = nfsInodes;
   }
 
@@ -1169,15 +1169,15 @@ public class Label {
   }
 
 
-  public Label nics(List<AlertRuleCluster> nics) {
+  public Label nics(List<NameIdPair> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Label addNicsItem(AlertRuleCluster nicsItem) {
+  public Label addNicsItem(NameIdPair nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<AlertRuleCluster>();
+      this.nics = new ArrayList<NameIdPair>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -1190,12 +1190,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNics() {
+  public List<NameIdPair> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<AlertRuleCluster> nics) {
+  public void setNics(List<NameIdPair> nics) {
     this.nics = nics;
   }
 
@@ -1246,15 +1246,15 @@ public class Label {
   }
 
 
-  public Label nvmfNamespaceSnapshots(List<AlertRuleCluster> nvmfNamespaceSnapshots) {
+  public Label nvmfNamespaceSnapshots(List<NameIdPair> nvmfNamespaceSnapshots) {
     
     this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
     return this;
   }
 
-  public Label addNvmfNamespaceSnapshotsItem(AlertRuleCluster nvmfNamespaceSnapshotsItem) {
+  public Label addNvmfNamespaceSnapshotsItem(NameIdPair nvmfNamespaceSnapshotsItem) {
     if (this.nvmfNamespaceSnapshots == null) {
-      this.nvmfNamespaceSnapshots = new ArrayList<AlertRuleCluster>();
+      this.nvmfNamespaceSnapshots = new ArrayList<NameIdPair>();
     }
     this.nvmfNamespaceSnapshots.add(nvmfNamespaceSnapshotsItem);
     return this;
@@ -1267,25 +1267,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNvmfNamespaceSnapshots() {
+  public List<NameIdPair> getNvmfNamespaceSnapshots() {
     return nvmfNamespaceSnapshots;
   }
 
 
-  public void setNvmfNamespaceSnapshots(List<AlertRuleCluster> nvmfNamespaceSnapshots) {
+  public void setNvmfNamespaceSnapshots(List<NameIdPair> nvmfNamespaceSnapshots) {
     this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
   }
 
 
-  public Label nvmfNamespaces(List<AlertRuleCluster> nvmfNamespaces) {
+  public Label nvmfNamespaces(List<NameIdPair> nvmfNamespaces) {
     
     this.nvmfNamespaces = nvmfNamespaces;
     return this;
   }
 
-  public Label addNvmfNamespacesItem(AlertRuleCluster nvmfNamespacesItem) {
+  public Label addNvmfNamespacesItem(NameIdPair nvmfNamespacesItem) {
     if (this.nvmfNamespaces == null) {
-      this.nvmfNamespaces = new ArrayList<AlertRuleCluster>();
+      this.nvmfNamespaces = new ArrayList<NameIdPair>();
     }
     this.nvmfNamespaces.add(nvmfNamespacesItem);
     return this;
@@ -1298,12 +1298,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNvmfNamespaces() {
+  public List<NameIdPair> getNvmfNamespaces() {
     return nvmfNamespaces;
   }
 
 
-  public void setNvmfNamespaces(List<AlertRuleCluster> nvmfNamespaces) {
+  public void setNvmfNamespaces(List<NameIdPair> nvmfNamespaces) {
     this.nvmfNamespaces = nvmfNamespaces;
   }
 
@@ -1331,15 +1331,15 @@ public class Label {
   }
 
 
-  public Label nvmfSubsystems(List<AlertRuleCluster> nvmfSubsystems) {
+  public Label nvmfSubsystems(List<NameIdPair> nvmfSubsystems) {
     
     this.nvmfSubsystems = nvmfSubsystems;
     return this;
   }
 
-  public Label addNvmfSubsystemsItem(AlertRuleCluster nvmfSubsystemsItem) {
+  public Label addNvmfSubsystemsItem(NameIdPair nvmfSubsystemsItem) {
     if (this.nvmfSubsystems == null) {
-      this.nvmfSubsystems = new ArrayList<AlertRuleCluster>();
+      this.nvmfSubsystems = new ArrayList<NameIdPair>();
     }
     this.nvmfSubsystems.add(nvmfSubsystemsItem);
     return this;
@@ -1352,25 +1352,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNvmfSubsystems() {
+  public List<NameIdPair> getNvmfSubsystems() {
     return nvmfSubsystems;
   }
 
 
-  public void setNvmfSubsystems(List<AlertRuleCluster> nvmfSubsystems) {
+  public void setNvmfSubsystems(List<NameIdPair> nvmfSubsystems) {
     this.nvmfSubsystems = nvmfSubsystems;
   }
 
 
-  public Label securityPolicies(List<AlertRuleCluster> securityPolicies) {
+  public Label securityPolicies(List<NameIdPair> securityPolicies) {
     
     this.securityPolicies = securityPolicies;
     return this;
   }
 
-  public Label addSecurityPoliciesItem(AlertRuleCluster securityPoliciesItem) {
+  public Label addSecurityPoliciesItem(NameIdPair securityPoliciesItem) {
     if (this.securityPolicies == null) {
-      this.securityPolicies = new ArrayList<AlertRuleCluster>();
+      this.securityPolicies = new ArrayList<NameIdPair>();
     }
     this.securityPolicies.add(securityPoliciesItem);
     return this;
@@ -1383,12 +1383,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getSecurityPolicies() {
+  public List<NameIdPair> getSecurityPolicies() {
     return securityPolicies;
   }
 
 
-  public void setSecurityPolicies(List<AlertRuleCluster> securityPolicies) {
+  public void setSecurityPolicies(List<NameIdPair> securityPolicies) {
     this.securityPolicies = securityPolicies;
   }
 
@@ -1508,15 +1508,15 @@ public class Label {
   }
 
 
-  public Label vdses(List<AlertRuleCluster> vdses) {
+  public Label vdses(List<NameIdPair> vdses) {
     
     this.vdses = vdses;
     return this;
   }
 
-  public Label addVdsesItem(AlertRuleCluster vdsesItem) {
+  public Label addVdsesItem(NameIdPair vdsesItem) {
     if (this.vdses == null) {
-      this.vdses = new ArrayList<AlertRuleCluster>();
+      this.vdses = new ArrayList<NameIdPair>();
     }
     this.vdses.add(vdsesItem);
     return this;
@@ -1529,25 +1529,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVdses() {
+  public List<NameIdPair> getVdses() {
     return vdses;
   }
 
 
-  public void setVdses(List<AlertRuleCluster> vdses) {
+  public void setVdses(List<NameIdPair> vdses) {
     this.vdses = vdses;
   }
 
 
-  public Label vlans(List<AlertRuleCluster> vlans) {
+  public Label vlans(List<NameIdPair> vlans) {
     
     this.vlans = vlans;
     return this;
   }
 
-  public Label addVlansItem(AlertRuleCluster vlansItem) {
+  public Label addVlansItem(NameIdPair vlansItem) {
     if (this.vlans == null) {
-      this.vlans = new ArrayList<AlertRuleCluster>();
+      this.vlans = new ArrayList<NameIdPair>();
     }
     this.vlans.add(vlansItem);
     return this;
@@ -1560,12 +1560,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVlans() {
+  public List<NameIdPair> getVlans() {
     return vlans;
   }
 
 
-  public void setVlans(List<AlertRuleCluster> vlans) {
+  public void setVlans(List<NameIdPair> vlans) {
     this.vlans = vlans;
   }
 
@@ -1616,15 +1616,15 @@ public class Label {
   }
 
 
-  public Label vmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public Label vmSnapshots(List<NameIdPair> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public Label addVmSnapshotsItem(AlertRuleCluster vmSnapshotsItem) {
+  public Label addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<AlertRuleCluster>();
+      this.vmSnapshots = new ArrayList<NameIdPair>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -1637,12 +1637,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmSnapshots() {
+  public List<NameIdPair> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 
@@ -1670,15 +1670,15 @@ public class Label {
   }
 
 
-  public Label vmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public Label vmTemplates(List<NameIdPair> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public Label addVmTemplatesItem(AlertRuleCluster vmTemplatesItem) {
+  public Label addVmTemplatesItem(NameIdPair vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<AlertRuleCluster>();
+      this.vmTemplates = new ArrayList<NameIdPair>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -1691,12 +1691,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmTemplates() {
+  public List<NameIdPair> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public void setVmTemplates(List<NameIdPair> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 
@@ -1747,15 +1747,15 @@ public class Label {
   }
 
 
-  public Label vmVolumes(List<AlertRuleCluster> vmVolumes) {
+  public Label vmVolumes(List<NameIdPair> vmVolumes) {
     
     this.vmVolumes = vmVolumes;
     return this;
   }
 
-  public Label addVmVolumesItem(AlertRuleCluster vmVolumesItem) {
+  public Label addVmVolumesItem(NameIdPair vmVolumesItem) {
     if (this.vmVolumes == null) {
-      this.vmVolumes = new ArrayList<AlertRuleCluster>();
+      this.vmVolumes = new ArrayList<NameIdPair>();
     }
     this.vmVolumes.add(vmVolumesItem);
     return this;
@@ -1768,25 +1768,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmVolumes() {
+  public List<NameIdPair> getVmVolumes() {
     return vmVolumes;
   }
 
 
-  public void setVmVolumes(List<AlertRuleCluster> vmVolumes) {
+  public void setVmVolumes(List<NameIdPair> vmVolumes) {
     this.vmVolumes = vmVolumes;
   }
 
 
-  public Label vms(List<AlertRuleCluster> vms) {
+  public Label vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Label addVmsItem(AlertRuleCluster vmsItem) {
+  public Label addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -1799,12 +1799,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 

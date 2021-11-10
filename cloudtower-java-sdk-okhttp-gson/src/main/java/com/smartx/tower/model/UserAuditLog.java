@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.UserAuditLogStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +38,7 @@ public class UserAuditLog {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertDisk cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -74,7 +74,7 @@ public class UserAuditLog {
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
-  private AlertDisk user;
+  private NameIdPair user;
 
 
   public UserAuditLog action(String action) {
@@ -100,7 +100,7 @@ public class UserAuditLog {
   }
 
 
-  public UserAuditLog cluster(AlertDisk cluster) {
+  public UserAuditLog cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -113,12 +113,12 @@ public class UserAuditLog {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertDisk cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -307,7 +307,7 @@ public class UserAuditLog {
   }
 
 
-  public UserAuditLog user(AlertDisk user) {
+  public UserAuditLog user(NameIdPair user) {
     
     this.user = user;
     return this;
@@ -320,12 +320,12 @@ public class UserAuditLog {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getUser() {
+  public NameIdPair getUser() {
     return user;
   }
 
 
-  public void setUser(AlertDisk user) {
+  public void setUser(NameIdPair user) {
     this.user = user;
   }
 

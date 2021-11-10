@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITSnapshotGroup extends ITBase {
   SnapshotGroupApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "snapshotGroupPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITSnapshotGroup extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotGroupPayload")
   public void cloneSnapshotGroup(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITSnapshotGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotGroupPayload")
   public void deleteSnapshotGroup(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITSnapshotGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotGroupPayload")
   public void getSnapshotGroups(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITSnapshotGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotGroupPayload")
   public void getSnapshotGroupsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITSnapshotGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotGroupPayload")
   public void keepSnapshotGroup(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITSnapshotGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snapshotGroupPayload")
   public void rollbackSnapshotGroup(String payload) {
     try {
       // parse params from json payload

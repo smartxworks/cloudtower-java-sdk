@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.UserAuditLogStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +38,7 @@ public class SystemAuditLog {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertDisk cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_FINISHED_AT = "finished_at";
   @SerializedName(SERIALIZED_NAME_FINISHED_AT)
@@ -92,7 +92,7 @@ public class SystemAuditLog {
   }
 
 
-  public SystemAuditLog cluster(AlertDisk cluster) {
+  public SystemAuditLog cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -105,12 +105,12 @@ public class SystemAuditLog {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertDisk cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 

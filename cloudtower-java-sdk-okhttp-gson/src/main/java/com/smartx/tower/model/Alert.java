@@ -21,8 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -45,11 +44,11 @@ public class Alert {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DISK = "disk";
   @SerializedName(SERIALIZED_NAME_DISK)
-  private AlertDisk disk;
+  private NameIdPair disk;
 
   public static final String SERIALIZED_NAME_ENDED = "ended";
   @SerializedName(SERIALIZED_NAME_ENDED)
@@ -57,7 +56,7 @@ public class Alert {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertDisk host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -113,7 +112,7 @@ public class Alert {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
 
   public Alert alertRule(AlertAlertRule alertRule) {
@@ -162,7 +161,7 @@ public class Alert {
   }
 
 
-  public Alert cluster(AlertRuleCluster cluster) {
+  public Alert cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -175,17 +174,17 @@ public class Alert {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public Alert disk(AlertDisk disk) {
+  public Alert disk(NameIdPair disk) {
     
     this.disk = disk;
     return this;
@@ -198,12 +197,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getDisk() {
+  public NameIdPair getDisk() {
     return disk;
   }
 
 
-  public void setDisk(AlertDisk disk) {
+  public void setDisk(NameIdPair disk) {
     this.disk = disk;
   }
 
@@ -231,7 +230,7 @@ public class Alert {
   }
 
 
-  public Alert host(AlertDisk host) {
+  public Alert host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -244,12 +243,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertDisk host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 
@@ -553,15 +552,15 @@ public class Alert {
   }
 
 
-  public Alert vms(List<AlertRuleCluster> vms) {
+  public Alert vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Alert addVmsItem(AlertRuleCluster vmsItem) {
+  public Alert addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -574,12 +573,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 

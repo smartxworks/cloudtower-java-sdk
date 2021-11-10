@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITUsbDevice extends ITBase {
   UsbDeviceApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "usbDevicePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITUsbDevice extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "usbDevicePayload")
   public void getUsbDevices(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITUsbDevice extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "usbDevicePayload")
   public void getUsbDevicesConnection(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITUsbDevice extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "usbDevicePayload")
   public void mountUsbDevice(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITUsbDevice extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "usbDevicePayload")
   public void unmountUsbDevice(String payload) {
     try {
       // parse params from json payload

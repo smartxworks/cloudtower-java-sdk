@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -36,11 +36,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ClusterTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPOES = "brick_topoes";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPOES)
-  private List<AlertRuleCluster> brickTopoes = null;
+  private List<NameIdPair> brickTopoes = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -56,22 +56,22 @@ public class ClusterTopo {
 
   public static final String SERIALIZED_NAME_NODE_TOPOES = "node_topoes";
   @SerializedName(SERIALIZED_NAME_NODE_TOPOES)
-  private List<AlertRuleCluster> nodeTopoes = null;
+  private List<NameIdPair> nodeTopoes = null;
 
   public static final String SERIALIZED_NAME_ZONE_TOPOES = "zone_topoes";
   @SerializedName(SERIALIZED_NAME_ZONE_TOPOES)
   private List<BrickTopoPowers> zoneTopoes = null;
 
 
-  public ClusterTopo brickTopoes(List<AlertRuleCluster> brickTopoes) {
+  public ClusterTopo brickTopoes(List<NameIdPair> brickTopoes) {
     
     this.brickTopoes = brickTopoes;
     return this;
   }
 
-  public ClusterTopo addBrickTopoesItem(AlertRuleCluster brickTopoesItem) {
+  public ClusterTopo addBrickTopoesItem(NameIdPair brickTopoesItem) {
     if (this.brickTopoes == null) {
-      this.brickTopoes = new ArrayList<AlertRuleCluster>();
+      this.brickTopoes = new ArrayList<NameIdPair>();
     }
     this.brickTopoes.add(brickTopoesItem);
     return this;
@@ -84,17 +84,17 @@ public class ClusterTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getBrickTopoes() {
+  public List<NameIdPair> getBrickTopoes() {
     return brickTopoes;
   }
 
 
-  public void setBrickTopoes(List<AlertRuleCluster> brickTopoes) {
+  public void setBrickTopoes(List<NameIdPair> brickTopoes) {
     this.brickTopoes = brickTopoes;
   }
 
 
-  public ClusterTopo cluster(AlertRuleCluster cluster) {
+  public ClusterTopo cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -107,12 +107,12 @@ public class ClusterTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -186,15 +186,15 @@ public class ClusterTopo {
   }
 
 
-  public ClusterTopo nodeTopoes(List<AlertRuleCluster> nodeTopoes) {
+  public ClusterTopo nodeTopoes(List<NameIdPair> nodeTopoes) {
     
     this.nodeTopoes = nodeTopoes;
     return this;
   }
 
-  public ClusterTopo addNodeTopoesItem(AlertRuleCluster nodeTopoesItem) {
+  public ClusterTopo addNodeTopoesItem(NameIdPair nodeTopoesItem) {
     if (this.nodeTopoes == null) {
-      this.nodeTopoes = new ArrayList<AlertRuleCluster>();
+      this.nodeTopoes = new ArrayList<NameIdPair>();
     }
     this.nodeTopoes.add(nodeTopoesItem);
     return this;
@@ -207,12 +207,12 @@ public class ClusterTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNodeTopoes() {
+  public List<NameIdPair> getNodeTopoes() {
     return nodeTopoes;
   }
 
 
-  public void setNodeTopoes(List<AlertRuleCluster> nodeTopoes) {
+  public void setNodeTopoes(List<NameIdPair> nodeTopoes) {
     this.nodeTopoes = nodeTopoes;
   }
 

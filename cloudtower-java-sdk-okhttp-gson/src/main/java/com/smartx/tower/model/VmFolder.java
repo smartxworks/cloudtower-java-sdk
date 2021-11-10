@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,7 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VmFolder {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -55,10 +55,10 @@ public class VmFolder {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
 
-  public VmFolder cluster(AlertRuleCluster cluster) {
+  public VmFolder cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -71,12 +71,12 @@ public class VmFolder {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -173,15 +173,15 @@ public class VmFolder {
   }
 
 
-  public VmFolder vms(List<AlertRuleCluster> vms) {
+  public VmFolder vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public VmFolder addVmsItem(AlertRuleCluster vmsItem) {
+  public VmFolder addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -194,12 +194,12 @@ public class VmFolder {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 

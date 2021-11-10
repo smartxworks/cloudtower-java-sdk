@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Witness {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE = "cpu_hz_per_core";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE)
@@ -76,7 +76,7 @@ public class Witness {
   private Double totalMemoryBytes;
 
 
-  public Witness cluster(AlertRuleCluster cluster) {
+  public Witness cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -89,12 +89,12 @@ public class Witness {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 

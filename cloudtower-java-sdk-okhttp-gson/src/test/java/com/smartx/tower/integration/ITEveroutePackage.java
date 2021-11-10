@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITEveroutePackage extends ITBase {
   EveroutePackageApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "everoutePackagePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITEveroutePackage extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "everoutePackagePayload")
   public void getEveroutePackages(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITEveroutePackage extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "everoutePackagePayload")
   public void getEveroutePackagesConnection(String payload) {
     try {
       // parse params from json payload

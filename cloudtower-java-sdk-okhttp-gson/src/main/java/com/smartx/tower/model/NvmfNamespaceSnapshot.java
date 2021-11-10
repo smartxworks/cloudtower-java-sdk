@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -38,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NvmfNamespaceSnapshot {
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT = "consistency_group_snapshot";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
-  private AlertDisk consistencyGroupSnapshot;
+  private NameIdPair consistencyGroupSnapshot;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -66,18 +65,18 @@ public class NvmfNamespaceSnapshot {
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE = "nvmf_namespace";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE)
-  private AlertDisk nvmfNamespace;
+  private NameIdPair nvmfNamespace;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private AlertRuleCluster nvmfSubsystem;
+  private NameIdPair nvmfSubsystem;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Double uniqueSize;
 
 
-  public NvmfNamespaceSnapshot consistencyGroupSnapshot(AlertDisk consistencyGroupSnapshot) {
+  public NvmfNamespaceSnapshot consistencyGroupSnapshot(NameIdPair consistencyGroupSnapshot) {
     
     this.consistencyGroupSnapshot = consistencyGroupSnapshot;
     return this;
@@ -90,12 +89,12 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getConsistencyGroupSnapshot() {
+  public NameIdPair getConsistencyGroupSnapshot() {
     return consistencyGroupSnapshot;
   }
 
 
-  public void setConsistencyGroupSnapshot(AlertDisk consistencyGroupSnapshot) {
+  public void setConsistencyGroupSnapshot(NameIdPair consistencyGroupSnapshot) {
     this.consistencyGroupSnapshot = consistencyGroupSnapshot;
   }
 
@@ -246,7 +245,7 @@ public class NvmfNamespaceSnapshot {
   }
 
 
-  public NvmfNamespaceSnapshot nvmfNamespace(AlertDisk nvmfNamespace) {
+  public NvmfNamespaceSnapshot nvmfNamespace(NameIdPair nvmfNamespace) {
     
     this.nvmfNamespace = nvmfNamespace;
     return this;
@@ -259,17 +258,17 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getNvmfNamespace() {
+  public NameIdPair getNvmfNamespace() {
     return nvmfNamespace;
   }
 
 
-  public void setNvmfNamespace(AlertDisk nvmfNamespace) {
+  public void setNvmfNamespace(NameIdPair nvmfNamespace) {
     this.nvmfNamespace = nvmfNamespace;
   }
 
 
-  public NvmfNamespaceSnapshot nvmfSubsystem(AlertRuleCluster nvmfSubsystem) {
+  public NvmfNamespaceSnapshot nvmfSubsystem(NameIdPair nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -282,12 +281,12 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getNvmfSubsystem() {
+  public NameIdPair getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(AlertRuleCluster nvmfSubsystem) {
+  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITCluster extends ITBase {
   ClusterApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "clusterPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -34,16 +34,15 @@ public class ITCluster extends ITBase {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {
-    }.getType());
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-  @Test(dataProvider = "payload")
+
+  @Test(dataProvider = "clusterPayload")
   public void connectCluster(String payload) {
     try {
       // parse params from json payload
-      List<ClusterCreationParams> params = gson.fromJson(payload, new TypeToken<List<ClusterCreationParams>>() {
-      }.getType());
+      List<ClusterCreationParams> params = gson.fromJson(payload, new TypeToken<List<ClusterCreationParams>>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskCluster> result = api.connectCluster(params, contentLanguage);
       assertThat(result).as("check result of connectCluster").isNotNull();
@@ -52,15 +51,11 @@ public class ITCluster extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload", priority = 10)
+  @Test(dataProvider = "clusterPayload")
   public void deleteCluster(String payload) {
     try {
       // parse params from json payload
-      ClusterDeletionParams params = gson.fromJson(payload, new TypeToken<ClusterDeletionParams>() {
-      }.getType());
-      if (params != null) {
-        return;
-      }
+      ClusterDeletionParams params = gson.fromJson(payload, new TypeToken<ClusterDeletionParams>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskDeleteCluster> result = api.deleteCluster(params, contentLanguage);
       assertThat(result).as("check result of deleteCluster").isNotNull();
@@ -69,12 +64,11 @@ public class ITCluster extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "clusterPayload")
   public void getClusters(String payload) {
     try {
       // parse params from json payload
-      GetClustersRequestBody params = gson.fromJson(payload, new TypeToken<GetClustersRequestBody>() {
-      }.getType());
+      GetClustersRequestBody params = gson.fromJson(payload, new TypeToken<GetClustersRequestBody>() {}.getType());
       // do some modify to params(optional)
       List<Cluster> result = api.getClusters(params, contentLanguage);
       assertThat(result).as("check result of getClusters").isNotNull();
@@ -83,13 +77,11 @@ public class ITCluster extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "clusterPayload")
   public void getClustersConnection(String payload) {
     try {
       // parse params from json payload
-      GetClustersConnectionRequestBody params = gson.fromJson(payload,
-          new TypeToken<GetClustersConnectionRequestBody>() {
-          }.getType());
+      GetClustersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClustersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
       ClusterConnection result = api.getClustersConnection(params, contentLanguage);
       assertThat(result).as("check result of getClustersConnection").isNotNull();
@@ -98,12 +90,11 @@ public class ITCluster extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload", priority = 5)
+  @Test(dataProvider = "clusterPayload")
   public void updateCluster(String payload) {
     try {
       // parse params from json payload
-      ClusterUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterUpdationParams>() {
-      }.getType());
+      ClusterUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterUpdationParams>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskCluster> result = api.updateCluster(params, contentLanguage);
       assertThat(result).as("check result of updateCluster").isNotNull();
@@ -112,12 +103,11 @@ public class ITCluster extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload", priority = 6)
+  @Test(dataProvider = "clusterPayload")
   public void updateClusterLicense(String payload) {
     try {
       // parse params from json payload
-      ClusterLicenseUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterLicenseUpdationParams>() {
-      }.getType());
+      ClusterLicenseUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterLicenseUpdationParams>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskCluster> result = api.updateClusterLicense(params, contentLanguage);
       assertThat(result).as("check result of updateClusterLicense").isNotNull();

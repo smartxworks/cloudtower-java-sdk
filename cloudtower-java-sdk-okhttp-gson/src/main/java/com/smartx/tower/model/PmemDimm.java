@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.DiskHealthStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -43,7 +42,7 @@ public class PmemDimm {
 
   public static final String SERIALIZED_NAME_DISK = "disk";
   @SerializedName(SERIALIZED_NAME_DISK)
-  private AlertDisk disk;
+  private NameIdPair disk;
 
   public static final String SERIALIZED_NAME_HEALTH_STATUS = "health_status";
   @SerializedName(SERIALIZED_NAME_HEALTH_STATUS)
@@ -51,7 +50,7 @@ public class PmemDimm {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -128,7 +127,7 @@ public class PmemDimm {
   }
 
 
-  public PmemDimm disk(AlertDisk disk) {
+  public PmemDimm disk(NameIdPair disk) {
     
     this.disk = disk;
     return this;
@@ -141,12 +140,12 @@ public class PmemDimm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getDisk() {
+  public NameIdPair getDisk() {
     return disk;
   }
 
 
-  public void setDisk(AlertDisk disk) {
+  public void setDisk(NameIdPair disk) {
     this.disk = disk;
   }
 
@@ -174,7 +173,7 @@ public class PmemDimm {
   }
 
 
-  public PmemDimm host(AlertRuleCluster host) {
+  public PmemDimm host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -187,12 +186,12 @@ public class PmemDimm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NetworkType;
@@ -74,7 +74,7 @@ public class Vlan {
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
-  private AlertRuleCluster vds;
+  private NameIdPair vds;
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
@@ -300,7 +300,7 @@ public class Vlan {
   }
 
 
-  public Vlan vds(AlertRuleCluster vds) {
+  public Vlan vds(NameIdPair vds) {
     
     this.vds = vds;
     return this;
@@ -313,12 +313,12 @@ public class Vlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVds() {
+  public NameIdPair getVds() {
     return vds;
   }
 
 
-  public void setVds(AlertRuleCluster vds) {
+  public void setVds(NameIdPair vds) {
     this.vds = vds;
   }
 

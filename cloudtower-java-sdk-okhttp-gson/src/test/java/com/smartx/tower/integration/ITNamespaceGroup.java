@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITNamespaceGroup extends ITBase {
   NamespaceGroupApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "namespaceGroupPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITNamespaceGroup extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "namespaceGroupPayload")
   public void createNamespaceGroup(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITNamespaceGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "namespaceGroupPayload")
   public void deleteNamespaceGroup(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITNamespaceGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "namespaceGroupPayload")
   public void getNamespaceGroups(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITNamespaceGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "namespaceGroupPayload")
   public void getNamespaceGroupsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITNamespaceGroup extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "namespaceGroupPayload")
   public void updateNamespaceGroup(String payload) {
     try {
       // parse params from json payload

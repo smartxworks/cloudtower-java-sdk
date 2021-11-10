@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EverouteClusterControllerInstances;
 import com.smartx.tower.model.EverouteClusterControllerTemplate;
 import com.smartx.tower.model.EverouteClusterPhase;
@@ -40,11 +40,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class EverouteCluster {
   public static final String SERIALIZED_NAME_AGENT_ELF_CLUSTERS = "agent_elf_clusters";
   @SerializedName(SERIALIZED_NAME_AGENT_ELF_CLUSTERS)
-  private List<AlertRuleCluster> agentElfClusters = null;
+  private List<NameIdPair> agentElfClusters = null;
 
   public static final String SERIALIZED_NAME_AGENT_ELF_VDSES = "agent_elf_vdses";
   @SerializedName(SERIALIZED_NAME_AGENT_ELF_VDSES)
-  private List<AlertRuleCluster> agentElfVdses = null;
+  private List<NameIdPair> agentElfVdses = null;
 
   public static final String SERIALIZED_NAME_CONTROLLER_INSTANCES = "controller_instances";
   @SerializedName(SERIALIZED_NAME_CONTROLLER_INSTANCES)
@@ -79,15 +79,15 @@ public class EverouteCluster {
   private String version;
 
 
-  public EverouteCluster agentElfClusters(List<AlertRuleCluster> agentElfClusters) {
+  public EverouteCluster agentElfClusters(List<NameIdPair> agentElfClusters) {
     
     this.agentElfClusters = agentElfClusters;
     return this;
   }
 
-  public EverouteCluster addAgentElfClustersItem(AlertRuleCluster agentElfClustersItem) {
+  public EverouteCluster addAgentElfClustersItem(NameIdPair agentElfClustersItem) {
     if (this.agentElfClusters == null) {
-      this.agentElfClusters = new ArrayList<AlertRuleCluster>();
+      this.agentElfClusters = new ArrayList<NameIdPair>();
     }
     this.agentElfClusters.add(agentElfClustersItem);
     return this;
@@ -100,25 +100,25 @@ public class EverouteCluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getAgentElfClusters() {
+  public List<NameIdPair> getAgentElfClusters() {
     return agentElfClusters;
   }
 
 
-  public void setAgentElfClusters(List<AlertRuleCluster> agentElfClusters) {
+  public void setAgentElfClusters(List<NameIdPair> agentElfClusters) {
     this.agentElfClusters = agentElfClusters;
   }
 
 
-  public EverouteCluster agentElfVdses(List<AlertRuleCluster> agentElfVdses) {
+  public EverouteCluster agentElfVdses(List<NameIdPair> agentElfVdses) {
     
     this.agentElfVdses = agentElfVdses;
     return this;
   }
 
-  public EverouteCluster addAgentElfVdsesItem(AlertRuleCluster agentElfVdsesItem) {
+  public EverouteCluster addAgentElfVdsesItem(NameIdPair agentElfVdsesItem) {
     if (this.agentElfVdses == null) {
-      this.agentElfVdses = new ArrayList<AlertRuleCluster>();
+      this.agentElfVdses = new ArrayList<NameIdPair>();
     }
     this.agentElfVdses.add(agentElfVdsesItem);
     return this;
@@ -131,12 +131,12 @@ public class EverouteCluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getAgentElfVdses() {
+  public List<NameIdPair> getAgentElfVdses() {
     return agentElfVdses;
   }
 
 
-  public void setAgentElfVdses(List<AlertRuleCluster> agentElfVdses) {
+  public void setAgentElfVdses(List<NameIdPair> agentElfVdses) {
     this.agentElfVdses = agentElfVdses;
   }
 

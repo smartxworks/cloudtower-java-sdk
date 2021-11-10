@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITElfImage extends ITBase {
   ElfImageApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "elfImagePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITElfImage extends ITBase {
   }
 
 
-  // @Test(dataProvider = "payload")
+  // @Test(dataProvider = "elfImagePayload")
   // public void createElfImage(String payload) {
   //   try {
   //     // parse params from json payload
@@ -51,7 +51,7 @@ public class ITElfImage extends ITBase {
   //   }
   // }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "elfImagePayload")
   public void deleteElfImage(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITElfImage extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "elfImagePayload")
   public void getElfImages(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITElfImage extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "elfImagePayload")
   public void getElfImagesConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITElfImage extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "elfImagePayload")
   public void updateElfImage(String payload) {
     try {
       // parse params from json payload

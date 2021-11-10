@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.IsolationMode;
 import com.smartx.tower.model.IsolationPolicyEgress;
@@ -42,7 +42,7 @@ public class IsolationPolicy {
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private AlertRuleCluster everouteCluster;
+  private NameIdPair everouteCluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,7 +62,7 @@ public class IsolationPolicy {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertRuleCluster vm;
+  private NameIdPair vm;
 
 
   public IsolationPolicy egress(List<IsolationPolicyEgress> egress) {
@@ -96,7 +96,7 @@ public class IsolationPolicy {
   }
 
 
-  public IsolationPolicy everouteCluster(AlertRuleCluster everouteCluster) {
+  public IsolationPolicy everouteCluster(NameIdPair everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -109,12 +109,12 @@ public class IsolationPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getEverouteCluster() {
+  public NameIdPair getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(AlertRuleCluster everouteCluster) {
+  public void setEverouteCluster(NameIdPair everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -227,7 +227,7 @@ public class IsolationPolicy {
   }
 
 
-  public IsolationPolicy vm(AlertRuleCluster vm) {
+  public IsolationPolicy vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -240,12 +240,12 @@ public class IsolationPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertRuleCluster vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 

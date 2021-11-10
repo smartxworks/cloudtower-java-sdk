@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITIscsiLunSnapshot extends ITBase {
   IscsiLunSnapshotApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "iscsiLunSnapshotPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITIscsiLunSnapshot extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunSnapshotPayload")
   public void createIscsiLunSnapshot(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITIscsiLunSnapshot extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunSnapshotPayload")
   public void deleteIscsiLunSnapshot(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITIscsiLunSnapshot extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunSnapshotPayload")
   public void getIscsiLunSnapshots(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITIscsiLunSnapshot extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunSnapshotPayload")
   public void getIscsiLunSnapshotsConnection(String payload) {
     try {
       // parse params from json payload

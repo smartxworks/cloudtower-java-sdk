@@ -1,5 +1,5 @@
 {
-  "createVm": [
+  "createAndDeleteVm": [
     {
       "name": "tower-api-test-vm",
       "cpu_sockets": 1,
@@ -23,5 +23,32 @@
     {
       "name": "tower-api-clone-vm"
     }
-  ]
+  ],
+  "updateVm": {
+    "data": {
+      "description": "tower-api-test-vm-description"
+    }
+  },
+  "deleteVm": {
+    "where": {
+      "name": "tower-api-test-vm"
+    }
+  },
+  "addVmDisk": {
+    "data": {
+      "vm_disks": {
+        "mount_new_create_disks": [
+          {
+            "bus": "IDE",
+            "boot": 0,
+            "vm_volume": {
+              "elf_storage_policy": "REPLICA_2_THICK_PROVISION",
+              "size": 1073741824,
+              "name": "tower-api-test-created-vm-volume"
+            }
+          }
+        ]
+      }
+    }
+  }
 }

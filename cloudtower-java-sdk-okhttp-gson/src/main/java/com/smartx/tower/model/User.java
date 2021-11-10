@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.UserRole;
 import com.smartx.tower.model.UserSource;
 import io.swagger.annotations.ApiModel;
@@ -65,7 +65,7 @@ public class User {
 
   public static final String SERIALIZED_NAME_ROLES = "roles";
   @SerializedName(SERIALIZED_NAME_ROLES)
-  private List<AlertRuleCluster> roles = null;
+  private List<NameIdPair> roles = null;
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
@@ -237,15 +237,15 @@ public class User {
   }
 
 
-  public User roles(List<AlertRuleCluster> roles) {
+  public User roles(List<NameIdPair> roles) {
     
     this.roles = roles;
     return this;
   }
 
-  public User addRolesItem(AlertRuleCluster rolesItem) {
+  public User addRolesItem(NameIdPair rolesItem) {
     if (this.roles == null) {
-      this.roles = new ArrayList<AlertRuleCluster>();
+      this.roles = new ArrayList<NameIdPair>();
     }
     this.roles.add(rolesItem);
     return this;
@@ -258,12 +258,12 @@ public class User {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getRoles() {
+  public List<NameIdPair> getRoles() {
     return roles;
   }
 
 
-  public void setRoles(List<AlertRuleCluster> roles) {
+  public void setRoles(List<NameIdPair> roles) {
     this.roles = roles;
   }
 

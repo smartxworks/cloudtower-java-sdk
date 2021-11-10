@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITIsolationPolicy extends ITBase {
   IsolationPolicyApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "isolationPolicyPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITIsolationPolicy extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "isolationPolicyPayload")
   public void getIsolationPolicies(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITIsolationPolicy extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "isolationPolicyPayload")
   public void getIsolationPoliciesConnection(String payload) {
     try {
       // parse params from json payload

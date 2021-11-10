@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.ElfDataStoreType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -35,7 +34,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ElfDataStore {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -59,7 +58,7 @@ public class ElfDataStore {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
-  private AlertDisk iscsiTarget;
+  private NameIdPair iscsiTarget;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -71,11 +70,11 @@ public class ElfDataStore {
 
   public static final String SERIALIZED_NAME_NFS_EXPORT = "nfs_export";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
-  private AlertDisk nfsExport;
+  private NameIdPair nfsExport;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private AlertDisk nvmfSubsystem;
+  private NameIdPair nvmfSubsystem;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
@@ -90,7 +89,7 @@ public class ElfDataStore {
   private ElfDataStoreType type;
 
 
-  public ElfDataStore cluster(AlertRuleCluster cluster) {
+  public ElfDataStore cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -103,12 +102,12 @@ public class ElfDataStore {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -228,7 +227,7 @@ public class ElfDataStore {
   }
 
 
-  public ElfDataStore iscsiTarget(AlertDisk iscsiTarget) {
+  public ElfDataStore iscsiTarget(NameIdPair iscsiTarget) {
     
     this.iscsiTarget = iscsiTarget;
     return this;
@@ -241,12 +240,12 @@ public class ElfDataStore {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getIscsiTarget() {
+  public NameIdPair getIscsiTarget() {
     return iscsiTarget;
   }
 
 
-  public void setIscsiTarget(AlertDisk iscsiTarget) {
+  public void setIscsiTarget(NameIdPair iscsiTarget) {
     this.iscsiTarget = iscsiTarget;
   }
 
@@ -297,7 +296,7 @@ public class ElfDataStore {
   }
 
 
-  public ElfDataStore nfsExport(AlertDisk nfsExport) {
+  public ElfDataStore nfsExport(NameIdPair nfsExport) {
     
     this.nfsExport = nfsExport;
     return this;
@@ -310,17 +309,17 @@ public class ElfDataStore {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getNfsExport() {
+  public NameIdPair getNfsExport() {
     return nfsExport;
   }
 
 
-  public void setNfsExport(AlertDisk nfsExport) {
+  public void setNfsExport(NameIdPair nfsExport) {
     this.nfsExport = nfsExport;
   }
 
 
-  public ElfDataStore nvmfSubsystem(AlertDisk nvmfSubsystem) {
+  public ElfDataStore nvmfSubsystem(NameIdPair nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -333,12 +332,12 @@ public class ElfDataStore {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getNvmfSubsystem() {
+  public NameIdPair getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(AlertDisk nvmfSubsystem) {
+  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.TaskStatus;
 import com.smartx.tower.model.TaskSteps;
 import io.swagger.annotations.ApiModel;
@@ -41,7 +41,7 @@ public class Task {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertDisk cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -113,7 +113,7 @@ public class Task {
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
-  private AlertDisk user;
+  private NameIdPair user;
 
 
   public Task args(Object args) {
@@ -139,7 +139,7 @@ public class Task {
   }
 
 
-  public Task cluster(AlertDisk cluster) {
+  public Task cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -152,12 +152,12 @@ public class Task {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertDisk cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -558,7 +558,7 @@ public class Task {
   }
 
 
-  public Task user(AlertDisk user) {
+  public Task user(NameIdPair user) {
     
     this.user = user;
     return this;
@@ -571,12 +571,12 @@ public class Task {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getUser() {
+  public NameIdPair getUser() {
     return user;
   }
 
 
-  public void setUser(AlertDisk user) {
+  public void setUser(NameIdPair user) {
     this.user = user;
   }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ContentLibraryImage {
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<AlertRuleCluster> clusters = null;
+  private List<NameIdPair> clusters = null;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -53,7 +53,7 @@ public class ContentLibraryImage {
 
   public static final String SERIALIZED_NAME_ELF_IMAGES = "elf_images";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES)
-  private List<AlertRuleCluster> elfImages = null;
+  private List<NameIdPair> elfImages = null;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -85,22 +85,22 @@ public class ContentLibraryImage {
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<AlertRuleCluster> vmSnapshots = null;
+  private List<NameIdPair> vmSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<AlertRuleCluster> vmTemplates = null;
+  private List<NameIdPair> vmTemplates = null;
 
 
-  public ContentLibraryImage clusters(List<AlertRuleCluster> clusters) {
+  public ContentLibraryImage clusters(List<NameIdPair> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public ContentLibraryImage addClustersItem(AlertRuleCluster clustersItem) {
+  public ContentLibraryImage addClustersItem(NameIdPair clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<AlertRuleCluster>();
+      this.clusters = new ArrayList<NameIdPair>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -113,12 +113,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getClusters() {
+  public List<NameIdPair> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<AlertRuleCluster> clusters) {
+  public void setClusters(List<NameIdPair> clusters) {
     this.clusters = clusters;
   }
 
@@ -197,15 +197,15 @@ public class ContentLibraryImage {
   }
 
 
-  public ContentLibraryImage elfImages(List<AlertRuleCluster> elfImages) {
+  public ContentLibraryImage elfImages(List<NameIdPair> elfImages) {
     
     this.elfImages = elfImages;
     return this;
   }
 
-  public ContentLibraryImage addElfImagesItem(AlertRuleCluster elfImagesItem) {
+  public ContentLibraryImage addElfImagesItem(NameIdPair elfImagesItem) {
     if (this.elfImages == null) {
-      this.elfImages = new ArrayList<AlertRuleCluster>();
+      this.elfImages = new ArrayList<NameIdPair>();
     }
     this.elfImages.add(elfImagesItem);
     return this;
@@ -218,12 +218,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getElfImages() {
+  public List<NameIdPair> getElfImages() {
     return elfImages;
   }
 
 
-  public void setElfImages(List<AlertRuleCluster> elfImages) {
+  public void setElfImages(List<NameIdPair> elfImages) {
     this.elfImages = elfImages;
   }
 
@@ -405,15 +405,15 @@ public class ContentLibraryImage {
   }
 
 
-  public ContentLibraryImage vmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public ContentLibraryImage vmSnapshots(List<NameIdPair> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public ContentLibraryImage addVmSnapshotsItem(AlertRuleCluster vmSnapshotsItem) {
+  public ContentLibraryImage addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<AlertRuleCluster>();
+      this.vmSnapshots = new ArrayList<NameIdPair>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -426,25 +426,25 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmSnapshots() {
+  public List<NameIdPair> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 
 
-  public ContentLibraryImage vmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public ContentLibraryImage vmTemplates(List<NameIdPair> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public ContentLibraryImage addVmTemplatesItem(AlertRuleCluster vmTemplatesItem) {
+  public ContentLibraryImage addVmTemplatesItem(NameIdPair vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<AlertRuleCluster>();
+      this.vmTemplates = new ArrayList<NameIdPair>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -457,12 +457,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmTemplates() {
+  public List<NameIdPair> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<AlertRuleCluster> vmTemplates) {
+  public void setVmTemplates(List<NameIdPair> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 

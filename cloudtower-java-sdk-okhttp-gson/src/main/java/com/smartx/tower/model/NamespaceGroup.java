@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -61,11 +61,11 @@ public class NamespaceGroup {
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<AlertRuleCluster> namespaces = null;
+  private List<NameIdPair> namespaces = null;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private AlertRuleCluster nvmfSubsystem;
+  private NameIdPair nvmfSubsystem;
 
 
   public NamespaceGroup entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -214,15 +214,15 @@ public class NamespaceGroup {
   }
 
 
-  public NamespaceGroup namespaces(List<AlertRuleCluster> namespaces) {
+  public NamespaceGroup namespaces(List<NameIdPair> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public NamespaceGroup addNamespacesItem(AlertRuleCluster namespacesItem) {
+  public NamespaceGroup addNamespacesItem(NameIdPair namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<AlertRuleCluster>();
+      this.namespaces = new ArrayList<NameIdPair>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -235,17 +235,17 @@ public class NamespaceGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNamespaces() {
+  public List<NameIdPair> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<AlertRuleCluster> namespaces) {
+  public void setNamespaces(List<NameIdPair> namespaces) {
     this.namespaces = namespaces;
   }
 
 
-  public NamespaceGroup nvmfSubsystem(AlertRuleCluster nvmfSubsystem) {
+  public NamespaceGroup nvmfSubsystem(NameIdPair nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -258,12 +258,12 @@ public class NamespaceGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getNvmfSubsystem() {
+  public NameIdPair getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(AlertRuleCluster nvmfSubsystem) {
+  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

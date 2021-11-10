@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITOrganization extends ITBase {
   OrganizationApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "organizationPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITOrganization extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "organizationPayload")
   public void createOrganization(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITOrganization extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "organizationPayload")
   public void deleteOrganization(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITOrganization extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "organizationPayload")
   public void getOrganizations(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITOrganization extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "organizationPayload")
   public void getOrganizationsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITOrganization extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "organizationPayload")
   public void updateOrganization(String payload) {
     try {
       // parse params from json payload

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -40,7 +40,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<AlertRuleCluster> clusters = null;
+  private List<NameIdPair> clusters = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -64,7 +64,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_ORGANIZATION = "organization";
   @SerializedName(SERIALIZED_NAME_ORGANIZATION)
-  private AlertRuleCluster organization;
+  private NameIdPair organization;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -118,15 +118,15 @@ public class Datacenter {
   }
 
 
-  public Datacenter clusters(List<AlertRuleCluster> clusters) {
+  public Datacenter clusters(List<NameIdPair> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public Datacenter addClustersItem(AlertRuleCluster clustersItem) {
+  public Datacenter addClustersItem(NameIdPair clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<AlertRuleCluster>();
+      this.clusters = new ArrayList<NameIdPair>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -139,12 +139,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getClusters() {
+  public List<NameIdPair> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<AlertRuleCluster> clusters) {
+  public void setClusters(List<NameIdPair> clusters) {
     this.clusters = clusters;
   }
 
@@ -272,7 +272,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter organization(AlertRuleCluster organization) {
+  public Datacenter organization(NameIdPair organization) {
     
     this.organization = organization;
     return this;
@@ -285,12 +285,12 @@ public class Datacenter {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getOrganization() {
+  public NameIdPair getOrganization() {
     return organization;
   }
 
 
-  public void setOrganization(AlertRuleCluster organization) {
+  public void setOrganization(NameIdPair organization) {
     this.organization = organization;
   }
 

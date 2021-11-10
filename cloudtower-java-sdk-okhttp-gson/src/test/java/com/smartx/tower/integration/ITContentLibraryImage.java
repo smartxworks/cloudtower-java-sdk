@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITContentLibraryImage extends ITBase {
   ContentLibraryImageApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "contentLibraryImagePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITContentLibraryImage extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "contentLibraryImagePayload")
   public void getContentLibraryImages(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITContentLibraryImage extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "contentLibraryImagePayload")
   public void getContentLibraryImagesConnection(String payload) {
     try {
       // parse params from json payload

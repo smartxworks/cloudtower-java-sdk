@@ -16,25 +16,25 @@ import com.smartx.tower.api.VmVolumeApi;
 import com.smartx.tower.model.*;
 
 public class ITVmVolume extends ITBase {
-  VmVolumeApi vmVolumeApi = null;
-  HashMap<String, Object> vmVolumePayloads = new HashMap<>();
+  VmVolumeApi api = null;
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
   @DataProvider(name = "vmVolumePayload")
-  Object[][] vmVolumeData(Method m) {
-    Object payload = vmVolumePayloads.get(m.getName());
+  Object[][] data(Method m) {
+    Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
   }
 
   @BeforeClass
   public void getService() throws IOException {
-    vmVolumeApi = new VmVolumeApi(client);
+    api = new VmVolumeApi(client);
     // get payloads from resource file
     InputStream stream = getClass().getResourceAsStream("/VmVolume.json");
     if (stream == null) {
       return;
     }
     // convert payloads string as map
-    vmVolumePayloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
 
@@ -44,7 +44,7 @@ public class ITVmVolume extends ITBase {
       // parse params from json payload
       List<VmVolumeCreationParams> params = gson.fromJson(payload, new TypeToken<List<VmVolumeCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVmVolume> result = vmVolumeApi.createVmVolume(params, contentLanguage);
+      List<WithTaskVmVolume> result = api.createVmVolume(params, contentLanguage);
       assertThat(result).as("check result of createVmVolume").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
@@ -57,7 +57,7 @@ public class ITVmVolume extends ITBase {
       // parse params from json payload
       VmVolumeDeletionParams params = gson.fromJson(payload, new TypeToken<VmVolumeDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteVmVolume> result = vmVolumeApi.deleteVmVolumeFromVm(params, contentLanguage);
+      List<WithTaskDeleteVmVolume> result = api.deleteVmVolumeFromVm(params, contentLanguage);
       assertThat(result).as("check result of deleteVmVolumeFromVm").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
@@ -70,7 +70,7 @@ public class ITVmVolume extends ITBase {
       // parse params from json payload
       GetVmVolumesRequestBody params = gson.fromJson(payload, new TypeToken<GetVmVolumesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VmVolume> result = vmVolumeApi.getVmVolumes(params, contentLanguage);
+      List<VmVolume> result = api.getVmVolumes(params, contentLanguage);
       assertThat(result).as("check result of getVmVolumes").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
@@ -83,7 +83,7 @@ public class ITVmVolume extends ITBase {
       // parse params from json payload
       GetVmVolumesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmVolumesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VmVolumeConnection result = vmVolumeApi.getVmVolumesConnection(params, contentLanguage);
+      VmVolumeConnection result = api.getVmVolumesConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmVolumesConnection").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();

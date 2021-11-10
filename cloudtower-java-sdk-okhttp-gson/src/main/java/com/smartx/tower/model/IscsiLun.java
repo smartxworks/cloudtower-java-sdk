@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -82,7 +81,7 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP = "consistency_group";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP)
-  private AlertDisk consistencyGroup;
+  private NameIdPair consistencyGroup;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -134,7 +133,7 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
-  private AlertRuleCluster iscsiTarget;
+  private NameIdPair iscsiTarget;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
@@ -442,7 +441,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun consistencyGroup(AlertDisk consistencyGroup) {
+  public IscsiLun consistencyGroup(NameIdPair consistencyGroup) {
     
     this.consistencyGroup = consistencyGroup;
     return this;
@@ -455,12 +454,12 @@ public class IscsiLun {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getConsistencyGroup() {
+  public NameIdPair getConsistencyGroup() {
     return consistencyGroup;
   }
 
 
-  public void setConsistencyGroup(AlertDisk consistencyGroup) {
+  public void setConsistencyGroup(NameIdPair consistencyGroup) {
     this.consistencyGroup = consistencyGroup;
   }
 
@@ -741,7 +740,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun iscsiTarget(AlertRuleCluster iscsiTarget) {
+  public IscsiLun iscsiTarget(NameIdPair iscsiTarget) {
     
     this.iscsiTarget = iscsiTarget;
     return this;
@@ -754,12 +753,12 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getIscsiTarget() {
+  public NameIdPair getIscsiTarget() {
     return iscsiTarget;
   }
 
 
-  public void setIscsiTarget(AlertRuleCluster iscsiTarget) {
+  public void setIscsiTarget(NameIdPair iscsiTarget) {
     this.iscsiTarget = iscsiTarget;
   }
 

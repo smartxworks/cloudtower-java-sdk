@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.IsolationPolicyEgress;
 import com.smartx.tower.model.SecurityPolicyApplyTo;
 import io.swagger.annotations.ApiModel;
@@ -49,7 +49,7 @@ public class SecurityPolicy {
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private AlertRuleCluster everouteCluster;
+  private NameIdPair everouteCluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -146,7 +146,7 @@ public class SecurityPolicy {
   }
 
 
-  public SecurityPolicy everouteCluster(AlertRuleCluster everouteCluster) {
+  public SecurityPolicy everouteCluster(NameIdPair everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -159,12 +159,12 @@ public class SecurityPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getEverouteCluster() {
+  public NameIdPair getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(AlertRuleCluster everouteCluster) {
+  public void setEverouteCluster(NameIdPair everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 

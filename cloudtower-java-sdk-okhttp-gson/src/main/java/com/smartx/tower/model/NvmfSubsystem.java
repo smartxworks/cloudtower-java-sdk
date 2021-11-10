@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NvmfSubsystemPolicyType;
@@ -74,7 +74,7 @@ public class NvmfSubsystem {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -154,11 +154,11 @@ public class NvmfSubsystem {
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUPS = "namespace_groups";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUPS)
-  private List<AlertRuleCluster> namespaceGroups = null;
+  private List<NameIdPair> namespaceGroups = null;
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<AlertRuleCluster> namespaces = null;
+  private List<NameIdPair> namespaces = null;
 
   public static final String SERIALIZED_NAME_NQN_NAME = "nqn_name";
   @SerializedName(SERIALIZED_NAME_NQN_NAME)
@@ -396,7 +396,7 @@ public class NvmfSubsystem {
   }
 
 
-  public NvmfSubsystem cluster(AlertRuleCluster cluster) {
+  public NvmfSubsystem cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -409,12 +409,12 @@ public class NvmfSubsystem {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -864,15 +864,15 @@ public class NvmfSubsystem {
   }
 
 
-  public NvmfSubsystem namespaceGroups(List<AlertRuleCluster> namespaceGroups) {
+  public NvmfSubsystem namespaceGroups(List<NameIdPair> namespaceGroups) {
     
     this.namespaceGroups = namespaceGroups;
     return this;
   }
 
-  public NvmfSubsystem addNamespaceGroupsItem(AlertRuleCluster namespaceGroupsItem) {
+  public NvmfSubsystem addNamespaceGroupsItem(NameIdPair namespaceGroupsItem) {
     if (this.namespaceGroups == null) {
-      this.namespaceGroups = new ArrayList<AlertRuleCluster>();
+      this.namespaceGroups = new ArrayList<NameIdPair>();
     }
     this.namespaceGroups.add(namespaceGroupsItem);
     return this;
@@ -885,25 +885,25 @@ public class NvmfSubsystem {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNamespaceGroups() {
+  public List<NameIdPair> getNamespaceGroups() {
     return namespaceGroups;
   }
 
 
-  public void setNamespaceGroups(List<AlertRuleCluster> namespaceGroups) {
+  public void setNamespaceGroups(List<NameIdPair> namespaceGroups) {
     this.namespaceGroups = namespaceGroups;
   }
 
 
-  public NvmfSubsystem namespaces(List<AlertRuleCluster> namespaces) {
+  public NvmfSubsystem namespaces(List<NameIdPair> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public NvmfSubsystem addNamespacesItem(AlertRuleCluster namespacesItem) {
+  public NvmfSubsystem addNamespacesItem(NameIdPair namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<AlertRuleCluster>();
+      this.namespaces = new ArrayList<NameIdPair>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -916,12 +916,12 @@ public class NvmfSubsystem {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNamespaces() {
+  public List<NameIdPair> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<AlertRuleCluster> namespaces) {
+  public void setNamespaces(List<NameIdPair> namespaces) {
     this.namespaces = namespaces;
   }
 

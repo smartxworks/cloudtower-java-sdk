@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.SnapshotPlanExecuteStatus;
@@ -48,7 +48,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -152,7 +152,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
 
   public SnapshotPlan autoDeleteNum(Double autoDeleteNum) {
@@ -201,7 +201,7 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan cluster(AlertRuleCluster cluster) {
+  public SnapshotPlan cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -214,12 +214,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -812,15 +812,15 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan vms(List<AlertRuleCluster> vms) {
+  public SnapshotPlan vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public SnapshotPlan addVmsItem(AlertRuleCluster vmsItem) {
+  public SnapshotPlan addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -833,12 +833,12 @@ public class SnapshotPlan {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 

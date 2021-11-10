@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NfsExport {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -57,7 +57,7 @@ public class NfsExport {
 
   public static final String SERIALIZED_NAME_INODES = "inodes";
   @SerializedName(SERIALIZED_NAME_INODES)
-  private List<AlertRuleCluster> inodes = null;
+  private List<NameIdPair> inodes = null;
 
   public static final String SERIALIZED_NAME_INTERNAL = "internal";
   @SerializedName(SERIALIZED_NAME_INTERNAL)
@@ -88,7 +88,7 @@ public class NfsExport {
   private Boolean thinProvision;
 
 
-  public NfsExport cluster(AlertRuleCluster cluster) {
+  public NfsExport cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -101,12 +101,12 @@ public class NfsExport {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -203,15 +203,15 @@ public class NfsExport {
   }
 
 
-  public NfsExport inodes(List<AlertRuleCluster> inodes) {
+  public NfsExport inodes(List<NameIdPair> inodes) {
     
     this.inodes = inodes;
     return this;
   }
 
-  public NfsExport addInodesItem(AlertRuleCluster inodesItem) {
+  public NfsExport addInodesItem(NameIdPair inodesItem) {
     if (this.inodes == null) {
-      this.inodes = new ArrayList<AlertRuleCluster>();
+      this.inodes = new ArrayList<NameIdPair>();
     }
     this.inodes.add(inodesItem);
     return this;
@@ -224,12 +224,12 @@ public class NfsExport {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getInodes() {
+  public List<NameIdPair> getInodes() {
     return inodes;
   }
 
 
-  public void setInodes(List<AlertRuleCluster> inodes) {
+  public void setInodes(List<NameIdPair> inodes) {
     this.inodes = inodes;
   }
 

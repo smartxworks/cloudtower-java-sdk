@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.ConsistentType;
 import com.smartx.tower.model.EntityAsyncStatus;
@@ -50,7 +49,7 @@ public class VmSnapshot {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CONSISTENT_TYPE = "consistent_type";
   @SerializedName(SERIALIZED_NAME_CONSISTENT_TYPE)
@@ -130,7 +129,7 @@ public class VmSnapshot {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshot_group";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
-  private AlertDisk snapshotGroup;
+  private NameIdPair snapshotGroup;
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
@@ -138,7 +137,7 @@ public class VmSnapshot {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertDisk vm;
+  private NameIdPair vm;
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
@@ -176,7 +175,7 @@ public class VmSnapshot {
   }
 
 
-  public VmSnapshot cluster(AlertRuleCluster cluster) {
+  public VmSnapshot cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -189,12 +188,12 @@ public class VmSnapshot {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -644,7 +643,7 @@ public class VmSnapshot {
   }
 
 
-  public VmSnapshot snapshotGroup(AlertDisk snapshotGroup) {
+  public VmSnapshot snapshotGroup(NameIdPair snapshotGroup) {
     
     this.snapshotGroup = snapshotGroup;
     return this;
@@ -657,12 +656,12 @@ public class VmSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getSnapshotGroup() {
+  public NameIdPair getSnapshotGroup() {
     return snapshotGroup;
   }
 
 
-  public void setSnapshotGroup(AlertDisk snapshotGroup) {
+  public void setSnapshotGroup(NameIdPair snapshotGroup) {
     this.snapshotGroup = snapshotGroup;
   }
 
@@ -690,7 +689,7 @@ public class VmSnapshot {
   }
 
 
-  public VmSnapshot vm(AlertDisk vm) {
+  public VmSnapshot vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -703,12 +702,12 @@ public class VmSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertDisk vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 

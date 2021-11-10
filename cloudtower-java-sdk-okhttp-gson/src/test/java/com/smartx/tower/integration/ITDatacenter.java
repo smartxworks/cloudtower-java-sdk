@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITDatacenter extends ITBase {
   DatacenterApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "datacenterPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -34,16 +34,15 @@ public class ITDatacenter extends ITBase {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {
-    }.getType());
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
   }
 
-  @Test(dataProvider = "payload", priority = 1)
+
+  @Test(dataProvider = "datacenterPayload")
   public void createDatacenter(String payload) {
     try {
       // parse params from json payload
-      List<DatacenterCreationParams> params = gson.fromJson(payload, new TypeToken<List<DatacenterCreationParams>>() {
-      }.getType());
+      List<DatacenterCreationParams> params = gson.fromJson(payload, new TypeToken<List<DatacenterCreationParams>>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskDatacenter> result = api.createDatacenter(params, contentLanguage);
       assertThat(result).as("check result of createDatacenter").isNotNull();
@@ -52,12 +51,11 @@ public class ITDatacenter extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload", priority = 3)
+  @Test(dataProvider = "datacenterPayload")
   public void deleteDatacenter(String payload) {
     try {
       // parse params from json payload
-      DatacenterDeletionParams params = gson.fromJson(payload, new TypeToken<DatacenterDeletionParams>() {
-      }.getType());
+      DatacenterDeletionParams params = gson.fromJson(payload, new TypeToken<DatacenterDeletionParams>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskDeleteDatacenter> result = api.deleteDatacenter(params, contentLanguage);
       assertThat(result).as("check result of deleteDatacenter").isNotNull();
@@ -66,12 +64,11 @@ public class ITDatacenter extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "datacenterPayload")
   public void getDatacenters(String payload) {
     try {
       // parse params from json payload
-      GetDatacentersRequestBody params = gson.fromJson(payload, new TypeToken<GetDatacentersRequestBody>() {
-      }.getType());
+      GetDatacentersRequestBody params = gson.fromJson(payload, new TypeToken<GetDatacentersRequestBody>() {}.getType());
       // do some modify to params(optional)
       List<Datacenter> result = api.getDatacenters(params, contentLanguage);
       assertThat(result).as("check result of getDatacenters").isNotNull();
@@ -80,13 +77,11 @@ public class ITDatacenter extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "datacenterPayload")
   public void getDatacentersConnection(String payload) {
     try {
       // parse params from json payload
-      GetDatacentersConnectionRequestBody params = gson.fromJson(payload,
-          new TypeToken<GetDatacentersConnectionRequestBody>() {
-          }.getType());
+      GetDatacentersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetDatacentersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
       DatacenterConnection result = api.getDatacentersConnection(params, contentLanguage);
       assertThat(result).as("check result of getDatacentersConnection").isNotNull();
@@ -95,12 +90,11 @@ public class ITDatacenter extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload", priority = 2)
+  @Test(dataProvider = "datacenterPayload")
   public void updateDatacenter(String payload) {
     try {
       // parse params from json payload
-      DatacenterUpdationParams params = gson.fromJson(payload, new TypeToken<DatacenterUpdationParams>() {
-      }.getType());
+      DatacenterUpdationParams params = gson.fromJson(payload, new TypeToken<DatacenterUpdationParams>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskDatacenter> result = api.updateDatacenter(params, contentLanguage);
       assertThat(result).as("check result of updateDatacenter").isNotNull();

@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITVlan extends ITBase {
   VlanApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "vlanPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITVlan extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void createVmVlan(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITVlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void deleteVlan(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITVlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void getVlans(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITVlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void getVlansConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITVlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void updateManagementVlan(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITVlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void updateMigrationVlan(String payload) {
     try {
       // parse params from json payload
@@ -116,7 +116,7 @@ public class ITVlan extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "vlanPayload")
   public void updateVlan(String payload) {
     try {
       // parse params from json payload

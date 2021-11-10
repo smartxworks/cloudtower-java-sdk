@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITIscsiLun extends ITBase {
   IscsiLunApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "iscsiLunPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITIscsiLun extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void cloneIscsiLunFromSnapshot(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITIscsiLun extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void createIscsiLun(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITIscsiLun extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void deleteIscsiLun(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITIscsiLun extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void getIscsiLuns(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITIscsiLun extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void getIscsiLunsConnection(String payload) {
     try {
       // parse params from json payload
@@ -103,7 +103,7 @@ public class ITIscsiLun extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void rollbackIscsiLunFromSnapshot(String payload) {
     try {
       // parse params from json payload
@@ -116,7 +116,7 @@ public class ITIscsiLun extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiLunPayload")
   public void updateIscsiLun(String payload) {
     try {
       // parse params from json payload

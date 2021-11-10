@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.smartx.tower.ApiException;
-import com.smartx.tower.api.ReportTaskApi;
+import com.smartx.tower.api.ZoneTopoApi;
 import com.smartx.tower.model.*;
 
-public class ITReportTask extends ITBase {
-  ReportTaskApi api = null;
+public class ITZoneTopo extends ITBase {
+  ZoneTopoApi api = null;
   HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "reportTaskPayload")
+  @DataProvider(name = "zoneTopoPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -27,9 +27,9 @@ public class ITReportTask extends ITBase {
 
   @BeforeClass
   public void getService() throws IOException {
-    api = new ReportTaskApi(client);
+    api = new ZoneTopoApi(client);
     // get payloads from resource file
-    InputStream stream = getClass().getResourceAsStream("/ReportTask.json");
+    InputStream stream = getClass().getResourceAsStream("/ZoneTopo.json");
     if (stream == null) {
       return;
     }
@@ -38,27 +38,27 @@ public class ITReportTask extends ITBase {
   }
 
 
-  @Test(dataProvider = "reportTaskPayload")
-  public void getReportTasks(String payload) {
+  @Test(dataProvider = "zoneTopoPayload")
+  public void getZoneTopoes(String payload) {
     try {
       // parse params from json payload
-      GetReportTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTasksRequestBody>() {}.getType());
+      GetZoneTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetZoneTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ReportTask> result = api.getReportTasks(params, contentLanguage);
-      assertThat(result).as("check result of getReportTasks").isNotNull();
+      List<ZoneTopo> result = api.getZoneTopoes(params, contentLanguage);
+      assertThat(result).as("check result of getZoneTopoes").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "reportTaskPayload")
-  public void getReportTasksConnection(String payload) {
+  @Test(dataProvider = "zoneTopoPayload")
+  public void getZoneTopoesConnection(String payload) {
     try {
       // parse params from json payload
-      GetReportTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTasksConnectionRequestBody>() {}.getType());
+      GetZoneTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetZoneTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ReportTaskConnection result = api.getReportTasksConnection(params, contentLanguage);
-      assertThat(result).as("check result of getReportTasksConnection").isNotNull();
+      ZoneTopoConnection result = api.getZoneTopoesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getZoneTopoesConnection").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }

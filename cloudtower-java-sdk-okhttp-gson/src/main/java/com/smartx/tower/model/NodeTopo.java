@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoCapacity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -35,19 +34,19 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NodeTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPO = "brick_topo";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPO)
-  private AlertDisk brickTopo;
+  private NameIdPair brickTopo;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CLUSTER_TOPO = "cluster_topo";
   @SerializedName(SERIALIZED_NAME_CLUSTER_TOPO)
-  private AlertDisk clusterTopo;
+  private NameIdPair clusterTopo;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -66,7 +65,7 @@ public class NodeTopo {
   private BrickTopoCapacity position;
 
 
-  public NodeTopo brickTopo(AlertDisk brickTopo) {
+  public NodeTopo brickTopo(NameIdPair brickTopo) {
     
     this.brickTopo = brickTopo;
     return this;
@@ -79,17 +78,17 @@ public class NodeTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getBrickTopo() {
+  public NameIdPair getBrickTopo() {
     return brickTopo;
   }
 
 
-  public void setBrickTopo(AlertDisk brickTopo) {
+  public void setBrickTopo(NameIdPair brickTopo) {
     this.brickTopo = brickTopo;
   }
 
 
-  public NodeTopo cluster(AlertRuleCluster cluster) {
+  public NodeTopo cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -102,17 +101,17 @@ public class NodeTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public NodeTopo clusterTopo(AlertDisk clusterTopo) {
+  public NodeTopo clusterTopo(NameIdPair clusterTopo) {
     
     this.clusterTopo = clusterTopo;
     return this;
@@ -125,17 +124,17 @@ public class NodeTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getClusterTopo() {
+  public NameIdPair getClusterTopo() {
     return clusterTopo;
   }
 
 
-  public void setClusterTopo(AlertDisk clusterTopo) {
+  public void setClusterTopo(NameIdPair clusterTopo) {
     this.clusterTopo = clusterTopo;
   }
 
 
-  public NodeTopo host(AlertRuleCluster host) {
+  public NodeTopo host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -148,12 +147,12 @@ public class NodeTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 

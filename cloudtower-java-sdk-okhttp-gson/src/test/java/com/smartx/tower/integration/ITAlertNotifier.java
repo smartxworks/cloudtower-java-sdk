@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITAlertNotifier extends ITBase {
   AlertNotifierApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "alertNotifierPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITAlertNotifier extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "alertNotifierPayload")
   public void getAlertNotifiers(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITAlertNotifier extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "alertNotifierPayload")
   public void getAlertNotifiersConnection(String payload) {
     try {
       // parse params from json payload

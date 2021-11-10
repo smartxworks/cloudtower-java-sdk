@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.StoreConnectionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -39,11 +38,11 @@ public class IscsiConnection {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -55,11 +54,11 @@ public class IscsiConnection {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
-  private AlertDisk iscsiTarget;
+  private NameIdPair iscsiTarget;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private AlertDisk nvmfSubsystem;
+  private NameIdPair nvmfSubsystem;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -89,7 +88,7 @@ public class IscsiConnection {
   }
 
 
-  public IscsiConnection cluster(AlertRuleCluster cluster) {
+  public IscsiConnection cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -102,17 +101,17 @@ public class IscsiConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public IscsiConnection host(AlertRuleCluster host) {
+  public IscsiConnection host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -125,12 +124,12 @@ public class IscsiConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 
@@ -181,7 +180,7 @@ public class IscsiConnection {
   }
 
 
-  public IscsiConnection iscsiTarget(AlertDisk iscsiTarget) {
+  public IscsiConnection iscsiTarget(NameIdPair iscsiTarget) {
     
     this.iscsiTarget = iscsiTarget;
     return this;
@@ -194,17 +193,17 @@ public class IscsiConnection {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getIscsiTarget() {
+  public NameIdPair getIscsiTarget() {
     return iscsiTarget;
   }
 
 
-  public void setIscsiTarget(AlertDisk iscsiTarget) {
+  public void setIscsiTarget(NameIdPair iscsiTarget) {
     this.iscsiTarget = iscsiTarget;
   }
 
 
-  public IscsiConnection nvmfSubsystem(AlertDisk nvmfSubsystem) {
+  public IscsiConnection nvmfSubsystem(NameIdPair nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -217,12 +216,12 @@ public class IscsiConnection {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getNvmfSubsystem() {
+  public NameIdPair getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(AlertDisk nvmfSubsystem) {
+  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

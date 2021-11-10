@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITGraph extends ITBase {
   GraphApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "graphPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITGraph extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "graphPayload")
   public void createGraph(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITGraph extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "graphPayload")
   public void deleteGraph(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITGraph extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "graphPayload")
   public void getGraphs(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITGraph extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "graphPayload")
   public void getGraphsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITGraph extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "graphPayload")
   public void updateGraph(String payload) {
     try {
       // parse params from json payload

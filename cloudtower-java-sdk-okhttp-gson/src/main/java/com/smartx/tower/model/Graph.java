@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.GraphType;
@@ -41,11 +40,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Graph {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertDisk cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<AlertRuleCluster> disks = null;
+  private List<NameIdPair> disks = null;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -53,7 +52,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<AlertRuleCluster> hosts = null;
+  private List<NameIdPair> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -69,7 +68,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_LUNS = "luns";
   @SerializedName(SERIALIZED_NAME_LUNS)
-  private List<AlertRuleCluster> luns = null;
+  private List<NameIdPair> luns = null;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT = "metric_count";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT)
@@ -85,7 +84,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<AlertRuleCluster> namespaces = null;
+  private List<NameIdPair> namespaces = null;
 
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
@@ -93,7 +92,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<AlertRuleCluster> nics = null;
+  private List<NameIdPair> nics = null;
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resource_type";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
@@ -117,7 +116,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_VIEW = "view";
   @SerializedName(SERIALIZED_NAME_VIEW)
-  private AlertRuleCluster view;
+  private NameIdPair view;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vmNics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
@@ -125,22 +124,22 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES = "vmVolumes";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES)
-  private List<AlertRuleCluster> vmVolumes = null;
+  private List<NameIdPair> vmVolumes = null;
 
   public static final String SERIALIZED_NAME_WITNESSES = "witnesses";
   @SerializedName(SERIALIZED_NAME_WITNESSES)
-  private List<AlertRuleCluster> witnesses = null;
+  private List<NameIdPair> witnesses = null;
 
   public static final String SERIALIZED_NAME_ZONES = "zones";
   @SerializedName(SERIALIZED_NAME_ZONES)
   private List<BrickTopoPowers> zones = null;
 
 
-  public Graph cluster(AlertDisk cluster) {
+  public Graph cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -153,25 +152,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertDisk cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public Graph disks(List<AlertRuleCluster> disks) {
+  public Graph disks(List<NameIdPair> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public Graph addDisksItem(AlertRuleCluster disksItem) {
+  public Graph addDisksItem(NameIdPair disksItem) {
     if (this.disks == null) {
-      this.disks = new ArrayList<AlertRuleCluster>();
+      this.disks = new ArrayList<NameIdPair>();
     }
     this.disks.add(disksItem);
     return this;
@@ -184,12 +183,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getDisks() {
+  public List<NameIdPair> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<AlertRuleCluster> disks) {
+  public void setDisks(List<NameIdPair> disks) {
     this.disks = disks;
   }
 
@@ -217,15 +216,15 @@ public class Graph {
   }
 
 
-  public Graph hosts(List<AlertRuleCluster> hosts) {
+  public Graph hosts(List<NameIdPair> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Graph addHostsItem(AlertRuleCluster hostsItem) {
+  public Graph addHostsItem(NameIdPair hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<AlertRuleCluster>();
+      this.hosts = new ArrayList<NameIdPair>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -238,12 +237,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getHosts() {
+  public List<NameIdPair> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<AlertRuleCluster> hosts) {
+  public void setHosts(List<NameIdPair> hosts) {
     this.hosts = hosts;
   }
 
@@ -322,15 +321,15 @@ public class Graph {
   }
 
 
-  public Graph luns(List<AlertRuleCluster> luns) {
+  public Graph luns(List<NameIdPair> luns) {
     
     this.luns = luns;
     return this;
   }
 
-  public Graph addLunsItem(AlertRuleCluster lunsItem) {
+  public Graph addLunsItem(NameIdPair lunsItem) {
     if (this.luns == null) {
-      this.luns = new ArrayList<AlertRuleCluster>();
+      this.luns = new ArrayList<NameIdPair>();
     }
     this.luns.add(lunsItem);
     return this;
@@ -343,12 +342,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getLuns() {
+  public List<NameIdPair> getLuns() {
     return luns;
   }
 
 
-  public void setLuns(List<AlertRuleCluster> luns) {
+  public void setLuns(List<NameIdPair> luns) {
     this.luns = luns;
   }
 
@@ -422,15 +421,15 @@ public class Graph {
   }
 
 
-  public Graph namespaces(List<AlertRuleCluster> namespaces) {
+  public Graph namespaces(List<NameIdPair> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public Graph addNamespacesItem(AlertRuleCluster namespacesItem) {
+  public Graph addNamespacesItem(NameIdPair namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<AlertRuleCluster>();
+      this.namespaces = new ArrayList<NameIdPair>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -443,12 +442,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNamespaces() {
+  public List<NameIdPair> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<AlertRuleCluster> namespaces) {
+  public void setNamespaces(List<NameIdPair> namespaces) {
     this.namespaces = namespaces;
   }
 
@@ -476,15 +475,15 @@ public class Graph {
   }
 
 
-  public Graph nics(List<AlertRuleCluster> nics) {
+  public Graph nics(List<NameIdPair> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Graph addNicsItem(AlertRuleCluster nicsItem) {
+  public Graph addNicsItem(NameIdPair nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<AlertRuleCluster>();
+      this.nics = new ArrayList<NameIdPair>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -497,12 +496,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNics() {
+  public List<NameIdPair> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<AlertRuleCluster> nics) {
+  public void setNics(List<NameIdPair> nics) {
     this.nics = nics;
   }
 
@@ -622,7 +621,7 @@ public class Graph {
   }
 
 
-  public Graph view(AlertRuleCluster view) {
+  public Graph view(NameIdPair view) {
     
     this.view = view;
     return this;
@@ -635,12 +634,12 @@ public class Graph {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getView() {
+  public NameIdPair getView() {
     return view;
   }
 
 
-  public void setView(AlertRuleCluster view) {
+  public void setView(NameIdPair view) {
     this.view = view;
   }
 
@@ -676,15 +675,15 @@ public class Graph {
   }
 
 
-  public Graph vms(List<AlertRuleCluster> vms) {
+  public Graph vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Graph addVmsItem(AlertRuleCluster vmsItem) {
+  public Graph addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -697,25 +696,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 
 
-  public Graph vmVolumes(List<AlertRuleCluster> vmVolumes) {
+  public Graph vmVolumes(List<NameIdPair> vmVolumes) {
     
     this.vmVolumes = vmVolumes;
     return this;
   }
 
-  public Graph addVmVolumesItem(AlertRuleCluster vmVolumesItem) {
+  public Graph addVmVolumesItem(NameIdPair vmVolumesItem) {
     if (this.vmVolumes == null) {
-      this.vmVolumes = new ArrayList<AlertRuleCluster>();
+      this.vmVolumes = new ArrayList<NameIdPair>();
     }
     this.vmVolumes.add(vmVolumesItem);
     return this;
@@ -728,25 +727,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmVolumes() {
+  public List<NameIdPair> getVmVolumes() {
     return vmVolumes;
   }
 
 
-  public void setVmVolumes(List<AlertRuleCluster> vmVolumes) {
+  public void setVmVolumes(List<NameIdPair> vmVolumes) {
     this.vmVolumes = vmVolumes;
   }
 
 
-  public Graph witnesses(List<AlertRuleCluster> witnesses) {
+  public Graph witnesses(List<NameIdPair> witnesses) {
     
     this.witnesses = witnesses;
     return this;
   }
 
-  public Graph addWitnessesItem(AlertRuleCluster witnessesItem) {
+  public Graph addWitnessesItem(NameIdPair witnessesItem) {
     if (this.witnesses == null) {
-      this.witnesses = new ArrayList<AlertRuleCluster>();
+      this.witnesses = new ArrayList<NameIdPair>();
     }
     this.witnesses.add(witnessesItem);
     return this;
@@ -759,12 +758,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getWitnesses() {
+  public List<NameIdPair> getWitnesses() {
     return witnesses;
   }
 
 
-  public void setWitnesses(List<AlertRuleCluster> witnesses) {
+  public void setWitnesses(List<NameIdPair> witnesses) {
     this.witnesses = witnesses;
   }
 

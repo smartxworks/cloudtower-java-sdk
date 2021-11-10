@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITDefault extends ITBase {
   DefaultApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "defaultPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITDefault extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "defaultPayload")
   public void createNvmfSubsystem(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITDefault extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "defaultPayload")
   public void deleteNvmfSubsystem(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITDefault extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "defaultPayload")
   public void updateNvmfSubsystem(String payload) {
     try {
       // parse params from json payload

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import io.swagger.annotations.ApiModel;
@@ -69,7 +69,7 @@ public class NfsInode {
 
   public static final String SERIALIZED_NAME_NFS_EXPORT = "nfs_export";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
-  private AlertRuleCluster nfsExport;
+  private NameIdPair nfsExport;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
   @SerializedName(SERIALIZED_NAME_PARENT_ID)
@@ -280,7 +280,7 @@ public class NfsInode {
   }
 
 
-  public NfsInode nfsExport(AlertRuleCluster nfsExport) {
+  public NfsInode nfsExport(NameIdPair nfsExport) {
     
     this.nfsExport = nfsExport;
     return this;
@@ -293,12 +293,12 @@ public class NfsInode {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getNfsExport() {
+  public NameIdPair getNfsExport() {
     return nfsExport;
   }
 
 
-  public void setNfsExport(AlertRuleCluster nfsExport) {
+  public void setNfsExport(NameIdPair nfsExport) {
     this.nfsExport = nfsExport;
   }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.SnapshotGroupVmInfo;
@@ -38,7 +38,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SnapshotGroup {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DELETED = "deleted";
   @SerializedName(SERIALIZED_NAME_DELETED)
@@ -94,10 +94,10 @@ public class SnapshotGroup {
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<AlertRuleCluster> vmSnapshots = null;
+  private List<NameIdPair> vmSnapshots = null;
 
 
-  public SnapshotGroup cluster(AlertRuleCluster cluster) {
+  public SnapshotGroup cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -110,12 +110,12 @@ public class SnapshotGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -424,15 +424,15 @@ public class SnapshotGroup {
   }
 
 
-  public SnapshotGroup vmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public SnapshotGroup vmSnapshots(List<NameIdPair> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public SnapshotGroup addVmSnapshotsItem(AlertRuleCluster vmSnapshotsItem) {
+  public SnapshotGroup addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<AlertRuleCluster>();
+      this.vmSnapshots = new ArrayList<NameIdPair>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -445,12 +445,12 @@ public class SnapshotGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmSnapshots() {
+  public List<NameIdPair> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<AlertRuleCluster> vmSnapshots) {
+  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 

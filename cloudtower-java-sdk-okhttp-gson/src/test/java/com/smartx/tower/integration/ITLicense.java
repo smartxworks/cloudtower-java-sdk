@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITLicense extends ITBase {
   LicenseApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "licensePayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITLicense extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "licensePayload")
   public void getLicenses(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITLicense extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "licensePayload")
   public void getLicensesConnection(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITLicense extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "licensePayload")
   public void updateDeploy(String payload) {
     try {
       // parse params from json payload

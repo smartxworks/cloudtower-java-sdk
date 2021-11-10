@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.ReportTemplateResourceMeta;
 import io.swagger.annotations.ApiModel;
@@ -69,7 +69,7 @@ public class ReportTemplate {
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
-  private List<AlertRuleCluster> tasks = null;
+  private List<NameIdPair> tasks = null;
 
 
   public ReportTemplate createdAt(String createdAt) {
@@ -266,15 +266,15 @@ public class ReportTemplate {
   }
 
 
-  public ReportTemplate tasks(List<AlertRuleCluster> tasks) {
+  public ReportTemplate tasks(List<NameIdPair> tasks) {
     
     this.tasks = tasks;
     return this;
   }
 
-  public ReportTemplate addTasksItem(AlertRuleCluster tasksItem) {
+  public ReportTemplate addTasksItem(NameIdPair tasksItem) {
     if (this.tasks == null) {
-      this.tasks = new ArrayList<AlertRuleCluster>();
+      this.tasks = new ArrayList<NameIdPair>();
     }
     this.tasks.add(tasksItem);
     return this;
@@ -287,12 +287,12 @@ public class ReportTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getTasks() {
+  public List<NameIdPair> getTasks() {
     return tasks;
   }
 
 
-  public void setTasks(List<AlertRuleCluster> tasks) {
+  public void setTasks(List<NameIdPair> tasks) {
     this.tasks = tasks;
   }
 

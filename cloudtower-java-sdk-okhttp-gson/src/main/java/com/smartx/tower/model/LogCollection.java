@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.LogCollectionStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -36,11 +36,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class LogCollection {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<AlertRuleCluster> hosts = null;
+  private List<NameIdPair> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -83,7 +83,7 @@ public class LogCollection {
   private LogCollectionStatus status;
 
 
-  public LogCollection cluster(AlertRuleCluster cluster) {
+  public LogCollection cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -96,25 +96,25 @@ public class LogCollection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public LogCollection hosts(List<AlertRuleCluster> hosts) {
+  public LogCollection hosts(List<NameIdPair> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public LogCollection addHostsItem(AlertRuleCluster hostsItem) {
+  public LogCollection addHostsItem(NameIdPair hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<AlertRuleCluster>();
+      this.hosts = new ArrayList<NameIdPair>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -127,12 +127,12 @@ public class LogCollection {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getHosts() {
+  public List<NameIdPair> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<AlertRuleCluster> hosts) {
+  public void setHosts(List<NameIdPair> hosts) {
     this.hosts = hosts;
   }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.DiskFailureInformation;
 import com.smartx.tower.model.DiskFunction;
@@ -68,7 +68,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -120,7 +120,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_PMEM_DIMMS = "pmem_dimms";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMMS)
-  private List<AlertRuleCluster> pmemDimms = null;
+  private List<NameIdPair> pmemDimms = null;
 
   public static final String SERIALIZED_NAME_RECOMMENDED_USAGE = "recommended_usage";
   @SerializedName(SERIALIZED_NAME_RECOMMENDED_USAGE)
@@ -289,7 +289,7 @@ public class Disk {
   }
 
 
-  public Disk host(AlertRuleCluster host) {
+  public Disk host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -302,12 +302,12 @@ public class Disk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 
@@ -601,15 +601,15 @@ public class Disk {
   }
 
 
-  public Disk pmemDimms(List<AlertRuleCluster> pmemDimms) {
+  public Disk pmemDimms(List<NameIdPair> pmemDimms) {
     
     this.pmemDimms = pmemDimms;
     return this;
   }
 
-  public Disk addPmemDimmsItem(AlertRuleCluster pmemDimmsItem) {
+  public Disk addPmemDimmsItem(NameIdPair pmemDimmsItem) {
     if (this.pmemDimms == null) {
-      this.pmemDimms = new ArrayList<AlertRuleCluster>();
+      this.pmemDimms = new ArrayList<NameIdPair>();
     }
     this.pmemDimms.add(pmemDimmsItem);
     return this;
@@ -622,12 +622,12 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getPmemDimms() {
+  public List<NameIdPair> getPmemDimms() {
     return pmemDimms;
   }
 
 
-  public void setPmemDimms(List<AlertRuleCluster> pmemDimms) {
+  public void setPmemDimms(List<NameIdPair> pmemDimms) {
     this.pmemDimms = pmemDimms;
   }
 

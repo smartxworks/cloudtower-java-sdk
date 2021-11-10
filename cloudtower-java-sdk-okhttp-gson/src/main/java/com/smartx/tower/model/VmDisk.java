@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.Bus;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskType;
@@ -61,7 +60,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_ELF_IMAGE = "elf_image";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE)
-  private AlertDisk elfImage;
+  private NameIdPair elfImage;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -93,7 +92,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_SVT_IMAGE = "svt_image";
   @SerializedName(SERIALIZED_NAME_SVT_IMAGE)
-  private AlertDisk svtImage;
+  private NameIdPair svtImage;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -113,11 +112,11 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertRuleCluster vm;
+  private NameIdPair vm;
 
   public static final String SERIALIZED_NAME_VM_VOLUME = "vm_volume";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME)
-  private AlertDisk vmVolume;
+  private NameIdPair vmVolume;
 
 
   public VmDisk boot(Double boot) {
@@ -258,7 +257,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk elfImage(AlertDisk elfImage) {
+  public VmDisk elfImage(NameIdPair elfImage) {
     
     this.elfImage = elfImage;
     return this;
@@ -271,12 +270,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getElfImage() {
+  public NameIdPair getElfImage() {
     return elfImage;
   }
 
 
-  public void setElfImage(AlertDisk elfImage) {
+  public void setElfImage(NameIdPair elfImage) {
     this.elfImage = elfImage;
   }
 
@@ -442,7 +441,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk svtImage(AlertDisk svtImage) {
+  public VmDisk svtImage(NameIdPair svtImage) {
     
     this.svtImage = svtImage;
     return this;
@@ -455,12 +454,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getSvtImage() {
+  public NameIdPair getSvtImage() {
     return svtImage;
   }
 
 
-  public void setSvtImage(AlertDisk svtImage) {
+  public void setSvtImage(NameIdPair svtImage) {
     this.svtImage = svtImage;
   }
 
@@ -557,7 +556,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk vm(AlertRuleCluster vm) {
+  public VmDisk vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -570,17 +569,17 @@ public class VmDisk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertRuleCluster vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 
 
-  public VmDisk vmVolume(AlertDisk vmVolume) {
+  public VmDisk vmVolume(NameIdPair vmVolume) {
     
     this.vmVolume = vmVolume;
     return this;
@@ -593,12 +592,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getVmVolume() {
+  public NameIdPair getVmVolume() {
     return vmVolume;
   }
 
 
-  public void setVmVolume(AlertDisk vmVolume) {
+  public void setVmVolume(NameIdPair vmVolume) {
     this.vmVolume = vmVolume;
   }
 

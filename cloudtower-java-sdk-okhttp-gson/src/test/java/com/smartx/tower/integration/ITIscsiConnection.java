@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITIscsiConnection extends ITBase {
   IscsiConnectionApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "iscsiConnectionPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITIscsiConnection extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiConnectionPayload")
   public void getIscsiConnections(String payload) {
     try {
       // parse params from json payload

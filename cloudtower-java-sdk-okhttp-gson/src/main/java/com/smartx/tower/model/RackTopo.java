@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -36,11 +36,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class RackTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPOES = "brick_topoes";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPOES)
-  private List<AlertRuleCluster> brickTopoes = null;
+  private List<NameIdPair> brickTopoes = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
@@ -63,15 +63,15 @@ public class RackTopo {
   private BrickTopoPowers zoneTopo;
 
 
-  public RackTopo brickTopoes(List<AlertRuleCluster> brickTopoes) {
+  public RackTopo brickTopoes(List<NameIdPair> brickTopoes) {
     
     this.brickTopoes = brickTopoes;
     return this;
   }
 
-  public RackTopo addBrickTopoesItem(AlertRuleCluster brickTopoesItem) {
+  public RackTopo addBrickTopoesItem(NameIdPair brickTopoesItem) {
     if (this.brickTopoes == null) {
-      this.brickTopoes = new ArrayList<AlertRuleCluster>();
+      this.brickTopoes = new ArrayList<NameIdPair>();
     }
     this.brickTopoes.add(brickTopoesItem);
     return this;
@@ -84,17 +84,17 @@ public class RackTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getBrickTopoes() {
+  public List<NameIdPair> getBrickTopoes() {
     return brickTopoes;
   }
 
 
-  public void setBrickTopoes(List<AlertRuleCluster> brickTopoes) {
+  public void setBrickTopoes(List<NameIdPair> brickTopoes) {
     this.brickTopoes = brickTopoes;
   }
 
 
-  public RackTopo cluster(AlertRuleCluster cluster) {
+  public RackTopo cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -107,12 +107,12 @@ public class RackTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 

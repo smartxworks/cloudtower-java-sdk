@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITSnmpTransport extends ITBase {
   SnmpTransportApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "snmpTransportPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITSnmpTransport extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snmpTransportPayload")
   public void createSnmpTransport(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITSnmpTransport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snmpTransportPayload")
   public void deleteSnmpTransport(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITSnmpTransport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snmpTransportPayload")
   public void getSnmpTransports(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITSnmpTransport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snmpTransportPayload")
   public void getSnmpTransportsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITSnmpTransport extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "snmpTransportPayload")
   public void updateSnmpTransport(String payload) {
     try {
       // parse params from json payload

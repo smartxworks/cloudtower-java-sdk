@@ -21,8 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.VmClockOffset;
@@ -53,7 +52,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertDisk cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CPU = "cpu";
   @SerializedName(SERIALIZED_NAME_CPU)
@@ -93,7 +92,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_FOLDER = "folder";
   @SerializedName(SERIALIZED_NAME_FOLDER)
-  private AlertDisk folder;
+  private NameIdPair folder;
 
   public static final String SERIALIZED_NAME_GUEST_CPU_MODEL = "guest_cpu_model";
   @SerializedName(SERIALIZED_NAME_GUEST_CPU_MODEL)
@@ -117,7 +116,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertDisk host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
@@ -233,11 +232,11 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshot_plan";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
-  private AlertDisk snapshotPlan;
+  private NameIdPair snapshotPlan;
 
   public static final String SERIALIZED_NAME_SNAPSHOTS = "snapshots";
   @SerializedName(SERIALIZED_NAME_SNAPSHOTS)
-  private List<AlertRuleCluster> snapshots = null;
+  private List<NameIdPair> snapshots = null;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -249,7 +248,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
-  private List<AlertRuleCluster> usbDevices = null;
+  private List<NameIdPair> usbDevices = null;
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
@@ -269,7 +268,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
   @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
-  private List<AlertRuleCluster> vmPlacementGroup = null;
+  private List<NameIdPair> vmPlacementGroup = null;
 
   public static final String SERIALIZED_NAME_VM_TOOLS_STATUS = "vm_tools_status";
   @SerializedName(SERIALIZED_NAME_VM_TOOLS_STATUS)
@@ -311,7 +310,7 @@ public class Vm {
   }
 
 
-  public Vm cluster(AlertDisk cluster) {
+  public Vm cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -324,12 +323,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertDisk cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -549,7 +548,7 @@ public class Vm {
   }
 
 
-  public Vm folder(AlertDisk folder) {
+  public Vm folder(NameIdPair folder) {
     
     this.folder = folder;
     return this;
@@ -562,12 +561,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getFolder() {
+  public NameIdPair getFolder() {
     return folder;
   }
 
 
-  public void setFolder(AlertDisk folder) {
+  public void setFolder(NameIdPair folder) {
     this.folder = folder;
   }
 
@@ -687,7 +686,7 @@ public class Vm {
   }
 
 
-  public Vm host(AlertDisk host) {
+  public Vm host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -700,12 +699,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertDisk host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 
@@ -1367,7 +1366,7 @@ public class Vm {
   }
 
 
-  public Vm snapshotPlan(AlertDisk snapshotPlan) {
+  public Vm snapshotPlan(NameIdPair snapshotPlan) {
     
     this.snapshotPlan = snapshotPlan;
     return this;
@@ -1380,25 +1379,25 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getSnapshotPlan() {
+  public NameIdPair getSnapshotPlan() {
     return snapshotPlan;
   }
 
 
-  public void setSnapshotPlan(AlertDisk snapshotPlan) {
+  public void setSnapshotPlan(NameIdPair snapshotPlan) {
     this.snapshotPlan = snapshotPlan;
   }
 
 
-  public Vm snapshots(List<AlertRuleCluster> snapshots) {
+  public Vm snapshots(List<NameIdPair> snapshots) {
     
     this.snapshots = snapshots;
     return this;
   }
 
-  public Vm addSnapshotsItem(AlertRuleCluster snapshotsItem) {
+  public Vm addSnapshotsItem(NameIdPair snapshotsItem) {
     if (this.snapshots == null) {
-      this.snapshots = new ArrayList<AlertRuleCluster>();
+      this.snapshots = new ArrayList<NameIdPair>();
     }
     this.snapshots.add(snapshotsItem);
     return this;
@@ -1411,12 +1410,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getSnapshots() {
+  public List<NameIdPair> getSnapshots() {
     return snapshots;
   }
 
 
-  public void setSnapshots(List<AlertRuleCluster> snapshots) {
+  public void setSnapshots(List<NameIdPair> snapshots) {
     this.snapshots = snapshots;
   }
 
@@ -1467,15 +1466,15 @@ public class Vm {
   }
 
 
-  public Vm usbDevices(List<AlertRuleCluster> usbDevices) {
+  public Vm usbDevices(List<NameIdPair> usbDevices) {
     
     this.usbDevices = usbDevices;
     return this;
   }
 
-  public Vm addUsbDevicesItem(AlertRuleCluster usbDevicesItem) {
+  public Vm addUsbDevicesItem(NameIdPair usbDevicesItem) {
     if (this.usbDevices == null) {
-      this.usbDevices = new ArrayList<AlertRuleCluster>();
+      this.usbDevices = new ArrayList<NameIdPair>();
     }
     this.usbDevices.add(usbDevicesItem);
     return this;
@@ -1488,12 +1487,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getUsbDevices() {
+  public List<NameIdPair> getUsbDevices() {
     return usbDevices;
   }
 
 
-  public void setUsbDevices(List<AlertRuleCluster> usbDevices) {
+  public void setUsbDevices(List<NameIdPair> usbDevices) {
     this.usbDevices = usbDevices;
   }
 
@@ -1606,15 +1605,15 @@ public class Vm {
   }
 
 
-  public Vm vmPlacementGroup(List<AlertRuleCluster> vmPlacementGroup) {
+  public Vm vmPlacementGroup(List<NameIdPair> vmPlacementGroup) {
     
     this.vmPlacementGroup = vmPlacementGroup;
     return this;
   }
 
-  public Vm addVmPlacementGroupItem(AlertRuleCluster vmPlacementGroupItem) {
+  public Vm addVmPlacementGroupItem(NameIdPair vmPlacementGroupItem) {
     if (this.vmPlacementGroup == null) {
-      this.vmPlacementGroup = new ArrayList<AlertRuleCluster>();
+      this.vmPlacementGroup = new ArrayList<NameIdPair>();
     }
     this.vmPlacementGroup.add(vmPlacementGroupItem);
     return this;
@@ -1627,12 +1626,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVmPlacementGroup() {
+  public List<NameIdPair> getVmPlacementGroup() {
     return vmPlacementGroup;
   }
 
 
-  public void setVmPlacementGroup(List<AlertRuleCluster> vmPlacementGroup) {
+  public void setVmPlacementGroup(List<NameIdPair> vmPlacementGroup) {
     this.vmPlacementGroup = vmPlacementGroup;
   }
 

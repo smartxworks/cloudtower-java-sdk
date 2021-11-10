@@ -17,9 +17,9 @@ import com.smartx.tower.model.*;
 
 public class ITIscsiTarget extends ITBase {
   IscsiTargetApi api = null;
-  HashMap<String, Object> payloads = new HashMap<>();
+  HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "payload")
+  @DataProvider(name = "iscsiTargetPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -38,7 +38,7 @@ public class ITIscsiTarget extends ITBase {
   }
 
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiTargetPayload")
   public void createIscsiTarget(String payload) {
     try {
       // parse params from json payload
@@ -51,7 +51,7 @@ public class ITIscsiTarget extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiTargetPayload")
   public void deleteIscsiTarget(String payload) {
     try {
       // parse params from json payload
@@ -64,7 +64,7 @@ public class ITIscsiTarget extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiTargetPayload")
   public void getIscsiTargets(String payload) {
     try {
       // parse params from json payload
@@ -77,7 +77,7 @@ public class ITIscsiTarget extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiTargetPayload")
   public void getIscsiTargetsConnection(String payload) {
     try {
       // parse params from json payload
@@ -90,7 +90,7 @@ public class ITIscsiTarget extends ITBase {
     }
   }
 
-  @Test(dataProvider = "payload")
+  @Test(dataProvider = "iscsiTargetPayload")
   public void updateIscsiTarget(String payload) {
     try {
       // parse params from json payload

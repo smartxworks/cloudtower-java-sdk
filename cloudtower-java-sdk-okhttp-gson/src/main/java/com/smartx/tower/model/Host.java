@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.CpuFanSpeedUnit;
 import com.smartx.tower.model.HostState;
@@ -52,7 +52,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_COMPATIBLE_CPU_MODELS = "compatible_cpu_models";
   @SerializedName(SERIALIZED_NAME_COMPATIBLE_CPU_MODELS)
@@ -88,7 +88,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<AlertRuleCluster> disks = null;
+  private List<NameIdPair> disks = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -148,7 +148,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<AlertRuleCluster> nics = null;
+  private List<NameIdPair> nics = null;
 
   public static final String SERIALIZED_NAME_NODE_TOPO_LOCAL_ID = "node_topo_local_id";
   @SerializedName(SERIALIZED_NAME_NODE_TOPO_LOCAL_ID)
@@ -172,7 +172,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_PMEM_DIMMS = "pmem_dimms";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMMS)
-  private List<AlertRuleCluster> pmemDimms = null;
+  private List<NameIdPair> pmemDimms = null;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT = "pmem_disk_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT)
@@ -260,7 +260,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
-  private List<AlertRuleCluster> usbDevices = null;
+  private List<NameIdPair> usbDevices = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
@@ -284,7 +284,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<AlertRuleCluster> vms = null;
+  private List<NameIdPair> vms = null;
 
   public static final String SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT = "vsphereEsxiAccount";
   @SerializedName(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT)
@@ -368,7 +368,7 @@ public class Host {
   }
 
 
-  public Host cluster(AlertRuleCluster cluster) {
+  public Host cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -381,12 +381,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -590,15 +590,15 @@ public class Host {
   }
 
 
-  public Host disks(List<AlertRuleCluster> disks) {
+  public Host disks(List<NameIdPair> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public Host addDisksItem(AlertRuleCluster disksItem) {
+  public Host addDisksItem(NameIdPair disksItem) {
     if (this.disks == null) {
-      this.disks = new ArrayList<AlertRuleCluster>();
+      this.disks = new ArrayList<NameIdPair>();
     }
     this.disks.add(disksItem);
     return this;
@@ -611,12 +611,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getDisks() {
+  public List<NameIdPair> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<AlertRuleCluster> disks) {
+  public void setDisks(List<NameIdPair> disks) {
     this.disks = disks;
   }
 
@@ -951,15 +951,15 @@ public class Host {
   }
 
 
-  public Host nics(List<AlertRuleCluster> nics) {
+  public Host nics(List<NameIdPair> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Host addNicsItem(AlertRuleCluster nicsItem) {
+  public Host addNicsItem(NameIdPair nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<AlertRuleCluster>();
+      this.nics = new ArrayList<NameIdPair>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -972,12 +972,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getNics() {
+  public List<NameIdPair> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<AlertRuleCluster> nics) {
+  public void setNics(List<NameIdPair> nics) {
     this.nics = nics;
   }
 
@@ -1097,15 +1097,15 @@ public class Host {
   }
 
 
-  public Host pmemDimms(List<AlertRuleCluster> pmemDimms) {
+  public Host pmemDimms(List<NameIdPair> pmemDimms) {
     
     this.pmemDimms = pmemDimms;
     return this;
   }
 
-  public Host addPmemDimmsItem(AlertRuleCluster pmemDimmsItem) {
+  public Host addPmemDimmsItem(NameIdPair pmemDimmsItem) {
     if (this.pmemDimms == null) {
-      this.pmemDimms = new ArrayList<AlertRuleCluster>();
+      this.pmemDimms = new ArrayList<NameIdPair>();
     }
     this.pmemDimms.add(pmemDimmsItem);
     return this;
@@ -1118,12 +1118,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getPmemDimms() {
+  public List<NameIdPair> getPmemDimms() {
     return pmemDimms;
   }
 
 
-  public void setPmemDimms(List<AlertRuleCluster> pmemDimms) {
+  public void setPmemDimms(List<NameIdPair> pmemDimms) {
     this.pmemDimms = pmemDimms;
   }
 
@@ -1611,15 +1611,15 @@ public class Host {
   }
 
 
-  public Host usbDevices(List<AlertRuleCluster> usbDevices) {
+  public Host usbDevices(List<NameIdPair> usbDevices) {
     
     this.usbDevices = usbDevices;
     return this;
   }
 
-  public Host addUsbDevicesItem(AlertRuleCluster usbDevicesItem) {
+  public Host addUsbDevicesItem(NameIdPair usbDevicesItem) {
     if (this.usbDevices == null) {
-      this.usbDevices = new ArrayList<AlertRuleCluster>();
+      this.usbDevices = new ArrayList<NameIdPair>();
     }
     this.usbDevices.add(usbDevicesItem);
     return this;
@@ -1632,12 +1632,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getUsbDevices() {
+  public List<NameIdPair> getUsbDevices() {
     return usbDevices;
   }
 
 
-  public void setUsbDevices(List<AlertRuleCluster> usbDevices) {
+  public void setUsbDevices(List<NameIdPair> usbDevices) {
     this.usbDevices = usbDevices;
   }
 
@@ -1757,15 +1757,15 @@ public class Host {
   }
 
 
-  public Host vms(List<AlertRuleCluster> vms) {
+  public Host vms(List<NameIdPair> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Host addVmsItem(AlertRuleCluster vmsItem) {
+  public Host addVmsItem(NameIdPair vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<AlertRuleCluster>();
+      this.vms = new ArrayList<NameIdPair>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -1778,12 +1778,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getVms() {
+  public List<NameIdPair> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<AlertRuleCluster> vms) {
+  public void setVms(List<NameIdPair> vms) {
     this.vms = vms;
   }
 

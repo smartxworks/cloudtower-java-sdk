@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.smartx.tower.ApiException;
-import com.smartx.tower.api.ReportTaskApi;
+import com.smartx.tower.api.ClusterTopoApi;
 import com.smartx.tower.model.*;
 
-public class ITReportTask extends ITBase {
-  ReportTaskApi api = null;
+public class ITClusterTopo extends ITBase {
+  ClusterTopoApi api = null;
   HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "reportTaskPayload")
+  @DataProvider(name = "clusterTopoPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -27,9 +27,9 @@ public class ITReportTask extends ITBase {
 
   @BeforeClass
   public void getService() throws IOException {
-    api = new ReportTaskApi(client);
+    api = new ClusterTopoApi(client);
     // get payloads from resource file
-    InputStream stream = getClass().getResourceAsStream("/ReportTask.json");
+    InputStream stream = getClass().getResourceAsStream("/ClusterTopo.json");
     if (stream == null) {
       return;
     }
@@ -38,27 +38,27 @@ public class ITReportTask extends ITBase {
   }
 
 
-  @Test(dataProvider = "reportTaskPayload")
-  public void getReportTasks(String payload) {
+  @Test(dataProvider = "clusterTopoPayload")
+  public void getClusterTopoes(String payload) {
     try {
       // parse params from json payload
-      GetReportTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTasksRequestBody>() {}.getType());
+      GetClusterTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ReportTask> result = api.getReportTasks(params, contentLanguage);
-      assertThat(result).as("check result of getReportTasks").isNotNull();
+      List<ClusterTopo> result = api.getClusterTopoes(params, contentLanguage);
+      assertThat(result).as("check result of getClusterTopoes").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "reportTaskPayload")
-  public void getReportTasksConnection(String payload) {
+  @Test(dataProvider = "clusterTopoPayload")
+  public void getClusterTopoesConnection(String payload) {
     try {
       // parse params from json payload
-      GetReportTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTasksConnectionRequestBody>() {}.getType());
+      GetClusterTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ReportTaskConnection result = api.getReportTasksConnection(params, contentLanguage);
-      assertThat(result).as("check result of getReportTasksConnection").isNotNull();
+      ClusterTopoConnection result = api.getClusterTopoesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getClusterTopoesConnection").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }

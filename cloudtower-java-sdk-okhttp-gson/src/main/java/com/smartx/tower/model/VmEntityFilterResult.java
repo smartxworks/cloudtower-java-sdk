@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,7 +34,7 @@ import java.util.List;
 public class VmEntityFilterResult {
   public static final String SERIALIZED_NAME_ENTITY_FILTER = "entityFilter";
   @SerializedName(SERIALIZED_NAME_ENTITY_FILTER)
-  private AlertRuleCluster entityFilter;
+  private NameIdPair entityFilter;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -46,10 +46,10 @@ public class VmEntityFilterResult {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertRuleCluster vm;
+  private NameIdPair vm;
 
 
-  public VmEntityFilterResult entityFilter(AlertRuleCluster entityFilter) {
+  public VmEntityFilterResult entityFilter(NameIdPair entityFilter) {
     
     this.entityFilter = entityFilter;
     return this;
@@ -62,12 +62,12 @@ public class VmEntityFilterResult {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getEntityFilter() {
+  public NameIdPair getEntityFilter() {
     return entityFilter;
   }
 
 
-  public void setEntityFilter(AlertRuleCluster entityFilter) {
+  public void setEntityFilter(NameIdPair entityFilter) {
     this.entityFilter = entityFilter;
   }
 
@@ -123,7 +123,7 @@ public class VmEntityFilterResult {
   }
 
 
-  public VmEntityFilterResult vm(AlertRuleCluster vm) {
+  public VmEntityFilterResult vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -136,12 +136,12 @@ public class VmEntityFilterResult {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertRuleCluster vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 

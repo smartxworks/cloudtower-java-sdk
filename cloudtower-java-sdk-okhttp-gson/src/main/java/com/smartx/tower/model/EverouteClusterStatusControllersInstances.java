@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EverouteClusterPhase;
 import com.smartx.tower.model.EverouteClusterStatusControllersMetrics;
 import io.swagger.annotations.ApiModel;
@@ -39,7 +39,7 @@ public class EverouteClusterStatusControllersInstances {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertRuleCluster vm;
+  private NameIdPair vm;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
   @SerializedName(SERIALIZED_NAME_REASON)
@@ -89,7 +89,7 @@ public class EverouteClusterStatusControllersInstances {
   }
 
 
-  public EverouteClusterStatusControllersInstances vm(AlertRuleCluster vm) {
+  public EverouteClusterStatusControllersInstances vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -102,12 +102,12 @@ public class EverouteClusterStatusControllersInstances {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertRuleCluster vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 

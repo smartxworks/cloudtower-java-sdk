@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.UsbDeviceStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -43,7 +42,7 @@ public class UsbDevice {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private AlertRuleCluster host;
+  private NameIdPair host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -79,7 +78,7 @@ public class UsbDevice {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private AlertDisk vm;
+  private NameIdPair vm;
 
 
   public UsbDevice binded(Boolean binded) {
@@ -128,7 +127,7 @@ public class UsbDevice {
   }
 
 
-  public UsbDevice host(AlertRuleCluster host) {
+  public UsbDevice host(NameIdPair host) {
     
     this.host = host;
     return this;
@@ -141,12 +140,12 @@ public class UsbDevice {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getHost() {
+  public NameIdPair getHost() {
     return host;
   }
 
 
-  public void setHost(AlertRuleCluster host) {
+  public void setHost(NameIdPair host) {
     this.host = host;
   }
 
@@ -335,7 +334,7 @@ public class UsbDevice {
   }
 
 
-  public UsbDevice vm(AlertDisk vm) {
+  public UsbDevice vm(NameIdPair vm) {
     
     this.vm = vm;
     return this;
@@ -348,12 +347,12 @@ public class UsbDevice {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getVm() {
+  public NameIdPair getVm() {
     return vm;
   }
 
 
-  public void setVm(AlertDisk vm) {
+  public void setVm(NameIdPair vm) {
     this.vm = vm;
   }
 

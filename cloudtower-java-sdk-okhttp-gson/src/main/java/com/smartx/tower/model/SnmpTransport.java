@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.SnmpAuthProtocol;
 import com.smartx.tower.model.SnmpPrivacyProtocol;
@@ -46,7 +46,7 @@ public class SnmpTransport {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_COMMUNITY = "community";
   @SerializedName(SERIALIZED_NAME_COMMUNITY)
@@ -143,7 +143,7 @@ public class SnmpTransport {
   }
 
 
-  public SnmpTransport cluster(AlertRuleCluster cluster) {
+  public SnmpTransport cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -156,12 +156,12 @@ public class SnmpTransport {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 

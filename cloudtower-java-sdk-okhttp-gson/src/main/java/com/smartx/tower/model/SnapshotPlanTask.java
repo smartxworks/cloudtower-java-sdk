@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertDisk;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.SnapshotPlanExecuteStatus;
 import com.smartx.tower.model.SnapshotPlanTaskType;
@@ -37,7 +36,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SnapshotPlanTask {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
@@ -61,11 +60,11 @@ public class SnapshotPlanTask {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshotGroup";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
-  private AlertDisk snapshotGroup;
+  private NameIdPair snapshotGroup;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshotPlan";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
-  private AlertRuleCluster snapshotPlan;
+  private NameIdPair snapshotPlan;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
@@ -80,7 +79,7 @@ public class SnapshotPlanTask {
   private SnapshotPlanTaskType type;
 
 
-  public SnapshotPlanTask cluster(AlertRuleCluster cluster) {
+  public SnapshotPlanTask cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -93,12 +92,12 @@ public class SnapshotPlanTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -218,7 +217,7 @@ public class SnapshotPlanTask {
   }
 
 
-  public SnapshotPlanTask snapshotGroup(AlertDisk snapshotGroup) {
+  public SnapshotPlanTask snapshotGroup(NameIdPair snapshotGroup) {
     
     this.snapshotGroup = snapshotGroup;
     return this;
@@ -231,17 +230,17 @@ public class SnapshotPlanTask {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertDisk getSnapshotGroup() {
+  public NameIdPair getSnapshotGroup() {
     return snapshotGroup;
   }
 
 
-  public void setSnapshotGroup(AlertDisk snapshotGroup) {
+  public void setSnapshotGroup(NameIdPair snapshotGroup) {
     this.snapshotGroup = snapshotGroup;
   }
 
 
-  public SnapshotPlanTask snapshotPlan(AlertRuleCluster snapshotPlan) {
+  public SnapshotPlanTask snapshotPlan(NameIdPair snapshotPlan) {
     
     this.snapshotPlan = snapshotPlan;
     return this;
@@ -254,12 +253,12 @@ public class SnapshotPlanTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getSnapshotPlan() {
+  public NameIdPair getSnapshotPlan() {
     return snapshotPlan;
   }
 
 
-  public void setSnapshotPlan(AlertRuleCluster snapshotPlan) {
+  public void setSnapshotPlan(NameIdPair snapshotPlan) {
     this.snapshotPlan = snapshotPlan;
   }
 

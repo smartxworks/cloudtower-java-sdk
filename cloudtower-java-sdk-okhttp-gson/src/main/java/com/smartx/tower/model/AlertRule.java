@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.AlertRuleThresholds;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -35,7 +35,7 @@ import java.util.List;
 public class AlertRule {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_CUSTOMIZED = "customized";
   @SerializedName(SERIALIZED_NAME_CUSTOMIZED)
@@ -47,7 +47,7 @@ public class AlertRule {
 
   public static final String SERIALIZED_NAME_GLOBAL_ALERT_RULE = "global_alert_rule";
   @SerializedName(SERIALIZED_NAME_GLOBAL_ALERT_RULE)
-  private AlertRuleCluster globalAlertRule;
+  private NameIdPair globalAlertRule;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,7 +62,7 @@ public class AlertRule {
   private List<AlertRuleThresholds> thresholds = new ArrayList<AlertRuleThresholds>();
 
 
-  public AlertRule cluster(AlertRuleCluster cluster) {
+  public AlertRule cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -75,12 +75,12 @@ public class AlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
@@ -131,7 +131,7 @@ public class AlertRule {
   }
 
 
-  public AlertRule globalAlertRule(AlertRuleCluster globalAlertRule) {
+  public AlertRule globalAlertRule(NameIdPair globalAlertRule) {
     
     this.globalAlertRule = globalAlertRule;
     return this;
@@ -144,12 +144,12 @@ public class AlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getGlobalAlertRule() {
+  public NameIdPair getGlobalAlertRule() {
     return globalAlertRule;
   }
 
 
-  public void setGlobalAlertRule(AlertRuleCluster globalAlertRule) {
+  public void setGlobalAlertRule(NameIdPair globalAlertRule) {
     this.globalAlertRule = globalAlertRule;
   }
 

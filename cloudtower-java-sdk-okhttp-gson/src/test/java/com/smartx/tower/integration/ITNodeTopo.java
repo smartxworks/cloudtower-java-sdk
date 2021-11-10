@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.smartx.tower.ApiException;
-import com.smartx.tower.api.NicApi;
+import com.smartx.tower.api.NodeTopoApi;
 import com.smartx.tower.model.*;
 
-public class ITNic extends ITBase {
-  NicApi api = null;
+public class ITNodeTopo extends ITBase {
+  NodeTopoApi api = null;
   HashMap<String, Object> payloads = new HashMap<String, Object>();
 
-  @DataProvider(name = "nicPayload")
+  @DataProvider(name = "nodeTopoPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
     return payload == null ? new Object[][] { { "{}" } } : new Object[][] { { payload.toString() } };
@@ -27,9 +27,9 @@ public class ITNic extends ITBase {
 
   @BeforeClass
   public void getService() throws IOException {
-    api = new NicApi(client);
+    api = new NodeTopoApi(client);
     // get payloads from resource file
-    InputStream stream = getClass().getResourceAsStream("/Nic.json");
+    InputStream stream = getClass().getResourceAsStream("/NodeTopo.json");
     if (stream == null) {
       return;
     }
@@ -38,40 +38,40 @@ public class ITNic extends ITBase {
   }
 
 
-  @Test(dataProvider = "nicPayload")
-  public void getNics(String payload) {
+  @Test(dataProvider = "nodeTopoPayload")
+  public void getNodeTopoes(String payload) {
     try {
       // parse params from json payload
-      GetNicsRequestBody params = gson.fromJson(payload, new TypeToken<GetNicsRequestBody>() {}.getType());
+      GetNodeTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetNodeTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Nic> result = api.getNics(params, contentLanguage);
-      assertThat(result).as("check result of getNics").isNotNull();
+      List<NodeTopo> result = api.getNodeTopoes(params, contentLanguage);
+      assertThat(result).as("check result of getNodeTopoes").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "nicPayload")
-  public void getNicsConnection(String payload) {
+  @Test(dataProvider = "nodeTopoPayload")
+  public void getNodeTopoesConnection(String payload) {
     try {
       // parse params from json payload
-      GetNicsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNicsConnectionRequestBody>() {}.getType());
+      GetNodeTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNodeTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NicConnection result = api.getNicsConnection(params, contentLanguage);
-      assertThat(result).as("check result of getNicsConnection").isNotNull();
+      NodeTopoConnection result = api.getNodeTopoesConnection(params, contentLanguage);
+      assertThat(result).as("check result of getNodeTopoesConnection").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "nicPayload")
-  public void updateNic(String payload) {
+  @Test(dataProvider = "nodeTopoPayload")
+  public void updateNodeTopo(String payload) {
     try {
       // parse params from json payload
-      NicUpdationParams params = gson.fromJson(payload, new TypeToken<NicUpdationParams>() {}.getType());
+      List<Object> params = gson.fromJson(payload, new TypeToken<List<Object>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNic> result = api.updateNic(params, contentLanguage);
-      assertThat(result).as("check result of updateNic").isNotNull();
+      List<WithTaskNodeTopo> result = api.updateNodeTopo(params, contentLanguage);
+      assertThat(result).as("check result of updateNodeTopo").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
     }

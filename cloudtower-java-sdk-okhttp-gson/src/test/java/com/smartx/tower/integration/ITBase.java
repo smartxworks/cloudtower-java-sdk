@@ -2,6 +2,7 @@ package com.smartx.tower.integration;
 
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -18,6 +19,7 @@ import org.testng.log4testng.Logger;
 
 public class ITBase {
   protected static final Logger LOGGER = Logger.getLogger(ITBase.class);
+  protected static final Long TIMEOUT = (long) (1000 * 60 * 5);
   protected static String contentLanguage = "zh-CN";
 
   public class ITConfig {
@@ -96,5 +98,128 @@ public class ITBase {
       throw new ApiException(400, "fixture data type not match");
     }
     return (R) result;
+  }
+
+  protected <TArgs, TApi, TResource> void waitForResourceAsyncStatus(TArgs args, TApi api, String func,
+      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs)
+      throws ApiException, InterruptedException, IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
+    Long start = System.currentTimeMillis();
+    TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
+        args, contentLanguage);
+    if (resource instanceof List) {
+      Object first = ((List) resource).get(0);
+      while (first != null && first.getClass().getDeclaredMethod("getEntityAsyncStatus").invoke(first) != null) {
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for async status");
+        }
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        first = ((List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage)).get(0);
+      }
+      if (first == null) {
+        throw new ApiException(404, "Resource not found");
+      }
+    } else {
+      while (resource != null
+          && classOfTResource.getClass().getDeclaredMethod("getEntityAsyncStatus").invoke(resource) != null) {
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for async status");
+        }
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage);
+      }
+      if (resource == null) {
+        throw new ApiException(404, "Resource not found");
+      }
+    }
+  }
+
+  protected <TArgs, TApi, TResource> void waitForResourceDeletion(TArgs args, TApi api, String func,
+      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs) throws IllegalAccessException,
+      IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, ApiException {
+    Long start = System.currentTimeMillis();
+    TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
+        args, contentLanguage);
+    if (resource instanceof List) {
+      while (((List) resource).size() > 0) {
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for async status");
+        }
+        Object first = ((List) resource).get(0);
+        if (first.getClass().getDeclaredMethod("getEntityAsyncStatus").invoke(first) != EntityAsyncStatus.DELETING) {
+          LOGGER.warn("Failed to delete resource");
+          return;
+        }
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage);
+      }
+    } else {
+      while (resource != null && classOfTResource.getClass().getDeclaredMethod("getEntityAsyncStatus")
+          .invoke(resource) == EntityAsyncStatus.DELETING) {
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for resource deletion");
+        }
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage);
+      }
+      if (resource != null && classOfTResource.getClass().getDeclaredMethod("getEntityAsyncStatus")
+          .invoke(resource) != EntityAsyncStatus.DELETING) {
+        LOGGER.warn("Failed to delete resource");
+      }
+    }
+  }
+
+  protected void waitForVmEntityAsyncStatus(String id, VmApi api) throws ApiException {
+    Long start = System.currentTimeMillis();
+    Vm vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage).get(0);
+    while (vm != null && vm.getEntityAsyncStatus() != null) {
+      if (System.currentTimeMillis() - start > TIMEOUT) {
+        throw new ApiException(408, "Timeout while waiting for async status");
+      }
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+      }
+      vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage).get(0);
+      LOGGER.debug(String.format("%s status: %s", vm.getName(), vm.getEntityAsyncStatus()));
+    }
+    if (vm == null) {
+      throw new ApiException(404, "VM not found");
+    }
+  }
+
+  protected void waitForVmDeletion(String id, VmApi api) throws ApiException {
+    Long start = System.currentTimeMillis();
+    List<Vm> vms = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage);
+    while (vms.size() > 0) {
+      if (System.currentTimeMillis() - start > TIMEOUT) {
+        throw new ApiException(408, "Timeout while waiting for vm deletion");
+      }
+      if (vms.get(0).getEntityAsyncStatus() != EntityAsyncStatus.DELETING) {
+        LOGGER.warn("Failed to delete vm");
+        return;
+      }
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+      }
+      vms = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage);
+    }
   }
 }

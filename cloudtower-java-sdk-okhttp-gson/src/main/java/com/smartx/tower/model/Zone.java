@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertRuleCluster;
+import com.smartx.tower.model.NameIdPair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,11 +35,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Zone {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private AlertRuleCluster cluster;
+  private NameIdPair cluster;
 
   public static final String SERIALIZED_NAME_DATACENTER = "datacenter";
   @SerializedName(SERIALIZED_NAME_DATACENTER)
-  private AlertRuleCluster datacenter;
+  private NameIdPair datacenter;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -51,7 +51,7 @@ public class Zone {
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<AlertRuleCluster> hosts = null;
+  private List<NameIdPair> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -126,7 +126,7 @@ public class Zone {
   private Double vmNum;
 
 
-  public Zone cluster(AlertRuleCluster cluster) {
+  public Zone cluster(NameIdPair cluster) {
     
     this.cluster = cluster;
     return this;
@@ -139,17 +139,17 @@ public class Zone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getCluster() {
+  public NameIdPair getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(AlertRuleCluster cluster) {
+  public void setCluster(NameIdPair cluster) {
     this.cluster = cluster;
   }
 
 
-  public Zone datacenter(AlertRuleCluster datacenter) {
+  public Zone datacenter(NameIdPair datacenter) {
     
     this.datacenter = datacenter;
     return this;
@@ -162,12 +162,12 @@ public class Zone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertRuleCluster getDatacenter() {
+  public NameIdPair getDatacenter() {
     return datacenter;
   }
 
 
-  public void setDatacenter(AlertRuleCluster datacenter) {
+  public void setDatacenter(NameIdPair datacenter) {
     this.datacenter = datacenter;
   }
 
@@ -218,15 +218,15 @@ public class Zone {
   }
 
 
-  public Zone hosts(List<AlertRuleCluster> hosts) {
+  public Zone hosts(List<NameIdPair> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Zone addHostsItem(AlertRuleCluster hostsItem) {
+  public Zone addHostsItem(NameIdPair hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<AlertRuleCluster>();
+      this.hosts = new ArrayList<NameIdPair>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -239,12 +239,12 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AlertRuleCluster> getHosts() {
+  public List<NameIdPair> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<AlertRuleCluster> hosts) {
+  public void setHosts(List<NameIdPair> hosts) {
     this.hosts = hosts;
   }
 
