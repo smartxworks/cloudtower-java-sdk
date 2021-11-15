@@ -7,12 +7,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numberHealth** | **Double** |  | 
+**numberHealth** | **Integer** |  | 
 **manageVDSes** | [**List&lt;EverouteClusterStatusAgentsManageVDSes&gt;**](EverouteClusterStatusAgentsManageVDSes.md) |  |  [optional]
 **instances** | [**List&lt;EverouteClusterStatusAgentsInstances&gt;**](EverouteClusterStatusAgentsInstances.md) |  |  [optional]
-**expectNumber** | **Double** |  | 
-**elfClusterNumber** | **Double** |  | 
-**currentNumber** | **Double** |  | 
+**expectNumber** | **Integer** |  | 
+**elfClusterNumber** | **Integer** |  | 
+**currentNumber** | **Integer** |  | 
 
 
 

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **noticeSeverities** | **List&lt;String&gt;** |  | 
 **securityMode** | [**NotifierSecurityMode**](NotifierSecurityMode.md) |  |  [optional]
 **smtpServerHost** | **String** |  |  [optional]
-**smtpServerPort** | **Double** |  |  [optional]
+**smtpServerPort** | **Integer** |  |  [optional]
 **username** | **String** |  |  [optional]
 
 

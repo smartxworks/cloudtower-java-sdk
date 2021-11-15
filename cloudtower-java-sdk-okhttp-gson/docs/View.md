@@ -7,13 +7,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
-**graphs** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**graphs** | [**List&lt;NestedGraph&gt;**](NestedGraph.md) |  |  [optional]
 **id** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**timeSpan** | **Double** |  | 
+**timeSpan** | **Integer** |  | 
 **timeUnit** | **TimeUnit** |  | 
 
 

@@ -72,35 +72,35 @@ public class UploadTaskWhereInput {
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK = "current_chunk";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK)
-  private Double currentChunk;
+  private Integer currentChunk;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_GT = "current_chunk_gt";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_GT)
-  private Double currentChunkGt;
+  private Integer currentChunkGt;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_GTE = "current_chunk_gte";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_GTE)
-  private Double currentChunkGte;
+  private Integer currentChunkGte;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_IN = "current_chunk_in";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_IN)
-  private List<Double> currentChunkIn = null;
+  private List<Integer> currentChunkIn = null;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_LT = "current_chunk_lt";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_LT)
-  private Double currentChunkLt;
+  private Integer currentChunkLt;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_LTE = "current_chunk_lte";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_LTE)
-  private Double currentChunkLte;
+  private Integer currentChunkLte;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_NOT = "current_chunk_not";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_NOT)
-  private Double currentChunkNot;
+  private Integer currentChunkNot;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK_NOT_IN = "current_chunk_not_in";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK_NOT_IN)
-  private List<Double> currentChunkNotIn = null;
+  private List<Integer> currentChunkNotIn = null;
 
   public static final String SERIALIZED_NAME_FINISHED_AT = "finished_at";
   @SerializedName(SERIALIZED_NAME_FINISHED_AT)
@@ -558,7 +558,7 @@ public class UploadTaskWhereInput {
   }
 
 
-  public UploadTaskWhereInput currentChunk(Double currentChunk) {
+  public UploadTaskWhereInput currentChunk(Integer currentChunk) {
     
     this.currentChunk = currentChunk;
     return this;
@@ -571,17 +571,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCurrentChunk() {
+  public Integer getCurrentChunk() {
     return currentChunk;
   }
 
 
-  public void setCurrentChunk(Double currentChunk) {
+  public void setCurrentChunk(Integer currentChunk) {
     this.currentChunk = currentChunk;
   }
 
 
-  public UploadTaskWhereInput currentChunkGt(Double currentChunkGt) {
+  public UploadTaskWhereInput currentChunkGt(Integer currentChunkGt) {
     
     this.currentChunkGt = currentChunkGt;
     return this;
@@ -594,17 +594,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCurrentChunkGt() {
+  public Integer getCurrentChunkGt() {
     return currentChunkGt;
   }
 
 
-  public void setCurrentChunkGt(Double currentChunkGt) {
+  public void setCurrentChunkGt(Integer currentChunkGt) {
     this.currentChunkGt = currentChunkGt;
   }
 
 
-  public UploadTaskWhereInput currentChunkGte(Double currentChunkGte) {
+  public UploadTaskWhereInput currentChunkGte(Integer currentChunkGte) {
     
     this.currentChunkGte = currentChunkGte;
     return this;
@@ -617,25 +617,25 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCurrentChunkGte() {
+  public Integer getCurrentChunkGte() {
     return currentChunkGte;
   }
 
 
-  public void setCurrentChunkGte(Double currentChunkGte) {
+  public void setCurrentChunkGte(Integer currentChunkGte) {
     this.currentChunkGte = currentChunkGte;
   }
 
 
-  public UploadTaskWhereInput currentChunkIn(List<Double> currentChunkIn) {
+  public UploadTaskWhereInput currentChunkIn(List<Integer> currentChunkIn) {
     
     this.currentChunkIn = currentChunkIn;
     return this;
   }
 
-  public UploadTaskWhereInput addCurrentChunkInItem(Double currentChunkInItem) {
+  public UploadTaskWhereInput addCurrentChunkInItem(Integer currentChunkInItem) {
     if (this.currentChunkIn == null) {
-      this.currentChunkIn = new ArrayList<Double>();
+      this.currentChunkIn = new ArrayList<Integer>();
     }
     this.currentChunkIn.add(currentChunkInItem);
     return this;
@@ -648,17 +648,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getCurrentChunkIn() {
+  public List<Integer> getCurrentChunkIn() {
     return currentChunkIn;
   }
 
 
-  public void setCurrentChunkIn(List<Double> currentChunkIn) {
+  public void setCurrentChunkIn(List<Integer> currentChunkIn) {
     this.currentChunkIn = currentChunkIn;
   }
 
 
-  public UploadTaskWhereInput currentChunkLt(Double currentChunkLt) {
+  public UploadTaskWhereInput currentChunkLt(Integer currentChunkLt) {
     
     this.currentChunkLt = currentChunkLt;
     return this;
@@ -671,17 +671,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCurrentChunkLt() {
+  public Integer getCurrentChunkLt() {
     return currentChunkLt;
   }
 
 
-  public void setCurrentChunkLt(Double currentChunkLt) {
+  public void setCurrentChunkLt(Integer currentChunkLt) {
     this.currentChunkLt = currentChunkLt;
   }
 
 
-  public UploadTaskWhereInput currentChunkLte(Double currentChunkLte) {
+  public UploadTaskWhereInput currentChunkLte(Integer currentChunkLte) {
     
     this.currentChunkLte = currentChunkLte;
     return this;
@@ -694,17 +694,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCurrentChunkLte() {
+  public Integer getCurrentChunkLte() {
     return currentChunkLte;
   }
 
 
-  public void setCurrentChunkLte(Double currentChunkLte) {
+  public void setCurrentChunkLte(Integer currentChunkLte) {
     this.currentChunkLte = currentChunkLte;
   }
 
 
-  public UploadTaskWhereInput currentChunkNot(Double currentChunkNot) {
+  public UploadTaskWhereInput currentChunkNot(Integer currentChunkNot) {
     
     this.currentChunkNot = currentChunkNot;
     return this;
@@ -717,25 +717,25 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCurrentChunkNot() {
+  public Integer getCurrentChunkNot() {
     return currentChunkNot;
   }
 
 
-  public void setCurrentChunkNot(Double currentChunkNot) {
+  public void setCurrentChunkNot(Integer currentChunkNot) {
     this.currentChunkNot = currentChunkNot;
   }
 
 
-  public UploadTaskWhereInput currentChunkNotIn(List<Double> currentChunkNotIn) {
+  public UploadTaskWhereInput currentChunkNotIn(List<Integer> currentChunkNotIn) {
     
     this.currentChunkNotIn = currentChunkNotIn;
     return this;
   }
 
-  public UploadTaskWhereInput addCurrentChunkNotInItem(Double currentChunkNotInItem) {
+  public UploadTaskWhereInput addCurrentChunkNotInItem(Integer currentChunkNotInItem) {
     if (this.currentChunkNotIn == null) {
-      this.currentChunkNotIn = new ArrayList<Double>();
+      this.currentChunkNotIn = new ArrayList<Integer>();
     }
     this.currentChunkNotIn.add(currentChunkNotInItem);
     return this;
@@ -748,12 +748,12 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getCurrentChunkNotIn() {
+  public List<Integer> getCurrentChunkNotIn() {
     return currentChunkNotIn;
   }
 
 
-  public void setCurrentChunkNotIn(List<Double> currentChunkNotIn) {
+  public void setCurrentChunkNotIn(List<Integer> currentChunkNotIn) {
     this.currentChunkNotIn = currentChunkNotIn;
   }
 

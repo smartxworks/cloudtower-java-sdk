@@ -7,12 +7,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**applyTo** | [**List&lt;SecurityPolicyApplyTo&gt;**](SecurityPolicyApplyTo.md) |  | 
+**applyTo** | [**List&lt;NestedSecurityPolicyApply&gt;**](NestedSecurityPolicyApply.md) |  | 
 **description** | **String** |  | 
-**egress** | [**List&lt;IsolationPolicyEgress&gt;**](IsolationPolicyEgress.md) |  |  [optional]
-**everouteCluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**egress** | [**List&lt;NestedNetworkPolicyRule&gt;**](NestedNetworkPolicyRule.md) |  |  [optional]
+**everouteCluster** | [**NestedEverouteCluster**](NestedEverouteCluster.md) |  | 
 **id** | **String** |  | 
-**ingress** | [**List&lt;IsolationPolicyEgress&gt;**](IsolationPolicyEgress.md) |  |  [optional]
+**ingress** | [**List&lt;NestedNetworkPolicyRule&gt;**](NestedNetworkPolicyRule.md) |  |  [optional]
 **name** | **String** |  | 
 
 

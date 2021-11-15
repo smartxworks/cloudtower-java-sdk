@@ -20,7 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedUser;
 import com.smartx.tower.model.UserAuditLogStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +39,7 @@ public class UserAuditLog {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -74,7 +75,7 @@ public class UserAuditLog {
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
-  private NameIdPair user;
+  private NestedUser user;
 
 
   public UserAuditLog action(String action) {
@@ -100,7 +101,7 @@ public class UserAuditLog {
   }
 
 
-  public UserAuditLog cluster(NameIdPair cluster) {
+  public UserAuditLog cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -113,12 +114,12 @@ public class UserAuditLog {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -307,7 +308,7 @@ public class UserAuditLog {
   }
 
 
-  public UserAuditLog user(NameIdPair user) {
+  public UserAuditLog user(NestedUser user) {
     
     this.user = user;
     return this;
@@ -320,12 +321,12 @@ public class UserAuditLog {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getUser() {
+  public NestedUser getUser() {
     return user;
   }
 
 
-  public void setUser(NameIdPair user) {
+  public void setUser(NestedUser user) {
     this.user = user;
   }
 

@@ -7,10 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**row** | **Double** |  | 
+**row** | **Integer** |  | 
 **phase** | **BrickPhaseEnum** |  | 
 **direction** | **Direction** |  | 
-**column** | **Double** |  | 
+**column** | **Integer** |  | 
 
 
 

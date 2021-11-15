@@ -36,7 +36,7 @@ public class ViewUpdationParamsData {
 
   public static final String SERIALIZED_NAME_TIME_SPAN = "time_span";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN)
-  private Double timeSpan;
+  private Integer timeSpan;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -66,7 +66,7 @@ public class ViewUpdationParamsData {
   }
 
 
-  public ViewUpdationParamsData timeSpan(Double timeSpan) {
+  public ViewUpdationParamsData timeSpan(Integer timeSpan) {
     
     this.timeSpan = timeSpan;
     return this;
@@ -79,12 +79,12 @@ public class ViewUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpan() {
+  public Integer getTimeSpan() {
     return timeSpan;
   }
 
 
-  public void setTimeSpan(Double timeSpan) {
+  public void setTimeSpan(Integer timeSpan) {
     this.timeSpan = timeSpan;
   }
 

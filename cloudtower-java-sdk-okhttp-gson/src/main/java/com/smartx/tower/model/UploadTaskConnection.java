@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertNotifierConnectionAggregate;
+import com.smartx.tower.model.NestedAggregateUploadTask;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -32,10 +32,10 @@ import java.io.IOException;
 public class UploadTaskConnection {
   public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
   @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private AlertNotifierConnectionAggregate aggregate;
+  private NestedAggregateUploadTask aggregate;
 
 
-  public UploadTaskConnection aggregate(AlertNotifierConnectionAggregate aggregate) {
+  public UploadTaskConnection aggregate(NestedAggregateUploadTask aggregate) {
     
     this.aggregate = aggregate;
     return this;
@@ -48,12 +48,12 @@ public class UploadTaskConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertNotifierConnectionAggregate getAggregate() {
+  public NestedAggregateUploadTask getAggregate() {
     return aggregate;
   }
 
 
-  public void setAggregate(AlertNotifierConnectionAggregate aggregate) {
+  public void setAggregate(NestedAggregateUploadTask aggregate) {
     this.aggregate = aggregate;
   }
 

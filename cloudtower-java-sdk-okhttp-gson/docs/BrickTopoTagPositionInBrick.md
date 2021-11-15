@@ -8,8 +8,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **String** |  | 
-**row** | **Double** |  | 
-**column** | **Double** |  | 
+**row** | **Integer** |  | 
+**column** | **Integer** |  | 
 
 
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertNotifierConnectionAggregate;
+import com.smartx.tower.model.NestedAggregateEverouteCluster;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -32,10 +32,10 @@ import java.io.IOException;
 public class EverouteClusterConnection {
   public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
   @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private AlertNotifierConnectionAggregate aggregate;
+  private NestedAggregateEverouteCluster aggregate;
 
 
-  public EverouteClusterConnection aggregate(AlertNotifierConnectionAggregate aggregate) {
+  public EverouteClusterConnection aggregate(NestedAggregateEverouteCluster aggregate) {
     
     this.aggregate = aggregate;
     return this;
@@ -48,12 +48,12 @@ public class EverouteClusterConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertNotifierConnectionAggregate getAggregate() {
+  public NestedAggregateEverouteCluster getAggregate() {
     return aggregate;
   }
 
 
-  public void setAggregate(AlertNotifierConnectionAggregate aggregate) {
+  public void setAggregate(NestedAggregateEverouteCluster aggregate) {
     this.aggregate = aggregate;
   }
 

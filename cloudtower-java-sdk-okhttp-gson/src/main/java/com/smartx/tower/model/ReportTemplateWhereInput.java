@@ -303,35 +303,35 @@ public class ReportTemplateWhereInput {
 
   public static final String SERIALIZED_NAME_TASK_NUM = "task_num";
   @SerializedName(SERIALIZED_NAME_TASK_NUM)
-  private Double taskNum;
+  private Integer taskNum;
 
   public static final String SERIALIZED_NAME_TASK_NUM_GT = "task_num_gt";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_GT)
-  private Double taskNumGt;
+  private Integer taskNumGt;
 
   public static final String SERIALIZED_NAME_TASK_NUM_GTE = "task_num_gte";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_GTE)
-  private Double taskNumGte;
+  private Integer taskNumGte;
 
   public static final String SERIALIZED_NAME_TASK_NUM_IN = "task_num_in";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_IN)
-  private List<Double> taskNumIn = null;
+  private List<Integer> taskNumIn = null;
 
   public static final String SERIALIZED_NAME_TASK_NUM_LT = "task_num_lt";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_LT)
-  private Double taskNumLt;
+  private Integer taskNumLt;
 
   public static final String SERIALIZED_NAME_TASK_NUM_LTE = "task_num_lte";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_LTE)
-  private Double taskNumLte;
+  private Integer taskNumLte;
 
   public static final String SERIALIZED_NAME_TASK_NUM_NOT = "task_num_not";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_NOT)
-  private Double taskNumNot;
+  private Integer taskNumNot;
 
   public static final String SERIALIZED_NAME_TASK_NUM_NOT_IN = "task_num_not_in";
   @SerializedName(SERIALIZED_NAME_TASK_NUM_NOT_IN)
-  private List<Double> taskNumNotIn = null;
+  private List<Integer> taskNumNotIn = null;
 
   public static final String SERIALIZED_NAME_TASKS_EVERY = "tasks_every";
   @SerializedName(SERIALIZED_NAME_TASKS_EVERY)
@@ -1991,7 +1991,7 @@ public class ReportTemplateWhereInput {
   }
 
 
-  public ReportTemplateWhereInput taskNum(Double taskNum) {
+  public ReportTemplateWhereInput taskNum(Integer taskNum) {
     
     this.taskNum = taskNum;
     return this;
@@ -2004,17 +2004,17 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTaskNum() {
+  public Integer getTaskNum() {
     return taskNum;
   }
 
 
-  public void setTaskNum(Double taskNum) {
+  public void setTaskNum(Integer taskNum) {
     this.taskNum = taskNum;
   }
 
 
-  public ReportTemplateWhereInput taskNumGt(Double taskNumGt) {
+  public ReportTemplateWhereInput taskNumGt(Integer taskNumGt) {
     
     this.taskNumGt = taskNumGt;
     return this;
@@ -2027,17 +2027,17 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTaskNumGt() {
+  public Integer getTaskNumGt() {
     return taskNumGt;
   }
 
 
-  public void setTaskNumGt(Double taskNumGt) {
+  public void setTaskNumGt(Integer taskNumGt) {
     this.taskNumGt = taskNumGt;
   }
 
 
-  public ReportTemplateWhereInput taskNumGte(Double taskNumGte) {
+  public ReportTemplateWhereInput taskNumGte(Integer taskNumGte) {
     
     this.taskNumGte = taskNumGte;
     return this;
@@ -2050,25 +2050,25 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTaskNumGte() {
+  public Integer getTaskNumGte() {
     return taskNumGte;
   }
 
 
-  public void setTaskNumGte(Double taskNumGte) {
+  public void setTaskNumGte(Integer taskNumGte) {
     this.taskNumGte = taskNumGte;
   }
 
 
-  public ReportTemplateWhereInput taskNumIn(List<Double> taskNumIn) {
+  public ReportTemplateWhereInput taskNumIn(List<Integer> taskNumIn) {
     
     this.taskNumIn = taskNumIn;
     return this;
   }
 
-  public ReportTemplateWhereInput addTaskNumInItem(Double taskNumInItem) {
+  public ReportTemplateWhereInput addTaskNumInItem(Integer taskNumInItem) {
     if (this.taskNumIn == null) {
-      this.taskNumIn = new ArrayList<Double>();
+      this.taskNumIn = new ArrayList<Integer>();
     }
     this.taskNumIn.add(taskNumInItem);
     return this;
@@ -2081,17 +2081,17 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTaskNumIn() {
+  public List<Integer> getTaskNumIn() {
     return taskNumIn;
   }
 
 
-  public void setTaskNumIn(List<Double> taskNumIn) {
+  public void setTaskNumIn(List<Integer> taskNumIn) {
     this.taskNumIn = taskNumIn;
   }
 
 
-  public ReportTemplateWhereInput taskNumLt(Double taskNumLt) {
+  public ReportTemplateWhereInput taskNumLt(Integer taskNumLt) {
     
     this.taskNumLt = taskNumLt;
     return this;
@@ -2104,17 +2104,17 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTaskNumLt() {
+  public Integer getTaskNumLt() {
     return taskNumLt;
   }
 
 
-  public void setTaskNumLt(Double taskNumLt) {
+  public void setTaskNumLt(Integer taskNumLt) {
     this.taskNumLt = taskNumLt;
   }
 
 
-  public ReportTemplateWhereInput taskNumLte(Double taskNumLte) {
+  public ReportTemplateWhereInput taskNumLte(Integer taskNumLte) {
     
     this.taskNumLte = taskNumLte;
     return this;
@@ -2127,17 +2127,17 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTaskNumLte() {
+  public Integer getTaskNumLte() {
     return taskNumLte;
   }
 
 
-  public void setTaskNumLte(Double taskNumLte) {
+  public void setTaskNumLte(Integer taskNumLte) {
     this.taskNumLte = taskNumLte;
   }
 
 
-  public ReportTemplateWhereInput taskNumNot(Double taskNumNot) {
+  public ReportTemplateWhereInput taskNumNot(Integer taskNumNot) {
     
     this.taskNumNot = taskNumNot;
     return this;
@@ -2150,25 +2150,25 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTaskNumNot() {
+  public Integer getTaskNumNot() {
     return taskNumNot;
   }
 
 
-  public void setTaskNumNot(Double taskNumNot) {
+  public void setTaskNumNot(Integer taskNumNot) {
     this.taskNumNot = taskNumNot;
   }
 
 
-  public ReportTemplateWhereInput taskNumNotIn(List<Double> taskNumNotIn) {
+  public ReportTemplateWhereInput taskNumNotIn(List<Integer> taskNumNotIn) {
     
     this.taskNumNotIn = taskNumNotIn;
     return this;
   }
 
-  public ReportTemplateWhereInput addTaskNumNotInItem(Double taskNumNotInItem) {
+  public ReportTemplateWhereInput addTaskNumNotInItem(Integer taskNumNotInItem) {
     if (this.taskNumNotIn == null) {
-      this.taskNumNotIn = new ArrayList<Double>();
+      this.taskNumNotIn = new ArrayList<Integer>();
     }
     this.taskNumNotIn.add(taskNumNotInItem);
     return this;
@@ -2181,12 +2181,12 @@ public class ReportTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTaskNumNotIn() {
+  public List<Integer> getTaskNumNotIn() {
     return taskNumNotIn;
   }
 
 
-  public void setTaskNumNotIn(List<Double> taskNumNotIn) {
+  public void setTaskNumNotIn(List<Integer> taskNumNotIn) {
     this.taskNumNotIn = taskNumNotIn;
   }
 

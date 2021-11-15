@@ -52,7 +52,7 @@ public class DiscoveredHostIfaces {
 
   public static final String SERIALIZED_NAME_MTU = "mtu";
   @SerializedName(SERIALIZED_NAME_MTU)
-  private Double mtu;
+  private Integer mtu;
 
   public static final String SERIALIZED_NAME_MAC_ADDRESS = "mac_address";
   @SerializedName(SERIALIZED_NAME_MAC_ADDRESS)
@@ -182,7 +182,7 @@ public class DiscoveredHostIfaces {
   }
 
 
-  public DiscoveredHostIfaces mtu(Double mtu) {
+  public DiscoveredHostIfaces mtu(Integer mtu) {
     
     this.mtu = mtu;
     return this;
@@ -195,12 +195,12 @@ public class DiscoveredHostIfaces {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMtu() {
+  public Integer getMtu() {
     return mtu;
   }
 
 
-  public void setMtu(Double mtu) {
+  public void setMtu(Integer mtu) {
     this.mtu = mtu;
   }
 

@@ -491,35 +491,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT = "hdd_disk_count";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT)
-  private Double hddDiskCount;
+  private Integer hddDiskCount;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_GT = "hdd_disk_count_gt";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_GT)
-  private Double hddDiskCountGt;
+  private Integer hddDiskCountGt;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_GTE = "hdd_disk_count_gte";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_GTE)
-  private Double hddDiskCountGte;
+  private Integer hddDiskCountGte;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_IN = "hdd_disk_count_in";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_IN)
-  private List<Double> hddDiskCountIn = null;
+  private List<Integer> hddDiskCountIn = null;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_LT = "hdd_disk_count_lt";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_LT)
-  private Double hddDiskCountLt;
+  private Integer hddDiskCountLt;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_LTE = "hdd_disk_count_lte";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_LTE)
-  private Double hddDiskCountLte;
+  private Integer hddDiskCountLte;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_NOT = "hdd_disk_count_not";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_NOT)
-  private Double hddDiskCountNot;
+  private Integer hddDiskCountNot;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT_NOT_IN = "hdd_disk_count_not_in";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT_NOT_IN)
-  private List<Double> hddDiskCountNotIn = null;
+  private List<Integer> hddDiskCountNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -843,35 +843,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_NIC_COUNT = "nic_count";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT)
-  private Double nicCount;
+  private Integer nicCount;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_GT = "nic_count_gt";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_GT)
-  private Double nicCountGt;
+  private Integer nicCountGt;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_GTE = "nic_count_gte";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_GTE)
-  private Double nicCountGte;
+  private Integer nicCountGte;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_IN = "nic_count_in";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_IN)
-  private List<Double> nicCountIn = null;
+  private List<Integer> nicCountIn = null;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_LT = "nic_count_lt";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_LT)
-  private Double nicCountLt;
+  private Integer nicCountLt;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_LTE = "nic_count_lte";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_LTE)
-  private Double nicCountLte;
+  private Integer nicCountLte;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_NOT = "nic_count_not";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_NOT)
-  private Double nicCountNot;
+  private Integer nicCountNot;
 
   public static final String SERIALIZED_NAME_NIC_COUNT_NOT_IN = "nic_count_not_in";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT_NOT_IN)
-  private List<Double> nicCountNotIn = null;
+  private List<Integer> nicCountNotIn = null;
 
   public static final String SERIALIZED_NAME_NICS_EVERY = "nics_every";
   @SerializedName(SERIALIZED_NAME_NICS_EVERY)
@@ -1071,35 +1071,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT = "pmem_dimm_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT)
-  private Double pmemDimmCount;
+  private Integer pmemDimmCount;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_GT = "pmem_dimm_count_gt";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_GT)
-  private Double pmemDimmCountGt;
+  private Integer pmemDimmCountGt;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_GTE = "pmem_dimm_count_gte";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_GTE)
-  private Double pmemDimmCountGte;
+  private Integer pmemDimmCountGte;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_IN = "pmem_dimm_count_in";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_IN)
-  private List<Double> pmemDimmCountIn = null;
+  private List<Integer> pmemDimmCountIn = null;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_LT = "pmem_dimm_count_lt";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_LT)
-  private Double pmemDimmCountLt;
+  private Integer pmemDimmCountLt;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_LTE = "pmem_dimm_count_lte";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_LTE)
-  private Double pmemDimmCountLte;
+  private Integer pmemDimmCountLte;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_NOT = "pmem_dimm_count_not";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_NOT)
-  private Double pmemDimmCountNot;
+  private Integer pmemDimmCountNot;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT_NOT_IN = "pmem_dimm_count_not_in";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT_NOT_IN)
-  private List<Double> pmemDimmCountNotIn = null;
+  private List<Integer> pmemDimmCountNotIn = null;
 
   public static final String SERIALIZED_NAME_PMEM_DIMMS_EVERY = "pmem_dimms_every";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMMS_EVERY)
@@ -1115,67 +1115,67 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT = "pmem_disk_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT)
-  private Double pmemDiskCount;
+  private Integer pmemDiskCount;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_GT = "pmem_disk_count_gt";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_GT)
-  private Double pmemDiskCountGt;
+  private Integer pmemDiskCountGt;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_GTE = "pmem_disk_count_gte";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_GTE)
-  private Double pmemDiskCountGte;
+  private Integer pmemDiskCountGte;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_IN = "pmem_disk_count_in";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_IN)
-  private List<Double> pmemDiskCountIn = null;
+  private List<Integer> pmemDiskCountIn = null;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_LT = "pmem_disk_count_lt";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_LT)
-  private Double pmemDiskCountLt;
+  private Integer pmemDiskCountLt;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_LTE = "pmem_disk_count_lte";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_LTE)
-  private Double pmemDiskCountLte;
+  private Integer pmemDiskCountLte;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_NOT = "pmem_disk_count_not";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_NOT)
-  private Double pmemDiskCountNot;
+  private Integer pmemDiskCountNot;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT_NOT_IN = "pmem_disk_count_not_in";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_NOT_IN)
-  private List<Double> pmemDiskCountNotIn = null;
+  private List<Integer> pmemDiskCountNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES)
-  private Double provisionedCpuCores;
+  private Integer provisionedCpuCores;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_GT = "provisioned_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_GT)
-  private Double provisionedCpuCoresGt;
+  private Integer provisionedCpuCoresGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_GTE = "provisioned_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_GTE)
-  private Double provisionedCpuCoresGte;
+  private Integer provisionedCpuCoresGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_IN = "provisioned_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_IN)
-  private List<Double> provisionedCpuCoresIn = null;
+  private List<Integer> provisionedCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_LT = "provisioned_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_LT)
-  private Double provisionedCpuCoresLt;
+  private Integer provisionedCpuCoresLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_LTE = "provisioned_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_LTE)
-  private Double provisionedCpuCoresLte;
+  private Integer provisionedCpuCoresLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT = "provisioned_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT)
-  private Double provisionedCpuCoresNot;
+  private Integer provisionedCpuCoresNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT_IN = "provisioned_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT_IN)
-  private List<Double> provisionedCpuCoresNotIn = null;
+  private List<Integer> provisionedCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
@@ -1243,35 +1243,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
-  private Double runningVmNum;
+  private Integer runningVmNum;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_GT = "running_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_GT)
-  private Double runningVmNumGt;
+  private Integer runningVmNumGt;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_GTE = "running_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_GTE)
-  private Double runningVmNumGte;
+  private Integer runningVmNumGte;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_IN = "running_vm_num_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_IN)
-  private List<Double> runningVmNumIn = null;
+  private List<Integer> runningVmNumIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_LT = "running_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_LT)
-  private Double runningVmNumLt;
+  private Integer runningVmNumLt;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_LTE = "running_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_LTE)
-  private Double runningVmNumLte;
+  private Integer runningVmNumLte;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_NOT = "running_vm_num_not";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_NOT)
-  private Double runningVmNumNot;
+  private Integer runningVmNumNot;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_NOT_IN = "running_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_NOT_IN)
-  private List<Double> runningVmNumNotIn = null;
+  private List<Integer> runningVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SCVM_CPU = "scvm_cpu";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU)
@@ -1483,35 +1483,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT = "ssd_disk_count";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT)
-  private Double ssdDiskCount;
+  private Integer ssdDiskCount;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_GT = "ssd_disk_count_gt";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_GT)
-  private Double ssdDiskCountGt;
+  private Integer ssdDiskCountGt;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_GTE = "ssd_disk_count_gte";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_GTE)
-  private Double ssdDiskCountGte;
+  private Integer ssdDiskCountGte;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_IN = "ssd_disk_count_in";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_IN)
-  private List<Double> ssdDiskCountIn = null;
+  private List<Integer> ssdDiskCountIn = null;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_LT = "ssd_disk_count_lt";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_LT)
-  private Double ssdDiskCountLt;
+  private Integer ssdDiskCountLt;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_LTE = "ssd_disk_count_lte";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_LTE)
-  private Double ssdDiskCountLte;
+  private Integer ssdDiskCountLte;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_NOT = "ssd_disk_count_not";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_NOT)
-  private Double ssdDiskCountNot;
+  private Integer ssdDiskCountNot;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT_NOT_IN = "ssd_disk_count_not_in";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT_NOT_IN)
-  private List<Double> ssdDiskCountNotIn = null;
+  private List<Integer> ssdDiskCountNotIn = null;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
@@ -1547,67 +1547,67 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM = "stopped_vm_num";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM)
-  private Double stoppedVmNum;
+  private Integer stoppedVmNum;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_GT = "stopped_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_GT)
-  private Double stoppedVmNumGt;
+  private Integer stoppedVmNumGt;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_GTE = "stopped_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_GTE)
-  private Double stoppedVmNumGte;
+  private Integer stoppedVmNumGte;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_IN = "stopped_vm_num_in";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_IN)
-  private List<Double> stoppedVmNumIn = null;
+  private List<Integer> stoppedVmNumIn = null;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_LT = "stopped_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_LT)
-  private Double stoppedVmNumLt;
+  private Integer stoppedVmNumLt;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_LTE = "stopped_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_LTE)
-  private Double stoppedVmNumLte;
+  private Integer stoppedVmNumLte;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_NOT = "stopped_vm_num_not";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_NOT)
-  private Double stoppedVmNumNot;
+  private Integer stoppedVmNumNot;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_NOT_IN = "stopped_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_NOT_IN)
-  private List<Double> stoppedVmNumNotIn = null;
+  private List<Integer> stoppedVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM = "suspended_vm_num";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM)
-  private Double suspendedVmNum;
+  private Integer suspendedVmNum;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_GT = "suspended_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_GT)
-  private Double suspendedVmNumGt;
+  private Integer suspendedVmNumGt;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_GTE = "suspended_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_GTE)
-  private Double suspendedVmNumGte;
+  private Integer suspendedVmNumGte;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_IN = "suspended_vm_num_in";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_IN)
-  private List<Double> suspendedVmNumIn = null;
+  private List<Integer> suspendedVmNumIn = null;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_LT = "suspended_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_LT)
-  private Double suspendedVmNumLt;
+  private Integer suspendedVmNumLt;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_LTE = "suspended_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_LTE)
-  private Double suspendedVmNumLte;
+  private Integer suspendedVmNumLte;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT = "suspended_vm_num_not";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT)
-  private Double suspendedVmNumNot;
+  private Integer suspendedVmNumNot;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT_IN = "suspended_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT_IN)
-  private List<Double> suspendedVmNumNotIn = null;
+  private List<Integer> suspendedVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
@@ -1643,35 +1643,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GT = "total_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GT)
-  private Double totalCpuCoresGt;
+  private Integer totalCpuCoresGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GTE = "total_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GTE)
-  private Double totalCpuCoresGte;
+  private Integer totalCpuCoresGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_IN = "total_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_IN)
-  private List<Double> totalCpuCoresIn = null;
+  private List<Integer> totalCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LT = "total_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LT)
-  private Double totalCpuCoresLt;
+  private Integer totalCpuCoresLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LTE = "total_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LTE)
-  private Double totalCpuCoresLte;
+  private Integer totalCpuCoresLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT = "total_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT)
-  private Double totalCpuCoresNot;
+  private Integer totalCpuCoresNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN = "total_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN)
-  private List<Double> totalCpuCoresNotIn = null;
+  private List<Integer> totalCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -1707,35 +1707,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
-  private Double totalCpuSockets;
+  private Integer totalCpuSockets;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GT = "total_cpu_sockets_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GT)
-  private Double totalCpuSocketsGt;
+  private Integer totalCpuSocketsGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GTE = "total_cpu_sockets_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GTE)
-  private Double totalCpuSocketsGte;
+  private Integer totalCpuSocketsGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_IN = "total_cpu_sockets_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_IN)
-  private List<Double> totalCpuSocketsIn = null;
+  private List<Integer> totalCpuSocketsIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LT = "total_cpu_sockets_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LT)
-  private Double totalCpuSocketsLt;
+  private Integer totalCpuSocketsLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LTE = "total_cpu_sockets_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LTE)
-  private Double totalCpuSocketsLte;
+  private Integer totalCpuSocketsLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT = "total_cpu_sockets_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT)
-  private Double totalCpuSocketsNot;
+  private Integer totalCpuSocketsNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT_IN = "total_cpu_sockets_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT_IN)
-  private List<Double> totalCpuSocketsNotIn = null;
+  private List<Integer> totalCpuSocketsNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
@@ -1911,35 +1911,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_NUM_GT = "vm_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GT)
-  private Double vmNumGt;
+  private Integer vmNumGt;
 
   public static final String SERIALIZED_NAME_VM_NUM_GTE = "vm_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GTE)
-  private Double vmNumGte;
+  private Integer vmNumGte;
 
   public static final String SERIALIZED_NAME_VM_NUM_IN = "vm_num_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_IN)
-  private List<Double> vmNumIn = null;
+  private List<Integer> vmNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM_LT = "vm_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LT)
-  private Double vmNumLt;
+  private Integer vmNumLt;
 
   public static final String SERIALIZED_NAME_VM_NUM_LTE = "vm_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LTE)
-  private Double vmNumLte;
+  private Integer vmNumLte;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT = "vm_num_not";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT)
-  private Double vmNumNot;
+  private Integer vmNumNot;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT_IN = "vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT_IN)
-  private List<Double> vmNumNotIn = null;
+  private List<Integer> vmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VMOTION_IP = "vmotion_ip";
   @SerializedName(SERIALIZED_NAME_VMOTION_IP)
@@ -4747,7 +4747,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput hddDiskCount(Double hddDiskCount) {
+  public HostWhereInput hddDiskCount(Integer hddDiskCount) {
     
     this.hddDiskCount = hddDiskCount;
     return this;
@@ -4760,17 +4760,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDiskCount() {
+  public Integer getHddDiskCount() {
     return hddDiskCount;
   }
 
 
-  public void setHddDiskCount(Double hddDiskCount) {
+  public void setHddDiskCount(Integer hddDiskCount) {
     this.hddDiskCount = hddDiskCount;
   }
 
 
-  public HostWhereInput hddDiskCountGt(Double hddDiskCountGt) {
+  public HostWhereInput hddDiskCountGt(Integer hddDiskCountGt) {
     
     this.hddDiskCountGt = hddDiskCountGt;
     return this;
@@ -4783,17 +4783,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDiskCountGt() {
+  public Integer getHddDiskCountGt() {
     return hddDiskCountGt;
   }
 
 
-  public void setHddDiskCountGt(Double hddDiskCountGt) {
+  public void setHddDiskCountGt(Integer hddDiskCountGt) {
     this.hddDiskCountGt = hddDiskCountGt;
   }
 
 
-  public HostWhereInput hddDiskCountGte(Double hddDiskCountGte) {
+  public HostWhereInput hddDiskCountGte(Integer hddDiskCountGte) {
     
     this.hddDiskCountGte = hddDiskCountGte;
     return this;
@@ -4806,25 +4806,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDiskCountGte() {
+  public Integer getHddDiskCountGte() {
     return hddDiskCountGte;
   }
 
 
-  public void setHddDiskCountGte(Double hddDiskCountGte) {
+  public void setHddDiskCountGte(Integer hddDiskCountGte) {
     this.hddDiskCountGte = hddDiskCountGte;
   }
 
 
-  public HostWhereInput hddDiskCountIn(List<Double> hddDiskCountIn) {
+  public HostWhereInput hddDiskCountIn(List<Integer> hddDiskCountIn) {
     
     this.hddDiskCountIn = hddDiskCountIn;
     return this;
   }
 
-  public HostWhereInput addHddDiskCountInItem(Double hddDiskCountInItem) {
+  public HostWhereInput addHddDiskCountInItem(Integer hddDiskCountInItem) {
     if (this.hddDiskCountIn == null) {
-      this.hddDiskCountIn = new ArrayList<Double>();
+      this.hddDiskCountIn = new ArrayList<Integer>();
     }
     this.hddDiskCountIn.add(hddDiskCountInItem);
     return this;
@@ -4837,17 +4837,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHddDiskCountIn() {
+  public List<Integer> getHddDiskCountIn() {
     return hddDiskCountIn;
   }
 
 
-  public void setHddDiskCountIn(List<Double> hddDiskCountIn) {
+  public void setHddDiskCountIn(List<Integer> hddDiskCountIn) {
     this.hddDiskCountIn = hddDiskCountIn;
   }
 
 
-  public HostWhereInput hddDiskCountLt(Double hddDiskCountLt) {
+  public HostWhereInput hddDiskCountLt(Integer hddDiskCountLt) {
     
     this.hddDiskCountLt = hddDiskCountLt;
     return this;
@@ -4860,17 +4860,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDiskCountLt() {
+  public Integer getHddDiskCountLt() {
     return hddDiskCountLt;
   }
 
 
-  public void setHddDiskCountLt(Double hddDiskCountLt) {
+  public void setHddDiskCountLt(Integer hddDiskCountLt) {
     this.hddDiskCountLt = hddDiskCountLt;
   }
 
 
-  public HostWhereInput hddDiskCountLte(Double hddDiskCountLte) {
+  public HostWhereInput hddDiskCountLte(Integer hddDiskCountLte) {
     
     this.hddDiskCountLte = hddDiskCountLte;
     return this;
@@ -4883,17 +4883,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDiskCountLte() {
+  public Integer getHddDiskCountLte() {
     return hddDiskCountLte;
   }
 
 
-  public void setHddDiskCountLte(Double hddDiskCountLte) {
+  public void setHddDiskCountLte(Integer hddDiskCountLte) {
     this.hddDiskCountLte = hddDiskCountLte;
   }
 
 
-  public HostWhereInput hddDiskCountNot(Double hddDiskCountNot) {
+  public HostWhereInput hddDiskCountNot(Integer hddDiskCountNot) {
     
     this.hddDiskCountNot = hddDiskCountNot;
     return this;
@@ -4906,25 +4906,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDiskCountNot() {
+  public Integer getHddDiskCountNot() {
     return hddDiskCountNot;
   }
 
 
-  public void setHddDiskCountNot(Double hddDiskCountNot) {
+  public void setHddDiskCountNot(Integer hddDiskCountNot) {
     this.hddDiskCountNot = hddDiskCountNot;
   }
 
 
-  public HostWhereInput hddDiskCountNotIn(List<Double> hddDiskCountNotIn) {
+  public HostWhereInput hddDiskCountNotIn(List<Integer> hddDiskCountNotIn) {
     
     this.hddDiskCountNotIn = hddDiskCountNotIn;
     return this;
   }
 
-  public HostWhereInput addHddDiskCountNotInItem(Double hddDiskCountNotInItem) {
+  public HostWhereInput addHddDiskCountNotInItem(Integer hddDiskCountNotInItem) {
     if (this.hddDiskCountNotIn == null) {
-      this.hddDiskCountNotIn = new ArrayList<Double>();
+      this.hddDiskCountNotIn = new ArrayList<Integer>();
     }
     this.hddDiskCountNotIn.add(hddDiskCountNotInItem);
     return this;
@@ -4937,12 +4937,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHddDiskCountNotIn() {
+  public List<Integer> getHddDiskCountNotIn() {
     return hddDiskCountNotIn;
   }
 
 
-  public void setHddDiskCountNotIn(List<Double> hddDiskCountNotIn) {
+  public void setHddDiskCountNotIn(List<Integer> hddDiskCountNotIn) {
     this.hddDiskCountNotIn = hddDiskCountNotIn;
   }
 
@@ -6867,7 +6867,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput nicCount(Double nicCount) {
+  public HostWhereInput nicCount(Integer nicCount) {
     
     this.nicCount = nicCount;
     return this;
@@ -6880,17 +6880,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicCount() {
+  public Integer getNicCount() {
     return nicCount;
   }
 
 
-  public void setNicCount(Double nicCount) {
+  public void setNicCount(Integer nicCount) {
     this.nicCount = nicCount;
   }
 
 
-  public HostWhereInput nicCountGt(Double nicCountGt) {
+  public HostWhereInput nicCountGt(Integer nicCountGt) {
     
     this.nicCountGt = nicCountGt;
     return this;
@@ -6903,17 +6903,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicCountGt() {
+  public Integer getNicCountGt() {
     return nicCountGt;
   }
 
 
-  public void setNicCountGt(Double nicCountGt) {
+  public void setNicCountGt(Integer nicCountGt) {
     this.nicCountGt = nicCountGt;
   }
 
 
-  public HostWhereInput nicCountGte(Double nicCountGte) {
+  public HostWhereInput nicCountGte(Integer nicCountGte) {
     
     this.nicCountGte = nicCountGte;
     return this;
@@ -6926,25 +6926,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicCountGte() {
+  public Integer getNicCountGte() {
     return nicCountGte;
   }
 
 
-  public void setNicCountGte(Double nicCountGte) {
+  public void setNicCountGte(Integer nicCountGte) {
     this.nicCountGte = nicCountGte;
   }
 
 
-  public HostWhereInput nicCountIn(List<Double> nicCountIn) {
+  public HostWhereInput nicCountIn(List<Integer> nicCountIn) {
     
     this.nicCountIn = nicCountIn;
     return this;
   }
 
-  public HostWhereInput addNicCountInItem(Double nicCountInItem) {
+  public HostWhereInput addNicCountInItem(Integer nicCountInItem) {
     if (this.nicCountIn == null) {
-      this.nicCountIn = new ArrayList<Double>();
+      this.nicCountIn = new ArrayList<Integer>();
     }
     this.nicCountIn.add(nicCountInItem);
     return this;
@@ -6957,17 +6957,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNicCountIn() {
+  public List<Integer> getNicCountIn() {
     return nicCountIn;
   }
 
 
-  public void setNicCountIn(List<Double> nicCountIn) {
+  public void setNicCountIn(List<Integer> nicCountIn) {
     this.nicCountIn = nicCountIn;
   }
 
 
-  public HostWhereInput nicCountLt(Double nicCountLt) {
+  public HostWhereInput nicCountLt(Integer nicCountLt) {
     
     this.nicCountLt = nicCountLt;
     return this;
@@ -6980,17 +6980,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicCountLt() {
+  public Integer getNicCountLt() {
     return nicCountLt;
   }
 
 
-  public void setNicCountLt(Double nicCountLt) {
+  public void setNicCountLt(Integer nicCountLt) {
     this.nicCountLt = nicCountLt;
   }
 
 
-  public HostWhereInput nicCountLte(Double nicCountLte) {
+  public HostWhereInput nicCountLte(Integer nicCountLte) {
     
     this.nicCountLte = nicCountLte;
     return this;
@@ -7003,17 +7003,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicCountLte() {
+  public Integer getNicCountLte() {
     return nicCountLte;
   }
 
 
-  public void setNicCountLte(Double nicCountLte) {
+  public void setNicCountLte(Integer nicCountLte) {
     this.nicCountLte = nicCountLte;
   }
 
 
-  public HostWhereInput nicCountNot(Double nicCountNot) {
+  public HostWhereInput nicCountNot(Integer nicCountNot) {
     
     this.nicCountNot = nicCountNot;
     return this;
@@ -7026,25 +7026,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicCountNot() {
+  public Integer getNicCountNot() {
     return nicCountNot;
   }
 
 
-  public void setNicCountNot(Double nicCountNot) {
+  public void setNicCountNot(Integer nicCountNot) {
     this.nicCountNot = nicCountNot;
   }
 
 
-  public HostWhereInput nicCountNotIn(List<Double> nicCountNotIn) {
+  public HostWhereInput nicCountNotIn(List<Integer> nicCountNotIn) {
     
     this.nicCountNotIn = nicCountNotIn;
     return this;
   }
 
-  public HostWhereInput addNicCountNotInItem(Double nicCountNotInItem) {
+  public HostWhereInput addNicCountNotInItem(Integer nicCountNotInItem) {
     if (this.nicCountNotIn == null) {
-      this.nicCountNotIn = new ArrayList<Double>();
+      this.nicCountNotIn = new ArrayList<Integer>();
     }
     this.nicCountNotIn.add(nicCountNotInItem);
     return this;
@@ -7057,12 +7057,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNicCountNotIn() {
+  public List<Integer> getNicCountNotIn() {
     return nicCountNotIn;
   }
 
 
-  public void setNicCountNotIn(List<Double> nicCountNotIn) {
+  public void setNicCountNotIn(List<Integer> nicCountNotIn) {
     this.nicCountNotIn = nicCountNotIn;
   }
 
@@ -8274,7 +8274,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput pmemDimmCount(Double pmemDimmCount) {
+  public HostWhereInput pmemDimmCount(Integer pmemDimmCount) {
     
     this.pmemDimmCount = pmemDimmCount;
     return this;
@@ -8287,17 +8287,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCount() {
+  public Integer getPmemDimmCount() {
     return pmemDimmCount;
   }
 
 
-  public void setPmemDimmCount(Double pmemDimmCount) {
+  public void setPmemDimmCount(Integer pmemDimmCount) {
     this.pmemDimmCount = pmemDimmCount;
   }
 
 
-  public HostWhereInput pmemDimmCountGt(Double pmemDimmCountGt) {
+  public HostWhereInput pmemDimmCountGt(Integer pmemDimmCountGt) {
     
     this.pmemDimmCountGt = pmemDimmCountGt;
     return this;
@@ -8310,17 +8310,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCountGt() {
+  public Integer getPmemDimmCountGt() {
     return pmemDimmCountGt;
   }
 
 
-  public void setPmemDimmCountGt(Double pmemDimmCountGt) {
+  public void setPmemDimmCountGt(Integer pmemDimmCountGt) {
     this.pmemDimmCountGt = pmemDimmCountGt;
   }
 
 
-  public HostWhereInput pmemDimmCountGte(Double pmemDimmCountGte) {
+  public HostWhereInput pmemDimmCountGte(Integer pmemDimmCountGte) {
     
     this.pmemDimmCountGte = pmemDimmCountGte;
     return this;
@@ -8333,25 +8333,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCountGte() {
+  public Integer getPmemDimmCountGte() {
     return pmemDimmCountGte;
   }
 
 
-  public void setPmemDimmCountGte(Double pmemDimmCountGte) {
+  public void setPmemDimmCountGte(Integer pmemDimmCountGte) {
     this.pmemDimmCountGte = pmemDimmCountGte;
   }
 
 
-  public HostWhereInput pmemDimmCountIn(List<Double> pmemDimmCountIn) {
+  public HostWhereInput pmemDimmCountIn(List<Integer> pmemDimmCountIn) {
     
     this.pmemDimmCountIn = pmemDimmCountIn;
     return this;
   }
 
-  public HostWhereInput addPmemDimmCountInItem(Double pmemDimmCountInItem) {
+  public HostWhereInput addPmemDimmCountInItem(Integer pmemDimmCountInItem) {
     if (this.pmemDimmCountIn == null) {
-      this.pmemDimmCountIn = new ArrayList<Double>();
+      this.pmemDimmCountIn = new ArrayList<Integer>();
     }
     this.pmemDimmCountIn.add(pmemDimmCountInItem);
     return this;
@@ -8364,17 +8364,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPmemDimmCountIn() {
+  public List<Integer> getPmemDimmCountIn() {
     return pmemDimmCountIn;
   }
 
 
-  public void setPmemDimmCountIn(List<Double> pmemDimmCountIn) {
+  public void setPmemDimmCountIn(List<Integer> pmemDimmCountIn) {
     this.pmemDimmCountIn = pmemDimmCountIn;
   }
 
 
-  public HostWhereInput pmemDimmCountLt(Double pmemDimmCountLt) {
+  public HostWhereInput pmemDimmCountLt(Integer pmemDimmCountLt) {
     
     this.pmemDimmCountLt = pmemDimmCountLt;
     return this;
@@ -8387,17 +8387,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCountLt() {
+  public Integer getPmemDimmCountLt() {
     return pmemDimmCountLt;
   }
 
 
-  public void setPmemDimmCountLt(Double pmemDimmCountLt) {
+  public void setPmemDimmCountLt(Integer pmemDimmCountLt) {
     this.pmemDimmCountLt = pmemDimmCountLt;
   }
 
 
-  public HostWhereInput pmemDimmCountLte(Double pmemDimmCountLte) {
+  public HostWhereInput pmemDimmCountLte(Integer pmemDimmCountLte) {
     
     this.pmemDimmCountLte = pmemDimmCountLte;
     return this;
@@ -8410,17 +8410,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCountLte() {
+  public Integer getPmemDimmCountLte() {
     return pmemDimmCountLte;
   }
 
 
-  public void setPmemDimmCountLte(Double pmemDimmCountLte) {
+  public void setPmemDimmCountLte(Integer pmemDimmCountLte) {
     this.pmemDimmCountLte = pmemDimmCountLte;
   }
 
 
-  public HostWhereInput pmemDimmCountNot(Double pmemDimmCountNot) {
+  public HostWhereInput pmemDimmCountNot(Integer pmemDimmCountNot) {
     
     this.pmemDimmCountNot = pmemDimmCountNot;
     return this;
@@ -8433,25 +8433,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCountNot() {
+  public Integer getPmemDimmCountNot() {
     return pmemDimmCountNot;
   }
 
 
-  public void setPmemDimmCountNot(Double pmemDimmCountNot) {
+  public void setPmemDimmCountNot(Integer pmemDimmCountNot) {
     this.pmemDimmCountNot = pmemDimmCountNot;
   }
 
 
-  public HostWhereInput pmemDimmCountNotIn(List<Double> pmemDimmCountNotIn) {
+  public HostWhereInput pmemDimmCountNotIn(List<Integer> pmemDimmCountNotIn) {
     
     this.pmemDimmCountNotIn = pmemDimmCountNotIn;
     return this;
   }
 
-  public HostWhereInput addPmemDimmCountNotInItem(Double pmemDimmCountNotInItem) {
+  public HostWhereInput addPmemDimmCountNotInItem(Integer pmemDimmCountNotInItem) {
     if (this.pmemDimmCountNotIn == null) {
-      this.pmemDimmCountNotIn = new ArrayList<Double>();
+      this.pmemDimmCountNotIn = new ArrayList<Integer>();
     }
     this.pmemDimmCountNotIn.add(pmemDimmCountNotInItem);
     return this;
@@ -8464,12 +8464,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPmemDimmCountNotIn() {
+  public List<Integer> getPmemDimmCountNotIn() {
     return pmemDimmCountNotIn;
   }
 
 
-  public void setPmemDimmCountNotIn(List<Double> pmemDimmCountNotIn) {
+  public void setPmemDimmCountNotIn(List<Integer> pmemDimmCountNotIn) {
     this.pmemDimmCountNotIn = pmemDimmCountNotIn;
   }
 
@@ -8543,7 +8543,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput pmemDiskCount(Double pmemDiskCount) {
+  public HostWhereInput pmemDiskCount(Integer pmemDiskCount) {
     
     this.pmemDiskCount = pmemDiskCount;
     return this;
@@ -8556,17 +8556,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDiskCount() {
+  public Integer getPmemDiskCount() {
     return pmemDiskCount;
   }
 
 
-  public void setPmemDiskCount(Double pmemDiskCount) {
+  public void setPmemDiskCount(Integer pmemDiskCount) {
     this.pmemDiskCount = pmemDiskCount;
   }
 
 
-  public HostWhereInput pmemDiskCountGt(Double pmemDiskCountGt) {
+  public HostWhereInput pmemDiskCountGt(Integer pmemDiskCountGt) {
     
     this.pmemDiskCountGt = pmemDiskCountGt;
     return this;
@@ -8579,17 +8579,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDiskCountGt() {
+  public Integer getPmemDiskCountGt() {
     return pmemDiskCountGt;
   }
 
 
-  public void setPmemDiskCountGt(Double pmemDiskCountGt) {
+  public void setPmemDiskCountGt(Integer pmemDiskCountGt) {
     this.pmemDiskCountGt = pmemDiskCountGt;
   }
 
 
-  public HostWhereInput pmemDiskCountGte(Double pmemDiskCountGte) {
+  public HostWhereInput pmemDiskCountGte(Integer pmemDiskCountGte) {
     
     this.pmemDiskCountGte = pmemDiskCountGte;
     return this;
@@ -8602,25 +8602,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDiskCountGte() {
+  public Integer getPmemDiskCountGte() {
     return pmemDiskCountGte;
   }
 
 
-  public void setPmemDiskCountGte(Double pmemDiskCountGte) {
+  public void setPmemDiskCountGte(Integer pmemDiskCountGte) {
     this.pmemDiskCountGte = pmemDiskCountGte;
   }
 
 
-  public HostWhereInput pmemDiskCountIn(List<Double> pmemDiskCountIn) {
+  public HostWhereInput pmemDiskCountIn(List<Integer> pmemDiskCountIn) {
     
     this.pmemDiskCountIn = pmemDiskCountIn;
     return this;
   }
 
-  public HostWhereInput addPmemDiskCountInItem(Double pmemDiskCountInItem) {
+  public HostWhereInput addPmemDiskCountInItem(Integer pmemDiskCountInItem) {
     if (this.pmemDiskCountIn == null) {
-      this.pmemDiskCountIn = new ArrayList<Double>();
+      this.pmemDiskCountIn = new ArrayList<Integer>();
     }
     this.pmemDiskCountIn.add(pmemDiskCountInItem);
     return this;
@@ -8633,17 +8633,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPmemDiskCountIn() {
+  public List<Integer> getPmemDiskCountIn() {
     return pmemDiskCountIn;
   }
 
 
-  public void setPmemDiskCountIn(List<Double> pmemDiskCountIn) {
+  public void setPmemDiskCountIn(List<Integer> pmemDiskCountIn) {
     this.pmemDiskCountIn = pmemDiskCountIn;
   }
 
 
-  public HostWhereInput pmemDiskCountLt(Double pmemDiskCountLt) {
+  public HostWhereInput pmemDiskCountLt(Integer pmemDiskCountLt) {
     
     this.pmemDiskCountLt = pmemDiskCountLt;
     return this;
@@ -8656,17 +8656,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDiskCountLt() {
+  public Integer getPmemDiskCountLt() {
     return pmemDiskCountLt;
   }
 
 
-  public void setPmemDiskCountLt(Double pmemDiskCountLt) {
+  public void setPmemDiskCountLt(Integer pmemDiskCountLt) {
     this.pmemDiskCountLt = pmemDiskCountLt;
   }
 
 
-  public HostWhereInput pmemDiskCountLte(Double pmemDiskCountLte) {
+  public HostWhereInput pmemDiskCountLte(Integer pmemDiskCountLte) {
     
     this.pmemDiskCountLte = pmemDiskCountLte;
     return this;
@@ -8679,17 +8679,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDiskCountLte() {
+  public Integer getPmemDiskCountLte() {
     return pmemDiskCountLte;
   }
 
 
-  public void setPmemDiskCountLte(Double pmemDiskCountLte) {
+  public void setPmemDiskCountLte(Integer pmemDiskCountLte) {
     this.pmemDiskCountLte = pmemDiskCountLte;
   }
 
 
-  public HostWhereInput pmemDiskCountNot(Double pmemDiskCountNot) {
+  public HostWhereInput pmemDiskCountNot(Integer pmemDiskCountNot) {
     
     this.pmemDiskCountNot = pmemDiskCountNot;
     return this;
@@ -8702,25 +8702,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDiskCountNot() {
+  public Integer getPmemDiskCountNot() {
     return pmemDiskCountNot;
   }
 
 
-  public void setPmemDiskCountNot(Double pmemDiskCountNot) {
+  public void setPmemDiskCountNot(Integer pmemDiskCountNot) {
     this.pmemDiskCountNot = pmemDiskCountNot;
   }
 
 
-  public HostWhereInput pmemDiskCountNotIn(List<Double> pmemDiskCountNotIn) {
+  public HostWhereInput pmemDiskCountNotIn(List<Integer> pmemDiskCountNotIn) {
     
     this.pmemDiskCountNotIn = pmemDiskCountNotIn;
     return this;
   }
 
-  public HostWhereInput addPmemDiskCountNotInItem(Double pmemDiskCountNotInItem) {
+  public HostWhereInput addPmemDiskCountNotInItem(Integer pmemDiskCountNotInItem) {
     if (this.pmemDiskCountNotIn == null) {
-      this.pmemDiskCountNotIn = new ArrayList<Double>();
+      this.pmemDiskCountNotIn = new ArrayList<Integer>();
     }
     this.pmemDiskCountNotIn.add(pmemDiskCountNotInItem);
     return this;
@@ -8733,17 +8733,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPmemDiskCountNotIn() {
+  public List<Integer> getPmemDiskCountNotIn() {
     return pmemDiskCountNotIn;
   }
 
 
-  public void setPmemDiskCountNotIn(List<Double> pmemDiskCountNotIn) {
+  public void setPmemDiskCountNotIn(List<Integer> pmemDiskCountNotIn) {
     this.pmemDiskCountNotIn = pmemDiskCountNotIn;
   }
 
 
-  public HostWhereInput provisionedCpuCores(Double provisionedCpuCores) {
+  public HostWhereInput provisionedCpuCores(Integer provisionedCpuCores) {
     
     this.provisionedCpuCores = provisionedCpuCores;
     return this;
@@ -8756,17 +8756,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCores() {
+  public Integer getProvisionedCpuCores() {
     return provisionedCpuCores;
   }
 
 
-  public void setProvisionedCpuCores(Double provisionedCpuCores) {
+  public void setProvisionedCpuCores(Integer provisionedCpuCores) {
     this.provisionedCpuCores = provisionedCpuCores;
   }
 
 
-  public HostWhereInput provisionedCpuCoresGt(Double provisionedCpuCoresGt) {
+  public HostWhereInput provisionedCpuCoresGt(Integer provisionedCpuCoresGt) {
     
     this.provisionedCpuCoresGt = provisionedCpuCoresGt;
     return this;
@@ -8779,17 +8779,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresGt() {
+  public Integer getProvisionedCpuCoresGt() {
     return provisionedCpuCoresGt;
   }
 
 
-  public void setProvisionedCpuCoresGt(Double provisionedCpuCoresGt) {
+  public void setProvisionedCpuCoresGt(Integer provisionedCpuCoresGt) {
     this.provisionedCpuCoresGt = provisionedCpuCoresGt;
   }
 
 
-  public HostWhereInput provisionedCpuCoresGte(Double provisionedCpuCoresGte) {
+  public HostWhereInput provisionedCpuCoresGte(Integer provisionedCpuCoresGte) {
     
     this.provisionedCpuCoresGte = provisionedCpuCoresGte;
     return this;
@@ -8802,25 +8802,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresGte() {
+  public Integer getProvisionedCpuCoresGte() {
     return provisionedCpuCoresGte;
   }
 
 
-  public void setProvisionedCpuCoresGte(Double provisionedCpuCoresGte) {
+  public void setProvisionedCpuCoresGte(Integer provisionedCpuCoresGte) {
     this.provisionedCpuCoresGte = provisionedCpuCoresGte;
   }
 
 
-  public HostWhereInput provisionedCpuCoresIn(List<Double> provisionedCpuCoresIn) {
+  public HostWhereInput provisionedCpuCoresIn(List<Integer> provisionedCpuCoresIn) {
     
     this.provisionedCpuCoresIn = provisionedCpuCoresIn;
     return this;
   }
 
-  public HostWhereInput addProvisionedCpuCoresInItem(Double provisionedCpuCoresInItem) {
+  public HostWhereInput addProvisionedCpuCoresInItem(Integer provisionedCpuCoresInItem) {
     if (this.provisionedCpuCoresIn == null) {
-      this.provisionedCpuCoresIn = new ArrayList<Double>();
+      this.provisionedCpuCoresIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresIn.add(provisionedCpuCoresInItem);
     return this;
@@ -8833,17 +8833,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresIn() {
+  public List<Integer> getProvisionedCpuCoresIn() {
     return provisionedCpuCoresIn;
   }
 
 
-  public void setProvisionedCpuCoresIn(List<Double> provisionedCpuCoresIn) {
+  public void setProvisionedCpuCoresIn(List<Integer> provisionedCpuCoresIn) {
     this.provisionedCpuCoresIn = provisionedCpuCoresIn;
   }
 
 
-  public HostWhereInput provisionedCpuCoresLt(Double provisionedCpuCoresLt) {
+  public HostWhereInput provisionedCpuCoresLt(Integer provisionedCpuCoresLt) {
     
     this.provisionedCpuCoresLt = provisionedCpuCoresLt;
     return this;
@@ -8856,17 +8856,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresLt() {
+  public Integer getProvisionedCpuCoresLt() {
     return provisionedCpuCoresLt;
   }
 
 
-  public void setProvisionedCpuCoresLt(Double provisionedCpuCoresLt) {
+  public void setProvisionedCpuCoresLt(Integer provisionedCpuCoresLt) {
     this.provisionedCpuCoresLt = provisionedCpuCoresLt;
   }
 
 
-  public HostWhereInput provisionedCpuCoresLte(Double provisionedCpuCoresLte) {
+  public HostWhereInput provisionedCpuCoresLte(Integer provisionedCpuCoresLte) {
     
     this.provisionedCpuCoresLte = provisionedCpuCoresLte;
     return this;
@@ -8879,17 +8879,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresLte() {
+  public Integer getProvisionedCpuCoresLte() {
     return provisionedCpuCoresLte;
   }
 
 
-  public void setProvisionedCpuCoresLte(Double provisionedCpuCoresLte) {
+  public void setProvisionedCpuCoresLte(Integer provisionedCpuCoresLte) {
     this.provisionedCpuCoresLte = provisionedCpuCoresLte;
   }
 
 
-  public HostWhereInput provisionedCpuCoresNot(Double provisionedCpuCoresNot) {
+  public HostWhereInput provisionedCpuCoresNot(Integer provisionedCpuCoresNot) {
     
     this.provisionedCpuCoresNot = provisionedCpuCoresNot;
     return this;
@@ -8902,25 +8902,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresNot() {
+  public Integer getProvisionedCpuCoresNot() {
     return provisionedCpuCoresNot;
   }
 
 
-  public void setProvisionedCpuCoresNot(Double provisionedCpuCoresNot) {
+  public void setProvisionedCpuCoresNot(Integer provisionedCpuCoresNot) {
     this.provisionedCpuCoresNot = provisionedCpuCoresNot;
   }
 
 
-  public HostWhereInput provisionedCpuCoresNotIn(List<Double> provisionedCpuCoresNotIn) {
+  public HostWhereInput provisionedCpuCoresNotIn(List<Integer> provisionedCpuCoresNotIn) {
     
     this.provisionedCpuCoresNotIn = provisionedCpuCoresNotIn;
     return this;
   }
 
-  public HostWhereInput addProvisionedCpuCoresNotInItem(Double provisionedCpuCoresNotInItem) {
+  public HostWhereInput addProvisionedCpuCoresNotInItem(Integer provisionedCpuCoresNotInItem) {
     if (this.provisionedCpuCoresNotIn == null) {
-      this.provisionedCpuCoresNotIn = new ArrayList<Double>();
+      this.provisionedCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresNotIn.add(provisionedCpuCoresNotInItem);
     return this;
@@ -8933,12 +8933,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresNotIn() {
+  public List<Integer> getProvisionedCpuCoresNotIn() {
     return provisionedCpuCoresNotIn;
   }
 
 
-  public void setProvisionedCpuCoresNotIn(List<Double> provisionedCpuCoresNotIn) {
+  public void setProvisionedCpuCoresNotIn(List<Integer> provisionedCpuCoresNotIn) {
     this.provisionedCpuCoresNotIn = provisionedCpuCoresNotIn;
   }
 
@@ -9343,7 +9343,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput runningVmNum(Double runningVmNum) {
+  public HostWhereInput runningVmNum(Integer runningVmNum) {
     
     this.runningVmNum = runningVmNum;
     return this;
@@ -9356,17 +9356,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNum() {
+  public Integer getRunningVmNum() {
     return runningVmNum;
   }
 
 
-  public void setRunningVmNum(Double runningVmNum) {
+  public void setRunningVmNum(Integer runningVmNum) {
     this.runningVmNum = runningVmNum;
   }
 
 
-  public HostWhereInput runningVmNumGt(Double runningVmNumGt) {
+  public HostWhereInput runningVmNumGt(Integer runningVmNumGt) {
     
     this.runningVmNumGt = runningVmNumGt;
     return this;
@@ -9379,17 +9379,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumGt() {
+  public Integer getRunningVmNumGt() {
     return runningVmNumGt;
   }
 
 
-  public void setRunningVmNumGt(Double runningVmNumGt) {
+  public void setRunningVmNumGt(Integer runningVmNumGt) {
     this.runningVmNumGt = runningVmNumGt;
   }
 
 
-  public HostWhereInput runningVmNumGte(Double runningVmNumGte) {
+  public HostWhereInput runningVmNumGte(Integer runningVmNumGte) {
     
     this.runningVmNumGte = runningVmNumGte;
     return this;
@@ -9402,25 +9402,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumGte() {
+  public Integer getRunningVmNumGte() {
     return runningVmNumGte;
   }
 
 
-  public void setRunningVmNumGte(Double runningVmNumGte) {
+  public void setRunningVmNumGte(Integer runningVmNumGte) {
     this.runningVmNumGte = runningVmNumGte;
   }
 
 
-  public HostWhereInput runningVmNumIn(List<Double> runningVmNumIn) {
+  public HostWhereInput runningVmNumIn(List<Integer> runningVmNumIn) {
     
     this.runningVmNumIn = runningVmNumIn;
     return this;
   }
 
-  public HostWhereInput addRunningVmNumInItem(Double runningVmNumInItem) {
+  public HostWhereInput addRunningVmNumInItem(Integer runningVmNumInItem) {
     if (this.runningVmNumIn == null) {
-      this.runningVmNumIn = new ArrayList<Double>();
+      this.runningVmNumIn = new ArrayList<Integer>();
     }
     this.runningVmNumIn.add(runningVmNumInItem);
     return this;
@@ -9433,17 +9433,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningVmNumIn() {
+  public List<Integer> getRunningVmNumIn() {
     return runningVmNumIn;
   }
 
 
-  public void setRunningVmNumIn(List<Double> runningVmNumIn) {
+  public void setRunningVmNumIn(List<Integer> runningVmNumIn) {
     this.runningVmNumIn = runningVmNumIn;
   }
 
 
-  public HostWhereInput runningVmNumLt(Double runningVmNumLt) {
+  public HostWhereInput runningVmNumLt(Integer runningVmNumLt) {
     
     this.runningVmNumLt = runningVmNumLt;
     return this;
@@ -9456,17 +9456,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumLt() {
+  public Integer getRunningVmNumLt() {
     return runningVmNumLt;
   }
 
 
-  public void setRunningVmNumLt(Double runningVmNumLt) {
+  public void setRunningVmNumLt(Integer runningVmNumLt) {
     this.runningVmNumLt = runningVmNumLt;
   }
 
 
-  public HostWhereInput runningVmNumLte(Double runningVmNumLte) {
+  public HostWhereInput runningVmNumLte(Integer runningVmNumLte) {
     
     this.runningVmNumLte = runningVmNumLte;
     return this;
@@ -9479,17 +9479,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumLte() {
+  public Integer getRunningVmNumLte() {
     return runningVmNumLte;
   }
 
 
-  public void setRunningVmNumLte(Double runningVmNumLte) {
+  public void setRunningVmNumLte(Integer runningVmNumLte) {
     this.runningVmNumLte = runningVmNumLte;
   }
 
 
-  public HostWhereInput runningVmNumNot(Double runningVmNumNot) {
+  public HostWhereInput runningVmNumNot(Integer runningVmNumNot) {
     
     this.runningVmNumNot = runningVmNumNot;
     return this;
@@ -9502,25 +9502,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumNot() {
+  public Integer getRunningVmNumNot() {
     return runningVmNumNot;
   }
 
 
-  public void setRunningVmNumNot(Double runningVmNumNot) {
+  public void setRunningVmNumNot(Integer runningVmNumNot) {
     this.runningVmNumNot = runningVmNumNot;
   }
 
 
-  public HostWhereInput runningVmNumNotIn(List<Double> runningVmNumNotIn) {
+  public HostWhereInput runningVmNumNotIn(List<Integer> runningVmNumNotIn) {
     
     this.runningVmNumNotIn = runningVmNumNotIn;
     return this;
   }
 
-  public HostWhereInput addRunningVmNumNotInItem(Double runningVmNumNotInItem) {
+  public HostWhereInput addRunningVmNumNotInItem(Integer runningVmNumNotInItem) {
     if (this.runningVmNumNotIn == null) {
-      this.runningVmNumNotIn = new ArrayList<Double>();
+      this.runningVmNumNotIn = new ArrayList<Integer>();
     }
     this.runningVmNumNotIn.add(runningVmNumNotInItem);
     return this;
@@ -9533,12 +9533,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningVmNumNotIn() {
+  public List<Integer> getRunningVmNumNotIn() {
     return runningVmNumNotIn;
   }
 
 
-  public void setRunningVmNumNotIn(List<Double> runningVmNumNotIn) {
+  public void setRunningVmNumNotIn(List<Integer> runningVmNumNotIn) {
     this.runningVmNumNotIn = runningVmNumNotIn;
   }
 
@@ -10819,7 +10819,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput ssdDiskCount(Double ssdDiskCount) {
+  public HostWhereInput ssdDiskCount(Integer ssdDiskCount) {
     
     this.ssdDiskCount = ssdDiskCount;
     return this;
@@ -10832,17 +10832,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDiskCount() {
+  public Integer getSsdDiskCount() {
     return ssdDiskCount;
   }
 
 
-  public void setSsdDiskCount(Double ssdDiskCount) {
+  public void setSsdDiskCount(Integer ssdDiskCount) {
     this.ssdDiskCount = ssdDiskCount;
   }
 
 
-  public HostWhereInput ssdDiskCountGt(Double ssdDiskCountGt) {
+  public HostWhereInput ssdDiskCountGt(Integer ssdDiskCountGt) {
     
     this.ssdDiskCountGt = ssdDiskCountGt;
     return this;
@@ -10855,17 +10855,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDiskCountGt() {
+  public Integer getSsdDiskCountGt() {
     return ssdDiskCountGt;
   }
 
 
-  public void setSsdDiskCountGt(Double ssdDiskCountGt) {
+  public void setSsdDiskCountGt(Integer ssdDiskCountGt) {
     this.ssdDiskCountGt = ssdDiskCountGt;
   }
 
 
-  public HostWhereInput ssdDiskCountGte(Double ssdDiskCountGte) {
+  public HostWhereInput ssdDiskCountGte(Integer ssdDiskCountGte) {
     
     this.ssdDiskCountGte = ssdDiskCountGte;
     return this;
@@ -10878,25 +10878,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDiskCountGte() {
+  public Integer getSsdDiskCountGte() {
     return ssdDiskCountGte;
   }
 
 
-  public void setSsdDiskCountGte(Double ssdDiskCountGte) {
+  public void setSsdDiskCountGte(Integer ssdDiskCountGte) {
     this.ssdDiskCountGte = ssdDiskCountGte;
   }
 
 
-  public HostWhereInput ssdDiskCountIn(List<Double> ssdDiskCountIn) {
+  public HostWhereInput ssdDiskCountIn(List<Integer> ssdDiskCountIn) {
     
     this.ssdDiskCountIn = ssdDiskCountIn;
     return this;
   }
 
-  public HostWhereInput addSsdDiskCountInItem(Double ssdDiskCountInItem) {
+  public HostWhereInput addSsdDiskCountInItem(Integer ssdDiskCountInItem) {
     if (this.ssdDiskCountIn == null) {
-      this.ssdDiskCountIn = new ArrayList<Double>();
+      this.ssdDiskCountIn = new ArrayList<Integer>();
     }
     this.ssdDiskCountIn.add(ssdDiskCountInItem);
     return this;
@@ -10909,17 +10909,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSsdDiskCountIn() {
+  public List<Integer> getSsdDiskCountIn() {
     return ssdDiskCountIn;
   }
 
 
-  public void setSsdDiskCountIn(List<Double> ssdDiskCountIn) {
+  public void setSsdDiskCountIn(List<Integer> ssdDiskCountIn) {
     this.ssdDiskCountIn = ssdDiskCountIn;
   }
 
 
-  public HostWhereInput ssdDiskCountLt(Double ssdDiskCountLt) {
+  public HostWhereInput ssdDiskCountLt(Integer ssdDiskCountLt) {
     
     this.ssdDiskCountLt = ssdDiskCountLt;
     return this;
@@ -10932,17 +10932,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDiskCountLt() {
+  public Integer getSsdDiskCountLt() {
     return ssdDiskCountLt;
   }
 
 
-  public void setSsdDiskCountLt(Double ssdDiskCountLt) {
+  public void setSsdDiskCountLt(Integer ssdDiskCountLt) {
     this.ssdDiskCountLt = ssdDiskCountLt;
   }
 
 
-  public HostWhereInput ssdDiskCountLte(Double ssdDiskCountLte) {
+  public HostWhereInput ssdDiskCountLte(Integer ssdDiskCountLte) {
     
     this.ssdDiskCountLte = ssdDiskCountLte;
     return this;
@@ -10955,17 +10955,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDiskCountLte() {
+  public Integer getSsdDiskCountLte() {
     return ssdDiskCountLte;
   }
 
 
-  public void setSsdDiskCountLte(Double ssdDiskCountLte) {
+  public void setSsdDiskCountLte(Integer ssdDiskCountLte) {
     this.ssdDiskCountLte = ssdDiskCountLte;
   }
 
 
-  public HostWhereInput ssdDiskCountNot(Double ssdDiskCountNot) {
+  public HostWhereInput ssdDiskCountNot(Integer ssdDiskCountNot) {
     
     this.ssdDiskCountNot = ssdDiskCountNot;
     return this;
@@ -10978,25 +10978,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDiskCountNot() {
+  public Integer getSsdDiskCountNot() {
     return ssdDiskCountNot;
   }
 
 
-  public void setSsdDiskCountNot(Double ssdDiskCountNot) {
+  public void setSsdDiskCountNot(Integer ssdDiskCountNot) {
     this.ssdDiskCountNot = ssdDiskCountNot;
   }
 
 
-  public HostWhereInput ssdDiskCountNotIn(List<Double> ssdDiskCountNotIn) {
+  public HostWhereInput ssdDiskCountNotIn(List<Integer> ssdDiskCountNotIn) {
     
     this.ssdDiskCountNotIn = ssdDiskCountNotIn;
     return this;
   }
 
-  public HostWhereInput addSsdDiskCountNotInItem(Double ssdDiskCountNotInItem) {
+  public HostWhereInput addSsdDiskCountNotInItem(Integer ssdDiskCountNotInItem) {
     if (this.ssdDiskCountNotIn == null) {
-      this.ssdDiskCountNotIn = new ArrayList<Double>();
+      this.ssdDiskCountNotIn = new ArrayList<Integer>();
     }
     this.ssdDiskCountNotIn.add(ssdDiskCountNotInItem);
     return this;
@@ -11009,12 +11009,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSsdDiskCountNotIn() {
+  public List<Integer> getSsdDiskCountNotIn() {
     return ssdDiskCountNotIn;
   }
 
 
-  public void setSsdDiskCountNotIn(List<Double> ssdDiskCountNotIn) {
+  public void setSsdDiskCountNotIn(List<Integer> ssdDiskCountNotIn) {
     this.ssdDiskCountNotIn = ssdDiskCountNotIn;
   }
 
@@ -11235,7 +11235,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput stoppedVmNum(Double stoppedVmNum) {
+  public HostWhereInput stoppedVmNum(Integer stoppedVmNum) {
     
     this.stoppedVmNum = stoppedVmNum;
     return this;
@@ -11248,17 +11248,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNum() {
+  public Integer getStoppedVmNum() {
     return stoppedVmNum;
   }
 
 
-  public void setStoppedVmNum(Double stoppedVmNum) {
+  public void setStoppedVmNum(Integer stoppedVmNum) {
     this.stoppedVmNum = stoppedVmNum;
   }
 
 
-  public HostWhereInput stoppedVmNumGt(Double stoppedVmNumGt) {
+  public HostWhereInput stoppedVmNumGt(Integer stoppedVmNumGt) {
     
     this.stoppedVmNumGt = stoppedVmNumGt;
     return this;
@@ -11271,17 +11271,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumGt() {
+  public Integer getStoppedVmNumGt() {
     return stoppedVmNumGt;
   }
 
 
-  public void setStoppedVmNumGt(Double stoppedVmNumGt) {
+  public void setStoppedVmNumGt(Integer stoppedVmNumGt) {
     this.stoppedVmNumGt = stoppedVmNumGt;
   }
 
 
-  public HostWhereInput stoppedVmNumGte(Double stoppedVmNumGte) {
+  public HostWhereInput stoppedVmNumGte(Integer stoppedVmNumGte) {
     
     this.stoppedVmNumGte = stoppedVmNumGte;
     return this;
@@ -11294,25 +11294,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumGte() {
+  public Integer getStoppedVmNumGte() {
     return stoppedVmNumGte;
   }
 
 
-  public void setStoppedVmNumGte(Double stoppedVmNumGte) {
+  public void setStoppedVmNumGte(Integer stoppedVmNumGte) {
     this.stoppedVmNumGte = stoppedVmNumGte;
   }
 
 
-  public HostWhereInput stoppedVmNumIn(List<Double> stoppedVmNumIn) {
+  public HostWhereInput stoppedVmNumIn(List<Integer> stoppedVmNumIn) {
     
     this.stoppedVmNumIn = stoppedVmNumIn;
     return this;
   }
 
-  public HostWhereInput addStoppedVmNumInItem(Double stoppedVmNumInItem) {
+  public HostWhereInput addStoppedVmNumInItem(Integer stoppedVmNumInItem) {
     if (this.stoppedVmNumIn == null) {
-      this.stoppedVmNumIn = new ArrayList<Double>();
+      this.stoppedVmNumIn = new ArrayList<Integer>();
     }
     this.stoppedVmNumIn.add(stoppedVmNumInItem);
     return this;
@@ -11325,17 +11325,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStoppedVmNumIn() {
+  public List<Integer> getStoppedVmNumIn() {
     return stoppedVmNumIn;
   }
 
 
-  public void setStoppedVmNumIn(List<Double> stoppedVmNumIn) {
+  public void setStoppedVmNumIn(List<Integer> stoppedVmNumIn) {
     this.stoppedVmNumIn = stoppedVmNumIn;
   }
 
 
-  public HostWhereInput stoppedVmNumLt(Double stoppedVmNumLt) {
+  public HostWhereInput stoppedVmNumLt(Integer stoppedVmNumLt) {
     
     this.stoppedVmNumLt = stoppedVmNumLt;
     return this;
@@ -11348,17 +11348,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumLt() {
+  public Integer getStoppedVmNumLt() {
     return stoppedVmNumLt;
   }
 
 
-  public void setStoppedVmNumLt(Double stoppedVmNumLt) {
+  public void setStoppedVmNumLt(Integer stoppedVmNumLt) {
     this.stoppedVmNumLt = stoppedVmNumLt;
   }
 
 
-  public HostWhereInput stoppedVmNumLte(Double stoppedVmNumLte) {
+  public HostWhereInput stoppedVmNumLte(Integer stoppedVmNumLte) {
     
     this.stoppedVmNumLte = stoppedVmNumLte;
     return this;
@@ -11371,17 +11371,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumLte() {
+  public Integer getStoppedVmNumLte() {
     return stoppedVmNumLte;
   }
 
 
-  public void setStoppedVmNumLte(Double stoppedVmNumLte) {
+  public void setStoppedVmNumLte(Integer stoppedVmNumLte) {
     this.stoppedVmNumLte = stoppedVmNumLte;
   }
 
 
-  public HostWhereInput stoppedVmNumNot(Double stoppedVmNumNot) {
+  public HostWhereInput stoppedVmNumNot(Integer stoppedVmNumNot) {
     
     this.stoppedVmNumNot = stoppedVmNumNot;
     return this;
@@ -11394,25 +11394,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumNot() {
+  public Integer getStoppedVmNumNot() {
     return stoppedVmNumNot;
   }
 
 
-  public void setStoppedVmNumNot(Double stoppedVmNumNot) {
+  public void setStoppedVmNumNot(Integer stoppedVmNumNot) {
     this.stoppedVmNumNot = stoppedVmNumNot;
   }
 
 
-  public HostWhereInput stoppedVmNumNotIn(List<Double> stoppedVmNumNotIn) {
+  public HostWhereInput stoppedVmNumNotIn(List<Integer> stoppedVmNumNotIn) {
     
     this.stoppedVmNumNotIn = stoppedVmNumNotIn;
     return this;
   }
 
-  public HostWhereInput addStoppedVmNumNotInItem(Double stoppedVmNumNotInItem) {
+  public HostWhereInput addStoppedVmNumNotInItem(Integer stoppedVmNumNotInItem) {
     if (this.stoppedVmNumNotIn == null) {
-      this.stoppedVmNumNotIn = new ArrayList<Double>();
+      this.stoppedVmNumNotIn = new ArrayList<Integer>();
     }
     this.stoppedVmNumNotIn.add(stoppedVmNumNotInItem);
     return this;
@@ -11425,17 +11425,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStoppedVmNumNotIn() {
+  public List<Integer> getStoppedVmNumNotIn() {
     return stoppedVmNumNotIn;
   }
 
 
-  public void setStoppedVmNumNotIn(List<Double> stoppedVmNumNotIn) {
+  public void setStoppedVmNumNotIn(List<Integer> stoppedVmNumNotIn) {
     this.stoppedVmNumNotIn = stoppedVmNumNotIn;
   }
 
 
-  public HostWhereInput suspendedVmNum(Double suspendedVmNum) {
+  public HostWhereInput suspendedVmNum(Integer suspendedVmNum) {
     
     this.suspendedVmNum = suspendedVmNum;
     return this;
@@ -11448,17 +11448,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNum() {
+  public Integer getSuspendedVmNum() {
     return suspendedVmNum;
   }
 
 
-  public void setSuspendedVmNum(Double suspendedVmNum) {
+  public void setSuspendedVmNum(Integer suspendedVmNum) {
     this.suspendedVmNum = suspendedVmNum;
   }
 
 
-  public HostWhereInput suspendedVmNumGt(Double suspendedVmNumGt) {
+  public HostWhereInput suspendedVmNumGt(Integer suspendedVmNumGt) {
     
     this.suspendedVmNumGt = suspendedVmNumGt;
     return this;
@@ -11471,17 +11471,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumGt() {
+  public Integer getSuspendedVmNumGt() {
     return suspendedVmNumGt;
   }
 
 
-  public void setSuspendedVmNumGt(Double suspendedVmNumGt) {
+  public void setSuspendedVmNumGt(Integer suspendedVmNumGt) {
     this.suspendedVmNumGt = suspendedVmNumGt;
   }
 
 
-  public HostWhereInput suspendedVmNumGte(Double suspendedVmNumGte) {
+  public HostWhereInput suspendedVmNumGte(Integer suspendedVmNumGte) {
     
     this.suspendedVmNumGte = suspendedVmNumGte;
     return this;
@@ -11494,25 +11494,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumGte() {
+  public Integer getSuspendedVmNumGte() {
     return suspendedVmNumGte;
   }
 
 
-  public void setSuspendedVmNumGte(Double suspendedVmNumGte) {
+  public void setSuspendedVmNumGte(Integer suspendedVmNumGte) {
     this.suspendedVmNumGte = suspendedVmNumGte;
   }
 
 
-  public HostWhereInput suspendedVmNumIn(List<Double> suspendedVmNumIn) {
+  public HostWhereInput suspendedVmNumIn(List<Integer> suspendedVmNumIn) {
     
     this.suspendedVmNumIn = suspendedVmNumIn;
     return this;
   }
 
-  public HostWhereInput addSuspendedVmNumInItem(Double suspendedVmNumInItem) {
+  public HostWhereInput addSuspendedVmNumInItem(Integer suspendedVmNumInItem) {
     if (this.suspendedVmNumIn == null) {
-      this.suspendedVmNumIn = new ArrayList<Double>();
+      this.suspendedVmNumIn = new ArrayList<Integer>();
     }
     this.suspendedVmNumIn.add(suspendedVmNumInItem);
     return this;
@@ -11525,17 +11525,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSuspendedVmNumIn() {
+  public List<Integer> getSuspendedVmNumIn() {
     return suspendedVmNumIn;
   }
 
 
-  public void setSuspendedVmNumIn(List<Double> suspendedVmNumIn) {
+  public void setSuspendedVmNumIn(List<Integer> suspendedVmNumIn) {
     this.suspendedVmNumIn = suspendedVmNumIn;
   }
 
 
-  public HostWhereInput suspendedVmNumLt(Double suspendedVmNumLt) {
+  public HostWhereInput suspendedVmNumLt(Integer suspendedVmNumLt) {
     
     this.suspendedVmNumLt = suspendedVmNumLt;
     return this;
@@ -11548,17 +11548,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumLt() {
+  public Integer getSuspendedVmNumLt() {
     return suspendedVmNumLt;
   }
 
 
-  public void setSuspendedVmNumLt(Double suspendedVmNumLt) {
+  public void setSuspendedVmNumLt(Integer suspendedVmNumLt) {
     this.suspendedVmNumLt = suspendedVmNumLt;
   }
 
 
-  public HostWhereInput suspendedVmNumLte(Double suspendedVmNumLte) {
+  public HostWhereInput suspendedVmNumLte(Integer suspendedVmNumLte) {
     
     this.suspendedVmNumLte = suspendedVmNumLte;
     return this;
@@ -11571,17 +11571,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumLte() {
+  public Integer getSuspendedVmNumLte() {
     return suspendedVmNumLte;
   }
 
 
-  public void setSuspendedVmNumLte(Double suspendedVmNumLte) {
+  public void setSuspendedVmNumLte(Integer suspendedVmNumLte) {
     this.suspendedVmNumLte = suspendedVmNumLte;
   }
 
 
-  public HostWhereInput suspendedVmNumNot(Double suspendedVmNumNot) {
+  public HostWhereInput suspendedVmNumNot(Integer suspendedVmNumNot) {
     
     this.suspendedVmNumNot = suspendedVmNumNot;
     return this;
@@ -11594,25 +11594,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumNot() {
+  public Integer getSuspendedVmNumNot() {
     return suspendedVmNumNot;
   }
 
 
-  public void setSuspendedVmNumNot(Double suspendedVmNumNot) {
+  public void setSuspendedVmNumNot(Integer suspendedVmNumNot) {
     this.suspendedVmNumNot = suspendedVmNumNot;
   }
 
 
-  public HostWhereInput suspendedVmNumNotIn(List<Double> suspendedVmNumNotIn) {
+  public HostWhereInput suspendedVmNumNotIn(List<Integer> suspendedVmNumNotIn) {
     
     this.suspendedVmNumNotIn = suspendedVmNumNotIn;
     return this;
   }
 
-  public HostWhereInput addSuspendedVmNumNotInItem(Double suspendedVmNumNotInItem) {
+  public HostWhereInput addSuspendedVmNumNotInItem(Integer suspendedVmNumNotInItem) {
     if (this.suspendedVmNumNotIn == null) {
-      this.suspendedVmNumNotIn = new ArrayList<Double>();
+      this.suspendedVmNumNotIn = new ArrayList<Integer>();
     }
     this.suspendedVmNumNotIn.add(suspendedVmNumNotInItem);
     return this;
@@ -11625,12 +11625,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSuspendedVmNumNotIn() {
+  public List<Integer> getSuspendedVmNumNotIn() {
     return suspendedVmNumNotIn;
   }
 
 
-  public void setSuspendedVmNumNotIn(List<Double> suspendedVmNumNotIn) {
+  public void setSuspendedVmNumNotIn(List<Integer> suspendedVmNumNotIn) {
     this.suspendedVmNumNotIn = suspendedVmNumNotIn;
   }
 
@@ -11835,7 +11835,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput totalCpuCores(Double totalCpuCores) {
+  public HostWhereInput totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -11848,17 +11848,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
 
-  public HostWhereInput totalCpuCoresGt(Double totalCpuCoresGt) {
+  public HostWhereInput totalCpuCoresGt(Integer totalCpuCoresGt) {
     
     this.totalCpuCoresGt = totalCpuCoresGt;
     return this;
@@ -11871,17 +11871,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGt() {
+  public Integer getTotalCpuCoresGt() {
     return totalCpuCoresGt;
   }
 
 
-  public void setTotalCpuCoresGt(Double totalCpuCoresGt) {
+  public void setTotalCpuCoresGt(Integer totalCpuCoresGt) {
     this.totalCpuCoresGt = totalCpuCoresGt;
   }
 
 
-  public HostWhereInput totalCpuCoresGte(Double totalCpuCoresGte) {
+  public HostWhereInput totalCpuCoresGte(Integer totalCpuCoresGte) {
     
     this.totalCpuCoresGte = totalCpuCoresGte;
     return this;
@@ -11894,25 +11894,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGte() {
+  public Integer getTotalCpuCoresGte() {
     return totalCpuCoresGte;
   }
 
 
-  public void setTotalCpuCoresGte(Double totalCpuCoresGte) {
+  public void setTotalCpuCoresGte(Integer totalCpuCoresGte) {
     this.totalCpuCoresGte = totalCpuCoresGte;
   }
 
 
-  public HostWhereInput totalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public HostWhereInput totalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     
     this.totalCpuCoresIn = totalCpuCoresIn;
     return this;
   }
 
-  public HostWhereInput addTotalCpuCoresInItem(Double totalCpuCoresInItem) {
+  public HostWhereInput addTotalCpuCoresInItem(Integer totalCpuCoresInItem) {
     if (this.totalCpuCoresIn == null) {
-      this.totalCpuCoresIn = new ArrayList<Double>();
+      this.totalCpuCoresIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresIn.add(totalCpuCoresInItem);
     return this;
@@ -11925,17 +11925,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresIn() {
+  public List<Integer> getTotalCpuCoresIn() {
     return totalCpuCoresIn;
   }
 
 
-  public void setTotalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public void setTotalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     this.totalCpuCoresIn = totalCpuCoresIn;
   }
 
 
-  public HostWhereInput totalCpuCoresLt(Double totalCpuCoresLt) {
+  public HostWhereInput totalCpuCoresLt(Integer totalCpuCoresLt) {
     
     this.totalCpuCoresLt = totalCpuCoresLt;
     return this;
@@ -11948,17 +11948,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLt() {
+  public Integer getTotalCpuCoresLt() {
     return totalCpuCoresLt;
   }
 
 
-  public void setTotalCpuCoresLt(Double totalCpuCoresLt) {
+  public void setTotalCpuCoresLt(Integer totalCpuCoresLt) {
     this.totalCpuCoresLt = totalCpuCoresLt;
   }
 
 
-  public HostWhereInput totalCpuCoresLte(Double totalCpuCoresLte) {
+  public HostWhereInput totalCpuCoresLte(Integer totalCpuCoresLte) {
     
     this.totalCpuCoresLte = totalCpuCoresLte;
     return this;
@@ -11971,17 +11971,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLte() {
+  public Integer getTotalCpuCoresLte() {
     return totalCpuCoresLte;
   }
 
 
-  public void setTotalCpuCoresLte(Double totalCpuCoresLte) {
+  public void setTotalCpuCoresLte(Integer totalCpuCoresLte) {
     this.totalCpuCoresLte = totalCpuCoresLte;
   }
 
 
-  public HostWhereInput totalCpuCoresNot(Double totalCpuCoresNot) {
+  public HostWhereInput totalCpuCoresNot(Integer totalCpuCoresNot) {
     
     this.totalCpuCoresNot = totalCpuCoresNot;
     return this;
@@ -11994,25 +11994,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresNot() {
+  public Integer getTotalCpuCoresNot() {
     return totalCpuCoresNot;
   }
 
 
-  public void setTotalCpuCoresNot(Double totalCpuCoresNot) {
+  public void setTotalCpuCoresNot(Integer totalCpuCoresNot) {
     this.totalCpuCoresNot = totalCpuCoresNot;
   }
 
 
-  public HostWhereInput totalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public HostWhereInput totalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
     return this;
   }
 
-  public HostWhereInput addTotalCpuCoresNotInItem(Double totalCpuCoresNotInItem) {
+  public HostWhereInput addTotalCpuCoresNotInItem(Integer totalCpuCoresNotInItem) {
     if (this.totalCpuCoresNotIn == null) {
-      this.totalCpuCoresNotIn = new ArrayList<Double>();
+      this.totalCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresNotIn.add(totalCpuCoresNotInItem);
     return this;
@@ -12025,12 +12025,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresNotIn() {
+  public List<Integer> getTotalCpuCoresNotIn() {
     return totalCpuCoresNotIn;
   }
 
 
-  public void setTotalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public void setTotalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
   }
 
@@ -12235,7 +12235,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput totalCpuSockets(Double totalCpuSockets) {
+  public HostWhereInput totalCpuSockets(Integer totalCpuSockets) {
     
     this.totalCpuSockets = totalCpuSockets;
     return this;
@@ -12248,17 +12248,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSockets() {
+  public Integer getTotalCpuSockets() {
     return totalCpuSockets;
   }
 
 
-  public void setTotalCpuSockets(Double totalCpuSockets) {
+  public void setTotalCpuSockets(Integer totalCpuSockets) {
     this.totalCpuSockets = totalCpuSockets;
   }
 
 
-  public HostWhereInput totalCpuSocketsGt(Double totalCpuSocketsGt) {
+  public HostWhereInput totalCpuSocketsGt(Integer totalCpuSocketsGt) {
     
     this.totalCpuSocketsGt = totalCpuSocketsGt;
     return this;
@@ -12271,17 +12271,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsGt() {
+  public Integer getTotalCpuSocketsGt() {
     return totalCpuSocketsGt;
   }
 
 
-  public void setTotalCpuSocketsGt(Double totalCpuSocketsGt) {
+  public void setTotalCpuSocketsGt(Integer totalCpuSocketsGt) {
     this.totalCpuSocketsGt = totalCpuSocketsGt;
   }
 
 
-  public HostWhereInput totalCpuSocketsGte(Double totalCpuSocketsGte) {
+  public HostWhereInput totalCpuSocketsGte(Integer totalCpuSocketsGte) {
     
     this.totalCpuSocketsGte = totalCpuSocketsGte;
     return this;
@@ -12294,25 +12294,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsGte() {
+  public Integer getTotalCpuSocketsGte() {
     return totalCpuSocketsGte;
   }
 
 
-  public void setTotalCpuSocketsGte(Double totalCpuSocketsGte) {
+  public void setTotalCpuSocketsGte(Integer totalCpuSocketsGte) {
     this.totalCpuSocketsGte = totalCpuSocketsGte;
   }
 
 
-  public HostWhereInput totalCpuSocketsIn(List<Double> totalCpuSocketsIn) {
+  public HostWhereInput totalCpuSocketsIn(List<Integer> totalCpuSocketsIn) {
     
     this.totalCpuSocketsIn = totalCpuSocketsIn;
     return this;
   }
 
-  public HostWhereInput addTotalCpuSocketsInItem(Double totalCpuSocketsInItem) {
+  public HostWhereInput addTotalCpuSocketsInItem(Integer totalCpuSocketsInItem) {
     if (this.totalCpuSocketsIn == null) {
-      this.totalCpuSocketsIn = new ArrayList<Double>();
+      this.totalCpuSocketsIn = new ArrayList<Integer>();
     }
     this.totalCpuSocketsIn.add(totalCpuSocketsInItem);
     return this;
@@ -12325,17 +12325,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuSocketsIn() {
+  public List<Integer> getTotalCpuSocketsIn() {
     return totalCpuSocketsIn;
   }
 
 
-  public void setTotalCpuSocketsIn(List<Double> totalCpuSocketsIn) {
+  public void setTotalCpuSocketsIn(List<Integer> totalCpuSocketsIn) {
     this.totalCpuSocketsIn = totalCpuSocketsIn;
   }
 
 
-  public HostWhereInput totalCpuSocketsLt(Double totalCpuSocketsLt) {
+  public HostWhereInput totalCpuSocketsLt(Integer totalCpuSocketsLt) {
     
     this.totalCpuSocketsLt = totalCpuSocketsLt;
     return this;
@@ -12348,17 +12348,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsLt() {
+  public Integer getTotalCpuSocketsLt() {
     return totalCpuSocketsLt;
   }
 
 
-  public void setTotalCpuSocketsLt(Double totalCpuSocketsLt) {
+  public void setTotalCpuSocketsLt(Integer totalCpuSocketsLt) {
     this.totalCpuSocketsLt = totalCpuSocketsLt;
   }
 
 
-  public HostWhereInput totalCpuSocketsLte(Double totalCpuSocketsLte) {
+  public HostWhereInput totalCpuSocketsLte(Integer totalCpuSocketsLte) {
     
     this.totalCpuSocketsLte = totalCpuSocketsLte;
     return this;
@@ -12371,17 +12371,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsLte() {
+  public Integer getTotalCpuSocketsLte() {
     return totalCpuSocketsLte;
   }
 
 
-  public void setTotalCpuSocketsLte(Double totalCpuSocketsLte) {
+  public void setTotalCpuSocketsLte(Integer totalCpuSocketsLte) {
     this.totalCpuSocketsLte = totalCpuSocketsLte;
   }
 
 
-  public HostWhereInput totalCpuSocketsNot(Double totalCpuSocketsNot) {
+  public HostWhereInput totalCpuSocketsNot(Integer totalCpuSocketsNot) {
     
     this.totalCpuSocketsNot = totalCpuSocketsNot;
     return this;
@@ -12394,25 +12394,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsNot() {
+  public Integer getTotalCpuSocketsNot() {
     return totalCpuSocketsNot;
   }
 
 
-  public void setTotalCpuSocketsNot(Double totalCpuSocketsNot) {
+  public void setTotalCpuSocketsNot(Integer totalCpuSocketsNot) {
     this.totalCpuSocketsNot = totalCpuSocketsNot;
   }
 
 
-  public HostWhereInput totalCpuSocketsNotIn(List<Double> totalCpuSocketsNotIn) {
+  public HostWhereInput totalCpuSocketsNotIn(List<Integer> totalCpuSocketsNotIn) {
     
     this.totalCpuSocketsNotIn = totalCpuSocketsNotIn;
     return this;
   }
 
-  public HostWhereInput addTotalCpuSocketsNotInItem(Double totalCpuSocketsNotInItem) {
+  public HostWhereInput addTotalCpuSocketsNotInItem(Integer totalCpuSocketsNotInItem) {
     if (this.totalCpuSocketsNotIn == null) {
-      this.totalCpuSocketsNotIn = new ArrayList<Double>();
+      this.totalCpuSocketsNotIn = new ArrayList<Integer>();
     }
     this.totalCpuSocketsNotIn.add(totalCpuSocketsNotInItem);
     return this;
@@ -12425,12 +12425,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuSocketsNotIn() {
+  public List<Integer> getTotalCpuSocketsNotIn() {
     return totalCpuSocketsNotIn;
   }
 
 
-  public void setTotalCpuSocketsNotIn(List<Double> totalCpuSocketsNotIn) {
+  public void setTotalCpuSocketsNotIn(List<Integer> totalCpuSocketsNotIn) {
     this.totalCpuSocketsNotIn = totalCpuSocketsNotIn;
   }
 
@@ -13504,7 +13504,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput vmNum(Double vmNum) {
+  public HostWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -13517,17 +13517,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public HostWhereInput vmNumGt(Double vmNumGt) {
+  public HostWhereInput vmNumGt(Integer vmNumGt) {
     
     this.vmNumGt = vmNumGt;
     return this;
@@ -13540,17 +13540,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGt() {
+  public Integer getVmNumGt() {
     return vmNumGt;
   }
 
 
-  public void setVmNumGt(Double vmNumGt) {
+  public void setVmNumGt(Integer vmNumGt) {
     this.vmNumGt = vmNumGt;
   }
 
 
-  public HostWhereInput vmNumGte(Double vmNumGte) {
+  public HostWhereInput vmNumGte(Integer vmNumGte) {
     
     this.vmNumGte = vmNumGte;
     return this;
@@ -13563,25 +13563,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGte() {
+  public Integer getVmNumGte() {
     return vmNumGte;
   }
 
 
-  public void setVmNumGte(Double vmNumGte) {
+  public void setVmNumGte(Integer vmNumGte) {
     this.vmNumGte = vmNumGte;
   }
 
 
-  public HostWhereInput vmNumIn(List<Double> vmNumIn) {
+  public HostWhereInput vmNumIn(List<Integer> vmNumIn) {
     
     this.vmNumIn = vmNumIn;
     return this;
   }
 
-  public HostWhereInput addVmNumInItem(Double vmNumInItem) {
+  public HostWhereInput addVmNumInItem(Integer vmNumInItem) {
     if (this.vmNumIn == null) {
-      this.vmNumIn = new ArrayList<Double>();
+      this.vmNumIn = new ArrayList<Integer>();
     }
     this.vmNumIn.add(vmNumInItem);
     return this;
@@ -13594,17 +13594,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumIn() {
+  public List<Integer> getVmNumIn() {
     return vmNumIn;
   }
 
 
-  public void setVmNumIn(List<Double> vmNumIn) {
+  public void setVmNumIn(List<Integer> vmNumIn) {
     this.vmNumIn = vmNumIn;
   }
 
 
-  public HostWhereInput vmNumLt(Double vmNumLt) {
+  public HostWhereInput vmNumLt(Integer vmNumLt) {
     
     this.vmNumLt = vmNumLt;
     return this;
@@ -13617,17 +13617,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLt() {
+  public Integer getVmNumLt() {
     return vmNumLt;
   }
 
 
-  public void setVmNumLt(Double vmNumLt) {
+  public void setVmNumLt(Integer vmNumLt) {
     this.vmNumLt = vmNumLt;
   }
 
 
-  public HostWhereInput vmNumLte(Double vmNumLte) {
+  public HostWhereInput vmNumLte(Integer vmNumLte) {
     
     this.vmNumLte = vmNumLte;
     return this;
@@ -13640,17 +13640,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLte() {
+  public Integer getVmNumLte() {
     return vmNumLte;
   }
 
 
-  public void setVmNumLte(Double vmNumLte) {
+  public void setVmNumLte(Integer vmNumLte) {
     this.vmNumLte = vmNumLte;
   }
 
 
-  public HostWhereInput vmNumNot(Double vmNumNot) {
+  public HostWhereInput vmNumNot(Integer vmNumNot) {
     
     this.vmNumNot = vmNumNot;
     return this;
@@ -13663,25 +13663,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumNot() {
+  public Integer getVmNumNot() {
     return vmNumNot;
   }
 
 
-  public void setVmNumNot(Double vmNumNot) {
+  public void setVmNumNot(Integer vmNumNot) {
     this.vmNumNot = vmNumNot;
   }
 
 
-  public HostWhereInput vmNumNotIn(List<Double> vmNumNotIn) {
+  public HostWhereInput vmNumNotIn(List<Integer> vmNumNotIn) {
     
     this.vmNumNotIn = vmNumNotIn;
     return this;
   }
 
-  public HostWhereInput addVmNumNotInItem(Double vmNumNotInItem) {
+  public HostWhereInput addVmNumNotInItem(Integer vmNumNotInItem) {
     if (this.vmNumNotIn == null) {
-      this.vmNumNotIn = new ArrayList<Double>();
+      this.vmNumNotIn = new ArrayList<Integer>();
     }
     this.vmNumNotIn.add(vmNumNotInItem);
     return this;
@@ -13694,12 +13694,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumNotIn() {
+  public List<Integer> getVmNumNotIn() {
     return vmNumNotIn;
   }
 
 
-  public void setVmNumNotIn(List<Double> vmNumNotIn) {
+  public void setVmNumNotIn(List<Integer> vmNumNotIn) {
     this.vmNumNotIn = vmNumNotIn;
   }
 

@@ -47,6 +47,8 @@ public class ITNfsExport extends ITBase {
       List<WithTaskNfsExport> result = api.createNfsExport(params, contentLanguage);
       assertThat(result).as("check result of createNfsExport").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNfsExport extends ITBase {
       List<WithTaskDeleteNfsExport> result = api.deleteNfsExport(params, contentLanguage);
       assertThat(result).as("check result of deleteNfsExport").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITNfsExport extends ITBase {
       List<NfsExport> result = api.getNfsExports(params, contentLanguage);
       assertThat(result).as("check result of getNfsExports").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITNfsExport extends ITBase {
       NfsExportConnection result = api.getNfsExportsConnection(params, contentLanguage);
       assertThat(result).as("check result of getNfsExportsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITNfsExport extends ITBase {
       List<WithTaskNfsExport> result = api.updateNfsExport(params, contentLanguage);
       assertThat(result).as("check result of updateNfsExport").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

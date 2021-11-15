@@ -220,35 +220,35 @@ public class VmFolderWhereInput {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_NUM_GT = "vm_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GT)
-  private Double vmNumGt;
+  private Integer vmNumGt;
 
   public static final String SERIALIZED_NAME_VM_NUM_GTE = "vm_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GTE)
-  private Double vmNumGte;
+  private Integer vmNumGte;
 
   public static final String SERIALIZED_NAME_VM_NUM_IN = "vm_num_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_IN)
-  private List<Double> vmNumIn = null;
+  private List<Integer> vmNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM_LT = "vm_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LT)
-  private Double vmNumLt;
+  private Integer vmNumLt;
 
   public static final String SERIALIZED_NAME_VM_NUM_LTE = "vm_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LTE)
-  private Double vmNumLte;
+  private Integer vmNumLte;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT = "vm_num_not";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT)
-  private Double vmNumNot;
+  private Integer vmNumNot;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT_IN = "vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT_IN)
-  private List<Double> vmNumNotIn = null;
+  private List<Integer> vmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
   @SerializedName(SERIALIZED_NAME_VMS_EVERY)
@@ -1393,7 +1393,7 @@ public class VmFolderWhereInput {
   }
 
 
-  public VmFolderWhereInput vmNum(Double vmNum) {
+  public VmFolderWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -1406,17 +1406,17 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public VmFolderWhereInput vmNumGt(Double vmNumGt) {
+  public VmFolderWhereInput vmNumGt(Integer vmNumGt) {
     
     this.vmNumGt = vmNumGt;
     return this;
@@ -1429,17 +1429,17 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGt() {
+  public Integer getVmNumGt() {
     return vmNumGt;
   }
 
 
-  public void setVmNumGt(Double vmNumGt) {
+  public void setVmNumGt(Integer vmNumGt) {
     this.vmNumGt = vmNumGt;
   }
 
 
-  public VmFolderWhereInput vmNumGte(Double vmNumGte) {
+  public VmFolderWhereInput vmNumGte(Integer vmNumGte) {
     
     this.vmNumGte = vmNumGte;
     return this;
@@ -1452,25 +1452,25 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGte() {
+  public Integer getVmNumGte() {
     return vmNumGte;
   }
 
 
-  public void setVmNumGte(Double vmNumGte) {
+  public void setVmNumGte(Integer vmNumGte) {
     this.vmNumGte = vmNumGte;
   }
 
 
-  public VmFolderWhereInput vmNumIn(List<Double> vmNumIn) {
+  public VmFolderWhereInput vmNumIn(List<Integer> vmNumIn) {
     
     this.vmNumIn = vmNumIn;
     return this;
   }
 
-  public VmFolderWhereInput addVmNumInItem(Double vmNumInItem) {
+  public VmFolderWhereInput addVmNumInItem(Integer vmNumInItem) {
     if (this.vmNumIn == null) {
-      this.vmNumIn = new ArrayList<Double>();
+      this.vmNumIn = new ArrayList<Integer>();
     }
     this.vmNumIn.add(vmNumInItem);
     return this;
@@ -1483,17 +1483,17 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumIn() {
+  public List<Integer> getVmNumIn() {
     return vmNumIn;
   }
 
 
-  public void setVmNumIn(List<Double> vmNumIn) {
+  public void setVmNumIn(List<Integer> vmNumIn) {
     this.vmNumIn = vmNumIn;
   }
 
 
-  public VmFolderWhereInput vmNumLt(Double vmNumLt) {
+  public VmFolderWhereInput vmNumLt(Integer vmNumLt) {
     
     this.vmNumLt = vmNumLt;
     return this;
@@ -1506,17 +1506,17 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLt() {
+  public Integer getVmNumLt() {
     return vmNumLt;
   }
 
 
-  public void setVmNumLt(Double vmNumLt) {
+  public void setVmNumLt(Integer vmNumLt) {
     this.vmNumLt = vmNumLt;
   }
 
 
-  public VmFolderWhereInput vmNumLte(Double vmNumLte) {
+  public VmFolderWhereInput vmNumLte(Integer vmNumLte) {
     
     this.vmNumLte = vmNumLte;
     return this;
@@ -1529,17 +1529,17 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLte() {
+  public Integer getVmNumLte() {
     return vmNumLte;
   }
 
 
-  public void setVmNumLte(Double vmNumLte) {
+  public void setVmNumLte(Integer vmNumLte) {
     this.vmNumLte = vmNumLte;
   }
 
 
-  public VmFolderWhereInput vmNumNot(Double vmNumNot) {
+  public VmFolderWhereInput vmNumNot(Integer vmNumNot) {
     
     this.vmNumNot = vmNumNot;
     return this;
@@ -1552,25 +1552,25 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumNot() {
+  public Integer getVmNumNot() {
     return vmNumNot;
   }
 
 
-  public void setVmNumNot(Double vmNumNot) {
+  public void setVmNumNot(Integer vmNumNot) {
     this.vmNumNot = vmNumNot;
   }
 
 
-  public VmFolderWhereInput vmNumNotIn(List<Double> vmNumNotIn) {
+  public VmFolderWhereInput vmNumNotIn(List<Integer> vmNumNotIn) {
     
     this.vmNumNotIn = vmNumNotIn;
     return this;
   }
 
-  public VmFolderWhereInput addVmNumNotInItem(Double vmNumNotInItem) {
+  public VmFolderWhereInput addVmNumNotInItem(Integer vmNumNotInItem) {
     if (this.vmNumNotIn == null) {
-      this.vmNumNotIn = new ArrayList<Double>();
+      this.vmNumNotIn = new ArrayList<Integer>();
     }
     this.vmNumNotIn.add(vmNumNotInItem);
     return this;
@@ -1583,12 +1583,12 @@ public class VmFolderWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumNotIn() {
+  public List<Integer> getVmNumNotIn() {
     return vmNumNotIn;
   }
 
 
-  public void setVmNumNotIn(List<Double> vmNumNotIn) {
+  public void setVmNumNotIn(List<Integer> vmNumNotIn) {
     this.vmNumNotIn = vmNumNotIn;
   }
 

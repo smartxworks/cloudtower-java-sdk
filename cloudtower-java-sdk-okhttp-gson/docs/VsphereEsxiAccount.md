@@ -7,13 +7,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **id** | **String** |  | 
 **ip** | **String** |  | 
 **isValid** | **Boolean** |  | 
 **localId** | **String** |  | 
 **password** | **String** |  | 
-**port** | **Double** |  | 
+**port** | **Integer** |  | 
 **username** | **String** |  | 
 
 

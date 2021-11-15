@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.BrickTopoCapacity;
-import com.smartx.tower.model.BrickTopoTagPositionInBrick;
+import com.smartx.tower.model.NestedCapacity;
+import com.smartx.tower.model.NestedTagPosition;
 import com.smartx.tower.model.NodeTopoWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class BrickTopoUpdationParamsData {
   public static final String SERIALIZED_NAME_TAG_POSITION_IN_BRICK = "tag_position_in_brick";
   @SerializedName(SERIALIZED_NAME_TAG_POSITION_IN_BRICK)
-  private List<BrickTopoTagPositionInBrick> tagPositionInBrick = null;
+  private List<NestedTagPosition> tagPositionInBrick = null;
 
   public static final String SERIALIZED_NAME_NODE_TOPOES = "node_topoes";
   @SerializedName(SERIALIZED_NAME_NODE_TOPOES)
@@ -45,11 +45,11 @@ public class BrickTopoUpdationParamsData {
 
   public static final String SERIALIZED_NAME_CAPACITY = "capacity";
   @SerializedName(SERIALIZED_NAME_CAPACITY)
-  private BrickTopoCapacity capacity;
+  private NestedCapacity capacity;
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Double height;
+  private Integer height;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -57,18 +57,18 @@ public class BrickTopoUpdationParamsData {
 
   public static final String SERIALIZED_NAME_POSITION = "position";
   @SerializedName(SERIALIZED_NAME_POSITION)
-  private Double position;
+  private Integer position;
 
 
-  public BrickTopoUpdationParamsData tagPositionInBrick(List<BrickTopoTagPositionInBrick> tagPositionInBrick) {
+  public BrickTopoUpdationParamsData tagPositionInBrick(List<NestedTagPosition> tagPositionInBrick) {
     
     this.tagPositionInBrick = tagPositionInBrick;
     return this;
   }
 
-  public BrickTopoUpdationParamsData addTagPositionInBrickItem(BrickTopoTagPositionInBrick tagPositionInBrickItem) {
+  public BrickTopoUpdationParamsData addTagPositionInBrickItem(NestedTagPosition tagPositionInBrickItem) {
     if (this.tagPositionInBrick == null) {
-      this.tagPositionInBrick = new ArrayList<BrickTopoTagPositionInBrick>();
+      this.tagPositionInBrick = new ArrayList<NestedTagPosition>();
     }
     this.tagPositionInBrick.add(tagPositionInBrickItem);
     return this;
@@ -81,12 +81,12 @@ public class BrickTopoUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoTagPositionInBrick> getTagPositionInBrick() {
+  public List<NestedTagPosition> getTagPositionInBrick() {
     return tagPositionInBrick;
   }
 
 
-  public void setTagPositionInBrick(List<BrickTopoTagPositionInBrick> tagPositionInBrick) {
+  public void setTagPositionInBrick(List<NestedTagPosition> tagPositionInBrick) {
     this.tagPositionInBrick = tagPositionInBrick;
   }
 
@@ -114,7 +114,7 @@ public class BrickTopoUpdationParamsData {
   }
 
 
-  public BrickTopoUpdationParamsData capacity(BrickTopoCapacity capacity) {
+  public BrickTopoUpdationParamsData capacity(NestedCapacity capacity) {
     
     this.capacity = capacity;
     return this;
@@ -127,17 +127,17 @@ public class BrickTopoUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public BrickTopoCapacity getCapacity() {
+  public NestedCapacity getCapacity() {
     return capacity;
   }
 
 
-  public void setCapacity(BrickTopoCapacity capacity) {
+  public void setCapacity(NestedCapacity capacity) {
     this.capacity = capacity;
   }
 
 
-  public BrickTopoUpdationParamsData height(Double height) {
+  public BrickTopoUpdationParamsData height(Integer height) {
     
     this.height = height;
     return this;
@@ -150,12 +150,12 @@ public class BrickTopoUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeight() {
+  public Integer getHeight() {
     return height;
   }
 
 
-  public void setHeight(Double height) {
+  public void setHeight(Integer height) {
     this.height = height;
   }
 
@@ -183,7 +183,7 @@ public class BrickTopoUpdationParamsData {
   }
 
 
-  public BrickTopoUpdationParamsData position(Double position) {
+  public BrickTopoUpdationParamsData position(Integer position) {
     
     this.position = position;
     return this;
@@ -196,12 +196,12 @@ public class BrickTopoUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPosition() {
+  public Integer getPosition() {
     return position;
   }
 
 
-  public void setPosition(Double position) {
+  public void setPosition(Integer position) {
     this.position = position;
   }
 

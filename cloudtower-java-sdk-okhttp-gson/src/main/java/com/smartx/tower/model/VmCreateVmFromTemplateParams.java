@@ -64,7 +64,7 @@ public class VmCreateVmFromTemplateParams {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
   @SerializedName(SERIALIZED_NAME_IO_POLICY)
@@ -72,7 +72,7 @@ public class VmCreateVmFromTemplateParams {
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -100,11 +100,11 @@ public class VmCreateVmFromTemplateParams {
 
   public static final String SERIALIZED_NAME_CPU_CORES = "cpu_cores";
   @SerializedName(SERIALIZED_NAME_CPU_CORES)
-  private Double cpuCores;
+  private Integer cpuCores;
 
   public static final String SERIALIZED_NAME_CPU_SOCKETS = "cpu_sockets";
   @SerializedName(SERIALIZED_NAME_CPU_SOCKETS)
-  private Double cpuSockets;
+  private Integer cpuSockets;
 
   public static final String SERIALIZED_NAME_GUEST_OS_TYPE = "guest_os_type";
   @SerializedName(SERIALIZED_NAME_GUEST_OS_TYPE)
@@ -269,7 +269,7 @@ public class VmCreateVmFromTemplateParams {
   }
 
 
-  public VmCreateVmFromTemplateParams maxIops(Double maxIops) {
+  public VmCreateVmFromTemplateParams maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -282,12 +282,12 @@ public class VmCreateVmFromTemplateParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
@@ -315,7 +315,7 @@ public class VmCreateVmFromTemplateParams {
   }
 
 
-  public VmCreateVmFromTemplateParams vcpu(Double vcpu) {
+  public VmCreateVmFromTemplateParams vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -328,12 +328,12 @@ public class VmCreateVmFromTemplateParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
@@ -484,7 +484,7 @@ public class VmCreateVmFromTemplateParams {
   }
 
 
-  public VmCreateVmFromTemplateParams cpuCores(Double cpuCores) {
+  public VmCreateVmFromTemplateParams cpuCores(Integer cpuCores) {
     
     this.cpuCores = cpuCores;
     return this;
@@ -497,17 +497,17 @@ public class VmCreateVmFromTemplateParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuCores() {
+  public Integer getCpuCores() {
     return cpuCores;
   }
 
 
-  public void setCpuCores(Double cpuCores) {
+  public void setCpuCores(Integer cpuCores) {
     this.cpuCores = cpuCores;
   }
 
 
-  public VmCreateVmFromTemplateParams cpuSockets(Double cpuSockets) {
+  public VmCreateVmFromTemplateParams cpuSockets(Integer cpuSockets) {
     
     this.cpuSockets = cpuSockets;
     return this;
@@ -520,12 +520,12 @@ public class VmCreateVmFromTemplateParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuSockets() {
+  public Integer getCpuSockets() {
     return cpuSockets;
   }
 
 
-  public void setCpuSockets(Double cpuSockets) {
+  public void setCpuSockets(Integer cpuSockets) {
     this.cpuSockets = cpuSockets;
   }
 

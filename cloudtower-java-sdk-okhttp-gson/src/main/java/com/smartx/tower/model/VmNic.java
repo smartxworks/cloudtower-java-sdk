@@ -20,7 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedNic;
+import com.smartx.tower.model.NestedVlan;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.VmNicModel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -70,11 +72,11 @@ public class VmNic {
 
   public static final String SERIALIZED_NAME_NIC = "nic";
   @SerializedName(SERIALIZED_NAME_NIC)
-  private NameIdPair nic;
+  private NestedNic nic;
 
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
-  private Double order;
+  private Integer order;
 
   public static final String SERIALIZED_NAME_SUBNET_MASK = "subnet_mask";
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)
@@ -82,11 +84,11 @@ public class VmNic {
 
   public static final String SERIALIZED_NAME_VLAN = "vlan";
   @SerializedName(SERIALIZED_NAME_VLAN)
-  private NameIdPair vlan;
+  private NestedVlan vlan;
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private NameIdPair vm;
+  private NestedVm vm;
 
 
   public VmNic enabled(Boolean enabled) {
@@ -296,7 +298,7 @@ public class VmNic {
   }
 
 
-  public VmNic nic(NameIdPair nic) {
+  public VmNic nic(NestedNic nic) {
     
     this.nic = nic;
     return this;
@@ -309,17 +311,17 @@ public class VmNic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getNic() {
+  public NestedNic getNic() {
     return nic;
   }
 
 
-  public void setNic(NameIdPair nic) {
+  public void setNic(NestedNic nic) {
     this.nic = nic;
   }
 
 
-  public VmNic order(Double order) {
+  public VmNic order(Integer order) {
     
     this.order = order;
     return this;
@@ -332,12 +334,12 @@ public class VmNic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrder() {
+  public Integer getOrder() {
     return order;
   }
 
 
-  public void setOrder(Double order) {
+  public void setOrder(Integer order) {
     this.order = order;
   }
 
@@ -365,7 +367,7 @@ public class VmNic {
   }
 
 
-  public VmNic vlan(NameIdPair vlan) {
+  public VmNic vlan(NestedVlan vlan) {
     
     this.vlan = vlan;
     return this;
@@ -378,17 +380,17 @@ public class VmNic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getVlan() {
+  public NestedVlan getVlan() {
     return vlan;
   }
 
 
-  public void setVlan(NameIdPair vlan) {
+  public void setVlan(NestedVlan vlan) {
     this.vlan = vlan;
   }
 
 
-  public VmNic vm(NameIdPair vm) {
+  public VmNic vm(NestedVm vm) {
     
     this.vm = vm;
     return this;
@@ -401,12 +403,12 @@ public class VmNic {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getVm() {
+  public NestedVm getVm() {
     return vm;
   }
 
 
-  public void setVm(NameIdPair vm) {
+  public void setVm(NestedVm vm) {
     this.vm = vm;
   }
 

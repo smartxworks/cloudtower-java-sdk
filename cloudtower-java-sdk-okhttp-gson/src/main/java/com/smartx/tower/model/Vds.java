@@ -20,9 +20,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedEverouteCluster;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNic;
+import com.smartx.tower.model.NestedVlan;
 import com.smartx.tower.model.NetworkType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -42,7 +45,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -50,7 +53,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private NameIdPair everouteCluster;
+  private NestedEverouteCluster everouteCluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,7 +65,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -74,7 +77,7 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<NameIdPair> nics = null;
+  private List<NestedNic> nics = null;
 
   public static final String SERIALIZED_NAME_OVSBR_NAME = "ovsbr_name";
   @SerializedName(SERIALIZED_NAME_OVSBR_NAME)
@@ -86,11 +89,11 @@ public class Vds {
 
   public static final String SERIALIZED_NAME_VLANS = "vlans";
   @SerializedName(SERIALIZED_NAME_VLANS)
-  private List<NameIdPair> vlans = null;
+  private List<NestedVlan> vlans = null;
 
   public static final String SERIALIZED_NAME_VLANS_NUM = "vlans_num";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM)
-  private Double vlansNum;
+  private Integer vlansNum;
 
 
   public Vds bondMode(String bondMode) {
@@ -116,7 +119,7 @@ public class Vds {
   }
 
 
-  public Vds cluster(NameIdPair cluster) {
+  public Vds cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -129,12 +132,12 @@ public class Vds {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -162,7 +165,7 @@ public class Vds {
   }
 
 
-  public Vds everouteCluster(NameIdPair everouteCluster) {
+  public Vds everouteCluster(NestedEverouteCluster everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -175,12 +178,12 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getEverouteCluster() {
+  public NestedEverouteCluster getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(NameIdPair everouteCluster) {
+  public void setEverouteCluster(NestedEverouteCluster everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -231,15 +234,15 @@ public class Vds {
   }
 
 
-  public Vds labels(List<BrickTopoPowers> labels) {
+  public Vds labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Vds addLabelsItem(BrickTopoPowers labelsItem) {
+  public Vds addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -252,12 +255,12 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -308,15 +311,15 @@ public class Vds {
   }
 
 
-  public Vds nics(List<NameIdPair> nics) {
+  public Vds nics(List<NestedNic> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Vds addNicsItem(NameIdPair nicsItem) {
+  public Vds addNicsItem(NestedNic nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<NameIdPair>();
+      this.nics = new ArrayList<NestedNic>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -329,12 +332,12 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNics() {
+  public List<NestedNic> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<NameIdPair> nics) {
+  public void setNics(List<NestedNic> nics) {
     this.nics = nics;
   }
 
@@ -385,15 +388,15 @@ public class Vds {
   }
 
 
-  public Vds vlans(List<NameIdPair> vlans) {
+  public Vds vlans(List<NestedVlan> vlans) {
     
     this.vlans = vlans;
     return this;
   }
 
-  public Vds addVlansItem(NameIdPair vlansItem) {
+  public Vds addVlansItem(NestedVlan vlansItem) {
     if (this.vlans == null) {
-      this.vlans = new ArrayList<NameIdPair>();
+      this.vlans = new ArrayList<NestedVlan>();
     }
     this.vlans.add(vlansItem);
     return this;
@@ -406,17 +409,17 @@ public class Vds {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVlans() {
+  public List<NestedVlan> getVlans() {
     return vlans;
   }
 
 
-  public void setVlans(List<NameIdPair> vlans) {
+  public void setVlans(List<NestedVlan> vlans) {
     this.vlans = vlans;
   }
 
 
-  public Vds vlansNum(Double vlansNum) {
+  public Vds vlansNum(Integer vlansNum) {
     
     this.vlansNum = vlansNum;
     return this;
@@ -429,12 +432,12 @@ public class Vds {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVlansNum() {
+  public Integer getVlansNum() {
     return vlansNum;
   }
 
 
-  public void setVlansNum(Double vlansNum) {
+  public void setVlansNum(Integer vlansNum) {
     this.vlansNum = vlansNum;
   }
 

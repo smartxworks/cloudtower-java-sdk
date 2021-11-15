@@ -47,6 +47,8 @@ public class ITEverouteLicense extends ITBase {
       List<EverouteLicense> result = api.getEverouteLicenses(params, contentLanguage);
       assertThat(result).as("check result of getEverouteLicenses").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITEverouteLicense extends ITBase {
       EverouteLicenseConnection result = api.getEverouteLicensesConnection(params, contentLanguage);
       assertThat(result).as("check result of getEverouteLicensesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

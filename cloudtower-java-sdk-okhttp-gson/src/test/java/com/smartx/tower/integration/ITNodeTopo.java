@@ -47,6 +47,8 @@ public class ITNodeTopo extends ITBase {
       List<NodeTopo> result = api.getNodeTopoes(params, contentLanguage);
       assertThat(result).as("check result of getNodeTopoes").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNodeTopo extends ITBase {
       NodeTopoConnection result = api.getNodeTopoesConnection(params, contentLanguage);
       assertThat(result).as("check result of getNodeTopoesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITNodeTopo extends ITBase {
       List<WithTaskNodeTopo> result = api.updateNodeTopo(params, contentLanguage);
       assertThat(result).as("check result of updateNodeTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

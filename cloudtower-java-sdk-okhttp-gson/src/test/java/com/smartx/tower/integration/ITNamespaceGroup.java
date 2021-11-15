@@ -47,6 +47,8 @@ public class ITNamespaceGroup extends ITBase {
       List<WithTaskNamespaceGroup> result = api.createNamespaceGroup(params, contentLanguage);
       assertThat(result).as("check result of createNamespaceGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNamespaceGroup extends ITBase {
       List<WithTaskDeleteNamespaceGroup> result = api.deleteNamespaceGroup(params, contentLanguage);
       assertThat(result).as("check result of deleteNamespaceGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITNamespaceGroup extends ITBase {
       List<NamespaceGroup> result = api.getNamespaceGroups(params, contentLanguage);
       assertThat(result).as("check result of getNamespaceGroups").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITNamespaceGroup extends ITBase {
       NamespaceGroupConnection result = api.getNamespaceGroupsConnection(params, contentLanguage);
       assertThat(result).as("check result of getNamespaceGroupsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITNamespaceGroup extends ITBase {
       List<WithTaskNamespaceGroup> result = api.updateNamespaceGroup(params, contentLanguage);
       assertThat(result).as("check result of updateNamespaceGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

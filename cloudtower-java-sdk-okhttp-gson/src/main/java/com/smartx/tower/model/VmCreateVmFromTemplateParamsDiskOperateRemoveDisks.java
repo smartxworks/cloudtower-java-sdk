@@ -33,16 +33,16 @@ import java.util.List;
 public class VmCreateVmFromTemplateParamsDiskOperateRemoveDisks {
   public static final String SERIALIZED_NAME_DISK_INDEX = "disk_index";
   @SerializedName(SERIALIZED_NAME_DISK_INDEX)
-  private List<Double> diskIndex = new ArrayList<Double>();
+  private List<Integer> diskIndex = new ArrayList<Integer>();
 
 
-  public VmCreateVmFromTemplateParamsDiskOperateRemoveDisks diskIndex(List<Double> diskIndex) {
+  public VmCreateVmFromTemplateParamsDiskOperateRemoveDisks diskIndex(List<Integer> diskIndex) {
     
     this.diskIndex = diskIndex;
     return this;
   }
 
-  public VmCreateVmFromTemplateParamsDiskOperateRemoveDisks addDiskIndexItem(Double diskIndexItem) {
+  public VmCreateVmFromTemplateParamsDiskOperateRemoveDisks addDiskIndexItem(Integer diskIndexItem) {
     this.diskIndex.add(diskIndexItem);
     return this;
   }
@@ -54,12 +54,12 @@ public class VmCreateVmFromTemplateParamsDiskOperateRemoveDisks {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Double> getDiskIndex() {
+  public List<Integer> getDiskIndex() {
     return diskIndex;
   }
 
 
-  public void setDiskIndex(List<Double> diskIndex) {
+  public void setDiskIndex(List<Integer> diskIndex) {
     this.diskIndex = diskIndex;
   }
 

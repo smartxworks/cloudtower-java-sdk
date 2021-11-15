@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cloneVmTemplateFromVm**](VmTemplateApi.md#cloneVmTemplateFromVm) | **POST** /clone-vm-template-from-vm | 
 [**convertVmTemplateFromVm**](VmTemplateApi.md#convertVmTemplateFromVm) | **POST** /convert-vm-template-from-vm | 
-[**deleteVmTemplateFromVm**](VmTemplateApi.md#deleteVmTemplateFromVm) | **POST** /delete-vm-template | 
+[**deleteVmTemplate**](VmTemplateApi.md#deleteVmTemplate) | **POST** /delete-vm-template | 
 [**getVmTemplates**](VmTemplateApi.md#getVmTemplates) | **POST** /get-vm-templates | 
 [**getVmTemplatesConnection**](VmTemplateApi.md#getVmTemplatesConnection) | **POST** /get-vm-templates-connection | 
-[**updateVmTemplateFromVm**](VmTemplateApi.md#updateVmTemplateFromVm) | **POST** /update-vm-template | 
+[**updateVmTemplate**](VmTemplateApi.md#updateVmTemplate) | **POST** /update-vm-template | 
 
 
 <a name="cloneVmTemplateFromVm"></a>
@@ -152,9 +152,9 @@ Name | Type | Description  | Notes
 **200** | Ok |  -  |
 **400** |  |  -  |
 
-<a name="deleteVmTemplateFromVm"></a>
-# **deleteVmTemplateFromVm**
-> List&lt;WithTaskDeleteVmTemplate&gt; deleteVmTemplateFromVm(vmTemplateDeletionParams, contentLanguage)
+<a name="deleteVmTemplate"></a>
+# **deleteVmTemplate**
+> List&lt;WithTaskDeleteVmTemplate&gt; deleteVmTemplate(vmTemplateDeletionParams, contentLanguage)
 
 
 
@@ -183,10 +183,10 @@ public class Example {
     VmTemplateDeletionParams vmTemplateDeletionParams = new VmTemplateDeletionParams(); // VmTemplateDeletionParams | 
     String contentLanguage = "zh-CN"; // String | 
     try {
-      List<WithTaskDeleteVmTemplate> result = apiInstance.deleteVmTemplateFromVm(vmTemplateDeletionParams, contentLanguage);
+      List<WithTaskDeleteVmTemplate> result = apiInstance.deleteVmTemplate(vmTemplateDeletionParams, contentLanguage);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling VmTemplateApi#deleteVmTemplateFromVm");
+      System.err.println("Exception when calling VmTemplateApi#deleteVmTemplate");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -362,9 +362,9 @@ Name | Type | Description  | Notes
 **200** | Ok |  -  |
 **400** |  |  -  |
 
-<a name="updateVmTemplateFromVm"></a>
-# **updateVmTemplateFromVm**
-> List&lt;WithTaskVmTemplate&gt; updateVmTemplateFromVm(vmTemplateUpdationParams, contentLanguage)
+<a name="updateVmTemplate"></a>
+# **updateVmTemplate**
+> List&lt;WithTaskVmTemplate&gt; updateVmTemplate(vmTemplateUpdationParams, contentLanguage)
 
 
 
@@ -393,10 +393,10 @@ public class Example {
     VmTemplateUpdationParams vmTemplateUpdationParams = new VmTemplateUpdationParams(); // VmTemplateUpdationParams | 
     String contentLanguage = "zh-CN"; // String | 
     try {
-      List<WithTaskVmTemplate> result = apiInstance.updateVmTemplateFromVm(vmTemplateUpdationParams, contentLanguage);
+      List<WithTaskVmTemplate> result = apiInstance.updateVmTemplate(vmTemplateUpdationParams, contentLanguage);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling VmTemplateApi#updateVmTemplateFromVm");
+      System.err.println("Exception when calling VmTemplateApi#updateVmTemplate");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -47,6 +47,8 @@ public class ITSecurityPolicy extends ITBase {
       List<SecurityPolicy> result = api.getSecurityPolicies(params, contentLanguage);
       assertThat(result).as("check result of getSecurityPolicies").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSecurityPolicy extends ITBase {
       SecurityPolicyConnection result = api.getSecurityPoliciesConnection(params, contentLanguage);
       assertThat(result).as("check result of getSecurityPoliciesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

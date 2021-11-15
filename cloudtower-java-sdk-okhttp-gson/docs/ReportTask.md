@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **planId** | **String** |  |  [optional]
 **status** | **TaskStatus** |  | 
-**template** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**template** | [**NestedReportTemplate**](NestedReportTemplate.md) |  | 
 
 
 

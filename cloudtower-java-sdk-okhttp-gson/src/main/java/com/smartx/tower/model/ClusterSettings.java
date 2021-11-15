@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.ClusterSettingsVmRecycleBin;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedVmRecycleBin;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,7 +34,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ClusterSettings {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DEFAULT_HA = "default_ha";
   @SerializedName(SERIALIZED_NAME_DEFAULT_HA)
@@ -46,10 +46,10 @@ public class ClusterSettings {
 
   public static final String SERIALIZED_NAME_VM_RECYCLE_BIN = "vm_recycle_bin";
   @SerializedName(SERIALIZED_NAME_VM_RECYCLE_BIN)
-  private ClusterSettingsVmRecycleBin vmRecycleBin;
+  private NestedVmRecycleBin vmRecycleBin;
 
 
-  public ClusterSettings cluster(NameIdPair cluster) {
+  public ClusterSettings cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -62,12 +62,12 @@ public class ClusterSettings {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -118,7 +118,7 @@ public class ClusterSettings {
   }
 
 
-  public ClusterSettings vmRecycleBin(ClusterSettingsVmRecycleBin vmRecycleBin) {
+  public ClusterSettings vmRecycleBin(NestedVmRecycleBin vmRecycleBin) {
     
     this.vmRecycleBin = vmRecycleBin;
     return this;
@@ -131,12 +131,12 @@ public class ClusterSettings {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public ClusterSettingsVmRecycleBin getVmRecycleBin() {
+  public NestedVmRecycleBin getVmRecycleBin() {
     return vmRecycleBin;
   }
 
 
-  public void setVmRecycleBin(ClusterSettingsVmRecycleBin vmRecycleBin) {
+  public void setVmRecycleBin(NestedVmRecycleBin vmRecycleBin) {
     this.vmRecycleBin = vmRecycleBin;
   }
 

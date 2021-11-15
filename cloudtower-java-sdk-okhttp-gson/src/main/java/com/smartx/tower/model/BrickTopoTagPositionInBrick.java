@@ -35,11 +35,11 @@ public class BrickTopoTagPositionInBrick {
 
   public static final String SERIALIZED_NAME_ROW = "row";
   @SerializedName(SERIALIZED_NAME_ROW)
-  private Double row;
+  private Integer row;
 
   public static final String SERIALIZED_NAME_COLUMN = "column";
   @SerializedName(SERIALIZED_NAME_COLUMN)
-  private Double column;
+  private Integer column;
 
 
   public BrickTopoTagPositionInBrick tag(String tag) {
@@ -65,7 +65,7 @@ public class BrickTopoTagPositionInBrick {
   }
 
 
-  public BrickTopoTagPositionInBrick row(Double row) {
+  public BrickTopoTagPositionInBrick row(Integer row) {
     
     this.row = row;
     return this;
@@ -78,17 +78,17 @@ public class BrickTopoTagPositionInBrick {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRow() {
+  public Integer getRow() {
     return row;
   }
 
 
-  public void setRow(Double row) {
+  public void setRow(Integer row) {
     this.row = row;
   }
 
 
-  public BrickTopoTagPositionInBrick column(Double column) {
+  public BrickTopoTagPositionInBrick column(Integer column) {
     
     this.column = column;
     return this;
@@ -101,12 +101,12 @@ public class BrickTopoTagPositionInBrick {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getColumn() {
+  public Integer getColumn() {
     return column;
   }
 
 
-  public void setColumn(Double column) {
+  public void setColumn(Integer column) {
     this.column = column;
   }
 

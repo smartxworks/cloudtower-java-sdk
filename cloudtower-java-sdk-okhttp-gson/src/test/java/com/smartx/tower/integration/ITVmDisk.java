@@ -47,6 +47,8 @@ public class ITVmDisk extends ITBase {
       List<VmDisk> result = api.getVmDisks(params, contentLanguage);
       assertThat(result).as("check result of getVmDisks").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVmDisk extends ITBase {
       VmDiskConnection result = api.getVmDisksConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmDisksConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

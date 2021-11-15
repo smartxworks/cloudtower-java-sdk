@@ -47,6 +47,8 @@ public class ITClusterTopo extends ITBase {
       List<ClusterTopo> result = api.getClusterTopoes(params, contentLanguage);
       assertThat(result).as("check result of getClusterTopoes").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITClusterTopo extends ITBase {
       ClusterTopoConnection result = api.getClusterTopoesConnection(params, contentLanguage);
       assertThat(result).as("check result of getClusterTopoesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

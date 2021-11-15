@@ -42,11 +42,11 @@ public class GetDeploysConnectionRequestBody {
 
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
-  private Double first;
+  private Integer first;
 
   public static final String SERIALIZED_NAME_LAST = "last";
   @SerializedName(SERIALIZED_NAME_LAST)
-  private Double last;
+  private Integer last;
 
   public static final String SERIALIZED_NAME_ORDER_BY = "orderBy";
   @SerializedName(SERIALIZED_NAME_ORDER_BY)
@@ -54,7 +54,7 @@ public class GetDeploysConnectionRequestBody {
 
   public static final String SERIALIZED_NAME_SKIP = "skip";
   @SerializedName(SERIALIZED_NAME_SKIP)
-  private Double skip;
+  private Integer skip;
 
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)
@@ -107,7 +107,7 @@ public class GetDeploysConnectionRequestBody {
   }
 
 
-  public GetDeploysConnectionRequestBody first(Double first) {
+  public GetDeploysConnectionRequestBody first(Integer first) {
     
     this.first = first;
     return this;
@@ -120,17 +120,17 @@ public class GetDeploysConnectionRequestBody {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFirst() {
+  public Integer getFirst() {
     return first;
   }
 
 
-  public void setFirst(Double first) {
+  public void setFirst(Integer first) {
     this.first = first;
   }
 
 
-  public GetDeploysConnectionRequestBody last(Double last) {
+  public GetDeploysConnectionRequestBody last(Integer last) {
     
     this.last = last;
     return this;
@@ -143,12 +143,12 @@ public class GetDeploysConnectionRequestBody {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLast() {
+  public Integer getLast() {
     return last;
   }
 
 
-  public void setLast(Double last) {
+  public void setLast(Integer last) {
     this.last = last;
   }
 
@@ -176,7 +176,7 @@ public class GetDeploysConnectionRequestBody {
   }
 
 
-  public GetDeploysConnectionRequestBody skip(Double skip) {
+  public GetDeploysConnectionRequestBody skip(Integer skip) {
     
     this.skip = skip;
     return this;
@@ -189,12 +189,12 @@ public class GetDeploysConnectionRequestBody {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSkip() {
+  public Integer getSkip() {
     return skip;
   }
 
 
-  public void setSkip(Double skip) {
+  public void setSkip(Integer skip) {
     this.skip = skip;
   }
 

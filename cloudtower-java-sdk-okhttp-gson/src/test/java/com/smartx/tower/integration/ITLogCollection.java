@@ -47,6 +47,8 @@ public class ITLogCollection extends ITBase {
       List<LogCollection> result = api.getLogCollections(params, contentLanguage);
       assertThat(result).as("check result of getLogCollections").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITLogCollection extends ITBase {
       LogCollectionConnection result = api.getLogCollectionsConnection(params, contentLanguage);
       assertThat(result).as("check result of getLogCollectionsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

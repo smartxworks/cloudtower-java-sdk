@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertNotifierConnectionAggregate;
+import com.smartx.tower.model.NestedAggregateHost;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -32,10 +32,10 @@ import java.io.IOException;
 public class HostConnection {
   public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
   @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private AlertNotifierConnectionAggregate aggregate;
+  private NestedAggregateHost aggregate;
 
 
-  public HostConnection aggregate(AlertNotifierConnectionAggregate aggregate) {
+  public HostConnection aggregate(NestedAggregateHost aggregate) {
     
     this.aggregate = aggregate;
     return this;
@@ -48,12 +48,12 @@ public class HostConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertNotifierConnectionAggregate getAggregate() {
+  public NestedAggregateHost getAggregate() {
     return aggregate;
   }
 
 
-  public void setAggregate(AlertNotifierConnectionAggregate aggregate) {
+  public void setAggregate(NestedAggregateHost aggregate) {
     this.aggregate = aggregate;
   }
 

@@ -20,8 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.AlertRuleThresholds;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedGlobalAlertRule;
+import com.smartx.tower.model.NestedThresholds;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,7 +36,7 @@ import java.util.List;
 public class AlertRule {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CUSTOMIZED = "customized";
   @SerializedName(SERIALIZED_NAME_CUSTOMIZED)
@@ -47,7 +48,7 @@ public class AlertRule {
 
   public static final String SERIALIZED_NAME_GLOBAL_ALERT_RULE = "global_alert_rule";
   @SerializedName(SERIALIZED_NAME_GLOBAL_ALERT_RULE)
-  private NameIdPair globalAlertRule;
+  private NestedGlobalAlertRule globalAlertRule;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -59,10 +60,10 @@ public class AlertRule {
 
   public static final String SERIALIZED_NAME_THRESHOLDS = "thresholds";
   @SerializedName(SERIALIZED_NAME_THRESHOLDS)
-  private List<AlertRuleThresholds> thresholds = new ArrayList<AlertRuleThresholds>();
+  private List<NestedThresholds> thresholds = new ArrayList<NestedThresholds>();
 
 
-  public AlertRule cluster(NameIdPair cluster) {
+  public AlertRule cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -75,12 +76,12 @@ public class AlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -131,7 +132,7 @@ public class AlertRule {
   }
 
 
-  public AlertRule globalAlertRule(NameIdPair globalAlertRule) {
+  public AlertRule globalAlertRule(NestedGlobalAlertRule globalAlertRule) {
     
     this.globalAlertRule = globalAlertRule;
     return this;
@@ -144,12 +145,12 @@ public class AlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getGlobalAlertRule() {
+  public NestedGlobalAlertRule getGlobalAlertRule() {
     return globalAlertRule;
   }
 
 
-  public void setGlobalAlertRule(NameIdPair globalAlertRule) {
+  public void setGlobalAlertRule(NestedGlobalAlertRule globalAlertRule) {
     this.globalAlertRule = globalAlertRule;
   }
 
@@ -200,13 +201,13 @@ public class AlertRule {
   }
 
 
-  public AlertRule thresholds(List<AlertRuleThresholds> thresholds) {
+  public AlertRule thresholds(List<NestedThresholds> thresholds) {
     
     this.thresholds = thresholds;
     return this;
   }
 
-  public AlertRule addThresholdsItem(AlertRuleThresholds thresholdsItem) {
+  public AlertRule addThresholdsItem(NestedThresholds thresholdsItem) {
     this.thresholds.add(thresholdsItem);
     return this;
   }
@@ -218,12 +219,12 @@ public class AlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<AlertRuleThresholds> getThresholds() {
+  public List<NestedThresholds> getThresholds() {
     return thresholds;
   }
 
 
-  public void setThresholds(List<AlertRuleThresholds> thresholds) {
+  public void setThresholds(List<NestedThresholds> thresholds) {
     this.thresholds = thresholds;
   }
 

@@ -47,6 +47,8 @@ public class ITDiscoveredHost extends ITBase {
       List<DiscoveredHost> result = api.getDiscoverHosts(params, contentLanguage);
       assertThat(result).as("check result of getDiscoverHosts").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

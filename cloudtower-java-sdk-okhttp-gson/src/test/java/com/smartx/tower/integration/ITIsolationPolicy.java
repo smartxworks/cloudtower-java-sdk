@@ -47,6 +47,8 @@ public class ITIsolationPolicy extends ITBase {
       List<IsolationPolicy> result = api.getIsolationPolicies(params, contentLanguage);
       assertThat(result).as("check result of getIsolationPolicies").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITIsolationPolicy extends ITBase {
       IsolationPolicyConnection result = api.getIsolationPoliciesConnection(params, contentLanguage);
       assertThat(result).as("check result of getIsolationPoliciesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

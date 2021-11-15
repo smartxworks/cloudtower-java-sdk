@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedGraph;
 import com.smartx.tower.model.TimeUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +38,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class View {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -46,7 +46,7 @@ public class View {
 
   public static final String SERIALIZED_NAME_GRAPHS = "graphs";
   @SerializedName(SERIALIZED_NAME_GRAPHS)
-  private List<BrickTopoPowers> graphs = null;
+  private List<NestedGraph> graphs = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,14 +62,14 @@ public class View {
 
   public static final String SERIALIZED_NAME_TIME_SPAN = "time_span";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN)
-  private Double timeSpan;
+  private Integer timeSpan;
 
   public static final String SERIALIZED_NAME_TIME_UNIT = "time_unit";
   @SerializedName(SERIALIZED_NAME_TIME_UNIT)
   private TimeUnit timeUnit;
 
 
-  public View cluster(NameIdPair cluster) {
+  public View cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -82,12 +82,12 @@ public class View {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -115,15 +115,15 @@ public class View {
   }
 
 
-  public View graphs(List<BrickTopoPowers> graphs) {
+  public View graphs(List<NestedGraph> graphs) {
     
     this.graphs = graphs;
     return this;
   }
 
-  public View addGraphsItem(BrickTopoPowers graphsItem) {
+  public View addGraphsItem(NestedGraph graphsItem) {
     if (this.graphs == null) {
-      this.graphs = new ArrayList<BrickTopoPowers>();
+      this.graphs = new ArrayList<NestedGraph>();
     }
     this.graphs.add(graphsItem);
     return this;
@@ -136,12 +136,12 @@ public class View {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getGraphs() {
+  public List<NestedGraph> getGraphs() {
     return graphs;
   }
 
 
-  public void setGraphs(List<BrickTopoPowers> graphs) {
+  public void setGraphs(List<NestedGraph> graphs) {
     this.graphs = graphs;
   }
 
@@ -215,7 +215,7 @@ public class View {
   }
 
 
-  public View timeSpan(Double timeSpan) {
+  public View timeSpan(Integer timeSpan) {
     
     this.timeSpan = timeSpan;
     return this;
@@ -228,12 +228,12 @@ public class View {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTimeSpan() {
+  public Integer getTimeSpan() {
     return timeSpan;
   }
 
 
-  public void setTimeSpan(Double timeSpan) {
+  public void setTimeSpan(Integer timeSpan) {
     this.timeSpan = timeSpan;
   }
 

@@ -47,6 +47,8 @@ public class ITDefault extends ITBase {
       List<WithTaskNvmfSubsystem> result = api.createNvmfSubsystem(params, contentLanguage);
       assertThat(result).as("check result of createNvmfSubsystem").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITDefault extends ITBase {
       List<WithTaskDeleteNvmfSubsystem> result = api.deleteNvmfSubsystem(params, contentLanguage);
       assertThat(result).as("check result of deleteNvmfSubsystem").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITDefault extends ITBase {
       List<WithTaskNvmfSubsystem> result = api.updateNvmfSubsystem(params, contentLanguage);
       assertThat(result).as("check result of updateNvmfSubsystem").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

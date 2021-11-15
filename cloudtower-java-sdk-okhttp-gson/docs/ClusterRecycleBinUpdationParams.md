@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**GlobalSettingsVmRecycleBin**](GlobalSettingsVmRecycleBin.md) |  | 
+**data** | [**ClusterRecycleBinCreationParamsData**](ClusterRecycleBinCreationParamsData.md) |  | 
 **where** | [**ClusterWhereInput**](ClusterWhereInput.md) |  | 
 
 

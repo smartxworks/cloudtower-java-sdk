@@ -8,10 +8,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **threshold** | **Double** |  | 
-**quantile** | **Double** |  | 
+**quantile** | **Integer** |  | 
 **op** | **FilterRuleOpEnum** |  | 
 **metric** | **FilterRuleMetricEnum** |  | 
-**duration** | **Double** |  | 
+**duration** | **Integer** |  | 
 **aggregation** | **FilterRuleAggregationEnum** |  | 
 
 

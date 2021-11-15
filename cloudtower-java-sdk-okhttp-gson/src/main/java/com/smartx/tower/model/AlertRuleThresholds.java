@@ -24,7 +24,6 @@ import com.smartx.tower.model.SeverityEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * AlertRuleThresholds
@@ -33,18 +32,14 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class AlertRuleThresholds {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
-  private Double value;
+  private Integer value;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
   private SeverityEnum severity;
 
-  public static final String SERIALIZED_NAME_QUANTILE = "quantile";
-  @SerializedName(SERIALIZED_NAME_QUANTILE)
-  private Double quantile;
 
-
-  public AlertRuleThresholds value(Double value) {
+  public AlertRuleThresholds value(Integer value) {
     
     this.value = value;
     return this;
@@ -54,15 +49,15 @@ public class AlertRuleThresholds {
    * Get value
    * @return value
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public Double getValue() {
+  public Integer getValue() {
     return value;
   }
 
 
-  public void setValue(Double value) {
+  public void setValue(Integer value) {
     this.value = value;
   }
 
@@ -77,8 +72,8 @@ public class AlertRuleThresholds {
    * Get severity
    * @return severity
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public SeverityEnum getSeverity() {
     return severity;
@@ -87,29 +82,6 @@ public class AlertRuleThresholds {
 
   public void setSeverity(SeverityEnum severity) {
     this.severity = severity;
-  }
-
-
-  public AlertRuleThresholds quantile(Double quantile) {
-    
-    this.quantile = quantile;
-    return this;
-  }
-
-   /**
-   * Get quantile
-   * @return quantile
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getQuantile() {
-    return quantile;
-  }
-
-
-  public void setQuantile(Double quantile) {
-    this.quantile = quantile;
   }
 
 
@@ -123,24 +95,12 @@ public class AlertRuleThresholds {
     }
     AlertRuleThresholds alertRuleThresholds = (AlertRuleThresholds) o;
     return Objects.equals(this.value, alertRuleThresholds.value) &&
-        Objects.equals(this.severity, alertRuleThresholds.severity) &&
-        Objects.equals(this.quantile, alertRuleThresholds.quantile);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+        Objects.equals(this.severity, alertRuleThresholds.severity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, severity, quantile);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(value, severity);
   }
 
   @Override
@@ -149,7 +109,6 @@ public class AlertRuleThresholds {
     sb.append("class AlertRuleThresholds {\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    severity: ").append(toIndentedString(severity)).append("\n");
-    sb.append("    quantile: ").append(toIndentedString(quantile)).append("\n");
     sb.append("}");
     return sb.toString();
   }

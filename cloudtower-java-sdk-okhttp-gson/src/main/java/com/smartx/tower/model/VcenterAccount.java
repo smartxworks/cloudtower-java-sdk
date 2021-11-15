@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VcenterAccount {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -57,14 +57,14 @@ public class VcenterAccount {
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
-  private Double port;
+  private Integer port;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
   private String username;
 
 
-  public VcenterAccount cluster(NameIdPair cluster) {
+  public VcenterAccount cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -77,12 +77,12 @@ public class VcenterAccount {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -202,7 +202,7 @@ public class VcenterAccount {
   }
 
 
-  public VcenterAccount port(Double port) {
+  public VcenterAccount port(Integer port) {
     
     this.port = port;
     return this;
@@ -215,12 +215,12 @@ public class VcenterAccount {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPort() {
+  public Integer getPort() {
     return port;
   }
 
 
-  public void setPort(Double port) {
+  public void setPort(Integer port) {
     this.port = port;
   }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedUserRoleNext;
 import com.smartx.tower.model.UserRole;
 import com.smartx.tower.model.UserSource;
 import io.swagger.annotations.ApiModel;
@@ -65,7 +65,7 @@ public class User {
 
   public static final String SERIALIZED_NAME_ROLES = "roles";
   @SerializedName(SERIALIZED_NAME_ROLES)
-  private List<NameIdPair> roles = null;
+  private List<NestedUserRoleNext> roles = null;
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
@@ -237,15 +237,15 @@ public class User {
   }
 
 
-  public User roles(List<NameIdPair> roles) {
+  public User roles(List<NestedUserRoleNext> roles) {
     
     this.roles = roles;
     return this;
   }
 
-  public User addRolesItem(NameIdPair rolesItem) {
+  public User addRolesItem(NestedUserRoleNext rolesItem) {
     if (this.roles == null) {
-      this.roles = new ArrayList<NameIdPair>();
+      this.roles = new ArrayList<NestedUserRoleNext>();
     }
     this.roles.add(rolesItem);
     return this;
@@ -258,12 +258,12 @@ public class User {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getRoles() {
+  public List<NestedUserRoleNext> getRoles() {
     return roles;
   }
 
 
-  public void setRoles(List<NameIdPair> roles) {
+  public void setRoles(List<NestedUserRoleNext> roles) {
     this.roles = roles;
   }
 

@@ -32,7 +32,7 @@ import java.io.IOException;
 public class NvmfSubsystemCreationParamsAllOf {
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -44,7 +44,7 @@ public class NvmfSubsystemCreationParamsAllOf {
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_POLICY = "policy";
   @SerializedName(SERIALIZED_NAME_POLICY)
@@ -59,7 +59,7 @@ public class NvmfSubsystemCreationParamsAllOf {
   private String name;
 
 
-  public NvmfSubsystemCreationParamsAllOf replicaNum(Double replicaNum) {
+  public NvmfSubsystemCreationParamsAllOf replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -72,12 +72,12 @@ public class NvmfSubsystemCreationParamsAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
@@ -128,7 +128,7 @@ public class NvmfSubsystemCreationParamsAllOf {
   }
 
 
-  public NvmfSubsystemCreationParamsAllOf stripeNum(Double stripeNum) {
+  public NvmfSubsystemCreationParamsAllOf stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -141,12 +141,12 @@ public class NvmfSubsystemCreationParamsAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 

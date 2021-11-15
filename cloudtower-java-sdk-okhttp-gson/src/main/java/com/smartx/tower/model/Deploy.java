@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
+import com.smartx.tower.model.NestedLicense;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,7 +37,7 @@ public class Deploy {
 
   public static final String SERIALIZED_NAME_LICENSE = "license";
   @SerializedName(SERIALIZED_NAME_LICENSE)
-  private AlertAlertRule license;
+  private NestedLicense license;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -67,7 +67,7 @@ public class Deploy {
   }
 
 
-  public Deploy license(AlertAlertRule license) {
+  public Deploy license(NestedLicense license) {
     
     this.license = license;
     return this;
@@ -80,12 +80,12 @@ public class Deploy {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getLicense() {
+  public NestedLicense getLicense() {
     return license;
   }
 
 
-  public void setLicense(AlertAlertRule license) {
+  public void setLicense(NestedLicense license) {
     this.license = license;
   }
 

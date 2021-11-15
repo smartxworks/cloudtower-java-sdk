@@ -47,6 +47,8 @@ public class ITZone extends ITBase {
       List<Zone> result = api.getZones(params, contentLanguage);
       assertThat(result).as("check result of getZones").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITZone extends ITBase {
       ZoneConnection result = api.getZonesConnection(params, contentLanguage);
       assertThat(result).as("check result of getZonesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

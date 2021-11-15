@@ -47,6 +47,8 @@ public class ITSnmpTrapReceiver extends ITBase {
       List<WithTaskSnmpTrapReceiver> result = api.createSnmpTrapReceiver(params, contentLanguage);
       assertThat(result).as("check result of createSnmpTrapReceiver").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSnmpTrapReceiver extends ITBase {
       List<WithTaskDeleteSnmpTrapReceiver> result = api.deleteSnmpTrapReceiver(params, contentLanguage);
       assertThat(result).as("check result of deleteSnmpTrapReceiver").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITSnmpTrapReceiver extends ITBase {
       List<SnmpTrapReceiver> result = api.getSnmpTrapReceivers(params, contentLanguage);
       assertThat(result).as("check result of getSnmpTrapReceivers").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITSnmpTrapReceiver extends ITBase {
       SnmpTrapReceiverConnection result = api.getSnmpTrapReceiversConnection(params, contentLanguage);
       assertThat(result).as("check result of getSnmpTrapReceiversConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITSnmpTrapReceiver extends ITBase {
       List<WithTaskSnmpTrapReceiver> result = api.updateSnmpTrapReceiver(params, contentLanguage);
       assertThat(result).as("check result of updateSnmpTrapReceiver").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

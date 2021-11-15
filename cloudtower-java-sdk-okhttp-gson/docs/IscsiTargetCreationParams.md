@@ -8,8 +8,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stripeSize** | **Double** |  | 
-**stripeNum** | **Double** |  | 
-**replicaNum** | **Double** |  | 
+**stripeNum** | **Integer** |  | 
+**replicaNum** | **Integer** |  | 
 **thinProvision** | **Boolean** |  | 
 **clusterId** | **String** |  | 
 **name** | **String** |  | 

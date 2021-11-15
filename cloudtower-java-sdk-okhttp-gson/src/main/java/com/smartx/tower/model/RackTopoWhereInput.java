@@ -57,35 +57,35 @@ public class RackTopoWhereInput {
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Double height;
+  private Integer height;
 
   public static final String SERIALIZED_NAME_HEIGHT_GT = "height_gt";
   @SerializedName(SERIALIZED_NAME_HEIGHT_GT)
-  private Double heightGt;
+  private Integer heightGt;
 
   public static final String SERIALIZED_NAME_HEIGHT_GTE = "height_gte";
   @SerializedName(SERIALIZED_NAME_HEIGHT_GTE)
-  private Double heightGte;
+  private Integer heightGte;
 
   public static final String SERIALIZED_NAME_HEIGHT_IN = "height_in";
   @SerializedName(SERIALIZED_NAME_HEIGHT_IN)
-  private List<Double> heightIn = null;
+  private List<Integer> heightIn = null;
 
   public static final String SERIALIZED_NAME_HEIGHT_LT = "height_lt";
   @SerializedName(SERIALIZED_NAME_HEIGHT_LT)
-  private Double heightLt;
+  private Integer heightLt;
 
   public static final String SERIALIZED_NAME_HEIGHT_LTE = "height_lte";
   @SerializedName(SERIALIZED_NAME_HEIGHT_LTE)
-  private Double heightLte;
+  private Integer heightLte;
 
   public static final String SERIALIZED_NAME_HEIGHT_NOT = "height_not";
   @SerializedName(SERIALIZED_NAME_HEIGHT_NOT)
-  private Double heightNot;
+  private Integer heightNot;
 
   public static final String SERIALIZED_NAME_HEIGHT_NOT_IN = "height_not_in";
   @SerializedName(SERIALIZED_NAME_HEIGHT_NOT_IN)
-  private List<Double> heightNotIn = null;
+  private List<Integer> heightNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -391,7 +391,7 @@ public class RackTopoWhereInput {
   }
 
 
-  public RackTopoWhereInput height(Double height) {
+  public RackTopoWhereInput height(Integer height) {
     
     this.height = height;
     return this;
@@ -404,17 +404,17 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeight() {
+  public Integer getHeight() {
     return height;
   }
 
 
-  public void setHeight(Double height) {
+  public void setHeight(Integer height) {
     this.height = height;
   }
 
 
-  public RackTopoWhereInput heightGt(Double heightGt) {
+  public RackTopoWhereInput heightGt(Integer heightGt) {
     
     this.heightGt = heightGt;
     return this;
@@ -427,17 +427,17 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightGt() {
+  public Integer getHeightGt() {
     return heightGt;
   }
 
 
-  public void setHeightGt(Double heightGt) {
+  public void setHeightGt(Integer heightGt) {
     this.heightGt = heightGt;
   }
 
 
-  public RackTopoWhereInput heightGte(Double heightGte) {
+  public RackTopoWhereInput heightGte(Integer heightGte) {
     
     this.heightGte = heightGte;
     return this;
@@ -450,25 +450,25 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightGte() {
+  public Integer getHeightGte() {
     return heightGte;
   }
 
 
-  public void setHeightGte(Double heightGte) {
+  public void setHeightGte(Integer heightGte) {
     this.heightGte = heightGte;
   }
 
 
-  public RackTopoWhereInput heightIn(List<Double> heightIn) {
+  public RackTopoWhereInput heightIn(List<Integer> heightIn) {
     
     this.heightIn = heightIn;
     return this;
   }
 
-  public RackTopoWhereInput addHeightInItem(Double heightInItem) {
+  public RackTopoWhereInput addHeightInItem(Integer heightInItem) {
     if (this.heightIn == null) {
-      this.heightIn = new ArrayList<Double>();
+      this.heightIn = new ArrayList<Integer>();
     }
     this.heightIn.add(heightInItem);
     return this;
@@ -481,17 +481,17 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHeightIn() {
+  public List<Integer> getHeightIn() {
     return heightIn;
   }
 
 
-  public void setHeightIn(List<Double> heightIn) {
+  public void setHeightIn(List<Integer> heightIn) {
     this.heightIn = heightIn;
   }
 
 
-  public RackTopoWhereInput heightLt(Double heightLt) {
+  public RackTopoWhereInput heightLt(Integer heightLt) {
     
     this.heightLt = heightLt;
     return this;
@@ -504,17 +504,17 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightLt() {
+  public Integer getHeightLt() {
     return heightLt;
   }
 
 
-  public void setHeightLt(Double heightLt) {
+  public void setHeightLt(Integer heightLt) {
     this.heightLt = heightLt;
   }
 
 
-  public RackTopoWhereInput heightLte(Double heightLte) {
+  public RackTopoWhereInput heightLte(Integer heightLte) {
     
     this.heightLte = heightLte;
     return this;
@@ -527,17 +527,17 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightLte() {
+  public Integer getHeightLte() {
     return heightLte;
   }
 
 
-  public void setHeightLte(Double heightLte) {
+  public void setHeightLte(Integer heightLte) {
     this.heightLte = heightLte;
   }
 
 
-  public RackTopoWhereInput heightNot(Double heightNot) {
+  public RackTopoWhereInput heightNot(Integer heightNot) {
     
     this.heightNot = heightNot;
     return this;
@@ -550,25 +550,25 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightNot() {
+  public Integer getHeightNot() {
     return heightNot;
   }
 
 
-  public void setHeightNot(Double heightNot) {
+  public void setHeightNot(Integer heightNot) {
     this.heightNot = heightNot;
   }
 
 
-  public RackTopoWhereInput heightNotIn(List<Double> heightNotIn) {
+  public RackTopoWhereInput heightNotIn(List<Integer> heightNotIn) {
     
     this.heightNotIn = heightNotIn;
     return this;
   }
 
-  public RackTopoWhereInput addHeightNotInItem(Double heightNotInItem) {
+  public RackTopoWhereInput addHeightNotInItem(Integer heightNotInItem) {
     if (this.heightNotIn == null) {
-      this.heightNotIn = new ArrayList<Double>();
+      this.heightNotIn = new ArrayList<Integer>();
     }
     this.heightNotIn.add(heightNotInItem);
     return this;
@@ -581,12 +581,12 @@ public class RackTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHeightNotIn() {
+  public List<Integer> getHeightNotIn() {
     return heightNotIn;
   }
 
 
-  public void setHeightNotIn(List<Double> heightNotIn) {
+  public void setHeightNotIn(List<Integer> heightNotIn) {
     this.heightNotIn = heightNotIn;
   }
 

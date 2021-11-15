@@ -20,8 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedSnapshotGroup;
+import com.smartx.tower.model.NestedSnapshotPlan;
 import com.smartx.tower.model.SnapshotPlanExecuteStatus;
 import com.smartx.tower.model.SnapshotPlanTaskType;
 import io.swagger.annotations.ApiModel;
@@ -36,7 +38,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SnapshotPlanTask {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
@@ -60,11 +62,11 @@ public class SnapshotPlanTask {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshotGroup";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
-  private NameIdPair snapshotGroup;
+  private NestedSnapshotGroup snapshotGroup;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshotPlan";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
-  private NameIdPair snapshotPlan;
+  private NestedSnapshotPlan snapshotPlan;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
@@ -79,7 +81,7 @@ public class SnapshotPlanTask {
   private SnapshotPlanTaskType type;
 
 
-  public SnapshotPlanTask cluster(NameIdPair cluster) {
+  public SnapshotPlanTask cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -92,12 +94,12 @@ public class SnapshotPlanTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -217,7 +219,7 @@ public class SnapshotPlanTask {
   }
 
 
-  public SnapshotPlanTask snapshotGroup(NameIdPair snapshotGroup) {
+  public SnapshotPlanTask snapshotGroup(NestedSnapshotGroup snapshotGroup) {
     
     this.snapshotGroup = snapshotGroup;
     return this;
@@ -230,17 +232,17 @@ public class SnapshotPlanTask {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getSnapshotGroup() {
+  public NestedSnapshotGroup getSnapshotGroup() {
     return snapshotGroup;
   }
 
 
-  public void setSnapshotGroup(NameIdPair snapshotGroup) {
+  public void setSnapshotGroup(NestedSnapshotGroup snapshotGroup) {
     this.snapshotGroup = snapshotGroup;
   }
 
 
-  public SnapshotPlanTask snapshotPlan(NameIdPair snapshotPlan) {
+  public SnapshotPlanTask snapshotPlan(NestedSnapshotPlan snapshotPlan) {
     
     this.snapshotPlan = snapshotPlan;
     return this;
@@ -253,12 +255,12 @@ public class SnapshotPlanTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getSnapshotPlan() {
+  public NestedSnapshotPlan getSnapshotPlan() {
     return snapshotPlan;
   }
 
 
-  public void setSnapshotPlan(NameIdPair snapshotPlan) {
+  public void setSnapshotPlan(NestedSnapshotPlan snapshotPlan) {
     this.snapshotPlan = snapshotPlan;
   }
 

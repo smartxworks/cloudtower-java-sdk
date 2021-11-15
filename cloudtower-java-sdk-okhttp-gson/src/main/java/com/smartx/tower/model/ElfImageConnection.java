@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertNotifierConnectionAggregate;
+import com.smartx.tower.model.NestedAggregateElfImage;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -32,10 +32,10 @@ import java.io.IOException;
 public class ElfImageConnection {
   public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
   @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private AlertNotifierConnectionAggregate aggregate;
+  private NestedAggregateElfImage aggregate;
 
 
-  public ElfImageConnection aggregate(AlertNotifierConnectionAggregate aggregate) {
+  public ElfImageConnection aggregate(NestedAggregateElfImage aggregate) {
     
     this.aggregate = aggregate;
     return this;
@@ -48,12 +48,12 @@ public class ElfImageConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public AlertNotifierConnectionAggregate getAggregate() {
+  public NestedAggregateElfImage getAggregate() {
     return aggregate;
   }
 
 
-  public void setAggregate(AlertNotifierConnectionAggregate aggregate) {
+  public void setAggregate(NestedAggregateElfImage aggregate) {
     this.aggregate = aggregate;
   }
 

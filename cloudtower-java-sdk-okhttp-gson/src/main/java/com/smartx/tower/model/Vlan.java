@@ -20,9 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedVds;
+import com.smartx.tower.model.NestedVmNic;
 import com.smartx.tower.model.NetworkType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -54,7 +55,7 @@ public class Vlan {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -74,15 +75,15 @@ public class Vlan {
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
-  private NameIdPair vds;
+  private NestedVds vds;
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Integer vlanId;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<BrickTopoPowers> vmNics = null;
+  private List<NestedVmNic> vmNics = null;
 
 
   public Vlan entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -177,15 +178,15 @@ public class Vlan {
   }
 
 
-  public Vlan labels(List<BrickTopoPowers> labels) {
+  public Vlan labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Vlan addLabelsItem(BrickTopoPowers labelsItem) {
+  public Vlan addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -198,12 +199,12 @@ public class Vlan {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -300,7 +301,7 @@ public class Vlan {
   }
 
 
-  public Vlan vds(NameIdPair vds) {
+  public Vlan vds(NestedVds vds) {
     
     this.vds = vds;
     return this;
@@ -313,17 +314,17 @@ public class Vlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getVds() {
+  public NestedVds getVds() {
     return vds;
   }
 
 
-  public void setVds(NameIdPair vds) {
+  public void setVds(NestedVds vds) {
     this.vds = vds;
   }
 
 
-  public Vlan vlanId(Double vlanId) {
+  public Vlan vlanId(Integer vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -336,25 +337,25 @@ public class Vlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVlanId() {
+  public Integer getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Integer vlanId) {
     this.vlanId = vlanId;
   }
 
 
-  public Vlan vmNics(List<BrickTopoPowers> vmNics) {
+  public Vlan vmNics(List<NestedVmNic> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public Vlan addVmNicsItem(BrickTopoPowers vmNicsItem) {
+  public Vlan addVmNicsItem(NestedVmNic vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<BrickTopoPowers>();
+      this.vmNics = new ArrayList<NestedVmNic>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -367,12 +368,12 @@ public class Vlan {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmNics() {
+  public List<NestedVmNic> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<BrickTopoPowers> vmNics) {
+  public void setVmNics(List<NestedVmNic> vmNics) {
     this.vmNics = vmNics;
   }
 

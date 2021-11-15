@@ -42,7 +42,7 @@ public class UploadTask {
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK = "current_chunk";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK)
-  private Double currentChunk;
+  private Integer currentChunk;
 
   public static final String SERIALIZED_NAME_FINISHED_AT = "finished_at";
   @SerializedName(SERIALIZED_NAME_FINISHED_AT)
@@ -119,7 +119,7 @@ public class UploadTask {
   }
 
 
-  public UploadTask currentChunk(Double currentChunk) {
+  public UploadTask currentChunk(Integer currentChunk) {
     
     this.currentChunk = currentChunk;
     return this;
@@ -132,12 +132,12 @@ public class UploadTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCurrentChunk() {
+  public Integer getCurrentChunk() {
     return currentChunk;
   }
 
 
-  public void setCurrentChunk(Double currentChunk) {
+  public void setCurrentChunk(Integer currentChunk) {
     this.currentChunk = currentChunk;
   }
 

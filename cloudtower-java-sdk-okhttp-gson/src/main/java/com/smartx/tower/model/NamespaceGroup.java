@@ -20,9 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNvmfNamespace;
+import com.smartx.tower.model.NestedNvmfSubsystem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -45,7 +46,7 @@ public class NamespaceGroup {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATE_TIME = "local_create_time";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATE_TIME)
@@ -61,11 +62,11 @@ public class NamespaceGroup {
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<NameIdPair> namespaces = null;
+  private List<NestedNvmfNamespace> namespaces = null;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private NameIdPair nvmfSubsystem;
+  private NestedNvmfSubsystem nvmfSubsystem;
 
 
   public NamespaceGroup entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -114,15 +115,15 @@ public class NamespaceGroup {
   }
 
 
-  public NamespaceGroup labels(List<BrickTopoPowers> labels) {
+  public NamespaceGroup labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public NamespaceGroup addLabelsItem(BrickTopoPowers labelsItem) {
+  public NamespaceGroup addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -135,12 +136,12 @@ public class NamespaceGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -214,15 +215,15 @@ public class NamespaceGroup {
   }
 
 
-  public NamespaceGroup namespaces(List<NameIdPair> namespaces) {
+  public NamespaceGroup namespaces(List<NestedNvmfNamespace> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public NamespaceGroup addNamespacesItem(NameIdPair namespacesItem) {
+  public NamespaceGroup addNamespacesItem(NestedNvmfNamespace namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<NameIdPair>();
+      this.namespaces = new ArrayList<NestedNvmfNamespace>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -235,17 +236,17 @@ public class NamespaceGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNamespaces() {
+  public List<NestedNvmfNamespace> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<NameIdPair> namespaces) {
+  public void setNamespaces(List<NestedNvmfNamespace> namespaces) {
     this.namespaces = namespaces;
   }
 
 
-  public NamespaceGroup nvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public NamespaceGroup nvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -258,12 +259,12 @@ public class NamespaceGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getNvmfSubsystem() {
+  public NestedNvmfSubsystem getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public void setNvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

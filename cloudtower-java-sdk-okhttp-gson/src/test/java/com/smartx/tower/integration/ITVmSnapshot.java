@@ -53,10 +53,10 @@ public class ITVmSnapshot extends ITBase {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
     cluster = getData("defaultCluster", Cluster.class);
-    params.add(new VmCreationParams().name("tower-api-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1.0)
-        .cpuSockets(1.0).memory(4294967296.0).ha(true).vcpu(1.0).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+    params.add(new VmCreationParams().name("tower-sdk-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1)
+        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1.0).index(1.0)))
+        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     vm = vmApi.createVm(params, contentLanguage).get(0).getData();
     waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
@@ -67,9 +67,13 @@ public class ITVmSnapshot extends ITBase {
   @AfterMethod(groups = { "need_vm" }, alwaysRun = true)
   public void deleteVm() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
       NoSuchMethodException, SecurityException, ApiException, InterruptedException {
-    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
+    Vm _vm = (Vm) waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi,
+        "getVms", new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
+    if (_vm.getStatus() == VmStatus.RUNNING) {
+      vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage);
+      waitForVmEntityAsyncStatus(_vm.getId(), vmApi);
+    }
     vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
     waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
         new TypeToken<List<Vm>>() {
@@ -83,7 +87,7 @@ public class ITVmSnapshot extends ITBase {
       VmSnapshotCreationParams params = gson.fromJson(payload, new TypeToken<VmSnapshotCreationParams>() {
       }.getType());
       params.addDataItem(new VmSnapshotCreationParamsData().vmId(vm.getId())
-          .name("tower-api-test-snapshot" + System.currentTimeMillis()));
+          .name("tower-sdk-test-snapshot" + System.currentTimeMillis()));
       // do some modify to params(optional)
       List<WithTaskVmSnapshot> result = api.createVmSnapshot(params, contentLanguage);
       assertThat(result).as("check result of createVmSnapshot").isNotNull();
@@ -91,6 +95,8 @@ public class ITVmSnapshot extends ITBase {
       api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId())),
           contentLanguage);
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -105,6 +111,8 @@ public class ITVmSnapshot extends ITBase {
       List<VmSnapshot> result = api.getVmSnapshots(params, contentLanguage);
       assertThat(result).as("check result of getVmSnapshots").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -120,6 +128,8 @@ public class ITVmSnapshot extends ITBase {
       VmSnapshotConnection result = api.getVmSnapshotsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmSnapshotsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -131,7 +141,7 @@ public class ITVmSnapshot extends ITBase {
       NoSuchMethodException, SecurityException, ApiException, InterruptedException {
     VmSnapshotCreationParams params = new VmSnapshotCreationParams();
     params.addDataItem(new VmSnapshotCreationParamsData().vmId(vm.getId())
-        .name("tower-api-test-snapshot" + System.currentTimeMillis()));
+        .name("tower-sdk-test-snapshot" + System.currentTimeMillis()));
     // do some modify to params(optional)
     List<WithTaskVmSnapshot> result = api.createVmSnapshot(params, contentLanguage);
     assertThat(result).as("check result of createVmSnapshot").isNotNull();
@@ -162,7 +172,7 @@ public class ITVmSnapshot extends ITBase {
       // parse params from json payload
       List<VmRebuildParams> params = new ArrayList<>();
       params.add(new VmRebuildParams().clusterId(cluster.getId())
-          .name("tower-api-test-rebuild-vm" + System.currentTimeMillis()).rebuildFromSnapshotId(snapshot.getId()));
+          .name("tower-sdk-test-rebuild-vm" + System.currentTimeMillis()).rebuildFromSnapshotId(snapshot.getId()));
       // do some modify to params(optional)
       List<WithTaskVm> result = vmApi.rebuildVm(params, contentLanguage);
       assertThat(result).as("check result of rebuildVm").isNotNull();
@@ -175,6 +185,8 @@ public class ITVmSnapshot extends ITBase {
           new TypeToken<List<Vm>>() {
           }.getClass(), GetVmsRequestBody.class);
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -189,6 +201,8 @@ public class ITVmSnapshot extends ITBase {
       List<WithTaskVm> result = vmApi.rollbackVm(params, contentLanguage);
       assertThat(result).as("check result of rollbackVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

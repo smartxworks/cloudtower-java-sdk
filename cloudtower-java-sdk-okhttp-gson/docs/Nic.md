@@ -10,17 +10,17 @@ Name | Type | Description | Notes
 **driver** | **String** |  |  [optional]
 **driverState** | [**NicDriverState**](NicDriverState.md) |  |  [optional]
 **gatewayIp** | **String** |  |  [optional]
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **ibdev** | **String** |  |  [optional]
 **id** | **String** |  | 
 **ipAddress** | **String** |  |  [optional]
 **isSriov** | **Boolean** |  |  [optional]
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **macAddress** | **String** |  | 
-**maxVfNum** | **Double** |  |  [optional]
+**maxVfNum** | **Integer** |  |  [optional]
 **model** | **String** |  |  [optional]
-**mtu** | **Double** |  | 
+**mtu** | **Integer** |  | 
 **name** | **String** |  | 
 **nicUuid** | **String** |  |  [optional]
 **physical** | **Boolean** |  | 
@@ -28,11 +28,11 @@ Name | Type | Description | Notes
 **running** | **Boolean** |  | 
 **speed** | **Double** |  |  [optional]
 **subnetMask** | **String** |  |  [optional]
-**totalVfNum** | **Double** |  |  [optional]
+**totalVfNum** | **Integer** |  |  [optional]
 **type** | [**NetworkType**](NetworkType.md) |  |  [optional]
 **up** | **Boolean** |  | 
-**usedVfNum** | **Double** |  |  [optional]
-**vds** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**usedVfNum** | **Integer** |  |  [optional]
+**vds** | [**NestedVds**](NestedVds.md) |  |  [optional]
 
 
 

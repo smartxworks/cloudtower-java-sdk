@@ -7,11 +7,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**namespaceId** | **Double** |  |  [optional]
+**namespaceId** | **Integer** |  |  [optional]
 **groupId** | **String** |  |  [optional]
 **isShared** | **Boolean** |  |  [optional]
 **assignedSize** | **Double** |  | 
-**replicaNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
 **nvmfSubsystemId** | **String** |  | 
 **name** | **String** |  | 
 **bpsWrMaxLength** | **Double** |  |  [optional]

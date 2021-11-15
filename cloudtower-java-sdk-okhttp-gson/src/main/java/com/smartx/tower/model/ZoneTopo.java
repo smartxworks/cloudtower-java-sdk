@@ -20,7 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedClusterTopo;
+import com.smartx.tower.model.NestedRackTopo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,11 +37,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ZoneTopo {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CLUSTER_TOPO = "cluster_topo";
   @SerializedName(SERIALIZED_NAME_CLUSTER_TOPO)
-  private NameIdPair clusterTopo;
+  private NestedClusterTopo clusterTopo;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -51,10 +53,10 @@ public class ZoneTopo {
 
   public static final String SERIALIZED_NAME_RACK_TOPOES = "rack_topoes";
   @SerializedName(SERIALIZED_NAME_RACK_TOPOES)
-  private List<NameIdPair> rackTopoes = null;
+  private List<NestedRackTopo> rackTopoes = null;
 
 
-  public ZoneTopo cluster(NameIdPair cluster) {
+  public ZoneTopo cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -67,17 +69,17 @@ public class ZoneTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public ZoneTopo clusterTopo(NameIdPair clusterTopo) {
+  public ZoneTopo clusterTopo(NestedClusterTopo clusterTopo) {
     
     this.clusterTopo = clusterTopo;
     return this;
@@ -90,12 +92,12 @@ public class ZoneTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getClusterTopo() {
+  public NestedClusterTopo getClusterTopo() {
     return clusterTopo;
   }
 
 
-  public void setClusterTopo(NameIdPair clusterTopo) {
+  public void setClusterTopo(NestedClusterTopo clusterTopo) {
     this.clusterTopo = clusterTopo;
   }
 
@@ -146,15 +148,15 @@ public class ZoneTopo {
   }
 
 
-  public ZoneTopo rackTopoes(List<NameIdPair> rackTopoes) {
+  public ZoneTopo rackTopoes(List<NestedRackTopo> rackTopoes) {
     
     this.rackTopoes = rackTopoes;
     return this;
   }
 
-  public ZoneTopo addRackTopoesItem(NameIdPair rackTopoesItem) {
+  public ZoneTopo addRackTopoesItem(NestedRackTopo rackTopoesItem) {
     if (this.rackTopoes == null) {
-      this.rackTopoes = new ArrayList<NameIdPair>();
+      this.rackTopoes = new ArrayList<NestedRackTopo>();
     }
     this.rackTopoes.add(rackTopoesItem);
     return this;
@@ -167,12 +169,12 @@ public class ZoneTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getRackTopoes() {
+  public List<NestedRackTopo> getRackTopoes() {
     return rackTopoes;
   }
 
 
-  public void setRackTopoes(List<NameIdPair> rackTopoes) {
+  public void setRackTopoes(List<NestedRackTopo> rackTopoes) {
     this.rackTopoes = rackTopoes;
   }
 

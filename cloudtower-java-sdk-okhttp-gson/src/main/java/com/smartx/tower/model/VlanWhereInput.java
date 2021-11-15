@@ -435,35 +435,35 @@ public class VlanWhereInput {
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Integer vlanId;
 
   public static final String SERIALIZED_NAME_VLAN_ID_GT = "vlan_id_gt";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_GT)
-  private Double vlanIdGt;
+  private Integer vlanIdGt;
 
   public static final String SERIALIZED_NAME_VLAN_ID_GTE = "vlan_id_gte";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_GTE)
-  private Double vlanIdGte;
+  private Integer vlanIdGte;
 
   public static final String SERIALIZED_NAME_VLAN_ID_IN = "vlan_id_in";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_IN)
-  private List<Double> vlanIdIn = null;
+  private List<Integer> vlanIdIn = null;
 
   public static final String SERIALIZED_NAME_VLAN_ID_LT = "vlan_id_lt";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_LT)
-  private Double vlanIdLt;
+  private Integer vlanIdLt;
 
   public static final String SERIALIZED_NAME_VLAN_ID_LTE = "vlan_id_lte";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_LTE)
-  private Double vlanIdLte;
+  private Integer vlanIdLte;
 
   public static final String SERIALIZED_NAME_VLAN_ID_NOT = "vlan_id_not";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_NOT)
-  private Double vlanIdNot;
+  private Integer vlanIdNot;
 
   public static final String SERIALIZED_NAME_VLAN_ID_NOT_IN = "vlan_id_not_in";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_NOT_IN)
-  private List<Double> vlanIdNotIn = null;
+  private List<Integer> vlanIdNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_NICS_EVERY = "vm_nics_every";
   @SerializedName(SERIALIZED_NAME_VM_NICS_EVERY)
@@ -2907,7 +2907,7 @@ public class VlanWhereInput {
   }
 
 
-  public VlanWhereInput vlanId(Double vlanId) {
+  public VlanWhereInput vlanId(Integer vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -2920,17 +2920,17 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanId() {
+  public Integer getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Integer vlanId) {
     this.vlanId = vlanId;
   }
 
 
-  public VlanWhereInput vlanIdGt(Double vlanIdGt) {
+  public VlanWhereInput vlanIdGt(Integer vlanIdGt) {
     
     this.vlanIdGt = vlanIdGt;
     return this;
@@ -2943,17 +2943,17 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanIdGt() {
+  public Integer getVlanIdGt() {
     return vlanIdGt;
   }
 
 
-  public void setVlanIdGt(Double vlanIdGt) {
+  public void setVlanIdGt(Integer vlanIdGt) {
     this.vlanIdGt = vlanIdGt;
   }
 
 
-  public VlanWhereInput vlanIdGte(Double vlanIdGte) {
+  public VlanWhereInput vlanIdGte(Integer vlanIdGte) {
     
     this.vlanIdGte = vlanIdGte;
     return this;
@@ -2966,25 +2966,25 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanIdGte() {
+  public Integer getVlanIdGte() {
     return vlanIdGte;
   }
 
 
-  public void setVlanIdGte(Double vlanIdGte) {
+  public void setVlanIdGte(Integer vlanIdGte) {
     this.vlanIdGte = vlanIdGte;
   }
 
 
-  public VlanWhereInput vlanIdIn(List<Double> vlanIdIn) {
+  public VlanWhereInput vlanIdIn(List<Integer> vlanIdIn) {
     
     this.vlanIdIn = vlanIdIn;
     return this;
   }
 
-  public VlanWhereInput addVlanIdInItem(Double vlanIdInItem) {
+  public VlanWhereInput addVlanIdInItem(Integer vlanIdInItem) {
     if (this.vlanIdIn == null) {
-      this.vlanIdIn = new ArrayList<Double>();
+      this.vlanIdIn = new ArrayList<Integer>();
     }
     this.vlanIdIn.add(vlanIdInItem);
     return this;
@@ -2997,17 +2997,17 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVlanIdIn() {
+  public List<Integer> getVlanIdIn() {
     return vlanIdIn;
   }
 
 
-  public void setVlanIdIn(List<Double> vlanIdIn) {
+  public void setVlanIdIn(List<Integer> vlanIdIn) {
     this.vlanIdIn = vlanIdIn;
   }
 
 
-  public VlanWhereInput vlanIdLt(Double vlanIdLt) {
+  public VlanWhereInput vlanIdLt(Integer vlanIdLt) {
     
     this.vlanIdLt = vlanIdLt;
     return this;
@@ -3020,17 +3020,17 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanIdLt() {
+  public Integer getVlanIdLt() {
     return vlanIdLt;
   }
 
 
-  public void setVlanIdLt(Double vlanIdLt) {
+  public void setVlanIdLt(Integer vlanIdLt) {
     this.vlanIdLt = vlanIdLt;
   }
 
 
-  public VlanWhereInput vlanIdLte(Double vlanIdLte) {
+  public VlanWhereInput vlanIdLte(Integer vlanIdLte) {
     
     this.vlanIdLte = vlanIdLte;
     return this;
@@ -3043,17 +3043,17 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanIdLte() {
+  public Integer getVlanIdLte() {
     return vlanIdLte;
   }
 
 
-  public void setVlanIdLte(Double vlanIdLte) {
+  public void setVlanIdLte(Integer vlanIdLte) {
     this.vlanIdLte = vlanIdLte;
   }
 
 
-  public VlanWhereInput vlanIdNot(Double vlanIdNot) {
+  public VlanWhereInput vlanIdNot(Integer vlanIdNot) {
     
     this.vlanIdNot = vlanIdNot;
     return this;
@@ -3066,25 +3066,25 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanIdNot() {
+  public Integer getVlanIdNot() {
     return vlanIdNot;
   }
 
 
-  public void setVlanIdNot(Double vlanIdNot) {
+  public void setVlanIdNot(Integer vlanIdNot) {
     this.vlanIdNot = vlanIdNot;
   }
 
 
-  public VlanWhereInput vlanIdNotIn(List<Double> vlanIdNotIn) {
+  public VlanWhereInput vlanIdNotIn(List<Integer> vlanIdNotIn) {
     
     this.vlanIdNotIn = vlanIdNotIn;
     return this;
   }
 
-  public VlanWhereInput addVlanIdNotInItem(Double vlanIdNotInItem) {
+  public VlanWhereInput addVlanIdNotInItem(Integer vlanIdNotInItem) {
     if (this.vlanIdNotIn == null) {
-      this.vlanIdNotIn = new ArrayList<Double>();
+      this.vlanIdNotIn = new ArrayList<Integer>();
     }
     this.vlanIdNotIn.add(vlanIdNotInItem);
     return this;
@@ -3097,12 +3097,12 @@ public class VlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVlanIdNotIn() {
+  public List<Integer> getVlanIdNotIn() {
     return vlanIdNotIn;
   }
 
 
-  public void setVlanIdNotIn(List<Double> vlanIdNotIn) {
+  public void setVlanIdNotIn(List<Integer> vlanIdNotIn) {
     this.vlanIdNotIn = vlanIdNotIn;
   }
 

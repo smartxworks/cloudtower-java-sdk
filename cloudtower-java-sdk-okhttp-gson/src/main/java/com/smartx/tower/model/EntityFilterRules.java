@@ -38,7 +38,7 @@ public class EntityFilterRules {
 
   public static final String SERIALIZED_NAME_QUANTILE = "quantile";
   @SerializedName(SERIALIZED_NAME_QUANTILE)
-  private Double quantile;
+  private Integer quantile;
 
   public static final String SERIALIZED_NAME_OP = "op";
   @SerializedName(SERIALIZED_NAME_OP)
@@ -50,7 +50,7 @@ public class EntityFilterRules {
 
   public static final String SERIALIZED_NAME_DURATION = "duration";
   @SerializedName(SERIALIZED_NAME_DURATION)
-  private Double duration;
+  private Integer duration;
 
   public static final String SERIALIZED_NAME_AGGREGATION = "aggregation";
   @SerializedName(SERIALIZED_NAME_AGGREGATION)
@@ -80,7 +80,7 @@ public class EntityFilterRules {
   }
 
 
-  public EntityFilterRules quantile(Double quantile) {
+  public EntityFilterRules quantile(Integer quantile) {
     
     this.quantile = quantile;
     return this;
@@ -93,12 +93,12 @@ public class EntityFilterRules {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getQuantile() {
+  public Integer getQuantile() {
     return quantile;
   }
 
 
-  public void setQuantile(Double quantile) {
+  public void setQuantile(Integer quantile) {
     this.quantile = quantile;
   }
 
@@ -149,7 +149,7 @@ public class EntityFilterRules {
   }
 
 
-  public EntityFilterRules duration(Double duration) {
+  public EntityFilterRules duration(Integer duration) {
     
     this.duration = duration;
     return this;
@@ -162,12 +162,12 @@ public class EntityFilterRules {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getDuration() {
+  public Integer getDuration() {
     return duration;
   }
 
 
-  public void setDuration(Double duration) {
+  public void setDuration(Integer duration) {
     this.duration = duration;
   }
 

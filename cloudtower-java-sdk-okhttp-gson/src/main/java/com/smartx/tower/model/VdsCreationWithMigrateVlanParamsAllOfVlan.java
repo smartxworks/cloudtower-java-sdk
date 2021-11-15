@@ -50,7 +50,7 @@ public class VdsCreationWithMigrateVlanParamsAllOfVlan {
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Integer vlanId;
 
 
   public VdsCreationWithMigrateVlanParamsAllOfVlan extraIp(List<VdsCreationWithMigrateVlanParamsAllOfVlanExtraIp> extraIp) {
@@ -150,7 +150,7 @@ public class VdsCreationWithMigrateVlanParamsAllOfVlan {
   }
 
 
-  public VdsCreationWithMigrateVlanParamsAllOfVlan vlanId(Double vlanId) {
+  public VdsCreationWithMigrateVlanParamsAllOfVlan vlanId(Integer vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -163,12 +163,12 @@ public class VdsCreationWithMigrateVlanParamsAllOfVlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVlanId() {
+  public Integer getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Integer vlanId) {
     this.vlanId = vlanId;
   }
 

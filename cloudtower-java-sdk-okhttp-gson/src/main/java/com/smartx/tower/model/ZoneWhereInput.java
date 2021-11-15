@@ -81,35 +81,35 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GT = "host_num_gt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GT)
-  private Double hostNumGt;
+  private Integer hostNumGt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GTE = "host_num_gte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GTE)
-  private Double hostNumGte;
+  private Integer hostNumGte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_IN = "host_num_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_IN)
-  private List<Double> hostNumIn = null;
+  private List<Integer> hostNumIn = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LT = "host_num_lt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LT)
-  private Double hostNumLt;
+  private Integer hostNumLt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LTE = "host_num_lte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LTE)
-  private Double hostNumLte;
+  private Integer hostNumLte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT = "host_num_not";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT)
-  private Double hostNumNot;
+  private Integer hostNumNot;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT_IN = "host_num_not_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT_IN)
-  private List<Double> hostNumNotIn = null;
+  private List<Integer> hostNumNotIn = null;
 
   public static final String SERIALIZED_NAME_HOSTS_EVERY = "hosts_every";
   @SerializedName(SERIALIZED_NAME_HOSTS_EVERY)
@@ -253,67 +253,67 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES)
-  private Double provisionedCpuCores;
+  private Integer provisionedCpuCores;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM = "provisioned_cpu_cores_for_active_vm";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM)
-  private Double provisionedCpuCoresForActiveVm;
+  private Integer provisionedCpuCoresForActiveVm;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GT = "provisioned_cpu_cores_for_active_vm_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GT)
-  private Double provisionedCpuCoresForActiveVmGt;
+  private Integer provisionedCpuCoresForActiveVmGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GTE = "provisioned_cpu_cores_for_active_vm_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GTE)
-  private Double provisionedCpuCoresForActiveVmGte;
+  private Integer provisionedCpuCoresForActiveVmGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_IN = "provisioned_cpu_cores_for_active_vm_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_IN)
-  private List<Double> provisionedCpuCoresForActiveVmIn = null;
+  private List<Integer> provisionedCpuCoresForActiveVmIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LT = "provisioned_cpu_cores_for_active_vm_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LT)
-  private Double provisionedCpuCoresForActiveVmLt;
+  private Integer provisionedCpuCoresForActiveVmLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LTE = "provisioned_cpu_cores_for_active_vm_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LTE)
-  private Double provisionedCpuCoresForActiveVmLte;
+  private Integer provisionedCpuCoresForActiveVmLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT = "provisioned_cpu_cores_for_active_vm_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT)
-  private Double provisionedCpuCoresForActiveVmNot;
+  private Integer provisionedCpuCoresForActiveVmNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT_IN = "provisioned_cpu_cores_for_active_vm_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT_IN)
-  private List<Double> provisionedCpuCoresForActiveVmNotIn = null;
+  private List<Integer> provisionedCpuCoresForActiveVmNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_GT = "provisioned_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_GT)
-  private Double provisionedCpuCoresGt;
+  private Integer provisionedCpuCoresGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_GTE = "provisioned_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_GTE)
-  private Double provisionedCpuCoresGte;
+  private Integer provisionedCpuCoresGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_IN = "provisioned_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_IN)
-  private List<Double> provisionedCpuCoresIn = null;
+  private List<Integer> provisionedCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_LT = "provisioned_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_LT)
-  private Double provisionedCpuCoresLt;
+  private Integer provisionedCpuCoresLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_LTE = "provisioned_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_LTE)
-  private Double provisionedCpuCoresLte;
+  private Integer provisionedCpuCoresLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT = "provisioned_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT)
-  private Double provisionedCpuCoresNot;
+  private Integer provisionedCpuCoresNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT_IN = "provisioned_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT_IN)
-  private List<Double> provisionedCpuCoresNotIn = null;
+  private List<Integer> provisionedCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE = "provisioned_data_space";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE)
@@ -381,99 +381,99 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
-  private Double runningVmNum;
+  private Integer runningVmNum;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_GT = "running_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_GT)
-  private Double runningVmNumGt;
+  private Integer runningVmNumGt;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_GTE = "running_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_GTE)
-  private Double runningVmNumGte;
+  private Integer runningVmNumGte;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_IN = "running_vm_num_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_IN)
-  private List<Double> runningVmNumIn = null;
+  private List<Integer> runningVmNumIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_LT = "running_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_LT)
-  private Double runningVmNumLt;
+  private Integer runningVmNumLt;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_LTE = "running_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_LTE)
-  private Double runningVmNumLte;
+  private Integer runningVmNumLte;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_NOT = "running_vm_num_not";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_NOT)
-  private Double runningVmNumNot;
+  private Integer runningVmNumNot;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_NOT_IN = "running_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_NOT_IN)
-  private List<Double> runningVmNumNotIn = null;
+  private List<Integer> runningVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM = "stopped_vm_num";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM)
-  private Double stoppedVmNum;
+  private Integer stoppedVmNum;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_GT = "stopped_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_GT)
-  private Double stoppedVmNumGt;
+  private Integer stoppedVmNumGt;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_GTE = "stopped_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_GTE)
-  private Double stoppedVmNumGte;
+  private Integer stoppedVmNumGte;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_IN = "stopped_vm_num_in";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_IN)
-  private List<Double> stoppedVmNumIn = null;
+  private List<Integer> stoppedVmNumIn = null;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_LT = "stopped_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_LT)
-  private Double stoppedVmNumLt;
+  private Integer stoppedVmNumLt;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_LTE = "stopped_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_LTE)
-  private Double stoppedVmNumLte;
+  private Integer stoppedVmNumLte;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_NOT = "stopped_vm_num_not";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_NOT)
-  private Double stoppedVmNumNot;
+  private Integer stoppedVmNumNot;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_NOT_IN = "stopped_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_NOT_IN)
-  private List<Double> stoppedVmNumNotIn = null;
+  private List<Integer> stoppedVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM = "suspended_vm_num";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM)
-  private Double suspendedVmNum;
+  private Integer suspendedVmNum;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_GT = "suspended_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_GT)
-  private Double suspendedVmNumGt;
+  private Integer suspendedVmNumGt;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_GTE = "suspended_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_GTE)
-  private Double suspendedVmNumGte;
+  private Integer suspendedVmNumGte;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_IN = "suspended_vm_num_in";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_IN)
-  private List<Double> suspendedVmNumIn = null;
+  private List<Integer> suspendedVmNumIn = null;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_LT = "suspended_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_LT)
-  private Double suspendedVmNumLt;
+  private Integer suspendedVmNumLt;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_LTE = "suspended_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_LTE)
-  private Double suspendedVmNumLte;
+  private Integer suspendedVmNumLte;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT = "suspended_vm_num_not";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT)
-  private Double suspendedVmNumNot;
+  private Integer suspendedVmNumNot;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT_IN = "suspended_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT_IN)
-  private List<Double> suspendedVmNumNotIn = null;
+  private List<Integer> suspendedVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
@@ -509,35 +509,35 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GT = "total_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GT)
-  private Double totalCpuCoresGt;
+  private Integer totalCpuCoresGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GTE = "total_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GTE)
-  private Double totalCpuCoresGte;
+  private Integer totalCpuCoresGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_IN = "total_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_IN)
-  private List<Double> totalCpuCoresIn = null;
+  private List<Integer> totalCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LT = "total_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LT)
-  private Double totalCpuCoresLt;
+  private Integer totalCpuCoresLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LTE = "total_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LTE)
-  private Double totalCpuCoresLte;
+  private Integer totalCpuCoresLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT = "total_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT)
-  private Double totalCpuCoresNot;
+  private Integer totalCpuCoresNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN = "total_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN)
-  private List<Double> totalCpuCoresNotIn = null;
+  private List<Integer> totalCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -701,35 +701,35 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_NUM_GT = "vm_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GT)
-  private Double vmNumGt;
+  private Integer vmNumGt;
 
   public static final String SERIALIZED_NAME_VM_NUM_GTE = "vm_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GTE)
-  private Double vmNumGte;
+  private Integer vmNumGte;
 
   public static final String SERIALIZED_NAME_VM_NUM_IN = "vm_num_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_IN)
-  private List<Double> vmNumIn = null;
+  private List<Integer> vmNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM_LT = "vm_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LT)
-  private Double vmNumLt;
+  private Integer vmNumLt;
 
   public static final String SERIALIZED_NAME_VM_NUM_LTE = "vm_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LTE)
-  private Double vmNumLte;
+  private Integer vmNumLte;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT = "vm_num_not";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT)
-  private Double vmNumNot;
+  private Integer vmNumNot;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT_IN = "vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT_IN)
-  private List<Double> vmNumNotIn = null;
+  private List<Integer> vmNumNotIn = null;
 
 
   public ZoneWhereInput AND(List<ZoneWhereInput> AND) {
@@ -1009,7 +1009,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput hostNum(Double hostNum) {
+  public ZoneWhereInput hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -1022,17 +1022,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public ZoneWhereInput hostNumGt(Double hostNumGt) {
+  public ZoneWhereInput hostNumGt(Integer hostNumGt) {
     
     this.hostNumGt = hostNumGt;
     return this;
@@ -1045,17 +1045,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGt() {
+  public Integer getHostNumGt() {
     return hostNumGt;
   }
 
 
-  public void setHostNumGt(Double hostNumGt) {
+  public void setHostNumGt(Integer hostNumGt) {
     this.hostNumGt = hostNumGt;
   }
 
 
-  public ZoneWhereInput hostNumGte(Double hostNumGte) {
+  public ZoneWhereInput hostNumGte(Integer hostNumGte) {
     
     this.hostNumGte = hostNumGte;
     return this;
@@ -1068,25 +1068,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGte() {
+  public Integer getHostNumGte() {
     return hostNumGte;
   }
 
 
-  public void setHostNumGte(Double hostNumGte) {
+  public void setHostNumGte(Integer hostNumGte) {
     this.hostNumGte = hostNumGte;
   }
 
 
-  public ZoneWhereInput hostNumIn(List<Double> hostNumIn) {
+  public ZoneWhereInput hostNumIn(List<Integer> hostNumIn) {
     
     this.hostNumIn = hostNumIn;
     return this;
   }
 
-  public ZoneWhereInput addHostNumInItem(Double hostNumInItem) {
+  public ZoneWhereInput addHostNumInItem(Integer hostNumInItem) {
     if (this.hostNumIn == null) {
-      this.hostNumIn = new ArrayList<Double>();
+      this.hostNumIn = new ArrayList<Integer>();
     }
     this.hostNumIn.add(hostNumInItem);
     return this;
@@ -1099,17 +1099,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumIn() {
+  public List<Integer> getHostNumIn() {
     return hostNumIn;
   }
 
 
-  public void setHostNumIn(List<Double> hostNumIn) {
+  public void setHostNumIn(List<Integer> hostNumIn) {
     this.hostNumIn = hostNumIn;
   }
 
 
-  public ZoneWhereInput hostNumLt(Double hostNumLt) {
+  public ZoneWhereInput hostNumLt(Integer hostNumLt) {
     
     this.hostNumLt = hostNumLt;
     return this;
@@ -1122,17 +1122,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLt() {
+  public Integer getHostNumLt() {
     return hostNumLt;
   }
 
 
-  public void setHostNumLt(Double hostNumLt) {
+  public void setHostNumLt(Integer hostNumLt) {
     this.hostNumLt = hostNumLt;
   }
 
 
-  public ZoneWhereInput hostNumLte(Double hostNumLte) {
+  public ZoneWhereInput hostNumLte(Integer hostNumLte) {
     
     this.hostNumLte = hostNumLte;
     return this;
@@ -1145,17 +1145,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLte() {
+  public Integer getHostNumLte() {
     return hostNumLte;
   }
 
 
-  public void setHostNumLte(Double hostNumLte) {
+  public void setHostNumLte(Integer hostNumLte) {
     this.hostNumLte = hostNumLte;
   }
 
 
-  public ZoneWhereInput hostNumNot(Double hostNumNot) {
+  public ZoneWhereInput hostNumNot(Integer hostNumNot) {
     
     this.hostNumNot = hostNumNot;
     return this;
@@ -1168,25 +1168,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumNot() {
+  public Integer getHostNumNot() {
     return hostNumNot;
   }
 
 
-  public void setHostNumNot(Double hostNumNot) {
+  public void setHostNumNot(Integer hostNumNot) {
     this.hostNumNot = hostNumNot;
   }
 
 
-  public ZoneWhereInput hostNumNotIn(List<Double> hostNumNotIn) {
+  public ZoneWhereInput hostNumNotIn(List<Integer> hostNumNotIn) {
     
     this.hostNumNotIn = hostNumNotIn;
     return this;
   }
 
-  public ZoneWhereInput addHostNumNotInItem(Double hostNumNotInItem) {
+  public ZoneWhereInput addHostNumNotInItem(Integer hostNumNotInItem) {
     if (this.hostNumNotIn == null) {
-      this.hostNumNotIn = new ArrayList<Double>();
+      this.hostNumNotIn = new ArrayList<Integer>();
     }
     this.hostNumNotIn.add(hostNumNotInItem);
     return this;
@@ -1199,12 +1199,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumNotIn() {
+  public List<Integer> getHostNumNotIn() {
     return hostNumNotIn;
   }
 
 
-  public void setHostNumNotIn(List<Double> hostNumNotIn) {
+  public void setHostNumNotIn(List<Integer> hostNumNotIn) {
     this.hostNumNotIn = hostNumNotIn;
   }
 
@@ -2062,7 +2062,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput provisionedCpuCores(Double provisionedCpuCores) {
+  public ZoneWhereInput provisionedCpuCores(Integer provisionedCpuCores) {
     
     this.provisionedCpuCores = provisionedCpuCores;
     return this;
@@ -2075,17 +2075,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCores() {
+  public Integer getProvisionedCpuCores() {
     return provisionedCpuCores;
   }
 
 
-  public void setProvisionedCpuCores(Double provisionedCpuCores) {
+  public void setProvisionedCpuCores(Integer provisionedCpuCores) {
     this.provisionedCpuCores = provisionedCpuCores;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
     return this;
@@ -2098,17 +2098,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVm() {
+  public Integer getProvisionedCpuCoresForActiveVm() {
     return provisionedCpuCoresForActiveVm;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public void setProvisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmGt(Double provisionedCpuCoresForActiveVmGt) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmGt(Integer provisionedCpuCoresForActiveVmGt) {
     
     this.provisionedCpuCoresForActiveVmGt = provisionedCpuCoresForActiveVmGt;
     return this;
@@ -2121,17 +2121,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmGt() {
+  public Integer getProvisionedCpuCoresForActiveVmGt() {
     return provisionedCpuCoresForActiveVmGt;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmGt(Double provisionedCpuCoresForActiveVmGt) {
+  public void setProvisionedCpuCoresForActiveVmGt(Integer provisionedCpuCoresForActiveVmGt) {
     this.provisionedCpuCoresForActiveVmGt = provisionedCpuCoresForActiveVmGt;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmGte(Double provisionedCpuCoresForActiveVmGte) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmGte(Integer provisionedCpuCoresForActiveVmGte) {
     
     this.provisionedCpuCoresForActiveVmGte = provisionedCpuCoresForActiveVmGte;
     return this;
@@ -2144,25 +2144,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmGte() {
+  public Integer getProvisionedCpuCoresForActiveVmGte() {
     return provisionedCpuCoresForActiveVmGte;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmGte(Double provisionedCpuCoresForActiveVmGte) {
+  public void setProvisionedCpuCoresForActiveVmGte(Integer provisionedCpuCoresForActiveVmGte) {
     this.provisionedCpuCoresForActiveVmGte = provisionedCpuCoresForActiveVmGte;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmIn(List<Double> provisionedCpuCoresForActiveVmIn) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmIn(List<Integer> provisionedCpuCoresForActiveVmIn) {
     
     this.provisionedCpuCoresForActiveVmIn = provisionedCpuCoresForActiveVmIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedCpuCoresForActiveVmInItem(Double provisionedCpuCoresForActiveVmInItem) {
+  public ZoneWhereInput addProvisionedCpuCoresForActiveVmInItem(Integer provisionedCpuCoresForActiveVmInItem) {
     if (this.provisionedCpuCoresForActiveVmIn == null) {
-      this.provisionedCpuCoresForActiveVmIn = new ArrayList<Double>();
+      this.provisionedCpuCoresForActiveVmIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresForActiveVmIn.add(provisionedCpuCoresForActiveVmInItem);
     return this;
@@ -2175,17 +2175,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresForActiveVmIn() {
+  public List<Integer> getProvisionedCpuCoresForActiveVmIn() {
     return provisionedCpuCoresForActiveVmIn;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmIn(List<Double> provisionedCpuCoresForActiveVmIn) {
+  public void setProvisionedCpuCoresForActiveVmIn(List<Integer> provisionedCpuCoresForActiveVmIn) {
     this.provisionedCpuCoresForActiveVmIn = provisionedCpuCoresForActiveVmIn;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmLt(Double provisionedCpuCoresForActiveVmLt) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmLt(Integer provisionedCpuCoresForActiveVmLt) {
     
     this.provisionedCpuCoresForActiveVmLt = provisionedCpuCoresForActiveVmLt;
     return this;
@@ -2198,17 +2198,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmLt() {
+  public Integer getProvisionedCpuCoresForActiveVmLt() {
     return provisionedCpuCoresForActiveVmLt;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmLt(Double provisionedCpuCoresForActiveVmLt) {
+  public void setProvisionedCpuCoresForActiveVmLt(Integer provisionedCpuCoresForActiveVmLt) {
     this.provisionedCpuCoresForActiveVmLt = provisionedCpuCoresForActiveVmLt;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmLte(Double provisionedCpuCoresForActiveVmLte) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmLte(Integer provisionedCpuCoresForActiveVmLte) {
     
     this.provisionedCpuCoresForActiveVmLte = provisionedCpuCoresForActiveVmLte;
     return this;
@@ -2221,17 +2221,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmLte() {
+  public Integer getProvisionedCpuCoresForActiveVmLte() {
     return provisionedCpuCoresForActiveVmLte;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmLte(Double provisionedCpuCoresForActiveVmLte) {
+  public void setProvisionedCpuCoresForActiveVmLte(Integer provisionedCpuCoresForActiveVmLte) {
     this.provisionedCpuCoresForActiveVmLte = provisionedCpuCoresForActiveVmLte;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmNot(Double provisionedCpuCoresForActiveVmNot) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmNot(Integer provisionedCpuCoresForActiveVmNot) {
     
     this.provisionedCpuCoresForActiveVmNot = provisionedCpuCoresForActiveVmNot;
     return this;
@@ -2244,25 +2244,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmNot() {
+  public Integer getProvisionedCpuCoresForActiveVmNot() {
     return provisionedCpuCoresForActiveVmNot;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmNot(Double provisionedCpuCoresForActiveVmNot) {
+  public void setProvisionedCpuCoresForActiveVmNot(Integer provisionedCpuCoresForActiveVmNot) {
     this.provisionedCpuCoresForActiveVmNot = provisionedCpuCoresForActiveVmNot;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresForActiveVmNotIn(List<Double> provisionedCpuCoresForActiveVmNotIn) {
+  public ZoneWhereInput provisionedCpuCoresForActiveVmNotIn(List<Integer> provisionedCpuCoresForActiveVmNotIn) {
     
     this.provisionedCpuCoresForActiveVmNotIn = provisionedCpuCoresForActiveVmNotIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedCpuCoresForActiveVmNotInItem(Double provisionedCpuCoresForActiveVmNotInItem) {
+  public ZoneWhereInput addProvisionedCpuCoresForActiveVmNotInItem(Integer provisionedCpuCoresForActiveVmNotInItem) {
     if (this.provisionedCpuCoresForActiveVmNotIn == null) {
-      this.provisionedCpuCoresForActiveVmNotIn = new ArrayList<Double>();
+      this.provisionedCpuCoresForActiveVmNotIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresForActiveVmNotIn.add(provisionedCpuCoresForActiveVmNotInItem);
     return this;
@@ -2275,17 +2275,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresForActiveVmNotIn() {
+  public List<Integer> getProvisionedCpuCoresForActiveVmNotIn() {
     return provisionedCpuCoresForActiveVmNotIn;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmNotIn(List<Double> provisionedCpuCoresForActiveVmNotIn) {
+  public void setProvisionedCpuCoresForActiveVmNotIn(List<Integer> provisionedCpuCoresForActiveVmNotIn) {
     this.provisionedCpuCoresForActiveVmNotIn = provisionedCpuCoresForActiveVmNotIn;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresGt(Double provisionedCpuCoresGt) {
+  public ZoneWhereInput provisionedCpuCoresGt(Integer provisionedCpuCoresGt) {
     
     this.provisionedCpuCoresGt = provisionedCpuCoresGt;
     return this;
@@ -2298,17 +2298,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresGt() {
+  public Integer getProvisionedCpuCoresGt() {
     return provisionedCpuCoresGt;
   }
 
 
-  public void setProvisionedCpuCoresGt(Double provisionedCpuCoresGt) {
+  public void setProvisionedCpuCoresGt(Integer provisionedCpuCoresGt) {
     this.provisionedCpuCoresGt = provisionedCpuCoresGt;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresGte(Double provisionedCpuCoresGte) {
+  public ZoneWhereInput provisionedCpuCoresGte(Integer provisionedCpuCoresGte) {
     
     this.provisionedCpuCoresGte = provisionedCpuCoresGte;
     return this;
@@ -2321,25 +2321,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresGte() {
+  public Integer getProvisionedCpuCoresGte() {
     return provisionedCpuCoresGte;
   }
 
 
-  public void setProvisionedCpuCoresGte(Double provisionedCpuCoresGte) {
+  public void setProvisionedCpuCoresGte(Integer provisionedCpuCoresGte) {
     this.provisionedCpuCoresGte = provisionedCpuCoresGte;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresIn(List<Double> provisionedCpuCoresIn) {
+  public ZoneWhereInput provisionedCpuCoresIn(List<Integer> provisionedCpuCoresIn) {
     
     this.provisionedCpuCoresIn = provisionedCpuCoresIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedCpuCoresInItem(Double provisionedCpuCoresInItem) {
+  public ZoneWhereInput addProvisionedCpuCoresInItem(Integer provisionedCpuCoresInItem) {
     if (this.provisionedCpuCoresIn == null) {
-      this.provisionedCpuCoresIn = new ArrayList<Double>();
+      this.provisionedCpuCoresIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresIn.add(provisionedCpuCoresInItem);
     return this;
@@ -2352,17 +2352,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresIn() {
+  public List<Integer> getProvisionedCpuCoresIn() {
     return provisionedCpuCoresIn;
   }
 
 
-  public void setProvisionedCpuCoresIn(List<Double> provisionedCpuCoresIn) {
+  public void setProvisionedCpuCoresIn(List<Integer> provisionedCpuCoresIn) {
     this.provisionedCpuCoresIn = provisionedCpuCoresIn;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresLt(Double provisionedCpuCoresLt) {
+  public ZoneWhereInput provisionedCpuCoresLt(Integer provisionedCpuCoresLt) {
     
     this.provisionedCpuCoresLt = provisionedCpuCoresLt;
     return this;
@@ -2375,17 +2375,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresLt() {
+  public Integer getProvisionedCpuCoresLt() {
     return provisionedCpuCoresLt;
   }
 
 
-  public void setProvisionedCpuCoresLt(Double provisionedCpuCoresLt) {
+  public void setProvisionedCpuCoresLt(Integer provisionedCpuCoresLt) {
     this.provisionedCpuCoresLt = provisionedCpuCoresLt;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresLte(Double provisionedCpuCoresLte) {
+  public ZoneWhereInput provisionedCpuCoresLte(Integer provisionedCpuCoresLte) {
     
     this.provisionedCpuCoresLte = provisionedCpuCoresLte;
     return this;
@@ -2398,17 +2398,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresLte() {
+  public Integer getProvisionedCpuCoresLte() {
     return provisionedCpuCoresLte;
   }
 
 
-  public void setProvisionedCpuCoresLte(Double provisionedCpuCoresLte) {
+  public void setProvisionedCpuCoresLte(Integer provisionedCpuCoresLte) {
     this.provisionedCpuCoresLte = provisionedCpuCoresLte;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresNot(Double provisionedCpuCoresNot) {
+  public ZoneWhereInput provisionedCpuCoresNot(Integer provisionedCpuCoresNot) {
     
     this.provisionedCpuCoresNot = provisionedCpuCoresNot;
     return this;
@@ -2421,25 +2421,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresNot() {
+  public Integer getProvisionedCpuCoresNot() {
     return provisionedCpuCoresNot;
   }
 
 
-  public void setProvisionedCpuCoresNot(Double provisionedCpuCoresNot) {
+  public void setProvisionedCpuCoresNot(Integer provisionedCpuCoresNot) {
     this.provisionedCpuCoresNot = provisionedCpuCoresNot;
   }
 
 
-  public ZoneWhereInput provisionedCpuCoresNotIn(List<Double> provisionedCpuCoresNotIn) {
+  public ZoneWhereInput provisionedCpuCoresNotIn(List<Integer> provisionedCpuCoresNotIn) {
     
     this.provisionedCpuCoresNotIn = provisionedCpuCoresNotIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedCpuCoresNotInItem(Double provisionedCpuCoresNotInItem) {
+  public ZoneWhereInput addProvisionedCpuCoresNotInItem(Integer provisionedCpuCoresNotInItem) {
     if (this.provisionedCpuCoresNotIn == null) {
-      this.provisionedCpuCoresNotIn = new ArrayList<Double>();
+      this.provisionedCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresNotIn.add(provisionedCpuCoresNotInItem);
     return this;
@@ -2452,12 +2452,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresNotIn() {
+  public List<Integer> getProvisionedCpuCoresNotIn() {
     return provisionedCpuCoresNotIn;
   }
 
 
-  public void setProvisionedCpuCoresNotIn(List<Double> provisionedCpuCoresNotIn) {
+  public void setProvisionedCpuCoresNotIn(List<Integer> provisionedCpuCoresNotIn) {
     this.provisionedCpuCoresNotIn = provisionedCpuCoresNotIn;
   }
 
@@ -2862,7 +2862,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput runningVmNum(Double runningVmNum) {
+  public ZoneWhereInput runningVmNum(Integer runningVmNum) {
     
     this.runningVmNum = runningVmNum;
     return this;
@@ -2875,17 +2875,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNum() {
+  public Integer getRunningVmNum() {
     return runningVmNum;
   }
 
 
-  public void setRunningVmNum(Double runningVmNum) {
+  public void setRunningVmNum(Integer runningVmNum) {
     this.runningVmNum = runningVmNum;
   }
 
 
-  public ZoneWhereInput runningVmNumGt(Double runningVmNumGt) {
+  public ZoneWhereInput runningVmNumGt(Integer runningVmNumGt) {
     
     this.runningVmNumGt = runningVmNumGt;
     return this;
@@ -2898,17 +2898,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumGt() {
+  public Integer getRunningVmNumGt() {
     return runningVmNumGt;
   }
 
 
-  public void setRunningVmNumGt(Double runningVmNumGt) {
+  public void setRunningVmNumGt(Integer runningVmNumGt) {
     this.runningVmNumGt = runningVmNumGt;
   }
 
 
-  public ZoneWhereInput runningVmNumGte(Double runningVmNumGte) {
+  public ZoneWhereInput runningVmNumGte(Integer runningVmNumGte) {
     
     this.runningVmNumGte = runningVmNumGte;
     return this;
@@ -2921,25 +2921,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumGte() {
+  public Integer getRunningVmNumGte() {
     return runningVmNumGte;
   }
 
 
-  public void setRunningVmNumGte(Double runningVmNumGte) {
+  public void setRunningVmNumGte(Integer runningVmNumGte) {
     this.runningVmNumGte = runningVmNumGte;
   }
 
 
-  public ZoneWhereInput runningVmNumIn(List<Double> runningVmNumIn) {
+  public ZoneWhereInput runningVmNumIn(List<Integer> runningVmNumIn) {
     
     this.runningVmNumIn = runningVmNumIn;
     return this;
   }
 
-  public ZoneWhereInput addRunningVmNumInItem(Double runningVmNumInItem) {
+  public ZoneWhereInput addRunningVmNumInItem(Integer runningVmNumInItem) {
     if (this.runningVmNumIn == null) {
-      this.runningVmNumIn = new ArrayList<Double>();
+      this.runningVmNumIn = new ArrayList<Integer>();
     }
     this.runningVmNumIn.add(runningVmNumInItem);
     return this;
@@ -2952,17 +2952,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningVmNumIn() {
+  public List<Integer> getRunningVmNumIn() {
     return runningVmNumIn;
   }
 
 
-  public void setRunningVmNumIn(List<Double> runningVmNumIn) {
+  public void setRunningVmNumIn(List<Integer> runningVmNumIn) {
     this.runningVmNumIn = runningVmNumIn;
   }
 
 
-  public ZoneWhereInput runningVmNumLt(Double runningVmNumLt) {
+  public ZoneWhereInput runningVmNumLt(Integer runningVmNumLt) {
     
     this.runningVmNumLt = runningVmNumLt;
     return this;
@@ -2975,17 +2975,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumLt() {
+  public Integer getRunningVmNumLt() {
     return runningVmNumLt;
   }
 
 
-  public void setRunningVmNumLt(Double runningVmNumLt) {
+  public void setRunningVmNumLt(Integer runningVmNumLt) {
     this.runningVmNumLt = runningVmNumLt;
   }
 
 
-  public ZoneWhereInput runningVmNumLte(Double runningVmNumLte) {
+  public ZoneWhereInput runningVmNumLte(Integer runningVmNumLte) {
     
     this.runningVmNumLte = runningVmNumLte;
     return this;
@@ -2998,17 +2998,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumLte() {
+  public Integer getRunningVmNumLte() {
     return runningVmNumLte;
   }
 
 
-  public void setRunningVmNumLte(Double runningVmNumLte) {
+  public void setRunningVmNumLte(Integer runningVmNumLte) {
     this.runningVmNumLte = runningVmNumLte;
   }
 
 
-  public ZoneWhereInput runningVmNumNot(Double runningVmNumNot) {
+  public ZoneWhereInput runningVmNumNot(Integer runningVmNumNot) {
     
     this.runningVmNumNot = runningVmNumNot;
     return this;
@@ -3021,25 +3021,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumNot() {
+  public Integer getRunningVmNumNot() {
     return runningVmNumNot;
   }
 
 
-  public void setRunningVmNumNot(Double runningVmNumNot) {
+  public void setRunningVmNumNot(Integer runningVmNumNot) {
     this.runningVmNumNot = runningVmNumNot;
   }
 
 
-  public ZoneWhereInput runningVmNumNotIn(List<Double> runningVmNumNotIn) {
+  public ZoneWhereInput runningVmNumNotIn(List<Integer> runningVmNumNotIn) {
     
     this.runningVmNumNotIn = runningVmNumNotIn;
     return this;
   }
 
-  public ZoneWhereInput addRunningVmNumNotInItem(Double runningVmNumNotInItem) {
+  public ZoneWhereInput addRunningVmNumNotInItem(Integer runningVmNumNotInItem) {
     if (this.runningVmNumNotIn == null) {
-      this.runningVmNumNotIn = new ArrayList<Double>();
+      this.runningVmNumNotIn = new ArrayList<Integer>();
     }
     this.runningVmNumNotIn.add(runningVmNumNotInItem);
     return this;
@@ -3052,17 +3052,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningVmNumNotIn() {
+  public List<Integer> getRunningVmNumNotIn() {
     return runningVmNumNotIn;
   }
 
 
-  public void setRunningVmNumNotIn(List<Double> runningVmNumNotIn) {
+  public void setRunningVmNumNotIn(List<Integer> runningVmNumNotIn) {
     this.runningVmNumNotIn = runningVmNumNotIn;
   }
 
 
-  public ZoneWhereInput stoppedVmNum(Double stoppedVmNum) {
+  public ZoneWhereInput stoppedVmNum(Integer stoppedVmNum) {
     
     this.stoppedVmNum = stoppedVmNum;
     return this;
@@ -3075,17 +3075,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNum() {
+  public Integer getStoppedVmNum() {
     return stoppedVmNum;
   }
 
 
-  public void setStoppedVmNum(Double stoppedVmNum) {
+  public void setStoppedVmNum(Integer stoppedVmNum) {
     this.stoppedVmNum = stoppedVmNum;
   }
 
 
-  public ZoneWhereInput stoppedVmNumGt(Double stoppedVmNumGt) {
+  public ZoneWhereInput stoppedVmNumGt(Integer stoppedVmNumGt) {
     
     this.stoppedVmNumGt = stoppedVmNumGt;
     return this;
@@ -3098,17 +3098,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumGt() {
+  public Integer getStoppedVmNumGt() {
     return stoppedVmNumGt;
   }
 
 
-  public void setStoppedVmNumGt(Double stoppedVmNumGt) {
+  public void setStoppedVmNumGt(Integer stoppedVmNumGt) {
     this.stoppedVmNumGt = stoppedVmNumGt;
   }
 
 
-  public ZoneWhereInput stoppedVmNumGte(Double stoppedVmNumGte) {
+  public ZoneWhereInput stoppedVmNumGte(Integer stoppedVmNumGte) {
     
     this.stoppedVmNumGte = stoppedVmNumGte;
     return this;
@@ -3121,25 +3121,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumGte() {
+  public Integer getStoppedVmNumGte() {
     return stoppedVmNumGte;
   }
 
 
-  public void setStoppedVmNumGte(Double stoppedVmNumGte) {
+  public void setStoppedVmNumGte(Integer stoppedVmNumGte) {
     this.stoppedVmNumGte = stoppedVmNumGte;
   }
 
 
-  public ZoneWhereInput stoppedVmNumIn(List<Double> stoppedVmNumIn) {
+  public ZoneWhereInput stoppedVmNumIn(List<Integer> stoppedVmNumIn) {
     
     this.stoppedVmNumIn = stoppedVmNumIn;
     return this;
   }
 
-  public ZoneWhereInput addStoppedVmNumInItem(Double stoppedVmNumInItem) {
+  public ZoneWhereInput addStoppedVmNumInItem(Integer stoppedVmNumInItem) {
     if (this.stoppedVmNumIn == null) {
-      this.stoppedVmNumIn = new ArrayList<Double>();
+      this.stoppedVmNumIn = new ArrayList<Integer>();
     }
     this.stoppedVmNumIn.add(stoppedVmNumInItem);
     return this;
@@ -3152,17 +3152,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStoppedVmNumIn() {
+  public List<Integer> getStoppedVmNumIn() {
     return stoppedVmNumIn;
   }
 
 
-  public void setStoppedVmNumIn(List<Double> stoppedVmNumIn) {
+  public void setStoppedVmNumIn(List<Integer> stoppedVmNumIn) {
     this.stoppedVmNumIn = stoppedVmNumIn;
   }
 
 
-  public ZoneWhereInput stoppedVmNumLt(Double stoppedVmNumLt) {
+  public ZoneWhereInput stoppedVmNumLt(Integer stoppedVmNumLt) {
     
     this.stoppedVmNumLt = stoppedVmNumLt;
     return this;
@@ -3175,17 +3175,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumLt() {
+  public Integer getStoppedVmNumLt() {
     return stoppedVmNumLt;
   }
 
 
-  public void setStoppedVmNumLt(Double stoppedVmNumLt) {
+  public void setStoppedVmNumLt(Integer stoppedVmNumLt) {
     this.stoppedVmNumLt = stoppedVmNumLt;
   }
 
 
-  public ZoneWhereInput stoppedVmNumLte(Double stoppedVmNumLte) {
+  public ZoneWhereInput stoppedVmNumLte(Integer stoppedVmNumLte) {
     
     this.stoppedVmNumLte = stoppedVmNumLte;
     return this;
@@ -3198,17 +3198,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumLte() {
+  public Integer getStoppedVmNumLte() {
     return stoppedVmNumLte;
   }
 
 
-  public void setStoppedVmNumLte(Double stoppedVmNumLte) {
+  public void setStoppedVmNumLte(Integer stoppedVmNumLte) {
     this.stoppedVmNumLte = stoppedVmNumLte;
   }
 
 
-  public ZoneWhereInput stoppedVmNumNot(Double stoppedVmNumNot) {
+  public ZoneWhereInput stoppedVmNumNot(Integer stoppedVmNumNot) {
     
     this.stoppedVmNumNot = stoppedVmNumNot;
     return this;
@@ -3221,25 +3221,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumNot() {
+  public Integer getStoppedVmNumNot() {
     return stoppedVmNumNot;
   }
 
 
-  public void setStoppedVmNumNot(Double stoppedVmNumNot) {
+  public void setStoppedVmNumNot(Integer stoppedVmNumNot) {
     this.stoppedVmNumNot = stoppedVmNumNot;
   }
 
 
-  public ZoneWhereInput stoppedVmNumNotIn(List<Double> stoppedVmNumNotIn) {
+  public ZoneWhereInput stoppedVmNumNotIn(List<Integer> stoppedVmNumNotIn) {
     
     this.stoppedVmNumNotIn = stoppedVmNumNotIn;
     return this;
   }
 
-  public ZoneWhereInput addStoppedVmNumNotInItem(Double stoppedVmNumNotInItem) {
+  public ZoneWhereInput addStoppedVmNumNotInItem(Integer stoppedVmNumNotInItem) {
     if (this.stoppedVmNumNotIn == null) {
-      this.stoppedVmNumNotIn = new ArrayList<Double>();
+      this.stoppedVmNumNotIn = new ArrayList<Integer>();
     }
     this.stoppedVmNumNotIn.add(stoppedVmNumNotInItem);
     return this;
@@ -3252,17 +3252,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStoppedVmNumNotIn() {
+  public List<Integer> getStoppedVmNumNotIn() {
     return stoppedVmNumNotIn;
   }
 
 
-  public void setStoppedVmNumNotIn(List<Double> stoppedVmNumNotIn) {
+  public void setStoppedVmNumNotIn(List<Integer> stoppedVmNumNotIn) {
     this.stoppedVmNumNotIn = stoppedVmNumNotIn;
   }
 
 
-  public ZoneWhereInput suspendedVmNum(Double suspendedVmNum) {
+  public ZoneWhereInput suspendedVmNum(Integer suspendedVmNum) {
     
     this.suspendedVmNum = suspendedVmNum;
     return this;
@@ -3275,17 +3275,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNum() {
+  public Integer getSuspendedVmNum() {
     return suspendedVmNum;
   }
 
 
-  public void setSuspendedVmNum(Double suspendedVmNum) {
+  public void setSuspendedVmNum(Integer suspendedVmNum) {
     this.suspendedVmNum = suspendedVmNum;
   }
 
 
-  public ZoneWhereInput suspendedVmNumGt(Double suspendedVmNumGt) {
+  public ZoneWhereInput suspendedVmNumGt(Integer suspendedVmNumGt) {
     
     this.suspendedVmNumGt = suspendedVmNumGt;
     return this;
@@ -3298,17 +3298,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumGt() {
+  public Integer getSuspendedVmNumGt() {
     return suspendedVmNumGt;
   }
 
 
-  public void setSuspendedVmNumGt(Double suspendedVmNumGt) {
+  public void setSuspendedVmNumGt(Integer suspendedVmNumGt) {
     this.suspendedVmNumGt = suspendedVmNumGt;
   }
 
 
-  public ZoneWhereInput suspendedVmNumGte(Double suspendedVmNumGte) {
+  public ZoneWhereInput suspendedVmNumGte(Integer suspendedVmNumGte) {
     
     this.suspendedVmNumGte = suspendedVmNumGte;
     return this;
@@ -3321,25 +3321,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumGte() {
+  public Integer getSuspendedVmNumGte() {
     return suspendedVmNumGte;
   }
 
 
-  public void setSuspendedVmNumGte(Double suspendedVmNumGte) {
+  public void setSuspendedVmNumGte(Integer suspendedVmNumGte) {
     this.suspendedVmNumGte = suspendedVmNumGte;
   }
 
 
-  public ZoneWhereInput suspendedVmNumIn(List<Double> suspendedVmNumIn) {
+  public ZoneWhereInput suspendedVmNumIn(List<Integer> suspendedVmNumIn) {
     
     this.suspendedVmNumIn = suspendedVmNumIn;
     return this;
   }
 
-  public ZoneWhereInput addSuspendedVmNumInItem(Double suspendedVmNumInItem) {
+  public ZoneWhereInput addSuspendedVmNumInItem(Integer suspendedVmNumInItem) {
     if (this.suspendedVmNumIn == null) {
-      this.suspendedVmNumIn = new ArrayList<Double>();
+      this.suspendedVmNumIn = new ArrayList<Integer>();
     }
     this.suspendedVmNumIn.add(suspendedVmNumInItem);
     return this;
@@ -3352,17 +3352,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSuspendedVmNumIn() {
+  public List<Integer> getSuspendedVmNumIn() {
     return suspendedVmNumIn;
   }
 
 
-  public void setSuspendedVmNumIn(List<Double> suspendedVmNumIn) {
+  public void setSuspendedVmNumIn(List<Integer> suspendedVmNumIn) {
     this.suspendedVmNumIn = suspendedVmNumIn;
   }
 
 
-  public ZoneWhereInput suspendedVmNumLt(Double suspendedVmNumLt) {
+  public ZoneWhereInput suspendedVmNumLt(Integer suspendedVmNumLt) {
     
     this.suspendedVmNumLt = suspendedVmNumLt;
     return this;
@@ -3375,17 +3375,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumLt() {
+  public Integer getSuspendedVmNumLt() {
     return suspendedVmNumLt;
   }
 
 
-  public void setSuspendedVmNumLt(Double suspendedVmNumLt) {
+  public void setSuspendedVmNumLt(Integer suspendedVmNumLt) {
     this.suspendedVmNumLt = suspendedVmNumLt;
   }
 
 
-  public ZoneWhereInput suspendedVmNumLte(Double suspendedVmNumLte) {
+  public ZoneWhereInput suspendedVmNumLte(Integer suspendedVmNumLte) {
     
     this.suspendedVmNumLte = suspendedVmNumLte;
     return this;
@@ -3398,17 +3398,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumLte() {
+  public Integer getSuspendedVmNumLte() {
     return suspendedVmNumLte;
   }
 
 
-  public void setSuspendedVmNumLte(Double suspendedVmNumLte) {
+  public void setSuspendedVmNumLte(Integer suspendedVmNumLte) {
     this.suspendedVmNumLte = suspendedVmNumLte;
   }
 
 
-  public ZoneWhereInput suspendedVmNumNot(Double suspendedVmNumNot) {
+  public ZoneWhereInput suspendedVmNumNot(Integer suspendedVmNumNot) {
     
     this.suspendedVmNumNot = suspendedVmNumNot;
     return this;
@@ -3421,25 +3421,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumNot() {
+  public Integer getSuspendedVmNumNot() {
     return suspendedVmNumNot;
   }
 
 
-  public void setSuspendedVmNumNot(Double suspendedVmNumNot) {
+  public void setSuspendedVmNumNot(Integer suspendedVmNumNot) {
     this.suspendedVmNumNot = suspendedVmNumNot;
   }
 
 
-  public ZoneWhereInput suspendedVmNumNotIn(List<Double> suspendedVmNumNotIn) {
+  public ZoneWhereInput suspendedVmNumNotIn(List<Integer> suspendedVmNumNotIn) {
     
     this.suspendedVmNumNotIn = suspendedVmNumNotIn;
     return this;
   }
 
-  public ZoneWhereInput addSuspendedVmNumNotInItem(Double suspendedVmNumNotInItem) {
+  public ZoneWhereInput addSuspendedVmNumNotInItem(Integer suspendedVmNumNotInItem) {
     if (this.suspendedVmNumNotIn == null) {
-      this.suspendedVmNumNotIn = new ArrayList<Double>();
+      this.suspendedVmNumNotIn = new ArrayList<Integer>();
     }
     this.suspendedVmNumNotIn.add(suspendedVmNumNotInItem);
     return this;
@@ -3452,12 +3452,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSuspendedVmNumNotIn() {
+  public List<Integer> getSuspendedVmNumNotIn() {
     return suspendedVmNumNotIn;
   }
 
 
-  public void setSuspendedVmNumNotIn(List<Double> suspendedVmNumNotIn) {
+  public void setSuspendedVmNumNotIn(List<Integer> suspendedVmNumNotIn) {
     this.suspendedVmNumNotIn = suspendedVmNumNotIn;
   }
 
@@ -3662,7 +3662,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput totalCpuCores(Double totalCpuCores) {
+  public ZoneWhereInput totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -3675,17 +3675,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
 
-  public ZoneWhereInput totalCpuCoresGt(Double totalCpuCoresGt) {
+  public ZoneWhereInput totalCpuCoresGt(Integer totalCpuCoresGt) {
     
     this.totalCpuCoresGt = totalCpuCoresGt;
     return this;
@@ -3698,17 +3698,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGt() {
+  public Integer getTotalCpuCoresGt() {
     return totalCpuCoresGt;
   }
 
 
-  public void setTotalCpuCoresGt(Double totalCpuCoresGt) {
+  public void setTotalCpuCoresGt(Integer totalCpuCoresGt) {
     this.totalCpuCoresGt = totalCpuCoresGt;
   }
 
 
-  public ZoneWhereInput totalCpuCoresGte(Double totalCpuCoresGte) {
+  public ZoneWhereInput totalCpuCoresGte(Integer totalCpuCoresGte) {
     
     this.totalCpuCoresGte = totalCpuCoresGte;
     return this;
@@ -3721,25 +3721,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGte() {
+  public Integer getTotalCpuCoresGte() {
     return totalCpuCoresGte;
   }
 
 
-  public void setTotalCpuCoresGte(Double totalCpuCoresGte) {
+  public void setTotalCpuCoresGte(Integer totalCpuCoresGte) {
     this.totalCpuCoresGte = totalCpuCoresGte;
   }
 
 
-  public ZoneWhereInput totalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public ZoneWhereInput totalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     
     this.totalCpuCoresIn = totalCpuCoresIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalCpuCoresInItem(Double totalCpuCoresInItem) {
+  public ZoneWhereInput addTotalCpuCoresInItem(Integer totalCpuCoresInItem) {
     if (this.totalCpuCoresIn == null) {
-      this.totalCpuCoresIn = new ArrayList<Double>();
+      this.totalCpuCoresIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresIn.add(totalCpuCoresInItem);
     return this;
@@ -3752,17 +3752,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresIn() {
+  public List<Integer> getTotalCpuCoresIn() {
     return totalCpuCoresIn;
   }
 
 
-  public void setTotalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public void setTotalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     this.totalCpuCoresIn = totalCpuCoresIn;
   }
 
 
-  public ZoneWhereInput totalCpuCoresLt(Double totalCpuCoresLt) {
+  public ZoneWhereInput totalCpuCoresLt(Integer totalCpuCoresLt) {
     
     this.totalCpuCoresLt = totalCpuCoresLt;
     return this;
@@ -3775,17 +3775,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLt() {
+  public Integer getTotalCpuCoresLt() {
     return totalCpuCoresLt;
   }
 
 
-  public void setTotalCpuCoresLt(Double totalCpuCoresLt) {
+  public void setTotalCpuCoresLt(Integer totalCpuCoresLt) {
     this.totalCpuCoresLt = totalCpuCoresLt;
   }
 
 
-  public ZoneWhereInput totalCpuCoresLte(Double totalCpuCoresLte) {
+  public ZoneWhereInput totalCpuCoresLte(Integer totalCpuCoresLte) {
     
     this.totalCpuCoresLte = totalCpuCoresLte;
     return this;
@@ -3798,17 +3798,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLte() {
+  public Integer getTotalCpuCoresLte() {
     return totalCpuCoresLte;
   }
 
 
-  public void setTotalCpuCoresLte(Double totalCpuCoresLte) {
+  public void setTotalCpuCoresLte(Integer totalCpuCoresLte) {
     this.totalCpuCoresLte = totalCpuCoresLte;
   }
 
 
-  public ZoneWhereInput totalCpuCoresNot(Double totalCpuCoresNot) {
+  public ZoneWhereInput totalCpuCoresNot(Integer totalCpuCoresNot) {
     
     this.totalCpuCoresNot = totalCpuCoresNot;
     return this;
@@ -3821,25 +3821,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresNot() {
+  public Integer getTotalCpuCoresNot() {
     return totalCpuCoresNot;
   }
 
 
-  public void setTotalCpuCoresNot(Double totalCpuCoresNot) {
+  public void setTotalCpuCoresNot(Integer totalCpuCoresNot) {
     this.totalCpuCoresNot = totalCpuCoresNot;
   }
 
 
-  public ZoneWhereInput totalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public ZoneWhereInput totalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalCpuCoresNotInItem(Double totalCpuCoresNotInItem) {
+  public ZoneWhereInput addTotalCpuCoresNotInItem(Integer totalCpuCoresNotInItem) {
     if (this.totalCpuCoresNotIn == null) {
-      this.totalCpuCoresNotIn = new ArrayList<Double>();
+      this.totalCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresNotIn.add(totalCpuCoresNotInItem);
     return this;
@@ -3852,12 +3852,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresNotIn() {
+  public List<Integer> getTotalCpuCoresNotIn() {
     return totalCpuCoresNotIn;
   }
 
 
-  public void setTotalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public void setTotalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
   }
 
@@ -4862,7 +4862,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput vmNum(Double vmNum) {
+  public ZoneWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -4875,17 +4875,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public ZoneWhereInput vmNumGt(Double vmNumGt) {
+  public ZoneWhereInput vmNumGt(Integer vmNumGt) {
     
     this.vmNumGt = vmNumGt;
     return this;
@@ -4898,17 +4898,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGt() {
+  public Integer getVmNumGt() {
     return vmNumGt;
   }
 
 
-  public void setVmNumGt(Double vmNumGt) {
+  public void setVmNumGt(Integer vmNumGt) {
     this.vmNumGt = vmNumGt;
   }
 
 
-  public ZoneWhereInput vmNumGte(Double vmNumGte) {
+  public ZoneWhereInput vmNumGte(Integer vmNumGte) {
     
     this.vmNumGte = vmNumGte;
     return this;
@@ -4921,25 +4921,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGte() {
+  public Integer getVmNumGte() {
     return vmNumGte;
   }
 
 
-  public void setVmNumGte(Double vmNumGte) {
+  public void setVmNumGte(Integer vmNumGte) {
     this.vmNumGte = vmNumGte;
   }
 
 
-  public ZoneWhereInput vmNumIn(List<Double> vmNumIn) {
+  public ZoneWhereInput vmNumIn(List<Integer> vmNumIn) {
     
     this.vmNumIn = vmNumIn;
     return this;
   }
 
-  public ZoneWhereInput addVmNumInItem(Double vmNumInItem) {
+  public ZoneWhereInput addVmNumInItem(Integer vmNumInItem) {
     if (this.vmNumIn == null) {
-      this.vmNumIn = new ArrayList<Double>();
+      this.vmNumIn = new ArrayList<Integer>();
     }
     this.vmNumIn.add(vmNumInItem);
     return this;
@@ -4952,17 +4952,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumIn() {
+  public List<Integer> getVmNumIn() {
     return vmNumIn;
   }
 
 
-  public void setVmNumIn(List<Double> vmNumIn) {
+  public void setVmNumIn(List<Integer> vmNumIn) {
     this.vmNumIn = vmNumIn;
   }
 
 
-  public ZoneWhereInput vmNumLt(Double vmNumLt) {
+  public ZoneWhereInput vmNumLt(Integer vmNumLt) {
     
     this.vmNumLt = vmNumLt;
     return this;
@@ -4975,17 +4975,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLt() {
+  public Integer getVmNumLt() {
     return vmNumLt;
   }
 
 
-  public void setVmNumLt(Double vmNumLt) {
+  public void setVmNumLt(Integer vmNumLt) {
     this.vmNumLt = vmNumLt;
   }
 
 
-  public ZoneWhereInput vmNumLte(Double vmNumLte) {
+  public ZoneWhereInput vmNumLte(Integer vmNumLte) {
     
     this.vmNumLte = vmNumLte;
     return this;
@@ -4998,17 +4998,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLte() {
+  public Integer getVmNumLte() {
     return vmNumLte;
   }
 
 
-  public void setVmNumLte(Double vmNumLte) {
+  public void setVmNumLte(Integer vmNumLte) {
     this.vmNumLte = vmNumLte;
   }
 
 
-  public ZoneWhereInput vmNumNot(Double vmNumNot) {
+  public ZoneWhereInput vmNumNot(Integer vmNumNot) {
     
     this.vmNumNot = vmNumNot;
     return this;
@@ -5021,25 +5021,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumNot() {
+  public Integer getVmNumNot() {
     return vmNumNot;
   }
 
 
-  public void setVmNumNot(Double vmNumNot) {
+  public void setVmNumNot(Integer vmNumNot) {
     this.vmNumNot = vmNumNot;
   }
 
 
-  public ZoneWhereInput vmNumNotIn(List<Double> vmNumNotIn) {
+  public ZoneWhereInput vmNumNotIn(List<Integer> vmNumNotIn) {
     
     this.vmNumNotIn = vmNumNotIn;
     return this;
   }
 
-  public ZoneWhereInput addVmNumNotInItem(Double vmNumNotInItem) {
+  public ZoneWhereInput addVmNumNotInItem(Integer vmNumNotInItem) {
     if (this.vmNumNotIn == null) {
-      this.vmNumNotIn = new ArrayList<Double>();
+      this.vmNumNotIn = new ArrayList<Integer>();
     }
     this.vmNumNotIn.add(vmNumNotInItem);
     return this;
@@ -5052,12 +5052,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumNotIn() {
+  public List<Integer> getVmNumNotIn() {
     return vmNumNotIn;
   }
 
 
-  public void setVmNumNotIn(List<Double> vmNumNotIn) {
+  public void setVmNumNotIn(List<Integer> vmNumNotIn) {
     this.vmNumNotIn = vmNumNotIn;
   }
 

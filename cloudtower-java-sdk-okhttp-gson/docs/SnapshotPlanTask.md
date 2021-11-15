@@ -7,14 +7,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **endTime** | **String** |  |  [optional]
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
 **internal** | **Boolean** |  |  [optional]
 **localId** | **String** |  | 
-**snapshotGroup** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**snapshotPlan** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**snapshotGroup** | [**NestedSnapshotGroup**](NestedSnapshotGroup.md) |  |  [optional]
+**snapshotPlan** | [**NestedSnapshotPlan**](NestedSnapshotPlan.md) |  | 
 **startTime** | **String** |  | 
 **status** | **SnapshotPlanExecuteStatus** |  | 
 **type** | **SnapshotPlanTaskType** |  | 

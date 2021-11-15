@@ -20,8 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.Bus;
+import com.smartx.tower.model.NestedElfImage;
+import com.smartx.tower.model.NestedSvtImage;
+import com.smartx.tower.model.NestedVm;
+import com.smartx.tower.model.NestedVmVolume;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskType;
 import io.swagger.annotations.ApiModel;
@@ -36,7 +39,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VmDisk {
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
-  private Double boot;
+  private Integer boot;
 
   public static final String SERIALIZED_NAME_BUS = "bus";
   @SerializedName(SERIALIZED_NAME_BUS)
@@ -60,7 +63,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_ELF_IMAGE = "elf_image";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE)
-  private NameIdPair elfImage;
+  private NestedElfImage elfImage;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,7 +71,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
-  private Double key;
+  private Integer key;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
@@ -80,7 +83,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -92,7 +95,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_SVT_IMAGE = "svt_image";
   @SerializedName(SERIALIZED_NAME_SVT_IMAGE)
-  private NameIdPair svtImage;
+  private NestedSvtImage svtImage;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -112,14 +115,14 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private NameIdPair vm;
+  private NestedVm vm;
 
   public static final String SERIALIZED_NAME_VM_VOLUME = "vm_volume";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME)
-  private NameIdPair vmVolume;
+  private NestedVmVolume vmVolume;
 
 
-  public VmDisk boot(Double boot) {
+  public VmDisk boot(Integer boot) {
     
     this.boot = boot;
     return this;
@@ -132,12 +135,12 @@ public class VmDisk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBoot() {
+  public Integer getBoot() {
     return boot;
   }
 
 
-  public void setBoot(Double boot) {
+  public void setBoot(Integer boot) {
     this.boot = boot;
   }
 
@@ -257,7 +260,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk elfImage(NameIdPair elfImage) {
+  public VmDisk elfImage(NestedElfImage elfImage) {
     
     this.elfImage = elfImage;
     return this;
@@ -270,12 +273,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getElfImage() {
+  public NestedElfImage getElfImage() {
     return elfImage;
   }
 
 
-  public void setElfImage(NameIdPair elfImage) {
+  public void setElfImage(NestedElfImage elfImage) {
     this.elfImage = elfImage;
   }
 
@@ -303,7 +306,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk key(Double key) {
+  public VmDisk key(Integer key) {
     
     this.key = key;
     return this;
@@ -316,12 +319,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKey() {
+  public Integer getKey() {
     return key;
   }
 
 
-  public void setKey(Double key) {
+  public void setKey(Integer key) {
     this.key = key;
   }
 
@@ -372,7 +375,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk maxIops(Double maxIops) {
+  public VmDisk maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -385,12 +388,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
@@ -441,7 +444,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk svtImage(NameIdPair svtImage) {
+  public VmDisk svtImage(NestedSvtImage svtImage) {
     
     this.svtImage = svtImage;
     return this;
@@ -454,12 +457,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getSvtImage() {
+  public NestedSvtImage getSvtImage() {
     return svtImage;
   }
 
 
-  public void setSvtImage(NameIdPair svtImage) {
+  public void setSvtImage(NestedSvtImage svtImage) {
     this.svtImage = svtImage;
   }
 
@@ -556,7 +559,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk vm(NameIdPair vm) {
+  public VmDisk vm(NestedVm vm) {
     
     this.vm = vm;
     return this;
@@ -569,17 +572,17 @@ public class VmDisk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getVm() {
+  public NestedVm getVm() {
     return vm;
   }
 
 
-  public void setVm(NameIdPair vm) {
+  public void setVm(NestedVm vm) {
     this.vm = vm;
   }
 
 
-  public VmDisk vmVolume(NameIdPair vmVolume) {
+  public VmDisk vmVolume(NestedVmVolume vmVolume) {
     
     this.vmVolume = vmVolume;
     return this;
@@ -592,12 +595,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getVmVolume() {
+  public NestedVmVolume getVmVolume() {
     return vmVolume;
   }
 
 
-  public void setVmVolume(NameIdPair vmVolume) {
+  public void setVmVolume(NestedVmVolume vmVolume) {
     this.vmVolume = vmVolume;
   }
 

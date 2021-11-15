@@ -7,29 +7,29 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**datacenter** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**datacenter** | [**NestedDatacenter**](NestedDatacenter.md) |  | 
 **failureDataSpace** | **Double** |  |  [optional]
-**hostNum** | **Double** |  |  [optional]
-**hosts** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**hostNum** | **Integer** |  |  [optional]
+**hosts** | [**List&lt;NestedHost&gt;**](NestedHost.md) |  |  [optional]
 **id** | **String** |  | 
 **isPreferred** | **Boolean** |  | 
 **localId** | **String** |  |  [optional]
-**provisionedCpuCores** | **Double** |  |  [optional]
-**provisionedCpuCoresForActiveVm** | **Double** |  |  [optional]
+**provisionedCpuCores** | **Integer** |  |  [optional]
+**provisionedCpuCoresForActiveVm** | **Integer** |  |  [optional]
 **provisionedDataSpace** | **Double** |  |  [optional]
 **provisionedMemoryBytes** | **Double** |  |  [optional]
-**runningVmNum** | **Double** |  |  [optional]
-**stoppedVmNum** | **Double** |  |  [optional]
-**suspendedVmNum** | **Double** |  |  [optional]
+**runningVmNum** | **Integer** |  |  [optional]
+**stoppedVmNum** | **Integer** |  |  [optional]
+**suspendedVmNum** | **Integer** |  |  [optional]
 **totalCacheCapacity** | **Double** |  |  [optional]
-**totalCpuCores** | **Double** |  |  [optional]
+**totalCpuCores** | **Integer** |  |  [optional]
 **totalCpuHz** | **Double** |  |  [optional]
 **totalDataCapacity** | **Double** |  |  [optional]
 **totalMemoryBytes** | **Double** |  |  [optional]
 **usedDataSpace** | **Double** |  |  [optional]
 **validDataSpace** | **Double** |  |  [optional]
-**vmNum** | **Double** |  |  [optional]
+**vmNum** | **Integer** |  |  [optional]
 
 
 

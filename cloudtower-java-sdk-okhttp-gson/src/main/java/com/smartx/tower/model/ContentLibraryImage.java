@@ -20,9 +20,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedElfImage;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedVmDisk;
+import com.smartx.tower.model.NestedVmSnapshot;
+import com.smartx.tower.model.NestedVmTemplate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,7 +41,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ContentLibraryImage {
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<NameIdPair> clusters = null;
+  private List<NestedCluster> clusters = null;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -53,7 +57,7 @@ public class ContentLibraryImage {
 
   public static final String SERIALIZED_NAME_ELF_IMAGES = "elf_images";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES)
-  private List<NameIdPair> elfImages = null;
+  private List<NestedElfImage> elfImages = null;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -65,7 +69,7 @@ public class ContentLibraryImage {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -81,26 +85,26 @@ public class ContentLibraryImage {
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
-  private List<BrickTopoPowers> vmDisks = null;
+  private List<NestedVmDisk> vmDisks = null;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<NameIdPair> vmSnapshots = null;
+  private List<NestedVmSnapshot> vmSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<NameIdPair> vmTemplates = null;
+  private List<NestedVmTemplate> vmTemplates = null;
 
 
-  public ContentLibraryImage clusters(List<NameIdPair> clusters) {
+  public ContentLibraryImage clusters(List<NestedCluster> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public ContentLibraryImage addClustersItem(NameIdPair clustersItem) {
+  public ContentLibraryImage addClustersItem(NestedCluster clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<NameIdPair>();
+      this.clusters = new ArrayList<NestedCluster>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -113,12 +117,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getClusters() {
+  public List<NestedCluster> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<NameIdPair> clusters) {
+  public void setClusters(List<NestedCluster> clusters) {
     this.clusters = clusters;
   }
 
@@ -197,15 +201,15 @@ public class ContentLibraryImage {
   }
 
 
-  public ContentLibraryImage elfImages(List<NameIdPair> elfImages) {
+  public ContentLibraryImage elfImages(List<NestedElfImage> elfImages) {
     
     this.elfImages = elfImages;
     return this;
   }
 
-  public ContentLibraryImage addElfImagesItem(NameIdPair elfImagesItem) {
+  public ContentLibraryImage addElfImagesItem(NestedElfImage elfImagesItem) {
     if (this.elfImages == null) {
-      this.elfImages = new ArrayList<NameIdPair>();
+      this.elfImages = new ArrayList<NestedElfImage>();
     }
     this.elfImages.add(elfImagesItem);
     return this;
@@ -218,12 +222,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getElfImages() {
+  public List<NestedElfImage> getElfImages() {
     return elfImages;
   }
 
 
-  public void setElfImages(List<NameIdPair> elfImages) {
+  public void setElfImages(List<NestedElfImage> elfImages) {
     this.elfImages = elfImages;
   }
 
@@ -274,15 +278,15 @@ public class ContentLibraryImage {
   }
 
 
-  public ContentLibraryImage labels(List<BrickTopoPowers> labels) {
+  public ContentLibraryImage labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public ContentLibraryImage addLabelsItem(BrickTopoPowers labelsItem) {
+  public ContentLibraryImage addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -295,12 +299,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -374,15 +378,15 @@ public class ContentLibraryImage {
   }
 
 
-  public ContentLibraryImage vmDisks(List<BrickTopoPowers> vmDisks) {
+  public ContentLibraryImage vmDisks(List<NestedVmDisk> vmDisks) {
     
     this.vmDisks = vmDisks;
     return this;
   }
 
-  public ContentLibraryImage addVmDisksItem(BrickTopoPowers vmDisksItem) {
+  public ContentLibraryImage addVmDisksItem(NestedVmDisk vmDisksItem) {
     if (this.vmDisks == null) {
-      this.vmDisks = new ArrayList<BrickTopoPowers>();
+      this.vmDisks = new ArrayList<NestedVmDisk>();
     }
     this.vmDisks.add(vmDisksItem);
     return this;
@@ -395,25 +399,25 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmDisks() {
+  public List<NestedVmDisk> getVmDisks() {
     return vmDisks;
   }
 
 
-  public void setVmDisks(List<BrickTopoPowers> vmDisks) {
+  public void setVmDisks(List<NestedVmDisk> vmDisks) {
     this.vmDisks = vmDisks;
   }
 
 
-  public ContentLibraryImage vmSnapshots(List<NameIdPair> vmSnapshots) {
+  public ContentLibraryImage vmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public ContentLibraryImage addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
+  public ContentLibraryImage addVmSnapshotsItem(NestedVmSnapshot vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<NameIdPair>();
+      this.vmSnapshots = new ArrayList<NestedVmSnapshot>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -426,25 +430,25 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmSnapshots() {
+  public List<NestedVmSnapshot> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
+  public void setVmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 
 
-  public ContentLibraryImage vmTemplates(List<NameIdPair> vmTemplates) {
+  public ContentLibraryImage vmTemplates(List<NestedVmTemplate> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public ContentLibraryImage addVmTemplatesItem(NameIdPair vmTemplatesItem) {
+  public ContentLibraryImage addVmTemplatesItem(NestedVmTemplate vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<NameIdPair>();
+      this.vmTemplates = new ArrayList<NestedVmTemplate>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -457,12 +461,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmTemplates() {
+  public List<NestedVmTemplate> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<NameIdPair> vmTemplates) {
+  public void setVmTemplates(List<NestedVmTemplate> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 

@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **after** | **String** |  |  [optional]
 **before** | **String** |  |  [optional]
-**first** | **Double** |  |  [optional]
-**last** | **Double** |  |  [optional]
+**first** | **Integer** |  |  [optional]
+**last** | **Integer** |  |  [optional]
 **orderBy** | [**UsbDeviceOrderByInput**](UsbDeviceOrderByInput.md) |  |  [optional]
-**skip** | **Double** |  |  [optional]
+**skip** | **Integer** |  |  [optional]
 **where** | [**UsbDeviceWhereInput**](UsbDeviceWhereInput.md) |  |  [optional]
 
 

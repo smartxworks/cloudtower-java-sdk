@@ -47,6 +47,8 @@ public class ITReportTask extends ITBase {
       List<ReportTask> result = api.getReportTasks(params, contentLanguage);
       assertThat(result).as("check result of getReportTasks").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITReportTask extends ITBase {
       ReportTaskConnection result = api.getReportTasksConnection(params, contentLanguage);
       assertThat(result).as("check result of getReportTasksConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

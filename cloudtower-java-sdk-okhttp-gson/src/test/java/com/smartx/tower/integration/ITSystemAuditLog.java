@@ -47,6 +47,8 @@ public class ITSystemAuditLog extends ITBase {
       List<SystemAuditLog> result = api.getSystemAuditLogs(params, contentLanguage);
       assertThat(result).as("check result of getSystemAuditLogs").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSystemAuditLog extends ITBase {
       SystemAuditLogConnection result = api.getSystemAuditLogsConnection(params, contentLanguage);
       assertThat(result).as("check result of getSystemAuditLogsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

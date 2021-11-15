@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**vmRecycleBin** | [**GlobalSettingsVmRecycleBin**](GlobalSettingsVmRecycleBin.md) |  | 
+**vmRecycleBin** | [**NestedVmRecycleBin**](NestedVmRecycleBin.md) |  | 
 
 
 

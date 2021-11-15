@@ -47,6 +47,8 @@ public class ITVmNic extends ITBase {
       List<VmNic> result = api.getVmNics(params, contentLanguage);
       assertThat(result).as("check result of getVmNics").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVmNic extends ITBase {
       VmNicConnection result = api.getVmNicsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmNicsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

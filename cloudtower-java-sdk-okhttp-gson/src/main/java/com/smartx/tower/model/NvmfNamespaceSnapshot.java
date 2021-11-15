@@ -20,9 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedConsistencyGroupSnapshot;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNvmfNamespace;
+import com.smartx.tower.model.NestedNvmfSubsystem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,7 +39,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NvmfNamespaceSnapshot {
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT = "consistency_group_snapshot";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
-  private NameIdPair consistencyGroupSnapshot;
+  private NestedConsistencyGroupSnapshot consistencyGroupSnapshot;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -49,7 +51,7 @@ public class NvmfNamespaceSnapshot {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -65,18 +67,18 @@ public class NvmfNamespaceSnapshot {
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE = "nvmf_namespace";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE)
-  private NameIdPair nvmfNamespace;
+  private NestedNvmfNamespace nvmfNamespace;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private NameIdPair nvmfSubsystem;
+  private NestedNvmfSubsystem nvmfSubsystem;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Double uniqueSize;
 
 
-  public NvmfNamespaceSnapshot consistencyGroupSnapshot(NameIdPair consistencyGroupSnapshot) {
+  public NvmfNamespaceSnapshot consistencyGroupSnapshot(NestedConsistencyGroupSnapshot consistencyGroupSnapshot) {
     
     this.consistencyGroupSnapshot = consistencyGroupSnapshot;
     return this;
@@ -89,12 +91,12 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getConsistencyGroupSnapshot() {
+  public NestedConsistencyGroupSnapshot getConsistencyGroupSnapshot() {
     return consistencyGroupSnapshot;
   }
 
 
-  public void setConsistencyGroupSnapshot(NameIdPair consistencyGroupSnapshot) {
+  public void setConsistencyGroupSnapshot(NestedConsistencyGroupSnapshot consistencyGroupSnapshot) {
     this.consistencyGroupSnapshot = consistencyGroupSnapshot;
   }
 
@@ -145,15 +147,15 @@ public class NvmfNamespaceSnapshot {
   }
 
 
-  public NvmfNamespaceSnapshot labels(List<BrickTopoPowers> labels) {
+  public NvmfNamespaceSnapshot labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public NvmfNamespaceSnapshot addLabelsItem(BrickTopoPowers labelsItem) {
+  public NvmfNamespaceSnapshot addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -166,12 +168,12 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -245,7 +247,7 @@ public class NvmfNamespaceSnapshot {
   }
 
 
-  public NvmfNamespaceSnapshot nvmfNamespace(NameIdPair nvmfNamespace) {
+  public NvmfNamespaceSnapshot nvmfNamespace(NestedNvmfNamespace nvmfNamespace) {
     
     this.nvmfNamespace = nvmfNamespace;
     return this;
@@ -258,17 +260,17 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getNvmfNamespace() {
+  public NestedNvmfNamespace getNvmfNamespace() {
     return nvmfNamespace;
   }
 
 
-  public void setNvmfNamespace(NameIdPair nvmfNamespace) {
+  public void setNvmfNamespace(NestedNvmfNamespace nvmfNamespace) {
     this.nvmfNamespace = nvmfNamespace;
   }
 
 
-  public NvmfNamespaceSnapshot nvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public NvmfNamespaceSnapshot nvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -281,12 +283,12 @@ public class NvmfNamespaceSnapshot {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getNvmfSubsystem() {
+  public NestedNvmfSubsystem getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public void setNvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

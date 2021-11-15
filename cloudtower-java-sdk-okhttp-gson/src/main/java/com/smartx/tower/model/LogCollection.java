@@ -20,8 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.LogCollectionStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedHost;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,11 +37,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class LogCollection {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<NameIdPair> hosts = null;
+  private List<NestedHost> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -83,7 +84,7 @@ public class LogCollection {
   private LogCollectionStatus status;
 
 
-  public LogCollection cluster(NameIdPair cluster) {
+  public LogCollection cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -96,25 +97,25 @@ public class LogCollection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public LogCollection hosts(List<NameIdPair> hosts) {
+  public LogCollection hosts(List<NestedHost> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public LogCollection addHostsItem(NameIdPair hostsItem) {
+  public LogCollection addHostsItem(NestedHost hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<NameIdPair>();
+      this.hosts = new ArrayList<NestedHost>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -127,12 +128,12 @@ public class LogCollection {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getHosts() {
+  public List<NestedHost> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<NameIdPair> hosts) {
+  public void setHosts(List<NestedHost> hosts) {
     this.hosts = hosts;
   }
 

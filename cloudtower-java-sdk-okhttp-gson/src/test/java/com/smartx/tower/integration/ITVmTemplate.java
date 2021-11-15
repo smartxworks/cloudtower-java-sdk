@@ -53,11 +53,9 @@ public class ITVmTemplate extends ITBase {
       InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
-    cluster = getData("defaultCluster", Cluster.class);
-    params.add(new VmCreationParams().name("tower-api-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1.0)
-        .cpuSockets(1.0).memory(4294967296.0).ha(true).vcpu(1.0).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
-        .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1.0).index(1.0)))
+    params.add(new VmCreationParams().name("tower-sdk-test-template-vm" + System.currentTimeMillis()).cpuCores(1)
+        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+        .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     vm = vmApi.createVm(params, contentLanguage).get(0).getData();
     waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
@@ -68,17 +66,28 @@ public class ITVmTemplate extends ITBase {
   @AfterMethod(groups = { "need_vm" }, alwaysRun = true)
   public void deleteVm() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
       NoSuchMethodException, SecurityException, ApiException, InterruptedException {
-    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
+    if (vm == null) {
+      // for operation will remove vm, set vm to null and it will not execute deleteVm
+      // again
+      return;
+    }
+    Vm _vm = (Vm) waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi,
+        "getVms", new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
+    if (_vm.getStatus() == VmStatus.RUNNING) {
+      vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage);
+      waitForVmEntityAsyncStatus(_vm.getId(), vmApi);
+    }
     vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
     waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
         new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
+    vm = null;
   }
 
   @Test(groups = { "need_vm" })
-  public void cloneVmTemplateFromVm() {
+  public void cloneVmTemplateFromVmAndUpdateAndDelete() throws IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException {
     try {
       // parse params from json payload
       List<VmTemplateCreationParams> params = new ArrayList<>();
@@ -86,36 +95,61 @@ public class ITVmTemplate extends ITBase {
           .clusterId(cluster.getId()).vmId(vm.getId()).cloudInitSupported(false));
       // do some modify to params(optional)
       List<WithTaskVmTemplate> result = api.cloneVmTemplateFromVm(params, contentLanguage);
-      assertThat(result).as("check result of cloneVmTemplateFromVm").isNotNull();
+      VmTemplate template = result.get(0).getData();
+      waitForResourceAsyncStatus(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+          api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+          }.getClass(), GetVmTemplatesRequestBody.class);
+      api.updateVmTemplate(new VmTemplateUpdationParams()
+          .data(new VmTemplateUpdationParamsData()
+              .name("tower-sdk-test-clone-vm-template-update" + System.currentTimeMillis()))
+          .where(new VmTemplateWhereInput().id(template.getId())), contentLanguage);
+      waitForResourceAsyncStatus(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+          api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+          }.getClass(), GetVmTemplatesRequestBody.class);
+      api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())),
+          contentLanguage);
+      waitForResourceDeletion(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+          api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+          }.getClass(), GetVmTemplatesRequestBody.class);
+      assertThat(result).as("check result of cloneVmTemplateFromVmAndUpdateAndDelete").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmTemplatePayload")
-  public void convertVmTemplateFromVm(String payload) {
+  @Test(groups = { "need_vm" })
+  public void convertVmTemplateFromVmAndUpdateAndDelete() throws IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException {
     try {
       // parse params from json payload
-      List<VmTemplateCreationParams> params = gson.fromJson(payload, new TypeToken<List<VmTemplateCreationParams>>() {
-      }.getType());
+      List<VmTemplateCreationParams> params = new ArrayList<>();
+      params.add(new VmTemplateCreationParams().name("tower-sdk-test-convert-vm-template" + System.currentTimeMillis())
+          .clusterId(cluster.getId()).vmId(vm.getId()).cloudInitSupported(false));
       // do some modify to params(optional)
       List<WithTaskVmTemplate> result = api.convertVmTemplateFromVm(params, contentLanguage);
-      assertThat(result).as("check result of convertVmTemplateFromVm").isNotNull();
+      VmTemplate template = result.get(0).getData();
+      waitForResourceAsyncStatus(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+          api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+          }.getClass(), GetVmTemplatesRequestBody.class);
+      api.updateVmTemplate(new VmTemplateUpdationParams()
+          .data(new VmTemplateUpdationParamsData()
+              .name("tower-sdk-test-clone-vm-template-update" + System.currentTimeMillis()))
+          .where(new VmTemplateWhereInput().id(template.getId())), contentLanguage);
+      waitForResourceAsyncStatus(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+          api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+          }.getClass(), GetVmTemplatesRequestBody.class);
+      api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())),
+          contentLanguage);
+      waitForResourceDeletion(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+          api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+          }.getClass(), GetVmTemplatesRequestBody.class);
+      assertThat(result).as("check result of convertVmTemplateFromVmAndDelete").isNotNull();
+      vm = null;
     } catch (ApiException e) {
-      assertThat(true).as(e.getResponseBody()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "vmTemplatePayload")
-  public void deleteVmTemplateFromVm(String payload) {
-    try {
-      // parse params from json payload
-      VmTemplateDeletionParams params = gson.fromJson(payload, new TypeToken<VmTemplateDeletionParams>() {
-      }.getType());
-      // do some modify to params(optional)
-      List<WithTaskDeleteVmTemplate> result = api.deleteVmTemplateFromVm(params, contentLanguage);
-      assertThat(result).as("check result of deleteVmTemplateFromVm").isNotNull();
-    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -130,6 +164,8 @@ public class ITVmTemplate extends ITBase {
       List<VmTemplate> result = api.getVmTemplates(params, contentLanguage);
       assertThat(result).as("check result of getVmTemplates").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -145,20 +181,92 @@ public class ITVmTemplate extends ITBase {
       VmTemplateConnection result = api.getVmTemplatesConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmTemplatesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmTemplatePayload")
-  public void updateVmTemplateFromVm(String payload) {
+  VmTemplate template = null;
+
+  @BeforeMethod(groups = { "need_vm_template" }, dependsOnMethods = { "createVm" })
+  public void createVmtemplate() throws ApiException, IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException {
+    List<VmTemplateCreationParams> params = new ArrayList<>();
+    params.add(new VmTemplateCreationParams().name("tower-api-test-clone-vm-template" + System.currentTimeMillis())
+        .clusterId(cluster.getId()).vmId(vm.getId()).cloudInitSupported(false));
+    // do some modify to params(optional)
+    List<WithTaskVmTemplate> result = api.cloneVmTemplateFromVm(params, contentLanguage);
+    template = result.get(0).getData();
+    waitForResourceAsyncStatus(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+        api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+        }.getClass(), GetVmTemplatesRequestBody.class);
+  }
+
+  @AfterMethod(groups = { "need_vm_template" }, alwaysRun = true)
+  public void deleteVmtemplate() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException, ApiException, InterruptedException {
+    if (template == null) {
+      // for operation will remove vm template, set vm to null and it will not execute
+      // deleteVmtemplate again
+      return;
+    }
+    waitForResourceAsyncStatus(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())),
+        api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+        }.getClass(), GetVmTemplatesRequestBody.class);
+    api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())),
+        contentLanguage);
+    waitForResourceDeletion(new GetVmTemplatesRequestBody().where(new VmTemplateWhereInput().id(template.getId())), api,
+        "getVmTemplates", new TypeToken<List<VmTemplate>>() {
+        }.getClass(), GetVmTemplatesRequestBody.class);
+  }
+
+  @Test(groups = { "need_vm", "need_vm_template" })
+  public void convertVmTemplateToVm() throws IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
     try {
-      // parse params from json payload
-      VmTemplateUpdationParams params = gson.fromJson(payload, new TypeToken<VmTemplateUpdationParams>() {
-      }.getType());
-      // do some modify to params(optional)
-      List<WithTaskVmTemplate> result = api.updateVmTemplateFromVm(params, contentLanguage);
-      assertThat(result).as("check result of updateVmTemplateFromVm").isNotNull();
+      List<ConvertVmTemplateToVmParams> params = new ArrayList<>();
+      params.add(new ConvertVmTemplateToVmParams().convertedFromTemplateId(template.getId())
+          .name("tower-sdk-test-vm-convert-from-template" + System.currentTimeMillis()));
+      List<WithTaskVm> result = vmApi.convertVmTemplateToVm(params, contentLanguage);
+      Vm vm = result.get(0).getData();
+      waitForResourceCreation(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
+      waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(result).as("check result of convertVmTemplateToVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(groups = { "need_vm", "need_vm_template" })
+  public void createVmFromTemplate() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException {
+    try {
+      List<VmCreateVmFromTemplateParams> params = new ArrayList<>();
+      params.add(new VmCreateVmFromTemplateParams().templateId(template.getId())
+          .name("tower-sdk-test-vm-create-from-template" + System.currentTimeMillis()).clusterId(cluster.getId())
+          .isFullCopy(false));
+      List<WithTaskVm> result = vmApi.createVmFromTemplate(params, contentLanguage);
+      Vm vm = result.get(0).getData();
+      waitForResourceCreation(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
+      waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(result).as("check result of createVmFromTemplate").isNotNull();
+      template = null;
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

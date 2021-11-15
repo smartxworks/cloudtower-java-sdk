@@ -438,35 +438,35 @@ public class NfsExportWhereInput {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GT = "replica_num_gt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GT)
-  private Double replicaNumGt;
+  private Integer replicaNumGt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GTE = "replica_num_gte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GTE)
-  private Double replicaNumGte;
+  private Integer replicaNumGte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_IN = "replica_num_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_IN)
-  private List<Double> replicaNumIn = null;
+  private List<Integer> replicaNumIn = null;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LT = "replica_num_lt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LT)
-  private Double replicaNumLt;
+  private Integer replicaNumLt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LTE = "replica_num_lte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LTE)
-  private Double replicaNumLte;
+  private Integer replicaNumLte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT = "replica_num_not";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT)
-  private Double replicaNumNot;
+  private Integer replicaNumNot;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT_IN = "replica_num_not_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
-  private List<Double> replicaNumNotIn = null;
+  private List<Integer> replicaNumNotIn = null;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -2913,7 +2913,7 @@ public class NfsExportWhereInput {
   }
 
 
-  public NfsExportWhereInput replicaNum(Double replicaNum) {
+  public NfsExportWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -2926,17 +2926,17 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public NfsExportWhereInput replicaNumGt(Double replicaNumGt) {
+  public NfsExportWhereInput replicaNumGt(Integer replicaNumGt) {
     
     this.replicaNumGt = replicaNumGt;
     return this;
@@ -2949,17 +2949,17 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGt() {
+  public Integer getReplicaNumGt() {
     return replicaNumGt;
   }
 
 
-  public void setReplicaNumGt(Double replicaNumGt) {
+  public void setReplicaNumGt(Integer replicaNumGt) {
     this.replicaNumGt = replicaNumGt;
   }
 
 
-  public NfsExportWhereInput replicaNumGte(Double replicaNumGte) {
+  public NfsExportWhereInput replicaNumGte(Integer replicaNumGte) {
     
     this.replicaNumGte = replicaNumGte;
     return this;
@@ -2972,25 +2972,25 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGte() {
+  public Integer getReplicaNumGte() {
     return replicaNumGte;
   }
 
 
-  public void setReplicaNumGte(Double replicaNumGte) {
+  public void setReplicaNumGte(Integer replicaNumGte) {
     this.replicaNumGte = replicaNumGte;
   }
 
 
-  public NfsExportWhereInput replicaNumIn(List<Double> replicaNumIn) {
+  public NfsExportWhereInput replicaNumIn(List<Integer> replicaNumIn) {
     
     this.replicaNumIn = replicaNumIn;
     return this;
   }
 
-  public NfsExportWhereInput addReplicaNumInItem(Double replicaNumInItem) {
+  public NfsExportWhereInput addReplicaNumInItem(Integer replicaNumInItem) {
     if (this.replicaNumIn == null) {
-      this.replicaNumIn = new ArrayList<Double>();
+      this.replicaNumIn = new ArrayList<Integer>();
     }
     this.replicaNumIn.add(replicaNumInItem);
     return this;
@@ -3003,17 +3003,17 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumIn() {
+  public List<Integer> getReplicaNumIn() {
     return replicaNumIn;
   }
 
 
-  public void setReplicaNumIn(List<Double> replicaNumIn) {
+  public void setReplicaNumIn(List<Integer> replicaNumIn) {
     this.replicaNumIn = replicaNumIn;
   }
 
 
-  public NfsExportWhereInput replicaNumLt(Double replicaNumLt) {
+  public NfsExportWhereInput replicaNumLt(Integer replicaNumLt) {
     
     this.replicaNumLt = replicaNumLt;
     return this;
@@ -3026,17 +3026,17 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLt() {
+  public Integer getReplicaNumLt() {
     return replicaNumLt;
   }
 
 
-  public void setReplicaNumLt(Double replicaNumLt) {
+  public void setReplicaNumLt(Integer replicaNumLt) {
     this.replicaNumLt = replicaNumLt;
   }
 
 
-  public NfsExportWhereInput replicaNumLte(Double replicaNumLte) {
+  public NfsExportWhereInput replicaNumLte(Integer replicaNumLte) {
     
     this.replicaNumLte = replicaNumLte;
     return this;
@@ -3049,17 +3049,17 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLte() {
+  public Integer getReplicaNumLte() {
     return replicaNumLte;
   }
 
 
-  public void setReplicaNumLte(Double replicaNumLte) {
+  public void setReplicaNumLte(Integer replicaNumLte) {
     this.replicaNumLte = replicaNumLte;
   }
 
 
-  public NfsExportWhereInput replicaNumNot(Double replicaNumNot) {
+  public NfsExportWhereInput replicaNumNot(Integer replicaNumNot) {
     
     this.replicaNumNot = replicaNumNot;
     return this;
@@ -3072,25 +3072,25 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumNot() {
+  public Integer getReplicaNumNot() {
     return replicaNumNot;
   }
 
 
-  public void setReplicaNumNot(Double replicaNumNot) {
+  public void setReplicaNumNot(Integer replicaNumNot) {
     this.replicaNumNot = replicaNumNot;
   }
 
 
-  public NfsExportWhereInput replicaNumNotIn(List<Double> replicaNumNotIn) {
+  public NfsExportWhereInput replicaNumNotIn(List<Integer> replicaNumNotIn) {
     
     this.replicaNumNotIn = replicaNumNotIn;
     return this;
   }
 
-  public NfsExportWhereInput addReplicaNumNotInItem(Double replicaNumNotInItem) {
+  public NfsExportWhereInput addReplicaNumNotInItem(Integer replicaNumNotInItem) {
     if (this.replicaNumNotIn == null) {
-      this.replicaNumNotIn = new ArrayList<Double>();
+      this.replicaNumNotIn = new ArrayList<Integer>();
     }
     this.replicaNumNotIn.add(replicaNumNotInItem);
     return this;
@@ -3103,12 +3103,12 @@ public class NfsExportWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumNotIn() {
+  public List<Integer> getReplicaNumNotIn() {
     return replicaNumNotIn;
   }
 
 
-  public void setReplicaNumNotIn(List<Double> replicaNumNotIn) {
+  public void setReplicaNumNotIn(List<Integer> replicaNumNotIn) {
     this.replicaNumNotIn = replicaNumNotIn;
   }
 

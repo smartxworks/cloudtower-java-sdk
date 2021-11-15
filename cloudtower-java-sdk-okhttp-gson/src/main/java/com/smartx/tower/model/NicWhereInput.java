@@ -475,35 +475,35 @@ public class NicWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM = "max_vf_num";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM)
-  private Double maxVfNum;
+  private Integer maxVfNum;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_GT = "max_vf_num_gt";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_GT)
-  private Double maxVfNumGt;
+  private Integer maxVfNumGt;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_GTE = "max_vf_num_gte";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_GTE)
-  private Double maxVfNumGte;
+  private Integer maxVfNumGte;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_IN = "max_vf_num_in";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_IN)
-  private List<Double> maxVfNumIn = null;
+  private List<Integer> maxVfNumIn = null;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_LT = "max_vf_num_lt";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_LT)
-  private Double maxVfNumLt;
+  private Integer maxVfNumLt;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_LTE = "max_vf_num_lte";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_LTE)
-  private Double maxVfNumLte;
+  private Integer maxVfNumLte;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_NOT = "max_vf_num_not";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_NOT)
-  private Double maxVfNumNot;
+  private Integer maxVfNumNot;
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM_NOT_IN = "max_vf_num_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM_NOT_IN)
-  private List<Double> maxVfNumNotIn = null;
+  private List<Integer> maxVfNumNotIn = null;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
@@ -563,35 +563,35 @@ public class NicWhereInput {
 
   public static final String SERIALIZED_NAME_MTU = "mtu";
   @SerializedName(SERIALIZED_NAME_MTU)
-  private Double mtu;
+  private Integer mtu;
 
   public static final String SERIALIZED_NAME_MTU_GT = "mtu_gt";
   @SerializedName(SERIALIZED_NAME_MTU_GT)
-  private Double mtuGt;
+  private Integer mtuGt;
 
   public static final String SERIALIZED_NAME_MTU_GTE = "mtu_gte";
   @SerializedName(SERIALIZED_NAME_MTU_GTE)
-  private Double mtuGte;
+  private Integer mtuGte;
 
   public static final String SERIALIZED_NAME_MTU_IN = "mtu_in";
   @SerializedName(SERIALIZED_NAME_MTU_IN)
-  private List<Double> mtuIn = null;
+  private List<Integer> mtuIn = null;
 
   public static final String SERIALIZED_NAME_MTU_LT = "mtu_lt";
   @SerializedName(SERIALIZED_NAME_MTU_LT)
-  private Double mtuLt;
+  private Integer mtuLt;
 
   public static final String SERIALIZED_NAME_MTU_LTE = "mtu_lte";
   @SerializedName(SERIALIZED_NAME_MTU_LTE)
-  private Double mtuLte;
+  private Integer mtuLte;
 
   public static final String SERIALIZED_NAME_MTU_NOT = "mtu_not";
   @SerializedName(SERIALIZED_NAME_MTU_NOT)
-  private Double mtuNot;
+  private Integer mtuNot;
 
   public static final String SERIALIZED_NAME_MTU_NOT_IN = "mtu_not_in";
   @SerializedName(SERIALIZED_NAME_MTU_NOT_IN)
-  private List<Double> mtuNotIn = null;
+  private List<Integer> mtuNotIn = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -827,35 +827,35 @@ public class NicWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM = "total_vf_num";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM)
-  private Double totalVfNum;
+  private Integer totalVfNum;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_GT = "total_vf_num_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_GT)
-  private Double totalVfNumGt;
+  private Integer totalVfNumGt;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_GTE = "total_vf_num_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_GTE)
-  private Double totalVfNumGte;
+  private Integer totalVfNumGte;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_IN = "total_vf_num_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_IN)
-  private List<Double> totalVfNumIn = null;
+  private List<Integer> totalVfNumIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_LT = "total_vf_num_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_LT)
-  private Double totalVfNumLt;
+  private Integer totalVfNumLt;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_LTE = "total_vf_num_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_LTE)
-  private Double totalVfNumLte;
+  private Integer totalVfNumLte;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_NOT = "total_vf_num_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_NOT)
-  private Double totalVfNumNot;
+  private Integer totalVfNumNot;
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM_NOT_IN = "total_vf_num_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM_NOT_IN)
-  private List<Double> totalVfNumNotIn = null;
+  private List<Integer> totalVfNumNotIn = null;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -883,35 +883,35 @@ public class NicWhereInput {
 
   public static final String SERIALIZED_NAME_USED_VF_NUM = "used_vf_num";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM)
-  private Double usedVfNum;
+  private Integer usedVfNum;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_GT = "used_vf_num_gt";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_GT)
-  private Double usedVfNumGt;
+  private Integer usedVfNumGt;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_GTE = "used_vf_num_gte";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_GTE)
-  private Double usedVfNumGte;
+  private Integer usedVfNumGte;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_IN = "used_vf_num_in";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_IN)
-  private List<Double> usedVfNumIn = null;
+  private List<Integer> usedVfNumIn = null;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_LT = "used_vf_num_lt";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_LT)
-  private Double usedVfNumLt;
+  private Integer usedVfNumLt;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_LTE = "used_vf_num_lte";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_LTE)
-  private Double usedVfNumLte;
+  private Integer usedVfNumLte;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_NOT = "used_vf_num_not";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_NOT)
-  private Double usedVfNumNot;
+  private Integer usedVfNumNot;
 
   public static final String SERIALIZED_NAME_USED_VF_NUM_NOT_IN = "used_vf_num_not_in";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_NOT_IN)
-  private List<Double> usedVfNumNotIn = null;
+  private List<Integer> usedVfNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
@@ -3561,7 +3561,7 @@ public class NicWhereInput {
   }
 
 
-  public NicWhereInput maxVfNum(Double maxVfNum) {
+  public NicWhereInput maxVfNum(Integer maxVfNum) {
     
     this.maxVfNum = maxVfNum;
     return this;
@@ -3574,17 +3574,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNum() {
+  public Integer getMaxVfNum() {
     return maxVfNum;
   }
 
 
-  public void setMaxVfNum(Double maxVfNum) {
+  public void setMaxVfNum(Integer maxVfNum) {
     this.maxVfNum = maxVfNum;
   }
 
 
-  public NicWhereInput maxVfNumGt(Double maxVfNumGt) {
+  public NicWhereInput maxVfNumGt(Integer maxVfNumGt) {
     
     this.maxVfNumGt = maxVfNumGt;
     return this;
@@ -3597,17 +3597,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNumGt() {
+  public Integer getMaxVfNumGt() {
     return maxVfNumGt;
   }
 
 
-  public void setMaxVfNumGt(Double maxVfNumGt) {
+  public void setMaxVfNumGt(Integer maxVfNumGt) {
     this.maxVfNumGt = maxVfNumGt;
   }
 
 
-  public NicWhereInput maxVfNumGte(Double maxVfNumGte) {
+  public NicWhereInput maxVfNumGte(Integer maxVfNumGte) {
     
     this.maxVfNumGte = maxVfNumGte;
     return this;
@@ -3620,25 +3620,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNumGte() {
+  public Integer getMaxVfNumGte() {
     return maxVfNumGte;
   }
 
 
-  public void setMaxVfNumGte(Double maxVfNumGte) {
+  public void setMaxVfNumGte(Integer maxVfNumGte) {
     this.maxVfNumGte = maxVfNumGte;
   }
 
 
-  public NicWhereInput maxVfNumIn(List<Double> maxVfNumIn) {
+  public NicWhereInput maxVfNumIn(List<Integer> maxVfNumIn) {
     
     this.maxVfNumIn = maxVfNumIn;
     return this;
   }
 
-  public NicWhereInput addMaxVfNumInItem(Double maxVfNumInItem) {
+  public NicWhereInput addMaxVfNumInItem(Integer maxVfNumInItem) {
     if (this.maxVfNumIn == null) {
-      this.maxVfNumIn = new ArrayList<Double>();
+      this.maxVfNumIn = new ArrayList<Integer>();
     }
     this.maxVfNumIn.add(maxVfNumInItem);
     return this;
@@ -3651,17 +3651,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxVfNumIn() {
+  public List<Integer> getMaxVfNumIn() {
     return maxVfNumIn;
   }
 
 
-  public void setMaxVfNumIn(List<Double> maxVfNumIn) {
+  public void setMaxVfNumIn(List<Integer> maxVfNumIn) {
     this.maxVfNumIn = maxVfNumIn;
   }
 
 
-  public NicWhereInput maxVfNumLt(Double maxVfNumLt) {
+  public NicWhereInput maxVfNumLt(Integer maxVfNumLt) {
     
     this.maxVfNumLt = maxVfNumLt;
     return this;
@@ -3674,17 +3674,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNumLt() {
+  public Integer getMaxVfNumLt() {
     return maxVfNumLt;
   }
 
 
-  public void setMaxVfNumLt(Double maxVfNumLt) {
+  public void setMaxVfNumLt(Integer maxVfNumLt) {
     this.maxVfNumLt = maxVfNumLt;
   }
 
 
-  public NicWhereInput maxVfNumLte(Double maxVfNumLte) {
+  public NicWhereInput maxVfNumLte(Integer maxVfNumLte) {
     
     this.maxVfNumLte = maxVfNumLte;
     return this;
@@ -3697,17 +3697,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNumLte() {
+  public Integer getMaxVfNumLte() {
     return maxVfNumLte;
   }
 
 
-  public void setMaxVfNumLte(Double maxVfNumLte) {
+  public void setMaxVfNumLte(Integer maxVfNumLte) {
     this.maxVfNumLte = maxVfNumLte;
   }
 
 
-  public NicWhereInput maxVfNumNot(Double maxVfNumNot) {
+  public NicWhereInput maxVfNumNot(Integer maxVfNumNot) {
     
     this.maxVfNumNot = maxVfNumNot;
     return this;
@@ -3720,25 +3720,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNumNot() {
+  public Integer getMaxVfNumNot() {
     return maxVfNumNot;
   }
 
 
-  public void setMaxVfNumNot(Double maxVfNumNot) {
+  public void setMaxVfNumNot(Integer maxVfNumNot) {
     this.maxVfNumNot = maxVfNumNot;
   }
 
 
-  public NicWhereInput maxVfNumNotIn(List<Double> maxVfNumNotIn) {
+  public NicWhereInput maxVfNumNotIn(List<Integer> maxVfNumNotIn) {
     
     this.maxVfNumNotIn = maxVfNumNotIn;
     return this;
   }
 
-  public NicWhereInput addMaxVfNumNotInItem(Double maxVfNumNotInItem) {
+  public NicWhereInput addMaxVfNumNotInItem(Integer maxVfNumNotInItem) {
     if (this.maxVfNumNotIn == null) {
-      this.maxVfNumNotIn = new ArrayList<Double>();
+      this.maxVfNumNotIn = new ArrayList<Integer>();
     }
     this.maxVfNumNotIn.add(maxVfNumNotInItem);
     return this;
@@ -3751,12 +3751,12 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxVfNumNotIn() {
+  public List<Integer> getMaxVfNumNotIn() {
     return maxVfNumNotIn;
   }
 
 
-  public void setMaxVfNumNotIn(List<Double> maxVfNumNotIn) {
+  public void setMaxVfNumNotIn(List<Integer> maxVfNumNotIn) {
     this.maxVfNumNotIn = maxVfNumNotIn;
   }
 
@@ -4099,7 +4099,7 @@ public class NicWhereInput {
   }
 
 
-  public NicWhereInput mtu(Double mtu) {
+  public NicWhereInput mtu(Integer mtu) {
     
     this.mtu = mtu;
     return this;
@@ -4112,17 +4112,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtu() {
+  public Integer getMtu() {
     return mtu;
   }
 
 
-  public void setMtu(Double mtu) {
+  public void setMtu(Integer mtu) {
     this.mtu = mtu;
   }
 
 
-  public NicWhereInput mtuGt(Double mtuGt) {
+  public NicWhereInput mtuGt(Integer mtuGt) {
     
     this.mtuGt = mtuGt;
     return this;
@@ -4135,17 +4135,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtuGt() {
+  public Integer getMtuGt() {
     return mtuGt;
   }
 
 
-  public void setMtuGt(Double mtuGt) {
+  public void setMtuGt(Integer mtuGt) {
     this.mtuGt = mtuGt;
   }
 
 
-  public NicWhereInput mtuGte(Double mtuGte) {
+  public NicWhereInput mtuGte(Integer mtuGte) {
     
     this.mtuGte = mtuGte;
     return this;
@@ -4158,25 +4158,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtuGte() {
+  public Integer getMtuGte() {
     return mtuGte;
   }
 
 
-  public void setMtuGte(Double mtuGte) {
+  public void setMtuGte(Integer mtuGte) {
     this.mtuGte = mtuGte;
   }
 
 
-  public NicWhereInput mtuIn(List<Double> mtuIn) {
+  public NicWhereInput mtuIn(List<Integer> mtuIn) {
     
     this.mtuIn = mtuIn;
     return this;
   }
 
-  public NicWhereInput addMtuInItem(Double mtuInItem) {
+  public NicWhereInput addMtuInItem(Integer mtuInItem) {
     if (this.mtuIn == null) {
-      this.mtuIn = new ArrayList<Double>();
+      this.mtuIn = new ArrayList<Integer>();
     }
     this.mtuIn.add(mtuInItem);
     return this;
@@ -4189,17 +4189,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMtuIn() {
+  public List<Integer> getMtuIn() {
     return mtuIn;
   }
 
 
-  public void setMtuIn(List<Double> mtuIn) {
+  public void setMtuIn(List<Integer> mtuIn) {
     this.mtuIn = mtuIn;
   }
 
 
-  public NicWhereInput mtuLt(Double mtuLt) {
+  public NicWhereInput mtuLt(Integer mtuLt) {
     
     this.mtuLt = mtuLt;
     return this;
@@ -4212,17 +4212,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtuLt() {
+  public Integer getMtuLt() {
     return mtuLt;
   }
 
 
-  public void setMtuLt(Double mtuLt) {
+  public void setMtuLt(Integer mtuLt) {
     this.mtuLt = mtuLt;
   }
 
 
-  public NicWhereInput mtuLte(Double mtuLte) {
+  public NicWhereInput mtuLte(Integer mtuLte) {
     
     this.mtuLte = mtuLte;
     return this;
@@ -4235,17 +4235,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtuLte() {
+  public Integer getMtuLte() {
     return mtuLte;
   }
 
 
-  public void setMtuLte(Double mtuLte) {
+  public void setMtuLte(Integer mtuLte) {
     this.mtuLte = mtuLte;
   }
 
 
-  public NicWhereInput mtuNot(Double mtuNot) {
+  public NicWhereInput mtuNot(Integer mtuNot) {
     
     this.mtuNot = mtuNot;
     return this;
@@ -4258,25 +4258,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtuNot() {
+  public Integer getMtuNot() {
     return mtuNot;
   }
 
 
-  public void setMtuNot(Double mtuNot) {
+  public void setMtuNot(Integer mtuNot) {
     this.mtuNot = mtuNot;
   }
 
 
-  public NicWhereInput mtuNotIn(List<Double> mtuNotIn) {
+  public NicWhereInput mtuNotIn(List<Integer> mtuNotIn) {
     
     this.mtuNotIn = mtuNotIn;
     return this;
   }
 
-  public NicWhereInput addMtuNotInItem(Double mtuNotInItem) {
+  public NicWhereInput addMtuNotInItem(Integer mtuNotInItem) {
     if (this.mtuNotIn == null) {
-      this.mtuNotIn = new ArrayList<Double>();
+      this.mtuNotIn = new ArrayList<Integer>();
     }
     this.mtuNotIn.add(mtuNotInItem);
     return this;
@@ -4289,12 +4289,12 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMtuNotIn() {
+  public List<Integer> getMtuNotIn() {
     return mtuNotIn;
   }
 
 
-  public void setMtuNotIn(List<Double> mtuNotIn) {
+  public void setMtuNotIn(List<Integer> mtuNotIn) {
     this.mtuNotIn = mtuNotIn;
   }
 
@@ -5713,7 +5713,7 @@ public class NicWhereInput {
   }
 
 
-  public NicWhereInput totalVfNum(Double totalVfNum) {
+  public NicWhereInput totalVfNum(Integer totalVfNum) {
     
     this.totalVfNum = totalVfNum;
     return this;
@@ -5726,17 +5726,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNum() {
+  public Integer getTotalVfNum() {
     return totalVfNum;
   }
 
 
-  public void setTotalVfNum(Double totalVfNum) {
+  public void setTotalVfNum(Integer totalVfNum) {
     this.totalVfNum = totalVfNum;
   }
 
 
-  public NicWhereInput totalVfNumGt(Double totalVfNumGt) {
+  public NicWhereInput totalVfNumGt(Integer totalVfNumGt) {
     
     this.totalVfNumGt = totalVfNumGt;
     return this;
@@ -5749,17 +5749,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNumGt() {
+  public Integer getTotalVfNumGt() {
     return totalVfNumGt;
   }
 
 
-  public void setTotalVfNumGt(Double totalVfNumGt) {
+  public void setTotalVfNumGt(Integer totalVfNumGt) {
     this.totalVfNumGt = totalVfNumGt;
   }
 
 
-  public NicWhereInput totalVfNumGte(Double totalVfNumGte) {
+  public NicWhereInput totalVfNumGte(Integer totalVfNumGte) {
     
     this.totalVfNumGte = totalVfNumGte;
     return this;
@@ -5772,25 +5772,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNumGte() {
+  public Integer getTotalVfNumGte() {
     return totalVfNumGte;
   }
 
 
-  public void setTotalVfNumGte(Double totalVfNumGte) {
+  public void setTotalVfNumGte(Integer totalVfNumGte) {
     this.totalVfNumGte = totalVfNumGte;
   }
 
 
-  public NicWhereInput totalVfNumIn(List<Double> totalVfNumIn) {
+  public NicWhereInput totalVfNumIn(List<Integer> totalVfNumIn) {
     
     this.totalVfNumIn = totalVfNumIn;
     return this;
   }
 
-  public NicWhereInput addTotalVfNumInItem(Double totalVfNumInItem) {
+  public NicWhereInput addTotalVfNumInItem(Integer totalVfNumInItem) {
     if (this.totalVfNumIn == null) {
-      this.totalVfNumIn = new ArrayList<Double>();
+      this.totalVfNumIn = new ArrayList<Integer>();
     }
     this.totalVfNumIn.add(totalVfNumInItem);
     return this;
@@ -5803,17 +5803,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalVfNumIn() {
+  public List<Integer> getTotalVfNumIn() {
     return totalVfNumIn;
   }
 
 
-  public void setTotalVfNumIn(List<Double> totalVfNumIn) {
+  public void setTotalVfNumIn(List<Integer> totalVfNumIn) {
     this.totalVfNumIn = totalVfNumIn;
   }
 
 
-  public NicWhereInput totalVfNumLt(Double totalVfNumLt) {
+  public NicWhereInput totalVfNumLt(Integer totalVfNumLt) {
     
     this.totalVfNumLt = totalVfNumLt;
     return this;
@@ -5826,17 +5826,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNumLt() {
+  public Integer getTotalVfNumLt() {
     return totalVfNumLt;
   }
 
 
-  public void setTotalVfNumLt(Double totalVfNumLt) {
+  public void setTotalVfNumLt(Integer totalVfNumLt) {
     this.totalVfNumLt = totalVfNumLt;
   }
 
 
-  public NicWhereInput totalVfNumLte(Double totalVfNumLte) {
+  public NicWhereInput totalVfNumLte(Integer totalVfNumLte) {
     
     this.totalVfNumLte = totalVfNumLte;
     return this;
@@ -5849,17 +5849,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNumLte() {
+  public Integer getTotalVfNumLte() {
     return totalVfNumLte;
   }
 
 
-  public void setTotalVfNumLte(Double totalVfNumLte) {
+  public void setTotalVfNumLte(Integer totalVfNumLte) {
     this.totalVfNumLte = totalVfNumLte;
   }
 
 
-  public NicWhereInput totalVfNumNot(Double totalVfNumNot) {
+  public NicWhereInput totalVfNumNot(Integer totalVfNumNot) {
     
     this.totalVfNumNot = totalVfNumNot;
     return this;
@@ -5872,25 +5872,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNumNot() {
+  public Integer getTotalVfNumNot() {
     return totalVfNumNot;
   }
 
 
-  public void setTotalVfNumNot(Double totalVfNumNot) {
+  public void setTotalVfNumNot(Integer totalVfNumNot) {
     this.totalVfNumNot = totalVfNumNot;
   }
 
 
-  public NicWhereInput totalVfNumNotIn(List<Double> totalVfNumNotIn) {
+  public NicWhereInput totalVfNumNotIn(List<Integer> totalVfNumNotIn) {
     
     this.totalVfNumNotIn = totalVfNumNotIn;
     return this;
   }
 
-  public NicWhereInput addTotalVfNumNotInItem(Double totalVfNumNotInItem) {
+  public NicWhereInput addTotalVfNumNotInItem(Integer totalVfNumNotInItem) {
     if (this.totalVfNumNotIn == null) {
-      this.totalVfNumNotIn = new ArrayList<Double>();
+      this.totalVfNumNotIn = new ArrayList<Integer>();
     }
     this.totalVfNumNotIn.add(totalVfNumNotInItem);
     return this;
@@ -5903,12 +5903,12 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalVfNumNotIn() {
+  public List<Integer> getTotalVfNumNotIn() {
     return totalVfNumNotIn;
   }
 
 
-  public void setTotalVfNumNotIn(List<Double> totalVfNumNotIn) {
+  public void setTotalVfNumNotIn(List<Integer> totalVfNumNotIn) {
     this.totalVfNumNotIn = totalVfNumNotIn;
   }
 
@@ -6067,7 +6067,7 @@ public class NicWhereInput {
   }
 
 
-  public NicWhereInput usedVfNum(Double usedVfNum) {
+  public NicWhereInput usedVfNum(Integer usedVfNum) {
     
     this.usedVfNum = usedVfNum;
     return this;
@@ -6080,17 +6080,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNum() {
+  public Integer getUsedVfNum() {
     return usedVfNum;
   }
 
 
-  public void setUsedVfNum(Double usedVfNum) {
+  public void setUsedVfNum(Integer usedVfNum) {
     this.usedVfNum = usedVfNum;
   }
 
 
-  public NicWhereInput usedVfNumGt(Double usedVfNumGt) {
+  public NicWhereInput usedVfNumGt(Integer usedVfNumGt) {
     
     this.usedVfNumGt = usedVfNumGt;
     return this;
@@ -6103,17 +6103,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNumGt() {
+  public Integer getUsedVfNumGt() {
     return usedVfNumGt;
   }
 
 
-  public void setUsedVfNumGt(Double usedVfNumGt) {
+  public void setUsedVfNumGt(Integer usedVfNumGt) {
     this.usedVfNumGt = usedVfNumGt;
   }
 
 
-  public NicWhereInput usedVfNumGte(Double usedVfNumGte) {
+  public NicWhereInput usedVfNumGte(Integer usedVfNumGte) {
     
     this.usedVfNumGte = usedVfNumGte;
     return this;
@@ -6126,25 +6126,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNumGte() {
+  public Integer getUsedVfNumGte() {
     return usedVfNumGte;
   }
 
 
-  public void setUsedVfNumGte(Double usedVfNumGte) {
+  public void setUsedVfNumGte(Integer usedVfNumGte) {
     this.usedVfNumGte = usedVfNumGte;
   }
 
 
-  public NicWhereInput usedVfNumIn(List<Double> usedVfNumIn) {
+  public NicWhereInput usedVfNumIn(List<Integer> usedVfNumIn) {
     
     this.usedVfNumIn = usedVfNumIn;
     return this;
   }
 
-  public NicWhereInput addUsedVfNumInItem(Double usedVfNumInItem) {
+  public NicWhereInput addUsedVfNumInItem(Integer usedVfNumInItem) {
     if (this.usedVfNumIn == null) {
-      this.usedVfNumIn = new ArrayList<Double>();
+      this.usedVfNumIn = new ArrayList<Integer>();
     }
     this.usedVfNumIn.add(usedVfNumInItem);
     return this;
@@ -6157,17 +6157,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedVfNumIn() {
+  public List<Integer> getUsedVfNumIn() {
     return usedVfNumIn;
   }
 
 
-  public void setUsedVfNumIn(List<Double> usedVfNumIn) {
+  public void setUsedVfNumIn(List<Integer> usedVfNumIn) {
     this.usedVfNumIn = usedVfNumIn;
   }
 
 
-  public NicWhereInput usedVfNumLt(Double usedVfNumLt) {
+  public NicWhereInput usedVfNumLt(Integer usedVfNumLt) {
     
     this.usedVfNumLt = usedVfNumLt;
     return this;
@@ -6180,17 +6180,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNumLt() {
+  public Integer getUsedVfNumLt() {
     return usedVfNumLt;
   }
 
 
-  public void setUsedVfNumLt(Double usedVfNumLt) {
+  public void setUsedVfNumLt(Integer usedVfNumLt) {
     this.usedVfNumLt = usedVfNumLt;
   }
 
 
-  public NicWhereInput usedVfNumLte(Double usedVfNumLte) {
+  public NicWhereInput usedVfNumLte(Integer usedVfNumLte) {
     
     this.usedVfNumLte = usedVfNumLte;
     return this;
@@ -6203,17 +6203,17 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNumLte() {
+  public Integer getUsedVfNumLte() {
     return usedVfNumLte;
   }
 
 
-  public void setUsedVfNumLte(Double usedVfNumLte) {
+  public void setUsedVfNumLte(Integer usedVfNumLte) {
     this.usedVfNumLte = usedVfNumLte;
   }
 
 
-  public NicWhereInput usedVfNumNot(Double usedVfNumNot) {
+  public NicWhereInput usedVfNumNot(Integer usedVfNumNot) {
     
     this.usedVfNumNot = usedVfNumNot;
     return this;
@@ -6226,25 +6226,25 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNumNot() {
+  public Integer getUsedVfNumNot() {
     return usedVfNumNot;
   }
 
 
-  public void setUsedVfNumNot(Double usedVfNumNot) {
+  public void setUsedVfNumNot(Integer usedVfNumNot) {
     this.usedVfNumNot = usedVfNumNot;
   }
 
 
-  public NicWhereInput usedVfNumNotIn(List<Double> usedVfNumNotIn) {
+  public NicWhereInput usedVfNumNotIn(List<Integer> usedVfNumNotIn) {
     
     this.usedVfNumNotIn = usedVfNumNotIn;
     return this;
   }
 
-  public NicWhereInput addUsedVfNumNotInItem(Double usedVfNumNotInItem) {
+  public NicWhereInput addUsedVfNumNotInItem(Integer usedVfNumNotInItem) {
     if (this.usedVfNumNotIn == null) {
-      this.usedVfNumNotIn = new ArrayList<Double>();
+      this.usedVfNumNotIn = new ArrayList<Integer>();
     }
     this.usedVfNumNotIn.add(usedVfNumNotInItem);
     return this;
@@ -6257,12 +6257,12 @@ public class NicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedVfNumNotIn() {
+  public List<Integer> getUsedVfNumNotIn() {
     return usedVfNumNotIn;
   }
 
 
-  public void setUsedVfNumNotIn(List<Double> usedVfNumNotIn) {
+  public void setUsedVfNumNotIn(List<Integer> usedVfNumNotIn) {
     this.usedVfNumNotIn = usedVfNumNotIn;
   }
 

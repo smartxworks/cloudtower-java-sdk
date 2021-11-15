@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -39,9 +38,8 @@ public class VmAddDiskParamsDataVmDisks {
   @SerializedName(SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS)
   private List<MountNewCreateDisksParams> mountNewCreateDisks = null;
 
-
   public VmAddDiskParamsDataVmDisks mountDisks(List<MountDisksParams> mountDisks) {
-    
+
     this.mountDisks = mountDisks;
     return this;
   }
@@ -54,10 +52,11 @@ public class VmAddDiskParamsDataVmDisks {
     return this;
   }
 
-   /**
+  /**
    * Get mountDisks
+   * 
    * @return mountDisks
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -65,14 +64,12 @@ public class VmAddDiskParamsDataVmDisks {
     return mountDisks;
   }
 
-
   public void setMountDisks(List<MountDisksParams> mountDisks) {
     this.mountDisks = mountDisks;
   }
 
-
   public VmAddDiskParamsDataVmDisks mountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
-    
+
     this.mountNewCreateDisks = mountNewCreateDisks;
     return this;
   }
@@ -85,10 +82,11 @@ public class VmAddDiskParamsDataVmDisks {
     return this;
   }
 
-   /**
+  /**
    * Get mountNewCreateDisks
+   * 
    * @return mountNewCreateDisks
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -96,11 +94,9 @@ public class VmAddDiskParamsDataVmDisks {
     return mountNewCreateDisks;
   }
 
-
   public void setMountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
     this.mountNewCreateDisks = mountNewCreateDisks;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -111,8 +107,8 @@ public class VmAddDiskParamsDataVmDisks {
       return false;
     }
     VmAddDiskParamsDataVmDisks vmAddDiskParamsDataVmDisks = (VmAddDiskParamsDataVmDisks) o;
-    return Objects.equals(this.mountDisks, vmAddDiskParamsDataVmDisks.mountDisks) &&
-        Objects.equals(this.mountNewCreateDisks, vmAddDiskParamsDataVmDisks.mountNewCreateDisks);
+    return Objects.equals(this.mountDisks, vmAddDiskParamsDataVmDisks.mountDisks)
+        && Objects.equals(this.mountNewCreateDisks, vmAddDiskParamsDataVmDisks.mountNewCreateDisks);
   }
 
   @Override
@@ -142,4 +138,3 @@ public class VmAddDiskParamsDataVmDisks {
   }
 
 }
-

@@ -47,6 +47,8 @@ public class ITVlan extends ITBase {
       List<WithTaskVlan> result = api.createVmVlan(params, contentLanguage);
       assertThat(result).as("check result of createVmVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVlan extends ITBase {
       List<WithTaskDeleteVlan> result = api.deleteVlan(params, contentLanguage);
       assertThat(result).as("check result of deleteVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITVlan extends ITBase {
       List<Vlan> result = api.getVlans(params, contentLanguage);
       assertThat(result).as("check result of getVlans").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITVlan extends ITBase {
       VlanConnection result = api.getVlansConnection(params, contentLanguage);
       assertThat(result).as("check result of getVlansConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITVlan extends ITBase {
       List<WithTaskVlan> result = api.updateManagementVlan(params, contentLanguage);
       assertThat(result).as("check result of updateManagementVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITVlan extends ITBase {
       List<WithTaskVlan> result = api.updateMigrationVlan(params, contentLanguage);
       assertThat(result).as("check result of updateMigrationVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -125,6 +137,8 @@ public class ITVlan extends ITBase {
       List<WithTaskVlan> result = api.updateVlan(params, contentLanguage);
       assertThat(result).as("check result of updateVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

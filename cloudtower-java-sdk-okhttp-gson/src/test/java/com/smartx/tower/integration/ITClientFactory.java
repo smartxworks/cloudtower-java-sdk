@@ -18,9 +18,10 @@ public class ITClientFactory {
     client.setBasePath(config.endpoint);
     UserApi userApi = new UserApi(client);
     try {
-      com.smartx.tower.model.WithTaskTokenStringData data = userApi.login(new LoginInput().password(config.password)
-          .username(config.username).source(UserSource.fromValue(config.usersource)), "zh-CN").getData();
-      token = data.getToken();
+      LoginInput loginInput = new LoginInput().password(config.password).username(config.username)
+          .source(UserSource.fromValue(config.usersource));
+      com.smartx.tower.model.WithTaskTokenString tokenString = userApi.login(loginInput, config.contentLanguage);
+      token = tokenString.getData().getToken();
     } catch (ApiException e) {
       throw e;
     }

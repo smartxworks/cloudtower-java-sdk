@@ -47,6 +47,8 @@ public class ITGraph extends ITBase {
       List<WithTaskGraph> result = api.createGraph(params, contentLanguage);
       assertThat(result).as("check result of createGraph").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITGraph extends ITBase {
       List<WithTaskDeleteGraph> result = api.deleteGraph(params, contentLanguage);
       assertThat(result).as("check result of deleteGraph").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITGraph extends ITBase {
       List<Graph> result = api.getGraphs(params, contentLanguage);
       assertThat(result).as("check result of getGraphs").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITGraph extends ITBase {
       GraphConnection result = api.getGraphsConnection(params, contentLanguage);
       assertThat(result).as("check result of getGraphsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITGraph extends ITBase {
       List<WithTaskGraph> result = api.updateGraph(params, contentLanguage);
       assertThat(result).as("check result of updateGraph").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

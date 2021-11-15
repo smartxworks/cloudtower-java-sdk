@@ -7,20 +7,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clusters** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**clusters** | [**List&lt;NestedCluster&gt;**](NestedCluster.md) |  |  [optional]
 **createdAt** | **String** |  | 
 **description** | **String** |  | 
 **elfImageUuids** | **List&lt;String&gt;** |  | 
-**elfImages** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**elfImages** | [**List&lt;NestedElfImage&gt;**](NestedElfImage.md) |  |  [optional]
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **name** | **String** |  | 
 **path** | **String** |  | 
 **size** | **Double** |  | 
-**vmDisks** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
-**vmSnapshots** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**vmTemplates** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**vmDisks** | [**List&lt;NestedVmDisk&gt;**](NestedVmDisk.md) |  |  [optional]
+**vmSnapshots** | [**List&lt;NestedVmSnapshot&gt;**](NestedVmSnapshot.md) |  |  [optional]
+**vmTemplates** | [**List&lt;NestedVmTemplate&gt;**](NestedVmTemplate.md) |  |  [optional]
 
 
 

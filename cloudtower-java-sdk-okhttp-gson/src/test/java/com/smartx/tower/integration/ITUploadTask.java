@@ -47,6 +47,8 @@ public class ITUploadTask extends ITBase {
       List<UploadTask> result = api.getUploadTasks(params, contentLanguage);
       assertThat(result).as("check result of getUploadTasks").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITUploadTask extends ITBase {
       UploadTaskConnection result = api.getUploadTasksConnection(params, contentLanguage);
       assertThat(result).as("check result of getUploadTasksConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

@@ -47,6 +47,8 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       List<WithTaskConsistencyGroupSnapshot> result = api.createConsistencyGroupSnapshot(params, contentLanguage);
       assertThat(result).as("check result of createConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       List<WithTaskDeleteConsistencyGroupSnapshot> result = api.deleteConsistencyGroupSnapshot(params, contentLanguage);
       assertThat(result).as("check result of deleteConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       List<ConsistencyGroupSnapshot> result = api.getConsistencyGroupSnapshots(params, contentLanguage);
       assertThat(result).as("check result of getConsistencyGroupSnapshots").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       ConsistencyGroupSnapshotConnection result = api.getConsistencyGroupSnapshotsConnection(params, contentLanguage);
       assertThat(result).as("check result of getConsistencyGroupSnapshotsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       List<WithTaskConsistencyGroupSnapshot> result = api.updateConsistencyGroupSnapshot(params, contentLanguage);
       assertThat(result).as("check result of updateConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

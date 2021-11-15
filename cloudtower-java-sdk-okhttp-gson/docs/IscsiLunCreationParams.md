@@ -7,9 +7,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lunId** | **Double** |  |  [optional]
+**lunId** | **Integer** |  |  [optional]
 **assignedSize** | **Double** |  | 
-**replicaNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
 **iscsiTargetId** | **String** |  | 
 **name** | **String** |  | 
 **bpsWrMaxLength** | **Double** |  |  [optional]

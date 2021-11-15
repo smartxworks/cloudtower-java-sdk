@@ -47,6 +47,8 @@ public class ITIscsi extends ITBase {
       IscsiConnectionConnection result = api.getIscsiConnectionsConnection(params, contentLanguage);
       assertThat(result).as("check result of getIscsiConnectionsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

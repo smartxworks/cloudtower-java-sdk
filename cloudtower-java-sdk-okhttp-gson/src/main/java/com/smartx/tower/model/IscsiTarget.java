@@ -20,10 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.IscsiTargetInitiatorChaps;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedInitiatorChap;
+import com.smartx.tower.model.NestedIscsiLun;
+import com.smartx.tower.model.NestedLabel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -86,7 +87,7 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -106,7 +107,7 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_INITIATOR_CHAPS = "initiator_chaps";
   @SerializedName(SERIALIZED_NAME_INITIATOR_CHAPS)
-  private List<IscsiTargetInitiatorChaps> initiatorChaps = null;
+  private List<NestedInitiatorChap> initiatorChaps = null;
 
   public static final String SERIALIZED_NAME_INTERNAL = "internal";
   @SerializedName(SERIALIZED_NAME_INTERNAL)
@@ -166,7 +167,7 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -174,7 +175,7 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_LUNS = "luns";
   @SerializedName(SERIALIZED_NAME_LUNS)
-  private List<NameIdPair> luns = null;
+  private List<NestedIscsiLun> luns = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -182,11 +183,11 @@ public class IscsiTarget {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -473,7 +474,7 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget cluster(NameIdPair cluster) {
+  public IscsiTarget cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -486,12 +487,12 @@ public class IscsiTarget {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -588,15 +589,15 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget initiatorChaps(List<IscsiTargetInitiatorChaps> initiatorChaps) {
+  public IscsiTarget initiatorChaps(List<NestedInitiatorChap> initiatorChaps) {
     
     this.initiatorChaps = initiatorChaps;
     return this;
   }
 
-  public IscsiTarget addInitiatorChapsItem(IscsiTargetInitiatorChaps initiatorChapsItem) {
+  public IscsiTarget addInitiatorChapsItem(NestedInitiatorChap initiatorChapsItem) {
     if (this.initiatorChaps == null) {
-      this.initiatorChaps = new ArrayList<IscsiTargetInitiatorChaps>();
+      this.initiatorChaps = new ArrayList<NestedInitiatorChap>();
     }
     this.initiatorChaps.add(initiatorChapsItem);
     return this;
@@ -609,12 +610,12 @@ public class IscsiTarget {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<IscsiTargetInitiatorChaps> getInitiatorChaps() {
+  public List<NestedInitiatorChap> getInitiatorChaps() {
     return initiatorChaps;
   }
 
 
-  public void setInitiatorChaps(List<IscsiTargetInitiatorChaps> initiatorChaps) {
+  public void setInitiatorChaps(List<NestedInitiatorChap> initiatorChaps) {
     this.initiatorChaps = initiatorChaps;
   }
 
@@ -941,15 +942,15 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget labels(List<BrickTopoPowers> labels) {
+  public IscsiTarget labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public IscsiTarget addLabelsItem(BrickTopoPowers labelsItem) {
+  public IscsiTarget addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -962,12 +963,12 @@ public class IscsiTarget {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -995,15 +996,15 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget luns(List<NameIdPair> luns) {
+  public IscsiTarget luns(List<NestedIscsiLun> luns) {
     
     this.luns = luns;
     return this;
   }
 
-  public IscsiTarget addLunsItem(NameIdPair lunsItem) {
+  public IscsiTarget addLunsItem(NestedIscsiLun lunsItem) {
     if (this.luns == null) {
-      this.luns = new ArrayList<NameIdPair>();
+      this.luns = new ArrayList<NestedIscsiLun>();
     }
     this.luns.add(lunsItem);
     return this;
@@ -1016,12 +1017,12 @@ public class IscsiTarget {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getLuns() {
+  public List<NestedIscsiLun> getLuns() {
     return luns;
   }
 
 
-  public void setLuns(List<NameIdPair> luns) {
+  public void setLuns(List<NestedIscsiLun> luns) {
     this.luns = luns;
   }
 
@@ -1049,7 +1050,7 @@ public class IscsiTarget {
   }
 
 
-  public IscsiTarget replicaNum(Double replicaNum) {
+  public IscsiTarget replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -1062,17 +1063,17 @@ public class IscsiTarget {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public IscsiTarget stripeNum(Double stripeNum) {
+  public IscsiTarget stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -1085,12 +1086,12 @@ public class IscsiTarget {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 

@@ -47,6 +47,8 @@ public class ITNfsInode extends ITBase {
       List<NfsInode> result = api.getNfsInodes(params, contentLanguage);
       assertThat(result).as("check result of getNfsInodes").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNfsInode extends ITBase {
       NfsInodeConnection result = api.getNfsInodesConnection(params, contentLanguage);
       assertThat(result).as("check result of getNfsInodesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

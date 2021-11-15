@@ -547,6 +547,38 @@ public class TaskWhereInput {
   @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_ERROR_STARTS_WITH)
   private String resourceRollbackErrorStartsWith;
 
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT = "resource_rollback_retry_count";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT)
+  private Integer resourceRollbackRetryCount;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_GT = "resource_rollback_retry_count_gt";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_GT)
+  private Integer resourceRollbackRetryCountGt;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_GTE = "resource_rollback_retry_count_gte";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_GTE)
+  private Integer resourceRollbackRetryCountGte;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_IN = "resource_rollback_retry_count_in";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_IN)
+  private List<Integer> resourceRollbackRetryCountIn = null;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_LT = "resource_rollback_retry_count_lt";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_LT)
+  private Integer resourceRollbackRetryCountLt;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_LTE = "resource_rollback_retry_count_lte";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_LTE)
+  private Integer resourceRollbackRetryCountLte;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_NOT = "resource_rollback_retry_count_not";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_NOT)
+  private Integer resourceRollbackRetryCountNot;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_NOT_IN = "resource_rollback_retry_count_not_in";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT_NOT_IN)
+  private List<Integer> resourceRollbackRetryCountNotIn = null;
+
   public static final String SERIALIZED_NAME_RESOURCE_ROLLBACKED = "resource_rollbacked";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACKED)
   private Boolean resourceRollbacked;
@@ -3848,6 +3880,206 @@ public class TaskWhereInput {
   }
 
 
+  public TaskWhereInput resourceRollbackRetryCount(Integer resourceRollbackRetryCount) {
+    
+    this.resourceRollbackRetryCount = resourceRollbackRetryCount;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCount
+   * @return resourceRollbackRetryCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCount() {
+    return resourceRollbackRetryCount;
+  }
+
+
+  public void setResourceRollbackRetryCount(Integer resourceRollbackRetryCount) {
+    this.resourceRollbackRetryCount = resourceRollbackRetryCount;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountGt(Integer resourceRollbackRetryCountGt) {
+    
+    this.resourceRollbackRetryCountGt = resourceRollbackRetryCountGt;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountGt
+   * @return resourceRollbackRetryCountGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCountGt() {
+    return resourceRollbackRetryCountGt;
+  }
+
+
+  public void setResourceRollbackRetryCountGt(Integer resourceRollbackRetryCountGt) {
+    this.resourceRollbackRetryCountGt = resourceRollbackRetryCountGt;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountGte(Integer resourceRollbackRetryCountGte) {
+    
+    this.resourceRollbackRetryCountGte = resourceRollbackRetryCountGte;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountGte
+   * @return resourceRollbackRetryCountGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCountGte() {
+    return resourceRollbackRetryCountGte;
+  }
+
+
+  public void setResourceRollbackRetryCountGte(Integer resourceRollbackRetryCountGte) {
+    this.resourceRollbackRetryCountGte = resourceRollbackRetryCountGte;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountIn(List<Integer> resourceRollbackRetryCountIn) {
+    
+    this.resourceRollbackRetryCountIn = resourceRollbackRetryCountIn;
+    return this;
+  }
+
+  public TaskWhereInput addResourceRollbackRetryCountInItem(Integer resourceRollbackRetryCountInItem) {
+    if (this.resourceRollbackRetryCountIn == null) {
+      this.resourceRollbackRetryCountIn = new ArrayList<Integer>();
+    }
+    this.resourceRollbackRetryCountIn.add(resourceRollbackRetryCountInItem);
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountIn
+   * @return resourceRollbackRetryCountIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getResourceRollbackRetryCountIn() {
+    return resourceRollbackRetryCountIn;
+  }
+
+
+  public void setResourceRollbackRetryCountIn(List<Integer> resourceRollbackRetryCountIn) {
+    this.resourceRollbackRetryCountIn = resourceRollbackRetryCountIn;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountLt(Integer resourceRollbackRetryCountLt) {
+    
+    this.resourceRollbackRetryCountLt = resourceRollbackRetryCountLt;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountLt
+   * @return resourceRollbackRetryCountLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCountLt() {
+    return resourceRollbackRetryCountLt;
+  }
+
+
+  public void setResourceRollbackRetryCountLt(Integer resourceRollbackRetryCountLt) {
+    this.resourceRollbackRetryCountLt = resourceRollbackRetryCountLt;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountLte(Integer resourceRollbackRetryCountLte) {
+    
+    this.resourceRollbackRetryCountLte = resourceRollbackRetryCountLte;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountLte
+   * @return resourceRollbackRetryCountLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCountLte() {
+    return resourceRollbackRetryCountLte;
+  }
+
+
+  public void setResourceRollbackRetryCountLte(Integer resourceRollbackRetryCountLte) {
+    this.resourceRollbackRetryCountLte = resourceRollbackRetryCountLte;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountNot(Integer resourceRollbackRetryCountNot) {
+    
+    this.resourceRollbackRetryCountNot = resourceRollbackRetryCountNot;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountNot
+   * @return resourceRollbackRetryCountNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCountNot() {
+    return resourceRollbackRetryCountNot;
+  }
+
+
+  public void setResourceRollbackRetryCountNot(Integer resourceRollbackRetryCountNot) {
+    this.resourceRollbackRetryCountNot = resourceRollbackRetryCountNot;
+  }
+
+
+  public TaskWhereInput resourceRollbackRetryCountNotIn(List<Integer> resourceRollbackRetryCountNotIn) {
+    
+    this.resourceRollbackRetryCountNotIn = resourceRollbackRetryCountNotIn;
+    return this;
+  }
+
+  public TaskWhereInput addResourceRollbackRetryCountNotInItem(Integer resourceRollbackRetryCountNotInItem) {
+    if (this.resourceRollbackRetryCountNotIn == null) {
+      this.resourceRollbackRetryCountNotIn = new ArrayList<Integer>();
+    }
+    this.resourceRollbackRetryCountNotIn.add(resourceRollbackRetryCountNotInItem);
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCountNotIn
+   * @return resourceRollbackRetryCountNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getResourceRollbackRetryCountNotIn() {
+    return resourceRollbackRetryCountNotIn;
+  }
+
+
+  public void setResourceRollbackRetryCountNotIn(List<Integer> resourceRollbackRetryCountNotIn) {
+    this.resourceRollbackRetryCountNotIn = resourceRollbackRetryCountNotIn;
+  }
+
+
   public TaskWhereInput resourceRollbacked(Boolean resourceRollbacked) {
     
     this.resourceRollbacked = resourceRollbacked;
@@ -5038,6 +5270,14 @@ public class TaskWhereInput {
         Objects.equals(this.resourceRollbackErrorNotIn, taskWhereInput.resourceRollbackErrorNotIn) &&
         Objects.equals(this.resourceRollbackErrorNotStartsWith, taskWhereInput.resourceRollbackErrorNotStartsWith) &&
         Objects.equals(this.resourceRollbackErrorStartsWith, taskWhereInput.resourceRollbackErrorStartsWith) &&
+        Objects.equals(this.resourceRollbackRetryCount, taskWhereInput.resourceRollbackRetryCount) &&
+        Objects.equals(this.resourceRollbackRetryCountGt, taskWhereInput.resourceRollbackRetryCountGt) &&
+        Objects.equals(this.resourceRollbackRetryCountGte, taskWhereInput.resourceRollbackRetryCountGte) &&
+        Objects.equals(this.resourceRollbackRetryCountIn, taskWhereInput.resourceRollbackRetryCountIn) &&
+        Objects.equals(this.resourceRollbackRetryCountLt, taskWhereInput.resourceRollbackRetryCountLt) &&
+        Objects.equals(this.resourceRollbackRetryCountLte, taskWhereInput.resourceRollbackRetryCountLte) &&
+        Objects.equals(this.resourceRollbackRetryCountNot, taskWhereInput.resourceRollbackRetryCountNot) &&
+        Objects.equals(this.resourceRollbackRetryCountNotIn, taskWhereInput.resourceRollbackRetryCountNotIn) &&
         Objects.equals(this.resourceRollbacked, taskWhereInput.resourceRollbacked) &&
         Objects.equals(this.resourceRollbackedNot, taskWhereInput.resourceRollbackedNot) &&
         Objects.equals(this.resourceType, taskWhereInput.resourceType) &&
@@ -5089,7 +5329,7 @@ public class TaskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, errorCode, errorCodeContains, errorCodeEndsWith, errorCodeGt, errorCodeGte, errorCodeIn, errorCodeLt, errorCodeLte, errorCodeNot, errorCodeNotContains, errorCodeNotEndsWith, errorCodeNotIn, errorCodeNotStartsWith, errorCodeStartsWith, errorMessage, errorMessageContains, errorMessageEndsWith, errorMessageGt, errorMessageGte, errorMessageIn, errorMessageLt, errorMessageLte, errorMessageNot, errorMessageNotContains, errorMessageNotEndsWith, errorMessageNotIn, errorMessageNotStartsWith, errorMessageStartsWith, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, NOT, OR, progress, progressGt, progressGte, progressIn, progressLt, progressLte, progressNot, progressNotIn, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, resourceMutation, resourceMutationContains, resourceMutationEndsWith, resourceMutationGt, resourceMutationGte, resourceMutationIn, resourceMutationLt, resourceMutationLte, resourceMutationNot, resourceMutationNotContains, resourceMutationNotEndsWith, resourceMutationNotIn, resourceMutationNotStartsWith, resourceMutationStartsWith, resourceRollbackError, resourceRollbackErrorContains, resourceRollbackErrorEndsWith, resourceRollbackErrorGt, resourceRollbackErrorGte, resourceRollbackErrorIn, resourceRollbackErrorLt, resourceRollbackErrorLte, resourceRollbackErrorNot, resourceRollbackErrorNotContains, resourceRollbackErrorNotEndsWith, resourceRollbackErrorNotIn, resourceRollbackErrorNotStartsWith, resourceRollbackErrorStartsWith, resourceRollbacked, resourceRollbackedNot, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, snapshot, snapshotContains, snapshotEndsWith, snapshotGt, snapshotGte, snapshotIn, snapshotLt, snapshotLte, snapshotNot, snapshotNotContains, snapshotNotEndsWith, snapshotNotIn, snapshotNotStartsWith, snapshotStartsWith, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, user);
+    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, errorCode, errorCodeContains, errorCodeEndsWith, errorCodeGt, errorCodeGte, errorCodeIn, errorCodeLt, errorCodeLte, errorCodeNot, errorCodeNotContains, errorCodeNotEndsWith, errorCodeNotIn, errorCodeNotStartsWith, errorCodeStartsWith, errorMessage, errorMessageContains, errorMessageEndsWith, errorMessageGt, errorMessageGte, errorMessageIn, errorMessageLt, errorMessageLte, errorMessageNot, errorMessageNotContains, errorMessageNotEndsWith, errorMessageNotIn, errorMessageNotStartsWith, errorMessageStartsWith, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, NOT, OR, progress, progressGt, progressGte, progressIn, progressLt, progressLte, progressNot, progressNotIn, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, resourceMutation, resourceMutationContains, resourceMutationEndsWith, resourceMutationGt, resourceMutationGte, resourceMutationIn, resourceMutationLt, resourceMutationLte, resourceMutationNot, resourceMutationNotContains, resourceMutationNotEndsWith, resourceMutationNotIn, resourceMutationNotStartsWith, resourceMutationStartsWith, resourceRollbackError, resourceRollbackErrorContains, resourceRollbackErrorEndsWith, resourceRollbackErrorGt, resourceRollbackErrorGte, resourceRollbackErrorIn, resourceRollbackErrorLt, resourceRollbackErrorLte, resourceRollbackErrorNot, resourceRollbackErrorNotContains, resourceRollbackErrorNotEndsWith, resourceRollbackErrorNotIn, resourceRollbackErrorNotStartsWith, resourceRollbackErrorStartsWith, resourceRollbackRetryCount, resourceRollbackRetryCountGt, resourceRollbackRetryCountGte, resourceRollbackRetryCountIn, resourceRollbackRetryCountLt, resourceRollbackRetryCountLte, resourceRollbackRetryCountNot, resourceRollbackRetryCountNotIn, resourceRollbacked, resourceRollbackedNot, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, snapshot, snapshotContains, snapshotEndsWith, snapshotGt, snapshotGte, snapshotIn, snapshotLt, snapshotLte, snapshotNot, snapshotNotContains, snapshotNotEndsWith, snapshotNotIn, snapshotNotStartsWith, snapshotStartsWith, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, user);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5231,6 +5471,14 @@ public class TaskWhereInput {
     sb.append("    resourceRollbackErrorNotIn: ").append(toIndentedString(resourceRollbackErrorNotIn)).append("\n");
     sb.append("    resourceRollbackErrorNotStartsWith: ").append(toIndentedString(resourceRollbackErrorNotStartsWith)).append("\n");
     sb.append("    resourceRollbackErrorStartsWith: ").append(toIndentedString(resourceRollbackErrorStartsWith)).append("\n");
+    sb.append("    resourceRollbackRetryCount: ").append(toIndentedString(resourceRollbackRetryCount)).append("\n");
+    sb.append("    resourceRollbackRetryCountGt: ").append(toIndentedString(resourceRollbackRetryCountGt)).append("\n");
+    sb.append("    resourceRollbackRetryCountGte: ").append(toIndentedString(resourceRollbackRetryCountGte)).append("\n");
+    sb.append("    resourceRollbackRetryCountIn: ").append(toIndentedString(resourceRollbackRetryCountIn)).append("\n");
+    sb.append("    resourceRollbackRetryCountLt: ").append(toIndentedString(resourceRollbackRetryCountLt)).append("\n");
+    sb.append("    resourceRollbackRetryCountLte: ").append(toIndentedString(resourceRollbackRetryCountLte)).append("\n");
+    sb.append("    resourceRollbackRetryCountNot: ").append(toIndentedString(resourceRollbackRetryCountNot)).append("\n");
+    sb.append("    resourceRollbackRetryCountNotIn: ").append(toIndentedString(resourceRollbackRetryCountNotIn)).append("\n");
     sb.append("    resourceRollbacked: ").append(toIndentedString(resourceRollbacked)).append("\n");
     sb.append("    resourceRollbackedNot: ").append(toIndentedString(resourceRollbackedNot)).append("\n");
     sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");

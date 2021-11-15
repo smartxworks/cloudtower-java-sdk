@@ -47,6 +47,8 @@ public class ITNic extends ITBase {
       List<Nic> result = api.getNics(params, contentLanguage);
       assertThat(result).as("check result of getNics").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNic extends ITBase {
       NicConnection result = api.getNicsConnection(params, contentLanguage);
       assertThat(result).as("check result of getNicsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITNic extends ITBase {
       List<WithTaskNic> result = api.updateNic(params, contentLanguage);
       assertThat(result).as("check result of updateNic").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

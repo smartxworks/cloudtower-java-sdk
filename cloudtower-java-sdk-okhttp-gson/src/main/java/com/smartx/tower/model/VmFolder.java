@@ -20,7 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedVm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,7 +36,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VmFolder {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -51,14 +52,14 @@ public class VmFolder {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
 
-  public VmFolder cluster(NameIdPair cluster) {
+  public VmFolder cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -71,12 +72,12 @@ public class VmFolder {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -150,7 +151,7 @@ public class VmFolder {
   }
 
 
-  public VmFolder vmNum(Double vmNum) {
+  public VmFolder vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -163,25 +164,25 @@ public class VmFolder {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public VmFolder vms(List<NameIdPair> vms) {
+  public VmFolder vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public VmFolder addVmsItem(NameIdPair vmsItem) {
+  public VmFolder addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -194,12 +195,12 @@ public class VmFolder {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 

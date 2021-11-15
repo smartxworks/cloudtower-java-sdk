@@ -20,8 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedOrganization;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,11 +37,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Datacenter {
   public static final String SERIALIZED_NAME_CLUSTER_NUM = "cluster_num";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM)
-  private Double clusterNum;
+  private Integer clusterNum;
 
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<NameIdPair> clusters = null;
+  private List<NestedCluster> clusters = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -48,7 +49,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -56,7 +57,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -64,7 +65,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_ORGANIZATION = "organization";
   @SerializedName(SERIALIZED_NAME_ORGANIZATION)
-  private NameIdPair organization;
+  private NestedOrganization organization;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -92,10 +93,10 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
 
-  public Datacenter clusterNum(Double clusterNum) {
+  public Datacenter clusterNum(Integer clusterNum) {
     
     this.clusterNum = clusterNum;
     return this;
@@ -108,25 +109,25 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNum() {
+  public Integer getClusterNum() {
     return clusterNum;
   }
 
 
-  public void setClusterNum(Double clusterNum) {
+  public void setClusterNum(Integer clusterNum) {
     this.clusterNum = clusterNum;
   }
 
 
-  public Datacenter clusters(List<NameIdPair> clusters) {
+  public Datacenter clusters(List<NestedCluster> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public Datacenter addClustersItem(NameIdPair clustersItem) {
+  public Datacenter addClustersItem(NestedCluster clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<NameIdPair>();
+      this.clusters = new ArrayList<NestedCluster>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -139,12 +140,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getClusters() {
+  public List<NestedCluster> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<NameIdPair> clusters) {
+  public void setClusters(List<NestedCluster> clusters) {
     this.clusters = clusters;
   }
 
@@ -172,7 +173,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter hostNum(Double hostNum) {
+  public Datacenter hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -185,12 +186,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
@@ -218,15 +219,15 @@ public class Datacenter {
   }
 
 
-  public Datacenter labels(List<BrickTopoPowers> labels) {
+  public Datacenter labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Datacenter addLabelsItem(BrickTopoPowers labelsItem) {
+  public Datacenter addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -239,12 +240,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -272,7 +273,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter organization(NameIdPair organization) {
+  public Datacenter organization(NestedOrganization organization) {
     
     this.organization = organization;
     return this;
@@ -285,12 +286,12 @@ public class Datacenter {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getOrganization() {
+  public NestedOrganization getOrganization() {
     return organization;
   }
 
 
-  public void setOrganization(NameIdPair organization) {
+  public void setOrganization(NestedOrganization organization) {
     this.organization = organization;
   }
 
@@ -433,7 +434,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter vmNum(Double vmNum) {
+  public Datacenter vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -446,12 +447,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 

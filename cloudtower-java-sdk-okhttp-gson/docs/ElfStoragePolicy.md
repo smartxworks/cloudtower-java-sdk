@@ -7,14 +7,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**replicaNum** | **Double** |  | 
-**stripeNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
+**stripeNum** | **Integer** |  | 
 **stripeSize** | **Double** |  | 
 **thinProvision** | **Boolean** |  | 
 

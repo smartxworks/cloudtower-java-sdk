@@ -7,13 +7,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **customized** | **Boolean** |  | 
 **disabled** | **Boolean** |  | 
-**globalAlertRule** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**globalAlertRule** | [**NestedGlobalAlertRule**](NestedGlobalAlertRule.md) |  | 
 **id** | **String** |  | 
 **localId** | **String** |  | 
-**thresholds** | [**List&lt;AlertRuleThresholds&gt;**](AlertRuleThresholds.md) |  | 
+**thresholds** | [**List&lt;NestedThresholds&gt;**](NestedThresholds.md) |  | 
 
 
 

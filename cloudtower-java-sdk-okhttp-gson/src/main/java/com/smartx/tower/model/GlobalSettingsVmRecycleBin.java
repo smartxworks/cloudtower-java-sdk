@@ -31,14 +31,14 @@ import java.io.IOException;
 public class GlobalSettingsVmRecycleBin {
   public static final String SERIALIZED_NAME_RETAIN = "retain";
   @SerializedName(SERIALIZED_NAME_RETAIN)
-  private Double retain;
+  private Integer retain;
 
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
   private Boolean enabled;
 
 
-  public GlobalSettingsVmRecycleBin retain(Double retain) {
+  public GlobalSettingsVmRecycleBin retain(Integer retain) {
     
     this.retain = retain;
     return this;
@@ -51,12 +51,12 @@ public class GlobalSettingsVmRecycleBin {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRetain() {
+  public Integer getRetain() {
     return retain;
   }
 
 
-  public void setRetain(Double retain) {
+  public void setRetain(Integer retain) {
     this.retain = retain;
   }
 

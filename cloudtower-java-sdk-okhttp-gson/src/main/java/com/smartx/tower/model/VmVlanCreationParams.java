@@ -35,7 +35,7 @@ public class VmVlanCreationParams {
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Integer vlanId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -65,7 +65,7 @@ public class VmVlanCreationParams {
   }
 
 
-  public VmVlanCreationParams vlanId(Double vlanId) {
+  public VmVlanCreationParams vlanId(Integer vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -78,12 +78,12 @@ public class VmVlanCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVlanId() {
+  public Integer getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Integer vlanId) {
     this.vlanId = vlanId;
   }
 

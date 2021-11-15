@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **file** | **Boolean** |  | 
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **localUpdatedAt** | **String** |  | 
 **name** | **String** |  | 
-**nfsExport** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**nfsExport** | [**NestedNfsExport**](NestedNfsExport.md) |  | 
 **parentId** | **String** |  | 
 **sharedSize** | **Double** |  | 
-**snapshotNum** | **Double** |  | 
+**snapshotNum** | **Integer** |  | 
 **uniqueSize** | **Double** |  | 
 
 

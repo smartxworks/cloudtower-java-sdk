@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.AlertRuleCluster;
 import com.smartx.tower.model.EverouteClusterPhase;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,11 +38,11 @@ public class EverouteClusterStatusAgentsManageVDSes {
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
-  private NameIdPair vds;
+  private AlertRuleCluster vds;
 
   public static final String SERIALIZED_NAME_RETRY_COUNT = "retryCount";
   @SerializedName(SERIALIZED_NAME_RETRY_COUNT)
-  private Double retryCount;
+  private Integer retryCount;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
   @SerializedName(SERIALIZED_NAME_REASON)
@@ -80,7 +80,7 @@ public class EverouteClusterStatusAgentsManageVDSes {
   }
 
 
-  public EverouteClusterStatusAgentsManageVDSes vds(NameIdPair vds) {
+  public EverouteClusterStatusAgentsManageVDSes vds(AlertRuleCluster vds) {
     
     this.vds = vds;
     return this;
@@ -93,17 +93,17 @@ public class EverouteClusterStatusAgentsManageVDSes {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getVds() {
+  public AlertRuleCluster getVds() {
     return vds;
   }
 
 
-  public void setVds(NameIdPair vds) {
+  public void setVds(AlertRuleCluster vds) {
     this.vds = vds;
   }
 
 
-  public EverouteClusterStatusAgentsManageVDSes retryCount(Double retryCount) {
+  public EverouteClusterStatusAgentsManageVDSes retryCount(Integer retryCount) {
     
     this.retryCount = retryCount;
     return this;
@@ -116,12 +116,12 @@ public class EverouteClusterStatusAgentsManageVDSes {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRetryCount() {
+  public Integer getRetryCount() {
     return retryCount;
   }
 
 
-  public void setRetryCount(Double retryCount) {
+  public void setRetryCount(Integer retryCount) {
     this.retryCount = retryCount;
   }
 

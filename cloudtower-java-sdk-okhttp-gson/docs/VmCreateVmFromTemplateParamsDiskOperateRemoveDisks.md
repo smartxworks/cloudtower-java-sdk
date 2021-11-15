@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**diskIndex** | **List&lt;Double&gt;** |  | 
+**diskIndex** | **List&lt;Integer&gt;** |  | 
 
 
 

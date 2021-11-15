@@ -8,11 +8,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **vmIds** | **List&lt;String&gt;** |  |  [optional]
-**executeIntervals** | **List&lt;Double&gt;** |  |  [optional]
+**executeIntervals** | **List&lt;Integer&gt;** |  |  [optional]
 **executePlanType** | **SnapshotPlanExecuteType** |  |  [optional]
 **execHM** | **String** |  |  [optional]
 **endTime** | **String** |  |  [optional]
-**remainSnapshotNum** | **Double** |  |  [optional]
+**remainSnapshotNum** | **Integer** |  |  [optional]
 **name** | **String** |  |  [optional]
 
 

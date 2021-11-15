@@ -54,11 +54,11 @@ public class License {
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM = "max_chunk_num";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM)
-  private Double maxChunkNum;
+  private Integer maxChunkNum;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM = "max_cluster_num";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM)
-  private Double maxClusterNum;
+  private Integer maxClusterNum;
 
   public static final String SERIALIZED_NAME_SIGN_DATE = "sign_date";
   @SerializedName(SERIALIZED_NAME_SIGN_DATE)
@@ -188,7 +188,7 @@ public class License {
   }
 
 
-  public License maxChunkNum(Double maxChunkNum) {
+  public License maxChunkNum(Integer maxChunkNum) {
     
     this.maxChunkNum = maxChunkNum;
     return this;
@@ -201,17 +201,17 @@ public class License {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMaxChunkNum() {
+  public Integer getMaxChunkNum() {
     return maxChunkNum;
   }
 
 
-  public void setMaxChunkNum(Double maxChunkNum) {
+  public void setMaxChunkNum(Integer maxChunkNum) {
     this.maxChunkNum = maxChunkNum;
   }
 
 
-  public License maxClusterNum(Double maxClusterNum) {
+  public License maxClusterNum(Integer maxClusterNum) {
     
     this.maxClusterNum = maxClusterNum;
     return this;
@@ -224,12 +224,12 @@ public class License {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMaxClusterNum() {
+  public Integer getMaxClusterNum() {
     return maxClusterNum;
   }
 
 
-  public void setMaxClusterNum(Double maxClusterNum) {
+  public void setMaxClusterNum(Integer maxClusterNum) {
     this.maxClusterNum = maxClusterNum;
   }
 

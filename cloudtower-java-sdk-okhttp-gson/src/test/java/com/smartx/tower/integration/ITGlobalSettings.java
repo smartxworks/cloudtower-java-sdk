@@ -47,6 +47,8 @@ public class ITGlobalSettings extends ITBase {
       List<WithTaskClusterSettings> result = api.createClusterRecycleBinSetting(params, contentLanguage);
       assertThat(result).as("check result of createClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITGlobalSettings extends ITBase {
       List<WithTaskDeleteClusterRecycleBin> result = api.deleteClusterRecycleBinSetting(params, contentLanguage);
       assertThat(result).as("check result of deleteClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITGlobalSettings extends ITBase {
       List<GlobalSettings> result = api.getGlobalSettingses(params, contentLanguage);
       assertThat(result).as("check result of getGlobalSettingses").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITGlobalSettings extends ITBase {
       GlobalSettingsConnection result = api.getGlobalSettingsesConnection(params, contentLanguage);
       assertThat(result).as("check result of getGlobalSettingsesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITGlobalSettings extends ITBase {
       List<WithTaskClusterSettings> result = api.updateClusterRecycleBinSetting(params, contentLanguage);
       assertThat(result).as("check result of updateClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITGlobalSettings extends ITBase {
       WithTaskGlobalSettings result = api.updateGlobalRecycleBinSetting(params, contentLanguage);
       assertThat(result).as("check result of updateGlobalRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

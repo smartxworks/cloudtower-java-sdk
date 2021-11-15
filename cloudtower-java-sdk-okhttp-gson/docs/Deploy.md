@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**license** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
+**license** | [**NestedLicense**](NestedLicense.md) |  |  [optional]
 **version** | **String** |  | 
 
 

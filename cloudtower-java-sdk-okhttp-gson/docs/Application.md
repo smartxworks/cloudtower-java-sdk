@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **errorMessage** | **String** |  |  [optional]
 **id** | **String** |  | 
 **imageName** | **String** |  |  [optional]
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **storageIp** | **String** |  | 
 **type** | **ApplicationType** |  | 
 **updateTime** | **String** |  |  [optional]
-**vcpu** | **Double** |  | 
+**vcpu** | **Integer** |  | 
 **version** | **String** |  | 
 **volumeSize** | **Double** |  | 
 

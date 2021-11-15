@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **authPassPhrase** | **String** |  |  [optional]
 **username** | **String** |  |  [optional]
 **community** | **String** |  |  [optional]
-**port** | **Double** |  |  [optional]
+**port** | **Integer** |  |  [optional]
 **protocol** | **SnmpProtocol** |  |  [optional]
 **version** | **SnmpVersion** |  |  [optional]
 **name** | **String** |  |  [optional]

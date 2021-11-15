@@ -51,7 +51,7 @@ public class ITVmFolder extends ITBase {
   public void createVmFolder() throws InterruptedException, ApiException {
     List<VmFolderCreationParams> params = new ArrayList<>();
     params.add(new VmFolderCreationParams().clusterId(cluster.getId())
-        .name("tower-api-test-vm-folder" + System.currentTimeMillis()));
+        .name("tower-sdk-test-vm-folder" + System.currentTimeMillis()));
     // do some modify to params(optional)
     List<WithTaskVmFolder> result = api.createVmFolder(params, contentLanguage);
     folder = result.get(0).getData();
@@ -73,7 +73,7 @@ public class ITVmFolder extends ITBase {
       // parse params from json payload
       List<VmFolderCreationParams> params = new ArrayList<>();
       params.add(new VmFolderCreationParams().clusterId(cluster.getId())
-          .name("tower-api-test-vm-folder" + System.currentTimeMillis()));
+          .name("tower-sdk-test-vm-folder" + System.currentTimeMillis()));
       // do some modify to params(optional)
       List<WithTaskVmFolder> result = api.createVmFolder(params, contentLanguage);
       VmFolder folder = result.get(0).getData();
@@ -83,6 +83,8 @@ public class ITVmFolder extends ITBase {
       Thread.sleep(1000);
       assertThat(result).as("check result of create and delete vm folder").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -97,6 +99,8 @@ public class ITVmFolder extends ITBase {
       List<VmFolder> result = api.getVmFolders(params, contentLanguage);
       assertThat(result).as("check result of getVmFolders").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +116,8 @@ public class ITVmFolder extends ITBase {
       VmFolderConnection result = api.getVmFoldersConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmFoldersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -122,12 +128,14 @@ public class ITVmFolder extends ITBase {
       // parse params from json payload
       VmFolderUpdationParams params = gson.fromJson(payload, new TypeToken<VmFolderUpdationParams>() {
       }.getType());
-      params.data(new VmFolderUpdationParamsData().name("tower-api-test-vm-folder-update" + System.currentTimeMillis()))
+      params.data(new VmFolderUpdationParamsData().name("tower-sdk-test-vm-folder-update" + System.currentTimeMillis()))
           .where(new VmFolderWhereInput().id(folder.getId()));
       // do some modify to params(optional)
       List<WithTaskVmFolder> result = api.updateVmFolder(params, contentLanguage);
       assertThat(result).as("check result of updateVmFolder").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -139,11 +147,10 @@ public class ITVmFolder extends ITBase {
       InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
-    cluster = getData("defaultCluster", Cluster.class);
-    params.add(new VmCreationParams().name("tower-api-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1.0)
-        .cpuSockets(1.0).memory(4294967296.0).ha(true).vcpu(1.0).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+    params.add(new VmCreationParams().name("tower-sdk-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1)
+        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1.0).index(1.0)))
+        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     vm = vmApi.createVm(params, contentLanguage).get(0).getData();
     waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
@@ -154,13 +161,19 @@ public class ITVmFolder extends ITBase {
   @AfterMethod(groups = { "need_vm" }, alwaysRun = true)
   public void deleteVm() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
       NoSuchMethodException, SecurityException, ApiException, InterruptedException {
-    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
+    Vm _vm = (Vm) waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi,
+        "getVms", new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
+    // shudown vm first before delete it if itis running;
+    if (_vm.getStatus() == VmStatus.RUNNING) {
+      vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage);
+      waitForVmEntityAsyncStatus(_vm.getId(), vmApi);
+    }
     vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
     waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
         new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
+    vm = null;
   }
 
   @Test(groups = { "need_vm_folder", "need_vm" })
@@ -181,6 +194,8 @@ public class ITVmFolder extends ITBase {
           }.getClass(), GetVmsRequestBody.class);
       assertThat(result).as("check result of addVmToFolder").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

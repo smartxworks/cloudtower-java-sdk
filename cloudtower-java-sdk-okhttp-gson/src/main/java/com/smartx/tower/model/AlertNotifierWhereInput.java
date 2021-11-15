@@ -312,35 +312,35 @@ public class AlertNotifierWhereInput {
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT = "smtp_server_port";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT)
-  private Double smtpServerPort;
+  private Integer smtpServerPort;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_GT = "smtp_server_port_gt";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_GT)
-  private Double smtpServerPortGt;
+  private Integer smtpServerPortGt;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_GTE = "smtp_server_port_gte";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_GTE)
-  private Double smtpServerPortGte;
+  private Integer smtpServerPortGte;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_IN = "smtp_server_port_in";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_IN)
-  private List<Double> smtpServerPortIn = null;
+  private List<Integer> smtpServerPortIn = null;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_LT = "smtp_server_port_lt";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_LT)
-  private Double smtpServerPortLt;
+  private Integer smtpServerPortLt;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_LTE = "smtp_server_port_lte";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_LTE)
-  private Double smtpServerPortLte;
+  private Integer smtpServerPortLte;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_NOT = "smtp_server_port_not";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_NOT)
-  private Double smtpServerPortNot;
+  private Integer smtpServerPortNot;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT_NOT_IN = "smtp_server_port_not_in";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT_NOT_IN)
-  private List<Double> smtpServerPortNotIn = null;
+  private List<Integer> smtpServerPortNotIn = null;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
@@ -2106,7 +2106,7 @@ public class AlertNotifierWhereInput {
   }
 
 
-  public AlertNotifierWhereInput smtpServerPort(Double smtpServerPort) {
+  public AlertNotifierWhereInput smtpServerPort(Integer smtpServerPort) {
     
     this.smtpServerPort = smtpServerPort;
     return this;
@@ -2119,17 +2119,17 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPort() {
+  public Integer getSmtpServerPort() {
     return smtpServerPort;
   }
 
 
-  public void setSmtpServerPort(Double smtpServerPort) {
+  public void setSmtpServerPort(Integer smtpServerPort) {
     this.smtpServerPort = smtpServerPort;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortGt(Double smtpServerPortGt) {
+  public AlertNotifierWhereInput smtpServerPortGt(Integer smtpServerPortGt) {
     
     this.smtpServerPortGt = smtpServerPortGt;
     return this;
@@ -2142,17 +2142,17 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPortGt() {
+  public Integer getSmtpServerPortGt() {
     return smtpServerPortGt;
   }
 
 
-  public void setSmtpServerPortGt(Double smtpServerPortGt) {
+  public void setSmtpServerPortGt(Integer smtpServerPortGt) {
     this.smtpServerPortGt = smtpServerPortGt;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortGte(Double smtpServerPortGte) {
+  public AlertNotifierWhereInput smtpServerPortGte(Integer smtpServerPortGte) {
     
     this.smtpServerPortGte = smtpServerPortGte;
     return this;
@@ -2165,25 +2165,25 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPortGte() {
+  public Integer getSmtpServerPortGte() {
     return smtpServerPortGte;
   }
 
 
-  public void setSmtpServerPortGte(Double smtpServerPortGte) {
+  public void setSmtpServerPortGte(Integer smtpServerPortGte) {
     this.smtpServerPortGte = smtpServerPortGte;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortIn(List<Double> smtpServerPortIn) {
+  public AlertNotifierWhereInput smtpServerPortIn(List<Integer> smtpServerPortIn) {
     
     this.smtpServerPortIn = smtpServerPortIn;
     return this;
   }
 
-  public AlertNotifierWhereInput addSmtpServerPortInItem(Double smtpServerPortInItem) {
+  public AlertNotifierWhereInput addSmtpServerPortInItem(Integer smtpServerPortInItem) {
     if (this.smtpServerPortIn == null) {
-      this.smtpServerPortIn = new ArrayList<Double>();
+      this.smtpServerPortIn = new ArrayList<Integer>();
     }
     this.smtpServerPortIn.add(smtpServerPortInItem);
     return this;
@@ -2196,17 +2196,17 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSmtpServerPortIn() {
+  public List<Integer> getSmtpServerPortIn() {
     return smtpServerPortIn;
   }
 
 
-  public void setSmtpServerPortIn(List<Double> smtpServerPortIn) {
+  public void setSmtpServerPortIn(List<Integer> smtpServerPortIn) {
     this.smtpServerPortIn = smtpServerPortIn;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortLt(Double smtpServerPortLt) {
+  public AlertNotifierWhereInput smtpServerPortLt(Integer smtpServerPortLt) {
     
     this.smtpServerPortLt = smtpServerPortLt;
     return this;
@@ -2219,17 +2219,17 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPortLt() {
+  public Integer getSmtpServerPortLt() {
     return smtpServerPortLt;
   }
 
 
-  public void setSmtpServerPortLt(Double smtpServerPortLt) {
+  public void setSmtpServerPortLt(Integer smtpServerPortLt) {
     this.smtpServerPortLt = smtpServerPortLt;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortLte(Double smtpServerPortLte) {
+  public AlertNotifierWhereInput smtpServerPortLte(Integer smtpServerPortLte) {
     
     this.smtpServerPortLte = smtpServerPortLte;
     return this;
@@ -2242,17 +2242,17 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPortLte() {
+  public Integer getSmtpServerPortLte() {
     return smtpServerPortLte;
   }
 
 
-  public void setSmtpServerPortLte(Double smtpServerPortLte) {
+  public void setSmtpServerPortLte(Integer smtpServerPortLte) {
     this.smtpServerPortLte = smtpServerPortLte;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortNot(Double smtpServerPortNot) {
+  public AlertNotifierWhereInput smtpServerPortNot(Integer smtpServerPortNot) {
     
     this.smtpServerPortNot = smtpServerPortNot;
     return this;
@@ -2265,25 +2265,25 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPortNot() {
+  public Integer getSmtpServerPortNot() {
     return smtpServerPortNot;
   }
 
 
-  public void setSmtpServerPortNot(Double smtpServerPortNot) {
+  public void setSmtpServerPortNot(Integer smtpServerPortNot) {
     this.smtpServerPortNot = smtpServerPortNot;
   }
 
 
-  public AlertNotifierWhereInput smtpServerPortNotIn(List<Double> smtpServerPortNotIn) {
+  public AlertNotifierWhereInput smtpServerPortNotIn(List<Integer> smtpServerPortNotIn) {
     
     this.smtpServerPortNotIn = smtpServerPortNotIn;
     return this;
   }
 
-  public AlertNotifierWhereInput addSmtpServerPortNotInItem(Double smtpServerPortNotInItem) {
+  public AlertNotifierWhereInput addSmtpServerPortNotInItem(Integer smtpServerPortNotInItem) {
     if (this.smtpServerPortNotIn == null) {
-      this.smtpServerPortNotIn = new ArrayList<Double>();
+      this.smtpServerPortNotIn = new ArrayList<Integer>();
     }
     this.smtpServerPortNotIn.add(smtpServerPortNotInItem);
     return this;
@@ -2296,12 +2296,12 @@ public class AlertNotifierWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSmtpServerPortNotIn() {
+  public List<Integer> getSmtpServerPortNotIn() {
     return smtpServerPortNotIn;
   }
 
 
-  public void setSmtpServerPortNotIn(List<Double> smtpServerPortNotIn) {
+  public void setSmtpServerPortNotIn(List<Integer> smtpServerPortNotIn) {
     this.smtpServerPortNotIn = smtpServerPortNotIn;
   }
 

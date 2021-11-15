@@ -60,6 +60,8 @@ public class ITElfImage extends ITBase {
       List<WithTaskDeleteElfImage> result = api.deleteElfImage(params, contentLanguage);
       assertThat(result).as("check result of deleteElfImage").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +75,8 @@ public class ITElfImage extends ITBase {
       List<ElfImage> result = api.getElfImages(params, contentLanguage);
       assertThat(result).as("check result of getElfImages").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +90,8 @@ public class ITElfImage extends ITBase {
       ElfImageConnection result = api.getElfImagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getElfImagesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +105,8 @@ public class ITElfImage extends ITBase {
       List<WithTaskElfImage> result = api.updateElfImage(params, contentLanguage);
       assertThat(result).as("check result of updateElfImage").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

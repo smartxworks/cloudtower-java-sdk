@@ -20,8 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedBrickTopo;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedNodeTopo;
+import com.smartx.tower.model.NestedZoneTopo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,11 +38,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ClusterTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPOES = "brick_topoes";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPOES)
-  private List<NameIdPair> brickTopoes = null;
+  private List<NestedBrickTopo> brickTopoes = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -56,22 +58,22 @@ public class ClusterTopo {
 
   public static final String SERIALIZED_NAME_NODE_TOPOES = "node_topoes";
   @SerializedName(SERIALIZED_NAME_NODE_TOPOES)
-  private List<NameIdPair> nodeTopoes = null;
+  private List<NestedNodeTopo> nodeTopoes = null;
 
   public static final String SERIALIZED_NAME_ZONE_TOPOES = "zone_topoes";
   @SerializedName(SERIALIZED_NAME_ZONE_TOPOES)
-  private List<BrickTopoPowers> zoneTopoes = null;
+  private List<NestedZoneTopo> zoneTopoes = null;
 
 
-  public ClusterTopo brickTopoes(List<NameIdPair> brickTopoes) {
+  public ClusterTopo brickTopoes(List<NestedBrickTopo> brickTopoes) {
     
     this.brickTopoes = brickTopoes;
     return this;
   }
 
-  public ClusterTopo addBrickTopoesItem(NameIdPair brickTopoesItem) {
+  public ClusterTopo addBrickTopoesItem(NestedBrickTopo brickTopoesItem) {
     if (this.brickTopoes == null) {
-      this.brickTopoes = new ArrayList<NameIdPair>();
+      this.brickTopoes = new ArrayList<NestedBrickTopo>();
     }
     this.brickTopoes.add(brickTopoesItem);
     return this;
@@ -84,17 +86,17 @@ public class ClusterTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getBrickTopoes() {
+  public List<NestedBrickTopo> getBrickTopoes() {
     return brickTopoes;
   }
 
 
-  public void setBrickTopoes(List<NameIdPair> brickTopoes) {
+  public void setBrickTopoes(List<NestedBrickTopo> brickTopoes) {
     this.brickTopoes = brickTopoes;
   }
 
 
-  public ClusterTopo cluster(NameIdPair cluster) {
+  public ClusterTopo cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -107,12 +109,12 @@ public class ClusterTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -186,15 +188,15 @@ public class ClusterTopo {
   }
 
 
-  public ClusterTopo nodeTopoes(List<NameIdPair> nodeTopoes) {
+  public ClusterTopo nodeTopoes(List<NestedNodeTopo> nodeTopoes) {
     
     this.nodeTopoes = nodeTopoes;
     return this;
   }
 
-  public ClusterTopo addNodeTopoesItem(NameIdPair nodeTopoesItem) {
+  public ClusterTopo addNodeTopoesItem(NestedNodeTopo nodeTopoesItem) {
     if (this.nodeTopoes == null) {
-      this.nodeTopoes = new ArrayList<NameIdPair>();
+      this.nodeTopoes = new ArrayList<NestedNodeTopo>();
     }
     this.nodeTopoes.add(nodeTopoesItem);
     return this;
@@ -207,25 +209,25 @@ public class ClusterTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNodeTopoes() {
+  public List<NestedNodeTopo> getNodeTopoes() {
     return nodeTopoes;
   }
 
 
-  public void setNodeTopoes(List<NameIdPair> nodeTopoes) {
+  public void setNodeTopoes(List<NestedNodeTopo> nodeTopoes) {
     this.nodeTopoes = nodeTopoes;
   }
 
 
-  public ClusterTopo zoneTopoes(List<BrickTopoPowers> zoneTopoes) {
+  public ClusterTopo zoneTopoes(List<NestedZoneTopo> zoneTopoes) {
     
     this.zoneTopoes = zoneTopoes;
     return this;
   }
 
-  public ClusterTopo addZoneTopoesItem(BrickTopoPowers zoneTopoesItem) {
+  public ClusterTopo addZoneTopoesItem(NestedZoneTopo zoneTopoesItem) {
     if (this.zoneTopoes == null) {
-      this.zoneTopoes = new ArrayList<BrickTopoPowers>();
+      this.zoneTopoes = new ArrayList<NestedZoneTopo>();
     }
     this.zoneTopoes.add(zoneTopoesItem);
     return this;
@@ -238,12 +240,12 @@ public class ClusterTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getZoneTopoes() {
+  public List<NestedZoneTopo> getZoneTopoes() {
     return zoneTopoes;
   }
 
 
-  public void setZoneTopoes(List<BrickTopoPowers> zoneTopoes) {
+  public void setZoneTopoes(List<NestedZoneTopo> zoneTopoes) {
     this.zoneTopoes = zoneTopoes;
   }
 

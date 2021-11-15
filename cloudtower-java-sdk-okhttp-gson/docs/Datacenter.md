@@ -7,21 +7,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clusterNum** | **Double** |  |  [optional]
-**clusters** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**clusterNum** | **Integer** |  |  [optional]
+**clusters** | [**List&lt;NestedCluster&gt;**](NestedCluster.md) |  |  [optional]
 **failureDataSpace** | **Double** |  |  [optional]
-**hostNum** | **Double** |  |  [optional]
+**hostNum** | **Integer** |  |  [optional]
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **name** | **String** |  | 
-**organization** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**organization** | [**NestedOrganization**](NestedOrganization.md) |  | 
 **totalCpuHz** | **Double** |  |  [optional]
 **totalDataCapacity** | **Double** |  |  [optional]
 **totalMemoryBytes** | **Double** |  |  [optional]
 **usedCpuHz** | **Double** |  |  [optional]
 **usedDataSpace** | **Double** |  |  [optional]
 **usedMemoryBytes** | **Double** |  |  [optional]
-**vmNum** | **Double** |  |  [optional]
+**vmNum** | **Integer** |  |  [optional]
 
 
 

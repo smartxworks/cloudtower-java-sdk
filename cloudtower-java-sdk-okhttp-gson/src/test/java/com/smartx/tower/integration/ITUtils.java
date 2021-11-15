@@ -4,6 +4,8 @@ import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Comparator;
+import java.util.concurrent.Callable;
 
 public class ITUtils {
   public static String readInputStream(InputStream stream) throws IOException {

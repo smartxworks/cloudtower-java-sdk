@@ -33,7 +33,7 @@ import java.io.IOException;
 public class BrickTopoDiskLayout {
   public static final String SERIALIZED_NAME_ROW = "row";
   @SerializedName(SERIALIZED_NAME_ROW)
-  private Double row;
+  private Integer row;
 
   public static final String SERIALIZED_NAME_PHASE = "phase";
   @SerializedName(SERIALIZED_NAME_PHASE)
@@ -45,10 +45,10 @@ public class BrickTopoDiskLayout {
 
   public static final String SERIALIZED_NAME_COLUMN = "column";
   @SerializedName(SERIALIZED_NAME_COLUMN)
-  private Double column;
+  private Integer column;
 
 
-  public BrickTopoDiskLayout row(Double row) {
+  public BrickTopoDiskLayout row(Integer row) {
     
     this.row = row;
     return this;
@@ -61,12 +61,12 @@ public class BrickTopoDiskLayout {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRow() {
+  public Integer getRow() {
     return row;
   }
 
 
-  public void setRow(Double row) {
+  public void setRow(Integer row) {
     this.row = row;
   }
 
@@ -117,7 +117,7 @@ public class BrickTopoDiskLayout {
   }
 
 
-  public BrickTopoDiskLayout column(Double column) {
+  public BrickTopoDiskLayout column(Integer column) {
     
     this.column = column;
     return this;
@@ -130,12 +130,12 @@ public class BrickTopoDiskLayout {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getColumn() {
+  public Integer getColumn() {
     return column;
   }
 
 
-  public void setColumn(Double column) {
+  public void setColumn(Integer column) {
     this.column = column;
   }
 

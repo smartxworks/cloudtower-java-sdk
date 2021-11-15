@@ -20,7 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.UsbDeviceStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -42,7 +43,7 @@ public class UsbDevice {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -78,7 +79,7 @@ public class UsbDevice {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private NameIdPair vm;
+  private NestedVm vm;
 
 
   public UsbDevice binded(Boolean binded) {
@@ -127,7 +128,7 @@ public class UsbDevice {
   }
 
 
-  public UsbDevice host(NameIdPair host) {
+  public UsbDevice host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -140,12 +141,12 @@ public class UsbDevice {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -334,7 +335,7 @@ public class UsbDevice {
   }
 
 
-  public UsbDevice vm(NameIdPair vm) {
+  public UsbDevice vm(NestedVm vm) {
     
     this.vm = vm;
     return this;
@@ -347,12 +348,12 @@ public class UsbDevice {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getVm() {
+  public NestedVm getVm() {
     return vm;
   }
 
 
-  public void setVm(NameIdPair vm) {
+  public void setVm(NestedVm vm) {
     this.vm = vm;
   }
 

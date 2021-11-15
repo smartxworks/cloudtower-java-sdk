@@ -63,7 +63,7 @@ public class SnmpTransportUpdationParamsData {
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
-  private Double port;
+  private Integer port;
 
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
@@ -239,7 +239,7 @@ public class SnmpTransportUpdationParamsData {
   }
 
 
-  public SnmpTransportUpdationParamsData port(Double port) {
+  public SnmpTransportUpdationParamsData port(Integer port) {
     
     this.port = port;
     return this;
@@ -252,12 +252,12 @@ public class SnmpTransportUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPort() {
+  public Integer getPort() {
     return port;
   }
 
 
-  public void setPort(Double port) {
+  public void setPort(Integer port) {
     this.port = port;
   }
 

@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **licenseSerial** | **String** |  | 
 **maintenanceEndDate** | **String** |  |  [optional]
 **maintenanceStartDate** | **String** |  |  [optional]
-**maxChunkNum** | **Double** |  | 
-**maxClusterNum** | **Double** |  | 
+**maxChunkNum** | **Integer** |  | 
+**maxClusterNum** | **Integer** |  | 
 **signDate** | **String** |  | 
 **softwareEdition** | **SoftwareEdition** |  | 
 **type** | **LicenseType** |  | 

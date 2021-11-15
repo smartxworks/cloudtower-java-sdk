@@ -47,6 +47,8 @@ public class ITDeploy extends ITBase {
       List<Deploy> result = api.getDeploys(params, contentLanguage);
       assertThat(result).as("check result of getDeploys").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITDeploy extends ITBase {
       DeployConnection result = api.getDeploysConnection(params, contentLanguage);
       assertThat(result).as("check result of getDeploysConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

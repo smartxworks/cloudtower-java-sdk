@@ -7,10 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entityFilter** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**entityFilter** | [**NestedEntityFilter**](NestedEntityFilter.md) |  | 
 **id** | **String** |  | 
 **result** | **List&lt;Double&gt;** |  | 
-**vm** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**vm** | [**NestedVm**](NestedVm.md) |  | 
 
 
 

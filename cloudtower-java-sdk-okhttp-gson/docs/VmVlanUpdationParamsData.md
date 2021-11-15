@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vlanId** | **Double** |  |  [optional]
+**vlanId** | **Integer** |  |  [optional]
 **name** | **String** |  |  [optional]
 
 

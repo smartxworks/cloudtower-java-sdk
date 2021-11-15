@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedHost;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -32,7 +32,7 @@ import java.io.IOException;
 public class VsphereEsxiAccount {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -56,14 +56,14 @@ public class VsphereEsxiAccount {
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
-  private Double port;
+  private Integer port;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
   private String username;
 
 
-  public VsphereEsxiAccount host(NameIdPair host) {
+  public VsphereEsxiAccount host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -76,12 +76,12 @@ public class VsphereEsxiAccount {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -201,7 +201,7 @@ public class VsphereEsxiAccount {
   }
 
 
-  public VsphereEsxiAccount port(Double port) {
+  public VsphereEsxiAccount port(Integer port) {
     
     this.port = port;
     return this;
@@ -214,12 +214,12 @@ public class VsphereEsxiAccount {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPort() {
+  public Integer getPort() {
     return port;
   }
 
 
-  public void setPort(Double port) {
+  public void setPort(Integer port) {
     this.port = port;
   }
 

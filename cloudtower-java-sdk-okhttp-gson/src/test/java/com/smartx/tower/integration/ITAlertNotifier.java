@@ -47,6 +47,8 @@ public class ITAlertNotifier extends ITBase {
       List<AlertNotifier> result = api.getAlertNotifiers(params, contentLanguage);
       assertThat(result).as("check result of getAlertNotifiers").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITAlertNotifier extends ITBase {
       AlertNotifierConnection result = api.getAlertNotifiersConnection(params, contentLanguage);
       assertThat(result).as("check result of getAlertNotifiersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

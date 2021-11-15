@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **packageInfo** | **Object** |  | 
 **size** | **Double** |  | 
-**uploadTask** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
+**uploadTask** | [**NestedUploadTask**](NestedUploadTask.md) |  |  [optional]
 **version** | **String** |  | 
 
 

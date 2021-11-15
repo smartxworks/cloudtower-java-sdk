@@ -7,8 +7,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sockets** | **Double** |  | 
-**cores** | **Double** |  | 
+**sockets** | **Integer** |  | 
+**cores** | **Integer** |  | 
 
 
 

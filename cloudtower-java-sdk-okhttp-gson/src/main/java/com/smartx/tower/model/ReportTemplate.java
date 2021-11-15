@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
-import com.smartx.tower.model.ReportTemplateResourceMeta;
+import com.smartx.tower.model.NestedExecutePlan;
+import com.smartx.tower.model.NestedReportTask;
+import com.smartx.tower.model.NestedResourceMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -45,7 +45,7 @@ public class ReportTemplate {
 
   public static final String SERIALIZED_NAME_EXECUTE_PLAN = "execute_plan";
   @SerializedName(SERIALIZED_NAME_EXECUTE_PLAN)
-  private List<BrickTopoPowers> executePlan = new ArrayList<BrickTopoPowers>();
+  private List<NestedExecutePlan> executePlan = new ArrayList<NestedExecutePlan>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -61,15 +61,15 @@ public class ReportTemplate {
 
   public static final String SERIALIZED_NAME_RESOURCE_META = "resource_meta";
   @SerializedName(SERIALIZED_NAME_RESOURCE_META)
-  private List<ReportTemplateResourceMeta> resourceMeta = new ArrayList<ReportTemplateResourceMeta>();
+  private List<NestedResourceMeta> resourceMeta = new ArrayList<NestedResourceMeta>();
 
   public static final String SERIALIZED_NAME_TASK_NUM = "task_num";
   @SerializedName(SERIALIZED_NAME_TASK_NUM)
-  private Double taskNum;
+  private Integer taskNum;
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
-  private List<NameIdPair> tasks = null;
+  private List<NestedReportTask> tasks = null;
 
 
   public ReportTemplate createdAt(String createdAt) {
@@ -118,13 +118,13 @@ public class ReportTemplate {
   }
 
 
-  public ReportTemplate executePlan(List<BrickTopoPowers> executePlan) {
+  public ReportTemplate executePlan(List<NestedExecutePlan> executePlan) {
     
     this.executePlan = executePlan;
     return this;
   }
 
-  public ReportTemplate addExecutePlanItem(BrickTopoPowers executePlanItem) {
+  public ReportTemplate addExecutePlanItem(NestedExecutePlan executePlanItem) {
     this.executePlan.add(executePlanItem);
     return this;
   }
@@ -136,12 +136,12 @@ public class ReportTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<BrickTopoPowers> getExecutePlan() {
+  public List<NestedExecutePlan> getExecutePlan() {
     return executePlan;
   }
 
 
-  public void setExecutePlan(List<BrickTopoPowers> executePlan) {
+  public void setExecutePlan(List<NestedExecutePlan> executePlan) {
     this.executePlan = executePlan;
   }
 
@@ -215,13 +215,13 @@ public class ReportTemplate {
   }
 
 
-  public ReportTemplate resourceMeta(List<ReportTemplateResourceMeta> resourceMeta) {
+  public ReportTemplate resourceMeta(List<NestedResourceMeta> resourceMeta) {
     
     this.resourceMeta = resourceMeta;
     return this;
   }
 
-  public ReportTemplate addResourceMetaItem(ReportTemplateResourceMeta resourceMetaItem) {
+  public ReportTemplate addResourceMetaItem(NestedResourceMeta resourceMetaItem) {
     this.resourceMeta.add(resourceMetaItem);
     return this;
   }
@@ -233,17 +233,17 @@ public class ReportTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<ReportTemplateResourceMeta> getResourceMeta() {
+  public List<NestedResourceMeta> getResourceMeta() {
     return resourceMeta;
   }
 
 
-  public void setResourceMeta(List<ReportTemplateResourceMeta> resourceMeta) {
+  public void setResourceMeta(List<NestedResourceMeta> resourceMeta) {
     this.resourceMeta = resourceMeta;
   }
 
 
-  public ReportTemplate taskNum(Double taskNum) {
+  public ReportTemplate taskNum(Integer taskNum) {
     
     this.taskNum = taskNum;
     return this;
@@ -256,25 +256,25 @@ public class ReportTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTaskNum() {
+  public Integer getTaskNum() {
     return taskNum;
   }
 
 
-  public void setTaskNum(Double taskNum) {
+  public void setTaskNum(Integer taskNum) {
     this.taskNum = taskNum;
   }
 
 
-  public ReportTemplate tasks(List<NameIdPair> tasks) {
+  public ReportTemplate tasks(List<NestedReportTask> tasks) {
     
     this.tasks = tasks;
     return this;
   }
 
-  public ReportTemplate addTasksItem(NameIdPair tasksItem) {
+  public ReportTemplate addTasksItem(NestedReportTask tasksItem) {
     if (this.tasks == null) {
-      this.tasks = new ArrayList<NameIdPair>();
+      this.tasks = new ArrayList<NestedReportTask>();
     }
     this.tasks.add(tasksItem);
     return this;
@@ -287,12 +287,12 @@ public class ReportTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getTasks() {
+  public List<NestedReportTask> getTasks() {
     return tasks;
   }
 
 
-  public void setTasks(List<NameIdPair> tasks) {
+  public void setTasks(List<NestedReportTask> tasks) {
     this.tasks = tasks;
   }
 

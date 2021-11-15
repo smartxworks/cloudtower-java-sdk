@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **deleted** | **Boolean** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **estimatedRecyclingTime** | **String** |  |  [optional]
@@ -18,10 +18,10 @@ Name | Type | Description | Notes
 **localId** | **String** |  | 
 **logicalSizeBytes** | **Double** |  | 
 **name** | **String** |  | 
-**objectNum** | **Double** |  | 
-**snapshotPlanTask** | [**BrickTopoPowers**](BrickTopoPowers.md) |  | 
-**vmInfo** | [**List&lt;SnapshotGroupVmInfo&gt;**](SnapshotGroupVmInfo.md) |  | 
-**vmSnapshots** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**objectNum** | **Integer** |  | 
+**snapshotPlanTask** | [**NestedSnapshotPlanTask**](NestedSnapshotPlanTask.md) |  | 
+**vmInfo** | [**List&lt;NestedSnapshotGroupVmInfo&gt;**](NestedSnapshotGroupVmInfo.md) |  | 
+**vmSnapshots** | [**List&lt;NestedVmSnapshot&gt;**](NestedVmSnapshot.md) |  |  [optional]
 
 
 

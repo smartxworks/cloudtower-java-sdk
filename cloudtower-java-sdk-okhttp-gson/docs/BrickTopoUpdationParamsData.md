@@ -7,12 +7,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tagPositionInBrick** | [**List&lt;BrickTopoTagPositionInBrick&gt;**](BrickTopoTagPositionInBrick.md) |  |  [optional]
+**tagPositionInBrick** | [**List&lt;NestedTagPosition&gt;**](NestedTagPosition.md) |  |  [optional]
 **nodeTopoes** | [**NodeTopoWhereInput**](NodeTopoWhereInput.md) |  |  [optional]
-**capacity** | [**BrickTopoCapacity**](BrickTopoCapacity.md) |  |  [optional]
-**height** | **Double** |  |  [optional]
+**capacity** | [**NestedCapacity**](NestedCapacity.md) |  |  [optional]
+**height** | **Integer** |  |  [optional]
 **name** | **String** |  |  [optional]
-**position** | **Double** |  |  [optional]
+**position** | **Integer** |  |  [optional]
 
 
 

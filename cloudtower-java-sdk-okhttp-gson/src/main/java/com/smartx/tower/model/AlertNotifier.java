@@ -68,7 +68,7 @@ public class AlertNotifier {
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_PORT = "smtp_server_port";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_PORT)
-  private Double smtpServerPort;
+  private Integer smtpServerPort;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
@@ -269,7 +269,7 @@ public class AlertNotifier {
   }
 
 
-  public AlertNotifier smtpServerPort(Double smtpServerPort) {
+  public AlertNotifier smtpServerPort(Integer smtpServerPort) {
     
     this.smtpServerPort = smtpServerPort;
     return this;
@@ -282,12 +282,12 @@ public class AlertNotifier {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSmtpServerPort() {
+  public Integer getSmtpServerPort() {
     return smtpServerPort;
   }
 
 
-  public void setSmtpServerPort(Double smtpServerPort) {
+  public void setSmtpServerPort(Integer smtpServerPort) {
     this.smtpServerPort = smtpServerPort;
   }
 

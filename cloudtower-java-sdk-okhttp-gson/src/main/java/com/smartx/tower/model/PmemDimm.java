@@ -20,8 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.DiskHealthStatus;
+import com.smartx.tower.model.NestedDisk;
+import com.smartx.tower.model.NestedHost;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -42,7 +43,7 @@ public class PmemDimm {
 
   public static final String SERIALIZED_NAME_DISK = "disk";
   @SerializedName(SERIALIZED_NAME_DISK)
-  private NameIdPair disk;
+  private NestedDisk disk;
 
   public static final String SERIALIZED_NAME_HEALTH_STATUS = "health_status";
   @SerializedName(SERIALIZED_NAME_HEALTH_STATUS)
@@ -50,7 +51,7 @@ public class PmemDimm {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -66,7 +67,7 @@ public class PmemDimm {
 
   public static final String SERIALIZED_NAME_NUMA_NODE = "numa_node";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE)
-  private Double numaNode;
+  private Integer numaNode;
 
   public static final String SERIALIZED_NAME_PART_NUMBER = "part_number";
   @SerializedName(SERIALIZED_NAME_PART_NUMBER)
@@ -74,7 +75,7 @@ public class PmemDimm {
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT = "remaining_life_percent";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT)
-  private Double remainingLifePercent;
+  private Integer remainingLifePercent;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -127,7 +128,7 @@ public class PmemDimm {
   }
 
 
-  public PmemDimm disk(NameIdPair disk) {
+  public PmemDimm disk(NestedDisk disk) {
     
     this.disk = disk;
     return this;
@@ -140,12 +141,12 @@ public class PmemDimm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getDisk() {
+  public NestedDisk getDisk() {
     return disk;
   }
 
 
-  public void setDisk(NameIdPair disk) {
+  public void setDisk(NestedDisk disk) {
     this.disk = disk;
   }
 
@@ -173,7 +174,7 @@ public class PmemDimm {
   }
 
 
-  public PmemDimm host(NameIdPair host) {
+  public PmemDimm host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -186,12 +187,12 @@ public class PmemDimm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -265,7 +266,7 @@ public class PmemDimm {
   }
 
 
-  public PmemDimm numaNode(Double numaNode) {
+  public PmemDimm numaNode(Integer numaNode) {
     
     this.numaNode = numaNode;
     return this;
@@ -278,12 +279,12 @@ public class PmemDimm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getNumaNode() {
+  public Integer getNumaNode() {
     return numaNode;
   }
 
 
-  public void setNumaNode(Double numaNode) {
+  public void setNumaNode(Integer numaNode) {
     this.numaNode = numaNode;
   }
 
@@ -311,7 +312,7 @@ public class PmemDimm {
   }
 
 
-  public PmemDimm remainingLifePercent(Double remainingLifePercent) {
+  public PmemDimm remainingLifePercent(Integer remainingLifePercent) {
     
     this.remainingLifePercent = remainingLifePercent;
     return this;
@@ -324,12 +325,12 @@ public class PmemDimm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercent() {
+  public Integer getRemainingLifePercent() {
     return remainingLifePercent;
   }
 
 
-  public void setRemainingLifePercent(Double remainingLifePercent) {
+  public void setRemainingLifePercent(Integer remainingLifePercent) {
     this.remainingLifePercent = remainingLifePercent;
   }
 

@@ -7,18 +7,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **description** | **String** |  | 
 **externalUse** | **Boolean** |  | 
 **id** | **String** |  | 
 **internal** | **Boolean** |  | 
 **ipWhitelist** | **String** |  | 
-**iscsiTarget** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**iscsiTarget** | [**NestedIscsiTarget**](NestedIscsiTarget.md) |  |  [optional]
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**nfsExport** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**nvmfSubsystem** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**replicaNum** | **Double** |  | 
+**nfsExport** | [**NestedNfsExport**](NestedNfsExport.md) |  |  [optional]
+**nvmfSubsystem** | [**NestedNvmfSubsystem**](NestedNvmfSubsystem.md) |  |  [optional]
+**replicaNum** | **Integer** |  | 
 **thinProvision** | **Boolean** |  | 
 **type** | **ElfDataStoreType** |  | 
 

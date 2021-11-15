@@ -47,6 +47,8 @@ public class ITContentLibraryImage extends ITBase {
       List<ContentLibraryImage> result = api.getContentLibraryImages(params, contentLanguage);
       assertThat(result).as("check result of getContentLibraryImages").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITContentLibraryImage extends ITBase {
       ContentLibraryImageConnection result = api.getContentLibraryImagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getContentLibraryImagesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

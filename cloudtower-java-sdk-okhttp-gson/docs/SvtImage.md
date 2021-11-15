@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
 **localCreatedAt** | **String** |  | 
@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **path** | **String** |  | 
 **size** | **Double** |  | 
-**version** | **Double** |  | 
-**vmDisks** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**version** | **Integer** |  | 
+**vmDisks** | [**List&lt;NestedVmDisk&gt;**](NestedVmDisk.md) |  |  [optional]
 
 
 

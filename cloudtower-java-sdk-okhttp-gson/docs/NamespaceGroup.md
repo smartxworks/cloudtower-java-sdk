@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreateTime** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**namespaces** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**nvmfSubsystem** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**namespaces** | [**List&lt;NestedNvmfNamespace&gt;**](NestedNvmfNamespace.md) |  |  [optional]
+**nvmfSubsystem** | [**NestedNvmfSubsystem**](NestedNvmfSubsystem.md) |  | 
 
 
 

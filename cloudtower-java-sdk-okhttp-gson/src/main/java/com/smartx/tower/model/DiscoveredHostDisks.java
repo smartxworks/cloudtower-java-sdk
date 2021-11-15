@@ -52,7 +52,7 @@ public class DiscoveredHostDisks {
 
   public static final String SERIALIZED_NAME_NUMA_NODE = "numa_node";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE)
-  private Double numaNode;
+  private Integer numaNode;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
@@ -163,7 +163,7 @@ public class DiscoveredHostDisks {
   }
 
 
-  public DiscoveredHostDisks numaNode(Double numaNode) {
+  public DiscoveredHostDisks numaNode(Integer numaNode) {
     
     this.numaNode = numaNode;
     return this;
@@ -176,12 +176,12 @@ public class DiscoveredHostDisks {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNode() {
+  public Integer getNumaNode() {
     return numaNode;
   }
 
 
-  public void setNumaNode(Double numaNode) {
+  public void setNumaNode(Integer numaNode) {
     this.numaNode = numaNode;
   }
 

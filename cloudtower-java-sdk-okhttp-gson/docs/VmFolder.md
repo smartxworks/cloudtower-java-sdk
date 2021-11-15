@@ -7,12 +7,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **id** | **String** |  | 
 **localId** | **String** |  |  [optional]
 **name** | **String** |  | 
-**vmNum** | **Double** |  |  [optional]
-**vms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**vmNum** | **Integer** |  |  [optional]
+**vms** | [**List&lt;NestedVm&gt;**](NestedVm.md) |  |  [optional]
 
 
 

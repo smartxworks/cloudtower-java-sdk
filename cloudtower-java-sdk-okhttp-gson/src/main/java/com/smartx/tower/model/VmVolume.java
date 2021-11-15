@@ -20,8 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedIscsiLun;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedVmDisk;
 import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -37,7 +39,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VmVolume {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -61,7 +63,7 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -73,7 +75,7 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_LUN = "lun";
   @SerializedName(SERIALIZED_NAME_LUN)
-  private NameIdPair lun;
+  private NestedIscsiLun lun;
 
   public static final String SERIALIZED_NAME_MOUNTING = "mounting";
   @SerializedName(SERIALIZED_NAME_MOUNTING)
@@ -101,10 +103,10 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
-  private List<BrickTopoPowers> vmDisks = null;
+  private List<NestedVmDisk> vmDisks = null;
 
 
-  public VmVolume cluster(NameIdPair cluster) {
+  public VmVolume cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -117,12 +119,12 @@ public class VmVolume {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -242,15 +244,15 @@ public class VmVolume {
   }
 
 
-  public VmVolume labels(List<BrickTopoPowers> labels) {
+  public VmVolume labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public VmVolume addLabelsItem(BrickTopoPowers labelsItem) {
+  public VmVolume addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -263,12 +265,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -319,7 +321,7 @@ public class VmVolume {
   }
 
 
-  public VmVolume lun(NameIdPair lun) {
+  public VmVolume lun(NestedIscsiLun lun) {
     
     this.lun = lun;
     return this;
@@ -332,12 +334,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getLun() {
+  public NestedIscsiLun getLun() {
     return lun;
   }
 
 
-  public void setLun(NameIdPair lun) {
+  public void setLun(NestedIscsiLun lun) {
     this.lun = lun;
   }
 
@@ -480,15 +482,15 @@ public class VmVolume {
   }
 
 
-  public VmVolume vmDisks(List<BrickTopoPowers> vmDisks) {
+  public VmVolume vmDisks(List<NestedVmDisk> vmDisks) {
     
     this.vmDisks = vmDisks;
     return this;
   }
 
-  public VmVolume addVmDisksItem(BrickTopoPowers vmDisksItem) {
+  public VmVolume addVmDisksItem(NestedVmDisk vmDisksItem) {
     if (this.vmDisks == null) {
-      this.vmDisks = new ArrayList<BrickTopoPowers>();
+      this.vmDisks = new ArrayList<NestedVmDisk>();
     }
     this.vmDisks.add(vmDisksItem);
     return this;
@@ -501,12 +503,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmDisks() {
+  public List<NestedVmDisk> getVmDisks() {
     return vmDisks;
   }
 
 
-  public void setVmDisks(List<BrickTopoPowers> vmDisks) {
+  public void setVmDisks(List<NestedVmDisk> vmDisks) {
     this.vmDisks = vmDisks;
   }
 

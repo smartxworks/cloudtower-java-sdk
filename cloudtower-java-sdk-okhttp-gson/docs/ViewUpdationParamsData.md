@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **timeUnit** | **TimeUnit** |  |  [optional]
-**timeSpan** | **Double** |  |  [optional]
+**timeSpan** | **Integer** |  |  [optional]
 **name** | **String** |  |  [optional]
 
 

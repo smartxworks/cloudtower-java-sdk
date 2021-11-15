@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **bpsWr** | **Double** |  |  [optional]
 **bpsWrMax** | **Double** |  |  [optional]
 **bpsWrMaxLength** | **Double** |  |  [optional]
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **externalUse** | **Boolean** |  | 
@@ -33,16 +33,16 @@ Name | Type | Description | Notes
 **iopsWrMax** | **Double** |  |  [optional]
 **iopsWrMaxLength** | **Double** |  |  [optional]
 **ipWhitelist** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**namespaceGroups** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**namespaces** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**namespaceGroups** | [**List&lt;NestedNamespaceGroup&gt;**](NestedNamespaceGroup.md) |  |  [optional]
+**namespaces** | [**List&lt;NestedNvmfNamespace&gt;**](NestedNvmfNamespace.md) |  |  [optional]
 **nqnName** | **String** |  | 
 **nqnWhitelist** | **String** |  | 
 **policy** | **NvmfSubsystemPolicyType** |  | 
-**replicaNum** | **Double** |  | 
-**stripeNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
+**stripeNum** | **Integer** |  | 
 **stripeSize** | **Double** |  | 
 **thinProvision** | **Boolean** |  | 
 

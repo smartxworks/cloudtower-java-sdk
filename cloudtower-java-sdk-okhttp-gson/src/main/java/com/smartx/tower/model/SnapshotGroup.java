@@ -20,10 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.SnapshotGroupVmInfo;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedSnapshotGroupVmInfo;
+import com.smartx.tower.model.NestedSnapshotPlanTask;
+import com.smartx.tower.model.NestedVmSnapshot;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -38,7 +39,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SnapshotGroup {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DELETED = "deleted";
   @SerializedName(SERIALIZED_NAME_DELETED)
@@ -82,22 +83,22 @@ public class SnapshotGroup {
 
   public static final String SERIALIZED_NAME_OBJECT_NUM = "object_num";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM)
-  private Double objectNum;
+  private Integer objectNum;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN_TASK = "snapshotPlanTask";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN_TASK)
-  private BrickTopoPowers snapshotPlanTask;
+  private NestedSnapshotPlanTask snapshotPlanTask;
 
   public static final String SERIALIZED_NAME_VM_INFO = "vm_info";
   @SerializedName(SERIALIZED_NAME_VM_INFO)
-  private List<SnapshotGroupVmInfo> vmInfo = new ArrayList<SnapshotGroupVmInfo>();
+  private List<NestedSnapshotGroupVmInfo> vmInfo = new ArrayList<NestedSnapshotGroupVmInfo>();
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<NameIdPair> vmSnapshots = null;
+  private List<NestedVmSnapshot> vmSnapshots = null;
 
 
-  public SnapshotGroup cluster(NameIdPair cluster) {
+  public SnapshotGroup cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -110,12 +111,12 @@ public class SnapshotGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -350,7 +351,7 @@ public class SnapshotGroup {
   }
 
 
-  public SnapshotGroup objectNum(Double objectNum) {
+  public SnapshotGroup objectNum(Integer objectNum) {
     
     this.objectNum = objectNum;
     return this;
@@ -363,17 +364,17 @@ public class SnapshotGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getObjectNum() {
+  public Integer getObjectNum() {
     return objectNum;
   }
 
 
-  public void setObjectNum(Double objectNum) {
+  public void setObjectNum(Integer objectNum) {
     this.objectNum = objectNum;
   }
 
 
-  public SnapshotGroup snapshotPlanTask(BrickTopoPowers snapshotPlanTask) {
+  public SnapshotGroup snapshotPlanTask(NestedSnapshotPlanTask snapshotPlanTask) {
     
     this.snapshotPlanTask = snapshotPlanTask;
     return this;
@@ -386,23 +387,23 @@ public class SnapshotGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public BrickTopoPowers getSnapshotPlanTask() {
+  public NestedSnapshotPlanTask getSnapshotPlanTask() {
     return snapshotPlanTask;
   }
 
 
-  public void setSnapshotPlanTask(BrickTopoPowers snapshotPlanTask) {
+  public void setSnapshotPlanTask(NestedSnapshotPlanTask snapshotPlanTask) {
     this.snapshotPlanTask = snapshotPlanTask;
   }
 
 
-  public SnapshotGroup vmInfo(List<SnapshotGroupVmInfo> vmInfo) {
+  public SnapshotGroup vmInfo(List<NestedSnapshotGroupVmInfo> vmInfo) {
     
     this.vmInfo = vmInfo;
     return this;
   }
 
-  public SnapshotGroup addVmInfoItem(SnapshotGroupVmInfo vmInfoItem) {
+  public SnapshotGroup addVmInfoItem(NestedSnapshotGroupVmInfo vmInfoItem) {
     this.vmInfo.add(vmInfoItem);
     return this;
   }
@@ -414,25 +415,25 @@ public class SnapshotGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<SnapshotGroupVmInfo> getVmInfo() {
+  public List<NestedSnapshotGroupVmInfo> getVmInfo() {
     return vmInfo;
   }
 
 
-  public void setVmInfo(List<SnapshotGroupVmInfo> vmInfo) {
+  public void setVmInfo(List<NestedSnapshotGroupVmInfo> vmInfo) {
     this.vmInfo = vmInfo;
   }
 
 
-  public SnapshotGroup vmSnapshots(List<NameIdPair> vmSnapshots) {
+  public SnapshotGroup vmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public SnapshotGroup addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
+  public SnapshotGroup addVmSnapshotsItem(NestedVmSnapshot vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<NameIdPair>();
+      this.vmSnapshots = new ArrayList<NestedVmSnapshot>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -445,12 +446,12 @@ public class SnapshotGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmSnapshots() {
+  public List<NestedVmSnapshot> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
+  public void setVmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 

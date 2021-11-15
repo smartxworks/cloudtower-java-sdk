@@ -48,6 +48,8 @@ public class ITAlert extends ITBase {
       List<Alert> result = api.getAlerts(params, contentLanguage);
       assertThat(result).as("check result of getAlerts").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -62,6 +64,8 @@ public class ITAlert extends ITBase {
       AlertConnection result = api.getAlertsConnection(params, contentLanguage);
       assertThat(result).as("check result of getAlertsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -80,6 +84,8 @@ public class ITAlert extends ITBase {
       List<WithTaskAlert> result = api.resolveAlert(params, contentLanguage);
       assertThat(result).as("check result of resolveAlert").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

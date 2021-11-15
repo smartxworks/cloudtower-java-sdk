@@ -52,35 +52,35 @@ public class BrickTopoWhereInput {
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Double height;
+  private Integer height;
 
   public static final String SERIALIZED_NAME_HEIGHT_GT = "height_gt";
   @SerializedName(SERIALIZED_NAME_HEIGHT_GT)
-  private Double heightGt;
+  private Integer heightGt;
 
   public static final String SERIALIZED_NAME_HEIGHT_GTE = "height_gte";
   @SerializedName(SERIALIZED_NAME_HEIGHT_GTE)
-  private Double heightGte;
+  private Integer heightGte;
 
   public static final String SERIALIZED_NAME_HEIGHT_IN = "height_in";
   @SerializedName(SERIALIZED_NAME_HEIGHT_IN)
-  private List<Double> heightIn = null;
+  private List<Integer> heightIn = null;
 
   public static final String SERIALIZED_NAME_HEIGHT_LT = "height_lt";
   @SerializedName(SERIALIZED_NAME_HEIGHT_LT)
-  private Double heightLt;
+  private Integer heightLt;
 
   public static final String SERIALIZED_NAME_HEIGHT_LTE = "height_lte";
   @SerializedName(SERIALIZED_NAME_HEIGHT_LTE)
-  private Double heightLte;
+  private Integer heightLte;
 
   public static final String SERIALIZED_NAME_HEIGHT_NOT = "height_not";
   @SerializedName(SERIALIZED_NAME_HEIGHT_NOT)
-  private Double heightNot;
+  private Integer heightNot;
 
   public static final String SERIALIZED_NAME_HEIGHT_NOT_IN = "height_not_in";
   @SerializedName(SERIALIZED_NAME_HEIGHT_NOT_IN)
-  private List<Double> heightNotIn = null;
+  private List<Integer> heightNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -328,35 +328,35 @@ public class BrickTopoWhereInput {
 
   public static final String SERIALIZED_NAME_POSITION = "position";
   @SerializedName(SERIALIZED_NAME_POSITION)
-  private Double position;
+  private Integer position;
 
   public static final String SERIALIZED_NAME_POSITION_GT = "position_gt";
   @SerializedName(SERIALIZED_NAME_POSITION_GT)
-  private Double positionGt;
+  private Integer positionGt;
 
   public static final String SERIALIZED_NAME_POSITION_GTE = "position_gte";
   @SerializedName(SERIALIZED_NAME_POSITION_GTE)
-  private Double positionGte;
+  private Integer positionGte;
 
   public static final String SERIALIZED_NAME_POSITION_IN = "position_in";
   @SerializedName(SERIALIZED_NAME_POSITION_IN)
-  private List<Double> positionIn = null;
+  private List<Integer> positionIn = null;
 
   public static final String SERIALIZED_NAME_POSITION_LT = "position_lt";
   @SerializedName(SERIALIZED_NAME_POSITION_LT)
-  private Double positionLt;
+  private Integer positionLt;
 
   public static final String SERIALIZED_NAME_POSITION_LTE = "position_lte";
   @SerializedName(SERIALIZED_NAME_POSITION_LTE)
-  private Double positionLte;
+  private Integer positionLte;
 
   public static final String SERIALIZED_NAME_POSITION_NOT = "position_not";
   @SerializedName(SERIALIZED_NAME_POSITION_NOT)
-  private Double positionNot;
+  private Integer positionNot;
 
   public static final String SERIALIZED_NAME_POSITION_NOT_IN = "position_not_in";
   @SerializedName(SERIALIZED_NAME_POSITION_NOT_IN)
-  private List<Double> positionNotIn = null;
+  private List<Integer> positionNotIn = null;
 
   public static final String SERIALIZED_NAME_POWER_LAYOUT = "power_layout";
   @SerializedName(SERIALIZED_NAME_POWER_LAYOUT)
@@ -472,7 +472,7 @@ public class BrickTopoWhereInput {
   }
 
 
-  public BrickTopoWhereInput height(Double height) {
+  public BrickTopoWhereInput height(Integer height) {
     
     this.height = height;
     return this;
@@ -485,17 +485,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeight() {
+  public Integer getHeight() {
     return height;
   }
 
 
-  public void setHeight(Double height) {
+  public void setHeight(Integer height) {
     this.height = height;
   }
 
 
-  public BrickTopoWhereInput heightGt(Double heightGt) {
+  public BrickTopoWhereInput heightGt(Integer heightGt) {
     
     this.heightGt = heightGt;
     return this;
@@ -508,17 +508,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightGt() {
+  public Integer getHeightGt() {
     return heightGt;
   }
 
 
-  public void setHeightGt(Double heightGt) {
+  public void setHeightGt(Integer heightGt) {
     this.heightGt = heightGt;
   }
 
 
-  public BrickTopoWhereInput heightGte(Double heightGte) {
+  public BrickTopoWhereInput heightGte(Integer heightGte) {
     
     this.heightGte = heightGte;
     return this;
@@ -531,25 +531,25 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightGte() {
+  public Integer getHeightGte() {
     return heightGte;
   }
 
 
-  public void setHeightGte(Double heightGte) {
+  public void setHeightGte(Integer heightGte) {
     this.heightGte = heightGte;
   }
 
 
-  public BrickTopoWhereInput heightIn(List<Double> heightIn) {
+  public BrickTopoWhereInput heightIn(List<Integer> heightIn) {
     
     this.heightIn = heightIn;
     return this;
   }
 
-  public BrickTopoWhereInput addHeightInItem(Double heightInItem) {
+  public BrickTopoWhereInput addHeightInItem(Integer heightInItem) {
     if (this.heightIn == null) {
-      this.heightIn = new ArrayList<Double>();
+      this.heightIn = new ArrayList<Integer>();
     }
     this.heightIn.add(heightInItem);
     return this;
@@ -562,17 +562,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHeightIn() {
+  public List<Integer> getHeightIn() {
     return heightIn;
   }
 
 
-  public void setHeightIn(List<Double> heightIn) {
+  public void setHeightIn(List<Integer> heightIn) {
     this.heightIn = heightIn;
   }
 
 
-  public BrickTopoWhereInput heightLt(Double heightLt) {
+  public BrickTopoWhereInput heightLt(Integer heightLt) {
     
     this.heightLt = heightLt;
     return this;
@@ -585,17 +585,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightLt() {
+  public Integer getHeightLt() {
     return heightLt;
   }
 
 
-  public void setHeightLt(Double heightLt) {
+  public void setHeightLt(Integer heightLt) {
     this.heightLt = heightLt;
   }
 
 
-  public BrickTopoWhereInput heightLte(Double heightLte) {
+  public BrickTopoWhereInput heightLte(Integer heightLte) {
     
     this.heightLte = heightLte;
     return this;
@@ -608,17 +608,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightLte() {
+  public Integer getHeightLte() {
     return heightLte;
   }
 
 
-  public void setHeightLte(Double heightLte) {
+  public void setHeightLte(Integer heightLte) {
     this.heightLte = heightLte;
   }
 
 
-  public BrickTopoWhereInput heightNot(Double heightNot) {
+  public BrickTopoWhereInput heightNot(Integer heightNot) {
     
     this.heightNot = heightNot;
     return this;
@@ -631,25 +631,25 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHeightNot() {
+  public Integer getHeightNot() {
     return heightNot;
   }
 
 
-  public void setHeightNot(Double heightNot) {
+  public void setHeightNot(Integer heightNot) {
     this.heightNot = heightNot;
   }
 
 
-  public BrickTopoWhereInput heightNotIn(List<Double> heightNotIn) {
+  public BrickTopoWhereInput heightNotIn(List<Integer> heightNotIn) {
     
     this.heightNotIn = heightNotIn;
     return this;
   }
 
-  public BrickTopoWhereInput addHeightNotInItem(Double heightNotInItem) {
+  public BrickTopoWhereInput addHeightNotInItem(Integer heightNotInItem) {
     if (this.heightNotIn == null) {
-      this.heightNotIn = new ArrayList<Double>();
+      this.heightNotIn = new ArrayList<Integer>();
     }
     this.heightNotIn.add(heightNotInItem);
     return this;
@@ -662,12 +662,12 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHeightNotIn() {
+  public List<Integer> getHeightNotIn() {
     return heightNotIn;
   }
 
 
-  public void setHeightNotIn(List<Double> heightNotIn) {
+  public void setHeightNotIn(List<Integer> heightNotIn) {
     this.heightNotIn = heightNotIn;
   }
 
@@ -2155,7 +2155,7 @@ public class BrickTopoWhereInput {
   }
 
 
-  public BrickTopoWhereInput position(Double position) {
+  public BrickTopoWhereInput position(Integer position) {
     
     this.position = position;
     return this;
@@ -2168,17 +2168,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPosition() {
+  public Integer getPosition() {
     return position;
   }
 
 
-  public void setPosition(Double position) {
+  public void setPosition(Integer position) {
     this.position = position;
   }
 
 
-  public BrickTopoWhereInput positionGt(Double positionGt) {
+  public BrickTopoWhereInput positionGt(Integer positionGt) {
     
     this.positionGt = positionGt;
     return this;
@@ -2191,17 +2191,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPositionGt() {
+  public Integer getPositionGt() {
     return positionGt;
   }
 
 
-  public void setPositionGt(Double positionGt) {
+  public void setPositionGt(Integer positionGt) {
     this.positionGt = positionGt;
   }
 
 
-  public BrickTopoWhereInput positionGte(Double positionGte) {
+  public BrickTopoWhereInput positionGte(Integer positionGte) {
     
     this.positionGte = positionGte;
     return this;
@@ -2214,25 +2214,25 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPositionGte() {
+  public Integer getPositionGte() {
     return positionGte;
   }
 
 
-  public void setPositionGte(Double positionGte) {
+  public void setPositionGte(Integer positionGte) {
     this.positionGte = positionGte;
   }
 
 
-  public BrickTopoWhereInput positionIn(List<Double> positionIn) {
+  public BrickTopoWhereInput positionIn(List<Integer> positionIn) {
     
     this.positionIn = positionIn;
     return this;
   }
 
-  public BrickTopoWhereInput addPositionInItem(Double positionInItem) {
+  public BrickTopoWhereInput addPositionInItem(Integer positionInItem) {
     if (this.positionIn == null) {
-      this.positionIn = new ArrayList<Double>();
+      this.positionIn = new ArrayList<Integer>();
     }
     this.positionIn.add(positionInItem);
     return this;
@@ -2245,17 +2245,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPositionIn() {
+  public List<Integer> getPositionIn() {
     return positionIn;
   }
 
 
-  public void setPositionIn(List<Double> positionIn) {
+  public void setPositionIn(List<Integer> positionIn) {
     this.positionIn = positionIn;
   }
 
 
-  public BrickTopoWhereInput positionLt(Double positionLt) {
+  public BrickTopoWhereInput positionLt(Integer positionLt) {
     
     this.positionLt = positionLt;
     return this;
@@ -2268,17 +2268,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPositionLt() {
+  public Integer getPositionLt() {
     return positionLt;
   }
 
 
-  public void setPositionLt(Double positionLt) {
+  public void setPositionLt(Integer positionLt) {
     this.positionLt = positionLt;
   }
 
 
-  public BrickTopoWhereInput positionLte(Double positionLte) {
+  public BrickTopoWhereInput positionLte(Integer positionLte) {
     
     this.positionLte = positionLte;
     return this;
@@ -2291,17 +2291,17 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPositionLte() {
+  public Integer getPositionLte() {
     return positionLte;
   }
 
 
-  public void setPositionLte(Double positionLte) {
+  public void setPositionLte(Integer positionLte) {
     this.positionLte = positionLte;
   }
 
 
-  public BrickTopoWhereInput positionNot(Double positionNot) {
+  public BrickTopoWhereInput positionNot(Integer positionNot) {
     
     this.positionNot = positionNot;
     return this;
@@ -2314,25 +2314,25 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPositionNot() {
+  public Integer getPositionNot() {
     return positionNot;
   }
 
 
-  public void setPositionNot(Double positionNot) {
+  public void setPositionNot(Integer positionNot) {
     this.positionNot = positionNot;
   }
 
 
-  public BrickTopoWhereInput positionNotIn(List<Double> positionNotIn) {
+  public BrickTopoWhereInput positionNotIn(List<Integer> positionNotIn) {
     
     this.positionNotIn = positionNotIn;
     return this;
   }
 
-  public BrickTopoWhereInput addPositionNotInItem(Double positionNotInItem) {
+  public BrickTopoWhereInput addPositionNotInItem(Integer positionNotInItem) {
     if (this.positionNotIn == null) {
-      this.positionNotIn = new ArrayList<Double>();
+      this.positionNotIn = new ArrayList<Integer>();
     }
     this.positionNotIn.add(positionNotInItem);
     return this;
@@ -2345,12 +2345,12 @@ public class BrickTopoWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPositionNotIn() {
+  public List<Integer> getPositionNotIn() {
     return positionNotIn;
   }
 
 
-  public void setPositionNotIn(List<Double> positionNotIn) {
+  public void setPositionNotIn(List<Integer> positionNotIn) {
     this.positionNotIn = positionNotIn;
   }
 

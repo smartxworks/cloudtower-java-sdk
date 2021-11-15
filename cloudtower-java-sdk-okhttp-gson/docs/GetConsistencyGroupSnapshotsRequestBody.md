@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **after** | **String** |  |  [optional]
 **before** | **String** |  |  [optional]
-**first** | **Double** |  |  [optional]
-**last** | **Double** |  |  [optional]
+**first** | **Integer** |  |  [optional]
+**last** | **Integer** |  |  [optional]
 **orderBy** | [**ConsistencyGroupSnapshotOrderByInput**](ConsistencyGroupSnapshotOrderByInput.md) |  |  [optional]
-**skip** | **Double** |  |  [optional]
+**skip** | **Integer** |  |  [optional]
 **where** | [**ConsistencyGroupSnapshotWhereInput**](ConsistencyGroupSnapshotWhereInput.md) |  |  [optional]
 
 

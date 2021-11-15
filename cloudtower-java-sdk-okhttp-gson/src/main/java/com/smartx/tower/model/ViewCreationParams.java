@@ -36,7 +36,7 @@ public class ViewCreationParams {
 
   public static final String SERIALIZED_NAME_TIME_SPAN = "time_span";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN)
-  private Double timeSpan;
+  private Integer timeSpan;
 
   public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
   @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
@@ -70,7 +70,7 @@ public class ViewCreationParams {
   }
 
 
-  public ViewCreationParams timeSpan(Double timeSpan) {
+  public ViewCreationParams timeSpan(Integer timeSpan) {
     
     this.timeSpan = timeSpan;
     return this;
@@ -83,12 +83,12 @@ public class ViewCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTimeSpan() {
+  public Integer getTimeSpan() {
     return timeSpan;
   }
 
 
-  public void setTimeSpan(Double timeSpan) {
+  public void setTimeSpan(Integer timeSpan) {
     this.timeSpan = timeSpan;
   }
 

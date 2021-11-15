@@ -47,6 +47,8 @@ public class ITVmEntityFilterResult extends ITBase {
       List<VmEntityFilterResult> result = api.getVmEntityFilterResults(params, contentLanguage);
       assertThat(result).as("check result of getVmEntityFilterResults").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVmEntityFilterResult extends ITBase {
       VmEntityFilterResultConnection result = api.getVmEntityFilterResultsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmEntityFilterResultsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

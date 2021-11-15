@@ -47,6 +47,8 @@ public class ITMigrateTransmitter extends ITBase {
       List<MigrateTransmitter> result = api.getMigrateTransmitters(params, contentLanguage);
       assertThat(result).as("check result of getMigrateTransmitters").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITMigrateTransmitter extends ITBase {
       MigrateTransmitterConnection result = api.getMigrateTransmittersConnection(params, contentLanguage);
       assertThat(result).as("check result of getMigrateTransmittersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

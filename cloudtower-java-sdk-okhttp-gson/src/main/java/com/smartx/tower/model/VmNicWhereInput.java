@@ -422,35 +422,35 @@ public class VmNicWhereInput {
 
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
-  private Double order;
+  private Integer order;
 
   public static final String SERIALIZED_NAME_ORDER_GT = "order_gt";
   @SerializedName(SERIALIZED_NAME_ORDER_GT)
-  private Double orderGt;
+  private Integer orderGt;
 
   public static final String SERIALIZED_NAME_ORDER_GTE = "order_gte";
   @SerializedName(SERIALIZED_NAME_ORDER_GTE)
-  private Double orderGte;
+  private Integer orderGte;
 
   public static final String SERIALIZED_NAME_ORDER_IN = "order_in";
   @SerializedName(SERIALIZED_NAME_ORDER_IN)
-  private List<Double> orderIn = null;
+  private List<Integer> orderIn = null;
 
   public static final String SERIALIZED_NAME_ORDER_LT = "order_lt";
   @SerializedName(SERIALIZED_NAME_ORDER_LT)
-  private Double orderLt;
+  private Integer orderLt;
 
   public static final String SERIALIZED_NAME_ORDER_LTE = "order_lte";
   @SerializedName(SERIALIZED_NAME_ORDER_LTE)
-  private Double orderLte;
+  private Integer orderLte;
 
   public static final String SERIALIZED_NAME_ORDER_NOT = "order_not";
   @SerializedName(SERIALIZED_NAME_ORDER_NOT)
-  private Double orderNot;
+  private Integer orderNot;
 
   public static final String SERIALIZED_NAME_ORDER_NOT_IN = "order_not_in";
   @SerializedName(SERIALIZED_NAME_ORDER_NOT_IN)
-  private List<Double> orderNotIn = null;
+  private List<Integer> orderNotIn = null;
 
   public static final String SERIALIZED_NAME_SUBNET_MASK = "subnet_mask";
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)
@@ -2861,7 +2861,7 @@ public class VmNicWhereInput {
   }
 
 
-  public VmNicWhereInput order(Double order) {
+  public VmNicWhereInput order(Integer order) {
     
     this.order = order;
     return this;
@@ -2874,17 +2874,17 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrder() {
+  public Integer getOrder() {
     return order;
   }
 
 
-  public void setOrder(Double order) {
+  public void setOrder(Integer order) {
     this.order = order;
   }
 
 
-  public VmNicWhereInput orderGt(Double orderGt) {
+  public VmNicWhereInput orderGt(Integer orderGt) {
     
     this.orderGt = orderGt;
     return this;
@@ -2897,17 +2897,17 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrderGt() {
+  public Integer getOrderGt() {
     return orderGt;
   }
 
 
-  public void setOrderGt(Double orderGt) {
+  public void setOrderGt(Integer orderGt) {
     this.orderGt = orderGt;
   }
 
 
-  public VmNicWhereInput orderGte(Double orderGte) {
+  public VmNicWhereInput orderGte(Integer orderGte) {
     
     this.orderGte = orderGte;
     return this;
@@ -2920,25 +2920,25 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrderGte() {
+  public Integer getOrderGte() {
     return orderGte;
   }
 
 
-  public void setOrderGte(Double orderGte) {
+  public void setOrderGte(Integer orderGte) {
     this.orderGte = orderGte;
   }
 
 
-  public VmNicWhereInput orderIn(List<Double> orderIn) {
+  public VmNicWhereInput orderIn(List<Integer> orderIn) {
     
     this.orderIn = orderIn;
     return this;
   }
 
-  public VmNicWhereInput addOrderInItem(Double orderInItem) {
+  public VmNicWhereInput addOrderInItem(Integer orderInItem) {
     if (this.orderIn == null) {
-      this.orderIn = new ArrayList<Double>();
+      this.orderIn = new ArrayList<Integer>();
     }
     this.orderIn.add(orderInItem);
     return this;
@@ -2951,17 +2951,17 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getOrderIn() {
+  public List<Integer> getOrderIn() {
     return orderIn;
   }
 
 
-  public void setOrderIn(List<Double> orderIn) {
+  public void setOrderIn(List<Integer> orderIn) {
     this.orderIn = orderIn;
   }
 
 
-  public VmNicWhereInput orderLt(Double orderLt) {
+  public VmNicWhereInput orderLt(Integer orderLt) {
     
     this.orderLt = orderLt;
     return this;
@@ -2974,17 +2974,17 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrderLt() {
+  public Integer getOrderLt() {
     return orderLt;
   }
 
 
-  public void setOrderLt(Double orderLt) {
+  public void setOrderLt(Integer orderLt) {
     this.orderLt = orderLt;
   }
 
 
-  public VmNicWhereInput orderLte(Double orderLte) {
+  public VmNicWhereInput orderLte(Integer orderLte) {
     
     this.orderLte = orderLte;
     return this;
@@ -2997,17 +2997,17 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrderLte() {
+  public Integer getOrderLte() {
     return orderLte;
   }
 
 
-  public void setOrderLte(Double orderLte) {
+  public void setOrderLte(Integer orderLte) {
     this.orderLte = orderLte;
   }
 
 
-  public VmNicWhereInput orderNot(Double orderNot) {
+  public VmNicWhereInput orderNot(Integer orderNot) {
     
     this.orderNot = orderNot;
     return this;
@@ -3020,25 +3020,25 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOrderNot() {
+  public Integer getOrderNot() {
     return orderNot;
   }
 
 
-  public void setOrderNot(Double orderNot) {
+  public void setOrderNot(Integer orderNot) {
     this.orderNot = orderNot;
   }
 
 
-  public VmNicWhereInput orderNotIn(List<Double> orderNotIn) {
+  public VmNicWhereInput orderNotIn(List<Integer> orderNotIn) {
     
     this.orderNotIn = orderNotIn;
     return this;
   }
 
-  public VmNicWhereInput addOrderNotInItem(Double orderNotInItem) {
+  public VmNicWhereInput addOrderNotInItem(Integer orderNotInItem) {
     if (this.orderNotIn == null) {
-      this.orderNotIn = new ArrayList<Double>();
+      this.orderNotIn = new ArrayList<Integer>();
     }
     this.orderNotIn.add(orderNotInItem);
     return this;
@@ -3051,12 +3051,12 @@ public class VmNicWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getOrderNotIn() {
+  public List<Integer> getOrderNotIn() {
     return orderNotIn;
   }
 
 
-  public void setOrderNotIn(List<Double> orderNotIn) {
+  public void setOrderNotIn(List<Integer> orderNotIn) {
     this.orderNotIn = orderNotIn;
   }
 

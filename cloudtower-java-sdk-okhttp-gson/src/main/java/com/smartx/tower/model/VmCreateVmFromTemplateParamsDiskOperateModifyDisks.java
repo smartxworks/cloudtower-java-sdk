@@ -40,7 +40,7 @@ public class VmCreateVmFromTemplateParamsDiskOperateModifyDisks {
 
   public static final String SERIALIZED_NAME_DISK_INDEX = "disk_index";
   @SerializedName(SERIALIZED_NAME_DISK_INDEX)
-  private Double diskIndex;
+  private Integer diskIndex;
 
 
   public VmCreateVmFromTemplateParamsDiskOperateModifyDisks vmVolumeId(String vmVolumeId) {
@@ -89,7 +89,7 @@ public class VmCreateVmFromTemplateParamsDiskOperateModifyDisks {
   }
 
 
-  public VmCreateVmFromTemplateParamsDiskOperateModifyDisks diskIndex(Double diskIndex) {
+  public VmCreateVmFromTemplateParamsDiskOperateModifyDisks diskIndex(Integer diskIndex) {
     
     this.diskIndex = diskIndex;
     return this;
@@ -102,12 +102,12 @@ public class VmCreateVmFromTemplateParamsDiskOperateModifyDisks {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getDiskIndex() {
+  public Integer getDiskIndex() {
     return diskIndex;
   }
 
 
-  public void setDiskIndex(Double diskIndex) {
+  public void setDiskIndex(Integer diskIndex) {
     this.diskIndex = diskIndex;
   }
 

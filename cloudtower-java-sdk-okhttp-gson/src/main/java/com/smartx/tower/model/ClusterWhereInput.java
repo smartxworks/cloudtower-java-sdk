@@ -309,35 +309,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GT = "host_num_gt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GT)
-  private Double hostNumGt;
+  private Integer hostNumGt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GTE = "host_num_gte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GTE)
-  private Double hostNumGte;
+  private Integer hostNumGte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_IN = "host_num_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_IN)
-  private List<Double> hostNumIn = null;
+  private List<Integer> hostNumIn = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LT = "host_num_lt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LT)
-  private Double hostNumLt;
+  private Integer hostNumLt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LTE = "host_num_lte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LTE)
-  private Double hostNumLte;
+  private Integer hostNumLte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT = "host_num_not";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT)
-  private Double hostNumNot;
+  private Integer hostNumNot;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT_IN = "host_num_not_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT_IN)
-  private List<Double> hostNumNotIn = null;
+  private List<Integer> hostNumNotIn = null;
 
   public static final String SERIALIZED_NAME_HOSTS_EVERY = "hosts_every";
   @SerializedName(SERIALIZED_NAME_HOSTS_EVERY)
@@ -869,35 +869,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM = "max_chunk_num";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM)
-  private Double maxChunkNum;
+  private Integer maxChunkNum;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_GT = "max_chunk_num_gt";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_GT)
-  private Double maxChunkNumGt;
+  private Integer maxChunkNumGt;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_GTE = "max_chunk_num_gte";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_GTE)
-  private Double maxChunkNumGte;
+  private Integer maxChunkNumGte;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_IN = "max_chunk_num_in";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_IN)
-  private List<Double> maxChunkNumIn = null;
+  private List<Integer> maxChunkNumIn = null;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_LT = "max_chunk_num_lt";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_LT)
-  private Double maxChunkNumLt;
+  private Integer maxChunkNumLt;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_LTE = "max_chunk_num_lte";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_LTE)
-  private Double maxChunkNumLte;
+  private Integer maxChunkNumLte;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_NOT = "max_chunk_num_not";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_NOT)
-  private Double maxChunkNumNot;
+  private Integer maxChunkNumNot;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_NOT_IN = "max_chunk_num_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_NOT_IN)
-  private List<Double> maxChunkNumNotIn = null;
+  private List<Integer> maxChunkNumNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY = "max_physical_data_capacity";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY)
@@ -1293,67 +1293,67 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES)
-  private Double provisionedCpuCores;
+  private Integer provisionedCpuCores;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM = "provisioned_cpu_cores_for_active_vm";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM)
-  private Double provisionedCpuCoresForActiveVm;
+  private Integer provisionedCpuCoresForActiveVm;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GT = "provisioned_cpu_cores_for_active_vm_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GT)
-  private Double provisionedCpuCoresForActiveVmGt;
+  private Integer provisionedCpuCoresForActiveVmGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GTE = "provisioned_cpu_cores_for_active_vm_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_GTE)
-  private Double provisionedCpuCoresForActiveVmGte;
+  private Integer provisionedCpuCoresForActiveVmGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_IN = "provisioned_cpu_cores_for_active_vm_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_IN)
-  private List<Double> provisionedCpuCoresForActiveVmIn = null;
+  private List<Integer> provisionedCpuCoresForActiveVmIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LT = "provisioned_cpu_cores_for_active_vm_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LT)
-  private Double provisionedCpuCoresForActiveVmLt;
+  private Integer provisionedCpuCoresForActiveVmLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LTE = "provisioned_cpu_cores_for_active_vm_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_LTE)
-  private Double provisionedCpuCoresForActiveVmLte;
+  private Integer provisionedCpuCoresForActiveVmLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT = "provisioned_cpu_cores_for_active_vm_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT)
-  private Double provisionedCpuCoresForActiveVmNot;
+  private Integer provisionedCpuCoresForActiveVmNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT_IN = "provisioned_cpu_cores_for_active_vm_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM_NOT_IN)
-  private List<Double> provisionedCpuCoresForActiveVmNotIn = null;
+  private List<Integer> provisionedCpuCoresForActiveVmNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_GT = "provisioned_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_GT)
-  private Double provisionedCpuCoresGt;
+  private Integer provisionedCpuCoresGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_GTE = "provisioned_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_GTE)
-  private Double provisionedCpuCoresGte;
+  private Integer provisionedCpuCoresGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_IN = "provisioned_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_IN)
-  private List<Double> provisionedCpuCoresIn = null;
+  private List<Integer> provisionedCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_LT = "provisioned_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_LT)
-  private Double provisionedCpuCoresLt;
+  private Integer provisionedCpuCoresLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_LTE = "provisioned_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_LTE)
-  private Double provisionedCpuCoresLte;
+  private Integer provisionedCpuCoresLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT = "provisioned_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT)
-  private Double provisionedCpuCoresNot;
+  private Integer provisionedCpuCoresNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT_IN = "provisioned_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_NOT_IN)
-  private List<Double> provisionedCpuCoresNotIn = null;
+  private List<Integer> provisionedCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_FOR_ACTIVE_VM_RATIO = "provisioned_for_active_vm_ratio";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_FOR_ACTIVE_VM_RATIO)
@@ -1525,67 +1525,67 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE = "reserved_cpu_cores_for_system_service";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE)
-  private Double reservedCpuCoresForSystemService;
+  private Integer reservedCpuCoresForSystemService;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_GT = "reserved_cpu_cores_for_system_service_gt";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_GT)
-  private Double reservedCpuCoresForSystemServiceGt;
+  private Integer reservedCpuCoresForSystemServiceGt;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_GTE = "reserved_cpu_cores_for_system_service_gte";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_GTE)
-  private Double reservedCpuCoresForSystemServiceGte;
+  private Integer reservedCpuCoresForSystemServiceGte;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_IN = "reserved_cpu_cores_for_system_service_in";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_IN)
-  private List<Double> reservedCpuCoresForSystemServiceIn = null;
+  private List<Integer> reservedCpuCoresForSystemServiceIn = null;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_LT = "reserved_cpu_cores_for_system_service_lt";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_LT)
-  private Double reservedCpuCoresForSystemServiceLt;
+  private Integer reservedCpuCoresForSystemServiceLt;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_LTE = "reserved_cpu_cores_for_system_service_lte";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_LTE)
-  private Double reservedCpuCoresForSystemServiceLte;
+  private Integer reservedCpuCoresForSystemServiceLte;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_NOT = "reserved_cpu_cores_for_system_service_not";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_NOT)
-  private Double reservedCpuCoresForSystemServiceNot;
+  private Integer reservedCpuCoresForSystemServiceNot;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_NOT_IN = "reserved_cpu_cores_for_system_service_not_in";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_NOT_IN)
-  private List<Double> reservedCpuCoresForSystemServiceNotIn = null;
+  private List<Integer> reservedCpuCoresForSystemServiceNotIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
-  private Double runningVmNum;
+  private Integer runningVmNum;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_GT = "running_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_GT)
-  private Double runningVmNumGt;
+  private Integer runningVmNumGt;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_GTE = "running_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_GTE)
-  private Double runningVmNumGte;
+  private Integer runningVmNumGte;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_IN = "running_vm_num_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_IN)
-  private List<Double> runningVmNumIn = null;
+  private List<Integer> runningVmNumIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_LT = "running_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_LT)
-  private Double runningVmNumLt;
+  private Integer runningVmNumLt;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_LTE = "running_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_LTE)
-  private Double runningVmNumLte;
+  private Integer runningVmNumLte;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_NOT = "running_vm_num_not";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_NOT)
-  private Double runningVmNumNot;
+  private Integer runningVmNumNot;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM_NOT_IN = "running_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM_NOT_IN)
-  private List<Double> runningVmNumNotIn = null;
+  private List<Integer> runningVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SETTINGS = "settings";
   @SerializedName(SERIALIZED_NAME_SETTINGS)
@@ -1609,35 +1609,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM = "stopped_vm_num";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM)
-  private Double stoppedVmNum;
+  private Integer stoppedVmNum;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_GT = "stopped_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_GT)
-  private Double stoppedVmNumGt;
+  private Integer stoppedVmNumGt;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_GTE = "stopped_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_GTE)
-  private Double stoppedVmNumGte;
+  private Integer stoppedVmNumGte;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_IN = "stopped_vm_num_in";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_IN)
-  private List<Double> stoppedVmNumIn = null;
+  private List<Integer> stoppedVmNumIn = null;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_LT = "stopped_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_LT)
-  private Double stoppedVmNumLt;
+  private Integer stoppedVmNumLt;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_LTE = "stopped_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_LTE)
-  private Double stoppedVmNumLte;
+  private Integer stoppedVmNumLte;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_NOT = "stopped_vm_num_not";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_NOT)
-  private Double stoppedVmNumNot;
+  private Integer stoppedVmNumNot;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM_NOT_IN = "stopped_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM_NOT_IN)
-  private List<Double> stoppedVmNumNotIn = null;
+  private List<Integer> stoppedVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRETCH = "stretch";
   @SerializedName(SERIALIZED_NAME_STRETCH)
@@ -1649,35 +1649,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM = "suspended_vm_num";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM)
-  private Double suspendedVmNum;
+  private Integer suspendedVmNum;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_GT = "suspended_vm_num_gt";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_GT)
-  private Double suspendedVmNumGt;
+  private Integer suspendedVmNumGt;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_GTE = "suspended_vm_num_gte";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_GTE)
-  private Double suspendedVmNumGte;
+  private Integer suspendedVmNumGte;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_IN = "suspended_vm_num_in";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_IN)
-  private List<Double> suspendedVmNumIn = null;
+  private List<Integer> suspendedVmNumIn = null;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_LT = "suspended_vm_num_lt";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_LT)
-  private Double suspendedVmNumLt;
+  private Integer suspendedVmNumLt;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_LTE = "suspended_vm_num_lte";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_LTE)
-  private Double suspendedVmNumLte;
+  private Integer suspendedVmNumLte;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT = "suspended_vm_num_not";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT)
-  private Double suspendedVmNumNot;
+  private Integer suspendedVmNumNot;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT_IN = "suspended_vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM_NOT_IN)
-  private List<Double> suspendedVmNumNotIn = null;
+  private List<Integer> suspendedVmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
@@ -1713,35 +1713,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GT = "total_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GT)
-  private Double totalCpuCoresGt;
+  private Integer totalCpuCoresGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GTE = "total_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GTE)
-  private Double totalCpuCoresGte;
+  private Integer totalCpuCoresGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_IN = "total_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_IN)
-  private List<Double> totalCpuCoresIn = null;
+  private List<Integer> totalCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LT = "total_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LT)
-  private Double totalCpuCoresLt;
+  private Integer totalCpuCoresLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LTE = "total_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LTE)
-  private Double totalCpuCoresLte;
+  private Integer totalCpuCoresLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT = "total_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT)
-  private Double totalCpuCoresNot;
+  private Integer totalCpuCoresNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN = "total_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN)
-  private List<Double> totalCpuCoresNotIn = null;
+  private List<Integer> totalCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -1777,35 +1777,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
-  private Double totalCpuSockets;
+  private Integer totalCpuSockets;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GT = "total_cpu_sockets_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GT)
-  private Double totalCpuSocketsGt;
+  private Integer totalCpuSocketsGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GTE = "total_cpu_sockets_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_GTE)
-  private Double totalCpuSocketsGte;
+  private Integer totalCpuSocketsGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_IN = "total_cpu_sockets_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_IN)
-  private List<Double> totalCpuSocketsIn = null;
+  private List<Integer> totalCpuSocketsIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LT = "total_cpu_sockets_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LT)
-  private Double totalCpuSocketsLt;
+  private Integer totalCpuSocketsLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LTE = "total_cpu_sockets_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_LTE)
-  private Double totalCpuSocketsLte;
+  private Integer totalCpuSocketsLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT = "total_cpu_sockets_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT)
-  private Double totalCpuSocketsNot;
+  private Integer totalCpuSocketsNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT_IN = "total_cpu_sockets_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS_NOT_IN)
-  private List<Double> totalCpuSocketsNotIn = null;
+  private List<Integer> totalCpuSocketsNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
@@ -2181,35 +2181,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_NUM_GT = "vm_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GT)
-  private Double vmNumGt;
+  private Integer vmNumGt;
 
   public static final String SERIALIZED_NAME_VM_NUM_GTE = "vm_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GTE)
-  private Double vmNumGte;
+  private Integer vmNumGte;
 
   public static final String SERIALIZED_NAME_VM_NUM_IN = "vm_num_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_IN)
-  private List<Double> vmNumIn = null;
+  private List<Integer> vmNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM_LT = "vm_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LT)
-  private Double vmNumLt;
+  private Integer vmNumLt;
 
   public static final String SERIALIZED_NAME_VM_NUM_LTE = "vm_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LTE)
-  private Double vmNumLte;
+  private Integer vmNumLte;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT = "vm_num_not";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT)
-  private Double vmNumNot;
+  private Integer vmNumNot;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT_IN = "vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT_IN)
-  private List<Double> vmNumNotIn = null;
+  private List<Integer> vmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES_EVERY = "vm_templates_every";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES_EVERY)
@@ -3821,7 +3821,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput hostNum(Double hostNum) {
+  public ClusterWhereInput hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -3834,17 +3834,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public ClusterWhereInput hostNumGt(Double hostNumGt) {
+  public ClusterWhereInput hostNumGt(Integer hostNumGt) {
     
     this.hostNumGt = hostNumGt;
     return this;
@@ -3857,17 +3857,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGt() {
+  public Integer getHostNumGt() {
     return hostNumGt;
   }
 
 
-  public void setHostNumGt(Double hostNumGt) {
+  public void setHostNumGt(Integer hostNumGt) {
     this.hostNumGt = hostNumGt;
   }
 
 
-  public ClusterWhereInput hostNumGte(Double hostNumGte) {
+  public ClusterWhereInput hostNumGte(Integer hostNumGte) {
     
     this.hostNumGte = hostNumGte;
     return this;
@@ -3880,25 +3880,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGte() {
+  public Integer getHostNumGte() {
     return hostNumGte;
   }
 
 
-  public void setHostNumGte(Double hostNumGte) {
+  public void setHostNumGte(Integer hostNumGte) {
     this.hostNumGte = hostNumGte;
   }
 
 
-  public ClusterWhereInput hostNumIn(List<Double> hostNumIn) {
+  public ClusterWhereInput hostNumIn(List<Integer> hostNumIn) {
     
     this.hostNumIn = hostNumIn;
     return this;
   }
 
-  public ClusterWhereInput addHostNumInItem(Double hostNumInItem) {
+  public ClusterWhereInput addHostNumInItem(Integer hostNumInItem) {
     if (this.hostNumIn == null) {
-      this.hostNumIn = new ArrayList<Double>();
+      this.hostNumIn = new ArrayList<Integer>();
     }
     this.hostNumIn.add(hostNumInItem);
     return this;
@@ -3911,17 +3911,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumIn() {
+  public List<Integer> getHostNumIn() {
     return hostNumIn;
   }
 
 
-  public void setHostNumIn(List<Double> hostNumIn) {
+  public void setHostNumIn(List<Integer> hostNumIn) {
     this.hostNumIn = hostNumIn;
   }
 
 
-  public ClusterWhereInput hostNumLt(Double hostNumLt) {
+  public ClusterWhereInput hostNumLt(Integer hostNumLt) {
     
     this.hostNumLt = hostNumLt;
     return this;
@@ -3934,17 +3934,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLt() {
+  public Integer getHostNumLt() {
     return hostNumLt;
   }
 
 
-  public void setHostNumLt(Double hostNumLt) {
+  public void setHostNumLt(Integer hostNumLt) {
     this.hostNumLt = hostNumLt;
   }
 
 
-  public ClusterWhereInput hostNumLte(Double hostNumLte) {
+  public ClusterWhereInput hostNumLte(Integer hostNumLte) {
     
     this.hostNumLte = hostNumLte;
     return this;
@@ -3957,17 +3957,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLte() {
+  public Integer getHostNumLte() {
     return hostNumLte;
   }
 
 
-  public void setHostNumLte(Double hostNumLte) {
+  public void setHostNumLte(Integer hostNumLte) {
     this.hostNumLte = hostNumLte;
   }
 
 
-  public ClusterWhereInput hostNumNot(Double hostNumNot) {
+  public ClusterWhereInput hostNumNot(Integer hostNumNot) {
     
     this.hostNumNot = hostNumNot;
     return this;
@@ -3980,25 +3980,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumNot() {
+  public Integer getHostNumNot() {
     return hostNumNot;
   }
 
 
-  public void setHostNumNot(Double hostNumNot) {
+  public void setHostNumNot(Integer hostNumNot) {
     this.hostNumNot = hostNumNot;
   }
 
 
-  public ClusterWhereInput hostNumNotIn(List<Double> hostNumNotIn) {
+  public ClusterWhereInput hostNumNotIn(List<Integer> hostNumNotIn) {
     
     this.hostNumNotIn = hostNumNotIn;
     return this;
   }
 
-  public ClusterWhereInput addHostNumNotInItem(Double hostNumNotInItem) {
+  public ClusterWhereInput addHostNumNotInItem(Integer hostNumNotInItem) {
     if (this.hostNumNotIn == null) {
-      this.hostNumNotIn = new ArrayList<Double>();
+      this.hostNumNotIn = new ArrayList<Integer>();
     }
     this.hostNumNotIn.add(hostNumNotInItem);
     return this;
@@ -4011,12 +4011,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumNotIn() {
+  public List<Integer> getHostNumNotIn() {
     return hostNumNotIn;
   }
 
 
-  public void setHostNumNotIn(List<Double> hostNumNotIn) {
+  public void setHostNumNotIn(List<Integer> hostNumNotIn) {
     this.hostNumNotIn = hostNumNotIn;
   }
 
@@ -7249,7 +7249,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput maxChunkNum(Double maxChunkNum) {
+  public ClusterWhereInput maxChunkNum(Integer maxChunkNum) {
     
     this.maxChunkNum = maxChunkNum;
     return this;
@@ -7262,17 +7262,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNum() {
+  public Integer getMaxChunkNum() {
     return maxChunkNum;
   }
 
 
-  public void setMaxChunkNum(Double maxChunkNum) {
+  public void setMaxChunkNum(Integer maxChunkNum) {
     this.maxChunkNum = maxChunkNum;
   }
 
 
-  public ClusterWhereInput maxChunkNumGt(Double maxChunkNumGt) {
+  public ClusterWhereInput maxChunkNumGt(Integer maxChunkNumGt) {
     
     this.maxChunkNumGt = maxChunkNumGt;
     return this;
@@ -7285,17 +7285,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumGt() {
+  public Integer getMaxChunkNumGt() {
     return maxChunkNumGt;
   }
 
 
-  public void setMaxChunkNumGt(Double maxChunkNumGt) {
+  public void setMaxChunkNumGt(Integer maxChunkNumGt) {
     this.maxChunkNumGt = maxChunkNumGt;
   }
 
 
-  public ClusterWhereInput maxChunkNumGte(Double maxChunkNumGte) {
+  public ClusterWhereInput maxChunkNumGte(Integer maxChunkNumGte) {
     
     this.maxChunkNumGte = maxChunkNumGte;
     return this;
@@ -7308,25 +7308,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumGte() {
+  public Integer getMaxChunkNumGte() {
     return maxChunkNumGte;
   }
 
 
-  public void setMaxChunkNumGte(Double maxChunkNumGte) {
+  public void setMaxChunkNumGte(Integer maxChunkNumGte) {
     this.maxChunkNumGte = maxChunkNumGte;
   }
 
 
-  public ClusterWhereInput maxChunkNumIn(List<Double> maxChunkNumIn) {
+  public ClusterWhereInput maxChunkNumIn(List<Integer> maxChunkNumIn) {
     
     this.maxChunkNumIn = maxChunkNumIn;
     return this;
   }
 
-  public ClusterWhereInput addMaxChunkNumInItem(Double maxChunkNumInItem) {
+  public ClusterWhereInput addMaxChunkNumInItem(Integer maxChunkNumInItem) {
     if (this.maxChunkNumIn == null) {
-      this.maxChunkNumIn = new ArrayList<Double>();
+      this.maxChunkNumIn = new ArrayList<Integer>();
     }
     this.maxChunkNumIn.add(maxChunkNumInItem);
     return this;
@@ -7339,17 +7339,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxChunkNumIn() {
+  public List<Integer> getMaxChunkNumIn() {
     return maxChunkNumIn;
   }
 
 
-  public void setMaxChunkNumIn(List<Double> maxChunkNumIn) {
+  public void setMaxChunkNumIn(List<Integer> maxChunkNumIn) {
     this.maxChunkNumIn = maxChunkNumIn;
   }
 
 
-  public ClusterWhereInput maxChunkNumLt(Double maxChunkNumLt) {
+  public ClusterWhereInput maxChunkNumLt(Integer maxChunkNumLt) {
     
     this.maxChunkNumLt = maxChunkNumLt;
     return this;
@@ -7362,17 +7362,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumLt() {
+  public Integer getMaxChunkNumLt() {
     return maxChunkNumLt;
   }
 
 
-  public void setMaxChunkNumLt(Double maxChunkNumLt) {
+  public void setMaxChunkNumLt(Integer maxChunkNumLt) {
     this.maxChunkNumLt = maxChunkNumLt;
   }
 
 
-  public ClusterWhereInput maxChunkNumLte(Double maxChunkNumLte) {
+  public ClusterWhereInput maxChunkNumLte(Integer maxChunkNumLte) {
     
     this.maxChunkNumLte = maxChunkNumLte;
     return this;
@@ -7385,17 +7385,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumLte() {
+  public Integer getMaxChunkNumLte() {
     return maxChunkNumLte;
   }
 
 
-  public void setMaxChunkNumLte(Double maxChunkNumLte) {
+  public void setMaxChunkNumLte(Integer maxChunkNumLte) {
     this.maxChunkNumLte = maxChunkNumLte;
   }
 
 
-  public ClusterWhereInput maxChunkNumNot(Double maxChunkNumNot) {
+  public ClusterWhereInput maxChunkNumNot(Integer maxChunkNumNot) {
     
     this.maxChunkNumNot = maxChunkNumNot;
     return this;
@@ -7408,25 +7408,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumNot() {
+  public Integer getMaxChunkNumNot() {
     return maxChunkNumNot;
   }
 
 
-  public void setMaxChunkNumNot(Double maxChunkNumNot) {
+  public void setMaxChunkNumNot(Integer maxChunkNumNot) {
     this.maxChunkNumNot = maxChunkNumNot;
   }
 
 
-  public ClusterWhereInput maxChunkNumNotIn(List<Double> maxChunkNumNotIn) {
+  public ClusterWhereInput maxChunkNumNotIn(List<Integer> maxChunkNumNotIn) {
     
     this.maxChunkNumNotIn = maxChunkNumNotIn;
     return this;
   }
 
-  public ClusterWhereInput addMaxChunkNumNotInItem(Double maxChunkNumNotInItem) {
+  public ClusterWhereInput addMaxChunkNumNotInItem(Integer maxChunkNumNotInItem) {
     if (this.maxChunkNumNotIn == null) {
-      this.maxChunkNumNotIn = new ArrayList<Double>();
+      this.maxChunkNumNotIn = new ArrayList<Integer>();
     }
     this.maxChunkNumNotIn.add(maxChunkNumNotInItem);
     return this;
@@ -7439,12 +7439,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxChunkNumNotIn() {
+  public List<Integer> getMaxChunkNumNotIn() {
     return maxChunkNumNotIn;
   }
 
 
-  public void setMaxChunkNumNotIn(List<Double> maxChunkNumNotIn) {
+  public void setMaxChunkNumNotIn(List<Integer> maxChunkNumNotIn) {
     this.maxChunkNumNotIn = maxChunkNumNotIn;
   }
 
@@ -9863,7 +9863,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput provisionedCpuCores(Double provisionedCpuCores) {
+  public ClusterWhereInput provisionedCpuCores(Integer provisionedCpuCores) {
     
     this.provisionedCpuCores = provisionedCpuCores;
     return this;
@@ -9876,17 +9876,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCores() {
+  public Integer getProvisionedCpuCores() {
     return provisionedCpuCores;
   }
 
 
-  public void setProvisionedCpuCores(Double provisionedCpuCores) {
+  public void setProvisionedCpuCores(Integer provisionedCpuCores) {
     this.provisionedCpuCores = provisionedCpuCores;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
     return this;
@@ -9899,17 +9899,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVm() {
+  public Integer getProvisionedCpuCoresForActiveVm() {
     return provisionedCpuCoresForActiveVm;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public void setProvisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmGt(Double provisionedCpuCoresForActiveVmGt) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmGt(Integer provisionedCpuCoresForActiveVmGt) {
     
     this.provisionedCpuCoresForActiveVmGt = provisionedCpuCoresForActiveVmGt;
     return this;
@@ -9922,17 +9922,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmGt() {
+  public Integer getProvisionedCpuCoresForActiveVmGt() {
     return provisionedCpuCoresForActiveVmGt;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmGt(Double provisionedCpuCoresForActiveVmGt) {
+  public void setProvisionedCpuCoresForActiveVmGt(Integer provisionedCpuCoresForActiveVmGt) {
     this.provisionedCpuCoresForActiveVmGt = provisionedCpuCoresForActiveVmGt;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmGte(Double provisionedCpuCoresForActiveVmGte) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmGte(Integer provisionedCpuCoresForActiveVmGte) {
     
     this.provisionedCpuCoresForActiveVmGte = provisionedCpuCoresForActiveVmGte;
     return this;
@@ -9945,25 +9945,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmGte() {
+  public Integer getProvisionedCpuCoresForActiveVmGte() {
     return provisionedCpuCoresForActiveVmGte;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmGte(Double provisionedCpuCoresForActiveVmGte) {
+  public void setProvisionedCpuCoresForActiveVmGte(Integer provisionedCpuCoresForActiveVmGte) {
     this.provisionedCpuCoresForActiveVmGte = provisionedCpuCoresForActiveVmGte;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmIn(List<Double> provisionedCpuCoresForActiveVmIn) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmIn(List<Integer> provisionedCpuCoresForActiveVmIn) {
     
     this.provisionedCpuCoresForActiveVmIn = provisionedCpuCoresForActiveVmIn;
     return this;
   }
 
-  public ClusterWhereInput addProvisionedCpuCoresForActiveVmInItem(Double provisionedCpuCoresForActiveVmInItem) {
+  public ClusterWhereInput addProvisionedCpuCoresForActiveVmInItem(Integer provisionedCpuCoresForActiveVmInItem) {
     if (this.provisionedCpuCoresForActiveVmIn == null) {
-      this.provisionedCpuCoresForActiveVmIn = new ArrayList<Double>();
+      this.provisionedCpuCoresForActiveVmIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresForActiveVmIn.add(provisionedCpuCoresForActiveVmInItem);
     return this;
@@ -9976,17 +9976,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresForActiveVmIn() {
+  public List<Integer> getProvisionedCpuCoresForActiveVmIn() {
     return provisionedCpuCoresForActiveVmIn;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmIn(List<Double> provisionedCpuCoresForActiveVmIn) {
+  public void setProvisionedCpuCoresForActiveVmIn(List<Integer> provisionedCpuCoresForActiveVmIn) {
     this.provisionedCpuCoresForActiveVmIn = provisionedCpuCoresForActiveVmIn;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmLt(Double provisionedCpuCoresForActiveVmLt) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmLt(Integer provisionedCpuCoresForActiveVmLt) {
     
     this.provisionedCpuCoresForActiveVmLt = provisionedCpuCoresForActiveVmLt;
     return this;
@@ -9999,17 +9999,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmLt() {
+  public Integer getProvisionedCpuCoresForActiveVmLt() {
     return provisionedCpuCoresForActiveVmLt;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmLt(Double provisionedCpuCoresForActiveVmLt) {
+  public void setProvisionedCpuCoresForActiveVmLt(Integer provisionedCpuCoresForActiveVmLt) {
     this.provisionedCpuCoresForActiveVmLt = provisionedCpuCoresForActiveVmLt;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmLte(Double provisionedCpuCoresForActiveVmLte) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmLte(Integer provisionedCpuCoresForActiveVmLte) {
     
     this.provisionedCpuCoresForActiveVmLte = provisionedCpuCoresForActiveVmLte;
     return this;
@@ -10022,17 +10022,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmLte() {
+  public Integer getProvisionedCpuCoresForActiveVmLte() {
     return provisionedCpuCoresForActiveVmLte;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmLte(Double provisionedCpuCoresForActiveVmLte) {
+  public void setProvisionedCpuCoresForActiveVmLte(Integer provisionedCpuCoresForActiveVmLte) {
     this.provisionedCpuCoresForActiveVmLte = provisionedCpuCoresForActiveVmLte;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmNot(Double provisionedCpuCoresForActiveVmNot) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmNot(Integer provisionedCpuCoresForActiveVmNot) {
     
     this.provisionedCpuCoresForActiveVmNot = provisionedCpuCoresForActiveVmNot;
     return this;
@@ -10045,25 +10045,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVmNot() {
+  public Integer getProvisionedCpuCoresForActiveVmNot() {
     return provisionedCpuCoresForActiveVmNot;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmNot(Double provisionedCpuCoresForActiveVmNot) {
+  public void setProvisionedCpuCoresForActiveVmNot(Integer provisionedCpuCoresForActiveVmNot) {
     this.provisionedCpuCoresForActiveVmNot = provisionedCpuCoresForActiveVmNot;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresForActiveVmNotIn(List<Double> provisionedCpuCoresForActiveVmNotIn) {
+  public ClusterWhereInput provisionedCpuCoresForActiveVmNotIn(List<Integer> provisionedCpuCoresForActiveVmNotIn) {
     
     this.provisionedCpuCoresForActiveVmNotIn = provisionedCpuCoresForActiveVmNotIn;
     return this;
   }
 
-  public ClusterWhereInput addProvisionedCpuCoresForActiveVmNotInItem(Double provisionedCpuCoresForActiveVmNotInItem) {
+  public ClusterWhereInput addProvisionedCpuCoresForActiveVmNotInItem(Integer provisionedCpuCoresForActiveVmNotInItem) {
     if (this.provisionedCpuCoresForActiveVmNotIn == null) {
-      this.provisionedCpuCoresForActiveVmNotIn = new ArrayList<Double>();
+      this.provisionedCpuCoresForActiveVmNotIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresForActiveVmNotIn.add(provisionedCpuCoresForActiveVmNotInItem);
     return this;
@@ -10076,17 +10076,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresForActiveVmNotIn() {
+  public List<Integer> getProvisionedCpuCoresForActiveVmNotIn() {
     return provisionedCpuCoresForActiveVmNotIn;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVmNotIn(List<Double> provisionedCpuCoresForActiveVmNotIn) {
+  public void setProvisionedCpuCoresForActiveVmNotIn(List<Integer> provisionedCpuCoresForActiveVmNotIn) {
     this.provisionedCpuCoresForActiveVmNotIn = provisionedCpuCoresForActiveVmNotIn;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresGt(Double provisionedCpuCoresGt) {
+  public ClusterWhereInput provisionedCpuCoresGt(Integer provisionedCpuCoresGt) {
     
     this.provisionedCpuCoresGt = provisionedCpuCoresGt;
     return this;
@@ -10099,17 +10099,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresGt() {
+  public Integer getProvisionedCpuCoresGt() {
     return provisionedCpuCoresGt;
   }
 
 
-  public void setProvisionedCpuCoresGt(Double provisionedCpuCoresGt) {
+  public void setProvisionedCpuCoresGt(Integer provisionedCpuCoresGt) {
     this.provisionedCpuCoresGt = provisionedCpuCoresGt;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresGte(Double provisionedCpuCoresGte) {
+  public ClusterWhereInput provisionedCpuCoresGte(Integer provisionedCpuCoresGte) {
     
     this.provisionedCpuCoresGte = provisionedCpuCoresGte;
     return this;
@@ -10122,25 +10122,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresGte() {
+  public Integer getProvisionedCpuCoresGte() {
     return provisionedCpuCoresGte;
   }
 
 
-  public void setProvisionedCpuCoresGte(Double provisionedCpuCoresGte) {
+  public void setProvisionedCpuCoresGte(Integer provisionedCpuCoresGte) {
     this.provisionedCpuCoresGte = provisionedCpuCoresGte;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresIn(List<Double> provisionedCpuCoresIn) {
+  public ClusterWhereInput provisionedCpuCoresIn(List<Integer> provisionedCpuCoresIn) {
     
     this.provisionedCpuCoresIn = provisionedCpuCoresIn;
     return this;
   }
 
-  public ClusterWhereInput addProvisionedCpuCoresInItem(Double provisionedCpuCoresInItem) {
+  public ClusterWhereInput addProvisionedCpuCoresInItem(Integer provisionedCpuCoresInItem) {
     if (this.provisionedCpuCoresIn == null) {
-      this.provisionedCpuCoresIn = new ArrayList<Double>();
+      this.provisionedCpuCoresIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresIn.add(provisionedCpuCoresInItem);
     return this;
@@ -10153,17 +10153,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresIn() {
+  public List<Integer> getProvisionedCpuCoresIn() {
     return provisionedCpuCoresIn;
   }
 
 
-  public void setProvisionedCpuCoresIn(List<Double> provisionedCpuCoresIn) {
+  public void setProvisionedCpuCoresIn(List<Integer> provisionedCpuCoresIn) {
     this.provisionedCpuCoresIn = provisionedCpuCoresIn;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresLt(Double provisionedCpuCoresLt) {
+  public ClusterWhereInput provisionedCpuCoresLt(Integer provisionedCpuCoresLt) {
     
     this.provisionedCpuCoresLt = provisionedCpuCoresLt;
     return this;
@@ -10176,17 +10176,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresLt() {
+  public Integer getProvisionedCpuCoresLt() {
     return provisionedCpuCoresLt;
   }
 
 
-  public void setProvisionedCpuCoresLt(Double provisionedCpuCoresLt) {
+  public void setProvisionedCpuCoresLt(Integer provisionedCpuCoresLt) {
     this.provisionedCpuCoresLt = provisionedCpuCoresLt;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresLte(Double provisionedCpuCoresLte) {
+  public ClusterWhereInput provisionedCpuCoresLte(Integer provisionedCpuCoresLte) {
     
     this.provisionedCpuCoresLte = provisionedCpuCoresLte;
     return this;
@@ -10199,17 +10199,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresLte() {
+  public Integer getProvisionedCpuCoresLte() {
     return provisionedCpuCoresLte;
   }
 
 
-  public void setProvisionedCpuCoresLte(Double provisionedCpuCoresLte) {
+  public void setProvisionedCpuCoresLte(Integer provisionedCpuCoresLte) {
     this.provisionedCpuCoresLte = provisionedCpuCoresLte;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresNot(Double provisionedCpuCoresNot) {
+  public ClusterWhereInput provisionedCpuCoresNot(Integer provisionedCpuCoresNot) {
     
     this.provisionedCpuCoresNot = provisionedCpuCoresNot;
     return this;
@@ -10222,25 +10222,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresNot() {
+  public Integer getProvisionedCpuCoresNot() {
     return provisionedCpuCoresNot;
   }
 
 
-  public void setProvisionedCpuCoresNot(Double provisionedCpuCoresNot) {
+  public void setProvisionedCpuCoresNot(Integer provisionedCpuCoresNot) {
     this.provisionedCpuCoresNot = provisionedCpuCoresNot;
   }
 
 
-  public ClusterWhereInput provisionedCpuCoresNotIn(List<Double> provisionedCpuCoresNotIn) {
+  public ClusterWhereInput provisionedCpuCoresNotIn(List<Integer> provisionedCpuCoresNotIn) {
     
     this.provisionedCpuCoresNotIn = provisionedCpuCoresNotIn;
     return this;
   }
 
-  public ClusterWhereInput addProvisionedCpuCoresNotInItem(Double provisionedCpuCoresNotInItem) {
+  public ClusterWhereInput addProvisionedCpuCoresNotInItem(Integer provisionedCpuCoresNotInItem) {
     if (this.provisionedCpuCoresNotIn == null) {
-      this.provisionedCpuCoresNotIn = new ArrayList<Double>();
+      this.provisionedCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.provisionedCpuCoresNotIn.add(provisionedCpuCoresNotInItem);
     return this;
@@ -10253,12 +10253,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedCpuCoresNotIn() {
+  public List<Integer> getProvisionedCpuCoresNotIn() {
     return provisionedCpuCoresNotIn;
   }
 
 
-  public void setProvisionedCpuCoresNotIn(List<Double> provisionedCpuCoresNotIn) {
+  public void setProvisionedCpuCoresNotIn(List<Integer> provisionedCpuCoresNotIn) {
     this.provisionedCpuCoresNotIn = provisionedCpuCoresNotIn;
   }
 
@@ -11309,7 +11309,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemService(Double reservedCpuCoresForSystemService) {
+  public ClusterWhereInput reservedCpuCoresForSystemService(Integer reservedCpuCoresForSystemService) {
     
     this.reservedCpuCoresForSystemService = reservedCpuCoresForSystemService;
     return this;
@@ -11322,17 +11322,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemService() {
+  public Integer getReservedCpuCoresForSystemService() {
     return reservedCpuCoresForSystemService;
   }
 
 
-  public void setReservedCpuCoresForSystemService(Double reservedCpuCoresForSystemService) {
+  public void setReservedCpuCoresForSystemService(Integer reservedCpuCoresForSystemService) {
     this.reservedCpuCoresForSystemService = reservedCpuCoresForSystemService;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceGt(Double reservedCpuCoresForSystemServiceGt) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceGt(Integer reservedCpuCoresForSystemServiceGt) {
     
     this.reservedCpuCoresForSystemServiceGt = reservedCpuCoresForSystemServiceGt;
     return this;
@@ -11345,17 +11345,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemServiceGt() {
+  public Integer getReservedCpuCoresForSystemServiceGt() {
     return reservedCpuCoresForSystemServiceGt;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceGt(Double reservedCpuCoresForSystemServiceGt) {
+  public void setReservedCpuCoresForSystemServiceGt(Integer reservedCpuCoresForSystemServiceGt) {
     this.reservedCpuCoresForSystemServiceGt = reservedCpuCoresForSystemServiceGt;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceGte(Double reservedCpuCoresForSystemServiceGte) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceGte(Integer reservedCpuCoresForSystemServiceGte) {
     
     this.reservedCpuCoresForSystemServiceGte = reservedCpuCoresForSystemServiceGte;
     return this;
@@ -11368,25 +11368,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemServiceGte() {
+  public Integer getReservedCpuCoresForSystemServiceGte() {
     return reservedCpuCoresForSystemServiceGte;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceGte(Double reservedCpuCoresForSystemServiceGte) {
+  public void setReservedCpuCoresForSystemServiceGte(Integer reservedCpuCoresForSystemServiceGte) {
     this.reservedCpuCoresForSystemServiceGte = reservedCpuCoresForSystemServiceGte;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceIn(List<Double> reservedCpuCoresForSystemServiceIn) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceIn(List<Integer> reservedCpuCoresForSystemServiceIn) {
     
     this.reservedCpuCoresForSystemServiceIn = reservedCpuCoresForSystemServiceIn;
     return this;
   }
 
-  public ClusterWhereInput addReservedCpuCoresForSystemServiceInItem(Double reservedCpuCoresForSystemServiceInItem) {
+  public ClusterWhereInput addReservedCpuCoresForSystemServiceInItem(Integer reservedCpuCoresForSystemServiceInItem) {
     if (this.reservedCpuCoresForSystemServiceIn == null) {
-      this.reservedCpuCoresForSystemServiceIn = new ArrayList<Double>();
+      this.reservedCpuCoresForSystemServiceIn = new ArrayList<Integer>();
     }
     this.reservedCpuCoresForSystemServiceIn.add(reservedCpuCoresForSystemServiceInItem);
     return this;
@@ -11399,17 +11399,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReservedCpuCoresForSystemServiceIn() {
+  public List<Integer> getReservedCpuCoresForSystemServiceIn() {
     return reservedCpuCoresForSystemServiceIn;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceIn(List<Double> reservedCpuCoresForSystemServiceIn) {
+  public void setReservedCpuCoresForSystemServiceIn(List<Integer> reservedCpuCoresForSystemServiceIn) {
     this.reservedCpuCoresForSystemServiceIn = reservedCpuCoresForSystemServiceIn;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceLt(Double reservedCpuCoresForSystemServiceLt) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceLt(Integer reservedCpuCoresForSystemServiceLt) {
     
     this.reservedCpuCoresForSystemServiceLt = reservedCpuCoresForSystemServiceLt;
     return this;
@@ -11422,17 +11422,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemServiceLt() {
+  public Integer getReservedCpuCoresForSystemServiceLt() {
     return reservedCpuCoresForSystemServiceLt;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceLt(Double reservedCpuCoresForSystemServiceLt) {
+  public void setReservedCpuCoresForSystemServiceLt(Integer reservedCpuCoresForSystemServiceLt) {
     this.reservedCpuCoresForSystemServiceLt = reservedCpuCoresForSystemServiceLt;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceLte(Double reservedCpuCoresForSystemServiceLte) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceLte(Integer reservedCpuCoresForSystemServiceLte) {
     
     this.reservedCpuCoresForSystemServiceLte = reservedCpuCoresForSystemServiceLte;
     return this;
@@ -11445,17 +11445,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemServiceLte() {
+  public Integer getReservedCpuCoresForSystemServiceLte() {
     return reservedCpuCoresForSystemServiceLte;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceLte(Double reservedCpuCoresForSystemServiceLte) {
+  public void setReservedCpuCoresForSystemServiceLte(Integer reservedCpuCoresForSystemServiceLte) {
     this.reservedCpuCoresForSystemServiceLte = reservedCpuCoresForSystemServiceLte;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceNot(Double reservedCpuCoresForSystemServiceNot) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceNot(Integer reservedCpuCoresForSystemServiceNot) {
     
     this.reservedCpuCoresForSystemServiceNot = reservedCpuCoresForSystemServiceNot;
     return this;
@@ -11468,25 +11468,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemServiceNot() {
+  public Integer getReservedCpuCoresForSystemServiceNot() {
     return reservedCpuCoresForSystemServiceNot;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceNot(Double reservedCpuCoresForSystemServiceNot) {
+  public void setReservedCpuCoresForSystemServiceNot(Integer reservedCpuCoresForSystemServiceNot) {
     this.reservedCpuCoresForSystemServiceNot = reservedCpuCoresForSystemServiceNot;
   }
 
 
-  public ClusterWhereInput reservedCpuCoresForSystemServiceNotIn(List<Double> reservedCpuCoresForSystemServiceNotIn) {
+  public ClusterWhereInput reservedCpuCoresForSystemServiceNotIn(List<Integer> reservedCpuCoresForSystemServiceNotIn) {
     
     this.reservedCpuCoresForSystemServiceNotIn = reservedCpuCoresForSystemServiceNotIn;
     return this;
   }
 
-  public ClusterWhereInput addReservedCpuCoresForSystemServiceNotInItem(Double reservedCpuCoresForSystemServiceNotInItem) {
+  public ClusterWhereInput addReservedCpuCoresForSystemServiceNotInItem(Integer reservedCpuCoresForSystemServiceNotInItem) {
     if (this.reservedCpuCoresForSystemServiceNotIn == null) {
-      this.reservedCpuCoresForSystemServiceNotIn = new ArrayList<Double>();
+      this.reservedCpuCoresForSystemServiceNotIn = new ArrayList<Integer>();
     }
     this.reservedCpuCoresForSystemServiceNotIn.add(reservedCpuCoresForSystemServiceNotInItem);
     return this;
@@ -11499,17 +11499,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReservedCpuCoresForSystemServiceNotIn() {
+  public List<Integer> getReservedCpuCoresForSystemServiceNotIn() {
     return reservedCpuCoresForSystemServiceNotIn;
   }
 
 
-  public void setReservedCpuCoresForSystemServiceNotIn(List<Double> reservedCpuCoresForSystemServiceNotIn) {
+  public void setReservedCpuCoresForSystemServiceNotIn(List<Integer> reservedCpuCoresForSystemServiceNotIn) {
     this.reservedCpuCoresForSystemServiceNotIn = reservedCpuCoresForSystemServiceNotIn;
   }
 
 
-  public ClusterWhereInput runningVmNum(Double runningVmNum) {
+  public ClusterWhereInput runningVmNum(Integer runningVmNum) {
     
     this.runningVmNum = runningVmNum;
     return this;
@@ -11522,17 +11522,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNum() {
+  public Integer getRunningVmNum() {
     return runningVmNum;
   }
 
 
-  public void setRunningVmNum(Double runningVmNum) {
+  public void setRunningVmNum(Integer runningVmNum) {
     this.runningVmNum = runningVmNum;
   }
 
 
-  public ClusterWhereInput runningVmNumGt(Double runningVmNumGt) {
+  public ClusterWhereInput runningVmNumGt(Integer runningVmNumGt) {
     
     this.runningVmNumGt = runningVmNumGt;
     return this;
@@ -11545,17 +11545,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumGt() {
+  public Integer getRunningVmNumGt() {
     return runningVmNumGt;
   }
 
 
-  public void setRunningVmNumGt(Double runningVmNumGt) {
+  public void setRunningVmNumGt(Integer runningVmNumGt) {
     this.runningVmNumGt = runningVmNumGt;
   }
 
 
-  public ClusterWhereInput runningVmNumGte(Double runningVmNumGte) {
+  public ClusterWhereInput runningVmNumGte(Integer runningVmNumGte) {
     
     this.runningVmNumGte = runningVmNumGte;
     return this;
@@ -11568,25 +11568,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumGte() {
+  public Integer getRunningVmNumGte() {
     return runningVmNumGte;
   }
 
 
-  public void setRunningVmNumGte(Double runningVmNumGte) {
+  public void setRunningVmNumGte(Integer runningVmNumGte) {
     this.runningVmNumGte = runningVmNumGte;
   }
 
 
-  public ClusterWhereInput runningVmNumIn(List<Double> runningVmNumIn) {
+  public ClusterWhereInput runningVmNumIn(List<Integer> runningVmNumIn) {
     
     this.runningVmNumIn = runningVmNumIn;
     return this;
   }
 
-  public ClusterWhereInput addRunningVmNumInItem(Double runningVmNumInItem) {
+  public ClusterWhereInput addRunningVmNumInItem(Integer runningVmNumInItem) {
     if (this.runningVmNumIn == null) {
-      this.runningVmNumIn = new ArrayList<Double>();
+      this.runningVmNumIn = new ArrayList<Integer>();
     }
     this.runningVmNumIn.add(runningVmNumInItem);
     return this;
@@ -11599,17 +11599,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningVmNumIn() {
+  public List<Integer> getRunningVmNumIn() {
     return runningVmNumIn;
   }
 
 
-  public void setRunningVmNumIn(List<Double> runningVmNumIn) {
+  public void setRunningVmNumIn(List<Integer> runningVmNumIn) {
     this.runningVmNumIn = runningVmNumIn;
   }
 
 
-  public ClusterWhereInput runningVmNumLt(Double runningVmNumLt) {
+  public ClusterWhereInput runningVmNumLt(Integer runningVmNumLt) {
     
     this.runningVmNumLt = runningVmNumLt;
     return this;
@@ -11622,17 +11622,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumLt() {
+  public Integer getRunningVmNumLt() {
     return runningVmNumLt;
   }
 
 
-  public void setRunningVmNumLt(Double runningVmNumLt) {
+  public void setRunningVmNumLt(Integer runningVmNumLt) {
     this.runningVmNumLt = runningVmNumLt;
   }
 
 
-  public ClusterWhereInput runningVmNumLte(Double runningVmNumLte) {
+  public ClusterWhereInput runningVmNumLte(Integer runningVmNumLte) {
     
     this.runningVmNumLte = runningVmNumLte;
     return this;
@@ -11645,17 +11645,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumLte() {
+  public Integer getRunningVmNumLte() {
     return runningVmNumLte;
   }
 
 
-  public void setRunningVmNumLte(Double runningVmNumLte) {
+  public void setRunningVmNumLte(Integer runningVmNumLte) {
     this.runningVmNumLte = runningVmNumLte;
   }
 
 
-  public ClusterWhereInput runningVmNumNot(Double runningVmNumNot) {
+  public ClusterWhereInput runningVmNumNot(Integer runningVmNumNot) {
     
     this.runningVmNumNot = runningVmNumNot;
     return this;
@@ -11668,25 +11668,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNumNot() {
+  public Integer getRunningVmNumNot() {
     return runningVmNumNot;
   }
 
 
-  public void setRunningVmNumNot(Double runningVmNumNot) {
+  public void setRunningVmNumNot(Integer runningVmNumNot) {
     this.runningVmNumNot = runningVmNumNot;
   }
 
 
-  public ClusterWhereInput runningVmNumNotIn(List<Double> runningVmNumNotIn) {
+  public ClusterWhereInput runningVmNumNotIn(List<Integer> runningVmNumNotIn) {
     
     this.runningVmNumNotIn = runningVmNumNotIn;
     return this;
   }
 
-  public ClusterWhereInput addRunningVmNumNotInItem(Double runningVmNumNotInItem) {
+  public ClusterWhereInput addRunningVmNumNotInItem(Integer runningVmNumNotInItem) {
     if (this.runningVmNumNotIn == null) {
-      this.runningVmNumNotIn = new ArrayList<Double>();
+      this.runningVmNumNotIn = new ArrayList<Integer>();
     }
     this.runningVmNumNotIn.add(runningVmNumNotInItem);
     return this;
@@ -11699,12 +11699,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningVmNumNotIn() {
+  public List<Integer> getRunningVmNumNotIn() {
     return runningVmNumNotIn;
   }
 
 
-  public void setRunningVmNumNotIn(List<Double> runningVmNumNotIn) {
+  public void setRunningVmNumNotIn(List<Integer> runningVmNumNotIn) {
     this.runningVmNumNotIn = runningVmNumNotIn;
   }
 
@@ -11840,7 +11840,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput stoppedVmNum(Double stoppedVmNum) {
+  public ClusterWhereInput stoppedVmNum(Integer stoppedVmNum) {
     
     this.stoppedVmNum = stoppedVmNum;
     return this;
@@ -11853,17 +11853,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNum() {
+  public Integer getStoppedVmNum() {
     return stoppedVmNum;
   }
 
 
-  public void setStoppedVmNum(Double stoppedVmNum) {
+  public void setStoppedVmNum(Integer stoppedVmNum) {
     this.stoppedVmNum = stoppedVmNum;
   }
 
 
-  public ClusterWhereInput stoppedVmNumGt(Double stoppedVmNumGt) {
+  public ClusterWhereInput stoppedVmNumGt(Integer stoppedVmNumGt) {
     
     this.stoppedVmNumGt = stoppedVmNumGt;
     return this;
@@ -11876,17 +11876,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumGt() {
+  public Integer getStoppedVmNumGt() {
     return stoppedVmNumGt;
   }
 
 
-  public void setStoppedVmNumGt(Double stoppedVmNumGt) {
+  public void setStoppedVmNumGt(Integer stoppedVmNumGt) {
     this.stoppedVmNumGt = stoppedVmNumGt;
   }
 
 
-  public ClusterWhereInput stoppedVmNumGte(Double stoppedVmNumGte) {
+  public ClusterWhereInput stoppedVmNumGte(Integer stoppedVmNumGte) {
     
     this.stoppedVmNumGte = stoppedVmNumGte;
     return this;
@@ -11899,25 +11899,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumGte() {
+  public Integer getStoppedVmNumGte() {
     return stoppedVmNumGte;
   }
 
 
-  public void setStoppedVmNumGte(Double stoppedVmNumGte) {
+  public void setStoppedVmNumGte(Integer stoppedVmNumGte) {
     this.stoppedVmNumGte = stoppedVmNumGte;
   }
 
 
-  public ClusterWhereInput stoppedVmNumIn(List<Double> stoppedVmNumIn) {
+  public ClusterWhereInput stoppedVmNumIn(List<Integer> stoppedVmNumIn) {
     
     this.stoppedVmNumIn = stoppedVmNumIn;
     return this;
   }
 
-  public ClusterWhereInput addStoppedVmNumInItem(Double stoppedVmNumInItem) {
+  public ClusterWhereInput addStoppedVmNumInItem(Integer stoppedVmNumInItem) {
     if (this.stoppedVmNumIn == null) {
-      this.stoppedVmNumIn = new ArrayList<Double>();
+      this.stoppedVmNumIn = new ArrayList<Integer>();
     }
     this.stoppedVmNumIn.add(stoppedVmNumInItem);
     return this;
@@ -11930,17 +11930,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStoppedVmNumIn() {
+  public List<Integer> getStoppedVmNumIn() {
     return stoppedVmNumIn;
   }
 
 
-  public void setStoppedVmNumIn(List<Double> stoppedVmNumIn) {
+  public void setStoppedVmNumIn(List<Integer> stoppedVmNumIn) {
     this.stoppedVmNumIn = stoppedVmNumIn;
   }
 
 
-  public ClusterWhereInput stoppedVmNumLt(Double stoppedVmNumLt) {
+  public ClusterWhereInput stoppedVmNumLt(Integer stoppedVmNumLt) {
     
     this.stoppedVmNumLt = stoppedVmNumLt;
     return this;
@@ -11953,17 +11953,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumLt() {
+  public Integer getStoppedVmNumLt() {
     return stoppedVmNumLt;
   }
 
 
-  public void setStoppedVmNumLt(Double stoppedVmNumLt) {
+  public void setStoppedVmNumLt(Integer stoppedVmNumLt) {
     this.stoppedVmNumLt = stoppedVmNumLt;
   }
 
 
-  public ClusterWhereInput stoppedVmNumLte(Double stoppedVmNumLte) {
+  public ClusterWhereInput stoppedVmNumLte(Integer stoppedVmNumLte) {
     
     this.stoppedVmNumLte = stoppedVmNumLte;
     return this;
@@ -11976,17 +11976,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumLte() {
+  public Integer getStoppedVmNumLte() {
     return stoppedVmNumLte;
   }
 
 
-  public void setStoppedVmNumLte(Double stoppedVmNumLte) {
+  public void setStoppedVmNumLte(Integer stoppedVmNumLte) {
     this.stoppedVmNumLte = stoppedVmNumLte;
   }
 
 
-  public ClusterWhereInput stoppedVmNumNot(Double stoppedVmNumNot) {
+  public ClusterWhereInput stoppedVmNumNot(Integer stoppedVmNumNot) {
     
     this.stoppedVmNumNot = stoppedVmNumNot;
     return this;
@@ -11999,25 +11999,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNumNot() {
+  public Integer getStoppedVmNumNot() {
     return stoppedVmNumNot;
   }
 
 
-  public void setStoppedVmNumNot(Double stoppedVmNumNot) {
+  public void setStoppedVmNumNot(Integer stoppedVmNumNot) {
     this.stoppedVmNumNot = stoppedVmNumNot;
   }
 
 
-  public ClusterWhereInput stoppedVmNumNotIn(List<Double> stoppedVmNumNotIn) {
+  public ClusterWhereInput stoppedVmNumNotIn(List<Integer> stoppedVmNumNotIn) {
     
     this.stoppedVmNumNotIn = stoppedVmNumNotIn;
     return this;
   }
 
-  public ClusterWhereInput addStoppedVmNumNotInItem(Double stoppedVmNumNotInItem) {
+  public ClusterWhereInput addStoppedVmNumNotInItem(Integer stoppedVmNumNotInItem) {
     if (this.stoppedVmNumNotIn == null) {
-      this.stoppedVmNumNotIn = new ArrayList<Double>();
+      this.stoppedVmNumNotIn = new ArrayList<Integer>();
     }
     this.stoppedVmNumNotIn.add(stoppedVmNumNotInItem);
     return this;
@@ -12030,12 +12030,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStoppedVmNumNotIn() {
+  public List<Integer> getStoppedVmNumNotIn() {
     return stoppedVmNumNotIn;
   }
 
 
-  public void setStoppedVmNumNotIn(List<Double> stoppedVmNumNotIn) {
+  public void setStoppedVmNumNotIn(List<Integer> stoppedVmNumNotIn) {
     this.stoppedVmNumNotIn = stoppedVmNumNotIn;
   }
 
@@ -12086,7 +12086,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput suspendedVmNum(Double suspendedVmNum) {
+  public ClusterWhereInput suspendedVmNum(Integer suspendedVmNum) {
     
     this.suspendedVmNum = suspendedVmNum;
     return this;
@@ -12099,17 +12099,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNum() {
+  public Integer getSuspendedVmNum() {
     return suspendedVmNum;
   }
 
 
-  public void setSuspendedVmNum(Double suspendedVmNum) {
+  public void setSuspendedVmNum(Integer suspendedVmNum) {
     this.suspendedVmNum = suspendedVmNum;
   }
 
 
-  public ClusterWhereInput suspendedVmNumGt(Double suspendedVmNumGt) {
+  public ClusterWhereInput suspendedVmNumGt(Integer suspendedVmNumGt) {
     
     this.suspendedVmNumGt = suspendedVmNumGt;
     return this;
@@ -12122,17 +12122,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumGt() {
+  public Integer getSuspendedVmNumGt() {
     return suspendedVmNumGt;
   }
 
 
-  public void setSuspendedVmNumGt(Double suspendedVmNumGt) {
+  public void setSuspendedVmNumGt(Integer suspendedVmNumGt) {
     this.suspendedVmNumGt = suspendedVmNumGt;
   }
 
 
-  public ClusterWhereInput suspendedVmNumGte(Double suspendedVmNumGte) {
+  public ClusterWhereInput suspendedVmNumGte(Integer suspendedVmNumGte) {
     
     this.suspendedVmNumGte = suspendedVmNumGte;
     return this;
@@ -12145,25 +12145,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumGte() {
+  public Integer getSuspendedVmNumGte() {
     return suspendedVmNumGte;
   }
 
 
-  public void setSuspendedVmNumGte(Double suspendedVmNumGte) {
+  public void setSuspendedVmNumGte(Integer suspendedVmNumGte) {
     this.suspendedVmNumGte = suspendedVmNumGte;
   }
 
 
-  public ClusterWhereInput suspendedVmNumIn(List<Double> suspendedVmNumIn) {
+  public ClusterWhereInput suspendedVmNumIn(List<Integer> suspendedVmNumIn) {
     
     this.suspendedVmNumIn = suspendedVmNumIn;
     return this;
   }
 
-  public ClusterWhereInput addSuspendedVmNumInItem(Double suspendedVmNumInItem) {
+  public ClusterWhereInput addSuspendedVmNumInItem(Integer suspendedVmNumInItem) {
     if (this.suspendedVmNumIn == null) {
-      this.suspendedVmNumIn = new ArrayList<Double>();
+      this.suspendedVmNumIn = new ArrayList<Integer>();
     }
     this.suspendedVmNumIn.add(suspendedVmNumInItem);
     return this;
@@ -12176,17 +12176,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSuspendedVmNumIn() {
+  public List<Integer> getSuspendedVmNumIn() {
     return suspendedVmNumIn;
   }
 
 
-  public void setSuspendedVmNumIn(List<Double> suspendedVmNumIn) {
+  public void setSuspendedVmNumIn(List<Integer> suspendedVmNumIn) {
     this.suspendedVmNumIn = suspendedVmNumIn;
   }
 
 
-  public ClusterWhereInput suspendedVmNumLt(Double suspendedVmNumLt) {
+  public ClusterWhereInput suspendedVmNumLt(Integer suspendedVmNumLt) {
     
     this.suspendedVmNumLt = suspendedVmNumLt;
     return this;
@@ -12199,17 +12199,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumLt() {
+  public Integer getSuspendedVmNumLt() {
     return suspendedVmNumLt;
   }
 
 
-  public void setSuspendedVmNumLt(Double suspendedVmNumLt) {
+  public void setSuspendedVmNumLt(Integer suspendedVmNumLt) {
     this.suspendedVmNumLt = suspendedVmNumLt;
   }
 
 
-  public ClusterWhereInput suspendedVmNumLte(Double suspendedVmNumLte) {
+  public ClusterWhereInput suspendedVmNumLte(Integer suspendedVmNumLte) {
     
     this.suspendedVmNumLte = suspendedVmNumLte;
     return this;
@@ -12222,17 +12222,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumLte() {
+  public Integer getSuspendedVmNumLte() {
     return suspendedVmNumLte;
   }
 
 
-  public void setSuspendedVmNumLte(Double suspendedVmNumLte) {
+  public void setSuspendedVmNumLte(Integer suspendedVmNumLte) {
     this.suspendedVmNumLte = suspendedVmNumLte;
   }
 
 
-  public ClusterWhereInput suspendedVmNumNot(Double suspendedVmNumNot) {
+  public ClusterWhereInput suspendedVmNumNot(Integer suspendedVmNumNot) {
     
     this.suspendedVmNumNot = suspendedVmNumNot;
     return this;
@@ -12245,25 +12245,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNumNot() {
+  public Integer getSuspendedVmNumNot() {
     return suspendedVmNumNot;
   }
 
 
-  public void setSuspendedVmNumNot(Double suspendedVmNumNot) {
+  public void setSuspendedVmNumNot(Integer suspendedVmNumNot) {
     this.suspendedVmNumNot = suspendedVmNumNot;
   }
 
 
-  public ClusterWhereInput suspendedVmNumNotIn(List<Double> suspendedVmNumNotIn) {
+  public ClusterWhereInput suspendedVmNumNotIn(List<Integer> suspendedVmNumNotIn) {
     
     this.suspendedVmNumNotIn = suspendedVmNumNotIn;
     return this;
   }
 
-  public ClusterWhereInput addSuspendedVmNumNotInItem(Double suspendedVmNumNotInItem) {
+  public ClusterWhereInput addSuspendedVmNumNotInItem(Integer suspendedVmNumNotInItem) {
     if (this.suspendedVmNumNotIn == null) {
-      this.suspendedVmNumNotIn = new ArrayList<Double>();
+      this.suspendedVmNumNotIn = new ArrayList<Integer>();
     }
     this.suspendedVmNumNotIn.add(suspendedVmNumNotInItem);
     return this;
@@ -12276,12 +12276,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSuspendedVmNumNotIn() {
+  public List<Integer> getSuspendedVmNumNotIn() {
     return suspendedVmNumNotIn;
   }
 
 
-  public void setSuspendedVmNumNotIn(List<Double> suspendedVmNumNotIn) {
+  public void setSuspendedVmNumNotIn(List<Integer> suspendedVmNumNotIn) {
     this.suspendedVmNumNotIn = suspendedVmNumNotIn;
   }
 
@@ -12486,7 +12486,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput totalCpuCores(Double totalCpuCores) {
+  public ClusterWhereInput totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -12499,17 +12499,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
 
-  public ClusterWhereInput totalCpuCoresGt(Double totalCpuCoresGt) {
+  public ClusterWhereInput totalCpuCoresGt(Integer totalCpuCoresGt) {
     
     this.totalCpuCoresGt = totalCpuCoresGt;
     return this;
@@ -12522,17 +12522,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGt() {
+  public Integer getTotalCpuCoresGt() {
     return totalCpuCoresGt;
   }
 
 
-  public void setTotalCpuCoresGt(Double totalCpuCoresGt) {
+  public void setTotalCpuCoresGt(Integer totalCpuCoresGt) {
     this.totalCpuCoresGt = totalCpuCoresGt;
   }
 
 
-  public ClusterWhereInput totalCpuCoresGte(Double totalCpuCoresGte) {
+  public ClusterWhereInput totalCpuCoresGte(Integer totalCpuCoresGte) {
     
     this.totalCpuCoresGte = totalCpuCoresGte;
     return this;
@@ -12545,25 +12545,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGte() {
+  public Integer getTotalCpuCoresGte() {
     return totalCpuCoresGte;
   }
 
 
-  public void setTotalCpuCoresGte(Double totalCpuCoresGte) {
+  public void setTotalCpuCoresGte(Integer totalCpuCoresGte) {
     this.totalCpuCoresGte = totalCpuCoresGte;
   }
 
 
-  public ClusterWhereInput totalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public ClusterWhereInput totalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     
     this.totalCpuCoresIn = totalCpuCoresIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCpuCoresInItem(Double totalCpuCoresInItem) {
+  public ClusterWhereInput addTotalCpuCoresInItem(Integer totalCpuCoresInItem) {
     if (this.totalCpuCoresIn == null) {
-      this.totalCpuCoresIn = new ArrayList<Double>();
+      this.totalCpuCoresIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresIn.add(totalCpuCoresInItem);
     return this;
@@ -12576,17 +12576,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresIn() {
+  public List<Integer> getTotalCpuCoresIn() {
     return totalCpuCoresIn;
   }
 
 
-  public void setTotalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public void setTotalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     this.totalCpuCoresIn = totalCpuCoresIn;
   }
 
 
-  public ClusterWhereInput totalCpuCoresLt(Double totalCpuCoresLt) {
+  public ClusterWhereInput totalCpuCoresLt(Integer totalCpuCoresLt) {
     
     this.totalCpuCoresLt = totalCpuCoresLt;
     return this;
@@ -12599,17 +12599,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLt() {
+  public Integer getTotalCpuCoresLt() {
     return totalCpuCoresLt;
   }
 
 
-  public void setTotalCpuCoresLt(Double totalCpuCoresLt) {
+  public void setTotalCpuCoresLt(Integer totalCpuCoresLt) {
     this.totalCpuCoresLt = totalCpuCoresLt;
   }
 
 
-  public ClusterWhereInput totalCpuCoresLte(Double totalCpuCoresLte) {
+  public ClusterWhereInput totalCpuCoresLte(Integer totalCpuCoresLte) {
     
     this.totalCpuCoresLte = totalCpuCoresLte;
     return this;
@@ -12622,17 +12622,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLte() {
+  public Integer getTotalCpuCoresLte() {
     return totalCpuCoresLte;
   }
 
 
-  public void setTotalCpuCoresLte(Double totalCpuCoresLte) {
+  public void setTotalCpuCoresLte(Integer totalCpuCoresLte) {
     this.totalCpuCoresLte = totalCpuCoresLte;
   }
 
 
-  public ClusterWhereInput totalCpuCoresNot(Double totalCpuCoresNot) {
+  public ClusterWhereInput totalCpuCoresNot(Integer totalCpuCoresNot) {
     
     this.totalCpuCoresNot = totalCpuCoresNot;
     return this;
@@ -12645,25 +12645,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresNot() {
+  public Integer getTotalCpuCoresNot() {
     return totalCpuCoresNot;
   }
 
 
-  public void setTotalCpuCoresNot(Double totalCpuCoresNot) {
+  public void setTotalCpuCoresNot(Integer totalCpuCoresNot) {
     this.totalCpuCoresNot = totalCpuCoresNot;
   }
 
 
-  public ClusterWhereInput totalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public ClusterWhereInput totalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCpuCoresNotInItem(Double totalCpuCoresNotInItem) {
+  public ClusterWhereInput addTotalCpuCoresNotInItem(Integer totalCpuCoresNotInItem) {
     if (this.totalCpuCoresNotIn == null) {
-      this.totalCpuCoresNotIn = new ArrayList<Double>();
+      this.totalCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresNotIn.add(totalCpuCoresNotInItem);
     return this;
@@ -12676,12 +12676,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresNotIn() {
+  public List<Integer> getTotalCpuCoresNotIn() {
     return totalCpuCoresNotIn;
   }
 
 
-  public void setTotalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public void setTotalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
   }
 
@@ -12886,7 +12886,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput totalCpuSockets(Double totalCpuSockets) {
+  public ClusterWhereInput totalCpuSockets(Integer totalCpuSockets) {
     
     this.totalCpuSockets = totalCpuSockets;
     return this;
@@ -12899,17 +12899,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSockets() {
+  public Integer getTotalCpuSockets() {
     return totalCpuSockets;
   }
 
 
-  public void setTotalCpuSockets(Double totalCpuSockets) {
+  public void setTotalCpuSockets(Integer totalCpuSockets) {
     this.totalCpuSockets = totalCpuSockets;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsGt(Double totalCpuSocketsGt) {
+  public ClusterWhereInput totalCpuSocketsGt(Integer totalCpuSocketsGt) {
     
     this.totalCpuSocketsGt = totalCpuSocketsGt;
     return this;
@@ -12922,17 +12922,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsGt() {
+  public Integer getTotalCpuSocketsGt() {
     return totalCpuSocketsGt;
   }
 
 
-  public void setTotalCpuSocketsGt(Double totalCpuSocketsGt) {
+  public void setTotalCpuSocketsGt(Integer totalCpuSocketsGt) {
     this.totalCpuSocketsGt = totalCpuSocketsGt;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsGte(Double totalCpuSocketsGte) {
+  public ClusterWhereInput totalCpuSocketsGte(Integer totalCpuSocketsGte) {
     
     this.totalCpuSocketsGte = totalCpuSocketsGte;
     return this;
@@ -12945,25 +12945,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsGte() {
+  public Integer getTotalCpuSocketsGte() {
     return totalCpuSocketsGte;
   }
 
 
-  public void setTotalCpuSocketsGte(Double totalCpuSocketsGte) {
+  public void setTotalCpuSocketsGte(Integer totalCpuSocketsGte) {
     this.totalCpuSocketsGte = totalCpuSocketsGte;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsIn(List<Double> totalCpuSocketsIn) {
+  public ClusterWhereInput totalCpuSocketsIn(List<Integer> totalCpuSocketsIn) {
     
     this.totalCpuSocketsIn = totalCpuSocketsIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCpuSocketsInItem(Double totalCpuSocketsInItem) {
+  public ClusterWhereInput addTotalCpuSocketsInItem(Integer totalCpuSocketsInItem) {
     if (this.totalCpuSocketsIn == null) {
-      this.totalCpuSocketsIn = new ArrayList<Double>();
+      this.totalCpuSocketsIn = new ArrayList<Integer>();
     }
     this.totalCpuSocketsIn.add(totalCpuSocketsInItem);
     return this;
@@ -12976,17 +12976,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuSocketsIn() {
+  public List<Integer> getTotalCpuSocketsIn() {
     return totalCpuSocketsIn;
   }
 
 
-  public void setTotalCpuSocketsIn(List<Double> totalCpuSocketsIn) {
+  public void setTotalCpuSocketsIn(List<Integer> totalCpuSocketsIn) {
     this.totalCpuSocketsIn = totalCpuSocketsIn;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsLt(Double totalCpuSocketsLt) {
+  public ClusterWhereInput totalCpuSocketsLt(Integer totalCpuSocketsLt) {
     
     this.totalCpuSocketsLt = totalCpuSocketsLt;
     return this;
@@ -12999,17 +12999,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsLt() {
+  public Integer getTotalCpuSocketsLt() {
     return totalCpuSocketsLt;
   }
 
 
-  public void setTotalCpuSocketsLt(Double totalCpuSocketsLt) {
+  public void setTotalCpuSocketsLt(Integer totalCpuSocketsLt) {
     this.totalCpuSocketsLt = totalCpuSocketsLt;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsLte(Double totalCpuSocketsLte) {
+  public ClusterWhereInput totalCpuSocketsLte(Integer totalCpuSocketsLte) {
     
     this.totalCpuSocketsLte = totalCpuSocketsLte;
     return this;
@@ -13022,17 +13022,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsLte() {
+  public Integer getTotalCpuSocketsLte() {
     return totalCpuSocketsLte;
   }
 
 
-  public void setTotalCpuSocketsLte(Double totalCpuSocketsLte) {
+  public void setTotalCpuSocketsLte(Integer totalCpuSocketsLte) {
     this.totalCpuSocketsLte = totalCpuSocketsLte;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsNot(Double totalCpuSocketsNot) {
+  public ClusterWhereInput totalCpuSocketsNot(Integer totalCpuSocketsNot) {
     
     this.totalCpuSocketsNot = totalCpuSocketsNot;
     return this;
@@ -13045,25 +13045,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSocketsNot() {
+  public Integer getTotalCpuSocketsNot() {
     return totalCpuSocketsNot;
   }
 
 
-  public void setTotalCpuSocketsNot(Double totalCpuSocketsNot) {
+  public void setTotalCpuSocketsNot(Integer totalCpuSocketsNot) {
     this.totalCpuSocketsNot = totalCpuSocketsNot;
   }
 
 
-  public ClusterWhereInput totalCpuSocketsNotIn(List<Double> totalCpuSocketsNotIn) {
+  public ClusterWhereInput totalCpuSocketsNotIn(List<Integer> totalCpuSocketsNotIn) {
     
     this.totalCpuSocketsNotIn = totalCpuSocketsNotIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCpuSocketsNotInItem(Double totalCpuSocketsNotInItem) {
+  public ClusterWhereInput addTotalCpuSocketsNotInItem(Integer totalCpuSocketsNotInItem) {
     if (this.totalCpuSocketsNotIn == null) {
-      this.totalCpuSocketsNotIn = new ArrayList<Double>();
+      this.totalCpuSocketsNotIn = new ArrayList<Integer>();
     }
     this.totalCpuSocketsNotIn.add(totalCpuSocketsNotInItem);
     return this;
@@ -13076,12 +13076,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuSocketsNotIn() {
+  public List<Integer> getTotalCpuSocketsNotIn() {
     return totalCpuSocketsNotIn;
   }
 
 
-  public void setTotalCpuSocketsNotIn(List<Double> totalCpuSocketsNotIn) {
+  public void setTotalCpuSocketsNotIn(List<Integer> totalCpuSocketsNotIn) {
     this.totalCpuSocketsNotIn = totalCpuSocketsNotIn;
   }
 
@@ -15369,7 +15369,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput vmNum(Double vmNum) {
+  public ClusterWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -15382,17 +15382,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public ClusterWhereInput vmNumGt(Double vmNumGt) {
+  public ClusterWhereInput vmNumGt(Integer vmNumGt) {
     
     this.vmNumGt = vmNumGt;
     return this;
@@ -15405,17 +15405,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGt() {
+  public Integer getVmNumGt() {
     return vmNumGt;
   }
 
 
-  public void setVmNumGt(Double vmNumGt) {
+  public void setVmNumGt(Integer vmNumGt) {
     this.vmNumGt = vmNumGt;
   }
 
 
-  public ClusterWhereInput vmNumGte(Double vmNumGte) {
+  public ClusterWhereInput vmNumGte(Integer vmNumGte) {
     
     this.vmNumGte = vmNumGte;
     return this;
@@ -15428,25 +15428,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGte() {
+  public Integer getVmNumGte() {
     return vmNumGte;
   }
 
 
-  public void setVmNumGte(Double vmNumGte) {
+  public void setVmNumGte(Integer vmNumGte) {
     this.vmNumGte = vmNumGte;
   }
 
 
-  public ClusterWhereInput vmNumIn(List<Double> vmNumIn) {
+  public ClusterWhereInput vmNumIn(List<Integer> vmNumIn) {
     
     this.vmNumIn = vmNumIn;
     return this;
   }
 
-  public ClusterWhereInput addVmNumInItem(Double vmNumInItem) {
+  public ClusterWhereInput addVmNumInItem(Integer vmNumInItem) {
     if (this.vmNumIn == null) {
-      this.vmNumIn = new ArrayList<Double>();
+      this.vmNumIn = new ArrayList<Integer>();
     }
     this.vmNumIn.add(vmNumInItem);
     return this;
@@ -15459,17 +15459,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumIn() {
+  public List<Integer> getVmNumIn() {
     return vmNumIn;
   }
 
 
-  public void setVmNumIn(List<Double> vmNumIn) {
+  public void setVmNumIn(List<Integer> vmNumIn) {
     this.vmNumIn = vmNumIn;
   }
 
 
-  public ClusterWhereInput vmNumLt(Double vmNumLt) {
+  public ClusterWhereInput vmNumLt(Integer vmNumLt) {
     
     this.vmNumLt = vmNumLt;
     return this;
@@ -15482,17 +15482,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLt() {
+  public Integer getVmNumLt() {
     return vmNumLt;
   }
 
 
-  public void setVmNumLt(Double vmNumLt) {
+  public void setVmNumLt(Integer vmNumLt) {
     this.vmNumLt = vmNumLt;
   }
 
 
-  public ClusterWhereInput vmNumLte(Double vmNumLte) {
+  public ClusterWhereInput vmNumLte(Integer vmNumLte) {
     
     this.vmNumLte = vmNumLte;
     return this;
@@ -15505,17 +15505,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLte() {
+  public Integer getVmNumLte() {
     return vmNumLte;
   }
 
 
-  public void setVmNumLte(Double vmNumLte) {
+  public void setVmNumLte(Integer vmNumLte) {
     this.vmNumLte = vmNumLte;
   }
 
 
-  public ClusterWhereInput vmNumNot(Double vmNumNot) {
+  public ClusterWhereInput vmNumNot(Integer vmNumNot) {
     
     this.vmNumNot = vmNumNot;
     return this;
@@ -15528,25 +15528,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumNot() {
+  public Integer getVmNumNot() {
     return vmNumNot;
   }
 
 
-  public void setVmNumNot(Double vmNumNot) {
+  public void setVmNumNot(Integer vmNumNot) {
     this.vmNumNot = vmNumNot;
   }
 
 
-  public ClusterWhereInput vmNumNotIn(List<Double> vmNumNotIn) {
+  public ClusterWhereInput vmNumNotIn(List<Integer> vmNumNotIn) {
     
     this.vmNumNotIn = vmNumNotIn;
     return this;
   }
 
-  public ClusterWhereInput addVmNumNotInItem(Double vmNumNotInItem) {
+  public ClusterWhereInput addVmNumNotInItem(Integer vmNumNotInItem) {
     if (this.vmNumNotIn == null) {
-      this.vmNumNotIn = new ArrayList<Double>();
+      this.vmNumNotIn = new ArrayList<Integer>();
     }
     this.vmNumNotIn.add(vmNumNotInItem);
     return this;
@@ -15559,12 +15559,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumNotIn() {
+  public List<Integer> getVmNumNotIn() {
     return vmNumNotIn;
   }
 
 
-  public void setVmNumNotIn(List<Double> vmNumNotIn) {
+  public void setVmNumNotIn(List<Integer> vmNumNotIn) {
     this.vmNumNotIn = vmNumNotIn;
   }
 

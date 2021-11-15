@@ -7,12 +7,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**consistencyGroupSnapshot** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**consistencyGroupSnapshot** | [**NestedConsistencyGroupSnapshot**](NestedConsistencyGroupSnapshot.md) |  |  [optional]
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
-**iscsiLun** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**iscsiTarget** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**iscsiLun** | [**NestedIscsiLun**](NestedIscsiLun.md) |  |  [optional]
+**iscsiTarget** | [**NestedIscsiTarget**](NestedIscsiTarget.md) |  | 
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreatedAt** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 

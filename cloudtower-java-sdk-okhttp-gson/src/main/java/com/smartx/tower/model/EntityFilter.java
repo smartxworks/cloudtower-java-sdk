@@ -20,10 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.EntityFilterRules;
 import com.smartx.tower.model.EntityType;
 import com.smartx.tower.model.FilterStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedFilterRule;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -42,7 +42,7 @@ public class EntityFilter {
 
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<NameIdPair> clusters = null;
+  private List<NestedCluster> clusters = null;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entity_type";
   @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
@@ -54,7 +54,7 @@ public class EntityFilter {
 
   public static final String SERIALIZED_NAME_EXEC_FAILED_CLUSTER = "exec_failed_cluster";
   @SerializedName(SERIALIZED_NAME_EXEC_FAILED_CLUSTER)
-  private List<NameIdPair> execFailedCluster = null;
+  private List<NestedCluster> execFailedCluster = null;
 
   public static final String SERIALIZED_NAME_FILTER_ERROR = "filter_error";
   @SerializedName(SERIALIZED_NAME_FILTER_ERROR)
@@ -86,7 +86,7 @@ public class EntityFilter {
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
-  private List<EntityFilterRules> rules = new ArrayList<EntityFilterRules>();
+  private List<NestedFilterRule> rules = new ArrayList<NestedFilterRule>();
 
 
   public EntityFilter applyToAllClusters(Boolean applyToAllClusters) {
@@ -112,15 +112,15 @@ public class EntityFilter {
   }
 
 
-  public EntityFilter clusters(List<NameIdPair> clusters) {
+  public EntityFilter clusters(List<NestedCluster> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public EntityFilter addClustersItem(NameIdPair clustersItem) {
+  public EntityFilter addClustersItem(NestedCluster clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<NameIdPair>();
+      this.clusters = new ArrayList<NestedCluster>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -133,12 +133,12 @@ public class EntityFilter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getClusters() {
+  public List<NestedCluster> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<NameIdPair> clusters) {
+  public void setClusters(List<NestedCluster> clusters) {
     this.clusters = clusters;
   }
 
@@ -194,15 +194,15 @@ public class EntityFilter {
   }
 
 
-  public EntityFilter execFailedCluster(List<NameIdPair> execFailedCluster) {
+  public EntityFilter execFailedCluster(List<NestedCluster> execFailedCluster) {
     
     this.execFailedCluster = execFailedCluster;
     return this;
   }
 
-  public EntityFilter addExecFailedClusterItem(NameIdPair execFailedClusterItem) {
+  public EntityFilter addExecFailedClusterItem(NestedCluster execFailedClusterItem) {
     if (this.execFailedCluster == null) {
-      this.execFailedCluster = new ArrayList<NameIdPair>();
+      this.execFailedCluster = new ArrayList<NestedCluster>();
     }
     this.execFailedCluster.add(execFailedClusterItem);
     return this;
@@ -215,12 +215,12 @@ public class EntityFilter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getExecFailedCluster() {
+  public List<NestedCluster> getExecFailedCluster() {
     return execFailedCluster;
   }
 
 
-  public void setExecFailedCluster(List<NameIdPair> execFailedCluster) {
+  public void setExecFailedCluster(List<NestedCluster> execFailedCluster) {
     this.execFailedCluster = execFailedCluster;
   }
 
@@ -396,13 +396,13 @@ public class EntityFilter {
   }
 
 
-  public EntityFilter rules(List<EntityFilterRules> rules) {
+  public EntityFilter rules(List<NestedFilterRule> rules) {
     
     this.rules = rules;
     return this;
   }
 
-  public EntityFilter addRulesItem(EntityFilterRules rulesItem) {
+  public EntityFilter addRulesItem(NestedFilterRule rulesItem) {
     this.rules.add(rulesItem);
     return this;
   }
@@ -414,12 +414,12 @@ public class EntityFilter {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EntityFilterRules> getRules() {
+  public List<NestedFilterRule> getRules() {
     return rules;
   }
 
 
-  public void setRules(List<EntityFilterRules> rules) {
+  public void setRules(List<NestedFilterRule> rules) {
     this.rules = rules;
   }
 

@@ -8,27 +8,27 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
-**failureInformation** | [**DiskFailureInformation**](DiskFailureInformation.md) |  |  [optional]
+**failureInformation** | [**NestedDiskFailureInformation**](NestedDiskFailureInformation.md) |  |  [optional]
 **firmware** | **String** |  | 
 **function** | [**DiskFunction**](DiskFunction.md) |  |  [optional]
 **healthStatus** | [**DiskHealthStatus**](DiskHealthStatus.md) |  |  [optional]
 **healthy** | **Boolean** |  | 
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **model** | **String** |  | 
 **mounted** | **Boolean** |  | 
 **name** | **String** |  | 
-**numaNode** | **Double** |  |  [optional]
+**numaNode** | **Integer** |  |  [optional]
 **offline** | **Boolean** |  | 
-**partitions** | [**List&lt;DiskPartitions&gt;**](DiskPartitions.md) |  | 
+**partitions** | [**List&lt;NestedPartition&gt;**](NestedPartition.md) |  | 
 **path** | **String** |  | 
 **persistentMemoryType** | **String** |  |  [optional]
-**physicalSlotOnBrick** | **Double** |  |  [optional]
-**pmemDimms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**physicalSlotOnBrick** | **Integer** |  |  [optional]
+**pmemDimms** | [**List&lt;NestedPmemDimm&gt;**](NestedPmemDimm.md) |  |  [optional]
 **recommendedUsage** | [**DiskUsage**](DiskUsage.md) |  |  [optional]
-**remainingLifePercent** | **Double** |  |  [optional]
+**remainingLifePercent** | **Integer** |  |  [optional]
 **serial** | **String** |  | 
 **size** | **Double** |  | 
 **type** | **DiskType** |  | 

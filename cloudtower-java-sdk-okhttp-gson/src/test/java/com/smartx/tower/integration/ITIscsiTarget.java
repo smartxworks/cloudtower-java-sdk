@@ -7,7 +7,9 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,6 +21,8 @@ public class ITIscsiTarget extends ITBase {
   IscsiTargetApi api = null;
   HashMap<String, Object> payloads = new HashMap<String, Object>();
 
+  Cluster cluster = null;
+
   @DataProvider(name = "iscsiTargetPayload")
   Object[][] data(Method m) {
     Object payload = payloads.get(m.getName());
@@ -26,40 +30,50 @@ public class ITIscsiTarget extends ITBase {
   }
 
   @BeforeClass
-  public void getService() throws IOException {
+  public void getService() throws IOException, ApiException {
     api = new IscsiTargetApi(client);
+    cluster = getData("defaultCluster", Cluster.class);
     // get payloads from resource file
     InputStream stream = getClass().getResourceAsStream("/IscsiTarget.json");
     if (stream == null) {
       return;
     }
     // convert payloads string as map
-    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {}.getType());
+    payloads = gson.fromJson(ITUtils.readInputStream(stream), new TypeToken<HashMap<String, Object>>() {
+    }.getType());
   }
 
-
-  @Test(dataProvider = "iscsiTargetPayload")
-  public void createIscsiTarget(String payload) {
+  @Test()
+  public void createAndUpdateAndDeleteIscsiTarget() throws IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
     try {
       // parse params from json payload
-      List<IscsiTargetCreationParams> params = gson.fromJson(payload, new TypeToken<List<IscsiTargetCreationParams>>() {}.getType());
-      // do some modify to params(optional)
-      List<WithTaskIscsiTarget> result = api.createIscsiTarget(params, contentLanguage);
-      assertThat(result).as("check result of createIscsiTarget").isNotNull();
+      List<IscsiTargetCreationParams> createParams = new ArrayList<IscsiTargetCreationParams>();
+      createParams.add(new IscsiTargetCreationParams().clusterId(cluster.getId()).thinProvision(true).replicaNum(2)
+          .stripeNum(4).stripeSize(262144.0).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
+      List<WithTaskIscsiTarget> createResult = api.createIscsiTarget(createParams, contentLanguage);
+      IscsiTarget target = createResult.get(0).getData();
+      waitForResourceCreation(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
+          api, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
+          }.getClass(), GetIscsiTargetsRequestBody.class);
+      assertThat(createResult).as("check result of createIscsiTarget").isNotNull();
+      IscsiTargetUpdationParams updateParams = new IscsiTargetUpdationParams()
+          .where(new IscsiTargetWhereInput().id(target.getId()))
+          .data(new IscsiTargetCommonParams().iops(target.getIops()));
+      List<WithTaskIscsiTarget> updateResult = api.updateIscsiTarget(updateParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
+          api, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
+          }.getClass(), GetIscsiTargetsRequestBody.class);
+      assertThat(updateResult).as("check result of updateIscsiTarget").isNotNull();
+      List<WithTaskDeleteIscsiTarget> deleteResult = api.deleteIscsiTarget(
+          new IscsiTargetDeletionParams().where(new IscsiTargetWhereInput().id(target.getId())), contentLanguage);
+      waitForResourceDeletion(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
+          api, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
+          }.getClass(), GetIscsiTargetsRequestBody.class);
+      assertThat(deleteResult).as("check result of deleteIscsiTarget").isNotNull();
     } catch (ApiException e) {
-      assertThat(true).as(e.getResponseBody()).isFalse();
-    }
-  }
-
-  @Test(dataProvider = "iscsiTargetPayload")
-  public void deleteIscsiTarget(String payload) {
-    try {
-      // parse params from json payload
-      IscsiTargetDeletionParams params = gson.fromJson(payload, new TypeToken<IscsiTargetDeletionParams>() {}.getType());
-      // do some modify to params(optional)
-      List<WithTaskDeleteIscsiTarget> result = api.deleteIscsiTarget(params, contentLanguage);
-      assertThat(result).as("check result of deleteIscsiTarget").isNotNull();
-    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -68,11 +82,14 @@ public class ITIscsiTarget extends ITBase {
   public void getIscsiTargets(String payload) {
     try {
       // parse params from json payload
-      GetIscsiTargetsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiTargetsRequestBody>() {}.getType());
+      GetIscsiTargetsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiTargetsRequestBody>() {
+      }.getType());
       // do some modify to params(optional)
       List<IscsiTarget> result = api.getIscsiTargets(params, contentLanguage);
       assertThat(result).as("check result of getIscsiTargets").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -81,26 +98,16 @@ public class ITIscsiTarget extends ITBase {
   public void getIscsiTargetsConnection(String payload) {
     try {
       // parse params from json payload
-      GetIscsiTargetsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiTargetsConnectionRequestBody>() {}.getType());
+      GetIscsiTargetsConnectionRequestBody params = gson.fromJson(payload,
+          new TypeToken<GetIscsiTargetsConnectionRequestBody>() {
+          }.getType());
       // do some modify to params(optional)
       IscsiTargetConnection result = api.getIscsiTargetsConnection(params, contentLanguage);
       assertThat(result).as("check result of getIscsiTargetsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
-
-  @Test(dataProvider = "iscsiTargetPayload")
-  public void updateIscsiTarget(String payload) {
-    try {
-      // parse params from json payload
-      IscsiTargetUpdationParams params = gson.fromJson(payload, new TypeToken<IscsiTargetUpdationParams>() {}.getType());
-      // do some modify to params(optional)
-      List<WithTaskIscsiTarget> result = api.updateIscsiTarget(params, contentLanguage);
-      assertThat(result).as("check result of updateIscsiTarget").isNotNull();
-    } catch (ApiException e) {
-      assertThat(true).as(e.getResponseBody()).isFalse();
-    }
-  }
-
 }

@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.DiscoveredHostDimms;
-import com.smartx.tower.model.DiscoveredHostDisks;
-import com.smartx.tower.model.DiscoveredHostIfaces;
+import com.smartx.tower.model.NestedDiscoveredHostDimms;
+import com.smartx.tower.model.NestedDiscoveredHostDisk;
+import com.smartx.tower.model.NestedDiscoveredHostIface;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -45,11 +45,11 @@ public class DiscoveredHost {
 
   public static final String SERIALIZED_NAME_DIMMS = "dimms";
   @SerializedName(SERIALIZED_NAME_DIMMS)
-  private List<DiscoveredHostDimms> dimms = null;
+  private List<NestedDiscoveredHostDimms> dimms = null;
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<DiscoveredHostDisks> disks = new ArrayList<DiscoveredHostDisks>();
+  private List<NestedDiscoveredHostDisk> disks = new ArrayList<NestedDiscoveredHostDisk>();
 
   public static final String SERIALIZED_NAME_HOST_IP = "host_ip";
   @SerializedName(SERIALIZED_NAME_HOST_IP)
@@ -65,7 +65,7 @@ public class DiscoveredHost {
 
   public static final String SERIALIZED_NAME_IFACES = "ifaces";
   @SerializedName(SERIALIZED_NAME_IFACES)
-  private List<DiscoveredHostIfaces> ifaces = new ArrayList<DiscoveredHostIfaces>();
+  private List<NestedDiscoveredHostIface> ifaces = new ArrayList<NestedDiscoveredHostIface>();
 
   public static final String SERIALIZED_NAME_IPMI_IP = "ipmi_ip";
   @SerializedName(SERIALIZED_NAME_IPMI_IP)
@@ -85,7 +85,7 @@ public class DiscoveredHost {
 
   public static final String SERIALIZED_NAME_SOCKETS = "sockets";
   @SerializedName(SERIALIZED_NAME_SOCKETS)
-  private Double sockets;
+  private Integer sockets;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -138,15 +138,15 @@ public class DiscoveredHost {
   }
 
 
-  public DiscoveredHost dimms(List<DiscoveredHostDimms> dimms) {
+  public DiscoveredHost dimms(List<NestedDiscoveredHostDimms> dimms) {
     
     this.dimms = dimms;
     return this;
   }
 
-  public DiscoveredHost addDimmsItem(DiscoveredHostDimms dimmsItem) {
+  public DiscoveredHost addDimmsItem(NestedDiscoveredHostDimms dimmsItem) {
     if (this.dimms == null) {
-      this.dimms = new ArrayList<DiscoveredHostDimms>();
+      this.dimms = new ArrayList<NestedDiscoveredHostDimms>();
     }
     this.dimms.add(dimmsItem);
     return this;
@@ -159,23 +159,23 @@ public class DiscoveredHost {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<DiscoveredHostDimms> getDimms() {
+  public List<NestedDiscoveredHostDimms> getDimms() {
     return dimms;
   }
 
 
-  public void setDimms(List<DiscoveredHostDimms> dimms) {
+  public void setDimms(List<NestedDiscoveredHostDimms> dimms) {
     this.dimms = dimms;
   }
 
 
-  public DiscoveredHost disks(List<DiscoveredHostDisks> disks) {
+  public DiscoveredHost disks(List<NestedDiscoveredHostDisk> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public DiscoveredHost addDisksItem(DiscoveredHostDisks disksItem) {
+  public DiscoveredHost addDisksItem(NestedDiscoveredHostDisk disksItem) {
     this.disks.add(disksItem);
     return this;
   }
@@ -187,12 +187,12 @@ public class DiscoveredHost {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<DiscoveredHostDisks> getDisks() {
+  public List<NestedDiscoveredHostDisk> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<DiscoveredHostDisks> disks) {
+  public void setDisks(List<NestedDiscoveredHostDisk> disks) {
     this.disks = disks;
   }
 
@@ -266,13 +266,13 @@ public class DiscoveredHost {
   }
 
 
-  public DiscoveredHost ifaces(List<DiscoveredHostIfaces> ifaces) {
+  public DiscoveredHost ifaces(List<NestedDiscoveredHostIface> ifaces) {
     
     this.ifaces = ifaces;
     return this;
   }
 
-  public DiscoveredHost addIfacesItem(DiscoveredHostIfaces ifacesItem) {
+  public DiscoveredHost addIfacesItem(NestedDiscoveredHostIface ifacesItem) {
     this.ifaces.add(ifacesItem);
     return this;
   }
@@ -284,12 +284,12 @@ public class DiscoveredHost {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<DiscoveredHostIfaces> getIfaces() {
+  public List<NestedDiscoveredHostIface> getIfaces() {
     return ifaces;
   }
 
 
-  public void setIfaces(List<DiscoveredHostIfaces> ifaces) {
+  public void setIfaces(List<NestedDiscoveredHostIface> ifaces) {
     this.ifaces = ifaces;
   }
 
@@ -386,7 +386,7 @@ public class DiscoveredHost {
   }
 
 
-  public DiscoveredHost sockets(Double sockets) {
+  public DiscoveredHost sockets(Integer sockets) {
     
     this.sockets = sockets;
     return this;
@@ -399,12 +399,12 @@ public class DiscoveredHost {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSockets() {
+  public Integer getSockets() {
     return sockets;
   }
 
 
-  public void setSockets(Double sockets) {
+  public void setSockets(Integer sockets) {
     this.sockets = sockets;
   }
 

@@ -47,6 +47,8 @@ public class ITUser extends ITBase {
       List<WithTaskUser> result = api.createUser(params, contentLanguage);
       assertThat(result).as("check result of createUser").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITUser extends ITBase {
       List<WithTaskDeleteUser> result = api.deleteUser(params, contentLanguage);
       assertThat(result).as("check result of deleteUser").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITUser extends ITBase {
       List<User> result = api.getUsers(params, contentLanguage);
       assertThat(result).as("check result of getUsers").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITUser extends ITBase {
       UserConnection result = api.getUsersConnection(params, contentLanguage);
       assertThat(result).as("check result of getUsersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITUser extends ITBase {
       WithTaskTokenString result = api.login(params, contentLanguage);
       assertThat(result).as("check result of login").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITUser extends ITBase {
       List<WithTaskUser> result = api.updateUser(params, contentLanguage);
       assertThat(result).as("check result of updateUser").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

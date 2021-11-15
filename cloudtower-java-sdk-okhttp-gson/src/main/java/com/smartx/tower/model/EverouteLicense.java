@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.LicenseType;
+import com.smartx.tower.model.NestedDeploy;
 import com.smartx.tower.model.SoftwareEdition;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -34,7 +34,7 @@ import java.io.IOException;
 public class EverouteLicense {
   public static final String SERIALIZED_NAME_CLOUD_TOWER = "cloud_tower";
   @SerializedName(SERIALIZED_NAME_CLOUD_TOWER)
-  private BrickTopoPowers cloudTower;
+  private NestedDeploy cloudTower;
 
   public static final String SERIALIZED_NAME_EXPIRE_DATE = "expire_date";
   @SerializedName(SERIALIZED_NAME_EXPIRE_DATE)
@@ -50,7 +50,7 @@ public class EverouteLicense {
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM = "max_socket_num";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM)
-  private Double maxSocketNum;
+  private Integer maxSocketNum;
 
   public static final String SERIALIZED_NAME_SIGN_DATE = "sign_date";
   @SerializedName(SERIALIZED_NAME_SIGN_DATE)
@@ -65,7 +65,7 @@ public class EverouteLicense {
   private LicenseType type;
 
 
-  public EverouteLicense cloudTower(BrickTopoPowers cloudTower) {
+  public EverouteLicense cloudTower(NestedDeploy cloudTower) {
     
     this.cloudTower = cloudTower;
     return this;
@@ -78,12 +78,12 @@ public class EverouteLicense {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public BrickTopoPowers getCloudTower() {
+  public NestedDeploy getCloudTower() {
     return cloudTower;
   }
 
 
-  public void setCloudTower(BrickTopoPowers cloudTower) {
+  public void setCloudTower(NestedDeploy cloudTower) {
     this.cloudTower = cloudTower;
   }
 
@@ -157,7 +157,7 @@ public class EverouteLicense {
   }
 
 
-  public EverouteLicense maxSocketNum(Double maxSocketNum) {
+  public EverouteLicense maxSocketNum(Integer maxSocketNum) {
     
     this.maxSocketNum = maxSocketNum;
     return this;
@@ -170,12 +170,12 @@ public class EverouteLicense {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMaxSocketNum() {
+  public Integer getMaxSocketNum() {
     return maxSocketNum;
   }
 
 
-  public void setMaxSocketNum(Double maxSocketNum) {
+  public void setMaxSocketNum(Integer maxSocketNum) {
     this.maxSocketNum = maxSocketNum;
   }
 

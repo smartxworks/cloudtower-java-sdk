@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **username** | **String** |  |  [optional]
 **community** | **String** |  |  [optional]
 **languageCode** | **SnmpLanguageCode** |  | 
-**port** | **Double** |  | 
+**port** | **Integer** |  | 
 **host** | **String** |  | 
 **protocol** | **SnmpProtocol** |  | 
 **version** | **SnmpVersion** |  | 

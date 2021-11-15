@@ -9,15 +9,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **capacity** | **Double** |  | 
 **deviceLocator** | **String** |  | 
-**disk** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**disk** | [**NestedDisk**](NestedDisk.md) |  |  [optional]
 **healthStatus** | [**DiskHealthStatus**](DiskHealthStatus.md) |  |  [optional]
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **id** | **String** |  | 
 **localId** | **String** |  |  [optional]
 **name** | **String** |  | 
-**numaNode** | **Double** |  | 
+**numaNode** | **Integer** |  | 
 **partNumber** | **String** |  | 
-**remainingLifePercent** | **Double** |  |  [optional]
+**remainingLifePercent** | **Integer** |  |  [optional]
 **version** | **String** |  | 
 
 

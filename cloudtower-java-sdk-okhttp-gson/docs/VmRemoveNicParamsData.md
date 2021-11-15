@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nicIndex** | **List&lt;Double&gt;** |  | 
+**nicIndex** | **List&lt;Integer&gt;** |  | 
 
 
 

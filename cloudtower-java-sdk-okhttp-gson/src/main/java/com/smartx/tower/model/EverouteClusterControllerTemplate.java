@@ -31,7 +31,7 @@ import java.io.IOException;
 public class EverouteClusterControllerTemplate {
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
@@ -54,7 +54,7 @@ public class EverouteClusterControllerTemplate {
   private String cluster;
 
 
-  public EverouteClusterControllerTemplate vcpu(Double vcpu) {
+  public EverouteClusterControllerTemplate vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -67,12 +67,12 @@ public class EverouteClusterControllerTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 

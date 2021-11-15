@@ -47,6 +47,8 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       List<WithTaskNvmfNamespaceSnapshot> result = api.createNvmfNamespaceSnapshot(params, contentLanguage);
       assertThat(result).as("check result of createNvmfNamespaceSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       List<WithTaskDeleteNvmfNamespaceSnapshot> result = api.deleteNvmfNamespaceSnapshot(params, contentLanguage);
       assertThat(result).as("check result of deleteNvmfNamespaceSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       List<NvmfNamespaceSnapshot> result = api.getNvmfNamespaceSnapshots(params, contentLanguage);
       assertThat(result).as("check result of getNvmfNamespaceSnapshots").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       NvmfNamespaceSnapshotConnection result = api.getNvmfNamespaceSnapshotsConnection(params, contentLanguage);
       assertThat(result).as("check result of getNvmfNamespaceSnapshotsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

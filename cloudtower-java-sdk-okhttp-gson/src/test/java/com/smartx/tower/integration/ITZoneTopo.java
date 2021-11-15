@@ -47,6 +47,8 @@ public class ITZoneTopo extends ITBase {
       List<ZoneTopo> result = api.getZoneTopoes(params, contentLanguage);
       assertThat(result).as("check result of getZoneTopoes").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITZoneTopo extends ITBase {
       ZoneTopoConnection result = api.getZoneTopoesConnection(params, contentLanguage);
       assertThat(result).as("check result of getZoneTopoesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

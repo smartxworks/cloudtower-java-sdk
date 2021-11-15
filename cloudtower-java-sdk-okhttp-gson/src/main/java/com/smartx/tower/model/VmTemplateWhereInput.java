@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
+import com.smartx.tower.model.ContentLibraryVmTemplateWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.LabelWhereInput;
 import com.smartx.tower.model.VmClockOffset;
@@ -70,6 +71,10 @@ public class VmTemplateWhereInput {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE = "content_library_vm_template";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE)
+  private ContentLibraryVmTemplateWhereInput contentLibraryVmTemplate;
 
   public static final String SERIALIZED_NAME_CPU_MODEL = "cpu_model";
   @SerializedName(SERIALIZED_NAME_CPU_MODEL)
@@ -445,35 +450,35 @@ public class VmTemplateWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_GT = "max_iops_gt";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_GT)
-  private Double maxIopsGt;
+  private Integer maxIopsGt;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_GTE = "max_iops_gte";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_GTE)
-  private Double maxIopsGte;
+  private Integer maxIopsGte;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_IN = "max_iops_in";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_IN)
-  private List<Double> maxIopsIn = null;
+  private List<Integer> maxIopsIn = null;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_LT = "max_iops_lt";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_LT)
-  private Double maxIopsLt;
+  private Integer maxIopsLt;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_LTE = "max_iops_lte";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_LTE)
-  private Double maxIopsLte;
+  private Integer maxIopsLte;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_NOT = "max_iops_not";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT)
-  private Double maxIopsNot;
+  private Integer maxIopsNot;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_NOT_IN = "max_iops_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT_IN)
-  private List<Double> maxIopsNotIn = null;
+  private List<Integer> maxIopsNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -621,35 +626,35 @@ public class VmTemplateWhereInput {
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_VCPU_GT = "vcpu_gt";
   @SerializedName(SERIALIZED_NAME_VCPU_GT)
-  private Double vcpuGt;
+  private Integer vcpuGt;
 
   public static final String SERIALIZED_NAME_VCPU_GTE = "vcpu_gte";
   @SerializedName(SERIALIZED_NAME_VCPU_GTE)
-  private Double vcpuGte;
+  private Integer vcpuGte;
 
   public static final String SERIALIZED_NAME_VCPU_IN = "vcpu_in";
   @SerializedName(SERIALIZED_NAME_VCPU_IN)
-  private List<Double> vcpuIn = null;
+  private List<Integer> vcpuIn = null;
 
   public static final String SERIALIZED_NAME_VCPU_LT = "vcpu_lt";
   @SerializedName(SERIALIZED_NAME_VCPU_LT)
-  private Double vcpuLt;
+  private Integer vcpuLt;
 
   public static final String SERIALIZED_NAME_VCPU_LTE = "vcpu_lte";
   @SerializedName(SERIALIZED_NAME_VCPU_LTE)
-  private Double vcpuLte;
+  private Integer vcpuLte;
 
   public static final String SERIALIZED_NAME_VCPU_NOT = "vcpu_not";
   @SerializedName(SERIALIZED_NAME_VCPU_NOT)
-  private Double vcpuNot;
+  private Integer vcpuNot;
 
   public static final String SERIALIZED_NAME_VCPU_NOT_IN = "vcpu_not_in";
   @SerializedName(SERIALIZED_NAME_VCPU_NOT_IN)
-  private List<Double> vcpuNotIn = null;
+  private List<Integer> vcpuNotIn = null;
 
   public static final String SERIALIZED_NAME_VIDEO_TYPE = "video_type";
   @SerializedName(SERIALIZED_NAME_VIDEO_TYPE)
@@ -921,6 +926,29 @@ public class VmTemplateWhereInput {
 
   public void setCluster(ClusterWhereInput cluster) {
     this.cluster = cluster;
+  }
+
+
+  public VmTemplateWhereInput contentLibraryVmTemplate(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplate) {
+    
+    this.contentLibraryVmTemplate = contentLibraryVmTemplate;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplate
+   * @return contentLibraryVmTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ContentLibraryVmTemplateWhereInput getContentLibraryVmTemplate() {
+    return contentLibraryVmTemplate;
+  }
+
+
+  public void setContentLibraryVmTemplate(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplate) {
+    this.contentLibraryVmTemplate = contentLibraryVmTemplate;
   }
 
 
@@ -3223,7 +3251,7 @@ public class VmTemplateWhereInput {
   }
 
 
-  public VmTemplateWhereInput maxIops(Double maxIops) {
+  public VmTemplateWhereInput maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -3236,17 +3264,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
 
-  public VmTemplateWhereInput maxIopsGt(Double maxIopsGt) {
+  public VmTemplateWhereInput maxIopsGt(Integer maxIopsGt) {
     
     this.maxIopsGt = maxIopsGt;
     return this;
@@ -3259,17 +3287,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsGt() {
+  public Integer getMaxIopsGt() {
     return maxIopsGt;
   }
 
 
-  public void setMaxIopsGt(Double maxIopsGt) {
+  public void setMaxIopsGt(Integer maxIopsGt) {
     this.maxIopsGt = maxIopsGt;
   }
 
 
-  public VmTemplateWhereInput maxIopsGte(Double maxIopsGte) {
+  public VmTemplateWhereInput maxIopsGte(Integer maxIopsGte) {
     
     this.maxIopsGte = maxIopsGte;
     return this;
@@ -3282,25 +3310,25 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsGte() {
+  public Integer getMaxIopsGte() {
     return maxIopsGte;
   }
 
 
-  public void setMaxIopsGte(Double maxIopsGte) {
+  public void setMaxIopsGte(Integer maxIopsGte) {
     this.maxIopsGte = maxIopsGte;
   }
 
 
-  public VmTemplateWhereInput maxIopsIn(List<Double> maxIopsIn) {
+  public VmTemplateWhereInput maxIopsIn(List<Integer> maxIopsIn) {
     
     this.maxIopsIn = maxIopsIn;
     return this;
   }
 
-  public VmTemplateWhereInput addMaxIopsInItem(Double maxIopsInItem) {
+  public VmTemplateWhereInput addMaxIopsInItem(Integer maxIopsInItem) {
     if (this.maxIopsIn == null) {
-      this.maxIopsIn = new ArrayList<Double>();
+      this.maxIopsIn = new ArrayList<Integer>();
     }
     this.maxIopsIn.add(maxIopsInItem);
     return this;
@@ -3313,17 +3341,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxIopsIn() {
+  public List<Integer> getMaxIopsIn() {
     return maxIopsIn;
   }
 
 
-  public void setMaxIopsIn(List<Double> maxIopsIn) {
+  public void setMaxIopsIn(List<Integer> maxIopsIn) {
     this.maxIopsIn = maxIopsIn;
   }
 
 
-  public VmTemplateWhereInput maxIopsLt(Double maxIopsLt) {
+  public VmTemplateWhereInput maxIopsLt(Integer maxIopsLt) {
     
     this.maxIopsLt = maxIopsLt;
     return this;
@@ -3336,17 +3364,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsLt() {
+  public Integer getMaxIopsLt() {
     return maxIopsLt;
   }
 
 
-  public void setMaxIopsLt(Double maxIopsLt) {
+  public void setMaxIopsLt(Integer maxIopsLt) {
     this.maxIopsLt = maxIopsLt;
   }
 
 
-  public VmTemplateWhereInput maxIopsLte(Double maxIopsLte) {
+  public VmTemplateWhereInput maxIopsLte(Integer maxIopsLte) {
     
     this.maxIopsLte = maxIopsLte;
     return this;
@@ -3359,17 +3387,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsLte() {
+  public Integer getMaxIopsLte() {
     return maxIopsLte;
   }
 
 
-  public void setMaxIopsLte(Double maxIopsLte) {
+  public void setMaxIopsLte(Integer maxIopsLte) {
     this.maxIopsLte = maxIopsLte;
   }
 
 
-  public VmTemplateWhereInput maxIopsNot(Double maxIopsNot) {
+  public VmTemplateWhereInput maxIopsNot(Integer maxIopsNot) {
     
     this.maxIopsNot = maxIopsNot;
     return this;
@@ -3382,25 +3410,25 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsNot() {
+  public Integer getMaxIopsNot() {
     return maxIopsNot;
   }
 
 
-  public void setMaxIopsNot(Double maxIopsNot) {
+  public void setMaxIopsNot(Integer maxIopsNot) {
     this.maxIopsNot = maxIopsNot;
   }
 
 
-  public VmTemplateWhereInput maxIopsNotIn(List<Double> maxIopsNotIn) {
+  public VmTemplateWhereInput maxIopsNotIn(List<Integer> maxIopsNotIn) {
     
     this.maxIopsNotIn = maxIopsNotIn;
     return this;
   }
 
-  public VmTemplateWhereInput addMaxIopsNotInItem(Double maxIopsNotInItem) {
+  public VmTemplateWhereInput addMaxIopsNotInItem(Integer maxIopsNotInItem) {
     if (this.maxIopsNotIn == null) {
-      this.maxIopsNotIn = new ArrayList<Double>();
+      this.maxIopsNotIn = new ArrayList<Integer>();
     }
     this.maxIopsNotIn.add(maxIopsNotInItem);
     return this;
@@ -3413,12 +3441,12 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxIopsNotIn() {
+  public List<Integer> getMaxIopsNotIn() {
     return maxIopsNotIn;
   }
 
 
-  public void setMaxIopsNotIn(List<Double> maxIopsNotIn) {
+  public void setMaxIopsNotIn(List<Integer> maxIopsNotIn) {
     this.maxIopsNotIn = maxIopsNotIn;
   }
 
@@ -4331,7 +4359,7 @@ public class VmTemplateWhereInput {
   }
 
 
-  public VmTemplateWhereInput vcpu(Double vcpu) {
+  public VmTemplateWhereInput vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -4344,17 +4372,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
 
-  public VmTemplateWhereInput vcpuGt(Double vcpuGt) {
+  public VmTemplateWhereInput vcpuGt(Integer vcpuGt) {
     
     this.vcpuGt = vcpuGt;
     return this;
@@ -4367,17 +4395,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuGt() {
+  public Integer getVcpuGt() {
     return vcpuGt;
   }
 
 
-  public void setVcpuGt(Double vcpuGt) {
+  public void setVcpuGt(Integer vcpuGt) {
     this.vcpuGt = vcpuGt;
   }
 
 
-  public VmTemplateWhereInput vcpuGte(Double vcpuGte) {
+  public VmTemplateWhereInput vcpuGte(Integer vcpuGte) {
     
     this.vcpuGte = vcpuGte;
     return this;
@@ -4390,25 +4418,25 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuGte() {
+  public Integer getVcpuGte() {
     return vcpuGte;
   }
 
 
-  public void setVcpuGte(Double vcpuGte) {
+  public void setVcpuGte(Integer vcpuGte) {
     this.vcpuGte = vcpuGte;
   }
 
 
-  public VmTemplateWhereInput vcpuIn(List<Double> vcpuIn) {
+  public VmTemplateWhereInput vcpuIn(List<Integer> vcpuIn) {
     
     this.vcpuIn = vcpuIn;
     return this;
   }
 
-  public VmTemplateWhereInput addVcpuInItem(Double vcpuInItem) {
+  public VmTemplateWhereInput addVcpuInItem(Integer vcpuInItem) {
     if (this.vcpuIn == null) {
-      this.vcpuIn = new ArrayList<Double>();
+      this.vcpuIn = new ArrayList<Integer>();
     }
     this.vcpuIn.add(vcpuInItem);
     return this;
@@ -4421,17 +4449,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVcpuIn() {
+  public List<Integer> getVcpuIn() {
     return vcpuIn;
   }
 
 
-  public void setVcpuIn(List<Double> vcpuIn) {
+  public void setVcpuIn(List<Integer> vcpuIn) {
     this.vcpuIn = vcpuIn;
   }
 
 
-  public VmTemplateWhereInput vcpuLt(Double vcpuLt) {
+  public VmTemplateWhereInput vcpuLt(Integer vcpuLt) {
     
     this.vcpuLt = vcpuLt;
     return this;
@@ -4444,17 +4472,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuLt() {
+  public Integer getVcpuLt() {
     return vcpuLt;
   }
 
 
-  public void setVcpuLt(Double vcpuLt) {
+  public void setVcpuLt(Integer vcpuLt) {
     this.vcpuLt = vcpuLt;
   }
 
 
-  public VmTemplateWhereInput vcpuLte(Double vcpuLte) {
+  public VmTemplateWhereInput vcpuLte(Integer vcpuLte) {
     
     this.vcpuLte = vcpuLte;
     return this;
@@ -4467,17 +4495,17 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuLte() {
+  public Integer getVcpuLte() {
     return vcpuLte;
   }
 
 
-  public void setVcpuLte(Double vcpuLte) {
+  public void setVcpuLte(Integer vcpuLte) {
     this.vcpuLte = vcpuLte;
   }
 
 
-  public VmTemplateWhereInput vcpuNot(Double vcpuNot) {
+  public VmTemplateWhereInput vcpuNot(Integer vcpuNot) {
     
     this.vcpuNot = vcpuNot;
     return this;
@@ -4490,25 +4518,25 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuNot() {
+  public Integer getVcpuNot() {
     return vcpuNot;
   }
 
 
-  public void setVcpuNot(Double vcpuNot) {
+  public void setVcpuNot(Integer vcpuNot) {
     this.vcpuNot = vcpuNot;
   }
 
 
-  public VmTemplateWhereInput vcpuNotIn(List<Double> vcpuNotIn) {
+  public VmTemplateWhereInput vcpuNotIn(List<Integer> vcpuNotIn) {
     
     this.vcpuNotIn = vcpuNotIn;
     return this;
   }
 
-  public VmTemplateWhereInput addVcpuNotInItem(Double vcpuNotInItem) {
+  public VmTemplateWhereInput addVcpuNotInItem(Integer vcpuNotInItem) {
     if (this.vcpuNotIn == null) {
-      this.vcpuNotIn = new ArrayList<Double>();
+      this.vcpuNotIn = new ArrayList<Integer>();
     }
     this.vcpuNotIn.add(vcpuNotInItem);
     return this;
@@ -4521,12 +4549,12 @@ public class VmTemplateWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVcpuNotIn() {
+  public List<Integer> getVcpuNotIn() {
     return vcpuNotIn;
   }
 
 
-  public void setVcpuNotIn(List<Double> vcpuNotIn) {
+  public void setVcpuNotIn(List<Integer> vcpuNotIn) {
     this.vcpuNotIn = vcpuNotIn;
   }
 
@@ -4932,6 +4960,7 @@ public class VmTemplateWhereInput {
         Objects.equals(this.cloudInitSupported, vmTemplateWhereInput.cloudInitSupported) &&
         Objects.equals(this.cloudInitSupportedNot, vmTemplateWhereInput.cloudInitSupportedNot) &&
         Objects.equals(this.cluster, vmTemplateWhereInput.cluster) &&
+        Objects.equals(this.contentLibraryVmTemplate, vmTemplateWhereInput.contentLibraryVmTemplate) &&
         Objects.equals(this.cpuModel, vmTemplateWhereInput.cpuModel) &&
         Objects.equals(this.cpuModelContains, vmTemplateWhereInput.cpuModelContains) &&
         Objects.equals(this.cpuModelEndsWith, vmTemplateWhereInput.cpuModelEndsWith) &&
@@ -5101,7 +5130,7 @@ public class VmTemplateWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeContains, videoTypeEndsWith, videoTypeGt, videoTypeGte, videoTypeIn, videoTypeLt, videoTypeLte, videoTypeNot, videoTypeNotContains, videoTypeNotEndsWith, videoTypeNotIn, videoTypeNotStartsWith, videoTypeStartsWith, winOpt, winOptNot);
+    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, contentLibraryVmTemplate, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeContains, videoTypeEndsWith, videoTypeGt, videoTypeGte, videoTypeIn, videoTypeLt, videoTypeLte, videoTypeNot, videoTypeNotContains, videoTypeNotEndsWith, videoTypeNotIn, videoTypeNotStartsWith, videoTypeStartsWith, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5123,6 +5152,7 @@ public class VmTemplateWhereInput {
     sb.append("    cloudInitSupported: ").append(toIndentedString(cloudInitSupported)).append("\n");
     sb.append("    cloudInitSupportedNot: ").append(toIndentedString(cloudInitSupportedNot)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+    sb.append("    contentLibraryVmTemplate: ").append(toIndentedString(contentLibraryVmTemplate)).append("\n");
     sb.append("    cpuModel: ").append(toIndentedString(cpuModel)).append("\n");
     sb.append("    cpuModelContains: ").append(toIndentedString(cpuModelContains)).append("\n");
     sb.append("    cpuModelEndsWith: ").append(toIndentedString(cpuModelEndsWith)).append("\n");

@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **startAt** | **String** |  |  [optional]
-**retain** | **Double** |  | 
+**retain** | **Integer** |  | 
 **period** | **String** |  | 
 **enabled** | **Boolean** |  |  [optional]
 

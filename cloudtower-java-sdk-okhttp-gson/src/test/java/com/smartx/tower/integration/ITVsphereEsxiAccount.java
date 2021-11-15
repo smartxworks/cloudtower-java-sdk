@@ -47,6 +47,8 @@ public class ITVsphereEsxiAccount extends ITBase {
       List<VsphereEsxiAccount> result = api.getVsphereEsxiAccounts(params, contentLanguage);
       assertThat(result).as("check result of getVsphereEsxiAccounts").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVsphereEsxiAccount extends ITBase {
       VsphereEsxiAccountConnection result = api.getVsphereEsxiAccountsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVsphereEsxiAccountsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

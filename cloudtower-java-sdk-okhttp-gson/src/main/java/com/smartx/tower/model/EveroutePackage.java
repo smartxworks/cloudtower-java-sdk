@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
 import com.smartx.tower.model.Architecture;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedUploadTask;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -67,7 +67,7 @@ public class EveroutePackage {
 
   public static final String SERIALIZED_NAME_UPLOAD_TASK = "upload_task";
   @SerializedName(SERIALIZED_NAME_UPLOAD_TASK)
-  private AlertAlertRule uploadTask;
+  private NestedUploadTask uploadTask;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -258,7 +258,7 @@ public class EveroutePackage {
   }
 
 
-  public EveroutePackage uploadTask(AlertAlertRule uploadTask) {
+  public EveroutePackage uploadTask(NestedUploadTask uploadTask) {
     
     this.uploadTask = uploadTask;
     return this;
@@ -271,12 +271,12 @@ public class EveroutePackage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getUploadTask() {
+  public NestedUploadTask getUploadTask() {
     return uploadTask;
   }
 
 
-  public void setUploadTask(AlertAlertRule uploadTask) {
+  public void setUploadTask(NestedUploadTask uploadTask) {
     this.uploadTask = uploadTask;
   }
 

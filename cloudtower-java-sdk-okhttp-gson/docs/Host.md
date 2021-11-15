@@ -10,68 +10,68 @@ Name | Type | Description | Notes
 **accessIp** | **String** |  |  [optional]
 **allocatableMemoryBytes** | **Double** |  | 
 **chunkId** | **String** |  | 
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **compatibleCpuModels** | **List&lt;String&gt;** |  | 
 **cpuBrand** | **String** |  | 
 **cpuFanSpeed** | **List&lt;Double&gt;** |  | 
 **cpuFanSpeedUnit** | [**CpuFanSpeedUnit**](CpuFanSpeedUnit.md) |  |  [optional]
 **cpuHzPerCore** | **Double** |  | 
 **cpuModel** | **String** |  | 
-**cpuTemperatureCelsius** | **List&lt;Double&gt;** |  | 
+**cpuTemperatureCelsius** | **List&lt;Integer&gt;** |  | 
 **dataIp** | **String** |  |  [optional]
-**disks** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**disks** | [**List&lt;NestedDisk&gt;**](NestedDisk.md) |  |  [optional]
 **failureDataSpace** | **Double** |  | 
 **hddDataCapacity** | **Double** |  | 
-**hddDiskCount** | **Double** |  | 
+**hddDiskCount** | **Integer** |  | 
 **id** | **String** |  | 
-**ipmi** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
+**ipmi** | [**NestedIpmi**](NestedIpmi.md) |  |  [optional]
 **isOsInRaid1** | **Boolean** |  |  [optional]
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **lsmCapDiskSafeUmount** | **Boolean** |  | 
 **managementIp** | **String** |  | 
 **model** | **String** |  | 
 **name** | **String** |  | 
 **nestedVirtualization** | **Boolean** |  | 
-**nicCount** | **Double** |  | 
-**nics** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**nicCount** | **Integer** |  | 
+**nics** | [**List&lt;NestedNic&gt;**](NestedNic.md) |  |  [optional]
 **nodeTopoLocalId** | **String** |  |  [optional]
 **osMemoryBytes** | **Double** |  | 
 **osVersion** | **String** |  |  [optional]
 **pmemDimmCapacity** | **Double** |  | 
-**pmemDimmCount** | **Double** |  | 
-**pmemDimms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**pmemDiskCount** | **Double** |  | 
-**provisionedCpuCores** | **Double** |  | 
+**pmemDimmCount** | **Integer** |  | 
+**pmemDimms** | [**List&lt;NestedPmemDimm&gt;**](NestedPmemDimm.md) |  |  [optional]
+**pmemDiskCount** | **Integer** |  | 
+**provisionedCpuCores** | **Integer** |  | 
 **provisionedMemoryBytes** | **Double** |  | 
 **runningPauseVmMemoryBytes** | **Double** |  | 
-**runningVmNum** | **Double** |  |  [optional]
+**runningVmNum** | **Integer** |  |  [optional]
 **scvmCpu** | **Double** |  |  [optional]
 **scvmMemory** | **Double** |  |  [optional]
 **scvmName** | **String** |  |  [optional]
 **serial** | **String** |  |  [optional]
 **ssdDataCapacity** | **Double** |  | 
-**ssdDiskCount** | **Double** |  | 
+**ssdDiskCount** | **Integer** |  | 
 **state** | **HostState** |  | 
 **status** | **HostStatus** |  | 
-**stoppedVmNum** | **Double** |  |  [optional]
-**suspendedVmNum** | **Double** |  |  [optional]
+**stoppedVmNum** | **Integer** |  |  [optional]
+**suspendedVmNum** | **Integer** |  |  [optional]
 **totalCacheCapacity** | **Double** |  |  [optional]
-**totalCpuCores** | **Double** |  | 
+**totalCpuCores** | **Integer** |  | 
 **totalCpuHz** | **Double** |  | 
-**totalCpuSockets** | **Double** |  |  [optional]
+**totalCpuSockets** | **Integer** |  |  [optional]
 **totalDataCapacity** | **Double** |  | 
 **totalMemoryBytes** | **Double** |  | 
-**usbDevices** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**usbDevices** | [**List&lt;NestedUsbDevice&gt;**](NestedUsbDevice.md) |  |  [optional]
 **usedCpuHz** | **Double** |  |  [optional]
 **usedDataSpace** | **Double** |  | 
 **usedMemoryBytes** | **Double** |  |  [optional]
-**vmNum** | **Double** |  |  [optional]
+**vmNum** | **Integer** |  |  [optional]
 **vmotionIp** | **String** |  |  [optional]
-**vms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**vsphereEsxiAccount** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
+**vms** | [**List&lt;NestedVm&gt;**](NestedVm.md) |  |  [optional]
+**vsphereEsxiAccount** | [**NestedVsphereEsxiAccount**](NestedVsphereEsxiAccount.md) |  |  [optional]
 **withFasterSsdAsCache** | **Boolean** |  |  [optional]
-**zone** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
+**zone** | [**NestedZone**](NestedZone.md) |  |  [optional]
 
 
 

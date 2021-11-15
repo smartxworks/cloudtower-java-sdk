@@ -409,35 +409,35 @@ public class NfsInodeWhereInput {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
-  private Double snapshotNum;
+  private Integer snapshotNum;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_GT = "snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_GT)
-  private Double snapshotNumGt;
+  private Integer snapshotNumGt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_GTE = "snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_GTE)
-  private Double snapshotNumGte;
+  private Integer snapshotNumGte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_IN = "snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_IN)
-  private List<Double> snapshotNumIn = null;
+  private List<Integer> snapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_LT = "snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_LT)
-  private Double snapshotNumLt;
+  private Integer snapshotNumLt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_LTE = "snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_LTE)
-  private Double snapshotNumLte;
+  private Integer snapshotNumLte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_NOT = "snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT)
-  private Double snapshotNumNot;
+  private Integer snapshotNumNot;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN = "snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> snapshotNumNotIn = null;
+  private List<Integer> snapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
@@ -2763,7 +2763,7 @@ public class NfsInodeWhereInput {
   }
 
 
-  public NfsInodeWhereInput snapshotNum(Double snapshotNum) {
+  public NfsInodeWhereInput snapshotNum(Integer snapshotNum) {
     
     this.snapshotNum = snapshotNum;
     return this;
@@ -2776,17 +2776,17 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNum() {
+  public Integer getSnapshotNum() {
     return snapshotNum;
   }
 
 
-  public void setSnapshotNum(Double snapshotNum) {
+  public void setSnapshotNum(Integer snapshotNum) {
     this.snapshotNum = snapshotNum;
   }
 
 
-  public NfsInodeWhereInput snapshotNumGt(Double snapshotNumGt) {
+  public NfsInodeWhereInput snapshotNumGt(Integer snapshotNumGt) {
     
     this.snapshotNumGt = snapshotNumGt;
     return this;
@@ -2799,17 +2799,17 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumGt() {
+  public Integer getSnapshotNumGt() {
     return snapshotNumGt;
   }
 
 
-  public void setSnapshotNumGt(Double snapshotNumGt) {
+  public void setSnapshotNumGt(Integer snapshotNumGt) {
     this.snapshotNumGt = snapshotNumGt;
   }
 
 
-  public NfsInodeWhereInput snapshotNumGte(Double snapshotNumGte) {
+  public NfsInodeWhereInput snapshotNumGte(Integer snapshotNumGte) {
     
     this.snapshotNumGte = snapshotNumGte;
     return this;
@@ -2822,25 +2822,25 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumGte() {
+  public Integer getSnapshotNumGte() {
     return snapshotNumGte;
   }
 
 
-  public void setSnapshotNumGte(Double snapshotNumGte) {
+  public void setSnapshotNumGte(Integer snapshotNumGte) {
     this.snapshotNumGte = snapshotNumGte;
   }
 
 
-  public NfsInodeWhereInput snapshotNumIn(List<Double> snapshotNumIn) {
+  public NfsInodeWhereInput snapshotNumIn(List<Integer> snapshotNumIn) {
     
     this.snapshotNumIn = snapshotNumIn;
     return this;
   }
 
-  public NfsInodeWhereInput addSnapshotNumInItem(Double snapshotNumInItem) {
+  public NfsInodeWhereInput addSnapshotNumInItem(Integer snapshotNumInItem) {
     if (this.snapshotNumIn == null) {
-      this.snapshotNumIn = new ArrayList<Double>();
+      this.snapshotNumIn = new ArrayList<Integer>();
     }
     this.snapshotNumIn.add(snapshotNumInItem);
     return this;
@@ -2853,17 +2853,17 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotNumIn() {
+  public List<Integer> getSnapshotNumIn() {
     return snapshotNumIn;
   }
 
 
-  public void setSnapshotNumIn(List<Double> snapshotNumIn) {
+  public void setSnapshotNumIn(List<Integer> snapshotNumIn) {
     this.snapshotNumIn = snapshotNumIn;
   }
 
 
-  public NfsInodeWhereInput snapshotNumLt(Double snapshotNumLt) {
+  public NfsInodeWhereInput snapshotNumLt(Integer snapshotNumLt) {
     
     this.snapshotNumLt = snapshotNumLt;
     return this;
@@ -2876,17 +2876,17 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumLt() {
+  public Integer getSnapshotNumLt() {
     return snapshotNumLt;
   }
 
 
-  public void setSnapshotNumLt(Double snapshotNumLt) {
+  public void setSnapshotNumLt(Integer snapshotNumLt) {
     this.snapshotNumLt = snapshotNumLt;
   }
 
 
-  public NfsInodeWhereInput snapshotNumLte(Double snapshotNumLte) {
+  public NfsInodeWhereInput snapshotNumLte(Integer snapshotNumLte) {
     
     this.snapshotNumLte = snapshotNumLte;
     return this;
@@ -2899,17 +2899,17 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumLte() {
+  public Integer getSnapshotNumLte() {
     return snapshotNumLte;
   }
 
 
-  public void setSnapshotNumLte(Double snapshotNumLte) {
+  public void setSnapshotNumLte(Integer snapshotNumLte) {
     this.snapshotNumLte = snapshotNumLte;
   }
 
 
-  public NfsInodeWhereInput snapshotNumNot(Double snapshotNumNot) {
+  public NfsInodeWhereInput snapshotNumNot(Integer snapshotNumNot) {
     
     this.snapshotNumNot = snapshotNumNot;
     return this;
@@ -2922,25 +2922,25 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumNot() {
+  public Integer getSnapshotNumNot() {
     return snapshotNumNot;
   }
 
 
-  public void setSnapshotNumNot(Double snapshotNumNot) {
+  public void setSnapshotNumNot(Integer snapshotNumNot) {
     this.snapshotNumNot = snapshotNumNot;
   }
 
 
-  public NfsInodeWhereInput snapshotNumNotIn(List<Double> snapshotNumNotIn) {
+  public NfsInodeWhereInput snapshotNumNotIn(List<Integer> snapshotNumNotIn) {
     
     this.snapshotNumNotIn = snapshotNumNotIn;
     return this;
   }
 
-  public NfsInodeWhereInput addSnapshotNumNotInItem(Double snapshotNumNotInItem) {
+  public NfsInodeWhereInput addSnapshotNumNotInItem(Integer snapshotNumNotInItem) {
     if (this.snapshotNumNotIn == null) {
-      this.snapshotNumNotIn = new ArrayList<Double>();
+      this.snapshotNumNotIn = new ArrayList<Integer>();
     }
     this.snapshotNumNotIn.add(snapshotNumNotInItem);
     return this;
@@ -2953,12 +2953,12 @@ public class NfsInodeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotNumNotIn() {
+  public List<Integer> getSnapshotNumNotIn() {
     return snapshotNumNotIn;
   }
 
 
-  public void setSnapshotNumNotIn(List<Double> snapshotNumNotIn) {
+  public void setSnapshotNumNotIn(List<Integer> snapshotNumNotIn) {
     this.snapshotNumNotIn = snapshotNumNotIn;
   }
 

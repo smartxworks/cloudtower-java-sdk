@@ -7,14 +7,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**brickTopo** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**clusterTopo** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**brickTopo** | [**NestedBrickTopo**](NestedBrickTopo.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**clusterTopo** | [**NestedClusterTopo**](NestedClusterTopo.md) |  |  [optional]
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **id** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**position** | [**BrickTopoCapacity**](BrickTopoCapacity.md) |  | 
+**position** | [**NestedPosition**](NestedPosition.md) |  | 
 
 
 

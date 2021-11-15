@@ -20,16 +20,17 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
-import com.smartx.tower.model.DiskFailureInformation;
 import com.smartx.tower.model.DiskFunction;
 import com.smartx.tower.model.DiskHealthStatus;
-import com.smartx.tower.model.DiskPartitions;
 import com.smartx.tower.model.DiskType;
 import com.smartx.tower.model.DiskUsage;
 import com.smartx.tower.model.DiskUsageStatus;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedDiskFailureInformation;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedPartition;
+import com.smartx.tower.model.NestedPmemDimm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -48,7 +49,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_FAILURE_INFORMATION = "failure_information";
   @SerializedName(SERIALIZED_NAME_FAILURE_INFORMATION)
-  private DiskFailureInformation failureInformation;
+  private NestedDiskFailureInformation failureInformation;
 
   public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
   @SerializedName(SERIALIZED_NAME_FIRMWARE)
@@ -68,7 +69,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -76,7 +77,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -96,7 +97,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_NUMA_NODE = "numa_node";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE)
-  private Double numaNode;
+  private Integer numaNode;
 
   public static final String SERIALIZED_NAME_OFFLINE = "offline";
   @SerializedName(SERIALIZED_NAME_OFFLINE)
@@ -104,7 +105,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_PARTITIONS = "partitions";
   @SerializedName(SERIALIZED_NAME_PARTITIONS)
-  private List<DiskPartitions> partitions = new ArrayList<DiskPartitions>();
+  private List<NestedPartition> partitions = new ArrayList<NestedPartition>();
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
@@ -116,11 +117,11 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK = "physical_slot_on_brick";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK)
-  private Double physicalSlotOnBrick;
+  private Integer physicalSlotOnBrick;
 
   public static final String SERIALIZED_NAME_PMEM_DIMMS = "pmem_dimms";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMMS)
-  private List<NameIdPair> pmemDimms = null;
+  private List<NestedPmemDimm> pmemDimms = null;
 
   public static final String SERIALIZED_NAME_RECOMMENDED_USAGE = "recommended_usage";
   @SerializedName(SERIALIZED_NAME_RECOMMENDED_USAGE)
@@ -128,7 +129,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT = "remaining_life_percent";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT)
-  private Double remainingLifePercent;
+  private Integer remainingLifePercent;
 
   public static final String SERIALIZED_NAME_SERIAL = "serial";
   @SerializedName(SERIALIZED_NAME_SERIAL)
@@ -174,7 +175,7 @@ public class Disk {
   }
 
 
-  public Disk failureInformation(DiskFailureInformation failureInformation) {
+  public Disk failureInformation(NestedDiskFailureInformation failureInformation) {
     
     this.failureInformation = failureInformation;
     return this;
@@ -187,12 +188,12 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public DiskFailureInformation getFailureInformation() {
+  public NestedDiskFailureInformation getFailureInformation() {
     return failureInformation;
   }
 
 
-  public void setFailureInformation(DiskFailureInformation failureInformation) {
+  public void setFailureInformation(NestedDiskFailureInformation failureInformation) {
     this.failureInformation = failureInformation;
   }
 
@@ -289,7 +290,7 @@ public class Disk {
   }
 
 
-  public Disk host(NameIdPair host) {
+  public Disk host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -302,12 +303,12 @@ public class Disk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -335,15 +336,15 @@ public class Disk {
   }
 
 
-  public Disk labels(List<BrickTopoPowers> labels) {
+  public Disk labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Disk addLabelsItem(BrickTopoPowers labelsItem) {
+  public Disk addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -356,12 +357,12 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -458,7 +459,7 @@ public class Disk {
   }
 
 
-  public Disk numaNode(Double numaNode) {
+  public Disk numaNode(Integer numaNode) {
     
     this.numaNode = numaNode;
     return this;
@@ -471,12 +472,12 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNode() {
+  public Integer getNumaNode() {
     return numaNode;
   }
 
 
-  public void setNumaNode(Double numaNode) {
+  public void setNumaNode(Integer numaNode) {
     this.numaNode = numaNode;
   }
 
@@ -504,13 +505,13 @@ public class Disk {
   }
 
 
-  public Disk partitions(List<DiskPartitions> partitions) {
+  public Disk partitions(List<NestedPartition> partitions) {
     
     this.partitions = partitions;
     return this;
   }
 
-  public Disk addPartitionsItem(DiskPartitions partitionsItem) {
+  public Disk addPartitionsItem(NestedPartition partitionsItem) {
     this.partitions.add(partitionsItem);
     return this;
   }
@@ -522,12 +523,12 @@ public class Disk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<DiskPartitions> getPartitions() {
+  public List<NestedPartition> getPartitions() {
     return partitions;
   }
 
 
-  public void setPartitions(List<DiskPartitions> partitions) {
+  public void setPartitions(List<NestedPartition> partitions) {
     this.partitions = partitions;
   }
 
@@ -578,7 +579,7 @@ public class Disk {
   }
 
 
-  public Disk physicalSlotOnBrick(Double physicalSlotOnBrick) {
+  public Disk physicalSlotOnBrick(Integer physicalSlotOnBrick) {
     
     this.physicalSlotOnBrick = physicalSlotOnBrick;
     return this;
@@ -591,25 +592,25 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrick() {
+  public Integer getPhysicalSlotOnBrick() {
     return physicalSlotOnBrick;
   }
 
 
-  public void setPhysicalSlotOnBrick(Double physicalSlotOnBrick) {
+  public void setPhysicalSlotOnBrick(Integer physicalSlotOnBrick) {
     this.physicalSlotOnBrick = physicalSlotOnBrick;
   }
 
 
-  public Disk pmemDimms(List<NameIdPair> pmemDimms) {
+  public Disk pmemDimms(List<NestedPmemDimm> pmemDimms) {
     
     this.pmemDimms = pmemDimms;
     return this;
   }
 
-  public Disk addPmemDimmsItem(NameIdPair pmemDimmsItem) {
+  public Disk addPmemDimmsItem(NestedPmemDimm pmemDimmsItem) {
     if (this.pmemDimms == null) {
-      this.pmemDimms = new ArrayList<NameIdPair>();
+      this.pmemDimms = new ArrayList<NestedPmemDimm>();
     }
     this.pmemDimms.add(pmemDimmsItem);
     return this;
@@ -622,12 +623,12 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getPmemDimms() {
+  public List<NestedPmemDimm> getPmemDimms() {
     return pmemDimms;
   }
 
 
-  public void setPmemDimms(List<NameIdPair> pmemDimms) {
+  public void setPmemDimms(List<NestedPmemDimm> pmemDimms) {
     this.pmemDimms = pmemDimms;
   }
 
@@ -655,7 +656,7 @@ public class Disk {
   }
 
 
-  public Disk remainingLifePercent(Double remainingLifePercent) {
+  public Disk remainingLifePercent(Integer remainingLifePercent) {
     
     this.remainingLifePercent = remainingLifePercent;
     return this;
@@ -668,12 +669,12 @@ public class Disk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercent() {
+  public Integer getRemainingLifePercent() {
     return remainingLifePercent;
   }
 
 
-  public void setRemainingLifePercent(Double remainingLifePercent) {
+  public void setRemainingLifePercent(Integer remainingLifePercent) {
     this.remainingLifePercent = remainingLifePercent;
   }
 

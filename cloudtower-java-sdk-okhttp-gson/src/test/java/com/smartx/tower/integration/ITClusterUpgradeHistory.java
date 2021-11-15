@@ -47,6 +47,8 @@ public class ITClusterUpgradeHistory extends ITBase {
       List<ClusterUpgradeHistory> result = api.getClusterUpgradeHistories(params, contentLanguage);
       assertThat(result).as("check result of getClusterUpgradeHistories").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITClusterUpgradeHistory extends ITBase {
       ClusterUpgradeHistoryConnection result = api.getClusterUpgradeHistoriesConnection(params, contentLanguage);
       assertThat(result).as("check result of getClusterUpgradeHistoriesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

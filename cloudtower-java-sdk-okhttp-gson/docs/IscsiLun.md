@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **bpsWr** | **Double** |  | 
 **bpsWrMax** | **Double** |  | 
 **bpsWrMaxLength** | **Double** |  | 
-**consistencyGroup** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**consistencyGroup** | [**NestedConsistencyGroup**](NestedConsistencyGroup.md) |  |  [optional]
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
 **ioSize** | **Double** |  | 
@@ -31,16 +31,16 @@ Name | Type | Description | Notes
 **iopsWr** | **Double** |  | 
 **iopsWrMax** | **Double** |  | 
 **iopsWrMaxLength** | **Double** |  | 
-**iscsiTarget** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**iscsiTarget** | [**NestedIscsiTarget**](NestedIscsiTarget.md) |  | 
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreatedAt** | **String** |  | 
 **localId** | **String** |  | 
-**lunId** | **Double** |  | 
+**lunId** | **Integer** |  | 
 **name** | **String** |  | 
-**replicaNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
 **sharedSize** | **Double** |  | 
-**snapshotNum** | **Double** |  | 
-**stripeNum** | **Double** |  | 
+**snapshotNum** | **Integer** |  | 
+**stripeNum** | **Integer** |  | 
 **stripeSize** | **Double** |  | 
 **thinProvision** | **Boolean** |  | 
 **uniqueSize** | **Double** |  | 

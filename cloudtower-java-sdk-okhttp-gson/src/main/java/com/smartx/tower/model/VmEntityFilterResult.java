@@ -20,7 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedEntityFilter;
+import com.smartx.tower.model.NestedVm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,7 +35,7 @@ import java.util.List;
 public class VmEntityFilterResult {
   public static final String SERIALIZED_NAME_ENTITY_FILTER = "entityFilter";
   @SerializedName(SERIALIZED_NAME_ENTITY_FILTER)
-  private NameIdPair entityFilter;
+  private NestedEntityFilter entityFilter;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -46,10 +47,10 @@ public class VmEntityFilterResult {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private NameIdPair vm;
+  private NestedVm vm;
 
 
-  public VmEntityFilterResult entityFilter(NameIdPair entityFilter) {
+  public VmEntityFilterResult entityFilter(NestedEntityFilter entityFilter) {
     
     this.entityFilter = entityFilter;
     return this;
@@ -62,12 +63,12 @@ public class VmEntityFilterResult {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getEntityFilter() {
+  public NestedEntityFilter getEntityFilter() {
     return entityFilter;
   }
 
 
-  public void setEntityFilter(NameIdPair entityFilter) {
+  public void setEntityFilter(NestedEntityFilter entityFilter) {
     this.entityFilter = entityFilter;
   }
 
@@ -123,7 +124,7 @@ public class VmEntityFilterResult {
   }
 
 
-  public VmEntityFilterResult vm(NameIdPair vm) {
+  public VmEntityFilterResult vm(NestedVm vm) {
     
     this.vm = vm;
     return this;
@@ -136,12 +137,12 @@ public class VmEntityFilterResult {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getVm() {
+  public NestedVm getVm() {
     return vm;
   }
 
 
-  public void setVm(NameIdPair vm) {
+  public void setVm(NestedVm vm) {
     this.vm = vm;
   }
 

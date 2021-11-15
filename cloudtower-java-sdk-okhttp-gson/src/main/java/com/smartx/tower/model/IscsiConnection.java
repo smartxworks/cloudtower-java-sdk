@@ -20,7 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedIscsiTarget;
+import com.smartx.tower.model.NestedNvmfSubsystem;
 import com.smartx.tower.model.StoreConnectionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -34,15 +37,15 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class IscsiConnection {
   public static final String SERIALIZED_NAME_CLIENT_PORT = "client_port";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT)
-  private Double clientPort;
+  private Integer clientPort;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -54,18 +57,18 @@ public class IscsiConnection {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
-  private NameIdPair iscsiTarget;
+  private NestedIscsiTarget iscsiTarget;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private NameIdPair nvmfSubsystem;
+  private NestedNvmfSubsystem nvmfSubsystem;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private StoreConnectionType type;
 
 
-  public IscsiConnection clientPort(Double clientPort) {
+  public IscsiConnection clientPort(Integer clientPort) {
     
     this.clientPort = clientPort;
     return this;
@@ -78,17 +81,17 @@ public class IscsiConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getClientPort() {
+  public Integer getClientPort() {
     return clientPort;
   }
 
 
-  public void setClientPort(Double clientPort) {
+  public void setClientPort(Integer clientPort) {
     this.clientPort = clientPort;
   }
 
 
-  public IscsiConnection cluster(NameIdPair cluster) {
+  public IscsiConnection cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -101,17 +104,17 @@ public class IscsiConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public IscsiConnection host(NameIdPair host) {
+  public IscsiConnection host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -124,12 +127,12 @@ public class IscsiConnection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -180,7 +183,7 @@ public class IscsiConnection {
   }
 
 
-  public IscsiConnection iscsiTarget(NameIdPair iscsiTarget) {
+  public IscsiConnection iscsiTarget(NestedIscsiTarget iscsiTarget) {
     
     this.iscsiTarget = iscsiTarget;
     return this;
@@ -193,17 +196,17 @@ public class IscsiConnection {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getIscsiTarget() {
+  public NestedIscsiTarget getIscsiTarget() {
     return iscsiTarget;
   }
 
 
-  public void setIscsiTarget(NameIdPair iscsiTarget) {
+  public void setIscsiTarget(NestedIscsiTarget iscsiTarget) {
     this.iscsiTarget = iscsiTarget;
   }
 
 
-  public IscsiConnection nvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public IscsiConnection nvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -216,12 +219,12 @@ public class IscsiConnection {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getNvmfSubsystem() {
+  public NestedNvmfSubsystem getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public void setNvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 

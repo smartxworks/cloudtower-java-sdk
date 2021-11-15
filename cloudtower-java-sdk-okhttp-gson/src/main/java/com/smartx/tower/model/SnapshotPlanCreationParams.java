@@ -38,7 +38,7 @@ public class SnapshotPlanCreationParams {
 
   public static final String SERIALIZED_NAME_EXECUTE_INTERVALS = "execute_intervals";
   @SerializedName(SERIALIZED_NAME_EXECUTE_INTERVALS)
-  private List<Double> executeIntervals = new ArrayList<Double>();
+  private List<Integer> executeIntervals = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_EXECUTE_PLAN_TYPE = "execute_plan_type";
   @SerializedName(SERIALIZED_NAME_EXECUTE_PLAN_TYPE)
@@ -58,7 +58,7 @@ public class SnapshotPlanCreationParams {
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM = "remain_snapshot_num";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM)
-  private Double remainSnapshotNum;
+  private Integer remainSnapshotNum;
 
   public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
   @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
@@ -97,13 +97,13 @@ public class SnapshotPlanCreationParams {
   }
 
 
-  public SnapshotPlanCreationParams executeIntervals(List<Double> executeIntervals) {
+  public SnapshotPlanCreationParams executeIntervals(List<Integer> executeIntervals) {
     
     this.executeIntervals = executeIntervals;
     return this;
   }
 
-  public SnapshotPlanCreationParams addExecuteIntervalsItem(Double executeIntervalsItem) {
+  public SnapshotPlanCreationParams addExecuteIntervalsItem(Integer executeIntervalsItem) {
     this.executeIntervals.add(executeIntervalsItem);
     return this;
   }
@@ -115,12 +115,12 @@ public class SnapshotPlanCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Double> getExecuteIntervals() {
+  public List<Integer> getExecuteIntervals() {
     return executeIntervals;
   }
 
 
-  public void setExecuteIntervals(List<Double> executeIntervals) {
+  public void setExecuteIntervals(List<Integer> executeIntervals) {
     this.executeIntervals = executeIntervals;
   }
 
@@ -217,7 +217,7 @@ public class SnapshotPlanCreationParams {
   }
 
 
-  public SnapshotPlanCreationParams remainSnapshotNum(Double remainSnapshotNum) {
+  public SnapshotPlanCreationParams remainSnapshotNum(Integer remainSnapshotNum) {
     
     this.remainSnapshotNum = remainSnapshotNum;
     return this;
@@ -230,12 +230,12 @@ public class SnapshotPlanCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRemainSnapshotNum() {
+  public Integer getRemainSnapshotNum() {
     return remainSnapshotNum;
   }
 
 
-  public void setRemainSnapshotNum(Double remainSnapshotNum) {
+  public void setRemainSnapshotNum(Integer remainSnapshotNum) {
     this.remainSnapshotNum = remainSnapshotNum;
   }
 

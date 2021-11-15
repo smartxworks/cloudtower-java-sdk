@@ -41,35 +41,35 @@ public class DatacenterWhereInput {
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM = "cluster_num";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM)
-  private Double clusterNum;
+  private Integer clusterNum;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_GT = "cluster_num_gt";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_GT)
-  private Double clusterNumGt;
+  private Integer clusterNumGt;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_GTE = "cluster_num_gte";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_GTE)
-  private Double clusterNumGte;
+  private Integer clusterNumGte;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_IN = "cluster_num_in";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_IN)
-  private List<Double> clusterNumIn = null;
+  private List<Integer> clusterNumIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_LT = "cluster_num_lt";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_LT)
-  private Double clusterNumLt;
+  private Integer clusterNumLt;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_LTE = "cluster_num_lte";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_LTE)
-  private Double clusterNumLte;
+  private Integer clusterNumLte;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_NOT = "cluster_num_not";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_NOT)
-  private Double clusterNumNot;
+  private Integer clusterNumNot;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_NOT_IN = "cluster_num_not_in";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_NOT_IN)
-  private List<Double> clusterNumNotIn = null;
+  private List<Integer> clusterNumNotIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTERS_EVERY = "clusters_every";
   @SerializedName(SERIALIZED_NAME_CLUSTERS_EVERY)
@@ -117,35 +117,35 @@ public class DatacenterWhereInput {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GT = "host_num_gt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GT)
-  private Double hostNumGt;
+  private Integer hostNumGt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GTE = "host_num_gte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GTE)
-  private Double hostNumGte;
+  private Integer hostNumGte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_IN = "host_num_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_IN)
-  private List<Double> hostNumIn = null;
+  private List<Integer> hostNumIn = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LT = "host_num_lt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LT)
-  private Double hostNumLt;
+  private Integer hostNumLt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LTE = "host_num_lte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LTE)
-  private Double hostNumLte;
+  private Integer hostNumLte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT = "host_num_not";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT)
-  private Double hostNumNot;
+  private Integer hostNumNot;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT_IN = "host_num_not_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT_IN)
-  private List<Double> hostNumNotIn = null;
+  private List<Integer> hostNumNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -477,35 +477,35 @@ public class DatacenterWhereInput {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_NUM_GT = "vm_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GT)
-  private Double vmNumGt;
+  private Integer vmNumGt;
 
   public static final String SERIALIZED_NAME_VM_NUM_GTE = "vm_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GTE)
-  private Double vmNumGte;
+  private Integer vmNumGte;
 
   public static final String SERIALIZED_NAME_VM_NUM_IN = "vm_num_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_IN)
-  private List<Double> vmNumIn = null;
+  private List<Integer> vmNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM_LT = "vm_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LT)
-  private Double vmNumLt;
+  private Integer vmNumLt;
 
   public static final String SERIALIZED_NAME_VM_NUM_LTE = "vm_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LTE)
-  private Double vmNumLte;
+  private Integer vmNumLte;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT = "vm_num_not";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT)
-  private Double vmNumNot;
+  private Integer vmNumNot;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT_IN = "vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT_IN)
-  private List<Double> vmNumNotIn = null;
+  private List<Integer> vmNumNotIn = null;
 
 
   public DatacenterWhereInput AND(List<DatacenterWhereInput> AND) {
@@ -539,7 +539,7 @@ public class DatacenterWhereInput {
   }
 
 
-  public DatacenterWhereInput clusterNum(Double clusterNum) {
+  public DatacenterWhereInput clusterNum(Integer clusterNum) {
     
     this.clusterNum = clusterNum;
     return this;
@@ -552,17 +552,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNum() {
+  public Integer getClusterNum() {
     return clusterNum;
   }
 
 
-  public void setClusterNum(Double clusterNum) {
+  public void setClusterNum(Integer clusterNum) {
     this.clusterNum = clusterNum;
   }
 
 
-  public DatacenterWhereInput clusterNumGt(Double clusterNumGt) {
+  public DatacenterWhereInput clusterNumGt(Integer clusterNumGt) {
     
     this.clusterNumGt = clusterNumGt;
     return this;
@@ -575,17 +575,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumGt() {
+  public Integer getClusterNumGt() {
     return clusterNumGt;
   }
 
 
-  public void setClusterNumGt(Double clusterNumGt) {
+  public void setClusterNumGt(Integer clusterNumGt) {
     this.clusterNumGt = clusterNumGt;
   }
 
 
-  public DatacenterWhereInput clusterNumGte(Double clusterNumGte) {
+  public DatacenterWhereInput clusterNumGte(Integer clusterNumGte) {
     
     this.clusterNumGte = clusterNumGte;
     return this;
@@ -598,25 +598,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumGte() {
+  public Integer getClusterNumGte() {
     return clusterNumGte;
   }
 
 
-  public void setClusterNumGte(Double clusterNumGte) {
+  public void setClusterNumGte(Integer clusterNumGte) {
     this.clusterNumGte = clusterNumGte;
   }
 
 
-  public DatacenterWhereInput clusterNumIn(List<Double> clusterNumIn) {
+  public DatacenterWhereInput clusterNumIn(List<Integer> clusterNumIn) {
     
     this.clusterNumIn = clusterNumIn;
     return this;
   }
 
-  public DatacenterWhereInput addClusterNumInItem(Double clusterNumInItem) {
+  public DatacenterWhereInput addClusterNumInItem(Integer clusterNumInItem) {
     if (this.clusterNumIn == null) {
-      this.clusterNumIn = new ArrayList<Double>();
+      this.clusterNumIn = new ArrayList<Integer>();
     }
     this.clusterNumIn.add(clusterNumInItem);
     return this;
@@ -629,17 +629,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getClusterNumIn() {
+  public List<Integer> getClusterNumIn() {
     return clusterNumIn;
   }
 
 
-  public void setClusterNumIn(List<Double> clusterNumIn) {
+  public void setClusterNumIn(List<Integer> clusterNumIn) {
     this.clusterNumIn = clusterNumIn;
   }
 
 
-  public DatacenterWhereInput clusterNumLt(Double clusterNumLt) {
+  public DatacenterWhereInput clusterNumLt(Integer clusterNumLt) {
     
     this.clusterNumLt = clusterNumLt;
     return this;
@@ -652,17 +652,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumLt() {
+  public Integer getClusterNumLt() {
     return clusterNumLt;
   }
 
 
-  public void setClusterNumLt(Double clusterNumLt) {
+  public void setClusterNumLt(Integer clusterNumLt) {
     this.clusterNumLt = clusterNumLt;
   }
 
 
-  public DatacenterWhereInput clusterNumLte(Double clusterNumLte) {
+  public DatacenterWhereInput clusterNumLte(Integer clusterNumLte) {
     
     this.clusterNumLte = clusterNumLte;
     return this;
@@ -675,17 +675,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumLte() {
+  public Integer getClusterNumLte() {
     return clusterNumLte;
   }
 
 
-  public void setClusterNumLte(Double clusterNumLte) {
+  public void setClusterNumLte(Integer clusterNumLte) {
     this.clusterNumLte = clusterNumLte;
   }
 
 
-  public DatacenterWhereInput clusterNumNot(Double clusterNumNot) {
+  public DatacenterWhereInput clusterNumNot(Integer clusterNumNot) {
     
     this.clusterNumNot = clusterNumNot;
     return this;
@@ -698,25 +698,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumNot() {
+  public Integer getClusterNumNot() {
     return clusterNumNot;
   }
 
 
-  public void setClusterNumNot(Double clusterNumNot) {
+  public void setClusterNumNot(Integer clusterNumNot) {
     this.clusterNumNot = clusterNumNot;
   }
 
 
-  public DatacenterWhereInput clusterNumNotIn(List<Double> clusterNumNotIn) {
+  public DatacenterWhereInput clusterNumNotIn(List<Integer> clusterNumNotIn) {
     
     this.clusterNumNotIn = clusterNumNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addClusterNumNotInItem(Double clusterNumNotInItem) {
+  public DatacenterWhereInput addClusterNumNotInItem(Integer clusterNumNotInItem) {
     if (this.clusterNumNotIn == null) {
-      this.clusterNumNotIn = new ArrayList<Double>();
+      this.clusterNumNotIn = new ArrayList<Integer>();
     }
     this.clusterNumNotIn.add(clusterNumNotInItem);
     return this;
@@ -729,12 +729,12 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getClusterNumNotIn() {
+  public List<Integer> getClusterNumNotIn() {
     return clusterNumNotIn;
   }
 
 
-  public void setClusterNumNotIn(List<Double> clusterNumNotIn) {
+  public void setClusterNumNotIn(List<Integer> clusterNumNotIn) {
     this.clusterNumNotIn = clusterNumNotIn;
   }
 
@@ -1008,7 +1008,7 @@ public class DatacenterWhereInput {
   }
 
 
-  public DatacenterWhereInput hostNum(Double hostNum) {
+  public DatacenterWhereInput hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -1021,17 +1021,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public DatacenterWhereInput hostNumGt(Double hostNumGt) {
+  public DatacenterWhereInput hostNumGt(Integer hostNumGt) {
     
     this.hostNumGt = hostNumGt;
     return this;
@@ -1044,17 +1044,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGt() {
+  public Integer getHostNumGt() {
     return hostNumGt;
   }
 
 
-  public void setHostNumGt(Double hostNumGt) {
+  public void setHostNumGt(Integer hostNumGt) {
     this.hostNumGt = hostNumGt;
   }
 
 
-  public DatacenterWhereInput hostNumGte(Double hostNumGte) {
+  public DatacenterWhereInput hostNumGte(Integer hostNumGte) {
     
     this.hostNumGte = hostNumGte;
     return this;
@@ -1067,25 +1067,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGte() {
+  public Integer getHostNumGte() {
     return hostNumGte;
   }
 
 
-  public void setHostNumGte(Double hostNumGte) {
+  public void setHostNumGte(Integer hostNumGte) {
     this.hostNumGte = hostNumGte;
   }
 
 
-  public DatacenterWhereInput hostNumIn(List<Double> hostNumIn) {
+  public DatacenterWhereInput hostNumIn(List<Integer> hostNumIn) {
     
     this.hostNumIn = hostNumIn;
     return this;
   }
 
-  public DatacenterWhereInput addHostNumInItem(Double hostNumInItem) {
+  public DatacenterWhereInput addHostNumInItem(Integer hostNumInItem) {
     if (this.hostNumIn == null) {
-      this.hostNumIn = new ArrayList<Double>();
+      this.hostNumIn = new ArrayList<Integer>();
     }
     this.hostNumIn.add(hostNumInItem);
     return this;
@@ -1098,17 +1098,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumIn() {
+  public List<Integer> getHostNumIn() {
     return hostNumIn;
   }
 
 
-  public void setHostNumIn(List<Double> hostNumIn) {
+  public void setHostNumIn(List<Integer> hostNumIn) {
     this.hostNumIn = hostNumIn;
   }
 
 
-  public DatacenterWhereInput hostNumLt(Double hostNumLt) {
+  public DatacenterWhereInput hostNumLt(Integer hostNumLt) {
     
     this.hostNumLt = hostNumLt;
     return this;
@@ -1121,17 +1121,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLt() {
+  public Integer getHostNumLt() {
     return hostNumLt;
   }
 
 
-  public void setHostNumLt(Double hostNumLt) {
+  public void setHostNumLt(Integer hostNumLt) {
     this.hostNumLt = hostNumLt;
   }
 
 
-  public DatacenterWhereInput hostNumLte(Double hostNumLte) {
+  public DatacenterWhereInput hostNumLte(Integer hostNumLte) {
     
     this.hostNumLte = hostNumLte;
     return this;
@@ -1144,17 +1144,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLte() {
+  public Integer getHostNumLte() {
     return hostNumLte;
   }
 
 
-  public void setHostNumLte(Double hostNumLte) {
+  public void setHostNumLte(Integer hostNumLte) {
     this.hostNumLte = hostNumLte;
   }
 
 
-  public DatacenterWhereInput hostNumNot(Double hostNumNot) {
+  public DatacenterWhereInput hostNumNot(Integer hostNumNot) {
     
     this.hostNumNot = hostNumNot;
     return this;
@@ -1167,25 +1167,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumNot() {
+  public Integer getHostNumNot() {
     return hostNumNot;
   }
 
 
-  public void setHostNumNot(Double hostNumNot) {
+  public void setHostNumNot(Integer hostNumNot) {
     this.hostNumNot = hostNumNot;
   }
 
 
-  public DatacenterWhereInput hostNumNotIn(List<Double> hostNumNotIn) {
+  public DatacenterWhereInput hostNumNotIn(List<Integer> hostNumNotIn) {
     
     this.hostNumNotIn = hostNumNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addHostNumNotInItem(Double hostNumNotInItem) {
+  public DatacenterWhereInput addHostNumNotInItem(Integer hostNumNotInItem) {
     if (this.hostNumNotIn == null) {
-      this.hostNumNotIn = new ArrayList<Double>();
+      this.hostNumNotIn = new ArrayList<Integer>();
     }
     this.hostNumNotIn.add(hostNumNotInItem);
     return this;
@@ -1198,12 +1198,12 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumNotIn() {
+  public List<Integer> getHostNumNotIn() {
     return hostNumNotIn;
   }
 
 
-  public void setHostNumNotIn(List<Double> hostNumNotIn) {
+  public void setHostNumNotIn(List<Integer> hostNumNotIn) {
     this.hostNumNotIn = hostNumNotIn;
   }
 
@@ -3238,7 +3238,7 @@ public class DatacenterWhereInput {
   }
 
 
-  public DatacenterWhereInput vmNum(Double vmNum) {
+  public DatacenterWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -3251,17 +3251,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public DatacenterWhereInput vmNumGt(Double vmNumGt) {
+  public DatacenterWhereInput vmNumGt(Integer vmNumGt) {
     
     this.vmNumGt = vmNumGt;
     return this;
@@ -3274,17 +3274,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGt() {
+  public Integer getVmNumGt() {
     return vmNumGt;
   }
 
 
-  public void setVmNumGt(Double vmNumGt) {
+  public void setVmNumGt(Integer vmNumGt) {
     this.vmNumGt = vmNumGt;
   }
 
 
-  public DatacenterWhereInput vmNumGte(Double vmNumGte) {
+  public DatacenterWhereInput vmNumGte(Integer vmNumGte) {
     
     this.vmNumGte = vmNumGte;
     return this;
@@ -3297,25 +3297,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGte() {
+  public Integer getVmNumGte() {
     return vmNumGte;
   }
 
 
-  public void setVmNumGte(Double vmNumGte) {
+  public void setVmNumGte(Integer vmNumGte) {
     this.vmNumGte = vmNumGte;
   }
 
 
-  public DatacenterWhereInput vmNumIn(List<Double> vmNumIn) {
+  public DatacenterWhereInput vmNumIn(List<Integer> vmNumIn) {
     
     this.vmNumIn = vmNumIn;
     return this;
   }
 
-  public DatacenterWhereInput addVmNumInItem(Double vmNumInItem) {
+  public DatacenterWhereInput addVmNumInItem(Integer vmNumInItem) {
     if (this.vmNumIn == null) {
-      this.vmNumIn = new ArrayList<Double>();
+      this.vmNumIn = new ArrayList<Integer>();
     }
     this.vmNumIn.add(vmNumInItem);
     return this;
@@ -3328,17 +3328,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumIn() {
+  public List<Integer> getVmNumIn() {
     return vmNumIn;
   }
 
 
-  public void setVmNumIn(List<Double> vmNumIn) {
+  public void setVmNumIn(List<Integer> vmNumIn) {
     this.vmNumIn = vmNumIn;
   }
 
 
-  public DatacenterWhereInput vmNumLt(Double vmNumLt) {
+  public DatacenterWhereInput vmNumLt(Integer vmNumLt) {
     
     this.vmNumLt = vmNumLt;
     return this;
@@ -3351,17 +3351,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLt() {
+  public Integer getVmNumLt() {
     return vmNumLt;
   }
 
 
-  public void setVmNumLt(Double vmNumLt) {
+  public void setVmNumLt(Integer vmNumLt) {
     this.vmNumLt = vmNumLt;
   }
 
 
-  public DatacenterWhereInput vmNumLte(Double vmNumLte) {
+  public DatacenterWhereInput vmNumLte(Integer vmNumLte) {
     
     this.vmNumLte = vmNumLte;
     return this;
@@ -3374,17 +3374,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLte() {
+  public Integer getVmNumLte() {
     return vmNumLte;
   }
 
 
-  public void setVmNumLte(Double vmNumLte) {
+  public void setVmNumLte(Integer vmNumLte) {
     this.vmNumLte = vmNumLte;
   }
 
 
-  public DatacenterWhereInput vmNumNot(Double vmNumNot) {
+  public DatacenterWhereInput vmNumNot(Integer vmNumNot) {
     
     this.vmNumNot = vmNumNot;
     return this;
@@ -3397,25 +3397,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumNot() {
+  public Integer getVmNumNot() {
     return vmNumNot;
   }
 
 
-  public void setVmNumNot(Double vmNumNot) {
+  public void setVmNumNot(Integer vmNumNot) {
     this.vmNumNot = vmNumNot;
   }
 
 
-  public DatacenterWhereInput vmNumNotIn(List<Double> vmNumNotIn) {
+  public DatacenterWhereInput vmNumNotIn(List<Integer> vmNumNotIn) {
     
     this.vmNumNotIn = vmNumNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addVmNumNotInItem(Double vmNumNotInItem) {
+  public DatacenterWhereInput addVmNumNotInItem(Integer vmNumNotInItem) {
     if (this.vmNumNotIn == null) {
-      this.vmNumNotIn = new ArrayList<Double>();
+      this.vmNumNotIn = new ArrayList<Integer>();
     }
     this.vmNumNotIn.add(vmNumNotInItem);
     return this;
@@ -3428,12 +3428,12 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumNotIn() {
+  public List<Integer> getVmNumNotIn() {
     return vmNumNotIn;
   }
 
 
-  public void setVmNumNotIn(List<Double> vmNumNotIn) {
+  public void setVmNumNotIn(List<Integer> vmNumNotIn) {
     this.vmNumNotIn = vmNumNotIn;
   }
 

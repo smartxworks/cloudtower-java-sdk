@@ -7,11 +7,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numberHealth** | **Double** |  | 
+**numberHealth** | **Integer** |  | 
 **instances** | [**List&lt;EverouteClusterStatusControllersInstances&gt;**](EverouteClusterStatusControllersInstances.md) |  |  [optional]
-**expectNumber** | **Double** |  | 
-**elfClusterNumber** | **Double** |  | 
-**currentNumber** | **Double** |  | 
+**expectNumber** | **Integer** |  | 
+**elfClusterNumber** | **Integer** |  | 
+**currentNumber** | **Integer** |  | 
 
 
 

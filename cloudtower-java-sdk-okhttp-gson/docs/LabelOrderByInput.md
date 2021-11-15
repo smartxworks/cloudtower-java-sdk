@@ -21,6 +21,10 @@
 
 * `CONTENT_LIBRARY_IMAGE_NUM_DESC` (value: `"content_library_image_num_DESC"`)
 
+* `CONTENT_LIBRARY_VM_TEMPLATE_NUM_ASC` (value: `"content_library_vm_template_num_ASC"`)
+
+* `CONTENT_LIBRARY_VM_TEMPLATE_NUM_DESC` (value: `"content_library_vm_template_num_DESC"`)
+
 * `CREATEDAT_ASC` (value: `"createdAt_ASC"`)
 
 * `CREATEDAT_DESC` (value: `"createdAt_DESC"`)

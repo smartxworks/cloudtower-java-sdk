@@ -47,6 +47,8 @@ public class ITPmemDimm extends ITBase {
       List<PmemDimm> result = api.getPmemDimms(params, contentLanguage);
       assertThat(result).as("check result of getPmemDimms").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITPmemDimm extends ITBase {
       PmemDimmConnection result = api.getPmemDimmsConnection(params, contentLanguage);
       assertThat(result).as("check result of getPmemDimmsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

@@ -20,12 +20,19 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.CpuFanSpeedUnit;
 import com.smartx.tower.model.HostState;
 import com.smartx.tower.model.HostStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedDisk;
+import com.smartx.tower.model.NestedIpmi;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNic;
+import com.smartx.tower.model.NestedPmemDimm;
+import com.smartx.tower.model.NestedUsbDevice;
+import com.smartx.tower.model.NestedVm;
+import com.smartx.tower.model.NestedVsphereEsxiAccount;
+import com.smartx.tower.model.NestedZone;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -52,7 +59,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_COMPATIBLE_CPU_MODELS = "compatible_cpu_models";
   @SerializedName(SERIALIZED_NAME_COMPATIBLE_CPU_MODELS)
@@ -80,7 +87,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_CPU_TEMPERATURE_CELSIUS = "cpu_temperature_celsius";
   @SerializedName(SERIALIZED_NAME_CPU_TEMPERATURE_CELSIUS)
-  private List<Double> cpuTemperatureCelsius = new ArrayList<Double>();
+  private List<Integer> cpuTemperatureCelsius = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_DATA_IP = "data_ip";
   @SerializedName(SERIALIZED_NAME_DATA_IP)
@@ -88,7 +95,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<NameIdPair> disks = null;
+  private List<NestedDisk> disks = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -100,7 +107,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT = "hdd_disk_count";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT)
-  private Double hddDiskCount;
+  private Integer hddDiskCount;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -108,7 +115,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_IPMI = "ipmi";
   @SerializedName(SERIALIZED_NAME_IPMI)
-  private AlertAlertRule ipmi;
+  private NestedIpmi ipmi;
 
   public static final String SERIALIZED_NAME_IS_OS_IN_RAID1 = "is_os_in_raid1";
   @SerializedName(SERIALIZED_NAME_IS_OS_IN_RAID1)
@@ -116,7 +123,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -144,11 +151,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_NIC_COUNT = "nic_count";
   @SerializedName(SERIALIZED_NAME_NIC_COUNT)
-  private Double nicCount;
+  private Integer nicCount;
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<NameIdPair> nics = null;
+  private List<NestedNic> nics = null;
 
   public static final String SERIALIZED_NAME_NODE_TOPO_LOCAL_ID = "node_topo_local_id";
   @SerializedName(SERIALIZED_NAME_NODE_TOPO_LOCAL_ID)
@@ -168,19 +175,19 @@ public class Host {
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT = "pmem_dimm_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT)
-  private Double pmemDimmCount;
+  private Integer pmemDimmCount;
 
   public static final String SERIALIZED_NAME_PMEM_DIMMS = "pmem_dimms";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMMS)
-  private List<NameIdPair> pmemDimms = null;
+  private List<NestedPmemDimm> pmemDimms = null;
 
   public static final String SERIALIZED_NAME_PMEM_DISK_COUNT = "pmem_disk_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT)
-  private Double pmemDiskCount;
+  private Integer pmemDiskCount;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES)
-  private Double provisionedCpuCores;
+  private Integer provisionedCpuCores;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
@@ -192,7 +199,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
-  private Double runningVmNum;
+  private Integer runningVmNum;
 
   public static final String SERIALIZED_NAME_SCVM_CPU = "scvm_cpu";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU)
@@ -216,7 +223,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT = "ssd_disk_count";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT)
-  private Double ssdDiskCount;
+  private Integer ssdDiskCount;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
@@ -228,11 +235,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM = "stopped_vm_num";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM)
-  private Double stoppedVmNum;
+  private Integer stoppedVmNum;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM = "suspended_vm_num";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM)
-  private Double suspendedVmNum;
+  private Integer suspendedVmNum;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
@@ -240,7 +247,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -248,7 +255,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
-  private Double totalCpuSockets;
+  private Integer totalCpuSockets;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
@@ -260,7 +267,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
-  private List<NameIdPair> usbDevices = null;
+  private List<NestedUsbDevice> usbDevices = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
@@ -276,7 +283,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VMOTION_IP = "vmotion_ip";
   @SerializedName(SERIALIZED_NAME_VMOTION_IP)
@@ -284,11 +291,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
   public static final String SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT = "vsphereEsxiAccount";
   @SerializedName(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT)
-  private AlertAlertRule vsphereEsxiAccount;
+  private NestedVsphereEsxiAccount vsphereEsxiAccount;
 
   public static final String SERIALIZED_NAME_WITH_FASTER_SSD_AS_CACHE = "with_faster_ssd_as_cache";
   @SerializedName(SERIALIZED_NAME_WITH_FASTER_SSD_AS_CACHE)
@@ -296,7 +303,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_ZONE = "zone";
   @SerializedName(SERIALIZED_NAME_ZONE)
-  private AlertAlertRule zone;
+  private NestedZone zone;
 
 
   public Host accessIp(String accessIp) {
@@ -368,7 +375,7 @@ public class Host {
   }
 
 
-  public Host cluster(NameIdPair cluster) {
+  public Host cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -381,12 +388,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -539,13 +546,13 @@ public class Host {
   }
 
 
-  public Host cpuTemperatureCelsius(List<Double> cpuTemperatureCelsius) {
+  public Host cpuTemperatureCelsius(List<Integer> cpuTemperatureCelsius) {
     
     this.cpuTemperatureCelsius = cpuTemperatureCelsius;
     return this;
   }
 
-  public Host addCpuTemperatureCelsiusItem(Double cpuTemperatureCelsiusItem) {
+  public Host addCpuTemperatureCelsiusItem(Integer cpuTemperatureCelsiusItem) {
     this.cpuTemperatureCelsius.add(cpuTemperatureCelsiusItem);
     return this;
   }
@@ -557,12 +564,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Double> getCpuTemperatureCelsius() {
+  public List<Integer> getCpuTemperatureCelsius() {
     return cpuTemperatureCelsius;
   }
 
 
-  public void setCpuTemperatureCelsius(List<Double> cpuTemperatureCelsius) {
+  public void setCpuTemperatureCelsius(List<Integer> cpuTemperatureCelsius) {
     this.cpuTemperatureCelsius = cpuTemperatureCelsius;
   }
 
@@ -590,15 +597,15 @@ public class Host {
   }
 
 
-  public Host disks(List<NameIdPair> disks) {
+  public Host disks(List<NestedDisk> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public Host addDisksItem(NameIdPair disksItem) {
+  public Host addDisksItem(NestedDisk disksItem) {
     if (this.disks == null) {
-      this.disks = new ArrayList<NameIdPair>();
+      this.disks = new ArrayList<NestedDisk>();
     }
     this.disks.add(disksItem);
     return this;
@@ -611,12 +618,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getDisks() {
+  public List<NestedDisk> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<NameIdPair> disks) {
+  public void setDisks(List<NestedDisk> disks) {
     this.disks = disks;
   }
 
@@ -667,7 +674,7 @@ public class Host {
   }
 
 
-  public Host hddDiskCount(Double hddDiskCount) {
+  public Host hddDiskCount(Integer hddDiskCount) {
     
     this.hddDiskCount = hddDiskCount;
     return this;
@@ -680,12 +687,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getHddDiskCount() {
+  public Integer getHddDiskCount() {
     return hddDiskCount;
   }
 
 
-  public void setHddDiskCount(Double hddDiskCount) {
+  public void setHddDiskCount(Integer hddDiskCount) {
     this.hddDiskCount = hddDiskCount;
   }
 
@@ -713,7 +720,7 @@ public class Host {
   }
 
 
-  public Host ipmi(AlertAlertRule ipmi) {
+  public Host ipmi(NestedIpmi ipmi) {
     
     this.ipmi = ipmi;
     return this;
@@ -726,12 +733,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getIpmi() {
+  public NestedIpmi getIpmi() {
     return ipmi;
   }
 
 
-  public void setIpmi(AlertAlertRule ipmi) {
+  public void setIpmi(NestedIpmi ipmi) {
     this.ipmi = ipmi;
   }
 
@@ -759,15 +766,15 @@ public class Host {
   }
 
 
-  public Host labels(List<BrickTopoPowers> labels) {
+  public Host labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Host addLabelsItem(BrickTopoPowers labelsItem) {
+  public Host addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -780,12 +787,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -928,7 +935,7 @@ public class Host {
   }
 
 
-  public Host nicCount(Double nicCount) {
+  public Host nicCount(Integer nicCount) {
     
     this.nicCount = nicCount;
     return this;
@@ -941,25 +948,25 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getNicCount() {
+  public Integer getNicCount() {
     return nicCount;
   }
 
 
-  public void setNicCount(Double nicCount) {
+  public void setNicCount(Integer nicCount) {
     this.nicCount = nicCount;
   }
 
 
-  public Host nics(List<NameIdPair> nics) {
+  public Host nics(List<NestedNic> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Host addNicsItem(NameIdPair nicsItem) {
+  public Host addNicsItem(NestedNic nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<NameIdPair>();
+      this.nics = new ArrayList<NestedNic>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -972,12 +979,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNics() {
+  public List<NestedNic> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<NameIdPair> nics) {
+  public void setNics(List<NestedNic> nics) {
     this.nics = nics;
   }
 
@@ -1074,7 +1081,7 @@ public class Host {
   }
 
 
-  public Host pmemDimmCount(Double pmemDimmCount) {
+  public Host pmemDimmCount(Integer pmemDimmCount) {
     
     this.pmemDimmCount = pmemDimmCount;
     return this;
@@ -1087,25 +1094,25 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPmemDimmCount() {
+  public Integer getPmemDimmCount() {
     return pmemDimmCount;
   }
 
 
-  public void setPmemDimmCount(Double pmemDimmCount) {
+  public void setPmemDimmCount(Integer pmemDimmCount) {
     this.pmemDimmCount = pmemDimmCount;
   }
 
 
-  public Host pmemDimms(List<NameIdPair> pmemDimms) {
+  public Host pmemDimms(List<NestedPmemDimm> pmemDimms) {
     
     this.pmemDimms = pmemDimms;
     return this;
   }
 
-  public Host addPmemDimmsItem(NameIdPair pmemDimmsItem) {
+  public Host addPmemDimmsItem(NestedPmemDimm pmemDimmsItem) {
     if (this.pmemDimms == null) {
-      this.pmemDimms = new ArrayList<NameIdPair>();
+      this.pmemDimms = new ArrayList<NestedPmemDimm>();
     }
     this.pmemDimms.add(pmemDimmsItem);
     return this;
@@ -1118,17 +1125,17 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getPmemDimms() {
+  public List<NestedPmemDimm> getPmemDimms() {
     return pmemDimms;
   }
 
 
-  public void setPmemDimms(List<NameIdPair> pmemDimms) {
+  public void setPmemDimms(List<NestedPmemDimm> pmemDimms) {
     this.pmemDimms = pmemDimms;
   }
 
 
-  public Host pmemDiskCount(Double pmemDiskCount) {
+  public Host pmemDiskCount(Integer pmemDiskCount) {
     
     this.pmemDiskCount = pmemDiskCount;
     return this;
@@ -1141,17 +1148,17 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPmemDiskCount() {
+  public Integer getPmemDiskCount() {
     return pmemDiskCount;
   }
 
 
-  public void setPmemDiskCount(Double pmemDiskCount) {
+  public void setPmemDiskCount(Integer pmemDiskCount) {
     this.pmemDiskCount = pmemDiskCount;
   }
 
 
-  public Host provisionedCpuCores(Double provisionedCpuCores) {
+  public Host provisionedCpuCores(Integer provisionedCpuCores) {
     
     this.provisionedCpuCores = provisionedCpuCores;
     return this;
@@ -1164,12 +1171,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getProvisionedCpuCores() {
+  public Integer getProvisionedCpuCores() {
     return provisionedCpuCores;
   }
 
 
-  public void setProvisionedCpuCores(Double provisionedCpuCores) {
+  public void setProvisionedCpuCores(Integer provisionedCpuCores) {
     this.provisionedCpuCores = provisionedCpuCores;
   }
 
@@ -1220,7 +1227,7 @@ public class Host {
   }
 
 
-  public Host runningVmNum(Double runningVmNum) {
+  public Host runningVmNum(Integer runningVmNum) {
     
     this.runningVmNum = runningVmNum;
     return this;
@@ -1233,12 +1240,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNum() {
+  public Integer getRunningVmNum() {
     return runningVmNum;
   }
 
 
-  public void setRunningVmNum(Double runningVmNum) {
+  public void setRunningVmNum(Integer runningVmNum) {
     this.runningVmNum = runningVmNum;
   }
 
@@ -1358,7 +1365,7 @@ public class Host {
   }
 
 
-  public Host ssdDiskCount(Double ssdDiskCount) {
+  public Host ssdDiskCount(Integer ssdDiskCount) {
     
     this.ssdDiskCount = ssdDiskCount;
     return this;
@@ -1371,12 +1378,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSsdDiskCount() {
+  public Integer getSsdDiskCount() {
     return ssdDiskCount;
   }
 
 
-  public void setSsdDiskCount(Double ssdDiskCount) {
+  public void setSsdDiskCount(Integer ssdDiskCount) {
     this.ssdDiskCount = ssdDiskCount;
   }
 
@@ -1427,7 +1434,7 @@ public class Host {
   }
 
 
-  public Host stoppedVmNum(Double stoppedVmNum) {
+  public Host stoppedVmNum(Integer stoppedVmNum) {
     
     this.stoppedVmNum = stoppedVmNum;
     return this;
@@ -1440,17 +1447,17 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNum() {
+  public Integer getStoppedVmNum() {
     return stoppedVmNum;
   }
 
 
-  public void setStoppedVmNum(Double stoppedVmNum) {
+  public void setStoppedVmNum(Integer stoppedVmNum) {
     this.stoppedVmNum = stoppedVmNum;
   }
 
 
-  public Host suspendedVmNum(Double suspendedVmNum) {
+  public Host suspendedVmNum(Integer suspendedVmNum) {
     
     this.suspendedVmNum = suspendedVmNum;
     return this;
@@ -1463,12 +1470,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNum() {
+  public Integer getSuspendedVmNum() {
     return suspendedVmNum;
   }
 
 
-  public void setSuspendedVmNum(Double suspendedVmNum) {
+  public void setSuspendedVmNum(Integer suspendedVmNum) {
     this.suspendedVmNum = suspendedVmNum;
   }
 
@@ -1496,7 +1503,7 @@ public class Host {
   }
 
 
-  public Host totalCpuCores(Double totalCpuCores) {
+  public Host totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -1509,12 +1516,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
@@ -1542,7 +1549,7 @@ public class Host {
   }
 
 
-  public Host totalCpuSockets(Double totalCpuSockets) {
+  public Host totalCpuSockets(Integer totalCpuSockets) {
     
     this.totalCpuSockets = totalCpuSockets;
     return this;
@@ -1555,12 +1562,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSockets() {
+  public Integer getTotalCpuSockets() {
     return totalCpuSockets;
   }
 
 
-  public void setTotalCpuSockets(Double totalCpuSockets) {
+  public void setTotalCpuSockets(Integer totalCpuSockets) {
     this.totalCpuSockets = totalCpuSockets;
   }
 
@@ -1611,15 +1618,15 @@ public class Host {
   }
 
 
-  public Host usbDevices(List<NameIdPair> usbDevices) {
+  public Host usbDevices(List<NestedUsbDevice> usbDevices) {
     
     this.usbDevices = usbDevices;
     return this;
   }
 
-  public Host addUsbDevicesItem(NameIdPair usbDevicesItem) {
+  public Host addUsbDevicesItem(NestedUsbDevice usbDevicesItem) {
     if (this.usbDevices == null) {
-      this.usbDevices = new ArrayList<NameIdPair>();
+      this.usbDevices = new ArrayList<NestedUsbDevice>();
     }
     this.usbDevices.add(usbDevicesItem);
     return this;
@@ -1632,12 +1639,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getUsbDevices() {
+  public List<NestedUsbDevice> getUsbDevices() {
     return usbDevices;
   }
 
 
-  public void setUsbDevices(List<NameIdPair> usbDevices) {
+  public void setUsbDevices(List<NestedUsbDevice> usbDevices) {
     this.usbDevices = usbDevices;
   }
 
@@ -1711,7 +1718,7 @@ public class Host {
   }
 
 
-  public Host vmNum(Double vmNum) {
+  public Host vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -1724,12 +1731,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
@@ -1757,15 +1764,15 @@ public class Host {
   }
 
 
-  public Host vms(List<NameIdPair> vms) {
+  public Host vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Host addVmsItem(NameIdPair vmsItem) {
+  public Host addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -1778,17 +1785,17 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 
 
-  public Host vsphereEsxiAccount(AlertAlertRule vsphereEsxiAccount) {
+  public Host vsphereEsxiAccount(NestedVsphereEsxiAccount vsphereEsxiAccount) {
     
     this.vsphereEsxiAccount = vsphereEsxiAccount;
     return this;
@@ -1801,12 +1808,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getVsphereEsxiAccount() {
+  public NestedVsphereEsxiAccount getVsphereEsxiAccount() {
     return vsphereEsxiAccount;
   }
 
 
-  public void setVsphereEsxiAccount(AlertAlertRule vsphereEsxiAccount) {
+  public void setVsphereEsxiAccount(NestedVsphereEsxiAccount vsphereEsxiAccount) {
     this.vsphereEsxiAccount = vsphereEsxiAccount;
   }
 
@@ -1834,7 +1841,7 @@ public class Host {
   }
 
 
-  public Host zone(AlertAlertRule zone) {
+  public Host zone(NestedZone zone) {
     
     this.zone = zone;
     return this;
@@ -1847,12 +1854,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getZone() {
+  public NestedZone getZone() {
     return zone;
   }
 
 
-  public void setZone(AlertAlertRule zone) {
+  public void setZone(NestedZone zone) {
     this.zone = zone;
   }
 

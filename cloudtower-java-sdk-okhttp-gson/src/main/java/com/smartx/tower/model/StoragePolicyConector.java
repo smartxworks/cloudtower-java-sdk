@@ -35,7 +35,7 @@ public class StoragePolicyConector {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -69,7 +69,7 @@ public class StoragePolicyConector {
   }
 
 
-  public StoragePolicyConector replicaNum(Double replicaNum) {
+  public StoragePolicyConector replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -82,12 +82,12 @@ public class StoragePolicyConector {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 

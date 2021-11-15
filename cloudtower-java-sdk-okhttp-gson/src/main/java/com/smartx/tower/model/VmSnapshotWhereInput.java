@@ -456,35 +456,35 @@ public class VmSnapshotWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_GT = "max_iops_gt";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_GT)
-  private Double maxIopsGt;
+  private Integer maxIopsGt;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_GTE = "max_iops_gte";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_GTE)
-  private Double maxIopsGte;
+  private Integer maxIopsGte;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_IN = "max_iops_in";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_IN)
-  private List<Double> maxIopsIn = null;
+  private List<Integer> maxIopsIn = null;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_LT = "max_iops_lt";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_LT)
-  private Double maxIopsLt;
+  private Integer maxIopsLt;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_LTE = "max_iops_lte";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_LTE)
-  private Double maxIopsLte;
+  private Integer maxIopsLte;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_NOT = "max_iops_not";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT)
-  private Double maxIopsNot;
+  private Integer maxIopsNot;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_NOT_IN = "max_iops_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT_IN)
-  private List<Double> maxIopsNotIn = null;
+  private List<Integer> maxIopsNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -636,35 +636,35 @@ public class VmSnapshotWhereInput {
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_VCPU_GT = "vcpu_gt";
   @SerializedName(SERIALIZED_NAME_VCPU_GT)
-  private Double vcpuGt;
+  private Integer vcpuGt;
 
   public static final String SERIALIZED_NAME_VCPU_GTE = "vcpu_gte";
   @SerializedName(SERIALIZED_NAME_VCPU_GTE)
-  private Double vcpuGte;
+  private Integer vcpuGte;
 
   public static final String SERIALIZED_NAME_VCPU_IN = "vcpu_in";
   @SerializedName(SERIALIZED_NAME_VCPU_IN)
-  private List<Double> vcpuIn = null;
+  private List<Integer> vcpuIn = null;
 
   public static final String SERIALIZED_NAME_VCPU_LT = "vcpu_lt";
   @SerializedName(SERIALIZED_NAME_VCPU_LT)
-  private Double vcpuLt;
+  private Integer vcpuLt;
 
   public static final String SERIALIZED_NAME_VCPU_LTE = "vcpu_lte";
   @SerializedName(SERIALIZED_NAME_VCPU_LTE)
-  private Double vcpuLte;
+  private Integer vcpuLte;
 
   public static final String SERIALIZED_NAME_VCPU_NOT = "vcpu_not";
   @SerializedName(SERIALIZED_NAME_VCPU_NOT)
-  private Double vcpuNot;
+  private Integer vcpuNot;
 
   public static final String SERIALIZED_NAME_VCPU_NOT_IN = "vcpu_not_in";
   @SerializedName(SERIALIZED_NAME_VCPU_NOT_IN)
-  private List<Double> vcpuNotIn = null;
+  private List<Integer> vcpuNotIn = null;
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
@@ -3248,7 +3248,7 @@ public class VmSnapshotWhereInput {
   }
 
 
-  public VmSnapshotWhereInput maxIops(Double maxIops) {
+  public VmSnapshotWhereInput maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -3261,17 +3261,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
 
-  public VmSnapshotWhereInput maxIopsGt(Double maxIopsGt) {
+  public VmSnapshotWhereInput maxIopsGt(Integer maxIopsGt) {
     
     this.maxIopsGt = maxIopsGt;
     return this;
@@ -3284,17 +3284,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsGt() {
+  public Integer getMaxIopsGt() {
     return maxIopsGt;
   }
 
 
-  public void setMaxIopsGt(Double maxIopsGt) {
+  public void setMaxIopsGt(Integer maxIopsGt) {
     this.maxIopsGt = maxIopsGt;
   }
 
 
-  public VmSnapshotWhereInput maxIopsGte(Double maxIopsGte) {
+  public VmSnapshotWhereInput maxIopsGte(Integer maxIopsGte) {
     
     this.maxIopsGte = maxIopsGte;
     return this;
@@ -3307,25 +3307,25 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsGte() {
+  public Integer getMaxIopsGte() {
     return maxIopsGte;
   }
 
 
-  public void setMaxIopsGte(Double maxIopsGte) {
+  public void setMaxIopsGte(Integer maxIopsGte) {
     this.maxIopsGte = maxIopsGte;
   }
 
 
-  public VmSnapshotWhereInput maxIopsIn(List<Double> maxIopsIn) {
+  public VmSnapshotWhereInput maxIopsIn(List<Integer> maxIopsIn) {
     
     this.maxIopsIn = maxIopsIn;
     return this;
   }
 
-  public VmSnapshotWhereInput addMaxIopsInItem(Double maxIopsInItem) {
+  public VmSnapshotWhereInput addMaxIopsInItem(Integer maxIopsInItem) {
     if (this.maxIopsIn == null) {
-      this.maxIopsIn = new ArrayList<Double>();
+      this.maxIopsIn = new ArrayList<Integer>();
     }
     this.maxIopsIn.add(maxIopsInItem);
     return this;
@@ -3338,17 +3338,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxIopsIn() {
+  public List<Integer> getMaxIopsIn() {
     return maxIopsIn;
   }
 
 
-  public void setMaxIopsIn(List<Double> maxIopsIn) {
+  public void setMaxIopsIn(List<Integer> maxIopsIn) {
     this.maxIopsIn = maxIopsIn;
   }
 
 
-  public VmSnapshotWhereInput maxIopsLt(Double maxIopsLt) {
+  public VmSnapshotWhereInput maxIopsLt(Integer maxIopsLt) {
     
     this.maxIopsLt = maxIopsLt;
     return this;
@@ -3361,17 +3361,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsLt() {
+  public Integer getMaxIopsLt() {
     return maxIopsLt;
   }
 
 
-  public void setMaxIopsLt(Double maxIopsLt) {
+  public void setMaxIopsLt(Integer maxIopsLt) {
     this.maxIopsLt = maxIopsLt;
   }
 
 
-  public VmSnapshotWhereInput maxIopsLte(Double maxIopsLte) {
+  public VmSnapshotWhereInput maxIopsLte(Integer maxIopsLte) {
     
     this.maxIopsLte = maxIopsLte;
     return this;
@@ -3384,17 +3384,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsLte() {
+  public Integer getMaxIopsLte() {
     return maxIopsLte;
   }
 
 
-  public void setMaxIopsLte(Double maxIopsLte) {
+  public void setMaxIopsLte(Integer maxIopsLte) {
     this.maxIopsLte = maxIopsLte;
   }
 
 
-  public VmSnapshotWhereInput maxIopsNot(Double maxIopsNot) {
+  public VmSnapshotWhereInput maxIopsNot(Integer maxIopsNot) {
     
     this.maxIopsNot = maxIopsNot;
     return this;
@@ -3407,25 +3407,25 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsNot() {
+  public Integer getMaxIopsNot() {
     return maxIopsNot;
   }
 
 
-  public void setMaxIopsNot(Double maxIopsNot) {
+  public void setMaxIopsNot(Integer maxIopsNot) {
     this.maxIopsNot = maxIopsNot;
   }
 
 
-  public VmSnapshotWhereInput maxIopsNotIn(List<Double> maxIopsNotIn) {
+  public VmSnapshotWhereInput maxIopsNotIn(List<Integer> maxIopsNotIn) {
     
     this.maxIopsNotIn = maxIopsNotIn;
     return this;
   }
 
-  public VmSnapshotWhereInput addMaxIopsNotInItem(Double maxIopsNotInItem) {
+  public VmSnapshotWhereInput addMaxIopsNotInItem(Integer maxIopsNotInItem) {
     if (this.maxIopsNotIn == null) {
-      this.maxIopsNotIn = new ArrayList<Double>();
+      this.maxIopsNotIn = new ArrayList<Integer>();
     }
     this.maxIopsNotIn.add(maxIopsNotInItem);
     return this;
@@ -3438,12 +3438,12 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxIopsNotIn() {
+  public List<Integer> getMaxIopsNotIn() {
     return maxIopsNotIn;
   }
 
 
-  public void setMaxIopsNotIn(List<Double> maxIopsNotIn) {
+  public void setMaxIopsNotIn(List<Integer> maxIopsNotIn) {
     this.maxIopsNotIn = maxIopsNotIn;
   }
 
@@ -4379,7 +4379,7 @@ public class VmSnapshotWhereInput {
   }
 
 
-  public VmSnapshotWhereInput vcpu(Double vcpu) {
+  public VmSnapshotWhereInput vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -4392,17 +4392,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
 
-  public VmSnapshotWhereInput vcpuGt(Double vcpuGt) {
+  public VmSnapshotWhereInput vcpuGt(Integer vcpuGt) {
     
     this.vcpuGt = vcpuGt;
     return this;
@@ -4415,17 +4415,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuGt() {
+  public Integer getVcpuGt() {
     return vcpuGt;
   }
 
 
-  public void setVcpuGt(Double vcpuGt) {
+  public void setVcpuGt(Integer vcpuGt) {
     this.vcpuGt = vcpuGt;
   }
 
 
-  public VmSnapshotWhereInput vcpuGte(Double vcpuGte) {
+  public VmSnapshotWhereInput vcpuGte(Integer vcpuGte) {
     
     this.vcpuGte = vcpuGte;
     return this;
@@ -4438,25 +4438,25 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuGte() {
+  public Integer getVcpuGte() {
     return vcpuGte;
   }
 
 
-  public void setVcpuGte(Double vcpuGte) {
+  public void setVcpuGte(Integer vcpuGte) {
     this.vcpuGte = vcpuGte;
   }
 
 
-  public VmSnapshotWhereInput vcpuIn(List<Double> vcpuIn) {
+  public VmSnapshotWhereInput vcpuIn(List<Integer> vcpuIn) {
     
     this.vcpuIn = vcpuIn;
     return this;
   }
 
-  public VmSnapshotWhereInput addVcpuInItem(Double vcpuInItem) {
+  public VmSnapshotWhereInput addVcpuInItem(Integer vcpuInItem) {
     if (this.vcpuIn == null) {
-      this.vcpuIn = new ArrayList<Double>();
+      this.vcpuIn = new ArrayList<Integer>();
     }
     this.vcpuIn.add(vcpuInItem);
     return this;
@@ -4469,17 +4469,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVcpuIn() {
+  public List<Integer> getVcpuIn() {
     return vcpuIn;
   }
 
 
-  public void setVcpuIn(List<Double> vcpuIn) {
+  public void setVcpuIn(List<Integer> vcpuIn) {
     this.vcpuIn = vcpuIn;
   }
 
 
-  public VmSnapshotWhereInput vcpuLt(Double vcpuLt) {
+  public VmSnapshotWhereInput vcpuLt(Integer vcpuLt) {
     
     this.vcpuLt = vcpuLt;
     return this;
@@ -4492,17 +4492,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuLt() {
+  public Integer getVcpuLt() {
     return vcpuLt;
   }
 
 
-  public void setVcpuLt(Double vcpuLt) {
+  public void setVcpuLt(Integer vcpuLt) {
     this.vcpuLt = vcpuLt;
   }
 
 
-  public VmSnapshotWhereInput vcpuLte(Double vcpuLte) {
+  public VmSnapshotWhereInput vcpuLte(Integer vcpuLte) {
     
     this.vcpuLte = vcpuLte;
     return this;
@@ -4515,17 +4515,17 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuLte() {
+  public Integer getVcpuLte() {
     return vcpuLte;
   }
 
 
-  public void setVcpuLte(Double vcpuLte) {
+  public void setVcpuLte(Integer vcpuLte) {
     this.vcpuLte = vcpuLte;
   }
 
 
-  public VmSnapshotWhereInput vcpuNot(Double vcpuNot) {
+  public VmSnapshotWhereInput vcpuNot(Integer vcpuNot) {
     
     this.vcpuNot = vcpuNot;
     return this;
@@ -4538,25 +4538,25 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuNot() {
+  public Integer getVcpuNot() {
     return vcpuNot;
   }
 
 
-  public void setVcpuNot(Double vcpuNot) {
+  public void setVcpuNot(Integer vcpuNot) {
     this.vcpuNot = vcpuNot;
   }
 
 
-  public VmSnapshotWhereInput vcpuNotIn(List<Double> vcpuNotIn) {
+  public VmSnapshotWhereInput vcpuNotIn(List<Integer> vcpuNotIn) {
     
     this.vcpuNotIn = vcpuNotIn;
     return this;
   }
 
-  public VmSnapshotWhereInput addVcpuNotInItem(Double vcpuNotInItem) {
+  public VmSnapshotWhereInput addVcpuNotInItem(Integer vcpuNotInItem) {
     if (this.vcpuNotIn == null) {
-      this.vcpuNotIn = new ArrayList<Double>();
+      this.vcpuNotIn = new ArrayList<Integer>();
     }
     this.vcpuNotIn.add(vcpuNotInItem);
     return this;
@@ -4569,12 +4569,12 @@ public class VmSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVcpuNotIn() {
+  public List<Integer> getVcpuNotIn() {
     return vcpuNotIn;
   }
 
 
-  public void setVcpuNotIn(List<Double> vcpuNotIn) {
+  public void setVcpuNotIn(List<Integer> vcpuNotIn) {
     this.vcpuNotIn = vcpuNotIn;
   }
 

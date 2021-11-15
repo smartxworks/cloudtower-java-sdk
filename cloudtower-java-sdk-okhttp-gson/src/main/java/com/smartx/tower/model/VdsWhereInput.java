@@ -413,35 +413,35 @@ public class VdsWhereInput {
 
   public static final String SERIALIZED_NAME_VLANS_NUM = "vlans_num";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM)
-  private Double vlansNum;
+  private Integer vlansNum;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_GT = "vlans_num_gt";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_GT)
-  private Double vlansNumGt;
+  private Integer vlansNumGt;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_GTE = "vlans_num_gte";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_GTE)
-  private Double vlansNumGte;
+  private Integer vlansNumGte;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_IN = "vlans_num_in";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_IN)
-  private List<Double> vlansNumIn = null;
+  private List<Integer> vlansNumIn = null;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_LT = "vlans_num_lt";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_LT)
-  private Double vlansNumLt;
+  private Integer vlansNumLt;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_LTE = "vlans_num_lte";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_LTE)
-  private Double vlansNumLte;
+  private Integer vlansNumLte;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_NOT = "vlans_num_not";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_NOT)
-  private Double vlansNumNot;
+  private Integer vlansNumNot;
 
   public static final String SERIALIZED_NAME_VLANS_NUM_NOT_IN = "vlans_num_not_in";
   @SerializedName(SERIALIZED_NAME_VLANS_NUM_NOT_IN)
-  private List<Double> vlansNumNotIn = null;
+  private List<Integer> vlansNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VLANS_SOME = "vlans_some";
   @SerializedName(SERIALIZED_NAME_VLANS_SOME)
@@ -2723,7 +2723,7 @@ public class VdsWhereInput {
   }
 
 
-  public VdsWhereInput vlansNum(Double vlansNum) {
+  public VdsWhereInput vlansNum(Integer vlansNum) {
     
     this.vlansNum = vlansNum;
     return this;
@@ -2736,17 +2736,17 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlansNum() {
+  public Integer getVlansNum() {
     return vlansNum;
   }
 
 
-  public void setVlansNum(Double vlansNum) {
+  public void setVlansNum(Integer vlansNum) {
     this.vlansNum = vlansNum;
   }
 
 
-  public VdsWhereInput vlansNumGt(Double vlansNumGt) {
+  public VdsWhereInput vlansNumGt(Integer vlansNumGt) {
     
     this.vlansNumGt = vlansNumGt;
     return this;
@@ -2759,17 +2759,17 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlansNumGt() {
+  public Integer getVlansNumGt() {
     return vlansNumGt;
   }
 
 
-  public void setVlansNumGt(Double vlansNumGt) {
+  public void setVlansNumGt(Integer vlansNumGt) {
     this.vlansNumGt = vlansNumGt;
   }
 
 
-  public VdsWhereInput vlansNumGte(Double vlansNumGte) {
+  public VdsWhereInput vlansNumGte(Integer vlansNumGte) {
     
     this.vlansNumGte = vlansNumGte;
     return this;
@@ -2782,25 +2782,25 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlansNumGte() {
+  public Integer getVlansNumGte() {
     return vlansNumGte;
   }
 
 
-  public void setVlansNumGte(Double vlansNumGte) {
+  public void setVlansNumGte(Integer vlansNumGte) {
     this.vlansNumGte = vlansNumGte;
   }
 
 
-  public VdsWhereInput vlansNumIn(List<Double> vlansNumIn) {
+  public VdsWhereInput vlansNumIn(List<Integer> vlansNumIn) {
     
     this.vlansNumIn = vlansNumIn;
     return this;
   }
 
-  public VdsWhereInput addVlansNumInItem(Double vlansNumInItem) {
+  public VdsWhereInput addVlansNumInItem(Integer vlansNumInItem) {
     if (this.vlansNumIn == null) {
-      this.vlansNumIn = new ArrayList<Double>();
+      this.vlansNumIn = new ArrayList<Integer>();
     }
     this.vlansNumIn.add(vlansNumInItem);
     return this;
@@ -2813,17 +2813,17 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVlansNumIn() {
+  public List<Integer> getVlansNumIn() {
     return vlansNumIn;
   }
 
 
-  public void setVlansNumIn(List<Double> vlansNumIn) {
+  public void setVlansNumIn(List<Integer> vlansNumIn) {
     this.vlansNumIn = vlansNumIn;
   }
 
 
-  public VdsWhereInput vlansNumLt(Double vlansNumLt) {
+  public VdsWhereInput vlansNumLt(Integer vlansNumLt) {
     
     this.vlansNumLt = vlansNumLt;
     return this;
@@ -2836,17 +2836,17 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlansNumLt() {
+  public Integer getVlansNumLt() {
     return vlansNumLt;
   }
 
 
-  public void setVlansNumLt(Double vlansNumLt) {
+  public void setVlansNumLt(Integer vlansNumLt) {
     this.vlansNumLt = vlansNumLt;
   }
 
 
-  public VdsWhereInput vlansNumLte(Double vlansNumLte) {
+  public VdsWhereInput vlansNumLte(Integer vlansNumLte) {
     
     this.vlansNumLte = vlansNumLte;
     return this;
@@ -2859,17 +2859,17 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlansNumLte() {
+  public Integer getVlansNumLte() {
     return vlansNumLte;
   }
 
 
-  public void setVlansNumLte(Double vlansNumLte) {
+  public void setVlansNumLte(Integer vlansNumLte) {
     this.vlansNumLte = vlansNumLte;
   }
 
 
-  public VdsWhereInput vlansNumNot(Double vlansNumNot) {
+  public VdsWhereInput vlansNumNot(Integer vlansNumNot) {
     
     this.vlansNumNot = vlansNumNot;
     return this;
@@ -2882,25 +2882,25 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlansNumNot() {
+  public Integer getVlansNumNot() {
     return vlansNumNot;
   }
 
 
-  public void setVlansNumNot(Double vlansNumNot) {
+  public void setVlansNumNot(Integer vlansNumNot) {
     this.vlansNumNot = vlansNumNot;
   }
 
 
-  public VdsWhereInput vlansNumNotIn(List<Double> vlansNumNotIn) {
+  public VdsWhereInput vlansNumNotIn(List<Integer> vlansNumNotIn) {
     
     this.vlansNumNotIn = vlansNumNotIn;
     return this;
   }
 
-  public VdsWhereInput addVlansNumNotInItem(Double vlansNumNotInItem) {
+  public VdsWhereInput addVlansNumNotInItem(Integer vlansNumNotInItem) {
     if (this.vlansNumNotIn == null) {
-      this.vlansNumNotIn = new ArrayList<Double>();
+      this.vlansNumNotIn = new ArrayList<Integer>();
     }
     this.vlansNumNotIn.add(vlansNumNotInItem);
     return this;
@@ -2913,12 +2913,12 @@ public class VdsWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVlansNumNotIn() {
+  public List<Integer> getVlansNumNotIn() {
     return vlansNumNotIn;
   }
 
 
-  public void setVlansNumNotIn(List<Double> vlansNumNotIn) {
+  public void setVlansNumNotIn(List<Integer> vlansNumNotIn) {
     this.vlansNumNotIn = vlansNumNotIn;
   }
 

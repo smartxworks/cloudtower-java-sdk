@@ -189,35 +189,35 @@ public class EverouteLicenseWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM = "max_socket_num";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM)
-  private Double maxSocketNum;
+  private Integer maxSocketNum;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_GT = "max_socket_num_gt";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_GT)
-  private Double maxSocketNumGt;
+  private Integer maxSocketNumGt;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_GTE = "max_socket_num_gte";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_GTE)
-  private Double maxSocketNumGte;
+  private Integer maxSocketNumGte;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_IN = "max_socket_num_in";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_IN)
-  private List<Double> maxSocketNumIn = null;
+  private List<Integer> maxSocketNumIn = null;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_LT = "max_socket_num_lt";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_LT)
-  private Double maxSocketNumLt;
+  private Integer maxSocketNumLt;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_LTE = "max_socket_num_lte";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_LTE)
-  private Double maxSocketNumLte;
+  private Integer maxSocketNumLte;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_NOT = "max_socket_num_not";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_NOT)
-  private Double maxSocketNumNot;
+  private Integer maxSocketNumNot;
 
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_NOT_IN = "max_socket_num_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_NOT_IN)
-  private List<Double> maxSocketNumNotIn = null;
+  private List<Integer> maxSocketNumNotIn = null;
 
   public static final String SERIALIZED_NAME_N_O_T = "NOT";
   @SerializedName(SERIALIZED_NAME_N_O_T)
@@ -1222,7 +1222,7 @@ public class EverouteLicenseWhereInput {
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNum(Double maxSocketNum) {
+  public EverouteLicenseWhereInput maxSocketNum(Integer maxSocketNum) {
     
     this.maxSocketNum = maxSocketNum;
     return this;
@@ -1235,17 +1235,17 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxSocketNum() {
+  public Integer getMaxSocketNum() {
     return maxSocketNum;
   }
 
 
-  public void setMaxSocketNum(Double maxSocketNum) {
+  public void setMaxSocketNum(Integer maxSocketNum) {
     this.maxSocketNum = maxSocketNum;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumGt(Double maxSocketNumGt) {
+  public EverouteLicenseWhereInput maxSocketNumGt(Integer maxSocketNumGt) {
     
     this.maxSocketNumGt = maxSocketNumGt;
     return this;
@@ -1258,17 +1258,17 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxSocketNumGt() {
+  public Integer getMaxSocketNumGt() {
     return maxSocketNumGt;
   }
 
 
-  public void setMaxSocketNumGt(Double maxSocketNumGt) {
+  public void setMaxSocketNumGt(Integer maxSocketNumGt) {
     this.maxSocketNumGt = maxSocketNumGt;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumGte(Double maxSocketNumGte) {
+  public EverouteLicenseWhereInput maxSocketNumGte(Integer maxSocketNumGte) {
     
     this.maxSocketNumGte = maxSocketNumGte;
     return this;
@@ -1281,25 +1281,25 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxSocketNumGte() {
+  public Integer getMaxSocketNumGte() {
     return maxSocketNumGte;
   }
 
 
-  public void setMaxSocketNumGte(Double maxSocketNumGte) {
+  public void setMaxSocketNumGte(Integer maxSocketNumGte) {
     this.maxSocketNumGte = maxSocketNumGte;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumIn(List<Double> maxSocketNumIn) {
+  public EverouteLicenseWhereInput maxSocketNumIn(List<Integer> maxSocketNumIn) {
     
     this.maxSocketNumIn = maxSocketNumIn;
     return this;
   }
 
-  public EverouteLicenseWhereInput addMaxSocketNumInItem(Double maxSocketNumInItem) {
+  public EverouteLicenseWhereInput addMaxSocketNumInItem(Integer maxSocketNumInItem) {
     if (this.maxSocketNumIn == null) {
-      this.maxSocketNumIn = new ArrayList<Double>();
+      this.maxSocketNumIn = new ArrayList<Integer>();
     }
     this.maxSocketNumIn.add(maxSocketNumInItem);
     return this;
@@ -1312,17 +1312,17 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxSocketNumIn() {
+  public List<Integer> getMaxSocketNumIn() {
     return maxSocketNumIn;
   }
 
 
-  public void setMaxSocketNumIn(List<Double> maxSocketNumIn) {
+  public void setMaxSocketNumIn(List<Integer> maxSocketNumIn) {
     this.maxSocketNumIn = maxSocketNumIn;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumLt(Double maxSocketNumLt) {
+  public EverouteLicenseWhereInput maxSocketNumLt(Integer maxSocketNumLt) {
     
     this.maxSocketNumLt = maxSocketNumLt;
     return this;
@@ -1335,17 +1335,17 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxSocketNumLt() {
+  public Integer getMaxSocketNumLt() {
     return maxSocketNumLt;
   }
 
 
-  public void setMaxSocketNumLt(Double maxSocketNumLt) {
+  public void setMaxSocketNumLt(Integer maxSocketNumLt) {
     this.maxSocketNumLt = maxSocketNumLt;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumLte(Double maxSocketNumLte) {
+  public EverouteLicenseWhereInput maxSocketNumLte(Integer maxSocketNumLte) {
     
     this.maxSocketNumLte = maxSocketNumLte;
     return this;
@@ -1358,17 +1358,17 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxSocketNumLte() {
+  public Integer getMaxSocketNumLte() {
     return maxSocketNumLte;
   }
 
 
-  public void setMaxSocketNumLte(Double maxSocketNumLte) {
+  public void setMaxSocketNumLte(Integer maxSocketNumLte) {
     this.maxSocketNumLte = maxSocketNumLte;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumNot(Double maxSocketNumNot) {
+  public EverouteLicenseWhereInput maxSocketNumNot(Integer maxSocketNumNot) {
     
     this.maxSocketNumNot = maxSocketNumNot;
     return this;
@@ -1381,25 +1381,25 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxSocketNumNot() {
+  public Integer getMaxSocketNumNot() {
     return maxSocketNumNot;
   }
 
 
-  public void setMaxSocketNumNot(Double maxSocketNumNot) {
+  public void setMaxSocketNumNot(Integer maxSocketNumNot) {
     this.maxSocketNumNot = maxSocketNumNot;
   }
 
 
-  public EverouteLicenseWhereInput maxSocketNumNotIn(List<Double> maxSocketNumNotIn) {
+  public EverouteLicenseWhereInput maxSocketNumNotIn(List<Integer> maxSocketNumNotIn) {
     
     this.maxSocketNumNotIn = maxSocketNumNotIn;
     return this;
   }
 
-  public EverouteLicenseWhereInput addMaxSocketNumNotInItem(Double maxSocketNumNotInItem) {
+  public EverouteLicenseWhereInput addMaxSocketNumNotInItem(Integer maxSocketNumNotInItem) {
     if (this.maxSocketNumNotIn == null) {
-      this.maxSocketNumNotIn = new ArrayList<Double>();
+      this.maxSocketNumNotIn = new ArrayList<Integer>();
     }
     this.maxSocketNumNotIn.add(maxSocketNumNotInItem);
     return this;
@@ -1412,12 +1412,12 @@ public class EverouteLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxSocketNumNotIn() {
+  public List<Integer> getMaxSocketNumNotIn() {
     return maxSocketNumNotIn;
   }
 
 
-  public void setMaxSocketNumNotIn(List<Double> maxSocketNumNotIn) {
+  public void setMaxSocketNumNotIn(List<Integer> maxSocketNumNotIn) {
     this.maxSocketNumNotIn = maxSocketNumNotIn;
   }
 

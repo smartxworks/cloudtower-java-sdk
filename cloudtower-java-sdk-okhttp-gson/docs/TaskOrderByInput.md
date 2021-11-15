@@ -57,6 +57,10 @@
 
 * `RESOURCE_ROLLBACK_ERROR_DESC` (value: `"resource_rollback_error_DESC"`)
 
+* `RESOURCE_ROLLBACK_RETRY_COUNT_ASC` (value: `"resource_rollback_retry_count_ASC"`)
+
+* `RESOURCE_ROLLBACK_RETRY_COUNT_DESC` (value: `"resource_rollback_retry_count_DESC"`)
+
 * `RESOURCE_ROLLBACKED_ASC` (value: `"resource_rollbacked_ASC"`)
 
 * `RESOURCE_ROLLBACKED_DESC` (value: `"resource_rollbacked_DESC"`)

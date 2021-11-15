@@ -45,67 +45,67 @@ public class SnapshotPlanWhereInput {
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM = "auto_delete_num";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM)
-  private Double autoDeleteNum;
+  private Integer autoDeleteNum;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_GT = "auto_delete_num_gt";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_GT)
-  private Double autoDeleteNumGt;
+  private Integer autoDeleteNumGt;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_GTE = "auto_delete_num_gte";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_GTE)
-  private Double autoDeleteNumGte;
+  private Integer autoDeleteNumGte;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_IN = "auto_delete_num_in";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_IN)
-  private List<Double> autoDeleteNumIn = null;
+  private List<Integer> autoDeleteNumIn = null;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_LT = "auto_delete_num_lt";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_LT)
-  private Double autoDeleteNumLt;
+  private Integer autoDeleteNumLt;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_LTE = "auto_delete_num_lte";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_LTE)
-  private Double autoDeleteNumLte;
+  private Integer autoDeleteNumLte;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_NOT = "auto_delete_num_not";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_NOT)
-  private Double autoDeleteNumNot;
+  private Integer autoDeleteNumNot;
 
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM_NOT_IN = "auto_delete_num_not_in";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM_NOT_IN)
-  private List<Double> autoDeleteNumNotIn = null;
+  private List<Integer> autoDeleteNumNotIn = null;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM = "auto_execute_num";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM)
-  private Double autoExecuteNum;
+  private Integer autoExecuteNum;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_GT = "auto_execute_num_gt";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_GT)
-  private Double autoExecuteNumGt;
+  private Integer autoExecuteNumGt;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_GTE = "auto_execute_num_gte";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_GTE)
-  private Double autoExecuteNumGte;
+  private Integer autoExecuteNumGte;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_IN = "auto_execute_num_in";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_IN)
-  private List<Double> autoExecuteNumIn = null;
+  private List<Integer> autoExecuteNumIn = null;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_LT = "auto_execute_num_lt";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_LT)
-  private Double autoExecuteNumLt;
+  private Integer autoExecuteNumLt;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_LTE = "auto_execute_num_lte";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_LTE)
-  private Double autoExecuteNumLte;
+  private Integer autoExecuteNumLte;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_NOT = "auto_execute_num_not";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_NOT)
-  private Double autoExecuteNumNot;
+  private Integer autoExecuteNumNot;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM_NOT_IN = "auto_execute_num_not_in";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM_NOT_IN)
-  private List<Double> autoExecuteNumNotIn = null;
+  private List<Integer> autoExecuteNumNotIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -477,67 +477,67 @@ public class SnapshotPlanWhereInput {
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM = "manual_delete_num";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM)
-  private Double manualDeleteNum;
+  private Integer manualDeleteNum;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_GT = "manual_delete_num_gt";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_GT)
-  private Double manualDeleteNumGt;
+  private Integer manualDeleteNumGt;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_GTE = "manual_delete_num_gte";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_GTE)
-  private Double manualDeleteNumGte;
+  private Integer manualDeleteNumGte;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_IN = "manual_delete_num_in";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_IN)
-  private List<Double> manualDeleteNumIn = null;
+  private List<Integer> manualDeleteNumIn = null;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_LT = "manual_delete_num_lt";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_LT)
-  private Double manualDeleteNumLt;
+  private Integer manualDeleteNumLt;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_LTE = "manual_delete_num_lte";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_LTE)
-  private Double manualDeleteNumLte;
+  private Integer manualDeleteNumLte;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_NOT = "manual_delete_num_not";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_NOT)
-  private Double manualDeleteNumNot;
+  private Integer manualDeleteNumNot;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM_NOT_IN = "manual_delete_num_not_in";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM_NOT_IN)
-  private List<Double> manualDeleteNumNotIn = null;
+  private List<Integer> manualDeleteNumNotIn = null;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM = "manual_execute_num";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM)
-  private Double manualExecuteNum;
+  private Integer manualExecuteNum;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_GT = "manual_execute_num_gt";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_GT)
-  private Double manualExecuteNumGt;
+  private Integer manualExecuteNumGt;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_GTE = "manual_execute_num_gte";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_GTE)
-  private Double manualExecuteNumGte;
+  private Integer manualExecuteNumGte;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_IN = "manual_execute_num_in";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_IN)
-  private List<Double> manualExecuteNumIn = null;
+  private List<Integer> manualExecuteNumIn = null;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_LT = "manual_execute_num_lt";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_LT)
-  private Double manualExecuteNumLt;
+  private Integer manualExecuteNumLt;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_LTE = "manual_execute_num_lte";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_LTE)
-  private Double manualExecuteNumLte;
+  private Integer manualExecuteNumLte;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_NOT = "manual_execute_num_not";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_NOT)
-  private Double manualExecuteNumNot;
+  private Integer manualExecuteNumNot;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM_NOT_IN = "manual_execute_num_not_in";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM_NOT_IN)
-  private List<Double> manualExecuteNumNotIn = null;
+  private List<Integer> manualExecuteNumNotIn = null;
 
   public static final String SERIALIZED_NAME_MIRROR = "mirror";
   @SerializedName(SERIALIZED_NAME_MIRROR)
@@ -641,35 +641,35 @@ public class SnapshotPlanWhereInput {
 
   public static final String SERIALIZED_NAME_OBJECT_NUM = "object_num";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM)
-  private Double objectNum;
+  private Integer objectNum;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_GT = "object_num_gt";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_GT)
-  private Double objectNumGt;
+  private Integer objectNumGt;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_GTE = "object_num_gte";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_GTE)
-  private Double objectNumGte;
+  private Integer objectNumGte;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_IN = "object_num_in";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_IN)
-  private List<Double> objectNumIn = null;
+  private List<Integer> objectNumIn = null;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_LT = "object_num_lt";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_LT)
-  private Double objectNumLt;
+  private Integer objectNumLt;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_LTE = "object_num_lte";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_LTE)
-  private Double objectNumLte;
+  private Integer objectNumLte;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_NOT = "object_num_not";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_NOT)
-  private Double objectNumNot;
+  private Integer objectNumNot;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_NOT_IN = "object_num_not_in";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_NOT_IN)
-  private List<Double> objectNumNotIn = null;
+  private List<Integer> objectNumNotIn = null;
 
   public static final String SERIALIZED_NAME_O_R = "OR";
   @SerializedName(SERIALIZED_NAME_O_R)
@@ -709,67 +709,67 @@ public class SnapshotPlanWhereInput {
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM = "remain_snapshot_num";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM)
-  private Double remainSnapshotNum;
+  private Integer remainSnapshotNum;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_GT = "remain_snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_GT)
-  private Double remainSnapshotNumGt;
+  private Integer remainSnapshotNumGt;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_GTE = "remain_snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_GTE)
-  private Double remainSnapshotNumGte;
+  private Integer remainSnapshotNumGte;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_IN = "remain_snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_IN)
-  private List<Double> remainSnapshotNumIn = null;
+  private List<Integer> remainSnapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_LT = "remain_snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_LT)
-  private Double remainSnapshotNumLt;
+  private Integer remainSnapshotNumLt;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_LTE = "remain_snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_LTE)
-  private Double remainSnapshotNumLte;
+  private Integer remainSnapshotNumLte;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_NOT = "remain_snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_NOT)
-  private Double remainSnapshotNumNot;
+  private Integer remainSnapshotNumNot;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_NOT_IN = "remain_snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> remainSnapshotNumNotIn = null;
+  private List<Integer> remainSnapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM = "snapshot_group_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM)
-  private Double snapshotGroupNum;
+  private Integer snapshotGroupNum;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_GT = "snapshot_group_num_gt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_GT)
-  private Double snapshotGroupNumGt;
+  private Integer snapshotGroupNumGt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_GTE = "snapshot_group_num_gte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_GTE)
-  private Double snapshotGroupNumGte;
+  private Integer snapshotGroupNumGte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_IN = "snapshot_group_num_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_IN)
-  private List<Double> snapshotGroupNumIn = null;
+  private List<Integer> snapshotGroupNumIn = null;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_LT = "snapshot_group_num_lt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_LT)
-  private Double snapshotGroupNumLt;
+  private Integer snapshotGroupNumLt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_LTE = "snapshot_group_num_lte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_LTE)
-  private Double snapshotGroupNumLte;
+  private Integer snapshotGroupNumLte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_NOT = "snapshot_group_num_not";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_NOT)
-  private Double snapshotGroupNumNot;
+  private Integer snapshotGroupNumNot;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_NOT_IN = "snapshot_group_num_not_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM_NOT_IN)
-  private List<Double> snapshotGroupNumNotIn = null;
+  private List<Integer> snapshotGroupNumNotIn = null;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
@@ -863,7 +863,7 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNum(Double autoDeleteNum) {
+  public SnapshotPlanWhereInput autoDeleteNum(Integer autoDeleteNum) {
     
     this.autoDeleteNum = autoDeleteNum;
     return this;
@@ -876,17 +876,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoDeleteNum() {
+  public Integer getAutoDeleteNum() {
     return autoDeleteNum;
   }
 
 
-  public void setAutoDeleteNum(Double autoDeleteNum) {
+  public void setAutoDeleteNum(Integer autoDeleteNum) {
     this.autoDeleteNum = autoDeleteNum;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumGt(Double autoDeleteNumGt) {
+  public SnapshotPlanWhereInput autoDeleteNumGt(Integer autoDeleteNumGt) {
     
     this.autoDeleteNumGt = autoDeleteNumGt;
     return this;
@@ -899,17 +899,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoDeleteNumGt() {
+  public Integer getAutoDeleteNumGt() {
     return autoDeleteNumGt;
   }
 
 
-  public void setAutoDeleteNumGt(Double autoDeleteNumGt) {
+  public void setAutoDeleteNumGt(Integer autoDeleteNumGt) {
     this.autoDeleteNumGt = autoDeleteNumGt;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumGte(Double autoDeleteNumGte) {
+  public SnapshotPlanWhereInput autoDeleteNumGte(Integer autoDeleteNumGte) {
     
     this.autoDeleteNumGte = autoDeleteNumGte;
     return this;
@@ -922,25 +922,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoDeleteNumGte() {
+  public Integer getAutoDeleteNumGte() {
     return autoDeleteNumGte;
   }
 
 
-  public void setAutoDeleteNumGte(Double autoDeleteNumGte) {
+  public void setAutoDeleteNumGte(Integer autoDeleteNumGte) {
     this.autoDeleteNumGte = autoDeleteNumGte;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumIn(List<Double> autoDeleteNumIn) {
+  public SnapshotPlanWhereInput autoDeleteNumIn(List<Integer> autoDeleteNumIn) {
     
     this.autoDeleteNumIn = autoDeleteNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addAutoDeleteNumInItem(Double autoDeleteNumInItem) {
+  public SnapshotPlanWhereInput addAutoDeleteNumInItem(Integer autoDeleteNumInItem) {
     if (this.autoDeleteNumIn == null) {
-      this.autoDeleteNumIn = new ArrayList<Double>();
+      this.autoDeleteNumIn = new ArrayList<Integer>();
     }
     this.autoDeleteNumIn.add(autoDeleteNumInItem);
     return this;
@@ -953,17 +953,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getAutoDeleteNumIn() {
+  public List<Integer> getAutoDeleteNumIn() {
     return autoDeleteNumIn;
   }
 
 
-  public void setAutoDeleteNumIn(List<Double> autoDeleteNumIn) {
+  public void setAutoDeleteNumIn(List<Integer> autoDeleteNumIn) {
     this.autoDeleteNumIn = autoDeleteNumIn;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumLt(Double autoDeleteNumLt) {
+  public SnapshotPlanWhereInput autoDeleteNumLt(Integer autoDeleteNumLt) {
     
     this.autoDeleteNumLt = autoDeleteNumLt;
     return this;
@@ -976,17 +976,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoDeleteNumLt() {
+  public Integer getAutoDeleteNumLt() {
     return autoDeleteNumLt;
   }
 
 
-  public void setAutoDeleteNumLt(Double autoDeleteNumLt) {
+  public void setAutoDeleteNumLt(Integer autoDeleteNumLt) {
     this.autoDeleteNumLt = autoDeleteNumLt;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumLte(Double autoDeleteNumLte) {
+  public SnapshotPlanWhereInput autoDeleteNumLte(Integer autoDeleteNumLte) {
     
     this.autoDeleteNumLte = autoDeleteNumLte;
     return this;
@@ -999,17 +999,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoDeleteNumLte() {
+  public Integer getAutoDeleteNumLte() {
     return autoDeleteNumLte;
   }
 
 
-  public void setAutoDeleteNumLte(Double autoDeleteNumLte) {
+  public void setAutoDeleteNumLte(Integer autoDeleteNumLte) {
     this.autoDeleteNumLte = autoDeleteNumLte;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumNot(Double autoDeleteNumNot) {
+  public SnapshotPlanWhereInput autoDeleteNumNot(Integer autoDeleteNumNot) {
     
     this.autoDeleteNumNot = autoDeleteNumNot;
     return this;
@@ -1022,25 +1022,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoDeleteNumNot() {
+  public Integer getAutoDeleteNumNot() {
     return autoDeleteNumNot;
   }
 
 
-  public void setAutoDeleteNumNot(Double autoDeleteNumNot) {
+  public void setAutoDeleteNumNot(Integer autoDeleteNumNot) {
     this.autoDeleteNumNot = autoDeleteNumNot;
   }
 
 
-  public SnapshotPlanWhereInput autoDeleteNumNotIn(List<Double> autoDeleteNumNotIn) {
+  public SnapshotPlanWhereInput autoDeleteNumNotIn(List<Integer> autoDeleteNumNotIn) {
     
     this.autoDeleteNumNotIn = autoDeleteNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addAutoDeleteNumNotInItem(Double autoDeleteNumNotInItem) {
+  public SnapshotPlanWhereInput addAutoDeleteNumNotInItem(Integer autoDeleteNumNotInItem) {
     if (this.autoDeleteNumNotIn == null) {
-      this.autoDeleteNumNotIn = new ArrayList<Double>();
+      this.autoDeleteNumNotIn = new ArrayList<Integer>();
     }
     this.autoDeleteNumNotIn.add(autoDeleteNumNotInItem);
     return this;
@@ -1053,17 +1053,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getAutoDeleteNumNotIn() {
+  public List<Integer> getAutoDeleteNumNotIn() {
     return autoDeleteNumNotIn;
   }
 
 
-  public void setAutoDeleteNumNotIn(List<Double> autoDeleteNumNotIn) {
+  public void setAutoDeleteNumNotIn(List<Integer> autoDeleteNumNotIn) {
     this.autoDeleteNumNotIn = autoDeleteNumNotIn;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNum(Double autoExecuteNum) {
+  public SnapshotPlanWhereInput autoExecuteNum(Integer autoExecuteNum) {
     
     this.autoExecuteNum = autoExecuteNum;
     return this;
@@ -1076,17 +1076,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoExecuteNum() {
+  public Integer getAutoExecuteNum() {
     return autoExecuteNum;
   }
 
 
-  public void setAutoExecuteNum(Double autoExecuteNum) {
+  public void setAutoExecuteNum(Integer autoExecuteNum) {
     this.autoExecuteNum = autoExecuteNum;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumGt(Double autoExecuteNumGt) {
+  public SnapshotPlanWhereInput autoExecuteNumGt(Integer autoExecuteNumGt) {
     
     this.autoExecuteNumGt = autoExecuteNumGt;
     return this;
@@ -1099,17 +1099,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoExecuteNumGt() {
+  public Integer getAutoExecuteNumGt() {
     return autoExecuteNumGt;
   }
 
 
-  public void setAutoExecuteNumGt(Double autoExecuteNumGt) {
+  public void setAutoExecuteNumGt(Integer autoExecuteNumGt) {
     this.autoExecuteNumGt = autoExecuteNumGt;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumGte(Double autoExecuteNumGte) {
+  public SnapshotPlanWhereInput autoExecuteNumGte(Integer autoExecuteNumGte) {
     
     this.autoExecuteNumGte = autoExecuteNumGte;
     return this;
@@ -1122,25 +1122,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoExecuteNumGte() {
+  public Integer getAutoExecuteNumGte() {
     return autoExecuteNumGte;
   }
 
 
-  public void setAutoExecuteNumGte(Double autoExecuteNumGte) {
+  public void setAutoExecuteNumGte(Integer autoExecuteNumGte) {
     this.autoExecuteNumGte = autoExecuteNumGte;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumIn(List<Double> autoExecuteNumIn) {
+  public SnapshotPlanWhereInput autoExecuteNumIn(List<Integer> autoExecuteNumIn) {
     
     this.autoExecuteNumIn = autoExecuteNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addAutoExecuteNumInItem(Double autoExecuteNumInItem) {
+  public SnapshotPlanWhereInput addAutoExecuteNumInItem(Integer autoExecuteNumInItem) {
     if (this.autoExecuteNumIn == null) {
-      this.autoExecuteNumIn = new ArrayList<Double>();
+      this.autoExecuteNumIn = new ArrayList<Integer>();
     }
     this.autoExecuteNumIn.add(autoExecuteNumInItem);
     return this;
@@ -1153,17 +1153,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getAutoExecuteNumIn() {
+  public List<Integer> getAutoExecuteNumIn() {
     return autoExecuteNumIn;
   }
 
 
-  public void setAutoExecuteNumIn(List<Double> autoExecuteNumIn) {
+  public void setAutoExecuteNumIn(List<Integer> autoExecuteNumIn) {
     this.autoExecuteNumIn = autoExecuteNumIn;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumLt(Double autoExecuteNumLt) {
+  public SnapshotPlanWhereInput autoExecuteNumLt(Integer autoExecuteNumLt) {
     
     this.autoExecuteNumLt = autoExecuteNumLt;
     return this;
@@ -1176,17 +1176,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoExecuteNumLt() {
+  public Integer getAutoExecuteNumLt() {
     return autoExecuteNumLt;
   }
 
 
-  public void setAutoExecuteNumLt(Double autoExecuteNumLt) {
+  public void setAutoExecuteNumLt(Integer autoExecuteNumLt) {
     this.autoExecuteNumLt = autoExecuteNumLt;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumLte(Double autoExecuteNumLte) {
+  public SnapshotPlanWhereInput autoExecuteNumLte(Integer autoExecuteNumLte) {
     
     this.autoExecuteNumLte = autoExecuteNumLte;
     return this;
@@ -1199,17 +1199,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoExecuteNumLte() {
+  public Integer getAutoExecuteNumLte() {
     return autoExecuteNumLte;
   }
 
 
-  public void setAutoExecuteNumLte(Double autoExecuteNumLte) {
+  public void setAutoExecuteNumLte(Integer autoExecuteNumLte) {
     this.autoExecuteNumLte = autoExecuteNumLte;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumNot(Double autoExecuteNumNot) {
+  public SnapshotPlanWhereInput autoExecuteNumNot(Integer autoExecuteNumNot) {
     
     this.autoExecuteNumNot = autoExecuteNumNot;
     return this;
@@ -1222,25 +1222,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAutoExecuteNumNot() {
+  public Integer getAutoExecuteNumNot() {
     return autoExecuteNumNot;
   }
 
 
-  public void setAutoExecuteNumNot(Double autoExecuteNumNot) {
+  public void setAutoExecuteNumNot(Integer autoExecuteNumNot) {
     this.autoExecuteNumNot = autoExecuteNumNot;
   }
 
 
-  public SnapshotPlanWhereInput autoExecuteNumNotIn(List<Double> autoExecuteNumNotIn) {
+  public SnapshotPlanWhereInput autoExecuteNumNotIn(List<Integer> autoExecuteNumNotIn) {
     
     this.autoExecuteNumNotIn = autoExecuteNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addAutoExecuteNumNotInItem(Double autoExecuteNumNotInItem) {
+  public SnapshotPlanWhereInput addAutoExecuteNumNotInItem(Integer autoExecuteNumNotInItem) {
     if (this.autoExecuteNumNotIn == null) {
-      this.autoExecuteNumNotIn = new ArrayList<Double>();
+      this.autoExecuteNumNotIn = new ArrayList<Integer>();
     }
     this.autoExecuteNumNotIn.add(autoExecuteNumNotInItem);
     return this;
@@ -1253,12 +1253,12 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getAutoExecuteNumNotIn() {
+  public List<Integer> getAutoExecuteNumNotIn() {
     return autoExecuteNumNotIn;
   }
 
 
-  public void setAutoExecuteNumNotIn(List<Double> autoExecuteNumNotIn) {
+  public void setAutoExecuteNumNotIn(List<Integer> autoExecuteNumNotIn) {
     this.autoExecuteNumNotIn = autoExecuteNumNotIn;
   }
 
@@ -3539,7 +3539,7 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNum(Double manualDeleteNum) {
+  public SnapshotPlanWhereInput manualDeleteNum(Integer manualDeleteNum) {
     
     this.manualDeleteNum = manualDeleteNum;
     return this;
@@ -3552,17 +3552,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualDeleteNum() {
+  public Integer getManualDeleteNum() {
     return manualDeleteNum;
   }
 
 
-  public void setManualDeleteNum(Double manualDeleteNum) {
+  public void setManualDeleteNum(Integer manualDeleteNum) {
     this.manualDeleteNum = manualDeleteNum;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumGt(Double manualDeleteNumGt) {
+  public SnapshotPlanWhereInput manualDeleteNumGt(Integer manualDeleteNumGt) {
     
     this.manualDeleteNumGt = manualDeleteNumGt;
     return this;
@@ -3575,17 +3575,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualDeleteNumGt() {
+  public Integer getManualDeleteNumGt() {
     return manualDeleteNumGt;
   }
 
 
-  public void setManualDeleteNumGt(Double manualDeleteNumGt) {
+  public void setManualDeleteNumGt(Integer manualDeleteNumGt) {
     this.manualDeleteNumGt = manualDeleteNumGt;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumGte(Double manualDeleteNumGte) {
+  public SnapshotPlanWhereInput manualDeleteNumGte(Integer manualDeleteNumGte) {
     
     this.manualDeleteNumGte = manualDeleteNumGte;
     return this;
@@ -3598,25 +3598,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualDeleteNumGte() {
+  public Integer getManualDeleteNumGte() {
     return manualDeleteNumGte;
   }
 
 
-  public void setManualDeleteNumGte(Double manualDeleteNumGte) {
+  public void setManualDeleteNumGte(Integer manualDeleteNumGte) {
     this.manualDeleteNumGte = manualDeleteNumGte;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumIn(List<Double> manualDeleteNumIn) {
+  public SnapshotPlanWhereInput manualDeleteNumIn(List<Integer> manualDeleteNumIn) {
     
     this.manualDeleteNumIn = manualDeleteNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addManualDeleteNumInItem(Double manualDeleteNumInItem) {
+  public SnapshotPlanWhereInput addManualDeleteNumInItem(Integer manualDeleteNumInItem) {
     if (this.manualDeleteNumIn == null) {
-      this.manualDeleteNumIn = new ArrayList<Double>();
+      this.manualDeleteNumIn = new ArrayList<Integer>();
     }
     this.manualDeleteNumIn.add(manualDeleteNumInItem);
     return this;
@@ -3629,17 +3629,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getManualDeleteNumIn() {
+  public List<Integer> getManualDeleteNumIn() {
     return manualDeleteNumIn;
   }
 
 
-  public void setManualDeleteNumIn(List<Double> manualDeleteNumIn) {
+  public void setManualDeleteNumIn(List<Integer> manualDeleteNumIn) {
     this.manualDeleteNumIn = manualDeleteNumIn;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumLt(Double manualDeleteNumLt) {
+  public SnapshotPlanWhereInput manualDeleteNumLt(Integer manualDeleteNumLt) {
     
     this.manualDeleteNumLt = manualDeleteNumLt;
     return this;
@@ -3652,17 +3652,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualDeleteNumLt() {
+  public Integer getManualDeleteNumLt() {
     return manualDeleteNumLt;
   }
 
 
-  public void setManualDeleteNumLt(Double manualDeleteNumLt) {
+  public void setManualDeleteNumLt(Integer manualDeleteNumLt) {
     this.manualDeleteNumLt = manualDeleteNumLt;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumLte(Double manualDeleteNumLte) {
+  public SnapshotPlanWhereInput manualDeleteNumLte(Integer manualDeleteNumLte) {
     
     this.manualDeleteNumLte = manualDeleteNumLte;
     return this;
@@ -3675,17 +3675,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualDeleteNumLte() {
+  public Integer getManualDeleteNumLte() {
     return manualDeleteNumLte;
   }
 
 
-  public void setManualDeleteNumLte(Double manualDeleteNumLte) {
+  public void setManualDeleteNumLte(Integer manualDeleteNumLte) {
     this.manualDeleteNumLte = manualDeleteNumLte;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumNot(Double manualDeleteNumNot) {
+  public SnapshotPlanWhereInput manualDeleteNumNot(Integer manualDeleteNumNot) {
     
     this.manualDeleteNumNot = manualDeleteNumNot;
     return this;
@@ -3698,25 +3698,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualDeleteNumNot() {
+  public Integer getManualDeleteNumNot() {
     return manualDeleteNumNot;
   }
 
 
-  public void setManualDeleteNumNot(Double manualDeleteNumNot) {
+  public void setManualDeleteNumNot(Integer manualDeleteNumNot) {
     this.manualDeleteNumNot = manualDeleteNumNot;
   }
 
 
-  public SnapshotPlanWhereInput manualDeleteNumNotIn(List<Double> manualDeleteNumNotIn) {
+  public SnapshotPlanWhereInput manualDeleteNumNotIn(List<Integer> manualDeleteNumNotIn) {
     
     this.manualDeleteNumNotIn = manualDeleteNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addManualDeleteNumNotInItem(Double manualDeleteNumNotInItem) {
+  public SnapshotPlanWhereInput addManualDeleteNumNotInItem(Integer manualDeleteNumNotInItem) {
     if (this.manualDeleteNumNotIn == null) {
-      this.manualDeleteNumNotIn = new ArrayList<Double>();
+      this.manualDeleteNumNotIn = new ArrayList<Integer>();
     }
     this.manualDeleteNumNotIn.add(manualDeleteNumNotInItem);
     return this;
@@ -3729,17 +3729,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getManualDeleteNumNotIn() {
+  public List<Integer> getManualDeleteNumNotIn() {
     return manualDeleteNumNotIn;
   }
 
 
-  public void setManualDeleteNumNotIn(List<Double> manualDeleteNumNotIn) {
+  public void setManualDeleteNumNotIn(List<Integer> manualDeleteNumNotIn) {
     this.manualDeleteNumNotIn = manualDeleteNumNotIn;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNum(Double manualExecuteNum) {
+  public SnapshotPlanWhereInput manualExecuteNum(Integer manualExecuteNum) {
     
     this.manualExecuteNum = manualExecuteNum;
     return this;
@@ -3752,17 +3752,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualExecuteNum() {
+  public Integer getManualExecuteNum() {
     return manualExecuteNum;
   }
 
 
-  public void setManualExecuteNum(Double manualExecuteNum) {
+  public void setManualExecuteNum(Integer manualExecuteNum) {
     this.manualExecuteNum = manualExecuteNum;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumGt(Double manualExecuteNumGt) {
+  public SnapshotPlanWhereInput manualExecuteNumGt(Integer manualExecuteNumGt) {
     
     this.manualExecuteNumGt = manualExecuteNumGt;
     return this;
@@ -3775,17 +3775,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualExecuteNumGt() {
+  public Integer getManualExecuteNumGt() {
     return manualExecuteNumGt;
   }
 
 
-  public void setManualExecuteNumGt(Double manualExecuteNumGt) {
+  public void setManualExecuteNumGt(Integer manualExecuteNumGt) {
     this.manualExecuteNumGt = manualExecuteNumGt;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumGte(Double manualExecuteNumGte) {
+  public SnapshotPlanWhereInput manualExecuteNumGte(Integer manualExecuteNumGte) {
     
     this.manualExecuteNumGte = manualExecuteNumGte;
     return this;
@@ -3798,25 +3798,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualExecuteNumGte() {
+  public Integer getManualExecuteNumGte() {
     return manualExecuteNumGte;
   }
 
 
-  public void setManualExecuteNumGte(Double manualExecuteNumGte) {
+  public void setManualExecuteNumGte(Integer manualExecuteNumGte) {
     this.manualExecuteNumGte = manualExecuteNumGte;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumIn(List<Double> manualExecuteNumIn) {
+  public SnapshotPlanWhereInput manualExecuteNumIn(List<Integer> manualExecuteNumIn) {
     
     this.manualExecuteNumIn = manualExecuteNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addManualExecuteNumInItem(Double manualExecuteNumInItem) {
+  public SnapshotPlanWhereInput addManualExecuteNumInItem(Integer manualExecuteNumInItem) {
     if (this.manualExecuteNumIn == null) {
-      this.manualExecuteNumIn = new ArrayList<Double>();
+      this.manualExecuteNumIn = new ArrayList<Integer>();
     }
     this.manualExecuteNumIn.add(manualExecuteNumInItem);
     return this;
@@ -3829,17 +3829,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getManualExecuteNumIn() {
+  public List<Integer> getManualExecuteNumIn() {
     return manualExecuteNumIn;
   }
 
 
-  public void setManualExecuteNumIn(List<Double> manualExecuteNumIn) {
+  public void setManualExecuteNumIn(List<Integer> manualExecuteNumIn) {
     this.manualExecuteNumIn = manualExecuteNumIn;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumLt(Double manualExecuteNumLt) {
+  public SnapshotPlanWhereInput manualExecuteNumLt(Integer manualExecuteNumLt) {
     
     this.manualExecuteNumLt = manualExecuteNumLt;
     return this;
@@ -3852,17 +3852,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualExecuteNumLt() {
+  public Integer getManualExecuteNumLt() {
     return manualExecuteNumLt;
   }
 
 
-  public void setManualExecuteNumLt(Double manualExecuteNumLt) {
+  public void setManualExecuteNumLt(Integer manualExecuteNumLt) {
     this.manualExecuteNumLt = manualExecuteNumLt;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumLte(Double manualExecuteNumLte) {
+  public SnapshotPlanWhereInput manualExecuteNumLte(Integer manualExecuteNumLte) {
     
     this.manualExecuteNumLte = manualExecuteNumLte;
     return this;
@@ -3875,17 +3875,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualExecuteNumLte() {
+  public Integer getManualExecuteNumLte() {
     return manualExecuteNumLte;
   }
 
 
-  public void setManualExecuteNumLte(Double manualExecuteNumLte) {
+  public void setManualExecuteNumLte(Integer manualExecuteNumLte) {
     this.manualExecuteNumLte = manualExecuteNumLte;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumNot(Double manualExecuteNumNot) {
+  public SnapshotPlanWhereInput manualExecuteNumNot(Integer manualExecuteNumNot) {
     
     this.manualExecuteNumNot = manualExecuteNumNot;
     return this;
@@ -3898,25 +3898,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getManualExecuteNumNot() {
+  public Integer getManualExecuteNumNot() {
     return manualExecuteNumNot;
   }
 
 
-  public void setManualExecuteNumNot(Double manualExecuteNumNot) {
+  public void setManualExecuteNumNot(Integer manualExecuteNumNot) {
     this.manualExecuteNumNot = manualExecuteNumNot;
   }
 
 
-  public SnapshotPlanWhereInput manualExecuteNumNotIn(List<Double> manualExecuteNumNotIn) {
+  public SnapshotPlanWhereInput manualExecuteNumNotIn(List<Integer> manualExecuteNumNotIn) {
     
     this.manualExecuteNumNotIn = manualExecuteNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addManualExecuteNumNotInItem(Double manualExecuteNumNotInItem) {
+  public SnapshotPlanWhereInput addManualExecuteNumNotInItem(Integer manualExecuteNumNotInItem) {
     if (this.manualExecuteNumNotIn == null) {
-      this.manualExecuteNumNotIn = new ArrayList<Double>();
+      this.manualExecuteNumNotIn = new ArrayList<Integer>();
     }
     this.manualExecuteNumNotIn.add(manualExecuteNumNotInItem);
     return this;
@@ -3929,12 +3929,12 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getManualExecuteNumNotIn() {
+  public List<Integer> getManualExecuteNumNotIn() {
     return manualExecuteNumNotIn;
   }
 
 
-  public void setManualExecuteNumNotIn(List<Double> manualExecuteNumNotIn) {
+  public void setManualExecuteNumNotIn(List<Integer> manualExecuteNumNotIn) {
     this.manualExecuteNumNotIn = manualExecuteNumNotIn;
   }
 
@@ -4554,7 +4554,7 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput objectNum(Double objectNum) {
+  public SnapshotPlanWhereInput objectNum(Integer objectNum) {
     
     this.objectNum = objectNum;
     return this;
@@ -4567,17 +4567,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNum() {
+  public Integer getObjectNum() {
     return objectNum;
   }
 
 
-  public void setObjectNum(Double objectNum) {
+  public void setObjectNum(Integer objectNum) {
     this.objectNum = objectNum;
   }
 
 
-  public SnapshotPlanWhereInput objectNumGt(Double objectNumGt) {
+  public SnapshotPlanWhereInput objectNumGt(Integer objectNumGt) {
     
     this.objectNumGt = objectNumGt;
     return this;
@@ -4590,17 +4590,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumGt() {
+  public Integer getObjectNumGt() {
     return objectNumGt;
   }
 
 
-  public void setObjectNumGt(Double objectNumGt) {
+  public void setObjectNumGt(Integer objectNumGt) {
     this.objectNumGt = objectNumGt;
   }
 
 
-  public SnapshotPlanWhereInput objectNumGte(Double objectNumGte) {
+  public SnapshotPlanWhereInput objectNumGte(Integer objectNumGte) {
     
     this.objectNumGte = objectNumGte;
     return this;
@@ -4613,25 +4613,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumGte() {
+  public Integer getObjectNumGte() {
     return objectNumGte;
   }
 
 
-  public void setObjectNumGte(Double objectNumGte) {
+  public void setObjectNumGte(Integer objectNumGte) {
     this.objectNumGte = objectNumGte;
   }
 
 
-  public SnapshotPlanWhereInput objectNumIn(List<Double> objectNumIn) {
+  public SnapshotPlanWhereInput objectNumIn(List<Integer> objectNumIn) {
     
     this.objectNumIn = objectNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addObjectNumInItem(Double objectNumInItem) {
+  public SnapshotPlanWhereInput addObjectNumInItem(Integer objectNumInItem) {
     if (this.objectNumIn == null) {
-      this.objectNumIn = new ArrayList<Double>();
+      this.objectNumIn = new ArrayList<Integer>();
     }
     this.objectNumIn.add(objectNumInItem);
     return this;
@@ -4644,17 +4644,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getObjectNumIn() {
+  public List<Integer> getObjectNumIn() {
     return objectNumIn;
   }
 
 
-  public void setObjectNumIn(List<Double> objectNumIn) {
+  public void setObjectNumIn(List<Integer> objectNumIn) {
     this.objectNumIn = objectNumIn;
   }
 
 
-  public SnapshotPlanWhereInput objectNumLt(Double objectNumLt) {
+  public SnapshotPlanWhereInput objectNumLt(Integer objectNumLt) {
     
     this.objectNumLt = objectNumLt;
     return this;
@@ -4667,17 +4667,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumLt() {
+  public Integer getObjectNumLt() {
     return objectNumLt;
   }
 
 
-  public void setObjectNumLt(Double objectNumLt) {
+  public void setObjectNumLt(Integer objectNumLt) {
     this.objectNumLt = objectNumLt;
   }
 
 
-  public SnapshotPlanWhereInput objectNumLte(Double objectNumLte) {
+  public SnapshotPlanWhereInput objectNumLte(Integer objectNumLte) {
     
     this.objectNumLte = objectNumLte;
     return this;
@@ -4690,17 +4690,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumLte() {
+  public Integer getObjectNumLte() {
     return objectNumLte;
   }
 
 
-  public void setObjectNumLte(Double objectNumLte) {
+  public void setObjectNumLte(Integer objectNumLte) {
     this.objectNumLte = objectNumLte;
   }
 
 
-  public SnapshotPlanWhereInput objectNumNot(Double objectNumNot) {
+  public SnapshotPlanWhereInput objectNumNot(Integer objectNumNot) {
     
     this.objectNumNot = objectNumNot;
     return this;
@@ -4713,25 +4713,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumNot() {
+  public Integer getObjectNumNot() {
     return objectNumNot;
   }
 
 
-  public void setObjectNumNot(Double objectNumNot) {
+  public void setObjectNumNot(Integer objectNumNot) {
     this.objectNumNot = objectNumNot;
   }
 
 
-  public SnapshotPlanWhereInput objectNumNotIn(List<Double> objectNumNotIn) {
+  public SnapshotPlanWhereInput objectNumNotIn(List<Integer> objectNumNotIn) {
     
     this.objectNumNotIn = objectNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addObjectNumNotInItem(Double objectNumNotInItem) {
+  public SnapshotPlanWhereInput addObjectNumNotInItem(Integer objectNumNotInItem) {
     if (this.objectNumNotIn == null) {
-      this.objectNumNotIn = new ArrayList<Double>();
+      this.objectNumNotIn = new ArrayList<Integer>();
     }
     this.objectNumNotIn.add(objectNumNotInItem);
     return this;
@@ -4744,12 +4744,12 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getObjectNumNotIn() {
+  public List<Integer> getObjectNumNotIn() {
     return objectNumNotIn;
   }
 
 
-  public void setObjectNumNotIn(List<Double> objectNumNotIn) {
+  public void setObjectNumNotIn(List<Integer> objectNumNotIn) {
     this.objectNumNotIn = objectNumNotIn;
   }
 
@@ -4985,7 +4985,7 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNum(Double remainSnapshotNum) {
+  public SnapshotPlanWhereInput remainSnapshotNum(Integer remainSnapshotNum) {
     
     this.remainSnapshotNum = remainSnapshotNum;
     return this;
@@ -4998,17 +4998,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainSnapshotNum() {
+  public Integer getRemainSnapshotNum() {
     return remainSnapshotNum;
   }
 
 
-  public void setRemainSnapshotNum(Double remainSnapshotNum) {
+  public void setRemainSnapshotNum(Integer remainSnapshotNum) {
     this.remainSnapshotNum = remainSnapshotNum;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumGt(Double remainSnapshotNumGt) {
+  public SnapshotPlanWhereInput remainSnapshotNumGt(Integer remainSnapshotNumGt) {
     
     this.remainSnapshotNumGt = remainSnapshotNumGt;
     return this;
@@ -5021,17 +5021,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainSnapshotNumGt() {
+  public Integer getRemainSnapshotNumGt() {
     return remainSnapshotNumGt;
   }
 
 
-  public void setRemainSnapshotNumGt(Double remainSnapshotNumGt) {
+  public void setRemainSnapshotNumGt(Integer remainSnapshotNumGt) {
     this.remainSnapshotNumGt = remainSnapshotNumGt;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumGte(Double remainSnapshotNumGte) {
+  public SnapshotPlanWhereInput remainSnapshotNumGte(Integer remainSnapshotNumGte) {
     
     this.remainSnapshotNumGte = remainSnapshotNumGte;
     return this;
@@ -5044,25 +5044,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainSnapshotNumGte() {
+  public Integer getRemainSnapshotNumGte() {
     return remainSnapshotNumGte;
   }
 
 
-  public void setRemainSnapshotNumGte(Double remainSnapshotNumGte) {
+  public void setRemainSnapshotNumGte(Integer remainSnapshotNumGte) {
     this.remainSnapshotNumGte = remainSnapshotNumGte;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumIn(List<Double> remainSnapshotNumIn) {
+  public SnapshotPlanWhereInput remainSnapshotNumIn(List<Integer> remainSnapshotNumIn) {
     
     this.remainSnapshotNumIn = remainSnapshotNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addRemainSnapshotNumInItem(Double remainSnapshotNumInItem) {
+  public SnapshotPlanWhereInput addRemainSnapshotNumInItem(Integer remainSnapshotNumInItem) {
     if (this.remainSnapshotNumIn == null) {
-      this.remainSnapshotNumIn = new ArrayList<Double>();
+      this.remainSnapshotNumIn = new ArrayList<Integer>();
     }
     this.remainSnapshotNumIn.add(remainSnapshotNumInItem);
     return this;
@@ -5075,17 +5075,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRemainSnapshotNumIn() {
+  public List<Integer> getRemainSnapshotNumIn() {
     return remainSnapshotNumIn;
   }
 
 
-  public void setRemainSnapshotNumIn(List<Double> remainSnapshotNumIn) {
+  public void setRemainSnapshotNumIn(List<Integer> remainSnapshotNumIn) {
     this.remainSnapshotNumIn = remainSnapshotNumIn;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumLt(Double remainSnapshotNumLt) {
+  public SnapshotPlanWhereInput remainSnapshotNumLt(Integer remainSnapshotNumLt) {
     
     this.remainSnapshotNumLt = remainSnapshotNumLt;
     return this;
@@ -5098,17 +5098,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainSnapshotNumLt() {
+  public Integer getRemainSnapshotNumLt() {
     return remainSnapshotNumLt;
   }
 
 
-  public void setRemainSnapshotNumLt(Double remainSnapshotNumLt) {
+  public void setRemainSnapshotNumLt(Integer remainSnapshotNumLt) {
     this.remainSnapshotNumLt = remainSnapshotNumLt;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumLte(Double remainSnapshotNumLte) {
+  public SnapshotPlanWhereInput remainSnapshotNumLte(Integer remainSnapshotNumLte) {
     
     this.remainSnapshotNumLte = remainSnapshotNumLte;
     return this;
@@ -5121,17 +5121,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainSnapshotNumLte() {
+  public Integer getRemainSnapshotNumLte() {
     return remainSnapshotNumLte;
   }
 
 
-  public void setRemainSnapshotNumLte(Double remainSnapshotNumLte) {
+  public void setRemainSnapshotNumLte(Integer remainSnapshotNumLte) {
     this.remainSnapshotNumLte = remainSnapshotNumLte;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumNot(Double remainSnapshotNumNot) {
+  public SnapshotPlanWhereInput remainSnapshotNumNot(Integer remainSnapshotNumNot) {
     
     this.remainSnapshotNumNot = remainSnapshotNumNot;
     return this;
@@ -5144,25 +5144,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainSnapshotNumNot() {
+  public Integer getRemainSnapshotNumNot() {
     return remainSnapshotNumNot;
   }
 
 
-  public void setRemainSnapshotNumNot(Double remainSnapshotNumNot) {
+  public void setRemainSnapshotNumNot(Integer remainSnapshotNumNot) {
     this.remainSnapshotNumNot = remainSnapshotNumNot;
   }
 
 
-  public SnapshotPlanWhereInput remainSnapshotNumNotIn(List<Double> remainSnapshotNumNotIn) {
+  public SnapshotPlanWhereInput remainSnapshotNumNotIn(List<Integer> remainSnapshotNumNotIn) {
     
     this.remainSnapshotNumNotIn = remainSnapshotNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addRemainSnapshotNumNotInItem(Double remainSnapshotNumNotInItem) {
+  public SnapshotPlanWhereInput addRemainSnapshotNumNotInItem(Integer remainSnapshotNumNotInItem) {
     if (this.remainSnapshotNumNotIn == null) {
-      this.remainSnapshotNumNotIn = new ArrayList<Double>();
+      this.remainSnapshotNumNotIn = new ArrayList<Integer>();
     }
     this.remainSnapshotNumNotIn.add(remainSnapshotNumNotInItem);
     return this;
@@ -5175,17 +5175,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRemainSnapshotNumNotIn() {
+  public List<Integer> getRemainSnapshotNumNotIn() {
     return remainSnapshotNumNotIn;
   }
 
 
-  public void setRemainSnapshotNumNotIn(List<Double> remainSnapshotNumNotIn) {
+  public void setRemainSnapshotNumNotIn(List<Integer> remainSnapshotNumNotIn) {
     this.remainSnapshotNumNotIn = remainSnapshotNumNotIn;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNum(Double snapshotGroupNum) {
+  public SnapshotPlanWhereInput snapshotGroupNum(Integer snapshotGroupNum) {
     
     this.snapshotGroupNum = snapshotGroupNum;
     return this;
@@ -5198,17 +5198,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotGroupNum() {
+  public Integer getSnapshotGroupNum() {
     return snapshotGroupNum;
   }
 
 
-  public void setSnapshotGroupNum(Double snapshotGroupNum) {
+  public void setSnapshotGroupNum(Integer snapshotGroupNum) {
     this.snapshotGroupNum = snapshotGroupNum;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumGt(Double snapshotGroupNumGt) {
+  public SnapshotPlanWhereInput snapshotGroupNumGt(Integer snapshotGroupNumGt) {
     
     this.snapshotGroupNumGt = snapshotGroupNumGt;
     return this;
@@ -5221,17 +5221,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotGroupNumGt() {
+  public Integer getSnapshotGroupNumGt() {
     return snapshotGroupNumGt;
   }
 
 
-  public void setSnapshotGroupNumGt(Double snapshotGroupNumGt) {
+  public void setSnapshotGroupNumGt(Integer snapshotGroupNumGt) {
     this.snapshotGroupNumGt = snapshotGroupNumGt;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumGte(Double snapshotGroupNumGte) {
+  public SnapshotPlanWhereInput snapshotGroupNumGte(Integer snapshotGroupNumGte) {
     
     this.snapshotGroupNumGte = snapshotGroupNumGte;
     return this;
@@ -5244,25 +5244,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotGroupNumGte() {
+  public Integer getSnapshotGroupNumGte() {
     return snapshotGroupNumGte;
   }
 
 
-  public void setSnapshotGroupNumGte(Double snapshotGroupNumGte) {
+  public void setSnapshotGroupNumGte(Integer snapshotGroupNumGte) {
     this.snapshotGroupNumGte = snapshotGroupNumGte;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumIn(List<Double> snapshotGroupNumIn) {
+  public SnapshotPlanWhereInput snapshotGroupNumIn(List<Integer> snapshotGroupNumIn) {
     
     this.snapshotGroupNumIn = snapshotGroupNumIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addSnapshotGroupNumInItem(Double snapshotGroupNumInItem) {
+  public SnapshotPlanWhereInput addSnapshotGroupNumInItem(Integer snapshotGroupNumInItem) {
     if (this.snapshotGroupNumIn == null) {
-      this.snapshotGroupNumIn = new ArrayList<Double>();
+      this.snapshotGroupNumIn = new ArrayList<Integer>();
     }
     this.snapshotGroupNumIn.add(snapshotGroupNumInItem);
     return this;
@@ -5275,17 +5275,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotGroupNumIn() {
+  public List<Integer> getSnapshotGroupNumIn() {
     return snapshotGroupNumIn;
   }
 
 
-  public void setSnapshotGroupNumIn(List<Double> snapshotGroupNumIn) {
+  public void setSnapshotGroupNumIn(List<Integer> snapshotGroupNumIn) {
     this.snapshotGroupNumIn = snapshotGroupNumIn;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumLt(Double snapshotGroupNumLt) {
+  public SnapshotPlanWhereInput snapshotGroupNumLt(Integer snapshotGroupNumLt) {
     
     this.snapshotGroupNumLt = snapshotGroupNumLt;
     return this;
@@ -5298,17 +5298,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotGroupNumLt() {
+  public Integer getSnapshotGroupNumLt() {
     return snapshotGroupNumLt;
   }
 
 
-  public void setSnapshotGroupNumLt(Double snapshotGroupNumLt) {
+  public void setSnapshotGroupNumLt(Integer snapshotGroupNumLt) {
     this.snapshotGroupNumLt = snapshotGroupNumLt;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumLte(Double snapshotGroupNumLte) {
+  public SnapshotPlanWhereInput snapshotGroupNumLte(Integer snapshotGroupNumLte) {
     
     this.snapshotGroupNumLte = snapshotGroupNumLte;
     return this;
@@ -5321,17 +5321,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotGroupNumLte() {
+  public Integer getSnapshotGroupNumLte() {
     return snapshotGroupNumLte;
   }
 
 
-  public void setSnapshotGroupNumLte(Double snapshotGroupNumLte) {
+  public void setSnapshotGroupNumLte(Integer snapshotGroupNumLte) {
     this.snapshotGroupNumLte = snapshotGroupNumLte;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumNot(Double snapshotGroupNumNot) {
+  public SnapshotPlanWhereInput snapshotGroupNumNot(Integer snapshotGroupNumNot) {
     
     this.snapshotGroupNumNot = snapshotGroupNumNot;
     return this;
@@ -5344,25 +5344,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotGroupNumNot() {
+  public Integer getSnapshotGroupNumNot() {
     return snapshotGroupNumNot;
   }
 
 
-  public void setSnapshotGroupNumNot(Double snapshotGroupNumNot) {
+  public void setSnapshotGroupNumNot(Integer snapshotGroupNumNot) {
     this.snapshotGroupNumNot = snapshotGroupNumNot;
   }
 
 
-  public SnapshotPlanWhereInput snapshotGroupNumNotIn(List<Double> snapshotGroupNumNotIn) {
+  public SnapshotPlanWhereInput snapshotGroupNumNotIn(List<Integer> snapshotGroupNumNotIn) {
     
     this.snapshotGroupNumNotIn = snapshotGroupNumNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addSnapshotGroupNumNotInItem(Double snapshotGroupNumNotInItem) {
+  public SnapshotPlanWhereInput addSnapshotGroupNumNotInItem(Integer snapshotGroupNumNotInItem) {
     if (this.snapshotGroupNumNotIn == null) {
-      this.snapshotGroupNumNotIn = new ArrayList<Double>();
+      this.snapshotGroupNumNotIn = new ArrayList<Integer>();
     }
     this.snapshotGroupNumNotIn.add(snapshotGroupNumNotInItem);
     return this;
@@ -5375,12 +5375,12 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotGroupNumNotIn() {
+  public List<Integer> getSnapshotGroupNumNotIn() {
     return snapshotGroupNumNotIn;
   }
 
 
-  public void setSnapshotGroupNumNotIn(List<Double> snapshotGroupNumNotIn) {
+  public void setSnapshotGroupNumNotIn(List<Integer> snapshotGroupNumNotIn) {
     this.snapshotGroupNumNotIn = snapshotGroupNumNotIn;
   }
 

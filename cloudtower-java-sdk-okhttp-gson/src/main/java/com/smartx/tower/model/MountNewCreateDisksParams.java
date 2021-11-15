@@ -4,119 +4,21 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 public class MountNewCreateDisksParams {
-  public class MountNewCreateDisksVmVolumeParams {
-    public static final String SERIALIZED_NAME_ELF_STORAGE_POILCY = "elf_storage_policy";
-    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POILCY)
-    private VmVolumeElfStoragePolicyType elfStoragePolicy;
-
-    public static final String SERIALIZED_NAME_PATH = "path";
-    @SerializedName(SERIALIZED_NAME_PATH)
-    private String path;
-
-    public static final String SERIALIZED_NAME_SIZE = "size";
-    @SerializedName(SERIALIZED_NAME_SIZE)
-    private Double size;
-
-    public static final String SERIALIZED_NAME_NAME = "name";
-    @SerializedName(SERIALIZED_NAME_NAME)
-    private String name;
-
-    public MountNewCreateDisksVmVolumeParams elfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
-      this.elfStoragePolicy = elfStoragePolicy;
-      return this;
-    }
-
-    /**
-     * Get elfStoragePolicy
-     * 
-     * @return elfStoragePolicy
-     **/
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
-    public VmVolumeElfStoragePolicyType getElfStoragePolicy() {
-      return elfStoragePolicy;
-    }
-
-    public void setElfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
-      this.elfStoragePolicy = elfStoragePolicy;
-    }
-
-    public MountNewCreateDisksVmVolumeParams path(String path) {
-      this.path = path;
-      return this;
-    }
-
-    /**
-     * Get path
-     * 
-     * @return path
-     **/
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public String getPath() {
-      return path;
-    }
-
-    public void setPath(String path) {
-      this.path = path;
-    }
-
-    public MountNewCreateDisksVmVolumeParams size(Double size) {
-      this.size = size;
-      return this;
-    }
-
-    /**
-     * Get size
-     * 
-     * @return size
-     **/
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
-    public Double getSize() {
-      return size;
-    }
-
-    public void setSize(Double size) {
-      this.size = size;
-    }
-
-    public MountNewCreateDisksVmVolumeParams name(String name) {
-      this.name = name;
-      return this;
-    }
-
-    /**
-     * Get name
-     * 
-     * @return name
-     **/
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
-    public String getName() {
-      return name;
-    }
-
-    public void setName(String name) {
-      this.name = name;
-    }
-  }
-
   public static final String SERIALIZED_NAME_MAX_BANDWITH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWITH_POLICY)
   private VmDiskIoRestrictType maxBandwidthPolicy;
 
   public static final String SERIALIZED_NAME_MAX_BANDWITH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWITH)
-  private String maxBandwidth;
+  private Double maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_IPOS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IPOS_POLICY)
-  private VmDiskIoRestrictType maxIposPolicy;
+  private VmDiskIoRestrictType maxIopsPolicy;
 
   public static final String SERIALIZED_NAME_MAX_IPOS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IPOS)
-  private String maxIpos;
+  private Double maxIops;
 
   public static final String SERIALIZED_NAME_VM_VOLUME = "vm_volume";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME)
@@ -124,7 +26,7 @@ public class MountNewCreateDisksParams {
 
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
-  private Double index;
+  private Integer index;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
@@ -136,7 +38,7 @@ public class MountNewCreateDisksParams {
 
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
-  private Double boot;
+  private Integer boot;
 
   public MountNewCreateDisksParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
@@ -158,7 +60,7 @@ public class MountNewCreateDisksParams {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
   }
 
-  public MountNewCreateDisksParams maxBandwidth(String maxBandwidth) {
+  public MountNewCreateDisksParams maxBandwidth(Double maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
     return this;
   }
@@ -170,52 +72,52 @@ public class MountNewCreateDisksParams {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public String getMaxBandwidth() {
+  public Double getMaxBandwidth() {
     return maxBandwidth;
   }
 
-  public void setMaxBandwidth(String maxBandwidth) {
+  public void setMaxBandwidth(Double maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
-  public MountNewCreateDisksParams maxIposPolicy(VmDiskIoRestrictType maxIposPolicy) {
-    this.maxIposPolicy = maxIposPolicy;
+  public MountNewCreateDisksParams maxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    this.maxIopsPolicy = maxIopsPolicy;
     return this;
   }
 
   /**
-   * Get maxIposPolicy
+   * Get maxIopsPolicy
    * 
-   * @return maxIposPolicy
+   * @return maxIopsPolicy
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public VmDiskIoRestrictType getMaxIposPolicy() {
-    return maxIposPolicy;
+  public VmDiskIoRestrictType getMaxIopsPolicy() {
+    return maxIopsPolicy;
   }
 
-  public void setMaxIposPolicy(VmDiskIoRestrictType maxIposPolicy) {
-    this.maxIposPolicy = maxIposPolicy;
+  public void setMaxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    this.maxIopsPolicy = maxIopsPolicy;
   }
 
-  public MountNewCreateDisksParams maxIpos(String maxIpos) {
-    this.maxIpos = maxIpos;
+  public MountNewCreateDisksParams maxIops(Double maxIops) {
+    this.maxIops = maxIops;
     return this;
   }
 
   /**
-   * Get maxIpos
+   * Get maxIops
    * 
-   * @return maxIpos
+   * @return maxIops
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public String getMaxIpos() {
-    return maxIpos;
+  public Double getMaxIops() {
+    return maxIops;
   }
 
-  public void setMaxIpos(String maxIpos) {
-    this.maxIpos = maxIpos;
+  public void setMaxIops(Double maxIops) {
+    this.maxIops = maxIops;
   }
 
   public MountNewCreateDisksParams vmVolume(MountNewCreateDisksVmVolumeParams vmVolume) {
@@ -238,7 +140,7 @@ public class MountNewCreateDisksParams {
     this.vmVolume = vmVolume;
   }
 
-  public MountNewCreateDisksParams index(Double index) {
+  public MountNewCreateDisksParams index(Integer index) {
     this.index = index;
     return this;
   }
@@ -250,11 +152,11 @@ public class MountNewCreateDisksParams {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public Double getIndex() {
+  public Integer getIndex() {
     return index;
   }
 
-  public void setIndex(Double index) {
+  public void setIndex(Integer index) {
     this.index = index;
   }
 
@@ -298,7 +200,7 @@ public class MountNewCreateDisksParams {
     this.bus = bus;
   }
 
-  public MountNewCreateDisksParams boot(Double boot) {
+  public MountNewCreateDisksParams boot(Integer boot) {
     this.boot = boot;
     return this;
   }
@@ -310,11 +212,11 @@ public class MountNewCreateDisksParams {
    **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
-  public Double getBoot() {
+  public Integer getBoot() {
     return boot;
   }
 
-  public void setBoot(Double boot) {
+  public void setBoot(Integer boot) {
     this.boot = boot;
   }
 

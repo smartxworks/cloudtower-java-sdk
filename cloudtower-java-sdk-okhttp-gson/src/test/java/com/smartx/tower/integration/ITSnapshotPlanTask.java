@@ -47,6 +47,8 @@ public class ITSnapshotPlanTask extends ITBase {
       List<SnapshotPlanTask> result = api.getSnapshotPlanTasks(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotPlanTasks").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSnapshotPlanTask extends ITBase {
       SnapshotPlanTaskConnection result = api.getSnapshotPlanTasksConnection(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotPlanTasksConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

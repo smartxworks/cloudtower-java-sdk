@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **binded** | **Boolean** |  | 
 **description** | **String** |  | 
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **id** | **String** |  | 
 **localCreatedAt** | **String** |  | 
 **localId** | **String** |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **size** | **Double** |  | 
 **status** | **UsbDeviceStatus** |  | 
 **usbType** | **String** |  | 
-**vm** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**vm** | [**NestedVm**](NestedVm.md) |  |  [optional]
 
 
 

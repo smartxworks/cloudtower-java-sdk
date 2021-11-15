@@ -7,13 +7,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clientPort** | **Double** |  | 
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**host** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**clientPort** | **Integer** |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**host** | [**NestedHost**](NestedHost.md) |  | 
 **id** | **String** |  | 
 **initiatorIp** | **String** |  | 
-**iscsiTarget** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**nvmfSubsystem** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**iscsiTarget** | [**NestedIscsiTarget**](NestedIscsiTarget.md) |  |  [optional]
+**nvmfSubsystem** | [**NestedNvmfSubsystem**](NestedNvmfSubsystem.md) |  |  [optional]
 **type** | **StoreConnectionType** |  | 
 
 

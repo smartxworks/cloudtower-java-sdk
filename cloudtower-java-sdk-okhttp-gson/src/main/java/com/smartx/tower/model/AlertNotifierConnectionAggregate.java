@@ -31,10 +31,10 @@ import java.io.IOException;
 public class AlertNotifierConnectionAggregate {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
-  private Double count;
+  private Integer count;
 
 
-  public AlertNotifierConnectionAggregate count(Double count) {
+  public AlertNotifierConnectionAggregate count(Integer count) {
     
     this.count = count;
     return this;
@@ -47,12 +47,12 @@ public class AlertNotifierConnectionAggregate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCount() {
+  public Integer getCount() {
     return count;
   }
 
 
-  public void setCount(Double count) {
+  public void setCount(Integer count) {
     this.count = count;
   }
 

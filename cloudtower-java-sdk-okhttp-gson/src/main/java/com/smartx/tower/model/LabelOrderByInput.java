@@ -45,6 +45,10 @@ public enum LabelOrderByInput {
   
   CONTENT_LIBRARY_IMAGE_NUM_DESC("content_library_image_num_DESC"),
   
+  CONTENT_LIBRARY_VM_TEMPLATE_NUM_ASC("content_library_vm_template_num_ASC"),
+  
+  CONTENT_LIBRARY_VM_TEMPLATE_NUM_DESC("content_library_vm_template_num_DESC"),
+  
   CREATEDAT_ASC("createdAt_ASC"),
   
   CREATEDAT_DESC("createdAt_DESC"),

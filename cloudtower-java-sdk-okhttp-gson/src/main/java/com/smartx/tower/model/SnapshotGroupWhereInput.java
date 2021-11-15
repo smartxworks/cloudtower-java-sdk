@@ -354,35 +354,35 @@ public class SnapshotGroupWhereInput {
 
   public static final String SERIALIZED_NAME_OBJECT_NUM = "object_num";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM)
-  private Double objectNum;
+  private Integer objectNum;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_GT = "object_num_gt";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_GT)
-  private Double objectNumGt;
+  private Integer objectNumGt;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_GTE = "object_num_gte";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_GTE)
-  private Double objectNumGte;
+  private Integer objectNumGte;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_IN = "object_num_in";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_IN)
-  private List<Double> objectNumIn = null;
+  private List<Integer> objectNumIn = null;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_LT = "object_num_lt";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_LT)
-  private Double objectNumLt;
+  private Integer objectNumLt;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_LTE = "object_num_lte";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_LTE)
-  private Double objectNumLte;
+  private Integer objectNumLte;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_NOT = "object_num_not";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_NOT)
-  private Double objectNumNot;
+  private Integer objectNumNot;
 
   public static final String SERIALIZED_NAME_OBJECT_NUM_NOT_IN = "object_num_not_in";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_NOT_IN)
-  private List<Double> objectNumNotIn = null;
+  private List<Integer> objectNumNotIn = null;
 
   public static final String SERIALIZED_NAME_O_R = "OR";
   @SerializedName(SERIALIZED_NAME_O_R)
@@ -2350,7 +2350,7 @@ public class SnapshotGroupWhereInput {
   }
 
 
-  public SnapshotGroupWhereInput objectNum(Double objectNum) {
+  public SnapshotGroupWhereInput objectNum(Integer objectNum) {
     
     this.objectNum = objectNum;
     return this;
@@ -2363,17 +2363,17 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNum() {
+  public Integer getObjectNum() {
     return objectNum;
   }
 
 
-  public void setObjectNum(Double objectNum) {
+  public void setObjectNum(Integer objectNum) {
     this.objectNum = objectNum;
   }
 
 
-  public SnapshotGroupWhereInput objectNumGt(Double objectNumGt) {
+  public SnapshotGroupWhereInput objectNumGt(Integer objectNumGt) {
     
     this.objectNumGt = objectNumGt;
     return this;
@@ -2386,17 +2386,17 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumGt() {
+  public Integer getObjectNumGt() {
     return objectNumGt;
   }
 
 
-  public void setObjectNumGt(Double objectNumGt) {
+  public void setObjectNumGt(Integer objectNumGt) {
     this.objectNumGt = objectNumGt;
   }
 
 
-  public SnapshotGroupWhereInput objectNumGte(Double objectNumGte) {
+  public SnapshotGroupWhereInput objectNumGte(Integer objectNumGte) {
     
     this.objectNumGte = objectNumGte;
     return this;
@@ -2409,25 +2409,25 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumGte() {
+  public Integer getObjectNumGte() {
     return objectNumGte;
   }
 
 
-  public void setObjectNumGte(Double objectNumGte) {
+  public void setObjectNumGte(Integer objectNumGte) {
     this.objectNumGte = objectNumGte;
   }
 
 
-  public SnapshotGroupWhereInput objectNumIn(List<Double> objectNumIn) {
+  public SnapshotGroupWhereInput objectNumIn(List<Integer> objectNumIn) {
     
     this.objectNumIn = objectNumIn;
     return this;
   }
 
-  public SnapshotGroupWhereInput addObjectNumInItem(Double objectNumInItem) {
+  public SnapshotGroupWhereInput addObjectNumInItem(Integer objectNumInItem) {
     if (this.objectNumIn == null) {
-      this.objectNumIn = new ArrayList<Double>();
+      this.objectNumIn = new ArrayList<Integer>();
     }
     this.objectNumIn.add(objectNumInItem);
     return this;
@@ -2440,17 +2440,17 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getObjectNumIn() {
+  public List<Integer> getObjectNumIn() {
     return objectNumIn;
   }
 
 
-  public void setObjectNumIn(List<Double> objectNumIn) {
+  public void setObjectNumIn(List<Integer> objectNumIn) {
     this.objectNumIn = objectNumIn;
   }
 
 
-  public SnapshotGroupWhereInput objectNumLt(Double objectNumLt) {
+  public SnapshotGroupWhereInput objectNumLt(Integer objectNumLt) {
     
     this.objectNumLt = objectNumLt;
     return this;
@@ -2463,17 +2463,17 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumLt() {
+  public Integer getObjectNumLt() {
     return objectNumLt;
   }
 
 
-  public void setObjectNumLt(Double objectNumLt) {
+  public void setObjectNumLt(Integer objectNumLt) {
     this.objectNumLt = objectNumLt;
   }
 
 
-  public SnapshotGroupWhereInput objectNumLte(Double objectNumLte) {
+  public SnapshotGroupWhereInput objectNumLte(Integer objectNumLte) {
     
     this.objectNumLte = objectNumLte;
     return this;
@@ -2486,17 +2486,17 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumLte() {
+  public Integer getObjectNumLte() {
     return objectNumLte;
   }
 
 
-  public void setObjectNumLte(Double objectNumLte) {
+  public void setObjectNumLte(Integer objectNumLte) {
     this.objectNumLte = objectNumLte;
   }
 
 
-  public SnapshotGroupWhereInput objectNumNot(Double objectNumNot) {
+  public SnapshotGroupWhereInput objectNumNot(Integer objectNumNot) {
     
     this.objectNumNot = objectNumNot;
     return this;
@@ -2509,25 +2509,25 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getObjectNumNot() {
+  public Integer getObjectNumNot() {
     return objectNumNot;
   }
 
 
-  public void setObjectNumNot(Double objectNumNot) {
+  public void setObjectNumNot(Integer objectNumNot) {
     this.objectNumNot = objectNumNot;
   }
 
 
-  public SnapshotGroupWhereInput objectNumNotIn(List<Double> objectNumNotIn) {
+  public SnapshotGroupWhereInput objectNumNotIn(List<Integer> objectNumNotIn) {
     
     this.objectNumNotIn = objectNumNotIn;
     return this;
   }
 
-  public SnapshotGroupWhereInput addObjectNumNotInItem(Double objectNumNotInItem) {
+  public SnapshotGroupWhereInput addObjectNumNotInItem(Integer objectNumNotInItem) {
     if (this.objectNumNotIn == null) {
-      this.objectNumNotIn = new ArrayList<Double>();
+      this.objectNumNotIn = new ArrayList<Integer>();
     }
     this.objectNumNotIn.add(objectNumNotInItem);
     return this;
@@ -2540,12 +2540,12 @@ public class SnapshotGroupWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getObjectNumNotIn() {
+  public List<Integer> getObjectNumNotIn() {
     return objectNumNotIn;
   }
 
 
-  public void setObjectNumNotIn(List<Double> objectNumNotIn) {
+  public void setObjectNumNotIn(List<Integer> objectNumNotIn) {
     this.objectNumNotIn = objectNumNotIn;
   }
 

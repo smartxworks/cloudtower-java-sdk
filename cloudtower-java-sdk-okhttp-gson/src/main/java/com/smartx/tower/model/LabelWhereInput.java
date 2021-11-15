@@ -24,6 +24,7 @@ import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.ConsistencyGroupSnapshotWhereInput;
 import com.smartx.tower.model.ConsistencyGroupWhereInput;
 import com.smartx.tower.model.ContentLibraryImageWhereInput;
+import com.smartx.tower.model.ContentLibraryVmTemplateWhereInput;
 import com.smartx.tower.model.DatacenterWhereInput;
 import com.smartx.tower.model.DiskWhereInput;
 import com.smartx.tower.model.ElfImageWhereInput;
@@ -64,35 +65,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM = "cluster_num";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM)
-  private Double clusterNum;
+  private Integer clusterNum;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_GT = "cluster_num_gt";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_GT)
-  private Double clusterNumGt;
+  private Integer clusterNumGt;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_GTE = "cluster_num_gte";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_GTE)
-  private Double clusterNumGte;
+  private Integer clusterNumGte;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_IN = "cluster_num_in";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_IN)
-  private List<Double> clusterNumIn = null;
+  private List<Integer> clusterNumIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_LT = "cluster_num_lt";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_LT)
-  private Double clusterNumLt;
+  private Integer clusterNumLt;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_LTE = "cluster_num_lte";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_LTE)
-  private Double clusterNumLte;
+  private Integer clusterNumLte;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_NOT = "cluster_num_not";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_NOT)
-  private Double clusterNumNot;
+  private Integer clusterNumNot;
 
   public static final String SERIALIZED_NAME_CLUSTER_NUM_NOT_IN = "cluster_num_not_in";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM_NOT_IN)
-  private List<Double> clusterNumNotIn = null;
+  private List<Integer> clusterNumNotIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTERS_EVERY = "clusters_every";
   @SerializedName(SERIALIZED_NAME_CLUSTERS_EVERY)
@@ -108,67 +109,67 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM = "consistency_group_num";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM)
-  private Double consistencyGroupNum;
+  private Integer consistencyGroupNum;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_GT = "consistency_group_num_gt";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_GT)
-  private Double consistencyGroupNumGt;
+  private Integer consistencyGroupNumGt;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_GTE = "consistency_group_num_gte";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_GTE)
-  private Double consistencyGroupNumGte;
+  private Integer consistencyGroupNumGte;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_IN = "consistency_group_num_in";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_IN)
-  private List<Double> consistencyGroupNumIn = null;
+  private List<Integer> consistencyGroupNumIn = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_LT = "consistency_group_num_lt";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_LT)
-  private Double consistencyGroupNumLt;
+  private Integer consistencyGroupNumLt;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_LTE = "consistency_group_num_lte";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_LTE)
-  private Double consistencyGroupNumLte;
+  private Integer consistencyGroupNumLte;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_NOT = "consistency_group_num_not";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_NOT)
-  private Double consistencyGroupNumNot;
+  private Integer consistencyGroupNumNot;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_NOT_IN = "consistency_group_num_not_in";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM_NOT_IN)
-  private List<Double> consistencyGroupNumNotIn = null;
+  private List<Integer> consistencyGroupNumNotIn = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM = "consistency_group_snapshot_num";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM)
-  private Double consistencyGroupSnapshotNum;
+  private Integer consistencyGroupSnapshotNum;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_GT = "consistency_group_snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_GT)
-  private Double consistencyGroupSnapshotNumGt;
+  private Integer consistencyGroupSnapshotNumGt;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_GTE = "consistency_group_snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_GTE)
-  private Double consistencyGroupSnapshotNumGte;
+  private Integer consistencyGroupSnapshotNumGte;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_IN = "consistency_group_snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_IN)
-  private List<Double> consistencyGroupSnapshotNumIn = null;
+  private List<Integer> consistencyGroupSnapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_LT = "consistency_group_snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_LT)
-  private Double consistencyGroupSnapshotNumLt;
+  private Integer consistencyGroupSnapshotNumLt;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_LTE = "consistency_group_snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_LTE)
-  private Double consistencyGroupSnapshotNumLte;
+  private Integer consistencyGroupSnapshotNumLte;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_NOT = "consistency_group_snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_NOT)
-  private Double consistencyGroupSnapshotNumNot;
+  private Integer consistencyGroupSnapshotNumNot;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_NOT_IN = "consistency_group_snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> consistencyGroupSnapshotNumNotIn = null;
+  private List<Integer> consistencyGroupSnapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS_EVERY = "consistency_group_snapshots_every";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS_EVERY)
@@ -196,35 +197,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM = "content_library_image_num";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM)
-  private Double contentLibraryImageNum;
+  private Integer contentLibraryImageNum;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_GT = "content_library_image_num_gt";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_GT)
-  private Double contentLibraryImageNumGt;
+  private Integer contentLibraryImageNumGt;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_GTE = "content_library_image_num_gte";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_GTE)
-  private Double contentLibraryImageNumGte;
+  private Integer contentLibraryImageNumGte;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_IN = "content_library_image_num_in";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_IN)
-  private List<Double> contentLibraryImageNumIn = null;
+  private List<Integer> contentLibraryImageNumIn = null;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_LT = "content_library_image_num_lt";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_LT)
-  private Double contentLibraryImageNumLt;
+  private Integer contentLibraryImageNumLt;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_LTE = "content_library_image_num_lte";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_LTE)
-  private Double contentLibraryImageNumLte;
+  private Integer contentLibraryImageNumLte;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_NOT = "content_library_image_num_not";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_NOT)
-  private Double contentLibraryImageNumNot;
+  private Integer contentLibraryImageNumNot;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_NOT_IN = "content_library_image_num_not_in";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM_NOT_IN)
-  private List<Double> contentLibraryImageNumNotIn = null;
+  private List<Integer> contentLibraryImageNumNotIn = null;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES_EVERY = "content_library_images_every";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES_EVERY)
@@ -237,6 +238,50 @@ public class LabelWhereInput {
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES_SOME = "content_library_images_some";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES_SOME)
   private ContentLibraryImageWhereInput contentLibraryImagesSome;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM = "content_library_vm_template_num";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM)
+  private Integer contentLibraryVmTemplateNum;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_GT = "content_library_vm_template_num_gt";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_GT)
+  private Integer contentLibraryVmTemplateNumGt;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_GTE = "content_library_vm_template_num_gte";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_GTE)
+  private Integer contentLibraryVmTemplateNumGte;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_IN = "content_library_vm_template_num_in";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_IN)
+  private List<Integer> contentLibraryVmTemplateNumIn = null;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_LT = "content_library_vm_template_num_lt";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_LT)
+  private Integer contentLibraryVmTemplateNumLt;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_LTE = "content_library_vm_template_num_lte";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_LTE)
+  private Integer contentLibraryVmTemplateNumLte;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_NOT = "content_library_vm_template_num_not";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_NOT)
+  private Integer contentLibraryVmTemplateNumNot;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_NOT_IN = "content_library_vm_template_num_not_in";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM_NOT_IN)
+  private List<Integer> contentLibraryVmTemplateNumNotIn = null;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES_EVERY = "content_library_vm_templates_every";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES_EVERY)
+  private ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesEvery;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES_NONE = "content_library_vm_templates_none";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES_NONE)
+  private ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesNone;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES_SOME = "content_library_vm_templates_some";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES_SOME)
+  private ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesSome;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -272,35 +317,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM = "datacenter_num";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM)
-  private Double datacenterNum;
+  private Integer datacenterNum;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_GT = "datacenter_num_gt";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_GT)
-  private Double datacenterNumGt;
+  private Integer datacenterNumGt;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_GTE = "datacenter_num_gte";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_GTE)
-  private Double datacenterNumGte;
+  private Integer datacenterNumGte;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_IN = "datacenter_num_in";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_IN)
-  private List<Double> datacenterNumIn = null;
+  private List<Integer> datacenterNumIn = null;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_LT = "datacenter_num_lt";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_LT)
-  private Double datacenterNumLt;
+  private Integer datacenterNumLt;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_LTE = "datacenter_num_lte";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_LTE)
-  private Double datacenterNumLte;
+  private Integer datacenterNumLte;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_NOT = "datacenter_num_not";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_NOT)
-  private Double datacenterNumNot;
+  private Integer datacenterNumNot;
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM_NOT_IN = "datacenter_num_not_in";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM_NOT_IN)
-  private List<Double> datacenterNumNotIn = null;
+  private List<Integer> datacenterNumNotIn = null;
 
   public static final String SERIALIZED_NAME_DATACENTERS_EVERY = "datacenters_every";
   @SerializedName(SERIALIZED_NAME_DATACENTERS_EVERY)
@@ -316,35 +361,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_DISK_NUM = "disk_num";
   @SerializedName(SERIALIZED_NAME_DISK_NUM)
-  private Double diskNum;
+  private Integer diskNum;
 
   public static final String SERIALIZED_NAME_DISK_NUM_GT = "disk_num_gt";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_GT)
-  private Double diskNumGt;
+  private Integer diskNumGt;
 
   public static final String SERIALIZED_NAME_DISK_NUM_GTE = "disk_num_gte";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_GTE)
-  private Double diskNumGte;
+  private Integer diskNumGte;
 
   public static final String SERIALIZED_NAME_DISK_NUM_IN = "disk_num_in";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_IN)
-  private List<Double> diskNumIn = null;
+  private List<Integer> diskNumIn = null;
 
   public static final String SERIALIZED_NAME_DISK_NUM_LT = "disk_num_lt";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_LT)
-  private Double diskNumLt;
+  private Integer diskNumLt;
 
   public static final String SERIALIZED_NAME_DISK_NUM_LTE = "disk_num_lte";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_LTE)
-  private Double diskNumLte;
+  private Integer diskNumLte;
 
   public static final String SERIALIZED_NAME_DISK_NUM_NOT = "disk_num_not";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_NOT)
-  private Double diskNumNot;
+  private Integer diskNumNot;
 
   public static final String SERIALIZED_NAME_DISK_NUM_NOT_IN = "disk_num_not_in";
   @SerializedName(SERIALIZED_NAME_DISK_NUM_NOT_IN)
-  private List<Double> diskNumNotIn = null;
+  private List<Integer> diskNumNotIn = null;
 
   public static final String SERIALIZED_NAME_DISKS_EVERY = "disks_every";
   @SerializedName(SERIALIZED_NAME_DISKS_EVERY)
@@ -360,35 +405,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM = "elf_image_num";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM)
-  private Double elfImageNum;
+  private Integer elfImageNum;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_GT = "elf_image_num_gt";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_GT)
-  private Double elfImageNumGt;
+  private Integer elfImageNumGt;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_GTE = "elf_image_num_gte";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_GTE)
-  private Double elfImageNumGte;
+  private Integer elfImageNumGte;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_IN = "elf_image_num_in";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_IN)
-  private List<Double> elfImageNumIn = null;
+  private List<Integer> elfImageNumIn = null;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_LT = "elf_image_num_lt";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_LT)
-  private Double elfImageNumLt;
+  private Integer elfImageNumLt;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_LTE = "elf_image_num_lte";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_LTE)
-  private Double elfImageNumLte;
+  private Integer elfImageNumLte;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_NOT = "elf_image_num_not";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_NOT)
-  private Double elfImageNumNot;
+  private Integer elfImageNumNot;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM_NOT_IN = "elf_image_num_not_in";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM_NOT_IN)
-  private List<Double> elfImageNumNotIn = null;
+  private List<Integer> elfImageNumNotIn = null;
 
   public static final String SERIALIZED_NAME_ELF_IMAGES_EVERY = "elf_images_every";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES_EVERY)
@@ -404,35 +449,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GT = "host_num_gt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GT)
-  private Double hostNumGt;
+  private Integer hostNumGt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_GTE = "host_num_gte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_GTE)
-  private Double hostNumGte;
+  private Integer hostNumGte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_IN = "host_num_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_IN)
-  private List<Double> hostNumIn = null;
+  private List<Integer> hostNumIn = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LT = "host_num_lt";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LT)
-  private Double hostNumLt;
+  private Integer hostNumLt;
 
   public static final String SERIALIZED_NAME_HOST_NUM_LTE = "host_num_lte";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_LTE)
-  private Double hostNumLte;
+  private Integer hostNumLte;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT = "host_num_not";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT)
-  private Double hostNumNot;
+  private Integer hostNumNot;
 
   public static final String SERIALIZED_NAME_HOST_NUM_NOT_IN = "host_num_not_in";
   @SerializedName(SERIALIZED_NAME_HOST_NUM_NOT_IN)
-  private List<Double> hostNumNotIn = null;
+  private List<Integer> hostNumNotIn = null;
 
   public static final String SERIALIZED_NAME_HOSTS_EVERY = "hosts_every";
   @SerializedName(SERIALIZED_NAME_HOSTS_EVERY)
@@ -504,67 +549,67 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM = "iscsi_lun_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM)
-  private Double iscsiLunNum;
+  private Integer iscsiLunNum;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_GT = "iscsi_lun_num_gt";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_GT)
-  private Double iscsiLunNumGt;
+  private Integer iscsiLunNumGt;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_GTE = "iscsi_lun_num_gte";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_GTE)
-  private Double iscsiLunNumGte;
+  private Integer iscsiLunNumGte;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_IN = "iscsi_lun_num_in";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_IN)
-  private List<Double> iscsiLunNumIn = null;
+  private List<Integer> iscsiLunNumIn = null;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_LT = "iscsi_lun_num_lt";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_LT)
-  private Double iscsiLunNumLt;
+  private Integer iscsiLunNumLt;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_LTE = "iscsi_lun_num_lte";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_LTE)
-  private Double iscsiLunNumLte;
+  private Integer iscsiLunNumLte;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_NOT = "iscsi_lun_num_not";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_NOT)
-  private Double iscsiLunNumNot;
+  private Integer iscsiLunNumNot;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM_NOT_IN = "iscsi_lun_num_not_in";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM_NOT_IN)
-  private List<Double> iscsiLunNumNotIn = null;
+  private List<Integer> iscsiLunNumNotIn = null;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM = "iscsi_lun_snapshot_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM)
-  private Double iscsiLunSnapshotNum;
+  private Integer iscsiLunSnapshotNum;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_GT = "iscsi_lun_snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_GT)
-  private Double iscsiLunSnapshotNumGt;
+  private Integer iscsiLunSnapshotNumGt;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_GTE = "iscsi_lun_snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_GTE)
-  private Double iscsiLunSnapshotNumGte;
+  private Integer iscsiLunSnapshotNumGte;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_IN = "iscsi_lun_snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_IN)
-  private List<Double> iscsiLunSnapshotNumIn = null;
+  private List<Integer> iscsiLunSnapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_LT = "iscsi_lun_snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_LT)
-  private Double iscsiLunSnapshotNumLt;
+  private Integer iscsiLunSnapshotNumLt;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_LTE = "iscsi_lun_snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_LTE)
-  private Double iscsiLunSnapshotNumLte;
+  private Integer iscsiLunSnapshotNumLte;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_NOT = "iscsi_lun_snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_NOT)
-  private Double iscsiLunSnapshotNumNot;
+  private Integer iscsiLunSnapshotNumNot;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_NOT_IN = "iscsi_lun_snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> iscsiLunSnapshotNumNotIn = null;
+  private List<Integer> iscsiLunSnapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_EVERY = "iscsi_lun_snapshots_every";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_EVERY)
@@ -592,35 +637,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM = "iscsi_target_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM)
-  private Double iscsiTargetNum;
+  private Integer iscsiTargetNum;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_GT = "iscsi_target_num_gt";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_GT)
-  private Double iscsiTargetNumGt;
+  private Integer iscsiTargetNumGt;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_GTE = "iscsi_target_num_gte";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_GTE)
-  private Double iscsiTargetNumGte;
+  private Integer iscsiTargetNumGte;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_IN = "iscsi_target_num_in";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_IN)
-  private List<Double> iscsiTargetNumIn = null;
+  private List<Integer> iscsiTargetNumIn = null;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_LT = "iscsi_target_num_lt";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_LT)
-  private Double iscsiTargetNumLt;
+  private Integer iscsiTargetNumLt;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_LTE = "iscsi_target_num_lte";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_LTE)
-  private Double iscsiTargetNumLte;
+  private Integer iscsiTargetNumLte;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_NOT = "iscsi_target_num_not";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_NOT)
-  private Double iscsiTargetNumNot;
+  private Integer iscsiTargetNumNot;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM_NOT_IN = "iscsi_target_num_not_in";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM_NOT_IN)
-  private List<Double> iscsiTargetNumNotIn = null;
+  private List<Integer> iscsiTargetNumNotIn = null;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGETS_EVERY = "iscsi_targets_every";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGETS_EVERY)
@@ -648,35 +693,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM = "isolation_policy_num";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM)
-  private Double isolationPolicyNum;
+  private Integer isolationPolicyNum;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_GT = "isolation_policy_num_gt";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_GT)
-  private Double isolationPolicyNumGt;
+  private Integer isolationPolicyNumGt;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_GTE = "isolation_policy_num_gte";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_GTE)
-  private Double isolationPolicyNumGte;
+  private Integer isolationPolicyNumGte;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_IN = "isolation_policy_num_in";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_IN)
-  private List<Double> isolationPolicyNumIn = null;
+  private List<Integer> isolationPolicyNumIn = null;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_LT = "isolation_policy_num_lt";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_LT)
-  private Double isolationPolicyNumLt;
+  private Integer isolationPolicyNumLt;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_LTE = "isolation_policy_num_lte";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_LTE)
-  private Double isolationPolicyNumLte;
+  private Integer isolationPolicyNumLte;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_NOT = "isolation_policy_num_not";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_NOT)
-  private Double isolationPolicyNumNot;
+  private Integer isolationPolicyNumNot;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM_NOT_IN = "isolation_policy_num_not_in";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM_NOT_IN)
-  private List<Double> isolationPolicyNumNotIn = null;
+  private List<Integer> isolationPolicyNumNotIn = null;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
@@ -736,35 +781,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM = "namespace_group_num";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM)
-  private Double namespaceGroupNum;
+  private Integer namespaceGroupNum;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_GT = "namespace_group_num_gt";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_GT)
-  private Double namespaceGroupNumGt;
+  private Integer namespaceGroupNumGt;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_GTE = "namespace_group_num_gte";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_GTE)
-  private Double namespaceGroupNumGte;
+  private Integer namespaceGroupNumGte;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_IN = "namespace_group_num_in";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_IN)
-  private List<Double> namespaceGroupNumIn = null;
+  private List<Integer> namespaceGroupNumIn = null;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_LT = "namespace_group_num_lt";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_LT)
-  private Double namespaceGroupNumLt;
+  private Integer namespaceGroupNumLt;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_LTE = "namespace_group_num_lte";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_LTE)
-  private Double namespaceGroupNumLte;
+  private Integer namespaceGroupNumLte;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_NOT = "namespace_group_num_not";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_NOT)
-  private Double namespaceGroupNumNot;
+  private Integer namespaceGroupNumNot;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM_NOT_IN = "namespace_group_num_not_in";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM_NOT_IN)
-  private List<Double> namespaceGroupNumNotIn = null;
+  private List<Integer> namespaceGroupNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUPS_EVERY = "namespace_groups_every";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUPS_EVERY)
@@ -780,35 +825,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM = "nfs_export_num";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM)
-  private Double nfsExportNum;
+  private Integer nfsExportNum;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_GT = "nfs_export_num_gt";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_GT)
-  private Double nfsExportNumGt;
+  private Integer nfsExportNumGt;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_GTE = "nfs_export_num_gte";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_GTE)
-  private Double nfsExportNumGte;
+  private Integer nfsExportNumGte;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_IN = "nfs_export_num_in";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_IN)
-  private List<Double> nfsExportNumIn = null;
+  private List<Integer> nfsExportNumIn = null;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_LT = "nfs_export_num_lt";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_LT)
-  private Double nfsExportNumLt;
+  private Integer nfsExportNumLt;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_LTE = "nfs_export_num_lte";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_LTE)
-  private Double nfsExportNumLte;
+  private Integer nfsExportNumLte;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_NOT = "nfs_export_num_not";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_NOT)
-  private Double nfsExportNumNot;
+  private Integer nfsExportNumNot;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM_NOT_IN = "nfs_export_num_not_in";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM_NOT_IN)
-  private List<Double> nfsExportNumNotIn = null;
+  private List<Integer> nfsExportNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NFS_EXPORTS_EVERY = "nfs_exports_every";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORTS_EVERY)
@@ -824,35 +869,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM = "nfs_inode_num";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM)
-  private Double nfsInodeNum;
+  private Integer nfsInodeNum;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_GT = "nfs_inode_num_gt";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_GT)
-  private Double nfsInodeNumGt;
+  private Integer nfsInodeNumGt;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_GTE = "nfs_inode_num_gte";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_GTE)
-  private Double nfsInodeNumGte;
+  private Integer nfsInodeNumGte;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_IN = "nfs_inode_num_in";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_IN)
-  private List<Double> nfsInodeNumIn = null;
+  private List<Integer> nfsInodeNumIn = null;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_LT = "nfs_inode_num_lt";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_LT)
-  private Double nfsInodeNumLt;
+  private Integer nfsInodeNumLt;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_LTE = "nfs_inode_num_lte";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_LTE)
-  private Double nfsInodeNumLte;
+  private Integer nfsInodeNumLte;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_NOT = "nfs_inode_num_not";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_NOT)
-  private Double nfsInodeNumNot;
+  private Integer nfsInodeNumNot;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM_NOT_IN = "nfs_inode_num_not_in";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM_NOT_IN)
-  private List<Double> nfsInodeNumNotIn = null;
+  private List<Integer> nfsInodeNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NFS_INODES_EVERY = "nfs_inodes_every";
   @SerializedName(SERIALIZED_NAME_NFS_INODES_EVERY)
@@ -868,35 +913,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_NIC_NUM = "nic_num";
   @SerializedName(SERIALIZED_NAME_NIC_NUM)
-  private Double nicNum;
+  private Integer nicNum;
 
   public static final String SERIALIZED_NAME_NIC_NUM_GT = "nic_num_gt";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_GT)
-  private Double nicNumGt;
+  private Integer nicNumGt;
 
   public static final String SERIALIZED_NAME_NIC_NUM_GTE = "nic_num_gte";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_GTE)
-  private Double nicNumGte;
+  private Integer nicNumGte;
 
   public static final String SERIALIZED_NAME_NIC_NUM_IN = "nic_num_in";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_IN)
-  private List<Double> nicNumIn = null;
+  private List<Integer> nicNumIn = null;
 
   public static final String SERIALIZED_NAME_NIC_NUM_LT = "nic_num_lt";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_LT)
-  private Double nicNumLt;
+  private Integer nicNumLt;
 
   public static final String SERIALIZED_NAME_NIC_NUM_LTE = "nic_num_lte";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_LTE)
-  private Double nicNumLte;
+  private Integer nicNumLte;
 
   public static final String SERIALIZED_NAME_NIC_NUM_NOT = "nic_num_not";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_NOT)
-  private Double nicNumNot;
+  private Integer nicNumNot;
 
   public static final String SERIALIZED_NAME_NIC_NUM_NOT_IN = "nic_num_not_in";
   @SerializedName(SERIALIZED_NAME_NIC_NUM_NOT_IN)
-  private List<Double> nicNumNotIn = null;
+  private List<Integer> nicNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NICS_EVERY = "nics_every";
   @SerializedName(SERIALIZED_NAME_NICS_EVERY)
@@ -916,67 +961,67 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM = "nvmf_namespace_num";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM)
-  private Double nvmfNamespaceNum;
+  private Integer nvmfNamespaceNum;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_GT = "nvmf_namespace_num_gt";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_GT)
-  private Double nvmfNamespaceNumGt;
+  private Integer nvmfNamespaceNumGt;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_GTE = "nvmf_namespace_num_gte";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_GTE)
-  private Double nvmfNamespaceNumGte;
+  private Integer nvmfNamespaceNumGte;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_IN = "nvmf_namespace_num_in";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_IN)
-  private List<Double> nvmfNamespaceNumIn = null;
+  private List<Integer> nvmfNamespaceNumIn = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_LT = "nvmf_namespace_num_lt";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_LT)
-  private Double nvmfNamespaceNumLt;
+  private Integer nvmfNamespaceNumLt;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_LTE = "nvmf_namespace_num_lte";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_LTE)
-  private Double nvmfNamespaceNumLte;
+  private Integer nvmfNamespaceNumLte;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_NOT = "nvmf_namespace_num_not";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_NOT)
-  private Double nvmfNamespaceNumNot;
+  private Integer nvmfNamespaceNumNot;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM_NOT_IN = "nvmf_namespace_num_not_in";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM_NOT_IN)
-  private List<Double> nvmfNamespaceNumNotIn = null;
+  private List<Integer> nvmfNamespaceNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM = "nvmf_namespace_snapshot_num";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM)
-  private Double nvmfNamespaceSnapshotNum;
+  private Integer nvmfNamespaceSnapshotNum;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_GT = "nvmf_namespace_snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_GT)
-  private Double nvmfNamespaceSnapshotNumGt;
+  private Integer nvmfNamespaceSnapshotNumGt;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_GTE = "nvmf_namespace_snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_GTE)
-  private Double nvmfNamespaceSnapshotNumGte;
+  private Integer nvmfNamespaceSnapshotNumGte;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_IN = "nvmf_namespace_snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_IN)
-  private List<Double> nvmfNamespaceSnapshotNumIn = null;
+  private List<Integer> nvmfNamespaceSnapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_LT = "nvmf_namespace_snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_LT)
-  private Double nvmfNamespaceSnapshotNumLt;
+  private Integer nvmfNamespaceSnapshotNumLt;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_LTE = "nvmf_namespace_snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_LTE)
-  private Double nvmfNamespaceSnapshotNumLte;
+  private Integer nvmfNamespaceSnapshotNumLte;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_NOT = "nvmf_namespace_snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_NOT)
-  private Double nvmfNamespaceSnapshotNumNot;
+  private Integer nvmfNamespaceSnapshotNumNot;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_NOT_IN = "nvmf_namespace_snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> nvmfNamespaceSnapshotNumNotIn = null;
+  private List<Integer> nvmfNamespaceSnapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS_EVERY = "nvmf_namespace_snapshots_every";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS_EVERY)
@@ -1004,35 +1049,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM = "nvmf_subsystem_num";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM)
-  private Double nvmfSubsystemNum;
+  private Integer nvmfSubsystemNum;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_GT = "nvmf_subsystem_num_gt";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_GT)
-  private Double nvmfSubsystemNumGt;
+  private Integer nvmfSubsystemNumGt;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_GTE = "nvmf_subsystem_num_gte";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_GTE)
-  private Double nvmfSubsystemNumGte;
+  private Integer nvmfSubsystemNumGte;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_IN = "nvmf_subsystem_num_in";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_IN)
-  private List<Double> nvmfSubsystemNumIn = null;
+  private List<Integer> nvmfSubsystemNumIn = null;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_LT = "nvmf_subsystem_num_lt";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_LT)
-  private Double nvmfSubsystemNumLt;
+  private Integer nvmfSubsystemNumLt;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_LTE = "nvmf_subsystem_num_lte";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_LTE)
-  private Double nvmfSubsystemNumLte;
+  private Integer nvmfSubsystemNumLte;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_NOT = "nvmf_subsystem_num_not";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_NOT)
-  private Double nvmfSubsystemNumNot;
+  private Integer nvmfSubsystemNumNot;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_NOT_IN = "nvmf_subsystem_num_not_in";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM_NOT_IN)
-  private List<Double> nvmfSubsystemNumNotIn = null;
+  private List<Integer> nvmfSubsystemNumNotIn = null;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEMS_EVERY = "nvmf_subsystems_every";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEMS_EVERY)
@@ -1064,99 +1109,99 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM = "security_policy_num";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM)
-  private Double securityPolicyNum;
+  private Integer securityPolicyNum;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_GT = "security_policy_num_gt";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_GT)
-  private Double securityPolicyNumGt;
+  private Integer securityPolicyNumGt;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_GTE = "security_policy_num_gte";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_GTE)
-  private Double securityPolicyNumGte;
+  private Integer securityPolicyNumGte;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_IN = "security_policy_num_in";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_IN)
-  private List<Double> securityPolicyNumIn = null;
+  private List<Integer> securityPolicyNumIn = null;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_LT = "security_policy_num_lt";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_LT)
-  private Double securityPolicyNumLt;
+  private Integer securityPolicyNumLt;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_LTE = "security_policy_num_lte";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_LTE)
-  private Double securityPolicyNumLte;
+  private Integer securityPolicyNumLte;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_NOT = "security_policy_num_not";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_NOT)
-  private Double securityPolicyNumNot;
+  private Integer securityPolicyNumNot;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM_NOT_IN = "security_policy_num_not_in";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM_NOT_IN)
-  private List<Double> securityPolicyNumNotIn = null;
+  private List<Integer> securityPolicyNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM = "system_vlan_num";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM)
-  private Double systemVlanNum;
+  private Integer systemVlanNum;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_GT = "system_vlan_num_gt";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_GT)
-  private Double systemVlanNumGt;
+  private Integer systemVlanNumGt;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_GTE = "system_vlan_num_gte";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_GTE)
-  private Double systemVlanNumGte;
+  private Integer systemVlanNumGte;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_IN = "system_vlan_num_in";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_IN)
-  private List<Double> systemVlanNumIn = null;
+  private List<Integer> systemVlanNumIn = null;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_LT = "system_vlan_num_lt";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_LT)
-  private Double systemVlanNumLt;
+  private Integer systemVlanNumLt;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_LTE = "system_vlan_num_lte";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_LTE)
-  private Double systemVlanNumLte;
+  private Integer systemVlanNumLte;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_NOT = "system_vlan_num_not";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_NOT)
-  private Double systemVlanNumNot;
+  private Integer systemVlanNumNot;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM_NOT_IN = "system_vlan_num_not_in";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM_NOT_IN)
-  private List<Double> systemVlanNumNotIn = null;
+  private List<Integer> systemVlanNumNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM = "total_num";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM)
-  private Double totalNum;
+  private Integer totalNum;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_GT = "total_num_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_GT)
-  private Double totalNumGt;
+  private Integer totalNumGt;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_GTE = "total_num_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_GTE)
-  private Double totalNumGte;
+  private Integer totalNumGte;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_IN = "total_num_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_IN)
-  private List<Double> totalNumIn = null;
+  private List<Integer> totalNumIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_LT = "total_num_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_LT)
-  private Double totalNumLt;
+  private Integer totalNumLt;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_LTE = "total_num_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_LTE)
-  private Double totalNumLte;
+  private Integer totalNumLte;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_NOT = "total_num_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_NOT)
-  private Double totalNumNot;
+  private Integer totalNumNot;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM_NOT_IN = "total_num_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM_NOT_IN)
-  private List<Double> totalNumNotIn = null;
+  private List<Integer> totalNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -1216,35 +1261,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_VDS_NUM = "vds_num";
   @SerializedName(SERIALIZED_NAME_VDS_NUM)
-  private Double vdsNum;
+  private Integer vdsNum;
 
   public static final String SERIALIZED_NAME_VDS_NUM_GT = "vds_num_gt";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_GT)
-  private Double vdsNumGt;
+  private Integer vdsNumGt;
 
   public static final String SERIALIZED_NAME_VDS_NUM_GTE = "vds_num_gte";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_GTE)
-  private Double vdsNumGte;
+  private Integer vdsNumGte;
 
   public static final String SERIALIZED_NAME_VDS_NUM_IN = "vds_num_in";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_IN)
-  private List<Double> vdsNumIn = null;
+  private List<Integer> vdsNumIn = null;
 
   public static final String SERIALIZED_NAME_VDS_NUM_LT = "vds_num_lt";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_LT)
-  private Double vdsNumLt;
+  private Integer vdsNumLt;
 
   public static final String SERIALIZED_NAME_VDS_NUM_LTE = "vds_num_lte";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_LTE)
-  private Double vdsNumLte;
+  private Integer vdsNumLte;
 
   public static final String SERIALIZED_NAME_VDS_NUM_NOT = "vds_num_not";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_NOT)
-  private Double vdsNumNot;
+  private Integer vdsNumNot;
 
   public static final String SERIALIZED_NAME_VDS_NUM_NOT_IN = "vds_num_not_in";
   @SerializedName(SERIALIZED_NAME_VDS_NUM_NOT_IN)
-  private List<Double> vdsNumNotIn = null;
+  private List<Integer> vdsNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VDSES_EVERY = "vdses_every";
   @SerializedName(SERIALIZED_NAME_VDSES_EVERY)
@@ -1272,67 +1317,67 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_NUM_GT = "vm_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GT)
-  private Double vmNumGt;
+  private Integer vmNumGt;
 
   public static final String SERIALIZED_NAME_VM_NUM_GTE = "vm_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_GTE)
-  private Double vmNumGte;
+  private Integer vmNumGte;
 
   public static final String SERIALIZED_NAME_VM_NUM_IN = "vm_num_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_IN)
-  private List<Double> vmNumIn = null;
+  private List<Integer> vmNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM_LT = "vm_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LT)
-  private Double vmNumLt;
+  private Integer vmNumLt;
 
   public static final String SERIALIZED_NAME_VM_NUM_LTE = "vm_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_NUM_LTE)
-  private Double vmNumLte;
+  private Integer vmNumLte;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT = "vm_num_not";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT)
-  private Double vmNumNot;
+  private Integer vmNumNot;
 
   public static final String SERIALIZED_NAME_VM_NUM_NOT_IN = "vm_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_NUM_NOT_IN)
-  private List<Double> vmNumNotIn = null;
+  private List<Integer> vmNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM = "vm_snapshot_num";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM)
-  private Double vmSnapshotNum;
+  private Integer vmSnapshotNum;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_GT = "vm_snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_GT)
-  private Double vmSnapshotNumGt;
+  private Integer vmSnapshotNumGt;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_GTE = "vm_snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_GTE)
-  private Double vmSnapshotNumGte;
+  private Integer vmSnapshotNumGte;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_IN = "vm_snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_IN)
-  private List<Double> vmSnapshotNumIn = null;
+  private List<Integer> vmSnapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_LT = "vm_snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_LT)
-  private Double vmSnapshotNumLt;
+  private Integer vmSnapshotNumLt;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_LTE = "vm_snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_LTE)
-  private Double vmSnapshotNumLte;
+  private Integer vmSnapshotNumLte;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_NOT = "vm_snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_NOT)
-  private Double vmSnapshotNumNot;
+  private Integer vmSnapshotNumNot;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM_NOT_IN = "vm_snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> vmSnapshotNumNotIn = null;
+  private List<Integer> vmSnapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS_EVERY = "vm_snapshots_every";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS_EVERY)
@@ -1348,35 +1393,35 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM = "vm_template_num";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM)
-  private Double vmTemplateNum;
+  private Integer vmTemplateNum;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_GT = "vm_template_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_GT)
-  private Double vmTemplateNumGt;
+  private Integer vmTemplateNumGt;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_GTE = "vm_template_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_GTE)
-  private Double vmTemplateNumGte;
+  private Integer vmTemplateNumGte;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_IN = "vm_template_num_in";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_IN)
-  private List<Double> vmTemplateNumIn = null;
+  private List<Integer> vmTemplateNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_LT = "vm_template_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_LT)
-  private Double vmTemplateNumLt;
+  private Integer vmTemplateNumLt;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_LTE = "vm_template_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_LTE)
-  private Double vmTemplateNumLte;
+  private Integer vmTemplateNumLte;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_NOT = "vm_template_num_not";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_NOT)
-  private Double vmTemplateNumNot;
+  private Integer vmTemplateNumNot;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM_NOT_IN = "vm_template_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM_NOT_IN)
-  private List<Double> vmTemplateNumNotIn = null;
+  private List<Integer> vmTemplateNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES_EVERY = "vm_templates_every";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES_EVERY)
@@ -1392,67 +1437,67 @@ public class LabelWhereInput {
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM = "vm_vlan_num";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM)
-  private Double vmVlanNum;
+  private Integer vmVlanNum;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_GT = "vm_vlan_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_GT)
-  private Double vmVlanNumGt;
+  private Integer vmVlanNumGt;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_GTE = "vm_vlan_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_GTE)
-  private Double vmVlanNumGte;
+  private Integer vmVlanNumGte;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_IN = "vm_vlan_num_in";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_IN)
-  private List<Double> vmVlanNumIn = null;
+  private List<Integer> vmVlanNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_LT = "vm_vlan_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_LT)
-  private Double vmVlanNumLt;
+  private Integer vmVlanNumLt;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_LTE = "vm_vlan_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_LTE)
-  private Double vmVlanNumLte;
+  private Integer vmVlanNumLte;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_NOT = "vm_vlan_num_not";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_NOT)
-  private Double vmVlanNumNot;
+  private Integer vmVlanNumNot;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM_NOT_IN = "vm_vlan_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM_NOT_IN)
-  private List<Double> vmVlanNumNotIn = null;
+  private List<Integer> vmVlanNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM = "vm_volume_num";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM)
-  private Double vmVolumeNum;
+  private Integer vmVolumeNum;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_GT = "vm_volume_num_gt";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_GT)
-  private Double vmVolumeNumGt;
+  private Integer vmVolumeNumGt;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_GTE = "vm_volume_num_gte";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_GTE)
-  private Double vmVolumeNumGte;
+  private Integer vmVolumeNumGte;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_IN = "vm_volume_num_in";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_IN)
-  private List<Double> vmVolumeNumIn = null;
+  private List<Integer> vmVolumeNumIn = null;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_LT = "vm_volume_num_lt";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_LT)
-  private Double vmVolumeNumLt;
+  private Integer vmVolumeNumLt;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_LTE = "vm_volume_num_lte";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_LTE)
-  private Double vmVolumeNumLte;
+  private Integer vmVolumeNumLte;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_NOT = "vm_volume_num_not";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_NOT)
-  private Double vmVolumeNumNot;
+  private Integer vmVolumeNumNot;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_NOT_IN = "vm_volume_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_NOT_IN)
-  private List<Double> vmVolumeNumNotIn = null;
+  private List<Integer> vmVolumeNumNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES_EVERY = "vm_volumes_every";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES_EVERY)
@@ -1510,7 +1555,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput clusterNum(Double clusterNum) {
+  public LabelWhereInput clusterNum(Integer clusterNum) {
     
     this.clusterNum = clusterNum;
     return this;
@@ -1523,17 +1568,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNum() {
+  public Integer getClusterNum() {
     return clusterNum;
   }
 
 
-  public void setClusterNum(Double clusterNum) {
+  public void setClusterNum(Integer clusterNum) {
     this.clusterNum = clusterNum;
   }
 
 
-  public LabelWhereInput clusterNumGt(Double clusterNumGt) {
+  public LabelWhereInput clusterNumGt(Integer clusterNumGt) {
     
     this.clusterNumGt = clusterNumGt;
     return this;
@@ -1546,17 +1591,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumGt() {
+  public Integer getClusterNumGt() {
     return clusterNumGt;
   }
 
 
-  public void setClusterNumGt(Double clusterNumGt) {
+  public void setClusterNumGt(Integer clusterNumGt) {
     this.clusterNumGt = clusterNumGt;
   }
 
 
-  public LabelWhereInput clusterNumGte(Double clusterNumGte) {
+  public LabelWhereInput clusterNumGte(Integer clusterNumGte) {
     
     this.clusterNumGte = clusterNumGte;
     return this;
@@ -1569,25 +1614,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumGte() {
+  public Integer getClusterNumGte() {
     return clusterNumGte;
   }
 
 
-  public void setClusterNumGte(Double clusterNumGte) {
+  public void setClusterNumGte(Integer clusterNumGte) {
     this.clusterNumGte = clusterNumGte;
   }
 
 
-  public LabelWhereInput clusterNumIn(List<Double> clusterNumIn) {
+  public LabelWhereInput clusterNumIn(List<Integer> clusterNumIn) {
     
     this.clusterNumIn = clusterNumIn;
     return this;
   }
 
-  public LabelWhereInput addClusterNumInItem(Double clusterNumInItem) {
+  public LabelWhereInput addClusterNumInItem(Integer clusterNumInItem) {
     if (this.clusterNumIn == null) {
-      this.clusterNumIn = new ArrayList<Double>();
+      this.clusterNumIn = new ArrayList<Integer>();
     }
     this.clusterNumIn.add(clusterNumInItem);
     return this;
@@ -1600,17 +1645,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getClusterNumIn() {
+  public List<Integer> getClusterNumIn() {
     return clusterNumIn;
   }
 
 
-  public void setClusterNumIn(List<Double> clusterNumIn) {
+  public void setClusterNumIn(List<Integer> clusterNumIn) {
     this.clusterNumIn = clusterNumIn;
   }
 
 
-  public LabelWhereInput clusterNumLt(Double clusterNumLt) {
+  public LabelWhereInput clusterNumLt(Integer clusterNumLt) {
     
     this.clusterNumLt = clusterNumLt;
     return this;
@@ -1623,17 +1668,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumLt() {
+  public Integer getClusterNumLt() {
     return clusterNumLt;
   }
 
 
-  public void setClusterNumLt(Double clusterNumLt) {
+  public void setClusterNumLt(Integer clusterNumLt) {
     this.clusterNumLt = clusterNumLt;
   }
 
 
-  public LabelWhereInput clusterNumLte(Double clusterNumLte) {
+  public LabelWhereInput clusterNumLte(Integer clusterNumLte) {
     
     this.clusterNumLte = clusterNumLte;
     return this;
@@ -1646,17 +1691,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumLte() {
+  public Integer getClusterNumLte() {
     return clusterNumLte;
   }
 
 
-  public void setClusterNumLte(Double clusterNumLte) {
+  public void setClusterNumLte(Integer clusterNumLte) {
     this.clusterNumLte = clusterNumLte;
   }
 
 
-  public LabelWhereInput clusterNumNot(Double clusterNumNot) {
+  public LabelWhereInput clusterNumNot(Integer clusterNumNot) {
     
     this.clusterNumNot = clusterNumNot;
     return this;
@@ -1669,25 +1714,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNumNot() {
+  public Integer getClusterNumNot() {
     return clusterNumNot;
   }
 
 
-  public void setClusterNumNot(Double clusterNumNot) {
+  public void setClusterNumNot(Integer clusterNumNot) {
     this.clusterNumNot = clusterNumNot;
   }
 
 
-  public LabelWhereInput clusterNumNotIn(List<Double> clusterNumNotIn) {
+  public LabelWhereInput clusterNumNotIn(List<Integer> clusterNumNotIn) {
     
     this.clusterNumNotIn = clusterNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addClusterNumNotInItem(Double clusterNumNotInItem) {
+  public LabelWhereInput addClusterNumNotInItem(Integer clusterNumNotInItem) {
     if (this.clusterNumNotIn == null) {
-      this.clusterNumNotIn = new ArrayList<Double>();
+      this.clusterNumNotIn = new ArrayList<Integer>();
     }
     this.clusterNumNotIn.add(clusterNumNotInItem);
     return this;
@@ -1700,12 +1745,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getClusterNumNotIn() {
+  public List<Integer> getClusterNumNotIn() {
     return clusterNumNotIn;
   }
 
 
-  public void setClusterNumNotIn(List<Double> clusterNumNotIn) {
+  public void setClusterNumNotIn(List<Integer> clusterNumNotIn) {
     this.clusterNumNotIn = clusterNumNotIn;
   }
 
@@ -1779,7 +1824,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput consistencyGroupNum(Double consistencyGroupNum) {
+  public LabelWhereInput consistencyGroupNum(Integer consistencyGroupNum) {
     
     this.consistencyGroupNum = consistencyGroupNum;
     return this;
@@ -1792,17 +1837,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNum() {
+  public Integer getConsistencyGroupNum() {
     return consistencyGroupNum;
   }
 
 
-  public void setConsistencyGroupNum(Double consistencyGroupNum) {
+  public void setConsistencyGroupNum(Integer consistencyGroupNum) {
     this.consistencyGroupNum = consistencyGroupNum;
   }
 
 
-  public LabelWhereInput consistencyGroupNumGt(Double consistencyGroupNumGt) {
+  public LabelWhereInput consistencyGroupNumGt(Integer consistencyGroupNumGt) {
     
     this.consistencyGroupNumGt = consistencyGroupNumGt;
     return this;
@@ -1815,17 +1860,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNumGt() {
+  public Integer getConsistencyGroupNumGt() {
     return consistencyGroupNumGt;
   }
 
 
-  public void setConsistencyGroupNumGt(Double consistencyGroupNumGt) {
+  public void setConsistencyGroupNumGt(Integer consistencyGroupNumGt) {
     this.consistencyGroupNumGt = consistencyGroupNumGt;
   }
 
 
-  public LabelWhereInput consistencyGroupNumGte(Double consistencyGroupNumGte) {
+  public LabelWhereInput consistencyGroupNumGte(Integer consistencyGroupNumGte) {
     
     this.consistencyGroupNumGte = consistencyGroupNumGte;
     return this;
@@ -1838,25 +1883,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNumGte() {
+  public Integer getConsistencyGroupNumGte() {
     return consistencyGroupNumGte;
   }
 
 
-  public void setConsistencyGroupNumGte(Double consistencyGroupNumGte) {
+  public void setConsistencyGroupNumGte(Integer consistencyGroupNumGte) {
     this.consistencyGroupNumGte = consistencyGroupNumGte;
   }
 
 
-  public LabelWhereInput consistencyGroupNumIn(List<Double> consistencyGroupNumIn) {
+  public LabelWhereInput consistencyGroupNumIn(List<Integer> consistencyGroupNumIn) {
     
     this.consistencyGroupNumIn = consistencyGroupNumIn;
     return this;
   }
 
-  public LabelWhereInput addConsistencyGroupNumInItem(Double consistencyGroupNumInItem) {
+  public LabelWhereInput addConsistencyGroupNumInItem(Integer consistencyGroupNumInItem) {
     if (this.consistencyGroupNumIn == null) {
-      this.consistencyGroupNumIn = new ArrayList<Double>();
+      this.consistencyGroupNumIn = new ArrayList<Integer>();
     }
     this.consistencyGroupNumIn.add(consistencyGroupNumInItem);
     return this;
@@ -1869,17 +1914,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getConsistencyGroupNumIn() {
+  public List<Integer> getConsistencyGroupNumIn() {
     return consistencyGroupNumIn;
   }
 
 
-  public void setConsistencyGroupNumIn(List<Double> consistencyGroupNumIn) {
+  public void setConsistencyGroupNumIn(List<Integer> consistencyGroupNumIn) {
     this.consistencyGroupNumIn = consistencyGroupNumIn;
   }
 
 
-  public LabelWhereInput consistencyGroupNumLt(Double consistencyGroupNumLt) {
+  public LabelWhereInput consistencyGroupNumLt(Integer consistencyGroupNumLt) {
     
     this.consistencyGroupNumLt = consistencyGroupNumLt;
     return this;
@@ -1892,17 +1937,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNumLt() {
+  public Integer getConsistencyGroupNumLt() {
     return consistencyGroupNumLt;
   }
 
 
-  public void setConsistencyGroupNumLt(Double consistencyGroupNumLt) {
+  public void setConsistencyGroupNumLt(Integer consistencyGroupNumLt) {
     this.consistencyGroupNumLt = consistencyGroupNumLt;
   }
 
 
-  public LabelWhereInput consistencyGroupNumLte(Double consistencyGroupNumLte) {
+  public LabelWhereInput consistencyGroupNumLte(Integer consistencyGroupNumLte) {
     
     this.consistencyGroupNumLte = consistencyGroupNumLte;
     return this;
@@ -1915,17 +1960,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNumLte() {
+  public Integer getConsistencyGroupNumLte() {
     return consistencyGroupNumLte;
   }
 
 
-  public void setConsistencyGroupNumLte(Double consistencyGroupNumLte) {
+  public void setConsistencyGroupNumLte(Integer consistencyGroupNumLte) {
     this.consistencyGroupNumLte = consistencyGroupNumLte;
   }
 
 
-  public LabelWhereInput consistencyGroupNumNot(Double consistencyGroupNumNot) {
+  public LabelWhereInput consistencyGroupNumNot(Integer consistencyGroupNumNot) {
     
     this.consistencyGroupNumNot = consistencyGroupNumNot;
     return this;
@@ -1938,25 +1983,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNumNot() {
+  public Integer getConsistencyGroupNumNot() {
     return consistencyGroupNumNot;
   }
 
 
-  public void setConsistencyGroupNumNot(Double consistencyGroupNumNot) {
+  public void setConsistencyGroupNumNot(Integer consistencyGroupNumNot) {
     this.consistencyGroupNumNot = consistencyGroupNumNot;
   }
 
 
-  public LabelWhereInput consistencyGroupNumNotIn(List<Double> consistencyGroupNumNotIn) {
+  public LabelWhereInput consistencyGroupNumNotIn(List<Integer> consistencyGroupNumNotIn) {
     
     this.consistencyGroupNumNotIn = consistencyGroupNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addConsistencyGroupNumNotInItem(Double consistencyGroupNumNotInItem) {
+  public LabelWhereInput addConsistencyGroupNumNotInItem(Integer consistencyGroupNumNotInItem) {
     if (this.consistencyGroupNumNotIn == null) {
-      this.consistencyGroupNumNotIn = new ArrayList<Double>();
+      this.consistencyGroupNumNotIn = new ArrayList<Integer>();
     }
     this.consistencyGroupNumNotIn.add(consistencyGroupNumNotInItem);
     return this;
@@ -1969,17 +2014,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getConsistencyGroupNumNotIn() {
+  public List<Integer> getConsistencyGroupNumNotIn() {
     return consistencyGroupNumNotIn;
   }
 
 
-  public void setConsistencyGroupNumNotIn(List<Double> consistencyGroupNumNotIn) {
+  public void setConsistencyGroupNumNotIn(List<Integer> consistencyGroupNumNotIn) {
     this.consistencyGroupNumNotIn = consistencyGroupNumNotIn;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNum(Double consistencyGroupSnapshotNum) {
+  public LabelWhereInput consistencyGroupSnapshotNum(Integer consistencyGroupSnapshotNum) {
     
     this.consistencyGroupSnapshotNum = consistencyGroupSnapshotNum;
     return this;
@@ -1992,17 +2037,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNum() {
+  public Integer getConsistencyGroupSnapshotNum() {
     return consistencyGroupSnapshotNum;
   }
 
 
-  public void setConsistencyGroupSnapshotNum(Double consistencyGroupSnapshotNum) {
+  public void setConsistencyGroupSnapshotNum(Integer consistencyGroupSnapshotNum) {
     this.consistencyGroupSnapshotNum = consistencyGroupSnapshotNum;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumGt(Double consistencyGroupSnapshotNumGt) {
+  public LabelWhereInput consistencyGroupSnapshotNumGt(Integer consistencyGroupSnapshotNumGt) {
     
     this.consistencyGroupSnapshotNumGt = consistencyGroupSnapshotNumGt;
     return this;
@@ -2015,17 +2060,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNumGt() {
+  public Integer getConsistencyGroupSnapshotNumGt() {
     return consistencyGroupSnapshotNumGt;
   }
 
 
-  public void setConsistencyGroupSnapshotNumGt(Double consistencyGroupSnapshotNumGt) {
+  public void setConsistencyGroupSnapshotNumGt(Integer consistencyGroupSnapshotNumGt) {
     this.consistencyGroupSnapshotNumGt = consistencyGroupSnapshotNumGt;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumGte(Double consistencyGroupSnapshotNumGte) {
+  public LabelWhereInput consistencyGroupSnapshotNumGte(Integer consistencyGroupSnapshotNumGte) {
     
     this.consistencyGroupSnapshotNumGte = consistencyGroupSnapshotNumGte;
     return this;
@@ -2038,25 +2083,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNumGte() {
+  public Integer getConsistencyGroupSnapshotNumGte() {
     return consistencyGroupSnapshotNumGte;
   }
 
 
-  public void setConsistencyGroupSnapshotNumGte(Double consistencyGroupSnapshotNumGte) {
+  public void setConsistencyGroupSnapshotNumGte(Integer consistencyGroupSnapshotNumGte) {
     this.consistencyGroupSnapshotNumGte = consistencyGroupSnapshotNumGte;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumIn(List<Double> consistencyGroupSnapshotNumIn) {
+  public LabelWhereInput consistencyGroupSnapshotNumIn(List<Integer> consistencyGroupSnapshotNumIn) {
     
     this.consistencyGroupSnapshotNumIn = consistencyGroupSnapshotNumIn;
     return this;
   }
 
-  public LabelWhereInput addConsistencyGroupSnapshotNumInItem(Double consistencyGroupSnapshotNumInItem) {
+  public LabelWhereInput addConsistencyGroupSnapshotNumInItem(Integer consistencyGroupSnapshotNumInItem) {
     if (this.consistencyGroupSnapshotNumIn == null) {
-      this.consistencyGroupSnapshotNumIn = new ArrayList<Double>();
+      this.consistencyGroupSnapshotNumIn = new ArrayList<Integer>();
     }
     this.consistencyGroupSnapshotNumIn.add(consistencyGroupSnapshotNumInItem);
     return this;
@@ -2069,17 +2114,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getConsistencyGroupSnapshotNumIn() {
+  public List<Integer> getConsistencyGroupSnapshotNumIn() {
     return consistencyGroupSnapshotNumIn;
   }
 
 
-  public void setConsistencyGroupSnapshotNumIn(List<Double> consistencyGroupSnapshotNumIn) {
+  public void setConsistencyGroupSnapshotNumIn(List<Integer> consistencyGroupSnapshotNumIn) {
     this.consistencyGroupSnapshotNumIn = consistencyGroupSnapshotNumIn;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumLt(Double consistencyGroupSnapshotNumLt) {
+  public LabelWhereInput consistencyGroupSnapshotNumLt(Integer consistencyGroupSnapshotNumLt) {
     
     this.consistencyGroupSnapshotNumLt = consistencyGroupSnapshotNumLt;
     return this;
@@ -2092,17 +2137,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNumLt() {
+  public Integer getConsistencyGroupSnapshotNumLt() {
     return consistencyGroupSnapshotNumLt;
   }
 
 
-  public void setConsistencyGroupSnapshotNumLt(Double consistencyGroupSnapshotNumLt) {
+  public void setConsistencyGroupSnapshotNumLt(Integer consistencyGroupSnapshotNumLt) {
     this.consistencyGroupSnapshotNumLt = consistencyGroupSnapshotNumLt;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumLte(Double consistencyGroupSnapshotNumLte) {
+  public LabelWhereInput consistencyGroupSnapshotNumLte(Integer consistencyGroupSnapshotNumLte) {
     
     this.consistencyGroupSnapshotNumLte = consistencyGroupSnapshotNumLte;
     return this;
@@ -2115,17 +2160,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNumLte() {
+  public Integer getConsistencyGroupSnapshotNumLte() {
     return consistencyGroupSnapshotNumLte;
   }
 
 
-  public void setConsistencyGroupSnapshotNumLte(Double consistencyGroupSnapshotNumLte) {
+  public void setConsistencyGroupSnapshotNumLte(Integer consistencyGroupSnapshotNumLte) {
     this.consistencyGroupSnapshotNumLte = consistencyGroupSnapshotNumLte;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumNot(Double consistencyGroupSnapshotNumNot) {
+  public LabelWhereInput consistencyGroupSnapshotNumNot(Integer consistencyGroupSnapshotNumNot) {
     
     this.consistencyGroupSnapshotNumNot = consistencyGroupSnapshotNumNot;
     return this;
@@ -2138,25 +2183,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNumNot() {
+  public Integer getConsistencyGroupSnapshotNumNot() {
     return consistencyGroupSnapshotNumNot;
   }
 
 
-  public void setConsistencyGroupSnapshotNumNot(Double consistencyGroupSnapshotNumNot) {
+  public void setConsistencyGroupSnapshotNumNot(Integer consistencyGroupSnapshotNumNot) {
     this.consistencyGroupSnapshotNumNot = consistencyGroupSnapshotNumNot;
   }
 
 
-  public LabelWhereInput consistencyGroupSnapshotNumNotIn(List<Double> consistencyGroupSnapshotNumNotIn) {
+  public LabelWhereInput consistencyGroupSnapshotNumNotIn(List<Integer> consistencyGroupSnapshotNumNotIn) {
     
     this.consistencyGroupSnapshotNumNotIn = consistencyGroupSnapshotNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addConsistencyGroupSnapshotNumNotInItem(Double consistencyGroupSnapshotNumNotInItem) {
+  public LabelWhereInput addConsistencyGroupSnapshotNumNotInItem(Integer consistencyGroupSnapshotNumNotInItem) {
     if (this.consistencyGroupSnapshotNumNotIn == null) {
-      this.consistencyGroupSnapshotNumNotIn = new ArrayList<Double>();
+      this.consistencyGroupSnapshotNumNotIn = new ArrayList<Integer>();
     }
     this.consistencyGroupSnapshotNumNotIn.add(consistencyGroupSnapshotNumNotInItem);
     return this;
@@ -2169,12 +2214,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getConsistencyGroupSnapshotNumNotIn() {
+  public List<Integer> getConsistencyGroupSnapshotNumNotIn() {
     return consistencyGroupSnapshotNumNotIn;
   }
 
 
-  public void setConsistencyGroupSnapshotNumNotIn(List<Double> consistencyGroupSnapshotNumNotIn) {
+  public void setConsistencyGroupSnapshotNumNotIn(List<Integer> consistencyGroupSnapshotNumNotIn) {
     this.consistencyGroupSnapshotNumNotIn = consistencyGroupSnapshotNumNotIn;
   }
 
@@ -2317,7 +2362,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput contentLibraryImageNum(Double contentLibraryImageNum) {
+  public LabelWhereInput contentLibraryImageNum(Integer contentLibraryImageNum) {
     
     this.contentLibraryImageNum = contentLibraryImageNum;
     return this;
@@ -2330,17 +2375,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNum() {
+  public Integer getContentLibraryImageNum() {
     return contentLibraryImageNum;
   }
 
 
-  public void setContentLibraryImageNum(Double contentLibraryImageNum) {
+  public void setContentLibraryImageNum(Integer contentLibraryImageNum) {
     this.contentLibraryImageNum = contentLibraryImageNum;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumGt(Double contentLibraryImageNumGt) {
+  public LabelWhereInput contentLibraryImageNumGt(Integer contentLibraryImageNumGt) {
     
     this.contentLibraryImageNumGt = contentLibraryImageNumGt;
     return this;
@@ -2353,17 +2398,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNumGt() {
+  public Integer getContentLibraryImageNumGt() {
     return contentLibraryImageNumGt;
   }
 
 
-  public void setContentLibraryImageNumGt(Double contentLibraryImageNumGt) {
+  public void setContentLibraryImageNumGt(Integer contentLibraryImageNumGt) {
     this.contentLibraryImageNumGt = contentLibraryImageNumGt;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumGte(Double contentLibraryImageNumGte) {
+  public LabelWhereInput contentLibraryImageNumGte(Integer contentLibraryImageNumGte) {
     
     this.contentLibraryImageNumGte = contentLibraryImageNumGte;
     return this;
@@ -2376,25 +2421,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNumGte() {
+  public Integer getContentLibraryImageNumGte() {
     return contentLibraryImageNumGte;
   }
 
 
-  public void setContentLibraryImageNumGte(Double contentLibraryImageNumGte) {
+  public void setContentLibraryImageNumGte(Integer contentLibraryImageNumGte) {
     this.contentLibraryImageNumGte = contentLibraryImageNumGte;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumIn(List<Double> contentLibraryImageNumIn) {
+  public LabelWhereInput contentLibraryImageNumIn(List<Integer> contentLibraryImageNumIn) {
     
     this.contentLibraryImageNumIn = contentLibraryImageNumIn;
     return this;
   }
 
-  public LabelWhereInput addContentLibraryImageNumInItem(Double contentLibraryImageNumInItem) {
+  public LabelWhereInput addContentLibraryImageNumInItem(Integer contentLibraryImageNumInItem) {
     if (this.contentLibraryImageNumIn == null) {
-      this.contentLibraryImageNumIn = new ArrayList<Double>();
+      this.contentLibraryImageNumIn = new ArrayList<Integer>();
     }
     this.contentLibraryImageNumIn.add(contentLibraryImageNumInItem);
     return this;
@@ -2407,17 +2452,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getContentLibraryImageNumIn() {
+  public List<Integer> getContentLibraryImageNumIn() {
     return contentLibraryImageNumIn;
   }
 
 
-  public void setContentLibraryImageNumIn(List<Double> contentLibraryImageNumIn) {
+  public void setContentLibraryImageNumIn(List<Integer> contentLibraryImageNumIn) {
     this.contentLibraryImageNumIn = contentLibraryImageNumIn;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumLt(Double contentLibraryImageNumLt) {
+  public LabelWhereInput contentLibraryImageNumLt(Integer contentLibraryImageNumLt) {
     
     this.contentLibraryImageNumLt = contentLibraryImageNumLt;
     return this;
@@ -2430,17 +2475,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNumLt() {
+  public Integer getContentLibraryImageNumLt() {
     return contentLibraryImageNumLt;
   }
 
 
-  public void setContentLibraryImageNumLt(Double contentLibraryImageNumLt) {
+  public void setContentLibraryImageNumLt(Integer contentLibraryImageNumLt) {
     this.contentLibraryImageNumLt = contentLibraryImageNumLt;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumLte(Double contentLibraryImageNumLte) {
+  public LabelWhereInput contentLibraryImageNumLte(Integer contentLibraryImageNumLte) {
     
     this.contentLibraryImageNumLte = contentLibraryImageNumLte;
     return this;
@@ -2453,17 +2498,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNumLte() {
+  public Integer getContentLibraryImageNumLte() {
     return contentLibraryImageNumLte;
   }
 
 
-  public void setContentLibraryImageNumLte(Double contentLibraryImageNumLte) {
+  public void setContentLibraryImageNumLte(Integer contentLibraryImageNumLte) {
     this.contentLibraryImageNumLte = contentLibraryImageNumLte;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumNot(Double contentLibraryImageNumNot) {
+  public LabelWhereInput contentLibraryImageNumNot(Integer contentLibraryImageNumNot) {
     
     this.contentLibraryImageNumNot = contentLibraryImageNumNot;
     return this;
@@ -2476,25 +2521,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNumNot() {
+  public Integer getContentLibraryImageNumNot() {
     return contentLibraryImageNumNot;
   }
 
 
-  public void setContentLibraryImageNumNot(Double contentLibraryImageNumNot) {
+  public void setContentLibraryImageNumNot(Integer contentLibraryImageNumNot) {
     this.contentLibraryImageNumNot = contentLibraryImageNumNot;
   }
 
 
-  public LabelWhereInput contentLibraryImageNumNotIn(List<Double> contentLibraryImageNumNotIn) {
+  public LabelWhereInput contentLibraryImageNumNotIn(List<Integer> contentLibraryImageNumNotIn) {
     
     this.contentLibraryImageNumNotIn = contentLibraryImageNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addContentLibraryImageNumNotInItem(Double contentLibraryImageNumNotInItem) {
+  public LabelWhereInput addContentLibraryImageNumNotInItem(Integer contentLibraryImageNumNotInItem) {
     if (this.contentLibraryImageNumNotIn == null) {
-      this.contentLibraryImageNumNotIn = new ArrayList<Double>();
+      this.contentLibraryImageNumNotIn = new ArrayList<Integer>();
     }
     this.contentLibraryImageNumNotIn.add(contentLibraryImageNumNotInItem);
     return this;
@@ -2507,12 +2552,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getContentLibraryImageNumNotIn() {
+  public List<Integer> getContentLibraryImageNumNotIn() {
     return contentLibraryImageNumNotIn;
   }
 
 
-  public void setContentLibraryImageNumNotIn(List<Double> contentLibraryImageNumNotIn) {
+  public void setContentLibraryImageNumNotIn(List<Integer> contentLibraryImageNumNotIn) {
     this.contentLibraryImageNumNotIn = contentLibraryImageNumNotIn;
   }
 
@@ -2583,6 +2628,275 @@ public class LabelWhereInput {
 
   public void setContentLibraryImagesSome(ContentLibraryImageWhereInput contentLibraryImagesSome) {
     this.contentLibraryImagesSome = contentLibraryImagesSome;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNum(Integer contentLibraryVmTemplateNum) {
+    
+    this.contentLibraryVmTemplateNum = contentLibraryVmTemplateNum;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNum
+   * @return contentLibraryVmTemplateNum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNum() {
+    return contentLibraryVmTemplateNum;
+  }
+
+
+  public void setContentLibraryVmTemplateNum(Integer contentLibraryVmTemplateNum) {
+    this.contentLibraryVmTemplateNum = contentLibraryVmTemplateNum;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumGt(Integer contentLibraryVmTemplateNumGt) {
+    
+    this.contentLibraryVmTemplateNumGt = contentLibraryVmTemplateNumGt;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumGt
+   * @return contentLibraryVmTemplateNumGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNumGt() {
+    return contentLibraryVmTemplateNumGt;
+  }
+
+
+  public void setContentLibraryVmTemplateNumGt(Integer contentLibraryVmTemplateNumGt) {
+    this.contentLibraryVmTemplateNumGt = contentLibraryVmTemplateNumGt;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumGte(Integer contentLibraryVmTemplateNumGte) {
+    
+    this.contentLibraryVmTemplateNumGte = contentLibraryVmTemplateNumGte;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumGte
+   * @return contentLibraryVmTemplateNumGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNumGte() {
+    return contentLibraryVmTemplateNumGte;
+  }
+
+
+  public void setContentLibraryVmTemplateNumGte(Integer contentLibraryVmTemplateNumGte) {
+    this.contentLibraryVmTemplateNumGte = contentLibraryVmTemplateNumGte;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumIn(List<Integer> contentLibraryVmTemplateNumIn) {
+    
+    this.contentLibraryVmTemplateNumIn = contentLibraryVmTemplateNumIn;
+    return this;
+  }
+
+  public LabelWhereInput addContentLibraryVmTemplateNumInItem(Integer contentLibraryVmTemplateNumInItem) {
+    if (this.contentLibraryVmTemplateNumIn == null) {
+      this.contentLibraryVmTemplateNumIn = new ArrayList<Integer>();
+    }
+    this.contentLibraryVmTemplateNumIn.add(contentLibraryVmTemplateNumInItem);
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumIn
+   * @return contentLibraryVmTemplateNumIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getContentLibraryVmTemplateNumIn() {
+    return contentLibraryVmTemplateNumIn;
+  }
+
+
+  public void setContentLibraryVmTemplateNumIn(List<Integer> contentLibraryVmTemplateNumIn) {
+    this.contentLibraryVmTemplateNumIn = contentLibraryVmTemplateNumIn;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumLt(Integer contentLibraryVmTemplateNumLt) {
+    
+    this.contentLibraryVmTemplateNumLt = contentLibraryVmTemplateNumLt;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumLt
+   * @return contentLibraryVmTemplateNumLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNumLt() {
+    return contentLibraryVmTemplateNumLt;
+  }
+
+
+  public void setContentLibraryVmTemplateNumLt(Integer contentLibraryVmTemplateNumLt) {
+    this.contentLibraryVmTemplateNumLt = contentLibraryVmTemplateNumLt;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumLte(Integer contentLibraryVmTemplateNumLte) {
+    
+    this.contentLibraryVmTemplateNumLte = contentLibraryVmTemplateNumLte;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumLte
+   * @return contentLibraryVmTemplateNumLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNumLte() {
+    return contentLibraryVmTemplateNumLte;
+  }
+
+
+  public void setContentLibraryVmTemplateNumLte(Integer contentLibraryVmTemplateNumLte) {
+    this.contentLibraryVmTemplateNumLte = contentLibraryVmTemplateNumLte;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumNot(Integer contentLibraryVmTemplateNumNot) {
+    
+    this.contentLibraryVmTemplateNumNot = contentLibraryVmTemplateNumNot;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumNot
+   * @return contentLibraryVmTemplateNumNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNumNot() {
+    return contentLibraryVmTemplateNumNot;
+  }
+
+
+  public void setContentLibraryVmTemplateNumNot(Integer contentLibraryVmTemplateNumNot) {
+    this.contentLibraryVmTemplateNumNot = contentLibraryVmTemplateNumNot;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplateNumNotIn(List<Integer> contentLibraryVmTemplateNumNotIn) {
+    
+    this.contentLibraryVmTemplateNumNotIn = contentLibraryVmTemplateNumNotIn;
+    return this;
+  }
+
+  public LabelWhereInput addContentLibraryVmTemplateNumNotInItem(Integer contentLibraryVmTemplateNumNotInItem) {
+    if (this.contentLibraryVmTemplateNumNotIn == null) {
+      this.contentLibraryVmTemplateNumNotIn = new ArrayList<Integer>();
+    }
+    this.contentLibraryVmTemplateNumNotIn.add(contentLibraryVmTemplateNumNotInItem);
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNumNotIn
+   * @return contentLibraryVmTemplateNumNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getContentLibraryVmTemplateNumNotIn() {
+    return contentLibraryVmTemplateNumNotIn;
+  }
+
+
+  public void setContentLibraryVmTemplateNumNotIn(List<Integer> contentLibraryVmTemplateNumNotIn) {
+    this.contentLibraryVmTemplateNumNotIn = contentLibraryVmTemplateNumNotIn;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplatesEvery(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesEvery) {
+    
+    this.contentLibraryVmTemplatesEvery = contentLibraryVmTemplatesEvery;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplatesEvery
+   * @return contentLibraryVmTemplatesEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ContentLibraryVmTemplateWhereInput getContentLibraryVmTemplatesEvery() {
+    return contentLibraryVmTemplatesEvery;
+  }
+
+
+  public void setContentLibraryVmTemplatesEvery(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesEvery) {
+    this.contentLibraryVmTemplatesEvery = contentLibraryVmTemplatesEvery;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplatesNone(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesNone) {
+    
+    this.contentLibraryVmTemplatesNone = contentLibraryVmTemplatesNone;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplatesNone
+   * @return contentLibraryVmTemplatesNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ContentLibraryVmTemplateWhereInput getContentLibraryVmTemplatesNone() {
+    return contentLibraryVmTemplatesNone;
+  }
+
+
+  public void setContentLibraryVmTemplatesNone(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesNone) {
+    this.contentLibraryVmTemplatesNone = contentLibraryVmTemplatesNone;
+  }
+
+
+  public LabelWhereInput contentLibraryVmTemplatesSome(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesSome) {
+    
+    this.contentLibraryVmTemplatesSome = contentLibraryVmTemplatesSome;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplatesSome
+   * @return contentLibraryVmTemplatesSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ContentLibraryVmTemplateWhereInput getContentLibraryVmTemplatesSome() {
+    return contentLibraryVmTemplatesSome;
+  }
+
+
+  public void setContentLibraryVmTemplatesSome(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplatesSome) {
+    this.contentLibraryVmTemplatesSome = contentLibraryVmTemplatesSome;
   }
 
 
@@ -2786,7 +3100,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput datacenterNum(Double datacenterNum) {
+  public LabelWhereInput datacenterNum(Integer datacenterNum) {
     
     this.datacenterNum = datacenterNum;
     return this;
@@ -2799,17 +3113,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNum() {
+  public Integer getDatacenterNum() {
     return datacenterNum;
   }
 
 
-  public void setDatacenterNum(Double datacenterNum) {
+  public void setDatacenterNum(Integer datacenterNum) {
     this.datacenterNum = datacenterNum;
   }
 
 
-  public LabelWhereInput datacenterNumGt(Double datacenterNumGt) {
+  public LabelWhereInput datacenterNumGt(Integer datacenterNumGt) {
     
     this.datacenterNumGt = datacenterNumGt;
     return this;
@@ -2822,17 +3136,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNumGt() {
+  public Integer getDatacenterNumGt() {
     return datacenterNumGt;
   }
 
 
-  public void setDatacenterNumGt(Double datacenterNumGt) {
+  public void setDatacenterNumGt(Integer datacenterNumGt) {
     this.datacenterNumGt = datacenterNumGt;
   }
 
 
-  public LabelWhereInput datacenterNumGte(Double datacenterNumGte) {
+  public LabelWhereInput datacenterNumGte(Integer datacenterNumGte) {
     
     this.datacenterNumGte = datacenterNumGte;
     return this;
@@ -2845,25 +3159,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNumGte() {
+  public Integer getDatacenterNumGte() {
     return datacenterNumGte;
   }
 
 
-  public void setDatacenterNumGte(Double datacenterNumGte) {
+  public void setDatacenterNumGte(Integer datacenterNumGte) {
     this.datacenterNumGte = datacenterNumGte;
   }
 
 
-  public LabelWhereInput datacenterNumIn(List<Double> datacenterNumIn) {
+  public LabelWhereInput datacenterNumIn(List<Integer> datacenterNumIn) {
     
     this.datacenterNumIn = datacenterNumIn;
     return this;
   }
 
-  public LabelWhereInput addDatacenterNumInItem(Double datacenterNumInItem) {
+  public LabelWhereInput addDatacenterNumInItem(Integer datacenterNumInItem) {
     if (this.datacenterNumIn == null) {
-      this.datacenterNumIn = new ArrayList<Double>();
+      this.datacenterNumIn = new ArrayList<Integer>();
     }
     this.datacenterNumIn.add(datacenterNumInItem);
     return this;
@@ -2876,17 +3190,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getDatacenterNumIn() {
+  public List<Integer> getDatacenterNumIn() {
     return datacenterNumIn;
   }
 
 
-  public void setDatacenterNumIn(List<Double> datacenterNumIn) {
+  public void setDatacenterNumIn(List<Integer> datacenterNumIn) {
     this.datacenterNumIn = datacenterNumIn;
   }
 
 
-  public LabelWhereInput datacenterNumLt(Double datacenterNumLt) {
+  public LabelWhereInput datacenterNumLt(Integer datacenterNumLt) {
     
     this.datacenterNumLt = datacenterNumLt;
     return this;
@@ -2899,17 +3213,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNumLt() {
+  public Integer getDatacenterNumLt() {
     return datacenterNumLt;
   }
 
 
-  public void setDatacenterNumLt(Double datacenterNumLt) {
+  public void setDatacenterNumLt(Integer datacenterNumLt) {
     this.datacenterNumLt = datacenterNumLt;
   }
 
 
-  public LabelWhereInput datacenterNumLte(Double datacenterNumLte) {
+  public LabelWhereInput datacenterNumLte(Integer datacenterNumLte) {
     
     this.datacenterNumLte = datacenterNumLte;
     return this;
@@ -2922,17 +3236,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNumLte() {
+  public Integer getDatacenterNumLte() {
     return datacenterNumLte;
   }
 
 
-  public void setDatacenterNumLte(Double datacenterNumLte) {
+  public void setDatacenterNumLte(Integer datacenterNumLte) {
     this.datacenterNumLte = datacenterNumLte;
   }
 
 
-  public LabelWhereInput datacenterNumNot(Double datacenterNumNot) {
+  public LabelWhereInput datacenterNumNot(Integer datacenterNumNot) {
     
     this.datacenterNumNot = datacenterNumNot;
     return this;
@@ -2945,25 +3259,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNumNot() {
+  public Integer getDatacenterNumNot() {
     return datacenterNumNot;
   }
 
 
-  public void setDatacenterNumNot(Double datacenterNumNot) {
+  public void setDatacenterNumNot(Integer datacenterNumNot) {
     this.datacenterNumNot = datacenterNumNot;
   }
 
 
-  public LabelWhereInput datacenterNumNotIn(List<Double> datacenterNumNotIn) {
+  public LabelWhereInput datacenterNumNotIn(List<Integer> datacenterNumNotIn) {
     
     this.datacenterNumNotIn = datacenterNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addDatacenterNumNotInItem(Double datacenterNumNotInItem) {
+  public LabelWhereInput addDatacenterNumNotInItem(Integer datacenterNumNotInItem) {
     if (this.datacenterNumNotIn == null) {
-      this.datacenterNumNotIn = new ArrayList<Double>();
+      this.datacenterNumNotIn = new ArrayList<Integer>();
     }
     this.datacenterNumNotIn.add(datacenterNumNotInItem);
     return this;
@@ -2976,12 +3290,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getDatacenterNumNotIn() {
+  public List<Integer> getDatacenterNumNotIn() {
     return datacenterNumNotIn;
   }
 
 
-  public void setDatacenterNumNotIn(List<Double> datacenterNumNotIn) {
+  public void setDatacenterNumNotIn(List<Integer> datacenterNumNotIn) {
     this.datacenterNumNotIn = datacenterNumNotIn;
   }
 
@@ -3055,7 +3369,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput diskNum(Double diskNum) {
+  public LabelWhereInput diskNum(Integer diskNum) {
     
     this.diskNum = diskNum;
     return this;
@@ -3068,17 +3382,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNum() {
+  public Integer getDiskNum() {
     return diskNum;
   }
 
 
-  public void setDiskNum(Double diskNum) {
+  public void setDiskNum(Integer diskNum) {
     this.diskNum = diskNum;
   }
 
 
-  public LabelWhereInput diskNumGt(Double diskNumGt) {
+  public LabelWhereInput diskNumGt(Integer diskNumGt) {
     
     this.diskNumGt = diskNumGt;
     return this;
@@ -3091,17 +3405,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNumGt() {
+  public Integer getDiskNumGt() {
     return diskNumGt;
   }
 
 
-  public void setDiskNumGt(Double diskNumGt) {
+  public void setDiskNumGt(Integer diskNumGt) {
     this.diskNumGt = diskNumGt;
   }
 
 
-  public LabelWhereInput diskNumGte(Double diskNumGte) {
+  public LabelWhereInput diskNumGte(Integer diskNumGte) {
     
     this.diskNumGte = diskNumGte;
     return this;
@@ -3114,25 +3428,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNumGte() {
+  public Integer getDiskNumGte() {
     return diskNumGte;
   }
 
 
-  public void setDiskNumGte(Double diskNumGte) {
+  public void setDiskNumGte(Integer diskNumGte) {
     this.diskNumGte = diskNumGte;
   }
 
 
-  public LabelWhereInput diskNumIn(List<Double> diskNumIn) {
+  public LabelWhereInput diskNumIn(List<Integer> diskNumIn) {
     
     this.diskNumIn = diskNumIn;
     return this;
   }
 
-  public LabelWhereInput addDiskNumInItem(Double diskNumInItem) {
+  public LabelWhereInput addDiskNumInItem(Integer diskNumInItem) {
     if (this.diskNumIn == null) {
-      this.diskNumIn = new ArrayList<Double>();
+      this.diskNumIn = new ArrayList<Integer>();
     }
     this.diskNumIn.add(diskNumInItem);
     return this;
@@ -3145,17 +3459,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getDiskNumIn() {
+  public List<Integer> getDiskNumIn() {
     return diskNumIn;
   }
 
 
-  public void setDiskNumIn(List<Double> diskNumIn) {
+  public void setDiskNumIn(List<Integer> diskNumIn) {
     this.diskNumIn = diskNumIn;
   }
 
 
-  public LabelWhereInput diskNumLt(Double diskNumLt) {
+  public LabelWhereInput diskNumLt(Integer diskNumLt) {
     
     this.diskNumLt = diskNumLt;
     return this;
@@ -3168,17 +3482,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNumLt() {
+  public Integer getDiskNumLt() {
     return diskNumLt;
   }
 
 
-  public void setDiskNumLt(Double diskNumLt) {
+  public void setDiskNumLt(Integer diskNumLt) {
     this.diskNumLt = diskNumLt;
   }
 
 
-  public LabelWhereInput diskNumLte(Double diskNumLte) {
+  public LabelWhereInput diskNumLte(Integer diskNumLte) {
     
     this.diskNumLte = diskNumLte;
     return this;
@@ -3191,17 +3505,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNumLte() {
+  public Integer getDiskNumLte() {
     return diskNumLte;
   }
 
 
-  public void setDiskNumLte(Double diskNumLte) {
+  public void setDiskNumLte(Integer diskNumLte) {
     this.diskNumLte = diskNumLte;
   }
 
 
-  public LabelWhereInput diskNumNot(Double diskNumNot) {
+  public LabelWhereInput diskNumNot(Integer diskNumNot) {
     
     this.diskNumNot = diskNumNot;
     return this;
@@ -3214,25 +3528,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNumNot() {
+  public Integer getDiskNumNot() {
     return diskNumNot;
   }
 
 
-  public void setDiskNumNot(Double diskNumNot) {
+  public void setDiskNumNot(Integer diskNumNot) {
     this.diskNumNot = diskNumNot;
   }
 
 
-  public LabelWhereInput diskNumNotIn(List<Double> diskNumNotIn) {
+  public LabelWhereInput diskNumNotIn(List<Integer> diskNumNotIn) {
     
     this.diskNumNotIn = diskNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addDiskNumNotInItem(Double diskNumNotInItem) {
+  public LabelWhereInput addDiskNumNotInItem(Integer diskNumNotInItem) {
     if (this.diskNumNotIn == null) {
-      this.diskNumNotIn = new ArrayList<Double>();
+      this.diskNumNotIn = new ArrayList<Integer>();
     }
     this.diskNumNotIn.add(diskNumNotInItem);
     return this;
@@ -3245,12 +3559,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getDiskNumNotIn() {
+  public List<Integer> getDiskNumNotIn() {
     return diskNumNotIn;
   }
 
 
-  public void setDiskNumNotIn(List<Double> diskNumNotIn) {
+  public void setDiskNumNotIn(List<Integer> diskNumNotIn) {
     this.diskNumNotIn = diskNumNotIn;
   }
 
@@ -3324,7 +3638,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput elfImageNum(Double elfImageNum) {
+  public LabelWhereInput elfImageNum(Integer elfImageNum) {
     
     this.elfImageNum = elfImageNum;
     return this;
@@ -3337,17 +3651,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNum() {
+  public Integer getElfImageNum() {
     return elfImageNum;
   }
 
 
-  public void setElfImageNum(Double elfImageNum) {
+  public void setElfImageNum(Integer elfImageNum) {
     this.elfImageNum = elfImageNum;
   }
 
 
-  public LabelWhereInput elfImageNumGt(Double elfImageNumGt) {
+  public LabelWhereInput elfImageNumGt(Integer elfImageNumGt) {
     
     this.elfImageNumGt = elfImageNumGt;
     return this;
@@ -3360,17 +3674,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNumGt() {
+  public Integer getElfImageNumGt() {
     return elfImageNumGt;
   }
 
 
-  public void setElfImageNumGt(Double elfImageNumGt) {
+  public void setElfImageNumGt(Integer elfImageNumGt) {
     this.elfImageNumGt = elfImageNumGt;
   }
 
 
-  public LabelWhereInput elfImageNumGte(Double elfImageNumGte) {
+  public LabelWhereInput elfImageNumGte(Integer elfImageNumGte) {
     
     this.elfImageNumGte = elfImageNumGte;
     return this;
@@ -3383,25 +3697,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNumGte() {
+  public Integer getElfImageNumGte() {
     return elfImageNumGte;
   }
 
 
-  public void setElfImageNumGte(Double elfImageNumGte) {
+  public void setElfImageNumGte(Integer elfImageNumGte) {
     this.elfImageNumGte = elfImageNumGte;
   }
 
 
-  public LabelWhereInput elfImageNumIn(List<Double> elfImageNumIn) {
+  public LabelWhereInput elfImageNumIn(List<Integer> elfImageNumIn) {
     
     this.elfImageNumIn = elfImageNumIn;
     return this;
   }
 
-  public LabelWhereInput addElfImageNumInItem(Double elfImageNumInItem) {
+  public LabelWhereInput addElfImageNumInItem(Integer elfImageNumInItem) {
     if (this.elfImageNumIn == null) {
-      this.elfImageNumIn = new ArrayList<Double>();
+      this.elfImageNumIn = new ArrayList<Integer>();
     }
     this.elfImageNumIn.add(elfImageNumInItem);
     return this;
@@ -3414,17 +3728,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getElfImageNumIn() {
+  public List<Integer> getElfImageNumIn() {
     return elfImageNumIn;
   }
 
 
-  public void setElfImageNumIn(List<Double> elfImageNumIn) {
+  public void setElfImageNumIn(List<Integer> elfImageNumIn) {
     this.elfImageNumIn = elfImageNumIn;
   }
 
 
-  public LabelWhereInput elfImageNumLt(Double elfImageNumLt) {
+  public LabelWhereInput elfImageNumLt(Integer elfImageNumLt) {
     
     this.elfImageNumLt = elfImageNumLt;
     return this;
@@ -3437,17 +3751,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNumLt() {
+  public Integer getElfImageNumLt() {
     return elfImageNumLt;
   }
 
 
-  public void setElfImageNumLt(Double elfImageNumLt) {
+  public void setElfImageNumLt(Integer elfImageNumLt) {
     this.elfImageNumLt = elfImageNumLt;
   }
 
 
-  public LabelWhereInput elfImageNumLte(Double elfImageNumLte) {
+  public LabelWhereInput elfImageNumLte(Integer elfImageNumLte) {
     
     this.elfImageNumLte = elfImageNumLte;
     return this;
@@ -3460,17 +3774,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNumLte() {
+  public Integer getElfImageNumLte() {
     return elfImageNumLte;
   }
 
 
-  public void setElfImageNumLte(Double elfImageNumLte) {
+  public void setElfImageNumLte(Integer elfImageNumLte) {
     this.elfImageNumLte = elfImageNumLte;
   }
 
 
-  public LabelWhereInput elfImageNumNot(Double elfImageNumNot) {
+  public LabelWhereInput elfImageNumNot(Integer elfImageNumNot) {
     
     this.elfImageNumNot = elfImageNumNot;
     return this;
@@ -3483,25 +3797,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNumNot() {
+  public Integer getElfImageNumNot() {
     return elfImageNumNot;
   }
 
 
-  public void setElfImageNumNot(Double elfImageNumNot) {
+  public void setElfImageNumNot(Integer elfImageNumNot) {
     this.elfImageNumNot = elfImageNumNot;
   }
 
 
-  public LabelWhereInput elfImageNumNotIn(List<Double> elfImageNumNotIn) {
+  public LabelWhereInput elfImageNumNotIn(List<Integer> elfImageNumNotIn) {
     
     this.elfImageNumNotIn = elfImageNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addElfImageNumNotInItem(Double elfImageNumNotInItem) {
+  public LabelWhereInput addElfImageNumNotInItem(Integer elfImageNumNotInItem) {
     if (this.elfImageNumNotIn == null) {
-      this.elfImageNumNotIn = new ArrayList<Double>();
+      this.elfImageNumNotIn = new ArrayList<Integer>();
     }
     this.elfImageNumNotIn.add(elfImageNumNotInItem);
     return this;
@@ -3514,12 +3828,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getElfImageNumNotIn() {
+  public List<Integer> getElfImageNumNotIn() {
     return elfImageNumNotIn;
   }
 
 
-  public void setElfImageNumNotIn(List<Double> elfImageNumNotIn) {
+  public void setElfImageNumNotIn(List<Integer> elfImageNumNotIn) {
     this.elfImageNumNotIn = elfImageNumNotIn;
   }
 
@@ -3593,7 +3907,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput hostNum(Double hostNum) {
+  public LabelWhereInput hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -3606,17 +3920,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public LabelWhereInput hostNumGt(Double hostNumGt) {
+  public LabelWhereInput hostNumGt(Integer hostNumGt) {
     
     this.hostNumGt = hostNumGt;
     return this;
@@ -3629,17 +3943,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGt() {
+  public Integer getHostNumGt() {
     return hostNumGt;
   }
 
 
-  public void setHostNumGt(Double hostNumGt) {
+  public void setHostNumGt(Integer hostNumGt) {
     this.hostNumGt = hostNumGt;
   }
 
 
-  public LabelWhereInput hostNumGte(Double hostNumGte) {
+  public LabelWhereInput hostNumGte(Integer hostNumGte) {
     
     this.hostNumGte = hostNumGte;
     return this;
@@ -3652,25 +3966,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumGte() {
+  public Integer getHostNumGte() {
     return hostNumGte;
   }
 
 
-  public void setHostNumGte(Double hostNumGte) {
+  public void setHostNumGte(Integer hostNumGte) {
     this.hostNumGte = hostNumGte;
   }
 
 
-  public LabelWhereInput hostNumIn(List<Double> hostNumIn) {
+  public LabelWhereInput hostNumIn(List<Integer> hostNumIn) {
     
     this.hostNumIn = hostNumIn;
     return this;
   }
 
-  public LabelWhereInput addHostNumInItem(Double hostNumInItem) {
+  public LabelWhereInput addHostNumInItem(Integer hostNumInItem) {
     if (this.hostNumIn == null) {
-      this.hostNumIn = new ArrayList<Double>();
+      this.hostNumIn = new ArrayList<Integer>();
     }
     this.hostNumIn.add(hostNumInItem);
     return this;
@@ -3683,17 +3997,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumIn() {
+  public List<Integer> getHostNumIn() {
     return hostNumIn;
   }
 
 
-  public void setHostNumIn(List<Double> hostNumIn) {
+  public void setHostNumIn(List<Integer> hostNumIn) {
     this.hostNumIn = hostNumIn;
   }
 
 
-  public LabelWhereInput hostNumLt(Double hostNumLt) {
+  public LabelWhereInput hostNumLt(Integer hostNumLt) {
     
     this.hostNumLt = hostNumLt;
     return this;
@@ -3706,17 +4020,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLt() {
+  public Integer getHostNumLt() {
     return hostNumLt;
   }
 
 
-  public void setHostNumLt(Double hostNumLt) {
+  public void setHostNumLt(Integer hostNumLt) {
     this.hostNumLt = hostNumLt;
   }
 
 
-  public LabelWhereInput hostNumLte(Double hostNumLte) {
+  public LabelWhereInput hostNumLte(Integer hostNumLte) {
     
     this.hostNumLte = hostNumLte;
     return this;
@@ -3729,17 +4043,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumLte() {
+  public Integer getHostNumLte() {
     return hostNumLte;
   }
 
 
-  public void setHostNumLte(Double hostNumLte) {
+  public void setHostNumLte(Integer hostNumLte) {
     this.hostNumLte = hostNumLte;
   }
 
 
-  public LabelWhereInput hostNumNot(Double hostNumNot) {
+  public LabelWhereInput hostNumNot(Integer hostNumNot) {
     
     this.hostNumNot = hostNumNot;
     return this;
@@ -3752,25 +4066,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNumNot() {
+  public Integer getHostNumNot() {
     return hostNumNot;
   }
 
 
-  public void setHostNumNot(Double hostNumNot) {
+  public void setHostNumNot(Integer hostNumNot) {
     this.hostNumNot = hostNumNot;
   }
 
 
-  public LabelWhereInput hostNumNotIn(List<Double> hostNumNotIn) {
+  public LabelWhereInput hostNumNotIn(List<Integer> hostNumNotIn) {
     
     this.hostNumNotIn = hostNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addHostNumNotInItem(Double hostNumNotInItem) {
+  public LabelWhereInput addHostNumNotInItem(Integer hostNumNotInItem) {
     if (this.hostNumNotIn == null) {
-      this.hostNumNotIn = new ArrayList<Double>();
+      this.hostNumNotIn = new ArrayList<Integer>();
     }
     this.hostNumNotIn.add(hostNumNotInItem);
     return this;
@@ -3783,12 +4097,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHostNumNotIn() {
+  public List<Integer> getHostNumNotIn() {
     return hostNumNotIn;
   }
 
 
-  public void setHostNumNotIn(List<Double> hostNumNotIn) {
+  public void setHostNumNotIn(List<Integer> hostNumNotIn) {
     this.hostNumNotIn = hostNumNotIn;
   }
 
@@ -4200,7 +4514,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput iscsiLunNum(Double iscsiLunNum) {
+  public LabelWhereInput iscsiLunNum(Integer iscsiLunNum) {
     
     this.iscsiLunNum = iscsiLunNum;
     return this;
@@ -4213,17 +4527,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNum() {
+  public Integer getIscsiLunNum() {
     return iscsiLunNum;
   }
 
 
-  public void setIscsiLunNum(Double iscsiLunNum) {
+  public void setIscsiLunNum(Integer iscsiLunNum) {
     this.iscsiLunNum = iscsiLunNum;
   }
 
 
-  public LabelWhereInput iscsiLunNumGt(Double iscsiLunNumGt) {
+  public LabelWhereInput iscsiLunNumGt(Integer iscsiLunNumGt) {
     
     this.iscsiLunNumGt = iscsiLunNumGt;
     return this;
@@ -4236,17 +4550,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNumGt() {
+  public Integer getIscsiLunNumGt() {
     return iscsiLunNumGt;
   }
 
 
-  public void setIscsiLunNumGt(Double iscsiLunNumGt) {
+  public void setIscsiLunNumGt(Integer iscsiLunNumGt) {
     this.iscsiLunNumGt = iscsiLunNumGt;
   }
 
 
-  public LabelWhereInput iscsiLunNumGte(Double iscsiLunNumGte) {
+  public LabelWhereInput iscsiLunNumGte(Integer iscsiLunNumGte) {
     
     this.iscsiLunNumGte = iscsiLunNumGte;
     return this;
@@ -4259,25 +4573,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNumGte() {
+  public Integer getIscsiLunNumGte() {
     return iscsiLunNumGte;
   }
 
 
-  public void setIscsiLunNumGte(Double iscsiLunNumGte) {
+  public void setIscsiLunNumGte(Integer iscsiLunNumGte) {
     this.iscsiLunNumGte = iscsiLunNumGte;
   }
 
 
-  public LabelWhereInput iscsiLunNumIn(List<Double> iscsiLunNumIn) {
+  public LabelWhereInput iscsiLunNumIn(List<Integer> iscsiLunNumIn) {
     
     this.iscsiLunNumIn = iscsiLunNumIn;
     return this;
   }
 
-  public LabelWhereInput addIscsiLunNumInItem(Double iscsiLunNumInItem) {
+  public LabelWhereInput addIscsiLunNumInItem(Integer iscsiLunNumInItem) {
     if (this.iscsiLunNumIn == null) {
-      this.iscsiLunNumIn = new ArrayList<Double>();
+      this.iscsiLunNumIn = new ArrayList<Integer>();
     }
     this.iscsiLunNumIn.add(iscsiLunNumInItem);
     return this;
@@ -4290,17 +4604,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIscsiLunNumIn() {
+  public List<Integer> getIscsiLunNumIn() {
     return iscsiLunNumIn;
   }
 
 
-  public void setIscsiLunNumIn(List<Double> iscsiLunNumIn) {
+  public void setIscsiLunNumIn(List<Integer> iscsiLunNumIn) {
     this.iscsiLunNumIn = iscsiLunNumIn;
   }
 
 
-  public LabelWhereInput iscsiLunNumLt(Double iscsiLunNumLt) {
+  public LabelWhereInput iscsiLunNumLt(Integer iscsiLunNumLt) {
     
     this.iscsiLunNumLt = iscsiLunNumLt;
     return this;
@@ -4313,17 +4627,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNumLt() {
+  public Integer getIscsiLunNumLt() {
     return iscsiLunNumLt;
   }
 
 
-  public void setIscsiLunNumLt(Double iscsiLunNumLt) {
+  public void setIscsiLunNumLt(Integer iscsiLunNumLt) {
     this.iscsiLunNumLt = iscsiLunNumLt;
   }
 
 
-  public LabelWhereInput iscsiLunNumLte(Double iscsiLunNumLte) {
+  public LabelWhereInput iscsiLunNumLte(Integer iscsiLunNumLte) {
     
     this.iscsiLunNumLte = iscsiLunNumLte;
     return this;
@@ -4336,17 +4650,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNumLte() {
+  public Integer getIscsiLunNumLte() {
     return iscsiLunNumLte;
   }
 
 
-  public void setIscsiLunNumLte(Double iscsiLunNumLte) {
+  public void setIscsiLunNumLte(Integer iscsiLunNumLte) {
     this.iscsiLunNumLte = iscsiLunNumLte;
   }
 
 
-  public LabelWhereInput iscsiLunNumNot(Double iscsiLunNumNot) {
+  public LabelWhereInput iscsiLunNumNot(Integer iscsiLunNumNot) {
     
     this.iscsiLunNumNot = iscsiLunNumNot;
     return this;
@@ -4359,25 +4673,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNumNot() {
+  public Integer getIscsiLunNumNot() {
     return iscsiLunNumNot;
   }
 
 
-  public void setIscsiLunNumNot(Double iscsiLunNumNot) {
+  public void setIscsiLunNumNot(Integer iscsiLunNumNot) {
     this.iscsiLunNumNot = iscsiLunNumNot;
   }
 
 
-  public LabelWhereInput iscsiLunNumNotIn(List<Double> iscsiLunNumNotIn) {
+  public LabelWhereInput iscsiLunNumNotIn(List<Integer> iscsiLunNumNotIn) {
     
     this.iscsiLunNumNotIn = iscsiLunNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addIscsiLunNumNotInItem(Double iscsiLunNumNotInItem) {
+  public LabelWhereInput addIscsiLunNumNotInItem(Integer iscsiLunNumNotInItem) {
     if (this.iscsiLunNumNotIn == null) {
-      this.iscsiLunNumNotIn = new ArrayList<Double>();
+      this.iscsiLunNumNotIn = new ArrayList<Integer>();
     }
     this.iscsiLunNumNotIn.add(iscsiLunNumNotInItem);
     return this;
@@ -4390,17 +4704,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIscsiLunNumNotIn() {
+  public List<Integer> getIscsiLunNumNotIn() {
     return iscsiLunNumNotIn;
   }
 
 
-  public void setIscsiLunNumNotIn(List<Double> iscsiLunNumNotIn) {
+  public void setIscsiLunNumNotIn(List<Integer> iscsiLunNumNotIn) {
     this.iscsiLunNumNotIn = iscsiLunNumNotIn;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNum(Double iscsiLunSnapshotNum) {
+  public LabelWhereInput iscsiLunSnapshotNum(Integer iscsiLunSnapshotNum) {
     
     this.iscsiLunSnapshotNum = iscsiLunSnapshotNum;
     return this;
@@ -4413,17 +4727,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNum() {
+  public Integer getIscsiLunSnapshotNum() {
     return iscsiLunSnapshotNum;
   }
 
 
-  public void setIscsiLunSnapshotNum(Double iscsiLunSnapshotNum) {
+  public void setIscsiLunSnapshotNum(Integer iscsiLunSnapshotNum) {
     this.iscsiLunSnapshotNum = iscsiLunSnapshotNum;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumGt(Double iscsiLunSnapshotNumGt) {
+  public LabelWhereInput iscsiLunSnapshotNumGt(Integer iscsiLunSnapshotNumGt) {
     
     this.iscsiLunSnapshotNumGt = iscsiLunSnapshotNumGt;
     return this;
@@ -4436,17 +4750,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNumGt() {
+  public Integer getIscsiLunSnapshotNumGt() {
     return iscsiLunSnapshotNumGt;
   }
 
 
-  public void setIscsiLunSnapshotNumGt(Double iscsiLunSnapshotNumGt) {
+  public void setIscsiLunSnapshotNumGt(Integer iscsiLunSnapshotNumGt) {
     this.iscsiLunSnapshotNumGt = iscsiLunSnapshotNumGt;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumGte(Double iscsiLunSnapshotNumGte) {
+  public LabelWhereInput iscsiLunSnapshotNumGte(Integer iscsiLunSnapshotNumGte) {
     
     this.iscsiLunSnapshotNumGte = iscsiLunSnapshotNumGte;
     return this;
@@ -4459,25 +4773,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNumGte() {
+  public Integer getIscsiLunSnapshotNumGte() {
     return iscsiLunSnapshotNumGte;
   }
 
 
-  public void setIscsiLunSnapshotNumGte(Double iscsiLunSnapshotNumGte) {
+  public void setIscsiLunSnapshotNumGte(Integer iscsiLunSnapshotNumGte) {
     this.iscsiLunSnapshotNumGte = iscsiLunSnapshotNumGte;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumIn(List<Double> iscsiLunSnapshotNumIn) {
+  public LabelWhereInput iscsiLunSnapshotNumIn(List<Integer> iscsiLunSnapshotNumIn) {
     
     this.iscsiLunSnapshotNumIn = iscsiLunSnapshotNumIn;
     return this;
   }
 
-  public LabelWhereInput addIscsiLunSnapshotNumInItem(Double iscsiLunSnapshotNumInItem) {
+  public LabelWhereInput addIscsiLunSnapshotNumInItem(Integer iscsiLunSnapshotNumInItem) {
     if (this.iscsiLunSnapshotNumIn == null) {
-      this.iscsiLunSnapshotNumIn = new ArrayList<Double>();
+      this.iscsiLunSnapshotNumIn = new ArrayList<Integer>();
     }
     this.iscsiLunSnapshotNumIn.add(iscsiLunSnapshotNumInItem);
     return this;
@@ -4490,17 +4804,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIscsiLunSnapshotNumIn() {
+  public List<Integer> getIscsiLunSnapshotNumIn() {
     return iscsiLunSnapshotNumIn;
   }
 
 
-  public void setIscsiLunSnapshotNumIn(List<Double> iscsiLunSnapshotNumIn) {
+  public void setIscsiLunSnapshotNumIn(List<Integer> iscsiLunSnapshotNumIn) {
     this.iscsiLunSnapshotNumIn = iscsiLunSnapshotNumIn;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumLt(Double iscsiLunSnapshotNumLt) {
+  public LabelWhereInput iscsiLunSnapshotNumLt(Integer iscsiLunSnapshotNumLt) {
     
     this.iscsiLunSnapshotNumLt = iscsiLunSnapshotNumLt;
     return this;
@@ -4513,17 +4827,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNumLt() {
+  public Integer getIscsiLunSnapshotNumLt() {
     return iscsiLunSnapshotNumLt;
   }
 
 
-  public void setIscsiLunSnapshotNumLt(Double iscsiLunSnapshotNumLt) {
+  public void setIscsiLunSnapshotNumLt(Integer iscsiLunSnapshotNumLt) {
     this.iscsiLunSnapshotNumLt = iscsiLunSnapshotNumLt;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumLte(Double iscsiLunSnapshotNumLte) {
+  public LabelWhereInput iscsiLunSnapshotNumLte(Integer iscsiLunSnapshotNumLte) {
     
     this.iscsiLunSnapshotNumLte = iscsiLunSnapshotNumLte;
     return this;
@@ -4536,17 +4850,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNumLte() {
+  public Integer getIscsiLunSnapshotNumLte() {
     return iscsiLunSnapshotNumLte;
   }
 
 
-  public void setIscsiLunSnapshotNumLte(Double iscsiLunSnapshotNumLte) {
+  public void setIscsiLunSnapshotNumLte(Integer iscsiLunSnapshotNumLte) {
     this.iscsiLunSnapshotNumLte = iscsiLunSnapshotNumLte;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumNot(Double iscsiLunSnapshotNumNot) {
+  public LabelWhereInput iscsiLunSnapshotNumNot(Integer iscsiLunSnapshotNumNot) {
     
     this.iscsiLunSnapshotNumNot = iscsiLunSnapshotNumNot;
     return this;
@@ -4559,25 +4873,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNumNot() {
+  public Integer getIscsiLunSnapshotNumNot() {
     return iscsiLunSnapshotNumNot;
   }
 
 
-  public void setIscsiLunSnapshotNumNot(Double iscsiLunSnapshotNumNot) {
+  public void setIscsiLunSnapshotNumNot(Integer iscsiLunSnapshotNumNot) {
     this.iscsiLunSnapshotNumNot = iscsiLunSnapshotNumNot;
   }
 
 
-  public LabelWhereInput iscsiLunSnapshotNumNotIn(List<Double> iscsiLunSnapshotNumNotIn) {
+  public LabelWhereInput iscsiLunSnapshotNumNotIn(List<Integer> iscsiLunSnapshotNumNotIn) {
     
     this.iscsiLunSnapshotNumNotIn = iscsiLunSnapshotNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addIscsiLunSnapshotNumNotInItem(Double iscsiLunSnapshotNumNotInItem) {
+  public LabelWhereInput addIscsiLunSnapshotNumNotInItem(Integer iscsiLunSnapshotNumNotInItem) {
     if (this.iscsiLunSnapshotNumNotIn == null) {
-      this.iscsiLunSnapshotNumNotIn = new ArrayList<Double>();
+      this.iscsiLunSnapshotNumNotIn = new ArrayList<Integer>();
     }
     this.iscsiLunSnapshotNumNotIn.add(iscsiLunSnapshotNumNotInItem);
     return this;
@@ -4590,12 +4904,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIscsiLunSnapshotNumNotIn() {
+  public List<Integer> getIscsiLunSnapshotNumNotIn() {
     return iscsiLunSnapshotNumNotIn;
   }
 
 
-  public void setIscsiLunSnapshotNumNotIn(List<Double> iscsiLunSnapshotNumNotIn) {
+  public void setIscsiLunSnapshotNumNotIn(List<Integer> iscsiLunSnapshotNumNotIn) {
     this.iscsiLunSnapshotNumNotIn = iscsiLunSnapshotNumNotIn;
   }
 
@@ -4738,7 +5052,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput iscsiTargetNum(Double iscsiTargetNum) {
+  public LabelWhereInput iscsiTargetNum(Integer iscsiTargetNum) {
     
     this.iscsiTargetNum = iscsiTargetNum;
     return this;
@@ -4751,17 +5065,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNum() {
+  public Integer getIscsiTargetNum() {
     return iscsiTargetNum;
   }
 
 
-  public void setIscsiTargetNum(Double iscsiTargetNum) {
+  public void setIscsiTargetNum(Integer iscsiTargetNum) {
     this.iscsiTargetNum = iscsiTargetNum;
   }
 
 
-  public LabelWhereInput iscsiTargetNumGt(Double iscsiTargetNumGt) {
+  public LabelWhereInput iscsiTargetNumGt(Integer iscsiTargetNumGt) {
     
     this.iscsiTargetNumGt = iscsiTargetNumGt;
     return this;
@@ -4774,17 +5088,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNumGt() {
+  public Integer getIscsiTargetNumGt() {
     return iscsiTargetNumGt;
   }
 
 
-  public void setIscsiTargetNumGt(Double iscsiTargetNumGt) {
+  public void setIscsiTargetNumGt(Integer iscsiTargetNumGt) {
     this.iscsiTargetNumGt = iscsiTargetNumGt;
   }
 
 
-  public LabelWhereInput iscsiTargetNumGte(Double iscsiTargetNumGte) {
+  public LabelWhereInput iscsiTargetNumGte(Integer iscsiTargetNumGte) {
     
     this.iscsiTargetNumGte = iscsiTargetNumGte;
     return this;
@@ -4797,25 +5111,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNumGte() {
+  public Integer getIscsiTargetNumGte() {
     return iscsiTargetNumGte;
   }
 
 
-  public void setIscsiTargetNumGte(Double iscsiTargetNumGte) {
+  public void setIscsiTargetNumGte(Integer iscsiTargetNumGte) {
     this.iscsiTargetNumGte = iscsiTargetNumGte;
   }
 
 
-  public LabelWhereInput iscsiTargetNumIn(List<Double> iscsiTargetNumIn) {
+  public LabelWhereInput iscsiTargetNumIn(List<Integer> iscsiTargetNumIn) {
     
     this.iscsiTargetNumIn = iscsiTargetNumIn;
     return this;
   }
 
-  public LabelWhereInput addIscsiTargetNumInItem(Double iscsiTargetNumInItem) {
+  public LabelWhereInput addIscsiTargetNumInItem(Integer iscsiTargetNumInItem) {
     if (this.iscsiTargetNumIn == null) {
-      this.iscsiTargetNumIn = new ArrayList<Double>();
+      this.iscsiTargetNumIn = new ArrayList<Integer>();
     }
     this.iscsiTargetNumIn.add(iscsiTargetNumInItem);
     return this;
@@ -4828,17 +5142,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIscsiTargetNumIn() {
+  public List<Integer> getIscsiTargetNumIn() {
     return iscsiTargetNumIn;
   }
 
 
-  public void setIscsiTargetNumIn(List<Double> iscsiTargetNumIn) {
+  public void setIscsiTargetNumIn(List<Integer> iscsiTargetNumIn) {
     this.iscsiTargetNumIn = iscsiTargetNumIn;
   }
 
 
-  public LabelWhereInput iscsiTargetNumLt(Double iscsiTargetNumLt) {
+  public LabelWhereInput iscsiTargetNumLt(Integer iscsiTargetNumLt) {
     
     this.iscsiTargetNumLt = iscsiTargetNumLt;
     return this;
@@ -4851,17 +5165,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNumLt() {
+  public Integer getIscsiTargetNumLt() {
     return iscsiTargetNumLt;
   }
 
 
-  public void setIscsiTargetNumLt(Double iscsiTargetNumLt) {
+  public void setIscsiTargetNumLt(Integer iscsiTargetNumLt) {
     this.iscsiTargetNumLt = iscsiTargetNumLt;
   }
 
 
-  public LabelWhereInput iscsiTargetNumLte(Double iscsiTargetNumLte) {
+  public LabelWhereInput iscsiTargetNumLte(Integer iscsiTargetNumLte) {
     
     this.iscsiTargetNumLte = iscsiTargetNumLte;
     return this;
@@ -4874,17 +5188,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNumLte() {
+  public Integer getIscsiTargetNumLte() {
     return iscsiTargetNumLte;
   }
 
 
-  public void setIscsiTargetNumLte(Double iscsiTargetNumLte) {
+  public void setIscsiTargetNumLte(Integer iscsiTargetNumLte) {
     this.iscsiTargetNumLte = iscsiTargetNumLte;
   }
 
 
-  public LabelWhereInput iscsiTargetNumNot(Double iscsiTargetNumNot) {
+  public LabelWhereInput iscsiTargetNumNot(Integer iscsiTargetNumNot) {
     
     this.iscsiTargetNumNot = iscsiTargetNumNot;
     return this;
@@ -4897,25 +5211,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNumNot() {
+  public Integer getIscsiTargetNumNot() {
     return iscsiTargetNumNot;
   }
 
 
-  public void setIscsiTargetNumNot(Double iscsiTargetNumNot) {
+  public void setIscsiTargetNumNot(Integer iscsiTargetNumNot) {
     this.iscsiTargetNumNot = iscsiTargetNumNot;
   }
 
 
-  public LabelWhereInput iscsiTargetNumNotIn(List<Double> iscsiTargetNumNotIn) {
+  public LabelWhereInput iscsiTargetNumNotIn(List<Integer> iscsiTargetNumNotIn) {
     
     this.iscsiTargetNumNotIn = iscsiTargetNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addIscsiTargetNumNotInItem(Double iscsiTargetNumNotInItem) {
+  public LabelWhereInput addIscsiTargetNumNotInItem(Integer iscsiTargetNumNotInItem) {
     if (this.iscsiTargetNumNotIn == null) {
-      this.iscsiTargetNumNotIn = new ArrayList<Double>();
+      this.iscsiTargetNumNotIn = new ArrayList<Integer>();
     }
     this.iscsiTargetNumNotIn.add(iscsiTargetNumNotInItem);
     return this;
@@ -4928,12 +5242,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIscsiTargetNumNotIn() {
+  public List<Integer> getIscsiTargetNumNotIn() {
     return iscsiTargetNumNotIn;
   }
 
 
-  public void setIscsiTargetNumNotIn(List<Double> iscsiTargetNumNotIn) {
+  public void setIscsiTargetNumNotIn(List<Integer> iscsiTargetNumNotIn) {
     this.iscsiTargetNumNotIn = iscsiTargetNumNotIn;
   }
 
@@ -5076,7 +5390,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput isolationPolicyNum(Double isolationPolicyNum) {
+  public LabelWhereInput isolationPolicyNum(Integer isolationPolicyNum) {
     
     this.isolationPolicyNum = isolationPolicyNum;
     return this;
@@ -5089,17 +5403,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNum() {
+  public Integer getIsolationPolicyNum() {
     return isolationPolicyNum;
   }
 
 
-  public void setIsolationPolicyNum(Double isolationPolicyNum) {
+  public void setIsolationPolicyNum(Integer isolationPolicyNum) {
     this.isolationPolicyNum = isolationPolicyNum;
   }
 
 
-  public LabelWhereInput isolationPolicyNumGt(Double isolationPolicyNumGt) {
+  public LabelWhereInput isolationPolicyNumGt(Integer isolationPolicyNumGt) {
     
     this.isolationPolicyNumGt = isolationPolicyNumGt;
     return this;
@@ -5112,17 +5426,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNumGt() {
+  public Integer getIsolationPolicyNumGt() {
     return isolationPolicyNumGt;
   }
 
 
-  public void setIsolationPolicyNumGt(Double isolationPolicyNumGt) {
+  public void setIsolationPolicyNumGt(Integer isolationPolicyNumGt) {
     this.isolationPolicyNumGt = isolationPolicyNumGt;
   }
 
 
-  public LabelWhereInput isolationPolicyNumGte(Double isolationPolicyNumGte) {
+  public LabelWhereInput isolationPolicyNumGte(Integer isolationPolicyNumGte) {
     
     this.isolationPolicyNumGte = isolationPolicyNumGte;
     return this;
@@ -5135,25 +5449,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNumGte() {
+  public Integer getIsolationPolicyNumGte() {
     return isolationPolicyNumGte;
   }
 
 
-  public void setIsolationPolicyNumGte(Double isolationPolicyNumGte) {
+  public void setIsolationPolicyNumGte(Integer isolationPolicyNumGte) {
     this.isolationPolicyNumGte = isolationPolicyNumGte;
   }
 
 
-  public LabelWhereInput isolationPolicyNumIn(List<Double> isolationPolicyNumIn) {
+  public LabelWhereInput isolationPolicyNumIn(List<Integer> isolationPolicyNumIn) {
     
     this.isolationPolicyNumIn = isolationPolicyNumIn;
     return this;
   }
 
-  public LabelWhereInput addIsolationPolicyNumInItem(Double isolationPolicyNumInItem) {
+  public LabelWhereInput addIsolationPolicyNumInItem(Integer isolationPolicyNumInItem) {
     if (this.isolationPolicyNumIn == null) {
-      this.isolationPolicyNumIn = new ArrayList<Double>();
+      this.isolationPolicyNumIn = new ArrayList<Integer>();
     }
     this.isolationPolicyNumIn.add(isolationPolicyNumInItem);
     return this;
@@ -5166,17 +5480,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIsolationPolicyNumIn() {
+  public List<Integer> getIsolationPolicyNumIn() {
     return isolationPolicyNumIn;
   }
 
 
-  public void setIsolationPolicyNumIn(List<Double> isolationPolicyNumIn) {
+  public void setIsolationPolicyNumIn(List<Integer> isolationPolicyNumIn) {
     this.isolationPolicyNumIn = isolationPolicyNumIn;
   }
 
 
-  public LabelWhereInput isolationPolicyNumLt(Double isolationPolicyNumLt) {
+  public LabelWhereInput isolationPolicyNumLt(Integer isolationPolicyNumLt) {
     
     this.isolationPolicyNumLt = isolationPolicyNumLt;
     return this;
@@ -5189,17 +5503,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNumLt() {
+  public Integer getIsolationPolicyNumLt() {
     return isolationPolicyNumLt;
   }
 
 
-  public void setIsolationPolicyNumLt(Double isolationPolicyNumLt) {
+  public void setIsolationPolicyNumLt(Integer isolationPolicyNumLt) {
     this.isolationPolicyNumLt = isolationPolicyNumLt;
   }
 
 
-  public LabelWhereInput isolationPolicyNumLte(Double isolationPolicyNumLte) {
+  public LabelWhereInput isolationPolicyNumLte(Integer isolationPolicyNumLte) {
     
     this.isolationPolicyNumLte = isolationPolicyNumLte;
     return this;
@@ -5212,17 +5526,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNumLte() {
+  public Integer getIsolationPolicyNumLte() {
     return isolationPolicyNumLte;
   }
 
 
-  public void setIsolationPolicyNumLte(Double isolationPolicyNumLte) {
+  public void setIsolationPolicyNumLte(Integer isolationPolicyNumLte) {
     this.isolationPolicyNumLte = isolationPolicyNumLte;
   }
 
 
-  public LabelWhereInput isolationPolicyNumNot(Double isolationPolicyNumNot) {
+  public LabelWhereInput isolationPolicyNumNot(Integer isolationPolicyNumNot) {
     
     this.isolationPolicyNumNot = isolationPolicyNumNot;
     return this;
@@ -5235,25 +5549,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNumNot() {
+  public Integer getIsolationPolicyNumNot() {
     return isolationPolicyNumNot;
   }
 
 
-  public void setIsolationPolicyNumNot(Double isolationPolicyNumNot) {
+  public void setIsolationPolicyNumNot(Integer isolationPolicyNumNot) {
     this.isolationPolicyNumNot = isolationPolicyNumNot;
   }
 
 
-  public LabelWhereInput isolationPolicyNumNotIn(List<Double> isolationPolicyNumNotIn) {
+  public LabelWhereInput isolationPolicyNumNotIn(List<Integer> isolationPolicyNumNotIn) {
     
     this.isolationPolicyNumNotIn = isolationPolicyNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addIsolationPolicyNumNotInItem(Double isolationPolicyNumNotInItem) {
+  public LabelWhereInput addIsolationPolicyNumNotInItem(Integer isolationPolicyNumNotInItem) {
     if (this.isolationPolicyNumNotIn == null) {
-      this.isolationPolicyNumNotIn = new ArrayList<Double>();
+      this.isolationPolicyNumNotIn = new ArrayList<Integer>();
     }
     this.isolationPolicyNumNotIn.add(isolationPolicyNumNotInItem);
     return this;
@@ -5266,12 +5580,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIsolationPolicyNumNotIn() {
+  public List<Integer> getIsolationPolicyNumNotIn() {
     return isolationPolicyNumNotIn;
   }
 
 
-  public void setIsolationPolicyNumNotIn(List<Double> isolationPolicyNumNotIn) {
+  public void setIsolationPolicyNumNotIn(List<Integer> isolationPolicyNumNotIn) {
     this.isolationPolicyNumNotIn = isolationPolicyNumNotIn;
   }
 
@@ -5614,7 +5928,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput namespaceGroupNum(Double namespaceGroupNum) {
+  public LabelWhereInput namespaceGroupNum(Integer namespaceGroupNum) {
     
     this.namespaceGroupNum = namespaceGroupNum;
     return this;
@@ -5627,17 +5941,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNum() {
+  public Integer getNamespaceGroupNum() {
     return namespaceGroupNum;
   }
 
 
-  public void setNamespaceGroupNum(Double namespaceGroupNum) {
+  public void setNamespaceGroupNum(Integer namespaceGroupNum) {
     this.namespaceGroupNum = namespaceGroupNum;
   }
 
 
-  public LabelWhereInput namespaceGroupNumGt(Double namespaceGroupNumGt) {
+  public LabelWhereInput namespaceGroupNumGt(Integer namespaceGroupNumGt) {
     
     this.namespaceGroupNumGt = namespaceGroupNumGt;
     return this;
@@ -5650,17 +5964,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNumGt() {
+  public Integer getNamespaceGroupNumGt() {
     return namespaceGroupNumGt;
   }
 
 
-  public void setNamespaceGroupNumGt(Double namespaceGroupNumGt) {
+  public void setNamespaceGroupNumGt(Integer namespaceGroupNumGt) {
     this.namespaceGroupNumGt = namespaceGroupNumGt;
   }
 
 
-  public LabelWhereInput namespaceGroupNumGte(Double namespaceGroupNumGte) {
+  public LabelWhereInput namespaceGroupNumGte(Integer namespaceGroupNumGte) {
     
     this.namespaceGroupNumGte = namespaceGroupNumGte;
     return this;
@@ -5673,25 +5987,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNumGte() {
+  public Integer getNamespaceGroupNumGte() {
     return namespaceGroupNumGte;
   }
 
 
-  public void setNamespaceGroupNumGte(Double namespaceGroupNumGte) {
+  public void setNamespaceGroupNumGte(Integer namespaceGroupNumGte) {
     this.namespaceGroupNumGte = namespaceGroupNumGte;
   }
 
 
-  public LabelWhereInput namespaceGroupNumIn(List<Double> namespaceGroupNumIn) {
+  public LabelWhereInput namespaceGroupNumIn(List<Integer> namespaceGroupNumIn) {
     
     this.namespaceGroupNumIn = namespaceGroupNumIn;
     return this;
   }
 
-  public LabelWhereInput addNamespaceGroupNumInItem(Double namespaceGroupNumInItem) {
+  public LabelWhereInput addNamespaceGroupNumInItem(Integer namespaceGroupNumInItem) {
     if (this.namespaceGroupNumIn == null) {
-      this.namespaceGroupNumIn = new ArrayList<Double>();
+      this.namespaceGroupNumIn = new ArrayList<Integer>();
     }
     this.namespaceGroupNumIn.add(namespaceGroupNumInItem);
     return this;
@@ -5704,17 +6018,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNamespaceGroupNumIn() {
+  public List<Integer> getNamespaceGroupNumIn() {
     return namespaceGroupNumIn;
   }
 
 
-  public void setNamespaceGroupNumIn(List<Double> namespaceGroupNumIn) {
+  public void setNamespaceGroupNumIn(List<Integer> namespaceGroupNumIn) {
     this.namespaceGroupNumIn = namespaceGroupNumIn;
   }
 
 
-  public LabelWhereInput namespaceGroupNumLt(Double namespaceGroupNumLt) {
+  public LabelWhereInput namespaceGroupNumLt(Integer namespaceGroupNumLt) {
     
     this.namespaceGroupNumLt = namespaceGroupNumLt;
     return this;
@@ -5727,17 +6041,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNumLt() {
+  public Integer getNamespaceGroupNumLt() {
     return namespaceGroupNumLt;
   }
 
 
-  public void setNamespaceGroupNumLt(Double namespaceGroupNumLt) {
+  public void setNamespaceGroupNumLt(Integer namespaceGroupNumLt) {
     this.namespaceGroupNumLt = namespaceGroupNumLt;
   }
 
 
-  public LabelWhereInput namespaceGroupNumLte(Double namespaceGroupNumLte) {
+  public LabelWhereInput namespaceGroupNumLte(Integer namespaceGroupNumLte) {
     
     this.namespaceGroupNumLte = namespaceGroupNumLte;
     return this;
@@ -5750,17 +6064,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNumLte() {
+  public Integer getNamespaceGroupNumLte() {
     return namespaceGroupNumLte;
   }
 
 
-  public void setNamespaceGroupNumLte(Double namespaceGroupNumLte) {
+  public void setNamespaceGroupNumLte(Integer namespaceGroupNumLte) {
     this.namespaceGroupNumLte = namespaceGroupNumLte;
   }
 
 
-  public LabelWhereInput namespaceGroupNumNot(Double namespaceGroupNumNot) {
+  public LabelWhereInput namespaceGroupNumNot(Integer namespaceGroupNumNot) {
     
     this.namespaceGroupNumNot = namespaceGroupNumNot;
     return this;
@@ -5773,25 +6087,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNumNot() {
+  public Integer getNamespaceGroupNumNot() {
     return namespaceGroupNumNot;
   }
 
 
-  public void setNamespaceGroupNumNot(Double namespaceGroupNumNot) {
+  public void setNamespaceGroupNumNot(Integer namespaceGroupNumNot) {
     this.namespaceGroupNumNot = namespaceGroupNumNot;
   }
 
 
-  public LabelWhereInput namespaceGroupNumNotIn(List<Double> namespaceGroupNumNotIn) {
+  public LabelWhereInput namespaceGroupNumNotIn(List<Integer> namespaceGroupNumNotIn) {
     
     this.namespaceGroupNumNotIn = namespaceGroupNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNamespaceGroupNumNotInItem(Double namespaceGroupNumNotInItem) {
+  public LabelWhereInput addNamespaceGroupNumNotInItem(Integer namespaceGroupNumNotInItem) {
     if (this.namespaceGroupNumNotIn == null) {
-      this.namespaceGroupNumNotIn = new ArrayList<Double>();
+      this.namespaceGroupNumNotIn = new ArrayList<Integer>();
     }
     this.namespaceGroupNumNotIn.add(namespaceGroupNumNotInItem);
     return this;
@@ -5804,12 +6118,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNamespaceGroupNumNotIn() {
+  public List<Integer> getNamespaceGroupNumNotIn() {
     return namespaceGroupNumNotIn;
   }
 
 
-  public void setNamespaceGroupNumNotIn(List<Double> namespaceGroupNumNotIn) {
+  public void setNamespaceGroupNumNotIn(List<Integer> namespaceGroupNumNotIn) {
     this.namespaceGroupNumNotIn = namespaceGroupNumNotIn;
   }
 
@@ -5883,7 +6197,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput nfsExportNum(Double nfsExportNum) {
+  public LabelWhereInput nfsExportNum(Integer nfsExportNum) {
     
     this.nfsExportNum = nfsExportNum;
     return this;
@@ -5896,17 +6210,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNum() {
+  public Integer getNfsExportNum() {
     return nfsExportNum;
   }
 
 
-  public void setNfsExportNum(Double nfsExportNum) {
+  public void setNfsExportNum(Integer nfsExportNum) {
     this.nfsExportNum = nfsExportNum;
   }
 
 
-  public LabelWhereInput nfsExportNumGt(Double nfsExportNumGt) {
+  public LabelWhereInput nfsExportNumGt(Integer nfsExportNumGt) {
     
     this.nfsExportNumGt = nfsExportNumGt;
     return this;
@@ -5919,17 +6233,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNumGt() {
+  public Integer getNfsExportNumGt() {
     return nfsExportNumGt;
   }
 
 
-  public void setNfsExportNumGt(Double nfsExportNumGt) {
+  public void setNfsExportNumGt(Integer nfsExportNumGt) {
     this.nfsExportNumGt = nfsExportNumGt;
   }
 
 
-  public LabelWhereInput nfsExportNumGte(Double nfsExportNumGte) {
+  public LabelWhereInput nfsExportNumGte(Integer nfsExportNumGte) {
     
     this.nfsExportNumGte = nfsExportNumGte;
     return this;
@@ -5942,25 +6256,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNumGte() {
+  public Integer getNfsExportNumGte() {
     return nfsExportNumGte;
   }
 
 
-  public void setNfsExportNumGte(Double nfsExportNumGte) {
+  public void setNfsExportNumGte(Integer nfsExportNumGte) {
     this.nfsExportNumGte = nfsExportNumGte;
   }
 
 
-  public LabelWhereInput nfsExportNumIn(List<Double> nfsExportNumIn) {
+  public LabelWhereInput nfsExportNumIn(List<Integer> nfsExportNumIn) {
     
     this.nfsExportNumIn = nfsExportNumIn;
     return this;
   }
 
-  public LabelWhereInput addNfsExportNumInItem(Double nfsExportNumInItem) {
+  public LabelWhereInput addNfsExportNumInItem(Integer nfsExportNumInItem) {
     if (this.nfsExportNumIn == null) {
-      this.nfsExportNumIn = new ArrayList<Double>();
+      this.nfsExportNumIn = new ArrayList<Integer>();
     }
     this.nfsExportNumIn.add(nfsExportNumInItem);
     return this;
@@ -5973,17 +6287,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNfsExportNumIn() {
+  public List<Integer> getNfsExportNumIn() {
     return nfsExportNumIn;
   }
 
 
-  public void setNfsExportNumIn(List<Double> nfsExportNumIn) {
+  public void setNfsExportNumIn(List<Integer> nfsExportNumIn) {
     this.nfsExportNumIn = nfsExportNumIn;
   }
 
 
-  public LabelWhereInput nfsExportNumLt(Double nfsExportNumLt) {
+  public LabelWhereInput nfsExportNumLt(Integer nfsExportNumLt) {
     
     this.nfsExportNumLt = nfsExportNumLt;
     return this;
@@ -5996,17 +6310,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNumLt() {
+  public Integer getNfsExportNumLt() {
     return nfsExportNumLt;
   }
 
 
-  public void setNfsExportNumLt(Double nfsExportNumLt) {
+  public void setNfsExportNumLt(Integer nfsExportNumLt) {
     this.nfsExportNumLt = nfsExportNumLt;
   }
 
 
-  public LabelWhereInput nfsExportNumLte(Double nfsExportNumLte) {
+  public LabelWhereInput nfsExportNumLte(Integer nfsExportNumLte) {
     
     this.nfsExportNumLte = nfsExportNumLte;
     return this;
@@ -6019,17 +6333,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNumLte() {
+  public Integer getNfsExportNumLte() {
     return nfsExportNumLte;
   }
 
 
-  public void setNfsExportNumLte(Double nfsExportNumLte) {
+  public void setNfsExportNumLte(Integer nfsExportNumLte) {
     this.nfsExportNumLte = nfsExportNumLte;
   }
 
 
-  public LabelWhereInput nfsExportNumNot(Double nfsExportNumNot) {
+  public LabelWhereInput nfsExportNumNot(Integer nfsExportNumNot) {
     
     this.nfsExportNumNot = nfsExportNumNot;
     return this;
@@ -6042,25 +6356,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNumNot() {
+  public Integer getNfsExportNumNot() {
     return nfsExportNumNot;
   }
 
 
-  public void setNfsExportNumNot(Double nfsExportNumNot) {
+  public void setNfsExportNumNot(Integer nfsExportNumNot) {
     this.nfsExportNumNot = nfsExportNumNot;
   }
 
 
-  public LabelWhereInput nfsExportNumNotIn(List<Double> nfsExportNumNotIn) {
+  public LabelWhereInput nfsExportNumNotIn(List<Integer> nfsExportNumNotIn) {
     
     this.nfsExportNumNotIn = nfsExportNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNfsExportNumNotInItem(Double nfsExportNumNotInItem) {
+  public LabelWhereInput addNfsExportNumNotInItem(Integer nfsExportNumNotInItem) {
     if (this.nfsExportNumNotIn == null) {
-      this.nfsExportNumNotIn = new ArrayList<Double>();
+      this.nfsExportNumNotIn = new ArrayList<Integer>();
     }
     this.nfsExportNumNotIn.add(nfsExportNumNotInItem);
     return this;
@@ -6073,12 +6387,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNfsExportNumNotIn() {
+  public List<Integer> getNfsExportNumNotIn() {
     return nfsExportNumNotIn;
   }
 
 
-  public void setNfsExportNumNotIn(List<Double> nfsExportNumNotIn) {
+  public void setNfsExportNumNotIn(List<Integer> nfsExportNumNotIn) {
     this.nfsExportNumNotIn = nfsExportNumNotIn;
   }
 
@@ -6152,7 +6466,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput nfsInodeNum(Double nfsInodeNum) {
+  public LabelWhereInput nfsInodeNum(Integer nfsInodeNum) {
     
     this.nfsInodeNum = nfsInodeNum;
     return this;
@@ -6165,17 +6479,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNum() {
+  public Integer getNfsInodeNum() {
     return nfsInodeNum;
   }
 
 
-  public void setNfsInodeNum(Double nfsInodeNum) {
+  public void setNfsInodeNum(Integer nfsInodeNum) {
     this.nfsInodeNum = nfsInodeNum;
   }
 
 
-  public LabelWhereInput nfsInodeNumGt(Double nfsInodeNumGt) {
+  public LabelWhereInput nfsInodeNumGt(Integer nfsInodeNumGt) {
     
     this.nfsInodeNumGt = nfsInodeNumGt;
     return this;
@@ -6188,17 +6502,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNumGt() {
+  public Integer getNfsInodeNumGt() {
     return nfsInodeNumGt;
   }
 
 
-  public void setNfsInodeNumGt(Double nfsInodeNumGt) {
+  public void setNfsInodeNumGt(Integer nfsInodeNumGt) {
     this.nfsInodeNumGt = nfsInodeNumGt;
   }
 
 
-  public LabelWhereInput nfsInodeNumGte(Double nfsInodeNumGte) {
+  public LabelWhereInput nfsInodeNumGte(Integer nfsInodeNumGte) {
     
     this.nfsInodeNumGte = nfsInodeNumGte;
     return this;
@@ -6211,25 +6525,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNumGte() {
+  public Integer getNfsInodeNumGte() {
     return nfsInodeNumGte;
   }
 
 
-  public void setNfsInodeNumGte(Double nfsInodeNumGte) {
+  public void setNfsInodeNumGte(Integer nfsInodeNumGte) {
     this.nfsInodeNumGte = nfsInodeNumGte;
   }
 
 
-  public LabelWhereInput nfsInodeNumIn(List<Double> nfsInodeNumIn) {
+  public LabelWhereInput nfsInodeNumIn(List<Integer> nfsInodeNumIn) {
     
     this.nfsInodeNumIn = nfsInodeNumIn;
     return this;
   }
 
-  public LabelWhereInput addNfsInodeNumInItem(Double nfsInodeNumInItem) {
+  public LabelWhereInput addNfsInodeNumInItem(Integer nfsInodeNumInItem) {
     if (this.nfsInodeNumIn == null) {
-      this.nfsInodeNumIn = new ArrayList<Double>();
+      this.nfsInodeNumIn = new ArrayList<Integer>();
     }
     this.nfsInodeNumIn.add(nfsInodeNumInItem);
     return this;
@@ -6242,17 +6556,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNfsInodeNumIn() {
+  public List<Integer> getNfsInodeNumIn() {
     return nfsInodeNumIn;
   }
 
 
-  public void setNfsInodeNumIn(List<Double> nfsInodeNumIn) {
+  public void setNfsInodeNumIn(List<Integer> nfsInodeNumIn) {
     this.nfsInodeNumIn = nfsInodeNumIn;
   }
 
 
-  public LabelWhereInput nfsInodeNumLt(Double nfsInodeNumLt) {
+  public LabelWhereInput nfsInodeNumLt(Integer nfsInodeNumLt) {
     
     this.nfsInodeNumLt = nfsInodeNumLt;
     return this;
@@ -6265,17 +6579,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNumLt() {
+  public Integer getNfsInodeNumLt() {
     return nfsInodeNumLt;
   }
 
 
-  public void setNfsInodeNumLt(Double nfsInodeNumLt) {
+  public void setNfsInodeNumLt(Integer nfsInodeNumLt) {
     this.nfsInodeNumLt = nfsInodeNumLt;
   }
 
 
-  public LabelWhereInput nfsInodeNumLte(Double nfsInodeNumLte) {
+  public LabelWhereInput nfsInodeNumLte(Integer nfsInodeNumLte) {
     
     this.nfsInodeNumLte = nfsInodeNumLte;
     return this;
@@ -6288,17 +6602,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNumLte() {
+  public Integer getNfsInodeNumLte() {
     return nfsInodeNumLte;
   }
 
 
-  public void setNfsInodeNumLte(Double nfsInodeNumLte) {
+  public void setNfsInodeNumLte(Integer nfsInodeNumLte) {
     this.nfsInodeNumLte = nfsInodeNumLte;
   }
 
 
-  public LabelWhereInput nfsInodeNumNot(Double nfsInodeNumNot) {
+  public LabelWhereInput nfsInodeNumNot(Integer nfsInodeNumNot) {
     
     this.nfsInodeNumNot = nfsInodeNumNot;
     return this;
@@ -6311,25 +6625,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNumNot() {
+  public Integer getNfsInodeNumNot() {
     return nfsInodeNumNot;
   }
 
 
-  public void setNfsInodeNumNot(Double nfsInodeNumNot) {
+  public void setNfsInodeNumNot(Integer nfsInodeNumNot) {
     this.nfsInodeNumNot = nfsInodeNumNot;
   }
 
 
-  public LabelWhereInput nfsInodeNumNotIn(List<Double> nfsInodeNumNotIn) {
+  public LabelWhereInput nfsInodeNumNotIn(List<Integer> nfsInodeNumNotIn) {
     
     this.nfsInodeNumNotIn = nfsInodeNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNfsInodeNumNotInItem(Double nfsInodeNumNotInItem) {
+  public LabelWhereInput addNfsInodeNumNotInItem(Integer nfsInodeNumNotInItem) {
     if (this.nfsInodeNumNotIn == null) {
-      this.nfsInodeNumNotIn = new ArrayList<Double>();
+      this.nfsInodeNumNotIn = new ArrayList<Integer>();
     }
     this.nfsInodeNumNotIn.add(nfsInodeNumNotInItem);
     return this;
@@ -6342,12 +6656,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNfsInodeNumNotIn() {
+  public List<Integer> getNfsInodeNumNotIn() {
     return nfsInodeNumNotIn;
   }
 
 
-  public void setNfsInodeNumNotIn(List<Double> nfsInodeNumNotIn) {
+  public void setNfsInodeNumNotIn(List<Integer> nfsInodeNumNotIn) {
     this.nfsInodeNumNotIn = nfsInodeNumNotIn;
   }
 
@@ -6421,7 +6735,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput nicNum(Double nicNum) {
+  public LabelWhereInput nicNum(Integer nicNum) {
     
     this.nicNum = nicNum;
     return this;
@@ -6434,17 +6748,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNum() {
+  public Integer getNicNum() {
     return nicNum;
   }
 
 
-  public void setNicNum(Double nicNum) {
+  public void setNicNum(Integer nicNum) {
     this.nicNum = nicNum;
   }
 
 
-  public LabelWhereInput nicNumGt(Double nicNumGt) {
+  public LabelWhereInput nicNumGt(Integer nicNumGt) {
     
     this.nicNumGt = nicNumGt;
     return this;
@@ -6457,17 +6771,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNumGt() {
+  public Integer getNicNumGt() {
     return nicNumGt;
   }
 
 
-  public void setNicNumGt(Double nicNumGt) {
+  public void setNicNumGt(Integer nicNumGt) {
     this.nicNumGt = nicNumGt;
   }
 
 
-  public LabelWhereInput nicNumGte(Double nicNumGte) {
+  public LabelWhereInput nicNumGte(Integer nicNumGte) {
     
     this.nicNumGte = nicNumGte;
     return this;
@@ -6480,25 +6794,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNumGte() {
+  public Integer getNicNumGte() {
     return nicNumGte;
   }
 
 
-  public void setNicNumGte(Double nicNumGte) {
+  public void setNicNumGte(Integer nicNumGte) {
     this.nicNumGte = nicNumGte;
   }
 
 
-  public LabelWhereInput nicNumIn(List<Double> nicNumIn) {
+  public LabelWhereInput nicNumIn(List<Integer> nicNumIn) {
     
     this.nicNumIn = nicNumIn;
     return this;
   }
 
-  public LabelWhereInput addNicNumInItem(Double nicNumInItem) {
+  public LabelWhereInput addNicNumInItem(Integer nicNumInItem) {
     if (this.nicNumIn == null) {
-      this.nicNumIn = new ArrayList<Double>();
+      this.nicNumIn = new ArrayList<Integer>();
     }
     this.nicNumIn.add(nicNumInItem);
     return this;
@@ -6511,17 +6825,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNicNumIn() {
+  public List<Integer> getNicNumIn() {
     return nicNumIn;
   }
 
 
-  public void setNicNumIn(List<Double> nicNumIn) {
+  public void setNicNumIn(List<Integer> nicNumIn) {
     this.nicNumIn = nicNumIn;
   }
 
 
-  public LabelWhereInput nicNumLt(Double nicNumLt) {
+  public LabelWhereInput nicNumLt(Integer nicNumLt) {
     
     this.nicNumLt = nicNumLt;
     return this;
@@ -6534,17 +6848,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNumLt() {
+  public Integer getNicNumLt() {
     return nicNumLt;
   }
 
 
-  public void setNicNumLt(Double nicNumLt) {
+  public void setNicNumLt(Integer nicNumLt) {
     this.nicNumLt = nicNumLt;
   }
 
 
-  public LabelWhereInput nicNumLte(Double nicNumLte) {
+  public LabelWhereInput nicNumLte(Integer nicNumLte) {
     
     this.nicNumLte = nicNumLte;
     return this;
@@ -6557,17 +6871,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNumLte() {
+  public Integer getNicNumLte() {
     return nicNumLte;
   }
 
 
-  public void setNicNumLte(Double nicNumLte) {
+  public void setNicNumLte(Integer nicNumLte) {
     this.nicNumLte = nicNumLte;
   }
 
 
-  public LabelWhereInput nicNumNot(Double nicNumNot) {
+  public LabelWhereInput nicNumNot(Integer nicNumNot) {
     
     this.nicNumNot = nicNumNot;
     return this;
@@ -6580,25 +6894,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNumNot() {
+  public Integer getNicNumNot() {
     return nicNumNot;
   }
 
 
-  public void setNicNumNot(Double nicNumNot) {
+  public void setNicNumNot(Integer nicNumNot) {
     this.nicNumNot = nicNumNot;
   }
 
 
-  public LabelWhereInput nicNumNotIn(List<Double> nicNumNotIn) {
+  public LabelWhereInput nicNumNotIn(List<Integer> nicNumNotIn) {
     
     this.nicNumNotIn = nicNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNicNumNotInItem(Double nicNumNotInItem) {
+  public LabelWhereInput addNicNumNotInItem(Integer nicNumNotInItem) {
     if (this.nicNumNotIn == null) {
-      this.nicNumNotIn = new ArrayList<Double>();
+      this.nicNumNotIn = new ArrayList<Integer>();
     }
     this.nicNumNotIn.add(nicNumNotInItem);
     return this;
@@ -6611,12 +6925,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNicNumNotIn() {
+  public List<Integer> getNicNumNotIn() {
     return nicNumNotIn;
   }
 
 
-  public void setNicNumNotIn(List<Double> nicNumNotIn) {
+  public void setNicNumNotIn(List<Integer> nicNumNotIn) {
     this.nicNumNotIn = nicNumNotIn;
   }
 
@@ -6721,7 +7035,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput nvmfNamespaceNum(Double nvmfNamespaceNum) {
+  public LabelWhereInput nvmfNamespaceNum(Integer nvmfNamespaceNum) {
     
     this.nvmfNamespaceNum = nvmfNamespaceNum;
     return this;
@@ -6734,17 +7048,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNum() {
+  public Integer getNvmfNamespaceNum() {
     return nvmfNamespaceNum;
   }
 
 
-  public void setNvmfNamespaceNum(Double nvmfNamespaceNum) {
+  public void setNvmfNamespaceNum(Integer nvmfNamespaceNum) {
     this.nvmfNamespaceNum = nvmfNamespaceNum;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumGt(Double nvmfNamespaceNumGt) {
+  public LabelWhereInput nvmfNamespaceNumGt(Integer nvmfNamespaceNumGt) {
     
     this.nvmfNamespaceNumGt = nvmfNamespaceNumGt;
     return this;
@@ -6757,17 +7071,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNumGt() {
+  public Integer getNvmfNamespaceNumGt() {
     return nvmfNamespaceNumGt;
   }
 
 
-  public void setNvmfNamespaceNumGt(Double nvmfNamespaceNumGt) {
+  public void setNvmfNamespaceNumGt(Integer nvmfNamespaceNumGt) {
     this.nvmfNamespaceNumGt = nvmfNamespaceNumGt;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumGte(Double nvmfNamespaceNumGte) {
+  public LabelWhereInput nvmfNamespaceNumGte(Integer nvmfNamespaceNumGte) {
     
     this.nvmfNamespaceNumGte = nvmfNamespaceNumGte;
     return this;
@@ -6780,25 +7094,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNumGte() {
+  public Integer getNvmfNamespaceNumGte() {
     return nvmfNamespaceNumGte;
   }
 
 
-  public void setNvmfNamespaceNumGte(Double nvmfNamespaceNumGte) {
+  public void setNvmfNamespaceNumGte(Integer nvmfNamespaceNumGte) {
     this.nvmfNamespaceNumGte = nvmfNamespaceNumGte;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumIn(List<Double> nvmfNamespaceNumIn) {
+  public LabelWhereInput nvmfNamespaceNumIn(List<Integer> nvmfNamespaceNumIn) {
     
     this.nvmfNamespaceNumIn = nvmfNamespaceNumIn;
     return this;
   }
 
-  public LabelWhereInput addNvmfNamespaceNumInItem(Double nvmfNamespaceNumInItem) {
+  public LabelWhereInput addNvmfNamespaceNumInItem(Integer nvmfNamespaceNumInItem) {
     if (this.nvmfNamespaceNumIn == null) {
-      this.nvmfNamespaceNumIn = new ArrayList<Double>();
+      this.nvmfNamespaceNumIn = new ArrayList<Integer>();
     }
     this.nvmfNamespaceNumIn.add(nvmfNamespaceNumInItem);
     return this;
@@ -6811,17 +7125,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNvmfNamespaceNumIn() {
+  public List<Integer> getNvmfNamespaceNumIn() {
     return nvmfNamespaceNumIn;
   }
 
 
-  public void setNvmfNamespaceNumIn(List<Double> nvmfNamespaceNumIn) {
+  public void setNvmfNamespaceNumIn(List<Integer> nvmfNamespaceNumIn) {
     this.nvmfNamespaceNumIn = nvmfNamespaceNumIn;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumLt(Double nvmfNamespaceNumLt) {
+  public LabelWhereInput nvmfNamespaceNumLt(Integer nvmfNamespaceNumLt) {
     
     this.nvmfNamespaceNumLt = nvmfNamespaceNumLt;
     return this;
@@ -6834,17 +7148,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNumLt() {
+  public Integer getNvmfNamespaceNumLt() {
     return nvmfNamespaceNumLt;
   }
 
 
-  public void setNvmfNamespaceNumLt(Double nvmfNamespaceNumLt) {
+  public void setNvmfNamespaceNumLt(Integer nvmfNamespaceNumLt) {
     this.nvmfNamespaceNumLt = nvmfNamespaceNumLt;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumLte(Double nvmfNamespaceNumLte) {
+  public LabelWhereInput nvmfNamespaceNumLte(Integer nvmfNamespaceNumLte) {
     
     this.nvmfNamespaceNumLte = nvmfNamespaceNumLte;
     return this;
@@ -6857,17 +7171,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNumLte() {
+  public Integer getNvmfNamespaceNumLte() {
     return nvmfNamespaceNumLte;
   }
 
 
-  public void setNvmfNamespaceNumLte(Double nvmfNamespaceNumLte) {
+  public void setNvmfNamespaceNumLte(Integer nvmfNamespaceNumLte) {
     this.nvmfNamespaceNumLte = nvmfNamespaceNumLte;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumNot(Double nvmfNamespaceNumNot) {
+  public LabelWhereInput nvmfNamespaceNumNot(Integer nvmfNamespaceNumNot) {
     
     this.nvmfNamespaceNumNot = nvmfNamespaceNumNot;
     return this;
@@ -6880,25 +7194,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNumNot() {
+  public Integer getNvmfNamespaceNumNot() {
     return nvmfNamespaceNumNot;
   }
 
 
-  public void setNvmfNamespaceNumNot(Double nvmfNamespaceNumNot) {
+  public void setNvmfNamespaceNumNot(Integer nvmfNamespaceNumNot) {
     this.nvmfNamespaceNumNot = nvmfNamespaceNumNot;
   }
 
 
-  public LabelWhereInput nvmfNamespaceNumNotIn(List<Double> nvmfNamespaceNumNotIn) {
+  public LabelWhereInput nvmfNamespaceNumNotIn(List<Integer> nvmfNamespaceNumNotIn) {
     
     this.nvmfNamespaceNumNotIn = nvmfNamespaceNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNvmfNamespaceNumNotInItem(Double nvmfNamespaceNumNotInItem) {
+  public LabelWhereInput addNvmfNamespaceNumNotInItem(Integer nvmfNamespaceNumNotInItem) {
     if (this.nvmfNamespaceNumNotIn == null) {
-      this.nvmfNamespaceNumNotIn = new ArrayList<Double>();
+      this.nvmfNamespaceNumNotIn = new ArrayList<Integer>();
     }
     this.nvmfNamespaceNumNotIn.add(nvmfNamespaceNumNotInItem);
     return this;
@@ -6911,17 +7225,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNvmfNamespaceNumNotIn() {
+  public List<Integer> getNvmfNamespaceNumNotIn() {
     return nvmfNamespaceNumNotIn;
   }
 
 
-  public void setNvmfNamespaceNumNotIn(List<Double> nvmfNamespaceNumNotIn) {
+  public void setNvmfNamespaceNumNotIn(List<Integer> nvmfNamespaceNumNotIn) {
     this.nvmfNamespaceNumNotIn = nvmfNamespaceNumNotIn;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNum(Double nvmfNamespaceSnapshotNum) {
+  public LabelWhereInput nvmfNamespaceSnapshotNum(Integer nvmfNamespaceSnapshotNum) {
     
     this.nvmfNamespaceSnapshotNum = nvmfNamespaceSnapshotNum;
     return this;
@@ -6934,17 +7248,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNum() {
+  public Integer getNvmfNamespaceSnapshotNum() {
     return nvmfNamespaceSnapshotNum;
   }
 
 
-  public void setNvmfNamespaceSnapshotNum(Double nvmfNamespaceSnapshotNum) {
+  public void setNvmfNamespaceSnapshotNum(Integer nvmfNamespaceSnapshotNum) {
     this.nvmfNamespaceSnapshotNum = nvmfNamespaceSnapshotNum;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumGt(Double nvmfNamespaceSnapshotNumGt) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumGt(Integer nvmfNamespaceSnapshotNumGt) {
     
     this.nvmfNamespaceSnapshotNumGt = nvmfNamespaceSnapshotNumGt;
     return this;
@@ -6957,17 +7271,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNumGt() {
+  public Integer getNvmfNamespaceSnapshotNumGt() {
     return nvmfNamespaceSnapshotNumGt;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumGt(Double nvmfNamespaceSnapshotNumGt) {
+  public void setNvmfNamespaceSnapshotNumGt(Integer nvmfNamespaceSnapshotNumGt) {
     this.nvmfNamespaceSnapshotNumGt = nvmfNamespaceSnapshotNumGt;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumGte(Double nvmfNamespaceSnapshotNumGte) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumGte(Integer nvmfNamespaceSnapshotNumGte) {
     
     this.nvmfNamespaceSnapshotNumGte = nvmfNamespaceSnapshotNumGte;
     return this;
@@ -6980,25 +7294,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNumGte() {
+  public Integer getNvmfNamespaceSnapshotNumGte() {
     return nvmfNamespaceSnapshotNumGte;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumGte(Double nvmfNamespaceSnapshotNumGte) {
+  public void setNvmfNamespaceSnapshotNumGte(Integer nvmfNamespaceSnapshotNumGte) {
     this.nvmfNamespaceSnapshotNumGte = nvmfNamespaceSnapshotNumGte;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumIn(List<Double> nvmfNamespaceSnapshotNumIn) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumIn(List<Integer> nvmfNamespaceSnapshotNumIn) {
     
     this.nvmfNamespaceSnapshotNumIn = nvmfNamespaceSnapshotNumIn;
     return this;
   }
 
-  public LabelWhereInput addNvmfNamespaceSnapshotNumInItem(Double nvmfNamespaceSnapshotNumInItem) {
+  public LabelWhereInput addNvmfNamespaceSnapshotNumInItem(Integer nvmfNamespaceSnapshotNumInItem) {
     if (this.nvmfNamespaceSnapshotNumIn == null) {
-      this.nvmfNamespaceSnapshotNumIn = new ArrayList<Double>();
+      this.nvmfNamespaceSnapshotNumIn = new ArrayList<Integer>();
     }
     this.nvmfNamespaceSnapshotNumIn.add(nvmfNamespaceSnapshotNumInItem);
     return this;
@@ -7011,17 +7325,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNvmfNamespaceSnapshotNumIn() {
+  public List<Integer> getNvmfNamespaceSnapshotNumIn() {
     return nvmfNamespaceSnapshotNumIn;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumIn(List<Double> nvmfNamespaceSnapshotNumIn) {
+  public void setNvmfNamespaceSnapshotNumIn(List<Integer> nvmfNamespaceSnapshotNumIn) {
     this.nvmfNamespaceSnapshotNumIn = nvmfNamespaceSnapshotNumIn;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumLt(Double nvmfNamespaceSnapshotNumLt) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumLt(Integer nvmfNamespaceSnapshotNumLt) {
     
     this.nvmfNamespaceSnapshotNumLt = nvmfNamespaceSnapshotNumLt;
     return this;
@@ -7034,17 +7348,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNumLt() {
+  public Integer getNvmfNamespaceSnapshotNumLt() {
     return nvmfNamespaceSnapshotNumLt;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumLt(Double nvmfNamespaceSnapshotNumLt) {
+  public void setNvmfNamespaceSnapshotNumLt(Integer nvmfNamespaceSnapshotNumLt) {
     this.nvmfNamespaceSnapshotNumLt = nvmfNamespaceSnapshotNumLt;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumLte(Double nvmfNamespaceSnapshotNumLte) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumLte(Integer nvmfNamespaceSnapshotNumLte) {
     
     this.nvmfNamespaceSnapshotNumLte = nvmfNamespaceSnapshotNumLte;
     return this;
@@ -7057,17 +7371,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNumLte() {
+  public Integer getNvmfNamespaceSnapshotNumLte() {
     return nvmfNamespaceSnapshotNumLte;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumLte(Double nvmfNamespaceSnapshotNumLte) {
+  public void setNvmfNamespaceSnapshotNumLte(Integer nvmfNamespaceSnapshotNumLte) {
     this.nvmfNamespaceSnapshotNumLte = nvmfNamespaceSnapshotNumLte;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumNot(Double nvmfNamespaceSnapshotNumNot) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumNot(Integer nvmfNamespaceSnapshotNumNot) {
     
     this.nvmfNamespaceSnapshotNumNot = nvmfNamespaceSnapshotNumNot;
     return this;
@@ -7080,25 +7394,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNumNot() {
+  public Integer getNvmfNamespaceSnapshotNumNot() {
     return nvmfNamespaceSnapshotNumNot;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumNot(Double nvmfNamespaceSnapshotNumNot) {
+  public void setNvmfNamespaceSnapshotNumNot(Integer nvmfNamespaceSnapshotNumNot) {
     this.nvmfNamespaceSnapshotNumNot = nvmfNamespaceSnapshotNumNot;
   }
 
 
-  public LabelWhereInput nvmfNamespaceSnapshotNumNotIn(List<Double> nvmfNamespaceSnapshotNumNotIn) {
+  public LabelWhereInput nvmfNamespaceSnapshotNumNotIn(List<Integer> nvmfNamespaceSnapshotNumNotIn) {
     
     this.nvmfNamespaceSnapshotNumNotIn = nvmfNamespaceSnapshotNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNvmfNamespaceSnapshotNumNotInItem(Double nvmfNamespaceSnapshotNumNotInItem) {
+  public LabelWhereInput addNvmfNamespaceSnapshotNumNotInItem(Integer nvmfNamespaceSnapshotNumNotInItem) {
     if (this.nvmfNamespaceSnapshotNumNotIn == null) {
-      this.nvmfNamespaceSnapshotNumNotIn = new ArrayList<Double>();
+      this.nvmfNamespaceSnapshotNumNotIn = new ArrayList<Integer>();
     }
     this.nvmfNamespaceSnapshotNumNotIn.add(nvmfNamespaceSnapshotNumNotInItem);
     return this;
@@ -7111,12 +7425,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNvmfNamespaceSnapshotNumNotIn() {
+  public List<Integer> getNvmfNamespaceSnapshotNumNotIn() {
     return nvmfNamespaceSnapshotNumNotIn;
   }
 
 
-  public void setNvmfNamespaceSnapshotNumNotIn(List<Double> nvmfNamespaceSnapshotNumNotIn) {
+  public void setNvmfNamespaceSnapshotNumNotIn(List<Integer> nvmfNamespaceSnapshotNumNotIn) {
     this.nvmfNamespaceSnapshotNumNotIn = nvmfNamespaceSnapshotNumNotIn;
   }
 
@@ -7259,7 +7573,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput nvmfSubsystemNum(Double nvmfSubsystemNum) {
+  public LabelWhereInput nvmfSubsystemNum(Integer nvmfSubsystemNum) {
     
     this.nvmfSubsystemNum = nvmfSubsystemNum;
     return this;
@@ -7272,17 +7586,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNum() {
+  public Integer getNvmfSubsystemNum() {
     return nvmfSubsystemNum;
   }
 
 
-  public void setNvmfSubsystemNum(Double nvmfSubsystemNum) {
+  public void setNvmfSubsystemNum(Integer nvmfSubsystemNum) {
     this.nvmfSubsystemNum = nvmfSubsystemNum;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumGt(Double nvmfSubsystemNumGt) {
+  public LabelWhereInput nvmfSubsystemNumGt(Integer nvmfSubsystemNumGt) {
     
     this.nvmfSubsystemNumGt = nvmfSubsystemNumGt;
     return this;
@@ -7295,17 +7609,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNumGt() {
+  public Integer getNvmfSubsystemNumGt() {
     return nvmfSubsystemNumGt;
   }
 
 
-  public void setNvmfSubsystemNumGt(Double nvmfSubsystemNumGt) {
+  public void setNvmfSubsystemNumGt(Integer nvmfSubsystemNumGt) {
     this.nvmfSubsystemNumGt = nvmfSubsystemNumGt;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumGte(Double nvmfSubsystemNumGte) {
+  public LabelWhereInput nvmfSubsystemNumGte(Integer nvmfSubsystemNumGte) {
     
     this.nvmfSubsystemNumGte = nvmfSubsystemNumGte;
     return this;
@@ -7318,25 +7632,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNumGte() {
+  public Integer getNvmfSubsystemNumGte() {
     return nvmfSubsystemNumGte;
   }
 
 
-  public void setNvmfSubsystemNumGte(Double nvmfSubsystemNumGte) {
+  public void setNvmfSubsystemNumGte(Integer nvmfSubsystemNumGte) {
     this.nvmfSubsystemNumGte = nvmfSubsystemNumGte;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumIn(List<Double> nvmfSubsystemNumIn) {
+  public LabelWhereInput nvmfSubsystemNumIn(List<Integer> nvmfSubsystemNumIn) {
     
     this.nvmfSubsystemNumIn = nvmfSubsystemNumIn;
     return this;
   }
 
-  public LabelWhereInput addNvmfSubsystemNumInItem(Double nvmfSubsystemNumInItem) {
+  public LabelWhereInput addNvmfSubsystemNumInItem(Integer nvmfSubsystemNumInItem) {
     if (this.nvmfSubsystemNumIn == null) {
-      this.nvmfSubsystemNumIn = new ArrayList<Double>();
+      this.nvmfSubsystemNumIn = new ArrayList<Integer>();
     }
     this.nvmfSubsystemNumIn.add(nvmfSubsystemNumInItem);
     return this;
@@ -7349,17 +7663,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNvmfSubsystemNumIn() {
+  public List<Integer> getNvmfSubsystemNumIn() {
     return nvmfSubsystemNumIn;
   }
 
 
-  public void setNvmfSubsystemNumIn(List<Double> nvmfSubsystemNumIn) {
+  public void setNvmfSubsystemNumIn(List<Integer> nvmfSubsystemNumIn) {
     this.nvmfSubsystemNumIn = nvmfSubsystemNumIn;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumLt(Double nvmfSubsystemNumLt) {
+  public LabelWhereInput nvmfSubsystemNumLt(Integer nvmfSubsystemNumLt) {
     
     this.nvmfSubsystemNumLt = nvmfSubsystemNumLt;
     return this;
@@ -7372,17 +7686,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNumLt() {
+  public Integer getNvmfSubsystemNumLt() {
     return nvmfSubsystemNumLt;
   }
 
 
-  public void setNvmfSubsystemNumLt(Double nvmfSubsystemNumLt) {
+  public void setNvmfSubsystemNumLt(Integer nvmfSubsystemNumLt) {
     this.nvmfSubsystemNumLt = nvmfSubsystemNumLt;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumLte(Double nvmfSubsystemNumLte) {
+  public LabelWhereInput nvmfSubsystemNumLte(Integer nvmfSubsystemNumLte) {
     
     this.nvmfSubsystemNumLte = nvmfSubsystemNumLte;
     return this;
@@ -7395,17 +7709,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNumLte() {
+  public Integer getNvmfSubsystemNumLte() {
     return nvmfSubsystemNumLte;
   }
 
 
-  public void setNvmfSubsystemNumLte(Double nvmfSubsystemNumLte) {
+  public void setNvmfSubsystemNumLte(Integer nvmfSubsystemNumLte) {
     this.nvmfSubsystemNumLte = nvmfSubsystemNumLte;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumNot(Double nvmfSubsystemNumNot) {
+  public LabelWhereInput nvmfSubsystemNumNot(Integer nvmfSubsystemNumNot) {
     
     this.nvmfSubsystemNumNot = nvmfSubsystemNumNot;
     return this;
@@ -7418,25 +7732,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNumNot() {
+  public Integer getNvmfSubsystemNumNot() {
     return nvmfSubsystemNumNot;
   }
 
 
-  public void setNvmfSubsystemNumNot(Double nvmfSubsystemNumNot) {
+  public void setNvmfSubsystemNumNot(Integer nvmfSubsystemNumNot) {
     this.nvmfSubsystemNumNot = nvmfSubsystemNumNot;
   }
 
 
-  public LabelWhereInput nvmfSubsystemNumNotIn(List<Double> nvmfSubsystemNumNotIn) {
+  public LabelWhereInput nvmfSubsystemNumNotIn(List<Integer> nvmfSubsystemNumNotIn) {
     
     this.nvmfSubsystemNumNotIn = nvmfSubsystemNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addNvmfSubsystemNumNotInItem(Double nvmfSubsystemNumNotInItem) {
+  public LabelWhereInput addNvmfSubsystemNumNotInItem(Integer nvmfSubsystemNumNotInItem) {
     if (this.nvmfSubsystemNumNotIn == null) {
-      this.nvmfSubsystemNumNotIn = new ArrayList<Double>();
+      this.nvmfSubsystemNumNotIn = new ArrayList<Integer>();
     }
     this.nvmfSubsystemNumNotIn.add(nvmfSubsystemNumNotInItem);
     return this;
@@ -7449,12 +7763,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNvmfSubsystemNumNotIn() {
+  public List<Integer> getNvmfSubsystemNumNotIn() {
     return nvmfSubsystemNumNotIn;
   }
 
 
-  public void setNvmfSubsystemNumNotIn(List<Double> nvmfSubsystemNumNotIn) {
+  public void setNvmfSubsystemNumNotIn(List<Integer> nvmfSubsystemNumNotIn) {
     this.nvmfSubsystemNumNotIn = nvmfSubsystemNumNotIn;
   }
 
@@ -7628,7 +7942,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput securityPolicyNum(Double securityPolicyNum) {
+  public LabelWhereInput securityPolicyNum(Integer securityPolicyNum) {
     
     this.securityPolicyNum = securityPolicyNum;
     return this;
@@ -7641,17 +7955,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNum() {
+  public Integer getSecurityPolicyNum() {
     return securityPolicyNum;
   }
 
 
-  public void setSecurityPolicyNum(Double securityPolicyNum) {
+  public void setSecurityPolicyNum(Integer securityPolicyNum) {
     this.securityPolicyNum = securityPolicyNum;
   }
 
 
-  public LabelWhereInput securityPolicyNumGt(Double securityPolicyNumGt) {
+  public LabelWhereInput securityPolicyNumGt(Integer securityPolicyNumGt) {
     
     this.securityPolicyNumGt = securityPolicyNumGt;
     return this;
@@ -7664,17 +7978,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNumGt() {
+  public Integer getSecurityPolicyNumGt() {
     return securityPolicyNumGt;
   }
 
 
-  public void setSecurityPolicyNumGt(Double securityPolicyNumGt) {
+  public void setSecurityPolicyNumGt(Integer securityPolicyNumGt) {
     this.securityPolicyNumGt = securityPolicyNumGt;
   }
 
 
-  public LabelWhereInput securityPolicyNumGte(Double securityPolicyNumGte) {
+  public LabelWhereInput securityPolicyNumGte(Integer securityPolicyNumGte) {
     
     this.securityPolicyNumGte = securityPolicyNumGte;
     return this;
@@ -7687,25 +8001,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNumGte() {
+  public Integer getSecurityPolicyNumGte() {
     return securityPolicyNumGte;
   }
 
 
-  public void setSecurityPolicyNumGte(Double securityPolicyNumGte) {
+  public void setSecurityPolicyNumGte(Integer securityPolicyNumGte) {
     this.securityPolicyNumGte = securityPolicyNumGte;
   }
 
 
-  public LabelWhereInput securityPolicyNumIn(List<Double> securityPolicyNumIn) {
+  public LabelWhereInput securityPolicyNumIn(List<Integer> securityPolicyNumIn) {
     
     this.securityPolicyNumIn = securityPolicyNumIn;
     return this;
   }
 
-  public LabelWhereInput addSecurityPolicyNumInItem(Double securityPolicyNumInItem) {
+  public LabelWhereInput addSecurityPolicyNumInItem(Integer securityPolicyNumInItem) {
     if (this.securityPolicyNumIn == null) {
-      this.securityPolicyNumIn = new ArrayList<Double>();
+      this.securityPolicyNumIn = new ArrayList<Integer>();
     }
     this.securityPolicyNumIn.add(securityPolicyNumInItem);
     return this;
@@ -7718,17 +8032,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSecurityPolicyNumIn() {
+  public List<Integer> getSecurityPolicyNumIn() {
     return securityPolicyNumIn;
   }
 
 
-  public void setSecurityPolicyNumIn(List<Double> securityPolicyNumIn) {
+  public void setSecurityPolicyNumIn(List<Integer> securityPolicyNumIn) {
     this.securityPolicyNumIn = securityPolicyNumIn;
   }
 
 
-  public LabelWhereInput securityPolicyNumLt(Double securityPolicyNumLt) {
+  public LabelWhereInput securityPolicyNumLt(Integer securityPolicyNumLt) {
     
     this.securityPolicyNumLt = securityPolicyNumLt;
     return this;
@@ -7741,17 +8055,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNumLt() {
+  public Integer getSecurityPolicyNumLt() {
     return securityPolicyNumLt;
   }
 
 
-  public void setSecurityPolicyNumLt(Double securityPolicyNumLt) {
+  public void setSecurityPolicyNumLt(Integer securityPolicyNumLt) {
     this.securityPolicyNumLt = securityPolicyNumLt;
   }
 
 
-  public LabelWhereInput securityPolicyNumLte(Double securityPolicyNumLte) {
+  public LabelWhereInput securityPolicyNumLte(Integer securityPolicyNumLte) {
     
     this.securityPolicyNumLte = securityPolicyNumLte;
     return this;
@@ -7764,17 +8078,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNumLte() {
+  public Integer getSecurityPolicyNumLte() {
     return securityPolicyNumLte;
   }
 
 
-  public void setSecurityPolicyNumLte(Double securityPolicyNumLte) {
+  public void setSecurityPolicyNumLte(Integer securityPolicyNumLte) {
     this.securityPolicyNumLte = securityPolicyNumLte;
   }
 
 
-  public LabelWhereInput securityPolicyNumNot(Double securityPolicyNumNot) {
+  public LabelWhereInput securityPolicyNumNot(Integer securityPolicyNumNot) {
     
     this.securityPolicyNumNot = securityPolicyNumNot;
     return this;
@@ -7787,25 +8101,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNumNot() {
+  public Integer getSecurityPolicyNumNot() {
     return securityPolicyNumNot;
   }
 
 
-  public void setSecurityPolicyNumNot(Double securityPolicyNumNot) {
+  public void setSecurityPolicyNumNot(Integer securityPolicyNumNot) {
     this.securityPolicyNumNot = securityPolicyNumNot;
   }
 
 
-  public LabelWhereInput securityPolicyNumNotIn(List<Double> securityPolicyNumNotIn) {
+  public LabelWhereInput securityPolicyNumNotIn(List<Integer> securityPolicyNumNotIn) {
     
     this.securityPolicyNumNotIn = securityPolicyNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addSecurityPolicyNumNotInItem(Double securityPolicyNumNotInItem) {
+  public LabelWhereInput addSecurityPolicyNumNotInItem(Integer securityPolicyNumNotInItem) {
     if (this.securityPolicyNumNotIn == null) {
-      this.securityPolicyNumNotIn = new ArrayList<Double>();
+      this.securityPolicyNumNotIn = new ArrayList<Integer>();
     }
     this.securityPolicyNumNotIn.add(securityPolicyNumNotInItem);
     return this;
@@ -7818,17 +8132,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSecurityPolicyNumNotIn() {
+  public List<Integer> getSecurityPolicyNumNotIn() {
     return securityPolicyNumNotIn;
   }
 
 
-  public void setSecurityPolicyNumNotIn(List<Double> securityPolicyNumNotIn) {
+  public void setSecurityPolicyNumNotIn(List<Integer> securityPolicyNumNotIn) {
     this.securityPolicyNumNotIn = securityPolicyNumNotIn;
   }
 
 
-  public LabelWhereInput systemVlanNum(Double systemVlanNum) {
+  public LabelWhereInput systemVlanNum(Integer systemVlanNum) {
     
     this.systemVlanNum = systemVlanNum;
     return this;
@@ -7841,17 +8155,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNum() {
+  public Integer getSystemVlanNum() {
     return systemVlanNum;
   }
 
 
-  public void setSystemVlanNum(Double systemVlanNum) {
+  public void setSystemVlanNum(Integer systemVlanNum) {
     this.systemVlanNum = systemVlanNum;
   }
 
 
-  public LabelWhereInput systemVlanNumGt(Double systemVlanNumGt) {
+  public LabelWhereInput systemVlanNumGt(Integer systemVlanNumGt) {
     
     this.systemVlanNumGt = systemVlanNumGt;
     return this;
@@ -7864,17 +8178,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNumGt() {
+  public Integer getSystemVlanNumGt() {
     return systemVlanNumGt;
   }
 
 
-  public void setSystemVlanNumGt(Double systemVlanNumGt) {
+  public void setSystemVlanNumGt(Integer systemVlanNumGt) {
     this.systemVlanNumGt = systemVlanNumGt;
   }
 
 
-  public LabelWhereInput systemVlanNumGte(Double systemVlanNumGte) {
+  public LabelWhereInput systemVlanNumGte(Integer systemVlanNumGte) {
     
     this.systemVlanNumGte = systemVlanNumGte;
     return this;
@@ -7887,25 +8201,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNumGte() {
+  public Integer getSystemVlanNumGte() {
     return systemVlanNumGte;
   }
 
 
-  public void setSystemVlanNumGte(Double systemVlanNumGte) {
+  public void setSystemVlanNumGte(Integer systemVlanNumGte) {
     this.systemVlanNumGte = systemVlanNumGte;
   }
 
 
-  public LabelWhereInput systemVlanNumIn(List<Double> systemVlanNumIn) {
+  public LabelWhereInput systemVlanNumIn(List<Integer> systemVlanNumIn) {
     
     this.systemVlanNumIn = systemVlanNumIn;
     return this;
   }
 
-  public LabelWhereInput addSystemVlanNumInItem(Double systemVlanNumInItem) {
+  public LabelWhereInput addSystemVlanNumInItem(Integer systemVlanNumInItem) {
     if (this.systemVlanNumIn == null) {
-      this.systemVlanNumIn = new ArrayList<Double>();
+      this.systemVlanNumIn = new ArrayList<Integer>();
     }
     this.systemVlanNumIn.add(systemVlanNumInItem);
     return this;
@@ -7918,17 +8232,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSystemVlanNumIn() {
+  public List<Integer> getSystemVlanNumIn() {
     return systemVlanNumIn;
   }
 
 
-  public void setSystemVlanNumIn(List<Double> systemVlanNumIn) {
+  public void setSystemVlanNumIn(List<Integer> systemVlanNumIn) {
     this.systemVlanNumIn = systemVlanNumIn;
   }
 
 
-  public LabelWhereInput systemVlanNumLt(Double systemVlanNumLt) {
+  public LabelWhereInput systemVlanNumLt(Integer systemVlanNumLt) {
     
     this.systemVlanNumLt = systemVlanNumLt;
     return this;
@@ -7941,17 +8255,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNumLt() {
+  public Integer getSystemVlanNumLt() {
     return systemVlanNumLt;
   }
 
 
-  public void setSystemVlanNumLt(Double systemVlanNumLt) {
+  public void setSystemVlanNumLt(Integer systemVlanNumLt) {
     this.systemVlanNumLt = systemVlanNumLt;
   }
 
 
-  public LabelWhereInput systemVlanNumLte(Double systemVlanNumLte) {
+  public LabelWhereInput systemVlanNumLte(Integer systemVlanNumLte) {
     
     this.systemVlanNumLte = systemVlanNumLte;
     return this;
@@ -7964,17 +8278,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNumLte() {
+  public Integer getSystemVlanNumLte() {
     return systemVlanNumLte;
   }
 
 
-  public void setSystemVlanNumLte(Double systemVlanNumLte) {
+  public void setSystemVlanNumLte(Integer systemVlanNumLte) {
     this.systemVlanNumLte = systemVlanNumLte;
   }
 
 
-  public LabelWhereInput systemVlanNumNot(Double systemVlanNumNot) {
+  public LabelWhereInput systemVlanNumNot(Integer systemVlanNumNot) {
     
     this.systemVlanNumNot = systemVlanNumNot;
     return this;
@@ -7987,25 +8301,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNumNot() {
+  public Integer getSystemVlanNumNot() {
     return systemVlanNumNot;
   }
 
 
-  public void setSystemVlanNumNot(Double systemVlanNumNot) {
+  public void setSystemVlanNumNot(Integer systemVlanNumNot) {
     this.systemVlanNumNot = systemVlanNumNot;
   }
 
 
-  public LabelWhereInput systemVlanNumNotIn(List<Double> systemVlanNumNotIn) {
+  public LabelWhereInput systemVlanNumNotIn(List<Integer> systemVlanNumNotIn) {
     
     this.systemVlanNumNotIn = systemVlanNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addSystemVlanNumNotInItem(Double systemVlanNumNotInItem) {
+  public LabelWhereInput addSystemVlanNumNotInItem(Integer systemVlanNumNotInItem) {
     if (this.systemVlanNumNotIn == null) {
-      this.systemVlanNumNotIn = new ArrayList<Double>();
+      this.systemVlanNumNotIn = new ArrayList<Integer>();
     }
     this.systemVlanNumNotIn.add(systemVlanNumNotInItem);
     return this;
@@ -8018,17 +8332,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSystemVlanNumNotIn() {
+  public List<Integer> getSystemVlanNumNotIn() {
     return systemVlanNumNotIn;
   }
 
 
-  public void setSystemVlanNumNotIn(List<Double> systemVlanNumNotIn) {
+  public void setSystemVlanNumNotIn(List<Integer> systemVlanNumNotIn) {
     this.systemVlanNumNotIn = systemVlanNumNotIn;
   }
 
 
-  public LabelWhereInput totalNum(Double totalNum) {
+  public LabelWhereInput totalNum(Integer totalNum) {
     
     this.totalNum = totalNum;
     return this;
@@ -8041,17 +8355,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNum() {
+  public Integer getTotalNum() {
     return totalNum;
   }
 
 
-  public void setTotalNum(Double totalNum) {
+  public void setTotalNum(Integer totalNum) {
     this.totalNum = totalNum;
   }
 
 
-  public LabelWhereInput totalNumGt(Double totalNumGt) {
+  public LabelWhereInput totalNumGt(Integer totalNumGt) {
     
     this.totalNumGt = totalNumGt;
     return this;
@@ -8064,17 +8378,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNumGt() {
+  public Integer getTotalNumGt() {
     return totalNumGt;
   }
 
 
-  public void setTotalNumGt(Double totalNumGt) {
+  public void setTotalNumGt(Integer totalNumGt) {
     this.totalNumGt = totalNumGt;
   }
 
 
-  public LabelWhereInput totalNumGte(Double totalNumGte) {
+  public LabelWhereInput totalNumGte(Integer totalNumGte) {
     
     this.totalNumGte = totalNumGte;
     return this;
@@ -8087,25 +8401,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNumGte() {
+  public Integer getTotalNumGte() {
     return totalNumGte;
   }
 
 
-  public void setTotalNumGte(Double totalNumGte) {
+  public void setTotalNumGte(Integer totalNumGte) {
     this.totalNumGte = totalNumGte;
   }
 
 
-  public LabelWhereInput totalNumIn(List<Double> totalNumIn) {
+  public LabelWhereInput totalNumIn(List<Integer> totalNumIn) {
     
     this.totalNumIn = totalNumIn;
     return this;
   }
 
-  public LabelWhereInput addTotalNumInItem(Double totalNumInItem) {
+  public LabelWhereInput addTotalNumInItem(Integer totalNumInItem) {
     if (this.totalNumIn == null) {
-      this.totalNumIn = new ArrayList<Double>();
+      this.totalNumIn = new ArrayList<Integer>();
     }
     this.totalNumIn.add(totalNumInItem);
     return this;
@@ -8118,17 +8432,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalNumIn() {
+  public List<Integer> getTotalNumIn() {
     return totalNumIn;
   }
 
 
-  public void setTotalNumIn(List<Double> totalNumIn) {
+  public void setTotalNumIn(List<Integer> totalNumIn) {
     this.totalNumIn = totalNumIn;
   }
 
 
-  public LabelWhereInput totalNumLt(Double totalNumLt) {
+  public LabelWhereInput totalNumLt(Integer totalNumLt) {
     
     this.totalNumLt = totalNumLt;
     return this;
@@ -8141,17 +8455,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNumLt() {
+  public Integer getTotalNumLt() {
     return totalNumLt;
   }
 
 
-  public void setTotalNumLt(Double totalNumLt) {
+  public void setTotalNumLt(Integer totalNumLt) {
     this.totalNumLt = totalNumLt;
   }
 
 
-  public LabelWhereInput totalNumLte(Double totalNumLte) {
+  public LabelWhereInput totalNumLte(Integer totalNumLte) {
     
     this.totalNumLte = totalNumLte;
     return this;
@@ -8164,17 +8478,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNumLte() {
+  public Integer getTotalNumLte() {
     return totalNumLte;
   }
 
 
-  public void setTotalNumLte(Double totalNumLte) {
+  public void setTotalNumLte(Integer totalNumLte) {
     this.totalNumLte = totalNumLte;
   }
 
 
-  public LabelWhereInput totalNumNot(Double totalNumNot) {
+  public LabelWhereInput totalNumNot(Integer totalNumNot) {
     
     this.totalNumNot = totalNumNot;
     return this;
@@ -8187,25 +8501,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNumNot() {
+  public Integer getTotalNumNot() {
     return totalNumNot;
   }
 
 
-  public void setTotalNumNot(Double totalNumNot) {
+  public void setTotalNumNot(Integer totalNumNot) {
     this.totalNumNot = totalNumNot;
   }
 
 
-  public LabelWhereInput totalNumNotIn(List<Double> totalNumNotIn) {
+  public LabelWhereInput totalNumNotIn(List<Integer> totalNumNotIn) {
     
     this.totalNumNotIn = totalNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addTotalNumNotInItem(Double totalNumNotInItem) {
+  public LabelWhereInput addTotalNumNotInItem(Integer totalNumNotInItem) {
     if (this.totalNumNotIn == null) {
-      this.totalNumNotIn = new ArrayList<Double>();
+      this.totalNumNotIn = new ArrayList<Integer>();
     }
     this.totalNumNotIn.add(totalNumNotInItem);
     return this;
@@ -8218,12 +8532,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalNumNotIn() {
+  public List<Integer> getTotalNumNotIn() {
     return totalNumNotIn;
   }
 
 
-  public void setTotalNumNotIn(List<Double> totalNumNotIn) {
+  public void setTotalNumNotIn(List<Integer> totalNumNotIn) {
     this.totalNumNotIn = totalNumNotIn;
   }
 
@@ -8566,7 +8880,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput vdsNum(Double vdsNum) {
+  public LabelWhereInput vdsNum(Integer vdsNum) {
     
     this.vdsNum = vdsNum;
     return this;
@@ -8579,17 +8893,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNum() {
+  public Integer getVdsNum() {
     return vdsNum;
   }
 
 
-  public void setVdsNum(Double vdsNum) {
+  public void setVdsNum(Integer vdsNum) {
     this.vdsNum = vdsNum;
   }
 
 
-  public LabelWhereInput vdsNumGt(Double vdsNumGt) {
+  public LabelWhereInput vdsNumGt(Integer vdsNumGt) {
     
     this.vdsNumGt = vdsNumGt;
     return this;
@@ -8602,17 +8916,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNumGt() {
+  public Integer getVdsNumGt() {
     return vdsNumGt;
   }
 
 
-  public void setVdsNumGt(Double vdsNumGt) {
+  public void setVdsNumGt(Integer vdsNumGt) {
     this.vdsNumGt = vdsNumGt;
   }
 
 
-  public LabelWhereInput vdsNumGte(Double vdsNumGte) {
+  public LabelWhereInput vdsNumGte(Integer vdsNumGte) {
     
     this.vdsNumGte = vdsNumGte;
     return this;
@@ -8625,25 +8939,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNumGte() {
+  public Integer getVdsNumGte() {
     return vdsNumGte;
   }
 
 
-  public void setVdsNumGte(Double vdsNumGte) {
+  public void setVdsNumGte(Integer vdsNumGte) {
     this.vdsNumGte = vdsNumGte;
   }
 
 
-  public LabelWhereInput vdsNumIn(List<Double> vdsNumIn) {
+  public LabelWhereInput vdsNumIn(List<Integer> vdsNumIn) {
     
     this.vdsNumIn = vdsNumIn;
     return this;
   }
 
-  public LabelWhereInput addVdsNumInItem(Double vdsNumInItem) {
+  public LabelWhereInput addVdsNumInItem(Integer vdsNumInItem) {
     if (this.vdsNumIn == null) {
-      this.vdsNumIn = new ArrayList<Double>();
+      this.vdsNumIn = new ArrayList<Integer>();
     }
     this.vdsNumIn.add(vdsNumInItem);
     return this;
@@ -8656,17 +8970,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVdsNumIn() {
+  public List<Integer> getVdsNumIn() {
     return vdsNumIn;
   }
 
 
-  public void setVdsNumIn(List<Double> vdsNumIn) {
+  public void setVdsNumIn(List<Integer> vdsNumIn) {
     this.vdsNumIn = vdsNumIn;
   }
 
 
-  public LabelWhereInput vdsNumLt(Double vdsNumLt) {
+  public LabelWhereInput vdsNumLt(Integer vdsNumLt) {
     
     this.vdsNumLt = vdsNumLt;
     return this;
@@ -8679,17 +8993,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNumLt() {
+  public Integer getVdsNumLt() {
     return vdsNumLt;
   }
 
 
-  public void setVdsNumLt(Double vdsNumLt) {
+  public void setVdsNumLt(Integer vdsNumLt) {
     this.vdsNumLt = vdsNumLt;
   }
 
 
-  public LabelWhereInput vdsNumLte(Double vdsNumLte) {
+  public LabelWhereInput vdsNumLte(Integer vdsNumLte) {
     
     this.vdsNumLte = vdsNumLte;
     return this;
@@ -8702,17 +9016,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNumLte() {
+  public Integer getVdsNumLte() {
     return vdsNumLte;
   }
 
 
-  public void setVdsNumLte(Double vdsNumLte) {
+  public void setVdsNumLte(Integer vdsNumLte) {
     this.vdsNumLte = vdsNumLte;
   }
 
 
-  public LabelWhereInput vdsNumNot(Double vdsNumNot) {
+  public LabelWhereInput vdsNumNot(Integer vdsNumNot) {
     
     this.vdsNumNot = vdsNumNot;
     return this;
@@ -8725,25 +9039,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNumNot() {
+  public Integer getVdsNumNot() {
     return vdsNumNot;
   }
 
 
-  public void setVdsNumNot(Double vdsNumNot) {
+  public void setVdsNumNot(Integer vdsNumNot) {
     this.vdsNumNot = vdsNumNot;
   }
 
 
-  public LabelWhereInput vdsNumNotIn(List<Double> vdsNumNotIn) {
+  public LabelWhereInput vdsNumNotIn(List<Integer> vdsNumNotIn) {
     
     this.vdsNumNotIn = vdsNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addVdsNumNotInItem(Double vdsNumNotInItem) {
+  public LabelWhereInput addVdsNumNotInItem(Integer vdsNumNotInItem) {
     if (this.vdsNumNotIn == null) {
-      this.vdsNumNotIn = new ArrayList<Double>();
+      this.vdsNumNotIn = new ArrayList<Integer>();
     }
     this.vdsNumNotIn.add(vdsNumNotInItem);
     return this;
@@ -8756,12 +9070,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVdsNumNotIn() {
+  public List<Integer> getVdsNumNotIn() {
     return vdsNumNotIn;
   }
 
 
-  public void setVdsNumNotIn(List<Double> vdsNumNotIn) {
+  public void setVdsNumNotIn(List<Integer> vdsNumNotIn) {
     this.vdsNumNotIn = vdsNumNotIn;
   }
 
@@ -8904,7 +9218,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput vmNum(Double vmNum) {
+  public LabelWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -8917,17 +9231,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public LabelWhereInput vmNumGt(Double vmNumGt) {
+  public LabelWhereInput vmNumGt(Integer vmNumGt) {
     
     this.vmNumGt = vmNumGt;
     return this;
@@ -8940,17 +9254,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGt() {
+  public Integer getVmNumGt() {
     return vmNumGt;
   }
 
 
-  public void setVmNumGt(Double vmNumGt) {
+  public void setVmNumGt(Integer vmNumGt) {
     this.vmNumGt = vmNumGt;
   }
 
 
-  public LabelWhereInput vmNumGte(Double vmNumGte) {
+  public LabelWhereInput vmNumGte(Integer vmNumGte) {
     
     this.vmNumGte = vmNumGte;
     return this;
@@ -8963,25 +9277,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumGte() {
+  public Integer getVmNumGte() {
     return vmNumGte;
   }
 
 
-  public void setVmNumGte(Double vmNumGte) {
+  public void setVmNumGte(Integer vmNumGte) {
     this.vmNumGte = vmNumGte;
   }
 
 
-  public LabelWhereInput vmNumIn(List<Double> vmNumIn) {
+  public LabelWhereInput vmNumIn(List<Integer> vmNumIn) {
     
     this.vmNumIn = vmNumIn;
     return this;
   }
 
-  public LabelWhereInput addVmNumInItem(Double vmNumInItem) {
+  public LabelWhereInput addVmNumInItem(Integer vmNumInItem) {
     if (this.vmNumIn == null) {
-      this.vmNumIn = new ArrayList<Double>();
+      this.vmNumIn = new ArrayList<Integer>();
     }
     this.vmNumIn.add(vmNumInItem);
     return this;
@@ -8994,17 +9308,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumIn() {
+  public List<Integer> getVmNumIn() {
     return vmNumIn;
   }
 
 
-  public void setVmNumIn(List<Double> vmNumIn) {
+  public void setVmNumIn(List<Integer> vmNumIn) {
     this.vmNumIn = vmNumIn;
   }
 
 
-  public LabelWhereInput vmNumLt(Double vmNumLt) {
+  public LabelWhereInput vmNumLt(Integer vmNumLt) {
     
     this.vmNumLt = vmNumLt;
     return this;
@@ -9017,17 +9331,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLt() {
+  public Integer getVmNumLt() {
     return vmNumLt;
   }
 
 
-  public void setVmNumLt(Double vmNumLt) {
+  public void setVmNumLt(Integer vmNumLt) {
     this.vmNumLt = vmNumLt;
   }
 
 
-  public LabelWhereInput vmNumLte(Double vmNumLte) {
+  public LabelWhereInput vmNumLte(Integer vmNumLte) {
     
     this.vmNumLte = vmNumLte;
     return this;
@@ -9040,17 +9354,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumLte() {
+  public Integer getVmNumLte() {
     return vmNumLte;
   }
 
 
-  public void setVmNumLte(Double vmNumLte) {
+  public void setVmNumLte(Integer vmNumLte) {
     this.vmNumLte = vmNumLte;
   }
 
 
-  public LabelWhereInput vmNumNot(Double vmNumNot) {
+  public LabelWhereInput vmNumNot(Integer vmNumNot) {
     
     this.vmNumNot = vmNumNot;
     return this;
@@ -9063,25 +9377,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNumNot() {
+  public Integer getVmNumNot() {
     return vmNumNot;
   }
 
 
-  public void setVmNumNot(Double vmNumNot) {
+  public void setVmNumNot(Integer vmNumNot) {
     this.vmNumNot = vmNumNot;
   }
 
 
-  public LabelWhereInput vmNumNotIn(List<Double> vmNumNotIn) {
+  public LabelWhereInput vmNumNotIn(List<Integer> vmNumNotIn) {
     
     this.vmNumNotIn = vmNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addVmNumNotInItem(Double vmNumNotInItem) {
+  public LabelWhereInput addVmNumNotInItem(Integer vmNumNotInItem) {
     if (this.vmNumNotIn == null) {
-      this.vmNumNotIn = new ArrayList<Double>();
+      this.vmNumNotIn = new ArrayList<Integer>();
     }
     this.vmNumNotIn.add(vmNumNotInItem);
     return this;
@@ -9094,17 +9408,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmNumNotIn() {
+  public List<Integer> getVmNumNotIn() {
     return vmNumNotIn;
   }
 
 
-  public void setVmNumNotIn(List<Double> vmNumNotIn) {
+  public void setVmNumNotIn(List<Integer> vmNumNotIn) {
     this.vmNumNotIn = vmNumNotIn;
   }
 
 
-  public LabelWhereInput vmSnapshotNum(Double vmSnapshotNum) {
+  public LabelWhereInput vmSnapshotNum(Integer vmSnapshotNum) {
     
     this.vmSnapshotNum = vmSnapshotNum;
     return this;
@@ -9117,17 +9431,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNum() {
+  public Integer getVmSnapshotNum() {
     return vmSnapshotNum;
   }
 
 
-  public void setVmSnapshotNum(Double vmSnapshotNum) {
+  public void setVmSnapshotNum(Integer vmSnapshotNum) {
     this.vmSnapshotNum = vmSnapshotNum;
   }
 
 
-  public LabelWhereInput vmSnapshotNumGt(Double vmSnapshotNumGt) {
+  public LabelWhereInput vmSnapshotNumGt(Integer vmSnapshotNumGt) {
     
     this.vmSnapshotNumGt = vmSnapshotNumGt;
     return this;
@@ -9140,17 +9454,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNumGt() {
+  public Integer getVmSnapshotNumGt() {
     return vmSnapshotNumGt;
   }
 
 
-  public void setVmSnapshotNumGt(Double vmSnapshotNumGt) {
+  public void setVmSnapshotNumGt(Integer vmSnapshotNumGt) {
     this.vmSnapshotNumGt = vmSnapshotNumGt;
   }
 
 
-  public LabelWhereInput vmSnapshotNumGte(Double vmSnapshotNumGte) {
+  public LabelWhereInput vmSnapshotNumGte(Integer vmSnapshotNumGte) {
     
     this.vmSnapshotNumGte = vmSnapshotNumGte;
     return this;
@@ -9163,25 +9477,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNumGte() {
+  public Integer getVmSnapshotNumGte() {
     return vmSnapshotNumGte;
   }
 
 
-  public void setVmSnapshotNumGte(Double vmSnapshotNumGte) {
+  public void setVmSnapshotNumGte(Integer vmSnapshotNumGte) {
     this.vmSnapshotNumGte = vmSnapshotNumGte;
   }
 
 
-  public LabelWhereInput vmSnapshotNumIn(List<Double> vmSnapshotNumIn) {
+  public LabelWhereInput vmSnapshotNumIn(List<Integer> vmSnapshotNumIn) {
     
     this.vmSnapshotNumIn = vmSnapshotNumIn;
     return this;
   }
 
-  public LabelWhereInput addVmSnapshotNumInItem(Double vmSnapshotNumInItem) {
+  public LabelWhereInput addVmSnapshotNumInItem(Integer vmSnapshotNumInItem) {
     if (this.vmSnapshotNumIn == null) {
-      this.vmSnapshotNumIn = new ArrayList<Double>();
+      this.vmSnapshotNumIn = new ArrayList<Integer>();
     }
     this.vmSnapshotNumIn.add(vmSnapshotNumInItem);
     return this;
@@ -9194,17 +9508,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmSnapshotNumIn() {
+  public List<Integer> getVmSnapshotNumIn() {
     return vmSnapshotNumIn;
   }
 
 
-  public void setVmSnapshotNumIn(List<Double> vmSnapshotNumIn) {
+  public void setVmSnapshotNumIn(List<Integer> vmSnapshotNumIn) {
     this.vmSnapshotNumIn = vmSnapshotNumIn;
   }
 
 
-  public LabelWhereInput vmSnapshotNumLt(Double vmSnapshotNumLt) {
+  public LabelWhereInput vmSnapshotNumLt(Integer vmSnapshotNumLt) {
     
     this.vmSnapshotNumLt = vmSnapshotNumLt;
     return this;
@@ -9217,17 +9531,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNumLt() {
+  public Integer getVmSnapshotNumLt() {
     return vmSnapshotNumLt;
   }
 
 
-  public void setVmSnapshotNumLt(Double vmSnapshotNumLt) {
+  public void setVmSnapshotNumLt(Integer vmSnapshotNumLt) {
     this.vmSnapshotNumLt = vmSnapshotNumLt;
   }
 
 
-  public LabelWhereInput vmSnapshotNumLte(Double vmSnapshotNumLte) {
+  public LabelWhereInput vmSnapshotNumLte(Integer vmSnapshotNumLte) {
     
     this.vmSnapshotNumLte = vmSnapshotNumLte;
     return this;
@@ -9240,17 +9554,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNumLte() {
+  public Integer getVmSnapshotNumLte() {
     return vmSnapshotNumLte;
   }
 
 
-  public void setVmSnapshotNumLte(Double vmSnapshotNumLte) {
+  public void setVmSnapshotNumLte(Integer vmSnapshotNumLte) {
     this.vmSnapshotNumLte = vmSnapshotNumLte;
   }
 
 
-  public LabelWhereInput vmSnapshotNumNot(Double vmSnapshotNumNot) {
+  public LabelWhereInput vmSnapshotNumNot(Integer vmSnapshotNumNot) {
     
     this.vmSnapshotNumNot = vmSnapshotNumNot;
     return this;
@@ -9263,25 +9577,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNumNot() {
+  public Integer getVmSnapshotNumNot() {
     return vmSnapshotNumNot;
   }
 
 
-  public void setVmSnapshotNumNot(Double vmSnapshotNumNot) {
+  public void setVmSnapshotNumNot(Integer vmSnapshotNumNot) {
     this.vmSnapshotNumNot = vmSnapshotNumNot;
   }
 
 
-  public LabelWhereInput vmSnapshotNumNotIn(List<Double> vmSnapshotNumNotIn) {
+  public LabelWhereInput vmSnapshotNumNotIn(List<Integer> vmSnapshotNumNotIn) {
     
     this.vmSnapshotNumNotIn = vmSnapshotNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addVmSnapshotNumNotInItem(Double vmSnapshotNumNotInItem) {
+  public LabelWhereInput addVmSnapshotNumNotInItem(Integer vmSnapshotNumNotInItem) {
     if (this.vmSnapshotNumNotIn == null) {
-      this.vmSnapshotNumNotIn = new ArrayList<Double>();
+      this.vmSnapshotNumNotIn = new ArrayList<Integer>();
     }
     this.vmSnapshotNumNotIn.add(vmSnapshotNumNotInItem);
     return this;
@@ -9294,12 +9608,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmSnapshotNumNotIn() {
+  public List<Integer> getVmSnapshotNumNotIn() {
     return vmSnapshotNumNotIn;
   }
 
 
-  public void setVmSnapshotNumNotIn(List<Double> vmSnapshotNumNotIn) {
+  public void setVmSnapshotNumNotIn(List<Integer> vmSnapshotNumNotIn) {
     this.vmSnapshotNumNotIn = vmSnapshotNumNotIn;
   }
 
@@ -9373,7 +9687,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput vmTemplateNum(Double vmTemplateNum) {
+  public LabelWhereInput vmTemplateNum(Integer vmTemplateNum) {
     
     this.vmTemplateNum = vmTemplateNum;
     return this;
@@ -9386,17 +9700,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNum() {
+  public Integer getVmTemplateNum() {
     return vmTemplateNum;
   }
 
 
-  public void setVmTemplateNum(Double vmTemplateNum) {
+  public void setVmTemplateNum(Integer vmTemplateNum) {
     this.vmTemplateNum = vmTemplateNum;
   }
 
 
-  public LabelWhereInput vmTemplateNumGt(Double vmTemplateNumGt) {
+  public LabelWhereInput vmTemplateNumGt(Integer vmTemplateNumGt) {
     
     this.vmTemplateNumGt = vmTemplateNumGt;
     return this;
@@ -9409,17 +9723,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNumGt() {
+  public Integer getVmTemplateNumGt() {
     return vmTemplateNumGt;
   }
 
 
-  public void setVmTemplateNumGt(Double vmTemplateNumGt) {
+  public void setVmTemplateNumGt(Integer vmTemplateNumGt) {
     this.vmTemplateNumGt = vmTemplateNumGt;
   }
 
 
-  public LabelWhereInput vmTemplateNumGte(Double vmTemplateNumGte) {
+  public LabelWhereInput vmTemplateNumGte(Integer vmTemplateNumGte) {
     
     this.vmTemplateNumGte = vmTemplateNumGte;
     return this;
@@ -9432,25 +9746,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNumGte() {
+  public Integer getVmTemplateNumGte() {
     return vmTemplateNumGte;
   }
 
 
-  public void setVmTemplateNumGte(Double vmTemplateNumGte) {
+  public void setVmTemplateNumGte(Integer vmTemplateNumGte) {
     this.vmTemplateNumGte = vmTemplateNumGte;
   }
 
 
-  public LabelWhereInput vmTemplateNumIn(List<Double> vmTemplateNumIn) {
+  public LabelWhereInput vmTemplateNumIn(List<Integer> vmTemplateNumIn) {
     
     this.vmTemplateNumIn = vmTemplateNumIn;
     return this;
   }
 
-  public LabelWhereInput addVmTemplateNumInItem(Double vmTemplateNumInItem) {
+  public LabelWhereInput addVmTemplateNumInItem(Integer vmTemplateNumInItem) {
     if (this.vmTemplateNumIn == null) {
-      this.vmTemplateNumIn = new ArrayList<Double>();
+      this.vmTemplateNumIn = new ArrayList<Integer>();
     }
     this.vmTemplateNumIn.add(vmTemplateNumInItem);
     return this;
@@ -9463,17 +9777,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmTemplateNumIn() {
+  public List<Integer> getVmTemplateNumIn() {
     return vmTemplateNumIn;
   }
 
 
-  public void setVmTemplateNumIn(List<Double> vmTemplateNumIn) {
+  public void setVmTemplateNumIn(List<Integer> vmTemplateNumIn) {
     this.vmTemplateNumIn = vmTemplateNumIn;
   }
 
 
-  public LabelWhereInput vmTemplateNumLt(Double vmTemplateNumLt) {
+  public LabelWhereInput vmTemplateNumLt(Integer vmTemplateNumLt) {
     
     this.vmTemplateNumLt = vmTemplateNumLt;
     return this;
@@ -9486,17 +9800,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNumLt() {
+  public Integer getVmTemplateNumLt() {
     return vmTemplateNumLt;
   }
 
 
-  public void setVmTemplateNumLt(Double vmTemplateNumLt) {
+  public void setVmTemplateNumLt(Integer vmTemplateNumLt) {
     this.vmTemplateNumLt = vmTemplateNumLt;
   }
 
 
-  public LabelWhereInput vmTemplateNumLte(Double vmTemplateNumLte) {
+  public LabelWhereInput vmTemplateNumLte(Integer vmTemplateNumLte) {
     
     this.vmTemplateNumLte = vmTemplateNumLte;
     return this;
@@ -9509,17 +9823,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNumLte() {
+  public Integer getVmTemplateNumLte() {
     return vmTemplateNumLte;
   }
 
 
-  public void setVmTemplateNumLte(Double vmTemplateNumLte) {
+  public void setVmTemplateNumLte(Integer vmTemplateNumLte) {
     this.vmTemplateNumLte = vmTemplateNumLte;
   }
 
 
-  public LabelWhereInput vmTemplateNumNot(Double vmTemplateNumNot) {
+  public LabelWhereInput vmTemplateNumNot(Integer vmTemplateNumNot) {
     
     this.vmTemplateNumNot = vmTemplateNumNot;
     return this;
@@ -9532,25 +9846,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNumNot() {
+  public Integer getVmTemplateNumNot() {
     return vmTemplateNumNot;
   }
 
 
-  public void setVmTemplateNumNot(Double vmTemplateNumNot) {
+  public void setVmTemplateNumNot(Integer vmTemplateNumNot) {
     this.vmTemplateNumNot = vmTemplateNumNot;
   }
 
 
-  public LabelWhereInput vmTemplateNumNotIn(List<Double> vmTemplateNumNotIn) {
+  public LabelWhereInput vmTemplateNumNotIn(List<Integer> vmTemplateNumNotIn) {
     
     this.vmTemplateNumNotIn = vmTemplateNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addVmTemplateNumNotInItem(Double vmTemplateNumNotInItem) {
+  public LabelWhereInput addVmTemplateNumNotInItem(Integer vmTemplateNumNotInItem) {
     if (this.vmTemplateNumNotIn == null) {
-      this.vmTemplateNumNotIn = new ArrayList<Double>();
+      this.vmTemplateNumNotIn = new ArrayList<Integer>();
     }
     this.vmTemplateNumNotIn.add(vmTemplateNumNotInItem);
     return this;
@@ -9563,12 +9877,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmTemplateNumNotIn() {
+  public List<Integer> getVmTemplateNumNotIn() {
     return vmTemplateNumNotIn;
   }
 
 
-  public void setVmTemplateNumNotIn(List<Double> vmTemplateNumNotIn) {
+  public void setVmTemplateNumNotIn(List<Integer> vmTemplateNumNotIn) {
     this.vmTemplateNumNotIn = vmTemplateNumNotIn;
   }
 
@@ -9642,7 +9956,7 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput vmVlanNum(Double vmVlanNum) {
+  public LabelWhereInput vmVlanNum(Integer vmVlanNum) {
     
     this.vmVlanNum = vmVlanNum;
     return this;
@@ -9655,17 +9969,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNum() {
+  public Integer getVmVlanNum() {
     return vmVlanNum;
   }
 
 
-  public void setVmVlanNum(Double vmVlanNum) {
+  public void setVmVlanNum(Integer vmVlanNum) {
     this.vmVlanNum = vmVlanNum;
   }
 
 
-  public LabelWhereInput vmVlanNumGt(Double vmVlanNumGt) {
+  public LabelWhereInput vmVlanNumGt(Integer vmVlanNumGt) {
     
     this.vmVlanNumGt = vmVlanNumGt;
     return this;
@@ -9678,17 +9992,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNumGt() {
+  public Integer getVmVlanNumGt() {
     return vmVlanNumGt;
   }
 
 
-  public void setVmVlanNumGt(Double vmVlanNumGt) {
+  public void setVmVlanNumGt(Integer vmVlanNumGt) {
     this.vmVlanNumGt = vmVlanNumGt;
   }
 
 
-  public LabelWhereInput vmVlanNumGte(Double vmVlanNumGte) {
+  public LabelWhereInput vmVlanNumGte(Integer vmVlanNumGte) {
     
     this.vmVlanNumGte = vmVlanNumGte;
     return this;
@@ -9701,25 +10015,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNumGte() {
+  public Integer getVmVlanNumGte() {
     return vmVlanNumGte;
   }
 
 
-  public void setVmVlanNumGte(Double vmVlanNumGte) {
+  public void setVmVlanNumGte(Integer vmVlanNumGte) {
     this.vmVlanNumGte = vmVlanNumGte;
   }
 
 
-  public LabelWhereInput vmVlanNumIn(List<Double> vmVlanNumIn) {
+  public LabelWhereInput vmVlanNumIn(List<Integer> vmVlanNumIn) {
     
     this.vmVlanNumIn = vmVlanNumIn;
     return this;
   }
 
-  public LabelWhereInput addVmVlanNumInItem(Double vmVlanNumInItem) {
+  public LabelWhereInput addVmVlanNumInItem(Integer vmVlanNumInItem) {
     if (this.vmVlanNumIn == null) {
-      this.vmVlanNumIn = new ArrayList<Double>();
+      this.vmVlanNumIn = new ArrayList<Integer>();
     }
     this.vmVlanNumIn.add(vmVlanNumInItem);
     return this;
@@ -9732,17 +10046,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmVlanNumIn() {
+  public List<Integer> getVmVlanNumIn() {
     return vmVlanNumIn;
   }
 
 
-  public void setVmVlanNumIn(List<Double> vmVlanNumIn) {
+  public void setVmVlanNumIn(List<Integer> vmVlanNumIn) {
     this.vmVlanNumIn = vmVlanNumIn;
   }
 
 
-  public LabelWhereInput vmVlanNumLt(Double vmVlanNumLt) {
+  public LabelWhereInput vmVlanNumLt(Integer vmVlanNumLt) {
     
     this.vmVlanNumLt = vmVlanNumLt;
     return this;
@@ -9755,17 +10069,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNumLt() {
+  public Integer getVmVlanNumLt() {
     return vmVlanNumLt;
   }
 
 
-  public void setVmVlanNumLt(Double vmVlanNumLt) {
+  public void setVmVlanNumLt(Integer vmVlanNumLt) {
     this.vmVlanNumLt = vmVlanNumLt;
   }
 
 
-  public LabelWhereInput vmVlanNumLte(Double vmVlanNumLte) {
+  public LabelWhereInput vmVlanNumLte(Integer vmVlanNumLte) {
     
     this.vmVlanNumLte = vmVlanNumLte;
     return this;
@@ -9778,17 +10092,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNumLte() {
+  public Integer getVmVlanNumLte() {
     return vmVlanNumLte;
   }
 
 
-  public void setVmVlanNumLte(Double vmVlanNumLte) {
+  public void setVmVlanNumLte(Integer vmVlanNumLte) {
     this.vmVlanNumLte = vmVlanNumLte;
   }
 
 
-  public LabelWhereInput vmVlanNumNot(Double vmVlanNumNot) {
+  public LabelWhereInput vmVlanNumNot(Integer vmVlanNumNot) {
     
     this.vmVlanNumNot = vmVlanNumNot;
     return this;
@@ -9801,25 +10115,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNumNot() {
+  public Integer getVmVlanNumNot() {
     return vmVlanNumNot;
   }
 
 
-  public void setVmVlanNumNot(Double vmVlanNumNot) {
+  public void setVmVlanNumNot(Integer vmVlanNumNot) {
     this.vmVlanNumNot = vmVlanNumNot;
   }
 
 
-  public LabelWhereInput vmVlanNumNotIn(List<Double> vmVlanNumNotIn) {
+  public LabelWhereInput vmVlanNumNotIn(List<Integer> vmVlanNumNotIn) {
     
     this.vmVlanNumNotIn = vmVlanNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addVmVlanNumNotInItem(Double vmVlanNumNotInItem) {
+  public LabelWhereInput addVmVlanNumNotInItem(Integer vmVlanNumNotInItem) {
     if (this.vmVlanNumNotIn == null) {
-      this.vmVlanNumNotIn = new ArrayList<Double>();
+      this.vmVlanNumNotIn = new ArrayList<Integer>();
     }
     this.vmVlanNumNotIn.add(vmVlanNumNotInItem);
     return this;
@@ -9832,17 +10146,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmVlanNumNotIn() {
+  public List<Integer> getVmVlanNumNotIn() {
     return vmVlanNumNotIn;
   }
 
 
-  public void setVmVlanNumNotIn(List<Double> vmVlanNumNotIn) {
+  public void setVmVlanNumNotIn(List<Integer> vmVlanNumNotIn) {
     this.vmVlanNumNotIn = vmVlanNumNotIn;
   }
 
 
-  public LabelWhereInput vmVolumeNum(Double vmVolumeNum) {
+  public LabelWhereInput vmVolumeNum(Integer vmVolumeNum) {
     
     this.vmVolumeNum = vmVolumeNum;
     return this;
@@ -9855,17 +10169,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNum() {
+  public Integer getVmVolumeNum() {
     return vmVolumeNum;
   }
 
 
-  public void setVmVolumeNum(Double vmVolumeNum) {
+  public void setVmVolumeNum(Integer vmVolumeNum) {
     this.vmVolumeNum = vmVolumeNum;
   }
 
 
-  public LabelWhereInput vmVolumeNumGt(Double vmVolumeNumGt) {
+  public LabelWhereInput vmVolumeNumGt(Integer vmVolumeNumGt) {
     
     this.vmVolumeNumGt = vmVolumeNumGt;
     return this;
@@ -9878,17 +10192,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNumGt() {
+  public Integer getVmVolumeNumGt() {
     return vmVolumeNumGt;
   }
 
 
-  public void setVmVolumeNumGt(Double vmVolumeNumGt) {
+  public void setVmVolumeNumGt(Integer vmVolumeNumGt) {
     this.vmVolumeNumGt = vmVolumeNumGt;
   }
 
 
-  public LabelWhereInput vmVolumeNumGte(Double vmVolumeNumGte) {
+  public LabelWhereInput vmVolumeNumGte(Integer vmVolumeNumGte) {
     
     this.vmVolumeNumGte = vmVolumeNumGte;
     return this;
@@ -9901,25 +10215,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNumGte() {
+  public Integer getVmVolumeNumGte() {
     return vmVolumeNumGte;
   }
 
 
-  public void setVmVolumeNumGte(Double vmVolumeNumGte) {
+  public void setVmVolumeNumGte(Integer vmVolumeNumGte) {
     this.vmVolumeNumGte = vmVolumeNumGte;
   }
 
 
-  public LabelWhereInput vmVolumeNumIn(List<Double> vmVolumeNumIn) {
+  public LabelWhereInput vmVolumeNumIn(List<Integer> vmVolumeNumIn) {
     
     this.vmVolumeNumIn = vmVolumeNumIn;
     return this;
   }
 
-  public LabelWhereInput addVmVolumeNumInItem(Double vmVolumeNumInItem) {
+  public LabelWhereInput addVmVolumeNumInItem(Integer vmVolumeNumInItem) {
     if (this.vmVolumeNumIn == null) {
-      this.vmVolumeNumIn = new ArrayList<Double>();
+      this.vmVolumeNumIn = new ArrayList<Integer>();
     }
     this.vmVolumeNumIn.add(vmVolumeNumInItem);
     return this;
@@ -9932,17 +10246,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmVolumeNumIn() {
+  public List<Integer> getVmVolumeNumIn() {
     return vmVolumeNumIn;
   }
 
 
-  public void setVmVolumeNumIn(List<Double> vmVolumeNumIn) {
+  public void setVmVolumeNumIn(List<Integer> vmVolumeNumIn) {
     this.vmVolumeNumIn = vmVolumeNumIn;
   }
 
 
-  public LabelWhereInput vmVolumeNumLt(Double vmVolumeNumLt) {
+  public LabelWhereInput vmVolumeNumLt(Integer vmVolumeNumLt) {
     
     this.vmVolumeNumLt = vmVolumeNumLt;
     return this;
@@ -9955,17 +10269,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNumLt() {
+  public Integer getVmVolumeNumLt() {
     return vmVolumeNumLt;
   }
 
 
-  public void setVmVolumeNumLt(Double vmVolumeNumLt) {
+  public void setVmVolumeNumLt(Integer vmVolumeNumLt) {
     this.vmVolumeNumLt = vmVolumeNumLt;
   }
 
 
-  public LabelWhereInput vmVolumeNumLte(Double vmVolumeNumLte) {
+  public LabelWhereInput vmVolumeNumLte(Integer vmVolumeNumLte) {
     
     this.vmVolumeNumLte = vmVolumeNumLte;
     return this;
@@ -9978,17 +10292,17 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNumLte() {
+  public Integer getVmVolumeNumLte() {
     return vmVolumeNumLte;
   }
 
 
-  public void setVmVolumeNumLte(Double vmVolumeNumLte) {
+  public void setVmVolumeNumLte(Integer vmVolumeNumLte) {
     this.vmVolumeNumLte = vmVolumeNumLte;
   }
 
 
-  public LabelWhereInput vmVolumeNumNot(Double vmVolumeNumNot) {
+  public LabelWhereInput vmVolumeNumNot(Integer vmVolumeNumNot) {
     
     this.vmVolumeNumNot = vmVolumeNumNot;
     return this;
@@ -10001,25 +10315,25 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNumNot() {
+  public Integer getVmVolumeNumNot() {
     return vmVolumeNumNot;
   }
 
 
-  public void setVmVolumeNumNot(Double vmVolumeNumNot) {
+  public void setVmVolumeNumNot(Integer vmVolumeNumNot) {
     this.vmVolumeNumNot = vmVolumeNumNot;
   }
 
 
-  public LabelWhereInput vmVolumeNumNotIn(List<Double> vmVolumeNumNotIn) {
+  public LabelWhereInput vmVolumeNumNotIn(List<Integer> vmVolumeNumNotIn) {
     
     this.vmVolumeNumNotIn = vmVolumeNumNotIn;
     return this;
   }
 
-  public LabelWhereInput addVmVolumeNumNotInItem(Double vmVolumeNumNotInItem) {
+  public LabelWhereInput addVmVolumeNumNotInItem(Integer vmVolumeNumNotInItem) {
     if (this.vmVolumeNumNotIn == null) {
-      this.vmVolumeNumNotIn = new ArrayList<Double>();
+      this.vmVolumeNumNotIn = new ArrayList<Integer>();
     }
     this.vmVolumeNumNotIn.add(vmVolumeNumNotInItem);
     return this;
@@ -10032,12 +10346,12 @@ public class LabelWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVmVolumeNumNotIn() {
+  public List<Integer> getVmVolumeNumNotIn() {
     return vmVolumeNumNotIn;
   }
 
 
-  public void setVmVolumeNumNotIn(List<Double> vmVolumeNumNotIn) {
+  public void setVmVolumeNumNotIn(List<Integer> vmVolumeNumNotIn) {
     this.vmVolumeNumNotIn = vmVolumeNumNotIn;
   }
 
@@ -10234,6 +10548,17 @@ public class LabelWhereInput {
         Objects.equals(this.contentLibraryImagesEvery, labelWhereInput.contentLibraryImagesEvery) &&
         Objects.equals(this.contentLibraryImagesNone, labelWhereInput.contentLibraryImagesNone) &&
         Objects.equals(this.contentLibraryImagesSome, labelWhereInput.contentLibraryImagesSome) &&
+        Objects.equals(this.contentLibraryVmTemplateNum, labelWhereInput.contentLibraryVmTemplateNum) &&
+        Objects.equals(this.contentLibraryVmTemplateNumGt, labelWhereInput.contentLibraryVmTemplateNumGt) &&
+        Objects.equals(this.contentLibraryVmTemplateNumGte, labelWhereInput.contentLibraryVmTemplateNumGte) &&
+        Objects.equals(this.contentLibraryVmTemplateNumIn, labelWhereInput.contentLibraryVmTemplateNumIn) &&
+        Objects.equals(this.contentLibraryVmTemplateNumLt, labelWhereInput.contentLibraryVmTemplateNumLt) &&
+        Objects.equals(this.contentLibraryVmTemplateNumLte, labelWhereInput.contentLibraryVmTemplateNumLte) &&
+        Objects.equals(this.contentLibraryVmTemplateNumNot, labelWhereInput.contentLibraryVmTemplateNumNot) &&
+        Objects.equals(this.contentLibraryVmTemplateNumNotIn, labelWhereInput.contentLibraryVmTemplateNumNotIn) &&
+        Objects.equals(this.contentLibraryVmTemplatesEvery, labelWhereInput.contentLibraryVmTemplatesEvery) &&
+        Objects.equals(this.contentLibraryVmTemplatesNone, labelWhereInput.contentLibraryVmTemplatesNone) &&
+        Objects.equals(this.contentLibraryVmTemplatesSome, labelWhereInput.contentLibraryVmTemplatesSome) &&
         Objects.equals(this.createdAt, labelWhereInput.createdAt) &&
         Objects.equals(this.createdAtGt, labelWhereInput.createdAtGt) &&
         Objects.equals(this.createdAtGte, labelWhereInput.createdAtGte) &&
@@ -10552,7 +10877,7 @@ public class LabelWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clusterNum, clusterNumGt, clusterNumGte, clusterNumIn, clusterNumLt, clusterNumLte, clusterNumNot, clusterNumNotIn, clustersEvery, clustersNone, clustersSome, consistencyGroupNum, consistencyGroupNumGt, consistencyGroupNumGte, consistencyGroupNumIn, consistencyGroupNumLt, consistencyGroupNumLte, consistencyGroupNumNot, consistencyGroupNumNotIn, consistencyGroupSnapshotNum, consistencyGroupSnapshotNumGt, consistencyGroupSnapshotNumGte, consistencyGroupSnapshotNumIn, consistencyGroupSnapshotNumLt, consistencyGroupSnapshotNumLte, consistencyGroupSnapshotNumNot, consistencyGroupSnapshotNumNotIn, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, contentLibraryImageNum, contentLibraryImageNumGt, contentLibraryImageNumGte, contentLibraryImageNumIn, contentLibraryImageNumLt, contentLibraryImageNumLte, contentLibraryImageNumNot, contentLibraryImageNumNotIn, contentLibraryImagesEvery, contentLibraryImagesNone, contentLibraryImagesSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, datacenterNum, datacenterNumGt, datacenterNumGte, datacenterNumIn, datacenterNumLt, datacenterNumLte, datacenterNumNot, datacenterNumNotIn, datacentersEvery, datacentersNone, datacentersSome, diskNum, diskNumGt, diskNumGte, diskNumIn, diskNumLt, diskNumLte, diskNumNot, diskNumNotIn, disksEvery, disksNone, disksSome, elfImageNum, elfImageNumGt, elfImageNumGte, elfImageNumIn, elfImageNumLt, elfImageNumLte, elfImageNumNot, elfImageNumNotIn, elfImagesEvery, elfImagesNone, elfImagesSome, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunNum, iscsiLunNumGt, iscsiLunNumGte, iscsiLunNumIn, iscsiLunNumLt, iscsiLunNumLte, iscsiLunNumNot, iscsiLunNumNotIn, iscsiLunSnapshotNum, iscsiLunSnapshotNumGt, iscsiLunSnapshotNumGte, iscsiLunSnapshotNumIn, iscsiLunSnapshotNumLt, iscsiLunSnapshotNumLte, iscsiLunSnapshotNumNot, iscsiLunSnapshotNumNotIn, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, iscsiTargetNum, iscsiTargetNumGt, iscsiTargetNumGte, iscsiTargetNumIn, iscsiTargetNumLt, iscsiTargetNumLte, iscsiTargetNumNot, iscsiTargetNumNotIn, iscsiTargetsEvery, iscsiTargetsNone, iscsiTargetsSome, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, isolationPolicyNum, isolationPolicyNumGt, isolationPolicyNumGte, isolationPolicyNumIn, isolationPolicyNumLt, isolationPolicyNumLte, isolationPolicyNumNot, isolationPolicyNumNotIn, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, namespaceGroupNum, namespaceGroupNumGt, namespaceGroupNumGte, namespaceGroupNumIn, namespaceGroupNumLt, namespaceGroupNumLte, namespaceGroupNumNot, namespaceGroupNumNotIn, namespaceGroupsEvery, namespaceGroupsNone, namespaceGroupsSome, nfsExportNum, nfsExportNumGt, nfsExportNumGte, nfsExportNumIn, nfsExportNumLt, nfsExportNumLte, nfsExportNumNot, nfsExportNumNotIn, nfsExportsEvery, nfsExportsNone, nfsExportsSome, nfsInodeNum, nfsInodeNumGt, nfsInodeNumGte, nfsInodeNumIn, nfsInodeNumLt, nfsInodeNumLte, nfsInodeNumNot, nfsInodeNumNotIn, nfsInodesEvery, nfsInodesNone, nfsInodesSome, nicNum, nicNumGt, nicNumGte, nicNumIn, nicNumLt, nicNumLte, nicNumNot, nicNumNotIn, nicsEvery, nicsNone, nicsSome, NOT, nvmfNamespaceNum, nvmfNamespaceNumGt, nvmfNamespaceNumGte, nvmfNamespaceNumIn, nvmfNamespaceNumLt, nvmfNamespaceNumLte, nvmfNamespaceNumNot, nvmfNamespaceNumNotIn, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshotNumGt, nvmfNamespaceSnapshotNumGte, nvmfNamespaceSnapshotNumIn, nvmfNamespaceSnapshotNumLt, nvmfNamespaceSnapshotNumLte, nvmfNamespaceSnapshotNumNot, nvmfNamespaceSnapshotNumNotIn, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, nvmfNamespacesEvery, nvmfNamespacesNone, nvmfNamespacesSome, nvmfSubsystemNum, nvmfSubsystemNumGt, nvmfSubsystemNumGte, nvmfSubsystemNumIn, nvmfSubsystemNumLt, nvmfSubsystemNumLte, nvmfSubsystemNumNot, nvmfSubsystemNumNotIn, nvmfSubsystemsEvery, nvmfSubsystemsNone, nvmfSubsystemsSome, OR, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, securityPolicyNum, securityPolicyNumGt, securityPolicyNumGte, securityPolicyNumIn, securityPolicyNumLt, securityPolicyNumLte, securityPolicyNumNot, securityPolicyNumNotIn, systemVlanNum, systemVlanNumGt, systemVlanNumGte, systemVlanNumIn, systemVlanNumLt, systemVlanNumLte, systemVlanNumNot, systemVlanNumNotIn, totalNum, totalNumGt, totalNumGte, totalNumIn, totalNumLt, totalNumLte, totalNumNot, totalNumNotIn, value, valueContains, valueEndsWith, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotContains, valueNotEndsWith, valueNotIn, valueNotStartsWith, valueStartsWith, vdsNum, vdsNumGt, vdsNumGte, vdsNumIn, vdsNumLt, vdsNumLte, vdsNumNot, vdsNumNotIn, vdsesEvery, vdsesNone, vdsesSome, vlansEvery, vlansNone, vlansSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmSnapshotNum, vmSnapshotNumGt, vmSnapshotNumGte, vmSnapshotNumIn, vmSnapshotNumLt, vmSnapshotNumLte, vmSnapshotNumNot, vmSnapshotNumNotIn, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplateNum, vmTemplateNumGt, vmTemplateNumGte, vmTemplateNumIn, vmTemplateNumLt, vmTemplateNumLte, vmTemplateNumNot, vmTemplateNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmVlanNum, vmVlanNumGt, vmVlanNumGte, vmVlanNumIn, vmVlanNumLt, vmVlanNumLte, vmVlanNumNot, vmVlanNumNotIn, vmVolumeNum, vmVolumeNumGt, vmVolumeNumGte, vmVolumeNumIn, vmVolumeNumLt, vmVolumeNumLte, vmVolumeNumNot, vmVolumeNumNotIn, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, clusterNum, clusterNumGt, clusterNumGte, clusterNumIn, clusterNumLt, clusterNumLte, clusterNumNot, clusterNumNotIn, clustersEvery, clustersNone, clustersSome, consistencyGroupNum, consistencyGroupNumGt, consistencyGroupNumGte, consistencyGroupNumIn, consistencyGroupNumLt, consistencyGroupNumLte, consistencyGroupNumNot, consistencyGroupNumNotIn, consistencyGroupSnapshotNum, consistencyGroupSnapshotNumGt, consistencyGroupSnapshotNumGte, consistencyGroupSnapshotNumIn, consistencyGroupSnapshotNumLt, consistencyGroupSnapshotNumLte, consistencyGroupSnapshotNumNot, consistencyGroupSnapshotNumNotIn, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, contentLibraryImageNum, contentLibraryImageNumGt, contentLibraryImageNumGte, contentLibraryImageNumIn, contentLibraryImageNumLt, contentLibraryImageNumLte, contentLibraryImageNumNot, contentLibraryImageNumNotIn, contentLibraryImagesEvery, contentLibraryImagesNone, contentLibraryImagesSome, contentLibraryVmTemplateNum, contentLibraryVmTemplateNumGt, contentLibraryVmTemplateNumGte, contentLibraryVmTemplateNumIn, contentLibraryVmTemplateNumLt, contentLibraryVmTemplateNumLte, contentLibraryVmTemplateNumNot, contentLibraryVmTemplateNumNotIn, contentLibraryVmTemplatesEvery, contentLibraryVmTemplatesNone, contentLibraryVmTemplatesSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, datacenterNum, datacenterNumGt, datacenterNumGte, datacenterNumIn, datacenterNumLt, datacenterNumLte, datacenterNumNot, datacenterNumNotIn, datacentersEvery, datacentersNone, datacentersSome, diskNum, diskNumGt, diskNumGte, diskNumIn, diskNumLt, diskNumLte, diskNumNot, diskNumNotIn, disksEvery, disksNone, disksSome, elfImageNum, elfImageNumGt, elfImageNumGte, elfImageNumIn, elfImageNumLt, elfImageNumLte, elfImageNumNot, elfImageNumNotIn, elfImagesEvery, elfImagesNone, elfImagesSome, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunNum, iscsiLunNumGt, iscsiLunNumGte, iscsiLunNumIn, iscsiLunNumLt, iscsiLunNumLte, iscsiLunNumNot, iscsiLunNumNotIn, iscsiLunSnapshotNum, iscsiLunSnapshotNumGt, iscsiLunSnapshotNumGte, iscsiLunSnapshotNumIn, iscsiLunSnapshotNumLt, iscsiLunSnapshotNumLte, iscsiLunSnapshotNumNot, iscsiLunSnapshotNumNotIn, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, iscsiTargetNum, iscsiTargetNumGt, iscsiTargetNumGte, iscsiTargetNumIn, iscsiTargetNumLt, iscsiTargetNumLte, iscsiTargetNumNot, iscsiTargetNumNotIn, iscsiTargetsEvery, iscsiTargetsNone, iscsiTargetsSome, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, isolationPolicyNum, isolationPolicyNumGt, isolationPolicyNumGte, isolationPolicyNumIn, isolationPolicyNumLt, isolationPolicyNumLte, isolationPolicyNumNot, isolationPolicyNumNotIn, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, namespaceGroupNum, namespaceGroupNumGt, namespaceGroupNumGte, namespaceGroupNumIn, namespaceGroupNumLt, namespaceGroupNumLte, namespaceGroupNumNot, namespaceGroupNumNotIn, namespaceGroupsEvery, namespaceGroupsNone, namespaceGroupsSome, nfsExportNum, nfsExportNumGt, nfsExportNumGte, nfsExportNumIn, nfsExportNumLt, nfsExportNumLte, nfsExportNumNot, nfsExportNumNotIn, nfsExportsEvery, nfsExportsNone, nfsExportsSome, nfsInodeNum, nfsInodeNumGt, nfsInodeNumGte, nfsInodeNumIn, nfsInodeNumLt, nfsInodeNumLte, nfsInodeNumNot, nfsInodeNumNotIn, nfsInodesEvery, nfsInodesNone, nfsInodesSome, nicNum, nicNumGt, nicNumGte, nicNumIn, nicNumLt, nicNumLte, nicNumNot, nicNumNotIn, nicsEvery, nicsNone, nicsSome, NOT, nvmfNamespaceNum, nvmfNamespaceNumGt, nvmfNamespaceNumGte, nvmfNamespaceNumIn, nvmfNamespaceNumLt, nvmfNamespaceNumLte, nvmfNamespaceNumNot, nvmfNamespaceNumNotIn, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshotNumGt, nvmfNamespaceSnapshotNumGte, nvmfNamespaceSnapshotNumIn, nvmfNamespaceSnapshotNumLt, nvmfNamespaceSnapshotNumLte, nvmfNamespaceSnapshotNumNot, nvmfNamespaceSnapshotNumNotIn, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, nvmfNamespacesEvery, nvmfNamespacesNone, nvmfNamespacesSome, nvmfSubsystemNum, nvmfSubsystemNumGt, nvmfSubsystemNumGte, nvmfSubsystemNumIn, nvmfSubsystemNumLt, nvmfSubsystemNumLte, nvmfSubsystemNumNot, nvmfSubsystemNumNotIn, nvmfSubsystemsEvery, nvmfSubsystemsNone, nvmfSubsystemsSome, OR, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, securityPolicyNum, securityPolicyNumGt, securityPolicyNumGte, securityPolicyNumIn, securityPolicyNumLt, securityPolicyNumLte, securityPolicyNumNot, securityPolicyNumNotIn, systemVlanNum, systemVlanNumGt, systemVlanNumGte, systemVlanNumIn, systemVlanNumLt, systemVlanNumLte, systemVlanNumNot, systemVlanNumNotIn, totalNum, totalNumGt, totalNumGte, totalNumIn, totalNumLt, totalNumLte, totalNumNot, totalNumNotIn, value, valueContains, valueEndsWith, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotContains, valueNotEndsWith, valueNotIn, valueNotStartsWith, valueStartsWith, vdsNum, vdsNumGt, vdsNumGte, vdsNumIn, vdsNumLt, vdsNumLte, vdsNumNot, vdsNumNotIn, vdsesEvery, vdsesNone, vdsesSome, vlansEvery, vlansNone, vlansSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmSnapshotNum, vmSnapshotNumGt, vmSnapshotNumGte, vmSnapshotNumIn, vmSnapshotNumLt, vmSnapshotNumLte, vmSnapshotNumNot, vmSnapshotNumNotIn, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplateNum, vmTemplateNumGt, vmTemplateNumGte, vmTemplateNumIn, vmTemplateNumLt, vmTemplateNumLte, vmTemplateNumNot, vmTemplateNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmVlanNum, vmVlanNumGt, vmVlanNumGte, vmVlanNumIn, vmVlanNumLt, vmVlanNumLte, vmVlanNumNot, vmVlanNumNotIn, vmVolumeNum, vmVolumeNumGt, vmVolumeNumGte, vmVolumeNumIn, vmVolumeNumLt, vmVolumeNumLte, vmVolumeNumNot, vmVolumeNumNotIn, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -10611,6 +10936,17 @@ public class LabelWhereInput {
     sb.append("    contentLibraryImagesEvery: ").append(toIndentedString(contentLibraryImagesEvery)).append("\n");
     sb.append("    contentLibraryImagesNone: ").append(toIndentedString(contentLibraryImagesNone)).append("\n");
     sb.append("    contentLibraryImagesSome: ").append(toIndentedString(contentLibraryImagesSome)).append("\n");
+    sb.append("    contentLibraryVmTemplateNum: ").append(toIndentedString(contentLibraryVmTemplateNum)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumGt: ").append(toIndentedString(contentLibraryVmTemplateNumGt)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumGte: ").append(toIndentedString(contentLibraryVmTemplateNumGte)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumIn: ").append(toIndentedString(contentLibraryVmTemplateNumIn)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumLt: ").append(toIndentedString(contentLibraryVmTemplateNumLt)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumLte: ").append(toIndentedString(contentLibraryVmTemplateNumLte)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumNot: ").append(toIndentedString(contentLibraryVmTemplateNumNot)).append("\n");
+    sb.append("    contentLibraryVmTemplateNumNotIn: ").append(toIndentedString(contentLibraryVmTemplateNumNotIn)).append("\n");
+    sb.append("    contentLibraryVmTemplatesEvery: ").append(toIndentedString(contentLibraryVmTemplatesEvery)).append("\n");
+    sb.append("    contentLibraryVmTemplatesNone: ").append(toIndentedString(contentLibraryVmTemplatesNone)).append("\n");
+    sb.append("    contentLibraryVmTemplatesSome: ").append(toIndentedString(contentLibraryVmTemplatesSome)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
     sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");

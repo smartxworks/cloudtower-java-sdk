@@ -47,6 +47,8 @@ public class ITClusterSettings extends ITBase {
       List<ClusterSettings> result = api.getClusterSettingses(params, contentLanguage);
       assertThat(result).as("check result of getClusterSettingses").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITClusterSettings extends ITBase {
       ClusterSettingsConnection result = api.getClusterSettingsesConnection(params, contentLanguage);
       assertThat(result).as("check result of getClusterSettingsesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

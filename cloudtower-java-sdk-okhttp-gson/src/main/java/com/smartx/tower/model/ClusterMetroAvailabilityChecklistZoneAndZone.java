@@ -39,7 +39,7 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
 
   public static final String SERIALIZED_NAME_NOTICE = "notice";
   @SerializedName(SERIALIZED_NAME_NOTICE)
-  private Double notice;
+  private Integer notice;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
@@ -47,11 +47,11 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
 
   public static final String SERIALIZED_NAME_INFO = "info";
   @SerializedName(SERIALIZED_NAME_INFO)
-  private Double info;
+  private Integer info;
 
   public static final String SERIALIZED_NAME_CRITICAL = "critical";
   @SerializedName(SERIALIZED_NAME_CRITICAL)
-  private Double critical;
+  private Integer critical;
 
 
   public ClusterMetroAvailabilityChecklistZoneAndZone status(MetroCheckStatusEnum status) {
@@ -77,7 +77,7 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
   }
 
 
-  public ClusterMetroAvailabilityChecklistZoneAndZone notice(Double notice) {
+  public ClusterMetroAvailabilityChecklistZoneAndZone notice(Integer notice) {
     
     this.notice = notice;
     return this;
@@ -90,12 +90,12 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getNotice() {
+  public Integer getNotice() {
     return notice;
   }
 
 
-  public void setNotice(Double notice) {
+  public void setNotice(Integer notice) {
     this.notice = notice;
   }
 
@@ -128,7 +128,7 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
   }
 
 
-  public ClusterMetroAvailabilityChecklistZoneAndZone info(Double info) {
+  public ClusterMetroAvailabilityChecklistZoneAndZone info(Integer info) {
     
     this.info = info;
     return this;
@@ -141,17 +141,17 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getInfo() {
+  public Integer getInfo() {
     return info;
   }
 
 
-  public void setInfo(Double info) {
+  public void setInfo(Integer info) {
     this.info = info;
   }
 
 
-  public ClusterMetroAvailabilityChecklistZoneAndZone critical(Double critical) {
+  public ClusterMetroAvailabilityChecklistZoneAndZone critical(Integer critical) {
     
     this.critical = critical;
     return this;
@@ -164,12 +164,12 @@ public class ClusterMetroAvailabilityChecklistZoneAndZone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCritical() {
+  public Integer getCritical() {
     return critical;
   }
 
 
-  public void setCritical(Double critical) {
+  public void setCritical(Integer critical) {
     this.critical = critical;
   }
 

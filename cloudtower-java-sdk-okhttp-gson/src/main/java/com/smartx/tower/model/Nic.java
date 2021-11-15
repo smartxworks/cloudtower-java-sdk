@@ -20,8 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedVds;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.NicDriverState;
 import io.swagger.annotations.ApiModel;
@@ -50,7 +51,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_IBDEV = "ibdev";
   @SerializedName(SERIALIZED_NAME_IBDEV)
@@ -70,7 +71,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -82,7 +83,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_MAX_VF_NUM = "max_vf_num";
   @SerializedName(SERIALIZED_NAME_MAX_VF_NUM)
-  private Double maxVfNum;
+  private Integer maxVfNum;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
@@ -90,7 +91,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_MTU = "mtu";
   @SerializedName(SERIALIZED_NAME_MTU)
-  private Double mtu;
+  private Integer mtu;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -122,7 +123,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM = "total_vf_num";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM)
-  private Double totalVfNum;
+  private Integer totalVfNum;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -134,11 +135,11 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_USED_VF_NUM = "used_vf_num";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM)
-  private Double usedVfNum;
+  private Integer usedVfNum;
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
-  private NameIdPair vds;
+  private NestedVds vds;
 
 
   public Nic driver(String driver) {
@@ -210,7 +211,7 @@ public class Nic {
   }
 
 
-  public Nic host(NameIdPair host) {
+  public Nic host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -223,12 +224,12 @@ public class Nic {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -325,15 +326,15 @@ public class Nic {
   }
 
 
-  public Nic labels(List<BrickTopoPowers> labels) {
+  public Nic labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Nic addLabelsItem(BrickTopoPowers labelsItem) {
+  public Nic addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -346,12 +347,12 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -402,7 +403,7 @@ public class Nic {
   }
 
 
-  public Nic maxVfNum(Double maxVfNum) {
+  public Nic maxVfNum(Integer maxVfNum) {
     
     this.maxVfNum = maxVfNum;
     return this;
@@ -415,12 +416,12 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxVfNum() {
+  public Integer getMaxVfNum() {
     return maxVfNum;
   }
 
 
-  public void setMaxVfNum(Double maxVfNum) {
+  public void setMaxVfNum(Integer maxVfNum) {
     this.maxVfNum = maxVfNum;
   }
 
@@ -448,7 +449,7 @@ public class Nic {
   }
 
 
-  public Nic mtu(Double mtu) {
+  public Nic mtu(Integer mtu) {
     
     this.mtu = mtu;
     return this;
@@ -461,12 +462,12 @@ public class Nic {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMtu() {
+  public Integer getMtu() {
     return mtu;
   }
 
 
-  public void setMtu(Double mtu) {
+  public void setMtu(Integer mtu) {
     this.mtu = mtu;
   }
 
@@ -632,7 +633,7 @@ public class Nic {
   }
 
 
-  public Nic totalVfNum(Double totalVfNum) {
+  public Nic totalVfNum(Integer totalVfNum) {
     
     this.totalVfNum = totalVfNum;
     return this;
@@ -645,12 +646,12 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNum() {
+  public Integer getTotalVfNum() {
     return totalVfNum;
   }
 
 
-  public void setTotalVfNum(Double totalVfNum) {
+  public void setTotalVfNum(Integer totalVfNum) {
     this.totalVfNum = totalVfNum;
   }
 
@@ -701,7 +702,7 @@ public class Nic {
   }
 
 
-  public Nic usedVfNum(Double usedVfNum) {
+  public Nic usedVfNum(Integer usedVfNum) {
     
     this.usedVfNum = usedVfNum;
     return this;
@@ -714,17 +715,17 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedVfNum() {
+  public Integer getUsedVfNum() {
     return usedVfNum;
   }
 
 
-  public void setUsedVfNum(Double usedVfNum) {
+  public void setUsedVfNum(Integer usedVfNum) {
     this.usedVfNum = usedVfNum;
   }
 
 
-  public Nic vds(NameIdPair vds) {
+  public Nic vds(NestedVds vds) {
     
     this.vds = vds;
     return this;
@@ -737,12 +738,12 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getVds() {
+  public NestedVds getVds() {
     return vds;
   }
 
 
-  public void setVds(NameIdPair vds) {
+  public void setVds(NestedVds vds) {
     this.vds = vds;
   }
 

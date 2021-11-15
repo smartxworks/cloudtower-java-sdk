@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.ApplicationState;
 import com.smartx.tower.model.ApplicationType;
+import com.smartx.tower.model.NestedCluster;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,7 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Application {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "error_message";
   @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
@@ -75,7 +75,7 @@ public class Application {
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -86,7 +86,7 @@ public class Application {
   private Double volumeSize;
 
 
-  public Application cluster(NameIdPair cluster) {
+  public Application cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -99,12 +99,12 @@ public class Application {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -316,7 +316,7 @@ public class Application {
   }
 
 
-  public Application vcpu(Double vcpu) {
+  public Application vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -329,12 +329,12 @@ public class Application {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 

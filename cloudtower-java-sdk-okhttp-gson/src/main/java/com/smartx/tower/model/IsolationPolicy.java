@@ -20,10 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.IsolationMode;
-import com.smartx.tower.model.IsolationPolicyEgress;
+import com.smartx.tower.model.NestedEverouteCluster;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNetworkPolicyRule;
+import com.smartx.tower.model.NestedVm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -38,11 +39,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class IsolationPolicy {
   public static final String SERIALIZED_NAME_EGRESS = "egress";
   @SerializedName(SERIALIZED_NAME_EGRESS)
-  private List<IsolationPolicyEgress> egress = null;
+  private List<NestedNetworkPolicyRule> egress = null;
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private NameIdPair everouteCluster;
+  private NestedEverouteCluster everouteCluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -50,11 +51,11 @@ public class IsolationPolicy {
 
   public static final String SERIALIZED_NAME_INGRESS = "ingress";
   @SerializedName(SERIALIZED_NAME_INGRESS)
-  private List<IsolationPolicyEgress> ingress = null;
+  private List<NestedNetworkPolicyRule> ingress = null;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_MODE = "mode";
   @SerializedName(SERIALIZED_NAME_MODE)
@@ -62,18 +63,18 @@ public class IsolationPolicy {
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
-  private NameIdPair vm;
+  private NestedVm vm;
 
 
-  public IsolationPolicy egress(List<IsolationPolicyEgress> egress) {
+  public IsolationPolicy egress(List<NestedNetworkPolicyRule> egress) {
     
     this.egress = egress;
     return this;
   }
 
-  public IsolationPolicy addEgressItem(IsolationPolicyEgress egressItem) {
+  public IsolationPolicy addEgressItem(NestedNetworkPolicyRule egressItem) {
     if (this.egress == null) {
-      this.egress = new ArrayList<IsolationPolicyEgress>();
+      this.egress = new ArrayList<NestedNetworkPolicyRule>();
     }
     this.egress.add(egressItem);
     return this;
@@ -86,17 +87,17 @@ public class IsolationPolicy {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<IsolationPolicyEgress> getEgress() {
+  public List<NestedNetworkPolicyRule> getEgress() {
     return egress;
   }
 
 
-  public void setEgress(List<IsolationPolicyEgress> egress) {
+  public void setEgress(List<NestedNetworkPolicyRule> egress) {
     this.egress = egress;
   }
 
 
-  public IsolationPolicy everouteCluster(NameIdPair everouteCluster) {
+  public IsolationPolicy everouteCluster(NestedEverouteCluster everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -109,12 +110,12 @@ public class IsolationPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getEverouteCluster() {
+  public NestedEverouteCluster getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(NameIdPair everouteCluster) {
+  public void setEverouteCluster(NestedEverouteCluster everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -142,15 +143,15 @@ public class IsolationPolicy {
   }
 
 
-  public IsolationPolicy ingress(List<IsolationPolicyEgress> ingress) {
+  public IsolationPolicy ingress(List<NestedNetworkPolicyRule> ingress) {
     
     this.ingress = ingress;
     return this;
   }
 
-  public IsolationPolicy addIngressItem(IsolationPolicyEgress ingressItem) {
+  public IsolationPolicy addIngressItem(NestedNetworkPolicyRule ingressItem) {
     if (this.ingress == null) {
-      this.ingress = new ArrayList<IsolationPolicyEgress>();
+      this.ingress = new ArrayList<NestedNetworkPolicyRule>();
     }
     this.ingress.add(ingressItem);
     return this;
@@ -163,25 +164,25 @@ public class IsolationPolicy {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<IsolationPolicyEgress> getIngress() {
+  public List<NestedNetworkPolicyRule> getIngress() {
     return ingress;
   }
 
 
-  public void setIngress(List<IsolationPolicyEgress> ingress) {
+  public void setIngress(List<NestedNetworkPolicyRule> ingress) {
     this.ingress = ingress;
   }
 
 
-  public IsolationPolicy labels(List<BrickTopoPowers> labels) {
+  public IsolationPolicy labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public IsolationPolicy addLabelsItem(BrickTopoPowers labelsItem) {
+  public IsolationPolicy addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -194,12 +195,12 @@ public class IsolationPolicy {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -227,7 +228,7 @@ public class IsolationPolicy {
   }
 
 
-  public IsolationPolicy vm(NameIdPair vm) {
+  public IsolationPolicy vm(NestedVm vm) {
     
     this.vm = vm;
     return this;
@@ -240,12 +241,12 @@ public class IsolationPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getVm() {
+  public NestedVm getVm() {
     return vm;
   }
 
 
-  public void setVm(NameIdPair vm) {
+  public void setVm(NestedVm vm) {
     this.vm = vm;
   }
 

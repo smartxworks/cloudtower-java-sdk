@@ -67,7 +67,7 @@ public class VmSnapshotVmDisks {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -79,11 +79,11 @@ public class VmSnapshotVmDisks {
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
-  private Double key;
+  private Integer key;
 
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
-  private Double index;
+  private Integer index;
 
   public static final String SERIALIZED_NAME_IMAGE_NAME = "image_name";
   @SerializedName(SERIALIZED_NAME_IMAGE_NAME)
@@ -294,7 +294,7 @@ public class VmSnapshotVmDisks {
   }
 
 
-  public VmSnapshotVmDisks maxIops(Double maxIops) {
+  public VmSnapshotVmDisks maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -307,12 +307,12 @@ public class VmSnapshotVmDisks {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
@@ -363,7 +363,7 @@ public class VmSnapshotVmDisks {
   }
 
 
-  public VmSnapshotVmDisks key(Double key) {
+  public VmSnapshotVmDisks key(Integer key) {
     
     this.key = key;
     return this;
@@ -376,17 +376,17 @@ public class VmSnapshotVmDisks {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKey() {
+  public Integer getKey() {
     return key;
   }
 
 
-  public void setKey(Double key) {
+  public void setKey(Integer key) {
     this.key = key;
   }
 
 
-  public VmSnapshotVmDisks index(Double index) {
+  public VmSnapshotVmDisks index(Integer index) {
     
     this.index = index;
     return this;
@@ -399,12 +399,12 @@ public class VmSnapshotVmDisks {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIndex() {
+  public Integer getIndex() {
     return index;
   }
 
 
-  public void setIndex(Double index) {
+  public void setIndex(Integer index) {
     this.index = index;
   }
 

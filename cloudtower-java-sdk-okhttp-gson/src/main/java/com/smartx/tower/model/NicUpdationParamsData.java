@@ -31,14 +31,14 @@ import java.io.IOException;
 public class NicUpdationParamsData {
   public static final String SERIALIZED_NAME_TOTAL_VF_NUM = "total_vf_num";
   @SerializedName(SERIALIZED_NAME_TOTAL_VF_NUM)
-  private Double totalVfNum;
+  private Integer totalVfNum;
 
   public static final String SERIALIZED_NAME_MTU = "mtu";
   @SerializedName(SERIALIZED_NAME_MTU)
-  private Double mtu;
+  private Integer mtu;
 
 
-  public NicUpdationParamsData totalVfNum(Double totalVfNum) {
+  public NicUpdationParamsData totalVfNum(Integer totalVfNum) {
     
     this.totalVfNum = totalVfNum;
     return this;
@@ -51,17 +51,17 @@ public class NicUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalVfNum() {
+  public Integer getTotalVfNum() {
     return totalVfNum;
   }
 
 
-  public void setTotalVfNum(Double totalVfNum) {
+  public void setTotalVfNum(Integer totalVfNum) {
     this.totalVfNum = totalVfNum;
   }
 
 
-  public NicUpdationParamsData mtu(Double mtu) {
+  public NicUpdationParamsData mtu(Integer mtu) {
     
     this.mtu = mtu;
     return this;
@@ -74,12 +74,12 @@ public class NicUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMtu() {
+  public Integer getMtu() {
     return mtu;
   }
 
 
-  public void setMtu(Double mtu) {
+  public void setMtu(Integer mtu) {
     this.mtu = mtu;
   }
 

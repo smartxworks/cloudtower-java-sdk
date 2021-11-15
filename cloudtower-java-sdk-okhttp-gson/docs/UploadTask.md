@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **args** | **Object** |  | 
 **chunkSize** | **Double** |  | 
-**currentChunk** | **Double** |  | 
+**currentChunk** | **Integer** |  | 
 **finishedAt** | **String** |  |  [optional]
 **id** | **String** |  | 
 **resourceType** | **UploadResourceType** |  | 

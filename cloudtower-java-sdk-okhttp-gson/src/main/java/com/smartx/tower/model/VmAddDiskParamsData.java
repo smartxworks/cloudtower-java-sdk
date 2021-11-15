@@ -46,7 +46,7 @@ public class VmAddDiskParamsData {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
   @SerializedName(SERIALIZED_NAME_IO_POLICY)
@@ -126,7 +126,7 @@ public class VmAddDiskParamsData {
   }
 
 
-  public VmAddDiskParamsData maxIops(Double maxIops) {
+  public VmAddDiskParamsData maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -139,12 +139,12 @@ public class VmAddDiskParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 

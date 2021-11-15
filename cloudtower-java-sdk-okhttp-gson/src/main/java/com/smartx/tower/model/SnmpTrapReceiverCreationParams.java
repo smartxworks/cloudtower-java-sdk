@@ -76,7 +76,7 @@ public class SnmpTrapReceiverCreationParams {
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
-  private Double port;
+  private Integer port;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
@@ -329,7 +329,7 @@ public class SnmpTrapReceiverCreationParams {
   }
 
 
-  public SnmpTrapReceiverCreationParams port(Double port) {
+  public SnmpTrapReceiverCreationParams port(Integer port) {
     
     this.port = port;
     return this;
@@ -342,12 +342,12 @@ public class SnmpTrapReceiverCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPort() {
+  public Integer getPort() {
     return port;
   }
 
 
-  public void setPort(Double port) {
+  public void setPort(Integer port) {
     this.port = port;
   }
 

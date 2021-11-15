@@ -16,11 +16,11 @@ Name | Type | Description | Notes
 **macAddress** | **String** |  |  [optional]
 **mirror** | **Boolean** |  |  [optional]
 **model** | [**VmNicModel**](VmNicModel.md) |  |  [optional]
-**nic** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**order** | **Double** |  |  [optional]
+**nic** | [**NestedNic**](NestedNic.md) |  |  [optional]
+**order** | **Integer** |  |  [optional]
 **subnetMask** | **String** |  |  [optional]
-**vlan** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**vm** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**vlan** | [**NestedVlan**](NestedVlan.md) |  |  [optional]
+**vm** | [**NestedVm**](NestedVm.md) |  | 
 
 
 

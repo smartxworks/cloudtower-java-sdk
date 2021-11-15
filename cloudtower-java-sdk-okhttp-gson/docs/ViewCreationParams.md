@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **timeUnit** | **TimeUnit** |  | 
-**timeSpan** | **Double** |  | 
+**timeSpan** | **Integer** |  | 
 **clusterId** | **String** |  | 
 **name** | **String** |  | 
 

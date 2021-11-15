@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **cluster** | [**ClusterWhereInput**](ClusterWhereInput.md) |  |  [optional]
 **service** | **String** |  |  [optional]
 **metricType** | **MetricType** |  |  [optional]
-**metricCount** | **Double** |  |  [optional]
+**metricCount** | **Integer** |  |  [optional]
 **type** | **GraphType** |  |  [optional]
 **resourceType** | **String** |  |  [optional]
 **title** | **String** |  |  [optional]

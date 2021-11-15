@@ -20,16 +20,17 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedContentLibraryVmTemplate;
+import com.smartx.tower.model.NestedCpu;
+import com.smartx.tower.model.NestedFrozenDisks;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedTemplateNic;
 import com.smartx.tower.model.VmClockOffset;
-import com.smartx.tower.model.VmCpu;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmFirmware;
-import com.smartx.tower.model.VmSnapshotVmDisks;
-import com.smartx.tower.model.VmTemplateVmNics;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -52,11 +53,15 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE = "content_library_vm_template";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE)
+  private NestedContentLibraryVmTemplate contentLibraryVmTemplate;
 
   public static final String SERIALIZED_NAME_CPU = "cpu";
   @SerializedName(SERIALIZED_NAME_CPU)
-  private VmCpu cpu;
+  private NestedCpu cpu;
 
   public static final String SERIALIZED_NAME_CPU_MODEL = "cpu_model";
   @SerializedName(SERIALIZED_NAME_CPU_MODEL)
@@ -88,7 +93,7 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -108,7 +113,7 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -128,7 +133,7 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_VIDEO_TYPE = "video_type";
   @SerializedName(SERIALIZED_NAME_VIDEO_TYPE)
@@ -136,11 +141,11 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
-  private List<VmSnapshotVmDisks> vmDisks = null;
+  private List<NestedFrozenDisks> vmDisks = null;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<VmTemplateVmNics> vmNics = null;
+  private List<NestedTemplateNic> vmNics = null;
 
   public static final String SERIALIZED_NAME_WIN_OPT = "win_opt";
   @SerializedName(SERIALIZED_NAME_WIN_OPT)
@@ -193,7 +198,7 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate cluster(NameIdPair cluster) {
+  public VmTemplate cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -206,17 +211,40 @@ public class VmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public VmTemplate cpu(VmCpu cpu) {
+  public VmTemplate contentLibraryVmTemplate(NestedContentLibraryVmTemplate contentLibraryVmTemplate) {
+    
+    this.contentLibraryVmTemplate = contentLibraryVmTemplate;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplate
+   * @return contentLibraryVmTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedContentLibraryVmTemplate getContentLibraryVmTemplate() {
+    return contentLibraryVmTemplate;
+  }
+
+
+  public void setContentLibraryVmTemplate(NestedContentLibraryVmTemplate contentLibraryVmTemplate) {
+    this.contentLibraryVmTemplate = contentLibraryVmTemplate;
+  }
+
+
+  public VmTemplate cpu(NestedCpu cpu) {
     
     this.cpu = cpu;
     return this;
@@ -229,12 +257,12 @@ public class VmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public VmCpu getCpu() {
+  public NestedCpu getCpu() {
     return cpu;
   }
 
 
-  public void setCpu(VmCpu cpu) {
+  public void setCpu(NestedCpu cpu) {
     this.cpu = cpu;
   }
 
@@ -400,15 +428,15 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate labels(List<BrickTopoPowers> labels) {
+  public VmTemplate labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public VmTemplate addLabelsItem(BrickTopoPowers labelsItem) {
+  public VmTemplate addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -421,12 +449,12 @@ public class VmTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -523,7 +551,7 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate maxIops(Double maxIops) {
+  public VmTemplate maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -536,12 +564,12 @@ public class VmTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
@@ -638,7 +666,7 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate vcpu(Double vcpu) {
+  public VmTemplate vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -651,12 +679,12 @@ public class VmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
@@ -684,15 +712,15 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate vmDisks(List<VmSnapshotVmDisks> vmDisks) {
+  public VmTemplate vmDisks(List<NestedFrozenDisks> vmDisks) {
     
     this.vmDisks = vmDisks;
     return this;
   }
 
-  public VmTemplate addVmDisksItem(VmSnapshotVmDisks vmDisksItem) {
+  public VmTemplate addVmDisksItem(NestedFrozenDisks vmDisksItem) {
     if (this.vmDisks == null) {
-      this.vmDisks = new ArrayList<VmSnapshotVmDisks>();
+      this.vmDisks = new ArrayList<NestedFrozenDisks>();
     }
     this.vmDisks.add(vmDisksItem);
     return this;
@@ -705,25 +733,25 @@ public class VmTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<VmSnapshotVmDisks> getVmDisks() {
+  public List<NestedFrozenDisks> getVmDisks() {
     return vmDisks;
   }
 
 
-  public void setVmDisks(List<VmSnapshotVmDisks> vmDisks) {
+  public void setVmDisks(List<NestedFrozenDisks> vmDisks) {
     this.vmDisks = vmDisks;
   }
 
 
-  public VmTemplate vmNics(List<VmTemplateVmNics> vmNics) {
+  public VmTemplate vmNics(List<NestedTemplateNic> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public VmTemplate addVmNicsItem(VmTemplateVmNics vmNicsItem) {
+  public VmTemplate addVmNicsItem(NestedTemplateNic vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<VmTemplateVmNics>();
+      this.vmNics = new ArrayList<NestedTemplateNic>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -736,12 +764,12 @@ public class VmTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<VmTemplateVmNics> getVmNics() {
+  public List<NestedTemplateNic> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<VmTemplateVmNics> vmNics) {
+  public void setVmNics(List<NestedTemplateNic> vmNics) {
     this.vmNics = vmNics;
   }
 
@@ -781,6 +809,7 @@ public class VmTemplate {
     return Objects.equals(this.clockOffset, vmTemplate.clockOffset) &&
         Objects.equals(this.cloudInitSupported, vmTemplate.cloudInitSupported) &&
         Objects.equals(this.cluster, vmTemplate.cluster) &&
+        Objects.equals(this.contentLibraryVmTemplate, vmTemplate.contentLibraryVmTemplate) &&
         Objects.equals(this.cpu, vmTemplate.cpu) &&
         Objects.equals(this.cpuModel, vmTemplate.cpuModel) &&
         Objects.equals(this.description, vmTemplate.description) &&
@@ -812,7 +841,7 @@ public class VmTemplate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, description, entityAsyncStatus, firmware, ha, id, ioPolicy, labels, localCreatedAt, localId, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, name, size, vcpu, videoType, vmDisks, vmNics, winOpt);
+    return Objects.hash(clockOffset, cloudInitSupported, cluster, contentLibraryVmTemplate, cpu, cpuModel, description, entityAsyncStatus, firmware, ha, id, ioPolicy, labels, localCreatedAt, localId, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, name, size, vcpu, videoType, vmDisks, vmNics, winOpt);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -829,6 +858,7 @@ public class VmTemplate {
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    cloudInitSupported: ").append(toIndentedString(cloudInitSupported)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+    sb.append("    contentLibraryVmTemplate: ").append(toIndentedString(contentLibraryVmTemplate)).append("\n");
     sb.append("    cpu: ").append(toIndentedString(cpu)).append("\n");
     sb.append("    cpuModel: ").append(toIndentedString(cpuModel)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

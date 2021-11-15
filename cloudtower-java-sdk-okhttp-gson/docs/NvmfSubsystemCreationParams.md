@@ -7,10 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**replicaNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
 **thinProvision** | **Boolean** |  | 
 **stripeSize** | **Double** |  | 
-**stripeNum** | **Double** |  | 
+**stripeNum** | **Integer** |  | 
 **policy** | **NvmfSubsystemPolicyType** |  | 
 **clusterId** | **String** |  | 
 **name** | **String** |  | 

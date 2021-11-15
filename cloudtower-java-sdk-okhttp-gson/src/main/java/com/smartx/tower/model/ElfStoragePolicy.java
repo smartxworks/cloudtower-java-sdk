@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,7 +34,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ElfStoragePolicy {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -58,11 +58,11 @@ public class ElfStoragePolicy {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -73,7 +73,7 @@ public class ElfStoragePolicy {
   private Boolean thinProvision;
 
 
-  public ElfStoragePolicy cluster(NameIdPair cluster) {
+  public ElfStoragePolicy cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -86,12 +86,12 @@ public class ElfStoragePolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -211,7 +211,7 @@ public class ElfStoragePolicy {
   }
 
 
-  public ElfStoragePolicy replicaNum(Double replicaNum) {
+  public ElfStoragePolicy replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -224,17 +224,17 @@ public class ElfStoragePolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public ElfStoragePolicy stripeNum(Double stripeNum) {
+  public ElfStoragePolicy stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -247,12 +247,12 @@ public class ElfStoragePolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 

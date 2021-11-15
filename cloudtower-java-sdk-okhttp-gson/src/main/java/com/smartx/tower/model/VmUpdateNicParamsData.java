@@ -68,7 +68,7 @@ public class VmUpdateNicParamsData {
 
   public static final String SERIALIZED_NAME_NIC_INDEX = "nic_index";
   @SerializedName(SERIALIZED_NAME_NIC_INDEX)
-  private Double nicIndex;
+  private Integer nicIndex;
 
 
   public VmUpdateNicParamsData subnetMask(String subnetMask) {
@@ -278,7 +278,7 @@ public class VmUpdateNicParamsData {
   }
 
 
-  public VmUpdateNicParamsData nicIndex(Double nicIndex) {
+  public VmUpdateNicParamsData nicIndex(Integer nicIndex) {
     
     this.nicIndex = nicIndex;
     return this;
@@ -291,12 +291,12 @@ public class VmUpdateNicParamsData {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getNicIndex() {
+  public Integer getNicIndex() {
     return nicIndex;
   }
 
 
-  public void setNicIndex(Double nicIndex) {
+  public void setNicIndex(Integer nicIndex) {
     this.nicIndex = nicIndex;
   }
 

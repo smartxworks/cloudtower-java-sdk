@@ -47,6 +47,8 @@ public class ITStoragePolicyConector extends ITBase {
       List<StoragePolicyConector> result = api.getStoragePoliciesConnector(params, contentLanguage);
       assertThat(result).as("check result of getStoragePoliciesConnector").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedDatacenter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,7 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Organization {
   public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
   @SerializedName(SERIALIZED_NAME_DATACENTERS)
-  private List<NameIdPair> datacenters = null;
+  private List<NestedDatacenter> datacenters = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -46,15 +46,15 @@ public class Organization {
   private String name;
 
 
-  public Organization datacenters(List<NameIdPair> datacenters) {
+  public Organization datacenters(List<NestedDatacenter> datacenters) {
     
     this.datacenters = datacenters;
     return this;
   }
 
-  public Organization addDatacentersItem(NameIdPair datacentersItem) {
+  public Organization addDatacentersItem(NestedDatacenter datacentersItem) {
     if (this.datacenters == null) {
-      this.datacenters = new ArrayList<NameIdPair>();
+      this.datacenters = new ArrayList<NestedDatacenter>();
     }
     this.datacenters.add(datacentersItem);
     return this;
@@ -67,12 +67,12 @@ public class Organization {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getDatacenters() {
+  public List<NestedDatacenter> getDatacenters() {
     return datacenters;
   }
 
 
-  public void setDatacenters(List<NameIdPair> datacenters) {
+  public void setDatacenters(List<NestedDatacenter> datacenters) {
     this.datacenters = datacenters;
   }
 

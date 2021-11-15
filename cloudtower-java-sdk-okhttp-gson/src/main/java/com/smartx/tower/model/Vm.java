@@ -20,12 +20,21 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedCpu;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedIsolationPolicy;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedSnapshotPlan;
+import com.smartx.tower.model.NestedUsbDevice;
+import com.smartx.tower.model.NestedVmDisk;
+import com.smartx.tower.model.NestedVmEntityFilterResult;
+import com.smartx.tower.model.NestedVmFolder;
+import com.smartx.tower.model.NestedVmNic;
+import com.smartx.tower.model.NestedVmPlacementGroup;
+import com.smartx.tower.model.NestedVmSnapshot;
 import com.smartx.tower.model.VmClockOffset;
-import com.smartx.tower.model.VmCpu;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmFirmware;
@@ -52,11 +61,11 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CPU = "cpu";
   @SerializedName(SERIALIZED_NAME_CPU)
-  private VmCpu cpu;
+  private NestedCpu cpu;
 
   public static final String SERIALIZED_NAME_CPU_MODEL = "cpu_model";
   @SerializedName(SERIALIZED_NAME_CPU_MODEL)
@@ -80,7 +89,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS = "entity_filter_results";
   @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS)
-  private List<BrickTopoPowers> entityFilterResults = null;
+  private List<NestedVmEntityFilterResult> entityFilterResults = null;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -92,7 +101,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_FOLDER = "folder";
   @SerializedName(SERIALIZED_NAME_FOLDER)
-  private NameIdPair folder;
+  private NestedVmFolder folder;
 
   public static final String SERIALIZED_NAME_GUEST_CPU_MODEL = "guest_cpu_model";
   @SerializedName(SERIALIZED_NAME_GUEST_CPU_MODEL)
@@ -116,7 +125,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
@@ -144,7 +153,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY = "isolation_policy";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY)
-  private AlertAlertRule isolationPolicy;
+  private NestedIsolationPolicy isolationPolicy;
 
   public static final String SERIALIZED_NAME_KERNEL_INFO = "kernel_info";
   @SerializedName(SERIALIZED_NAME_KERNEL_INFO)
@@ -152,7 +161,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LAST_SHUTDOWN_TIME = "last_shutdown_time";
   @SerializedName(SERIALIZED_NAME_LAST_SHUTDOWN_TIME)
@@ -180,7 +189,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -232,11 +241,11 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshot_plan";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
-  private NameIdPair snapshotPlan;
+  private NestedSnapshotPlan snapshotPlan;
 
   public static final String SERIALIZED_NAME_SNAPSHOTS = "snapshots";
   @SerializedName(SERIALIZED_NAME_SNAPSHOTS)
-  private List<NameIdPair> snapshots = null;
+  private List<NestedVmSnapshot> snapshots = null;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -248,11 +257,11 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
-  private List<NameIdPair> usbDevices = null;
+  private List<NestedUsbDevice> usbDevices = null;
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_VIDEO_TYPE = "video_type";
   @SerializedName(SERIALIZED_NAME_VIDEO_TYPE)
@@ -260,15 +269,15 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
-  private List<BrickTopoPowers> vmDisks = null;
+  private List<NestedVmDisk> vmDisks = null;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<BrickTopoPowers> vmNics = null;
+  private List<NestedVmNic> vmNics = null;
 
   public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
   @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
-  private List<NameIdPair> vmPlacementGroup = null;
+  private List<NestedVmPlacementGroup> vmPlacementGroup = null;
 
   public static final String SERIALIZED_NAME_VM_TOOLS_STATUS = "vm_tools_status";
   @SerializedName(SERIALIZED_NAME_VM_TOOLS_STATUS)
@@ -310,7 +319,7 @@ public class Vm {
   }
 
 
-  public Vm cluster(NameIdPair cluster) {
+  public Vm cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -323,17 +332,17 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public Vm cpu(VmCpu cpu) {
+  public Vm cpu(NestedCpu cpu) {
     
     this.cpu = cpu;
     return this;
@@ -346,12 +355,12 @@ public class Vm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public VmCpu getCpu() {
+  public NestedCpu getCpu() {
     return cpu;
   }
 
 
-  public void setCpu(VmCpu cpu) {
+  public void setCpu(NestedCpu cpu) {
     this.cpu = cpu;
   }
 
@@ -471,15 +480,15 @@ public class Vm {
   }
 
 
-  public Vm entityFilterResults(List<BrickTopoPowers> entityFilterResults) {
+  public Vm entityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
     
     this.entityFilterResults = entityFilterResults;
     return this;
   }
 
-  public Vm addEntityFilterResultsItem(BrickTopoPowers entityFilterResultsItem) {
+  public Vm addEntityFilterResultsItem(NestedVmEntityFilterResult entityFilterResultsItem) {
     if (this.entityFilterResults == null) {
-      this.entityFilterResults = new ArrayList<BrickTopoPowers>();
+      this.entityFilterResults = new ArrayList<NestedVmEntityFilterResult>();
     }
     this.entityFilterResults.add(entityFilterResultsItem);
     return this;
@@ -492,12 +501,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getEntityFilterResults() {
+  public List<NestedVmEntityFilterResult> getEntityFilterResults() {
     return entityFilterResults;
   }
 
 
-  public void setEntityFilterResults(List<BrickTopoPowers> entityFilterResults) {
+  public void setEntityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
     this.entityFilterResults = entityFilterResults;
   }
 
@@ -548,7 +557,7 @@ public class Vm {
   }
 
 
-  public Vm folder(NameIdPair folder) {
+  public Vm folder(NestedVmFolder folder) {
     
     this.folder = folder;
     return this;
@@ -561,12 +570,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getFolder() {
+  public NestedVmFolder getFolder() {
     return folder;
   }
 
 
-  public void setFolder(NameIdPair folder) {
+  public void setFolder(NestedVmFolder folder) {
     this.folder = folder;
   }
 
@@ -686,7 +695,7 @@ public class Vm {
   }
 
 
-  public Vm host(NameIdPair host) {
+  public Vm host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -699,12 +708,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -847,7 +856,7 @@ public class Vm {
   }
 
 
-  public Vm isolationPolicy(AlertAlertRule isolationPolicy) {
+  public Vm isolationPolicy(NestedIsolationPolicy isolationPolicy) {
     
     this.isolationPolicy = isolationPolicy;
     return this;
@@ -860,12 +869,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getIsolationPolicy() {
+  public NestedIsolationPolicy getIsolationPolicy() {
     return isolationPolicy;
   }
 
 
-  public void setIsolationPolicy(AlertAlertRule isolationPolicy) {
+  public void setIsolationPolicy(NestedIsolationPolicy isolationPolicy) {
     this.isolationPolicy = isolationPolicy;
   }
 
@@ -893,15 +902,15 @@ public class Vm {
   }
 
 
-  public Vm labels(List<BrickTopoPowers> labels) {
+  public Vm labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Vm addLabelsItem(BrickTopoPowers labelsItem) {
+  public Vm addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -914,12 +923,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -1062,7 +1071,7 @@ public class Vm {
   }
 
 
-  public Vm maxIops(Double maxIops) {
+  public Vm maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -1075,12 +1084,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
@@ -1366,7 +1375,7 @@ public class Vm {
   }
 
 
-  public Vm snapshotPlan(NameIdPair snapshotPlan) {
+  public Vm snapshotPlan(NestedSnapshotPlan snapshotPlan) {
     
     this.snapshotPlan = snapshotPlan;
     return this;
@@ -1379,25 +1388,25 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getSnapshotPlan() {
+  public NestedSnapshotPlan getSnapshotPlan() {
     return snapshotPlan;
   }
 
 
-  public void setSnapshotPlan(NameIdPair snapshotPlan) {
+  public void setSnapshotPlan(NestedSnapshotPlan snapshotPlan) {
     this.snapshotPlan = snapshotPlan;
   }
 
 
-  public Vm snapshots(List<NameIdPair> snapshots) {
+  public Vm snapshots(List<NestedVmSnapshot> snapshots) {
     
     this.snapshots = snapshots;
     return this;
   }
 
-  public Vm addSnapshotsItem(NameIdPair snapshotsItem) {
+  public Vm addSnapshotsItem(NestedVmSnapshot snapshotsItem) {
     if (this.snapshots == null) {
-      this.snapshots = new ArrayList<NameIdPair>();
+      this.snapshots = new ArrayList<NestedVmSnapshot>();
     }
     this.snapshots.add(snapshotsItem);
     return this;
@@ -1410,12 +1419,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getSnapshots() {
+  public List<NestedVmSnapshot> getSnapshots() {
     return snapshots;
   }
 
 
-  public void setSnapshots(List<NameIdPair> snapshots) {
+  public void setSnapshots(List<NestedVmSnapshot> snapshots) {
     this.snapshots = snapshots;
   }
 
@@ -1466,15 +1475,15 @@ public class Vm {
   }
 
 
-  public Vm usbDevices(List<NameIdPair> usbDevices) {
+  public Vm usbDevices(List<NestedUsbDevice> usbDevices) {
     
     this.usbDevices = usbDevices;
     return this;
   }
 
-  public Vm addUsbDevicesItem(NameIdPair usbDevicesItem) {
+  public Vm addUsbDevicesItem(NestedUsbDevice usbDevicesItem) {
     if (this.usbDevices == null) {
-      this.usbDevices = new ArrayList<NameIdPair>();
+      this.usbDevices = new ArrayList<NestedUsbDevice>();
     }
     this.usbDevices.add(usbDevicesItem);
     return this;
@@ -1487,17 +1496,17 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getUsbDevices() {
+  public List<NestedUsbDevice> getUsbDevices() {
     return usbDevices;
   }
 
 
-  public void setUsbDevices(List<NameIdPair> usbDevices) {
+  public void setUsbDevices(List<NestedUsbDevice> usbDevices) {
     this.usbDevices = usbDevices;
   }
 
 
-  public Vm vcpu(Double vcpu) {
+  public Vm vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -1510,12 +1519,12 @@ public class Vm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
@@ -1543,15 +1552,15 @@ public class Vm {
   }
 
 
-  public Vm vmDisks(List<BrickTopoPowers> vmDisks) {
+  public Vm vmDisks(List<NestedVmDisk> vmDisks) {
     
     this.vmDisks = vmDisks;
     return this;
   }
 
-  public Vm addVmDisksItem(BrickTopoPowers vmDisksItem) {
+  public Vm addVmDisksItem(NestedVmDisk vmDisksItem) {
     if (this.vmDisks == null) {
-      this.vmDisks = new ArrayList<BrickTopoPowers>();
+      this.vmDisks = new ArrayList<NestedVmDisk>();
     }
     this.vmDisks.add(vmDisksItem);
     return this;
@@ -1564,25 +1573,25 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmDisks() {
+  public List<NestedVmDisk> getVmDisks() {
     return vmDisks;
   }
 
 
-  public void setVmDisks(List<BrickTopoPowers> vmDisks) {
+  public void setVmDisks(List<NestedVmDisk> vmDisks) {
     this.vmDisks = vmDisks;
   }
 
 
-  public Vm vmNics(List<BrickTopoPowers> vmNics) {
+  public Vm vmNics(List<NestedVmNic> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public Vm addVmNicsItem(BrickTopoPowers vmNicsItem) {
+  public Vm addVmNicsItem(NestedVmNic vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<BrickTopoPowers>();
+      this.vmNics = new ArrayList<NestedVmNic>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -1595,25 +1604,25 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmNics() {
+  public List<NestedVmNic> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<BrickTopoPowers> vmNics) {
+  public void setVmNics(List<NestedVmNic> vmNics) {
     this.vmNics = vmNics;
   }
 
 
-  public Vm vmPlacementGroup(List<NameIdPair> vmPlacementGroup) {
+  public Vm vmPlacementGroup(List<NestedVmPlacementGroup> vmPlacementGroup) {
     
     this.vmPlacementGroup = vmPlacementGroup;
     return this;
   }
 
-  public Vm addVmPlacementGroupItem(NameIdPair vmPlacementGroupItem) {
+  public Vm addVmPlacementGroupItem(NestedVmPlacementGroup vmPlacementGroupItem) {
     if (this.vmPlacementGroup == null) {
-      this.vmPlacementGroup = new ArrayList<NameIdPair>();
+      this.vmPlacementGroup = new ArrayList<NestedVmPlacementGroup>();
     }
     this.vmPlacementGroup.add(vmPlacementGroupItem);
     return this;
@@ -1626,12 +1635,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmPlacementGroup() {
+  public List<NestedVmPlacementGroup> getVmPlacementGroup() {
     return vmPlacementGroup;
   }
 
 
-  public void setVmPlacementGroup(List<NameIdPair> vmPlacementGroup) {
+  public void setVmPlacementGroup(List<NestedVmPlacementGroup> vmPlacementGroup) {
     this.vmPlacementGroup = vmPlacementGroup;
   }
 

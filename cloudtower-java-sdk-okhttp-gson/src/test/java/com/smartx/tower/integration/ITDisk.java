@@ -47,6 +47,8 @@ public class ITDisk extends ITBase {
       List<Disk> result = api.getDisks(params, contentLanguage);
       assertThat(result).as("check result of getDisks").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITDisk extends ITBase {
       DiskConnection result = api.getDisksConnection(params, contentLanguage);
       assertThat(result).as("check result of getDisksConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITDisk extends ITBase {
       List<WithTaskDisk> result = api.mountDisk(params, contentLanguage);
       assertThat(result).as("check result of mountDisk").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITDisk extends ITBase {
       List<WithTaskDisk> result = api.unmountDisk(params, contentLanguage);
       assertThat(result).as("check result of unmountDisk").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

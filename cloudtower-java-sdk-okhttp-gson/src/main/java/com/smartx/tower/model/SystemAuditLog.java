@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.UserAuditLogStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +38,7 @@ public class SystemAuditLog {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_FINISHED_AT = "finished_at";
   @SerializedName(SERIALIZED_NAME_FINISHED_AT)
@@ -92,7 +92,7 @@ public class SystemAuditLog {
   }
 
 
-  public SystemAuditLog cluster(NameIdPair cluster) {
+  public SystemAuditLog cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -105,12 +105,12 @@ public class SystemAuditLog {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 

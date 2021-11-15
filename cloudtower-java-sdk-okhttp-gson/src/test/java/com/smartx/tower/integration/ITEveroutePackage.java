@@ -47,6 +47,8 @@ public class ITEveroutePackage extends ITBase {
       List<EveroutePackage> result = api.getEveroutePackages(params, contentLanguage);
       assertThat(result).as("check result of getEveroutePackages").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITEveroutePackage extends ITBase {
       EveroutePackageConnection result = api.getEveroutePackagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getEveroutePackagesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

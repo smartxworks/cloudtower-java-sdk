@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **cpuHzPerCore** | **Double** |  | 
 **dataIp** | **String** |  | 
 **id** | **String** |  | 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **systemDataCapacity** | **Double** |  | 
 **systemUsedDataSpace** | **Double** |  | 
-**totalCpuCores** | **Double** |  | 
+**totalCpuCores** | **Integer** |  | 
 **totalCpuHz** | **Double** |  | 
 **totalMemoryBytes** | **Double** |  | 
 

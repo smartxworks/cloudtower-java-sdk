@@ -7,17 +7,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**consistencyGroupSnapshots** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**consistencyGroupSnapshots** | [**List&lt;NestedConsistencyGroupSnapshot&gt;**](NestedConsistencyGroupSnapshot.md) |  |  [optional]
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
-**iscsiLuns** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**iscsiLuns** | [**List&lt;NestedIscsiLun&gt;**](NestedIscsiLun.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreatedAt** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**namespaces** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**namespaces** | [**List&lt;NestedNvmfNamespace&gt;**](NestedNvmfNamespace.md) |  |  [optional]
 **uniqueSize** | **Double** |  | 
 
 

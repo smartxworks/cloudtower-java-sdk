@@ -33,7 +33,7 @@ import java.io.IOException;
 public class NvmfNamespaceCreationParams {
   public static final String SERIALIZED_NAME_NAMESPACE_ID = "namespace_id";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID)
-  private Double namespaceId;
+  private Integer namespaceId;
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
@@ -49,7 +49,7 @@ public class NvmfNamespaceCreationParams {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_ID = "nvmf_subsystem_id";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_ID)
@@ -136,7 +136,7 @@ public class NvmfNamespaceCreationParams {
   private String nqnWhitelist;
 
 
-  public NvmfNamespaceCreationParams namespaceId(Double namespaceId) {
+  public NvmfNamespaceCreationParams namespaceId(Integer namespaceId) {
     
     this.namespaceId = namespaceId;
     return this;
@@ -149,12 +149,12 @@ public class NvmfNamespaceCreationParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceId() {
+  public Integer getNamespaceId() {
     return namespaceId;
   }
 
 
-  public void setNamespaceId(Double namespaceId) {
+  public void setNamespaceId(Integer namespaceId) {
     this.namespaceId = namespaceId;
   }
 
@@ -228,7 +228,7 @@ public class NvmfNamespaceCreationParams {
   }
 
 
-  public NvmfNamespaceCreationParams replicaNum(Double replicaNum) {
+  public NvmfNamespaceCreationParams replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -241,12 +241,12 @@ public class NvmfNamespaceCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 

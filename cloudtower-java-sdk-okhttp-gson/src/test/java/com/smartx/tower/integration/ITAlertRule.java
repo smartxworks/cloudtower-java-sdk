@@ -47,6 +47,8 @@ public class ITAlertRule extends ITBase {
       List<AlertRule> result = api.getAlertRules(params, contentLanguage);
       assertThat(result).as("check result of getAlertRules").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITAlertRule extends ITBase {
       AlertRuleConnection result = api.getAlertRulesConnection(params, contentLanguage);
       assertThat(result).as("check result of getAlertRulesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

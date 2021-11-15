@@ -20,9 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedSnapshotPlanTask;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.SnapshotPlanExecuteStatus;
 import com.smartx.tower.model.SnapshotPlanExecuteType;
 import com.smartx.tower.model.SnapshotPlanStatus;
@@ -40,15 +41,15 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SnapshotPlan {
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM = "auto_delete_num";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM)
-  private Double autoDeleteNum;
+  private Integer autoDeleteNum;
 
   public static final String SERIALIZED_NAME_AUTO_EXECUTE_NUM = "auto_execute_num";
   @SerializedName(SERIALIZED_NAME_AUTO_EXECUTE_NUM)
-  private Double autoExecuteNum;
+  private Integer autoExecuteNum;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -68,7 +69,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_EXECUTE_INTERVALS = "execute_intervals";
   @SerializedName(SERIALIZED_NAME_EXECUTE_INTERVALS)
-  private List<Double> executeIntervals = new ArrayList<Double>();
+  private List<Integer> executeIntervals = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_EXECUTE_PLAN_TYPE = "execute_plan_type";
   @SerializedName(SERIALIZED_NAME_EXECUTE_PLAN_TYPE)
@@ -76,7 +77,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_EXECUTION_TASKS = "execution_tasks";
   @SerializedName(SERIALIZED_NAME_EXECUTION_TASKS)
-  private List<BrickTopoPowers> executionTasks = null;
+  private List<NestedSnapshotPlanTask> executionTasks = null;
 
   public static final String SERIALIZED_NAME_HEALTHY = "healthy";
   @SerializedName(SERIALIZED_NAME_HEALTHY)
@@ -108,11 +109,11 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM = "manual_delete_num";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM)
-  private Double manualDeleteNum;
+  private Integer manualDeleteNum;
 
   public static final String SERIALIZED_NAME_MANUAL_EXECUTE_NUM = "manual_execute_num";
   @SerializedName(SERIALIZED_NAME_MANUAL_EXECUTE_NUM)
-  private Double manualExecuteNum;
+  private Integer manualExecuteNum;
 
   public static final String SERIALIZED_NAME_MIRROR = "mirror";
   @SerializedName(SERIALIZED_NAME_MIRROR)
@@ -128,7 +129,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_OBJECT_NUM = "object_num";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM)
-  private Double objectNum;
+  private Integer objectNum;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES = "physical_size_bytes";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES)
@@ -136,11 +137,11 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM = "remain_snapshot_num";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM)
-  private Double remainSnapshotNum;
+  private Integer remainSnapshotNum;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP_NUM = "snapshot_group_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP_NUM)
-  private Double snapshotGroupNum;
+  private Integer snapshotGroupNum;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
@@ -152,10 +153,10 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
 
-  public SnapshotPlan autoDeleteNum(Double autoDeleteNum) {
+  public SnapshotPlan autoDeleteNum(Integer autoDeleteNum) {
     
     this.autoDeleteNum = autoDeleteNum;
     return this;
@@ -168,17 +169,17 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAutoDeleteNum() {
+  public Integer getAutoDeleteNum() {
     return autoDeleteNum;
   }
 
 
-  public void setAutoDeleteNum(Double autoDeleteNum) {
+  public void setAutoDeleteNum(Integer autoDeleteNum) {
     this.autoDeleteNum = autoDeleteNum;
   }
 
 
-  public SnapshotPlan autoExecuteNum(Double autoExecuteNum) {
+  public SnapshotPlan autoExecuteNum(Integer autoExecuteNum) {
     
     this.autoExecuteNum = autoExecuteNum;
     return this;
@@ -191,17 +192,17 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAutoExecuteNum() {
+  public Integer getAutoExecuteNum() {
     return autoExecuteNum;
   }
 
 
-  public void setAutoExecuteNum(Double autoExecuteNum) {
+  public void setAutoExecuteNum(Integer autoExecuteNum) {
     this.autoExecuteNum = autoExecuteNum;
   }
 
 
-  public SnapshotPlan cluster(NameIdPair cluster) {
+  public SnapshotPlan cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -214,12 +215,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -316,13 +317,13 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan executeIntervals(List<Double> executeIntervals) {
+  public SnapshotPlan executeIntervals(List<Integer> executeIntervals) {
     
     this.executeIntervals = executeIntervals;
     return this;
   }
 
-  public SnapshotPlan addExecuteIntervalsItem(Double executeIntervalsItem) {
+  public SnapshotPlan addExecuteIntervalsItem(Integer executeIntervalsItem) {
     this.executeIntervals.add(executeIntervalsItem);
     return this;
   }
@@ -334,12 +335,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Double> getExecuteIntervals() {
+  public List<Integer> getExecuteIntervals() {
     return executeIntervals;
   }
 
 
-  public void setExecuteIntervals(List<Double> executeIntervals) {
+  public void setExecuteIntervals(List<Integer> executeIntervals) {
     this.executeIntervals = executeIntervals;
   }
 
@@ -367,15 +368,15 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan executionTasks(List<BrickTopoPowers> executionTasks) {
+  public SnapshotPlan executionTasks(List<NestedSnapshotPlanTask> executionTasks) {
     
     this.executionTasks = executionTasks;
     return this;
   }
 
-  public SnapshotPlan addExecutionTasksItem(BrickTopoPowers executionTasksItem) {
+  public SnapshotPlan addExecutionTasksItem(NestedSnapshotPlanTask executionTasksItem) {
     if (this.executionTasks == null) {
-      this.executionTasks = new ArrayList<BrickTopoPowers>();
+      this.executionTasks = new ArrayList<NestedSnapshotPlanTask>();
     }
     this.executionTasks.add(executionTasksItem);
     return this;
@@ -388,12 +389,12 @@ public class SnapshotPlan {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getExecutionTasks() {
+  public List<NestedSnapshotPlanTask> getExecutionTasks() {
     return executionTasks;
   }
 
 
-  public void setExecutionTasks(List<BrickTopoPowers> executionTasks) {
+  public void setExecutionTasks(List<NestedSnapshotPlanTask> executionTasks) {
     this.executionTasks = executionTasks;
   }
 
@@ -559,7 +560,7 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan manualDeleteNum(Double manualDeleteNum) {
+  public SnapshotPlan manualDeleteNum(Integer manualDeleteNum) {
     
     this.manualDeleteNum = manualDeleteNum;
     return this;
@@ -572,17 +573,17 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getManualDeleteNum() {
+  public Integer getManualDeleteNum() {
     return manualDeleteNum;
   }
 
 
-  public void setManualDeleteNum(Double manualDeleteNum) {
+  public void setManualDeleteNum(Integer manualDeleteNum) {
     this.manualDeleteNum = manualDeleteNum;
   }
 
 
-  public SnapshotPlan manualExecuteNum(Double manualExecuteNum) {
+  public SnapshotPlan manualExecuteNum(Integer manualExecuteNum) {
     
     this.manualExecuteNum = manualExecuteNum;
     return this;
@@ -595,12 +596,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getManualExecuteNum() {
+  public Integer getManualExecuteNum() {
     return manualExecuteNum;
   }
 
 
-  public void setManualExecuteNum(Double manualExecuteNum) {
+  public void setManualExecuteNum(Integer manualExecuteNum) {
     this.manualExecuteNum = manualExecuteNum;
   }
 
@@ -674,7 +675,7 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan objectNum(Double objectNum) {
+  public SnapshotPlan objectNum(Integer objectNum) {
     
     this.objectNum = objectNum;
     return this;
@@ -687,12 +688,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getObjectNum() {
+  public Integer getObjectNum() {
     return objectNum;
   }
 
 
-  public void setObjectNum(Double objectNum) {
+  public void setObjectNum(Integer objectNum) {
     this.objectNum = objectNum;
   }
 
@@ -720,7 +721,7 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan remainSnapshotNum(Double remainSnapshotNum) {
+  public SnapshotPlan remainSnapshotNum(Integer remainSnapshotNum) {
     
     this.remainSnapshotNum = remainSnapshotNum;
     return this;
@@ -733,17 +734,17 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRemainSnapshotNum() {
+  public Integer getRemainSnapshotNum() {
     return remainSnapshotNum;
   }
 
 
-  public void setRemainSnapshotNum(Double remainSnapshotNum) {
+  public void setRemainSnapshotNum(Integer remainSnapshotNum) {
     this.remainSnapshotNum = remainSnapshotNum;
   }
 
 
-  public SnapshotPlan snapshotGroupNum(Double snapshotGroupNum) {
+  public SnapshotPlan snapshotGroupNum(Integer snapshotGroupNum) {
     
     this.snapshotGroupNum = snapshotGroupNum;
     return this;
@@ -756,12 +757,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSnapshotGroupNum() {
+  public Integer getSnapshotGroupNum() {
     return snapshotGroupNum;
   }
 
 
-  public void setSnapshotGroupNum(Double snapshotGroupNum) {
+  public void setSnapshotGroupNum(Integer snapshotGroupNum) {
     this.snapshotGroupNum = snapshotGroupNum;
   }
 
@@ -812,15 +813,15 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan vms(List<NameIdPair> vms) {
+  public SnapshotPlan vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public SnapshotPlan addVmsItem(NameIdPair vmsItem) {
+  public SnapshotPlan addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -833,12 +834,12 @@ public class SnapshotPlan {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 

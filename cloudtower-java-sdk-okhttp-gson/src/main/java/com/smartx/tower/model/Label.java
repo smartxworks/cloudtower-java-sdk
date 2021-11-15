@@ -20,8 +20,33 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedConsistencyGroup;
+import com.smartx.tower.model.NestedConsistencyGroupSnapshot;
+import com.smartx.tower.model.NestedContentLibraryImage;
+import com.smartx.tower.model.NestedContentLibraryVmTemplate;
+import com.smartx.tower.model.NestedDatacenter;
+import com.smartx.tower.model.NestedDisk;
+import com.smartx.tower.model.NestedElfImage;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedIscsiLun;
+import com.smartx.tower.model.NestedIscsiLunSnapshot;
+import com.smartx.tower.model.NestedIscsiTarget;
+import com.smartx.tower.model.NestedIsolationPolicy;
+import com.smartx.tower.model.NestedNamespaceGroup;
+import com.smartx.tower.model.NestedNfsExport;
+import com.smartx.tower.model.NestedNfsInode;
+import com.smartx.tower.model.NestedNic;
+import com.smartx.tower.model.NestedNvmfNamespace;
+import com.smartx.tower.model.NestedNvmfNamespaceSnapshot;
+import com.smartx.tower.model.NestedNvmfSubsystem;
+import com.smartx.tower.model.NestedSecurityPolicy;
+import com.smartx.tower.model.NestedVds;
+import com.smartx.tower.model.NestedVlan;
+import com.smartx.tower.model.NestedVm;
+import com.smartx.tower.model.NestedVmSnapshot;
+import com.smartx.tower.model.NestedVmTemplate;
+import com.smartx.tower.model.NestedVmVolume;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,35 +61,43 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Label {
   public static final String SERIALIZED_NAME_CLUSTER_NUM = "cluster_num";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM)
-  private Double clusterNum;
+  private Integer clusterNum;
 
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private List<NameIdPair> clusters = null;
+  private List<NestedCluster> clusters = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_NUM = "consistency_group_num";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_NUM)
-  private Double consistencyGroupNum;
+  private Integer consistencyGroupNum;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM = "consistency_group_snapshot_num";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT_NUM)
-  private Double consistencyGroupSnapshotNum;
+  private Integer consistencyGroupSnapshotNum;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS = "consistency_group_snapshots";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS)
-  private List<NameIdPair> consistencyGroupSnapshots = null;
+  private List<NestedConsistencyGroupSnapshot> consistencyGroupSnapshots = null;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUPS = "consistency_groups";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUPS)
-  private List<NameIdPair> consistencyGroups = null;
+  private List<NestedConsistencyGroup> consistencyGroups = null;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM = "content_library_image_num";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_NUM)
-  private Double contentLibraryImageNum;
+  private Integer contentLibraryImageNum;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES = "content_library_images";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGES)
-  private List<NameIdPair> contentLibraryImages = null;
+  private List<NestedContentLibraryImage> contentLibraryImages = null;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM = "content_library_vm_template_num";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE_NUM)
+  private Integer contentLibraryVmTemplateNum;
+
+  public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES = "content_library_vm_templates";
+  @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES)
+  private List<NestedContentLibraryVmTemplate> contentLibraryVmTemplates = null;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -72,35 +105,35 @@ public class Label {
 
   public static final String SERIALIZED_NAME_DATACENTER_NUM = "datacenter_num";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NUM)
-  private Double datacenterNum;
+  private Integer datacenterNum;
 
   public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
   @SerializedName(SERIALIZED_NAME_DATACENTERS)
-  private List<NameIdPair> datacenters = null;
+  private List<NestedDatacenter> datacenters = null;
 
   public static final String SERIALIZED_NAME_DISK_NUM = "disk_num";
   @SerializedName(SERIALIZED_NAME_DISK_NUM)
-  private Double diskNum;
+  private Integer diskNum;
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<NameIdPair> disks = null;
+  private List<NestedDisk> disks = null;
 
   public static final String SERIALIZED_NAME_ELF_IMAGE_NUM = "elf_image_num";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGE_NUM)
-  private Double elfImageNum;
+  private Integer elfImageNum;
 
   public static final String SERIALIZED_NAME_ELF_IMAGES = "elf_images";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES)
-  private List<NameIdPair> elfImages = null;
+  private List<NestedElfImage> elfImages = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<NameIdPair> hosts = null;
+  private List<NestedHost> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -108,35 +141,35 @@ public class Label {
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_NUM = "iscsi_lun_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_NUM)
-  private Double iscsiLunNum;
+  private Integer iscsiLunNum;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM = "iscsi_lun_snapshot_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOT_NUM)
-  private Double iscsiLunSnapshotNum;
+  private Integer iscsiLunSnapshotNum;
 
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS = "iscsi_lun_snapshots";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS)
-  private List<NameIdPair> iscsiLunSnapshots = null;
+  private List<NestedIscsiLunSnapshot> iscsiLunSnapshots = null;
 
   public static final String SERIALIZED_NAME_ISCSI_LUNS = "iscsi_luns";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUNS)
-  private List<NameIdPair> iscsiLuns = null;
+  private List<NestedIscsiLun> iscsiLuns = null;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_NUM = "iscsi_target_num";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_NUM)
-  private Double iscsiTargetNum;
+  private Integer iscsiTargetNum;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGETS = "iscsi_targets";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGETS)
-  private List<NameIdPair> iscsiTargets = null;
+  private List<NestedIscsiTarget> iscsiTargets = null;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICIES = "isolation_policies";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES)
-  private List<BrickTopoPowers> isolationPolicies = null;
+  private List<NestedIsolationPolicy> isolationPolicies = null;
 
   public static final String SERIALIZED_NAME_ISOLATION_POLICY_NUM = "isolation_policy_num";
   @SerializedName(SERIALIZED_NAME_ISOLATION_POLICY_NUM)
-  private Double isolationPolicyNum;
+  private Integer isolationPolicyNum;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
@@ -144,75 +177,75 @@ public class Label {
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_NUM = "namespace_group_num";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_NUM)
-  private Double namespaceGroupNum;
+  private Integer namespaceGroupNum;
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUPS = "namespace_groups";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUPS)
-  private List<NameIdPair> namespaceGroups = null;
+  private List<NestedNamespaceGroup> namespaceGroups = null;
 
   public static final String SERIALIZED_NAME_NFS_EXPORT_NUM = "nfs_export_num";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT_NUM)
-  private Double nfsExportNum;
+  private Integer nfsExportNum;
 
   public static final String SERIALIZED_NAME_NFS_EXPORTS = "nfs_exports";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORTS)
-  private List<NameIdPair> nfsExports = null;
+  private List<NestedNfsExport> nfsExports = null;
 
   public static final String SERIALIZED_NAME_NFS_INODE_NUM = "nfs_inode_num";
   @SerializedName(SERIALIZED_NAME_NFS_INODE_NUM)
-  private Double nfsInodeNum;
+  private Integer nfsInodeNum;
 
   public static final String SERIALIZED_NAME_NFS_INODES = "nfs_inodes";
   @SerializedName(SERIALIZED_NAME_NFS_INODES)
-  private List<NameIdPair> nfsInodes = null;
+  private List<NestedNfsInode> nfsInodes = null;
 
   public static final String SERIALIZED_NAME_NIC_NUM = "nic_num";
   @SerializedName(SERIALIZED_NAME_NIC_NUM)
-  private Double nicNum;
+  private Integer nicNum;
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<NameIdPair> nics = null;
+  private List<NestedNic> nics = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM = "nvmf_namespace_num";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM)
-  private Double nvmfNamespaceNum;
+  private Integer nvmfNamespaceNum;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM = "nvmf_namespace_snapshot_num";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOT_NUM)
-  private Double nvmfNamespaceSnapshotNum;
+  private Integer nvmfNamespaceSnapshotNum;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS = "nvmf_namespace_snapshots";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS)
-  private List<NameIdPair> nvmfNamespaceSnapshots = null;
+  private List<NestedNvmfNamespaceSnapshot> nvmfNamespaceSnapshots = null;
 
   public static final String SERIALIZED_NAME_NVMF_NAMESPACES = "nvmf_namespaces";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACES)
-  private List<NameIdPair> nvmfNamespaces = null;
+  private List<NestedNvmfNamespace> nvmfNamespaces = null;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM = "nvmf_subsystem_num";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_NUM)
-  private Double nvmfSubsystemNum;
+  private Integer nvmfSubsystemNum;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEMS = "nvmf_subsystems";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEMS)
-  private List<NameIdPair> nvmfSubsystems = null;
+  private List<NestedNvmfSubsystem> nvmfSubsystems = null;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICIES = "security_policies";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES)
-  private List<NameIdPair> securityPolicies = null;
+  private List<NestedSecurityPolicy> securityPolicies = null;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICY_NUM = "security_policy_num";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICY_NUM)
-  private Double securityPolicyNum;
+  private Integer securityPolicyNum;
 
   public static final String SERIALIZED_NAME_SYSTEM_VLAN_NUM = "system_vlan_num";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VLAN_NUM)
-  private Double systemVlanNum;
+  private Integer systemVlanNum;
 
   public static final String SERIALIZED_NAME_TOTAL_NUM = "total_num";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUM)
-  private Double totalNum;
+  private Integer totalNum;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -220,54 +253,54 @@ public class Label {
 
   public static final String SERIALIZED_NAME_VDS_NUM = "vds_num";
   @SerializedName(SERIALIZED_NAME_VDS_NUM)
-  private Double vdsNum;
+  private Integer vdsNum;
 
   public static final String SERIALIZED_NAME_VDSES = "vdses";
   @SerializedName(SERIALIZED_NAME_VDSES)
-  private List<NameIdPair> vdses = null;
+  private List<NestedVds> vdses = null;
 
   public static final String SERIALIZED_NAME_VLANS = "vlans";
   @SerializedName(SERIALIZED_NAME_VLANS)
-  private List<NameIdPair> vlans = null;
+  private List<NestedVlan> vlans = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOT_NUM = "vm_snapshot_num";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOT_NUM)
-  private Double vmSnapshotNum;
+  private Integer vmSnapshotNum;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<NameIdPair> vmSnapshots = null;
+  private List<NestedVmSnapshot> vmSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATE_NUM = "vm_template_num";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_NUM)
-  private Double vmTemplateNum;
+  private Integer vmTemplateNum;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<NameIdPair> vmTemplates = null;
+  private List<NestedVmTemplate> vmTemplates = null;
 
   public static final String SERIALIZED_NAME_VM_VLAN_NUM = "vm_vlan_num";
   @SerializedName(SERIALIZED_NAME_VM_VLAN_NUM)
-  private Double vmVlanNum;
+  private Integer vmVlanNum;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM = "vm_volume_num";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM)
-  private Double vmVolumeNum;
+  private Integer vmVolumeNum;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES = "vm_volumes";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES)
-  private List<NameIdPair> vmVolumes = null;
+  private List<NestedVmVolume> vmVolumes = null;
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
 
-  public Label clusterNum(Double clusterNum) {
+  public Label clusterNum(Integer clusterNum) {
     
     this.clusterNum = clusterNum;
     return this;
@@ -280,25 +313,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClusterNum() {
+  public Integer getClusterNum() {
     return clusterNum;
   }
 
 
-  public void setClusterNum(Double clusterNum) {
+  public void setClusterNum(Integer clusterNum) {
     this.clusterNum = clusterNum;
   }
 
 
-  public Label clusters(List<NameIdPair> clusters) {
+  public Label clusters(List<NestedCluster> clusters) {
     
     this.clusters = clusters;
     return this;
   }
 
-  public Label addClustersItem(NameIdPair clustersItem) {
+  public Label addClustersItem(NestedCluster clustersItem) {
     if (this.clusters == null) {
-      this.clusters = new ArrayList<NameIdPair>();
+      this.clusters = new ArrayList<NestedCluster>();
     }
     this.clusters.add(clustersItem);
     return this;
@@ -311,17 +344,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getClusters() {
+  public List<NestedCluster> getClusters() {
     return clusters;
   }
 
 
-  public void setClusters(List<NameIdPair> clusters) {
+  public void setClusters(List<NestedCluster> clusters) {
     this.clusters = clusters;
   }
 
 
-  public Label consistencyGroupNum(Double consistencyGroupNum) {
+  public Label consistencyGroupNum(Integer consistencyGroupNum) {
     
     this.consistencyGroupNum = consistencyGroupNum;
     return this;
@@ -334,17 +367,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupNum() {
+  public Integer getConsistencyGroupNum() {
     return consistencyGroupNum;
   }
 
 
-  public void setConsistencyGroupNum(Double consistencyGroupNum) {
+  public void setConsistencyGroupNum(Integer consistencyGroupNum) {
     this.consistencyGroupNum = consistencyGroupNum;
   }
 
 
-  public Label consistencyGroupSnapshotNum(Double consistencyGroupSnapshotNum) {
+  public Label consistencyGroupSnapshotNum(Integer consistencyGroupSnapshotNum) {
     
     this.consistencyGroupSnapshotNum = consistencyGroupSnapshotNum;
     return this;
@@ -357,25 +390,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getConsistencyGroupSnapshotNum() {
+  public Integer getConsistencyGroupSnapshotNum() {
     return consistencyGroupSnapshotNum;
   }
 
 
-  public void setConsistencyGroupSnapshotNum(Double consistencyGroupSnapshotNum) {
+  public void setConsistencyGroupSnapshotNum(Integer consistencyGroupSnapshotNum) {
     this.consistencyGroupSnapshotNum = consistencyGroupSnapshotNum;
   }
 
 
-  public Label consistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
+  public Label consistencyGroupSnapshots(List<NestedConsistencyGroupSnapshot> consistencyGroupSnapshots) {
     
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
     return this;
   }
 
-  public Label addConsistencyGroupSnapshotsItem(NameIdPair consistencyGroupSnapshotsItem) {
+  public Label addConsistencyGroupSnapshotsItem(NestedConsistencyGroupSnapshot consistencyGroupSnapshotsItem) {
     if (this.consistencyGroupSnapshots == null) {
-      this.consistencyGroupSnapshots = new ArrayList<NameIdPair>();
+      this.consistencyGroupSnapshots = new ArrayList<NestedConsistencyGroupSnapshot>();
     }
     this.consistencyGroupSnapshots.add(consistencyGroupSnapshotsItem);
     return this;
@@ -388,25 +421,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getConsistencyGroupSnapshots() {
+  public List<NestedConsistencyGroupSnapshot> getConsistencyGroupSnapshots() {
     return consistencyGroupSnapshots;
   }
 
 
-  public void setConsistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
+  public void setConsistencyGroupSnapshots(List<NestedConsistencyGroupSnapshot> consistencyGroupSnapshots) {
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
   }
 
 
-  public Label consistencyGroups(List<NameIdPair> consistencyGroups) {
+  public Label consistencyGroups(List<NestedConsistencyGroup> consistencyGroups) {
     
     this.consistencyGroups = consistencyGroups;
     return this;
   }
 
-  public Label addConsistencyGroupsItem(NameIdPair consistencyGroupsItem) {
+  public Label addConsistencyGroupsItem(NestedConsistencyGroup consistencyGroupsItem) {
     if (this.consistencyGroups == null) {
-      this.consistencyGroups = new ArrayList<NameIdPair>();
+      this.consistencyGroups = new ArrayList<NestedConsistencyGroup>();
     }
     this.consistencyGroups.add(consistencyGroupsItem);
     return this;
@@ -419,17 +452,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getConsistencyGroups() {
+  public List<NestedConsistencyGroup> getConsistencyGroups() {
     return consistencyGroups;
   }
 
 
-  public void setConsistencyGroups(List<NameIdPair> consistencyGroups) {
+  public void setConsistencyGroups(List<NestedConsistencyGroup> consistencyGroups) {
     this.consistencyGroups = consistencyGroups;
   }
 
 
-  public Label contentLibraryImageNum(Double contentLibraryImageNum) {
+  public Label contentLibraryImageNum(Integer contentLibraryImageNum) {
     
     this.contentLibraryImageNum = contentLibraryImageNum;
     return this;
@@ -442,25 +475,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getContentLibraryImageNum() {
+  public Integer getContentLibraryImageNum() {
     return contentLibraryImageNum;
   }
 
 
-  public void setContentLibraryImageNum(Double contentLibraryImageNum) {
+  public void setContentLibraryImageNum(Integer contentLibraryImageNum) {
     this.contentLibraryImageNum = contentLibraryImageNum;
   }
 
 
-  public Label contentLibraryImages(List<NameIdPair> contentLibraryImages) {
+  public Label contentLibraryImages(List<NestedContentLibraryImage> contentLibraryImages) {
     
     this.contentLibraryImages = contentLibraryImages;
     return this;
   }
 
-  public Label addContentLibraryImagesItem(NameIdPair contentLibraryImagesItem) {
+  public Label addContentLibraryImagesItem(NestedContentLibraryImage contentLibraryImagesItem) {
     if (this.contentLibraryImages == null) {
-      this.contentLibraryImages = new ArrayList<NameIdPair>();
+      this.contentLibraryImages = new ArrayList<NestedContentLibraryImage>();
     }
     this.contentLibraryImages.add(contentLibraryImagesItem);
     return this;
@@ -473,13 +506,67 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getContentLibraryImages() {
+  public List<NestedContentLibraryImage> getContentLibraryImages() {
     return contentLibraryImages;
   }
 
 
-  public void setContentLibraryImages(List<NameIdPair> contentLibraryImages) {
+  public void setContentLibraryImages(List<NestedContentLibraryImage> contentLibraryImages) {
     this.contentLibraryImages = contentLibraryImages;
+  }
+
+
+  public Label contentLibraryVmTemplateNum(Integer contentLibraryVmTemplateNum) {
+    
+    this.contentLibraryVmTemplateNum = contentLibraryVmTemplateNum;
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplateNum
+   * @return contentLibraryVmTemplateNum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getContentLibraryVmTemplateNum() {
+    return contentLibraryVmTemplateNum;
+  }
+
+
+  public void setContentLibraryVmTemplateNum(Integer contentLibraryVmTemplateNum) {
+    this.contentLibraryVmTemplateNum = contentLibraryVmTemplateNum;
+  }
+
+
+  public Label contentLibraryVmTemplates(List<NestedContentLibraryVmTemplate> contentLibraryVmTemplates) {
+    
+    this.contentLibraryVmTemplates = contentLibraryVmTemplates;
+    return this;
+  }
+
+  public Label addContentLibraryVmTemplatesItem(NestedContentLibraryVmTemplate contentLibraryVmTemplatesItem) {
+    if (this.contentLibraryVmTemplates == null) {
+      this.contentLibraryVmTemplates = new ArrayList<NestedContentLibraryVmTemplate>();
+    }
+    this.contentLibraryVmTemplates.add(contentLibraryVmTemplatesItem);
+    return this;
+  }
+
+   /**
+   * Get contentLibraryVmTemplates
+   * @return contentLibraryVmTemplates
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedContentLibraryVmTemplate> getContentLibraryVmTemplates() {
+    return contentLibraryVmTemplates;
+  }
+
+
+  public void setContentLibraryVmTemplates(List<NestedContentLibraryVmTemplate> contentLibraryVmTemplates) {
+    this.contentLibraryVmTemplates = contentLibraryVmTemplates;
   }
 
 
@@ -506,7 +593,7 @@ public class Label {
   }
 
 
-  public Label datacenterNum(Double datacenterNum) {
+  public Label datacenterNum(Integer datacenterNum) {
     
     this.datacenterNum = datacenterNum;
     return this;
@@ -519,25 +606,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDatacenterNum() {
+  public Integer getDatacenterNum() {
     return datacenterNum;
   }
 
 
-  public void setDatacenterNum(Double datacenterNum) {
+  public void setDatacenterNum(Integer datacenterNum) {
     this.datacenterNum = datacenterNum;
   }
 
 
-  public Label datacenters(List<NameIdPair> datacenters) {
+  public Label datacenters(List<NestedDatacenter> datacenters) {
     
     this.datacenters = datacenters;
     return this;
   }
 
-  public Label addDatacentersItem(NameIdPair datacentersItem) {
+  public Label addDatacentersItem(NestedDatacenter datacentersItem) {
     if (this.datacenters == null) {
-      this.datacenters = new ArrayList<NameIdPair>();
+      this.datacenters = new ArrayList<NestedDatacenter>();
     }
     this.datacenters.add(datacentersItem);
     return this;
@@ -550,17 +637,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getDatacenters() {
+  public List<NestedDatacenter> getDatacenters() {
     return datacenters;
   }
 
 
-  public void setDatacenters(List<NameIdPair> datacenters) {
+  public void setDatacenters(List<NestedDatacenter> datacenters) {
     this.datacenters = datacenters;
   }
 
 
-  public Label diskNum(Double diskNum) {
+  public Label diskNum(Integer diskNum) {
     
     this.diskNum = diskNum;
     return this;
@@ -573,25 +660,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getDiskNum() {
+  public Integer getDiskNum() {
     return diskNum;
   }
 
 
-  public void setDiskNum(Double diskNum) {
+  public void setDiskNum(Integer diskNum) {
     this.diskNum = diskNum;
   }
 
 
-  public Label disks(List<NameIdPair> disks) {
+  public Label disks(List<NestedDisk> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public Label addDisksItem(NameIdPair disksItem) {
+  public Label addDisksItem(NestedDisk disksItem) {
     if (this.disks == null) {
-      this.disks = new ArrayList<NameIdPair>();
+      this.disks = new ArrayList<NestedDisk>();
     }
     this.disks.add(disksItem);
     return this;
@@ -604,17 +691,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getDisks() {
+  public List<NestedDisk> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<NameIdPair> disks) {
+  public void setDisks(List<NestedDisk> disks) {
     this.disks = disks;
   }
 
 
-  public Label elfImageNum(Double elfImageNum) {
+  public Label elfImageNum(Integer elfImageNum) {
     
     this.elfImageNum = elfImageNum;
     return this;
@@ -627,25 +714,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getElfImageNum() {
+  public Integer getElfImageNum() {
     return elfImageNum;
   }
 
 
-  public void setElfImageNum(Double elfImageNum) {
+  public void setElfImageNum(Integer elfImageNum) {
     this.elfImageNum = elfImageNum;
   }
 
 
-  public Label elfImages(List<NameIdPair> elfImages) {
+  public Label elfImages(List<NestedElfImage> elfImages) {
     
     this.elfImages = elfImages;
     return this;
   }
 
-  public Label addElfImagesItem(NameIdPair elfImagesItem) {
+  public Label addElfImagesItem(NestedElfImage elfImagesItem) {
     if (this.elfImages == null) {
-      this.elfImages = new ArrayList<NameIdPair>();
+      this.elfImages = new ArrayList<NestedElfImage>();
     }
     this.elfImages.add(elfImagesItem);
     return this;
@@ -658,17 +745,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getElfImages() {
+  public List<NestedElfImage> getElfImages() {
     return elfImages;
   }
 
 
-  public void setElfImages(List<NameIdPair> elfImages) {
+  public void setElfImages(List<NestedElfImage> elfImages) {
     this.elfImages = elfImages;
   }
 
 
-  public Label hostNum(Double hostNum) {
+  public Label hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -681,25 +768,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public Label hosts(List<NameIdPair> hosts) {
+  public Label hosts(List<NestedHost> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Label addHostsItem(NameIdPair hostsItem) {
+  public Label addHostsItem(NestedHost hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<NameIdPair>();
+      this.hosts = new ArrayList<NestedHost>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -712,12 +799,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getHosts() {
+  public List<NestedHost> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<NameIdPair> hosts) {
+  public void setHosts(List<NestedHost> hosts) {
     this.hosts = hosts;
   }
 
@@ -745,7 +832,7 @@ public class Label {
   }
 
 
-  public Label iscsiLunNum(Double iscsiLunNum) {
+  public Label iscsiLunNum(Integer iscsiLunNum) {
     
     this.iscsiLunNum = iscsiLunNum;
     return this;
@@ -758,17 +845,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunNum() {
+  public Integer getIscsiLunNum() {
     return iscsiLunNum;
   }
 
 
-  public void setIscsiLunNum(Double iscsiLunNum) {
+  public void setIscsiLunNum(Integer iscsiLunNum) {
     this.iscsiLunNum = iscsiLunNum;
   }
 
 
-  public Label iscsiLunSnapshotNum(Double iscsiLunSnapshotNum) {
+  public Label iscsiLunSnapshotNum(Integer iscsiLunSnapshotNum) {
     
     this.iscsiLunSnapshotNum = iscsiLunSnapshotNum;
     return this;
@@ -781,25 +868,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiLunSnapshotNum() {
+  public Integer getIscsiLunSnapshotNum() {
     return iscsiLunSnapshotNum;
   }
 
 
-  public void setIscsiLunSnapshotNum(Double iscsiLunSnapshotNum) {
+  public void setIscsiLunSnapshotNum(Integer iscsiLunSnapshotNum) {
     this.iscsiLunSnapshotNum = iscsiLunSnapshotNum;
   }
 
 
-  public Label iscsiLunSnapshots(List<NameIdPair> iscsiLunSnapshots) {
+  public Label iscsiLunSnapshots(List<NestedIscsiLunSnapshot> iscsiLunSnapshots) {
     
     this.iscsiLunSnapshots = iscsiLunSnapshots;
     return this;
   }
 
-  public Label addIscsiLunSnapshotsItem(NameIdPair iscsiLunSnapshotsItem) {
+  public Label addIscsiLunSnapshotsItem(NestedIscsiLunSnapshot iscsiLunSnapshotsItem) {
     if (this.iscsiLunSnapshots == null) {
-      this.iscsiLunSnapshots = new ArrayList<NameIdPair>();
+      this.iscsiLunSnapshots = new ArrayList<NestedIscsiLunSnapshot>();
     }
     this.iscsiLunSnapshots.add(iscsiLunSnapshotsItem);
     return this;
@@ -812,25 +899,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getIscsiLunSnapshots() {
+  public List<NestedIscsiLunSnapshot> getIscsiLunSnapshots() {
     return iscsiLunSnapshots;
   }
 
 
-  public void setIscsiLunSnapshots(List<NameIdPair> iscsiLunSnapshots) {
+  public void setIscsiLunSnapshots(List<NestedIscsiLunSnapshot> iscsiLunSnapshots) {
     this.iscsiLunSnapshots = iscsiLunSnapshots;
   }
 
 
-  public Label iscsiLuns(List<NameIdPair> iscsiLuns) {
+  public Label iscsiLuns(List<NestedIscsiLun> iscsiLuns) {
     
     this.iscsiLuns = iscsiLuns;
     return this;
   }
 
-  public Label addIscsiLunsItem(NameIdPair iscsiLunsItem) {
+  public Label addIscsiLunsItem(NestedIscsiLun iscsiLunsItem) {
     if (this.iscsiLuns == null) {
-      this.iscsiLuns = new ArrayList<NameIdPair>();
+      this.iscsiLuns = new ArrayList<NestedIscsiLun>();
     }
     this.iscsiLuns.add(iscsiLunsItem);
     return this;
@@ -843,17 +930,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getIscsiLuns() {
+  public List<NestedIscsiLun> getIscsiLuns() {
     return iscsiLuns;
   }
 
 
-  public void setIscsiLuns(List<NameIdPair> iscsiLuns) {
+  public void setIscsiLuns(List<NestedIscsiLun> iscsiLuns) {
     this.iscsiLuns = iscsiLuns;
   }
 
 
-  public Label iscsiTargetNum(Double iscsiTargetNum) {
+  public Label iscsiTargetNum(Integer iscsiTargetNum) {
     
     this.iscsiTargetNum = iscsiTargetNum;
     return this;
@@ -866,25 +953,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIscsiTargetNum() {
+  public Integer getIscsiTargetNum() {
     return iscsiTargetNum;
   }
 
 
-  public void setIscsiTargetNum(Double iscsiTargetNum) {
+  public void setIscsiTargetNum(Integer iscsiTargetNum) {
     this.iscsiTargetNum = iscsiTargetNum;
   }
 
 
-  public Label iscsiTargets(List<NameIdPair> iscsiTargets) {
+  public Label iscsiTargets(List<NestedIscsiTarget> iscsiTargets) {
     
     this.iscsiTargets = iscsiTargets;
     return this;
   }
 
-  public Label addIscsiTargetsItem(NameIdPair iscsiTargetsItem) {
+  public Label addIscsiTargetsItem(NestedIscsiTarget iscsiTargetsItem) {
     if (this.iscsiTargets == null) {
-      this.iscsiTargets = new ArrayList<NameIdPair>();
+      this.iscsiTargets = new ArrayList<NestedIscsiTarget>();
     }
     this.iscsiTargets.add(iscsiTargetsItem);
     return this;
@@ -897,25 +984,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getIscsiTargets() {
+  public List<NestedIscsiTarget> getIscsiTargets() {
     return iscsiTargets;
   }
 
 
-  public void setIscsiTargets(List<NameIdPair> iscsiTargets) {
+  public void setIscsiTargets(List<NestedIscsiTarget> iscsiTargets) {
     this.iscsiTargets = iscsiTargets;
   }
 
 
-  public Label isolationPolicies(List<BrickTopoPowers> isolationPolicies) {
+  public Label isolationPolicies(List<NestedIsolationPolicy> isolationPolicies) {
     
     this.isolationPolicies = isolationPolicies;
     return this;
   }
 
-  public Label addIsolationPoliciesItem(BrickTopoPowers isolationPoliciesItem) {
+  public Label addIsolationPoliciesItem(NestedIsolationPolicy isolationPoliciesItem) {
     if (this.isolationPolicies == null) {
-      this.isolationPolicies = new ArrayList<BrickTopoPowers>();
+      this.isolationPolicies = new ArrayList<NestedIsolationPolicy>();
     }
     this.isolationPolicies.add(isolationPoliciesItem);
     return this;
@@ -928,17 +1015,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getIsolationPolicies() {
+  public List<NestedIsolationPolicy> getIsolationPolicies() {
     return isolationPolicies;
   }
 
 
-  public void setIsolationPolicies(List<BrickTopoPowers> isolationPolicies) {
+  public void setIsolationPolicies(List<NestedIsolationPolicy> isolationPolicies) {
     this.isolationPolicies = isolationPolicies;
   }
 
 
-  public Label isolationPolicyNum(Double isolationPolicyNum) {
+  public Label isolationPolicyNum(Integer isolationPolicyNum) {
     
     this.isolationPolicyNum = isolationPolicyNum;
     return this;
@@ -951,12 +1038,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIsolationPolicyNum() {
+  public Integer getIsolationPolicyNum() {
     return isolationPolicyNum;
   }
 
 
-  public void setIsolationPolicyNum(Double isolationPolicyNum) {
+  public void setIsolationPolicyNum(Integer isolationPolicyNum) {
     this.isolationPolicyNum = isolationPolicyNum;
   }
 
@@ -984,7 +1071,7 @@ public class Label {
   }
 
 
-  public Label namespaceGroupNum(Double namespaceGroupNum) {
+  public Label namespaceGroupNum(Integer namespaceGroupNum) {
     
     this.namespaceGroupNum = namespaceGroupNum;
     return this;
@@ -997,25 +1084,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceGroupNum() {
+  public Integer getNamespaceGroupNum() {
     return namespaceGroupNum;
   }
 
 
-  public void setNamespaceGroupNum(Double namespaceGroupNum) {
+  public void setNamespaceGroupNum(Integer namespaceGroupNum) {
     this.namespaceGroupNum = namespaceGroupNum;
   }
 
 
-  public Label namespaceGroups(List<NameIdPair> namespaceGroups) {
+  public Label namespaceGroups(List<NestedNamespaceGroup> namespaceGroups) {
     
     this.namespaceGroups = namespaceGroups;
     return this;
   }
 
-  public Label addNamespaceGroupsItem(NameIdPair namespaceGroupsItem) {
+  public Label addNamespaceGroupsItem(NestedNamespaceGroup namespaceGroupsItem) {
     if (this.namespaceGroups == null) {
-      this.namespaceGroups = new ArrayList<NameIdPair>();
+      this.namespaceGroups = new ArrayList<NestedNamespaceGroup>();
     }
     this.namespaceGroups.add(namespaceGroupsItem);
     return this;
@@ -1028,17 +1115,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNamespaceGroups() {
+  public List<NestedNamespaceGroup> getNamespaceGroups() {
     return namespaceGroups;
   }
 
 
-  public void setNamespaceGroups(List<NameIdPair> namespaceGroups) {
+  public void setNamespaceGroups(List<NestedNamespaceGroup> namespaceGroups) {
     this.namespaceGroups = namespaceGroups;
   }
 
 
-  public Label nfsExportNum(Double nfsExportNum) {
+  public Label nfsExportNum(Integer nfsExportNum) {
     
     this.nfsExportNum = nfsExportNum;
     return this;
@@ -1051,25 +1138,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsExportNum() {
+  public Integer getNfsExportNum() {
     return nfsExportNum;
   }
 
 
-  public void setNfsExportNum(Double nfsExportNum) {
+  public void setNfsExportNum(Integer nfsExportNum) {
     this.nfsExportNum = nfsExportNum;
   }
 
 
-  public Label nfsExports(List<NameIdPair> nfsExports) {
+  public Label nfsExports(List<NestedNfsExport> nfsExports) {
     
     this.nfsExports = nfsExports;
     return this;
   }
 
-  public Label addNfsExportsItem(NameIdPair nfsExportsItem) {
+  public Label addNfsExportsItem(NestedNfsExport nfsExportsItem) {
     if (this.nfsExports == null) {
-      this.nfsExports = new ArrayList<NameIdPair>();
+      this.nfsExports = new ArrayList<NestedNfsExport>();
     }
     this.nfsExports.add(nfsExportsItem);
     return this;
@@ -1082,17 +1169,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNfsExports() {
+  public List<NestedNfsExport> getNfsExports() {
     return nfsExports;
   }
 
 
-  public void setNfsExports(List<NameIdPair> nfsExports) {
+  public void setNfsExports(List<NestedNfsExport> nfsExports) {
     this.nfsExports = nfsExports;
   }
 
 
-  public Label nfsInodeNum(Double nfsInodeNum) {
+  public Label nfsInodeNum(Integer nfsInodeNum) {
     
     this.nfsInodeNum = nfsInodeNum;
     return this;
@@ -1105,25 +1192,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNfsInodeNum() {
+  public Integer getNfsInodeNum() {
     return nfsInodeNum;
   }
 
 
-  public void setNfsInodeNum(Double nfsInodeNum) {
+  public void setNfsInodeNum(Integer nfsInodeNum) {
     this.nfsInodeNum = nfsInodeNum;
   }
 
 
-  public Label nfsInodes(List<NameIdPair> nfsInodes) {
+  public Label nfsInodes(List<NestedNfsInode> nfsInodes) {
     
     this.nfsInodes = nfsInodes;
     return this;
   }
 
-  public Label addNfsInodesItem(NameIdPair nfsInodesItem) {
+  public Label addNfsInodesItem(NestedNfsInode nfsInodesItem) {
     if (this.nfsInodes == null) {
-      this.nfsInodes = new ArrayList<NameIdPair>();
+      this.nfsInodes = new ArrayList<NestedNfsInode>();
     }
     this.nfsInodes.add(nfsInodesItem);
     return this;
@@ -1136,17 +1223,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNfsInodes() {
+  public List<NestedNfsInode> getNfsInodes() {
     return nfsInodes;
   }
 
 
-  public void setNfsInodes(List<NameIdPair> nfsInodes) {
+  public void setNfsInodes(List<NestedNfsInode> nfsInodes) {
     this.nfsInodes = nfsInodes;
   }
 
 
-  public Label nicNum(Double nicNum) {
+  public Label nicNum(Integer nicNum) {
     
     this.nicNum = nicNum;
     return this;
@@ -1159,25 +1246,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNicNum() {
+  public Integer getNicNum() {
     return nicNum;
   }
 
 
-  public void setNicNum(Double nicNum) {
+  public void setNicNum(Integer nicNum) {
     this.nicNum = nicNum;
   }
 
 
-  public Label nics(List<NameIdPair> nics) {
+  public Label nics(List<NestedNic> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Label addNicsItem(NameIdPair nicsItem) {
+  public Label addNicsItem(NestedNic nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<NameIdPair>();
+      this.nics = new ArrayList<NestedNic>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -1190,17 +1277,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNics() {
+  public List<NestedNic> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<NameIdPair> nics) {
+  public void setNics(List<NestedNic> nics) {
     this.nics = nics;
   }
 
 
-  public Label nvmfNamespaceNum(Double nvmfNamespaceNum) {
+  public Label nvmfNamespaceNum(Integer nvmfNamespaceNum) {
     
     this.nvmfNamespaceNum = nvmfNamespaceNum;
     return this;
@@ -1213,17 +1300,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceNum() {
+  public Integer getNvmfNamespaceNum() {
     return nvmfNamespaceNum;
   }
 
 
-  public void setNvmfNamespaceNum(Double nvmfNamespaceNum) {
+  public void setNvmfNamespaceNum(Integer nvmfNamespaceNum) {
     this.nvmfNamespaceNum = nvmfNamespaceNum;
   }
 
 
-  public Label nvmfNamespaceSnapshotNum(Double nvmfNamespaceSnapshotNum) {
+  public Label nvmfNamespaceSnapshotNum(Integer nvmfNamespaceSnapshotNum) {
     
     this.nvmfNamespaceSnapshotNum = nvmfNamespaceSnapshotNum;
     return this;
@@ -1236,25 +1323,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfNamespaceSnapshotNum() {
+  public Integer getNvmfNamespaceSnapshotNum() {
     return nvmfNamespaceSnapshotNum;
   }
 
 
-  public void setNvmfNamespaceSnapshotNum(Double nvmfNamespaceSnapshotNum) {
+  public void setNvmfNamespaceSnapshotNum(Integer nvmfNamespaceSnapshotNum) {
     this.nvmfNamespaceSnapshotNum = nvmfNamespaceSnapshotNum;
   }
 
 
-  public Label nvmfNamespaceSnapshots(List<NameIdPair> nvmfNamespaceSnapshots) {
+  public Label nvmfNamespaceSnapshots(List<NestedNvmfNamespaceSnapshot> nvmfNamespaceSnapshots) {
     
     this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
     return this;
   }
 
-  public Label addNvmfNamespaceSnapshotsItem(NameIdPair nvmfNamespaceSnapshotsItem) {
+  public Label addNvmfNamespaceSnapshotsItem(NestedNvmfNamespaceSnapshot nvmfNamespaceSnapshotsItem) {
     if (this.nvmfNamespaceSnapshots == null) {
-      this.nvmfNamespaceSnapshots = new ArrayList<NameIdPair>();
+      this.nvmfNamespaceSnapshots = new ArrayList<NestedNvmfNamespaceSnapshot>();
     }
     this.nvmfNamespaceSnapshots.add(nvmfNamespaceSnapshotsItem);
     return this;
@@ -1267,25 +1354,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNvmfNamespaceSnapshots() {
+  public List<NestedNvmfNamespaceSnapshot> getNvmfNamespaceSnapshots() {
     return nvmfNamespaceSnapshots;
   }
 
 
-  public void setNvmfNamespaceSnapshots(List<NameIdPair> nvmfNamespaceSnapshots) {
+  public void setNvmfNamespaceSnapshots(List<NestedNvmfNamespaceSnapshot> nvmfNamespaceSnapshots) {
     this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
   }
 
 
-  public Label nvmfNamespaces(List<NameIdPair> nvmfNamespaces) {
+  public Label nvmfNamespaces(List<NestedNvmfNamespace> nvmfNamespaces) {
     
     this.nvmfNamespaces = nvmfNamespaces;
     return this;
   }
 
-  public Label addNvmfNamespacesItem(NameIdPair nvmfNamespacesItem) {
+  public Label addNvmfNamespacesItem(NestedNvmfNamespace nvmfNamespacesItem) {
     if (this.nvmfNamespaces == null) {
-      this.nvmfNamespaces = new ArrayList<NameIdPair>();
+      this.nvmfNamespaces = new ArrayList<NestedNvmfNamespace>();
     }
     this.nvmfNamespaces.add(nvmfNamespacesItem);
     return this;
@@ -1298,17 +1385,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNvmfNamespaces() {
+  public List<NestedNvmfNamespace> getNvmfNamespaces() {
     return nvmfNamespaces;
   }
 
 
-  public void setNvmfNamespaces(List<NameIdPair> nvmfNamespaces) {
+  public void setNvmfNamespaces(List<NestedNvmfNamespace> nvmfNamespaces) {
     this.nvmfNamespaces = nvmfNamespaces;
   }
 
 
-  public Label nvmfSubsystemNum(Double nvmfSubsystemNum) {
+  public Label nvmfSubsystemNum(Integer nvmfSubsystemNum) {
     
     this.nvmfSubsystemNum = nvmfSubsystemNum;
     return this;
@@ -1321,25 +1408,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNvmfSubsystemNum() {
+  public Integer getNvmfSubsystemNum() {
     return nvmfSubsystemNum;
   }
 
 
-  public void setNvmfSubsystemNum(Double nvmfSubsystemNum) {
+  public void setNvmfSubsystemNum(Integer nvmfSubsystemNum) {
     this.nvmfSubsystemNum = nvmfSubsystemNum;
   }
 
 
-  public Label nvmfSubsystems(List<NameIdPair> nvmfSubsystems) {
+  public Label nvmfSubsystems(List<NestedNvmfSubsystem> nvmfSubsystems) {
     
     this.nvmfSubsystems = nvmfSubsystems;
     return this;
   }
 
-  public Label addNvmfSubsystemsItem(NameIdPair nvmfSubsystemsItem) {
+  public Label addNvmfSubsystemsItem(NestedNvmfSubsystem nvmfSubsystemsItem) {
     if (this.nvmfSubsystems == null) {
-      this.nvmfSubsystems = new ArrayList<NameIdPair>();
+      this.nvmfSubsystems = new ArrayList<NestedNvmfSubsystem>();
     }
     this.nvmfSubsystems.add(nvmfSubsystemsItem);
     return this;
@@ -1352,25 +1439,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNvmfSubsystems() {
+  public List<NestedNvmfSubsystem> getNvmfSubsystems() {
     return nvmfSubsystems;
   }
 
 
-  public void setNvmfSubsystems(List<NameIdPair> nvmfSubsystems) {
+  public void setNvmfSubsystems(List<NestedNvmfSubsystem> nvmfSubsystems) {
     this.nvmfSubsystems = nvmfSubsystems;
   }
 
 
-  public Label securityPolicies(List<NameIdPair> securityPolicies) {
+  public Label securityPolicies(List<NestedSecurityPolicy> securityPolicies) {
     
     this.securityPolicies = securityPolicies;
     return this;
   }
 
-  public Label addSecurityPoliciesItem(NameIdPair securityPoliciesItem) {
+  public Label addSecurityPoliciesItem(NestedSecurityPolicy securityPoliciesItem) {
     if (this.securityPolicies == null) {
-      this.securityPolicies = new ArrayList<NameIdPair>();
+      this.securityPolicies = new ArrayList<NestedSecurityPolicy>();
     }
     this.securityPolicies.add(securityPoliciesItem);
     return this;
@@ -1383,17 +1470,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getSecurityPolicies() {
+  public List<NestedSecurityPolicy> getSecurityPolicies() {
     return securityPolicies;
   }
 
 
-  public void setSecurityPolicies(List<NameIdPair> securityPolicies) {
+  public void setSecurityPolicies(List<NestedSecurityPolicy> securityPolicies) {
     this.securityPolicies = securityPolicies;
   }
 
 
-  public Label securityPolicyNum(Double securityPolicyNum) {
+  public Label securityPolicyNum(Integer securityPolicyNum) {
     
     this.securityPolicyNum = securityPolicyNum;
     return this;
@@ -1406,17 +1493,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSecurityPolicyNum() {
+  public Integer getSecurityPolicyNum() {
     return securityPolicyNum;
   }
 
 
-  public void setSecurityPolicyNum(Double securityPolicyNum) {
+  public void setSecurityPolicyNum(Integer securityPolicyNum) {
     this.securityPolicyNum = securityPolicyNum;
   }
 
 
-  public Label systemVlanNum(Double systemVlanNum) {
+  public Label systemVlanNum(Integer systemVlanNum) {
     
     this.systemVlanNum = systemVlanNum;
     return this;
@@ -1429,17 +1516,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemVlanNum() {
+  public Integer getSystemVlanNum() {
     return systemVlanNum;
   }
 
 
-  public void setSystemVlanNum(Double systemVlanNum) {
+  public void setSystemVlanNum(Integer systemVlanNum) {
     this.systemVlanNum = systemVlanNum;
   }
 
 
-  public Label totalNum(Double totalNum) {
+  public Label totalNum(Integer totalNum) {
     
     this.totalNum = totalNum;
     return this;
@@ -1452,12 +1539,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalNum() {
+  public Integer getTotalNum() {
     return totalNum;
   }
 
 
-  public void setTotalNum(Double totalNum) {
+  public void setTotalNum(Integer totalNum) {
     this.totalNum = totalNum;
   }
 
@@ -1485,7 +1572,7 @@ public class Label {
   }
 
 
-  public Label vdsNum(Double vdsNum) {
+  public Label vdsNum(Integer vdsNum) {
     
     this.vdsNum = vdsNum;
     return this;
@@ -1498,25 +1585,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVdsNum() {
+  public Integer getVdsNum() {
     return vdsNum;
   }
 
 
-  public void setVdsNum(Double vdsNum) {
+  public void setVdsNum(Integer vdsNum) {
     this.vdsNum = vdsNum;
   }
 
 
-  public Label vdses(List<NameIdPair> vdses) {
+  public Label vdses(List<NestedVds> vdses) {
     
     this.vdses = vdses;
     return this;
   }
 
-  public Label addVdsesItem(NameIdPair vdsesItem) {
+  public Label addVdsesItem(NestedVds vdsesItem) {
     if (this.vdses == null) {
-      this.vdses = new ArrayList<NameIdPair>();
+      this.vdses = new ArrayList<NestedVds>();
     }
     this.vdses.add(vdsesItem);
     return this;
@@ -1529,25 +1616,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVdses() {
+  public List<NestedVds> getVdses() {
     return vdses;
   }
 
 
-  public void setVdses(List<NameIdPair> vdses) {
+  public void setVdses(List<NestedVds> vdses) {
     this.vdses = vdses;
   }
 
 
-  public Label vlans(List<NameIdPair> vlans) {
+  public Label vlans(List<NestedVlan> vlans) {
     
     this.vlans = vlans;
     return this;
   }
 
-  public Label addVlansItem(NameIdPair vlansItem) {
+  public Label addVlansItem(NestedVlan vlansItem) {
     if (this.vlans == null) {
-      this.vlans = new ArrayList<NameIdPair>();
+      this.vlans = new ArrayList<NestedVlan>();
     }
     this.vlans.add(vlansItem);
     return this;
@@ -1560,17 +1647,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVlans() {
+  public List<NestedVlan> getVlans() {
     return vlans;
   }
 
 
-  public void setVlans(List<NameIdPair> vlans) {
+  public void setVlans(List<NestedVlan> vlans) {
     this.vlans = vlans;
   }
 
 
-  public Label vmNum(Double vmNum) {
+  public Label vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -1583,17 +1670,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public Label vmSnapshotNum(Double vmSnapshotNum) {
+  public Label vmSnapshotNum(Integer vmSnapshotNum) {
     
     this.vmSnapshotNum = vmSnapshotNum;
     return this;
@@ -1606,25 +1693,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmSnapshotNum() {
+  public Integer getVmSnapshotNum() {
     return vmSnapshotNum;
   }
 
 
-  public void setVmSnapshotNum(Double vmSnapshotNum) {
+  public void setVmSnapshotNum(Integer vmSnapshotNum) {
     this.vmSnapshotNum = vmSnapshotNum;
   }
 
 
-  public Label vmSnapshots(List<NameIdPair> vmSnapshots) {
+  public Label vmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public Label addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
+  public Label addVmSnapshotsItem(NestedVmSnapshot vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<NameIdPair>();
+      this.vmSnapshots = new ArrayList<NestedVmSnapshot>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -1637,17 +1724,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmSnapshots() {
+  public List<NestedVmSnapshot> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
+  public void setVmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 
 
-  public Label vmTemplateNum(Double vmTemplateNum) {
+  public Label vmTemplateNum(Integer vmTemplateNum) {
     
     this.vmTemplateNum = vmTemplateNum;
     return this;
@@ -1660,25 +1747,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmTemplateNum() {
+  public Integer getVmTemplateNum() {
     return vmTemplateNum;
   }
 
 
-  public void setVmTemplateNum(Double vmTemplateNum) {
+  public void setVmTemplateNum(Integer vmTemplateNum) {
     this.vmTemplateNum = vmTemplateNum;
   }
 
 
-  public Label vmTemplates(List<NameIdPair> vmTemplates) {
+  public Label vmTemplates(List<NestedVmTemplate> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public Label addVmTemplatesItem(NameIdPair vmTemplatesItem) {
+  public Label addVmTemplatesItem(NestedVmTemplate vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<NameIdPair>();
+      this.vmTemplates = new ArrayList<NestedVmTemplate>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -1691,17 +1778,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmTemplates() {
+  public List<NestedVmTemplate> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<NameIdPair> vmTemplates) {
+  public void setVmTemplates(List<NestedVmTemplate> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 
 
-  public Label vmVlanNum(Double vmVlanNum) {
+  public Label vmVlanNum(Integer vmVlanNum) {
     
     this.vmVlanNum = vmVlanNum;
     return this;
@@ -1714,17 +1801,17 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVlanNum() {
+  public Integer getVmVlanNum() {
     return vmVlanNum;
   }
 
 
-  public void setVmVlanNum(Double vmVlanNum) {
+  public void setVmVlanNum(Integer vmVlanNum) {
     this.vmVlanNum = vmVlanNum;
   }
 
 
-  public Label vmVolumeNum(Double vmVolumeNum) {
+  public Label vmVolumeNum(Integer vmVolumeNum) {
     
     this.vmVolumeNum = vmVolumeNum;
     return this;
@@ -1737,25 +1824,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmVolumeNum() {
+  public Integer getVmVolumeNum() {
     return vmVolumeNum;
   }
 
 
-  public void setVmVolumeNum(Double vmVolumeNum) {
+  public void setVmVolumeNum(Integer vmVolumeNum) {
     this.vmVolumeNum = vmVolumeNum;
   }
 
 
-  public Label vmVolumes(List<NameIdPair> vmVolumes) {
+  public Label vmVolumes(List<NestedVmVolume> vmVolumes) {
     
     this.vmVolumes = vmVolumes;
     return this;
   }
 
-  public Label addVmVolumesItem(NameIdPair vmVolumesItem) {
+  public Label addVmVolumesItem(NestedVmVolume vmVolumesItem) {
     if (this.vmVolumes == null) {
-      this.vmVolumes = new ArrayList<NameIdPair>();
+      this.vmVolumes = new ArrayList<NestedVmVolume>();
     }
     this.vmVolumes.add(vmVolumesItem);
     return this;
@@ -1768,25 +1855,25 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmVolumes() {
+  public List<NestedVmVolume> getVmVolumes() {
     return vmVolumes;
   }
 
 
-  public void setVmVolumes(List<NameIdPair> vmVolumes) {
+  public void setVmVolumes(List<NestedVmVolume> vmVolumes) {
     this.vmVolumes = vmVolumes;
   }
 
 
-  public Label vms(List<NameIdPair> vms) {
+  public Label vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Label addVmsItem(NameIdPair vmsItem) {
+  public Label addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -1799,12 +1886,12 @@ public class Label {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 
@@ -1826,6 +1913,8 @@ public class Label {
         Objects.equals(this.consistencyGroups, label.consistencyGroups) &&
         Objects.equals(this.contentLibraryImageNum, label.contentLibraryImageNum) &&
         Objects.equals(this.contentLibraryImages, label.contentLibraryImages) &&
+        Objects.equals(this.contentLibraryVmTemplateNum, label.contentLibraryVmTemplateNum) &&
+        Objects.equals(this.contentLibraryVmTemplates, label.contentLibraryVmTemplates) &&
         Objects.equals(this.createdAt, label.createdAt) &&
         Objects.equals(this.datacenterNum, label.datacenterNum) &&
         Objects.equals(this.datacenters, label.datacenters) &&
@@ -1884,7 +1973,7 @@ public class Label {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clusterNum, clusters, consistencyGroupNum, consistencyGroupSnapshotNum, consistencyGroupSnapshots, consistencyGroups, contentLibraryImageNum, contentLibraryImages, createdAt, datacenterNum, datacenters, diskNum, disks, elfImageNum, elfImages, hostNum, hosts, id, iscsiLunNum, iscsiLunSnapshotNum, iscsiLunSnapshots, iscsiLuns, iscsiTargetNum, iscsiTargets, isolationPolicies, isolationPolicyNum, key, namespaceGroupNum, namespaceGroups, nfsExportNum, nfsExports, nfsInodeNum, nfsInodes, nicNum, nics, nvmfNamespaceNum, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshots, nvmfNamespaces, nvmfSubsystemNum, nvmfSubsystems, securityPolicies, securityPolicyNum, systemVlanNum, totalNum, value, vdsNum, vdses, vlans, vmNum, vmSnapshotNum, vmSnapshots, vmTemplateNum, vmTemplates, vmVlanNum, vmVolumeNum, vmVolumes, vms);
+    return Objects.hash(clusterNum, clusters, consistencyGroupNum, consistencyGroupSnapshotNum, consistencyGroupSnapshots, consistencyGroups, contentLibraryImageNum, contentLibraryImages, contentLibraryVmTemplateNum, contentLibraryVmTemplates, createdAt, datacenterNum, datacenters, diskNum, disks, elfImageNum, elfImages, hostNum, hosts, id, iscsiLunNum, iscsiLunSnapshotNum, iscsiLunSnapshots, iscsiLuns, iscsiTargetNum, iscsiTargets, isolationPolicies, isolationPolicyNum, key, namespaceGroupNum, namespaceGroups, nfsExportNum, nfsExports, nfsInodeNum, nfsInodes, nicNum, nics, nvmfNamespaceNum, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshots, nvmfNamespaces, nvmfSubsystemNum, nvmfSubsystems, securityPolicies, securityPolicyNum, systemVlanNum, totalNum, value, vdsNum, vdses, vlans, vmNum, vmSnapshotNum, vmSnapshots, vmTemplateNum, vmTemplates, vmVlanNum, vmVolumeNum, vmVolumes, vms);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1906,6 +1995,8 @@ public class Label {
     sb.append("    consistencyGroups: ").append(toIndentedString(consistencyGroups)).append("\n");
     sb.append("    contentLibraryImageNum: ").append(toIndentedString(contentLibraryImageNum)).append("\n");
     sb.append("    contentLibraryImages: ").append(toIndentedString(contentLibraryImages)).append("\n");
+    sb.append("    contentLibraryVmTemplateNum: ").append(toIndentedString(contentLibraryVmTemplateNum)).append("\n");
+    sb.append("    contentLibraryVmTemplates: ").append(toIndentedString(contentLibraryVmTemplates)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    datacenterNum: ").append(toIndentedString(datacenterNum)).append("\n");
     sb.append("    datacenters: ").append(toIndentedString(datacenters)).append("\n");

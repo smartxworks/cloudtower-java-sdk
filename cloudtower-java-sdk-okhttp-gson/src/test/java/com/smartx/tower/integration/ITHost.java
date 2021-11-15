@@ -47,6 +47,8 @@ public class ITHost extends ITBase {
       List<WithTaskBatchHosts> result = api.createHost(params, contentLanguage);
       assertThat(result).as("check result of createHost").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITHost extends ITBase {
       List<Host> result = api.getHosts(params, contentLanguage);
       assertThat(result).as("check result of getHosts").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITHost extends ITBase {
       HostConnection result = api.getHostsConnection(params, contentLanguage);
       assertThat(result).as("check result of getHostsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITHost extends ITBase {
       List<WithTaskHost> result = api.triggerDiskBlink(params, contentLanguage);
       assertThat(result).as("check result of triggerDiskBlink").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITHost extends ITBase {
       List<WithTaskHost> result = api.updateHost(params, contentLanguage);
       assertThat(result).as("check result of updateHost").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

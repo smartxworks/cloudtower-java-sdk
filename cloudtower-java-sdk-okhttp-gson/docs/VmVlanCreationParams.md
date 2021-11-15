@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **vdsId** | **String** |  | 
-**vlanId** | **Double** |  | 
+**vlanId** | **Integer** |  | 
 **name** | **String** |  | 
 
 

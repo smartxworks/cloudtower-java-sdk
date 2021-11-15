@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.SnmpAuthProtocol;
 import com.smartx.tower.model.SnmpLanguageCode;
 import com.smartx.tower.model.SnmpPrivacyProtocol;
@@ -47,7 +47,7 @@ public class SnmpTrapReceiver {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_COMMUNITY = "community";
   @SerializedName(SERIALIZED_NAME_COMMUNITY)
@@ -91,7 +91,7 @@ public class SnmpTrapReceiver {
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
-  private Double port;
+  private Integer port;
 
   public static final String SERIALIZED_NAME_PRIVACY_PASS_PHRASE = "privacy_pass_phrase";
   @SerializedName(SERIALIZED_NAME_PRIVACY_PASS_PHRASE)
@@ -160,7 +160,7 @@ public class SnmpTrapReceiver {
   }
 
 
-  public SnmpTrapReceiver cluster(NameIdPair cluster) {
+  public SnmpTrapReceiver cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -173,12 +173,12 @@ public class SnmpTrapReceiver {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -413,7 +413,7 @@ public class SnmpTrapReceiver {
   }
 
 
-  public SnmpTrapReceiver port(Double port) {
+  public SnmpTrapReceiver port(Integer port) {
     
     this.port = port;
     return this;
@@ -426,12 +426,12 @@ public class SnmpTrapReceiver {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPort() {
+  public Integer getPort() {
     return port;
   }
 
 
-  public void setPort(Double port) {
+  public void setPort(Integer port) {
     this.port = port;
   }
 

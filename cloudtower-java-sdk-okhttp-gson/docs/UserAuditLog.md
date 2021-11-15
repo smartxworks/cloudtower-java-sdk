@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **String** |  | 
-**cluster** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  |  [optional]
 **createdAt** | **String** |  | 
 **finishedAt** | **String** |  |  [optional]
 **id** | **String** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **resourceId** | **String** |  |  [optional]
 **resourceType** | **String** |  |  [optional]
 **status** | [**UserAuditLogStatus**](UserAuditLogStatus.md) |  |  [optional]
-**user** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**user** | [**NestedUser**](NestedUser.md) |  |  [optional]
 
 
 

@@ -20,10 +20,14 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedContentLibraryImage;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedUploadTask;
+import com.smartx.tower.model.NestedVmDisk;
+import com.smartx.tower.model.NestedVmSnapshot;
+import com.smartx.tower.model.NestedVmTemplate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -38,11 +42,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ElfImage {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE = "content_library_image";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE)
-  private NameIdPair contentLibraryImage;
+  private NestedContentLibraryImage contentLibraryImage;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -58,7 +62,7 @@ public class ElfImage {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -82,22 +86,22 @@ public class ElfImage {
 
   public static final String SERIALIZED_NAME_UPLOAD_TASK = "upload_task";
   @SerializedName(SERIALIZED_NAME_UPLOAD_TASK)
-  private AlertAlertRule uploadTask;
+  private NestedUploadTask uploadTask;
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
-  private List<BrickTopoPowers> vmDisks = null;
+  private List<NestedVmDisk> vmDisks = null;
 
   public static final String SERIALIZED_NAME_VM_SNAPSHOTS = "vm_snapshots";
   @SerializedName(SERIALIZED_NAME_VM_SNAPSHOTS)
-  private List<NameIdPair> vmSnapshots = null;
+  private List<NestedVmSnapshot> vmSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<NameIdPair> vmTemplates = null;
+  private List<NestedVmTemplate> vmTemplates = null;
 
 
-  public ElfImage cluster(NameIdPair cluster) {
+  public ElfImage cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -110,17 +114,17 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public ElfImage contentLibraryImage(NameIdPair contentLibraryImage) {
+  public ElfImage contentLibraryImage(NestedContentLibraryImage contentLibraryImage) {
     
     this.contentLibraryImage = contentLibraryImage;
     return this;
@@ -133,12 +137,12 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getContentLibraryImage() {
+  public NestedContentLibraryImage getContentLibraryImage() {
     return contentLibraryImage;
   }
 
 
-  public void setContentLibraryImage(NameIdPair contentLibraryImage) {
+  public void setContentLibraryImage(NestedContentLibraryImage contentLibraryImage) {
     this.contentLibraryImage = contentLibraryImage;
   }
 
@@ -212,15 +216,15 @@ public class ElfImage {
   }
 
 
-  public ElfImage labels(List<BrickTopoPowers> labels) {
+  public ElfImage labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public ElfImage addLabelsItem(BrickTopoPowers labelsItem) {
+  public ElfImage addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -233,12 +237,12 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -358,7 +362,7 @@ public class ElfImage {
   }
 
 
-  public ElfImage uploadTask(AlertAlertRule uploadTask) {
+  public ElfImage uploadTask(NestedUploadTask uploadTask) {
     
     this.uploadTask = uploadTask;
     return this;
@@ -371,25 +375,25 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getUploadTask() {
+  public NestedUploadTask getUploadTask() {
     return uploadTask;
   }
 
 
-  public void setUploadTask(AlertAlertRule uploadTask) {
+  public void setUploadTask(NestedUploadTask uploadTask) {
     this.uploadTask = uploadTask;
   }
 
 
-  public ElfImage vmDisks(List<BrickTopoPowers> vmDisks) {
+  public ElfImage vmDisks(List<NestedVmDisk> vmDisks) {
     
     this.vmDisks = vmDisks;
     return this;
   }
 
-  public ElfImage addVmDisksItem(BrickTopoPowers vmDisksItem) {
+  public ElfImage addVmDisksItem(NestedVmDisk vmDisksItem) {
     if (this.vmDisks == null) {
-      this.vmDisks = new ArrayList<BrickTopoPowers>();
+      this.vmDisks = new ArrayList<NestedVmDisk>();
     }
     this.vmDisks.add(vmDisksItem);
     return this;
@@ -402,25 +406,25 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmDisks() {
+  public List<NestedVmDisk> getVmDisks() {
     return vmDisks;
   }
 
 
-  public void setVmDisks(List<BrickTopoPowers> vmDisks) {
+  public void setVmDisks(List<NestedVmDisk> vmDisks) {
     this.vmDisks = vmDisks;
   }
 
 
-  public ElfImage vmSnapshots(List<NameIdPair> vmSnapshots) {
+  public ElfImage vmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     
     this.vmSnapshots = vmSnapshots;
     return this;
   }
 
-  public ElfImage addVmSnapshotsItem(NameIdPair vmSnapshotsItem) {
+  public ElfImage addVmSnapshotsItem(NestedVmSnapshot vmSnapshotsItem) {
     if (this.vmSnapshots == null) {
-      this.vmSnapshots = new ArrayList<NameIdPair>();
+      this.vmSnapshots = new ArrayList<NestedVmSnapshot>();
     }
     this.vmSnapshots.add(vmSnapshotsItem);
     return this;
@@ -433,25 +437,25 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmSnapshots() {
+  public List<NestedVmSnapshot> getVmSnapshots() {
     return vmSnapshots;
   }
 
 
-  public void setVmSnapshots(List<NameIdPair> vmSnapshots) {
+  public void setVmSnapshots(List<NestedVmSnapshot> vmSnapshots) {
     this.vmSnapshots = vmSnapshots;
   }
 
 
-  public ElfImage vmTemplates(List<NameIdPair> vmTemplates) {
+  public ElfImage vmTemplates(List<NestedVmTemplate> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public ElfImage addVmTemplatesItem(NameIdPair vmTemplatesItem) {
+  public ElfImage addVmTemplatesItem(NestedVmTemplate vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<NameIdPair>();
+      this.vmTemplates = new ArrayList<NestedVmTemplate>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -464,12 +468,12 @@ public class ElfImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmTemplates() {
+  public List<NestedVmTemplate> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<NameIdPair> vmTemplates) {
+  public void setVmTemplates(List<NestedVmTemplate> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 

@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **Double** |  | 
+**count** | **Integer** |  | 
 
 
 

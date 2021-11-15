@@ -20,8 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedAlertRule;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedDisk;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedVm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,7 +39,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Alert {
   public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
   @SerializedName(SERIALIZED_NAME_ALERT_RULE)
-  private AlertAlertRule alertRule;
+  private NestedAlertRule alertRule;
 
   public static final String SERIALIZED_NAME_CAUSE = "cause";
   @SerializedName(SERIALIZED_NAME_CAUSE)
@@ -44,11 +47,11 @@ public class Alert {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DISK = "disk";
   @SerializedName(SERIALIZED_NAME_DISK)
-  private NameIdPair disk;
+  private NestedDisk disk;
 
   public static final String SERIALIZED_NAME_ENDED = "ended";
   @SerializedName(SERIALIZED_NAME_ENDED)
@@ -56,7 +59,7 @@ public class Alert {
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -112,10 +115,10 @@ public class Alert {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
 
-  public Alert alertRule(AlertAlertRule alertRule) {
+  public Alert alertRule(NestedAlertRule alertRule) {
     
     this.alertRule = alertRule;
     return this;
@@ -128,12 +131,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getAlertRule() {
+  public NestedAlertRule getAlertRule() {
     return alertRule;
   }
 
 
-  public void setAlertRule(AlertAlertRule alertRule) {
+  public void setAlertRule(NestedAlertRule alertRule) {
     this.alertRule = alertRule;
   }
 
@@ -161,7 +164,7 @@ public class Alert {
   }
 
 
-  public Alert cluster(NameIdPair cluster) {
+  public Alert cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -174,17 +177,17 @@ public class Alert {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public Alert disk(NameIdPair disk) {
+  public Alert disk(NestedDisk disk) {
     
     this.disk = disk;
     return this;
@@ -197,12 +200,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getDisk() {
+  public NestedDisk getDisk() {
     return disk;
   }
 
 
-  public void setDisk(NameIdPair disk) {
+  public void setDisk(NestedDisk disk) {
     this.disk = disk;
   }
 
@@ -230,7 +233,7 @@ public class Alert {
   }
 
 
-  public Alert host(NameIdPair host) {
+  public Alert host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -243,12 +246,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -552,15 +555,15 @@ public class Alert {
   }
 
 
-  public Alert vms(List<NameIdPair> vms) {
+  public Alert vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Alert addVmsItem(NameIdPair vmsItem) {
+  public Alert addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -573,12 +576,12 @@ public class Alert {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 

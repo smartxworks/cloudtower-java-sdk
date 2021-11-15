@@ -15,11 +15,11 @@ Name | Type | Description | Notes
 **size** | **Double** |  | 
 **path** | **String** |  | 
 **maxIopsPolicy** | [**VmDiskIoRestrictType**](VmDiskIoRestrictType.md) |  |  [optional]
-**maxIops** | **Double** |  |  [optional]
+**maxIops** | **Integer** |  |  [optional]
 **maxBandwidthPolicy** | [**VmDiskIoRestrictType**](VmDiskIoRestrictType.md) |  |  [optional]
 **maxBandwidth** | **Double** |  |  [optional]
-**key** | **Double** |  |  [optional]
-**index** | **Double** |  | 
+**key** | **Integer** |  |  [optional]
+**index** | **Integer** |  | 
 **imageName** | **String** |  |  [optional]
 **elfImageLocalId** | **String** |  | 
 **diskName** | **String** |  |  [optional]

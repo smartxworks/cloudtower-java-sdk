@@ -283,35 +283,35 @@ public class VcenterAccountWhereInput {
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
-  private Double port;
+  private Integer port;
 
   public static final String SERIALIZED_NAME_PORT_GT = "port_gt";
   @SerializedName(SERIALIZED_NAME_PORT_GT)
-  private Double portGt;
+  private Integer portGt;
 
   public static final String SERIALIZED_NAME_PORT_GTE = "port_gte";
   @SerializedName(SERIALIZED_NAME_PORT_GTE)
-  private Double portGte;
+  private Integer portGte;
 
   public static final String SERIALIZED_NAME_PORT_IN = "port_in";
   @SerializedName(SERIALIZED_NAME_PORT_IN)
-  private List<Double> portIn = null;
+  private List<Integer> portIn = null;
 
   public static final String SERIALIZED_NAME_PORT_LT = "port_lt";
   @SerializedName(SERIALIZED_NAME_PORT_LT)
-  private Double portLt;
+  private Integer portLt;
 
   public static final String SERIALIZED_NAME_PORT_LTE = "port_lte";
   @SerializedName(SERIALIZED_NAME_PORT_LTE)
-  private Double portLte;
+  private Integer portLte;
 
   public static final String SERIALIZED_NAME_PORT_NOT = "port_not";
   @SerializedName(SERIALIZED_NAME_PORT_NOT)
-  private Double portNot;
+  private Integer portNot;
 
   public static final String SERIALIZED_NAME_PORT_NOT_IN = "port_not_in";
   @SerializedName(SERIALIZED_NAME_PORT_NOT_IN)
-  private List<Double> portNotIn = null;
+  private List<Integer> portNotIn = null;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
@@ -1884,7 +1884,7 @@ public class VcenterAccountWhereInput {
   }
 
 
-  public VcenterAccountWhereInput port(Double port) {
+  public VcenterAccountWhereInput port(Integer port) {
     
     this.port = port;
     return this;
@@ -1897,17 +1897,17 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPort() {
+  public Integer getPort() {
     return port;
   }
 
 
-  public void setPort(Double port) {
+  public void setPort(Integer port) {
     this.port = port;
   }
 
 
-  public VcenterAccountWhereInput portGt(Double portGt) {
+  public VcenterAccountWhereInput portGt(Integer portGt) {
     
     this.portGt = portGt;
     return this;
@@ -1920,17 +1920,17 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPortGt() {
+  public Integer getPortGt() {
     return portGt;
   }
 
 
-  public void setPortGt(Double portGt) {
+  public void setPortGt(Integer portGt) {
     this.portGt = portGt;
   }
 
 
-  public VcenterAccountWhereInput portGte(Double portGte) {
+  public VcenterAccountWhereInput portGte(Integer portGte) {
     
     this.portGte = portGte;
     return this;
@@ -1943,25 +1943,25 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPortGte() {
+  public Integer getPortGte() {
     return portGte;
   }
 
 
-  public void setPortGte(Double portGte) {
+  public void setPortGte(Integer portGte) {
     this.portGte = portGte;
   }
 
 
-  public VcenterAccountWhereInput portIn(List<Double> portIn) {
+  public VcenterAccountWhereInput portIn(List<Integer> portIn) {
     
     this.portIn = portIn;
     return this;
   }
 
-  public VcenterAccountWhereInput addPortInItem(Double portInItem) {
+  public VcenterAccountWhereInput addPortInItem(Integer portInItem) {
     if (this.portIn == null) {
-      this.portIn = new ArrayList<Double>();
+      this.portIn = new ArrayList<Integer>();
     }
     this.portIn.add(portInItem);
     return this;
@@ -1974,17 +1974,17 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPortIn() {
+  public List<Integer> getPortIn() {
     return portIn;
   }
 
 
-  public void setPortIn(List<Double> portIn) {
+  public void setPortIn(List<Integer> portIn) {
     this.portIn = portIn;
   }
 
 
-  public VcenterAccountWhereInput portLt(Double portLt) {
+  public VcenterAccountWhereInput portLt(Integer portLt) {
     
     this.portLt = portLt;
     return this;
@@ -1997,17 +1997,17 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPortLt() {
+  public Integer getPortLt() {
     return portLt;
   }
 
 
-  public void setPortLt(Double portLt) {
+  public void setPortLt(Integer portLt) {
     this.portLt = portLt;
   }
 
 
-  public VcenterAccountWhereInput portLte(Double portLte) {
+  public VcenterAccountWhereInput portLte(Integer portLte) {
     
     this.portLte = portLte;
     return this;
@@ -2020,17 +2020,17 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPortLte() {
+  public Integer getPortLte() {
     return portLte;
   }
 
 
-  public void setPortLte(Double portLte) {
+  public void setPortLte(Integer portLte) {
     this.portLte = portLte;
   }
 
 
-  public VcenterAccountWhereInput portNot(Double portNot) {
+  public VcenterAccountWhereInput portNot(Integer portNot) {
     
     this.portNot = portNot;
     return this;
@@ -2043,25 +2043,25 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPortNot() {
+  public Integer getPortNot() {
     return portNot;
   }
 
 
-  public void setPortNot(Double portNot) {
+  public void setPortNot(Integer portNot) {
     this.portNot = portNot;
   }
 
 
-  public VcenterAccountWhereInput portNotIn(List<Double> portNotIn) {
+  public VcenterAccountWhereInput portNotIn(List<Integer> portNotIn) {
     
     this.portNotIn = portNotIn;
     return this;
   }
 
-  public VcenterAccountWhereInput addPortNotInItem(Double portNotInItem) {
+  public VcenterAccountWhereInput addPortNotInItem(Integer portNotInItem) {
     if (this.portNotIn == null) {
-      this.portNotIn = new ArrayList<Double>();
+      this.portNotIn = new ArrayList<Integer>();
     }
     this.portNotIn.add(portNotInItem);
     return this;
@@ -2074,12 +2074,12 @@ public class VcenterAccountWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPortNotIn() {
+  public List<Integer> getPortNotIn() {
     return portNotIn;
   }
 
 
-  public void setPortNotIn(List<Double> portNotIn) {
+  public void setPortNotIn(List<Integer> portNotIn) {
     this.portNotIn = portNotIn;
   }
 

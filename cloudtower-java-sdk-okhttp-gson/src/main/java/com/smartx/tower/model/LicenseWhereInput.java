@@ -248,67 +248,67 @@ public class LicenseWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM = "max_chunk_num";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM)
-  private Double maxChunkNum;
+  private Integer maxChunkNum;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_GT = "max_chunk_num_gt";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_GT)
-  private Double maxChunkNumGt;
+  private Integer maxChunkNumGt;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_GTE = "max_chunk_num_gte";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_GTE)
-  private Double maxChunkNumGte;
+  private Integer maxChunkNumGte;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_IN = "max_chunk_num_in";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_IN)
-  private List<Double> maxChunkNumIn = null;
+  private List<Integer> maxChunkNumIn = null;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_LT = "max_chunk_num_lt";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_LT)
-  private Double maxChunkNumLt;
+  private Integer maxChunkNumLt;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_LTE = "max_chunk_num_lte";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_LTE)
-  private Double maxChunkNumLte;
+  private Integer maxChunkNumLte;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_NOT = "max_chunk_num_not";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_NOT)
-  private Double maxChunkNumNot;
+  private Integer maxChunkNumNot;
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM_NOT_IN = "max_chunk_num_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM_NOT_IN)
-  private List<Double> maxChunkNumNotIn = null;
+  private List<Integer> maxChunkNumNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM = "max_cluster_num";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM)
-  private Double maxClusterNum;
+  private Integer maxClusterNum;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_GT = "max_cluster_num_gt";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_GT)
-  private Double maxClusterNumGt;
+  private Integer maxClusterNumGt;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_GTE = "max_cluster_num_gte";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_GTE)
-  private Double maxClusterNumGte;
+  private Integer maxClusterNumGte;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_IN = "max_cluster_num_in";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_IN)
-  private List<Double> maxClusterNumIn = null;
+  private List<Integer> maxClusterNumIn = null;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_LT = "max_cluster_num_lt";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_LT)
-  private Double maxClusterNumLt;
+  private Integer maxClusterNumLt;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_LTE = "max_cluster_num_lte";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_LTE)
-  private Double maxClusterNumLte;
+  private Integer maxClusterNumLte;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_NOT = "max_cluster_num_not";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_NOT)
-  private Double maxClusterNumNot;
+  private Integer maxClusterNumNot;
 
   public static final String SERIALIZED_NAME_MAX_CLUSTER_NUM_NOT_IN = "max_cluster_num_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_CLUSTER_NUM_NOT_IN)
-  private List<Double> maxClusterNumNotIn = null;
+  private List<Integer> maxClusterNumNotIn = null;
 
   public static final String SERIALIZED_NAME_N_O_T = "NOT";
   @SerializedName(SERIALIZED_NAME_N_O_T)
@@ -1690,7 +1690,7 @@ public class LicenseWhereInput {
   }
 
 
-  public LicenseWhereInput maxChunkNum(Double maxChunkNum) {
+  public LicenseWhereInput maxChunkNum(Integer maxChunkNum) {
     
     this.maxChunkNum = maxChunkNum;
     return this;
@@ -1703,17 +1703,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNum() {
+  public Integer getMaxChunkNum() {
     return maxChunkNum;
   }
 
 
-  public void setMaxChunkNum(Double maxChunkNum) {
+  public void setMaxChunkNum(Integer maxChunkNum) {
     this.maxChunkNum = maxChunkNum;
   }
 
 
-  public LicenseWhereInput maxChunkNumGt(Double maxChunkNumGt) {
+  public LicenseWhereInput maxChunkNumGt(Integer maxChunkNumGt) {
     
     this.maxChunkNumGt = maxChunkNumGt;
     return this;
@@ -1726,17 +1726,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumGt() {
+  public Integer getMaxChunkNumGt() {
     return maxChunkNumGt;
   }
 
 
-  public void setMaxChunkNumGt(Double maxChunkNumGt) {
+  public void setMaxChunkNumGt(Integer maxChunkNumGt) {
     this.maxChunkNumGt = maxChunkNumGt;
   }
 
 
-  public LicenseWhereInput maxChunkNumGte(Double maxChunkNumGte) {
+  public LicenseWhereInput maxChunkNumGte(Integer maxChunkNumGte) {
     
     this.maxChunkNumGte = maxChunkNumGte;
     return this;
@@ -1749,25 +1749,25 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumGte() {
+  public Integer getMaxChunkNumGte() {
     return maxChunkNumGte;
   }
 
 
-  public void setMaxChunkNumGte(Double maxChunkNumGte) {
+  public void setMaxChunkNumGte(Integer maxChunkNumGte) {
     this.maxChunkNumGte = maxChunkNumGte;
   }
 
 
-  public LicenseWhereInput maxChunkNumIn(List<Double> maxChunkNumIn) {
+  public LicenseWhereInput maxChunkNumIn(List<Integer> maxChunkNumIn) {
     
     this.maxChunkNumIn = maxChunkNumIn;
     return this;
   }
 
-  public LicenseWhereInput addMaxChunkNumInItem(Double maxChunkNumInItem) {
+  public LicenseWhereInput addMaxChunkNumInItem(Integer maxChunkNumInItem) {
     if (this.maxChunkNumIn == null) {
-      this.maxChunkNumIn = new ArrayList<Double>();
+      this.maxChunkNumIn = new ArrayList<Integer>();
     }
     this.maxChunkNumIn.add(maxChunkNumInItem);
     return this;
@@ -1780,17 +1780,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxChunkNumIn() {
+  public List<Integer> getMaxChunkNumIn() {
     return maxChunkNumIn;
   }
 
 
-  public void setMaxChunkNumIn(List<Double> maxChunkNumIn) {
+  public void setMaxChunkNumIn(List<Integer> maxChunkNumIn) {
     this.maxChunkNumIn = maxChunkNumIn;
   }
 
 
-  public LicenseWhereInput maxChunkNumLt(Double maxChunkNumLt) {
+  public LicenseWhereInput maxChunkNumLt(Integer maxChunkNumLt) {
     
     this.maxChunkNumLt = maxChunkNumLt;
     return this;
@@ -1803,17 +1803,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumLt() {
+  public Integer getMaxChunkNumLt() {
     return maxChunkNumLt;
   }
 
 
-  public void setMaxChunkNumLt(Double maxChunkNumLt) {
+  public void setMaxChunkNumLt(Integer maxChunkNumLt) {
     this.maxChunkNumLt = maxChunkNumLt;
   }
 
 
-  public LicenseWhereInput maxChunkNumLte(Double maxChunkNumLte) {
+  public LicenseWhereInput maxChunkNumLte(Integer maxChunkNumLte) {
     
     this.maxChunkNumLte = maxChunkNumLte;
     return this;
@@ -1826,17 +1826,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumLte() {
+  public Integer getMaxChunkNumLte() {
     return maxChunkNumLte;
   }
 
 
-  public void setMaxChunkNumLte(Double maxChunkNumLte) {
+  public void setMaxChunkNumLte(Integer maxChunkNumLte) {
     this.maxChunkNumLte = maxChunkNumLte;
   }
 
 
-  public LicenseWhereInput maxChunkNumNot(Double maxChunkNumNot) {
+  public LicenseWhereInput maxChunkNumNot(Integer maxChunkNumNot) {
     
     this.maxChunkNumNot = maxChunkNumNot;
     return this;
@@ -1849,25 +1849,25 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNumNot() {
+  public Integer getMaxChunkNumNot() {
     return maxChunkNumNot;
   }
 
 
-  public void setMaxChunkNumNot(Double maxChunkNumNot) {
+  public void setMaxChunkNumNot(Integer maxChunkNumNot) {
     this.maxChunkNumNot = maxChunkNumNot;
   }
 
 
-  public LicenseWhereInput maxChunkNumNotIn(List<Double> maxChunkNumNotIn) {
+  public LicenseWhereInput maxChunkNumNotIn(List<Integer> maxChunkNumNotIn) {
     
     this.maxChunkNumNotIn = maxChunkNumNotIn;
     return this;
   }
 
-  public LicenseWhereInput addMaxChunkNumNotInItem(Double maxChunkNumNotInItem) {
+  public LicenseWhereInput addMaxChunkNumNotInItem(Integer maxChunkNumNotInItem) {
     if (this.maxChunkNumNotIn == null) {
-      this.maxChunkNumNotIn = new ArrayList<Double>();
+      this.maxChunkNumNotIn = new ArrayList<Integer>();
     }
     this.maxChunkNumNotIn.add(maxChunkNumNotInItem);
     return this;
@@ -1880,17 +1880,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxChunkNumNotIn() {
+  public List<Integer> getMaxChunkNumNotIn() {
     return maxChunkNumNotIn;
   }
 
 
-  public void setMaxChunkNumNotIn(List<Double> maxChunkNumNotIn) {
+  public void setMaxChunkNumNotIn(List<Integer> maxChunkNumNotIn) {
     this.maxChunkNumNotIn = maxChunkNumNotIn;
   }
 
 
-  public LicenseWhereInput maxClusterNum(Double maxClusterNum) {
+  public LicenseWhereInput maxClusterNum(Integer maxClusterNum) {
     
     this.maxClusterNum = maxClusterNum;
     return this;
@@ -1903,17 +1903,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxClusterNum() {
+  public Integer getMaxClusterNum() {
     return maxClusterNum;
   }
 
 
-  public void setMaxClusterNum(Double maxClusterNum) {
+  public void setMaxClusterNum(Integer maxClusterNum) {
     this.maxClusterNum = maxClusterNum;
   }
 
 
-  public LicenseWhereInput maxClusterNumGt(Double maxClusterNumGt) {
+  public LicenseWhereInput maxClusterNumGt(Integer maxClusterNumGt) {
     
     this.maxClusterNumGt = maxClusterNumGt;
     return this;
@@ -1926,17 +1926,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxClusterNumGt() {
+  public Integer getMaxClusterNumGt() {
     return maxClusterNumGt;
   }
 
 
-  public void setMaxClusterNumGt(Double maxClusterNumGt) {
+  public void setMaxClusterNumGt(Integer maxClusterNumGt) {
     this.maxClusterNumGt = maxClusterNumGt;
   }
 
 
-  public LicenseWhereInput maxClusterNumGte(Double maxClusterNumGte) {
+  public LicenseWhereInput maxClusterNumGte(Integer maxClusterNumGte) {
     
     this.maxClusterNumGte = maxClusterNumGte;
     return this;
@@ -1949,25 +1949,25 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxClusterNumGte() {
+  public Integer getMaxClusterNumGte() {
     return maxClusterNumGte;
   }
 
 
-  public void setMaxClusterNumGte(Double maxClusterNumGte) {
+  public void setMaxClusterNumGte(Integer maxClusterNumGte) {
     this.maxClusterNumGte = maxClusterNumGte;
   }
 
 
-  public LicenseWhereInput maxClusterNumIn(List<Double> maxClusterNumIn) {
+  public LicenseWhereInput maxClusterNumIn(List<Integer> maxClusterNumIn) {
     
     this.maxClusterNumIn = maxClusterNumIn;
     return this;
   }
 
-  public LicenseWhereInput addMaxClusterNumInItem(Double maxClusterNumInItem) {
+  public LicenseWhereInput addMaxClusterNumInItem(Integer maxClusterNumInItem) {
     if (this.maxClusterNumIn == null) {
-      this.maxClusterNumIn = new ArrayList<Double>();
+      this.maxClusterNumIn = new ArrayList<Integer>();
     }
     this.maxClusterNumIn.add(maxClusterNumInItem);
     return this;
@@ -1980,17 +1980,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxClusterNumIn() {
+  public List<Integer> getMaxClusterNumIn() {
     return maxClusterNumIn;
   }
 
 
-  public void setMaxClusterNumIn(List<Double> maxClusterNumIn) {
+  public void setMaxClusterNumIn(List<Integer> maxClusterNumIn) {
     this.maxClusterNumIn = maxClusterNumIn;
   }
 
 
-  public LicenseWhereInput maxClusterNumLt(Double maxClusterNumLt) {
+  public LicenseWhereInput maxClusterNumLt(Integer maxClusterNumLt) {
     
     this.maxClusterNumLt = maxClusterNumLt;
     return this;
@@ -2003,17 +2003,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxClusterNumLt() {
+  public Integer getMaxClusterNumLt() {
     return maxClusterNumLt;
   }
 
 
-  public void setMaxClusterNumLt(Double maxClusterNumLt) {
+  public void setMaxClusterNumLt(Integer maxClusterNumLt) {
     this.maxClusterNumLt = maxClusterNumLt;
   }
 
 
-  public LicenseWhereInput maxClusterNumLte(Double maxClusterNumLte) {
+  public LicenseWhereInput maxClusterNumLte(Integer maxClusterNumLte) {
     
     this.maxClusterNumLte = maxClusterNumLte;
     return this;
@@ -2026,17 +2026,17 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxClusterNumLte() {
+  public Integer getMaxClusterNumLte() {
     return maxClusterNumLte;
   }
 
 
-  public void setMaxClusterNumLte(Double maxClusterNumLte) {
+  public void setMaxClusterNumLte(Integer maxClusterNumLte) {
     this.maxClusterNumLte = maxClusterNumLte;
   }
 
 
-  public LicenseWhereInput maxClusterNumNot(Double maxClusterNumNot) {
+  public LicenseWhereInput maxClusterNumNot(Integer maxClusterNumNot) {
     
     this.maxClusterNumNot = maxClusterNumNot;
     return this;
@@ -2049,25 +2049,25 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxClusterNumNot() {
+  public Integer getMaxClusterNumNot() {
     return maxClusterNumNot;
   }
 
 
-  public void setMaxClusterNumNot(Double maxClusterNumNot) {
+  public void setMaxClusterNumNot(Integer maxClusterNumNot) {
     this.maxClusterNumNot = maxClusterNumNot;
   }
 
 
-  public LicenseWhereInput maxClusterNumNotIn(List<Double> maxClusterNumNotIn) {
+  public LicenseWhereInput maxClusterNumNotIn(List<Integer> maxClusterNumNotIn) {
     
     this.maxClusterNumNotIn = maxClusterNumNotIn;
     return this;
   }
 
-  public LicenseWhereInput addMaxClusterNumNotInItem(Double maxClusterNumNotInItem) {
+  public LicenseWhereInput addMaxClusterNumNotInItem(Integer maxClusterNumNotInItem) {
     if (this.maxClusterNumNotIn == null) {
-      this.maxClusterNumNotIn = new ArrayList<Double>();
+      this.maxClusterNumNotIn = new ArrayList<Integer>();
     }
     this.maxClusterNumNotIn.add(maxClusterNumNotInItem);
     return this;
@@ -2080,12 +2080,12 @@ public class LicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxClusterNumNotIn() {
+  public List<Integer> getMaxClusterNumNotIn() {
     return maxClusterNumNotIn;
   }
 
 
-  public void setMaxClusterNumNotIn(List<Double> maxClusterNumNotIn) {
+  public void setMaxClusterNumNotIn(List<Integer> maxClusterNumNotIn) {
     this.maxClusterNumNotIn = maxClusterNumNotIn;
   }
 

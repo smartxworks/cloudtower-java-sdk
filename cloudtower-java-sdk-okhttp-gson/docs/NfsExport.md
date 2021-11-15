@@ -7,18 +7,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **exportInodeId** | **String** |  | 
 **id** | **String** |  | 
-**inodes** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**inodes** | [**List&lt;NestedNfsInode&gt;**](NestedNfsInode.md) |  |  [optional]
 **internal** | **Boolean** |  | 
 **ipWhitelist** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**replicaNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
 **thinProvision** | **Boolean** |  | 
 
 

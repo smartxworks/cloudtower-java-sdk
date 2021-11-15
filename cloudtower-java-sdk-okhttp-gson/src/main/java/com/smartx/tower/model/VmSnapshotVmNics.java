@@ -58,7 +58,7 @@ public class VmSnapshotVmNics {
 
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
-  private Double index;
+  private Integer index;
 
   public static final String SERIALIZED_NAME_GATEWAY = "gateway";
   @SerializedName(SERIALIZED_NAME_GATEWAY)
@@ -207,7 +207,7 @@ public class VmSnapshotVmNics {
   }
 
 
-  public VmSnapshotVmNics index(Double index) {
+  public VmSnapshotVmNics index(Integer index) {
     
     this.index = index;
     return this;
@@ -220,12 +220,12 @@ public class VmSnapshotVmNics {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIndex() {
+  public Integer getIndex() {
     return index;
   }
 
 
-  public void setIndex(Double index) {
+  public void setIndex(Integer index) {
     this.index = index;
   }
 

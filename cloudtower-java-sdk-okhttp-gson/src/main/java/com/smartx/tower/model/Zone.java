@@ -20,7 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedDatacenter;
+import com.smartx.tower.model.NestedHost;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,11 +37,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Zone {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DATACENTER = "datacenter";
   @SerializedName(SERIALIZED_NAME_DATACENTER)
-  private NameIdPair datacenter;
+  private NestedDatacenter datacenter;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -47,11 +49,11 @@ public class Zone {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<NameIdPair> hosts = null;
+  private List<NestedHost> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -67,11 +69,11 @@ public class Zone {
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES)
-  private Double provisionedCpuCores;
+  private Integer provisionedCpuCores;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM = "provisioned_cpu_cores_for_active_vm";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM)
-  private Double provisionedCpuCoresForActiveVm;
+  private Integer provisionedCpuCoresForActiveVm;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE = "provisioned_data_space";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE)
@@ -83,15 +85,15 @@ public class Zone {
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
-  private Double runningVmNum;
+  private Integer runningVmNum;
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM = "stopped_vm_num";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM)
-  private Double stoppedVmNum;
+  private Integer stoppedVmNum;
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM = "suspended_vm_num";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM)
-  private Double suspendedVmNum;
+  private Integer suspendedVmNum;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
@@ -99,7 +101,7 @@ public class Zone {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -123,10 +125,10 @@ public class Zone {
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
 
-  public Zone cluster(NameIdPair cluster) {
+  public Zone cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -139,17 +141,17 @@ public class Zone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public Zone datacenter(NameIdPair datacenter) {
+  public Zone datacenter(NestedDatacenter datacenter) {
     
     this.datacenter = datacenter;
     return this;
@@ -162,12 +164,12 @@ public class Zone {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getDatacenter() {
+  public NestedDatacenter getDatacenter() {
     return datacenter;
   }
 
 
-  public void setDatacenter(NameIdPair datacenter) {
+  public void setDatacenter(NestedDatacenter datacenter) {
     this.datacenter = datacenter;
   }
 
@@ -195,7 +197,7 @@ public class Zone {
   }
 
 
-  public Zone hostNum(Double hostNum) {
+  public Zone hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -208,25 +210,25 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public Zone hosts(List<NameIdPair> hosts) {
+  public Zone hosts(List<NestedHost> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Zone addHostsItem(NameIdPair hostsItem) {
+  public Zone addHostsItem(NestedHost hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<NameIdPair>();
+      this.hosts = new ArrayList<NestedHost>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -239,12 +241,12 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getHosts() {
+  public List<NestedHost> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<NameIdPair> hosts) {
+  public void setHosts(List<NestedHost> hosts) {
     this.hosts = hosts;
   }
 
@@ -318,7 +320,7 @@ public class Zone {
   }
 
 
-  public Zone provisionedCpuCores(Double provisionedCpuCores) {
+  public Zone provisionedCpuCores(Integer provisionedCpuCores) {
     
     this.provisionedCpuCores = provisionedCpuCores;
     return this;
@@ -331,17 +333,17 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCores() {
+  public Integer getProvisionedCpuCores() {
     return provisionedCpuCores;
   }
 
 
-  public void setProvisionedCpuCores(Double provisionedCpuCores) {
+  public void setProvisionedCpuCores(Integer provisionedCpuCores) {
     this.provisionedCpuCores = provisionedCpuCores;
   }
 
 
-  public Zone provisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public Zone provisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
     return this;
@@ -354,12 +356,12 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVm() {
+  public Integer getProvisionedCpuCoresForActiveVm() {
     return provisionedCpuCoresForActiveVm;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public void setProvisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
   }
 
@@ -410,7 +412,7 @@ public class Zone {
   }
 
 
-  public Zone runningVmNum(Double runningVmNum) {
+  public Zone runningVmNum(Integer runningVmNum) {
     
     this.runningVmNum = runningVmNum;
     return this;
@@ -423,17 +425,17 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNum() {
+  public Integer getRunningVmNum() {
     return runningVmNum;
   }
 
 
-  public void setRunningVmNum(Double runningVmNum) {
+  public void setRunningVmNum(Integer runningVmNum) {
     this.runningVmNum = runningVmNum;
   }
 
 
-  public Zone stoppedVmNum(Double stoppedVmNum) {
+  public Zone stoppedVmNum(Integer stoppedVmNum) {
     
     this.stoppedVmNum = stoppedVmNum;
     return this;
@@ -446,17 +448,17 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNum() {
+  public Integer getStoppedVmNum() {
     return stoppedVmNum;
   }
 
 
-  public void setStoppedVmNum(Double stoppedVmNum) {
+  public void setStoppedVmNum(Integer stoppedVmNum) {
     this.stoppedVmNum = stoppedVmNum;
   }
 
 
-  public Zone suspendedVmNum(Double suspendedVmNum) {
+  public Zone suspendedVmNum(Integer suspendedVmNum) {
     
     this.suspendedVmNum = suspendedVmNum;
     return this;
@@ -469,12 +471,12 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNum() {
+  public Integer getSuspendedVmNum() {
     return suspendedVmNum;
   }
 
 
-  public void setSuspendedVmNum(Double suspendedVmNum) {
+  public void setSuspendedVmNum(Integer suspendedVmNum) {
     this.suspendedVmNum = suspendedVmNum;
   }
 
@@ -502,7 +504,7 @@ public class Zone {
   }
 
 
-  public Zone totalCpuCores(Double totalCpuCores) {
+  public Zone totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -515,12 +517,12 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
@@ -640,7 +642,7 @@ public class Zone {
   }
 
 
-  public Zone vmNum(Double vmNum) {
+  public Zone vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -653,12 +655,12 @@ public class Zone {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 

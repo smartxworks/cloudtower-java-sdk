@@ -47,6 +47,8 @@ public class ITConsistencyGroup extends ITBase {
       List<WithTaskConsistencyGroup> result = api.createConsistencyGroup(params, contentLanguage);
       assertThat(result).as("check result of createConsistencyGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITConsistencyGroup extends ITBase {
       List<WithTaskDeleteConsistencyGroup> result = api.deleteConsistencyGroup(params, contentLanguage);
       assertThat(result).as("check result of deleteConsistencyGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITConsistencyGroup extends ITBase {
       List<ConsistencyGroup> result = api.getConsistencyGroups(params, contentLanguage);
       assertThat(result).as("check result of getConsistencyGroups").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITConsistencyGroup extends ITBase {
       ConsistencyGroupConnection result = api.getConsistencyGroupsConnection(params, contentLanguage);
       assertThat(result).as("check result of getConsistencyGroupsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITConsistencyGroup extends ITBase {
       List<WithTaskConsistencyGroup> result = api.updateConsistencyGroup(params, contentLanguage);
       assertThat(result).as("check result of updateConsistencyGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

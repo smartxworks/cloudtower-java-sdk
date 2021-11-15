@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **clusterId** | **String** |  | 
 **ipWhitelist** | **String** |  |  [optional]
 **thinProvision** | **Boolean** |  | 
-**replicaNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
 **name** | **String** |  | 
 
 

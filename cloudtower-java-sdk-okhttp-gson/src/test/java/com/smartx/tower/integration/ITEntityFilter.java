@@ -47,6 +47,8 @@ public class ITEntityFilter extends ITBase {
       List<WithTaskEntityFilter> result = api.createEntityFilter(params, contentLanguage);
       assertThat(result).as("check result of createEntityFilter").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITEntityFilter extends ITBase {
       List<WithTaskDeleteEntityFilter> result = api.deleteEntityFilter(params, contentLanguage);
       assertThat(result).as("check result of deleteEntityFilter").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITEntityFilter extends ITBase {
       List<EntityFilter> result = api.getEntityFilters(params, contentLanguage);
       assertThat(result).as("check result of getEntityFilters").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITEntityFilter extends ITBase {
       EntityFilterConnection result = api.getEntityFiltersConnection(params, contentLanguage);
       assertThat(result).as("check result of getEntityFiltersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITEntityFilter extends ITBase {
       List<WithTaskEntityFilter> result = api.updateEntityFilter(params, contentLanguage);
       assertThat(result).as("check result of updateEntityFilter").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

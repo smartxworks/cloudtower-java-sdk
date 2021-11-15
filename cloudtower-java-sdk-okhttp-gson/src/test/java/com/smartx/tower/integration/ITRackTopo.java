@@ -47,6 +47,8 @@ public class ITRackTopo extends ITBase {
       List<WithTaskRackTopo> result = api.createRackTopo(params, contentLanguage);
       assertThat(result).as("check result of createRackTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITRackTopo extends ITBase {
       List<WithTaskDeleteRackTopo> result = api.deleteRackTopo(params, contentLanguage);
       assertThat(result).as("check result of deleteRackTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITRackTopo extends ITBase {
       List<RackTopo> result = api.getRackTopoes(params, contentLanguage);
       assertThat(result).as("check result of getRackTopoes").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITRackTopo extends ITBase {
       RackTopoConnection result = api.getRackTopoesConnection(params, contentLanguage);
       assertThat(result).as("check result of getRackTopoesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITRackTopo extends ITBase {
       List<WithTaskRackTopo> result = api.updateRackTopo(params, contentLanguage);
       assertThat(result).as("check result of updateRackTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

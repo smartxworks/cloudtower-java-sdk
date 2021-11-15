@@ -47,6 +47,8 @@ public class ITSnmpTransport extends ITBase {
       List<WithTaskSnmpTransport> result = api.createSnmpTransport(params, contentLanguage);
       assertThat(result).as("check result of createSnmpTransport").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSnmpTransport extends ITBase {
       List<WithTaskDeleteSnmpTransport> result = api.deleteSnmpTransport(params, contentLanguage);
       assertThat(result).as("check result of deleteSnmpTransport").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITSnmpTransport extends ITBase {
       List<SnmpTransport> result = api.getSnmpTransports(params, contentLanguage);
       assertThat(result).as("check result of getSnmpTransports").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITSnmpTransport extends ITBase {
       SnmpTransportConnection result = api.getSnmpTransportsConnection(params, contentLanguage);
       assertThat(result).as("check result of getSnmpTransportsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITSnmpTransport extends ITBase {
       List<WithTaskSnmpTransport> result = api.updateSnmpTransport(params, contentLanguage);
       assertThat(result).as("check result of updateSnmpTransport").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

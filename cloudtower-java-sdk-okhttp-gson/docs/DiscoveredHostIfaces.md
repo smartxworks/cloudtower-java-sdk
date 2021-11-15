@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **rdmaEnabled** | **Boolean** |  |  [optional]
 **pciSlotName** | **String** |  |  [optional]
 **name** | **String** |  | 
-**mtu** | **Double** |  | 
+**mtu** | **Integer** |  | 
 **macAddress** | **String** |  | 
 **ipv6** | **String** |  |  [optional]
 **ipv4** | **String** |  |  [optional]

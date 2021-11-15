@@ -47,6 +47,8 @@ public class ITNvmfNamespace extends ITBase {
       List<WithTaskNvmfNamespace> result = api.cloneNvmfNamespaceFromSnapshot(params, contentLanguage);
       assertThat(result).as("check result of cloneNvmfNamespaceFromSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNvmfNamespace extends ITBase {
       List<WithTaskNvmfNamespace> result = api.createNvmfNamespace(params, contentLanguage);
       assertThat(result).as("check result of createNvmfNamespace").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITNvmfNamespace extends ITBase {
       List<WithTaskDeleteNvmfNamespace> result = api.deleteNvmfNamespace(params, contentLanguage);
       assertThat(result).as("check result of deleteNvmfNamespace").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITNvmfNamespace extends ITBase {
       List<NvmfNamespace> result = api.getNvmfNamespaces(params, contentLanguage);
       assertThat(result).as("check result of getNvmfNamespaces").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITNvmfNamespace extends ITBase {
       NvmfNamespaceConnection result = api.getNvmfNamespacesConnection(params, contentLanguage);
       assertThat(result).as("check result of getNvmfNamespacesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITNvmfNamespace extends ITBase {
       List<WithTaskNvmfNamespace> result = api.rollbackNvmfNamespaceFromSnapshot(params, contentLanguage);
       assertThat(result).as("check result of rollbackNvmfNamespaceFromSnapshot").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -125,6 +137,8 @@ public class ITNvmfNamespace extends ITBase {
       List<WithTaskNvmfNamespace> result = api.updateNvmfNamespace(params, contentLanguage);
       assertThat(result).as("check result of updateNvmfNamespace").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

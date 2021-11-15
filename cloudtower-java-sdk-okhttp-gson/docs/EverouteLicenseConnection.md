@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aggregate** | [**AlertNotifierConnectionAggregate**](AlertNotifierConnectionAggregate.md) |  | 
+**aggregate** | [**NestedAggregateEverouteLicense**](NestedAggregateEverouteLicense.md) |  | 
 
 
 

@@ -47,6 +47,8 @@ public class ITNvmfSubsystem extends ITBase {
       List<NvmfSubsystem> result = api.getNvmfSubsystems(params, contentLanguage);
       assertThat(result).as("check result of getNvmfSubsystems").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITNvmfSubsystem extends ITBase {
       NvmfSubsystemConnection result = api.getNvmfSubsystemsConnection(params, contentLanguage);
       assertThat(result).as("check result of getNvmfSubsystemsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

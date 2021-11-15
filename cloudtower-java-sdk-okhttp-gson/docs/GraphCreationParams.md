@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **network** | **NetworkType** |  |  [optional]
 **service** | **String** |  |  [optional]
 **metricType** | **MetricType** |  |  [optional]
-**metricCount** | **Double** |  |  [optional]
+**metricCount** | **Integer** |  |  [optional]
 **type** | **GraphType** |  | 
 **resourceType** | **String** |  | 
 **viewId** | **String** |  | 

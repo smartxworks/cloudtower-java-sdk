@@ -8,10 +8,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **MetroCheckStatusEnum** |  | 
-**notice** | **Double** |  | 
+**notice** | **Integer** |  | 
 **items** | [**List&lt;ClusterMetroAvailabilityChecklistZoneAndZoneItems&gt;**](ClusterMetroAvailabilityChecklistZoneAndZoneItems.md) |  | 
-**info** | **Double** |  | 
-**critical** | **Double** |  | 
+**info** | **Integer** |  | 
+**critical** | **Integer** |  | 
 
 
 

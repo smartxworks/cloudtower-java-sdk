@@ -47,6 +47,8 @@ public class ITSvtImage extends ITBase {
       List<SvtImage> result = api.getSvtImages(params, contentLanguage);
       assertThat(result).as("check result of getSvtImages").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSvtImage extends ITBase {
       SvtImageConnection result = api.getSvtImagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getSvtImagesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

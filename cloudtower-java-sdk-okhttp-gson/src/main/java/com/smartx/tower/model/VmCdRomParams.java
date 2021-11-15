@@ -25,15 +25,15 @@ public class VmCdRomParams {
 
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
-  private Double index;
+  private Integer index;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
-  private Double key;
+  private Integer key;
 
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
-  private Double nicId;
+  private Integer nicId;
 
   public VmCdRomParams elfImageId(String elfImageId) {
 
@@ -57,7 +57,7 @@ public class VmCdRomParams {
     this.elfImageId = elfImageId;
   }
 
-  public VmCdRomParams index(Double index) {
+  public VmCdRomParams index(Integer index) {
     this.index = index;
     return this;
   }
@@ -69,15 +69,15 @@ public class VmCdRomParams {
    **/
   @javax.annotation.Nonnull
   @ApiModelProperty(value = "", required = true)
-  public Double getIndex() {
+  public Integer getIndex() {
     return index;
   }
 
-  public void setIndex(Double index) {
+  public void setIndex(Integer index) {
     this.index = index;
   }
 
-  public VmCdRomParams key(Double key) {
+  public VmCdRomParams key(Integer key) {
     this.key = key;
     return this;
   }
@@ -89,15 +89,15 @@ public class VmCdRomParams {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public Double getKey() {
+  public Integer getKey() {
     return key;
   }
 
-  public void setKey(Double key) {
+  public void setKey(Integer key) {
     this.key = key;
   }
 
-  public VmCdRomParams boot(Double nicId) {
+  public VmCdRomParams boot(Integer nicId) {
     this.nicId = nicId;
     return this;
   }
@@ -109,11 +109,11 @@ public class VmCdRomParams {
    **/
   @javax.annotation.Nonnull
   @ApiModelProperty(value = "", required = true)
-  public Double getBoot() {
+  public Integer getBoot() {
     return nicId;
   }
 
-  public void setBoot(Double nicId) {
+  public void setBoot(Integer nicId) {
     this.nicId = nicId;
   }
 

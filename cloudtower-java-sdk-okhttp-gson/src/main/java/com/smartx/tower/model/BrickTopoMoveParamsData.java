@@ -35,7 +35,7 @@ public class BrickTopoMoveParamsData {
 
   public static final String SERIALIZED_NAME_POSITION = "position";
   @SerializedName(SERIALIZED_NAME_POSITION)
-  private Double position;
+  private Integer position;
 
 
   public BrickTopoMoveParamsData rackTopoId(String rackTopoId) {
@@ -61,7 +61,7 @@ public class BrickTopoMoveParamsData {
   }
 
 
-  public BrickTopoMoveParamsData position(Double position) {
+  public BrickTopoMoveParamsData position(Integer position) {
     
     this.position = position;
     return this;
@@ -74,12 +74,12 @@ public class BrickTopoMoveParamsData {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPosition() {
+  public Integer getPosition() {
     return position;
   }
 
 
-  public void setPosition(Double position) {
+  public void setPosition(Integer position) {
     this.position = position;
   }
 

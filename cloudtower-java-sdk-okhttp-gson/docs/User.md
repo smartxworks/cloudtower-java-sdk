@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  |  [optional]
 **name** | **String** |  | 
 **role** | [**UserRole**](UserRole.md) |  |  [optional]
-**roles** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**roles** | [**List&lt;NestedUserRoleNext&gt;**](NestedUserRoleNext.md) |  |  [optional]
 **source** | **UserSource** |  | 
 **username** | **String** |  | 
 

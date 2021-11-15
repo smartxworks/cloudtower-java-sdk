@@ -20,8 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.ElfDataStoreType;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedIscsiTarget;
+import com.smartx.tower.model.NestedNfsExport;
+import com.smartx.tower.model.NestedNvmfSubsystem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ElfDataStore {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -58,7 +61,7 @@ public class ElfDataStore {
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
-  private NameIdPair iscsiTarget;
+  private NestedIscsiTarget iscsiTarget;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -70,15 +73,15 @@ public class ElfDataStore {
 
   public static final String SERIALIZED_NAME_NFS_EXPORT = "nfs_export";
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
-  private NameIdPair nfsExport;
+  private NestedNfsExport nfsExport;
 
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
-  private NameIdPair nvmfSubsystem;
+  private NestedNvmfSubsystem nvmfSubsystem;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -89,7 +92,7 @@ public class ElfDataStore {
   private ElfDataStoreType type;
 
 
-  public ElfDataStore cluster(NameIdPair cluster) {
+  public ElfDataStore cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -102,12 +105,12 @@ public class ElfDataStore {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -227,7 +230,7 @@ public class ElfDataStore {
   }
 
 
-  public ElfDataStore iscsiTarget(NameIdPair iscsiTarget) {
+  public ElfDataStore iscsiTarget(NestedIscsiTarget iscsiTarget) {
     
     this.iscsiTarget = iscsiTarget;
     return this;
@@ -240,12 +243,12 @@ public class ElfDataStore {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getIscsiTarget() {
+  public NestedIscsiTarget getIscsiTarget() {
     return iscsiTarget;
   }
 
 
-  public void setIscsiTarget(NameIdPair iscsiTarget) {
+  public void setIscsiTarget(NestedIscsiTarget iscsiTarget) {
     this.iscsiTarget = iscsiTarget;
   }
 
@@ -296,7 +299,7 @@ public class ElfDataStore {
   }
 
 
-  public ElfDataStore nfsExport(NameIdPair nfsExport) {
+  public ElfDataStore nfsExport(NestedNfsExport nfsExport) {
     
     this.nfsExport = nfsExport;
     return this;
@@ -309,17 +312,17 @@ public class ElfDataStore {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getNfsExport() {
+  public NestedNfsExport getNfsExport() {
     return nfsExport;
   }
 
 
-  public void setNfsExport(NameIdPair nfsExport) {
+  public void setNfsExport(NestedNfsExport nfsExport) {
     this.nfsExport = nfsExport;
   }
 
 
-  public ElfDataStore nvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public ElfDataStore nvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
     return this;
@@ -332,17 +335,17 @@ public class ElfDataStore {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getNvmfSubsystem() {
+  public NestedNvmfSubsystem getNvmfSubsystem() {
     return nvmfSubsystem;
   }
 
 
-  public void setNvmfSubsystem(NameIdPair nvmfSubsystem) {
+  public void setNvmfSubsystem(NestedNvmfSubsystem nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
   }
 
 
-  public ElfDataStore replicaNum(Double replicaNum) {
+  public ElfDataStore replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -355,12 +358,12 @@ public class ElfDataStore {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 

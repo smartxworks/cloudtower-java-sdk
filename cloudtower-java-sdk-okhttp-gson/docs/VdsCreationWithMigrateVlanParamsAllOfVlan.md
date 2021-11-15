@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **subnetmask** | **String** |  | 
 **gatewaySubnetmask** | **String** |  |  [optional]
 **gatewayIp** | **String** |  |  [optional]
-**vlanId** | **Double** |  | 
+**vlanId** | **Integer** |  | 
 
 
 

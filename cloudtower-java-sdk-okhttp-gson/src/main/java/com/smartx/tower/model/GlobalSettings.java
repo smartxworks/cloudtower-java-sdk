@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.GlobalSettingsVmRecycleBin;
+import com.smartx.tower.model.NestedVmRecycleBin;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class GlobalSettings {
 
   public static final String SERIALIZED_NAME_VM_RECYCLE_BIN = "vm_recycle_bin";
   @SerializedName(SERIALIZED_NAME_VM_RECYCLE_BIN)
-  private GlobalSettingsVmRecycleBin vmRecycleBin;
+  private NestedVmRecycleBin vmRecycleBin;
 
 
   public GlobalSettings id(String id) {
@@ -62,7 +62,7 @@ public class GlobalSettings {
   }
 
 
-  public GlobalSettings vmRecycleBin(GlobalSettingsVmRecycleBin vmRecycleBin) {
+  public GlobalSettings vmRecycleBin(NestedVmRecycleBin vmRecycleBin) {
     
     this.vmRecycleBin = vmRecycleBin;
     return this;
@@ -75,12 +75,12 @@ public class GlobalSettings {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public GlobalSettingsVmRecycleBin getVmRecycleBin() {
+  public NestedVmRecycleBin getVmRecycleBin() {
     return vmRecycleBin;
   }
 
 
-  public void setVmRecycleBin(GlobalSettingsVmRecycleBin vmRecycleBin) {
+  public void setVmRecycleBin(NestedVmRecycleBin vmRecycleBin) {
     this.vmRecycleBin = vmRecycleBin;
   }
 

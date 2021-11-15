@@ -31,14 +31,14 @@ import java.io.IOException;
 public class VmVlanUpdationParamsData {
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Integer vlanId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
 
-  public VmVlanUpdationParamsData vlanId(Double vlanId) {
+  public VmVlanUpdationParamsData vlanId(Integer vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -51,12 +51,12 @@ public class VmVlanUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanId() {
+  public Integer getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Integer vlanId) {
     this.vlanId = vlanId;
   }
 

@@ -47,6 +47,8 @@ public class ITClusterImage extends ITBase {
       List<ClusterImage> result = api.getClusterImages(params, contentLanguage);
       assertThat(result).as("check result of getClusterImages").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITClusterImage extends ITBase {
       ClusterImageConnection result = api.getClusterImagesConnection(params, contentLanguage);
       assertThat(result).as("check result of getClusterImagesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

@@ -47,6 +47,8 @@ public class ITCluster extends ITBase {
       List<WithTaskCluster> result = api.connectCluster(params, contentLanguage);
       assertThat(result).as("check result of connectCluster").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITCluster extends ITBase {
       List<WithTaskDeleteCluster> result = api.deleteCluster(params, contentLanguage);
       assertThat(result).as("check result of deleteCluster").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITCluster extends ITBase {
       List<Cluster> result = api.getClusters(params, contentLanguage);
       assertThat(result).as("check result of getClusters").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITCluster extends ITBase {
       ClusterConnection result = api.getClustersConnection(params, contentLanguage);
       assertThat(result).as("check result of getClustersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITCluster extends ITBase {
       List<WithTaskCluster> result = api.updateCluster(params, contentLanguage);
       assertThat(result).as("check result of updateCluster").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITCluster extends ITBase {
       List<WithTaskCluster> result = api.updateClusterLicense(params, contentLanguage);
       assertThat(result).as("check result of updateClusterLicense").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

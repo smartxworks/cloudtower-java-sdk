@@ -47,6 +47,8 @@ public class ITView extends ITBase {
       List<WithTaskView> result = api.createView(params, contentLanguage);
       assertThat(result).as("check result of createView").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITView extends ITBase {
       List<WithTaskDeleteView> result = api.deleteView(params, contentLanguage);
       assertThat(result).as("check result of deleteView").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITView extends ITBase {
       List<View> result = api.getViews(params, contentLanguage);
       assertThat(result).as("check result of getViews").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITView extends ITBase {
       ViewConnection result = api.getViewsConnection(params, contentLanguage);
       assertThat(result).as("check result of getViewsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITView extends ITBase {
       List<WithTaskView> result = api.updateView(params, contentLanguage);
       assertThat(result).as("check result of updateView").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

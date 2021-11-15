@@ -20,9 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedStep;
+import com.smartx.tower.model.NestedUser;
 import com.smartx.tower.model.TaskStatus;
-import com.smartx.tower.model.TaskSteps;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -41,7 +42,7 @@ public class Task {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -87,6 +88,10 @@ public class Task {
   @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_ERROR)
   private String resourceRollbackError;
 
+  public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT = "resource_rollback_retry_count";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT)
+  private Integer resourceRollbackRetryCount;
+
   public static final String SERIALIZED_NAME_RESOURCE_ROLLBACKED = "resource_rollbacked";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACKED)
   private Boolean resourceRollbacked;
@@ -109,11 +114,11 @@ public class Task {
 
   public static final String SERIALIZED_NAME_STEPS = "steps";
   @SerializedName(SERIALIZED_NAME_STEPS)
-  private List<TaskSteps> steps = new ArrayList<TaskSteps>();
+  private List<NestedStep> steps = new ArrayList<NestedStep>();
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
-  private NameIdPair user;
+  private NestedUser user;
 
 
   public Task args(Object args) {
@@ -139,7 +144,7 @@ public class Task {
   }
 
 
-  public Task cluster(NameIdPair cluster) {
+  public Task cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -152,12 +157,12 @@ public class Task {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -415,6 +420,29 @@ public class Task {
   }
 
 
+  public Task resourceRollbackRetryCount(Integer resourceRollbackRetryCount) {
+    
+    this.resourceRollbackRetryCount = resourceRollbackRetryCount;
+    return this;
+  }
+
+   /**
+   * Get resourceRollbackRetryCount
+   * @return resourceRollbackRetryCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getResourceRollbackRetryCount() {
+    return resourceRollbackRetryCount;
+  }
+
+
+  public void setResourceRollbackRetryCount(Integer resourceRollbackRetryCount) {
+    this.resourceRollbackRetryCount = resourceRollbackRetryCount;
+  }
+
+
   public Task resourceRollbacked(Boolean resourceRollbacked) {
     
     this.resourceRollbacked = resourceRollbacked;
@@ -530,13 +558,13 @@ public class Task {
   }
 
 
-  public Task steps(List<TaskSteps> steps) {
+  public Task steps(List<NestedStep> steps) {
     
     this.steps = steps;
     return this;
   }
 
-  public Task addStepsItem(TaskSteps stepsItem) {
+  public Task addStepsItem(NestedStep stepsItem) {
     this.steps.add(stepsItem);
     return this;
   }
@@ -548,17 +576,17 @@ public class Task {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<TaskSteps> getSteps() {
+  public List<NestedStep> getSteps() {
     return steps;
   }
 
 
-  public void setSteps(List<TaskSteps> steps) {
+  public void setSteps(List<NestedStep> steps) {
     this.steps = steps;
   }
 
 
-  public Task user(NameIdPair user) {
+  public Task user(NestedUser user) {
     
     this.user = user;
     return this;
@@ -571,12 +599,12 @@ public class Task {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getUser() {
+  public NestedUser getUser() {
     return user;
   }
 
 
-  public void setUser(NameIdPair user) {
+  public void setUser(NestedUser user) {
     this.user = user;
   }
 
@@ -603,6 +631,7 @@ public class Task {
         Objects.equals(this.resourceId, task.resourceId) &&
         Objects.equals(this.resourceMutation, task.resourceMutation) &&
         Objects.equals(this.resourceRollbackError, task.resourceRollbackError) &&
+        Objects.equals(this.resourceRollbackRetryCount, task.resourceRollbackRetryCount) &&
         Objects.equals(this.resourceRollbacked, task.resourceRollbacked) &&
         Objects.equals(this.resourceType, task.resourceType) &&
         Objects.equals(this.snapshot, task.snapshot) &&
@@ -618,7 +647,7 @@ public class Task {
 
   @Override
   public int hashCode() {
-    return Objects.hash(args, cluster, description, errorCode, errorMessage, finishedAt, id, internal, localCreatedAt, progress, resourceId, resourceMutation, resourceRollbackError, resourceRollbacked, resourceType, snapshot, startedAt, status, steps, user);
+    return Objects.hash(args, cluster, description, errorCode, errorMessage, finishedAt, id, internal, localCreatedAt, progress, resourceId, resourceMutation, resourceRollbackError, resourceRollbackRetryCount, resourceRollbacked, resourceType, snapshot, startedAt, status, steps, user);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -645,6 +674,7 @@ public class Task {
     sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
     sb.append("    resourceMutation: ").append(toIndentedString(resourceMutation)).append("\n");
     sb.append("    resourceRollbackError: ").append(toIndentedString(resourceRollbackError)).append("\n");
+    sb.append("    resourceRollbackRetryCount: ").append(toIndentedString(resourceRollbackRetryCount)).append("\n");
     sb.append("    resourceRollbacked: ").append(toIndentedString(resourceRollbacked)).append("\n");
     sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
     sb.append("    snapshot: ").append(toIndentedString(snapshot)).append("\n");

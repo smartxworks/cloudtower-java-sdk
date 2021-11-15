@@ -47,6 +47,8 @@ public class ITElfStoragePolicy extends ITBase {
       List<ElfStoragePolicy> result = api.getElfStoragePolicies(params, contentLanguage);
       assertThat(result).as("check result of getElfStoragePolicies").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITElfStoragePolicy extends ITBase {
       ElfStoragePolicyConnection result = api.getElfStoragePoliciesConnection(params, contentLanguage);
       assertThat(result).as("check result of getElfStoragePoliciesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

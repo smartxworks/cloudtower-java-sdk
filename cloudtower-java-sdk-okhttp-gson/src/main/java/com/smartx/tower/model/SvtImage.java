@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedVmDisk;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SvtImage {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -69,14 +69,14 @@ public class SvtImage {
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
-  private Double version;
+  private Integer version;
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
-  private List<BrickTopoPowers> vmDisks = null;
+  private List<NestedVmDisk> vmDisks = null;
 
 
-  public SvtImage cluster(NameIdPair cluster) {
+  public SvtImage cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -89,12 +89,12 @@ public class SvtImage {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -260,7 +260,7 @@ public class SvtImage {
   }
 
 
-  public SvtImage version(Double version) {
+  public SvtImage version(Integer version) {
     
     this.version = version;
     return this;
@@ -273,25 +273,25 @@ public class SvtImage {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVersion() {
+  public Integer getVersion() {
     return version;
   }
 
 
-  public void setVersion(Double version) {
+  public void setVersion(Integer version) {
     this.version = version;
   }
 
 
-  public SvtImage vmDisks(List<BrickTopoPowers> vmDisks) {
+  public SvtImage vmDisks(List<NestedVmDisk> vmDisks) {
     
     this.vmDisks = vmDisks;
     return this;
   }
 
-  public SvtImage addVmDisksItem(BrickTopoPowers vmDisksItem) {
+  public SvtImage addVmDisksItem(NestedVmDisk vmDisksItem) {
     if (this.vmDisks == null) {
-      this.vmDisks = new ArrayList<BrickTopoPowers>();
+      this.vmDisks = new ArrayList<NestedVmDisk>();
     }
     this.vmDisks.add(vmDisksItem);
     return this;
@@ -304,12 +304,12 @@ public class SvtImage {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmDisks() {
+  public List<NestedVmDisk> getVmDisks() {
     return vmDisks;
   }
 
 
-  public void setVmDisks(List<BrickTopoPowers> vmDisks) {
+  public void setVmDisks(List<NestedVmDisk> vmDisks) {
     this.vmDisks = vmDisks;
   }
 

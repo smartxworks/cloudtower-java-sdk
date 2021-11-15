@@ -7,8 +7,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**totalVfNum** | **Double** |  |  [optional]
-**mtu** | **Double** |  |  [optional]
+**totalVfNum** | **Integer** |  |  [optional]
+**mtu** | **Integer** |  |  [optional]
 
 
 

@@ -7,11 +7,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**clusterTopo** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**clusterTopo** | [**NestedClusterTopo**](NestedClusterTopo.md) |  | 
 **id** | **String** |  | 
 **localId** | **String** |  | 
-**rackTopoes** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**rackTopoes** | [**List&lt;NestedRackTopo&gt;**](NestedRackTopo.md) |  |  [optional]
 
 
 

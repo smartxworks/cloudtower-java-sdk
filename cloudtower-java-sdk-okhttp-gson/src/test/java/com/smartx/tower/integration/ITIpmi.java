@@ -47,6 +47,8 @@ public class ITIpmi extends ITBase {
       List<Ipmi> result = api.getIpmis(params, contentLanguage);
       assertThat(result).as("check result of getIpmis").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

@@ -20,9 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNfsInode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,7 +38,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NfsExport {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -57,7 +58,7 @@ public class NfsExport {
 
   public static final String SERIALIZED_NAME_INODES = "inodes";
   @SerializedName(SERIALIZED_NAME_INODES)
-  private List<NameIdPair> inodes = null;
+  private List<NestedNfsInode> inodes = null;
 
   public static final String SERIALIZED_NAME_INTERNAL = "internal";
   @SerializedName(SERIALIZED_NAME_INTERNAL)
@@ -69,7 +70,7 @@ public class NfsExport {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -81,14 +82,14 @@ public class NfsExport {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
   private Boolean thinProvision;
 
 
-  public NfsExport cluster(NameIdPair cluster) {
+  public NfsExport cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -101,12 +102,12 @@ public class NfsExport {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -203,15 +204,15 @@ public class NfsExport {
   }
 
 
-  public NfsExport inodes(List<NameIdPair> inodes) {
+  public NfsExport inodes(List<NestedNfsInode> inodes) {
     
     this.inodes = inodes;
     return this;
   }
 
-  public NfsExport addInodesItem(NameIdPair inodesItem) {
+  public NfsExport addInodesItem(NestedNfsInode inodesItem) {
     if (this.inodes == null) {
-      this.inodes = new ArrayList<NameIdPair>();
+      this.inodes = new ArrayList<NestedNfsInode>();
     }
     this.inodes.add(inodesItem);
     return this;
@@ -224,12 +225,12 @@ public class NfsExport {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getInodes() {
+  public List<NestedNfsInode> getInodes() {
     return inodes;
   }
 
 
-  public void setInodes(List<NameIdPair> inodes) {
+  public void setInodes(List<NestedNfsInode> inodes) {
     this.inodes = inodes;
   }
 
@@ -280,15 +281,15 @@ public class NfsExport {
   }
 
 
-  public NfsExport labels(List<BrickTopoPowers> labels) {
+  public NfsExport labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public NfsExport addLabelsItem(BrickTopoPowers labelsItem) {
+  public NfsExport addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -301,12 +302,12 @@ public class NfsExport {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -357,7 +358,7 @@ public class NfsExport {
   }
 
 
-  public NfsExport replicaNum(Double replicaNum) {
+  public NfsExport replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -370,12 +371,12 @@ public class NfsExport {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 

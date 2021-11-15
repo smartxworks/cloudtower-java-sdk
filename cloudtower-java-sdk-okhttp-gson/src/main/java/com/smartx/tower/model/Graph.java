@@ -20,11 +20,21 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.GraphType;
 import com.smartx.tower.model.MetricType;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedDisk;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedIscsiLun;
+import com.smartx.tower.model.NestedNic;
+import com.smartx.tower.model.NestedNvmfNamespace;
+import com.smartx.tower.model.NestedView;
+import com.smartx.tower.model.NestedVm;
+import com.smartx.tower.model.NestedVmNic;
+import com.smartx.tower.model.NestedVmVolume;
+import com.smartx.tower.model.NestedWitness;
+import com.smartx.tower.model.NestedZone;
 import com.smartx.tower.model.NetworkType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -40,11 +50,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Graph {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
-  private List<NameIdPair> disks = null;
+  private List<NestedDisk> disks = null;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -52,7 +62,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<NameIdPair> hosts = null;
+  private List<NestedHost> hosts = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,11 +78,11 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_LUNS = "luns";
   @SerializedName(SERIALIZED_NAME_LUNS)
-  private List<NameIdPair> luns = null;
+  private List<NestedIscsiLun> luns = null;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT = "metric_count";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT)
-  private Double metricCount;
+  private Integer metricCount;
 
   public static final String SERIALIZED_NAME_METRIC_NAME = "metric_name";
   @SerializedName(SERIALIZED_NAME_METRIC_NAME)
@@ -84,7 +94,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<NameIdPair> namespaces = null;
+  private List<NestedNvmfNamespace> namespaces = null;
 
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
@@ -92,7 +102,7 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
-  private List<NameIdPair> nics = null;
+  private List<NestedNic> nics = null;
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resource_type";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
@@ -116,30 +126,30 @@ public class Graph {
 
   public static final String SERIALIZED_NAME_VIEW = "view";
   @SerializedName(SERIALIZED_NAME_VIEW)
-  private NameIdPair view;
+  private NestedView view;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vmNics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<BrickTopoPowers> vmNics = null;
+  private List<NestedVmNic> vmNics = null;
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES = "vmVolumes";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES)
-  private List<NameIdPair> vmVolumes = null;
+  private List<NestedVmVolume> vmVolumes = null;
 
   public static final String SERIALIZED_NAME_WITNESSES = "witnesses";
   @SerializedName(SERIALIZED_NAME_WITNESSES)
-  private List<NameIdPair> witnesses = null;
+  private List<NestedWitness> witnesses = null;
 
   public static final String SERIALIZED_NAME_ZONES = "zones";
   @SerializedName(SERIALIZED_NAME_ZONES)
-  private List<BrickTopoPowers> zones = null;
+  private List<NestedZone> zones = null;
 
 
-  public Graph cluster(NameIdPair cluster) {
+  public Graph cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -152,25 +162,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public Graph disks(List<NameIdPair> disks) {
+  public Graph disks(List<NestedDisk> disks) {
     
     this.disks = disks;
     return this;
   }
 
-  public Graph addDisksItem(NameIdPair disksItem) {
+  public Graph addDisksItem(NestedDisk disksItem) {
     if (this.disks == null) {
-      this.disks = new ArrayList<NameIdPair>();
+      this.disks = new ArrayList<NestedDisk>();
     }
     this.disks.add(disksItem);
     return this;
@@ -183,12 +193,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getDisks() {
+  public List<NestedDisk> getDisks() {
     return disks;
   }
 
 
-  public void setDisks(List<NameIdPair> disks) {
+  public void setDisks(List<NestedDisk> disks) {
     this.disks = disks;
   }
 
@@ -216,15 +226,15 @@ public class Graph {
   }
 
 
-  public Graph hosts(List<NameIdPair> hosts) {
+  public Graph hosts(List<NestedHost> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Graph addHostsItem(NameIdPair hostsItem) {
+  public Graph addHostsItem(NestedHost hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<NameIdPair>();
+      this.hosts = new ArrayList<NestedHost>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -237,12 +247,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getHosts() {
+  public List<NestedHost> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<NameIdPair> hosts) {
+  public void setHosts(List<NestedHost> hosts) {
     this.hosts = hosts;
   }
 
@@ -321,15 +331,15 @@ public class Graph {
   }
 
 
-  public Graph luns(List<NameIdPair> luns) {
+  public Graph luns(List<NestedIscsiLun> luns) {
     
     this.luns = luns;
     return this;
   }
 
-  public Graph addLunsItem(NameIdPair lunsItem) {
+  public Graph addLunsItem(NestedIscsiLun lunsItem) {
     if (this.luns == null) {
-      this.luns = new ArrayList<NameIdPair>();
+      this.luns = new ArrayList<NestedIscsiLun>();
     }
     this.luns.add(lunsItem);
     return this;
@@ -342,17 +352,17 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getLuns() {
+  public List<NestedIscsiLun> getLuns() {
     return luns;
   }
 
 
-  public void setLuns(List<NameIdPair> luns) {
+  public void setLuns(List<NestedIscsiLun> luns) {
     this.luns = luns;
   }
 
 
-  public Graph metricCount(Double metricCount) {
+  public Graph metricCount(Integer metricCount) {
     
     this.metricCount = metricCount;
     return this;
@@ -365,12 +375,12 @@ public class Graph {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMetricCount() {
+  public Integer getMetricCount() {
     return metricCount;
   }
 
 
-  public void setMetricCount(Double metricCount) {
+  public void setMetricCount(Integer metricCount) {
     this.metricCount = metricCount;
   }
 
@@ -421,15 +431,15 @@ public class Graph {
   }
 
 
-  public Graph namespaces(List<NameIdPair> namespaces) {
+  public Graph namespaces(List<NestedNvmfNamespace> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public Graph addNamespacesItem(NameIdPair namespacesItem) {
+  public Graph addNamespacesItem(NestedNvmfNamespace namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<NameIdPair>();
+      this.namespaces = new ArrayList<NestedNvmfNamespace>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -442,12 +452,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNamespaces() {
+  public List<NestedNvmfNamespace> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<NameIdPair> namespaces) {
+  public void setNamespaces(List<NestedNvmfNamespace> namespaces) {
     this.namespaces = namespaces;
   }
 
@@ -475,15 +485,15 @@ public class Graph {
   }
 
 
-  public Graph nics(List<NameIdPair> nics) {
+  public Graph nics(List<NestedNic> nics) {
     
     this.nics = nics;
     return this;
   }
 
-  public Graph addNicsItem(NameIdPair nicsItem) {
+  public Graph addNicsItem(NestedNic nicsItem) {
     if (this.nics == null) {
-      this.nics = new ArrayList<NameIdPair>();
+      this.nics = new ArrayList<NestedNic>();
     }
     this.nics.add(nicsItem);
     return this;
@@ -496,12 +506,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNics() {
+  public List<NestedNic> getNics() {
     return nics;
   }
 
 
-  public void setNics(List<NameIdPair> nics) {
+  public void setNics(List<NestedNic> nics) {
     this.nics = nics;
   }
 
@@ -621,7 +631,7 @@ public class Graph {
   }
 
 
-  public Graph view(NameIdPair view) {
+  public Graph view(NestedView view) {
     
     this.view = view;
     return this;
@@ -634,25 +644,25 @@ public class Graph {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getView() {
+  public NestedView getView() {
     return view;
   }
 
 
-  public void setView(NameIdPair view) {
+  public void setView(NestedView view) {
     this.view = view;
   }
 
 
-  public Graph vmNics(List<BrickTopoPowers> vmNics) {
+  public Graph vmNics(List<NestedVmNic> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public Graph addVmNicsItem(BrickTopoPowers vmNicsItem) {
+  public Graph addVmNicsItem(NestedVmNic vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<BrickTopoPowers>();
+      this.vmNics = new ArrayList<NestedVmNic>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -665,25 +675,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getVmNics() {
+  public List<NestedVmNic> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<BrickTopoPowers> vmNics) {
+  public void setVmNics(List<NestedVmNic> vmNics) {
     this.vmNics = vmNics;
   }
 
 
-  public Graph vms(List<NameIdPair> vms) {
+  public Graph vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Graph addVmsItem(NameIdPair vmsItem) {
+  public Graph addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -696,25 +706,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 
 
-  public Graph vmVolumes(List<NameIdPair> vmVolumes) {
+  public Graph vmVolumes(List<NestedVmVolume> vmVolumes) {
     
     this.vmVolumes = vmVolumes;
     return this;
   }
 
-  public Graph addVmVolumesItem(NameIdPair vmVolumesItem) {
+  public Graph addVmVolumesItem(NestedVmVolume vmVolumesItem) {
     if (this.vmVolumes == null) {
-      this.vmVolumes = new ArrayList<NameIdPair>();
+      this.vmVolumes = new ArrayList<NestedVmVolume>();
     }
     this.vmVolumes.add(vmVolumesItem);
     return this;
@@ -727,25 +737,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmVolumes() {
+  public List<NestedVmVolume> getVmVolumes() {
     return vmVolumes;
   }
 
 
-  public void setVmVolumes(List<NameIdPair> vmVolumes) {
+  public void setVmVolumes(List<NestedVmVolume> vmVolumes) {
     this.vmVolumes = vmVolumes;
   }
 
 
-  public Graph witnesses(List<NameIdPair> witnesses) {
+  public Graph witnesses(List<NestedWitness> witnesses) {
     
     this.witnesses = witnesses;
     return this;
   }
 
-  public Graph addWitnessesItem(NameIdPair witnessesItem) {
+  public Graph addWitnessesItem(NestedWitness witnessesItem) {
     if (this.witnesses == null) {
-      this.witnesses = new ArrayList<NameIdPair>();
+      this.witnesses = new ArrayList<NestedWitness>();
     }
     this.witnesses.add(witnessesItem);
     return this;
@@ -758,25 +768,25 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getWitnesses() {
+  public List<NestedWitness> getWitnesses() {
     return witnesses;
   }
 
 
-  public void setWitnesses(List<NameIdPair> witnesses) {
+  public void setWitnesses(List<NestedWitness> witnesses) {
     this.witnesses = witnesses;
   }
 
 
-  public Graph zones(List<BrickTopoPowers> zones) {
+  public Graph zones(List<NestedZone> zones) {
     
     this.zones = zones;
     return this;
   }
 
-  public Graph addZonesItem(BrickTopoPowers zonesItem) {
+  public Graph addZonesItem(NestedZone zonesItem) {
     if (this.zones == null) {
-      this.zones = new ArrayList<BrickTopoPowers>();
+      this.zones = new ArrayList<NestedZone>();
     }
     this.zones.add(zonesItem);
     return this;
@@ -789,12 +799,12 @@ public class Graph {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getZones() {
+  public List<NestedZone> getZones() {
     return zones;
   }
 
 
-  public void setZones(List<BrickTopoPowers> zones) {
+  public void setZones(List<NestedZone> zones) {
     this.zones = zones;
   }
 

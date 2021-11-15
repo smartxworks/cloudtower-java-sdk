@@ -918,35 +918,35 @@ public class IscsiLunWhereInput {
 
   public static final String SERIALIZED_NAME_LUN_ID = "lun_id";
   @SerializedName(SERIALIZED_NAME_LUN_ID)
-  private Double lunId;
+  private Integer lunId;
 
   public static final String SERIALIZED_NAME_LUN_ID_GT = "lun_id_gt";
   @SerializedName(SERIALIZED_NAME_LUN_ID_GT)
-  private Double lunIdGt;
+  private Integer lunIdGt;
 
   public static final String SERIALIZED_NAME_LUN_ID_GTE = "lun_id_gte";
   @SerializedName(SERIALIZED_NAME_LUN_ID_GTE)
-  private Double lunIdGte;
+  private Integer lunIdGte;
 
   public static final String SERIALIZED_NAME_LUN_ID_IN = "lun_id_in";
   @SerializedName(SERIALIZED_NAME_LUN_ID_IN)
-  private List<Double> lunIdIn = null;
+  private List<Integer> lunIdIn = null;
 
   public static final String SERIALIZED_NAME_LUN_ID_LT = "lun_id_lt";
   @SerializedName(SERIALIZED_NAME_LUN_ID_LT)
-  private Double lunIdLt;
+  private Integer lunIdLt;
 
   public static final String SERIALIZED_NAME_LUN_ID_LTE = "lun_id_lte";
   @SerializedName(SERIALIZED_NAME_LUN_ID_LTE)
-  private Double lunIdLte;
+  private Integer lunIdLte;
 
   public static final String SERIALIZED_NAME_LUN_ID_NOT = "lun_id_not";
   @SerializedName(SERIALIZED_NAME_LUN_ID_NOT)
-  private Double lunIdNot;
+  private Integer lunIdNot;
 
   public static final String SERIALIZED_NAME_LUN_ID_NOT_IN = "lun_id_not_in";
   @SerializedName(SERIALIZED_NAME_LUN_ID_NOT_IN)
-  private List<Double> lunIdNotIn = null;
+  private List<Integer> lunIdNotIn = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -1014,35 +1014,35 @@ public class IscsiLunWhereInput {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GT = "replica_num_gt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GT)
-  private Double replicaNumGt;
+  private Integer replicaNumGt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GTE = "replica_num_gte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GTE)
-  private Double replicaNumGte;
+  private Integer replicaNumGte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_IN = "replica_num_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_IN)
-  private List<Double> replicaNumIn = null;
+  private List<Integer> replicaNumIn = null;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LT = "replica_num_lt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LT)
-  private Double replicaNumLt;
+  private Integer replicaNumLt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LTE = "replica_num_lte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LTE)
-  private Double replicaNumLte;
+  private Integer replicaNumLte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT = "replica_num_not";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT)
-  private Double replicaNumNot;
+  private Integer replicaNumNot;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT_IN = "replica_num_not_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
-  private List<Double> replicaNumNotIn = null;
+  private List<Integer> replicaNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
   @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
@@ -1078,67 +1078,67 @@ public class IscsiLunWhereInput {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
-  private Double snapshotNum;
+  private Integer snapshotNum;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_GT = "snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_GT)
-  private Double snapshotNumGt;
+  private Integer snapshotNumGt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_GTE = "snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_GTE)
-  private Double snapshotNumGte;
+  private Integer snapshotNumGte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_IN = "snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_IN)
-  private List<Double> snapshotNumIn = null;
+  private List<Integer> snapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_LT = "snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_LT)
-  private Double snapshotNumLt;
+  private Integer snapshotNumLt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_LTE = "snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_LTE)
-  private Double snapshotNumLte;
+  private Integer snapshotNumLte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_NOT = "snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT)
-  private Double snapshotNumNot;
+  private Integer snapshotNumNot;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN = "snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> snapshotNumNotIn = null;
+  private List<Integer> snapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_GT = "stripe_num_gt";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_GT)
-  private Double stripeNumGt;
+  private Integer stripeNumGt;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_GTE = "stripe_num_gte";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_GTE)
-  private Double stripeNumGte;
+  private Integer stripeNumGte;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_IN = "stripe_num_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_IN)
-  private List<Double> stripeNumIn = null;
+  private List<Integer> stripeNumIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_LT = "stripe_num_lt";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_LT)
-  private Double stripeNumLt;
+  private Integer stripeNumLt;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_LTE = "stripe_num_lte";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_LTE)
-  private Double stripeNumLte;
+  private Integer stripeNumLte;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_NOT = "stripe_num_not";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_NOT)
-  private Double stripeNumNot;
+  private Integer stripeNumNot;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_NOT_IN = "stripe_num_not_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_NOT_IN)
-  private List<Double> stripeNumNotIn = null;
+  private List<Integer> stripeNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -6737,7 +6737,7 @@ public class IscsiLunWhereInput {
   }
 
 
-  public IscsiLunWhereInput lunId(Double lunId) {
+  public IscsiLunWhereInput lunId(Integer lunId) {
     
     this.lunId = lunId;
     return this;
@@ -6750,17 +6750,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunId() {
+  public Integer getLunId() {
     return lunId;
   }
 
 
-  public void setLunId(Double lunId) {
+  public void setLunId(Integer lunId) {
     this.lunId = lunId;
   }
 
 
-  public IscsiLunWhereInput lunIdGt(Double lunIdGt) {
+  public IscsiLunWhereInput lunIdGt(Integer lunIdGt) {
     
     this.lunIdGt = lunIdGt;
     return this;
@@ -6773,17 +6773,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunIdGt() {
+  public Integer getLunIdGt() {
     return lunIdGt;
   }
 
 
-  public void setLunIdGt(Double lunIdGt) {
+  public void setLunIdGt(Integer lunIdGt) {
     this.lunIdGt = lunIdGt;
   }
 
 
-  public IscsiLunWhereInput lunIdGte(Double lunIdGte) {
+  public IscsiLunWhereInput lunIdGte(Integer lunIdGte) {
     
     this.lunIdGte = lunIdGte;
     return this;
@@ -6796,25 +6796,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunIdGte() {
+  public Integer getLunIdGte() {
     return lunIdGte;
   }
 
 
-  public void setLunIdGte(Double lunIdGte) {
+  public void setLunIdGte(Integer lunIdGte) {
     this.lunIdGte = lunIdGte;
   }
 
 
-  public IscsiLunWhereInput lunIdIn(List<Double> lunIdIn) {
+  public IscsiLunWhereInput lunIdIn(List<Integer> lunIdIn) {
     
     this.lunIdIn = lunIdIn;
     return this;
   }
 
-  public IscsiLunWhereInput addLunIdInItem(Double lunIdInItem) {
+  public IscsiLunWhereInput addLunIdInItem(Integer lunIdInItem) {
     if (this.lunIdIn == null) {
-      this.lunIdIn = new ArrayList<Double>();
+      this.lunIdIn = new ArrayList<Integer>();
     }
     this.lunIdIn.add(lunIdInItem);
     return this;
@@ -6827,17 +6827,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getLunIdIn() {
+  public List<Integer> getLunIdIn() {
     return lunIdIn;
   }
 
 
-  public void setLunIdIn(List<Double> lunIdIn) {
+  public void setLunIdIn(List<Integer> lunIdIn) {
     this.lunIdIn = lunIdIn;
   }
 
 
-  public IscsiLunWhereInput lunIdLt(Double lunIdLt) {
+  public IscsiLunWhereInput lunIdLt(Integer lunIdLt) {
     
     this.lunIdLt = lunIdLt;
     return this;
@@ -6850,17 +6850,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunIdLt() {
+  public Integer getLunIdLt() {
     return lunIdLt;
   }
 
 
-  public void setLunIdLt(Double lunIdLt) {
+  public void setLunIdLt(Integer lunIdLt) {
     this.lunIdLt = lunIdLt;
   }
 
 
-  public IscsiLunWhereInput lunIdLte(Double lunIdLte) {
+  public IscsiLunWhereInput lunIdLte(Integer lunIdLte) {
     
     this.lunIdLte = lunIdLte;
     return this;
@@ -6873,17 +6873,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunIdLte() {
+  public Integer getLunIdLte() {
     return lunIdLte;
   }
 
 
-  public void setLunIdLte(Double lunIdLte) {
+  public void setLunIdLte(Integer lunIdLte) {
     this.lunIdLte = lunIdLte;
   }
 
 
-  public IscsiLunWhereInput lunIdNot(Double lunIdNot) {
+  public IscsiLunWhereInput lunIdNot(Integer lunIdNot) {
     
     this.lunIdNot = lunIdNot;
     return this;
@@ -6896,25 +6896,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunIdNot() {
+  public Integer getLunIdNot() {
     return lunIdNot;
   }
 
 
-  public void setLunIdNot(Double lunIdNot) {
+  public void setLunIdNot(Integer lunIdNot) {
     this.lunIdNot = lunIdNot;
   }
 
 
-  public IscsiLunWhereInput lunIdNotIn(List<Double> lunIdNotIn) {
+  public IscsiLunWhereInput lunIdNotIn(List<Integer> lunIdNotIn) {
     
     this.lunIdNotIn = lunIdNotIn;
     return this;
   }
 
-  public IscsiLunWhereInput addLunIdNotInItem(Double lunIdNotInItem) {
+  public IscsiLunWhereInput addLunIdNotInItem(Integer lunIdNotInItem) {
     if (this.lunIdNotIn == null) {
-      this.lunIdNotIn = new ArrayList<Double>();
+      this.lunIdNotIn = new ArrayList<Integer>();
     }
     this.lunIdNotIn.add(lunIdNotInItem);
     return this;
@@ -6927,12 +6927,12 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getLunIdNotIn() {
+  public List<Integer> getLunIdNotIn() {
     return lunIdNotIn;
   }
 
 
-  public void setLunIdNotIn(List<Double> lunIdNotIn) {
+  public void setLunIdNotIn(List<Integer> lunIdNotIn) {
     this.lunIdNotIn = lunIdNotIn;
   }
 
@@ -7337,7 +7337,7 @@ public class IscsiLunWhereInput {
   }
 
 
-  public IscsiLunWhereInput replicaNum(Double replicaNum) {
+  public IscsiLunWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -7350,17 +7350,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public IscsiLunWhereInput replicaNumGt(Double replicaNumGt) {
+  public IscsiLunWhereInput replicaNumGt(Integer replicaNumGt) {
     
     this.replicaNumGt = replicaNumGt;
     return this;
@@ -7373,17 +7373,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGt() {
+  public Integer getReplicaNumGt() {
     return replicaNumGt;
   }
 
 
-  public void setReplicaNumGt(Double replicaNumGt) {
+  public void setReplicaNumGt(Integer replicaNumGt) {
     this.replicaNumGt = replicaNumGt;
   }
 
 
-  public IscsiLunWhereInput replicaNumGte(Double replicaNumGte) {
+  public IscsiLunWhereInput replicaNumGte(Integer replicaNumGte) {
     
     this.replicaNumGte = replicaNumGte;
     return this;
@@ -7396,25 +7396,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGte() {
+  public Integer getReplicaNumGte() {
     return replicaNumGte;
   }
 
 
-  public void setReplicaNumGte(Double replicaNumGte) {
+  public void setReplicaNumGte(Integer replicaNumGte) {
     this.replicaNumGte = replicaNumGte;
   }
 
 
-  public IscsiLunWhereInput replicaNumIn(List<Double> replicaNumIn) {
+  public IscsiLunWhereInput replicaNumIn(List<Integer> replicaNumIn) {
     
     this.replicaNumIn = replicaNumIn;
     return this;
   }
 
-  public IscsiLunWhereInput addReplicaNumInItem(Double replicaNumInItem) {
+  public IscsiLunWhereInput addReplicaNumInItem(Integer replicaNumInItem) {
     if (this.replicaNumIn == null) {
-      this.replicaNumIn = new ArrayList<Double>();
+      this.replicaNumIn = new ArrayList<Integer>();
     }
     this.replicaNumIn.add(replicaNumInItem);
     return this;
@@ -7427,17 +7427,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumIn() {
+  public List<Integer> getReplicaNumIn() {
     return replicaNumIn;
   }
 
 
-  public void setReplicaNumIn(List<Double> replicaNumIn) {
+  public void setReplicaNumIn(List<Integer> replicaNumIn) {
     this.replicaNumIn = replicaNumIn;
   }
 
 
-  public IscsiLunWhereInput replicaNumLt(Double replicaNumLt) {
+  public IscsiLunWhereInput replicaNumLt(Integer replicaNumLt) {
     
     this.replicaNumLt = replicaNumLt;
     return this;
@@ -7450,17 +7450,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLt() {
+  public Integer getReplicaNumLt() {
     return replicaNumLt;
   }
 
 
-  public void setReplicaNumLt(Double replicaNumLt) {
+  public void setReplicaNumLt(Integer replicaNumLt) {
     this.replicaNumLt = replicaNumLt;
   }
 
 
-  public IscsiLunWhereInput replicaNumLte(Double replicaNumLte) {
+  public IscsiLunWhereInput replicaNumLte(Integer replicaNumLte) {
     
     this.replicaNumLte = replicaNumLte;
     return this;
@@ -7473,17 +7473,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLte() {
+  public Integer getReplicaNumLte() {
     return replicaNumLte;
   }
 
 
-  public void setReplicaNumLte(Double replicaNumLte) {
+  public void setReplicaNumLte(Integer replicaNumLte) {
     this.replicaNumLte = replicaNumLte;
   }
 
 
-  public IscsiLunWhereInput replicaNumNot(Double replicaNumNot) {
+  public IscsiLunWhereInput replicaNumNot(Integer replicaNumNot) {
     
     this.replicaNumNot = replicaNumNot;
     return this;
@@ -7496,25 +7496,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumNot() {
+  public Integer getReplicaNumNot() {
     return replicaNumNot;
   }
 
 
-  public void setReplicaNumNot(Double replicaNumNot) {
+  public void setReplicaNumNot(Integer replicaNumNot) {
     this.replicaNumNot = replicaNumNot;
   }
 
 
-  public IscsiLunWhereInput replicaNumNotIn(List<Double> replicaNumNotIn) {
+  public IscsiLunWhereInput replicaNumNotIn(List<Integer> replicaNumNotIn) {
     
     this.replicaNumNotIn = replicaNumNotIn;
     return this;
   }
 
-  public IscsiLunWhereInput addReplicaNumNotInItem(Double replicaNumNotInItem) {
+  public IscsiLunWhereInput addReplicaNumNotInItem(Integer replicaNumNotInItem) {
     if (this.replicaNumNotIn == null) {
-      this.replicaNumNotIn = new ArrayList<Double>();
+      this.replicaNumNotIn = new ArrayList<Integer>();
     }
     this.replicaNumNotIn.add(replicaNumNotInItem);
     return this;
@@ -7527,12 +7527,12 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumNotIn() {
+  public List<Integer> getReplicaNumNotIn() {
     return replicaNumNotIn;
   }
 
 
-  public void setReplicaNumNotIn(List<Double> replicaNumNotIn) {
+  public void setReplicaNumNotIn(List<Integer> replicaNumNotIn) {
     this.replicaNumNotIn = replicaNumNotIn;
   }
 
@@ -7737,7 +7737,7 @@ public class IscsiLunWhereInput {
   }
 
 
-  public IscsiLunWhereInput snapshotNum(Double snapshotNum) {
+  public IscsiLunWhereInput snapshotNum(Integer snapshotNum) {
     
     this.snapshotNum = snapshotNum;
     return this;
@@ -7750,17 +7750,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNum() {
+  public Integer getSnapshotNum() {
     return snapshotNum;
   }
 
 
-  public void setSnapshotNum(Double snapshotNum) {
+  public void setSnapshotNum(Integer snapshotNum) {
     this.snapshotNum = snapshotNum;
   }
 
 
-  public IscsiLunWhereInput snapshotNumGt(Double snapshotNumGt) {
+  public IscsiLunWhereInput snapshotNumGt(Integer snapshotNumGt) {
     
     this.snapshotNumGt = snapshotNumGt;
     return this;
@@ -7773,17 +7773,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumGt() {
+  public Integer getSnapshotNumGt() {
     return snapshotNumGt;
   }
 
 
-  public void setSnapshotNumGt(Double snapshotNumGt) {
+  public void setSnapshotNumGt(Integer snapshotNumGt) {
     this.snapshotNumGt = snapshotNumGt;
   }
 
 
-  public IscsiLunWhereInput snapshotNumGte(Double snapshotNumGte) {
+  public IscsiLunWhereInput snapshotNumGte(Integer snapshotNumGte) {
     
     this.snapshotNumGte = snapshotNumGte;
     return this;
@@ -7796,25 +7796,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumGte() {
+  public Integer getSnapshotNumGte() {
     return snapshotNumGte;
   }
 
 
-  public void setSnapshotNumGte(Double snapshotNumGte) {
+  public void setSnapshotNumGte(Integer snapshotNumGte) {
     this.snapshotNumGte = snapshotNumGte;
   }
 
 
-  public IscsiLunWhereInput snapshotNumIn(List<Double> snapshotNumIn) {
+  public IscsiLunWhereInput snapshotNumIn(List<Integer> snapshotNumIn) {
     
     this.snapshotNumIn = snapshotNumIn;
     return this;
   }
 
-  public IscsiLunWhereInput addSnapshotNumInItem(Double snapshotNumInItem) {
+  public IscsiLunWhereInput addSnapshotNumInItem(Integer snapshotNumInItem) {
     if (this.snapshotNumIn == null) {
-      this.snapshotNumIn = new ArrayList<Double>();
+      this.snapshotNumIn = new ArrayList<Integer>();
     }
     this.snapshotNumIn.add(snapshotNumInItem);
     return this;
@@ -7827,17 +7827,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotNumIn() {
+  public List<Integer> getSnapshotNumIn() {
     return snapshotNumIn;
   }
 
 
-  public void setSnapshotNumIn(List<Double> snapshotNumIn) {
+  public void setSnapshotNumIn(List<Integer> snapshotNumIn) {
     this.snapshotNumIn = snapshotNumIn;
   }
 
 
-  public IscsiLunWhereInput snapshotNumLt(Double snapshotNumLt) {
+  public IscsiLunWhereInput snapshotNumLt(Integer snapshotNumLt) {
     
     this.snapshotNumLt = snapshotNumLt;
     return this;
@@ -7850,17 +7850,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumLt() {
+  public Integer getSnapshotNumLt() {
     return snapshotNumLt;
   }
 
 
-  public void setSnapshotNumLt(Double snapshotNumLt) {
+  public void setSnapshotNumLt(Integer snapshotNumLt) {
     this.snapshotNumLt = snapshotNumLt;
   }
 
 
-  public IscsiLunWhereInput snapshotNumLte(Double snapshotNumLte) {
+  public IscsiLunWhereInput snapshotNumLte(Integer snapshotNumLte) {
     
     this.snapshotNumLte = snapshotNumLte;
     return this;
@@ -7873,17 +7873,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumLte() {
+  public Integer getSnapshotNumLte() {
     return snapshotNumLte;
   }
 
 
-  public void setSnapshotNumLte(Double snapshotNumLte) {
+  public void setSnapshotNumLte(Integer snapshotNumLte) {
     this.snapshotNumLte = snapshotNumLte;
   }
 
 
-  public IscsiLunWhereInput snapshotNumNot(Double snapshotNumNot) {
+  public IscsiLunWhereInput snapshotNumNot(Integer snapshotNumNot) {
     
     this.snapshotNumNot = snapshotNumNot;
     return this;
@@ -7896,25 +7896,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumNot() {
+  public Integer getSnapshotNumNot() {
     return snapshotNumNot;
   }
 
 
-  public void setSnapshotNumNot(Double snapshotNumNot) {
+  public void setSnapshotNumNot(Integer snapshotNumNot) {
     this.snapshotNumNot = snapshotNumNot;
   }
 
 
-  public IscsiLunWhereInput snapshotNumNotIn(List<Double> snapshotNumNotIn) {
+  public IscsiLunWhereInput snapshotNumNotIn(List<Integer> snapshotNumNotIn) {
     
     this.snapshotNumNotIn = snapshotNumNotIn;
     return this;
   }
 
-  public IscsiLunWhereInput addSnapshotNumNotInItem(Double snapshotNumNotInItem) {
+  public IscsiLunWhereInput addSnapshotNumNotInItem(Integer snapshotNumNotInItem) {
     if (this.snapshotNumNotIn == null) {
-      this.snapshotNumNotIn = new ArrayList<Double>();
+      this.snapshotNumNotIn = new ArrayList<Integer>();
     }
     this.snapshotNumNotIn.add(snapshotNumNotInItem);
     return this;
@@ -7927,17 +7927,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotNumNotIn() {
+  public List<Integer> getSnapshotNumNotIn() {
     return snapshotNumNotIn;
   }
 
 
-  public void setSnapshotNumNotIn(List<Double> snapshotNumNotIn) {
+  public void setSnapshotNumNotIn(List<Integer> snapshotNumNotIn) {
     this.snapshotNumNotIn = snapshotNumNotIn;
   }
 
 
-  public IscsiLunWhereInput stripeNum(Double stripeNum) {
+  public IscsiLunWhereInput stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -7950,17 +7950,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 
 
-  public IscsiLunWhereInput stripeNumGt(Double stripeNumGt) {
+  public IscsiLunWhereInput stripeNumGt(Integer stripeNumGt) {
     
     this.stripeNumGt = stripeNumGt;
     return this;
@@ -7973,17 +7973,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumGt() {
+  public Integer getStripeNumGt() {
     return stripeNumGt;
   }
 
 
-  public void setStripeNumGt(Double stripeNumGt) {
+  public void setStripeNumGt(Integer stripeNumGt) {
     this.stripeNumGt = stripeNumGt;
   }
 
 
-  public IscsiLunWhereInput stripeNumGte(Double stripeNumGte) {
+  public IscsiLunWhereInput stripeNumGte(Integer stripeNumGte) {
     
     this.stripeNumGte = stripeNumGte;
     return this;
@@ -7996,25 +7996,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumGte() {
+  public Integer getStripeNumGte() {
     return stripeNumGte;
   }
 
 
-  public void setStripeNumGte(Double stripeNumGte) {
+  public void setStripeNumGte(Integer stripeNumGte) {
     this.stripeNumGte = stripeNumGte;
   }
 
 
-  public IscsiLunWhereInput stripeNumIn(List<Double> stripeNumIn) {
+  public IscsiLunWhereInput stripeNumIn(List<Integer> stripeNumIn) {
     
     this.stripeNumIn = stripeNumIn;
     return this;
   }
 
-  public IscsiLunWhereInput addStripeNumInItem(Double stripeNumInItem) {
+  public IscsiLunWhereInput addStripeNumInItem(Integer stripeNumInItem) {
     if (this.stripeNumIn == null) {
-      this.stripeNumIn = new ArrayList<Double>();
+      this.stripeNumIn = new ArrayList<Integer>();
     }
     this.stripeNumIn.add(stripeNumInItem);
     return this;
@@ -8027,17 +8027,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeNumIn() {
+  public List<Integer> getStripeNumIn() {
     return stripeNumIn;
   }
 
 
-  public void setStripeNumIn(List<Double> stripeNumIn) {
+  public void setStripeNumIn(List<Integer> stripeNumIn) {
     this.stripeNumIn = stripeNumIn;
   }
 
 
-  public IscsiLunWhereInput stripeNumLt(Double stripeNumLt) {
+  public IscsiLunWhereInput stripeNumLt(Integer stripeNumLt) {
     
     this.stripeNumLt = stripeNumLt;
     return this;
@@ -8050,17 +8050,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumLt() {
+  public Integer getStripeNumLt() {
     return stripeNumLt;
   }
 
 
-  public void setStripeNumLt(Double stripeNumLt) {
+  public void setStripeNumLt(Integer stripeNumLt) {
     this.stripeNumLt = stripeNumLt;
   }
 
 
-  public IscsiLunWhereInput stripeNumLte(Double stripeNumLte) {
+  public IscsiLunWhereInput stripeNumLte(Integer stripeNumLte) {
     
     this.stripeNumLte = stripeNumLte;
     return this;
@@ -8073,17 +8073,17 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumLte() {
+  public Integer getStripeNumLte() {
     return stripeNumLte;
   }
 
 
-  public void setStripeNumLte(Double stripeNumLte) {
+  public void setStripeNumLte(Integer stripeNumLte) {
     this.stripeNumLte = stripeNumLte;
   }
 
 
-  public IscsiLunWhereInput stripeNumNot(Double stripeNumNot) {
+  public IscsiLunWhereInput stripeNumNot(Integer stripeNumNot) {
     
     this.stripeNumNot = stripeNumNot;
     return this;
@@ -8096,25 +8096,25 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumNot() {
+  public Integer getStripeNumNot() {
     return stripeNumNot;
   }
 
 
-  public void setStripeNumNot(Double stripeNumNot) {
+  public void setStripeNumNot(Integer stripeNumNot) {
     this.stripeNumNot = stripeNumNot;
   }
 
 
-  public IscsiLunWhereInput stripeNumNotIn(List<Double> stripeNumNotIn) {
+  public IscsiLunWhereInput stripeNumNotIn(List<Integer> stripeNumNotIn) {
     
     this.stripeNumNotIn = stripeNumNotIn;
     return this;
   }
 
-  public IscsiLunWhereInput addStripeNumNotInItem(Double stripeNumNotInItem) {
+  public IscsiLunWhereInput addStripeNumNotInItem(Integer stripeNumNotInItem) {
     if (this.stripeNumNotIn == null) {
-      this.stripeNumNotIn = new ArrayList<Double>();
+      this.stripeNumNotIn = new ArrayList<Integer>();
     }
     this.stripeNumNotIn.add(stripeNumNotInItem);
     return this;
@@ -8127,12 +8127,12 @@ public class IscsiLunWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeNumNotIn() {
+  public List<Integer> getStripeNumNotIn() {
     return stripeNumNotIn;
   }
 
 
-  public void setStripeNumNotIn(List<Double> stripeNumNotIn) {
+  public void setStripeNumNotIn(List<Integer> stripeNumNotIn) {
     this.stripeNumNotIn = stripeNumNotIn;
   }
 

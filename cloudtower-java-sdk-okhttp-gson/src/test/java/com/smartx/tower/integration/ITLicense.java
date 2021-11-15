@@ -47,6 +47,8 @@ public class ITLicense extends ITBase {
       List<License> result = api.getLicenses(params, contentLanguage);
       assertThat(result).as("check result of getLicenses").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITLicense extends ITBase {
       LicenseConnection result = api.getLicensesConnection(params, contentLanguage);
       assertThat(result).as("check result of getLicensesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITLicense extends ITBase {
       WithTaskLicense result = api.updateDeploy(params, contentLanguage);
       assertThat(result).as("check result of updateDeploy").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

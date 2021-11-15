@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 **gatewayIp** | **String** |  |  [optional]
 **gatewaySubnetmask** | **String** |  |  [optional]
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
 **name** | **String** |  | 
 **subnetmask** | **String** |  |  [optional]
 **type** | **NetworkType** |  | 
-**vds** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**vlanId** | **Double** |  | 
-**vmNics** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**vds** | [**NestedVds**](NestedVds.md) |  | 
+**vlanId** | **Integer** |  | 
+**vmNics** | [**List&lt;NestedVmNic&gt;**](NestedVmNic.md) |  |  [optional]
 
 
 

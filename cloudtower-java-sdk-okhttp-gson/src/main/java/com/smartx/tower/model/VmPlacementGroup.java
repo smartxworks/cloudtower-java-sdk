@@ -20,8 +20,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.VmVmPolicy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -37,7 +39,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class VmPlacementGroup {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -77,7 +79,7 @@ public class VmPlacementGroup {
 
   public static final String SERIALIZED_NAME_VM_HOST_MUST_HOST_UUIDS = "vm_host_must_host_uuids";
   @SerializedName(SERIALIZED_NAME_VM_HOST_MUST_HOST_UUIDS)
-  private List<NameIdPair> vmHostMustHostUuids = null;
+  private List<NestedHost> vmHostMustHostUuids = null;
 
   public static final String SERIALIZED_NAME_VM_HOST_MUST_POLICY = "vm_host_must_policy";
   @SerializedName(SERIALIZED_NAME_VM_HOST_MUST_POLICY)
@@ -89,7 +91,7 @@ public class VmPlacementGroup {
 
   public static final String SERIALIZED_NAME_VM_HOST_PREFER_HOST_UUIDS = "vm_host_prefer_host_uuids";
   @SerializedName(SERIALIZED_NAME_VM_HOST_PREFER_HOST_UUIDS)
-  private List<NameIdPair> vmHostPreferHostUuids = null;
+  private List<NestedHost> vmHostPreferHostUuids = null;
 
   public static final String SERIALIZED_NAME_VM_HOST_PREFER_POLICY = "vm_host_prefer_policy";
   @SerializedName(SERIALIZED_NAME_VM_HOST_PREFER_POLICY)
@@ -105,10 +107,10 @@ public class VmPlacementGroup {
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
 
-  public VmPlacementGroup cluster(NameIdPair cluster) {
+  public VmPlacementGroup cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -121,12 +123,12 @@ public class VmPlacementGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -338,15 +340,15 @@ public class VmPlacementGroup {
   }
 
 
-  public VmPlacementGroup vmHostMustHostUuids(List<NameIdPair> vmHostMustHostUuids) {
+  public VmPlacementGroup vmHostMustHostUuids(List<NestedHost> vmHostMustHostUuids) {
     
     this.vmHostMustHostUuids = vmHostMustHostUuids;
     return this;
   }
 
-  public VmPlacementGroup addVmHostMustHostUuidsItem(NameIdPair vmHostMustHostUuidsItem) {
+  public VmPlacementGroup addVmHostMustHostUuidsItem(NestedHost vmHostMustHostUuidsItem) {
     if (this.vmHostMustHostUuids == null) {
-      this.vmHostMustHostUuids = new ArrayList<NameIdPair>();
+      this.vmHostMustHostUuids = new ArrayList<NestedHost>();
     }
     this.vmHostMustHostUuids.add(vmHostMustHostUuidsItem);
     return this;
@@ -359,12 +361,12 @@ public class VmPlacementGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmHostMustHostUuids() {
+  public List<NestedHost> getVmHostMustHostUuids() {
     return vmHostMustHostUuids;
   }
 
 
-  public void setVmHostMustHostUuids(List<NameIdPair> vmHostMustHostUuids) {
+  public void setVmHostMustHostUuids(List<NestedHost> vmHostMustHostUuids) {
     this.vmHostMustHostUuids = vmHostMustHostUuids;
   }
 
@@ -415,15 +417,15 @@ public class VmPlacementGroup {
   }
 
 
-  public VmPlacementGroup vmHostPreferHostUuids(List<NameIdPair> vmHostPreferHostUuids) {
+  public VmPlacementGroup vmHostPreferHostUuids(List<NestedHost> vmHostPreferHostUuids) {
     
     this.vmHostPreferHostUuids = vmHostPreferHostUuids;
     return this;
   }
 
-  public VmPlacementGroup addVmHostPreferHostUuidsItem(NameIdPair vmHostPreferHostUuidsItem) {
+  public VmPlacementGroup addVmHostPreferHostUuidsItem(NestedHost vmHostPreferHostUuidsItem) {
     if (this.vmHostPreferHostUuids == null) {
-      this.vmHostPreferHostUuids = new ArrayList<NameIdPair>();
+      this.vmHostPreferHostUuids = new ArrayList<NestedHost>();
     }
     this.vmHostPreferHostUuids.add(vmHostPreferHostUuidsItem);
     return this;
@@ -436,12 +438,12 @@ public class VmPlacementGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmHostPreferHostUuids() {
+  public List<NestedHost> getVmHostPreferHostUuids() {
     return vmHostPreferHostUuids;
   }
 
 
-  public void setVmHostPreferHostUuids(List<NameIdPair> vmHostPreferHostUuids) {
+  public void setVmHostPreferHostUuids(List<NestedHost> vmHostPreferHostUuids) {
     this.vmHostPreferHostUuids = vmHostPreferHostUuids;
   }
 
@@ -515,15 +517,15 @@ public class VmPlacementGroup {
   }
 
 
-  public VmPlacementGroup vms(List<NameIdPair> vms) {
+  public VmPlacementGroup vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public VmPlacementGroup addVmsItem(NameIdPair vmsItem) {
+  public VmPlacementGroup addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -536,12 +538,12 @@ public class VmPlacementGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 

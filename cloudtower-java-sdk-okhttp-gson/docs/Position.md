@@ -7,8 +7,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**row** | **Double** |  |  [optional]
-**column** | **Double** |  |  [optional]
+**row** | **Integer** |  |  [optional]
+**column** | **Integer** |  |  [optional]
 **typename** | [**TypenameEnum**](#TypenameEnum) |  |  [optional]
 
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **mirror** | **Boolean** |  |  [optional]
 **macAddress** | **String** |  | 
 **ipAddress** | **String** |  | 
-**index** | **Double** |  | 
+**index** | **Integer** |  | 
 **gateway** | **String** |  | 
 **enabled** | **Boolean** |  |  [optional]
 

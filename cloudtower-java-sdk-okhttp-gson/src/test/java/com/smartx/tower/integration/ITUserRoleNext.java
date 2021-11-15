@@ -47,6 +47,8 @@ public class ITUserRoleNext extends ITBase {
       List<WithTaskUserRoleNext> result = api.createRole(params, contentLanguage);
       assertThat(result).as("check result of createRole").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITUserRoleNext extends ITBase {
       List<WithTaskDeleteRole> result = api.deleteRole(params, contentLanguage);
       assertThat(result).as("check result of deleteRole").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITUserRoleNext extends ITBase {
       List<UserRoleNext> result = api.getUserRoleNexts(params, contentLanguage);
       assertThat(result).as("check result of getUserRoleNexts").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITUserRoleNext extends ITBase {
       UserRoleNextConnection result = api.getUserRoleNextsConnection(params, contentLanguage);
       assertThat(result).as("check result of getUserRoleNextsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITUserRoleNext extends ITBase {
       List<WithTaskUserRoleNext> result = api.updateRole(params, contentLanguage);
       assertThat(result).as("check result of updateRole").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

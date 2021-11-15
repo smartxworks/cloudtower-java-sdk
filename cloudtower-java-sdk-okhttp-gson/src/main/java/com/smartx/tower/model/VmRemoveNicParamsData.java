@@ -33,16 +33,16 @@ import java.util.List;
 public class VmRemoveNicParamsData {
   public static final String SERIALIZED_NAME_NIC_INDEX = "nic_index";
   @SerializedName(SERIALIZED_NAME_NIC_INDEX)
-  private List<Double> nicIndex = new ArrayList<Double>();
+  private List<Integer> nicIndex = new ArrayList<Integer>();
 
 
-  public VmRemoveNicParamsData nicIndex(List<Double> nicIndex) {
+  public VmRemoveNicParamsData nicIndex(List<Integer> nicIndex) {
     
     this.nicIndex = nicIndex;
     return this;
   }
 
-  public VmRemoveNicParamsData addNicIndexItem(Double nicIndexItem) {
+  public VmRemoveNicParamsData addNicIndexItem(Integer nicIndexItem) {
     this.nicIndex.add(nicIndexItem);
     return this;
   }
@@ -54,12 +54,12 @@ public class VmRemoveNicParamsData {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Double> getNicIndex() {
+  public List<Integer> getNicIndex() {
     return nicIndex;
   }
 
 
-  public void setNicIndex(List<Double> nicIndex) {
+  public void setNicIndex(List<Integer> nicIndex) {
     this.nicIndex = nicIndex;
   }
 

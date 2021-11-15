@@ -20,12 +20,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.EverouteClusterControllerInstances;
-import com.smartx.tower.model.EverouteClusterControllerTemplate;
 import com.smartx.tower.model.EverouteClusterPhase;
-import com.smartx.tower.model.EverouteClusterStatus;
 import com.smartx.tower.model.GlobalPolicyAction;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedEverouteClusterStatus;
+import com.smartx.tower.model.NestedEverouteControllerInstance;
+import com.smartx.tower.model.NestedEverouteControllerTemplate;
+import com.smartx.tower.model.NestedVds;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -40,19 +41,19 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class EverouteCluster {
   public static final String SERIALIZED_NAME_AGENT_ELF_CLUSTERS = "agent_elf_clusters";
   @SerializedName(SERIALIZED_NAME_AGENT_ELF_CLUSTERS)
-  private List<NameIdPair> agentElfClusters = null;
+  private List<NestedCluster> agentElfClusters = null;
 
   public static final String SERIALIZED_NAME_AGENT_ELF_VDSES = "agent_elf_vdses";
   @SerializedName(SERIALIZED_NAME_AGENT_ELF_VDSES)
-  private List<NameIdPair> agentElfVdses = null;
+  private List<NestedVds> agentElfVdses = null;
 
   public static final String SERIALIZED_NAME_CONTROLLER_INSTANCES = "controller_instances";
   @SerializedName(SERIALIZED_NAME_CONTROLLER_INSTANCES)
-  private List<EverouteClusterControllerInstances> controllerInstances = new ArrayList<EverouteClusterControllerInstances>();
+  private List<NestedEverouteControllerInstance> controllerInstances = new ArrayList<NestedEverouteControllerInstance>();
 
   public static final String SERIALIZED_NAME_CONTROLLER_TEMPLATE = "controller_template";
   @SerializedName(SERIALIZED_NAME_CONTROLLER_TEMPLATE)
-  private EverouteClusterControllerTemplate controllerTemplate;
+  private NestedEverouteControllerTemplate controllerTemplate;
 
   public static final String SERIALIZED_NAME_GLOBAL_DEFAULT_ACTION = "global_default_action";
   @SerializedName(SERIALIZED_NAME_GLOBAL_DEFAULT_ACTION)
@@ -72,22 +73,22 @@ public class EverouteCluster {
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private EverouteClusterStatus status;
+  private NestedEverouteClusterStatus status;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
   private String version;
 
 
-  public EverouteCluster agentElfClusters(List<NameIdPair> agentElfClusters) {
+  public EverouteCluster agentElfClusters(List<NestedCluster> agentElfClusters) {
     
     this.agentElfClusters = agentElfClusters;
     return this;
   }
 
-  public EverouteCluster addAgentElfClustersItem(NameIdPair agentElfClustersItem) {
+  public EverouteCluster addAgentElfClustersItem(NestedCluster agentElfClustersItem) {
     if (this.agentElfClusters == null) {
-      this.agentElfClusters = new ArrayList<NameIdPair>();
+      this.agentElfClusters = new ArrayList<NestedCluster>();
     }
     this.agentElfClusters.add(agentElfClustersItem);
     return this;
@@ -100,25 +101,25 @@ public class EverouteCluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getAgentElfClusters() {
+  public List<NestedCluster> getAgentElfClusters() {
     return agentElfClusters;
   }
 
 
-  public void setAgentElfClusters(List<NameIdPair> agentElfClusters) {
+  public void setAgentElfClusters(List<NestedCluster> agentElfClusters) {
     this.agentElfClusters = agentElfClusters;
   }
 
 
-  public EverouteCluster agentElfVdses(List<NameIdPair> agentElfVdses) {
+  public EverouteCluster agentElfVdses(List<NestedVds> agentElfVdses) {
     
     this.agentElfVdses = agentElfVdses;
     return this;
   }
 
-  public EverouteCluster addAgentElfVdsesItem(NameIdPair agentElfVdsesItem) {
+  public EverouteCluster addAgentElfVdsesItem(NestedVds agentElfVdsesItem) {
     if (this.agentElfVdses == null) {
-      this.agentElfVdses = new ArrayList<NameIdPair>();
+      this.agentElfVdses = new ArrayList<NestedVds>();
     }
     this.agentElfVdses.add(agentElfVdsesItem);
     return this;
@@ -131,23 +132,23 @@ public class EverouteCluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getAgentElfVdses() {
+  public List<NestedVds> getAgentElfVdses() {
     return agentElfVdses;
   }
 
 
-  public void setAgentElfVdses(List<NameIdPair> agentElfVdses) {
+  public void setAgentElfVdses(List<NestedVds> agentElfVdses) {
     this.agentElfVdses = agentElfVdses;
   }
 
 
-  public EverouteCluster controllerInstances(List<EverouteClusterControllerInstances> controllerInstances) {
+  public EverouteCluster controllerInstances(List<NestedEverouteControllerInstance> controllerInstances) {
     
     this.controllerInstances = controllerInstances;
     return this;
   }
 
-  public EverouteCluster addControllerInstancesItem(EverouteClusterControllerInstances controllerInstancesItem) {
+  public EverouteCluster addControllerInstancesItem(NestedEverouteControllerInstance controllerInstancesItem) {
     this.controllerInstances.add(controllerInstancesItem);
     return this;
   }
@@ -159,17 +160,17 @@ public class EverouteCluster {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EverouteClusterControllerInstances> getControllerInstances() {
+  public List<NestedEverouteControllerInstance> getControllerInstances() {
     return controllerInstances;
   }
 
 
-  public void setControllerInstances(List<EverouteClusterControllerInstances> controllerInstances) {
+  public void setControllerInstances(List<NestedEverouteControllerInstance> controllerInstances) {
     this.controllerInstances = controllerInstances;
   }
 
 
-  public EverouteCluster controllerTemplate(EverouteClusterControllerTemplate controllerTemplate) {
+  public EverouteCluster controllerTemplate(NestedEverouteControllerTemplate controllerTemplate) {
     
     this.controllerTemplate = controllerTemplate;
     return this;
@@ -182,12 +183,12 @@ public class EverouteCluster {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public EverouteClusterControllerTemplate getControllerTemplate() {
+  public NestedEverouteControllerTemplate getControllerTemplate() {
     return controllerTemplate;
   }
 
 
-  public void setControllerTemplate(EverouteClusterControllerTemplate controllerTemplate) {
+  public void setControllerTemplate(NestedEverouteControllerTemplate controllerTemplate) {
     this.controllerTemplate = controllerTemplate;
   }
 
@@ -284,7 +285,7 @@ public class EverouteCluster {
   }
 
 
-  public EverouteCluster status(EverouteClusterStatus status) {
+  public EverouteCluster status(NestedEverouteClusterStatus status) {
     
     this.status = status;
     return this;
@@ -297,12 +298,12 @@ public class EverouteCluster {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public EverouteClusterStatus getStatus() {
+  public NestedEverouteClusterStatus getStatus() {
     return status;
   }
 
 
-  public void setStatus(EverouteClusterStatus status) {
+  public void setStatus(NestedEverouteClusterStatus status) {
     this.status = status;
   }
 

@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aggregate** | [**AlertNotifierConnectionAggregate**](AlertNotifierConnectionAggregate.md) |  | 
+**aggregate** | [**NestedAggregateGlobalSettings**](NestedAggregateGlobalSettings.md) |  | 
 
 
 

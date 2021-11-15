@@ -19,12 +19,12 @@ Name | Type | Description | Notes
 **chapEnabled** | **Boolean** |  | 
 **chapName** | **String** |  |  [optional]
 **chapSecret** | **String** |  |  [optional]
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **externalUse** | **Boolean** |  | 
 **id** | **String** |  | 
-**initiatorChaps** | [**List&lt;IscsiTargetInitiatorChaps&gt;**](IscsiTargetInitiatorChaps.md) |  |  [optional]
+**initiatorChaps** | [**List&lt;NestedInitiatorChap&gt;**](NestedInitiatorChap.md) |  |  [optional]
 **internal** | **Boolean** |  | 
 **ioSize** | **Double** |  |  [optional]
 **iops** | **Double** |  |  [optional]
@@ -39,12 +39,12 @@ Name | Type | Description | Notes
 **ipWhitelist** | **String** |  | 
 **iqnName** | **String** |  | 
 **iqnWhitelist** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localId** | **String** |  | 
-**luns** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**luns** | [**List&lt;NestedIscsiLun&gt;**](NestedIscsiLun.md) |  |  [optional]
 **name** | **String** |  | 
-**replicaNum** | **Double** |  | 
-**stripeNum** | **Double** |  | 
+**replicaNum** | **Integer** |  | 
+**stripeNum** | **Integer** |  | 
 **stripeSize** | **Double** |  | 
 **thinProvision** | **Boolean** |  | 
 

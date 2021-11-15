@@ -47,6 +47,8 @@ public class ITApplication extends ITBase {
       List<Application> result = api.getApplications(params, contentLanguage);
       assertThat(result).as("check result of getApplications").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITApplication extends ITBase {
       ApplicationConnection result = api.getApplicationsConnection(params, contentLanguage);
       assertThat(result).as("check result of getApplicationsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

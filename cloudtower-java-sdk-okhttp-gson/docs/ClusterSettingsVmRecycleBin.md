@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**retain** | **Double** |  | 
+**retain** | **Integer** |  | 
 **enabled** | **Boolean** |  | 
 
 

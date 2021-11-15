@@ -250,35 +250,35 @@ public class ViewWhereInput {
 
   public static final String SERIALIZED_NAME_TIME_SPAN = "time_span";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN)
-  private Double timeSpan;
+  private Integer timeSpan;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_GT = "time_span_gt";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_GT)
-  private Double timeSpanGt;
+  private Integer timeSpanGt;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_GTE = "time_span_gte";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_GTE)
-  private Double timeSpanGte;
+  private Integer timeSpanGte;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_IN = "time_span_in";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_IN)
-  private List<Double> timeSpanIn = null;
+  private List<Integer> timeSpanIn = null;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_LT = "time_span_lt";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_LT)
-  private Double timeSpanLt;
+  private Integer timeSpanLt;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_LTE = "time_span_lte";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_LTE)
-  private Double timeSpanLte;
+  private Integer timeSpanLte;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_NOT = "time_span_not";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_NOT)
-  private Double timeSpanNot;
+  private Integer timeSpanNot;
 
   public static final String SERIALIZED_NAME_TIME_SPAN_NOT_IN = "time_span_not_in";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN_NOT_IN)
-  private List<Double> timeSpanNotIn = null;
+  private List<Integer> timeSpanNotIn = null;
 
   public static final String SERIALIZED_NAME_TIME_UNIT = "time_unit";
   @SerializedName(SERIALIZED_NAME_TIME_UNIT)
@@ -1604,7 +1604,7 @@ public class ViewWhereInput {
   }
 
 
-  public ViewWhereInput timeSpan(Double timeSpan) {
+  public ViewWhereInput timeSpan(Integer timeSpan) {
     
     this.timeSpan = timeSpan;
     return this;
@@ -1617,17 +1617,17 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpan() {
+  public Integer getTimeSpan() {
     return timeSpan;
   }
 
 
-  public void setTimeSpan(Double timeSpan) {
+  public void setTimeSpan(Integer timeSpan) {
     this.timeSpan = timeSpan;
   }
 
 
-  public ViewWhereInput timeSpanGt(Double timeSpanGt) {
+  public ViewWhereInput timeSpanGt(Integer timeSpanGt) {
     
     this.timeSpanGt = timeSpanGt;
     return this;
@@ -1640,17 +1640,17 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpanGt() {
+  public Integer getTimeSpanGt() {
     return timeSpanGt;
   }
 
 
-  public void setTimeSpanGt(Double timeSpanGt) {
+  public void setTimeSpanGt(Integer timeSpanGt) {
     this.timeSpanGt = timeSpanGt;
   }
 
 
-  public ViewWhereInput timeSpanGte(Double timeSpanGte) {
+  public ViewWhereInput timeSpanGte(Integer timeSpanGte) {
     
     this.timeSpanGte = timeSpanGte;
     return this;
@@ -1663,25 +1663,25 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpanGte() {
+  public Integer getTimeSpanGte() {
     return timeSpanGte;
   }
 
 
-  public void setTimeSpanGte(Double timeSpanGte) {
+  public void setTimeSpanGte(Integer timeSpanGte) {
     this.timeSpanGte = timeSpanGte;
   }
 
 
-  public ViewWhereInput timeSpanIn(List<Double> timeSpanIn) {
+  public ViewWhereInput timeSpanIn(List<Integer> timeSpanIn) {
     
     this.timeSpanIn = timeSpanIn;
     return this;
   }
 
-  public ViewWhereInput addTimeSpanInItem(Double timeSpanInItem) {
+  public ViewWhereInput addTimeSpanInItem(Integer timeSpanInItem) {
     if (this.timeSpanIn == null) {
-      this.timeSpanIn = new ArrayList<Double>();
+      this.timeSpanIn = new ArrayList<Integer>();
     }
     this.timeSpanIn.add(timeSpanInItem);
     return this;
@@ -1694,17 +1694,17 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTimeSpanIn() {
+  public List<Integer> getTimeSpanIn() {
     return timeSpanIn;
   }
 
 
-  public void setTimeSpanIn(List<Double> timeSpanIn) {
+  public void setTimeSpanIn(List<Integer> timeSpanIn) {
     this.timeSpanIn = timeSpanIn;
   }
 
 
-  public ViewWhereInput timeSpanLt(Double timeSpanLt) {
+  public ViewWhereInput timeSpanLt(Integer timeSpanLt) {
     
     this.timeSpanLt = timeSpanLt;
     return this;
@@ -1717,17 +1717,17 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpanLt() {
+  public Integer getTimeSpanLt() {
     return timeSpanLt;
   }
 
 
-  public void setTimeSpanLt(Double timeSpanLt) {
+  public void setTimeSpanLt(Integer timeSpanLt) {
     this.timeSpanLt = timeSpanLt;
   }
 
 
-  public ViewWhereInput timeSpanLte(Double timeSpanLte) {
+  public ViewWhereInput timeSpanLte(Integer timeSpanLte) {
     
     this.timeSpanLte = timeSpanLte;
     return this;
@@ -1740,17 +1740,17 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpanLte() {
+  public Integer getTimeSpanLte() {
     return timeSpanLte;
   }
 
 
-  public void setTimeSpanLte(Double timeSpanLte) {
+  public void setTimeSpanLte(Integer timeSpanLte) {
     this.timeSpanLte = timeSpanLte;
   }
 
 
-  public ViewWhereInput timeSpanNot(Double timeSpanNot) {
+  public ViewWhereInput timeSpanNot(Integer timeSpanNot) {
     
     this.timeSpanNot = timeSpanNot;
     return this;
@@ -1763,25 +1763,25 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTimeSpanNot() {
+  public Integer getTimeSpanNot() {
     return timeSpanNot;
   }
 
 
-  public void setTimeSpanNot(Double timeSpanNot) {
+  public void setTimeSpanNot(Integer timeSpanNot) {
     this.timeSpanNot = timeSpanNot;
   }
 
 
-  public ViewWhereInput timeSpanNotIn(List<Double> timeSpanNotIn) {
+  public ViewWhereInput timeSpanNotIn(List<Integer> timeSpanNotIn) {
     
     this.timeSpanNotIn = timeSpanNotIn;
     return this;
   }
 
-  public ViewWhereInput addTimeSpanNotInItem(Double timeSpanNotInItem) {
+  public ViewWhereInput addTimeSpanNotInItem(Integer timeSpanNotInItem) {
     if (this.timeSpanNotIn == null) {
-      this.timeSpanNotIn = new ArrayList<Double>();
+      this.timeSpanNotIn = new ArrayList<Integer>();
     }
     this.timeSpanNotIn.add(timeSpanNotInItem);
     return this;
@@ -1794,12 +1794,12 @@ public class ViewWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTimeSpanNotIn() {
+  public List<Integer> getTimeSpanNotIn() {
     return timeSpanNotIn;
   }
 
 
-  public void setTimeSpanNotIn(List<Double> timeSpanNotIn) {
+  public void setTimeSpanNotIn(List<Integer> timeSpanNotIn) {
     this.timeSpanNotIn = timeSpanNotIn;
   }
 

@@ -47,6 +47,8 @@ public class ITDatacenter extends ITBase {
       List<WithTaskDatacenter> result = api.createDatacenter(params, contentLanguage);
       assertThat(result).as("check result of createDatacenter").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITDatacenter extends ITBase {
       List<WithTaskDeleteDatacenter> result = api.deleteDatacenter(params, contentLanguage);
       assertThat(result).as("check result of deleteDatacenter").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITDatacenter extends ITBase {
       List<Datacenter> result = api.getDatacenters(params, contentLanguage);
       assertThat(result).as("check result of getDatacenters").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITDatacenter extends ITBase {
       DatacenterConnection result = api.getDatacentersConnection(params, contentLanguage);
       assertThat(result).as("check result of getDatacentersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITDatacenter extends ITBase {
       List<WithTaskDatacenter> result = api.updateDatacenter(params, contentLanguage);
       assertThat(result).as("check result of updateDatacenter").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

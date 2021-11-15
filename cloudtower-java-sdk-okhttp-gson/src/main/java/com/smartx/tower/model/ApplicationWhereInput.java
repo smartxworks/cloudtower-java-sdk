@@ -429,35 +429,35 @@ public class ApplicationWhereInput {
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
-  private Double vcpu;
+  private Integer vcpu;
 
   public static final String SERIALIZED_NAME_VCPU_GT = "vcpu_gt";
   @SerializedName(SERIALIZED_NAME_VCPU_GT)
-  private Double vcpuGt;
+  private Integer vcpuGt;
 
   public static final String SERIALIZED_NAME_VCPU_GTE = "vcpu_gte";
   @SerializedName(SERIALIZED_NAME_VCPU_GTE)
-  private Double vcpuGte;
+  private Integer vcpuGte;
 
   public static final String SERIALIZED_NAME_VCPU_IN = "vcpu_in";
   @SerializedName(SERIALIZED_NAME_VCPU_IN)
-  private List<Double> vcpuIn = null;
+  private List<Integer> vcpuIn = null;
 
   public static final String SERIALIZED_NAME_VCPU_LT = "vcpu_lt";
   @SerializedName(SERIALIZED_NAME_VCPU_LT)
-  private Double vcpuLt;
+  private Integer vcpuLt;
 
   public static final String SERIALIZED_NAME_VCPU_LTE = "vcpu_lte";
   @SerializedName(SERIALIZED_NAME_VCPU_LTE)
-  private Double vcpuLte;
+  private Integer vcpuLte;
 
   public static final String SERIALIZED_NAME_VCPU_NOT = "vcpu_not";
   @SerializedName(SERIALIZED_NAME_VCPU_NOT)
-  private Double vcpuNot;
+  private Integer vcpuNot;
 
   public static final String SERIALIZED_NAME_VCPU_NOT_IN = "vcpu_not_in";
   @SerializedName(SERIALIZED_NAME_VCPU_NOT_IN)
-  private List<Double> vcpuNotIn = null;
+  private List<Integer> vcpuNotIn = null;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -2970,7 +2970,7 @@ public class ApplicationWhereInput {
   }
 
 
-  public ApplicationWhereInput vcpu(Double vcpu) {
+  public ApplicationWhereInput vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
     return this;
@@ -2983,17 +2983,17 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpu() {
+  public Integer getVcpu() {
     return vcpu;
   }
 
 
-  public void setVcpu(Double vcpu) {
+  public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
 
-  public ApplicationWhereInput vcpuGt(Double vcpuGt) {
+  public ApplicationWhereInput vcpuGt(Integer vcpuGt) {
     
     this.vcpuGt = vcpuGt;
     return this;
@@ -3006,17 +3006,17 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuGt() {
+  public Integer getVcpuGt() {
     return vcpuGt;
   }
 
 
-  public void setVcpuGt(Double vcpuGt) {
+  public void setVcpuGt(Integer vcpuGt) {
     this.vcpuGt = vcpuGt;
   }
 
 
-  public ApplicationWhereInput vcpuGte(Double vcpuGte) {
+  public ApplicationWhereInput vcpuGte(Integer vcpuGte) {
     
     this.vcpuGte = vcpuGte;
     return this;
@@ -3029,25 +3029,25 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuGte() {
+  public Integer getVcpuGte() {
     return vcpuGte;
   }
 
 
-  public void setVcpuGte(Double vcpuGte) {
+  public void setVcpuGte(Integer vcpuGte) {
     this.vcpuGte = vcpuGte;
   }
 
 
-  public ApplicationWhereInput vcpuIn(List<Double> vcpuIn) {
+  public ApplicationWhereInput vcpuIn(List<Integer> vcpuIn) {
     
     this.vcpuIn = vcpuIn;
     return this;
   }
 
-  public ApplicationWhereInput addVcpuInItem(Double vcpuInItem) {
+  public ApplicationWhereInput addVcpuInItem(Integer vcpuInItem) {
     if (this.vcpuIn == null) {
-      this.vcpuIn = new ArrayList<Double>();
+      this.vcpuIn = new ArrayList<Integer>();
     }
     this.vcpuIn.add(vcpuInItem);
     return this;
@@ -3060,17 +3060,17 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVcpuIn() {
+  public List<Integer> getVcpuIn() {
     return vcpuIn;
   }
 
 
-  public void setVcpuIn(List<Double> vcpuIn) {
+  public void setVcpuIn(List<Integer> vcpuIn) {
     this.vcpuIn = vcpuIn;
   }
 
 
-  public ApplicationWhereInput vcpuLt(Double vcpuLt) {
+  public ApplicationWhereInput vcpuLt(Integer vcpuLt) {
     
     this.vcpuLt = vcpuLt;
     return this;
@@ -3083,17 +3083,17 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuLt() {
+  public Integer getVcpuLt() {
     return vcpuLt;
   }
 
 
-  public void setVcpuLt(Double vcpuLt) {
+  public void setVcpuLt(Integer vcpuLt) {
     this.vcpuLt = vcpuLt;
   }
 
 
-  public ApplicationWhereInput vcpuLte(Double vcpuLte) {
+  public ApplicationWhereInput vcpuLte(Integer vcpuLte) {
     
     this.vcpuLte = vcpuLte;
     return this;
@@ -3106,17 +3106,17 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuLte() {
+  public Integer getVcpuLte() {
     return vcpuLte;
   }
 
 
-  public void setVcpuLte(Double vcpuLte) {
+  public void setVcpuLte(Integer vcpuLte) {
     this.vcpuLte = vcpuLte;
   }
 
 
-  public ApplicationWhereInput vcpuNot(Double vcpuNot) {
+  public ApplicationWhereInput vcpuNot(Integer vcpuNot) {
     
     this.vcpuNot = vcpuNot;
     return this;
@@ -3129,25 +3129,25 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVcpuNot() {
+  public Integer getVcpuNot() {
     return vcpuNot;
   }
 
 
-  public void setVcpuNot(Double vcpuNot) {
+  public void setVcpuNot(Integer vcpuNot) {
     this.vcpuNot = vcpuNot;
   }
 
 
-  public ApplicationWhereInput vcpuNotIn(List<Double> vcpuNotIn) {
+  public ApplicationWhereInput vcpuNotIn(List<Integer> vcpuNotIn) {
     
     this.vcpuNotIn = vcpuNotIn;
     return this;
   }
 
-  public ApplicationWhereInput addVcpuNotInItem(Double vcpuNotInItem) {
+  public ApplicationWhereInput addVcpuNotInItem(Integer vcpuNotInItem) {
     if (this.vcpuNotIn == null) {
-      this.vcpuNotIn = new ArrayList<Double>();
+      this.vcpuNotIn = new ArrayList<Integer>();
     }
     this.vcpuNotIn.add(vcpuNotInItem);
     return this;
@@ -3160,12 +3160,12 @@ public class ApplicationWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVcpuNotIn() {
+  public List<Integer> getVcpuNotIn() {
     return vcpuNotIn;
   }
 
 
-  public void setVcpuNotIn(List<Double> vcpuNotIn) {
+  public void setVcpuNotIn(List<Integer> vcpuNotIn) {
     this.vcpuNotIn = vcpuNotIn;
   }
 

@@ -7,8 +7,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**hosts** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**hosts** | [**List&lt;NestedHost&gt;**](NestedHost.md) |  |  [optional]
 **id** | **String** |  | 
 **localId** | **String** |  | 
 **logEndedAt** | **String** |  | 

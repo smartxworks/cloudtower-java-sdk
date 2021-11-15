@@ -7,13 +7,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  |  [optional]
 **id** | **String** |  | 
 **ip** | **String** |  | 
 **isValid** | **Boolean** |  | 
 **localId** | **String** |  | 
 **password** | **String** |  | 
-**port** | **Double** |  | 
+**port** | **Integer** |  | 
 **username** | **String** |  | 
 
 

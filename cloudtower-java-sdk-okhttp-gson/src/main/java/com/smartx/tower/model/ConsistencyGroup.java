@@ -20,9 +20,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedConsistencyGroupSnapshot;
+import com.smartx.tower.model.NestedIscsiLun;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNvmfNamespace;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,11 +40,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class ConsistencyGroup {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS = "consistency_group_snapshots";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS)
-  private List<NameIdPair> consistencyGroupSnapshots = null;
+  private List<NestedConsistencyGroupSnapshot> consistencyGroupSnapshots = null;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -57,11 +60,11 @@ public class ConsistencyGroup {
 
   public static final String SERIALIZED_NAME_ISCSI_LUNS = "iscsi_luns";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUNS)
-  private List<NameIdPair> iscsiLuns = null;
+  private List<NestedIscsiLun> iscsiLuns = null;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -77,14 +80,14 @@ public class ConsistencyGroup {
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<NameIdPair> namespaces = null;
+  private List<NestedNvmfNamespace> namespaces = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Double uniqueSize;
 
 
-  public ConsistencyGroup cluster(NameIdPair cluster) {
+  public ConsistencyGroup cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -97,25 +100,25 @@ public class ConsistencyGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public ConsistencyGroup consistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
+  public ConsistencyGroup consistencyGroupSnapshots(List<NestedConsistencyGroupSnapshot> consistencyGroupSnapshots) {
     
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
     return this;
   }
 
-  public ConsistencyGroup addConsistencyGroupSnapshotsItem(NameIdPair consistencyGroupSnapshotsItem) {
+  public ConsistencyGroup addConsistencyGroupSnapshotsItem(NestedConsistencyGroupSnapshot consistencyGroupSnapshotsItem) {
     if (this.consistencyGroupSnapshots == null) {
-      this.consistencyGroupSnapshots = new ArrayList<NameIdPair>();
+      this.consistencyGroupSnapshots = new ArrayList<NestedConsistencyGroupSnapshot>();
     }
     this.consistencyGroupSnapshots.add(consistencyGroupSnapshotsItem);
     return this;
@@ -128,12 +131,12 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getConsistencyGroupSnapshots() {
+  public List<NestedConsistencyGroupSnapshot> getConsistencyGroupSnapshots() {
     return consistencyGroupSnapshots;
   }
 
 
-  public void setConsistencyGroupSnapshots(List<NameIdPair> consistencyGroupSnapshots) {
+  public void setConsistencyGroupSnapshots(List<NestedConsistencyGroupSnapshot> consistencyGroupSnapshots) {
     this.consistencyGroupSnapshots = consistencyGroupSnapshots;
   }
 
@@ -207,15 +210,15 @@ public class ConsistencyGroup {
   }
 
 
-  public ConsistencyGroup iscsiLuns(List<NameIdPair> iscsiLuns) {
+  public ConsistencyGroup iscsiLuns(List<NestedIscsiLun> iscsiLuns) {
     
     this.iscsiLuns = iscsiLuns;
     return this;
   }
 
-  public ConsistencyGroup addIscsiLunsItem(NameIdPair iscsiLunsItem) {
+  public ConsistencyGroup addIscsiLunsItem(NestedIscsiLun iscsiLunsItem) {
     if (this.iscsiLuns == null) {
-      this.iscsiLuns = new ArrayList<NameIdPair>();
+      this.iscsiLuns = new ArrayList<NestedIscsiLun>();
     }
     this.iscsiLuns.add(iscsiLunsItem);
     return this;
@@ -228,25 +231,25 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getIscsiLuns() {
+  public List<NestedIscsiLun> getIscsiLuns() {
     return iscsiLuns;
   }
 
 
-  public void setIscsiLuns(List<NameIdPair> iscsiLuns) {
+  public void setIscsiLuns(List<NestedIscsiLun> iscsiLuns) {
     this.iscsiLuns = iscsiLuns;
   }
 
 
-  public ConsistencyGroup labels(List<BrickTopoPowers> labels) {
+  public ConsistencyGroup labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public ConsistencyGroup addLabelsItem(BrickTopoPowers labelsItem) {
+  public ConsistencyGroup addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -259,12 +262,12 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -338,15 +341,15 @@ public class ConsistencyGroup {
   }
 
 
-  public ConsistencyGroup namespaces(List<NameIdPair> namespaces) {
+  public ConsistencyGroup namespaces(List<NestedNvmfNamespace> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public ConsistencyGroup addNamespacesItem(NameIdPair namespacesItem) {
+  public ConsistencyGroup addNamespacesItem(NestedNvmfNamespace namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<NameIdPair>();
+      this.namespaces = new ArrayList<NestedNvmfNamespace>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -359,12 +362,12 @@ public class ConsistencyGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNamespaces() {
+  public List<NestedNvmfNamespace> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<NameIdPair> namespaces) {
+  public void setNamespaces(List<NestedNvmfNamespace> namespaces) {
     this.namespaces = namespaces;
   }
 

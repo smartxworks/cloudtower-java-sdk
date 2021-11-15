@@ -20,12 +20,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoCapacity;
-import com.smartx.tower.model.BrickTopoDiskLayout;
-import com.smartx.tower.model.BrickTopoPowers;
-import com.smartx.tower.model.BrickTopoTagPositionInBrick;
 import com.smartx.tower.model.Direction;
+import com.smartx.tower.model.NestedBrickDiskLayout;
+import com.smartx.tower.model.NestedBrickPower;
+import com.smartx.tower.model.NestedCapacity;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedClusterTopo;
+import com.smartx.tower.model.NestedNodeTopo;
+import com.smartx.tower.model.NestedRackTopo;
+import com.smartx.tower.model.NestedTagPosition;
 import com.smartx.tower.model.PowerPosition;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -41,23 +44,23 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class BrickTopo {
   public static final String SERIALIZED_NAME_CAPACITY = "capacity";
   @SerializedName(SERIALIZED_NAME_CAPACITY)
-  private BrickTopoCapacity capacity;
+  private NestedCapacity capacity;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CLUSTER_TOPO = "cluster_topo";
   @SerializedName(SERIALIZED_NAME_CLUSTER_TOPO)
-  private NameIdPair clusterTopo;
+  private NestedClusterTopo clusterTopo;
 
   public static final String SERIALIZED_NAME_DISK_LAYOUT = "disk_layout";
   @SerializedName(SERIALIZED_NAME_DISK_LAYOUT)
-  private BrickTopoDiskLayout diskLayout;
+  private NestedBrickDiskLayout diskLayout;
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Double height;
+  private Integer height;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -77,11 +80,11 @@ public class BrickTopo {
 
   public static final String SERIALIZED_NAME_NODE_TOPOES = "node_topoes";
   @SerializedName(SERIALIZED_NAME_NODE_TOPOES)
-  private List<NameIdPair> nodeTopoes = null;
+  private List<NestedNodeTopo> nodeTopoes = null;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
   @SerializedName(SERIALIZED_NAME_POSITION)
-  private Double position;
+  private Integer position;
 
   public static final String SERIALIZED_NAME_POWER_LAYOUT = "power_layout";
   @SerializedName(SERIALIZED_NAME_POWER_LAYOUT)
@@ -93,18 +96,18 @@ public class BrickTopo {
 
   public static final String SERIALIZED_NAME_POWERS = "powers";
   @SerializedName(SERIALIZED_NAME_POWERS)
-  private List<BrickTopoPowers> powers = null;
+  private List<NestedBrickPower> powers = null;
 
   public static final String SERIALIZED_NAME_RACK_TOPO = "rack_topo";
   @SerializedName(SERIALIZED_NAME_RACK_TOPO)
-  private NameIdPair rackTopo;
+  private NestedRackTopo rackTopo;
 
   public static final String SERIALIZED_NAME_TAG_POSITION_IN_BRICK = "tag_position_in_brick";
   @SerializedName(SERIALIZED_NAME_TAG_POSITION_IN_BRICK)
-  private List<BrickTopoTagPositionInBrick> tagPositionInBrick = null;
+  private List<NestedTagPosition> tagPositionInBrick = null;
 
 
-  public BrickTopo capacity(BrickTopoCapacity capacity) {
+  public BrickTopo capacity(NestedCapacity capacity) {
     
     this.capacity = capacity;
     return this;
@@ -117,17 +120,17 @@ public class BrickTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public BrickTopoCapacity getCapacity() {
+  public NestedCapacity getCapacity() {
     return capacity;
   }
 
 
-  public void setCapacity(BrickTopoCapacity capacity) {
+  public void setCapacity(NestedCapacity capacity) {
     this.capacity = capacity;
   }
 
 
-  public BrickTopo cluster(NameIdPair cluster) {
+  public BrickTopo cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -140,17 +143,17 @@ public class BrickTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public BrickTopo clusterTopo(NameIdPair clusterTopo) {
+  public BrickTopo clusterTopo(NestedClusterTopo clusterTopo) {
     
     this.clusterTopo = clusterTopo;
     return this;
@@ -163,17 +166,17 @@ public class BrickTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getClusterTopo() {
+  public NestedClusterTopo getClusterTopo() {
     return clusterTopo;
   }
 
 
-  public void setClusterTopo(NameIdPair clusterTopo) {
+  public void setClusterTopo(NestedClusterTopo clusterTopo) {
     this.clusterTopo = clusterTopo;
   }
 
 
-  public BrickTopo diskLayout(BrickTopoDiskLayout diskLayout) {
+  public BrickTopo diskLayout(NestedBrickDiskLayout diskLayout) {
     
     this.diskLayout = diskLayout;
     return this;
@@ -186,17 +189,17 @@ public class BrickTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public BrickTopoDiskLayout getDiskLayout() {
+  public NestedBrickDiskLayout getDiskLayout() {
     return diskLayout;
   }
 
 
-  public void setDiskLayout(BrickTopoDiskLayout diskLayout) {
+  public void setDiskLayout(NestedBrickDiskLayout diskLayout) {
     this.diskLayout = diskLayout;
   }
 
 
-  public BrickTopo height(Double height) {
+  public BrickTopo height(Integer height) {
     
     this.height = height;
     return this;
@@ -209,12 +212,12 @@ public class BrickTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getHeight() {
+  public Integer getHeight() {
     return height;
   }
 
 
-  public void setHeight(Double height) {
+  public void setHeight(Integer height) {
     this.height = height;
   }
 
@@ -311,15 +314,15 @@ public class BrickTopo {
   }
 
 
-  public BrickTopo nodeTopoes(List<NameIdPair> nodeTopoes) {
+  public BrickTopo nodeTopoes(List<NestedNodeTopo> nodeTopoes) {
     
     this.nodeTopoes = nodeTopoes;
     return this;
   }
 
-  public BrickTopo addNodeTopoesItem(NameIdPair nodeTopoesItem) {
+  public BrickTopo addNodeTopoesItem(NestedNodeTopo nodeTopoesItem) {
     if (this.nodeTopoes == null) {
-      this.nodeTopoes = new ArrayList<NameIdPair>();
+      this.nodeTopoes = new ArrayList<NestedNodeTopo>();
     }
     this.nodeTopoes.add(nodeTopoesItem);
     return this;
@@ -332,17 +335,17 @@ public class BrickTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNodeTopoes() {
+  public List<NestedNodeTopo> getNodeTopoes() {
     return nodeTopoes;
   }
 
 
-  public void setNodeTopoes(List<NameIdPair> nodeTopoes) {
+  public void setNodeTopoes(List<NestedNodeTopo> nodeTopoes) {
     this.nodeTopoes = nodeTopoes;
   }
 
 
-  public BrickTopo position(Double position) {
+  public BrickTopo position(Integer position) {
     
     this.position = position;
     return this;
@@ -355,12 +358,12 @@ public class BrickTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPosition() {
+  public Integer getPosition() {
     return position;
   }
 
 
-  public void setPosition(Double position) {
+  public void setPosition(Integer position) {
     this.position = position;
   }
 
@@ -411,15 +414,15 @@ public class BrickTopo {
   }
 
 
-  public BrickTopo powers(List<BrickTopoPowers> powers) {
+  public BrickTopo powers(List<NestedBrickPower> powers) {
     
     this.powers = powers;
     return this;
   }
 
-  public BrickTopo addPowersItem(BrickTopoPowers powersItem) {
+  public BrickTopo addPowersItem(NestedBrickPower powersItem) {
     if (this.powers == null) {
-      this.powers = new ArrayList<BrickTopoPowers>();
+      this.powers = new ArrayList<NestedBrickPower>();
     }
     this.powers.add(powersItem);
     return this;
@@ -432,17 +435,17 @@ public class BrickTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getPowers() {
+  public List<NestedBrickPower> getPowers() {
     return powers;
   }
 
 
-  public void setPowers(List<BrickTopoPowers> powers) {
+  public void setPowers(List<NestedBrickPower> powers) {
     this.powers = powers;
   }
 
 
-  public BrickTopo rackTopo(NameIdPair rackTopo) {
+  public BrickTopo rackTopo(NestedRackTopo rackTopo) {
     
     this.rackTopo = rackTopo;
     return this;
@@ -455,25 +458,25 @@ public class BrickTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getRackTopo() {
+  public NestedRackTopo getRackTopo() {
     return rackTopo;
   }
 
 
-  public void setRackTopo(NameIdPair rackTopo) {
+  public void setRackTopo(NestedRackTopo rackTopo) {
     this.rackTopo = rackTopo;
   }
 
 
-  public BrickTopo tagPositionInBrick(List<BrickTopoTagPositionInBrick> tagPositionInBrick) {
+  public BrickTopo tagPositionInBrick(List<NestedTagPosition> tagPositionInBrick) {
     
     this.tagPositionInBrick = tagPositionInBrick;
     return this;
   }
 
-  public BrickTopo addTagPositionInBrickItem(BrickTopoTagPositionInBrick tagPositionInBrickItem) {
+  public BrickTopo addTagPositionInBrickItem(NestedTagPosition tagPositionInBrickItem) {
     if (this.tagPositionInBrick == null) {
-      this.tagPositionInBrick = new ArrayList<BrickTopoTagPositionInBrick>();
+      this.tagPositionInBrick = new ArrayList<NestedTagPosition>();
     }
     this.tagPositionInBrick.add(tagPositionInBrickItem);
     return this;
@@ -486,12 +489,12 @@ public class BrickTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoTagPositionInBrick> getTagPositionInBrick() {
+  public List<NestedTagPosition> getTagPositionInBrick() {
     return tagPositionInBrick;
   }
 
 
-  public void setTagPositionInBrick(List<BrickTopoTagPositionInBrick> tagPositionInBrick) {
+  public void setTagPositionInBrick(List<NestedTagPosition> tagPositionInBrick) {
     this.tagPositionInBrick = tagPositionInBrick;
   }
 

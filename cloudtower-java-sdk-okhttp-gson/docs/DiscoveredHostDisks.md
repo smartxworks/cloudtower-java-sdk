@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **size** | **Double** |  | 
 **serial** | **String** |  | 
 **persistentMemoryType** | **String** |  |  [optional]
-**numaNode** | **Double** |  |  [optional]
+**numaNode** | **Integer** |  |  [optional]
 **model** | **String** |  | 
 **function** | [**DiskFunction**](DiskFunction.md) |  |  [optional]
 **drive** | **String** |  | 

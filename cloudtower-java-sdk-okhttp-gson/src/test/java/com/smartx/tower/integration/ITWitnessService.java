@@ -47,6 +47,8 @@ public class ITWitnessService extends ITBase {
       List<WitnessService> result = api.getWitnessServices(params, contentLanguage);
       assertThat(result).as("check result of getWitnessServices").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

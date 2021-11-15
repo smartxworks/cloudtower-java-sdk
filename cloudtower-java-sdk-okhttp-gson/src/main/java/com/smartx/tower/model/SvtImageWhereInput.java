@@ -357,35 +357,35 @@ public class SvtImageWhereInput {
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
-  private Double version;
+  private Integer version;
 
   public static final String SERIALIZED_NAME_VERSION_GT = "version_gt";
   @SerializedName(SERIALIZED_NAME_VERSION_GT)
-  private Double versionGt;
+  private Integer versionGt;
 
   public static final String SERIALIZED_NAME_VERSION_GTE = "version_gte";
   @SerializedName(SERIALIZED_NAME_VERSION_GTE)
-  private Double versionGte;
+  private Integer versionGte;
 
   public static final String SERIALIZED_NAME_VERSION_IN = "version_in";
   @SerializedName(SERIALIZED_NAME_VERSION_IN)
-  private List<Double> versionIn = null;
+  private List<Integer> versionIn = null;
 
   public static final String SERIALIZED_NAME_VERSION_LT = "version_lt";
   @SerializedName(SERIALIZED_NAME_VERSION_LT)
-  private Double versionLt;
+  private Integer versionLt;
 
   public static final String SERIALIZED_NAME_VERSION_LTE = "version_lte";
   @SerializedName(SERIALIZED_NAME_VERSION_LTE)
-  private Double versionLte;
+  private Integer versionLte;
 
   public static final String SERIALIZED_NAME_VERSION_NOT = "version_not";
   @SerializedName(SERIALIZED_NAME_VERSION_NOT)
-  private Double versionNot;
+  private Integer versionNot;
 
   public static final String SERIALIZED_NAME_VERSION_NOT_IN = "version_not_in";
   @SerializedName(SERIALIZED_NAME_VERSION_NOT_IN)
-  private List<Double> versionNotIn = null;
+  private List<Integer> versionNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_DISKS_EVERY = "vm_disks_every";
   @SerializedName(SERIALIZED_NAME_VM_DISKS_EVERY)
@@ -2376,7 +2376,7 @@ public class SvtImageWhereInput {
   }
 
 
-  public SvtImageWhereInput version(Double version) {
+  public SvtImageWhereInput version(Integer version) {
     
     this.version = version;
     return this;
@@ -2389,17 +2389,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVersion() {
+  public Integer getVersion() {
     return version;
   }
 
 
-  public void setVersion(Double version) {
+  public void setVersion(Integer version) {
     this.version = version;
   }
 
 
-  public SvtImageWhereInput versionGt(Double versionGt) {
+  public SvtImageWhereInput versionGt(Integer versionGt) {
     
     this.versionGt = versionGt;
     return this;
@@ -2412,17 +2412,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVersionGt() {
+  public Integer getVersionGt() {
     return versionGt;
   }
 
 
-  public void setVersionGt(Double versionGt) {
+  public void setVersionGt(Integer versionGt) {
     this.versionGt = versionGt;
   }
 
 
-  public SvtImageWhereInput versionGte(Double versionGte) {
+  public SvtImageWhereInput versionGte(Integer versionGte) {
     
     this.versionGte = versionGte;
     return this;
@@ -2435,25 +2435,25 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVersionGte() {
+  public Integer getVersionGte() {
     return versionGte;
   }
 
 
-  public void setVersionGte(Double versionGte) {
+  public void setVersionGte(Integer versionGte) {
     this.versionGte = versionGte;
   }
 
 
-  public SvtImageWhereInput versionIn(List<Double> versionIn) {
+  public SvtImageWhereInput versionIn(List<Integer> versionIn) {
     
     this.versionIn = versionIn;
     return this;
   }
 
-  public SvtImageWhereInput addVersionInItem(Double versionInItem) {
+  public SvtImageWhereInput addVersionInItem(Integer versionInItem) {
     if (this.versionIn == null) {
-      this.versionIn = new ArrayList<Double>();
+      this.versionIn = new ArrayList<Integer>();
     }
     this.versionIn.add(versionInItem);
     return this;
@@ -2466,17 +2466,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVersionIn() {
+  public List<Integer> getVersionIn() {
     return versionIn;
   }
 
 
-  public void setVersionIn(List<Double> versionIn) {
+  public void setVersionIn(List<Integer> versionIn) {
     this.versionIn = versionIn;
   }
 
 
-  public SvtImageWhereInput versionLt(Double versionLt) {
+  public SvtImageWhereInput versionLt(Integer versionLt) {
     
     this.versionLt = versionLt;
     return this;
@@ -2489,17 +2489,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVersionLt() {
+  public Integer getVersionLt() {
     return versionLt;
   }
 
 
-  public void setVersionLt(Double versionLt) {
+  public void setVersionLt(Integer versionLt) {
     this.versionLt = versionLt;
   }
 
 
-  public SvtImageWhereInput versionLte(Double versionLte) {
+  public SvtImageWhereInput versionLte(Integer versionLte) {
     
     this.versionLte = versionLte;
     return this;
@@ -2512,17 +2512,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVersionLte() {
+  public Integer getVersionLte() {
     return versionLte;
   }
 
 
-  public void setVersionLte(Double versionLte) {
+  public void setVersionLte(Integer versionLte) {
     this.versionLte = versionLte;
   }
 
 
-  public SvtImageWhereInput versionNot(Double versionNot) {
+  public SvtImageWhereInput versionNot(Integer versionNot) {
     
     this.versionNot = versionNot;
     return this;
@@ -2535,25 +2535,25 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVersionNot() {
+  public Integer getVersionNot() {
     return versionNot;
   }
 
 
-  public void setVersionNot(Double versionNot) {
+  public void setVersionNot(Integer versionNot) {
     this.versionNot = versionNot;
   }
 
 
-  public SvtImageWhereInput versionNotIn(List<Double> versionNotIn) {
+  public SvtImageWhereInput versionNotIn(List<Integer> versionNotIn) {
     
     this.versionNotIn = versionNotIn;
     return this;
   }
 
-  public SvtImageWhereInput addVersionNotInItem(Double versionNotInItem) {
+  public SvtImageWhereInput addVersionNotInItem(Integer versionNotInItem) {
     if (this.versionNotIn == null) {
-      this.versionNotIn = new ArrayList<Double>();
+      this.versionNotIn = new ArrayList<Integer>();
     }
     this.versionNotIn.add(versionNotInItem);
     return this;
@@ -2566,12 +2566,12 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getVersionNotIn() {
+  public List<Integer> getVersionNotIn() {
     return versionNotIn;
   }
 
 
-  public void setVersionNotIn(List<Double> versionNotIn) {
+  public void setVersionNotIn(List<Integer> versionNotIn) {
     this.versionNotIn = versionNotIn;
   }
 

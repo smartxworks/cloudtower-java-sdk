@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **rackTopoId** | **String** |  |  [optional]
-**position** | **Double** |  | 
+**position** | **Integer** |  | 
 
 
 

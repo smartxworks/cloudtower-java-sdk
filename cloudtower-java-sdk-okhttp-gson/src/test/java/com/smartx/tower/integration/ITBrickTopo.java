@@ -47,6 +47,8 @@ public class ITBrickTopo extends ITBase {
       List<WithTaskBrickTopo> result = api.createBrickTopo(params, contentLanguage);
       assertThat(result).as("check result of createBrickTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITBrickTopo extends ITBase {
       List<WithTaskDeleteBrickTopo> result = api.deleteBrickTopo(params, contentLanguage);
       assertThat(result).as("check result of deleteBrickTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITBrickTopo extends ITBase {
       List<BrickTopo> result = api.getBrickTopoes(params, contentLanguage);
       assertThat(result).as("check result of getBrickTopoes").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITBrickTopo extends ITBase {
       BrickTopoConnection result = api.getBrickTopoesConnection(params, contentLanguage);
       assertThat(result).as("check result of getBrickTopoesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITBrickTopo extends ITBase {
       List<WithTaskBrickTopo> result = api.moveBrickTopo(params, contentLanguage);
       assertThat(result).as("check result of moveBrickTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITBrickTopo extends ITBase {
       List<WithTaskBrickTopo> result = api.updateBrickTopo(params, contentLanguage);
       assertThat(result).as("check result of updateBrickTopo").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

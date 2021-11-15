@@ -44,7 +44,7 @@ public class RackTopoCreationParams {
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Double height;
+  private Integer height;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -120,7 +120,7 @@ public class RackTopoCreationParams {
   }
 
 
-  public RackTopoCreationParams height(Double height) {
+  public RackTopoCreationParams height(Integer height) {
     
     this.height = height;
     return this;
@@ -133,12 +133,12 @@ public class RackTopoCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getHeight() {
+  public Integer getHeight() {
     return height;
   }
 
 
-  public void setHeight(Double height) {
+  public void setHeight(Integer height) {
     this.height = height;
   }
 

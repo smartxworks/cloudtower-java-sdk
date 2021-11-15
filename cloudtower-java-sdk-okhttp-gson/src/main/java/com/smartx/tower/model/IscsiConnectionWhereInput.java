@@ -43,35 +43,35 @@ public class IscsiConnectionWhereInput {
 
   public static final String SERIALIZED_NAME_CLIENT_PORT = "client_port";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT)
-  private Double clientPort;
+  private Integer clientPort;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_GT = "client_port_gt";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_GT)
-  private Double clientPortGt;
+  private Integer clientPortGt;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_GTE = "client_port_gte";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_GTE)
-  private Double clientPortGte;
+  private Integer clientPortGte;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_IN = "client_port_in";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_IN)
-  private List<Double> clientPortIn = null;
+  private List<Integer> clientPortIn = null;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_LT = "client_port_lt";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_LT)
-  private Double clientPortLt;
+  private Integer clientPortLt;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_LTE = "client_port_lte";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_LTE)
-  private Double clientPortLte;
+  private Integer clientPortLte;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_NOT = "client_port_not";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_NOT)
-  private Double clientPortNot;
+  private Integer clientPortNot;
 
   public static final String SERIALIZED_NAME_CLIENT_PORT_NOT_IN = "client_port_not_in";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT_NOT_IN)
-  private List<Double> clientPortNotIn = null;
+  private List<Integer> clientPortNotIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -257,7 +257,7 @@ public class IscsiConnectionWhereInput {
   }
 
 
-  public IscsiConnectionWhereInput clientPort(Double clientPort) {
+  public IscsiConnectionWhereInput clientPort(Integer clientPort) {
     
     this.clientPort = clientPort;
     return this;
@@ -270,17 +270,17 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClientPort() {
+  public Integer getClientPort() {
     return clientPort;
   }
 
 
-  public void setClientPort(Double clientPort) {
+  public void setClientPort(Integer clientPort) {
     this.clientPort = clientPort;
   }
 
 
-  public IscsiConnectionWhereInput clientPortGt(Double clientPortGt) {
+  public IscsiConnectionWhereInput clientPortGt(Integer clientPortGt) {
     
     this.clientPortGt = clientPortGt;
     return this;
@@ -293,17 +293,17 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClientPortGt() {
+  public Integer getClientPortGt() {
     return clientPortGt;
   }
 
 
-  public void setClientPortGt(Double clientPortGt) {
+  public void setClientPortGt(Integer clientPortGt) {
     this.clientPortGt = clientPortGt;
   }
 
 
-  public IscsiConnectionWhereInput clientPortGte(Double clientPortGte) {
+  public IscsiConnectionWhereInput clientPortGte(Integer clientPortGte) {
     
     this.clientPortGte = clientPortGte;
     return this;
@@ -316,25 +316,25 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClientPortGte() {
+  public Integer getClientPortGte() {
     return clientPortGte;
   }
 
 
-  public void setClientPortGte(Double clientPortGte) {
+  public void setClientPortGte(Integer clientPortGte) {
     this.clientPortGte = clientPortGte;
   }
 
 
-  public IscsiConnectionWhereInput clientPortIn(List<Double> clientPortIn) {
+  public IscsiConnectionWhereInput clientPortIn(List<Integer> clientPortIn) {
     
     this.clientPortIn = clientPortIn;
     return this;
   }
 
-  public IscsiConnectionWhereInput addClientPortInItem(Double clientPortInItem) {
+  public IscsiConnectionWhereInput addClientPortInItem(Integer clientPortInItem) {
     if (this.clientPortIn == null) {
-      this.clientPortIn = new ArrayList<Double>();
+      this.clientPortIn = new ArrayList<Integer>();
     }
     this.clientPortIn.add(clientPortInItem);
     return this;
@@ -347,17 +347,17 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getClientPortIn() {
+  public List<Integer> getClientPortIn() {
     return clientPortIn;
   }
 
 
-  public void setClientPortIn(List<Double> clientPortIn) {
+  public void setClientPortIn(List<Integer> clientPortIn) {
     this.clientPortIn = clientPortIn;
   }
 
 
-  public IscsiConnectionWhereInput clientPortLt(Double clientPortLt) {
+  public IscsiConnectionWhereInput clientPortLt(Integer clientPortLt) {
     
     this.clientPortLt = clientPortLt;
     return this;
@@ -370,17 +370,17 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClientPortLt() {
+  public Integer getClientPortLt() {
     return clientPortLt;
   }
 
 
-  public void setClientPortLt(Double clientPortLt) {
+  public void setClientPortLt(Integer clientPortLt) {
     this.clientPortLt = clientPortLt;
   }
 
 
-  public IscsiConnectionWhereInput clientPortLte(Double clientPortLte) {
+  public IscsiConnectionWhereInput clientPortLte(Integer clientPortLte) {
     
     this.clientPortLte = clientPortLte;
     return this;
@@ -393,17 +393,17 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClientPortLte() {
+  public Integer getClientPortLte() {
     return clientPortLte;
   }
 
 
-  public void setClientPortLte(Double clientPortLte) {
+  public void setClientPortLte(Integer clientPortLte) {
     this.clientPortLte = clientPortLte;
   }
 
 
-  public IscsiConnectionWhereInput clientPortNot(Double clientPortNot) {
+  public IscsiConnectionWhereInput clientPortNot(Integer clientPortNot) {
     
     this.clientPortNot = clientPortNot;
     return this;
@@ -416,25 +416,25 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getClientPortNot() {
+  public Integer getClientPortNot() {
     return clientPortNot;
   }
 
 
-  public void setClientPortNot(Double clientPortNot) {
+  public void setClientPortNot(Integer clientPortNot) {
     this.clientPortNot = clientPortNot;
   }
 
 
-  public IscsiConnectionWhereInput clientPortNotIn(List<Double> clientPortNotIn) {
+  public IscsiConnectionWhereInput clientPortNotIn(List<Integer> clientPortNotIn) {
     
     this.clientPortNotIn = clientPortNotIn;
     return this;
   }
 
-  public IscsiConnectionWhereInput addClientPortNotInItem(Double clientPortNotInItem) {
+  public IscsiConnectionWhereInput addClientPortNotInItem(Integer clientPortNotInItem) {
     if (this.clientPortNotIn == null) {
-      this.clientPortNotIn = new ArrayList<Double>();
+      this.clientPortNotIn = new ArrayList<Integer>();
     }
     this.clientPortNotIn.add(clientPortNotInItem);
     return this;
@@ -447,12 +447,12 @@ public class IscsiConnectionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getClientPortNotIn() {
+  public List<Integer> getClientPortNotIn() {
     return clientPortNotIn;
   }
 
 
-  public void setClientPortNotIn(List<Double> clientPortNotIn) {
+  public void setClientPortNotIn(List<Integer> clientPortNotIn) {
     this.clientPortNotIn = clientPortNotIn;
   }
 

@@ -47,6 +47,8 @@ public class ITVcenterAccount extends ITBase {
       List<VcenterAccount> result = api.getVcenterAccounts(params, contentLanguage);
       assertThat(result).as("check result of getVcenterAccounts").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVcenterAccount extends ITBase {
       VcenterAccountConnection result = api.getVcenterAccountsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVcenterAccountsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

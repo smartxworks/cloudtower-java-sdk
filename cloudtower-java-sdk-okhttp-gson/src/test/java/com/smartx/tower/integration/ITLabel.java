@@ -47,6 +47,8 @@ public class ITLabel extends ITBase {
       List<WithTaskLabel> result = api.addLabelsToResources(params, contentLanguage);
       assertThat(result).as("check result of addLabelsToResources").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITLabel extends ITBase {
       List<WithTaskLabel> result = api.createLabel(params, contentLanguage);
       assertThat(result).as("check result of createLabel").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITLabel extends ITBase {
       List<WithTaskDeleteLabel> result = api.deleteLabel(params, contentLanguage);
       assertThat(result).as("check result of deleteLabel").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITLabel extends ITBase {
       List<Label> result = api.getLabels(params, contentLanguage);
       assertThat(result).as("check result of getLabels").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITLabel extends ITBase {
       LabelConnection result = api.getLabelsConnection(params, contentLanguage);
       assertThat(result).as("check result of getLabelsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITLabel extends ITBase {
       List<WithTaskLabel> result = api.removeLabelsFromResources(params, contentLanguage);
       assertThat(result).as("check result of removeLabelsFromResources").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -125,6 +137,8 @@ public class ITLabel extends ITBase {
       List<WithTaskLabel> result = api.updateLabel(params, contentLanguage);
       assertThat(result).as("check result of updateLabel").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

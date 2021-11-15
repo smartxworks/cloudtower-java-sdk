@@ -47,6 +47,8 @@ public class ITGlobalAlertRule extends ITBase {
       List<GlobalAlertRule> result = api.getGlobalAlertRules(params, contentLanguage);
       assertThat(result).as("check result of getGlobalAlertRules").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITGlobalAlertRule extends ITBase {
       GlobalAlertRuleConnection result = api.getGlobalAlertRulesConnection(params, contentLanguage);
       assertThat(result).as("check result of getGlobalAlertRulesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITGlobalAlertRule extends ITBase {
       List<WithTaskGlobalAlertRule> result = api.updateCustomizeAlertRule(params, contentLanguage);
       assertThat(result).as("check result of updateCustomizeAlertRule").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITGlobalAlertRule extends ITBase {
       List<WithTaskGlobalAlertRule> result = api.updateGlobalAlertRule(params, contentLanguage);
       assertThat(result).as("check result of updateGlobalAlertRule").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

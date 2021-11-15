@@ -10,15 +10,15 @@ public class MountDisksParams {
 
   public static final String SERIALIZED_NAME_MAX_BANDWITH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWITH)
-  private String maxBandwidth;
+  private Double maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_IPOS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IPOS_POLICY)
-  private VmDiskIoRestrictType maxIposPolicy;
+  private VmDiskIoRestrictType maxIopsPolicy;
 
   public static final String SERIALIZED_NAME_MAX_IPOS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IPOS)
-  private String maxIpos;
+  private Double maxIops;
 
   public static final String SERIALIZED_NAME_VM_VOLUME_ID = "vm_volume_id";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_ID)
@@ -26,7 +26,7 @@ public class MountDisksParams {
 
   public static final String SERIALIZED_NAME_INDEX = "index";
   @SerializedName(SERIALIZED_NAME_INDEX)
-  private Double index;
+  private Integer index;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
@@ -38,7 +38,7 @@ public class MountDisksParams {
 
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
-  private Double boot;
+  private Integer boot;
 
   public MountDisksParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
 
@@ -61,7 +61,7 @@ public class MountDisksParams {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
   }
 
-  public MountDisksParams maxBandwidth(String maxBandwidth) {
+  public MountDisksParams maxBandwidth(Double maxBandwidth) {
 
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -74,52 +74,52 @@ public class MountDisksParams {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public String getMaxBandwidth() {
+  public Double getMaxBandwidth() {
     return maxBandwidth;
   }
 
-  public void setMaxBandwidth(String maxBandwidth) {
+  public void setMaxBandwidth(Double maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
-  public MountDisksParams maxIposPolicy(VmDiskIoRestrictType maxIposPolicy) {
-    this.maxIposPolicy = maxIposPolicy;
+  public MountDisksParams maxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    this.maxIopsPolicy = maxIopsPolicy;
     return this;
   }
 
   /**
-   * Get maxIposPolicy
+   * Get maxIopsPolicy
    * 
-   * @return maxIposPolicy
+   * @return maxIopsPolicy
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  public VmDiskIoRestrictType getMaxIposPolicy() {
-    return maxIposPolicy;
+  public VmDiskIoRestrictType getMaxIopsPolicy() {
+    return maxIopsPolicy;
   }
 
-  public void setMaxIposPolicy(VmDiskIoRestrictType maxIposPolicy) {
-    this.maxIposPolicy = maxIposPolicy;
+  public void setMaxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    this.maxIopsPolicy = maxIopsPolicy;
   }
 
-  public MountDisksParams maxIpos(String maxIpos) {
-    this.maxIpos = maxIpos;
+  public MountDisksParams maxIops(Double maxIops) {
+    this.maxIops = maxIops;
     return this;
   }
 
   /**
-   * Get maxIpos
+   * Get maxIops
    * 
-   * @return maxIpos
+   * @return maxIops
    **/
   @javax.annotation.Nonnull
   @ApiModelProperty(value = "", required = true)
-  public String getMaxIpos() {
-    return maxIpos;
+  public Double getMaxIops() {
+    return maxIops;
   }
 
-  public void setMaxIpos(String maxIpos) {
-    this.maxIpos = maxIpos;
+  public void setMaxIops(Double maxIops) {
+    this.maxIops = maxIops;
   }
 
   public MountDisksParams vmVolumeId(String vmVolumeId) {
@@ -142,7 +142,7 @@ public class MountDisksParams {
     this.vmVolumeId = vmVolumeId;
   }
 
-  public MountDisksParams index(Double index) {
+  public MountDisksParams index(Integer index) {
     this.index = index;
     return this;
   }
@@ -154,11 +154,11 @@ public class MountDisksParams {
    **/
   @javax.annotation.Nonnull
   @ApiModelProperty(value = "", required = true)
-  public Double getIndex() {
+  public Integer getIndex() {
     return index;
   }
 
-  public void setIndex(Double index) {
+  public void setIndex(Integer index) {
     this.index = index;
   }
 
@@ -202,7 +202,7 @@ public class MountDisksParams {
     this.bus = bus;
   }
 
-  public MountDisksParams boot(Double boot) {
+  public MountDisksParams boot(Integer boot) {
     this.boot = boot;
     return this;
   }
@@ -214,11 +214,11 @@ public class MountDisksParams {
    **/
   @javax.annotation.Nonnull
   @ApiModelProperty(value = "", required = true)
-  public Double getBoot() {
+  public Integer getBoot() {
     return boot;
   }
 
-  public void setBoot(Double boot) {
+  public void setBoot(Integer boot) {
     this.boot = boot;
   }
 }

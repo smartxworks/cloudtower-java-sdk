@@ -47,6 +47,8 @@ public class ITSnapshotGroup extends ITBase {
       List<WithTaskSnapshotGroup> result = api.cloneSnapshotGroup(params, contentLanguage);
       assertThat(result).as("check result of cloneSnapshotGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSnapshotGroup extends ITBase {
       List<WithTaskDeleteSnapshotGroup> result = api.deleteSnapshotGroup(params, contentLanguage);
       assertThat(result).as("check result of deleteSnapshotGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITSnapshotGroup extends ITBase {
       List<SnapshotGroup> result = api.getSnapshotGroups(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotGroups").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITSnapshotGroup extends ITBase {
       SnapshotGroupConnection result = api.getSnapshotGroupsConnection(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotGroupsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITSnapshotGroup extends ITBase {
       List<WithTaskSnapshotGroup> result = api.keepSnapshotGroup(params, contentLanguage);
       assertThat(result).as("check result of keepSnapshotGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITSnapshotGroup extends ITBase {
       List<WithTaskSnapshotGroup> result = api.rollbackSnapshotGroup(params, contentLanguage);
       assertThat(result).as("check result of rollbackSnapshotGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

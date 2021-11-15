@@ -411,35 +411,35 @@ public class DiskWhereInput {
 
   public static final String SERIALIZED_NAME_NUMA_NODE = "numa_node";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE)
-  private Double numaNode;
+  private Integer numaNode;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_GT = "numa_node_gt";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_GT)
-  private Double numaNodeGt;
+  private Integer numaNodeGt;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_GTE = "numa_node_gte";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_GTE)
-  private Double numaNodeGte;
+  private Integer numaNodeGte;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_IN = "numa_node_in";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_IN)
-  private List<Double> numaNodeIn = null;
+  private List<Integer> numaNodeIn = null;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_LT = "numa_node_lt";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_LT)
-  private Double numaNodeLt;
+  private Integer numaNodeLt;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_LTE = "numa_node_lte";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_LTE)
-  private Double numaNodeLte;
+  private Integer numaNodeLte;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_NOT = "numa_node_not";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_NOT)
-  private Double numaNodeNot;
+  private Integer numaNodeNot;
 
   public static final String SERIALIZED_NAME_NUMA_NODE_NOT_IN = "numa_node_not_in";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_NOT_IN)
-  private List<Double> numaNodeNotIn = null;
+  private List<Integer> numaNodeNotIn = null;
 
   public static final String SERIALIZED_NAME_OFFLINE = "offline";
   @SerializedName(SERIALIZED_NAME_OFFLINE)
@@ -567,35 +567,35 @@ public class DiskWhereInput {
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK = "physical_slot_on_brick";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK)
-  private Double physicalSlotOnBrick;
+  private Integer physicalSlotOnBrick;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_GT = "physical_slot_on_brick_gt";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_GT)
-  private Double physicalSlotOnBrickGt;
+  private Integer physicalSlotOnBrickGt;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_GTE = "physical_slot_on_brick_gte";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_GTE)
-  private Double physicalSlotOnBrickGte;
+  private Integer physicalSlotOnBrickGte;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_IN = "physical_slot_on_brick_in";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_IN)
-  private List<Double> physicalSlotOnBrickIn = null;
+  private List<Integer> physicalSlotOnBrickIn = null;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_LT = "physical_slot_on_brick_lt";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_LT)
-  private Double physicalSlotOnBrickLt;
+  private Integer physicalSlotOnBrickLt;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_LTE = "physical_slot_on_brick_lte";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_LTE)
-  private Double physicalSlotOnBrickLte;
+  private Integer physicalSlotOnBrickLte;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_NOT = "physical_slot_on_brick_not";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_NOT)
-  private Double physicalSlotOnBrickNot;
+  private Integer physicalSlotOnBrickNot;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_NOT_IN = "physical_slot_on_brick_not_in";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SLOT_ON_BRICK_NOT_IN)
-  private List<Double> physicalSlotOnBrickNotIn = null;
+  private List<Integer> physicalSlotOnBrickNotIn = null;
 
   public static final String SERIALIZED_NAME_PMEM_DIMMS_EVERY = "pmem_dimms_every";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMMS_EVERY)
@@ -627,35 +627,35 @@ public class DiskWhereInput {
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT = "remaining_life_percent";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT)
-  private Double remainingLifePercent;
+  private Integer remainingLifePercent;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_GT = "remaining_life_percent_gt";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_GT)
-  private Double remainingLifePercentGt;
+  private Integer remainingLifePercentGt;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_GTE = "remaining_life_percent_gte";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_GTE)
-  private Double remainingLifePercentGte;
+  private Integer remainingLifePercentGte;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_IN = "remaining_life_percent_in";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_IN)
-  private List<Double> remainingLifePercentIn = null;
+  private List<Integer> remainingLifePercentIn = null;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_LT = "remaining_life_percent_lt";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_LT)
-  private Double remainingLifePercentLt;
+  private Integer remainingLifePercentLt;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_LTE = "remaining_life_percent_lte";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_LTE)
-  private Double remainingLifePercentLte;
+  private Integer remainingLifePercentLte;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_NOT = "remaining_life_percent_not";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_NOT)
-  private Double remainingLifePercentNot;
+  private Integer remainingLifePercentNot;
 
   public static final String SERIALIZED_NAME_REMAINING_LIFE_PERCENT_NOT_IN = "remaining_life_percent_not_in";
   @SerializedName(SERIALIZED_NAME_REMAINING_LIFE_PERCENT_NOT_IN)
-  private List<Double> remainingLifePercentNotIn = null;
+  private List<Integer> remainingLifePercentNotIn = null;
 
   public static final String SERIALIZED_NAME_SERIAL = "serial";
   @SerializedName(SERIALIZED_NAME_SERIAL)
@@ -3054,7 +3054,7 @@ public class DiskWhereInput {
   }
 
 
-  public DiskWhereInput numaNode(Double numaNode) {
+  public DiskWhereInput numaNode(Integer numaNode) {
     
     this.numaNode = numaNode;
     return this;
@@ -3067,17 +3067,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNode() {
+  public Integer getNumaNode() {
     return numaNode;
   }
 
 
-  public void setNumaNode(Double numaNode) {
+  public void setNumaNode(Integer numaNode) {
     this.numaNode = numaNode;
   }
 
 
-  public DiskWhereInput numaNodeGt(Double numaNodeGt) {
+  public DiskWhereInput numaNodeGt(Integer numaNodeGt) {
     
     this.numaNodeGt = numaNodeGt;
     return this;
@@ -3090,17 +3090,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNodeGt() {
+  public Integer getNumaNodeGt() {
     return numaNodeGt;
   }
 
 
-  public void setNumaNodeGt(Double numaNodeGt) {
+  public void setNumaNodeGt(Integer numaNodeGt) {
     this.numaNodeGt = numaNodeGt;
   }
 
 
-  public DiskWhereInput numaNodeGte(Double numaNodeGte) {
+  public DiskWhereInput numaNodeGte(Integer numaNodeGte) {
     
     this.numaNodeGte = numaNodeGte;
     return this;
@@ -3113,25 +3113,25 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNodeGte() {
+  public Integer getNumaNodeGte() {
     return numaNodeGte;
   }
 
 
-  public void setNumaNodeGte(Double numaNodeGte) {
+  public void setNumaNodeGte(Integer numaNodeGte) {
     this.numaNodeGte = numaNodeGte;
   }
 
 
-  public DiskWhereInput numaNodeIn(List<Double> numaNodeIn) {
+  public DiskWhereInput numaNodeIn(List<Integer> numaNodeIn) {
     
     this.numaNodeIn = numaNodeIn;
     return this;
   }
 
-  public DiskWhereInput addNumaNodeInItem(Double numaNodeInItem) {
+  public DiskWhereInput addNumaNodeInItem(Integer numaNodeInItem) {
     if (this.numaNodeIn == null) {
-      this.numaNodeIn = new ArrayList<Double>();
+      this.numaNodeIn = new ArrayList<Integer>();
     }
     this.numaNodeIn.add(numaNodeInItem);
     return this;
@@ -3144,17 +3144,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNumaNodeIn() {
+  public List<Integer> getNumaNodeIn() {
     return numaNodeIn;
   }
 
 
-  public void setNumaNodeIn(List<Double> numaNodeIn) {
+  public void setNumaNodeIn(List<Integer> numaNodeIn) {
     this.numaNodeIn = numaNodeIn;
   }
 
 
-  public DiskWhereInput numaNodeLt(Double numaNodeLt) {
+  public DiskWhereInput numaNodeLt(Integer numaNodeLt) {
     
     this.numaNodeLt = numaNodeLt;
     return this;
@@ -3167,17 +3167,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNodeLt() {
+  public Integer getNumaNodeLt() {
     return numaNodeLt;
   }
 
 
-  public void setNumaNodeLt(Double numaNodeLt) {
+  public void setNumaNodeLt(Integer numaNodeLt) {
     this.numaNodeLt = numaNodeLt;
   }
 
 
-  public DiskWhereInput numaNodeLte(Double numaNodeLte) {
+  public DiskWhereInput numaNodeLte(Integer numaNodeLte) {
     
     this.numaNodeLte = numaNodeLte;
     return this;
@@ -3190,17 +3190,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNodeLte() {
+  public Integer getNumaNodeLte() {
     return numaNodeLte;
   }
 
 
-  public void setNumaNodeLte(Double numaNodeLte) {
+  public void setNumaNodeLte(Integer numaNodeLte) {
     this.numaNodeLte = numaNodeLte;
   }
 
 
-  public DiskWhereInput numaNodeNot(Double numaNodeNot) {
+  public DiskWhereInput numaNodeNot(Integer numaNodeNot) {
     
     this.numaNodeNot = numaNodeNot;
     return this;
@@ -3213,25 +3213,25 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNumaNodeNot() {
+  public Integer getNumaNodeNot() {
     return numaNodeNot;
   }
 
 
-  public void setNumaNodeNot(Double numaNodeNot) {
+  public void setNumaNodeNot(Integer numaNodeNot) {
     this.numaNodeNot = numaNodeNot;
   }
 
 
-  public DiskWhereInput numaNodeNotIn(List<Double> numaNodeNotIn) {
+  public DiskWhereInput numaNodeNotIn(List<Integer> numaNodeNotIn) {
     
     this.numaNodeNotIn = numaNodeNotIn;
     return this;
   }
 
-  public DiskWhereInput addNumaNodeNotInItem(Double numaNodeNotInItem) {
+  public DiskWhereInput addNumaNodeNotInItem(Integer numaNodeNotInItem) {
     if (this.numaNodeNotIn == null) {
-      this.numaNodeNotIn = new ArrayList<Double>();
+      this.numaNodeNotIn = new ArrayList<Integer>();
     }
     this.numaNodeNotIn.add(numaNodeNotInItem);
     return this;
@@ -3244,12 +3244,12 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNumaNodeNotIn() {
+  public List<Integer> getNumaNodeNotIn() {
     return numaNodeNotIn;
   }
 
 
-  public void setNumaNodeNotIn(List<Double> numaNodeNotIn) {
+  public void setNumaNodeNotIn(List<Integer> numaNodeNotIn) {
     this.numaNodeNotIn = numaNodeNotIn;
   }
 
@@ -4007,7 +4007,7 @@ public class DiskWhereInput {
   }
 
 
-  public DiskWhereInput physicalSlotOnBrick(Double physicalSlotOnBrick) {
+  public DiskWhereInput physicalSlotOnBrick(Integer physicalSlotOnBrick) {
     
     this.physicalSlotOnBrick = physicalSlotOnBrick;
     return this;
@@ -4020,17 +4020,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrick() {
+  public Integer getPhysicalSlotOnBrick() {
     return physicalSlotOnBrick;
   }
 
 
-  public void setPhysicalSlotOnBrick(Double physicalSlotOnBrick) {
+  public void setPhysicalSlotOnBrick(Integer physicalSlotOnBrick) {
     this.physicalSlotOnBrick = physicalSlotOnBrick;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickGt(Double physicalSlotOnBrickGt) {
+  public DiskWhereInput physicalSlotOnBrickGt(Integer physicalSlotOnBrickGt) {
     
     this.physicalSlotOnBrickGt = physicalSlotOnBrickGt;
     return this;
@@ -4043,17 +4043,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrickGt() {
+  public Integer getPhysicalSlotOnBrickGt() {
     return physicalSlotOnBrickGt;
   }
 
 
-  public void setPhysicalSlotOnBrickGt(Double physicalSlotOnBrickGt) {
+  public void setPhysicalSlotOnBrickGt(Integer physicalSlotOnBrickGt) {
     this.physicalSlotOnBrickGt = physicalSlotOnBrickGt;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickGte(Double physicalSlotOnBrickGte) {
+  public DiskWhereInput physicalSlotOnBrickGte(Integer physicalSlotOnBrickGte) {
     
     this.physicalSlotOnBrickGte = physicalSlotOnBrickGte;
     return this;
@@ -4066,25 +4066,25 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrickGte() {
+  public Integer getPhysicalSlotOnBrickGte() {
     return physicalSlotOnBrickGte;
   }
 
 
-  public void setPhysicalSlotOnBrickGte(Double physicalSlotOnBrickGte) {
+  public void setPhysicalSlotOnBrickGte(Integer physicalSlotOnBrickGte) {
     this.physicalSlotOnBrickGte = physicalSlotOnBrickGte;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickIn(List<Double> physicalSlotOnBrickIn) {
+  public DiskWhereInput physicalSlotOnBrickIn(List<Integer> physicalSlotOnBrickIn) {
     
     this.physicalSlotOnBrickIn = physicalSlotOnBrickIn;
     return this;
   }
 
-  public DiskWhereInput addPhysicalSlotOnBrickInItem(Double physicalSlotOnBrickInItem) {
+  public DiskWhereInput addPhysicalSlotOnBrickInItem(Integer physicalSlotOnBrickInItem) {
     if (this.physicalSlotOnBrickIn == null) {
-      this.physicalSlotOnBrickIn = new ArrayList<Double>();
+      this.physicalSlotOnBrickIn = new ArrayList<Integer>();
     }
     this.physicalSlotOnBrickIn.add(physicalSlotOnBrickInItem);
     return this;
@@ -4097,17 +4097,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPhysicalSlotOnBrickIn() {
+  public List<Integer> getPhysicalSlotOnBrickIn() {
     return physicalSlotOnBrickIn;
   }
 
 
-  public void setPhysicalSlotOnBrickIn(List<Double> physicalSlotOnBrickIn) {
+  public void setPhysicalSlotOnBrickIn(List<Integer> physicalSlotOnBrickIn) {
     this.physicalSlotOnBrickIn = physicalSlotOnBrickIn;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickLt(Double physicalSlotOnBrickLt) {
+  public DiskWhereInput physicalSlotOnBrickLt(Integer physicalSlotOnBrickLt) {
     
     this.physicalSlotOnBrickLt = physicalSlotOnBrickLt;
     return this;
@@ -4120,17 +4120,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrickLt() {
+  public Integer getPhysicalSlotOnBrickLt() {
     return physicalSlotOnBrickLt;
   }
 
 
-  public void setPhysicalSlotOnBrickLt(Double physicalSlotOnBrickLt) {
+  public void setPhysicalSlotOnBrickLt(Integer physicalSlotOnBrickLt) {
     this.physicalSlotOnBrickLt = physicalSlotOnBrickLt;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickLte(Double physicalSlotOnBrickLte) {
+  public DiskWhereInput physicalSlotOnBrickLte(Integer physicalSlotOnBrickLte) {
     
     this.physicalSlotOnBrickLte = physicalSlotOnBrickLte;
     return this;
@@ -4143,17 +4143,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrickLte() {
+  public Integer getPhysicalSlotOnBrickLte() {
     return physicalSlotOnBrickLte;
   }
 
 
-  public void setPhysicalSlotOnBrickLte(Double physicalSlotOnBrickLte) {
+  public void setPhysicalSlotOnBrickLte(Integer physicalSlotOnBrickLte) {
     this.physicalSlotOnBrickLte = physicalSlotOnBrickLte;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickNot(Double physicalSlotOnBrickNot) {
+  public DiskWhereInput physicalSlotOnBrickNot(Integer physicalSlotOnBrickNot) {
     
     this.physicalSlotOnBrickNot = physicalSlotOnBrickNot;
     return this;
@@ -4166,25 +4166,25 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSlotOnBrickNot() {
+  public Integer getPhysicalSlotOnBrickNot() {
     return physicalSlotOnBrickNot;
   }
 
 
-  public void setPhysicalSlotOnBrickNot(Double physicalSlotOnBrickNot) {
+  public void setPhysicalSlotOnBrickNot(Integer physicalSlotOnBrickNot) {
     this.physicalSlotOnBrickNot = physicalSlotOnBrickNot;
   }
 
 
-  public DiskWhereInput physicalSlotOnBrickNotIn(List<Double> physicalSlotOnBrickNotIn) {
+  public DiskWhereInput physicalSlotOnBrickNotIn(List<Integer> physicalSlotOnBrickNotIn) {
     
     this.physicalSlotOnBrickNotIn = physicalSlotOnBrickNotIn;
     return this;
   }
 
-  public DiskWhereInput addPhysicalSlotOnBrickNotInItem(Double physicalSlotOnBrickNotInItem) {
+  public DiskWhereInput addPhysicalSlotOnBrickNotInItem(Integer physicalSlotOnBrickNotInItem) {
     if (this.physicalSlotOnBrickNotIn == null) {
-      this.physicalSlotOnBrickNotIn = new ArrayList<Double>();
+      this.physicalSlotOnBrickNotIn = new ArrayList<Integer>();
     }
     this.physicalSlotOnBrickNotIn.add(physicalSlotOnBrickNotInItem);
     return this;
@@ -4197,12 +4197,12 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPhysicalSlotOnBrickNotIn() {
+  public List<Integer> getPhysicalSlotOnBrickNotIn() {
     return physicalSlotOnBrickNotIn;
   }
 
 
-  public void setPhysicalSlotOnBrickNotIn(List<Double> physicalSlotOnBrickNotIn) {
+  public void setPhysicalSlotOnBrickNotIn(List<Integer> physicalSlotOnBrickNotIn) {
     this.physicalSlotOnBrickNotIn = physicalSlotOnBrickNotIn;
   }
 
@@ -4384,7 +4384,7 @@ public class DiskWhereInput {
   }
 
 
-  public DiskWhereInput remainingLifePercent(Double remainingLifePercent) {
+  public DiskWhereInput remainingLifePercent(Integer remainingLifePercent) {
     
     this.remainingLifePercent = remainingLifePercent;
     return this;
@@ -4397,17 +4397,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercent() {
+  public Integer getRemainingLifePercent() {
     return remainingLifePercent;
   }
 
 
-  public void setRemainingLifePercent(Double remainingLifePercent) {
+  public void setRemainingLifePercent(Integer remainingLifePercent) {
     this.remainingLifePercent = remainingLifePercent;
   }
 
 
-  public DiskWhereInput remainingLifePercentGt(Double remainingLifePercentGt) {
+  public DiskWhereInput remainingLifePercentGt(Integer remainingLifePercentGt) {
     
     this.remainingLifePercentGt = remainingLifePercentGt;
     return this;
@@ -4420,17 +4420,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercentGt() {
+  public Integer getRemainingLifePercentGt() {
     return remainingLifePercentGt;
   }
 
 
-  public void setRemainingLifePercentGt(Double remainingLifePercentGt) {
+  public void setRemainingLifePercentGt(Integer remainingLifePercentGt) {
     this.remainingLifePercentGt = remainingLifePercentGt;
   }
 
 
-  public DiskWhereInput remainingLifePercentGte(Double remainingLifePercentGte) {
+  public DiskWhereInput remainingLifePercentGte(Integer remainingLifePercentGte) {
     
     this.remainingLifePercentGte = remainingLifePercentGte;
     return this;
@@ -4443,25 +4443,25 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercentGte() {
+  public Integer getRemainingLifePercentGte() {
     return remainingLifePercentGte;
   }
 
 
-  public void setRemainingLifePercentGte(Double remainingLifePercentGte) {
+  public void setRemainingLifePercentGte(Integer remainingLifePercentGte) {
     this.remainingLifePercentGte = remainingLifePercentGte;
   }
 
 
-  public DiskWhereInput remainingLifePercentIn(List<Double> remainingLifePercentIn) {
+  public DiskWhereInput remainingLifePercentIn(List<Integer> remainingLifePercentIn) {
     
     this.remainingLifePercentIn = remainingLifePercentIn;
     return this;
   }
 
-  public DiskWhereInput addRemainingLifePercentInItem(Double remainingLifePercentInItem) {
+  public DiskWhereInput addRemainingLifePercentInItem(Integer remainingLifePercentInItem) {
     if (this.remainingLifePercentIn == null) {
-      this.remainingLifePercentIn = new ArrayList<Double>();
+      this.remainingLifePercentIn = new ArrayList<Integer>();
     }
     this.remainingLifePercentIn.add(remainingLifePercentInItem);
     return this;
@@ -4474,17 +4474,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRemainingLifePercentIn() {
+  public List<Integer> getRemainingLifePercentIn() {
     return remainingLifePercentIn;
   }
 
 
-  public void setRemainingLifePercentIn(List<Double> remainingLifePercentIn) {
+  public void setRemainingLifePercentIn(List<Integer> remainingLifePercentIn) {
     this.remainingLifePercentIn = remainingLifePercentIn;
   }
 
 
-  public DiskWhereInput remainingLifePercentLt(Double remainingLifePercentLt) {
+  public DiskWhereInput remainingLifePercentLt(Integer remainingLifePercentLt) {
     
     this.remainingLifePercentLt = remainingLifePercentLt;
     return this;
@@ -4497,17 +4497,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercentLt() {
+  public Integer getRemainingLifePercentLt() {
     return remainingLifePercentLt;
   }
 
 
-  public void setRemainingLifePercentLt(Double remainingLifePercentLt) {
+  public void setRemainingLifePercentLt(Integer remainingLifePercentLt) {
     this.remainingLifePercentLt = remainingLifePercentLt;
   }
 
 
-  public DiskWhereInput remainingLifePercentLte(Double remainingLifePercentLte) {
+  public DiskWhereInput remainingLifePercentLte(Integer remainingLifePercentLte) {
     
     this.remainingLifePercentLte = remainingLifePercentLte;
     return this;
@@ -4520,17 +4520,17 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercentLte() {
+  public Integer getRemainingLifePercentLte() {
     return remainingLifePercentLte;
   }
 
 
-  public void setRemainingLifePercentLte(Double remainingLifePercentLte) {
+  public void setRemainingLifePercentLte(Integer remainingLifePercentLte) {
     this.remainingLifePercentLte = remainingLifePercentLte;
   }
 
 
-  public DiskWhereInput remainingLifePercentNot(Double remainingLifePercentNot) {
+  public DiskWhereInput remainingLifePercentNot(Integer remainingLifePercentNot) {
     
     this.remainingLifePercentNot = remainingLifePercentNot;
     return this;
@@ -4543,25 +4543,25 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRemainingLifePercentNot() {
+  public Integer getRemainingLifePercentNot() {
     return remainingLifePercentNot;
   }
 
 
-  public void setRemainingLifePercentNot(Double remainingLifePercentNot) {
+  public void setRemainingLifePercentNot(Integer remainingLifePercentNot) {
     this.remainingLifePercentNot = remainingLifePercentNot;
   }
 
 
-  public DiskWhereInput remainingLifePercentNotIn(List<Double> remainingLifePercentNotIn) {
+  public DiskWhereInput remainingLifePercentNotIn(List<Integer> remainingLifePercentNotIn) {
     
     this.remainingLifePercentNotIn = remainingLifePercentNotIn;
     return this;
   }
 
-  public DiskWhereInput addRemainingLifePercentNotInItem(Double remainingLifePercentNotInItem) {
+  public DiskWhereInput addRemainingLifePercentNotInItem(Integer remainingLifePercentNotInItem) {
     if (this.remainingLifePercentNotIn == null) {
-      this.remainingLifePercentNotIn = new ArrayList<Double>();
+      this.remainingLifePercentNotIn = new ArrayList<Integer>();
     }
     this.remainingLifePercentNotIn.add(remainingLifePercentNotInItem);
     return this;
@@ -4574,12 +4574,12 @@ public class DiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRemainingLifePercentNotIn() {
+  public List<Integer> getRemainingLifePercentNotIn() {
     return remainingLifePercentNotIn;
   }
 
 
-  public void setRemainingLifePercentNotIn(List<Double> remainingLifePercentNotIn) {
+  public void setRemainingLifePercentNotIn(List<Integer> remainingLifePercentNotIn) {
     this.remainingLifePercentNotIn = remainingLifePercentNotIn;
   }
 

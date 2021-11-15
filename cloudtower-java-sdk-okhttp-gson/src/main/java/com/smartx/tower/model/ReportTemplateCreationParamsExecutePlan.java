@@ -35,7 +35,7 @@ public class ReportTemplateCreationParamsExecutePlan {
 
   public static final String SERIALIZED_NAME_RETAIN = "retain";
   @SerializedName(SERIALIZED_NAME_RETAIN)
-  private Double retain;
+  private Integer retain;
 
   public static final String SERIALIZED_NAME_PERIOD = "period";
   @SerializedName(SERIALIZED_NAME_PERIOD)
@@ -69,7 +69,7 @@ public class ReportTemplateCreationParamsExecutePlan {
   }
 
 
-  public ReportTemplateCreationParamsExecutePlan retain(Double retain) {
+  public ReportTemplateCreationParamsExecutePlan retain(Integer retain) {
     
     this.retain = retain;
     return this;
@@ -82,12 +82,12 @@ public class ReportTemplateCreationParamsExecutePlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRetain() {
+  public Integer getRetain() {
     return retain;
   }
 
 
-  public void setRetain(Double retain) {
+  public void setRetain(Integer retain) {
     this.retain = retain;
   }
 

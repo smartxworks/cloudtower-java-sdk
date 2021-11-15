@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
+import com.smartx.tower.model.NestedReportTemplate;
 import com.smartx.tower.model.TaskStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -58,7 +58,7 @@ public class ReportTask {
 
   public static final String SERIALIZED_NAME_TEMPLATE = "template";
   @SerializedName(SERIALIZED_NAME_TEMPLATE)
-  private NameIdPair template;
+  private NestedReportTemplate template;
 
 
   public ReportTask createdAt(String createdAt) {
@@ -199,7 +199,7 @@ public class ReportTask {
   }
 
 
-  public ReportTask template(NameIdPair template) {
+  public ReportTask template(NestedReportTemplate template) {
     
     this.template = template;
     return this;
@@ -212,12 +212,12 @@ public class ReportTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getTemplate() {
+  public NestedReportTemplate getTemplate() {
     return template;
   }
 
 
-  public void setTemplate(NameIdPair template) {
+  public void setTemplate(NestedReportTemplate template) {
     this.template = template;
   }
 

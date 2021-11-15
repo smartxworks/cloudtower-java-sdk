@@ -47,6 +47,8 @@ public class ITVds extends ITBase {
       List<WithTaskVds> result = api.createVds(params, contentLanguage);
       assertThat(result).as("check result of createVds").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITVds extends ITBase {
       List<WithTaskVds> result = api.createVdsWithAccessVlan(params, contentLanguage);
       assertThat(result).as("check result of createVdsWithAccessVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITVds extends ITBase {
       List<WithTaskVds> result = api.createVdsWithMigrateVlan(params, contentLanguage);
       assertThat(result).as("check result of createVdsWithMigrateVlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITVds extends ITBase {
       List<WithTaskDeleteVds> result = api.deleteVds(params, contentLanguage);
       assertThat(result).as("check result of deleteVds").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITVds extends ITBase {
       List<Vds> result = api.getVdses(params, contentLanguage);
       assertThat(result).as("check result of getVdses").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITVds extends ITBase {
       VdsConnection result = api.getVdsesConnection(params, contentLanguage);
       assertThat(result).as("check result of getVdsesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -125,6 +137,8 @@ public class ITVds extends ITBase {
       List<WithTaskVds> result = api.updateVds(params, contentLanguage);
       assertThat(result).as("check result of updateVds").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

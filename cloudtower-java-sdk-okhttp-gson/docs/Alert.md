@@ -7,12 +7,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alertRule** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
+**alertRule** | [**NestedAlertRule**](NestedAlertRule.md) |  |  [optional]
 **cause** | **String** |  | 
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**disk** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
+**disk** | [**NestedDisk**](NestedDisk.md) |  |  [optional]
 **ended** | **Boolean** |  | 
-**host** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**host** | [**NestedHost**](NestedHost.md) |  |  [optional]
 **id** | **String** |  | 
 **impact** | **String** |  | 
 **labels** | **Object** |  | 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **solution** | **String** |  | 
 **threshold** | **Double** |  | 
 **value** | **Double** |  | 
-**vms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**vms** | [**List&lt;NestedVm&gt;**](NestedVm.md) |  |  [optional]
 
 
 

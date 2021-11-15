@@ -7,21 +7,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**contentLibraryImage** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  |  [optional]
+**contentLibraryImage** | [**NestedContentLibraryImage**](NestedContentLibraryImage.md) |  |  [optional]
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreatedAt** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
 **path** | **String** |  | 
 **size** | **Double** |  | 
-**uploadTask** | [**AlertAlertRule**](AlertAlertRule.md) |  |  [optional]
-**vmDisks** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
-**vmSnapshots** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**vmTemplates** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**uploadTask** | [**NestedUploadTask**](NestedUploadTask.md) |  |  [optional]
+**vmDisks** | [**List&lt;NestedVmDisk&gt;**](NestedVmDisk.md) |  |  [optional]
+**vmSnapshots** | [**List&lt;NestedVmSnapshot&gt;**](NestedVmSnapshot.md) |  |  [optional]
+**vmTemplates** | [**List&lt;NestedVmTemplate&gt;**](NestedVmTemplate.md) |  |  [optional]
 
 
 

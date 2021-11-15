@@ -46,7 +46,7 @@ public class ManagementVlanUpdationParamsData {
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Integer vlanId;
 
 
   public ManagementVlanUpdationParamsData extraIp(List<VdsCreationWithMigrateVlanParamsAllOfVlanExtraIp> extraIp) {
@@ -126,7 +126,7 @@ public class ManagementVlanUpdationParamsData {
   }
 
 
-  public ManagementVlanUpdationParamsData vlanId(Double vlanId) {
+  public ManagementVlanUpdationParamsData vlanId(Integer vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -139,12 +139,12 @@ public class ManagementVlanUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVlanId() {
+  public Integer getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Integer vlanId) {
     this.vlanId = vlanId;
   }
 

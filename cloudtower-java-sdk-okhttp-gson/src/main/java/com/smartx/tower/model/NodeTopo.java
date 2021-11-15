@@ -20,8 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoCapacity;
+import com.smartx.tower.model.NestedBrickTopo;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedClusterTopo;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedPosition;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,19 +37,19 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NodeTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPO = "brick_topo";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPO)
-  private NameIdPair brickTopo;
+  private NestedBrickTopo brickTopo;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_CLUSTER_TOPO = "cluster_topo";
   @SerializedName(SERIALIZED_NAME_CLUSTER_TOPO)
-  private NameIdPair clusterTopo;
+  private NestedClusterTopo clusterTopo;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
-  private NameIdPair host;
+  private NestedHost host;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,10 +65,10 @@ public class NodeTopo {
 
   public static final String SERIALIZED_NAME_POSITION = "position";
   @SerializedName(SERIALIZED_NAME_POSITION)
-  private BrickTopoCapacity position;
+  private NestedPosition position;
 
 
-  public NodeTopo brickTopo(NameIdPair brickTopo) {
+  public NodeTopo brickTopo(NestedBrickTopo brickTopo) {
     
     this.brickTopo = brickTopo;
     return this;
@@ -78,17 +81,17 @@ public class NodeTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getBrickTopo() {
+  public NestedBrickTopo getBrickTopo() {
     return brickTopo;
   }
 
 
-  public void setBrickTopo(NameIdPair brickTopo) {
+  public void setBrickTopo(NestedBrickTopo brickTopo) {
     this.brickTopo = brickTopo;
   }
 
 
-  public NodeTopo cluster(NameIdPair cluster) {
+  public NodeTopo cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -101,17 +104,17 @@ public class NodeTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public NodeTopo clusterTopo(NameIdPair clusterTopo) {
+  public NodeTopo clusterTopo(NestedClusterTopo clusterTopo) {
     
     this.clusterTopo = clusterTopo;
     return this;
@@ -124,17 +127,17 @@ public class NodeTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getClusterTopo() {
+  public NestedClusterTopo getClusterTopo() {
     return clusterTopo;
   }
 
 
-  public void setClusterTopo(NameIdPair clusterTopo) {
+  public void setClusterTopo(NestedClusterTopo clusterTopo) {
     this.clusterTopo = clusterTopo;
   }
 
 
-  public NodeTopo host(NameIdPair host) {
+  public NodeTopo host(NestedHost host) {
     
     this.host = host;
     return this;
@@ -147,12 +150,12 @@ public class NodeTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getHost() {
+  public NestedHost getHost() {
     return host;
   }
 
 
-  public void setHost(NameIdPair host) {
+  public void setHost(NestedHost host) {
     this.host = host;
   }
 
@@ -226,7 +229,7 @@ public class NodeTopo {
   }
 
 
-  public NodeTopo position(BrickTopoCapacity position) {
+  public NodeTopo position(NestedPosition position) {
     
     this.position = position;
     return this;
@@ -239,12 +242,12 @@ public class NodeTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public BrickTopoCapacity getPosition() {
+  public NestedPosition getPosition() {
     return position;
   }
 
 
-  public void setPosition(BrickTopoCapacity position) {
+  public void setPosition(NestedPosition position) {
     this.position = position;
   }
 

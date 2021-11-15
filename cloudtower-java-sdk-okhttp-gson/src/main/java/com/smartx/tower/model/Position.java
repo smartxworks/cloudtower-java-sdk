@@ -32,11 +32,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Position {
   public static final String SERIALIZED_NAME_ROW = "row";
   @SerializedName(SERIALIZED_NAME_ROW)
-  private Double row;
+  private Integer row;
 
   public static final String SERIALIZED_NAME_COLUMN = "column";
   @SerializedName(SERIALIZED_NAME_COLUMN)
-  private Double column;
+  private Integer column;
 
   /**
    * Gets or Sets typename
@@ -88,7 +88,7 @@ public class Position {
   private TypenameEnum typename;
 
 
-  public Position row(Double row) {
+  public Position row(Integer row) {
     
     this.row = row;
     return this;
@@ -101,17 +101,17 @@ public class Position {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRow() {
+  public Integer getRow() {
     return row;
   }
 
 
-  public void setRow(Double row) {
+  public void setRow(Integer row) {
     this.row = row;
   }
 
 
-  public Position column(Double column) {
+  public Position column(Integer column) {
     
     this.column = column;
     return this;
@@ -124,12 +124,12 @@ public class Position {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getColumn() {
+  public Integer getColumn() {
     return column;
   }
 
 
-  public void setColumn(Double column) {
+  public void setColumn(Integer column) {
     this.column = column;
   }
 

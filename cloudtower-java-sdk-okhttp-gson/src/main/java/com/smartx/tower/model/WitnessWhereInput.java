@@ -371,35 +371,35 @@ public class WitnessWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GT = "total_cpu_cores_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GT)
-  private Double totalCpuCoresGt;
+  private Integer totalCpuCoresGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_GTE = "total_cpu_cores_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_GTE)
-  private Double totalCpuCoresGte;
+  private Integer totalCpuCoresGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_IN = "total_cpu_cores_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_IN)
-  private List<Double> totalCpuCoresIn = null;
+  private List<Integer> totalCpuCoresIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LT = "total_cpu_cores_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LT)
-  private Double totalCpuCoresLt;
+  private Integer totalCpuCoresLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_LTE = "total_cpu_cores_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_LTE)
-  private Double totalCpuCoresLte;
+  private Integer totalCpuCoresLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT = "total_cpu_cores_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT)
-  private Double totalCpuCoresNot;
+  private Integer totalCpuCoresNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN = "total_cpu_cores_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES_NOT_IN)
-  private List<Double> totalCpuCoresNotIn = null;
+  private List<Integer> totalCpuCoresNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -2534,7 +2534,7 @@ public class WitnessWhereInput {
   }
 
 
-  public WitnessWhereInput totalCpuCores(Double totalCpuCores) {
+  public WitnessWhereInput totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -2547,17 +2547,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
 
-  public WitnessWhereInput totalCpuCoresGt(Double totalCpuCoresGt) {
+  public WitnessWhereInput totalCpuCoresGt(Integer totalCpuCoresGt) {
     
     this.totalCpuCoresGt = totalCpuCoresGt;
     return this;
@@ -2570,17 +2570,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGt() {
+  public Integer getTotalCpuCoresGt() {
     return totalCpuCoresGt;
   }
 
 
-  public void setTotalCpuCoresGt(Double totalCpuCoresGt) {
+  public void setTotalCpuCoresGt(Integer totalCpuCoresGt) {
     this.totalCpuCoresGt = totalCpuCoresGt;
   }
 
 
-  public WitnessWhereInput totalCpuCoresGte(Double totalCpuCoresGte) {
+  public WitnessWhereInput totalCpuCoresGte(Integer totalCpuCoresGte) {
     
     this.totalCpuCoresGte = totalCpuCoresGte;
     return this;
@@ -2593,25 +2593,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresGte() {
+  public Integer getTotalCpuCoresGte() {
     return totalCpuCoresGte;
   }
 
 
-  public void setTotalCpuCoresGte(Double totalCpuCoresGte) {
+  public void setTotalCpuCoresGte(Integer totalCpuCoresGte) {
     this.totalCpuCoresGte = totalCpuCoresGte;
   }
 
 
-  public WitnessWhereInput totalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public WitnessWhereInput totalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     
     this.totalCpuCoresIn = totalCpuCoresIn;
     return this;
   }
 
-  public WitnessWhereInput addTotalCpuCoresInItem(Double totalCpuCoresInItem) {
+  public WitnessWhereInput addTotalCpuCoresInItem(Integer totalCpuCoresInItem) {
     if (this.totalCpuCoresIn == null) {
-      this.totalCpuCoresIn = new ArrayList<Double>();
+      this.totalCpuCoresIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresIn.add(totalCpuCoresInItem);
     return this;
@@ -2624,17 +2624,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresIn() {
+  public List<Integer> getTotalCpuCoresIn() {
     return totalCpuCoresIn;
   }
 
 
-  public void setTotalCpuCoresIn(List<Double> totalCpuCoresIn) {
+  public void setTotalCpuCoresIn(List<Integer> totalCpuCoresIn) {
     this.totalCpuCoresIn = totalCpuCoresIn;
   }
 
 
-  public WitnessWhereInput totalCpuCoresLt(Double totalCpuCoresLt) {
+  public WitnessWhereInput totalCpuCoresLt(Integer totalCpuCoresLt) {
     
     this.totalCpuCoresLt = totalCpuCoresLt;
     return this;
@@ -2647,17 +2647,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLt() {
+  public Integer getTotalCpuCoresLt() {
     return totalCpuCoresLt;
   }
 
 
-  public void setTotalCpuCoresLt(Double totalCpuCoresLt) {
+  public void setTotalCpuCoresLt(Integer totalCpuCoresLt) {
     this.totalCpuCoresLt = totalCpuCoresLt;
   }
 
 
-  public WitnessWhereInput totalCpuCoresLte(Double totalCpuCoresLte) {
+  public WitnessWhereInput totalCpuCoresLte(Integer totalCpuCoresLte) {
     
     this.totalCpuCoresLte = totalCpuCoresLte;
     return this;
@@ -2670,17 +2670,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresLte() {
+  public Integer getTotalCpuCoresLte() {
     return totalCpuCoresLte;
   }
 
 
-  public void setTotalCpuCoresLte(Double totalCpuCoresLte) {
+  public void setTotalCpuCoresLte(Integer totalCpuCoresLte) {
     this.totalCpuCoresLte = totalCpuCoresLte;
   }
 
 
-  public WitnessWhereInput totalCpuCoresNot(Double totalCpuCoresNot) {
+  public WitnessWhereInput totalCpuCoresNot(Integer totalCpuCoresNot) {
     
     this.totalCpuCoresNot = totalCpuCoresNot;
     return this;
@@ -2693,25 +2693,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCoresNot() {
+  public Integer getTotalCpuCoresNot() {
     return totalCpuCoresNot;
   }
 
 
-  public void setTotalCpuCoresNot(Double totalCpuCoresNot) {
+  public void setTotalCpuCoresNot(Integer totalCpuCoresNot) {
     this.totalCpuCoresNot = totalCpuCoresNot;
   }
 
 
-  public WitnessWhereInput totalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public WitnessWhereInput totalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
     return this;
   }
 
-  public WitnessWhereInput addTotalCpuCoresNotInItem(Double totalCpuCoresNotInItem) {
+  public WitnessWhereInput addTotalCpuCoresNotInItem(Integer totalCpuCoresNotInItem) {
     if (this.totalCpuCoresNotIn == null) {
-      this.totalCpuCoresNotIn = new ArrayList<Double>();
+      this.totalCpuCoresNotIn = new ArrayList<Integer>();
     }
     this.totalCpuCoresNotIn.add(totalCpuCoresNotInItem);
     return this;
@@ -2724,12 +2724,12 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuCoresNotIn() {
+  public List<Integer> getTotalCpuCoresNotIn() {
     return totalCpuCoresNotIn;
   }
 
 
-  public void setTotalCpuCoresNotIn(List<Double> totalCpuCoresNotIn) {
+  public void setTotalCpuCoresNotIn(List<Integer> totalCpuCoresNotIn) {
     this.totalCpuCoresNotIn = totalCpuCoresNotIn;
   }
 

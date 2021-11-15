@@ -42,7 +42,7 @@ public class EverouteClusterStatus {
 
   public static final String SERIALIZED_NAME_RETRY_COUNT = "retryCount";
   @SerializedName(SERIALIZED_NAME_RETRY_COUNT)
-  private Double retryCount;
+  private Integer retryCount;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
   @SerializedName(SERIALIZED_NAME_REASON)
@@ -92,7 +92,7 @@ public class EverouteClusterStatus {
   }
 
 
-  public EverouteClusterStatus retryCount(Double retryCount) {
+  public EverouteClusterStatus retryCount(Integer retryCount) {
     
     this.retryCount = retryCount;
     return this;
@@ -105,12 +105,12 @@ public class EverouteClusterStatus {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRetryCount() {
+  public Integer getRetryCount() {
     return retryCount;
   }
 
 
-  public void setRetryCount(Double retryCount) {
+  public void setRetryCount(Integer retryCount) {
     this.retryCount = retryCount;
   }
 

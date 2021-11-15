@@ -50,7 +50,7 @@ public class ITVmPlacementGroup extends ITBase {
       // parse params from json payload
       List<VmPlacementGroupCreationParams> params = new ArrayList<>();
       params.add(new VmPlacementGroupCreationParams().clusterId(cluster.getId())
-          .name("tower-api-test-vm-placement-group" + System.currentTimeMillis()).vmVmPolicy(VmVmPolicy.PREFER_SAME)
+          .name("tower-sdk-test-vm-placement-group" + System.currentTimeMillis()).vmVmPolicy(VmVmPolicy.PREFER_SAME)
           .vmVmPolicyEnabled(true).enabled(true).vmHostPreferPolicy(false).vmHostMustEnabled(false)
           .vmHostMustPolicy(false).vmHostPreferEnabled(false));
       // do some modify to params(optional)
@@ -69,6 +69,8 @@ public class ITVmPlacementGroup extends ITBase {
           }.getClass()), GetVmPlacementGroupsRequestBody.class);
       assertThat(result).as("check result of createVmPlacementGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -83,6 +85,8 @@ public class ITVmPlacementGroup extends ITBase {
       List<VmPlacementGroup> result = api.getVmPlacementGroups(params, contentLanguage);
       assertThat(result).as("check result of getVmPlacementGroups").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -98,6 +102,8 @@ public class ITVmPlacementGroup extends ITBase {
       VmPlacementGroupConnection result = api.getVmPlacementGroupsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmPlacementGroupsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -109,7 +115,7 @@ public class ITVmPlacementGroup extends ITBase {
       IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
     List<VmPlacementGroupCreationParams> params = new ArrayList<>();
     params.add(new VmPlacementGroupCreationParams().clusterId(cluster.getId())
-        .name("tower-api-test-vm-placement-group" + System.currentTimeMillis()).vmVmPolicy(VmVmPolicy.PREFER_SAME)
+        .name("tower-sdk-test-vm-placement-group" + System.currentTimeMillis()).vmVmPolicy(VmVmPolicy.PREFER_SAME)
         .vmVmPolicyEnabled(true).enabled(true).vmHostPreferPolicy(false).vmHostMustEnabled(false)
         .vmHostMustPolicy(false).vmHostPreferEnabled(false));
     List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params, contentLanguage);
@@ -149,6 +155,8 @@ public class ITVmPlacementGroup extends ITBase {
       List<WithTaskVmPlacementGroup> result = api.updateVmPlacementGroup(params, contentLanguage);
       assertThat(result).as("check result of updateVmPlacementGroup").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

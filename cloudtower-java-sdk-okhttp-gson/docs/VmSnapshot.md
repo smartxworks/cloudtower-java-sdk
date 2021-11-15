@@ -8,9 +8,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clockOffset** | **VmClockOffset** |  | 
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **consistentType** | **ConsistentType** |  | 
-**cpu** | [**VmCpu**](VmCpu.md) |  | 
+**cpu** | [**NestedCpu**](NestedCpu.md) |  | 
 **cpuModel** | **String** |  | 
 **description** | **String** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
@@ -18,21 +18,21 @@ Name | Type | Description | Notes
 **ha** | **Boolean** |  | 
 **id** | **String** |  | 
 **ioPolicy** | [**VmDiskIoPolicy**](VmDiskIoPolicy.md) |  |  [optional]
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreatedAt** | **String** |  |  [optional]
 **localId** | **String** |  | 
 **maxBandwidth** | **Double** |  |  [optional]
 **maxBandwidthPolicy** | [**VmDiskIoRestrictType**](VmDiskIoRestrictType.md) |  |  [optional]
-**maxIops** | **Double** |  |  [optional]
+**maxIops** | **Integer** |  |  [optional]
 **maxIopsPolicy** | [**VmDiskIoRestrictType**](VmDiskIoRestrictType.md) |  |  [optional]
 **memory** | **Double** |  | 
 **name** | **String** |  | 
 **size** | **Double** |  | 
-**snapshotGroup** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**vcpu** | **Double** |  | 
-**vm** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**vmDisks** | [**List&lt;VmSnapshotVmDisks&gt;**](VmSnapshotVmDisks.md) |  |  [optional]
-**vmNics** | [**List&lt;VmSnapshotVmNics&gt;**](VmSnapshotVmNics.md) |  |  [optional]
+**snapshotGroup** | [**NestedSnapshotGroup**](NestedSnapshotGroup.md) |  |  [optional]
+**vcpu** | **Integer** |  | 
+**vm** | [**NestedVm**](NestedVm.md) |  |  [optional]
+**vmDisks** | [**List&lt;NestedFrozenDisks&gt;**](NestedFrozenDisks.md) |  |  [optional]
+**vmNics** | [**List&lt;NestedFrozenNic&gt;**](NestedFrozenNic.md) |  |  [optional]
 **winOpt** | **Boolean** |  | 
 
 

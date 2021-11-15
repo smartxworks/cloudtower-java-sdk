@@ -47,6 +47,8 @@ public class ITUsbDevice extends ITBase {
       List<UsbDevice> result = api.getUsbDevices(params, contentLanguage);
       assertThat(result).as("check result of getUsbDevices").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITUsbDevice extends ITBase {
       UsbDeviceConnection result = api.getUsbDevicesConnection(params, contentLanguage);
       assertThat(result).as("check result of getUsbDevicesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITUsbDevice extends ITBase {
       List<WithTaskUsbDevice> result = api.mountUsbDevice(params, contentLanguage);
       assertThat(result).as("check result of mountUsbDevice").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITUsbDevice extends ITBase {
       List<WithTaskUsbDevice> result = api.unmountUsbDevice(params, contentLanguage);
       assertThat(result).as("check result of unmountUsbDevice").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

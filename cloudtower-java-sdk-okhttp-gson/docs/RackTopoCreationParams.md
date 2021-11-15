@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **brickTopoes** | [**BrickTopoWhereInput**](BrickTopoWhereInput.md) |  |  [optional]
 **clusterId** | **String** |  | 
 **zoneTopoId** | **String** |  | 
-**height** | **Double** |  | 
+**height** | **Integer** |  | 
 **name** | **String** |  | 
 
 

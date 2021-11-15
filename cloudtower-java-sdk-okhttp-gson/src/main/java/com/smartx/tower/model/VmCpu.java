@@ -31,14 +31,14 @@ import java.io.IOException;
 public class VmCpu {
   public static final String SERIALIZED_NAME_SOCKETS = "sockets";
   @SerializedName(SERIALIZED_NAME_SOCKETS)
-  private Double sockets;
+  private Integer sockets;
 
   public static final String SERIALIZED_NAME_CORES = "cores";
   @SerializedName(SERIALIZED_NAME_CORES)
-  private Double cores;
+  private Integer cores;
 
 
-  public VmCpu sockets(Double sockets) {
+  public VmCpu sockets(Integer sockets) {
     
     this.sockets = sockets;
     return this;
@@ -51,17 +51,17 @@ public class VmCpu {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSockets() {
+  public Integer getSockets() {
     return sockets;
   }
 
 
-  public void setSockets(Double sockets) {
+  public void setSockets(Integer sockets) {
     this.sockets = sockets;
   }
 
 
-  public VmCpu cores(Double cores) {
+  public VmCpu cores(Integer cores) {
     
     this.cores = cores;
     return this;
@@ -74,12 +74,12 @@ public class VmCpu {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCores() {
+  public Integer getCores() {
     return cores;
   }
 
 
-  public void setCores(Double cores) {
+  public void setCores(Integer cores) {
     this.cores = cores;
   }
 

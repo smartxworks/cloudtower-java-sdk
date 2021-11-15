@@ -47,6 +47,8 @@ public class ITElfDataStore extends ITBase {
       List<ElfDataStore> result = api.getElfDataStores(params, contentLanguage);
       assertThat(result).as("check result of getElfDataStores").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITElfDataStore extends ITBase {
       ElfDataStoreConnection result = api.getElfDataStoresConnection(params, contentLanguage);
       assertThat(result).as("check result of getElfDataStoresConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

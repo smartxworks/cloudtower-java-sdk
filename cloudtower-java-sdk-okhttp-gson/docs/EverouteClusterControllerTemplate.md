@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vcpu** | **Double** |  | 
+**vcpu** | **Integer** |  | 
 **size** | **Double** |  | 
 **netmask** | **String** |  | 
 **memory** | **Double** |  | 

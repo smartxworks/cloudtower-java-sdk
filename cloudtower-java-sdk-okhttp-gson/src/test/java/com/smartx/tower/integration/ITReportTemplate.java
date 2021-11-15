@@ -47,6 +47,8 @@ public class ITReportTemplate extends ITBase {
       List<WithTaskReportTemplate> result = api.createReportTemplate(params, contentLanguage);
       assertThat(result).as("check result of createReportTemplate").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITReportTemplate extends ITBase {
       List<WithTaskDeleteReportTemplate> result = api.deleteReportTemplate(params, contentLanguage);
       assertThat(result).as("check result of deleteReportTemplate").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITReportTemplate extends ITBase {
       List<WithTaskReportTask> result = api.generateFromReportTemplate(params, contentLanguage);
       assertThat(result).as("check result of generateFromReportTemplate").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITReportTemplate extends ITBase {
       List<ReportTemplate> result = api.getReportTemplates(params, contentLanguage);
       assertThat(result).as("check result of getReportTemplates").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITReportTemplate extends ITBase {
       ReportTemplateConnection result = api.getReportTemplatesConnection(params, contentLanguage);
       assertThat(result).as("check result of getReportTemplatesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITReportTemplate extends ITBase {
       List<WithTaskReportTemplate> result = api.updateReportTemplate(params, contentLanguage);
       assertThat(result).as("check result of updateReportTemplate").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

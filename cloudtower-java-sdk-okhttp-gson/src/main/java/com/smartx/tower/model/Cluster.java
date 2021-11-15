@@ -20,17 +20,28 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.AlertAlertRule;
-import com.smartx.tower.model.NameIdPair;
 import com.smartx.tower.model.Architecture;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.ClusterConnectorErrorCode;
-import com.smartx.tower.model.ClusterMetroAvailabilityChecklist;
 import com.smartx.tower.model.ClusterType;
 import com.smartx.tower.model.ConnectState;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.Hypervisor;
 import com.smartx.tower.model.LicenseType;
+import com.smartx.tower.model.NestedApplication;
+import com.smartx.tower.model.NestedClusterSettings;
+import com.smartx.tower.model.NestedConsistencyGroup;
+import com.smartx.tower.model.NestedDatacenter;
+import com.smartx.tower.model.NestedEverouteCluster;
+import com.smartx.tower.model.NestedHost;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedMetroAvailabilityChecklist;
+import com.smartx.tower.model.NestedVcenterAccount;
+import com.smartx.tower.model.NestedVds;
+import com.smartx.tower.model.NestedVm;
+import com.smartx.tower.model.NestedVmFolder;
+import com.smartx.tower.model.NestedVmTemplate;
+import com.smartx.tower.model.NestedWitness;
+import com.smartx.tower.model.NestedZone;
 import com.smartx.tower.model.NtpMode;
 import com.smartx.tower.model.SoftwareEdition;
 import io.swagger.annotations.ApiModel;
@@ -47,7 +58,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class Cluster {
   public static final String SERIALIZED_NAME_APPLICATIONS = "applications";
   @SerializedName(SERIALIZED_NAME_APPLICATIONS)
-  private List<BrickTopoPowers> applications = null;
+  private List<NestedApplication> applications = null;
 
   public static final String SERIALIZED_NAME_ARCHITECTURE = "architecture";
   @SerializedName(SERIALIZED_NAME_ARCHITECTURE)
@@ -63,7 +74,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUPS = "consistency_groups";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUPS)
-  private List<NameIdPair> consistencyGroups = null;
+  private List<NestedConsistencyGroup> consistencyGroups = null;
 
   public static final String SERIALIZED_NAME_CURRENT_CPU_MODEL = "current_cpu_model";
   @SerializedName(SERIALIZED_NAME_CURRENT_CPU_MODEL)
@@ -71,7 +82,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
   @SerializedName(SERIALIZED_NAME_DATACENTERS)
-  private List<NameIdPair> datacenters = null;
+  private List<NestedDatacenter> datacenters = null;
 
   public static final String SERIALIZED_NAME_DISCONNECTED_DATE = "disconnected_date";
   @SerializedName(SERIALIZED_NAME_DISCONNECTED_DATE)
@@ -91,7 +102,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private NameIdPair everouteCluster;
+  private NestedEverouteCluster everouteCluster;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -107,11 +118,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
-  private Double hostNum;
+  private Integer hostNum;
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
-  private List<NameIdPair> hosts = null;
+  private List<NestedHost> hosts = null;
 
   public static final String SERIALIZED_NAME_HYPERVISOR = "hypervisor";
   @SerializedName(SERIALIZED_NAME_HYPERVISOR)
@@ -135,7 +146,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LICENSE_EXPIRE_DATE = "license_expire_date";
   @SerializedName(SERIALIZED_NAME_LICENSE_EXPIRE_DATE)
@@ -171,7 +182,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_MAX_CHUNK_NUM = "max_chunk_num";
   @SerializedName(SERIALIZED_NAME_MAX_CHUNK_NUM)
-  private Double maxChunkNum;
+  private Integer maxChunkNum;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY = "max_physical_data_capacity";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY)
@@ -183,7 +194,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_METRO_AVAILABILITY_CHECKLIST = "metro_availability_checklist";
   @SerializedName(SERIALIZED_NAME_METRO_AVAILABILITY_CHECKLIST)
-  private ClusterMetroAvailabilityChecklist metroAvailabilityChecklist;
+  private NestedMetroAvailabilityChecklist metroAvailabilityChecklist;
 
   public static final String SERIALIZED_NAME_MGT_GATEWAY = "mgt_gateway";
   @SerializedName(SERIALIZED_NAME_MGT_GATEWAY)
@@ -223,11 +234,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES)
-  private Double provisionedCpuCores;
+  private Integer provisionedCpuCores;
 
   public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM = "provisioned_cpu_cores_for_active_vm";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_CPU_CORES_FOR_ACTIVE_VM)
-  private Double provisionedCpuCoresForActiveVm;
+  private Integer provisionedCpuCoresForActiveVm;
 
   public static final String SERIALIZED_NAME_PROVISIONED_FOR_ACTIVE_VM_RATIO = "provisioned_for_active_vm_ratio";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_FOR_ACTIVE_VM_RATIO)
@@ -259,15 +270,15 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE = "reserved_cpu_cores_for_system_service";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE)
-  private Double reservedCpuCoresForSystemService;
+  private Integer reservedCpuCoresForSystemService;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
-  private Double runningVmNum;
+  private Integer runningVmNum;
 
   public static final String SERIALIZED_NAME_SETTINGS = "settings";
   @SerializedName(SERIALIZED_NAME_SETTINGS)
-  private AlertAlertRule settings;
+  private NestedClusterSettings settings;
 
   public static final String SERIALIZED_NAME_SOFTWARE_EDITION = "software_edition";
   @SerializedName(SERIALIZED_NAME_SOFTWARE_EDITION)
@@ -275,7 +286,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_STOPPED_VM_NUM = "stopped_vm_num";
   @SerializedName(SERIALIZED_NAME_STOPPED_VM_NUM)
-  private Double stoppedVmNum;
+  private Integer stoppedVmNum;
 
   public static final String SERIALIZED_NAME_STRETCH = "stretch";
   @SerializedName(SERIALIZED_NAME_STRETCH)
@@ -283,7 +294,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_SUSPENDED_VM_NUM = "suspended_vm_num";
   @SerializedName(SERIALIZED_NAME_SUSPENDED_VM_NUM)
-  private Double suspendedVmNum;
+  private Integer suspendedVmNum;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
@@ -291,7 +302,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
-  private Double totalCpuCores;
+  private Integer totalCpuCores;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
@@ -303,7 +314,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
-  private Double totalCpuSockets;
+  private Integer totalCpuSockets;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
@@ -335,11 +346,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_VCENTER_ACCOUNT = "vcenterAccount";
   @SerializedName(SERIALIZED_NAME_VCENTER_ACCOUNT)
-  private AlertAlertRule vcenterAccount;
+  private NestedVcenterAccount vcenterAccount;
 
   public static final String SERIALIZED_NAME_VDSES = "vdses";
   @SerializedName(SERIALIZED_NAME_VDSES)
-  private List<NameIdPair> vdses = null;
+  private List<NestedVds> vdses = null;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -351,38 +362,38 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_VM_FOLDERS = "vm_folders";
   @SerializedName(SERIALIZED_NAME_VM_FOLDERS)
-  private List<NameIdPair> vmFolders = null;
+  private List<NestedVmFolder> vmFolders = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
-  private Double vmNum;
+  private Integer vmNum;
 
   public static final String SERIALIZED_NAME_VM_TEMPLATES = "vm_templates";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES)
-  private List<NameIdPair> vmTemplates = null;
+  private List<NestedVmTemplate> vmTemplates = null;
 
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
-  private List<NameIdPair> vms = null;
+  private List<NestedVm> vms = null;
 
   public static final String SERIALIZED_NAME_WITNESS = "witness";
   @SerializedName(SERIALIZED_NAME_WITNESS)
-  private NameIdPair witness;
+  private NestedWitness witness;
 
   public static final String SERIALIZED_NAME_ZONES = "zones";
   @SerializedName(SERIALIZED_NAME_ZONES)
-  private List<BrickTopoPowers> zones = null;
+  private List<NestedZone> zones = null;
 
 
-  public Cluster applications(List<BrickTopoPowers> applications) {
+  public Cluster applications(List<NestedApplication> applications) {
     
     this.applications = applications;
     return this;
   }
 
-  public Cluster addApplicationsItem(BrickTopoPowers applicationsItem) {
+  public Cluster addApplicationsItem(NestedApplication applicationsItem) {
     if (this.applications == null) {
-      this.applications = new ArrayList<BrickTopoPowers>();
+      this.applications = new ArrayList<NestedApplication>();
     }
     this.applications.add(applicationsItem);
     return this;
@@ -395,12 +406,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getApplications() {
+  public List<NestedApplication> getApplications() {
     return applications;
   }
 
 
-  public void setApplications(List<BrickTopoPowers> applications) {
+  public void setApplications(List<NestedApplication> applications) {
     this.applications = applications;
   }
 
@@ -474,15 +485,15 @@ public class Cluster {
   }
 
 
-  public Cluster consistencyGroups(List<NameIdPair> consistencyGroups) {
+  public Cluster consistencyGroups(List<NestedConsistencyGroup> consistencyGroups) {
     
     this.consistencyGroups = consistencyGroups;
     return this;
   }
 
-  public Cluster addConsistencyGroupsItem(NameIdPair consistencyGroupsItem) {
+  public Cluster addConsistencyGroupsItem(NestedConsistencyGroup consistencyGroupsItem) {
     if (this.consistencyGroups == null) {
-      this.consistencyGroups = new ArrayList<NameIdPair>();
+      this.consistencyGroups = new ArrayList<NestedConsistencyGroup>();
     }
     this.consistencyGroups.add(consistencyGroupsItem);
     return this;
@@ -495,12 +506,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getConsistencyGroups() {
+  public List<NestedConsistencyGroup> getConsistencyGroups() {
     return consistencyGroups;
   }
 
 
-  public void setConsistencyGroups(List<NameIdPair> consistencyGroups) {
+  public void setConsistencyGroups(List<NestedConsistencyGroup> consistencyGroups) {
     this.consistencyGroups = consistencyGroups;
   }
 
@@ -528,15 +539,15 @@ public class Cluster {
   }
 
 
-  public Cluster datacenters(List<NameIdPair> datacenters) {
+  public Cluster datacenters(List<NestedDatacenter> datacenters) {
     
     this.datacenters = datacenters;
     return this;
   }
 
-  public Cluster addDatacentersItem(NameIdPair datacentersItem) {
+  public Cluster addDatacentersItem(NestedDatacenter datacentersItem) {
     if (this.datacenters == null) {
-      this.datacenters = new ArrayList<NameIdPair>();
+      this.datacenters = new ArrayList<NestedDatacenter>();
     }
     this.datacenters.add(datacentersItem);
     return this;
@@ -549,12 +560,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getDatacenters() {
+  public List<NestedDatacenter> getDatacenters() {
     return datacenters;
   }
 
 
-  public void setDatacenters(List<NameIdPair> datacenters) {
+  public void setDatacenters(List<NestedDatacenter> datacenters) {
     this.datacenters = datacenters;
   }
 
@@ -656,7 +667,7 @@ public class Cluster {
   }
 
 
-  public Cluster everouteCluster(NameIdPair everouteCluster) {
+  public Cluster everouteCluster(NestedEverouteCluster everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -669,12 +680,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getEverouteCluster() {
+  public NestedEverouteCluster getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(NameIdPair everouteCluster) {
+  public void setEverouteCluster(NestedEverouteCluster everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -748,7 +759,7 @@ public class Cluster {
   }
 
 
-  public Cluster hostNum(Double hostNum) {
+  public Cluster hostNum(Integer hostNum) {
     
     this.hostNum = hostNum;
     return this;
@@ -761,25 +772,25 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHostNum() {
+  public Integer getHostNum() {
     return hostNum;
   }
 
 
-  public void setHostNum(Double hostNum) {
+  public void setHostNum(Integer hostNum) {
     this.hostNum = hostNum;
   }
 
 
-  public Cluster hosts(List<NameIdPair> hosts) {
+  public Cluster hosts(List<NestedHost> hosts) {
     
     this.hosts = hosts;
     return this;
   }
 
-  public Cluster addHostsItem(NameIdPair hostsItem) {
+  public Cluster addHostsItem(NestedHost hostsItem) {
     if (this.hosts == null) {
-      this.hosts = new ArrayList<NameIdPair>();
+      this.hosts = new ArrayList<NestedHost>();
     }
     this.hosts.add(hostsItem);
     return this;
@@ -792,12 +803,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getHosts() {
+  public List<NestedHost> getHosts() {
     return hosts;
   }
 
 
-  public void setHosts(List<NameIdPair> hosts) {
+  public void setHosts(List<NestedHost> hosts) {
     this.hosts = hosts;
   }
 
@@ -917,15 +928,15 @@ public class Cluster {
   }
 
 
-  public Cluster labels(List<BrickTopoPowers> labels) {
+  public Cluster labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public Cluster addLabelsItem(BrickTopoPowers labelsItem) {
+  public Cluster addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -938,12 +949,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -1132,7 +1143,7 @@ public class Cluster {
   }
 
 
-  public Cluster maxChunkNum(Double maxChunkNum) {
+  public Cluster maxChunkNum(Integer maxChunkNum) {
     
     this.maxChunkNum = maxChunkNum;
     return this;
@@ -1145,12 +1156,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxChunkNum() {
+  public Integer getMaxChunkNum() {
     return maxChunkNum;
   }
 
 
-  public void setMaxChunkNum(Double maxChunkNum) {
+  public void setMaxChunkNum(Integer maxChunkNum) {
     this.maxChunkNum = maxChunkNum;
   }
 
@@ -1201,7 +1212,7 @@ public class Cluster {
   }
 
 
-  public Cluster metroAvailabilityChecklist(ClusterMetroAvailabilityChecklist metroAvailabilityChecklist) {
+  public Cluster metroAvailabilityChecklist(NestedMetroAvailabilityChecklist metroAvailabilityChecklist) {
     
     this.metroAvailabilityChecklist = metroAvailabilityChecklist;
     return this;
@@ -1214,12 +1225,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public ClusterMetroAvailabilityChecklist getMetroAvailabilityChecklist() {
+  public NestedMetroAvailabilityChecklist getMetroAvailabilityChecklist() {
     return metroAvailabilityChecklist;
   }
 
 
-  public void setMetroAvailabilityChecklist(ClusterMetroAvailabilityChecklist metroAvailabilityChecklist) {
+  public void setMetroAvailabilityChecklist(NestedMetroAvailabilityChecklist metroAvailabilityChecklist) {
     this.metroAvailabilityChecklist = metroAvailabilityChecklist;
   }
 
@@ -1436,7 +1447,7 @@ public class Cluster {
   }
 
 
-  public Cluster provisionedCpuCores(Double provisionedCpuCores) {
+  public Cluster provisionedCpuCores(Integer provisionedCpuCores) {
     
     this.provisionedCpuCores = provisionedCpuCores;
     return this;
@@ -1449,17 +1460,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCores() {
+  public Integer getProvisionedCpuCores() {
     return provisionedCpuCores;
   }
 
 
-  public void setProvisionedCpuCores(Double provisionedCpuCores) {
+  public void setProvisionedCpuCores(Integer provisionedCpuCores) {
     this.provisionedCpuCores = provisionedCpuCores;
   }
 
 
-  public Cluster provisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public Cluster provisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
     return this;
@@ -1472,12 +1483,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedCpuCoresForActiveVm() {
+  public Integer getProvisionedCpuCoresForActiveVm() {
     return provisionedCpuCoresForActiveVm;
   }
 
 
-  public void setProvisionedCpuCoresForActiveVm(Double provisionedCpuCoresForActiveVm) {
+  public void setProvisionedCpuCoresForActiveVm(Integer provisionedCpuCoresForActiveVm) {
     this.provisionedCpuCoresForActiveVm = provisionedCpuCoresForActiveVm;
   }
 
@@ -1648,7 +1659,7 @@ public class Cluster {
   }
 
 
-  public Cluster reservedCpuCoresForSystemService(Double reservedCpuCoresForSystemService) {
+  public Cluster reservedCpuCoresForSystemService(Integer reservedCpuCoresForSystemService) {
     
     this.reservedCpuCoresForSystemService = reservedCpuCoresForSystemService;
     return this;
@@ -1661,17 +1672,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReservedCpuCoresForSystemService() {
+  public Integer getReservedCpuCoresForSystemService() {
     return reservedCpuCoresForSystemService;
   }
 
 
-  public void setReservedCpuCoresForSystemService(Double reservedCpuCoresForSystemService) {
+  public void setReservedCpuCoresForSystemService(Integer reservedCpuCoresForSystemService) {
     this.reservedCpuCoresForSystemService = reservedCpuCoresForSystemService;
   }
 
 
-  public Cluster runningVmNum(Double runningVmNum) {
+  public Cluster runningVmNum(Integer runningVmNum) {
     
     this.runningVmNum = runningVmNum;
     return this;
@@ -1684,17 +1695,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningVmNum() {
+  public Integer getRunningVmNum() {
     return runningVmNum;
   }
 
 
-  public void setRunningVmNum(Double runningVmNum) {
+  public void setRunningVmNum(Integer runningVmNum) {
     this.runningVmNum = runningVmNum;
   }
 
 
-  public Cluster settings(AlertAlertRule settings) {
+  public Cluster settings(NestedClusterSettings settings) {
     
     this.settings = settings;
     return this;
@@ -1707,12 +1718,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getSettings() {
+  public NestedClusterSettings getSettings() {
     return settings;
   }
 
 
-  public void setSettings(AlertAlertRule settings) {
+  public void setSettings(NestedClusterSettings settings) {
     this.settings = settings;
   }
 
@@ -1740,7 +1751,7 @@ public class Cluster {
   }
 
 
-  public Cluster stoppedVmNum(Double stoppedVmNum) {
+  public Cluster stoppedVmNum(Integer stoppedVmNum) {
     
     this.stoppedVmNum = stoppedVmNum;
     return this;
@@ -1753,12 +1764,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStoppedVmNum() {
+  public Integer getStoppedVmNum() {
     return stoppedVmNum;
   }
 
 
-  public void setStoppedVmNum(Double stoppedVmNum) {
+  public void setStoppedVmNum(Integer stoppedVmNum) {
     this.stoppedVmNum = stoppedVmNum;
   }
 
@@ -1786,7 +1797,7 @@ public class Cluster {
   }
 
 
-  public Cluster suspendedVmNum(Double suspendedVmNum) {
+  public Cluster suspendedVmNum(Integer suspendedVmNum) {
     
     this.suspendedVmNum = suspendedVmNum;
     return this;
@@ -1799,12 +1810,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSuspendedVmNum() {
+  public Integer getSuspendedVmNum() {
     return suspendedVmNum;
   }
 
 
-  public void setSuspendedVmNum(Double suspendedVmNum) {
+  public void setSuspendedVmNum(Integer suspendedVmNum) {
     this.suspendedVmNum = suspendedVmNum;
   }
 
@@ -1832,7 +1843,7 @@ public class Cluster {
   }
 
 
-  public Cluster totalCpuCores(Double totalCpuCores) {
+  public Cluster totalCpuCores(Integer totalCpuCores) {
     
     this.totalCpuCores = totalCpuCores;
     return this;
@@ -1845,12 +1856,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuCores() {
+  public Integer getTotalCpuCores() {
     return totalCpuCores;
   }
 
 
-  public void setTotalCpuCores(Double totalCpuCores) {
+  public void setTotalCpuCores(Integer totalCpuCores) {
     this.totalCpuCores = totalCpuCores;
   }
 
@@ -1906,7 +1917,7 @@ public class Cluster {
   }
 
 
-  public Cluster totalCpuSockets(Double totalCpuSockets) {
+  public Cluster totalCpuSockets(Integer totalCpuSockets) {
     
     this.totalCpuSockets = totalCpuSockets;
     return this;
@@ -1919,12 +1930,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuSockets() {
+  public Integer getTotalCpuSockets() {
     return totalCpuSockets;
   }
 
 
-  public void setTotalCpuSockets(Double totalCpuSockets) {
+  public void setTotalCpuSockets(Integer totalCpuSockets) {
     this.totalCpuSockets = totalCpuSockets;
   }
 
@@ -2090,7 +2101,7 @@ public class Cluster {
   }
 
 
-  public Cluster vcenterAccount(AlertAlertRule vcenterAccount) {
+  public Cluster vcenterAccount(NestedVcenterAccount vcenterAccount) {
     
     this.vcenterAccount = vcenterAccount;
     return this;
@@ -2103,25 +2114,25 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AlertAlertRule getVcenterAccount() {
+  public NestedVcenterAccount getVcenterAccount() {
     return vcenterAccount;
   }
 
 
-  public void setVcenterAccount(AlertAlertRule vcenterAccount) {
+  public void setVcenterAccount(NestedVcenterAccount vcenterAccount) {
     this.vcenterAccount = vcenterAccount;
   }
 
 
-  public Cluster vdses(List<NameIdPair> vdses) {
+  public Cluster vdses(List<NestedVds> vdses) {
     
     this.vdses = vdses;
     return this;
   }
 
-  public Cluster addVdsesItem(NameIdPair vdsesItem) {
+  public Cluster addVdsesItem(NestedVds vdsesItem) {
     if (this.vdses == null) {
-      this.vdses = new ArrayList<NameIdPair>();
+      this.vdses = new ArrayList<NestedVds>();
     }
     this.vdses.add(vdsesItem);
     return this;
@@ -2134,12 +2145,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVdses() {
+  public List<NestedVds> getVdses() {
     return vdses;
   }
 
 
-  public void setVdses(List<NameIdPair> vdses) {
+  public void setVdses(List<NestedVds> vdses) {
     this.vdses = vdses;
   }
 
@@ -2190,15 +2201,15 @@ public class Cluster {
   }
 
 
-  public Cluster vmFolders(List<NameIdPair> vmFolders) {
+  public Cluster vmFolders(List<NestedVmFolder> vmFolders) {
     
     this.vmFolders = vmFolders;
     return this;
   }
 
-  public Cluster addVmFoldersItem(NameIdPair vmFoldersItem) {
+  public Cluster addVmFoldersItem(NestedVmFolder vmFoldersItem) {
     if (this.vmFolders == null) {
-      this.vmFolders = new ArrayList<NameIdPair>();
+      this.vmFolders = new ArrayList<NestedVmFolder>();
     }
     this.vmFolders.add(vmFoldersItem);
     return this;
@@ -2211,17 +2222,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmFolders() {
+  public List<NestedVmFolder> getVmFolders() {
     return vmFolders;
   }
 
 
-  public void setVmFolders(List<NameIdPair> vmFolders) {
+  public void setVmFolders(List<NestedVmFolder> vmFolders) {
     this.vmFolders = vmFolders;
   }
 
 
-  public Cluster vmNum(Double vmNum) {
+  public Cluster vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
     return this;
@@ -2234,25 +2245,25 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getVmNum() {
+  public Integer getVmNum() {
     return vmNum;
   }
 
 
-  public void setVmNum(Double vmNum) {
+  public void setVmNum(Integer vmNum) {
     this.vmNum = vmNum;
   }
 
 
-  public Cluster vmTemplates(List<NameIdPair> vmTemplates) {
+  public Cluster vmTemplates(List<NestedVmTemplate> vmTemplates) {
     
     this.vmTemplates = vmTemplates;
     return this;
   }
 
-  public Cluster addVmTemplatesItem(NameIdPair vmTemplatesItem) {
+  public Cluster addVmTemplatesItem(NestedVmTemplate vmTemplatesItem) {
     if (this.vmTemplates == null) {
-      this.vmTemplates = new ArrayList<NameIdPair>();
+      this.vmTemplates = new ArrayList<NestedVmTemplate>();
     }
     this.vmTemplates.add(vmTemplatesItem);
     return this;
@@ -2265,25 +2276,25 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVmTemplates() {
+  public List<NestedVmTemplate> getVmTemplates() {
     return vmTemplates;
   }
 
 
-  public void setVmTemplates(List<NameIdPair> vmTemplates) {
+  public void setVmTemplates(List<NestedVmTemplate> vmTemplates) {
     this.vmTemplates = vmTemplates;
   }
 
 
-  public Cluster vms(List<NameIdPair> vms) {
+  public Cluster vms(List<NestedVm> vms) {
     
     this.vms = vms;
     return this;
   }
 
-  public Cluster addVmsItem(NameIdPair vmsItem) {
+  public Cluster addVmsItem(NestedVm vmsItem) {
     if (this.vms == null) {
-      this.vms = new ArrayList<NameIdPair>();
+      this.vms = new ArrayList<NestedVm>();
     }
     this.vms.add(vmsItem);
     return this;
@@ -2296,17 +2307,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getVms() {
+  public List<NestedVm> getVms() {
     return vms;
   }
 
 
-  public void setVms(List<NameIdPair> vms) {
+  public void setVms(List<NestedVm> vms) {
     this.vms = vms;
   }
 
 
-  public Cluster witness(NameIdPair witness) {
+  public Cluster witness(NestedWitness witness) {
     
     this.witness = witness;
     return this;
@@ -2319,25 +2330,25 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NameIdPair getWitness() {
+  public NestedWitness getWitness() {
     return witness;
   }
 
 
-  public void setWitness(NameIdPair witness) {
+  public void setWitness(NestedWitness witness) {
     this.witness = witness;
   }
 
 
-  public Cluster zones(List<BrickTopoPowers> zones) {
+  public Cluster zones(List<NestedZone> zones) {
     
     this.zones = zones;
     return this;
   }
 
-  public Cluster addZonesItem(BrickTopoPowers zonesItem) {
+  public Cluster addZonesItem(NestedZone zonesItem) {
     if (this.zones == null) {
-      this.zones = new ArrayList<BrickTopoPowers>();
+      this.zones = new ArrayList<NestedZone>();
     }
     this.zones.add(zonesItem);
     return this;
@@ -2350,12 +2361,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getZones() {
+  public List<NestedZone> getZones() {
     return zones;
   }
 
 
-  public void setZones(List<BrickTopoPowers> zones) {
+  public void setZones(List<NestedZone> zones) {
     this.zones = zones;
   }
 

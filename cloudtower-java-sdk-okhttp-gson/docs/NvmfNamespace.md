@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **bpsWr** | **Double** |  | 
 **bpsWrMax** | **Double** |  | 
 **bpsWrMaxLength** | **Double** |  | 
-**consistencyGroup** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**consistencyGroup** | [**NestedConsistencyGroup**](NestedConsistencyGroup.md) |  |  [optional]
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
 **id** | **String** |  | 
 **ioSize** | **Double** |  | 
@@ -31,18 +31,18 @@ Name | Type | Description | Notes
 **iopsWrMax** | **Double** |  | 
 **iopsWrMaxLength** | **Double** |  | 
 **isShared** | **Boolean** |  | 
-**labels** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**labels** | [**List&lt;NestedLabel&gt;**](NestedLabel.md) |  |  [optional]
 **localCreatedAt** | **String** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**namespaceGroup** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**namespaceId** | **Double** |  | 
+**namespaceGroup** | [**NestedNamespaceGroup**](NestedNamespaceGroup.md) |  |  [optional]
+**namespaceId** | **Integer** |  | 
 **nqnWhitelist** | **String** |  | 
-**nvmfSubsystem** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**replicaNum** | **Double** |  | 
+**nvmfSubsystem** | [**NestedNvmfSubsystem**](NestedNvmfSubsystem.md) |  | 
+**replicaNum** | **Integer** |  | 
 **sharedSize** | **Double** |  | 
-**snapshotNum** | **Double** |  | 
-**stripeNum** | **Double** |  | 
+**snapshotNum** | **Integer** |  | 
+**stripeNum** | **Integer** |  | 
 **stripeSize** | **Double** |  | 
 **thinProvision** | **Boolean** |  | 
 **uniqueSize** | **Double** |  | 

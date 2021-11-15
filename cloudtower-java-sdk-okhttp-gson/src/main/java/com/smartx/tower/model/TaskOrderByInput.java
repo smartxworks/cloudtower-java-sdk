@@ -81,6 +81,10 @@ public enum TaskOrderByInput {
   
   RESOURCE_ROLLBACK_ERROR_DESC("resource_rollback_error_DESC"),
   
+  RESOURCE_ROLLBACK_RETRY_COUNT_ASC("resource_rollback_retry_count_ASC"),
+  
+  RESOURCE_ROLLBACK_RETRY_COUNT_DESC("resource_rollback_retry_count_DESC"),
+  
   RESOURCE_ROLLBACKED_ASC("resource_rollbacked_ASC"),
   
   RESOURCE_ROLLBACKED_DESC("resource_rollbacked_DESC"),

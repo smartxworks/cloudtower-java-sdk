@@ -7,31 +7,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
-**disks** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  |  [optional]
+**disks** | [**List&lt;NestedDisk&gt;**](NestedDisk.md) |  |  [optional]
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
-**hosts** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**hosts** | [**List&lt;NestedHost&gt;**](NestedHost.md) |  |  [optional]
 **id** | **String** |  | 
 **instanceIds** | **List&lt;String&gt;** |  | 
 **localId** | **String** |  | 
-**luns** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**metricCount** | **Double** |  | 
+**luns** | [**List&lt;NestedIscsiLun&gt;**](NestedIscsiLun.md) |  |  [optional]
+**metricCount** | **Integer** |  | 
 **metricName** | **String** |  | 
 **metricType** | **MetricType** |  | 
-**namespaces** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**namespaces** | [**List&lt;NestedNvmfNamespace&gt;**](NestedNvmfNamespace.md) |  |  [optional]
 **network** | [**NetworkType**](NetworkType.md) |  |  [optional]
-**nics** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**nics** | [**List&lt;NestedNic&gt;**](NestedNic.md) |  |  [optional]
 **resourceType** | **String** |  | 
 **service** | **String** |  |  [optional]
 **targets** | **Object** |  | 
 **title** | **String** |  | 
 **type** | **GraphType** |  | 
-**view** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
-**vmNics** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
-**vms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**vmVolumes** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**witnesses** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
-**zones** | [**List&lt;BrickTopoPowers&gt;**](BrickTopoPowers.md) |  |  [optional]
+**view** | [**NestedView**](NestedView.md) |  | 
+**vmNics** | [**List&lt;NestedVmNic&gt;**](NestedVmNic.md) |  |  [optional]
+**vms** | [**List&lt;NestedVm&gt;**](NestedVm.md) |  |  [optional]
+**vmVolumes** | [**List&lt;NestedVmVolume&gt;**](NestedVmVolume.md) |  |  [optional]
+**witnesses** | [**List&lt;NestedWitness&gt;**](NestedWitness.md) |  |  [optional]
+**zones** | [**List&lt;NestedZone&gt;**](NestedZone.md) |  |  [optional]
 
 
 

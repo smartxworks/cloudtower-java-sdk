@@ -927,35 +927,35 @@ public class NvmfNamespaceWhereInput {
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID = "namespace_id";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID)
-  private Double namespaceId;
+  private Integer namespaceId;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_GT = "namespace_id_gt";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_GT)
-  private Double namespaceIdGt;
+  private Integer namespaceIdGt;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_GTE = "namespace_id_gte";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_GTE)
-  private Double namespaceIdGte;
+  private Integer namespaceIdGte;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_IN = "namespace_id_in";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_IN)
-  private List<Double> namespaceIdIn = null;
+  private List<Integer> namespaceIdIn = null;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_LT = "namespace_id_lt";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_LT)
-  private Double namespaceIdLt;
+  private Integer namespaceIdLt;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_LTE = "namespace_id_lte";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_LTE)
-  private Double namespaceIdLte;
+  private Integer namespaceIdLte;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_NOT = "namespace_id_not";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_NOT)
-  private Double namespaceIdNot;
+  private Integer namespaceIdNot;
 
   public static final String SERIALIZED_NAME_NAMESPACE_ID_NOT_IN = "namespace_id_not_in";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_NOT_IN)
-  private List<Double> namespaceIdNotIn = null;
+  private List<Integer> namespaceIdNotIn = null;
 
   public static final String SERIALIZED_NAME_N_O_T = "NOT";
   @SerializedName(SERIALIZED_NAME_N_O_T)
@@ -1027,35 +1027,35 @@ public class NvmfNamespaceWhereInput {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GT = "replica_num_gt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GT)
-  private Double replicaNumGt;
+  private Integer replicaNumGt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GTE = "replica_num_gte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GTE)
-  private Double replicaNumGte;
+  private Integer replicaNumGte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_IN = "replica_num_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_IN)
-  private List<Double> replicaNumIn = null;
+  private List<Integer> replicaNumIn = null;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LT = "replica_num_lt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LT)
-  private Double replicaNumLt;
+  private Integer replicaNumLt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LTE = "replica_num_lte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LTE)
-  private Double replicaNumLte;
+  private Integer replicaNumLte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT = "replica_num_not";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT)
-  private Double replicaNumNot;
+  private Integer replicaNumNot;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT_IN = "replica_num_not_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
-  private List<Double> replicaNumNotIn = null;
+  private List<Integer> replicaNumNotIn = null;
 
   public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
   @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
@@ -1091,67 +1091,67 @@ public class NvmfNamespaceWhereInput {
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
-  private Double snapshotNum;
+  private Integer snapshotNum;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_GT = "snapshot_num_gt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_GT)
-  private Double snapshotNumGt;
+  private Integer snapshotNumGt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_GTE = "snapshot_num_gte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_GTE)
-  private Double snapshotNumGte;
+  private Integer snapshotNumGte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_IN = "snapshot_num_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_IN)
-  private List<Double> snapshotNumIn = null;
+  private List<Integer> snapshotNumIn = null;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_LT = "snapshot_num_lt";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_LT)
-  private Double snapshotNumLt;
+  private Integer snapshotNumLt;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_LTE = "snapshot_num_lte";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_LTE)
-  private Double snapshotNumLte;
+  private Integer snapshotNumLte;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_NOT = "snapshot_num_not";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT)
-  private Double snapshotNumNot;
+  private Integer snapshotNumNot;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN = "snapshot_num_not_in";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN)
-  private List<Double> snapshotNumNotIn = null;
+  private List<Integer> snapshotNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_GT = "stripe_num_gt";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_GT)
-  private Double stripeNumGt;
+  private Integer stripeNumGt;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_GTE = "stripe_num_gte";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_GTE)
-  private Double stripeNumGte;
+  private Integer stripeNumGte;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_IN = "stripe_num_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_IN)
-  private List<Double> stripeNumIn = null;
+  private List<Integer> stripeNumIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_LT = "stripe_num_lt";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_LT)
-  private Double stripeNumLt;
+  private Integer stripeNumLt;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_LTE = "stripe_num_lte";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_LTE)
-  private Double stripeNumLte;
+  private Integer stripeNumLte;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_NOT = "stripe_num_not";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_NOT)
-  private Double stripeNumNot;
+  private Integer stripeNumNot;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_NOT_IN = "stripe_num_not_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_NOT_IN)
-  private List<Double> stripeNumNotIn = null;
+  private List<Integer> stripeNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -6796,7 +6796,7 @@ public class NvmfNamespaceWhereInput {
   }
 
 
-  public NvmfNamespaceWhereInput namespaceId(Double namespaceId) {
+  public NvmfNamespaceWhereInput namespaceId(Integer namespaceId) {
     
     this.namespaceId = namespaceId;
     return this;
@@ -6809,17 +6809,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceId() {
+  public Integer getNamespaceId() {
     return namespaceId;
   }
 
 
-  public void setNamespaceId(Double namespaceId) {
+  public void setNamespaceId(Integer namespaceId) {
     this.namespaceId = namespaceId;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdGt(Double namespaceIdGt) {
+  public NvmfNamespaceWhereInput namespaceIdGt(Integer namespaceIdGt) {
     
     this.namespaceIdGt = namespaceIdGt;
     return this;
@@ -6832,17 +6832,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceIdGt() {
+  public Integer getNamespaceIdGt() {
     return namespaceIdGt;
   }
 
 
-  public void setNamespaceIdGt(Double namespaceIdGt) {
+  public void setNamespaceIdGt(Integer namespaceIdGt) {
     this.namespaceIdGt = namespaceIdGt;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdGte(Double namespaceIdGte) {
+  public NvmfNamespaceWhereInput namespaceIdGte(Integer namespaceIdGte) {
     
     this.namespaceIdGte = namespaceIdGte;
     return this;
@@ -6855,25 +6855,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceIdGte() {
+  public Integer getNamespaceIdGte() {
     return namespaceIdGte;
   }
 
 
-  public void setNamespaceIdGte(Double namespaceIdGte) {
+  public void setNamespaceIdGte(Integer namespaceIdGte) {
     this.namespaceIdGte = namespaceIdGte;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdIn(List<Double> namespaceIdIn) {
+  public NvmfNamespaceWhereInput namespaceIdIn(List<Integer> namespaceIdIn) {
     
     this.namespaceIdIn = namespaceIdIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addNamespaceIdInItem(Double namespaceIdInItem) {
+  public NvmfNamespaceWhereInput addNamespaceIdInItem(Integer namespaceIdInItem) {
     if (this.namespaceIdIn == null) {
-      this.namespaceIdIn = new ArrayList<Double>();
+      this.namespaceIdIn = new ArrayList<Integer>();
     }
     this.namespaceIdIn.add(namespaceIdInItem);
     return this;
@@ -6886,17 +6886,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNamespaceIdIn() {
+  public List<Integer> getNamespaceIdIn() {
     return namespaceIdIn;
   }
 
 
-  public void setNamespaceIdIn(List<Double> namespaceIdIn) {
+  public void setNamespaceIdIn(List<Integer> namespaceIdIn) {
     this.namespaceIdIn = namespaceIdIn;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdLt(Double namespaceIdLt) {
+  public NvmfNamespaceWhereInput namespaceIdLt(Integer namespaceIdLt) {
     
     this.namespaceIdLt = namespaceIdLt;
     return this;
@@ -6909,17 +6909,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceIdLt() {
+  public Integer getNamespaceIdLt() {
     return namespaceIdLt;
   }
 
 
-  public void setNamespaceIdLt(Double namespaceIdLt) {
+  public void setNamespaceIdLt(Integer namespaceIdLt) {
     this.namespaceIdLt = namespaceIdLt;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdLte(Double namespaceIdLte) {
+  public NvmfNamespaceWhereInput namespaceIdLte(Integer namespaceIdLte) {
     
     this.namespaceIdLte = namespaceIdLte;
     return this;
@@ -6932,17 +6932,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceIdLte() {
+  public Integer getNamespaceIdLte() {
     return namespaceIdLte;
   }
 
 
-  public void setNamespaceIdLte(Double namespaceIdLte) {
+  public void setNamespaceIdLte(Integer namespaceIdLte) {
     this.namespaceIdLte = namespaceIdLte;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdNot(Double namespaceIdNot) {
+  public NvmfNamespaceWhereInput namespaceIdNot(Integer namespaceIdNot) {
     
     this.namespaceIdNot = namespaceIdNot;
     return this;
@@ -6955,25 +6955,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getNamespaceIdNot() {
+  public Integer getNamespaceIdNot() {
     return namespaceIdNot;
   }
 
 
-  public void setNamespaceIdNot(Double namespaceIdNot) {
+  public void setNamespaceIdNot(Integer namespaceIdNot) {
     this.namespaceIdNot = namespaceIdNot;
   }
 
 
-  public NvmfNamespaceWhereInput namespaceIdNotIn(List<Double> namespaceIdNotIn) {
+  public NvmfNamespaceWhereInput namespaceIdNotIn(List<Integer> namespaceIdNotIn) {
     
     this.namespaceIdNotIn = namespaceIdNotIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addNamespaceIdNotInItem(Double namespaceIdNotInItem) {
+  public NvmfNamespaceWhereInput addNamespaceIdNotInItem(Integer namespaceIdNotInItem) {
     if (this.namespaceIdNotIn == null) {
-      this.namespaceIdNotIn = new ArrayList<Double>();
+      this.namespaceIdNotIn = new ArrayList<Integer>();
     }
     this.namespaceIdNotIn.add(namespaceIdNotInItem);
     return this;
@@ -6986,12 +6986,12 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getNamespaceIdNotIn() {
+  public List<Integer> getNamespaceIdNotIn() {
     return namespaceIdNotIn;
   }
 
 
-  public void setNamespaceIdNotIn(List<Double> namespaceIdNotIn) {
+  public void setNamespaceIdNotIn(List<Integer> namespaceIdNotIn) {
     this.namespaceIdNotIn = namespaceIdNotIn;
   }
 
@@ -7419,7 +7419,7 @@ public class NvmfNamespaceWhereInput {
   }
 
 
-  public NvmfNamespaceWhereInput replicaNum(Double replicaNum) {
+  public NvmfNamespaceWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -7432,17 +7432,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumGt(Double replicaNumGt) {
+  public NvmfNamespaceWhereInput replicaNumGt(Integer replicaNumGt) {
     
     this.replicaNumGt = replicaNumGt;
     return this;
@@ -7455,17 +7455,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGt() {
+  public Integer getReplicaNumGt() {
     return replicaNumGt;
   }
 
 
-  public void setReplicaNumGt(Double replicaNumGt) {
+  public void setReplicaNumGt(Integer replicaNumGt) {
     this.replicaNumGt = replicaNumGt;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumGte(Double replicaNumGte) {
+  public NvmfNamespaceWhereInput replicaNumGte(Integer replicaNumGte) {
     
     this.replicaNumGte = replicaNumGte;
     return this;
@@ -7478,25 +7478,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGte() {
+  public Integer getReplicaNumGte() {
     return replicaNumGte;
   }
 
 
-  public void setReplicaNumGte(Double replicaNumGte) {
+  public void setReplicaNumGte(Integer replicaNumGte) {
     this.replicaNumGte = replicaNumGte;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumIn(List<Double> replicaNumIn) {
+  public NvmfNamespaceWhereInput replicaNumIn(List<Integer> replicaNumIn) {
     
     this.replicaNumIn = replicaNumIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addReplicaNumInItem(Double replicaNumInItem) {
+  public NvmfNamespaceWhereInput addReplicaNumInItem(Integer replicaNumInItem) {
     if (this.replicaNumIn == null) {
-      this.replicaNumIn = new ArrayList<Double>();
+      this.replicaNumIn = new ArrayList<Integer>();
     }
     this.replicaNumIn.add(replicaNumInItem);
     return this;
@@ -7509,17 +7509,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumIn() {
+  public List<Integer> getReplicaNumIn() {
     return replicaNumIn;
   }
 
 
-  public void setReplicaNumIn(List<Double> replicaNumIn) {
+  public void setReplicaNumIn(List<Integer> replicaNumIn) {
     this.replicaNumIn = replicaNumIn;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumLt(Double replicaNumLt) {
+  public NvmfNamespaceWhereInput replicaNumLt(Integer replicaNumLt) {
     
     this.replicaNumLt = replicaNumLt;
     return this;
@@ -7532,17 +7532,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLt() {
+  public Integer getReplicaNumLt() {
     return replicaNumLt;
   }
 
 
-  public void setReplicaNumLt(Double replicaNumLt) {
+  public void setReplicaNumLt(Integer replicaNumLt) {
     this.replicaNumLt = replicaNumLt;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumLte(Double replicaNumLte) {
+  public NvmfNamespaceWhereInput replicaNumLte(Integer replicaNumLte) {
     
     this.replicaNumLte = replicaNumLte;
     return this;
@@ -7555,17 +7555,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLte() {
+  public Integer getReplicaNumLte() {
     return replicaNumLte;
   }
 
 
-  public void setReplicaNumLte(Double replicaNumLte) {
+  public void setReplicaNumLte(Integer replicaNumLte) {
     this.replicaNumLte = replicaNumLte;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumNot(Double replicaNumNot) {
+  public NvmfNamespaceWhereInput replicaNumNot(Integer replicaNumNot) {
     
     this.replicaNumNot = replicaNumNot;
     return this;
@@ -7578,25 +7578,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumNot() {
+  public Integer getReplicaNumNot() {
     return replicaNumNot;
   }
 
 
-  public void setReplicaNumNot(Double replicaNumNot) {
+  public void setReplicaNumNot(Integer replicaNumNot) {
     this.replicaNumNot = replicaNumNot;
   }
 
 
-  public NvmfNamespaceWhereInput replicaNumNotIn(List<Double> replicaNumNotIn) {
+  public NvmfNamespaceWhereInput replicaNumNotIn(List<Integer> replicaNumNotIn) {
     
     this.replicaNumNotIn = replicaNumNotIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addReplicaNumNotInItem(Double replicaNumNotInItem) {
+  public NvmfNamespaceWhereInput addReplicaNumNotInItem(Integer replicaNumNotInItem) {
     if (this.replicaNumNotIn == null) {
-      this.replicaNumNotIn = new ArrayList<Double>();
+      this.replicaNumNotIn = new ArrayList<Integer>();
     }
     this.replicaNumNotIn.add(replicaNumNotInItem);
     return this;
@@ -7609,12 +7609,12 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumNotIn() {
+  public List<Integer> getReplicaNumNotIn() {
     return replicaNumNotIn;
   }
 
 
-  public void setReplicaNumNotIn(List<Double> replicaNumNotIn) {
+  public void setReplicaNumNotIn(List<Integer> replicaNumNotIn) {
     this.replicaNumNotIn = replicaNumNotIn;
   }
 
@@ -7819,7 +7819,7 @@ public class NvmfNamespaceWhereInput {
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNum(Double snapshotNum) {
+  public NvmfNamespaceWhereInput snapshotNum(Integer snapshotNum) {
     
     this.snapshotNum = snapshotNum;
     return this;
@@ -7832,17 +7832,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNum() {
+  public Integer getSnapshotNum() {
     return snapshotNum;
   }
 
 
-  public void setSnapshotNum(Double snapshotNum) {
+  public void setSnapshotNum(Integer snapshotNum) {
     this.snapshotNum = snapshotNum;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumGt(Double snapshotNumGt) {
+  public NvmfNamespaceWhereInput snapshotNumGt(Integer snapshotNumGt) {
     
     this.snapshotNumGt = snapshotNumGt;
     return this;
@@ -7855,17 +7855,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumGt() {
+  public Integer getSnapshotNumGt() {
     return snapshotNumGt;
   }
 
 
-  public void setSnapshotNumGt(Double snapshotNumGt) {
+  public void setSnapshotNumGt(Integer snapshotNumGt) {
     this.snapshotNumGt = snapshotNumGt;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumGte(Double snapshotNumGte) {
+  public NvmfNamespaceWhereInput snapshotNumGte(Integer snapshotNumGte) {
     
     this.snapshotNumGte = snapshotNumGte;
     return this;
@@ -7878,25 +7878,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumGte() {
+  public Integer getSnapshotNumGte() {
     return snapshotNumGte;
   }
 
 
-  public void setSnapshotNumGte(Double snapshotNumGte) {
+  public void setSnapshotNumGte(Integer snapshotNumGte) {
     this.snapshotNumGte = snapshotNumGte;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumIn(List<Double> snapshotNumIn) {
+  public NvmfNamespaceWhereInput snapshotNumIn(List<Integer> snapshotNumIn) {
     
     this.snapshotNumIn = snapshotNumIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addSnapshotNumInItem(Double snapshotNumInItem) {
+  public NvmfNamespaceWhereInput addSnapshotNumInItem(Integer snapshotNumInItem) {
     if (this.snapshotNumIn == null) {
-      this.snapshotNumIn = new ArrayList<Double>();
+      this.snapshotNumIn = new ArrayList<Integer>();
     }
     this.snapshotNumIn.add(snapshotNumInItem);
     return this;
@@ -7909,17 +7909,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotNumIn() {
+  public List<Integer> getSnapshotNumIn() {
     return snapshotNumIn;
   }
 
 
-  public void setSnapshotNumIn(List<Double> snapshotNumIn) {
+  public void setSnapshotNumIn(List<Integer> snapshotNumIn) {
     this.snapshotNumIn = snapshotNumIn;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumLt(Double snapshotNumLt) {
+  public NvmfNamespaceWhereInput snapshotNumLt(Integer snapshotNumLt) {
     
     this.snapshotNumLt = snapshotNumLt;
     return this;
@@ -7932,17 +7932,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumLt() {
+  public Integer getSnapshotNumLt() {
     return snapshotNumLt;
   }
 
 
-  public void setSnapshotNumLt(Double snapshotNumLt) {
+  public void setSnapshotNumLt(Integer snapshotNumLt) {
     this.snapshotNumLt = snapshotNumLt;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumLte(Double snapshotNumLte) {
+  public NvmfNamespaceWhereInput snapshotNumLte(Integer snapshotNumLte) {
     
     this.snapshotNumLte = snapshotNumLte;
     return this;
@@ -7955,17 +7955,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumLte() {
+  public Integer getSnapshotNumLte() {
     return snapshotNumLte;
   }
 
 
-  public void setSnapshotNumLte(Double snapshotNumLte) {
+  public void setSnapshotNumLte(Integer snapshotNumLte) {
     this.snapshotNumLte = snapshotNumLte;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumNot(Double snapshotNumNot) {
+  public NvmfNamespaceWhereInput snapshotNumNot(Integer snapshotNumNot) {
     
     this.snapshotNumNot = snapshotNumNot;
     return this;
@@ -7978,25 +7978,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSnapshotNumNot() {
+  public Integer getSnapshotNumNot() {
     return snapshotNumNot;
   }
 
 
-  public void setSnapshotNumNot(Double snapshotNumNot) {
+  public void setSnapshotNumNot(Integer snapshotNumNot) {
     this.snapshotNumNot = snapshotNumNot;
   }
 
 
-  public NvmfNamespaceWhereInput snapshotNumNotIn(List<Double> snapshotNumNotIn) {
+  public NvmfNamespaceWhereInput snapshotNumNotIn(List<Integer> snapshotNumNotIn) {
     
     this.snapshotNumNotIn = snapshotNumNotIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addSnapshotNumNotInItem(Double snapshotNumNotInItem) {
+  public NvmfNamespaceWhereInput addSnapshotNumNotInItem(Integer snapshotNumNotInItem) {
     if (this.snapshotNumNotIn == null) {
-      this.snapshotNumNotIn = new ArrayList<Double>();
+      this.snapshotNumNotIn = new ArrayList<Integer>();
     }
     this.snapshotNumNotIn.add(snapshotNumNotInItem);
     return this;
@@ -8009,17 +8009,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSnapshotNumNotIn() {
+  public List<Integer> getSnapshotNumNotIn() {
     return snapshotNumNotIn;
   }
 
 
-  public void setSnapshotNumNotIn(List<Double> snapshotNumNotIn) {
+  public void setSnapshotNumNotIn(List<Integer> snapshotNumNotIn) {
     this.snapshotNumNotIn = snapshotNumNotIn;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNum(Double stripeNum) {
+  public NvmfNamespaceWhereInput stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -8032,17 +8032,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumGt(Double stripeNumGt) {
+  public NvmfNamespaceWhereInput stripeNumGt(Integer stripeNumGt) {
     
     this.stripeNumGt = stripeNumGt;
     return this;
@@ -8055,17 +8055,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumGt() {
+  public Integer getStripeNumGt() {
     return stripeNumGt;
   }
 
 
-  public void setStripeNumGt(Double stripeNumGt) {
+  public void setStripeNumGt(Integer stripeNumGt) {
     this.stripeNumGt = stripeNumGt;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumGte(Double stripeNumGte) {
+  public NvmfNamespaceWhereInput stripeNumGte(Integer stripeNumGte) {
     
     this.stripeNumGte = stripeNumGte;
     return this;
@@ -8078,25 +8078,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumGte() {
+  public Integer getStripeNumGte() {
     return stripeNumGte;
   }
 
 
-  public void setStripeNumGte(Double stripeNumGte) {
+  public void setStripeNumGte(Integer stripeNumGte) {
     this.stripeNumGte = stripeNumGte;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumIn(List<Double> stripeNumIn) {
+  public NvmfNamespaceWhereInput stripeNumIn(List<Integer> stripeNumIn) {
     
     this.stripeNumIn = stripeNumIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addStripeNumInItem(Double stripeNumInItem) {
+  public NvmfNamespaceWhereInput addStripeNumInItem(Integer stripeNumInItem) {
     if (this.stripeNumIn == null) {
-      this.stripeNumIn = new ArrayList<Double>();
+      this.stripeNumIn = new ArrayList<Integer>();
     }
     this.stripeNumIn.add(stripeNumInItem);
     return this;
@@ -8109,17 +8109,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeNumIn() {
+  public List<Integer> getStripeNumIn() {
     return stripeNumIn;
   }
 
 
-  public void setStripeNumIn(List<Double> stripeNumIn) {
+  public void setStripeNumIn(List<Integer> stripeNumIn) {
     this.stripeNumIn = stripeNumIn;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumLt(Double stripeNumLt) {
+  public NvmfNamespaceWhereInput stripeNumLt(Integer stripeNumLt) {
     
     this.stripeNumLt = stripeNumLt;
     return this;
@@ -8132,17 +8132,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumLt() {
+  public Integer getStripeNumLt() {
     return stripeNumLt;
   }
 
 
-  public void setStripeNumLt(Double stripeNumLt) {
+  public void setStripeNumLt(Integer stripeNumLt) {
     this.stripeNumLt = stripeNumLt;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumLte(Double stripeNumLte) {
+  public NvmfNamespaceWhereInput stripeNumLte(Integer stripeNumLte) {
     
     this.stripeNumLte = stripeNumLte;
     return this;
@@ -8155,17 +8155,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumLte() {
+  public Integer getStripeNumLte() {
     return stripeNumLte;
   }
 
 
-  public void setStripeNumLte(Double stripeNumLte) {
+  public void setStripeNumLte(Integer stripeNumLte) {
     this.stripeNumLte = stripeNumLte;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumNot(Double stripeNumNot) {
+  public NvmfNamespaceWhereInput stripeNumNot(Integer stripeNumNot) {
     
     this.stripeNumNot = stripeNumNot;
     return this;
@@ -8178,25 +8178,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumNot() {
+  public Integer getStripeNumNot() {
     return stripeNumNot;
   }
 
 
-  public void setStripeNumNot(Double stripeNumNot) {
+  public void setStripeNumNot(Integer stripeNumNot) {
     this.stripeNumNot = stripeNumNot;
   }
 
 
-  public NvmfNamespaceWhereInput stripeNumNotIn(List<Double> stripeNumNotIn) {
+  public NvmfNamespaceWhereInput stripeNumNotIn(List<Integer> stripeNumNotIn) {
     
     this.stripeNumNotIn = stripeNumNotIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addStripeNumNotInItem(Double stripeNumNotInItem) {
+  public NvmfNamespaceWhereInput addStripeNumNotInItem(Integer stripeNumNotInItem) {
     if (this.stripeNumNotIn == null) {
-      this.stripeNumNotIn = new ArrayList<Double>();
+      this.stripeNumNotIn = new ArrayList<Integer>();
     }
     this.stripeNumNotIn.add(stripeNumNotInItem);
     return this;
@@ -8209,12 +8209,12 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeNumNotIn() {
+  public List<Integer> getStripeNumNotIn() {
     return stripeNumNotIn;
   }
 
 
-  public void setStripeNumNotIn(List<Double> stripeNumNotIn) {
+  public void setStripeNumNotIn(List<Integer> stripeNumNotIn) {
     this.stripeNumNotIn = stripeNumNotIn;
   }
 

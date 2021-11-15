@@ -21,9 +21,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.AlertRuleObject;
-import com.smartx.tower.model.AlertRuleThresholds;
 import com.smartx.tower.model.AlertRuleUnit;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedAlertRule;
+import com.smartx.tower.model.NestedThresholds;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -38,7 +38,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class GlobalAlertRule {
   public static final String SERIALIZED_NAME_ALERT_RULES = "alert_rules";
   @SerializedName(SERIALIZED_NAME_ALERT_RULES)
-  private List<BrickTopoPowers> alertRules = null;
+  private List<NestedAlertRule> alertRules = null;
 
   public static final String SERIALIZED_NAME_BOOLEAN = "boolean";
   @SerializedName(SERIALIZED_NAME_BOOLEAN)
@@ -50,7 +50,7 @@ public class GlobalAlertRule {
 
   public static final String SERIALIZED_NAME_DEFAULT_THRESHOLDS = "default_thresholds";
   @SerializedName(SERIALIZED_NAME_DEFAULT_THRESHOLDS)
-  private List<AlertRuleThresholds> defaultThresholds = new ArrayList<AlertRuleThresholds>();
+  private List<NestedThresholds> defaultThresholds = new ArrayList<NestedThresholds>();
 
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
@@ -86,22 +86,22 @@ public class GlobalAlertRule {
 
   public static final String SERIALIZED_NAME_THRESHOLDS = "thresholds";
   @SerializedName(SERIALIZED_NAME_THRESHOLDS)
-  private List<AlertRuleThresholds> thresholds = new ArrayList<AlertRuleThresholds>();
+  private List<NestedThresholds> thresholds = new ArrayList<NestedThresholds>();
 
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)
   private AlertRuleUnit unit;
 
 
-  public GlobalAlertRule alertRules(List<BrickTopoPowers> alertRules) {
+  public GlobalAlertRule alertRules(List<NestedAlertRule> alertRules) {
     
     this.alertRules = alertRules;
     return this;
   }
 
-  public GlobalAlertRule addAlertRulesItem(BrickTopoPowers alertRulesItem) {
+  public GlobalAlertRule addAlertRulesItem(NestedAlertRule alertRulesItem) {
     if (this.alertRules == null) {
-      this.alertRules = new ArrayList<BrickTopoPowers>();
+      this.alertRules = new ArrayList<NestedAlertRule>();
     }
     this.alertRules.add(alertRulesItem);
     return this;
@@ -114,12 +114,12 @@ public class GlobalAlertRule {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getAlertRules() {
+  public List<NestedAlertRule> getAlertRules() {
     return alertRules;
   }
 
 
-  public void setAlertRules(List<BrickTopoPowers> alertRules) {
+  public void setAlertRules(List<NestedAlertRule> alertRules) {
     this.alertRules = alertRules;
   }
 
@@ -170,13 +170,13 @@ public class GlobalAlertRule {
   }
 
 
-  public GlobalAlertRule defaultThresholds(List<AlertRuleThresholds> defaultThresholds) {
+  public GlobalAlertRule defaultThresholds(List<NestedThresholds> defaultThresholds) {
     
     this.defaultThresholds = defaultThresholds;
     return this;
   }
 
-  public GlobalAlertRule addDefaultThresholdsItem(AlertRuleThresholds defaultThresholdsItem) {
+  public GlobalAlertRule addDefaultThresholdsItem(NestedThresholds defaultThresholdsItem) {
     this.defaultThresholds.add(defaultThresholdsItem);
     return this;
   }
@@ -188,12 +188,12 @@ public class GlobalAlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<AlertRuleThresholds> getDefaultThresholds() {
+  public List<NestedThresholds> getDefaultThresholds() {
     return defaultThresholds;
   }
 
 
-  public void setDefaultThresholds(List<AlertRuleThresholds> defaultThresholds) {
+  public void setDefaultThresholds(List<NestedThresholds> defaultThresholds) {
     this.defaultThresholds = defaultThresholds;
   }
 
@@ -382,13 +382,13 @@ public class GlobalAlertRule {
   }
 
 
-  public GlobalAlertRule thresholds(List<AlertRuleThresholds> thresholds) {
+  public GlobalAlertRule thresholds(List<NestedThresholds> thresholds) {
     
     this.thresholds = thresholds;
     return this;
   }
 
-  public GlobalAlertRule addThresholdsItem(AlertRuleThresholds thresholdsItem) {
+  public GlobalAlertRule addThresholdsItem(NestedThresholds thresholdsItem) {
     this.thresholds.add(thresholdsItem);
     return this;
   }
@@ -400,12 +400,12 @@ public class GlobalAlertRule {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<AlertRuleThresholds> getThresholds() {
+  public List<NestedThresholds> getThresholds() {
     return thresholds;
   }
 
 
-  public void setThresholds(List<AlertRuleThresholds> thresholds) {
+  public void setThresholds(List<NestedThresholds> thresholds) {
     this.thresholds = thresholds;
   }
 

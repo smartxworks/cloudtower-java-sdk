@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.IsolationPolicyEgress;
-import com.smartx.tower.model.SecurityPolicyApplyTo;
+import com.smartx.tower.model.NestedEverouteCluster;
+import com.smartx.tower.model.NestedNetworkPolicyRule;
+import com.smartx.tower.model.NestedSecurityPolicyApply;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class SecurityPolicy {
   public static final String SERIALIZED_NAME_APPLY_TO = "apply_to";
   @SerializedName(SERIALIZED_NAME_APPLY_TO)
-  private List<SecurityPolicyApplyTo> applyTo = new ArrayList<SecurityPolicyApplyTo>();
+  private List<NestedSecurityPolicyApply> applyTo = new ArrayList<NestedSecurityPolicyApply>();
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -45,11 +45,11 @@ public class SecurityPolicy {
 
   public static final String SERIALIZED_NAME_EGRESS = "egress";
   @SerializedName(SERIALIZED_NAME_EGRESS)
-  private List<IsolationPolicyEgress> egress = null;
+  private List<NestedNetworkPolicyRule> egress = null;
 
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
-  private NameIdPair everouteCluster;
+  private NestedEverouteCluster everouteCluster;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -57,20 +57,20 @@ public class SecurityPolicy {
 
   public static final String SERIALIZED_NAME_INGRESS = "ingress";
   @SerializedName(SERIALIZED_NAME_INGRESS)
-  private List<IsolationPolicyEgress> ingress = null;
+  private List<NestedNetworkPolicyRule> ingress = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
 
-  public SecurityPolicy applyTo(List<SecurityPolicyApplyTo> applyTo) {
+  public SecurityPolicy applyTo(List<NestedSecurityPolicyApply> applyTo) {
     
     this.applyTo = applyTo;
     return this;
   }
 
-  public SecurityPolicy addApplyToItem(SecurityPolicyApplyTo applyToItem) {
+  public SecurityPolicy addApplyToItem(NestedSecurityPolicyApply applyToItem) {
     this.applyTo.add(applyToItem);
     return this;
   }
@@ -82,12 +82,12 @@ public class SecurityPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<SecurityPolicyApplyTo> getApplyTo() {
+  public List<NestedSecurityPolicyApply> getApplyTo() {
     return applyTo;
   }
 
 
-  public void setApplyTo(List<SecurityPolicyApplyTo> applyTo) {
+  public void setApplyTo(List<NestedSecurityPolicyApply> applyTo) {
     this.applyTo = applyTo;
   }
 
@@ -115,15 +115,15 @@ public class SecurityPolicy {
   }
 
 
-  public SecurityPolicy egress(List<IsolationPolicyEgress> egress) {
+  public SecurityPolicy egress(List<NestedNetworkPolicyRule> egress) {
     
     this.egress = egress;
     return this;
   }
 
-  public SecurityPolicy addEgressItem(IsolationPolicyEgress egressItem) {
+  public SecurityPolicy addEgressItem(NestedNetworkPolicyRule egressItem) {
     if (this.egress == null) {
-      this.egress = new ArrayList<IsolationPolicyEgress>();
+      this.egress = new ArrayList<NestedNetworkPolicyRule>();
     }
     this.egress.add(egressItem);
     return this;
@@ -136,17 +136,17 @@ public class SecurityPolicy {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<IsolationPolicyEgress> getEgress() {
+  public List<NestedNetworkPolicyRule> getEgress() {
     return egress;
   }
 
 
-  public void setEgress(List<IsolationPolicyEgress> egress) {
+  public void setEgress(List<NestedNetworkPolicyRule> egress) {
     this.egress = egress;
   }
 
 
-  public SecurityPolicy everouteCluster(NameIdPair everouteCluster) {
+  public SecurityPolicy everouteCluster(NestedEverouteCluster everouteCluster) {
     
     this.everouteCluster = everouteCluster;
     return this;
@@ -159,12 +159,12 @@ public class SecurityPolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getEverouteCluster() {
+  public NestedEverouteCluster getEverouteCluster() {
     return everouteCluster;
   }
 
 
-  public void setEverouteCluster(NameIdPair everouteCluster) {
+  public void setEverouteCluster(NestedEverouteCluster everouteCluster) {
     this.everouteCluster = everouteCluster;
   }
 
@@ -192,15 +192,15 @@ public class SecurityPolicy {
   }
 
 
-  public SecurityPolicy ingress(List<IsolationPolicyEgress> ingress) {
+  public SecurityPolicy ingress(List<NestedNetworkPolicyRule> ingress) {
     
     this.ingress = ingress;
     return this;
   }
 
-  public SecurityPolicy addIngressItem(IsolationPolicyEgress ingressItem) {
+  public SecurityPolicy addIngressItem(NestedNetworkPolicyRule ingressItem) {
     if (this.ingress == null) {
-      this.ingress = new ArrayList<IsolationPolicyEgress>();
+      this.ingress = new ArrayList<NestedNetworkPolicyRule>();
     }
     this.ingress.add(ingressItem);
     return this;
@@ -213,12 +213,12 @@ public class SecurityPolicy {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<IsolationPolicyEgress> getIngress() {
+  public List<NestedNetworkPolicyRule> getIngress() {
     return ingress;
   }
 
 
-  public void setIngress(List<IsolationPolicyEgress> ingress) {
+  public void setIngress(List<NestedNetworkPolicyRule> ingress) {
     this.ingress = ingress;
   }
 

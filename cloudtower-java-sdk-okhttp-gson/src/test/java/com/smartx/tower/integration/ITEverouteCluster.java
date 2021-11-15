@@ -47,6 +47,8 @@ public class ITEverouteCluster extends ITBase {
       List<EverouteCluster> result = api.getEverouteClusters(params, contentLanguage);
       assertThat(result).as("check result of getEverouteClusters").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITEverouteCluster extends ITBase {
       EverouteClusterConnection result = api.getEverouteClustersConnection(params, contentLanguage);
       assertThat(result).as("check result of getEverouteClustersConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

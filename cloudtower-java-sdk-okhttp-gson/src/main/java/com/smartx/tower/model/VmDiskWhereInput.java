@@ -45,35 +45,35 @@ public class VmDiskWhereInput {
 
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
-  private Double boot;
+  private Integer boot;
 
   public static final String SERIALIZED_NAME_BOOT_GT = "boot_gt";
   @SerializedName(SERIALIZED_NAME_BOOT_GT)
-  private Double bootGt;
+  private Integer bootGt;
 
   public static final String SERIALIZED_NAME_BOOT_GTE = "boot_gte";
   @SerializedName(SERIALIZED_NAME_BOOT_GTE)
-  private Double bootGte;
+  private Integer bootGte;
 
   public static final String SERIALIZED_NAME_BOOT_IN = "boot_in";
   @SerializedName(SERIALIZED_NAME_BOOT_IN)
-  private List<Double> bootIn = null;
+  private List<Integer> bootIn = null;
 
   public static final String SERIALIZED_NAME_BOOT_LT = "boot_lt";
   @SerializedName(SERIALIZED_NAME_BOOT_LT)
-  private Double bootLt;
+  private Integer bootLt;
 
   public static final String SERIALIZED_NAME_BOOT_LTE = "boot_lte";
   @SerializedName(SERIALIZED_NAME_BOOT_LTE)
-  private Double bootLte;
+  private Integer bootLte;
 
   public static final String SERIALIZED_NAME_BOOT_NOT = "boot_not";
   @SerializedName(SERIALIZED_NAME_BOOT_NOT)
-  private Double bootNot;
+  private Integer bootNot;
 
   public static final String SERIALIZED_NAME_BOOT_NOT_IN = "boot_not_in";
   @SerializedName(SERIALIZED_NAME_BOOT_NOT_IN)
-  private List<Double> bootNotIn = null;
+  private List<Integer> bootNotIn = null;
 
   public static final String SERIALIZED_NAME_BUS = "bus";
   @SerializedName(SERIALIZED_NAME_BUS)
@@ -329,35 +329,35 @@ public class VmDiskWhereInput {
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
-  private Double key;
+  private Integer key;
 
   public static final String SERIALIZED_NAME_KEY_GT = "key_gt";
   @SerializedName(SERIALIZED_NAME_KEY_GT)
-  private Double keyGt;
+  private Integer keyGt;
 
   public static final String SERIALIZED_NAME_KEY_GTE = "key_gte";
   @SerializedName(SERIALIZED_NAME_KEY_GTE)
-  private Double keyGte;
+  private Integer keyGte;
 
   public static final String SERIALIZED_NAME_KEY_IN = "key_in";
   @SerializedName(SERIALIZED_NAME_KEY_IN)
-  private List<Double> keyIn = null;
+  private List<Integer> keyIn = null;
 
   public static final String SERIALIZED_NAME_KEY_LT = "key_lt";
   @SerializedName(SERIALIZED_NAME_KEY_LT)
-  private Double keyLt;
+  private Integer keyLt;
 
   public static final String SERIALIZED_NAME_KEY_LTE = "key_lte";
   @SerializedName(SERIALIZED_NAME_KEY_LTE)
-  private Double keyLte;
+  private Integer keyLte;
 
   public static final String SERIALIZED_NAME_KEY_NOT = "key_not";
   @SerializedName(SERIALIZED_NAME_KEY_NOT)
-  private Double keyNot;
+  private Integer keyNot;
 
   public static final String SERIALIZED_NAME_KEY_NOT_IN = "key_not_in";
   @SerializedName(SERIALIZED_NAME_KEY_NOT_IN)
-  private List<Double> keyNotIn = null;
+  private List<Integer> keyNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
@@ -409,35 +409,35 @@ public class VmDiskWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS)
-  private Double maxIops;
+  private Integer maxIops;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_GT = "max_iops_gt";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_GT)
-  private Double maxIopsGt;
+  private Integer maxIopsGt;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_GTE = "max_iops_gte";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_GTE)
-  private Double maxIopsGte;
+  private Integer maxIopsGte;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_IN = "max_iops_in";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_IN)
-  private List<Double> maxIopsIn = null;
+  private List<Integer> maxIopsIn = null;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_LT = "max_iops_lt";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_LT)
-  private Double maxIopsLt;
+  private Integer maxIopsLt;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_LTE = "max_iops_lte";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_LTE)
-  private Double maxIopsLte;
+  private Integer maxIopsLte;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_NOT = "max_iops_not";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT)
-  private Double maxIopsNot;
+  private Integer maxIopsNot;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_NOT_IN = "max_iops_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT_IN)
-  private List<Double> maxIopsNotIn = null;
+  private List<Integer> maxIopsNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -747,7 +747,7 @@ public class VmDiskWhereInput {
   }
 
 
-  public VmDiskWhereInput boot(Double boot) {
+  public VmDiskWhereInput boot(Integer boot) {
     
     this.boot = boot;
     return this;
@@ -760,17 +760,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBoot() {
+  public Integer getBoot() {
     return boot;
   }
 
 
-  public void setBoot(Double boot) {
+  public void setBoot(Integer boot) {
     this.boot = boot;
   }
 
 
-  public VmDiskWhereInput bootGt(Double bootGt) {
+  public VmDiskWhereInput bootGt(Integer bootGt) {
     
     this.bootGt = bootGt;
     return this;
@@ -783,17 +783,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBootGt() {
+  public Integer getBootGt() {
     return bootGt;
   }
 
 
-  public void setBootGt(Double bootGt) {
+  public void setBootGt(Integer bootGt) {
     this.bootGt = bootGt;
   }
 
 
-  public VmDiskWhereInput bootGte(Double bootGte) {
+  public VmDiskWhereInput bootGte(Integer bootGte) {
     
     this.bootGte = bootGte;
     return this;
@@ -806,25 +806,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBootGte() {
+  public Integer getBootGte() {
     return bootGte;
   }
 
 
-  public void setBootGte(Double bootGte) {
+  public void setBootGte(Integer bootGte) {
     this.bootGte = bootGte;
   }
 
 
-  public VmDiskWhereInput bootIn(List<Double> bootIn) {
+  public VmDiskWhereInput bootIn(List<Integer> bootIn) {
     
     this.bootIn = bootIn;
     return this;
   }
 
-  public VmDiskWhereInput addBootInItem(Double bootInItem) {
+  public VmDiskWhereInput addBootInItem(Integer bootInItem) {
     if (this.bootIn == null) {
-      this.bootIn = new ArrayList<Double>();
+      this.bootIn = new ArrayList<Integer>();
     }
     this.bootIn.add(bootInItem);
     return this;
@@ -837,17 +837,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBootIn() {
+  public List<Integer> getBootIn() {
     return bootIn;
   }
 
 
-  public void setBootIn(List<Double> bootIn) {
+  public void setBootIn(List<Integer> bootIn) {
     this.bootIn = bootIn;
   }
 
 
-  public VmDiskWhereInput bootLt(Double bootLt) {
+  public VmDiskWhereInput bootLt(Integer bootLt) {
     
     this.bootLt = bootLt;
     return this;
@@ -860,17 +860,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBootLt() {
+  public Integer getBootLt() {
     return bootLt;
   }
 
 
-  public void setBootLt(Double bootLt) {
+  public void setBootLt(Integer bootLt) {
     this.bootLt = bootLt;
   }
 
 
-  public VmDiskWhereInput bootLte(Double bootLte) {
+  public VmDiskWhereInput bootLte(Integer bootLte) {
     
     this.bootLte = bootLte;
     return this;
@@ -883,17 +883,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBootLte() {
+  public Integer getBootLte() {
     return bootLte;
   }
 
 
-  public void setBootLte(Double bootLte) {
+  public void setBootLte(Integer bootLte) {
     this.bootLte = bootLte;
   }
 
 
-  public VmDiskWhereInput bootNot(Double bootNot) {
+  public VmDiskWhereInput bootNot(Integer bootNot) {
     
     this.bootNot = bootNot;
     return this;
@@ -906,25 +906,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBootNot() {
+  public Integer getBootNot() {
     return bootNot;
   }
 
 
-  public void setBootNot(Double bootNot) {
+  public void setBootNot(Integer bootNot) {
     this.bootNot = bootNot;
   }
 
 
-  public VmDiskWhereInput bootNotIn(List<Double> bootNotIn) {
+  public VmDiskWhereInput bootNotIn(List<Integer> bootNotIn) {
     
     this.bootNotIn = bootNotIn;
     return this;
   }
 
-  public VmDiskWhereInput addBootNotInItem(Double bootNotInItem) {
+  public VmDiskWhereInput addBootNotInItem(Integer bootNotInItem) {
     if (this.bootNotIn == null) {
-      this.bootNotIn = new ArrayList<Double>();
+      this.bootNotIn = new ArrayList<Integer>();
     }
     this.bootNotIn.add(bootNotInItem);
     return this;
@@ -937,12 +937,12 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBootNotIn() {
+  public List<Integer> getBootNotIn() {
     return bootNotIn;
   }
 
 
-  public void setBootNotIn(List<Double> bootNotIn) {
+  public void setBootNotIn(List<Integer> bootNotIn) {
     this.bootNotIn = bootNotIn;
   }
 
@@ -2476,7 +2476,7 @@ public class VmDiskWhereInput {
   }
 
 
-  public VmDiskWhereInput key(Double key) {
+  public VmDiskWhereInput key(Integer key) {
     
     this.key = key;
     return this;
@@ -2489,17 +2489,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKey() {
+  public Integer getKey() {
     return key;
   }
 
 
-  public void setKey(Double key) {
+  public void setKey(Integer key) {
     this.key = key;
   }
 
 
-  public VmDiskWhereInput keyGt(Double keyGt) {
+  public VmDiskWhereInput keyGt(Integer keyGt) {
     
     this.keyGt = keyGt;
     return this;
@@ -2512,17 +2512,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKeyGt() {
+  public Integer getKeyGt() {
     return keyGt;
   }
 
 
-  public void setKeyGt(Double keyGt) {
+  public void setKeyGt(Integer keyGt) {
     this.keyGt = keyGt;
   }
 
 
-  public VmDiskWhereInput keyGte(Double keyGte) {
+  public VmDiskWhereInput keyGte(Integer keyGte) {
     
     this.keyGte = keyGte;
     return this;
@@ -2535,25 +2535,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKeyGte() {
+  public Integer getKeyGte() {
     return keyGte;
   }
 
 
-  public void setKeyGte(Double keyGte) {
+  public void setKeyGte(Integer keyGte) {
     this.keyGte = keyGte;
   }
 
 
-  public VmDiskWhereInput keyIn(List<Double> keyIn) {
+  public VmDiskWhereInput keyIn(List<Integer> keyIn) {
     
     this.keyIn = keyIn;
     return this;
   }
 
-  public VmDiskWhereInput addKeyInItem(Double keyInItem) {
+  public VmDiskWhereInput addKeyInItem(Integer keyInItem) {
     if (this.keyIn == null) {
-      this.keyIn = new ArrayList<Double>();
+      this.keyIn = new ArrayList<Integer>();
     }
     this.keyIn.add(keyInItem);
     return this;
@@ -2566,17 +2566,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getKeyIn() {
+  public List<Integer> getKeyIn() {
     return keyIn;
   }
 
 
-  public void setKeyIn(List<Double> keyIn) {
+  public void setKeyIn(List<Integer> keyIn) {
     this.keyIn = keyIn;
   }
 
 
-  public VmDiskWhereInput keyLt(Double keyLt) {
+  public VmDiskWhereInput keyLt(Integer keyLt) {
     
     this.keyLt = keyLt;
     return this;
@@ -2589,17 +2589,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKeyLt() {
+  public Integer getKeyLt() {
     return keyLt;
   }
 
 
-  public void setKeyLt(Double keyLt) {
+  public void setKeyLt(Integer keyLt) {
     this.keyLt = keyLt;
   }
 
 
-  public VmDiskWhereInput keyLte(Double keyLte) {
+  public VmDiskWhereInput keyLte(Integer keyLte) {
     
     this.keyLte = keyLte;
     return this;
@@ -2612,17 +2612,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKeyLte() {
+  public Integer getKeyLte() {
     return keyLte;
   }
 
 
-  public void setKeyLte(Double keyLte) {
+  public void setKeyLte(Integer keyLte) {
     this.keyLte = keyLte;
   }
 
 
-  public VmDiskWhereInput keyNot(Double keyNot) {
+  public VmDiskWhereInput keyNot(Integer keyNot) {
     
     this.keyNot = keyNot;
     return this;
@@ -2635,25 +2635,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getKeyNot() {
+  public Integer getKeyNot() {
     return keyNot;
   }
 
 
-  public void setKeyNot(Double keyNot) {
+  public void setKeyNot(Integer keyNot) {
     this.keyNot = keyNot;
   }
 
 
-  public VmDiskWhereInput keyNotIn(List<Double> keyNotIn) {
+  public VmDiskWhereInput keyNotIn(List<Integer> keyNotIn) {
     
     this.keyNotIn = keyNotIn;
     return this;
   }
 
-  public VmDiskWhereInput addKeyNotInItem(Double keyNotInItem) {
+  public VmDiskWhereInput addKeyNotInItem(Integer keyNotInItem) {
     if (this.keyNotIn == null) {
-      this.keyNotIn = new ArrayList<Double>();
+      this.keyNotIn = new ArrayList<Integer>();
     }
     this.keyNotIn.add(keyNotInItem);
     return this;
@@ -2666,12 +2666,12 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getKeyNotIn() {
+  public List<Integer> getKeyNotIn() {
     return keyNotIn;
   }
 
 
-  public void setKeyNotIn(List<Double> keyNotIn) {
+  public void setKeyNotIn(List<Integer> keyNotIn) {
     this.keyNotIn = keyNotIn;
   }
 
@@ -2984,7 +2984,7 @@ public class VmDiskWhereInput {
   }
 
 
-  public VmDiskWhereInput maxIops(Double maxIops) {
+  public VmDiskWhereInput maxIops(Integer maxIops) {
     
     this.maxIops = maxIops;
     return this;
@@ -2997,17 +2997,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIops() {
+  public Integer getMaxIops() {
     return maxIops;
   }
 
 
-  public void setMaxIops(Double maxIops) {
+  public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
 
-  public VmDiskWhereInput maxIopsGt(Double maxIopsGt) {
+  public VmDiskWhereInput maxIopsGt(Integer maxIopsGt) {
     
     this.maxIopsGt = maxIopsGt;
     return this;
@@ -3020,17 +3020,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsGt() {
+  public Integer getMaxIopsGt() {
     return maxIopsGt;
   }
 
 
-  public void setMaxIopsGt(Double maxIopsGt) {
+  public void setMaxIopsGt(Integer maxIopsGt) {
     this.maxIopsGt = maxIopsGt;
   }
 
 
-  public VmDiskWhereInput maxIopsGte(Double maxIopsGte) {
+  public VmDiskWhereInput maxIopsGte(Integer maxIopsGte) {
     
     this.maxIopsGte = maxIopsGte;
     return this;
@@ -3043,25 +3043,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsGte() {
+  public Integer getMaxIopsGte() {
     return maxIopsGte;
   }
 
 
-  public void setMaxIopsGte(Double maxIopsGte) {
+  public void setMaxIopsGte(Integer maxIopsGte) {
     this.maxIopsGte = maxIopsGte;
   }
 
 
-  public VmDiskWhereInput maxIopsIn(List<Double> maxIopsIn) {
+  public VmDiskWhereInput maxIopsIn(List<Integer> maxIopsIn) {
     
     this.maxIopsIn = maxIopsIn;
     return this;
   }
 
-  public VmDiskWhereInput addMaxIopsInItem(Double maxIopsInItem) {
+  public VmDiskWhereInput addMaxIopsInItem(Integer maxIopsInItem) {
     if (this.maxIopsIn == null) {
-      this.maxIopsIn = new ArrayList<Double>();
+      this.maxIopsIn = new ArrayList<Integer>();
     }
     this.maxIopsIn.add(maxIopsInItem);
     return this;
@@ -3074,17 +3074,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxIopsIn() {
+  public List<Integer> getMaxIopsIn() {
     return maxIopsIn;
   }
 
 
-  public void setMaxIopsIn(List<Double> maxIopsIn) {
+  public void setMaxIopsIn(List<Integer> maxIopsIn) {
     this.maxIopsIn = maxIopsIn;
   }
 
 
-  public VmDiskWhereInput maxIopsLt(Double maxIopsLt) {
+  public VmDiskWhereInput maxIopsLt(Integer maxIopsLt) {
     
     this.maxIopsLt = maxIopsLt;
     return this;
@@ -3097,17 +3097,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsLt() {
+  public Integer getMaxIopsLt() {
     return maxIopsLt;
   }
 
 
-  public void setMaxIopsLt(Double maxIopsLt) {
+  public void setMaxIopsLt(Integer maxIopsLt) {
     this.maxIopsLt = maxIopsLt;
   }
 
 
-  public VmDiskWhereInput maxIopsLte(Double maxIopsLte) {
+  public VmDiskWhereInput maxIopsLte(Integer maxIopsLte) {
     
     this.maxIopsLte = maxIopsLte;
     return this;
@@ -3120,17 +3120,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsLte() {
+  public Integer getMaxIopsLte() {
     return maxIopsLte;
   }
 
 
-  public void setMaxIopsLte(Double maxIopsLte) {
+  public void setMaxIopsLte(Integer maxIopsLte) {
     this.maxIopsLte = maxIopsLte;
   }
 
 
-  public VmDiskWhereInput maxIopsNot(Double maxIopsNot) {
+  public VmDiskWhereInput maxIopsNot(Integer maxIopsNot) {
     
     this.maxIopsNot = maxIopsNot;
     return this;
@@ -3143,25 +3143,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxIopsNot() {
+  public Integer getMaxIopsNot() {
     return maxIopsNot;
   }
 
 
-  public void setMaxIopsNot(Double maxIopsNot) {
+  public void setMaxIopsNot(Integer maxIopsNot) {
     this.maxIopsNot = maxIopsNot;
   }
 
 
-  public VmDiskWhereInput maxIopsNotIn(List<Double> maxIopsNotIn) {
+  public VmDiskWhereInput maxIopsNotIn(List<Integer> maxIopsNotIn) {
     
     this.maxIopsNotIn = maxIopsNotIn;
     return this;
   }
 
-  public VmDiskWhereInput addMaxIopsNotInItem(Double maxIopsNotInItem) {
+  public VmDiskWhereInput addMaxIopsNotInItem(Integer maxIopsNotInItem) {
     if (this.maxIopsNotIn == null) {
-      this.maxIopsNotIn = new ArrayList<Double>();
+      this.maxIopsNotIn = new ArrayList<Integer>();
     }
     this.maxIopsNotIn.add(maxIopsNotInItem);
     return this;
@@ -3174,12 +3174,12 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxIopsNotIn() {
+  public List<Integer> getMaxIopsNotIn() {
     return maxIopsNotIn;
   }
 
 
-  public void setMaxIopsNotIn(List<Double> maxIopsNotIn) {
+  public void setMaxIopsNotIn(List<Integer> maxIopsNotIn) {
     this.maxIopsNotIn = maxIopsNotIn;
   }
 

@@ -47,6 +47,8 @@ public class ITImageConnector extends ITBase {
       List<ImageConnector> result = api.getImagesConnector(params, contentLanguage);
       assertThat(result).as("check result of getImagesConnector").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

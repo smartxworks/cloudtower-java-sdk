@@ -1140,67 +1140,67 @@ public class NvmfSubsystemWhereInput {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GT = "replica_num_gt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GT)
-  private Double replicaNumGt;
+  private Integer replicaNumGt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_GTE = "replica_num_gte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_GTE)
-  private Double replicaNumGte;
+  private Integer replicaNumGte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_IN = "replica_num_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_IN)
-  private List<Double> replicaNumIn = null;
+  private List<Integer> replicaNumIn = null;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LT = "replica_num_lt";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LT)
-  private Double replicaNumLt;
+  private Integer replicaNumLt;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_LTE = "replica_num_lte";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_LTE)
-  private Double replicaNumLte;
+  private Integer replicaNumLte;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT = "replica_num_not";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT)
-  private Double replicaNumNot;
+  private Integer replicaNumNot;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM_NOT_IN = "replica_num_not_in";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
-  private List<Double> replicaNumNotIn = null;
+  private List<Integer> replicaNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_GT = "stripe_num_gt";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_GT)
-  private Double stripeNumGt;
+  private Integer stripeNumGt;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_GTE = "stripe_num_gte";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_GTE)
-  private Double stripeNumGte;
+  private Integer stripeNumGte;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_IN = "stripe_num_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_IN)
-  private List<Double> stripeNumIn = null;
+  private List<Integer> stripeNumIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_LT = "stripe_num_lt";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_LT)
-  private Double stripeNumLt;
+  private Integer stripeNumLt;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_LTE = "stripe_num_lte";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_LTE)
-  private Double stripeNumLte;
+  private Integer stripeNumLte;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_NOT = "stripe_num_not";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_NOT)
-  private Double stripeNumNot;
+  private Integer stripeNumNot;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM_NOT_IN = "stripe_num_not_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM_NOT_IN)
-  private List<Double> stripeNumNotIn = null;
+  private List<Integer> stripeNumNotIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -8040,7 +8040,7 @@ public class NvmfSubsystemWhereInput {
   }
 
 
-  public NvmfSubsystemWhereInput replicaNum(Double replicaNum) {
+  public NvmfSubsystemWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -8053,17 +8053,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumGt(Double replicaNumGt) {
+  public NvmfSubsystemWhereInput replicaNumGt(Integer replicaNumGt) {
     
     this.replicaNumGt = replicaNumGt;
     return this;
@@ -8076,17 +8076,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGt() {
+  public Integer getReplicaNumGt() {
     return replicaNumGt;
   }
 
 
-  public void setReplicaNumGt(Double replicaNumGt) {
+  public void setReplicaNumGt(Integer replicaNumGt) {
     this.replicaNumGt = replicaNumGt;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumGte(Double replicaNumGte) {
+  public NvmfSubsystemWhereInput replicaNumGte(Integer replicaNumGte) {
     
     this.replicaNumGte = replicaNumGte;
     return this;
@@ -8099,25 +8099,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumGte() {
+  public Integer getReplicaNumGte() {
     return replicaNumGte;
   }
 
 
-  public void setReplicaNumGte(Double replicaNumGte) {
+  public void setReplicaNumGte(Integer replicaNumGte) {
     this.replicaNumGte = replicaNumGte;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumIn(List<Double> replicaNumIn) {
+  public NvmfSubsystemWhereInput replicaNumIn(List<Integer> replicaNumIn) {
     
     this.replicaNumIn = replicaNumIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addReplicaNumInItem(Double replicaNumInItem) {
+  public NvmfSubsystemWhereInput addReplicaNumInItem(Integer replicaNumInItem) {
     if (this.replicaNumIn == null) {
-      this.replicaNumIn = new ArrayList<Double>();
+      this.replicaNumIn = new ArrayList<Integer>();
     }
     this.replicaNumIn.add(replicaNumInItem);
     return this;
@@ -8130,17 +8130,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumIn() {
+  public List<Integer> getReplicaNumIn() {
     return replicaNumIn;
   }
 
 
-  public void setReplicaNumIn(List<Double> replicaNumIn) {
+  public void setReplicaNumIn(List<Integer> replicaNumIn) {
     this.replicaNumIn = replicaNumIn;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumLt(Double replicaNumLt) {
+  public NvmfSubsystemWhereInput replicaNumLt(Integer replicaNumLt) {
     
     this.replicaNumLt = replicaNumLt;
     return this;
@@ -8153,17 +8153,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLt() {
+  public Integer getReplicaNumLt() {
     return replicaNumLt;
   }
 
 
-  public void setReplicaNumLt(Double replicaNumLt) {
+  public void setReplicaNumLt(Integer replicaNumLt) {
     this.replicaNumLt = replicaNumLt;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumLte(Double replicaNumLte) {
+  public NvmfSubsystemWhereInput replicaNumLte(Integer replicaNumLte) {
     
     this.replicaNumLte = replicaNumLte;
     return this;
@@ -8176,17 +8176,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumLte() {
+  public Integer getReplicaNumLte() {
     return replicaNumLte;
   }
 
 
-  public void setReplicaNumLte(Double replicaNumLte) {
+  public void setReplicaNumLte(Integer replicaNumLte) {
     this.replicaNumLte = replicaNumLte;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumNot(Double replicaNumNot) {
+  public NvmfSubsystemWhereInput replicaNumNot(Integer replicaNumNot) {
     
     this.replicaNumNot = replicaNumNot;
     return this;
@@ -8199,25 +8199,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReplicaNumNot() {
+  public Integer getReplicaNumNot() {
     return replicaNumNot;
   }
 
 
-  public void setReplicaNumNot(Double replicaNumNot) {
+  public void setReplicaNumNot(Integer replicaNumNot) {
     this.replicaNumNot = replicaNumNot;
   }
 
 
-  public NvmfSubsystemWhereInput replicaNumNotIn(List<Double> replicaNumNotIn) {
+  public NvmfSubsystemWhereInput replicaNumNotIn(List<Integer> replicaNumNotIn) {
     
     this.replicaNumNotIn = replicaNumNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addReplicaNumNotInItem(Double replicaNumNotInItem) {
+  public NvmfSubsystemWhereInput addReplicaNumNotInItem(Integer replicaNumNotInItem) {
     if (this.replicaNumNotIn == null) {
-      this.replicaNumNotIn = new ArrayList<Double>();
+      this.replicaNumNotIn = new ArrayList<Integer>();
     }
     this.replicaNumNotIn.add(replicaNumNotInItem);
     return this;
@@ -8230,17 +8230,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReplicaNumNotIn() {
+  public List<Integer> getReplicaNumNotIn() {
     return replicaNumNotIn;
   }
 
 
-  public void setReplicaNumNotIn(List<Double> replicaNumNotIn) {
+  public void setReplicaNumNotIn(List<Integer> replicaNumNotIn) {
     this.replicaNumNotIn = replicaNumNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNum(Double stripeNum) {
+  public NvmfSubsystemWhereInput stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -8253,17 +8253,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumGt(Double stripeNumGt) {
+  public NvmfSubsystemWhereInput stripeNumGt(Integer stripeNumGt) {
     
     this.stripeNumGt = stripeNumGt;
     return this;
@@ -8276,17 +8276,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumGt() {
+  public Integer getStripeNumGt() {
     return stripeNumGt;
   }
 
 
-  public void setStripeNumGt(Double stripeNumGt) {
+  public void setStripeNumGt(Integer stripeNumGt) {
     this.stripeNumGt = stripeNumGt;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumGte(Double stripeNumGte) {
+  public NvmfSubsystemWhereInput stripeNumGte(Integer stripeNumGte) {
     
     this.stripeNumGte = stripeNumGte;
     return this;
@@ -8299,25 +8299,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumGte() {
+  public Integer getStripeNumGte() {
     return stripeNumGte;
   }
 
 
-  public void setStripeNumGte(Double stripeNumGte) {
+  public void setStripeNumGte(Integer stripeNumGte) {
     this.stripeNumGte = stripeNumGte;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumIn(List<Double> stripeNumIn) {
+  public NvmfSubsystemWhereInput stripeNumIn(List<Integer> stripeNumIn) {
     
     this.stripeNumIn = stripeNumIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addStripeNumInItem(Double stripeNumInItem) {
+  public NvmfSubsystemWhereInput addStripeNumInItem(Integer stripeNumInItem) {
     if (this.stripeNumIn == null) {
-      this.stripeNumIn = new ArrayList<Double>();
+      this.stripeNumIn = new ArrayList<Integer>();
     }
     this.stripeNumIn.add(stripeNumInItem);
     return this;
@@ -8330,17 +8330,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeNumIn() {
+  public List<Integer> getStripeNumIn() {
     return stripeNumIn;
   }
 
 
-  public void setStripeNumIn(List<Double> stripeNumIn) {
+  public void setStripeNumIn(List<Integer> stripeNumIn) {
     this.stripeNumIn = stripeNumIn;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumLt(Double stripeNumLt) {
+  public NvmfSubsystemWhereInput stripeNumLt(Integer stripeNumLt) {
     
     this.stripeNumLt = stripeNumLt;
     return this;
@@ -8353,17 +8353,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumLt() {
+  public Integer getStripeNumLt() {
     return stripeNumLt;
   }
 
 
-  public void setStripeNumLt(Double stripeNumLt) {
+  public void setStripeNumLt(Integer stripeNumLt) {
     this.stripeNumLt = stripeNumLt;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumLte(Double stripeNumLte) {
+  public NvmfSubsystemWhereInput stripeNumLte(Integer stripeNumLte) {
     
     this.stripeNumLte = stripeNumLte;
     return this;
@@ -8376,17 +8376,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumLte() {
+  public Integer getStripeNumLte() {
     return stripeNumLte;
   }
 
 
-  public void setStripeNumLte(Double stripeNumLte) {
+  public void setStripeNumLte(Integer stripeNumLte) {
     this.stripeNumLte = stripeNumLte;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumNot(Double stripeNumNot) {
+  public NvmfSubsystemWhereInput stripeNumNot(Integer stripeNumNot) {
     
     this.stripeNumNot = stripeNumNot;
     return this;
@@ -8399,25 +8399,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeNumNot() {
+  public Integer getStripeNumNot() {
     return stripeNumNot;
   }
 
 
-  public void setStripeNumNot(Double stripeNumNot) {
+  public void setStripeNumNot(Integer stripeNumNot) {
     this.stripeNumNot = stripeNumNot;
   }
 
 
-  public NvmfSubsystemWhereInput stripeNumNotIn(List<Double> stripeNumNotIn) {
+  public NvmfSubsystemWhereInput stripeNumNotIn(List<Integer> stripeNumNotIn) {
     
     this.stripeNumNotIn = stripeNumNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addStripeNumNotInItem(Double stripeNumNotInItem) {
+  public NvmfSubsystemWhereInput addStripeNumNotInItem(Integer stripeNumNotInItem) {
     if (this.stripeNumNotIn == null) {
-      this.stripeNumNotIn = new ArrayList<Double>();
+      this.stripeNumNotIn = new ArrayList<Integer>();
     }
     this.stripeNumNotIn.add(stripeNumNotInItem);
     return this;
@@ -8430,12 +8430,12 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeNumNotIn() {
+  public List<Integer> getStripeNumNotIn() {
     return stripeNumNotIn;
   }
 
 
-  public void setStripeNumNotIn(List<Double> stripeNumNotIn) {
+  public void setStripeNumNotIn(List<Integer> stripeNumNotIn) {
     this.stripeNumNotIn = stripeNumNotIn;
   }
 

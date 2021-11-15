@@ -47,6 +47,8 @@ public class ITSnapshotPlan extends ITBase {
       List<WithTaskSnapshotPlan> result = api.createSnapshotPlan(params, contentLanguage);
       assertThat(result).as("check result of createSnapshotPlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITSnapshotPlan extends ITBase {
       List<WithTaskDeleteSnapshotPlan> result = api.deleteSnapshotPlan(params, contentLanguage);
       assertThat(result).as("check result of deleteSnapshotPlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -73,6 +77,8 @@ public class ITSnapshotPlan extends ITBase {
       List<WithTaskSnapshotPlan> result = api.executeSnapshotPlan(params, contentLanguage);
       assertThat(result).as("check result of executeSnapshotPlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -86,6 +92,8 @@ public class ITSnapshotPlan extends ITBase {
       List<SnapshotPlan> result = api.getSnapshotPlans(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotPlans").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -99,6 +107,8 @@ public class ITSnapshotPlan extends ITBase {
       SnapshotPlanConnection result = api.getSnapshotPlansConnection(params, contentLanguage);
       assertThat(result).as("check result of getSnapshotPlansConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -112,6 +122,8 @@ public class ITSnapshotPlan extends ITBase {
       List<WithTaskSnapshotPlan> result = api.resumeSnapshotPlan(params, contentLanguage);
       assertThat(result).as("check result of resumeSnapshotPlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -125,6 +137,8 @@ public class ITSnapshotPlan extends ITBase {
       List<WithTaskSnapshotPlan> result = api.suspendSnapshotPlan(params, contentLanguage);
       assertThat(result).as("check result of suspendSnapshotPlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -138,6 +152,8 @@ public class ITSnapshotPlan extends ITBase {
       List<WithTaskSnapshotPlan> result = api.updateSnapshotPlan(params, contentLanguage);
       assertThat(result).as("check result of updateSnapshotPlan").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

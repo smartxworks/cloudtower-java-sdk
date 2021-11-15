@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **model** | **VmNicModel** |  |  [optional]
 **enabled** | **Boolean** |  |  [optional]
 **macAddress** | **String** |  |  [optional]
-**nicIndex** | **Double** |  | 
+**nicIndex** | **Integer** |  | 
 
 
 

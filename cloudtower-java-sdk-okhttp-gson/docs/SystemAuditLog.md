@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **String** |  | 
-**cluster** | [**AlertDisk**](AlertDisk.md) |  |  [optional]
+**cluster** | [**NestedCluster**](NestedCluster.md) |  |  [optional]
 **finishedAt** | **String** |  |  [optional]
 **id** | **String** |  | 
 **localCreatedAt** | **String** |  |  [optional]

@@ -43,7 +43,7 @@ public class VmCreateVmFromTemplateParamsCloudInitNetworks {
 
   public static final String SERIALIZED_NAME_NIC_INDEX = "nic_index";
   @SerializedName(SERIALIZED_NAME_NIC_INDEX)
-  private Double nicIndex;
+  private Integer nicIndex;
 
   public static final String SERIALIZED_NAME_NETMASK = "netmask";
   @SerializedName(SERIALIZED_NAME_NETMASK)
@@ -108,7 +108,7 @@ public class VmCreateVmFromTemplateParamsCloudInitNetworks {
   }
 
 
-  public VmCreateVmFromTemplateParamsCloudInitNetworks nicIndex(Double nicIndex) {
+  public VmCreateVmFromTemplateParamsCloudInitNetworks nicIndex(Integer nicIndex) {
     
     this.nicIndex = nicIndex;
     return this;
@@ -121,12 +121,12 @@ public class VmCreateVmFromTemplateParamsCloudInitNetworks {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getNicIndex() {
+  public Integer getNicIndex() {
     return nicIndex;
   }
 
 
-  public void setNicIndex(Double nicIndex) {
+  public void setNicIndex(Integer nicIndex) {
     this.nicIndex = nicIndex;
   }
 

@@ -12,16 +12,20 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 import com.smartx.tower.ApiException;
+import com.smartx.tower.api.GlobalSettingsApi;
 import com.smartx.tower.api.HostApi;
 import com.smartx.tower.api.VmApi;
+import com.smartx.tower.api.VmDiskApi;
 import com.smartx.tower.model.*;
 
 public class ITVm extends ITBase {
   Cluster cluster = null;
 
   VmApi api = null;
+  VmDiskApi diskApi = null;
   HashMap<String, Object> payloads = new HashMap<String, Object>();
 
   @DataProvider(name = "vmPayload")
@@ -33,6 +37,7 @@ public class ITVm extends ITBase {
   @BeforeClass
   public void getService() throws IOException, ApiException {
     api = new VmApi(client);
+    diskApi = new VmDiskApi(client);
     // get payloads from resource file
     InputStream stream = getClass().getResourceAsStream("/Vm.json");
     cluster = getData("defaultCluster", Cluster.class);
@@ -45,26 +50,32 @@ public class ITVm extends ITBase {
   }
 
   // #region base api
-  @Test(dataProvider = "vmPayload", groups = { "base" })
-  public void createAndDeleteVm(String payload) throws IllegalAccessException, IllegalArgumentException,
-      InvocationTargetException, NoSuchMethodException, SecurityException {
+  @Test()
+  public void createAndDeleteVm() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException {
     try {
       // parse params from json payload
       Vlan vlan = getData("defaultVlan", Vlan.class);
-      List<VmCreationParams> params = gson.fromJson(payload, new TypeToken<List<VmCreationParams>>() {
-      }.getType());
-      params.get(0).setClusterId(cluster.getId());
-      params.get(0).addVmNicsItem(new VmNicParams().connectVlanId(vlan.getId()).localId(""));
+      List<VmCreationParams> params = new ArrayList<>();
+      params.add(new VmCreationParams().clusterId(cluster.getId())
+          .addVmNicsItem(new VmNicParams().connectVlanId(vlan.getId()).localId(""))
+          .name("tower-sdk-test-create-vm" + System.currentTimeMillis()).cpuCores(1).cpuSockets(1).memory(4294967296.0)
+          .ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+          .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1))));
       // do some modify to params(optional)
       List<WithTaskVm> result = api.createVm(params, contentLanguage);
       assertThat(result).as("check result of createVm").isNotNull();
       Vm createdVm = result.get(0).getData();
-      waitForVmEntityAsyncStatus(createdVm.getId(), api);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(createdVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
       api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(createdVm.getId())), contentLanguage);
       waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(createdVm.getId())), api, "getVms",
           new TypeToken<List<Vm>>() {
           }.getClass(), GetVmsRequestBody.class);
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -74,39 +85,50 @@ public class ITVm extends ITBase {
 
   Vm stoppedVm = null;
 
-  @BeforeMethod(onlyForGroups = { "stopped_vm_operation" })
-  public void createStoppedVm() throws ApiException {
+  @BeforeMethod(onlyForGroups = { "need_stopped_vm" })
+  public void createStoppedVm() throws ApiException, IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
-    params.add(new VmCreationParams().name("tower-api-test-stopped-vm" + System.currentTimeMillis()).cpuCores(1.0)
-        .cpuSockets(1.0).memory(4294967296.0).ha(true).vcpu(1.0).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
-        .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1.0).index(1.0)))
+    params.add(new VmCreationParams().name("tower-sdk-test-stopped-vm" + System.currentTimeMillis()).cpuCores(1)
+        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+        .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     stoppedVm = api.createVm(params, contentLanguage).get(0).getData();
-    waitForVmEntityAsyncStatus(stoppedVm.getId(), api);
+    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+        new TypeToken<List<Vm>>() {
+        }.getClass(), GetVmsRequestBody.class);
   }
 
-  @AfterMethod(onlyForGroups = { "stopped_vm_operation" })
+  @AfterMethod(onlyForGroups = { "need_stopped_vm" })
   public void removeStoppedVm() throws ApiException, IllegalAccessException, IllegalArgumentException,
       InvocationTargetException, NoSuchMethodException, SecurityException {
-    waitForVmEntityAsyncStatus(stoppedVm.getId(), api);
+    Vm vm = waitForVmEntityAsyncStatus(stoppedVm.getId(), api);
+    // shudown vm first before delete it if itis running;
+    if (vm.getStatus() == VmStatus.RUNNING) {
+      api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+    }
     VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(stoppedVm.getId()));
     api.deleteVm(params, contentLanguage);
     waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
         new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
     stoppedVm = null;
+
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "stopped_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_stopped_vm" })
   public void cloneVm(String payload) throws IllegalAccessException, IllegalArgumentException,
       InvocationTargetException, NoSuchMethodException, SecurityException {
     try {
       // parse params from json payload
       List<VmCloneParams> params = gson.fromJson(payload, new TypeToken<List<VmCloneParams>>() {
       }.getType());
-      params.get(0).srcVmId(stoppedVm.getId()).clusterId(cluster.getId());
+      params.get(0).srcVmId(stoppedVm.getId()).clusterId(cluster.getId())
+          .name("tower-sdk-test-clone-vm" + System.currentTimeMillis());
       // do some modify to params(optional)
       List<WithTaskVm> result = api.cloneVm(params, contentLanguage);
       assertThat(result).as("check result of cloneVm").isNotNull();
@@ -117,11 +139,13 @@ public class ITVm extends ITBase {
           new TypeToken<List<Vm>>() {
           }.getClass(), GetVmsRequestBody.class);
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "stopped_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_stopped_vm" })
   public void startVm(String payload) {
     try {
       // parse params from json payload
@@ -132,11 +156,13 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.startVm(params, contentLanguage);
       assertThat(result).as("check result of startVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "stopped_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_stopped_vm" })
   public void updateVm(String payload) {
     try {
       // parse params from json payload
@@ -147,14 +173,16 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.updateVm(params, contentLanguage);
       assertThat(result).as("check result of updateVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "stopped_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_stopped_vm" })
   public void migRateVm(String payload) {
     try {
-      NameIdPair vmhost = stoppedVm.getHost();
+      NestedHost vmhost = stoppedVm.getHost();
       Host host = new HostApi(client)
           .getHosts(new GetHostsRequestBody().where(new HostWhereInput().idNot(vmhost != null ? vmhost.getId() : null)
               .cluster(new ClusterWhereInput().id(cluster.getId()))), contentLanguage)
@@ -167,6 +195,8 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.migRateVm(params, contentLanguage);
       assertThat(result).as("check result of migRateVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -175,32 +205,42 @@ public class ITVm extends ITBase {
   // #region running vm operation
   Vm runningVM = null;
 
-  @BeforeMethod(onlyForGroups = { "running_vm_operation" })
-  public void createRunningVm() throws ApiException {
+  @BeforeMethod(onlyForGroups = { "need_running_vm" })
+  public void createRunningVm() throws ApiException, IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
-    params.add(new VmCreationParams().name("tower-api-test-running-vm" + System.currentTimeMillis()).cpuCores(1.0)
-        .cpuSockets(1.0).memory(4294967296.0).ha(true).vcpu(1.0).status(VmStatus.RUNNING).firmware(VmFirmware.BIOS)
-        .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1.0).index(1.0)))
+    params.add(new VmCreationParams().name("tower-sdk-test-running-vm" + System.currentTimeMillis()).cpuCores(1)
+        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.RUNNING).firmware(VmFirmware.BIOS)
+        .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     runningVM = api.createVm(params, contentLanguage).get(0).getData();
-    waitForVmEntityAsyncStatus(runningVM.getId(), api);
+    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(runningVM.getId())), api, "getVms",
+        new TypeToken<List<Vm>>() {
+        }.getClass(), GetVmsRequestBody.class);
   }
 
-  @AfterMethod(onlyForGroups = { "running_vm_operation" })
+  @AfterMethod(onlyForGroups = { "need_running_vm" })
   public void removeRunningVm() throws ApiException, IllegalAccessException, IllegalArgumentException,
       InvocationTargetException, NoSuchMethodException, SecurityException {
-    waitForVmEntityAsyncStatus(runningVM.getId(), api);
+    Vm vm = waitForVmEntityAsyncStatus(runningVM.getId(), api);
+    // shudown vm first before delete it;
+    if (vm.getStatus() == VmStatus.RUNNING) {
+      api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(runningVM.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+    }
     VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(runningVM.getId()));
     api.deleteVm(params, contentLanguage);
     waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(runningVM.getId())), api, "getVms",
         new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
     runningVM = null;
+
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "running_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_running_vm" })
   public void restartVm(String payload) {
     try {
       // parse params from json payload
@@ -211,11 +251,13 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.restartVm(params, contentLanguage);
       assertThat(result).as("check result of restartVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "running_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_running_vm" })
   public void suspendAndResumeVm(String payload) {
     try {
       // parse params from json payload
@@ -228,11 +270,13 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.resumeVm(params, contentLanguage);
       assertThat(result).as("check result of suspend and resume vm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "running_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_running_vm" })
   public void forceRestartVm(String payload) {
     try {
       // parse params from json payload
@@ -243,11 +287,13 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.forceRestartVm(params, contentLanguage);
       assertThat(result).as("check result of forceRestartVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "running_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_running_vm" })
   public void forceShutDownVm(String payload) {
     try {
       // parse params from json payload
@@ -258,11 +304,13 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.forceShutDownVm(params, contentLanguage);
       assertThat(result).as("check result of forceShutDownVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  @Test(dataProvider = "vmPayload", groups = { "running_vm_operation" })
+  @Test(dataProvider = "vmPayload", groups = { "need_running_vm" })
   public void shutDownVm(String payload) {
     try {
       // parse params from json payload
@@ -273,85 +321,12 @@ public class ITVm extends ITBase {
       List<WithTaskVm> result = api.shutDownVm(params, contentLanguage);
       assertThat(result).as("check result of shutDownVm").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
   // #endregion running vm operation
-
-  // @Test(dataProvider = "vmPayload")
-  // public void addVmCdRom(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmAddCdRomParams params = gson.fromJson(payload, new
-  // TypeToken<VmAddCdRomParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.addVmCdRom(params, contentLanguage);
-  // assertThat(result).as("check result of addVmCdRom").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
-
-  // @Test(dataProvider = "vmPayload")
-  // public void addVmDisk(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmAddDiskParams params = gson.fromJson(payload, new
-  // TypeToken<VmAddDiskParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.addVmDisk(params, contentLanguage);
-  // assertThat(result).as("check result of addVmDisk").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
-
-  // @Test(dataProvider = "vmPayload")
-  // public void addVmNic(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmAddNicParams params = gson.fromJson(payload, new
-  // TypeToken<VmAddNicParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.addVmNic(params, contentLanguage);
-  // assertThat(result).as("check result of addVmNic").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
-
-  // @Test(dataProvider = "vmPayload")
-  // public void convertVmTemplateToVm(String payload) {
-  // try {
-  // // parse params from json payload
-  // List<ConvertVmTemplateToVmParams> params = gson.fromJson(payload,
-  // new TypeToken<List<ConvertVmTemplateToVmParams>>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.convertVmTemplateToVm(params, contentLanguage);
-  // assertThat(result).as("check result of convertVmTemplateToVm").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
-
-  // @Test(dataProvider = "vmPayload")
-  // public void createVmFromTemplate(String payload) {
-  // try {
-  // // parse params from json payload
-  // List<VmCreateVmFromTemplateParams> params = gson.fromJson(payload,
-  // new TypeToken<List<VmCreateVmFromTemplateParams>>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.createVmFromTemplate(params, contentLanguage);
-  // assertThat(result).as("check result of createVmFromTemplate").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
 
   @Test(dataProvider = "vmPayload")
   public void getVms(String payload) {
@@ -363,6 +338,8 @@ public class ITVm extends ITBase {
       List<Vm> result = api.getVms(params, contentLanguage);
       assertThat(result).as("check result of getVms").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -377,160 +354,187 @@ public class ITVm extends ITBase {
       VmConnection result = api.getVmsConnection(params, contentLanguage);
       assertThat(result).as("check result of getVmsConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
 
-  // @Test(dataProvider = "vmPayload")
-  // public void installVmtools(String payload) {
-  // try {
-  // // parse params from json payload
-  // InstallVmtoolsParams params = gson.fromJson(payload, new
-  // TypeToken<InstallVmtoolsParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.installVmtools(params, contentLanguage);
-  // assertThat(result).as("check result of installVmtools").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+  // skip vmtools installation
+  @Test(dataProvider = "vmPayload", enabled = false)
+  public void installVmtools(String payload) {
+    try {
+      // parse params from json payload
+      InstallVmtoolsParams params = gson.fromJson(payload, new TypeToken<InstallVmtoolsParams>() {
+      }.getType());
+      // do some modify to params(optional)
+      List<WithTaskVm> result = api.installVmtools(params, contentLanguage);
+      assertThat(result).as("check result of installVmtools").isNotNull();
+    } catch (ApiException e) {
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
 
-  // @Test(dataProvider = "vmPayload")
-  // public void moveVmToRecycleBin(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmOperateParams params = gson.fromJson(payload, new
-  // TypeToken<VmOperateParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<InlineResponse200> result = api.moveVmToRecycleBin(params,
-  // contentLanguage);
-  // assertThat(result).as("check result of moveVmToRecycleBin").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+  @Test(groups = { "need_stopped_vm" })
+  public void OperatingVmCdRom() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException {
+    try {
+      // parse params from json payload
+      VmAddCdRomParams addParams = new VmAddCdRomParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmAddCdRomParamsData().addVmCdRomsItem(new VmCdRomParams().boot(2).index(2)));
+      // do some modify to params(optional)
+      List<WithTaskVm> addResult = api.addVmCdRom(addParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(addResult).as("check result of addVmCdRom").isNotNull();
+      VmDiskApi diskApi = new VmDiskApi(client);
+      VmDisk disk = diskApi
+          .getVmDisks(new GetVmDisksRequestBody()
+              .where(new VmDiskWhereInput().boot(2).vm(new VmWhereInput().id(stoppedVm.getId()))), contentLanguage)
+          .get(0);
 
-  // @Test(dataProvider = "vmPayload")
-  // public void rebuildVm(String payload) {
-  // try {
-  // // parse params from json payload
-  // List<VmRebuildParams> params = gson.fromJson(payload, new
-  // TypeToken<List<VmRebuildParams>>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.rebuildVm(params, contentLanguage);
-  // assertThat(result).as("check result of rebuildVm").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+      VmRemoveCdRomParams removeParams = new VmRemoveCdRomParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmRemoveCdRomParamsData().addCdRomIdsItem(disk.getId()));
+      List<WithTaskVm> removeResult = api.removeVmCdRom(removeParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(removeResult).as("check result of removeVmCdRom").isNotNull();
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
 
-  // @Test(dataProvider = "vmPayload")
-  // public void recoverVmFromRecycleBin(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmOperateParams params = gson.fromJson(payload, new
-  // TypeToken<VmOperateParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<InlineResponse200> result = api.recoverVmFromRecycleBin(params,
-  // contentLanguage);
-  // assertThat(result).as("check result of recoverVmFromRecycleBin").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+  @Test(groups = { "need_stopped_vm" })
+  public void addAndUpdateAndRemoveVmDisk() throws IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
+    try {
+      // parse params from json payload
+      VmAddDiskParams addParams = new VmAddDiskParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmAddDiskParamsData().vmDisks(new VmAddDiskParamsDataVmDisks()
+              .addMountNewCreateDisksItem(new MountNewCreateDisksParams().bus(Bus.IDE).boot(0)
+                  .vmVolume(new MountNewCreateDisksVmVolumeParams()
+                      .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION)
+                      .name("tower-sdk-test-vm-operate-disk-volume" + System.currentTimeMillis()).size(4096.0)))));
+      // do some modify to params(optional)
+      List<WithTaskVm> addResult = api.addVmDisk(addParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(addResult).as("check result of addVmDisk").isNotNull();
 
-  // @Test(dataProvider = "vmPayload")
-  // public void removeVmCdRom(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmRemoveCdRomParams params = gson.fromJson(payload, new
-  // TypeToken<VmRemoveCdRomParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.removeVmCdRom(params, contentLanguage);
-  // assertThat(result).as("check result of removeVmCdRom").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+      VmUpdateDiskParams updateParams = new VmUpdateDiskParams().where(new VmWhereInput().id(stoppedVm.getId())).data(
+          new VmUpdateDiskParamsData().bus(Bus.SCSI).vmDiskId(addResult.get(0).getData().getVmDisks().get(0).getId()));
+      List<WithTaskVm> updateresults = api.updateVmDisk(updateParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(updateresults).as("check result of addVmDisk").isNotNull();
 
-  // @Test(dataProvider = "vmPayload")
-  // public void removeVmDisk(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmRemoveDiskParams params = gson.fromJson(payload, new
-  // TypeToken<VmRemoveDiskParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.removeVmDisk(params, contentLanguage);
-  // assertThat(result).as("check result of removeVmDisk").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+      VmRemoveDiskParams deleteParams = new VmRemoveDiskParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmRemoveDiskParamsData().addDiskIdsItem(addResult.get(0).getData().getVmDisks().get(0).getId()));
+      List<WithTaskVm> removeResult = api.removeVmDisk(deleteParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(removeResult).as("check result of removeVmDisk").isNotNull();
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
 
-  // @Test(dataProvider = "vmPayload")
-  // public void removeVmNic(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmRemoveNicParams params = gson.fromJson(payload, new
-  // TypeToken<VmRemoveNicParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.removeVmNic(params, contentLanguage);
-  // assertThat(result).as("check result of removeVmNic").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+  @Test(groups = { "need_stopped_vm" })
+  public void addAndUpdateAndRemoveVmNic() throws IllegalAccessException, IllegalArgumentException,
+      InvocationTargetException, NoSuchMethodException, SecurityException {
+    try {
+      Vlan vlan = getData("defaultVlan", Vlan.class);
 
-  // @Test(dataProvider = "vmPayload")
-  // public void rollbackVm(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmRollbackParams params = gson.fromJson(payload, new
-  // TypeToken<VmRollbackParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.rollbackVm(params, contentLanguage);
-  // assertThat(result).as("check result of rollbackVm").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+      // parse params from json payload
+      VmAddNicParams addParams = new VmAddNicParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmAddNicParamsData().addVmNicsItem(new VmNicParams().connectVlanId(vlan.getId())));
+      // do some modify to params(optional)
+      List<WithTaskVm> addResult = api.addVmNic(addParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(addResult).as("check result of addVmNic").isNotNull();
+      VmUpdateNicParams updateParams = new VmUpdateNicParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmUpdateNicParamsData().nicIndex(0).enabled(false));
+      List<WithTaskVm> updateresults = api.updateVmNic(updateParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(updateresults).as("check result of addVmNic").isNotNull();
+      VmRemoveNicParams removeParams = new VmRemoveNicParams().where(new VmWhereInput().id(stoppedVm.getId()))
+          .data(new VmRemoveNicParamsData().addNicIndexItem(0));
+      List<WithTaskVm> removeResult = api.removeVmNic(removeParams, contentLanguage);
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      assertThat(removeResult).as("check result of removeVmNic").isNotNull();
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
 
-  // @Test(dataProvider = "vmPayload")
-  // public void updateVmDisk(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmUpdateDiskParams params = gson.fromJson(payload, new
-  // TypeToken<VmUpdateDiskParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.updateVmDisk(params, contentLanguage);
-  // assertThat(result).as("check result of updateVmDisk").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+  @Test(groups = { "need_stopped_vm" })
+  public void OperateVmRecycleBin() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException {
+    try {
+      List<Method> methods = new ArrayList<>();
+      methods.add(GlobalSettings.class.getDeclaredMethod("getVmRecycleBin"));
+      methods.add(NestedVmRecycleBin.class.getDeclaredMethod("getEnabled"));
+      GlobalSettingsApi settingApi = new GlobalSettingsApi(client);
+      GlobalSettings settings = settingApi.getGlobalSettingses(new GetGlobalSettingsesRequestBody(), contentLanguage)
+          .get(0);
+      Boolean isRecycleBinEnabled = settings.getVmRecycleBin().getEnabled();
+      if (!isRecycleBinEnabled) {
+        GlobalSettings updatingSetting = settingApi.updateGlobalRecycleBinSetting(
+            new GlobalRecycleBinUpdationParams().enabled(true).retain(30), contentLanguage).getData();
+        waitForResourceUpdationToTargetValue(
+            new GetGlobalSettingsesRequestBody().where(new GlobalSettingsWhereInput().id(updatingSetting.getId())),
+            settingApi, GlobalSettingsApi.class.getDeclaredMethod("getGlobalSettingses",
+                GetGlobalSettingsesRequestBody.class, String.class),
+            new TypeToken<List<GlobalSettings>>() {
+            }.getClass(), GetGlobalSettingsesRequestBody.class, methods, true);
+      }
+      VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(stoppedVm.getId()));
+      // do some modify to params(optional)
+      List<InlineResponse200> result = api.moveVmToRecycleBin(params, contentLanguage);
+      assertThat(result).as("check result of moveVmToRecycleBin").isNotNull();
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      result = api.recoverVmFromRecycleBin(params, contentLanguage);
+      assertThat(result).as("check result of moveVmToRecycleBin").isNotNull();
+      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId())), api, "getVms",
+          new TypeToken<List<Vm>>() {
+          }.getClass(), GetVmsRequestBody.class);
+      if (isRecycleBinEnabled) {
+        GlobalSettings updatingSetting = settingApi.updateGlobalRecycleBinSetting(
+            new GlobalRecycleBinUpdationParams().enabled(false).retain(settings.getVmRecycleBin().getRetain()),
+            contentLanguage).getData();
 
-  // @Test(dataProvider = "vmPayload")
-  // public void updateVmNic(String payload) {
-  // try {
-  // // parse params from json payload
-  // VmUpdateNicParams params = gson.fromJson(payload, new
-  // TypeToken<VmUpdateNicParams>() {
-  // }.getType());
-  // // do some modify to params(optional)
-  // List<WithTaskVm> result = api.updateVmNic(params, contentLanguage);
-  // assertThat(result).as("check result of updateVmNic").isNotNull();
-  // } catch (ApiException e) {
-  // assertThat(true).as(e.getResponseBody()).isFalse();
-  // }
-  // }
+        waitForResourceUpdationToTargetValue(
+            new GetGlobalSettingsesRequestBody().where(new GlobalSettingsWhereInput().id(updatingSetting.getId())),
+            settingApi, GlobalSettingsApi.class.getDeclaredMethod("getGlobalSettingses",
+                GetGlobalSettingsesRequestBody.class, String.class),
+            new TypeToken<List<GlobalSettings>>() {
+            }.getClass(), GetGlobalSettingsesRequestBody.class, methods, false);
+      }
+    } catch (
 
+    ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
 }

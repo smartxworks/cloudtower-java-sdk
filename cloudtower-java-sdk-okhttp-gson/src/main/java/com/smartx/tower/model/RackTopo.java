@@ -20,8 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
+import com.smartx.tower.model.NestedBrickTopo;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedZoneTopo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,15 +37,15 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class RackTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPOES = "brick_topoes";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPOES)
-  private List<NameIdPair> brickTopoes = null;
+  private List<NestedBrickTopo> brickTopoes = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Double height;
+  private Integer height;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -60,18 +61,18 @@ public class RackTopo {
 
   public static final String SERIALIZED_NAME_ZONE_TOPO = "zone_topo";
   @SerializedName(SERIALIZED_NAME_ZONE_TOPO)
-  private BrickTopoPowers zoneTopo;
+  private NestedZoneTopo zoneTopo;
 
 
-  public RackTopo brickTopoes(List<NameIdPair> brickTopoes) {
+  public RackTopo brickTopoes(List<NestedBrickTopo> brickTopoes) {
     
     this.brickTopoes = brickTopoes;
     return this;
   }
 
-  public RackTopo addBrickTopoesItem(NameIdPair brickTopoesItem) {
+  public RackTopo addBrickTopoesItem(NestedBrickTopo brickTopoesItem) {
     if (this.brickTopoes == null) {
-      this.brickTopoes = new ArrayList<NameIdPair>();
+      this.brickTopoes = new ArrayList<NestedBrickTopo>();
     }
     this.brickTopoes.add(brickTopoesItem);
     return this;
@@ -84,17 +85,17 @@ public class RackTopo {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getBrickTopoes() {
+  public List<NestedBrickTopo> getBrickTopoes() {
     return brickTopoes;
   }
 
 
-  public void setBrickTopoes(List<NameIdPair> brickTopoes) {
+  public void setBrickTopoes(List<NestedBrickTopo> brickTopoes) {
     this.brickTopoes = brickTopoes;
   }
 
 
-  public RackTopo cluster(NameIdPair cluster) {
+  public RackTopo cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -107,17 +108,17 @@ public class RackTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
 
-  public RackTopo height(Double height) {
+  public RackTopo height(Integer height) {
     
     this.height = height;
     return this;
@@ -130,12 +131,12 @@ public class RackTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getHeight() {
+  public Integer getHeight() {
     return height;
   }
 
 
-  public void setHeight(Double height) {
+  public void setHeight(Integer height) {
     this.height = height;
   }
 
@@ -209,7 +210,7 @@ public class RackTopo {
   }
 
 
-  public RackTopo zoneTopo(BrickTopoPowers zoneTopo) {
+  public RackTopo zoneTopo(NestedZoneTopo zoneTopo) {
     
     this.zoneTopo = zoneTopo;
     return this;
@@ -222,12 +223,12 @@ public class RackTopo {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public BrickTopoPowers getZoneTopo() {
+  public NestedZoneTopo getZoneTopo() {
     return zoneTopo;
   }
 
 
-  public void setZoneTopo(BrickTopoPowers zoneTopo) {
+  public void setZoneTopo(NestedZoneTopo zoneTopo) {
     this.zoneTopo = zoneTopo;
   }
 

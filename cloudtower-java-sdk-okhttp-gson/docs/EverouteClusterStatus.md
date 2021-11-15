@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version** | **String** |  | 
-**retryCount** | **Double** |  | 
+**retryCount** | **Integer** |  | 
 **reason** | **String** |  | 
 **phase** | [**EverouteClusterPhase**](EverouteClusterPhase.md) |  |  [optional]
 **message** | **String** |  | 

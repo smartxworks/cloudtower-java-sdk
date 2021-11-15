@@ -33,7 +33,7 @@ import java.io.IOException;
 public class IscsiLunCreationParams {
   public static final String SERIALIZED_NAME_LUN_ID = "lun_id";
   @SerializedName(SERIALIZED_NAME_LUN_ID)
-  private Double lunId;
+  private Integer lunId;
 
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
@@ -41,7 +41,7 @@ public class IscsiLunCreationParams {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET_ID = "iscsi_target_id";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_ID)
@@ -128,7 +128,7 @@ public class IscsiLunCreationParams {
   private String allowedInitiators;
 
 
-  public IscsiLunCreationParams lunId(Double lunId) {
+  public IscsiLunCreationParams lunId(Integer lunId) {
     
     this.lunId = lunId;
     return this;
@@ -141,12 +141,12 @@ public class IscsiLunCreationParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLunId() {
+  public Integer getLunId() {
     return lunId;
   }
 
 
-  public void setLunId(Double lunId) {
+  public void setLunId(Integer lunId) {
     this.lunId = lunId;
   }
 
@@ -174,7 +174,7 @@ public class IscsiLunCreationParams {
   }
 
 
-  public IscsiLunCreationParams replicaNum(Double replicaNum) {
+  public IscsiLunCreationParams replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -187,12 +187,12 @@ public class IscsiLunCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 

@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ClusterRecycleBinCreationParamsData;
 import com.smartx.tower.model.ClusterWhereInput;
-import com.smartx.tower.model.GlobalSettingsVmRecycleBin;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -33,14 +33,14 @@ import java.io.IOException;
 public class ClusterRecycleBinCreationParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private GlobalSettingsVmRecycleBin data;
+  private ClusterRecycleBinCreationParamsData data;
 
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)
   private ClusterWhereInput where;
 
 
-  public ClusterRecycleBinCreationParams data(GlobalSettingsVmRecycleBin data) {
+  public ClusterRecycleBinCreationParams data(ClusterRecycleBinCreationParamsData data) {
     
     this.data = data;
     return this;
@@ -53,12 +53,12 @@ public class ClusterRecycleBinCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public GlobalSettingsVmRecycleBin getData() {
+  public ClusterRecycleBinCreationParamsData getData() {
     return data;
   }
 
 
-  public void setData(GlobalSettingsVmRecycleBin data) {
+  public void setData(ClusterRecycleBinCreationParamsData data) {
     this.data = data;
   }
 

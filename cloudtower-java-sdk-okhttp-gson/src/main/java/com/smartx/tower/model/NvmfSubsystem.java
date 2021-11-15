@@ -20,9 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NameIdPair;
-import com.smartx.tower.model.BrickTopoPowers;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNamespaceGroup;
+import com.smartx.tower.model.NestedNvmfNamespace;
 import com.smartx.tower.model.NvmfSubsystemPolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -74,7 +76,7 @@ public class NvmfSubsystem {
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NameIdPair cluster;
+  private NestedCluster cluster;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -142,7 +144,7 @@ public class NvmfSubsystem {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<BrickTopoPowers> labels = null;
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -154,11 +156,11 @@ public class NvmfSubsystem {
 
   public static final String SERIALIZED_NAME_NAMESPACE_GROUPS = "namespace_groups";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUPS)
-  private List<NameIdPair> namespaceGroups = null;
+  private List<NestedNamespaceGroup> namespaceGroups = null;
 
   public static final String SERIALIZED_NAME_NAMESPACES = "namespaces";
   @SerializedName(SERIALIZED_NAME_NAMESPACES)
-  private List<NameIdPair> namespaces = null;
+  private List<NestedNvmfNamespace> namespaces = null;
 
   public static final String SERIALIZED_NAME_NQN_NAME = "nqn_name";
   @SerializedName(SERIALIZED_NAME_NQN_NAME)
@@ -174,11 +176,11 @@ public class NvmfSubsystem {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
-  private Double stripeNum;
+  private Integer stripeNum;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -396,7 +398,7 @@ public class NvmfSubsystem {
   }
 
 
-  public NvmfSubsystem cluster(NameIdPair cluster) {
+  public NvmfSubsystem cluster(NestedCluster cluster) {
     
     this.cluster = cluster;
     return this;
@@ -409,12 +411,12 @@ public class NvmfSubsystem {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public NameIdPair getCluster() {
+  public NestedCluster getCluster() {
     return cluster;
   }
 
 
-  public void setCluster(NameIdPair cluster) {
+  public void setCluster(NestedCluster cluster) {
     this.cluster = cluster;
   }
 
@@ -787,15 +789,15 @@ public class NvmfSubsystem {
   }
 
 
-  public NvmfSubsystem labels(List<BrickTopoPowers> labels) {
+  public NvmfSubsystem labels(List<NestedLabel> labels) {
     
     this.labels = labels;
     return this;
   }
 
-  public NvmfSubsystem addLabelsItem(BrickTopoPowers labelsItem) {
+  public NvmfSubsystem addLabelsItem(NestedLabel labelsItem) {
     if (this.labels == null) {
-      this.labels = new ArrayList<BrickTopoPowers>();
+      this.labels = new ArrayList<NestedLabel>();
     }
     this.labels.add(labelsItem);
     return this;
@@ -808,12 +810,12 @@ public class NvmfSubsystem {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<BrickTopoPowers> getLabels() {
+  public List<NestedLabel> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(List<BrickTopoPowers> labels) {
+  public void setLabels(List<NestedLabel> labels) {
     this.labels = labels;
   }
 
@@ -864,15 +866,15 @@ public class NvmfSubsystem {
   }
 
 
-  public NvmfSubsystem namespaceGroups(List<NameIdPair> namespaceGroups) {
+  public NvmfSubsystem namespaceGroups(List<NestedNamespaceGroup> namespaceGroups) {
     
     this.namespaceGroups = namespaceGroups;
     return this;
   }
 
-  public NvmfSubsystem addNamespaceGroupsItem(NameIdPair namespaceGroupsItem) {
+  public NvmfSubsystem addNamespaceGroupsItem(NestedNamespaceGroup namespaceGroupsItem) {
     if (this.namespaceGroups == null) {
-      this.namespaceGroups = new ArrayList<NameIdPair>();
+      this.namespaceGroups = new ArrayList<NestedNamespaceGroup>();
     }
     this.namespaceGroups.add(namespaceGroupsItem);
     return this;
@@ -885,25 +887,25 @@ public class NvmfSubsystem {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNamespaceGroups() {
+  public List<NestedNamespaceGroup> getNamespaceGroups() {
     return namespaceGroups;
   }
 
 
-  public void setNamespaceGroups(List<NameIdPair> namespaceGroups) {
+  public void setNamespaceGroups(List<NestedNamespaceGroup> namespaceGroups) {
     this.namespaceGroups = namespaceGroups;
   }
 
 
-  public NvmfSubsystem namespaces(List<NameIdPair> namespaces) {
+  public NvmfSubsystem namespaces(List<NestedNvmfNamespace> namespaces) {
     
     this.namespaces = namespaces;
     return this;
   }
 
-  public NvmfSubsystem addNamespacesItem(NameIdPair namespacesItem) {
+  public NvmfSubsystem addNamespacesItem(NestedNvmfNamespace namespacesItem) {
     if (this.namespaces == null) {
-      this.namespaces = new ArrayList<NameIdPair>();
+      this.namespaces = new ArrayList<NestedNvmfNamespace>();
     }
     this.namespaces.add(namespacesItem);
     return this;
@@ -916,12 +918,12 @@ public class NvmfSubsystem {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<NameIdPair> getNamespaces() {
+  public List<NestedNvmfNamespace> getNamespaces() {
     return namespaces;
   }
 
 
-  public void setNamespaces(List<NameIdPair> namespaces) {
+  public void setNamespaces(List<NestedNvmfNamespace> namespaces) {
     this.namespaces = namespaces;
   }
 
@@ -995,7 +997,7 @@ public class NvmfSubsystem {
   }
 
 
-  public NvmfSubsystem replicaNum(Double replicaNum) {
+  public NvmfSubsystem replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -1008,17 +1010,17 @@ public class NvmfSubsystem {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 
 
-  public NvmfSubsystem stripeNum(Double stripeNum) {
+  public NvmfSubsystem stripeNum(Integer stripeNum) {
     
     this.stripeNum = stripeNum;
     return this;
@@ -1031,12 +1033,12 @@ public class NvmfSubsystem {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeNum() {
+  public Integer getStripeNum() {
     return stripeNum;
   }
 
 
-  public void setStripeNum(Double stripeNum) {
+  public void setStripeNum(Integer stripeNum) {
     this.stripeNum = stripeNum;
   }
 

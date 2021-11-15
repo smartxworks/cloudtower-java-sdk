@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **elfStoragePolicy** | **VmVolumeElfStoragePolicyType** |  | 
-**size** | **Double** |  | 
+**size** | **Integer** |  | 
 **sharing** | **Boolean** |  | 
 **clusterId** | **String** |  | 
 **name** | **String** |  | 

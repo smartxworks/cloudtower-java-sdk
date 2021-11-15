@@ -7,10 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **defaultHa** | **Boolean** |  |  [optional]
 **id** | **String** |  | 
-**vmRecycleBin** | [**ClusterSettingsVmRecycleBin**](ClusterSettingsVmRecycleBin.md) |  |  [optional]
+**vmRecycleBin** | [**NestedVmRecycleBin**](NestedVmRecycleBin.md) |  |  [optional]
 
 
 

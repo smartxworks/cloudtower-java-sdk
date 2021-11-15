@@ -47,6 +47,8 @@ public class ITWitness extends ITBase {
       List<Witness> result = api.getWitnesses(params, contentLanguage);
       assertThat(result).as("check result of getWitnesses").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }
@@ -60,6 +62,8 @@ public class ITWitness extends ITBase {
       WitnessConnection result = api.getWitnessesConnection(params, contentLanguage);
       assertThat(result).as("check result of getWitnessesConnection").isNotNull();
     } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
       assertThat(true).as(e.getResponseBody()).isFalse();
     }
   }

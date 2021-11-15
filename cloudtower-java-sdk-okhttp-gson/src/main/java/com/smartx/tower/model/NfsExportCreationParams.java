@@ -43,7 +43,7 @@ public class NfsExportCreationParams {
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Double replicaNum;
+  private Integer replicaNum;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -119,7 +119,7 @@ public class NfsExportCreationParams {
   }
 
 
-  public NfsExportCreationParams replicaNum(Double replicaNum) {
+  public NfsExportCreationParams replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
     return this;
@@ -132,12 +132,12 @@ public class NfsExportCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getReplicaNum() {
+  public Integer getReplicaNum() {
     return replicaNum;
   }
 
 
-  public void setReplicaNum(Double replicaNum) {
+  public void setReplicaNum(Integer replicaNum) {
     this.replicaNum = replicaNum;
   }
 

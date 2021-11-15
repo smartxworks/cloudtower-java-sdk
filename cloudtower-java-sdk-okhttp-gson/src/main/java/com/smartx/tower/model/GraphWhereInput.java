@@ -222,35 +222,35 @@ public class GraphWhereInput {
 
   public static final String SERIALIZED_NAME_METRIC_COUNT = "metric_count";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT)
-  private Double metricCount;
+  private Integer metricCount;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_GT = "metric_count_gt";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_GT)
-  private Double metricCountGt;
+  private Integer metricCountGt;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_GTE = "metric_count_gte";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_GTE)
-  private Double metricCountGte;
+  private Integer metricCountGte;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_IN = "metric_count_in";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_IN)
-  private List<Double> metricCountIn = null;
+  private List<Integer> metricCountIn = null;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_LT = "metric_count_lt";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_LT)
-  private Double metricCountLt;
+  private Integer metricCountLt;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_LTE = "metric_count_lte";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_LTE)
-  private Double metricCountLte;
+  private Integer metricCountLte;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_NOT = "metric_count_not";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_NOT)
-  private Double metricCountNot;
+  private Integer metricCountNot;
 
   public static final String SERIALIZED_NAME_METRIC_COUNT_NOT_IN = "metric_count_not_in";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT_NOT_IN)
-  private List<Double> metricCountNotIn = null;
+  private List<Integer> metricCountNotIn = null;
 
   public static final String SERIALIZED_NAME_METRIC_NAME = "metric_name";
   @SerializedName(SERIALIZED_NAME_METRIC_NAME)
@@ -1666,7 +1666,7 @@ public class GraphWhereInput {
   }
 
 
-  public GraphWhereInput metricCount(Double metricCount) {
+  public GraphWhereInput metricCount(Integer metricCount) {
     
     this.metricCount = metricCount;
     return this;
@@ -1679,17 +1679,17 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCount() {
+  public Integer getMetricCount() {
     return metricCount;
   }
 
 
-  public void setMetricCount(Double metricCount) {
+  public void setMetricCount(Integer metricCount) {
     this.metricCount = metricCount;
   }
 
 
-  public GraphWhereInput metricCountGt(Double metricCountGt) {
+  public GraphWhereInput metricCountGt(Integer metricCountGt) {
     
     this.metricCountGt = metricCountGt;
     return this;
@@ -1702,17 +1702,17 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCountGt() {
+  public Integer getMetricCountGt() {
     return metricCountGt;
   }
 
 
-  public void setMetricCountGt(Double metricCountGt) {
+  public void setMetricCountGt(Integer metricCountGt) {
     this.metricCountGt = metricCountGt;
   }
 
 
-  public GraphWhereInput metricCountGte(Double metricCountGte) {
+  public GraphWhereInput metricCountGte(Integer metricCountGte) {
     
     this.metricCountGte = metricCountGte;
     return this;
@@ -1725,25 +1725,25 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCountGte() {
+  public Integer getMetricCountGte() {
     return metricCountGte;
   }
 
 
-  public void setMetricCountGte(Double metricCountGte) {
+  public void setMetricCountGte(Integer metricCountGte) {
     this.metricCountGte = metricCountGte;
   }
 
 
-  public GraphWhereInput metricCountIn(List<Double> metricCountIn) {
+  public GraphWhereInput metricCountIn(List<Integer> metricCountIn) {
     
     this.metricCountIn = metricCountIn;
     return this;
   }
 
-  public GraphWhereInput addMetricCountInItem(Double metricCountInItem) {
+  public GraphWhereInput addMetricCountInItem(Integer metricCountInItem) {
     if (this.metricCountIn == null) {
-      this.metricCountIn = new ArrayList<Double>();
+      this.metricCountIn = new ArrayList<Integer>();
     }
     this.metricCountIn.add(metricCountInItem);
     return this;
@@ -1756,17 +1756,17 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMetricCountIn() {
+  public List<Integer> getMetricCountIn() {
     return metricCountIn;
   }
 
 
-  public void setMetricCountIn(List<Double> metricCountIn) {
+  public void setMetricCountIn(List<Integer> metricCountIn) {
     this.metricCountIn = metricCountIn;
   }
 
 
-  public GraphWhereInput metricCountLt(Double metricCountLt) {
+  public GraphWhereInput metricCountLt(Integer metricCountLt) {
     
     this.metricCountLt = metricCountLt;
     return this;
@@ -1779,17 +1779,17 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCountLt() {
+  public Integer getMetricCountLt() {
     return metricCountLt;
   }
 
 
-  public void setMetricCountLt(Double metricCountLt) {
+  public void setMetricCountLt(Integer metricCountLt) {
     this.metricCountLt = metricCountLt;
   }
 
 
-  public GraphWhereInput metricCountLte(Double metricCountLte) {
+  public GraphWhereInput metricCountLte(Integer metricCountLte) {
     
     this.metricCountLte = metricCountLte;
     return this;
@@ -1802,17 +1802,17 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCountLte() {
+  public Integer getMetricCountLte() {
     return metricCountLte;
   }
 
 
-  public void setMetricCountLte(Double metricCountLte) {
+  public void setMetricCountLte(Integer metricCountLte) {
     this.metricCountLte = metricCountLte;
   }
 
 
-  public GraphWhereInput metricCountNot(Double metricCountNot) {
+  public GraphWhereInput metricCountNot(Integer metricCountNot) {
     
     this.metricCountNot = metricCountNot;
     return this;
@@ -1825,25 +1825,25 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCountNot() {
+  public Integer getMetricCountNot() {
     return metricCountNot;
   }
 
 
-  public void setMetricCountNot(Double metricCountNot) {
+  public void setMetricCountNot(Integer metricCountNot) {
     this.metricCountNot = metricCountNot;
   }
 
 
-  public GraphWhereInput metricCountNotIn(List<Double> metricCountNotIn) {
+  public GraphWhereInput metricCountNotIn(List<Integer> metricCountNotIn) {
     
     this.metricCountNotIn = metricCountNotIn;
     return this;
   }
 
-  public GraphWhereInput addMetricCountNotInItem(Double metricCountNotInItem) {
+  public GraphWhereInput addMetricCountNotInItem(Integer metricCountNotInItem) {
     if (this.metricCountNotIn == null) {
-      this.metricCountNotIn = new ArrayList<Double>();
+      this.metricCountNotIn = new ArrayList<Integer>();
     }
     this.metricCountNotIn.add(metricCountNotInItem);
     return this;
@@ -1856,12 +1856,12 @@ public class GraphWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMetricCountNotIn() {
+  public List<Integer> getMetricCountNotIn() {
     return metricCountNotIn;
   }
 
 
-  public void setMetricCountNotIn(List<Double> metricCountNotIn) {
+  public void setMetricCountNotIn(List<Integer> metricCountNotIn) {
     this.metricCountNotIn = metricCountNotIn;
   }
 

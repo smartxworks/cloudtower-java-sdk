@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **authPassPhrase** | **String** |  |  [optional]
 **authProtocol** | [**SnmpAuthProtocol**](SnmpAuthProtocol.md) |  |  [optional]
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **community** | **String** |  |  [optional]
 **disabled** | **Boolean** |  | 
 **engineId** | **String** |  |  [optional]
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **languageCode** | **SnmpLanguageCode** |  | 
 **localId** | **String** |  | 
 **name** | **String** |  | 
-**port** | **Double** |  | 
+**port** | **Integer** |  | 
 **privacyPassPhrase** | **String** |  |  [optional]
 **privacyProtocol** | [**SnmpPrivacyProtocol**](SnmpPrivacyProtocol.md) |  |  [optional]
 **protocol** | **SnmpProtocol** |  | 

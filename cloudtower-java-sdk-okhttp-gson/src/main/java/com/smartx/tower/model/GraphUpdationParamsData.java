@@ -92,7 +92,7 @@ public class GraphUpdationParamsData {
 
   public static final String SERIALIZED_NAME_METRIC_COUNT = "metric_count";
   @SerializedName(SERIALIZED_NAME_METRIC_COUNT)
-  private Double metricCount;
+  private Integer metricCount;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -399,7 +399,7 @@ public class GraphUpdationParamsData {
   }
 
 
-  public GraphUpdationParamsData metricCount(Double metricCount) {
+  public GraphUpdationParamsData metricCount(Integer metricCount) {
     
     this.metricCount = metricCount;
     return this;
@@ -412,12 +412,12 @@ public class GraphUpdationParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetricCount() {
+  public Integer getMetricCount() {
     return metricCount;
   }
 
 
-  public void setMetricCount(Double metricCount) {
+  public void setMetricCount(Integer metricCount) {
     this.metricCount = metricCount;
   }
 

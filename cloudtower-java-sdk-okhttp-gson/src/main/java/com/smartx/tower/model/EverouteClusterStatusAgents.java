@@ -36,7 +36,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class EverouteClusterStatusAgents {
   public static final String SERIALIZED_NAME_NUMBER_HEALTH = "numberHealth";
   @SerializedName(SERIALIZED_NAME_NUMBER_HEALTH)
-  private Double numberHealth;
+  private Integer numberHealth;
 
   public static final String SERIALIZED_NAME_MANAGE_V_D_SES = "manageVDSes";
   @SerializedName(SERIALIZED_NAME_MANAGE_V_D_SES)
@@ -48,18 +48,18 @@ public class EverouteClusterStatusAgents {
 
   public static final String SERIALIZED_NAME_EXPECT_NUMBER = "expectNumber";
   @SerializedName(SERIALIZED_NAME_EXPECT_NUMBER)
-  private Double expectNumber;
+  private Integer expectNumber;
 
   public static final String SERIALIZED_NAME_ELF_CLUSTER_NUMBER = "elfClusterNumber";
   @SerializedName(SERIALIZED_NAME_ELF_CLUSTER_NUMBER)
-  private Double elfClusterNumber;
+  private Integer elfClusterNumber;
 
   public static final String SERIALIZED_NAME_CURRENT_NUMBER = "currentNumber";
   @SerializedName(SERIALIZED_NAME_CURRENT_NUMBER)
-  private Double currentNumber;
+  private Integer currentNumber;
 
 
-  public EverouteClusterStatusAgents numberHealth(Double numberHealth) {
+  public EverouteClusterStatusAgents numberHealth(Integer numberHealth) {
     
     this.numberHealth = numberHealth;
     return this;
@@ -72,12 +72,12 @@ public class EverouteClusterStatusAgents {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getNumberHealth() {
+  public Integer getNumberHealth() {
     return numberHealth;
   }
 
 
-  public void setNumberHealth(Double numberHealth) {
+  public void setNumberHealth(Integer numberHealth) {
     this.numberHealth = numberHealth;
   }
 
@@ -144,7 +144,7 @@ public class EverouteClusterStatusAgents {
   }
 
 
-  public EverouteClusterStatusAgents expectNumber(Double expectNumber) {
+  public EverouteClusterStatusAgents expectNumber(Integer expectNumber) {
     
     this.expectNumber = expectNumber;
     return this;
@@ -157,17 +157,17 @@ public class EverouteClusterStatusAgents {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getExpectNumber() {
+  public Integer getExpectNumber() {
     return expectNumber;
   }
 
 
-  public void setExpectNumber(Double expectNumber) {
+  public void setExpectNumber(Integer expectNumber) {
     this.expectNumber = expectNumber;
   }
 
 
-  public EverouteClusterStatusAgents elfClusterNumber(Double elfClusterNumber) {
+  public EverouteClusterStatusAgents elfClusterNumber(Integer elfClusterNumber) {
     
     this.elfClusterNumber = elfClusterNumber;
     return this;
@@ -180,17 +180,17 @@ public class EverouteClusterStatusAgents {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getElfClusterNumber() {
+  public Integer getElfClusterNumber() {
     return elfClusterNumber;
   }
 
 
-  public void setElfClusterNumber(Double elfClusterNumber) {
+  public void setElfClusterNumber(Integer elfClusterNumber) {
     this.elfClusterNumber = elfClusterNumber;
   }
 
 
-  public EverouteClusterStatusAgents currentNumber(Double currentNumber) {
+  public EverouteClusterStatusAgents currentNumber(Integer currentNumber) {
     
     this.currentNumber = currentNumber;
     return this;
@@ -203,12 +203,12 @@ public class EverouteClusterStatusAgents {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCurrentNumber() {
+  public Integer getCurrentNumber() {
     return currentNumber;
   }
 
 
-  public void setCurrentNumber(Double currentNumber) {
+  public void setCurrentNumber(Integer currentNumber) {
     this.currentNumber = currentNumber;
   }
 

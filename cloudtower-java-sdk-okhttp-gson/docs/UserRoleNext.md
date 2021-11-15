@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **platform** | **UserRolePlatform** |  | 
 **preset** | [**UserRolePreset**](UserRolePreset.md) |  |  [optional]
-**users** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**users** | [**List&lt;NestedUser&gt;**](NestedUser.md) |  |  [optional]
 
 
 

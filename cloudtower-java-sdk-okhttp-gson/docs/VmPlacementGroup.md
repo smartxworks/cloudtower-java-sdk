@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster** | [**AlertRuleCluster**](AlertRuleCluster.md) |  | 
+**cluster** | [**NestedCluster**](NestedCluster.md) |  | 
 **description** | **String** |  | 
 **enabled** | **Boolean** |  | 
 **entityAsyncStatus** | [**EntityAsyncStatus**](EntityAsyncStatus.md) |  |  [optional]
@@ -17,14 +17,14 @@ Name | Type | Description | Notes
 **localUpdatedAt** | **String** |  | 
 **name** | **String** |  | 
 **vmHostMustEnabled** | **Boolean** |  | 
-**vmHostMustHostUuids** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**vmHostMustHostUuids** | [**List&lt;NestedHost&gt;**](NestedHost.md) |  |  [optional]
 **vmHostMustPolicy** | **Boolean** |  | 
 **vmHostPreferEnabled** | **Boolean** |  | 
-**vmHostPreferHostUuids** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**vmHostPreferHostUuids** | [**List&lt;NestedHost&gt;**](NestedHost.md) |  |  [optional]
 **vmHostPreferPolicy** | **Boolean** |  | 
 **vmVmPolicy** | **VmVmPolicy** |  | 
 **vmVmPolicyEnabled** | **Boolean** |  | 
-**vms** | [**List&lt;AlertRuleCluster&gt;**](AlertRuleCluster.md) |  |  [optional]
+**vms** | [**List&lt;NestedVm&gt;**](NestedVm.md) |  |  [optional]
 
 
 

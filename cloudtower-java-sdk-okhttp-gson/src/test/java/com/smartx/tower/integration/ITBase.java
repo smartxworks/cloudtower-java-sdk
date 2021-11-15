@@ -1,13 +1,19 @@
 package com.smartx.tower.integration;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Callable;
+
+import javax.annotation.Resource;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
@@ -100,15 +106,69 @@ public class ITBase {
     return (R) result;
   }
 
-  protected <TArgs, TApi, TResource> void waitForResourceAsyncStatus(TArgs args, TApi api, String func,
-      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs)
-      throws ApiException, InterruptedException, IllegalAccessException, IllegalArgumentException,
-      InvocationTargetException, NoSuchMethodException, SecurityException {
+  protected <TArgs, TApi, TResource> Object waitForResourceCreation(TArgs args, TApi api, String func,
+      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs) throws ApiException, IllegalAccessException,
+      IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+    return waitForResourceCreation(args, api, func, classOfTResource, classOfTArgs, true);
+  }
+
+  protected <TArgs, TApi, TResource> Object waitForResourceCreation(TArgs args, TApi api, String func,
+      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs, boolean waitFinish)
+      throws ApiException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+      NoSuchMethodException, SecurityException {
     Long start = System.currentTimeMillis();
     TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
         args, contentLanguage);
     if (resource instanceof List) {
-      Object first = ((List) resource).get(0);
+      List resourceList = (List) resource;
+      while (resourceList.size() == 0) {
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for async status");
+        }
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage);
+      }
+      if (resourceList.size() > 1) {
+        throw new ApiException(400, "Invalid query parameters");
+      }
+      if (waitFinish) {
+        waitForResourceAsyncStatus(args, api, func, classOfTResource, classOfTArgs);
+      }
+      return resourceList.get(0);
+    } else {
+      while (resource == null) {
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage);
+      }
+      if (waitFinish) {
+        waitForResourceAsyncStatus(args, api, func, classOfTResource, classOfTArgs);
+      }
+      return resource;
+    }
+  }
+
+  protected <TArgs, TApi, TResource> Object waitForResourceAsyncStatus(TArgs args, TApi api, String func,
+      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs) throws ApiException, IllegalAccessException,
+      IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+    Long start = System.currentTimeMillis();
+    TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
+        args, contentLanguage);
+    if (resource instanceof List) {
+      List resourceList = (List) resource;
+      if (resourceList.size() > 1) {
+        throw new ApiException(400, "Invalid query parameters");
+      } else if (resourceList.size() == 0) {
+        throw new ApiException(404, "Resource not found");
+      }
+      Object first = resourceList.get(0);
       while (first != null && first.getClass().getDeclaredMethod("getEntityAsyncStatus").invoke(first) != null) {
         if (System.currentTimeMillis() - start > TIMEOUT) {
           throw new ApiException(408, "Timeout while waiting for async status");
@@ -117,12 +177,14 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        first = ((List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage)).get(0);
+        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+            contentLanguage);
+        if (resourceList.isEmpty()) {
+          throw new ApiException(404, "Resource not found");
+        }
+        first = resourceList.get(0);
       }
-      if (first == null) {
-        throw new ApiException(404, "Resource not found");
-      }
+      return first;
     } else {
       while (resource != null
           && classOfTResource.getClass().getDeclaredMethod("getEntityAsyncStatus").invoke(resource) != null) {
@@ -139,6 +201,7 @@ public class ITBase {
       if (resource == null) {
         throw new ApiException(404, "Resource not found");
       }
+      return resource;
     }
   }
 
@@ -149,11 +212,15 @@ public class ITBase {
     TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
         args, contentLanguage);
     if (resource instanceof List) {
-      while (((List) resource).size() > 0) {
+      List resourceList = (List) resource;
+      while (resourceList.size() > 0) {
+        if (resourceList.size() > 1) {
+          throw new ApiException(400, "Invalid query parameters");
+        }
         if (System.currentTimeMillis() - start > TIMEOUT) {
           throw new ApiException(408, "Timeout while waiting for async status");
         }
-        Object first = ((List) resource).get(0);
+        Object first = resourceList.get(0);
         if (first.getClass().getDeclaredMethod("getEntityAsyncStatus").invoke(first) != EntityAsyncStatus.DELETING) {
           LOGGER.warn("Failed to delete resource");
           return;
@@ -162,7 +229,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
+        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
             contentLanguage);
       }
     } else {
@@ -185,7 +252,60 @@ public class ITBase {
     }
   }
 
-  protected void waitForVmEntityAsyncStatus(String id, VmApi api) throws ApiException {
+  protected <TArgs, TApi, TResource> Object waitForResourceUpdationToTargetValue(TArgs args, TApi api, Method method,
+      Class<TResource> classOfTResource, Class<TArgs> classOfTArgs, List<Method> callTree, Object target)
+      throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException,
+      SecurityException, ApiException {
+    Long start = System.currentTimeMillis();
+    TResource resource = (TResource) method.invoke(api, args, contentLanguage);
+    if (resource instanceof List) {
+      List resourceList = (List) resource;
+      while (resourceList.size() > 0) {
+        if (resourceList.size() > 1) {
+          throw new ApiException(400, "Invalid query parameters");
+        }
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for async status");
+        }
+        Object firstElement = resourceList.get(0);
+        Object cursor = firstElement;
+        for (Method toCall : callTree) {
+          cursor = toCall.invoke(cursor);
+        }
+
+        if (cursor.equals(target)) {
+          return firstElement;
+        }
+
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        resourceList = (List) method.invoke(api, args, contentLanguage);
+      }
+    } else {
+      while (resource != null) {
+        if (System.currentTimeMillis() - start > TIMEOUT) {
+          throw new ApiException(408, "Timeout while waiting for resource deletion");
+        }
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        Object cursor = resource;
+        for (Method toCall : callTree) {
+          cursor = toCall.invoke(cursor);
+        }
+        if (cursor.equals(target)) {
+          return resource;
+        }
+        resource = (TResource) method.invoke(api, args, contentLanguage);
+      }
+    }
+    return null;
+  }
+
+  protected Vm waitForVmEntityAsyncStatus(String id, VmApi api) throws ApiException {
     Long start = System.currentTimeMillis();
     Vm vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage).get(0);
     while (vm != null && vm.getEntityAsyncStatus() != null) {
@@ -202,6 +322,7 @@ public class ITBase {
     if (vm == null) {
       throw new ApiException(404, "VM not found");
     }
+    return vm;
   }
 
   protected void waitForVmDeletion(String id, VmApi api) throws ApiException {
