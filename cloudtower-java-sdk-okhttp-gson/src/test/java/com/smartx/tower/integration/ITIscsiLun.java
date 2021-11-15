@@ -91,7 +91,7 @@ public class ITIscsiLun extends ITBase {
           }.getClass(), GetIscsiLunsRequestBody.class);
       assertThat(createResult).as("check result of createIscsiLun").isNotNull();
       IscsiLunUpdationParams updateParams = new IscsiLunUpdationParams().where(new IscsiLunWhereInput().id(lun.getId()))
-          .data(new IscsiLunCommonParams().allowedInitiators(lun.getAllowedInitiators()));
+          .data(new IscsiLunUpdationParamsData().allowedInitiators(lun.getAllowedInitiators()));
       List<WithTaskIscsiLun> updateResult = api.updateIscsiLun(updateParams, contentLanguage);
       waitForResourceAsyncStatus(new GetIscsiLunsRequestBody().where(new IscsiLunWhereInput().id(lun.getId())), api,
           "getIscsiLuns", new TypeToken<List<IscsiLun>>() {

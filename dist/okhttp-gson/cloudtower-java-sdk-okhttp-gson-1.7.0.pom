@@ -10,7 +10,7 @@
   <scm>
     <connection>scm:git:git@github.com:Sczlog/cloudtower-java-sdk.git</connection>
     <developerConnection>scm:git:git@github.com:Sczlog/cloudtower-java-sdk.git</developerConnection>
-    <url>https://github.com/Sczlog/cloudtower-java-sdk</url>
+    <url>https://github.com/Sczlog/cloudtower-java-sdk/cloudtower-java-sdk-okhttp-gson</url>
   </scm>
 
   <licenses>
@@ -142,6 +142,20 @@
               </sources>
             </configuration>
           </execution>
+          <execution>
+            <id>add-test-resource</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>add-test-resource</goal>
+            </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>src/test/resource</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
       <plugin>
@@ -262,15 +276,15 @@
     </dependency>
     <!-- test dependencies -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit-version}</version>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.4.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>3.11.2</version>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.21.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

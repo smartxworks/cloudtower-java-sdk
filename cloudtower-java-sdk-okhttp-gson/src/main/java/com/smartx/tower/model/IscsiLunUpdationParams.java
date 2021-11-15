@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -32,46 +31,45 @@ import java.io.IOException;
 public class IscsiLunUpdationParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private Object data;
+  private IscsiLunUpdationParamsData data;
 
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)
   private IscsiLunWhereInput where;
 
+  public IscsiLunUpdationParams data(IscsiLunUpdationParamsData data) {
 
-  public IscsiLunUpdationParams data(Object data) {
-    
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Get data
+   * 
    * @return data
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(required = true, value = "")
 
-  public Object getData() {
+  public IscsiLunUpdationParamsData getData() {
     return data;
   }
 
-
-  public void setData(Object data) {
+  public void setData(IscsiLunUpdationParamsData data) {
     this.data = data;
   }
 
-
   public IscsiLunUpdationParams where(IscsiLunWhereInput where) {
-    
+
     this.where = where;
     return this;
   }
 
-   /**
+  /**
    * Get where
+   * 
    * @return where
-  **/
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -79,11 +77,9 @@ public class IscsiLunUpdationParams {
     return where;
   }
 
-
   public void setWhere(IscsiLunWhereInput where) {
     this.where = where;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -94,8 +90,8 @@ public class IscsiLunUpdationParams {
       return false;
     }
     IscsiLunUpdationParams iscsiLunUpdationParams = (IscsiLunUpdationParams) o;
-    return Objects.equals(this.data, iscsiLunUpdationParams.data) &&
-        Objects.equals(this.where, iscsiLunUpdationParams.where);
+    return Objects.equals(this.data, iscsiLunUpdationParams.data)
+        && Objects.equals(this.where, iscsiLunUpdationParams.where);
   }
 
   @Override
@@ -125,4 +121,3 @@ public class IscsiLunUpdationParams {
   }
 
 }
-
