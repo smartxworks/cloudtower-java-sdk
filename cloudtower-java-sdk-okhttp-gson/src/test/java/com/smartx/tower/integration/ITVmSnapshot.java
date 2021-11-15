@@ -55,13 +55,11 @@ public class ITVmSnapshot extends ITBase {
     cluster = getData("defaultCluster", Cluster.class);
     params.add(new VmCreationParams().name("tower-sdk-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1)
         .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
-        .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
+        .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
-    vm = vmApi.createVm(params, contentLanguage).get(0).getData();
-    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
-        }.getClass(), GetVmsRequestBody.class);
+    WithTaskVm createResult = vmApi.createVm(params, contentLanguage).get(0);
+    vm = createResult.getData();
+    waitForTaskSucceed(createResult.getTaskId());
   }
 
   @AfterMethod(groups = { "need_vm" }, alwaysRun = true)
@@ -71,13 +69,12 @@ public class ITVmSnapshot extends ITBase {
         "getVms", new TypeToken<List<Vm>>() {
         }.getClass(), GetVmsRequestBody.class);
     if (_vm.getStatus() == VmStatus.RUNNING) {
-      vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage);
-      waitForVmEntityAsyncStatus(_vm.getId(), vmApi);
+      waitForTaskSucceed(
+          vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage).get(0)
+              .getTaskId());
     }
-    vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
-    waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
-        }.getClass(), GetVmsRequestBody.class);
+    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+        .get(0).getTaskId());
   }
 
   @Test(dataProvider = "vmSnapshotPayload", groups = { "need_vm" })
@@ -143,12 +140,10 @@ public class ITVmSnapshot extends ITBase {
     params.addDataItem(new VmSnapshotCreationParamsData().vmId(vm.getId())
         .name("tower-sdk-test-snapshot" + System.currentTimeMillis()));
     // do some modify to params(optional)
-    List<WithTaskVmSnapshot> result = api.createVmSnapshot(params, contentLanguage);
+    WithTaskVmSnapshot result = api.createVmSnapshot(params, contentLanguage).get(0);
     assertThat(result).as("check result of createVmSnapshot").isNotNull();
-    snapshot = result.get(0).getData();
-    waitForResourceAsyncStatus(new GetVmSnapshotsRequestBody().where(new VmSnapshotWhereInput().id(snapshot.getId())),
-        api, "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
-        }.getClass(), GetVmSnapshotsRequestBody.class);
+    snapshot = result.getData();
+    waitForTaskSucceed(result.getTaskId());
   }
 
   @AfterMethod(alwaysRun = true, onlyForGroups = { "need_vm_snapshot" })
@@ -157,11 +152,9 @@ public class ITVmSnapshot extends ITBase {
     waitForResourceAsyncStatus(new GetVmSnapshotsRequestBody().where(new VmSnapshotWhereInput().id(snapshot.getId())),
         api, "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
         }.getClass(), GetVmSnapshotsRequestBody.class);
-    api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId())),
-        contentLanguage);
-    waitForResourceDeletion(new GetVmSnapshotsRequestBody().where(new VmSnapshotWhereInput().id(snapshot.getId())), api,
-        "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
-        }.getClass(), GetVmSnapshotsRequestBody.class);
+    waitForTaskSucceed(
+        api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId())),
+            contentLanguage).get(0).getTaskId());
     snapshot = null;
   }
 
@@ -177,13 +170,9 @@ public class ITVmSnapshot extends ITBase {
       List<WithTaskVm> result = vmApi.rebuildVm(params, contentLanguage);
       assertThat(result).as("check result of rebuildVm").isNotNull();
       Vm vm = result.get(0).getData();
-      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-          new TypeToken<List<Vm>>() {
-          }.getClass(), GetVmsRequestBody.class);
-      vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
-      waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-          new TypeToken<List<Vm>>() {
-          }.getClass(), GetVmsRequestBody.class);
+      waitForTaskSucceed(result.get(0).getTaskId());
+      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+          .get(0).getTaskId());
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
       LOGGER.error(e.getCode());

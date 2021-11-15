@@ -56,17 +56,10 @@ public class ITVmPlacementGroup extends ITBase {
       // do some modify to params(optional)
       List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params, contentLanguage);
       VmPlacementGroup vmPlacementGroup = result.get(0).getData();
-      waitForResourceAsyncStatus(
-          new GetVmPlacementGroupsRequestBody().where(new VmPlacementGroupWhereInput().id(vmPlacementGroup.getId())),
-          api, "getVmPlacementGroups", (new TypeToken<List<VmCreationParams>>() {
-          }.getClass()), GetVmPlacementGroupsRequestBody.class);
-      api.deleteVmPlacementGroup(
+      waitForTaskSucceed(result.get(0).getTaskId());
+      waitForTaskSucceed(api.deleteVmPlacementGroup(
           new VmPlacementGroupDeletionParams().where(new VmPlacementGroupWhereInput().id(vmPlacementGroup.getId())),
-          contentLanguage);
-      waitForResourceDeletion(
-          new GetVmPlacementGroupsRequestBody().where(new VmPlacementGroupWhereInput().id(vmPlacementGroup.getId())),
-          api, "getVmPlacementGroups", (new TypeToken<List<VmCreationParams>>() {
-          }.getClass()), GetVmPlacementGroupsRequestBody.class);
+          contentLanguage).get(0).getTaskId());
       assertThat(result).as("check result of createVmPlacementGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -120,10 +113,7 @@ public class ITVmPlacementGroup extends ITBase {
         .vmHostMustPolicy(false).vmHostPreferEnabled(false));
     List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params, contentLanguage);
     placementGroup = result.get(0).getData();
-    waitForResourceAsyncStatus(
-        new GetVmPlacementGroupsRequestBody().where(new VmPlacementGroupWhereInput().id(placementGroup.getId())), api,
-        "getVmPlacementGroups", (new TypeToken<List<VmCreationParams>>() {
-        }.getClass()), GetVmPlacementGroupsRequestBody.class);
+    waitForTaskSucceed(result.get(0).getTaskId());
   }
 
   @AfterMethod(onlyForGroups = { "need_vm_placement_group" })
@@ -133,13 +123,9 @@ public class ITVmPlacementGroup extends ITBase {
         new GetVmPlacementGroupsRequestBody().where(new VmPlacementGroupWhereInput().id(placementGroup.getId())), api,
         "getVmPlacementGroups", (new TypeToken<List<VmCreationParams>>() {
         }.getClass()), GetVmPlacementGroupsRequestBody.class);
-    api.deleteVmPlacementGroup(
+    waitForTaskSucceed(api.deleteVmPlacementGroup(
         new VmPlacementGroupDeletionParams().where(new VmPlacementGroupWhereInput().id(placementGroup.getId())),
-        contentLanguage);
-    waitForResourceDeletion(
-        new GetVmPlacementGroupsRequestBody().where(new VmPlacementGroupWhereInput().id(placementGroup.getId())), api,
-        "getVmPlacementGroups", (new TypeToken<List<VmCreationParams>>() {
-        }.getClass()), GetVmPlacementGroupsRequestBody.class);
+        contentLanguage).get(0).getTaskId());
     placementGroup = null;
   }
 

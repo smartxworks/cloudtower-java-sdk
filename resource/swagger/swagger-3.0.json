@@ -119629,26 +119629,29 @@
           }
         ]
       },
+      "IscsiLunUpdationParamsData": {
+        "allOf": [
+          {
+            "properties": {
+              "assigned_size": {
+                "type": "number",
+                "format": "double"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          {
+            "$ref": "#/components/schemas/IscsiLunCommonParams"
+          }
+        ]
+      },
       "IscsiLunUpdationParams": {
         "properties": {
           "data": {
-            "allOf": [
-              {
-                "properties": {
-                  "assigned_size": {
-                    "type": "number",
-                    "format": "double"
-                  },
-                  "name": {
-                    "type": "string"
-                  }
-                },
-                "type": "object"
-              },
-              {
-                "$ref": "#/components/schemas/IscsiLunCommonParams"
-              }
-            ]
+            "$ref": "#/components/schemas/IscsiLunUpdationParamsData"
           },
           "where": {
             "$ref": "#/components/schemas/IscsiLunWhereInput"
@@ -120788,26 +120791,29 @@
           }
         ]
       },
+      "NvmfNamespaceUpdationParamsData": {
+        "allOf": [
+          {
+            "properties": {
+              "assigned_size": {
+                "type": "number",
+                "format": "double"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          {
+            "$ref": "#/components/schemas/NvmfNamespaceCommonParams"
+          }
+        ]
+      },
       "NvmfNamespaceUpdationParams": {
         "properties": {
           "data": {
-            "allOf": [
-              {
-                "properties": {
-                  "assigned_size": {
-                    "type": "number",
-                    "format": "double"
-                  },
-                  "name": {
-                    "type": "string"
-                  }
-                },
-                "type": "object"
-              },
-              {
-                "$ref": "#/components/schemas/NvmfNamespaceCommonParams"
-              }
-            ]
+            "$ref": "#/components/schemas/NvmfNamespaceUpdationParamsData"
           },
           "where": {
             "$ref": "#/components/schemas/NvmfNamespaceWhereInput"
@@ -123626,197 +123632,194 @@
         "type": "object"
       },
       "MountNewCreateDisksParams": {
-        "items": {
-          "properties": {
-            "max_bandwidth_policy": {
-              "$ref": "#/components/schemas/VmDiskIoRestrictType"
-            },
-            "max_bandwidth": {
-              "type": "number",
-              "format": "double"
-            },
-            "max_iops_policy": {
-              "$ref": "#/components/schemas/VmDiskIoRestrictType"
-            },
-            "max_iops": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "vm_volume": {
-              "properties": {
-                "elf_storage_policy": {
-                  "$ref": "#/components/schemas/VmVolumeElfStoragePolicyType"
-                },
-                "path": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number",
-                  "format": "double"
-                },
-                "name": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "elf_storage_policy",
-                "size",
-                "name"
-              ],
-              "type": "object"
-            },
-            "index": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "key": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "bus": {
-              "$ref": "#/components/schemas/Bus"
-            },
-            "boot": {
-              "type": "integer",
-              "format": "int32"
-            }
+        "properties": {
+          "max_bandwidth_policy": {
+            "$ref": "#/components/schemas/VmDiskIoRestrictType"
           },
-          "required": [
-            "vm_volume",
-            "bus",
-            "boot"
-          ],
-          "type": "object"
+          "max_bandwidth": {
+            "type": "number",
+            "format": "double"
+          },
+          "max_iops_policy": {
+            "$ref": "#/components/schemas/VmDiskIoRestrictType"
+          },
+          "max_iops": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vm_volume": {
+            "properties": {
+              "elf_storage_policy": {
+                "$ref": "#/components/schemas/VmVolumeElfStoragePolicyType"
+              },
+              "path": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number",
+                "format": "double"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "elf_storage_policy",
+              "size",
+              "name"
+            ],
+            "type": "object"
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "key": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bus": {
+            "$ref": "#/components/schemas/Bus"
+          },
+          "boot": {
+            "type": "integer",
+            "format": "int32"
+          }
         },
-        "type": "array"
+        "required": [
+          "vm_volume",
+          "bus",
+          "boot"
+        ],
+        "type": "object"
       },
       "MountDisksParams": {
-        "items": {
-          "properties": {
-            "max_bandwidth_policy": {
-              "$ref": "#/components/schemas/VmDiskIoRestrictType"
-            },
-            "max_bandwidth": {
-              "type": "number",
-              "format": "double"
-            },
-            "max_iops_policy": {
-              "$ref": "#/components/schemas/VmDiskIoRestrictType"
-            },
-            "max_iops": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "vm_volume_id": {
-              "type": "string"
-            },
-            "index": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "key": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "bus": {
-              "$ref": "#/components/schemas/Bus"
-            },
-            "boot": {
-              "type": "integer",
-              "format": "int32"
-            }
+        "properties": {
+          "max_bandwidth_policy": {
+            "$ref": "#/components/schemas/VmDiskIoRestrictType"
           },
-          "required": [
-            "vm_volume_id",
-            "index",
-            "bus",
-            "boot"
-          ],
-          "type": "object"
+          "max_bandwidth": {
+            "type": "number",
+            "format": "double"
+          },
+          "max_iops_policy": {
+            "$ref": "#/components/schemas/VmDiskIoRestrictType"
+          },
+          "max_iops": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vm_volume_id": {
+            "type": "string"
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "key": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bus": {
+            "$ref": "#/components/schemas/Bus"
+          },
+          "boot": {
+            "type": "integer",
+            "format": "int32"
+          }
         },
-        "type": "array"
+        "required": [
+          "vm_volume_id",
+          "index",
+          "bus",
+          "boot"
+        ],
+        "type": "object"
       },
       "VmCdRomParams": {
-        "items": {
-          "properties": {
-            "elf_image_id": {
-              "type": "string"
-            },
-            "index": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "key": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "boot": {
-              "type": "integer",
-              "format": "int32"
-            }
+        "properties": {
+          "elf_image_id": {
+            "type": "string"
           },
-          "required": [
-            "index",
-            "boot"
-          ],
-          "type": "object"
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "key": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "boot": {
+            "type": "integer",
+            "format": "int32"
+          }
         },
-        "type": "array"
+        "required": [
+          "index",
+          "boot"
+        ],
+        "type": "object"
       },
       "VmDiskParams": {
         "properties": {
           "mount_cd_roms": {
-            "$ref": "#/components/schemas/VmCdRomParams"
+            "items": {
+              "$ref": "#/components/schemas/VmCdRomParams"
+            },
+            "type": "array"
           },
           "mount_disks": {
-            "$ref": "#/components/schemas/MountDisksParams"
+            "items": {
+              "$ref": "#/components/schemas/MountDisksParams"
+            },
+            "type": "array"
           },
           "mount_new_create_disks": {
-            "$ref": "#/components/schemas/MountNewCreateDisksParams"
+            "items": {
+              "$ref": "#/components/schemas/MountNewCreateDisksParams"
+            },
+            "type": "array"
           }
         },
         "type": "object"
       },
       "VmNicParams": {
-        "items": {
-          "properties": {
-            "subnet_mask": {
-              "type": "string"
-            },
-            "gateway": {
-              "type": "string"
-            },
-            "ip_address": {
-              "type": "string"
-            },
-            "nic_id": {
-              "type": "string"
-            },
-            "connect_vlan_id": {
-              "type": "string"
-            },
-            "mirror": {
-              "type": "boolean"
-            },
-            "model": {
-              "$ref": "#/components/schemas/VmNicModel"
-            },
-            "enabled": {
-              "type": "boolean"
-            },
-            "mac_address": {
-              "type": "string"
-            },
-            "local_id": {
-              "type": "string"
-            }
+        "properties": {
+          "subnet_mask": {
+            "type": "string"
           },
-          "required": [
-            "connect_vlan_id"
-          ],
-          "type": "object"
+          "gateway": {
+            "type": "string"
+          },
+          "ip_address": {
+            "type": "string"
+          },
+          "nic_id": {
+            "type": "string"
+          },
+          "connect_vlan_id": {
+            "type": "string"
+          },
+          "mirror": {
+            "type": "boolean"
+          },
+          "model": {
+            "$ref": "#/components/schemas/VmNicModel"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "mac_address": {
+            "type": "string"
+          },
+          "local_id": {
+            "type": "string"
+          }
         },
-        "type": "array"
+        "required": [
+          "connect_vlan_id"
+        ],
+        "type": "object"
       },
       "VmCreationParams": {
         "properties": {
@@ -123851,7 +123854,10 @@
             "type": "boolean"
           },
           "vm_nics": {
-            "$ref": "#/components/schemas/VmNicParams"
+            "items": {
+              "$ref": "#/components/schemas/VmNicParams"
+            },
+            "type": "array"
           },
           "vm_disks": {
             "$ref": "#/components/schemas/VmDiskParams"
@@ -124021,7 +124027,10 @@
             "type": "boolean"
           },
           "vm_nics": {
-            "$ref": "#/components/schemas/VmNicParams"
+            "items": {
+              "$ref": "#/components/schemas/VmNicParams"
+            },
+            "type": "array"
           },
           "disk_operate": {
             "properties": {
@@ -124156,7 +124165,10 @@
             "type": "boolean"
           },
           "vm_nics": {
-            "$ref": "#/components/schemas/VmNicParams"
+            "items": {
+              "$ref": "#/components/schemas/VmNicParams"
+            },
+            "type": "array"
           },
           "vm_disks": {
             "$ref": "#/components/schemas/VmDiskParams"
@@ -124234,7 +124246,10 @@
             "type": "boolean"
           },
           "vm_nics": {
-            "$ref": "#/components/schemas/VmNicParams"
+            "items": {
+              "$ref": "#/components/schemas/VmNicParams"
+            },
+            "type": "array"
           },
           "vm_disks": {
             "$ref": "#/components/schemas/VmDiskParams"
@@ -124352,6 +124367,21 @@
         ],
         "type": "object"
       },
+      "WithTask_DeleteVm_": {
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/DeleteVm"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "type": "object"
+      },
       "VmOperateParams": {
         "properties": {
           "where": {
@@ -124409,10 +124439,16 @@
               "vm_disks": {
                 "properties": {
                   "mount_disks": {
-                    "$ref": "#/components/schemas/MountDisksParams"
+                    "items": {
+                      "$ref": "#/components/schemas/MountDisksParams"
+                    },
+                    "type": "array"
                   },
                   "mount_new_create_disks": {
-                    "$ref": "#/components/schemas/MountNewCreateDisksParams"
+                    "items": {
+                      "$ref": "#/components/schemas/MountNewCreateDisksParams"
+                    },
+                    "type": "array"
                   }
                 },
                 "type": "object"
@@ -124497,7 +124533,10 @@
           "data": {
             "properties": {
               "vm_cd_roms": {
-                "$ref": "#/components/schemas/VmCdRomParams"
+                "items": {
+                  "$ref": "#/components/schemas/VmCdRomParams"
+                },
+                "type": "array"
               }
             },
             "required": [
@@ -124546,7 +124585,10 @@
           "data": {
             "properties": {
               "vm_nics": {
-                "$ref": "#/components/schemas/VmNicParams"
+                "items": {
+                  "$ref": "#/components/schemas/VmNicParams"
+                },
+                "type": "array"
               }
             },
             "required": [
@@ -144047,25 +144089,7 @@
               "application/json": {
                 "schema": {
                   "items": {
-                    "properties": {
-                      "task_id": {
-                        "type": "string",
-                        "nullable": true
-                      },
-                      "data": {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/DeleteVm"
-                          }
-                        ],
-                        "nullable": true
-                      }
-                    },
-                    "required": [
-                      "task_id",
-                      "data"
-                    ],
-                    "type": "object"
+                    "$ref": "#/components/schemas/WithTask_DeleteVm_"
                   },
                   "type": "array"
                 }
@@ -144128,25 +144152,7 @@
               "application/json": {
                 "schema": {
                   "items": {
-                    "properties": {
-                      "task_id": {
-                        "type": "string",
-                        "nullable": true
-                      },
-                      "data": {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/DeleteVm"
-                          }
-                        ],
-                        "nullable": true
-                      }
-                    },
-                    "required": [
-                      "task_id",
-                      "data"
-                    ],
-                    "type": "object"
+                    "$ref": "#/components/schemas/WithTask_DeleteVm_"
                   },
                   "type": "array"
                 }
@@ -144209,25 +144215,7 @@
               "application/json": {
                 "schema": {
                   "items": {
-                    "properties": {
-                      "task_id": {
-                        "type": "string",
-                        "nullable": true
-                      },
-                      "data": {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/DeleteVm"
-                          }
-                        ],
-                        "nullable": true
-                      }
-                    },
-                    "required": [
-                      "task_id",
-                      "data"
-                    ],
-                    "type": "object"
+                    "$ref": "#/components/schemas/WithTask_DeleteVm_"
                   },
                   "type": "array"
                 }

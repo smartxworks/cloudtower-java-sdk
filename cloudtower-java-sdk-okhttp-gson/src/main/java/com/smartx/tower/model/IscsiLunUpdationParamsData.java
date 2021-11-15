@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -19,7 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.IscsiLunWhereInput;
+import com.smartx.tower.model.IscsiLunCommonParams;
+import com.smartx.tower.model.IscsiLunUpdationParamsDataAllOf;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,7 +29,16 @@ import java.io.IOException;
 /**
  * IscsiLunUpdationParamsData
  */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class IscsiLunUpdationParamsData {
+  public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
+  @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
+  private Double assignedSize;
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
   private Double bpsWrMaxLength;
@@ -104,25 +115,63 @@ public class IscsiLunUpdationParamsData {
   @SerializedName(SERIALIZED_NAME_ALLOWED_INITIATORS)
   private String allowedInitiators;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
 
-  public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
-  @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
-  private Double assignedSize;
+  public IscsiLunUpdationParamsData assignedSize(Double assignedSize) {
+    
+    this.assignedSize = assignedSize;
+    return this;
+  }
+
+   /**
+   * Get assignedSize
+   * @return assignedSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getAssignedSize() {
+    return assignedSize;
+  }
+
+
+  public void setAssignedSize(Double assignedSize) {
+    this.assignedSize = assignedSize;
+  }
+
+
+  public IscsiLunUpdationParamsData name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 
   public IscsiLunUpdationParamsData bpsWrMaxLength(Double bpsWrMaxLength) {
-
+    
     this.bpsWrMaxLength = bpsWrMaxLength;
     return this;
   }
 
-  /**
+   /**
    * Get bpsWrMaxLength
-   * 
    * @return bpsWrMaxLength
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -130,21 +179,22 @@ public class IscsiLunUpdationParamsData {
     return bpsWrMaxLength;
   }
 
+
   public void setBpsWrMaxLength(Double bpsWrMaxLength) {
     this.bpsWrMaxLength = bpsWrMaxLength;
   }
 
-  public IscsiLunUpdationParamsData bpsWrMax(Double bpsWrMax) {
 
+  public IscsiLunUpdationParamsData bpsWrMax(Double bpsWrMax) {
+    
     this.bpsWrMax = bpsWrMax;
     return this;
   }
 
-  /**
+   /**
    * Get bpsWrMax
-   * 
    * @return bpsWrMax
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -152,21 +202,22 @@ public class IscsiLunUpdationParamsData {
     return bpsWrMax;
   }
 
+
   public void setBpsWrMax(Double bpsWrMax) {
     this.bpsWrMax = bpsWrMax;
   }
 
-  public IscsiLunUpdationParamsData bpsRdMaxLength(Double bpsRdMaxLength) {
 
+  public IscsiLunUpdationParamsData bpsRdMaxLength(Double bpsRdMaxLength) {
+    
     this.bpsRdMaxLength = bpsRdMaxLength;
     return this;
   }
 
-  /**
+   /**
    * Get bpsRdMaxLength
-   * 
    * @return bpsRdMaxLength
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -174,21 +225,22 @@ public class IscsiLunUpdationParamsData {
     return bpsRdMaxLength;
   }
 
+
   public void setBpsRdMaxLength(Double bpsRdMaxLength) {
     this.bpsRdMaxLength = bpsRdMaxLength;
   }
 
-  public IscsiLunUpdationParamsData bpsRdMax(Double bpsRdMax) {
 
+  public IscsiLunUpdationParamsData bpsRdMax(Double bpsRdMax) {
+    
     this.bpsRdMax = bpsRdMax;
     return this;
   }
 
-  /**
+   /**
    * Get bpsRdMax
-   * 
    * @return bpsRdMax
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -196,21 +248,22 @@ public class IscsiLunUpdationParamsData {
     return bpsRdMax;
   }
 
+
   public void setBpsRdMax(Double bpsRdMax) {
     this.bpsRdMax = bpsRdMax;
   }
 
-  public IscsiLunUpdationParamsData bpsMaxLength(Double bpsMaxLength) {
 
+  public IscsiLunUpdationParamsData bpsMaxLength(Double bpsMaxLength) {
+    
     this.bpsMaxLength = bpsMaxLength;
     return this;
   }
 
-  /**
+   /**
    * Get bpsMaxLength
-   * 
    * @return bpsMaxLength
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -218,21 +271,22 @@ public class IscsiLunUpdationParamsData {
     return bpsMaxLength;
   }
 
+
   public void setBpsMaxLength(Double bpsMaxLength) {
     this.bpsMaxLength = bpsMaxLength;
   }
 
-  public IscsiLunUpdationParamsData bpsMax(Double bpsMax) {
 
+  public IscsiLunUpdationParamsData bpsMax(Double bpsMax) {
+    
     this.bpsMax = bpsMax;
     return this;
   }
 
-  /**
+   /**
    * Get bpsMax
-   * 
    * @return bpsMax
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -240,21 +294,22 @@ public class IscsiLunUpdationParamsData {
     return bpsMax;
   }
 
+
   public void setBpsMax(Double bpsMax) {
     this.bpsMax = bpsMax;
   }
 
-  public IscsiLunUpdationParamsData iopsWrMaxLength(Double iopsWrMaxLength) {
 
+  public IscsiLunUpdationParamsData iopsWrMaxLength(Double iopsWrMaxLength) {
+    
     this.iopsWrMaxLength = iopsWrMaxLength;
     return this;
   }
 
-  /**
+   /**
    * Get iopsWrMaxLength
-   * 
    * @return iopsWrMaxLength
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -262,21 +317,22 @@ public class IscsiLunUpdationParamsData {
     return iopsWrMaxLength;
   }
 
+
   public void setIopsWrMaxLength(Double iopsWrMaxLength) {
     this.iopsWrMaxLength = iopsWrMaxLength;
   }
 
-  public IscsiLunUpdationParamsData iopsWrMax(Double iopsWrMax) {
 
+  public IscsiLunUpdationParamsData iopsWrMax(Double iopsWrMax) {
+    
     this.iopsWrMax = iopsWrMax;
     return this;
   }
 
-  /**
+   /**
    * Get iopsWrMax
-   * 
    * @return iopsWrMax
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -284,21 +340,22 @@ public class IscsiLunUpdationParamsData {
     return iopsWrMax;
   }
 
+
   public void setIopsWrMax(Double iopsWrMax) {
     this.iopsWrMax = iopsWrMax;
   }
 
-  public IscsiLunUpdationParamsData iopsRdMaxLength(Double iopsRdMaxLength) {
 
+  public IscsiLunUpdationParamsData iopsRdMaxLength(Double iopsRdMaxLength) {
+    
     this.iopsRdMaxLength = iopsRdMaxLength;
     return this;
   }
 
-  /**
+   /**
    * Get iopsRdMaxLength
-   * 
    * @return iopsRdMaxLength
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -306,21 +363,22 @@ public class IscsiLunUpdationParamsData {
     return iopsRdMaxLength;
   }
 
+
   public void setIopsRdMaxLength(Double iopsRdMaxLength) {
     this.iopsRdMaxLength = iopsRdMaxLength;
   }
 
-  public IscsiLunUpdationParamsData iopsRdMax(Double iopsRdMax) {
 
+  public IscsiLunUpdationParamsData iopsRdMax(Double iopsRdMax) {
+    
     this.iopsRdMax = iopsRdMax;
     return this;
   }
 
-  /**
+   /**
    * Get iopsRdMax
-   * 
    * @return iopsRdMax
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -328,21 +386,22 @@ public class IscsiLunUpdationParamsData {
     return iopsRdMax;
   }
 
+
   public void setIopsRdMax(Double iopsRdMax) {
     this.iopsRdMax = iopsRdMax;
   }
 
-  public IscsiLunUpdationParamsData iopsMaxLength(Double iopsMaxLength) {
 
+  public IscsiLunUpdationParamsData iopsMaxLength(Double iopsMaxLength) {
+    
     this.iopsMaxLength = iopsMaxLength;
     return this;
   }
 
-  /**
+   /**
    * Get iopsMaxLength
-   * 
    * @return iopsMaxLength
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -350,21 +409,22 @@ public class IscsiLunUpdationParamsData {
     return iopsMaxLength;
   }
 
+
   public void setIopsMaxLength(Double iopsMaxLength) {
     this.iopsMaxLength = iopsMaxLength;
   }
 
-  public IscsiLunUpdationParamsData iopsMax(Double iopsMax) {
 
+  public IscsiLunUpdationParamsData iopsMax(Double iopsMax) {
+    
     this.iopsMax = iopsMax;
     return this;
   }
 
-  /**
+   /**
    * Get iopsMax
-   * 
    * @return iopsMax
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -372,21 +432,22 @@ public class IscsiLunUpdationParamsData {
     return iopsMax;
   }
 
+
   public void setIopsMax(Double iopsMax) {
     this.iopsMax = iopsMax;
   }
 
-  public IscsiLunUpdationParamsData bpsWr(Double bpsWr) {
 
+  public IscsiLunUpdationParamsData bpsWr(Double bpsWr) {
+    
     this.bpsWr = bpsWr;
     return this;
   }
 
-  /**
+   /**
    * Get bpsWr
-   * 
    * @return bpsWr
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -394,21 +455,22 @@ public class IscsiLunUpdationParamsData {
     return bpsWr;
   }
 
+
   public void setBpsWr(Double bpsWr) {
     this.bpsWr = bpsWr;
   }
 
-  public IscsiLunUpdationParamsData bpsRd(Double bpsRd) {
 
+  public IscsiLunUpdationParamsData bpsRd(Double bpsRd) {
+    
     this.bpsRd = bpsRd;
     return this;
   }
 
-  /**
+   /**
    * Get bpsRd
-   * 
    * @return bpsRd
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -416,21 +478,22 @@ public class IscsiLunUpdationParamsData {
     return bpsRd;
   }
 
+
   public void setBpsRd(Double bpsRd) {
     this.bpsRd = bpsRd;
   }
 
-  public IscsiLunUpdationParamsData bps(Double bps) {
 
+  public IscsiLunUpdationParamsData bps(Double bps) {
+    
     this.bps = bps;
     return this;
   }
 
-  /**
+   /**
    * Get bps
-   * 
    * @return bps
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -438,21 +501,22 @@ public class IscsiLunUpdationParamsData {
     return bps;
   }
 
+
   public void setBps(Double bps) {
     this.bps = bps;
   }
 
-  public IscsiLunUpdationParamsData iopsWr(Double iopsWr) {
 
+  public IscsiLunUpdationParamsData iopsWr(Double iopsWr) {
+    
     this.iopsWr = iopsWr;
     return this;
   }
 
-  /**
+   /**
    * Get iopsWr
-   * 
    * @return iopsWr
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -460,21 +524,22 @@ public class IscsiLunUpdationParamsData {
     return iopsWr;
   }
 
+
   public void setIopsWr(Double iopsWr) {
     this.iopsWr = iopsWr;
   }
 
-  public IscsiLunUpdationParamsData iopsRd(Double iopsRd) {
 
+  public IscsiLunUpdationParamsData iopsRd(Double iopsRd) {
+    
     this.iopsRd = iopsRd;
     return this;
   }
 
-  /**
+   /**
    * Get iopsRd
-   * 
    * @return iopsRd
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -482,21 +547,22 @@ public class IscsiLunUpdationParamsData {
     return iopsRd;
   }
 
+
   public void setIopsRd(Double iopsRd) {
     this.iopsRd = iopsRd;
   }
 
-  public IscsiLunUpdationParamsData iops(Double iops) {
 
+  public IscsiLunUpdationParamsData iops(Double iops) {
+    
     this.iops = iops;
     return this;
   }
 
-  /**
+   /**
    * Get iops
-   * 
    * @return iops
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -504,21 +570,22 @@ public class IscsiLunUpdationParamsData {
     return iops;
   }
 
+
   public void setIops(Double iops) {
     this.iops = iops;
   }
 
-  public IscsiLunUpdationParamsData allowedInitiators(String allowedInitiators) {
 
+  public IscsiLunUpdationParamsData allowedInitiators(String allowedInitiators) {
+    
     this.allowedInitiators = allowedInitiators;
     return this;
   }
 
-  /**
+   /**
    * Get allowedInitiators
-   * 
    * @return allowedInitiators
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -526,52 +593,11 @@ public class IscsiLunUpdationParamsData {
     return allowedInitiators;
   }
 
+
   public void setAllowedInitiators(String allowedInitiators) {
     this.allowedInitiators = allowedInitiators;
   }
 
-  public IscsiLunUpdationParamsData name(String name) {
-
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Get name
-   * 
-   * @return name
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public IscsiLunUpdationParamsData where(Double assignedSize) {
-
-    this.assignedSize = assignedSize;
-    return this;
-  }
-
-  /**
-   * Get assignedSize
-   * 
-   * @return assignedSize
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Double getAssignedSize() {
-    return assignedSize;
-  }
-
-  public void setAssignedSize(Double assignedSize) {
-    this.assignedSize = assignedSize;
-  }
 
   @Override
   public boolean equals(Object o) {
@@ -582,40 +608,40 @@ public class IscsiLunUpdationParamsData {
       return false;
     }
     IscsiLunUpdationParamsData iscsiLunUpdationParamsData = (IscsiLunUpdationParamsData) o;
-    return Objects.equals(this.bpsWrMaxLength, iscsiLunUpdationParamsData.bpsWrMaxLength)
-        && Objects.equals(this.bpsWrMax, iscsiLunUpdationParamsData.bpsWrMax)
-        && Objects.equals(this.bpsRdMaxLength, iscsiLunUpdationParamsData.bpsRdMaxLength)
-        && Objects.equals(this.bpsRdMax, iscsiLunUpdationParamsData.bpsRdMax)
-        && Objects.equals(this.bpsMaxLength, iscsiLunUpdationParamsData.bpsMaxLength)
-        && Objects.equals(this.bpsMax, iscsiLunUpdationParamsData.bpsMax)
-        && Objects.equals(this.iopsWrMaxLength, iscsiLunUpdationParamsData.iopsWrMaxLength)
-        && Objects.equals(this.iopsWrMax, iscsiLunUpdationParamsData.iopsWrMax)
-        && Objects.equals(this.iopsRdMaxLength, iscsiLunUpdationParamsData.iopsRdMaxLength)
-        && Objects.equals(this.iopsRdMax, iscsiLunUpdationParamsData.iopsRdMax)
-        && Objects.equals(this.iopsMaxLength, iscsiLunUpdationParamsData.iopsMaxLength)
-        && Objects.equals(this.iopsMax, iscsiLunUpdationParamsData.iopsMax)
-        && Objects.equals(this.bpsWr, iscsiLunUpdationParamsData.bpsWr)
-        && Objects.equals(this.bpsRd, iscsiLunUpdationParamsData.bpsRd)
-        && Objects.equals(this.bps, iscsiLunUpdationParamsData.bps)
-        && Objects.equals(this.iopsWr, iscsiLunUpdationParamsData.iopsWr)
-        && Objects.equals(this.iopsRd, iscsiLunUpdationParamsData.iopsRd)
-        && Objects.equals(this.iops, iscsiLunUpdationParamsData.iops)
-        && Objects.equals(this.allowedInitiators, iscsiLunUpdationParamsData.allowedInitiators)
-        && Objects.equals(this.name, iscsiLunUpdationParamsData.name)
-        && Objects.equals(this.assignedSize, iscsiLunUpdationParamsData.assignedSize);
+    return Objects.equals(this.assignedSize, iscsiLunUpdationParamsData.assignedSize) &&
+        Objects.equals(this.name, iscsiLunUpdationParamsData.name) &&
+        Objects.equals(this.bpsWrMaxLength, iscsiLunUpdationParamsData.bpsWrMaxLength) &&
+        Objects.equals(this.bpsWrMax, iscsiLunUpdationParamsData.bpsWrMax) &&
+        Objects.equals(this.bpsRdMaxLength, iscsiLunUpdationParamsData.bpsRdMaxLength) &&
+        Objects.equals(this.bpsRdMax, iscsiLunUpdationParamsData.bpsRdMax) &&
+        Objects.equals(this.bpsMaxLength, iscsiLunUpdationParamsData.bpsMaxLength) &&
+        Objects.equals(this.bpsMax, iscsiLunUpdationParamsData.bpsMax) &&
+        Objects.equals(this.iopsWrMaxLength, iscsiLunUpdationParamsData.iopsWrMaxLength) &&
+        Objects.equals(this.iopsWrMax, iscsiLunUpdationParamsData.iopsWrMax) &&
+        Objects.equals(this.iopsRdMaxLength, iscsiLunUpdationParamsData.iopsRdMaxLength) &&
+        Objects.equals(this.iopsRdMax, iscsiLunUpdationParamsData.iopsRdMax) &&
+        Objects.equals(this.iopsMaxLength, iscsiLunUpdationParamsData.iopsMaxLength) &&
+        Objects.equals(this.iopsMax, iscsiLunUpdationParamsData.iopsMax) &&
+        Objects.equals(this.bpsWr, iscsiLunUpdationParamsData.bpsWr) &&
+        Objects.equals(this.bpsRd, iscsiLunUpdationParamsData.bpsRd) &&
+        Objects.equals(this.bps, iscsiLunUpdationParamsData.bps) &&
+        Objects.equals(this.iopsWr, iscsiLunUpdationParamsData.iopsWr) &&
+        Objects.equals(this.iopsRd, iscsiLunUpdationParamsData.iopsRd) &&
+        Objects.equals(this.iops, iscsiLunUpdationParamsData.iops) &&
+        Objects.equals(this.allowedInitiators, iscsiLunUpdationParamsData.allowedInitiators);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bpsWrMaxLength, bpsWrMax, bpsRdMaxLength, bpsRdMax, bpsMaxLength, bpsMax, iopsWrMaxLength,
-        iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWr, bpsRd, bps, iopsWr, iopsRd, iops,
-        allowedInitiators, name, assignedSize);
+    return Objects.hash(assignedSize, name, bpsWrMaxLength, bpsWrMax, bpsRdMaxLength, bpsRdMax, bpsMaxLength, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWr, bpsRd, bps, iopsWr, iopsRd, iops, allowedInitiators);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiLunUpdationParamsData {\n");
+    sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
     sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
     sb.append("    bpsRdMaxLength: ").append(toIndentedString(bpsRdMaxLength)).append("\n");
@@ -635,8 +661,6 @@ public class IscsiLunUpdationParamsData {
     sb.append("    iopsRd: ").append(toIndentedString(iopsRd)).append("\n");
     sb.append("    iops: ").append(toIndentedString(iops)).append("\n");
     sb.append("    allowedInitiators: ").append(toIndentedString(allowedInitiators)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    assigned_size: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -653,3 +677,4 @@ public class IscsiLunUpdationParamsData {
   }
 
 }
+

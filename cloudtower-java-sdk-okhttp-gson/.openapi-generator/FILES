@@ -447,7 +447,6 @@ docs/HostWhereInput.md
 docs/Hypervisor.md
 docs/ImageConnector.md
 docs/ImageConnectorApi.md
-docs/InlineResponse200.md
 docs/InstallVmtoolsParams.md
 docs/InstallVmtoolsParamsData.md
 docs/Ipmi.md
@@ -479,6 +478,8 @@ docs/IscsiLunSnapshotDeletionParams.md
 docs/IscsiLunSnapshotOrderByInput.md
 docs/IscsiLunSnapshotWhereInput.md
 docs/IscsiLunUpdationParams.md
+docs/IscsiLunUpdationParamsData.md
+docs/IscsiLunUpdationParamsDataAllOf.md
 docs/IscsiLunWhereInput.md
 docs/IscsiTarget.md
 docs/IscsiTargetApi.md
@@ -532,6 +533,9 @@ docs/MigrateTransmitterConnection.md
 docs/MigrateTransmitterOrderByInput.md
 docs/MigrateTransmitterWhereInput.md
 docs/MigrationVlanUpdationParams.md
+docs/MountDisksParams.md
+docs/MountNewCreateDisksParams.md
+docs/MountNewCreateDisksParamsVmVolume.md
 docs/NamespaceGroup.md
 docs/NamespaceGroupApi.md
 docs/NamespaceGroupConnection.md
@@ -779,6 +783,7 @@ docs/NvmfNamespaceSnapshotDeletionParams.md
 docs/NvmfNamespaceSnapshotOrderByInput.md
 docs/NvmfNamespaceSnapshotWhereInput.md
 docs/NvmfNamespaceUpdationParams.md
+docs/NvmfNamespaceUpdationParamsData.md
 docs/NvmfNamespaceWhereInput.md
 docs/NvmfSubsystem.md
 docs/NvmfSubsystemApi.md
@@ -1009,6 +1014,7 @@ docs/VmAddFolderParamsData.md
 docs/VmAddNicParams.md
 docs/VmAddNicParamsData.md
 docs/VmApi.md
+docs/VmCdRomParams.md
 docs/VmClockOffset.md
 docs/VmCloneParams.md
 docs/VmConnection.md
@@ -1051,6 +1057,7 @@ docs/VmNicApi.md
 docs/VmNicConnection.md
 docs/VmNicModel.md
 docs/VmNicOrderByInput.md
+docs/VmNicParams.md
 docs/VmNicWhereInput.md
 docs/VmOperateParams.md
 docs/VmOrderByInput.md
@@ -1157,6 +1164,7 @@ docs/WithTaskDeleteUser.md
 docs/WithTaskDeleteVds.md
 docs/WithTaskDeleteView.md
 docs/WithTaskDeleteVlan.md
+docs/WithTaskDeleteVm.md
 docs/WithTaskDeleteVmFolder.md
 docs/WithTaskDeleteVmPlacementGroup.md
 docs/WithTaskDeleteVmSnapshot.md
@@ -1747,7 +1755,6 @@ src/main/java/com/smartx/tower/model/HostUpdationParamsData.java
 src/main/java/com/smartx/tower/model/HostWhereInput.java
 src/main/java/com/smartx/tower/model/Hypervisor.java
 src/main/java/com/smartx/tower/model/ImageConnector.java
-src/main/java/com/smartx/tower/model/InlineResponse200.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParams.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParamsData.java
 src/main/java/com/smartx/tower/model/Ipmi.java
@@ -1774,6 +1781,8 @@ src/main/java/com/smartx/tower/model/IscsiLunSnapshotDeletionParams.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshotOrderByInput.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshotWhereInput.java
 src/main/java/com/smartx/tower/model/IscsiLunUpdationParams.java
+src/main/java/com/smartx/tower/model/IscsiLunUpdationParamsData.java
+src/main/java/com/smartx/tower/model/IscsiLunUpdationParamsDataAllOf.java
 src/main/java/com/smartx/tower/model/IscsiLunWhereInput.java
 src/main/java/com/smartx/tower/model/IscsiTarget.java
 src/main/java/com/smartx/tower/model/IscsiTargetCommonParams.java
@@ -1821,6 +1830,9 @@ src/main/java/com/smartx/tower/model/MigrateTransmitterConnection.java
 src/main/java/com/smartx/tower/model/MigrateTransmitterOrderByInput.java
 src/main/java/com/smartx/tower/model/MigrateTransmitterWhereInput.java
 src/main/java/com/smartx/tower/model/MigrationVlanUpdationParams.java
+src/main/java/com/smartx/tower/model/MountDisksParams.java
+src/main/java/com/smartx/tower/model/MountNewCreateDisksParams.java
+src/main/java/com/smartx/tower/model/MountNewCreateDisksParamsVmVolume.java
 src/main/java/com/smartx/tower/model/NamespaceGroup.java
 src/main/java/com/smartx/tower/model/NamespaceGroupConnection.java
 src/main/java/com/smartx/tower/model/NamespaceGroupCreationParams.java
@@ -2061,6 +2073,7 @@ src/main/java/com/smartx/tower/model/NvmfNamespaceSnapshotDeletionParams.java
 src/main/java/com/smartx/tower/model/NvmfNamespaceSnapshotOrderByInput.java
 src/main/java/com/smartx/tower/model/NvmfNamespaceSnapshotWhereInput.java
 src/main/java/com/smartx/tower/model/NvmfNamespaceUpdationParams.java
+src/main/java/com/smartx/tower/model/NvmfNamespaceUpdationParamsData.java
 src/main/java/com/smartx/tower/model/NvmfNamespaceWhereInput.java
 src/main/java/com/smartx/tower/model/NvmfSubsystem.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemCommonParams.java
@@ -2265,6 +2278,7 @@ src/main/java/com/smartx/tower/model/VmAddFolderParams.java
 src/main/java/com/smartx/tower/model/VmAddFolderParamsData.java
 src/main/java/com/smartx/tower/model/VmAddNicParams.java
 src/main/java/com/smartx/tower/model/VmAddNicParamsData.java
+src/main/java/com/smartx/tower/model/VmCdRomParams.java
 src/main/java/com/smartx/tower/model/VmClockOffset.java
 src/main/java/com/smartx/tower/model/VmCloneParams.java
 src/main/java/com/smartx/tower/model/VmConnection.java
@@ -2303,6 +2317,7 @@ src/main/java/com/smartx/tower/model/VmNic.java
 src/main/java/com/smartx/tower/model/VmNicConnection.java
 src/main/java/com/smartx/tower/model/VmNicModel.java
 src/main/java/com/smartx/tower/model/VmNicOrderByInput.java
+src/main/java/com/smartx/tower/model/VmNicParams.java
 src/main/java/com/smartx/tower/model/VmNicWhereInput.java
 src/main/java/com/smartx/tower/model/VmOperateParams.java
 src/main/java/com/smartx/tower/model/VmOrderByInput.java
@@ -2404,6 +2419,7 @@ src/main/java/com/smartx/tower/model/WithTaskDeleteUser.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteVds.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteView.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteVlan.java
+src/main/java/com/smartx/tower/model/WithTaskDeleteVm.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteVmFolder.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteVmPlacementGroup.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteVmSnapshot.java

@@ -149,13 +149,11 @@ public class ITVmFolder extends ITBase {
     Vlan vlan = getData("defaultVlan", Vlan.class);
     params.add(new VmCreationParams().name("tower-sdk-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1)
         .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
-        .clusterId(cluster.getId())
-        .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
+        .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
-    vm = vmApi.createVm(params, contentLanguage).get(0).getData();
-    waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
-        }.getClass(), GetVmsRequestBody.class);
+    WithTaskVm createResult = vmApi.createVm(params, contentLanguage).get(0);
+    vm = createResult.getData();
+    waitForTaskSucceed(createResult.getTaskId());
   }
 
   @AfterMethod(groups = { "need_vm" }, alwaysRun = true)
@@ -166,13 +164,12 @@ public class ITVmFolder extends ITBase {
         }.getClass(), GetVmsRequestBody.class);
     // shudown vm first before delete it if itis running;
     if (_vm.getStatus() == VmStatus.RUNNING) {
-      vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage);
-      waitForVmEntityAsyncStatus(_vm.getId(), vmApi);
+      waitForTaskSucceed(
+          vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage).get(0)
+              .getTaskId());
     }
-    vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
-    waitForResourceDeletion(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-        new TypeToken<List<Vm>>() {
-        }.getClass(), GetVmsRequestBody.class);
+    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+        .get(0).getTaskId());
     vm = null;
   }
 
@@ -185,13 +182,10 @@ public class ITVmFolder extends ITBase {
       // do some modify to params(optional)
       params.where(new VmWhereInput().id(vm.getId())).data(new VmAddFolderParamsData().folderId(folder.getId()));
       List<WithTaskVm> result = vmApi.addVmToFolder(params, contentLanguage);
-      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-          new TypeToken<List<Vm>>() {
-          }.getClass(), GetVmsRequestBody.class);
-      vmApi.removeVmToFolder(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage);
-      waitForResourceAsyncStatus(new GetVmsRequestBody().where(new VmWhereInput().id(vm.getId())), vmApi, "getVms",
-          new TypeToken<List<Vm>>() {
-          }.getClass(), GetVmsRequestBody.class);
+      waitForTaskSucceed(result.get(0).getTaskId());
+      waitForTaskSucceed(
+          vmApi.removeVmToFolder(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage).get(0)
+              .getTaskId());
       assertThat(result).as("check result of addVmToFolder").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -30,7 +30,6 @@ import java.io.IOException;
 import com.smartx.tower.model.ConvertVmTemplateToVmParams;
 import com.smartx.tower.model.GetVmsConnectionRequestBody;
 import com.smartx.tower.model.GetVmsRequestBody;
-import com.smartx.tower.model.InlineResponse200;
 import com.smartx.tower.model.InstallVmtoolsParams;
 import com.smartx.tower.model.Vm;
 import com.smartx.tower.model.VmAddCdRomParams;
@@ -52,6 +51,7 @@ import com.smartx.tower.model.VmStartParams;
 import com.smartx.tower.model.VmUpdateDiskParams;
 import com.smartx.tower.model.VmUpdateNicParams;
 import com.smartx.tower.model.VmUpdateParams;
+import com.smartx.tower.model.WithTaskDeleteVm;
 import com.smartx.tower.model.WithTaskVm;
 
 import java.lang.reflect.Type;
@@ -1130,7 +1130,7 @@ public class VmApi {
      * 
      * @param vmOperateParams  (required)
      * @param contentLanguage  (optional, default to en-US)
-     * @return List&lt;InlineResponse200&gt;
+     * @return List&lt;WithTaskDeleteVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1139,8 +1139,8 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse200> deleteVm(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<InlineResponse200>> localVarResp = deleteVmWithHttpInfo(vmOperateParams, contentLanguage);
+    public List<WithTaskDeleteVm> deleteVm(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVm>> localVarResp = deleteVmWithHttpInfo(vmOperateParams, contentLanguage);
         return localVarResp.getData();
     }
 
@@ -1149,7 +1149,7 @@ public class VmApi {
      * 
      * @param vmOperateParams  (required)
      * @param contentLanguage  (optional, default to en-US)
-     * @return ApiResponse&lt;List&lt;InlineResponse200&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskDeleteVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1158,9 +1158,9 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse200>> deleteVmWithHttpInfo(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
+    public ApiResponse<List<WithTaskDeleteVm>> deleteVmWithHttpInfo(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
         okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmOperateParams, contentLanguage, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1179,10 +1179,10 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmAsync(VmOperateParams vmOperateParams, String contentLanguage, final ApiCallback<List<InlineResponse200>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmAsync(VmOperateParams vmOperateParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmOperateParams, contentLanguage, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1991,7 +1991,7 @@ public class VmApi {
      * 
      * @param vmOperateParams  (required)
      * @param contentLanguage  (optional, default to en-US)
-     * @return List&lt;InlineResponse200&gt;
+     * @return List&lt;WithTaskDeleteVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2000,8 +2000,8 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse200> moveVmToRecycleBin(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<InlineResponse200>> localVarResp = moveVmToRecycleBinWithHttpInfo(vmOperateParams, contentLanguage);
+    public List<WithTaskDeleteVm> moveVmToRecycleBin(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVm>> localVarResp = moveVmToRecycleBinWithHttpInfo(vmOperateParams, contentLanguage);
         return localVarResp.getData();
     }
 
@@ -2010,7 +2010,7 @@ public class VmApi {
      * 
      * @param vmOperateParams  (required)
      * @param contentLanguage  (optional, default to en-US)
-     * @return ApiResponse&lt;List&lt;InlineResponse200&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskDeleteVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2019,9 +2019,9 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse200>> moveVmToRecycleBinWithHttpInfo(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
+    public ApiResponse<List<WithTaskDeleteVm>> moveVmToRecycleBinWithHttpInfo(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
         okhttp3.Call localVarCall = moveVmToRecycleBinValidateBeforeCall(vmOperateParams, contentLanguage, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2040,10 +2040,10 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call moveVmToRecycleBinAsync(VmOperateParams vmOperateParams, String contentLanguage, final ApiCallback<List<InlineResponse200>> _callback) throws ApiException {
+    public okhttp3.Call moveVmToRecycleBinAsync(VmOperateParams vmOperateParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = moveVmToRecycleBinValidateBeforeCall(vmOperateParams, contentLanguage, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2237,7 +2237,7 @@ public class VmApi {
      * 
      * @param vmOperateParams  (required)
      * @param contentLanguage  (optional, default to en-US)
-     * @return List&lt;InlineResponse200&gt;
+     * @return List&lt;WithTaskDeleteVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2246,8 +2246,8 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse200> recoverVmFromRecycleBin(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<InlineResponse200>> localVarResp = recoverVmFromRecycleBinWithHttpInfo(vmOperateParams, contentLanguage);
+    public List<WithTaskDeleteVm> recoverVmFromRecycleBin(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVm>> localVarResp = recoverVmFromRecycleBinWithHttpInfo(vmOperateParams, contentLanguage);
         return localVarResp.getData();
     }
 
@@ -2256,7 +2256,7 @@ public class VmApi {
      * 
      * @param vmOperateParams  (required)
      * @param contentLanguage  (optional, default to en-US)
-     * @return ApiResponse&lt;List&lt;InlineResponse200&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskDeleteVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2265,9 +2265,9 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse200>> recoverVmFromRecycleBinWithHttpInfo(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
+    public ApiResponse<List<WithTaskDeleteVm>> recoverVmFromRecycleBinWithHttpInfo(VmOperateParams vmOperateParams, String contentLanguage) throws ApiException {
         okhttp3.Call localVarCall = recoverVmFromRecycleBinValidateBeforeCall(vmOperateParams, contentLanguage, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2286,10 +2286,10 @@ public class VmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call recoverVmFromRecycleBinAsync(VmOperateParams vmOperateParams, String contentLanguage, final ApiCallback<List<InlineResponse200>> _callback) throws ApiException {
+    public okhttp3.Call recoverVmFromRecycleBinAsync(VmOperateParams vmOperateParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = recoverVmFromRecycleBinValidateBeforeCall(vmOperateParams, contentLanguage, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -24,6 +25,7 @@ import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
 import com.smartx.tower.model.VmFirmware;
 import com.smartx.tower.model.VmGuestsOperationSystem;
+import com.smartx.tower.model.VmNicParams;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -120,17 +122,17 @@ public class VmRebuildParams {
   @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
   private String clusterId;
 
-  public VmRebuildParams rebuildFromSnapshotId(String rebuildFromSnapshotId) {
 
+  public VmRebuildParams rebuildFromSnapshotId(String rebuildFromSnapshotId) {
+    
     this.rebuildFromSnapshotId = rebuildFromSnapshotId;
     return this;
   }
 
-  /**
+   /**
    * Get rebuildFromSnapshotId
-   * 
    * @return rebuildFromSnapshotId
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -138,21 +140,22 @@ public class VmRebuildParams {
     return rebuildFromSnapshotId;
   }
 
+
   public void setRebuildFromSnapshotId(String rebuildFromSnapshotId) {
     this.rebuildFromSnapshotId = rebuildFromSnapshotId;
   }
 
-  public VmRebuildParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
 
+  public VmRebuildParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
+    
     this.maxBandwidthPolicy = maxBandwidthPolicy;
     return this;
   }
 
-  /**
+   /**
    * Get maxBandwidthPolicy
-   * 
    * @return maxBandwidthPolicy
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -160,21 +163,22 @@ public class VmRebuildParams {
     return maxBandwidthPolicy;
   }
 
+
   public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
   }
 
-  public VmRebuildParams maxBandwidth(Double maxBandwidth) {
 
+  public VmRebuildParams maxBandwidth(Double maxBandwidth) {
+    
     this.maxBandwidth = maxBandwidth;
     return this;
   }
 
-  /**
+   /**
    * Get maxBandwidth
-   * 
    * @return maxBandwidth
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -182,21 +186,22 @@ public class VmRebuildParams {
     return maxBandwidth;
   }
 
+
   public void setMaxBandwidth(Double maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
-  public VmRebuildParams maxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
 
+  public VmRebuildParams maxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    
     this.maxIopsPolicy = maxIopsPolicy;
     return this;
   }
 
-  /**
+   /**
    * Get maxIopsPolicy
-   * 
    * @return maxIopsPolicy
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -204,21 +209,22 @@ public class VmRebuildParams {
     return maxIopsPolicy;
   }
 
+
   public void setMaxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
     this.maxIopsPolicy = maxIopsPolicy;
   }
 
-  public VmRebuildParams maxIops(Integer maxIops) {
 
+  public VmRebuildParams maxIops(Integer maxIops) {
+    
     this.maxIops = maxIops;
     return this;
   }
 
-  /**
+   /**
    * Get maxIops
-   * 
    * @return maxIops
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -226,21 +232,22 @@ public class VmRebuildParams {
     return maxIops;
   }
 
+
   public void setMaxIops(Integer maxIops) {
     this.maxIops = maxIops;
   }
 
-  public VmRebuildParams ioPolicy(VmDiskIoPolicy ioPolicy) {
 
+  public VmRebuildParams ioPolicy(VmDiskIoPolicy ioPolicy) {
+    
     this.ioPolicy = ioPolicy;
     return this;
   }
 
-  /**
+   /**
    * Get ioPolicy
-   * 
    * @return ioPolicy
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -248,21 +255,22 @@ public class VmRebuildParams {
     return ioPolicy;
   }
 
+
   public void setIoPolicy(VmDiskIoPolicy ioPolicy) {
     this.ioPolicy = ioPolicy;
   }
 
-  public VmRebuildParams vcpu(Integer vcpu) {
 
+  public VmRebuildParams vcpu(Integer vcpu) {
+    
     this.vcpu = vcpu;
     return this;
   }
 
-  /**
+   /**
    * Get vcpu
-   * 
    * @return vcpu
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -270,21 +278,22 @@ public class VmRebuildParams {
     return vcpu;
   }
 
+
   public void setVcpu(Integer vcpu) {
     this.vcpu = vcpu;
   }
 
-  public VmRebuildParams status(VmStatus status) {
 
+  public VmRebuildParams status(VmStatus status) {
+    
     this.status = status;
     return this;
   }
 
-  /**
+   /**
    * Get status
-   * 
    * @return status
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -292,21 +301,22 @@ public class VmRebuildParams {
     return status;
   }
 
+
   public void setStatus(VmStatus status) {
     this.status = status;
   }
 
-  public VmRebuildParams firmware(VmFirmware firmware) {
 
+  public VmRebuildParams firmware(VmFirmware firmware) {
+    
     this.firmware = firmware;
     return this;
   }
 
-  /**
+   /**
    * Get firmware
-   * 
    * @return firmware
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -314,21 +324,22 @@ public class VmRebuildParams {
     return firmware;
   }
 
+
   public void setFirmware(VmFirmware firmware) {
     this.firmware = firmware;
   }
 
-  public VmRebuildParams ha(Boolean ha) {
 
+  public VmRebuildParams ha(Boolean ha) {
+    
     this.ha = ha;
     return this;
   }
 
-  /**
+   /**
    * Get ha
-   * 
    * @return ha
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -336,12 +347,14 @@ public class VmRebuildParams {
     return ha;
   }
 
+
   public void setHa(Boolean ha) {
     this.ha = ha;
   }
 
-  public VmRebuildParams vmNics(List<VmNicParams> vmNics) {
 
+  public VmRebuildParams vmNics(List<VmNicParams> vmNics) {
+    
     this.vmNics = vmNics;
     return this;
   }
@@ -354,11 +367,10 @@ public class VmRebuildParams {
     return this;
   }
 
-  /**
+   /**
    * Get vmNics
-   * 
    * @return vmNics
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -366,21 +378,22 @@ public class VmRebuildParams {
     return vmNics;
   }
 
+
   public void setVmNics(List<VmNicParams> vmNics) {
     this.vmNics = vmNics;
   }
 
-  public VmRebuildParams vmDisks(VmDiskParams vmDisks) {
 
+  public VmRebuildParams vmDisks(VmDiskParams vmDisks) {
+    
     this.vmDisks = vmDisks;
     return this;
   }
 
-  /**
+   /**
    * Get vmDisks
-   * 
    * @return vmDisks
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -388,21 +401,22 @@ public class VmRebuildParams {
     return vmDisks;
   }
 
+
   public void setVmDisks(VmDiskParams vmDisks) {
     this.vmDisks = vmDisks;
   }
 
-  public VmRebuildParams memory(Double memory) {
 
+  public VmRebuildParams memory(Double memory) {
+    
     this.memory = memory;
     return this;
   }
 
-  /**
+   /**
    * Get memory
-   * 
    * @return memory
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -410,21 +424,22 @@ public class VmRebuildParams {
     return memory;
   }
 
+
   public void setMemory(Double memory) {
     this.memory = memory;
   }
 
-  public VmRebuildParams cpuCores(Integer cpuCores) {
 
+  public VmRebuildParams cpuCores(Integer cpuCores) {
+    
     this.cpuCores = cpuCores;
     return this;
   }
 
-  /**
+   /**
    * Get cpuCores
-   * 
    * @return cpuCores
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -432,21 +447,22 @@ public class VmRebuildParams {
     return cpuCores;
   }
 
+
   public void setCpuCores(Integer cpuCores) {
     this.cpuCores = cpuCores;
   }
 
-  public VmRebuildParams cpuSockets(Integer cpuSockets) {
 
+  public VmRebuildParams cpuSockets(Integer cpuSockets) {
+    
     this.cpuSockets = cpuSockets;
     return this;
   }
 
-  /**
+   /**
    * Get cpuSockets
-   * 
    * @return cpuSockets
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -454,21 +470,22 @@ public class VmRebuildParams {
     return cpuSockets;
   }
 
+
   public void setCpuSockets(Integer cpuSockets) {
     this.cpuSockets = cpuSockets;
   }
 
-  public VmRebuildParams guestOsType(VmGuestsOperationSystem guestOsType) {
 
+  public VmRebuildParams guestOsType(VmGuestsOperationSystem guestOsType) {
+    
     this.guestOsType = guestOsType;
     return this;
   }
 
-  /**
+   /**
    * Get guestOsType
-   * 
    * @return guestOsType
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -476,21 +493,22 @@ public class VmRebuildParams {
     return guestOsType;
   }
 
+
   public void setGuestOsType(VmGuestsOperationSystem guestOsType) {
     this.guestOsType = guestOsType;
   }
 
-  public VmRebuildParams folderId(String folderId) {
 
+  public VmRebuildParams folderId(String folderId) {
+    
     this.folderId = folderId;
     return this;
   }
 
-  /**
+   /**
    * Get folderId
-   * 
    * @return folderId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -498,21 +516,22 @@ public class VmRebuildParams {
     return folderId;
   }
 
+
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
 
-  public VmRebuildParams description(String description) {
 
+  public VmRebuildParams description(String description) {
+    
     this.description = description;
     return this;
   }
 
-  /**
+   /**
    * Get description
-   * 
    * @return description
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -520,21 +539,22 @@ public class VmRebuildParams {
     return description;
   }
 
+
   public void setDescription(String description) {
     this.description = description;
   }
 
-  public VmRebuildParams name(String name) {
 
+  public VmRebuildParams name(String name) {
+    
     this.name = name;
     return this;
   }
 
-  /**
+   /**
    * Get name
-   * 
    * @return name
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -542,21 +562,22 @@ public class VmRebuildParams {
     return name;
   }
 
+
   public void setName(String name) {
     this.name = name;
   }
 
-  public VmRebuildParams hostId(String hostId) {
 
+  public VmRebuildParams hostId(String hostId) {
+    
     this.hostId = hostId;
     return this;
   }
 
-  /**
+   /**
    * Get hostId
-   * 
    * @return hostId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -564,21 +585,22 @@ public class VmRebuildParams {
     return hostId;
   }
 
+
   public void setHostId(String hostId) {
     this.hostId = hostId;
   }
 
-  public VmRebuildParams clusterId(String clusterId) {
 
+  public VmRebuildParams clusterId(String clusterId) {
+    
     this.clusterId = clusterId;
     return this;
   }
 
-  /**
+   /**
    * Get clusterId
-   * 
    * @return clusterId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -586,9 +608,11 @@ public class VmRebuildParams {
     return clusterId;
   }
 
+
   public void setClusterId(String clusterId) {
     this.clusterId = clusterId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -599,30 +623,32 @@ public class VmRebuildParams {
       return false;
     }
     VmRebuildParams vmRebuildParams = (VmRebuildParams) o;
-    return Objects.equals(this.rebuildFromSnapshotId, vmRebuildParams.rebuildFromSnapshotId)
-        && Objects.equals(this.maxBandwidthPolicy, vmRebuildParams.maxBandwidthPolicy)
-        && Objects.equals(this.maxBandwidth, vmRebuildParams.maxBandwidth)
-        && Objects.equals(this.maxIopsPolicy, vmRebuildParams.maxIopsPolicy)
-        && Objects.equals(this.maxIops, vmRebuildParams.maxIops)
-        && Objects.equals(this.ioPolicy, vmRebuildParams.ioPolicy) && Objects.equals(this.vcpu, vmRebuildParams.vcpu)
-        && Objects.equals(this.status, vmRebuildParams.status)
-        && Objects.equals(this.firmware, vmRebuildParams.firmware) && Objects.equals(this.ha, vmRebuildParams.ha)
-        && Objects.equals(this.vmNics, vmRebuildParams.vmNics) && Objects.equals(this.vmDisks, vmRebuildParams.vmDisks)
-        && Objects.equals(this.memory, vmRebuildParams.memory)
-        && Objects.equals(this.cpuCores, vmRebuildParams.cpuCores)
-        && Objects.equals(this.cpuSockets, vmRebuildParams.cpuSockets)
-        && Objects.equals(this.guestOsType, vmRebuildParams.guestOsType)
-        && Objects.equals(this.folderId, vmRebuildParams.folderId)
-        && Objects.equals(this.description, vmRebuildParams.description)
-        && Objects.equals(this.name, vmRebuildParams.name) && Objects.equals(this.hostId, vmRebuildParams.hostId)
-        && Objects.equals(this.clusterId, vmRebuildParams.clusterId);
+    return Objects.equals(this.rebuildFromSnapshotId, vmRebuildParams.rebuildFromSnapshotId) &&
+        Objects.equals(this.maxBandwidthPolicy, vmRebuildParams.maxBandwidthPolicy) &&
+        Objects.equals(this.maxBandwidth, vmRebuildParams.maxBandwidth) &&
+        Objects.equals(this.maxIopsPolicy, vmRebuildParams.maxIopsPolicy) &&
+        Objects.equals(this.maxIops, vmRebuildParams.maxIops) &&
+        Objects.equals(this.ioPolicy, vmRebuildParams.ioPolicy) &&
+        Objects.equals(this.vcpu, vmRebuildParams.vcpu) &&
+        Objects.equals(this.status, vmRebuildParams.status) &&
+        Objects.equals(this.firmware, vmRebuildParams.firmware) &&
+        Objects.equals(this.ha, vmRebuildParams.ha) &&
+        Objects.equals(this.vmNics, vmRebuildParams.vmNics) &&
+        Objects.equals(this.vmDisks, vmRebuildParams.vmDisks) &&
+        Objects.equals(this.memory, vmRebuildParams.memory) &&
+        Objects.equals(this.cpuCores, vmRebuildParams.cpuCores) &&
+        Objects.equals(this.cpuSockets, vmRebuildParams.cpuSockets) &&
+        Objects.equals(this.guestOsType, vmRebuildParams.guestOsType) &&
+        Objects.equals(this.folderId, vmRebuildParams.folderId) &&
+        Objects.equals(this.description, vmRebuildParams.description) &&
+        Objects.equals(this.name, vmRebuildParams.name) &&
+        Objects.equals(this.hostId, vmRebuildParams.hostId) &&
+        Objects.equals(this.clusterId, vmRebuildParams.clusterId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(rebuildFromSnapshotId, maxBandwidthPolicy, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu,
-        status, firmware, ha, vmNics, vmDisks, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name,
-        hostId, clusterId);
+    return Objects.hash(rebuildFromSnapshotId, maxBandwidthPolicy, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
@@ -666,3 +692,4 @@ public class VmRebuildParams {
   }
 
 }
+

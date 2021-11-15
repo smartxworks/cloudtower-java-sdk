@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -19,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.IscsiLunUpdationParamsData;
 import com.smartx.tower.model.IscsiLunWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -37,39 +39,40 @@ public class IscsiLunUpdationParams {
   @SerializedName(SERIALIZED_NAME_WHERE)
   private IscsiLunWhereInput where;
 
-  public IscsiLunUpdationParams data(IscsiLunUpdationParamsData data) {
 
+  public IscsiLunUpdationParams data(IscsiLunUpdationParamsData data) {
+    
     this.data = data;
     return this;
   }
 
-  /**
+   /**
    * Get data
-   * 
    * @return data
-   **/
-  @javax.annotation.Nullable
+  **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public IscsiLunUpdationParamsData getData() {
     return data;
   }
 
+
   public void setData(IscsiLunUpdationParamsData data) {
     this.data = data;
   }
 
-  public IscsiLunUpdationParams where(IscsiLunWhereInput where) {
 
+  public IscsiLunUpdationParams where(IscsiLunWhereInput where) {
+    
     this.where = where;
     return this;
   }
 
-  /**
+   /**
    * Get where
-   * 
    * @return where
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -77,9 +80,11 @@ public class IscsiLunUpdationParams {
     return where;
   }
 
+
   public void setWhere(IscsiLunWhereInput where) {
     this.where = where;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -90,8 +95,8 @@ public class IscsiLunUpdationParams {
       return false;
     }
     IscsiLunUpdationParams iscsiLunUpdationParams = (IscsiLunUpdationParams) o;
-    return Objects.equals(this.data, iscsiLunUpdationParams.data)
-        && Objects.equals(this.where, iscsiLunUpdationParams.where);
+    return Objects.equals(this.data, iscsiLunUpdationParams.data) &&
+        Objects.equals(this.where, iscsiLunUpdationParams.where);
   }
 
   @Override
@@ -121,3 +126,4 @@ public class IscsiLunUpdationParams {
   }
 
 }
+

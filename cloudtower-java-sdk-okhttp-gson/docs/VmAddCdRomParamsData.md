@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vmCdRoms** | [**List&lt;Object&gt;**](Object.md) |  | 
+**vmCdRoms** | [**List&lt;VmCdRomParams&gt;**](VmCdRomParams.md) |  | 
 
 
 

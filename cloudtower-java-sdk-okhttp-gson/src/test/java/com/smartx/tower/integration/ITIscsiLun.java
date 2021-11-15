@@ -54,10 +54,9 @@ public class ITIscsiLun extends ITBase {
     List<IscsiTargetCreationParams> params = new ArrayList<IscsiTargetCreationParams>();
     params.add(new IscsiTargetCreationParams().clusterId(cluster.getId()).thinProvision(true).replicaNum(2).stripeNum(4)
         .stripeSize(262144.0).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
-    target = targetApi.createIscsiTarget(params, contentLanguage).get(0).getData();
-    waitForResourceCreation(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
-        targetApi, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
-        }.getClass(), GetIscsiTargetsRequestBody.class);
+    WithTaskIscsiTarget createResult = targetApi.createIscsiTarget(params, contentLanguage).get(0);
+    target = createResult.getData();
+    waitForTaskSucceed(createResult.getTaskId());
   }
 
   @AfterMethod(onlyForGroups = { "need_iscsi_target" })
@@ -66,11 +65,10 @@ public class ITIscsiLun extends ITBase {
     waitForResourceAsyncStatus(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
         targetApi, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
         }.getClass(), GetIscsiTargetsRequestBody.class);
-    targetApi.deleteIscsiTarget(new IscsiTargetDeletionParams().where(new IscsiTargetWhereInput().id(target.getId())),
-        contentLanguage);
-    waitForResourceDeletion(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
-        targetApi, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
-        }.getClass(), GetIscsiTargetsRequestBody.class);
+    waitForTaskSucceed(targetApi
+        .deleteIscsiTarget(new IscsiTargetDeletionParams().where(new IscsiTargetWhereInput().id(target.getId())),
+            contentLanguage)
+        .get(0).getTaskId());
     target = null;
   }
 
@@ -86,23 +84,17 @@ public class ITIscsiLun extends ITBase {
       // do some modify to params(optional)
       List<WithTaskIscsiLun> createResult = api.createIscsiLun(createParams, contentLanguage);
       IscsiLun lun = createResult.get(0).getData();
-      waitForResourceCreation(new GetIscsiLunsRequestBody().where(new IscsiLunWhereInput().id(lun.getId())), api,
-          "getIscsiLuns", new TypeToken<List<IscsiLun>>() {
-          }.getClass(), GetIscsiLunsRequestBody.class);
+      waitForTaskSucceed(createResult.get(0).getTaskId());
       assertThat(createResult).as("check result of createIscsiLun").isNotNull();
       IscsiLunUpdationParams updateParams = new IscsiLunUpdationParams().where(new IscsiLunWhereInput().id(lun.getId()))
           .data(new IscsiLunUpdationParamsData().allowedInitiators(lun.getAllowedInitiators()));
       List<WithTaskIscsiLun> updateResult = api.updateIscsiLun(updateParams, contentLanguage);
-      waitForResourceAsyncStatus(new GetIscsiLunsRequestBody().where(new IscsiLunWhereInput().id(lun.getId())), api,
-          "getIscsiLuns", new TypeToken<List<IscsiLun>>() {
-          }.getClass(), GetIscsiLunsRequestBody.class);
+      waitForTaskSucceed(updateResult.get(0).getTaskId());
       assertThat(updateResult).as("check result of updateIscsiLun").isNotNull();
       IscsiLunDeletionParams deletionParams = new IscsiLunDeletionParams()
           .where(new IscsiLunWhereInput().id(lun.getId())).data(new IscsiLunDeletionParamsData().removeSnapshot(true));
       List<WithTaskDeleteIscsiLun> deleteResult = api.deleteIscsiLun(deletionParams, contentLanguage);
-      waitForResourceDeletion(new GetIscsiLunsRequestBody().where(new IscsiLunWhereInput().id(lun.getId())), api,
-          "getIscsiLuns", new TypeToken<List<IscsiLun>>() {
-          }.getClass(), GetIscsiLunsRequestBody.class);
+      waitForTaskSucceed(deleteResult.get(0).getTaskId());
       assertThat(deleteResult).as("check result of createIscsiLun").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

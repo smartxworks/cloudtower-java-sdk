@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -19,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.VmCdRomParams;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,8 +36,9 @@ public class VmAddCdRomParamsData {
   @SerializedName(SERIALIZED_NAME_VM_CD_ROMS)
   private List<VmCdRomParams> vmCdRoms = new ArrayList<VmCdRomParams>();
 
-  public VmAddCdRomParamsData vmCdRoms(List<VmCdRomParams> vmCdRoms) {
 
+  public VmAddCdRomParamsData vmCdRoms(List<VmCdRomParams> vmCdRoms) {
+    
     this.vmCdRoms = vmCdRoms;
     return this;
   }
@@ -45,11 +48,10 @@ public class VmAddCdRomParamsData {
     return this;
   }
 
-  /**
+   /**
    * Get vmCdRoms
-   * 
    * @return vmCdRoms
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -57,9 +59,11 @@ public class VmAddCdRomParamsData {
     return vmCdRoms;
   }
 
+
   public void setVmCdRoms(List<VmCdRomParams> vmCdRoms) {
     this.vmCdRoms = vmCdRoms;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -99,3 +103,4 @@ public class VmAddCdRomParamsData {
   }
 
 }
+

@@ -7,9 +7,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mountCdRoms** | [**List&lt;Object&gt;**](Object.md) |  |  [optional]
-**mountDisks** | [**List&lt;Object&gt;**](Object.md) |  |  [optional]
-**mountNewCreateDisks** | [**List&lt;Object&gt;**](Object.md) |  |  [optional]
+**mountCdRoms** | [**List&lt;VmCdRomParams&gt;**](VmCdRomParams.md) |  |  [optional]
+**mountDisks** | [**List&lt;MountDisksParams&gt;**](MountDisksParams.md) |  |  [optional]
+**mountNewCreateDisks** | [**List&lt;MountNewCreateDisksParams&gt;**](MountNewCreateDisksParams.md) |  |  [optional]
 
 
 

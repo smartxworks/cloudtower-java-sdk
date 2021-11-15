@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -19,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.VmNicParams;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,8 +36,9 @@ public class VmAddNicParamsData {
   @SerializedName(SERIALIZED_NAME_VM_NICS)
   private List<VmNicParams> vmNics = new ArrayList<VmNicParams>();
 
-  public VmAddNicParamsData vmNics(List<VmNicParams> vmNics) {
 
+  public VmAddNicParamsData vmNics(List<VmNicParams> vmNics) {
+    
     this.vmNics = vmNics;
     return this;
   }
@@ -45,11 +48,10 @@ public class VmAddNicParamsData {
     return this;
   }
 
-  /**
+   /**
    * Get vmNics
-   * 
    * @return vmNics
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -57,9 +59,11 @@ public class VmAddNicParamsData {
     return vmNics;
   }
 
+
   public void setVmNics(List<VmNicParams> vmNics) {
     this.vmNics = vmNics;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -99,3 +103,4 @@ public class VmAddNicParamsData {
   }
 
 }
+

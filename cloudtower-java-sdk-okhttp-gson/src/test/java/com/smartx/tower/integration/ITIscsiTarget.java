@@ -53,23 +53,17 @@ public class ITIscsiTarget extends ITBase {
           .stripeNum(4).stripeSize(262144.0).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
       List<WithTaskIscsiTarget> createResult = api.createIscsiTarget(createParams, contentLanguage);
       IscsiTarget target = createResult.get(0).getData();
-      waitForResourceCreation(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
-          api, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
-          }.getClass(), GetIscsiTargetsRequestBody.class);
+      waitForTaskSucceed(createResult.get(0).getTaskId());
       assertThat(createResult).as("check result of createIscsiTarget").isNotNull();
       IscsiTargetUpdationParams updateParams = new IscsiTargetUpdationParams()
           .where(new IscsiTargetWhereInput().id(target.getId()))
           .data(new IscsiTargetCommonParams().iops(target.getIops()));
       List<WithTaskIscsiTarget> updateResult = api.updateIscsiTarget(updateParams, contentLanguage);
-      waitForResourceAsyncStatus(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
-          api, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
-          }.getClass(), GetIscsiTargetsRequestBody.class);
+      waitForTaskSucceed(updateResult.get(0).getTaskId());
       assertThat(updateResult).as("check result of updateIscsiTarget").isNotNull();
       List<WithTaskDeleteIscsiTarget> deleteResult = api.deleteIscsiTarget(
           new IscsiTargetDeletionParams().where(new IscsiTargetWhereInput().id(target.getId())), contentLanguage);
-      waitForResourceDeletion(new GetIscsiTargetsRequestBody().where(new IscsiTargetWhereInput().id(target.getId())),
-          api, "getIscsiTargets", new TypeToken<List<IscsiTarget>>() {
-          }.getClass(), GetIscsiTargetsRequestBody.class);
+      waitForTaskSucceed(deleteResult.get(0).getTaskId());
       assertThat(deleteResult).as("check result of deleteIscsiTarget").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

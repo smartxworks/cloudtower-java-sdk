@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Object**](Object.md) |  | 
+**data** | [**IscsiLunUpdationParamsData**](IscsiLunUpdationParamsData.md) |  | 
 **where** | [**IscsiLunWhereInput**](IscsiLunWhereInput.md) |  | 
 
 

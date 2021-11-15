@@ -25,6 +25,7 @@ import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
 import com.smartx.tower.model.VmFirmware;
 import com.smartx.tower.model.VmGuestsOperationSystem;
+import com.smartx.tower.model.VmNicParams;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

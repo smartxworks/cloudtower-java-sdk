@@ -37,6 +37,7 @@ public class ITBase {
   }
 
   protected ApiClient client = null;
+  protected TaskApi taskApi = null;
   protected static ITClientFactory factory = new ITClientFactory();
   protected static HashMap<String, Object> fixtureData = null;
 
@@ -325,22 +326,25 @@ public class ITBase {
     return vm;
   }
 
-  protected void waitForVmDeletion(String id, VmApi api) throws ApiException {
+  protected void waitForTaskSucceed(String taskId) throws ApiException {
     Long start = System.currentTimeMillis();
-    List<Vm> vms = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage);
-    while (vms.size() > 0) {
+    if (taskApi == null) {
+      taskApi = new TaskApi(client);
+    }
+    Task task = taskApi.getTasks(new GetTasksRequestBody().where(new TaskWhereInput().id(taskId)), contentLanguage)
+        .get(0);
+    while (task.getStatus().equals(TaskStatus.EXECUTING) || task.getStatus().equals(TaskStatus.PENDING)) {
       if (System.currentTimeMillis() - start > TIMEOUT) {
-        throw new ApiException(408, "Timeout while waiting for vm deletion");
-      }
-      if (vms.get(0).getEntityAsyncStatus() != EntityAsyncStatus.DELETING) {
-        LOGGER.warn("Failed to delete vm");
-        return;
+        throw new ApiException(408, "Timeout while waiting for task to succeed");
       }
       try {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
       }
-      vms = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage);
+      task = taskApi.getTasks(new GetTasksRequestBody().where(new TaskWhereInput().id(taskId)), contentLanguage).get(0);
+    }
+    if (!task.getStatus().equals(TaskStatus.SUCCESSED)) {
+      throw new ApiException(400, "Task failed");
     }
   }
 }

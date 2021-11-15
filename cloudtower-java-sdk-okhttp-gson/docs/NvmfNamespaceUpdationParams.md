@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Object**](Object.md) |  | 
+**data** | [**NvmfNamespaceUpdationParamsData**](NvmfNamespaceUpdationParamsData.md) |  | 
 **where** | [**NvmfNamespaceWhereInput**](NvmfNamespaceWhereInput.md) |  | 
 
 

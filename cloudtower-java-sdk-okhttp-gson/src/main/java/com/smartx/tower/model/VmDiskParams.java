@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.smartx.tower.model;
 
 import java.util.Objects;
@@ -19,6 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.MountDisksParams;
+import com.smartx.tower.model.MountNewCreateDisksParams;
+import com.smartx.tower.model.VmCdRomParams;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -42,8 +46,9 @@ public class VmDiskParams {
   @SerializedName(SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS)
   private List<MountNewCreateDisksParams> mountNewCreateDisks = null;
 
-  public VmDiskParams mountCdRoms(List<VmCdRomParams> mountCdRoms) {
 
+  public VmDiskParams mountCdRoms(List<VmCdRomParams> mountCdRoms) {
+    
     this.mountCdRoms = mountCdRoms;
     return this;
   }
@@ -56,11 +61,10 @@ public class VmDiskParams {
     return this;
   }
 
-  /**
+   /**
    * Get mountCdRoms
-   * 
    * @return mountCdRoms
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -68,12 +72,14 @@ public class VmDiskParams {
     return mountCdRoms;
   }
 
+
   public void setMountCdRoms(List<VmCdRomParams> mountCdRoms) {
     this.mountCdRoms = mountCdRoms;
   }
 
-  public VmDiskParams mountDisks(List<MountDisksParams> mountDisks) {
 
+  public VmDiskParams mountDisks(List<MountDisksParams> mountDisks) {
+    
     this.mountDisks = mountDisks;
     return this;
   }
@@ -86,11 +92,10 @@ public class VmDiskParams {
     return this;
   }
 
-  /**
+   /**
    * Get mountDisks
-   * 
    * @return mountDisks
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -98,12 +103,14 @@ public class VmDiskParams {
     return mountDisks;
   }
 
+
   public void setMountDisks(List<MountDisksParams> mountDisks) {
     this.mountDisks = mountDisks;
   }
 
-  public VmDiskParams mountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
 
+  public VmDiskParams mountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
+    
     this.mountNewCreateDisks = mountNewCreateDisks;
     return this;
   }
@@ -116,11 +123,10 @@ public class VmDiskParams {
     return this;
   }
 
-  /**
+   /**
    * Get mountNewCreateDisks
-   * 
    * @return mountNewCreateDisks
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -128,9 +134,11 @@ public class VmDiskParams {
     return mountNewCreateDisks;
   }
 
+
   public void setMountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
     this.mountNewCreateDisks = mountNewCreateDisks;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -141,9 +149,9 @@ public class VmDiskParams {
       return false;
     }
     VmDiskParams vmDiskParams = (VmDiskParams) o;
-    return Objects.equals(this.mountCdRoms, vmDiskParams.mountCdRoms)
-        && Objects.equals(this.mountDisks, vmDiskParams.mountDisks)
-        && Objects.equals(this.mountNewCreateDisks, vmDiskParams.mountNewCreateDisks);
+    return Objects.equals(this.mountCdRoms, vmDiskParams.mountCdRoms) &&
+        Objects.equals(this.mountDisks, vmDiskParams.mountDisks) &&
+        Objects.equals(this.mountNewCreateDisks, vmDiskParams.mountNewCreateDisks);
   }
 
   @Override
@@ -174,3 +182,4 @@ public class VmDiskParams {
   }
 
 }
+

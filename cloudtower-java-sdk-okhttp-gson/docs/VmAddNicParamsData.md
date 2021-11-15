@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vmNics** | [**List&lt;Object&gt;**](Object.md) |  | 
+**vmNics** | [**List&lt;VmNicParams&gt;**](VmNicParams.md) |  | 
 
 
 

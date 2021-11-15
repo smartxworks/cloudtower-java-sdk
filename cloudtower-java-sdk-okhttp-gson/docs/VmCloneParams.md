@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **status** | **VmStatus** |  |  [optional]
 **firmware** | **VmFirmware** |  |  [optional]
 **ha** | **Boolean** |  |  [optional]
-**vmNics** | [**List&lt;Object&gt;**](Object.md) |  |  [optional]
+**vmNics** | [**List&lt;VmNicParams&gt;**](VmNicParams.md) |  |  [optional]
 **vmDisks** | [**VmDiskParams**](VmDiskParams.md) |  |  [optional]
 **memory** | **Double** |  |  [optional]
 **cpuCores** | **Integer** |  |  [optional]

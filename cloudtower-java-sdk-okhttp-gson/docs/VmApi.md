@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteVm"></a>
 # **deleteVm**
-> List&lt;InlineResponse200&gt; deleteVm(vmOperateParams, contentLanguage)
+> List&lt;WithTaskDeleteVm&gt; deleteVm(vmOperateParams, contentLanguage)
 
 
 
@@ -628,7 +628,7 @@ public class Example {
     VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
     String contentLanguage = "zh-CN"; // String | 
     try {
-      List<InlineResponse200> result = apiInstance.deleteVm(vmOperateParams, contentLanguage);
+      List<WithTaskDeleteVm> result = apiInstance.deleteVm(vmOperateParams, contentLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VmApi#deleteVm");
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;InlineResponse200&gt;**](InlineResponse200.md)
+[**List&lt;WithTaskDeleteVm&gt;**](WithTaskDeleteVm.md)
 
 ### Authorization
 
@@ -1089,7 +1089,7 @@ Name | Type | Description  | Notes
 
 <a name="moveVmToRecycleBin"></a>
 # **moveVmToRecycleBin**
-> List&lt;InlineResponse200&gt; moveVmToRecycleBin(vmOperateParams, contentLanguage)
+> List&lt;WithTaskDeleteVm&gt; moveVmToRecycleBin(vmOperateParams, contentLanguage)
 
 
 
@@ -1118,7 +1118,7 @@ public class Example {
     VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
     String contentLanguage = "zh-CN"; // String | 
     try {
-      List<InlineResponse200> result = apiInstance.moveVmToRecycleBin(vmOperateParams, contentLanguage);
+      List<WithTaskDeleteVm> result = apiInstance.moveVmToRecycleBin(vmOperateParams, contentLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VmApi#moveVmToRecycleBin");
@@ -1140,7 +1140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;InlineResponse200&gt;**](InlineResponse200.md)
+[**List&lt;WithTaskDeleteVm&gt;**](WithTaskDeleteVm.md)
 
 ### Authorization
 
@@ -1229,7 +1229,7 @@ Name | Type | Description  | Notes
 
 <a name="recoverVmFromRecycleBin"></a>
 # **recoverVmFromRecycleBin**
-> List&lt;InlineResponse200&gt; recoverVmFromRecycleBin(vmOperateParams, contentLanguage)
+> List&lt;WithTaskDeleteVm&gt; recoverVmFromRecycleBin(vmOperateParams, contentLanguage)
 
 
 
@@ -1258,7 +1258,7 @@ public class Example {
     VmOperateParams vmOperateParams = new VmOperateParams(); // VmOperateParams | 
     String contentLanguage = "zh-CN"; // String | 
     try {
-      List<InlineResponse200> result = apiInstance.recoverVmFromRecycleBin(vmOperateParams, contentLanguage);
+      List<WithTaskDeleteVm> result = apiInstance.recoverVmFromRecycleBin(vmOperateParams, contentLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VmApi#recoverVmFromRecycleBin");
@@ -1280,7 +1280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;InlineResponse200&gt;**](InlineResponse200.md)
+[**List&lt;WithTaskDeleteVm&gt;**](WithTaskDeleteVm.md)
 
 ### Authorization
 
