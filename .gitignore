@@ -9,7 +9,7 @@
 *.ear
 
 # exclude jar for gradle wrapper
-!**/gradle/wrapper/*.jar
+!gradle/wrapper/*.jar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -19,10 +19,4 @@ hs_err_pid*
 target
 .gradle
 build
-
-# exclude release jar and pom
-!dist/**/*.jar
-
-# exclude vscode settings
-.vscode/settings.json
-**/.vscode/settings.json
+.vscode
