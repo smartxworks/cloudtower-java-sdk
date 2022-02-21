@@ -44,7 +44,7 @@ public class ITVmEntityFilterResult extends ITBase {
       // parse params from json payload
       GetVmEntityFilterResultsRequestBody params = gson.fromJson(payload, new TypeToken<GetVmEntityFilterResultsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VmEntityFilterResult> result = api.getVmEntityFilterResults(params, contentLanguage);
+      List<VmEntityFilterResult> result = api.getVmEntityFilterResults(params);
       assertThat(result).as("check result of getVmEntityFilterResults").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVmEntityFilterResult extends ITBase {
       // parse params from json payload
       GetVmEntityFilterResultsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmEntityFilterResultsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VmEntityFilterResultConnection result = api.getVmEntityFilterResultsConnection(params, contentLanguage);
+      VmEntityFilterResultConnection result = api.getVmEntityFilterResultsConnection(params);
       assertThat(result).as("check result of getVmEntityFilterResultsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

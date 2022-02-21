@@ -44,7 +44,7 @@ public class ITGlobalSettings extends ITBase {
       // parse params from json payload
       ClusterRecycleBinCreationParams params = gson.fromJson(payload, new TypeToken<ClusterRecycleBinCreationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskClusterSettings> result = api.createClusterRecycleBinSetting(params, contentLanguage);
+      List<WithTaskClusterSettings> result = api.createClusterRecycleBinSetting(params);
       assertThat(result).as("check result of createClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITGlobalSettings extends ITBase {
       // parse params from json payload
       ClusterRecycleBinDeletionParams params = gson.fromJson(payload, new TypeToken<ClusterRecycleBinDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteClusterRecycleBin> result = api.deleteClusterRecycleBinSetting(params, contentLanguage);
+      List<WithTaskDeleteClusterRecycleBin> result = api.deleteClusterRecycleBinSetting(params);
       assertThat(result).as("check result of deleteClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITGlobalSettings extends ITBase {
       // parse params from json payload
       GetGlobalSettingsesRequestBody params = gson.fromJson(payload, new TypeToken<GetGlobalSettingsesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<GlobalSettings> result = api.getGlobalSettingses(params, contentLanguage);
+      List<GlobalSettings> result = api.getGlobalSettingses(params);
       assertThat(result).as("check result of getGlobalSettingses").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITGlobalSettings extends ITBase {
       // parse params from json payload
       GetGlobalSettingsesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetGlobalSettingsesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      GlobalSettingsConnection result = api.getGlobalSettingsesConnection(params, contentLanguage);
+      GlobalSettingsConnection result = api.getGlobalSettingsesConnection(params);
       assertThat(result).as("check result of getGlobalSettingsesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITGlobalSettings extends ITBase {
       // parse params from json payload
       ClusterRecycleBinUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterRecycleBinUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskClusterSettings> result = api.updateClusterRecycleBinSetting(params, contentLanguage);
+      List<WithTaskClusterSettings> result = api.updateClusterRecycleBinSetting(params);
       assertThat(result).as("check result of updateClusterRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITGlobalSettings extends ITBase {
       // parse params from json payload
       GlobalRecycleBinUpdationParams params = gson.fromJson(payload, new TypeToken<GlobalRecycleBinUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      WithTaskGlobalSettings result = api.updateGlobalRecycleBinSetting(params, contentLanguage);
+      WithTaskGlobalSettings result = api.updateGlobalRecycleBinSetting(params);
       assertThat(result).as("check result of updateGlobalRecycleBinSetting").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

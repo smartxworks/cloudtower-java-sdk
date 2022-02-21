@@ -44,7 +44,7 @@ public class ITLicense extends ITBase {
       // parse params from json payload
       GetLicensesRequestBody params = gson.fromJson(payload, new TypeToken<GetLicensesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<License> result = api.getLicenses(params, contentLanguage);
+      List<License> result = api.getLicenses(params);
       assertThat(result).as("check result of getLicenses").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITLicense extends ITBase {
       // parse params from json payload
       GetLicensesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetLicensesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      LicenseConnection result = api.getLicensesConnection(params, contentLanguage);
+      LicenseConnection result = api.getLicensesConnection(params);
       assertThat(result).as("check result of getLicensesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITLicense extends ITBase {
       // parse params from json payload
       LicenseUpdationParams params = gson.fromJson(payload, new TypeToken<LicenseUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      WithTaskLicense result = api.updateDeploy(params, contentLanguage);
+      WithTaskLicense result = api.updateDeploy(params);
       assertThat(result).as("check result of updateDeploy").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

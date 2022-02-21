@@ -78,7 +78,6 @@ public class ContentLibraryImageApi {
     /**
      * Build call for getContentLibraryImages
      * @param getContentLibraryImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryImagesCall(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryImagesCall(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ContentLibraryImageApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ContentLibraryImageApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ContentLibraryImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContentLibraryImagesValidateBeforeCall(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getContentLibraryImagesValidateBeforeCall(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getContentLibraryImagesRequestBody' is set
         if (getContentLibraryImagesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ContentLibraryImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getContentLibraryImagesCall(getContentLibraryImagesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryImagesCall(getContentLibraryImagesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ContentLibraryImageApi {
      * 
      * 
      * @param getContentLibraryImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ContentLibraryImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ContentLibraryImage> getContentLibraryImages(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ContentLibraryImage>> localVarResp = getContentLibraryImagesWithHttpInfo(getContentLibraryImagesRequestBody, contentLanguage);
+    public List<ContentLibraryImage> getContentLibraryImages(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody) throws ApiException {
+        ApiResponse<List<ContentLibraryImage>> localVarResp = getContentLibraryImagesWithHttpInfo(getContentLibraryImagesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ContentLibraryImageApi {
      * 
      * 
      * @param getContentLibraryImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ContentLibraryImage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ContentLibraryImage>> getContentLibraryImagesWithHttpInfo(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getContentLibraryImagesValidateBeforeCall(getContentLibraryImagesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ContentLibraryImage>> getContentLibraryImagesWithHttpInfo(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getContentLibraryImagesValidateBeforeCall(getContentLibraryImagesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ContentLibraryImage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ContentLibraryImageApi {
      *  (asynchronously)
      * 
      * @param getContentLibraryImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryImagesAsync(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, String contentLanguage, final ApiCallback<List<ContentLibraryImage>> _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryImagesAsync(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, final ApiCallback<List<ContentLibraryImage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getContentLibraryImagesValidateBeforeCall(getContentLibraryImagesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryImagesValidateBeforeCall(getContentLibraryImagesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ContentLibraryImage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ContentLibraryImageApi {
     /**
      * Build call for getContentLibraryImagesConnection
      * @param getContentLibraryImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryImagesConnectionCall(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryImagesConnectionCall(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ContentLibraryImageApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ContentLibraryImageApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ContentLibraryImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContentLibraryImagesConnectionValidateBeforeCall(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getContentLibraryImagesConnectionValidateBeforeCall(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getContentLibraryImagesConnectionRequestBody' is set
         if (getContentLibraryImagesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ContentLibraryImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getContentLibraryImagesConnectionCall(getContentLibraryImagesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryImagesConnectionCall(getContentLibraryImagesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ContentLibraryImageApi {
      * 
      * 
      * @param getContentLibraryImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ContentLibraryImageConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ContentLibraryImageConnection getContentLibraryImagesConnection(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ContentLibraryImageConnection> localVarResp = getContentLibraryImagesConnectionWithHttpInfo(getContentLibraryImagesConnectionRequestBody, contentLanguage);
+    public ContentLibraryImageConnection getContentLibraryImagesConnection(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody) throws ApiException {
+        ApiResponse<ContentLibraryImageConnection> localVarResp = getContentLibraryImagesConnectionWithHttpInfo(getContentLibraryImagesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ContentLibraryImageApi {
      * 
      * 
      * @param getContentLibraryImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ContentLibraryImageConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ContentLibraryImageConnection> getContentLibraryImagesConnectionWithHttpInfo(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getContentLibraryImagesConnectionValidateBeforeCall(getContentLibraryImagesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ContentLibraryImageConnection> getContentLibraryImagesConnectionWithHttpInfo(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getContentLibraryImagesConnectionValidateBeforeCall(getContentLibraryImagesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ContentLibraryImageConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ContentLibraryImageApi {
      *  (asynchronously)
      * 
      * @param getContentLibraryImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ContentLibraryImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryImagesConnectionAsync(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, String contentLanguage, final ApiCallback<ContentLibraryImageConnection> _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryImagesConnectionAsync(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, final ApiCallback<ContentLibraryImageConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getContentLibraryImagesConnectionValidateBeforeCall(getContentLibraryImagesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryImagesConnectionValidateBeforeCall(getContentLibraryImagesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ContentLibraryImageConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

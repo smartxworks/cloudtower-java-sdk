@@ -44,7 +44,7 @@ public class ITIsolationPolicy extends ITBase {
       // parse params from json payload
       GetIsolationPoliciesRequestBody params = gson.fromJson(payload, new TypeToken<GetIsolationPoliciesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<IsolationPolicy> result = api.getIsolationPolicies(params, contentLanguage);
+      List<IsolationPolicy> result = api.getIsolationPolicies(params);
       assertThat(result).as("check result of getIsolationPolicies").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITIsolationPolicy extends ITBase {
       // parse params from json payload
       GetIsolationPoliciesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetIsolationPoliciesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      IsolationPolicyConnection result = api.getIsolationPoliciesConnection(params, contentLanguage);
+      IsolationPolicyConnection result = api.getIsolationPoliciesConnection(params);
       assertThat(result).as("check result of getIsolationPoliciesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -44,7 +44,7 @@ public class ITSnmpTransport extends ITBase {
       // parse params from json payload
       List<SnmpTransportCreationParams> params = gson.fromJson(payload, new TypeToken<List<SnmpTransportCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnmpTransport> result = api.createSnmpTransport(params, contentLanguage);
+      List<WithTaskSnmpTransport> result = api.createSnmpTransport(params);
       assertThat(result).as("check result of createSnmpTransport").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSnmpTransport extends ITBase {
       // parse params from json payload
       SnmpTransportDeletionParams params = gson.fromJson(payload, new TypeToken<SnmpTransportDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteSnmpTransport> result = api.deleteSnmpTransport(params, contentLanguage);
+      List<WithTaskDeleteSnmpTransport> result = api.deleteSnmpTransport(params);
       assertThat(result).as("check result of deleteSnmpTransport").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITSnmpTransport extends ITBase {
       // parse params from json payload
       GetSnmpTransportsRequestBody params = gson.fromJson(payload, new TypeToken<GetSnmpTransportsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SnmpTransport> result = api.getSnmpTransports(params, contentLanguage);
+      List<SnmpTransport> result = api.getSnmpTransports(params);
       assertThat(result).as("check result of getSnmpTransports").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITSnmpTransport extends ITBase {
       // parse params from json payload
       GetSnmpTransportsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSnmpTransportsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SnmpTransportConnection result = api.getSnmpTransportsConnection(params, contentLanguage);
+      SnmpTransportConnection result = api.getSnmpTransportsConnection(params);
       assertThat(result).as("check result of getSnmpTransportsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITSnmpTransport extends ITBase {
       // parse params from json payload
       SnmpTransportUpdationParams params = gson.fromJson(payload, new TypeToken<SnmpTransportUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnmpTransport> result = api.updateSnmpTransport(params, contentLanguage);
+      List<WithTaskSnmpTransport> result = api.updateSnmpTransport(params);
       assertThat(result).as("check result of updateSnmpTransport").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

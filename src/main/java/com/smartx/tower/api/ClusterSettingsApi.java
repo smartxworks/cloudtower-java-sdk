@@ -78,7 +78,6 @@ public class ClusterSettingsApi {
     /**
      * Build call for getClusterSettingses
      * @param getClusterSettingsesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterSettingsesCall(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterSettingsesCall(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ClusterSettingsApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ClusterSettingsApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ClusterSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterSettingsesValidateBeforeCall(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterSettingsesValidateBeforeCall(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterSettingsesRequestBody' is set
         if (getClusterSettingsesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ClusterSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterSettingsesCall(getClusterSettingsesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterSettingsesCall(getClusterSettingsesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ClusterSettingsApi {
      * 
      * 
      * @param getClusterSettingsesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ClusterSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ClusterSettings> getClusterSettingses(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ClusterSettings>> localVarResp = getClusterSettingsesWithHttpInfo(getClusterSettingsesRequestBody, contentLanguage);
+    public List<ClusterSettings> getClusterSettingses(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody) throws ApiException {
+        ApiResponse<List<ClusterSettings>> localVarResp = getClusterSettingsesWithHttpInfo(getClusterSettingsesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ClusterSettingsApi {
      * 
      * 
      * @param getClusterSettingsesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ClusterSettings&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ClusterSettings>> getClusterSettingsesWithHttpInfo(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterSettingsesValidateBeforeCall(getClusterSettingsesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ClusterSettings>> getClusterSettingsesWithHttpInfo(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterSettingsesValidateBeforeCall(getClusterSettingsesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ClusterSettings>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ClusterSettingsApi {
      *  (asynchronously)
      * 
      * @param getClusterSettingsesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterSettingsesAsync(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, String contentLanguage, final ApiCallback<List<ClusterSettings>> _callback) throws ApiException {
+    public okhttp3.Call getClusterSettingsesAsync(GetClusterSettingsesRequestBody getClusterSettingsesRequestBody, final ApiCallback<List<ClusterSettings>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterSettingsesValidateBeforeCall(getClusterSettingsesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterSettingsesValidateBeforeCall(getClusterSettingsesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ClusterSettings>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ClusterSettingsApi {
     /**
      * Build call for getClusterSettingsesConnection
      * @param getClusterSettingsesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterSettingsesConnectionCall(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterSettingsesConnectionCall(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ClusterSettingsApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ClusterSettingsApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ClusterSettingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterSettingsesConnectionValidateBeforeCall(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterSettingsesConnectionValidateBeforeCall(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterSettingsesConnectionRequestBody' is set
         if (getClusterSettingsesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ClusterSettingsApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterSettingsesConnectionCall(getClusterSettingsesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterSettingsesConnectionCall(getClusterSettingsesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ClusterSettingsApi {
      * 
      * 
      * @param getClusterSettingsesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ClusterSettingsConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ClusterSettingsConnection getClusterSettingsesConnection(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ClusterSettingsConnection> localVarResp = getClusterSettingsesConnectionWithHttpInfo(getClusterSettingsesConnectionRequestBody, contentLanguage);
+    public ClusterSettingsConnection getClusterSettingsesConnection(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody) throws ApiException {
+        ApiResponse<ClusterSettingsConnection> localVarResp = getClusterSettingsesConnectionWithHttpInfo(getClusterSettingsesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ClusterSettingsApi {
      * 
      * 
      * @param getClusterSettingsesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ClusterSettingsConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterSettingsConnection> getClusterSettingsesConnectionWithHttpInfo(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterSettingsesConnectionValidateBeforeCall(getClusterSettingsesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ClusterSettingsConnection> getClusterSettingsesConnectionWithHttpInfo(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterSettingsesConnectionValidateBeforeCall(getClusterSettingsesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ClusterSettingsConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ClusterSettingsApi {
      *  (asynchronously)
      * 
      * @param getClusterSettingsesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ClusterSettingsApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterSettingsesConnectionAsync(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, String contentLanguage, final ApiCallback<ClusterSettingsConnection> _callback) throws ApiException {
+    public okhttp3.Call getClusterSettingsesConnectionAsync(GetClusterSettingsesConnectionRequestBody getClusterSettingsesConnectionRequestBody, final ApiCallback<ClusterSettingsConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterSettingsesConnectionValidateBeforeCall(getClusterSettingsesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterSettingsesConnectionValidateBeforeCall(getClusterSettingsesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ClusterSettingsConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

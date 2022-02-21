@@ -83,7 +83,6 @@ public class DatacenterApi {
     /**
      * Build call for createDatacenter
      * @param datacenterCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createDatacenterCall(List<DatacenterCreationParams> datacenterCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createDatacenterCall(List<DatacenterCreationParams> datacenterCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class DatacenterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class DatacenterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class DatacenterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createDatacenterValidateBeforeCall(List<DatacenterCreationParams> datacenterCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createDatacenterValidateBeforeCall(List<DatacenterCreationParams> datacenterCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'datacenterCreationParams' is set
         if (datacenterCreationParams == null) {
@@ -153,7 +148,7 @@ public class DatacenterApi {
         }
         
 
-        okhttp3.Call localVarCall = createDatacenterCall(datacenterCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createDatacenterCall(datacenterCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class DatacenterApi {
      * 
      * 
      * @param datacenterCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDatacenter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDatacenter> createDatacenter(List<DatacenterCreationParams> datacenterCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDatacenter>> localVarResp = createDatacenterWithHttpInfo(datacenterCreationParams, contentLanguage);
+    public List<WithTaskDatacenter> createDatacenter(List<DatacenterCreationParams> datacenterCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskDatacenter>> localVarResp = createDatacenterWithHttpInfo(datacenterCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class DatacenterApi {
      * 
      * 
      * @param datacenterCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDatacenter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDatacenter>> createDatacenterWithHttpInfo(List<DatacenterCreationParams> datacenterCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createDatacenterValidateBeforeCall(datacenterCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDatacenter>> createDatacenterWithHttpInfo(List<DatacenterCreationParams> datacenterCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createDatacenterValidateBeforeCall(datacenterCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDatacenter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class DatacenterApi {
      *  (asynchronously)
      * 
      * @param datacenterCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createDatacenterAsync(List<DatacenterCreationParams> datacenterCreationParams, String contentLanguage, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
+    public okhttp3.Call createDatacenterAsync(List<DatacenterCreationParams> datacenterCreationParams, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createDatacenterValidateBeforeCall(datacenterCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createDatacenterValidateBeforeCall(datacenterCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDatacenter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class DatacenterApi {
     /**
      * Build call for deleteDatacenter
      * @param datacenterDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteDatacenterCall(DatacenterDeletionParams datacenterDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteDatacenterCall(DatacenterDeletionParams datacenterDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class DatacenterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class DatacenterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class DatacenterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteDatacenterValidateBeforeCall(DatacenterDeletionParams datacenterDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteDatacenterValidateBeforeCall(DatacenterDeletionParams datacenterDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'datacenterDeletionParams' is set
         if (datacenterDeletionParams == null) {
@@ -292,7 +279,7 @@ public class DatacenterApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteDatacenterCall(datacenterDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteDatacenterCall(datacenterDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class DatacenterApi {
      * 
      * 
      * @param datacenterDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteDatacenter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteDatacenter> deleteDatacenter(DatacenterDeletionParams datacenterDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteDatacenter>> localVarResp = deleteDatacenterWithHttpInfo(datacenterDeletionParams, contentLanguage);
+    public List<WithTaskDeleteDatacenter> deleteDatacenter(DatacenterDeletionParams datacenterDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteDatacenter>> localVarResp = deleteDatacenterWithHttpInfo(datacenterDeletionParams);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class DatacenterApi {
      * 
      * 
      * @param datacenterDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteDatacenter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteDatacenter>> deleteDatacenterWithHttpInfo(DatacenterDeletionParams datacenterDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteDatacenterValidateBeforeCall(datacenterDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteDatacenter>> deleteDatacenterWithHttpInfo(DatacenterDeletionParams datacenterDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteDatacenterValidateBeforeCall(datacenterDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteDatacenter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class DatacenterApi {
      *  (asynchronously)
      * 
      * @param datacenterDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteDatacenterAsync(DatacenterDeletionParams datacenterDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteDatacenter>> _callback) throws ApiException {
+    public okhttp3.Call deleteDatacenterAsync(DatacenterDeletionParams datacenterDeletionParams, final ApiCallback<List<WithTaskDeleteDatacenter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteDatacenterValidateBeforeCall(datacenterDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteDatacenterValidateBeforeCall(datacenterDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteDatacenter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class DatacenterApi {
     /**
      * Build call for getDatacenters
      * @param getDatacentersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDatacentersCall(GetDatacentersRequestBody getDatacentersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDatacentersCall(GetDatacentersRequestBody getDatacentersRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class DatacenterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class DatacenterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class DatacenterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDatacentersValidateBeforeCall(GetDatacentersRequestBody getDatacentersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDatacentersValidateBeforeCall(GetDatacentersRequestBody getDatacentersRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDatacentersRequestBody' is set
         if (getDatacentersRequestBody == null) {
@@ -431,7 +410,7 @@ public class DatacenterApi {
         }
         
 
-        okhttp3.Call localVarCall = getDatacentersCall(getDatacentersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDatacentersCall(getDatacentersRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class DatacenterApi {
      * 
      * 
      * @param getDatacentersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Datacenter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Datacenter> getDatacenters(GetDatacentersRequestBody getDatacentersRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Datacenter>> localVarResp = getDatacentersWithHttpInfo(getDatacentersRequestBody, contentLanguage);
+    public List<Datacenter> getDatacenters(GetDatacentersRequestBody getDatacentersRequestBody) throws ApiException {
+        ApiResponse<List<Datacenter>> localVarResp = getDatacentersWithHttpInfo(getDatacentersRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class DatacenterApi {
      * 
      * 
      * @param getDatacentersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Datacenter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Datacenter>> getDatacentersWithHttpInfo(GetDatacentersRequestBody getDatacentersRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getDatacentersValidateBeforeCall(getDatacentersRequestBody, contentLanguage, null);
+    public ApiResponse<List<Datacenter>> getDatacentersWithHttpInfo(GetDatacentersRequestBody getDatacentersRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getDatacentersValidateBeforeCall(getDatacentersRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Datacenter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class DatacenterApi {
      *  (asynchronously)
      * 
      * @param getDatacentersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDatacentersAsync(GetDatacentersRequestBody getDatacentersRequestBody, String contentLanguage, final ApiCallback<List<Datacenter>> _callback) throws ApiException {
+    public okhttp3.Call getDatacentersAsync(GetDatacentersRequestBody getDatacentersRequestBody, final ApiCallback<List<Datacenter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDatacentersValidateBeforeCall(getDatacentersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDatacentersValidateBeforeCall(getDatacentersRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Datacenter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class DatacenterApi {
     /**
      * Build call for getDatacentersConnection
      * @param getDatacentersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDatacentersConnectionCall(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDatacentersConnectionCall(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class DatacenterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class DatacenterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class DatacenterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDatacentersConnectionValidateBeforeCall(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDatacentersConnectionValidateBeforeCall(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDatacentersConnectionRequestBody' is set
         if (getDatacentersConnectionRequestBody == null) {
@@ -570,7 +541,7 @@ public class DatacenterApi {
         }
         
 
-        okhttp3.Call localVarCall = getDatacentersConnectionCall(getDatacentersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDatacentersConnectionCall(getDatacentersConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class DatacenterApi {
      * 
      * 
      * @param getDatacentersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return DatacenterConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public DatacenterConnection getDatacentersConnection(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<DatacenterConnection> localVarResp = getDatacentersConnectionWithHttpInfo(getDatacentersConnectionRequestBody, contentLanguage);
+    public DatacenterConnection getDatacentersConnection(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody) throws ApiException {
+        ApiResponse<DatacenterConnection> localVarResp = getDatacentersConnectionWithHttpInfo(getDatacentersConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class DatacenterApi {
      * 
      * 
      * @param getDatacentersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;DatacenterConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DatacenterConnection> getDatacentersConnectionWithHttpInfo(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getDatacentersConnectionValidateBeforeCall(getDatacentersConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<DatacenterConnection> getDatacentersConnectionWithHttpInfo(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getDatacentersConnectionValidateBeforeCall(getDatacentersConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<DatacenterConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class DatacenterApi {
      *  (asynchronously)
      * 
      * @param getDatacentersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDatacentersConnectionAsync(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, String contentLanguage, final ApiCallback<DatacenterConnection> _callback) throws ApiException {
+    public okhttp3.Call getDatacentersConnectionAsync(GetDatacentersConnectionRequestBody getDatacentersConnectionRequestBody, final ApiCallback<DatacenterConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDatacentersConnectionValidateBeforeCall(getDatacentersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDatacentersConnectionValidateBeforeCall(getDatacentersConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<DatacenterConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class DatacenterApi {
     /**
      * Build call for updateDatacenter
      * @param datacenterUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDatacenterCall(DatacenterUpdationParams datacenterUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateDatacenterCall(DatacenterUpdationParams datacenterUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class DatacenterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class DatacenterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class DatacenterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateDatacenterValidateBeforeCall(DatacenterUpdationParams datacenterUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateDatacenterValidateBeforeCall(DatacenterUpdationParams datacenterUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'datacenterUpdationParams' is set
         if (datacenterUpdationParams == null) {
@@ -709,7 +672,7 @@ public class DatacenterApi {
         }
         
 
-        okhttp3.Call localVarCall = updateDatacenterCall(datacenterUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateDatacenterCall(datacenterUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class DatacenterApi {
      * 
      * 
      * @param datacenterUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDatacenter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDatacenter> updateDatacenter(DatacenterUpdationParams datacenterUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDatacenter>> localVarResp = updateDatacenterWithHttpInfo(datacenterUpdationParams, contentLanguage);
+    public List<WithTaskDatacenter> updateDatacenter(DatacenterUpdationParams datacenterUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskDatacenter>> localVarResp = updateDatacenterWithHttpInfo(datacenterUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class DatacenterApi {
      * 
      * 
      * @param datacenterUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDatacenter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDatacenter>> updateDatacenterWithHttpInfo(DatacenterUpdationParams datacenterUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateDatacenterValidateBeforeCall(datacenterUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDatacenter>> updateDatacenterWithHttpInfo(DatacenterUpdationParams datacenterUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateDatacenterValidateBeforeCall(datacenterUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDatacenter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class DatacenterApi {
      *  (asynchronously)
      * 
      * @param datacenterUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class DatacenterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDatacenterAsync(DatacenterUpdationParams datacenterUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
+    public okhttp3.Call updateDatacenterAsync(DatacenterUpdationParams datacenterUpdationParams, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateDatacenterValidateBeforeCall(datacenterUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateDatacenterValidateBeforeCall(datacenterUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDatacenter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

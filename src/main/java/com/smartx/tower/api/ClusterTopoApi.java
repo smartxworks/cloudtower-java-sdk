@@ -78,7 +78,6 @@ public class ClusterTopoApi {
     /**
      * Build call for getClusterTopoes
      * @param getClusterTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterTopoesCall(GetClusterTopoesRequestBody getClusterTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesCall(GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ClusterTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ClusterTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ClusterTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterTopoesValidateBeforeCall(GetClusterTopoesRequestBody getClusterTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterTopoesValidateBeforeCall(GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterTopoesRequestBody' is set
         if (getClusterTopoesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ClusterTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterTopoesCall(getClusterTopoesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterTopoesCall(getClusterTopoesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ClusterTopoApi {
      * 
      * 
      * @param getClusterTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ClusterTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ClusterTopo> getClusterTopoes(GetClusterTopoesRequestBody getClusterTopoesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ClusterTopo>> localVarResp = getClusterTopoesWithHttpInfo(getClusterTopoesRequestBody, contentLanguage);
+    public List<ClusterTopo> getClusterTopoes(GetClusterTopoesRequestBody getClusterTopoesRequestBody) throws ApiException {
+        ApiResponse<List<ClusterTopo>> localVarResp = getClusterTopoesWithHttpInfo(getClusterTopoesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ClusterTopoApi {
      * 
      * 
      * @param getClusterTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ClusterTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ClusterTopo>> getClusterTopoesWithHttpInfo(GetClusterTopoesRequestBody getClusterTopoesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ClusterTopo>> getClusterTopoesWithHttpInfo(GetClusterTopoesRequestBody getClusterTopoesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ClusterTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ClusterTopoApi {
      *  (asynchronously)
      * 
      * @param getClusterTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterTopoesAsync(GetClusterTopoesRequestBody getClusterTopoesRequestBody, String contentLanguage, final ApiCallback<List<ClusterTopo>> _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesAsync(GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback<List<ClusterTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ClusterTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ClusterTopoApi {
     /**
      * Build call for getClusterTopoesConnection
      * @param getClusterTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterTopoesConnectionCall(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesConnectionCall(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ClusterTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ClusterTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ClusterTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterTopoesConnectionValidateBeforeCall(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterTopoesConnectionValidateBeforeCall(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterTopoesConnectionRequestBody' is set
         if (getClusterTopoesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ClusterTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterTopoesConnectionCall(getClusterTopoesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterTopoesConnectionCall(getClusterTopoesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ClusterTopoApi {
      * 
      * 
      * @param getClusterTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ClusterTopoConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ClusterTopoConnection getClusterTopoesConnection(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ClusterTopoConnection> localVarResp = getClusterTopoesConnectionWithHttpInfo(getClusterTopoesConnectionRequestBody, contentLanguage);
+    public ClusterTopoConnection getClusterTopoesConnection(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody) throws ApiException {
+        ApiResponse<ClusterTopoConnection> localVarResp = getClusterTopoesConnectionWithHttpInfo(getClusterTopoesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ClusterTopoApi {
      * 
      * 
      * @param getClusterTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ClusterTopoConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterTopoConnection> getClusterTopoesConnectionWithHttpInfo(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterTopoesConnectionValidateBeforeCall(getClusterTopoesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ClusterTopoConnection> getClusterTopoesConnectionWithHttpInfo(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterTopoesConnectionValidateBeforeCall(getClusterTopoesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ClusterTopoConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ClusterTopoApi {
      *  (asynchronously)
      * 
      * @param getClusterTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ClusterTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterTopoesConnectionAsync(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, String contentLanguage, final ApiCallback<ClusterTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesConnectionAsync(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, final ApiCallback<ClusterTopoConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterTopoesConnectionValidateBeforeCall(getClusterTopoesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterTopoesConnectionValidateBeforeCall(getClusterTopoesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ClusterTopoConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

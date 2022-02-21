@@ -44,7 +44,7 @@ public class ITZone extends ITBase {
       // parse params from json payload
       GetZonesRequestBody params = gson.fromJson(payload, new TypeToken<GetZonesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Zone> result = api.getZones(params, contentLanguage);
+      List<Zone> result = api.getZones(params);
       assertThat(result).as("check result of getZones").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITZone extends ITBase {
       // parse params from json payload
       GetZonesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetZonesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ZoneConnection result = api.getZonesConnection(params, contentLanguage);
+      ZoneConnection result = api.getZonesConnection(params);
       assertThat(result).as("check result of getZonesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

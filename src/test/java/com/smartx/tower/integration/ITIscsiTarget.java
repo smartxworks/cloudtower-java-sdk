@@ -51,18 +51,18 @@ public class ITIscsiTarget extends ITBase {
       List<IscsiTargetCreationParams> createParams = new ArrayList<IscsiTargetCreationParams>();
       createParams.add(new IscsiTargetCreationParams().clusterId(cluster.getId()).thinProvision(true).replicaNum(2)
           .stripeNum(4).stripeSize(262144.0).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
-      List<WithTaskIscsiTarget> createResult = api.createIscsiTarget(createParams, contentLanguage);
+      List<WithTaskIscsiTarget> createResult = api.createIscsiTarget(createParams);
       IscsiTarget target = createResult.get(0).getData();
       waitForTaskSucceed(createResult.get(0).getTaskId());
       assertThat(createResult).as("check result of createIscsiTarget").isNotNull();
       IscsiTargetUpdationParams updateParams = new IscsiTargetUpdationParams()
           .where(new IscsiTargetWhereInput().id(target.getId()))
           .data(new IscsiTargetCommonParams().iops(target.getIops()));
-      List<WithTaskIscsiTarget> updateResult = api.updateIscsiTarget(updateParams, contentLanguage);
+      List<WithTaskIscsiTarget> updateResult = api.updateIscsiTarget(updateParams);
       waitForTaskSucceed(updateResult.get(0).getTaskId());
       assertThat(updateResult).as("check result of updateIscsiTarget").isNotNull();
       List<WithTaskDeleteIscsiTarget> deleteResult = api.deleteIscsiTarget(
-          new IscsiTargetDeletionParams().where(new IscsiTargetWhereInput().id(target.getId())), contentLanguage);
+          new IscsiTargetDeletionParams().where(new IscsiTargetWhereInput().id(target.getId())));
       waitForTaskSucceed(deleteResult.get(0).getTaskId());
       assertThat(deleteResult).as("check result of deleteIscsiTarget").isNotNull();
     } catch (ApiException e) {
@@ -79,7 +79,7 @@ public class ITIscsiTarget extends ITBase {
       GetIscsiTargetsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiTargetsRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<IscsiTarget> result = api.getIscsiTargets(params, contentLanguage);
+      List<IscsiTarget> result = api.getIscsiTargets(params);
       assertThat(result).as("check result of getIscsiTargets").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -96,7 +96,7 @@ public class ITIscsiTarget extends ITBase {
           new TypeToken<GetIscsiTargetsConnectionRequestBody>() {
           }.getType());
       // do some modify to params(optional)
-      IscsiTargetConnection result = api.getIscsiTargetsConnection(params, contentLanguage);
+      IscsiTargetConnection result = api.getIscsiTargetsConnection(params);
       assertThat(result).as("check result of getIscsiTargetsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

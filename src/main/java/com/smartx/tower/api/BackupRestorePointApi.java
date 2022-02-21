@@ -78,7 +78,6 @@ public class BackupRestorePointApi {
     /**
      * Build call for getBackupRestorePoints
      * @param getBackupRestorePointsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupRestorePointsCall(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupRestorePointsCall(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class BackupRestorePointApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class BackupRestorePointApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class BackupRestorePointApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupRestorePointsValidateBeforeCall(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupRestorePointsValidateBeforeCall(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupRestorePointsRequestBody' is set
         if (getBackupRestorePointsRequestBody == null) {
@@ -148,7 +143,7 @@ public class BackupRestorePointApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupRestorePointsCall(getBackupRestorePointsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupRestorePointsCall(getBackupRestorePointsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class BackupRestorePointApi {
      * 
      * 
      * @param getBackupRestorePointsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;BackupRestorePoint&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<BackupRestorePoint> getBackupRestorePoints(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<BackupRestorePoint>> localVarResp = getBackupRestorePointsWithHttpInfo(getBackupRestorePointsRequestBody, contentLanguage);
+    public List<BackupRestorePoint> getBackupRestorePoints(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody) throws ApiException {
+        ApiResponse<List<BackupRestorePoint>> localVarResp = getBackupRestorePointsWithHttpInfo(getBackupRestorePointsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class BackupRestorePointApi {
      * 
      * 
      * @param getBackupRestorePointsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;BackupRestorePoint&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BackupRestorePoint>> getBackupRestorePointsWithHttpInfo(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupRestorePointsValidateBeforeCall(getBackupRestorePointsRequestBody, contentLanguage, null);
+    public ApiResponse<List<BackupRestorePoint>> getBackupRestorePointsWithHttpInfo(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupRestorePointsValidateBeforeCall(getBackupRestorePointsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<BackupRestorePoint>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class BackupRestorePointApi {
      *  (asynchronously)
      * 
      * @param getBackupRestorePointsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupRestorePointsAsync(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, String contentLanguage, final ApiCallback<List<BackupRestorePoint>> _callback) throws ApiException {
+    public okhttp3.Call getBackupRestorePointsAsync(GetBackupRestorePointsRequestBody getBackupRestorePointsRequestBody, final ApiCallback<List<BackupRestorePoint>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupRestorePointsValidateBeforeCall(getBackupRestorePointsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupRestorePointsValidateBeforeCall(getBackupRestorePointsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<BackupRestorePoint>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class BackupRestorePointApi {
     /**
      * Build call for getBackupRestorePointsConnection
      * @param getBackupRestorePointsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupRestorePointsConnectionCall(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupRestorePointsConnectionCall(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class BackupRestorePointApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class BackupRestorePointApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class BackupRestorePointApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupRestorePointsConnectionValidateBeforeCall(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupRestorePointsConnectionValidateBeforeCall(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupRestorePointsConnectionRequestBody' is set
         if (getBackupRestorePointsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class BackupRestorePointApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupRestorePointsConnectionCall(getBackupRestorePointsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupRestorePointsConnectionCall(getBackupRestorePointsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class BackupRestorePointApi {
      * 
      * 
      * @param getBackupRestorePointsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return BackupRestorePointConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public BackupRestorePointConnection getBackupRestorePointsConnection(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<BackupRestorePointConnection> localVarResp = getBackupRestorePointsConnectionWithHttpInfo(getBackupRestorePointsConnectionRequestBody, contentLanguage);
+    public BackupRestorePointConnection getBackupRestorePointsConnection(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody) throws ApiException {
+        ApiResponse<BackupRestorePointConnection> localVarResp = getBackupRestorePointsConnectionWithHttpInfo(getBackupRestorePointsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class BackupRestorePointApi {
      * 
      * 
      * @param getBackupRestorePointsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;BackupRestorePointConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BackupRestorePointConnection> getBackupRestorePointsConnectionWithHttpInfo(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupRestorePointsConnectionValidateBeforeCall(getBackupRestorePointsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<BackupRestorePointConnection> getBackupRestorePointsConnectionWithHttpInfo(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupRestorePointsConnectionValidateBeforeCall(getBackupRestorePointsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<BackupRestorePointConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class BackupRestorePointApi {
      *  (asynchronously)
      * 
      * @param getBackupRestorePointsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class BackupRestorePointApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupRestorePointsConnectionAsync(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, String contentLanguage, final ApiCallback<BackupRestorePointConnection> _callback) throws ApiException {
+    public okhttp3.Call getBackupRestorePointsConnectionAsync(GetBackupRestorePointsConnectionRequestBody getBackupRestorePointsConnectionRequestBody, final ApiCallback<BackupRestorePointConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupRestorePointsConnectionValidateBeforeCall(getBackupRestorePointsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupRestorePointsConnectionValidateBeforeCall(getBackupRestorePointsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<BackupRestorePointConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -78,7 +78,6 @@ public class VmEntityFilterResultApi {
     /**
      * Build call for getVmEntityFilterResults
      * @param getVmEntityFilterResultsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmEntityFilterResultsCall(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmEntityFilterResultsCall(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class VmEntityFilterResultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class VmEntityFilterResultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class VmEntityFilterResultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmEntityFilterResultsValidateBeforeCall(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmEntityFilterResultsValidateBeforeCall(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmEntityFilterResultsRequestBody' is set
         if (getVmEntityFilterResultsRequestBody == null) {
@@ -148,7 +143,7 @@ public class VmEntityFilterResultApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmEntityFilterResultsCall(getVmEntityFilterResultsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmEntityFilterResultsCall(getVmEntityFilterResultsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class VmEntityFilterResultApi {
      * 
      * 
      * @param getVmEntityFilterResultsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmEntityFilterResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmEntityFilterResult> getVmEntityFilterResults(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<VmEntityFilterResult>> localVarResp = getVmEntityFilterResultsWithHttpInfo(getVmEntityFilterResultsRequestBody, contentLanguage);
+    public List<VmEntityFilterResult> getVmEntityFilterResults(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody) throws ApiException {
+        ApiResponse<List<VmEntityFilterResult>> localVarResp = getVmEntityFilterResultsWithHttpInfo(getVmEntityFilterResultsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class VmEntityFilterResultApi {
      * 
      * 
      * @param getVmEntityFilterResultsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmEntityFilterResult&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmEntityFilterResult>> getVmEntityFilterResultsWithHttpInfo(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmEntityFilterResultsValidateBeforeCall(getVmEntityFilterResultsRequestBody, contentLanguage, null);
+    public ApiResponse<List<VmEntityFilterResult>> getVmEntityFilterResultsWithHttpInfo(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmEntityFilterResultsValidateBeforeCall(getVmEntityFilterResultsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<VmEntityFilterResult>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class VmEntityFilterResultApi {
      *  (asynchronously)
      * 
      * @param getVmEntityFilterResultsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmEntityFilterResultsAsync(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, String contentLanguage, final ApiCallback<List<VmEntityFilterResult>> _callback) throws ApiException {
+    public okhttp3.Call getVmEntityFilterResultsAsync(GetVmEntityFilterResultsRequestBody getVmEntityFilterResultsRequestBody, final ApiCallback<List<VmEntityFilterResult>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmEntityFilterResultsValidateBeforeCall(getVmEntityFilterResultsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmEntityFilterResultsValidateBeforeCall(getVmEntityFilterResultsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<VmEntityFilterResult>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class VmEntityFilterResultApi {
     /**
      * Build call for getVmEntityFilterResultsConnection
      * @param getVmEntityFilterResultsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmEntityFilterResultsConnectionCall(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmEntityFilterResultsConnectionCall(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class VmEntityFilterResultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class VmEntityFilterResultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class VmEntityFilterResultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmEntityFilterResultsConnectionValidateBeforeCall(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmEntityFilterResultsConnectionValidateBeforeCall(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmEntityFilterResultsConnectionRequestBody' is set
         if (getVmEntityFilterResultsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class VmEntityFilterResultApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmEntityFilterResultsConnectionCall(getVmEntityFilterResultsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmEntityFilterResultsConnectionCall(getVmEntityFilterResultsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class VmEntityFilterResultApi {
      * 
      * 
      * @param getVmEntityFilterResultsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return VmEntityFilterResultConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmEntityFilterResultConnection getVmEntityFilterResultsConnection(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<VmEntityFilterResultConnection> localVarResp = getVmEntityFilterResultsConnectionWithHttpInfo(getVmEntityFilterResultsConnectionRequestBody, contentLanguage);
+    public VmEntityFilterResultConnection getVmEntityFilterResultsConnection(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody) throws ApiException {
+        ApiResponse<VmEntityFilterResultConnection> localVarResp = getVmEntityFilterResultsConnectionWithHttpInfo(getVmEntityFilterResultsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class VmEntityFilterResultApi {
      * 
      * 
      * @param getVmEntityFilterResultsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmEntityFilterResultConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmEntityFilterResultConnection> getVmEntityFilterResultsConnectionWithHttpInfo(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmEntityFilterResultsConnectionValidateBeforeCall(getVmEntityFilterResultsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<VmEntityFilterResultConnection> getVmEntityFilterResultsConnectionWithHttpInfo(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmEntityFilterResultsConnectionValidateBeforeCall(getVmEntityFilterResultsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<VmEntityFilterResultConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class VmEntityFilterResultApi {
      *  (asynchronously)
      * 
      * @param getVmEntityFilterResultsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class VmEntityFilterResultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmEntityFilterResultsConnectionAsync(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, String contentLanguage, final ApiCallback<VmEntityFilterResultConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmEntityFilterResultsConnectionAsync(GetVmEntityFilterResultsConnectionRequestBody getVmEntityFilterResultsConnectionRequestBody, final ApiCallback<VmEntityFilterResultConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmEntityFilterResultsConnectionValidateBeforeCall(getVmEntityFilterResultsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmEntityFilterResultsConnectionValidateBeforeCall(getVmEntityFilterResultsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VmEntityFilterResultConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -83,7 +83,6 @@ public class NfsExportApi {
     /**
      * Build call for createNfsExport
      * @param nfsExportCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNfsExportCall(List<NfsExportCreationParams> nfsExportCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createNfsExportCall(List<NfsExportCreationParams> nfsExportCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class NfsExportApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class NfsExportApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class NfsExportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createNfsExportValidateBeforeCall(List<NfsExportCreationParams> nfsExportCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createNfsExportValidateBeforeCall(List<NfsExportCreationParams> nfsExportCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nfsExportCreationParams' is set
         if (nfsExportCreationParams == null) {
@@ -153,7 +148,7 @@ public class NfsExportApi {
         }
         
 
-        okhttp3.Call localVarCall = createNfsExportCall(nfsExportCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createNfsExportCall(nfsExportCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class NfsExportApi {
      * 
      * 
      * @param nfsExportCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNfsExport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNfsExport> createNfsExport(List<NfsExportCreationParams> nfsExportCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNfsExport>> localVarResp = createNfsExportWithHttpInfo(nfsExportCreationParams, contentLanguage);
+    public List<WithTaskNfsExport> createNfsExport(List<NfsExportCreationParams> nfsExportCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskNfsExport>> localVarResp = createNfsExportWithHttpInfo(nfsExportCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class NfsExportApi {
      * 
      * 
      * @param nfsExportCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNfsExport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNfsExport>> createNfsExportWithHttpInfo(List<NfsExportCreationParams> nfsExportCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createNfsExportValidateBeforeCall(nfsExportCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNfsExport>> createNfsExportWithHttpInfo(List<NfsExportCreationParams> nfsExportCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createNfsExportValidateBeforeCall(nfsExportCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNfsExport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class NfsExportApi {
      *  (asynchronously)
      * 
      * @param nfsExportCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNfsExportAsync(List<NfsExportCreationParams> nfsExportCreationParams, String contentLanguage, final ApiCallback<List<WithTaskNfsExport>> _callback) throws ApiException {
+    public okhttp3.Call createNfsExportAsync(List<NfsExportCreationParams> nfsExportCreationParams, final ApiCallback<List<WithTaskNfsExport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createNfsExportValidateBeforeCall(nfsExportCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createNfsExportValidateBeforeCall(nfsExportCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNfsExport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class NfsExportApi {
     /**
      * Build call for deleteNfsExport
      * @param nfsExportDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNfsExportCall(NfsExportDeletionParams nfsExportDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteNfsExportCall(NfsExportDeletionParams nfsExportDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class NfsExportApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class NfsExportApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class NfsExportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteNfsExportValidateBeforeCall(NfsExportDeletionParams nfsExportDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteNfsExportValidateBeforeCall(NfsExportDeletionParams nfsExportDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nfsExportDeletionParams' is set
         if (nfsExportDeletionParams == null) {
@@ -292,7 +279,7 @@ public class NfsExportApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteNfsExportCall(nfsExportDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteNfsExportCall(nfsExportDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class NfsExportApi {
      * 
      * 
      * @param nfsExportDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteNfsExport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteNfsExport> deleteNfsExport(NfsExportDeletionParams nfsExportDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteNfsExport>> localVarResp = deleteNfsExportWithHttpInfo(nfsExportDeletionParams, contentLanguage);
+    public List<WithTaskDeleteNfsExport> deleteNfsExport(NfsExportDeletionParams nfsExportDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteNfsExport>> localVarResp = deleteNfsExportWithHttpInfo(nfsExportDeletionParams);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class NfsExportApi {
      * 
      * 
      * @param nfsExportDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteNfsExport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteNfsExport>> deleteNfsExportWithHttpInfo(NfsExportDeletionParams nfsExportDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteNfsExportValidateBeforeCall(nfsExportDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteNfsExport>> deleteNfsExportWithHttpInfo(NfsExportDeletionParams nfsExportDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteNfsExportValidateBeforeCall(nfsExportDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNfsExport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class NfsExportApi {
      *  (asynchronously)
      * 
      * @param nfsExportDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNfsExportAsync(NfsExportDeletionParams nfsExportDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteNfsExport>> _callback) throws ApiException {
+    public okhttp3.Call deleteNfsExportAsync(NfsExportDeletionParams nfsExportDeletionParams, final ApiCallback<List<WithTaskDeleteNfsExport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteNfsExportValidateBeforeCall(nfsExportDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteNfsExportValidateBeforeCall(nfsExportDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNfsExport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class NfsExportApi {
     /**
      * Build call for getNfsExports
      * @param getNfsExportsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsExportsCall(GetNfsExportsRequestBody getNfsExportsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNfsExportsCall(GetNfsExportsRequestBody getNfsExportsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class NfsExportApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class NfsExportApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class NfsExportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNfsExportsValidateBeforeCall(GetNfsExportsRequestBody getNfsExportsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getNfsExportsValidateBeforeCall(GetNfsExportsRequestBody getNfsExportsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNfsExportsRequestBody' is set
         if (getNfsExportsRequestBody == null) {
@@ -431,7 +410,7 @@ public class NfsExportApi {
         }
         
 
-        okhttp3.Call localVarCall = getNfsExportsCall(getNfsExportsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNfsExportsCall(getNfsExportsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class NfsExportApi {
      * 
      * 
      * @param getNfsExportsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;NfsExport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<NfsExport> getNfsExports(GetNfsExportsRequestBody getNfsExportsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<NfsExport>> localVarResp = getNfsExportsWithHttpInfo(getNfsExportsRequestBody, contentLanguage);
+    public List<NfsExport> getNfsExports(GetNfsExportsRequestBody getNfsExportsRequestBody) throws ApiException {
+        ApiResponse<List<NfsExport>> localVarResp = getNfsExportsWithHttpInfo(getNfsExportsRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class NfsExportApi {
      * 
      * 
      * @param getNfsExportsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;NfsExport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<NfsExport>> getNfsExportsWithHttpInfo(GetNfsExportsRequestBody getNfsExportsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getNfsExportsValidateBeforeCall(getNfsExportsRequestBody, contentLanguage, null);
+    public ApiResponse<List<NfsExport>> getNfsExportsWithHttpInfo(GetNfsExportsRequestBody getNfsExportsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getNfsExportsValidateBeforeCall(getNfsExportsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<NfsExport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class NfsExportApi {
      *  (asynchronously)
      * 
      * @param getNfsExportsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsExportsAsync(GetNfsExportsRequestBody getNfsExportsRequestBody, String contentLanguage, final ApiCallback<List<NfsExport>> _callback) throws ApiException {
+    public okhttp3.Call getNfsExportsAsync(GetNfsExportsRequestBody getNfsExportsRequestBody, final ApiCallback<List<NfsExport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNfsExportsValidateBeforeCall(getNfsExportsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNfsExportsValidateBeforeCall(getNfsExportsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<NfsExport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class NfsExportApi {
     /**
      * Build call for getNfsExportsConnection
      * @param getNfsExportsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsExportsConnectionCall(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNfsExportsConnectionCall(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class NfsExportApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class NfsExportApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class NfsExportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNfsExportsConnectionValidateBeforeCall(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getNfsExportsConnectionValidateBeforeCall(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNfsExportsConnectionRequestBody' is set
         if (getNfsExportsConnectionRequestBody == null) {
@@ -570,7 +541,7 @@ public class NfsExportApi {
         }
         
 
-        okhttp3.Call localVarCall = getNfsExportsConnectionCall(getNfsExportsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNfsExportsConnectionCall(getNfsExportsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class NfsExportApi {
      * 
      * 
      * @param getNfsExportsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return NfsExportConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NfsExportConnection getNfsExportsConnection(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<NfsExportConnection> localVarResp = getNfsExportsConnectionWithHttpInfo(getNfsExportsConnectionRequestBody, contentLanguage);
+    public NfsExportConnection getNfsExportsConnection(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody) throws ApiException {
+        ApiResponse<NfsExportConnection> localVarResp = getNfsExportsConnectionWithHttpInfo(getNfsExportsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class NfsExportApi {
      * 
      * 
      * @param getNfsExportsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NfsExportConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NfsExportConnection> getNfsExportsConnectionWithHttpInfo(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getNfsExportsConnectionValidateBeforeCall(getNfsExportsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<NfsExportConnection> getNfsExportsConnectionWithHttpInfo(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getNfsExportsConnectionValidateBeforeCall(getNfsExportsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<NfsExportConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class NfsExportApi {
      *  (asynchronously)
      * 
      * @param getNfsExportsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNfsExportsConnectionAsync(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, String contentLanguage, final ApiCallback<NfsExportConnection> _callback) throws ApiException {
+    public okhttp3.Call getNfsExportsConnectionAsync(GetNfsExportsConnectionRequestBody getNfsExportsConnectionRequestBody, final ApiCallback<NfsExportConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNfsExportsConnectionValidateBeforeCall(getNfsExportsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNfsExportsConnectionValidateBeforeCall(getNfsExportsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<NfsExportConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class NfsExportApi {
     /**
      * Build call for updateNfsExport
      * @param nfsExportUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNfsExportCall(NfsExportUpdationParams nfsExportUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNfsExportCall(NfsExportUpdationParams nfsExportUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class NfsExportApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class NfsExportApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class NfsExportApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNfsExportValidateBeforeCall(NfsExportUpdationParams nfsExportUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateNfsExportValidateBeforeCall(NfsExportUpdationParams nfsExportUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nfsExportUpdationParams' is set
         if (nfsExportUpdationParams == null) {
@@ -709,7 +672,7 @@ public class NfsExportApi {
         }
         
 
-        okhttp3.Call localVarCall = updateNfsExportCall(nfsExportUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateNfsExportCall(nfsExportUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class NfsExportApi {
      * 
      * 
      * @param nfsExportUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNfsExport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNfsExport> updateNfsExport(NfsExportUpdationParams nfsExportUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNfsExport>> localVarResp = updateNfsExportWithHttpInfo(nfsExportUpdationParams, contentLanguage);
+    public List<WithTaskNfsExport> updateNfsExport(NfsExportUpdationParams nfsExportUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskNfsExport>> localVarResp = updateNfsExportWithHttpInfo(nfsExportUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class NfsExportApi {
      * 
      * 
      * @param nfsExportUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNfsExport&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNfsExport>> updateNfsExportWithHttpInfo(NfsExportUpdationParams nfsExportUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateNfsExportValidateBeforeCall(nfsExportUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNfsExport>> updateNfsExportWithHttpInfo(NfsExportUpdationParams nfsExportUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateNfsExportValidateBeforeCall(nfsExportUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNfsExport>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class NfsExportApi {
      *  (asynchronously)
      * 
      * @param nfsExportUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class NfsExportApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNfsExportAsync(NfsExportUpdationParams nfsExportUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskNfsExport>> _callback) throws ApiException {
+    public okhttp3.Call updateNfsExportAsync(NfsExportUpdationParams nfsExportUpdationParams, final ApiCallback<List<WithTaskNfsExport>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNfsExportValidateBeforeCall(nfsExportUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateNfsExportValidateBeforeCall(nfsExportUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNfsExport>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

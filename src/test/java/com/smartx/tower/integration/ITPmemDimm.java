@@ -44,7 +44,7 @@ public class ITPmemDimm extends ITBase {
       // parse params from json payload
       GetPmemDimmsRequestBody params = gson.fromJson(payload, new TypeToken<GetPmemDimmsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<PmemDimm> result = api.getPmemDimms(params, contentLanguage);
+      List<PmemDimm> result = api.getPmemDimms(params);
       assertThat(result).as("check result of getPmemDimms").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITPmemDimm extends ITBase {
       // parse params from json payload
       GetPmemDimmsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetPmemDimmsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      PmemDimmConnection result = api.getPmemDimmsConnection(params, contentLanguage);
+      PmemDimmConnection result = api.getPmemDimmsConnection(params);
       assertThat(result).as("check result of getPmemDimmsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

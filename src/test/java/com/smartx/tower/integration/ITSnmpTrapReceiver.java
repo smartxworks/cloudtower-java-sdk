@@ -44,7 +44,7 @@ public class ITSnmpTrapReceiver extends ITBase {
       // parse params from json payload
       List<SnmpTrapReceiverCreationParams> params = gson.fromJson(payload, new TypeToken<List<SnmpTrapReceiverCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnmpTrapReceiver> result = api.createSnmpTrapReceiver(params, contentLanguage);
+      List<WithTaskSnmpTrapReceiver> result = api.createSnmpTrapReceiver(params);
       assertThat(result).as("check result of createSnmpTrapReceiver").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSnmpTrapReceiver extends ITBase {
       // parse params from json payload
       SnmpTrapReceiverDeletionParams params = gson.fromJson(payload, new TypeToken<SnmpTrapReceiverDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteSnmpTrapReceiver> result = api.deleteSnmpTrapReceiver(params, contentLanguage);
+      List<WithTaskDeleteSnmpTrapReceiver> result = api.deleteSnmpTrapReceiver(params);
       assertThat(result).as("check result of deleteSnmpTrapReceiver").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITSnmpTrapReceiver extends ITBase {
       // parse params from json payload
       GetSnmpTrapReceiversRequestBody params = gson.fromJson(payload, new TypeToken<GetSnmpTrapReceiversRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SnmpTrapReceiver> result = api.getSnmpTrapReceivers(params, contentLanguage);
+      List<SnmpTrapReceiver> result = api.getSnmpTrapReceivers(params);
       assertThat(result).as("check result of getSnmpTrapReceivers").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITSnmpTrapReceiver extends ITBase {
       // parse params from json payload
       GetSnmpTrapReceiversConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSnmpTrapReceiversConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SnmpTrapReceiverConnection result = api.getSnmpTrapReceiversConnection(params, contentLanguage);
+      SnmpTrapReceiverConnection result = api.getSnmpTrapReceiversConnection(params);
       assertThat(result).as("check result of getSnmpTrapReceiversConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITSnmpTrapReceiver extends ITBase {
       // parse params from json payload
       SnmpTrapReceiverUpdationParams params = gson.fromJson(payload, new TypeToken<SnmpTrapReceiverUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnmpTrapReceiver> result = api.updateSnmpTrapReceiver(params, contentLanguage);
+      List<WithTaskSnmpTrapReceiver> result = api.updateSnmpTrapReceiver(params);
       assertThat(result).as("check result of updateSnmpTrapReceiver").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

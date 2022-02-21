@@ -44,7 +44,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       AddLabelsToResourcesParams params = gson.fromJson(payload, new TypeToken<AddLabelsToResourcesParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskLabel> result = api.addLabelsToResources(params, contentLanguage);
+      List<WithTaskLabel> result = api.addLabelsToResources(params);
       assertThat(result).as("check result of addLabelsToResources").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       List<LabelCreationParams> params = gson.fromJson(payload, new TypeToken<List<LabelCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskLabel> result = api.createLabel(params, contentLanguage);
+      List<WithTaskLabel> result = api.createLabel(params);
       assertThat(result).as("check result of createLabel").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       LabelDeletionParams params = gson.fromJson(payload, new TypeToken<LabelDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteLabel> result = api.deleteLabel(params, contentLanguage);
+      List<WithTaskDeleteLabel> result = api.deleteLabel(params);
       assertThat(result).as("check result of deleteLabel").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       GetLabelsRequestBody params = gson.fromJson(payload, new TypeToken<GetLabelsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Label> result = api.getLabels(params, contentLanguage);
+      List<Label> result = api.getLabels(params);
       assertThat(result).as("check result of getLabels").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       GetLabelsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetLabelsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      LabelConnection result = api.getLabelsConnection(params, contentLanguage);
+      LabelConnection result = api.getLabelsConnection(params);
       assertThat(result).as("check result of getLabelsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       AddLabelsToResourcesParams params = gson.fromJson(payload, new TypeToken<AddLabelsToResourcesParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskLabel> result = api.removeLabelsFromResources(params, contentLanguage);
+      List<WithTaskLabel> result = api.removeLabelsFromResources(params);
       assertThat(result).as("check result of removeLabelsFromResources").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -134,7 +134,7 @@ public class ITLabel extends ITBase {
       // parse params from json payload
       LabelUpdationParams params = gson.fromJson(payload, new TypeToken<LabelUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskLabel> result = api.updateLabel(params, contentLanguage);
+      List<WithTaskLabel> result = api.updateLabel(params);
       assertThat(result).as("check result of updateLabel").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -78,7 +78,6 @@ public class SvtImageApi {
     /**
      * Build call for getSvtImages
      * @param getSvtImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSvtImagesCall(GetSvtImagesRequestBody getSvtImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSvtImagesCall(GetSvtImagesRequestBody getSvtImagesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class SvtImageApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class SvtImageApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class SvtImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSvtImagesValidateBeforeCall(GetSvtImagesRequestBody getSvtImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSvtImagesValidateBeforeCall(GetSvtImagesRequestBody getSvtImagesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSvtImagesRequestBody' is set
         if (getSvtImagesRequestBody == null) {
@@ -148,7 +143,7 @@ public class SvtImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getSvtImagesCall(getSvtImagesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSvtImagesCall(getSvtImagesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class SvtImageApi {
      * 
      * 
      * @param getSvtImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SvtImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SvtImage> getSvtImages(GetSvtImagesRequestBody getSvtImagesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<SvtImage>> localVarResp = getSvtImagesWithHttpInfo(getSvtImagesRequestBody, contentLanguage);
+    public List<SvtImage> getSvtImages(GetSvtImagesRequestBody getSvtImagesRequestBody) throws ApiException {
+        ApiResponse<List<SvtImage>> localVarResp = getSvtImagesWithHttpInfo(getSvtImagesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class SvtImageApi {
      * 
      * 
      * @param getSvtImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SvtImage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SvtImage>> getSvtImagesWithHttpInfo(GetSvtImagesRequestBody getSvtImagesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getSvtImagesValidateBeforeCall(getSvtImagesRequestBody, contentLanguage, null);
+    public ApiResponse<List<SvtImage>> getSvtImagesWithHttpInfo(GetSvtImagesRequestBody getSvtImagesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getSvtImagesValidateBeforeCall(getSvtImagesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<SvtImage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class SvtImageApi {
      *  (asynchronously)
      * 
      * @param getSvtImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSvtImagesAsync(GetSvtImagesRequestBody getSvtImagesRequestBody, String contentLanguage, final ApiCallback<List<SvtImage>> _callback) throws ApiException {
+    public okhttp3.Call getSvtImagesAsync(GetSvtImagesRequestBody getSvtImagesRequestBody, final ApiCallback<List<SvtImage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSvtImagesValidateBeforeCall(getSvtImagesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSvtImagesValidateBeforeCall(getSvtImagesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<SvtImage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class SvtImageApi {
     /**
      * Build call for getSvtImagesConnection
      * @param getSvtImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSvtImagesConnectionCall(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSvtImagesConnectionCall(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class SvtImageApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class SvtImageApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class SvtImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSvtImagesConnectionValidateBeforeCall(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSvtImagesConnectionValidateBeforeCall(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSvtImagesConnectionRequestBody' is set
         if (getSvtImagesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class SvtImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getSvtImagesConnectionCall(getSvtImagesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSvtImagesConnectionCall(getSvtImagesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class SvtImageApi {
      * 
      * 
      * @param getSvtImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return SvtImageConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SvtImageConnection getSvtImagesConnection(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<SvtImageConnection> localVarResp = getSvtImagesConnectionWithHttpInfo(getSvtImagesConnectionRequestBody, contentLanguage);
+    public SvtImageConnection getSvtImagesConnection(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody) throws ApiException {
+        ApiResponse<SvtImageConnection> localVarResp = getSvtImagesConnectionWithHttpInfo(getSvtImagesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class SvtImageApi {
      * 
      * 
      * @param getSvtImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SvtImageConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SvtImageConnection> getSvtImagesConnectionWithHttpInfo(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getSvtImagesConnectionValidateBeforeCall(getSvtImagesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<SvtImageConnection> getSvtImagesConnectionWithHttpInfo(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getSvtImagesConnectionValidateBeforeCall(getSvtImagesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<SvtImageConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class SvtImageApi {
      *  (asynchronously)
      * 
      * @param getSvtImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class SvtImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSvtImagesConnectionAsync(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, String contentLanguage, final ApiCallback<SvtImageConnection> _callback) throws ApiException {
+    public okhttp3.Call getSvtImagesConnectionAsync(GetSvtImagesConnectionRequestBody getSvtImagesConnectionRequestBody, final ApiCallback<SvtImageConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSvtImagesConnectionValidateBeforeCall(getSvtImagesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSvtImagesConnectionValidateBeforeCall(getSvtImagesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<SvtImageConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

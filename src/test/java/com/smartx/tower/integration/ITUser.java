@@ -44,7 +44,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       List<UserCreationParams> params = gson.fromJson(payload, new TypeToken<List<UserCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUser> result = api.createUser(params, contentLanguage);
+      List<WithTaskUser> result = api.createUser(params);
       assertThat(result).as("check result of createUser").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       UserDeletionParams params = gson.fromJson(payload, new TypeToken<UserDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteUser> result = api.deleteUser(params, contentLanguage);
+      List<WithTaskDeleteUser> result = api.deleteUser(params);
       assertThat(result).as("check result of deleteUser").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       GetUsersRequestBody params = gson.fromJson(payload, new TypeToken<GetUsersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<User> result = api.getUsers(params, contentLanguage);
+      List<User> result = api.getUsers(params);
       assertThat(result).as("check result of getUsers").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       GetUsersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUsersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      UserConnection result = api.getUsersConnection(params, contentLanguage);
+      UserConnection result = api.getUsersConnection(params);
       assertThat(result).as("check result of getUsersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       LoginInput params = gson.fromJson(payload, new TypeToken<LoginInput>() {}.getType());
       // do some modify to params(optional)
-      WithTaskTokenString result = api.login(params, contentLanguage);
+      WithTaskTokenString result = api.login(params);
       assertThat(result).as("check result of login").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       UserUpdationParams params = gson.fromJson(payload, new TypeToken<UserUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUser> result = api.updateUser(params, contentLanguage);
+      List<WithTaskUser> result = api.updateUser(params);
       assertThat(result).as("check result of updateUser").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -44,7 +44,7 @@ public class ITRackTopo extends ITBase {
       // parse params from json payload
       List<RackTopoCreationParams> params = gson.fromJson(payload, new TypeToken<List<RackTopoCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskRackTopo> result = api.createRackTopo(params, contentLanguage);
+      List<WithTaskRackTopo> result = api.createRackTopo(params);
       assertThat(result).as("check result of createRackTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITRackTopo extends ITBase {
       // parse params from json payload
       RackTopoDeletionParams params = gson.fromJson(payload, new TypeToken<RackTopoDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteRackTopo> result = api.deleteRackTopo(params, contentLanguage);
+      List<WithTaskDeleteRackTopo> result = api.deleteRackTopo(params);
       assertThat(result).as("check result of deleteRackTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITRackTopo extends ITBase {
       // parse params from json payload
       GetRackTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetRackTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<RackTopo> result = api.getRackTopoes(params, contentLanguage);
+      List<RackTopo> result = api.getRackTopoes(params);
       assertThat(result).as("check result of getRackTopoes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITRackTopo extends ITBase {
       // parse params from json payload
       GetRackTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetRackTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      RackTopoConnection result = api.getRackTopoesConnection(params, contentLanguage);
+      RackTopoConnection result = api.getRackTopoesConnection(params);
       assertThat(result).as("check result of getRackTopoesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITRackTopo extends ITBase {
       // parse params from json payload
       RackTopoUpdationParams params = gson.fromJson(payload, new TypeToken<RackTopoUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskRackTopo> result = api.updateRackTopo(params, contentLanguage);
+      List<WithTaskRackTopo> result = api.updateRackTopo(params);
       assertThat(result).as("check result of updateRackTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

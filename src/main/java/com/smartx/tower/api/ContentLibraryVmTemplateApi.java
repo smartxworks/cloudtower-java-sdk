@@ -78,7 +78,6 @@ public class ContentLibraryVmTemplateApi {
     /**
      * Build call for getContentLibraryVmTemplates
      * @param getContentLibraryVmTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryVmTemplatesCall(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryVmTemplatesCall(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ContentLibraryVmTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ContentLibraryVmTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ContentLibraryVmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContentLibraryVmTemplatesValidateBeforeCall(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getContentLibraryVmTemplatesValidateBeforeCall(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getContentLibraryVmTemplatesRequestBody' is set
         if (getContentLibraryVmTemplatesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ContentLibraryVmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = getContentLibraryVmTemplatesCall(getContentLibraryVmTemplatesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryVmTemplatesCall(getContentLibraryVmTemplatesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ContentLibraryVmTemplateApi {
      * 
      * 
      * @param getContentLibraryVmTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ContentLibraryVmTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ContentLibraryVmTemplate> getContentLibraryVmTemplates(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ContentLibraryVmTemplate>> localVarResp = getContentLibraryVmTemplatesWithHttpInfo(getContentLibraryVmTemplatesRequestBody, contentLanguage);
+    public List<ContentLibraryVmTemplate> getContentLibraryVmTemplates(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody) throws ApiException {
+        ApiResponse<List<ContentLibraryVmTemplate>> localVarResp = getContentLibraryVmTemplatesWithHttpInfo(getContentLibraryVmTemplatesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ContentLibraryVmTemplateApi {
      * 
      * 
      * @param getContentLibraryVmTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ContentLibraryVmTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ContentLibraryVmTemplate>> getContentLibraryVmTemplatesWithHttpInfo(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getContentLibraryVmTemplatesValidateBeforeCall(getContentLibraryVmTemplatesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ContentLibraryVmTemplate>> getContentLibraryVmTemplatesWithHttpInfo(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getContentLibraryVmTemplatesValidateBeforeCall(getContentLibraryVmTemplatesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ContentLibraryVmTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ContentLibraryVmTemplateApi {
      *  (asynchronously)
      * 
      * @param getContentLibraryVmTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryVmTemplatesAsync(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, String contentLanguage, final ApiCallback<List<ContentLibraryVmTemplate>> _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryVmTemplatesAsync(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, final ApiCallback<List<ContentLibraryVmTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getContentLibraryVmTemplatesValidateBeforeCall(getContentLibraryVmTemplatesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryVmTemplatesValidateBeforeCall(getContentLibraryVmTemplatesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ContentLibraryVmTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ContentLibraryVmTemplateApi {
     /**
      * Build call for getContentLibraryVmTemplatesConnection
      * @param getContentLibraryVmTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryVmTemplatesConnectionCall(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryVmTemplatesConnectionCall(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ContentLibraryVmTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ContentLibraryVmTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ContentLibraryVmTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContentLibraryVmTemplatesConnectionValidateBeforeCall(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getContentLibraryVmTemplatesConnectionValidateBeforeCall(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getContentLibraryVmTemplatesConnectionRequestBody' is set
         if (getContentLibraryVmTemplatesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ContentLibraryVmTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = getContentLibraryVmTemplatesConnectionCall(getContentLibraryVmTemplatesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryVmTemplatesConnectionCall(getContentLibraryVmTemplatesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ContentLibraryVmTemplateApi {
      * 
      * 
      * @param getContentLibraryVmTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ContentLibraryVmTemplateConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ContentLibraryVmTemplateConnection getContentLibraryVmTemplatesConnection(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ContentLibraryVmTemplateConnection> localVarResp = getContentLibraryVmTemplatesConnectionWithHttpInfo(getContentLibraryVmTemplatesConnectionRequestBody, contentLanguage);
+    public ContentLibraryVmTemplateConnection getContentLibraryVmTemplatesConnection(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody) throws ApiException {
+        ApiResponse<ContentLibraryVmTemplateConnection> localVarResp = getContentLibraryVmTemplatesConnectionWithHttpInfo(getContentLibraryVmTemplatesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ContentLibraryVmTemplateApi {
      * 
      * 
      * @param getContentLibraryVmTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ContentLibraryVmTemplateConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ContentLibraryVmTemplateConnection> getContentLibraryVmTemplatesConnectionWithHttpInfo(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getContentLibraryVmTemplatesConnectionValidateBeforeCall(getContentLibraryVmTemplatesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ContentLibraryVmTemplateConnection> getContentLibraryVmTemplatesConnectionWithHttpInfo(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getContentLibraryVmTemplatesConnectionValidateBeforeCall(getContentLibraryVmTemplatesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ContentLibraryVmTemplateConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ContentLibraryVmTemplateApi {
      *  (asynchronously)
      * 
      * @param getContentLibraryVmTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ContentLibraryVmTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContentLibraryVmTemplatesConnectionAsync(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback<ContentLibraryVmTemplateConnection> _callback) throws ApiException {
+    public okhttp3.Call getContentLibraryVmTemplatesConnectionAsync(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, final ApiCallback<ContentLibraryVmTemplateConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getContentLibraryVmTemplatesConnectionValidateBeforeCall(getContentLibraryVmTemplatesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getContentLibraryVmTemplatesConnectionValidateBeforeCall(getContentLibraryVmTemplatesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ContentLibraryVmTemplateConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

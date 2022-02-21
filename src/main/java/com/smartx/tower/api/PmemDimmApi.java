@@ -78,7 +78,6 @@ public class PmemDimmApi {
     /**
      * Build call for getPmemDimms
      * @param getPmemDimmsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPmemDimmsCall(GetPmemDimmsRequestBody getPmemDimmsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPmemDimmsCall(GetPmemDimmsRequestBody getPmemDimmsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class PmemDimmApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class PmemDimmApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class PmemDimmApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPmemDimmsValidateBeforeCall(GetPmemDimmsRequestBody getPmemDimmsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPmemDimmsValidateBeforeCall(GetPmemDimmsRequestBody getPmemDimmsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getPmemDimmsRequestBody' is set
         if (getPmemDimmsRequestBody == null) {
@@ -148,7 +143,7 @@ public class PmemDimmApi {
         }
         
 
-        okhttp3.Call localVarCall = getPmemDimmsCall(getPmemDimmsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getPmemDimmsCall(getPmemDimmsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class PmemDimmApi {
      * 
      * 
      * @param getPmemDimmsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;PmemDimm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<PmemDimm> getPmemDimms(GetPmemDimmsRequestBody getPmemDimmsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<PmemDimm>> localVarResp = getPmemDimmsWithHttpInfo(getPmemDimmsRequestBody, contentLanguage);
+    public List<PmemDimm> getPmemDimms(GetPmemDimmsRequestBody getPmemDimmsRequestBody) throws ApiException {
+        ApiResponse<List<PmemDimm>> localVarResp = getPmemDimmsWithHttpInfo(getPmemDimmsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class PmemDimmApi {
      * 
      * 
      * @param getPmemDimmsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;PmemDimm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<PmemDimm>> getPmemDimmsWithHttpInfo(GetPmemDimmsRequestBody getPmemDimmsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getPmemDimmsValidateBeforeCall(getPmemDimmsRequestBody, contentLanguage, null);
+    public ApiResponse<List<PmemDimm>> getPmemDimmsWithHttpInfo(GetPmemDimmsRequestBody getPmemDimmsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getPmemDimmsValidateBeforeCall(getPmemDimmsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<PmemDimm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class PmemDimmApi {
      *  (asynchronously)
      * 
      * @param getPmemDimmsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPmemDimmsAsync(GetPmemDimmsRequestBody getPmemDimmsRequestBody, String contentLanguage, final ApiCallback<List<PmemDimm>> _callback) throws ApiException {
+    public okhttp3.Call getPmemDimmsAsync(GetPmemDimmsRequestBody getPmemDimmsRequestBody, final ApiCallback<List<PmemDimm>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getPmemDimmsValidateBeforeCall(getPmemDimmsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getPmemDimmsValidateBeforeCall(getPmemDimmsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<PmemDimm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class PmemDimmApi {
     /**
      * Build call for getPmemDimmsConnection
      * @param getPmemDimmsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPmemDimmsConnectionCall(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPmemDimmsConnectionCall(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class PmemDimmApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class PmemDimmApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class PmemDimmApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPmemDimmsConnectionValidateBeforeCall(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPmemDimmsConnectionValidateBeforeCall(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getPmemDimmsConnectionRequestBody' is set
         if (getPmemDimmsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class PmemDimmApi {
         }
         
 
-        okhttp3.Call localVarCall = getPmemDimmsConnectionCall(getPmemDimmsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getPmemDimmsConnectionCall(getPmemDimmsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class PmemDimmApi {
      * 
      * 
      * @param getPmemDimmsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return PmemDimmConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public PmemDimmConnection getPmemDimmsConnection(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<PmemDimmConnection> localVarResp = getPmemDimmsConnectionWithHttpInfo(getPmemDimmsConnectionRequestBody, contentLanguage);
+    public PmemDimmConnection getPmemDimmsConnection(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody) throws ApiException {
+        ApiResponse<PmemDimmConnection> localVarResp = getPmemDimmsConnectionWithHttpInfo(getPmemDimmsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class PmemDimmApi {
      * 
      * 
      * @param getPmemDimmsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;PmemDimmConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PmemDimmConnection> getPmemDimmsConnectionWithHttpInfo(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getPmemDimmsConnectionValidateBeforeCall(getPmemDimmsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<PmemDimmConnection> getPmemDimmsConnectionWithHttpInfo(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getPmemDimmsConnectionValidateBeforeCall(getPmemDimmsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<PmemDimmConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class PmemDimmApi {
      *  (asynchronously)
      * 
      * @param getPmemDimmsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class PmemDimmApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPmemDimmsConnectionAsync(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, String contentLanguage, final ApiCallback<PmemDimmConnection> _callback) throws ApiException {
+    public okhttp3.Call getPmemDimmsConnectionAsync(GetPmemDimmsConnectionRequestBody getPmemDimmsConnectionRequestBody, final ApiCallback<PmemDimmConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getPmemDimmsConnectionValidateBeforeCall(getPmemDimmsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getPmemDimmsConnectionValidateBeforeCall(getPmemDimmsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<PmemDimmConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

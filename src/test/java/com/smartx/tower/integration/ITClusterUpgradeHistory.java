@@ -44,7 +44,7 @@ public class ITClusterUpgradeHistory extends ITBase {
       // parse params from json payload
       GetClusterUpgradeHistoriesRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterUpgradeHistoriesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ClusterUpgradeHistory> result = api.getClusterUpgradeHistories(params, contentLanguage);
+      List<ClusterUpgradeHistory> result = api.getClusterUpgradeHistories(params);
       assertThat(result).as("check result of getClusterUpgradeHistories").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITClusterUpgradeHistory extends ITBase {
       // parse params from json payload
       GetClusterUpgradeHistoriesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterUpgradeHistoriesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ClusterUpgradeHistoryConnection result = api.getClusterUpgradeHistoriesConnection(params, contentLanguage);
+      ClusterUpgradeHistoryConnection result = api.getClusterUpgradeHistoriesConnection(params);
       assertThat(result).as("check result of getClusterUpgradeHistoriesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

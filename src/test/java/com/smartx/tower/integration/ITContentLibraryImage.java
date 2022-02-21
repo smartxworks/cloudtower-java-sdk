@@ -44,7 +44,7 @@ public class ITContentLibraryImage extends ITBase {
       // parse params from json payload
       GetContentLibraryImagesRequestBody params = gson.fromJson(payload, new TypeToken<GetContentLibraryImagesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ContentLibraryImage> result = api.getContentLibraryImages(params, contentLanguage);
+      List<ContentLibraryImage> result = api.getContentLibraryImages(params);
       assertThat(result).as("check result of getContentLibraryImages").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITContentLibraryImage extends ITBase {
       // parse params from json payload
       GetContentLibraryImagesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetContentLibraryImagesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ContentLibraryImageConnection result = api.getContentLibraryImagesConnection(params, contentLanguage);
+      ContentLibraryImageConnection result = api.getContentLibraryImagesConnection(params);
       assertThat(result).as("check result of getContentLibraryImagesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -78,7 +78,6 @@ public class BackupStoreRepositoryApi {
     /**
      * Build call for getBackupStoreRepositories
      * @param getBackupStoreRepositoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupStoreRepositoriesCall(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupStoreRepositoriesCall(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class BackupStoreRepositoryApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class BackupStoreRepositoryApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class BackupStoreRepositoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupStoreRepositoriesValidateBeforeCall(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupStoreRepositoriesValidateBeforeCall(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupStoreRepositoriesRequestBody' is set
         if (getBackupStoreRepositoriesRequestBody == null) {
@@ -148,7 +143,7 @@ public class BackupStoreRepositoryApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupStoreRepositoriesCall(getBackupStoreRepositoriesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupStoreRepositoriesCall(getBackupStoreRepositoriesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class BackupStoreRepositoryApi {
      * 
      * 
      * @param getBackupStoreRepositoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;BackupStoreRepository&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<BackupStoreRepository> getBackupStoreRepositories(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<BackupStoreRepository>> localVarResp = getBackupStoreRepositoriesWithHttpInfo(getBackupStoreRepositoriesRequestBody, contentLanguage);
+    public List<BackupStoreRepository> getBackupStoreRepositories(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody) throws ApiException {
+        ApiResponse<List<BackupStoreRepository>> localVarResp = getBackupStoreRepositoriesWithHttpInfo(getBackupStoreRepositoriesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class BackupStoreRepositoryApi {
      * 
      * 
      * @param getBackupStoreRepositoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;BackupStoreRepository&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BackupStoreRepository>> getBackupStoreRepositoriesWithHttpInfo(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupStoreRepositoriesValidateBeforeCall(getBackupStoreRepositoriesRequestBody, contentLanguage, null);
+    public ApiResponse<List<BackupStoreRepository>> getBackupStoreRepositoriesWithHttpInfo(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupStoreRepositoriesValidateBeforeCall(getBackupStoreRepositoriesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<BackupStoreRepository>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class BackupStoreRepositoryApi {
      *  (asynchronously)
      * 
      * @param getBackupStoreRepositoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupStoreRepositoriesAsync(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, String contentLanguage, final ApiCallback<List<BackupStoreRepository>> _callback) throws ApiException {
+    public okhttp3.Call getBackupStoreRepositoriesAsync(GetBackupStoreRepositoriesRequestBody getBackupStoreRepositoriesRequestBody, final ApiCallback<List<BackupStoreRepository>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupStoreRepositoriesValidateBeforeCall(getBackupStoreRepositoriesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupStoreRepositoriesValidateBeforeCall(getBackupStoreRepositoriesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<BackupStoreRepository>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class BackupStoreRepositoryApi {
     /**
      * Build call for getBackupStoreRepositoriesConnection
      * @param getBackupStoreRepositoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupStoreRepositoriesConnectionCall(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupStoreRepositoriesConnectionCall(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class BackupStoreRepositoryApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class BackupStoreRepositoryApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class BackupStoreRepositoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupStoreRepositoriesConnectionValidateBeforeCall(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupStoreRepositoriesConnectionValidateBeforeCall(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupStoreRepositoriesConnectionRequestBody' is set
         if (getBackupStoreRepositoriesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class BackupStoreRepositoryApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupStoreRepositoriesConnectionCall(getBackupStoreRepositoriesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupStoreRepositoriesConnectionCall(getBackupStoreRepositoriesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class BackupStoreRepositoryApi {
      * 
      * 
      * @param getBackupStoreRepositoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return BackupStoreRepositoryConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public BackupStoreRepositoryConnection getBackupStoreRepositoriesConnection(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<BackupStoreRepositoryConnection> localVarResp = getBackupStoreRepositoriesConnectionWithHttpInfo(getBackupStoreRepositoriesConnectionRequestBody, contentLanguage);
+    public BackupStoreRepositoryConnection getBackupStoreRepositoriesConnection(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody) throws ApiException {
+        ApiResponse<BackupStoreRepositoryConnection> localVarResp = getBackupStoreRepositoriesConnectionWithHttpInfo(getBackupStoreRepositoriesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class BackupStoreRepositoryApi {
      * 
      * 
      * @param getBackupStoreRepositoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;BackupStoreRepositoryConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BackupStoreRepositoryConnection> getBackupStoreRepositoriesConnectionWithHttpInfo(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupStoreRepositoriesConnectionValidateBeforeCall(getBackupStoreRepositoriesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<BackupStoreRepositoryConnection> getBackupStoreRepositoriesConnectionWithHttpInfo(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupStoreRepositoriesConnectionValidateBeforeCall(getBackupStoreRepositoriesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<BackupStoreRepositoryConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class BackupStoreRepositoryApi {
      *  (asynchronously)
      * 
      * @param getBackupStoreRepositoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class BackupStoreRepositoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupStoreRepositoriesConnectionAsync(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, String contentLanguage, final ApiCallback<BackupStoreRepositoryConnection> _callback) throws ApiException {
+    public okhttp3.Call getBackupStoreRepositoriesConnectionAsync(GetBackupStoreRepositoriesConnectionRequestBody getBackupStoreRepositoriesConnectionRequestBody, final ApiCallback<BackupStoreRepositoryConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupStoreRepositoriesConnectionValidateBeforeCall(getBackupStoreRepositoriesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupStoreRepositoriesConnectionValidateBeforeCall(getBackupStoreRepositoriesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<BackupStoreRepositoryConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

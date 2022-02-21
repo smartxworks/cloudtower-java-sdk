@@ -44,7 +44,7 @@ public class ITView extends ITBase {
       // parse params from json payload
       List<ViewCreationParams> params = gson.fromJson(payload, new TypeToken<List<ViewCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskView> result = api.createView(params, contentLanguage);
+      List<WithTaskView> result = api.createView(params);
       assertThat(result).as("check result of createView").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITView extends ITBase {
       // parse params from json payload
       ViewDeletionParams params = gson.fromJson(payload, new TypeToken<ViewDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteView> result = api.deleteView(params, contentLanguage);
+      List<WithTaskDeleteView> result = api.deleteView(params);
       assertThat(result).as("check result of deleteView").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITView extends ITBase {
       // parse params from json payload
       GetViewsRequestBody params = gson.fromJson(payload, new TypeToken<GetViewsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<View> result = api.getViews(params, contentLanguage);
+      List<View> result = api.getViews(params);
       assertThat(result).as("check result of getViews").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITView extends ITBase {
       // parse params from json payload
       GetViewsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetViewsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ViewConnection result = api.getViewsConnection(params, contentLanguage);
+      ViewConnection result = api.getViewsConnection(params);
       assertThat(result).as("check result of getViewsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITView extends ITBase {
       // parse params from json payload
       ViewUpdationParams params = gson.fromJson(payload, new TypeToken<ViewUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskView> result = api.updateView(params, contentLanguage);
+      List<WithTaskView> result = api.updateView(params);
       assertThat(result).as("check result of updateView").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

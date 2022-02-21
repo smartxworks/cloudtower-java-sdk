@@ -78,7 +78,6 @@ public class ZoneApi {
     /**
      * Build call for getZones
      * @param getZonesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZonesCall(GetZonesRequestBody getZonesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getZonesCall(GetZonesRequestBody getZonesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ZoneApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ZoneApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ZoneApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getZonesValidateBeforeCall(GetZonesRequestBody getZonesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getZonesValidateBeforeCall(GetZonesRequestBody getZonesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getZonesRequestBody' is set
         if (getZonesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ZoneApi {
         }
         
 
-        okhttp3.Call localVarCall = getZonesCall(getZonesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZonesCall(getZonesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ZoneApi {
      * 
      * 
      * @param getZonesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Zone&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Zone> getZones(GetZonesRequestBody getZonesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Zone>> localVarResp = getZonesWithHttpInfo(getZonesRequestBody, contentLanguage);
+    public List<Zone> getZones(GetZonesRequestBody getZonesRequestBody) throws ApiException {
+        ApiResponse<List<Zone>> localVarResp = getZonesWithHttpInfo(getZonesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ZoneApi {
      * 
      * 
      * @param getZonesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Zone&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Zone>> getZonesWithHttpInfo(GetZonesRequestBody getZonesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getZonesValidateBeforeCall(getZonesRequestBody, contentLanguage, null);
+    public ApiResponse<List<Zone>> getZonesWithHttpInfo(GetZonesRequestBody getZonesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getZonesValidateBeforeCall(getZonesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Zone>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ZoneApi {
      *  (asynchronously)
      * 
      * @param getZonesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZonesAsync(GetZonesRequestBody getZonesRequestBody, String contentLanguage, final ApiCallback<List<Zone>> _callback) throws ApiException {
+    public okhttp3.Call getZonesAsync(GetZonesRequestBody getZonesRequestBody, final ApiCallback<List<Zone>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getZonesValidateBeforeCall(getZonesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZonesValidateBeforeCall(getZonesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Zone>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ZoneApi {
     /**
      * Build call for getZonesConnection
      * @param getZonesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZonesConnectionCall(GetZonesConnectionRequestBody getZonesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getZonesConnectionCall(GetZonesConnectionRequestBody getZonesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ZoneApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ZoneApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ZoneApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getZonesConnectionValidateBeforeCall(GetZonesConnectionRequestBody getZonesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getZonesConnectionValidateBeforeCall(GetZonesConnectionRequestBody getZonesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getZonesConnectionRequestBody' is set
         if (getZonesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ZoneApi {
         }
         
 
-        okhttp3.Call localVarCall = getZonesConnectionCall(getZonesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZonesConnectionCall(getZonesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ZoneApi {
      * 
      * 
      * @param getZonesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ZoneConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ZoneConnection getZonesConnection(GetZonesConnectionRequestBody getZonesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ZoneConnection> localVarResp = getZonesConnectionWithHttpInfo(getZonesConnectionRequestBody, contentLanguage);
+    public ZoneConnection getZonesConnection(GetZonesConnectionRequestBody getZonesConnectionRequestBody) throws ApiException {
+        ApiResponse<ZoneConnection> localVarResp = getZonesConnectionWithHttpInfo(getZonesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ZoneApi {
      * 
      * 
      * @param getZonesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ZoneConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ZoneConnection> getZonesConnectionWithHttpInfo(GetZonesConnectionRequestBody getZonesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getZonesConnectionValidateBeforeCall(getZonesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ZoneConnection> getZonesConnectionWithHttpInfo(GetZonesConnectionRequestBody getZonesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getZonesConnectionValidateBeforeCall(getZonesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ZoneConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ZoneApi {
      *  (asynchronously)
      * 
      * @param getZonesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ZoneApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZonesConnectionAsync(GetZonesConnectionRequestBody getZonesConnectionRequestBody, String contentLanguage, final ApiCallback<ZoneConnection> _callback) throws ApiException {
+    public okhttp3.Call getZonesConnectionAsync(GetZonesConnectionRequestBody getZonesConnectionRequestBody, final ApiCallback<ZoneConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getZonesConnectionValidateBeforeCall(getZonesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZonesConnectionValidateBeforeCall(getZonesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ZoneConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

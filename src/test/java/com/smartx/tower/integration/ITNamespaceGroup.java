@@ -44,7 +44,7 @@ public class ITNamespaceGroup extends ITBase {
       // parse params from json payload
       List<NamespaceGroupCreationParams> params = gson.fromJson(payload, new TypeToken<List<NamespaceGroupCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNamespaceGroup> result = api.createNamespaceGroup(params, contentLanguage);
+      List<WithTaskNamespaceGroup> result = api.createNamespaceGroup(params);
       assertThat(result).as("check result of createNamespaceGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNamespaceGroup extends ITBase {
       // parse params from json payload
       NamespaceGroupDeletionParams params = gson.fromJson(payload, new TypeToken<NamespaceGroupDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteNamespaceGroup> result = api.deleteNamespaceGroup(params, contentLanguage);
+      List<WithTaskDeleteNamespaceGroup> result = api.deleteNamespaceGroup(params);
       assertThat(result).as("check result of deleteNamespaceGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITNamespaceGroup extends ITBase {
       // parse params from json payload
       GetNamespaceGroupsRequestBody params = gson.fromJson(payload, new TypeToken<GetNamespaceGroupsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<NamespaceGroup> result = api.getNamespaceGroups(params, contentLanguage);
+      List<NamespaceGroup> result = api.getNamespaceGroups(params);
       assertThat(result).as("check result of getNamespaceGroups").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITNamespaceGroup extends ITBase {
       // parse params from json payload
       GetNamespaceGroupsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNamespaceGroupsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NamespaceGroupConnection result = api.getNamespaceGroupsConnection(params, contentLanguage);
+      NamespaceGroupConnection result = api.getNamespaceGroupsConnection(params);
       assertThat(result).as("check result of getNamespaceGroupsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITNamespaceGroup extends ITBase {
       // parse params from json payload
       NamespaceGroupUpdationParams params = gson.fromJson(payload, new TypeToken<NamespaceGroupUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNamespaceGroup> result = api.updateNamespaceGroup(params, contentLanguage);
+      List<WithTaskNamespaceGroup> result = api.updateNamespaceGroup(params);
       assertThat(result).as("check result of updateNamespaceGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

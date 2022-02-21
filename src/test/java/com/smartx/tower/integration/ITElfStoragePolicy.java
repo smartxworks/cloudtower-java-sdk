@@ -44,7 +44,7 @@ public class ITElfStoragePolicy extends ITBase {
       // parse params from json payload
       GetElfStoragePoliciesRequestBody params = gson.fromJson(payload, new TypeToken<GetElfStoragePoliciesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ElfStoragePolicy> result = api.getElfStoragePolicies(params, contentLanguage);
+      List<ElfStoragePolicy> result = api.getElfStoragePolicies(params);
       assertThat(result).as("check result of getElfStoragePolicies").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITElfStoragePolicy extends ITBase {
       // parse params from json payload
       GetElfStoragePoliciesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetElfStoragePoliciesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ElfStoragePolicyConnection result = api.getElfStoragePoliciesConnection(params, contentLanguage);
+      ElfStoragePolicyConnection result = api.getElfStoragePoliciesConnection(params);
       assertThat(result).as("check result of getElfStoragePoliciesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

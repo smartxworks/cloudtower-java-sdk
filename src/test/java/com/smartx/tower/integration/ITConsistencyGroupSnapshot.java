@@ -44,7 +44,7 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       // parse params from json payload
       List<ConsistencyGroupSnapshotCreationParams> params = gson.fromJson(payload, new TypeToken<List<ConsistencyGroupSnapshotCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskConsistencyGroupSnapshot> result = api.createConsistencyGroupSnapshot(params, contentLanguage);
+      List<WithTaskConsistencyGroupSnapshot> result = api.createConsistencyGroupSnapshot(params);
       assertThat(result).as("check result of createConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       // parse params from json payload
       ConsistencyGroupSnapshotDeletionParams params = gson.fromJson(payload, new TypeToken<ConsistencyGroupSnapshotDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteConsistencyGroupSnapshot> result = api.deleteConsistencyGroupSnapshot(params, contentLanguage);
+      List<WithTaskDeleteConsistencyGroupSnapshot> result = api.deleteConsistencyGroupSnapshot(params);
       assertThat(result).as("check result of deleteConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       // parse params from json payload
       GetConsistencyGroupSnapshotsRequestBody params = gson.fromJson(payload, new TypeToken<GetConsistencyGroupSnapshotsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ConsistencyGroupSnapshot> result = api.getConsistencyGroupSnapshots(params, contentLanguage);
+      List<ConsistencyGroupSnapshot> result = api.getConsistencyGroupSnapshots(params);
       assertThat(result).as("check result of getConsistencyGroupSnapshots").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       // parse params from json payload
       GetConsistencyGroupSnapshotsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetConsistencyGroupSnapshotsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ConsistencyGroupSnapshotConnection result = api.getConsistencyGroupSnapshotsConnection(params, contentLanguage);
+      ConsistencyGroupSnapshotConnection result = api.getConsistencyGroupSnapshotsConnection(params);
       assertThat(result).as("check result of getConsistencyGroupSnapshotsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITConsistencyGroupSnapshot extends ITBase {
       // parse params from json payload
       ConsistencyGroupSnapshotUpdationParams params = gson.fromJson(payload, new TypeToken<ConsistencyGroupSnapshotUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskConsistencyGroupSnapshot> result = api.updateConsistencyGroupSnapshot(params, contentLanguage);
+      List<WithTaskConsistencyGroupSnapshot> result = api.updateConsistencyGroupSnapshot(params);
       assertThat(result).as("check result of updateConsistencyGroupSnapshot").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -44,7 +44,7 @@ public class ITNvmfSubsystem extends ITBase {
       // parse params from json payload
       GetNvmfSubsystemsRequestBody params = gson.fromJson(payload, new TypeToken<GetNvmfSubsystemsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<NvmfSubsystem> result = api.getNvmfSubsystems(params, contentLanguage);
+      List<NvmfSubsystem> result = api.getNvmfSubsystems(params);
       assertThat(result).as("check result of getNvmfSubsystems").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNvmfSubsystem extends ITBase {
       // parse params from json payload
       GetNvmfSubsystemsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNvmfSubsystemsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NvmfSubsystemConnection result = api.getNvmfSubsystemsConnection(params, contentLanguage);
+      NvmfSubsystemConnection result = api.getNvmfSubsystemsConnection(params);
       assertThat(result).as("check result of getNvmfSubsystemsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

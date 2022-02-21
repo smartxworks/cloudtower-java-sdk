@@ -44,7 +44,7 @@ public class ITEverouteLicense extends ITBase {
       // parse params from json payload
       GetEverouteLicensesRequestBody params = gson.fromJson(payload, new TypeToken<GetEverouteLicensesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<EverouteLicense> result = api.getEverouteLicenses(params, contentLanguage);
+      List<EverouteLicense> result = api.getEverouteLicenses(params);
       assertThat(result).as("check result of getEverouteLicenses").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITEverouteLicense extends ITBase {
       // parse params from json payload
       GetEverouteLicensesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetEverouteLicensesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      EverouteLicenseConnection result = api.getEverouteLicensesConnection(params, contentLanguage);
+      EverouteLicenseConnection result = api.getEverouteLicensesConnection(params);
       assertThat(result).as("check result of getEverouteLicensesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

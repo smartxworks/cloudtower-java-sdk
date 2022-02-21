@@ -63,11 +63,11 @@ public class ITVm extends ITBase {
           .ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
           .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1))));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.createVm(params, contentLanguage);
+      List<WithTaskVm> result = api.createVm(params);
       assertThat(result).as("check result of createVm").isNotNull();
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+      waitForTaskSucceed(api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -90,7 +90,7 @@ public class ITVm extends ITBase {
         .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
-    WithTaskVm result = api.createVm(params, contentLanguage).get(0);
+    WithTaskVm result = api.createVm(params).get(0);
     stoppedVm = result.getData();
     waitForTaskSucceed(result.getTaskId());
   }
@@ -101,12 +101,12 @@ public class ITVm extends ITBase {
     Vm vm = waitForVmEntityAsyncStatus(stoppedVm.getId(), api);
     // shudown vm first before delete it if itis running;
     if (vm.getStatus() == VmStatus.RUNNING) {
-      waitForTaskSucceed(api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+      waitForTaskSucceed(api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     }
     VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(stoppedVm.getId()));
     ;
-    waitForTaskSucceed(api.deleteVm(params, contentLanguage).get(0).getTaskId());
+    waitForTaskSucceed(api.deleteVm(params).get(0).getTaskId());
     stoppedVm = null;
   }
 
@@ -120,12 +120,12 @@ public class ITVm extends ITBase {
       params.get(0).srcVmId(stoppedVm.getId()).clusterId(cluster.getId())
           .name("tower-sdk-test-clone-vm" + System.currentTimeMillis());
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.cloneVm(params, contentLanguage);
+      List<WithTaskVm> result = api.cloneVm(params);
       assertThat(result).as("check result of cloneVm").isNotNull();
       Vm clonedVm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
       waitForTaskSucceed(
-          api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(clonedVm.getId())), contentLanguage).get(0)
+          api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(clonedVm.getId()))).get(0)
               .getTaskId());
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -142,7 +142,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(stoppedVm.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.startVm(params, contentLanguage);
+      List<WithTaskVm> result = api.startVm(params);
       assertThat(result).as("check result of startVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -159,7 +159,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(stoppedVm.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.updateVm(params, contentLanguage);
+      List<WithTaskVm> result = api.updateVm(params);
       assertThat(result).as("check result of updateVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -174,14 +174,14 @@ public class ITVm extends ITBase {
       NestedHost vmhost = stoppedVm.getHost();
       Host host = new HostApi(client)
           .getHosts(new GetHostsRequestBody().where(new HostWhereInput().idNot(vmhost != null ? vmhost.getId() : null)
-              .cluster(new ClusterWhereInput().id(cluster.getId()))), contentLanguage)
+              .cluster(new ClusterWhereInput().id(cluster.getId()))))
           .get(0);
       // parse params from json payload
       VmMigrateParams params = gson.fromJson(payload, new TypeToken<VmMigrateParams>() {
       }.getType());
       params.where(new VmWhereInput().id(stoppedVm.getId())).data(new VmStartParamsData().hostId(host.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.migRateVm(params, contentLanguage);
+      List<WithTaskVm> result = api.migRateVm(params);
       assertThat(result).as("check result of migRateVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -203,7 +203,7 @@ public class ITVm extends ITBase {
         .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.RUNNING).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
-    WithTaskVm result = api.createVm(params, contentLanguage).get(0);
+    WithTaskVm result = api.createVm(params).get(0);
     runningVM = result.getData();
     waitForTaskSucceed(result.getTaskId());
   }
@@ -214,11 +214,11 @@ public class ITVm extends ITBase {
     Vm vm = waitForVmEntityAsyncStatus(runningVM.getId(), api);
     // shudown vm first before delete it;
     if (vm.getStatus() == VmStatus.RUNNING) {
-      waitForTaskSucceed(api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+      waitForTaskSucceed(api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     }
     VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(runningVM.getId()));
-    waitForTaskSucceed(api.deleteVm(params, contentLanguage).get(0).getTaskId());
+    waitForTaskSucceed(api.deleteVm(params).get(0).getTaskId());
     runningVM = null;
   }
 
@@ -230,7 +230,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(runningVM.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.restartVm(params, contentLanguage);
+      List<WithTaskVm> result = api.restartVm(params);
       assertThat(result).as("check result of restartVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -246,9 +246,9 @@ public class ITVm extends ITBase {
       VmOperateParams params = gson.fromJson(payload, new TypeToken<VmOperateParams>() {
       }.getType());
       params.where(new VmWhereInput().id(runningVM.getId()));
-      waitForTaskSucceed(api.suspendVm(params, contentLanguage).get(0).getTaskId());
+      waitForTaskSucceed(api.suspendVm(params).get(0).getTaskId());
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.resumeVm(params, contentLanguage);
+      List<WithTaskVm> result = api.resumeVm(params);
       assertThat(result).as("check result of suspend and resume vm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -265,7 +265,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(runningVM.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.forceRestartVm(params, contentLanguage);
+      List<WithTaskVm> result = api.forceRestartVm(params);
       assertThat(result).as("check result of forceRestartVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -282,7 +282,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(runningVM.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.forceShutDownVm(params, contentLanguage);
+      List<WithTaskVm> result = api.forceShutDownVm(params);
       assertThat(result).as("check result of forceShutDownVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -299,7 +299,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(runningVM.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.shutDownVm(params, contentLanguage);
+      List<WithTaskVm> result = api.shutDownVm(params);
       assertThat(result).as("check result of shutDownVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -316,7 +316,7 @@ public class ITVm extends ITBase {
       GetVmsRequestBody params = gson.fromJson(payload, new TypeToken<GetVmsRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<Vm> result = api.getVms(params, contentLanguage);
+      List<Vm> result = api.getVms(params);
       assertThat(result).as("check result of getVms").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -332,7 +332,7 @@ public class ITVm extends ITBase {
       GetVmsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmsConnectionRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      VmConnection result = api.getVmsConnection(params, contentLanguage);
+      VmConnection result = api.getVmsConnection(params);
       assertThat(result).as("check result of getVmsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -349,7 +349,7 @@ public class ITVm extends ITBase {
       InstallVmtoolsParams params = gson.fromJson(payload, new TypeToken<InstallVmtoolsParams>() {
       }.getType());
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.installVmtools(params, contentLanguage);
+      List<WithTaskVm> result = api.installVmtools(params);
       assertThat(result).as("check result of installVmtools").isNotNull();
     } catch (ApiException e) {
       assertThat(true).as(e.getResponseBody()).isFalse();
@@ -364,18 +364,18 @@ public class ITVm extends ITBase {
       VmAddCdRomParams addParams = new VmAddCdRomParams().where(new VmWhereInput().id(stoppedVm.getId()))
           .data(new VmAddCdRomParamsData().addVmCdRomsItem(new VmCdRomParams().boot(2).index(2)));
       // do some modify to params(optional)
-      List<WithTaskVm> addResult = api.addVmCdRom(addParams, contentLanguage);
+      List<WithTaskVm> addResult = api.addVmCdRom(addParams);
       waitForTaskSucceed(addResult.get(0).getTaskId());
       assertThat(addResult).as("check result of addVmCdRom").isNotNull();
       VmDiskApi diskApi = new VmDiskApi(client);
       VmDisk disk = diskApi
           .getVmDisks(new GetVmDisksRequestBody()
-              .where(new VmDiskWhereInput().boot(2).vm(new VmWhereInput().id(stoppedVm.getId()))), contentLanguage)
+              .where(new VmDiskWhereInput().boot(2).vm(new VmWhereInput().id(stoppedVm.getId()))))
           .get(0);
 
       VmRemoveCdRomParams removeParams = new VmRemoveCdRomParams().where(new VmWhereInput().id(stoppedVm.getId()))
           .data(new VmRemoveCdRomParamsData().addCdRomIdsItem(disk.getId()));
-      List<WithTaskVm> removeResult = api.removeVmCdRom(removeParams, contentLanguage);
+      List<WithTaskVm> removeResult = api.removeVmCdRom(removeParams);
       waitForTaskSucceed(removeResult.get(0).getTaskId());
       assertThat(removeResult).as("check result of removeVmCdRom").isNotNull();
     } catch (ApiException e) {
@@ -397,20 +397,20 @@ public class ITVm extends ITBase {
                       .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION)
                       .name("tower-sdk-test-vm-operate-disk-volume" + System.currentTimeMillis()).size(1073741824.0)))));
       // do some modify to params(optional)
-      List<WithTaskVm> addResult = api.addVmDisk(addParams, contentLanguage);
+      List<WithTaskVm> addResult = api.addVmDisk(addParams);
       waitForTaskSucceed(addResult.get(0).getTaskId());
       assertThat(addResult).as("check result of addVmDisk").isNotNull();
 
       VmUpdateDiskParams updateParams = new VmUpdateDiskParams().where(new VmWhereInput().id(stoppedVm.getId())).data(
           new VmUpdateDiskParamsData().bus(Bus.SCSI).vmDiskId(addResult.get(0).getData().getVmDisks().get(0).getId()));
-      List<WithTaskVm> updateresults = api.updateVmDisk(updateParams, contentLanguage);
+      List<WithTaskVm> updateresults = api.updateVmDisk(updateParams);
       waitForTaskSucceed(updateresults.get(0).getTaskId());
 
       assertThat(updateresults).as("check result of addVmDisk").isNotNull();
 
       VmRemoveDiskParams removeParams = new VmRemoveDiskParams().where(new VmWhereInput().id(stoppedVm.getId()))
           .data(new VmRemoveDiskParamsData().addDiskIdsItem(addResult.get(0).getData().getVmDisks().get(0).getId()));
-      List<WithTaskVm> removeResult = api.removeVmDisk(removeParams, contentLanguage);
+      List<WithTaskVm> removeResult = api.removeVmDisk(removeParams);
       waitForTaskSucceed(removeResult.get(0).getTaskId());
 
       assertThat(removeResult).as("check result of removeVmDisk").isNotNull();
@@ -431,17 +431,17 @@ public class ITVm extends ITBase {
       VmAddNicParams addParams = new VmAddNicParams().where(new VmWhereInput().id(stoppedVm.getId()))
           .data(new VmAddNicParamsData().addVmNicsItem(new VmNicParams().connectVlanId(vlan.getId())));
       // do some modify to params(optional)
-      List<WithTaskVm> addResult = api.addVmNic(addParams, contentLanguage);
+      List<WithTaskVm> addResult = api.addVmNic(addParams);
       waitForTaskSucceed(addResult.get(0).getTaskId());
       assertThat(addResult).as("check result of addVmNic").isNotNull();
       VmUpdateNicParams updateParams = new VmUpdateNicParams().where(new VmWhereInput().id(stoppedVm.getId()))
           .data(new VmUpdateNicParamsData().nicIndex(0).enabled(false));
-      List<WithTaskVm> updateResults = api.updateVmNic(updateParams, contentLanguage);
+      List<WithTaskVm> updateResults = api.updateVmNic(updateParams);
       waitForTaskSucceed(updateResults.get(0).getTaskId());
       assertThat(updateResults).as("check result of addVmNic").isNotNull();
       VmRemoveNicParams removeParams = new VmRemoveNicParams().where(new VmWhereInput().id(stoppedVm.getId()))
           .data(new VmRemoveNicParamsData().addNicIndexItem(0));
-      List<WithTaskVm> removeResult = api.removeVmNic(removeParams, contentLanguage);
+      List<WithTaskVm> removeResult = api.removeVmNic(removeParams);
       waitForTaskSucceed(removeResult.get(0).getTaskId());
       assertThat(removeResult).as("check result of removeVmNic").isNotNull();
     } catch (ApiException e) {
@@ -459,12 +459,12 @@ public class ITVm extends ITBase {
       methods.add(GlobalSettings.class.getDeclaredMethod("getVmRecycleBin"));
       methods.add(NestedVmRecycleBin.class.getDeclaredMethod("getEnabled"));
       GlobalSettingsApi settingApi = new GlobalSettingsApi(client);
-      GlobalSettings settings = settingApi.getGlobalSettingses(new GetGlobalSettingsesRequestBody(), contentLanguage)
+      GlobalSettings settings = settingApi.getGlobalSettingses(new GetGlobalSettingsesRequestBody())
           .get(0);
       Boolean isRecycleBinEnabled = settings.getVmRecycleBin().getEnabled();
       if (!isRecycleBinEnabled) {
         GlobalSettings updatingSetting = settingApi.updateGlobalRecycleBinSetting(
-            new GlobalRecycleBinUpdationParams().enabled(true).retain(30), contentLanguage).getData();
+            new GlobalRecycleBinUpdationParams().enabled(true).retain(30)).getData();
         waitForResourceUpdationToTargetValue(
             new GetGlobalSettingsesRequestBody().where(new GlobalSettingsWhereInput().id(updatingSetting.getId())),
             settingApi, GlobalSettingsApi.class.getDeclaredMethod("getGlobalSettingses",
@@ -474,16 +474,15 @@ public class ITVm extends ITBase {
       }
       VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(stoppedVm.getId()));
       // do some modify to params(optional)
-      List<WithTaskDeleteVm> result = api.moveVmToRecycleBin(params, contentLanguage);
+      List<WithTaskDeleteVm> result = api.moveVmToRecycleBin(params);
       assertThat(result).as("check result of moveVmToRecycleBin").isNotNull();
       waitForTaskSucceed(result.get(0).getTaskId());
-      result = api.recoverVmFromRecycleBin(params, contentLanguage);
+      result = api.recoverVmFromRecycleBin(params);
       assertThat(result).as("check result of moveVmToRecycleBin").isNotNull();
       waitForTaskSucceed(result.get(0).getTaskId());
       if (isRecycleBinEnabled) {
         GlobalSettings updatingSetting = settingApi.updateGlobalRecycleBinSetting(
-            new GlobalRecycleBinUpdationParams().enabled(false).retain(settings.getVmRecycleBin().getRetain()),
-            contentLanguage).getData();
+            new GlobalRecycleBinUpdationParams().enabled(false).retain(settings.getVmRecycleBin().getRetain())).getData();
 
         waitForResourceUpdationToTargetValue(
             new GetGlobalSettingsesRequestBody().where(new GlobalSettingsWhereInput().id(updatingSetting.getId())),

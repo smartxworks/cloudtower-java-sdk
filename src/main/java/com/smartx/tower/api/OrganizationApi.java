@@ -83,7 +83,6 @@ public class OrganizationApi {
     /**
      * Build call for createOrganization
      * @param organizationCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createOrganizationCall(List<OrganizationCreationParams> organizationCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createOrganizationCall(List<OrganizationCreationParams> organizationCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class OrganizationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class OrganizationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createOrganizationValidateBeforeCall(List<OrganizationCreationParams> organizationCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createOrganizationValidateBeforeCall(List<OrganizationCreationParams> organizationCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'organizationCreationParams' is set
         if (organizationCreationParams == null) {
@@ -153,7 +148,7 @@ public class OrganizationApi {
         }
         
 
-        okhttp3.Call localVarCall = createOrganizationCall(organizationCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createOrganizationCall(organizationCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class OrganizationApi {
      * 
      * 
      * @param organizationCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskOrganization&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskOrganization> createOrganization(List<OrganizationCreationParams> organizationCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskOrganization>> localVarResp = createOrganizationWithHttpInfo(organizationCreationParams, contentLanguage);
+    public List<WithTaskOrganization> createOrganization(List<OrganizationCreationParams> organizationCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskOrganization>> localVarResp = createOrganizationWithHttpInfo(organizationCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class OrganizationApi {
      * 
      * 
      * @param organizationCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskOrganization&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskOrganization>> createOrganizationWithHttpInfo(List<OrganizationCreationParams> organizationCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createOrganizationValidateBeforeCall(organizationCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskOrganization>> createOrganizationWithHttpInfo(List<OrganizationCreationParams> organizationCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createOrganizationValidateBeforeCall(organizationCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class OrganizationApi {
      *  (asynchronously)
      * 
      * @param organizationCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createOrganizationAsync(List<OrganizationCreationParams> organizationCreationParams, String contentLanguage, final ApiCallback<List<WithTaskOrganization>> _callback) throws ApiException {
+    public okhttp3.Call createOrganizationAsync(List<OrganizationCreationParams> organizationCreationParams, final ApiCallback<List<WithTaskOrganization>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createOrganizationValidateBeforeCall(organizationCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createOrganizationValidateBeforeCall(organizationCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class OrganizationApi {
     /**
      * Build call for deleteOrganization
      * @param organizationDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteOrganizationCall(OrganizationDeletionParams organizationDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteOrganizationCall(OrganizationDeletionParams organizationDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class OrganizationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class OrganizationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteOrganizationValidateBeforeCall(OrganizationDeletionParams organizationDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteOrganizationValidateBeforeCall(OrganizationDeletionParams organizationDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'organizationDeletionParams' is set
         if (organizationDeletionParams == null) {
@@ -292,7 +279,7 @@ public class OrganizationApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteOrganizationCall(organizationDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteOrganizationCall(organizationDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class OrganizationApi {
      * 
      * 
      * @param organizationDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteOrganization&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteOrganization> deleteOrganization(OrganizationDeletionParams organizationDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteOrganization>> localVarResp = deleteOrganizationWithHttpInfo(organizationDeletionParams, contentLanguage);
+    public List<WithTaskDeleteOrganization> deleteOrganization(OrganizationDeletionParams organizationDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteOrganization>> localVarResp = deleteOrganizationWithHttpInfo(organizationDeletionParams);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class OrganizationApi {
      * 
      * 
      * @param organizationDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteOrganization&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteOrganization>> deleteOrganizationWithHttpInfo(OrganizationDeletionParams organizationDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteOrganizationValidateBeforeCall(organizationDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteOrganization>> deleteOrganizationWithHttpInfo(OrganizationDeletionParams organizationDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteOrganizationValidateBeforeCall(organizationDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteOrganization>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class OrganizationApi {
      *  (asynchronously)
      * 
      * @param organizationDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteOrganizationAsync(OrganizationDeletionParams organizationDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteOrganization>> _callback) throws ApiException {
+    public okhttp3.Call deleteOrganizationAsync(OrganizationDeletionParams organizationDeletionParams, final ApiCallback<List<WithTaskDeleteOrganization>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteOrganizationValidateBeforeCall(organizationDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteOrganizationValidateBeforeCall(organizationDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteOrganization>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class OrganizationApi {
     /**
      * Build call for getOrganizations
      * @param getOrganizationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationsCall(GetOrganizationsRequestBody getOrganizationsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsCall(GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class OrganizationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class OrganizationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganizationsValidateBeforeCall(GetOrganizationsRequestBody getOrganizationsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOrganizationsValidateBeforeCall(GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getOrganizationsRequestBody' is set
         if (getOrganizationsRequestBody == null) {
@@ -431,7 +410,7 @@ public class OrganizationApi {
         }
         
 
-        okhttp3.Call localVarCall = getOrganizationsCall(getOrganizationsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getOrganizationsCall(getOrganizationsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class OrganizationApi {
      * 
      * 
      * @param getOrganizationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Organization&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Organization> getOrganizations(GetOrganizationsRequestBody getOrganizationsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Organization>> localVarResp = getOrganizationsWithHttpInfo(getOrganizationsRequestBody, contentLanguage);
+    public List<Organization> getOrganizations(GetOrganizationsRequestBody getOrganizationsRequestBody) throws ApiException {
+        ApiResponse<List<Organization>> localVarResp = getOrganizationsWithHttpInfo(getOrganizationsRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class OrganizationApi {
      * 
      * 
      * @param getOrganizationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Organization&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Organization>> getOrganizationsWithHttpInfo(GetOrganizationsRequestBody getOrganizationsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, contentLanguage, null);
+    public ApiResponse<List<Organization>> getOrganizationsWithHttpInfo(GetOrganizationsRequestBody getOrganizationsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Organization>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class OrganizationApi {
      *  (asynchronously)
      * 
      * @param getOrganizationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationsAsync(GetOrganizationsRequestBody getOrganizationsRequestBody, String contentLanguage, final ApiCallback<List<Organization>> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsAsync(GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback<List<Organization>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Organization>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class OrganizationApi {
     /**
      * Build call for getOrganizationsConnection
      * @param getOrganizationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationsConnectionCall(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsConnectionCall(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class OrganizationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class OrganizationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganizationsConnectionValidateBeforeCall(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOrganizationsConnectionValidateBeforeCall(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getOrganizationsConnectionRequestBody' is set
         if (getOrganizationsConnectionRequestBody == null) {
@@ -570,7 +541,7 @@ public class OrganizationApi {
         }
         
 
-        okhttp3.Call localVarCall = getOrganizationsConnectionCall(getOrganizationsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getOrganizationsConnectionCall(getOrganizationsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class OrganizationApi {
      * 
      * 
      * @param getOrganizationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return OrganizationConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public OrganizationConnection getOrganizationsConnection(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<OrganizationConnection> localVarResp = getOrganizationsConnectionWithHttpInfo(getOrganizationsConnectionRequestBody, contentLanguage);
+    public OrganizationConnection getOrganizationsConnection(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody) throws ApiException {
+        ApiResponse<OrganizationConnection> localVarResp = getOrganizationsConnectionWithHttpInfo(getOrganizationsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class OrganizationApi {
      * 
      * 
      * @param getOrganizationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;OrganizationConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OrganizationConnection> getOrganizationsConnectionWithHttpInfo(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getOrganizationsConnectionValidateBeforeCall(getOrganizationsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<OrganizationConnection> getOrganizationsConnectionWithHttpInfo(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getOrganizationsConnectionValidateBeforeCall(getOrganizationsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<OrganizationConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class OrganizationApi {
      *  (asynchronously)
      * 
      * @param getOrganizationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationsConnectionAsync(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, String contentLanguage, final ApiCallback<OrganizationConnection> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsConnectionAsync(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, final ApiCallback<OrganizationConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getOrganizationsConnectionValidateBeforeCall(getOrganizationsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getOrganizationsConnectionValidateBeforeCall(getOrganizationsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<OrganizationConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class OrganizationApi {
     /**
      * Build call for updateOrganization
      * @param organizationUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOrganizationCall(OrganizationUpdationParams organizationUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateOrganizationCall(OrganizationUpdationParams organizationUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class OrganizationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class OrganizationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateOrganizationValidateBeforeCall(OrganizationUpdationParams organizationUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateOrganizationValidateBeforeCall(OrganizationUpdationParams organizationUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'organizationUpdationParams' is set
         if (organizationUpdationParams == null) {
@@ -709,7 +672,7 @@ public class OrganizationApi {
         }
         
 
-        okhttp3.Call localVarCall = updateOrganizationCall(organizationUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateOrganizationCall(organizationUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class OrganizationApi {
      * 
      * 
      * @param organizationUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskOrganization&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskOrganization> updateOrganization(OrganizationUpdationParams organizationUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskOrganization>> localVarResp = updateOrganizationWithHttpInfo(organizationUpdationParams, contentLanguage);
+    public List<WithTaskOrganization> updateOrganization(OrganizationUpdationParams organizationUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskOrganization>> localVarResp = updateOrganizationWithHttpInfo(organizationUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class OrganizationApi {
      * 
      * 
      * @param organizationUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskOrganization&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskOrganization>> updateOrganizationWithHttpInfo(OrganizationUpdationParams organizationUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateOrganizationValidateBeforeCall(organizationUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskOrganization>> updateOrganizationWithHttpInfo(OrganizationUpdationParams organizationUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateOrganizationValidateBeforeCall(organizationUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class OrganizationApi {
      *  (asynchronously)
      * 
      * @param organizationUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class OrganizationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOrganizationAsync(OrganizationUpdationParams organizationUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskOrganization>> _callback) throws ApiException {
+    public okhttp3.Call updateOrganizationAsync(OrganizationUpdationParams organizationUpdationParams, final ApiCallback<List<WithTaskOrganization>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateOrganizationValidateBeforeCall(organizationUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateOrganizationValidateBeforeCall(organizationUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

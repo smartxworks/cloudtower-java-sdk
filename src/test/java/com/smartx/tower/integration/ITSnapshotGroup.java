@@ -44,7 +44,7 @@ public class ITSnapshotGroup extends ITBase {
       // parse params from json payload
       List<SnapshotGroupCloneParams> params = gson.fromJson(payload, new TypeToken<List<SnapshotGroupCloneParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnapshotGroup> result = api.cloneSnapshotGroup(params, contentLanguage);
+      List<WithTaskSnapshotGroup> result = api.cloneSnapshotGroup(params);
       assertThat(result).as("check result of cloneSnapshotGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSnapshotGroup extends ITBase {
       // parse params from json payload
       SnapshotGroupDeletionParams params = gson.fromJson(payload, new TypeToken<SnapshotGroupDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteSnapshotGroup> result = api.deleteSnapshotGroup(params, contentLanguage);
+      List<WithTaskDeleteSnapshotGroup> result = api.deleteSnapshotGroup(params);
       assertThat(result).as("check result of deleteSnapshotGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITSnapshotGroup extends ITBase {
       // parse params from json payload
       GetSnapshotGroupsRequestBody params = gson.fromJson(payload, new TypeToken<GetSnapshotGroupsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SnapshotGroup> result = api.getSnapshotGroups(params, contentLanguage);
+      List<SnapshotGroup> result = api.getSnapshotGroups(params);
       assertThat(result).as("check result of getSnapshotGroups").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITSnapshotGroup extends ITBase {
       // parse params from json payload
       GetSnapshotGroupsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSnapshotGroupsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SnapshotGroupConnection result = api.getSnapshotGroupsConnection(params, contentLanguage);
+      SnapshotGroupConnection result = api.getSnapshotGroupsConnection(params);
       assertThat(result).as("check result of getSnapshotGroupsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITSnapshotGroup extends ITBase {
       // parse params from json payload
       SnapshotGroupKeepParams params = gson.fromJson(payload, new TypeToken<SnapshotGroupKeepParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnapshotGroup> result = api.keepSnapshotGroup(params, contentLanguage);
+      List<WithTaskSnapshotGroup> result = api.keepSnapshotGroup(params);
       assertThat(result).as("check result of keepSnapshotGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITSnapshotGroup extends ITBase {
       // parse params from json payload
       SnapshotGroupRollbackParams params = gson.fromJson(payload, new TypeToken<SnapshotGroupRollbackParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskSnapshotGroup> result = api.rollbackSnapshotGroup(params, contentLanguage);
+      List<WithTaskSnapshotGroup> result = api.rollbackSnapshotGroup(params);
       assertThat(result).as("check result of rollbackSnapshotGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -78,7 +78,6 @@ public class BackupPlanExecutionApi {
     /**
      * Build call for getBackupPlanExecutions
      * @param getBackupPlanExecutionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupPlanExecutionsCall(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupPlanExecutionsCall(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class BackupPlanExecutionApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class BackupPlanExecutionApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class BackupPlanExecutionApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupPlanExecutionsValidateBeforeCall(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupPlanExecutionsValidateBeforeCall(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupPlanExecutionsRequestBody' is set
         if (getBackupPlanExecutionsRequestBody == null) {
@@ -148,7 +143,7 @@ public class BackupPlanExecutionApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupPlanExecutionsCall(getBackupPlanExecutionsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupPlanExecutionsCall(getBackupPlanExecutionsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class BackupPlanExecutionApi {
      * 
      * 
      * @param getBackupPlanExecutionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;BackupPlanExecution&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<BackupPlanExecution> getBackupPlanExecutions(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<BackupPlanExecution>> localVarResp = getBackupPlanExecutionsWithHttpInfo(getBackupPlanExecutionsRequestBody, contentLanguage);
+    public List<BackupPlanExecution> getBackupPlanExecutions(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody) throws ApiException {
+        ApiResponse<List<BackupPlanExecution>> localVarResp = getBackupPlanExecutionsWithHttpInfo(getBackupPlanExecutionsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class BackupPlanExecutionApi {
      * 
      * 
      * @param getBackupPlanExecutionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;BackupPlanExecution&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BackupPlanExecution>> getBackupPlanExecutionsWithHttpInfo(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupPlanExecutionsValidateBeforeCall(getBackupPlanExecutionsRequestBody, contentLanguage, null);
+    public ApiResponse<List<BackupPlanExecution>> getBackupPlanExecutionsWithHttpInfo(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupPlanExecutionsValidateBeforeCall(getBackupPlanExecutionsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<BackupPlanExecution>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class BackupPlanExecutionApi {
      *  (asynchronously)
      * 
      * @param getBackupPlanExecutionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupPlanExecutionsAsync(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, String contentLanguage, final ApiCallback<List<BackupPlanExecution>> _callback) throws ApiException {
+    public okhttp3.Call getBackupPlanExecutionsAsync(GetBackupPlanExecutionsRequestBody getBackupPlanExecutionsRequestBody, final ApiCallback<List<BackupPlanExecution>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupPlanExecutionsValidateBeforeCall(getBackupPlanExecutionsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupPlanExecutionsValidateBeforeCall(getBackupPlanExecutionsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<BackupPlanExecution>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class BackupPlanExecutionApi {
     /**
      * Build call for getBackupPlanExecutionsConnection
      * @param getBackupPlanExecutionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupPlanExecutionsConnectionCall(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupPlanExecutionsConnectionCall(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class BackupPlanExecutionApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class BackupPlanExecutionApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class BackupPlanExecutionApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupPlanExecutionsConnectionValidateBeforeCall(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupPlanExecutionsConnectionValidateBeforeCall(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupPlanExecutionsConnectionRequestBody' is set
         if (getBackupPlanExecutionsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class BackupPlanExecutionApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupPlanExecutionsConnectionCall(getBackupPlanExecutionsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupPlanExecutionsConnectionCall(getBackupPlanExecutionsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class BackupPlanExecutionApi {
      * 
      * 
      * @param getBackupPlanExecutionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return BackupPlanExecutionConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public BackupPlanExecutionConnection getBackupPlanExecutionsConnection(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<BackupPlanExecutionConnection> localVarResp = getBackupPlanExecutionsConnectionWithHttpInfo(getBackupPlanExecutionsConnectionRequestBody, contentLanguage);
+    public BackupPlanExecutionConnection getBackupPlanExecutionsConnection(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody) throws ApiException {
+        ApiResponse<BackupPlanExecutionConnection> localVarResp = getBackupPlanExecutionsConnectionWithHttpInfo(getBackupPlanExecutionsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class BackupPlanExecutionApi {
      * 
      * 
      * @param getBackupPlanExecutionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;BackupPlanExecutionConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BackupPlanExecutionConnection> getBackupPlanExecutionsConnectionWithHttpInfo(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupPlanExecutionsConnectionValidateBeforeCall(getBackupPlanExecutionsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<BackupPlanExecutionConnection> getBackupPlanExecutionsConnectionWithHttpInfo(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupPlanExecutionsConnectionValidateBeforeCall(getBackupPlanExecutionsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<BackupPlanExecutionConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class BackupPlanExecutionApi {
      *  (asynchronously)
      * 
      * @param getBackupPlanExecutionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class BackupPlanExecutionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupPlanExecutionsConnectionAsync(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, String contentLanguage, final ApiCallback<BackupPlanExecutionConnection> _callback) throws ApiException {
+    public okhttp3.Call getBackupPlanExecutionsConnectionAsync(GetBackupPlanExecutionsConnectionRequestBody getBackupPlanExecutionsConnectionRequestBody, final ApiCallback<BackupPlanExecutionConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupPlanExecutionsConnectionValidateBeforeCall(getBackupPlanExecutionsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupPlanExecutionsConnectionValidateBeforeCall(getBackupPlanExecutionsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<BackupPlanExecutionConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

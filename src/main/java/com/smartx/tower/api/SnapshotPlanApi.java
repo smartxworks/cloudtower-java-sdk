@@ -86,7 +86,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for createSnapshotPlan
      * @param snapshotPlanCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -97,7 +96,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createSnapshotPlanCall(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createSnapshotPlanCall(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -123,10 +122,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -139,7 +134,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -148,7 +143,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createSnapshotPlanValidateBeforeCall(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createSnapshotPlanValidateBeforeCall(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotPlanCreationParams' is set
         if (snapshotPlanCreationParams == null) {
@@ -156,7 +151,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = createSnapshotPlanCall(snapshotPlanCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createSnapshotPlanCall(snapshotPlanCreationParams, _callback);
         return localVarCall;
 
     }
@@ -165,7 +160,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -175,8 +169,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotPlan> createSnapshotPlan(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = createSnapshotPlanWithHttpInfo(snapshotPlanCreationParams, contentLanguage);
+    public List<WithTaskSnapshotPlan> createSnapshotPlan(List<SnapshotPlanCreationParams> snapshotPlanCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = createSnapshotPlanWithHttpInfo(snapshotPlanCreationParams);
         return localVarResp.getData();
     }
 
@@ -184,7 +178,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -194,8 +187,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotPlan>> createSnapshotPlanWithHttpInfo(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createSnapshotPlanValidateBeforeCall(snapshotPlanCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotPlan>> createSnapshotPlanWithHttpInfo(List<SnapshotPlanCreationParams> snapshotPlanCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createSnapshotPlanValidateBeforeCall(snapshotPlanCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -204,7 +197,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param snapshotPlanCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -215,9 +207,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createSnapshotPlanAsync(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call createSnapshotPlanAsync(List<SnapshotPlanCreationParams> snapshotPlanCreationParams, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createSnapshotPlanValidateBeforeCall(snapshotPlanCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createSnapshotPlanValidateBeforeCall(snapshotPlanCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -225,7 +217,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for deleteSnapshotPlan
      * @param snapshotPlanDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -236,7 +227,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnapshotPlanCall(SnapshotPlanDeletionParams snapshotPlanDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteSnapshotPlanCall(SnapshotPlanDeletionParams snapshotPlanDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -262,10 +253,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -278,7 +265,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -287,7 +274,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteSnapshotPlanValidateBeforeCall(SnapshotPlanDeletionParams snapshotPlanDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteSnapshotPlanValidateBeforeCall(SnapshotPlanDeletionParams snapshotPlanDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotPlanDeletionParams' is set
         if (snapshotPlanDeletionParams == null) {
@@ -295,7 +282,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteSnapshotPlanCall(snapshotPlanDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteSnapshotPlanCall(snapshotPlanDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -304,7 +291,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteSnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -314,8 +300,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteSnapshotPlan> deleteSnapshotPlan(SnapshotPlanDeletionParams snapshotPlanDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteSnapshotPlan>> localVarResp = deleteSnapshotPlanWithHttpInfo(snapshotPlanDeletionParams, contentLanguage);
+    public List<WithTaskDeleteSnapshotPlan> deleteSnapshotPlan(SnapshotPlanDeletionParams snapshotPlanDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteSnapshotPlan>> localVarResp = deleteSnapshotPlanWithHttpInfo(snapshotPlanDeletionParams);
         return localVarResp.getData();
     }
 
@@ -323,7 +309,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteSnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -333,8 +318,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteSnapshotPlan>> deleteSnapshotPlanWithHttpInfo(SnapshotPlanDeletionParams snapshotPlanDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteSnapshotPlanValidateBeforeCall(snapshotPlanDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteSnapshotPlan>> deleteSnapshotPlanWithHttpInfo(SnapshotPlanDeletionParams snapshotPlanDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteSnapshotPlanValidateBeforeCall(snapshotPlanDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -343,7 +328,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param snapshotPlanDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -354,9 +338,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnapshotPlanAsync(SnapshotPlanDeletionParams snapshotPlanDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteSnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call deleteSnapshotPlanAsync(SnapshotPlanDeletionParams snapshotPlanDeletionParams, final ApiCallback<List<WithTaskDeleteSnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteSnapshotPlanValidateBeforeCall(snapshotPlanDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteSnapshotPlanValidateBeforeCall(snapshotPlanDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -364,7 +348,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for executeSnapshotPlan
      * @param snapshotPlanExecutionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -375,7 +358,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call executeSnapshotPlanCall(SnapshotPlanExecutionParams snapshotPlanExecutionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call executeSnapshotPlanCall(SnapshotPlanExecutionParams snapshotPlanExecutionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -401,10 +384,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -417,7 +396,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -426,7 +405,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call executeSnapshotPlanValidateBeforeCall(SnapshotPlanExecutionParams snapshotPlanExecutionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call executeSnapshotPlanValidateBeforeCall(SnapshotPlanExecutionParams snapshotPlanExecutionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotPlanExecutionParams' is set
         if (snapshotPlanExecutionParams == null) {
@@ -434,7 +413,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = executeSnapshotPlanCall(snapshotPlanExecutionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = executeSnapshotPlanCall(snapshotPlanExecutionParams, _callback);
         return localVarCall;
 
     }
@@ -443,7 +422,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanExecutionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -453,8 +431,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotPlan> executeSnapshotPlan(SnapshotPlanExecutionParams snapshotPlanExecutionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = executeSnapshotPlanWithHttpInfo(snapshotPlanExecutionParams, contentLanguage);
+    public List<WithTaskSnapshotPlan> executeSnapshotPlan(SnapshotPlanExecutionParams snapshotPlanExecutionParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = executeSnapshotPlanWithHttpInfo(snapshotPlanExecutionParams);
         return localVarResp.getData();
     }
 
@@ -462,7 +440,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanExecutionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -472,8 +449,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotPlan>> executeSnapshotPlanWithHttpInfo(SnapshotPlanExecutionParams snapshotPlanExecutionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = executeSnapshotPlanValidateBeforeCall(snapshotPlanExecutionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotPlan>> executeSnapshotPlanWithHttpInfo(SnapshotPlanExecutionParams snapshotPlanExecutionParams) throws ApiException {
+        okhttp3.Call localVarCall = executeSnapshotPlanValidateBeforeCall(snapshotPlanExecutionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -482,7 +459,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param snapshotPlanExecutionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -493,9 +469,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call executeSnapshotPlanAsync(SnapshotPlanExecutionParams snapshotPlanExecutionParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call executeSnapshotPlanAsync(SnapshotPlanExecutionParams snapshotPlanExecutionParams, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = executeSnapshotPlanValidateBeforeCall(snapshotPlanExecutionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = executeSnapshotPlanValidateBeforeCall(snapshotPlanExecutionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -503,7 +479,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for getSnapshotPlans
      * @param getSnapshotPlansRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -514,7 +489,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotPlansCall(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnapshotPlansCall(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -540,10 +515,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -556,7 +527,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -565,7 +536,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnapshotPlansValidateBeforeCall(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSnapshotPlansValidateBeforeCall(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnapshotPlansRequestBody' is set
         if (getSnapshotPlansRequestBody == null) {
@@ -573,7 +544,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnapshotPlansCall(getSnapshotPlansRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotPlansCall(getSnapshotPlansRequestBody, _callback);
         return localVarCall;
 
     }
@@ -582,7 +553,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param getSnapshotPlansRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -592,8 +562,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SnapshotPlan> getSnapshotPlans(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<SnapshotPlan>> localVarResp = getSnapshotPlansWithHttpInfo(getSnapshotPlansRequestBody, contentLanguage);
+    public List<SnapshotPlan> getSnapshotPlans(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody) throws ApiException {
+        ApiResponse<List<SnapshotPlan>> localVarResp = getSnapshotPlansWithHttpInfo(getSnapshotPlansRequestBody);
         return localVarResp.getData();
     }
 
@@ -601,7 +571,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param getSnapshotPlansRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -611,8 +580,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SnapshotPlan>> getSnapshotPlansWithHttpInfo(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getSnapshotPlansValidateBeforeCall(getSnapshotPlansRequestBody, contentLanguage, null);
+    public ApiResponse<List<SnapshotPlan>> getSnapshotPlansWithHttpInfo(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getSnapshotPlansValidateBeforeCall(getSnapshotPlansRequestBody, null);
         Type localVarReturnType = new TypeToken<List<SnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -621,7 +590,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param getSnapshotPlansRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -632,9 +600,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotPlansAsync(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, String contentLanguage, final ApiCallback<List<SnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call getSnapshotPlansAsync(GetSnapshotPlansRequestBody getSnapshotPlansRequestBody, final ApiCallback<List<SnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnapshotPlansValidateBeforeCall(getSnapshotPlansRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotPlansValidateBeforeCall(getSnapshotPlansRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<SnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -642,7 +610,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for getSnapshotPlansConnection
      * @param getSnapshotPlansConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -653,7 +620,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotPlansConnectionCall(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnapshotPlansConnectionCall(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -679,10 +646,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -695,7 +658,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -704,7 +667,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnapshotPlansConnectionValidateBeforeCall(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSnapshotPlansConnectionValidateBeforeCall(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnapshotPlansConnectionRequestBody' is set
         if (getSnapshotPlansConnectionRequestBody == null) {
@@ -712,7 +675,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnapshotPlansConnectionCall(getSnapshotPlansConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotPlansConnectionCall(getSnapshotPlansConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -721,7 +684,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param getSnapshotPlansConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return SnapshotPlanConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -731,8 +693,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SnapshotPlanConnection getSnapshotPlansConnection(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<SnapshotPlanConnection> localVarResp = getSnapshotPlansConnectionWithHttpInfo(getSnapshotPlansConnectionRequestBody, contentLanguage);
+    public SnapshotPlanConnection getSnapshotPlansConnection(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody) throws ApiException {
+        ApiResponse<SnapshotPlanConnection> localVarResp = getSnapshotPlansConnectionWithHttpInfo(getSnapshotPlansConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -740,7 +702,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param getSnapshotPlansConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SnapshotPlanConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -750,8 +711,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SnapshotPlanConnection> getSnapshotPlansConnectionWithHttpInfo(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getSnapshotPlansConnectionValidateBeforeCall(getSnapshotPlansConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<SnapshotPlanConnection> getSnapshotPlansConnectionWithHttpInfo(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getSnapshotPlansConnectionValidateBeforeCall(getSnapshotPlansConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<SnapshotPlanConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -760,7 +721,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param getSnapshotPlansConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -771,9 +731,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotPlansConnectionAsync(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, String contentLanguage, final ApiCallback<SnapshotPlanConnection> _callback) throws ApiException {
+    public okhttp3.Call getSnapshotPlansConnectionAsync(GetSnapshotPlansConnectionRequestBody getSnapshotPlansConnectionRequestBody, final ApiCallback<SnapshotPlanConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnapshotPlansConnectionValidateBeforeCall(getSnapshotPlansConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotPlansConnectionValidateBeforeCall(getSnapshotPlansConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<SnapshotPlanConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -781,7 +741,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for resumeSnapshotPlan
      * @param snapshotPlanResumeParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -792,7 +751,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call resumeSnapshotPlanCall(SnapshotPlanResumeParams snapshotPlanResumeParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call resumeSnapshotPlanCall(SnapshotPlanResumeParams snapshotPlanResumeParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -818,10 +777,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -834,7 +789,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -843,7 +798,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call resumeSnapshotPlanValidateBeforeCall(SnapshotPlanResumeParams snapshotPlanResumeParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call resumeSnapshotPlanValidateBeforeCall(SnapshotPlanResumeParams snapshotPlanResumeParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotPlanResumeParams' is set
         if (snapshotPlanResumeParams == null) {
@@ -851,7 +806,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = resumeSnapshotPlanCall(snapshotPlanResumeParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = resumeSnapshotPlanCall(snapshotPlanResumeParams, _callback);
         return localVarCall;
 
     }
@@ -860,7 +815,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanResumeParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -870,8 +824,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotPlan> resumeSnapshotPlan(SnapshotPlanResumeParams snapshotPlanResumeParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = resumeSnapshotPlanWithHttpInfo(snapshotPlanResumeParams, contentLanguage);
+    public List<WithTaskSnapshotPlan> resumeSnapshotPlan(SnapshotPlanResumeParams snapshotPlanResumeParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = resumeSnapshotPlanWithHttpInfo(snapshotPlanResumeParams);
         return localVarResp.getData();
     }
 
@@ -879,7 +833,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanResumeParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -889,8 +842,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotPlan>> resumeSnapshotPlanWithHttpInfo(SnapshotPlanResumeParams snapshotPlanResumeParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = resumeSnapshotPlanValidateBeforeCall(snapshotPlanResumeParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotPlan>> resumeSnapshotPlanWithHttpInfo(SnapshotPlanResumeParams snapshotPlanResumeParams) throws ApiException {
+        okhttp3.Call localVarCall = resumeSnapshotPlanValidateBeforeCall(snapshotPlanResumeParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -899,7 +852,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param snapshotPlanResumeParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -910,9 +862,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call resumeSnapshotPlanAsync(SnapshotPlanResumeParams snapshotPlanResumeParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call resumeSnapshotPlanAsync(SnapshotPlanResumeParams snapshotPlanResumeParams, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = resumeSnapshotPlanValidateBeforeCall(snapshotPlanResumeParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = resumeSnapshotPlanValidateBeforeCall(snapshotPlanResumeParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -920,7 +872,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for suspendSnapshotPlan
      * @param snapshotPlanSuspendedParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -931,7 +882,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call suspendSnapshotPlanCall(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call suspendSnapshotPlanCall(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -957,10 +908,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -973,7 +920,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -982,7 +929,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call suspendSnapshotPlanValidateBeforeCall(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call suspendSnapshotPlanValidateBeforeCall(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotPlanSuspendedParams' is set
         if (snapshotPlanSuspendedParams == null) {
@@ -990,7 +937,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = suspendSnapshotPlanCall(snapshotPlanSuspendedParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = suspendSnapshotPlanCall(snapshotPlanSuspendedParams, _callback);
         return localVarCall;
 
     }
@@ -999,7 +946,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanSuspendedParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1009,8 +955,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotPlan> suspendSnapshotPlan(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = suspendSnapshotPlanWithHttpInfo(snapshotPlanSuspendedParams, contentLanguage);
+    public List<WithTaskSnapshotPlan> suspendSnapshotPlan(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = suspendSnapshotPlanWithHttpInfo(snapshotPlanSuspendedParams);
         return localVarResp.getData();
     }
 
@@ -1018,7 +964,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanSuspendedParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1028,8 +973,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotPlan>> suspendSnapshotPlanWithHttpInfo(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = suspendSnapshotPlanValidateBeforeCall(snapshotPlanSuspendedParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotPlan>> suspendSnapshotPlanWithHttpInfo(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams) throws ApiException {
+        okhttp3.Call localVarCall = suspendSnapshotPlanValidateBeforeCall(snapshotPlanSuspendedParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1038,7 +983,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param snapshotPlanSuspendedParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1049,9 +993,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call suspendSnapshotPlanAsync(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call suspendSnapshotPlanAsync(SnapshotPlanSuspendedParams snapshotPlanSuspendedParams, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = suspendSnapshotPlanValidateBeforeCall(snapshotPlanSuspendedParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = suspendSnapshotPlanValidateBeforeCall(snapshotPlanSuspendedParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1059,7 +1003,6 @@ public class SnapshotPlanApi {
     /**
      * Build call for updateSnapshotPlan
      * @param snapshotPlanUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1070,7 +1013,7 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateSnapshotPlanCall(SnapshotPlanUpdationParams snapshotPlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateSnapshotPlanCall(SnapshotPlanUpdationParams snapshotPlanUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -1096,10 +1039,6 @@ public class SnapshotPlanApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -1112,7 +1051,7 @@ public class SnapshotPlanApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -1121,7 +1060,7 @@ public class SnapshotPlanApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateSnapshotPlanValidateBeforeCall(SnapshotPlanUpdationParams snapshotPlanUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateSnapshotPlanValidateBeforeCall(SnapshotPlanUpdationParams snapshotPlanUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotPlanUpdationParams' is set
         if (snapshotPlanUpdationParams == null) {
@@ -1129,7 +1068,7 @@ public class SnapshotPlanApi {
         }
         
 
-        okhttp3.Call localVarCall = updateSnapshotPlanCall(snapshotPlanUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateSnapshotPlanCall(snapshotPlanUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -1138,7 +1077,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotPlan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1148,8 +1086,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotPlan> updateSnapshotPlan(SnapshotPlanUpdationParams snapshotPlanUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = updateSnapshotPlanWithHttpInfo(snapshotPlanUpdationParams, contentLanguage);
+    public List<WithTaskSnapshotPlan> updateSnapshotPlan(SnapshotPlanUpdationParams snapshotPlanUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotPlan>> localVarResp = updateSnapshotPlanWithHttpInfo(snapshotPlanUpdationParams);
         return localVarResp.getData();
     }
 
@@ -1157,7 +1095,6 @@ public class SnapshotPlanApi {
      * 
      * 
      * @param snapshotPlanUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotPlan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1167,8 +1104,8 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotPlan>> updateSnapshotPlanWithHttpInfo(SnapshotPlanUpdationParams snapshotPlanUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateSnapshotPlanValidateBeforeCall(snapshotPlanUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotPlan>> updateSnapshotPlanWithHttpInfo(SnapshotPlanUpdationParams snapshotPlanUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateSnapshotPlanValidateBeforeCall(snapshotPlanUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1177,7 +1114,6 @@ public class SnapshotPlanApi {
      *  (asynchronously)
      * 
      * @param snapshotPlanUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1188,9 +1124,9 @@ public class SnapshotPlanApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateSnapshotPlanAsync(SnapshotPlanUpdationParams snapshotPlanUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
+    public okhttp3.Call updateSnapshotPlanAsync(SnapshotPlanUpdationParams snapshotPlanUpdationParams, final ApiCallback<List<WithTaskSnapshotPlan>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateSnapshotPlanValidateBeforeCall(snapshotPlanUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateSnapshotPlanValidateBeforeCall(snapshotPlanUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotPlan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

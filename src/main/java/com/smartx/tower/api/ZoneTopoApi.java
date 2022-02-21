@@ -78,7 +78,6 @@ public class ZoneTopoApi {
     /**
      * Build call for getZoneTopoes
      * @param getZoneTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZoneTopoesCall(GetZoneTopoesRequestBody getZoneTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getZoneTopoesCall(GetZoneTopoesRequestBody getZoneTopoesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ZoneTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ZoneTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ZoneTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getZoneTopoesValidateBeforeCall(GetZoneTopoesRequestBody getZoneTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getZoneTopoesValidateBeforeCall(GetZoneTopoesRequestBody getZoneTopoesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getZoneTopoesRequestBody' is set
         if (getZoneTopoesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ZoneTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getZoneTopoesCall(getZoneTopoesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZoneTopoesCall(getZoneTopoesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ZoneTopoApi {
      * 
      * 
      * @param getZoneTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ZoneTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ZoneTopo> getZoneTopoes(GetZoneTopoesRequestBody getZoneTopoesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ZoneTopo>> localVarResp = getZoneTopoesWithHttpInfo(getZoneTopoesRequestBody, contentLanguage);
+    public List<ZoneTopo> getZoneTopoes(GetZoneTopoesRequestBody getZoneTopoesRequestBody) throws ApiException {
+        ApiResponse<List<ZoneTopo>> localVarResp = getZoneTopoesWithHttpInfo(getZoneTopoesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ZoneTopoApi {
      * 
      * 
      * @param getZoneTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ZoneTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ZoneTopo>> getZoneTopoesWithHttpInfo(GetZoneTopoesRequestBody getZoneTopoesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getZoneTopoesValidateBeforeCall(getZoneTopoesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ZoneTopo>> getZoneTopoesWithHttpInfo(GetZoneTopoesRequestBody getZoneTopoesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getZoneTopoesValidateBeforeCall(getZoneTopoesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ZoneTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ZoneTopoApi {
      *  (asynchronously)
      * 
      * @param getZoneTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZoneTopoesAsync(GetZoneTopoesRequestBody getZoneTopoesRequestBody, String contentLanguage, final ApiCallback<List<ZoneTopo>> _callback) throws ApiException {
+    public okhttp3.Call getZoneTopoesAsync(GetZoneTopoesRequestBody getZoneTopoesRequestBody, final ApiCallback<List<ZoneTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getZoneTopoesValidateBeforeCall(getZoneTopoesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZoneTopoesValidateBeforeCall(getZoneTopoesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ZoneTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ZoneTopoApi {
     /**
      * Build call for getZoneTopoesConnection
      * @param getZoneTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZoneTopoesConnectionCall(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getZoneTopoesConnectionCall(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ZoneTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ZoneTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ZoneTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getZoneTopoesConnectionValidateBeforeCall(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getZoneTopoesConnectionValidateBeforeCall(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getZoneTopoesConnectionRequestBody' is set
         if (getZoneTopoesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ZoneTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getZoneTopoesConnectionCall(getZoneTopoesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZoneTopoesConnectionCall(getZoneTopoesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ZoneTopoApi {
      * 
      * 
      * @param getZoneTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ZoneTopoConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ZoneTopoConnection getZoneTopoesConnection(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ZoneTopoConnection> localVarResp = getZoneTopoesConnectionWithHttpInfo(getZoneTopoesConnectionRequestBody, contentLanguage);
+    public ZoneTopoConnection getZoneTopoesConnection(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody) throws ApiException {
+        ApiResponse<ZoneTopoConnection> localVarResp = getZoneTopoesConnectionWithHttpInfo(getZoneTopoesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ZoneTopoApi {
      * 
      * 
      * @param getZoneTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ZoneTopoConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ZoneTopoConnection> getZoneTopoesConnectionWithHttpInfo(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getZoneTopoesConnectionValidateBeforeCall(getZoneTopoesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ZoneTopoConnection> getZoneTopoesConnectionWithHttpInfo(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getZoneTopoesConnectionValidateBeforeCall(getZoneTopoesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ZoneTopoConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ZoneTopoApi {
      *  (asynchronously)
      * 
      * @param getZoneTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ZoneTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getZoneTopoesConnectionAsync(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, String contentLanguage, final ApiCallback<ZoneTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getZoneTopoesConnectionAsync(GetZoneTopoesConnectionRequestBody getZoneTopoesConnectionRequestBody, final ApiCallback<ZoneTopoConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getZoneTopoesConnectionValidateBeforeCall(getZoneTopoesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getZoneTopoesConnectionValidateBeforeCall(getZoneTopoesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ZoneTopoConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -78,7 +78,6 @@ public class ClusterUpgradeHistoryApi {
     /**
      * Build call for getClusterUpgradeHistories
      * @param getClusterUpgradeHistoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterUpgradeHistoriesCall(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterUpgradeHistoriesCall(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ClusterUpgradeHistoryApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ClusterUpgradeHistoryApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ClusterUpgradeHistoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterUpgradeHistoriesValidateBeforeCall(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterUpgradeHistoriesValidateBeforeCall(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterUpgradeHistoriesRequestBody' is set
         if (getClusterUpgradeHistoriesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ClusterUpgradeHistoryApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterUpgradeHistoriesCall(getClusterUpgradeHistoriesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterUpgradeHistoriesCall(getClusterUpgradeHistoriesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ClusterUpgradeHistoryApi {
      * 
      * 
      * @param getClusterUpgradeHistoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ClusterUpgradeHistory&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ClusterUpgradeHistory> getClusterUpgradeHistories(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ClusterUpgradeHistory>> localVarResp = getClusterUpgradeHistoriesWithHttpInfo(getClusterUpgradeHistoriesRequestBody, contentLanguage);
+    public List<ClusterUpgradeHistory> getClusterUpgradeHistories(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody) throws ApiException {
+        ApiResponse<List<ClusterUpgradeHistory>> localVarResp = getClusterUpgradeHistoriesWithHttpInfo(getClusterUpgradeHistoriesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ClusterUpgradeHistoryApi {
      * 
      * 
      * @param getClusterUpgradeHistoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ClusterUpgradeHistory&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ClusterUpgradeHistory>> getClusterUpgradeHistoriesWithHttpInfo(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterUpgradeHistoriesValidateBeforeCall(getClusterUpgradeHistoriesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ClusterUpgradeHistory>> getClusterUpgradeHistoriesWithHttpInfo(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterUpgradeHistoriesValidateBeforeCall(getClusterUpgradeHistoriesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ClusterUpgradeHistory>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ClusterUpgradeHistoryApi {
      *  (asynchronously)
      * 
      * @param getClusterUpgradeHistoriesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterUpgradeHistoriesAsync(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, String contentLanguage, final ApiCallback<List<ClusterUpgradeHistory>> _callback) throws ApiException {
+    public okhttp3.Call getClusterUpgradeHistoriesAsync(GetClusterUpgradeHistoriesRequestBody getClusterUpgradeHistoriesRequestBody, final ApiCallback<List<ClusterUpgradeHistory>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterUpgradeHistoriesValidateBeforeCall(getClusterUpgradeHistoriesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterUpgradeHistoriesValidateBeforeCall(getClusterUpgradeHistoriesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ClusterUpgradeHistory>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ClusterUpgradeHistoryApi {
     /**
      * Build call for getClusterUpgradeHistoriesConnection
      * @param getClusterUpgradeHistoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterUpgradeHistoriesConnectionCall(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterUpgradeHistoriesConnectionCall(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ClusterUpgradeHistoryApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ClusterUpgradeHistoryApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ClusterUpgradeHistoryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterUpgradeHistoriesConnectionValidateBeforeCall(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterUpgradeHistoriesConnectionValidateBeforeCall(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterUpgradeHistoriesConnectionRequestBody' is set
         if (getClusterUpgradeHistoriesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ClusterUpgradeHistoryApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterUpgradeHistoriesConnectionCall(getClusterUpgradeHistoriesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterUpgradeHistoriesConnectionCall(getClusterUpgradeHistoriesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ClusterUpgradeHistoryApi {
      * 
      * 
      * @param getClusterUpgradeHistoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ClusterUpgradeHistoryConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ClusterUpgradeHistoryConnection getClusterUpgradeHistoriesConnection(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ClusterUpgradeHistoryConnection> localVarResp = getClusterUpgradeHistoriesConnectionWithHttpInfo(getClusterUpgradeHistoriesConnectionRequestBody, contentLanguage);
+    public ClusterUpgradeHistoryConnection getClusterUpgradeHistoriesConnection(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody) throws ApiException {
+        ApiResponse<ClusterUpgradeHistoryConnection> localVarResp = getClusterUpgradeHistoriesConnectionWithHttpInfo(getClusterUpgradeHistoriesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ClusterUpgradeHistoryApi {
      * 
      * 
      * @param getClusterUpgradeHistoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ClusterUpgradeHistoryConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterUpgradeHistoryConnection> getClusterUpgradeHistoriesConnectionWithHttpInfo(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterUpgradeHistoriesConnectionValidateBeforeCall(getClusterUpgradeHistoriesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ClusterUpgradeHistoryConnection> getClusterUpgradeHistoriesConnectionWithHttpInfo(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterUpgradeHistoriesConnectionValidateBeforeCall(getClusterUpgradeHistoriesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ClusterUpgradeHistoryConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ClusterUpgradeHistoryApi {
      *  (asynchronously)
      * 
      * @param getClusterUpgradeHistoriesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ClusterUpgradeHistoryApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterUpgradeHistoriesConnectionAsync(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, String contentLanguage, final ApiCallback<ClusterUpgradeHistoryConnection> _callback) throws ApiException {
+    public okhttp3.Call getClusterUpgradeHistoriesConnectionAsync(GetClusterUpgradeHistoriesConnectionRequestBody getClusterUpgradeHistoriesConnectionRequestBody, final ApiCallback<ClusterUpgradeHistoryConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterUpgradeHistoriesConnectionValidateBeforeCall(getClusterUpgradeHistoriesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterUpgradeHistoriesConnectionValidateBeforeCall(getClusterUpgradeHistoriesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ClusterUpgradeHistoryConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

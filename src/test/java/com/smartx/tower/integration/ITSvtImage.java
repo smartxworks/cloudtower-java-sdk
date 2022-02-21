@@ -44,7 +44,7 @@ public class ITSvtImage extends ITBase {
       // parse params from json payload
       GetSvtImagesRequestBody params = gson.fromJson(payload, new TypeToken<GetSvtImagesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SvtImage> result = api.getSvtImages(params, contentLanguage);
+      List<SvtImage> result = api.getSvtImages(params);
       assertThat(result).as("check result of getSvtImages").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSvtImage extends ITBase {
       // parse params from json payload
       GetSvtImagesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSvtImagesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SvtImageConnection result = api.getSvtImagesConnection(params, contentLanguage);
+      SvtImageConnection result = api.getSvtImagesConnection(params);
       assertThat(result).as("check result of getSvtImagesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

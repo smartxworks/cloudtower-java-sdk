@@ -85,7 +85,6 @@ public class ReportTemplateApi {
     /**
      * Build call for createReportTemplate
      * @param reportTemplateCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -96,7 +95,7 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createReportTemplateCall(List<ReportTemplateCreationParams> reportTemplateCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createReportTemplateCall(List<ReportTemplateCreationParams> reportTemplateCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -122,10 +121,6 @@ public class ReportTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -138,7 +133,7 @@ public class ReportTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -147,7 +142,7 @@ public class ReportTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createReportTemplateValidateBeforeCall(List<ReportTemplateCreationParams> reportTemplateCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createReportTemplateValidateBeforeCall(List<ReportTemplateCreationParams> reportTemplateCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'reportTemplateCreationParams' is set
         if (reportTemplateCreationParams == null) {
@@ -155,7 +150,7 @@ public class ReportTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = createReportTemplateCall(reportTemplateCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createReportTemplateCall(reportTemplateCreationParams, _callback);
         return localVarCall;
 
     }
@@ -164,7 +159,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reportTemplateCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskReportTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -174,8 +168,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskReportTemplate> createReportTemplate(List<ReportTemplateCreationParams> reportTemplateCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskReportTemplate>> localVarResp = createReportTemplateWithHttpInfo(reportTemplateCreationParams, contentLanguage);
+    public List<WithTaskReportTemplate> createReportTemplate(List<ReportTemplateCreationParams> reportTemplateCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskReportTemplate>> localVarResp = createReportTemplateWithHttpInfo(reportTemplateCreationParams);
         return localVarResp.getData();
     }
 
@@ -183,7 +177,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reportTemplateCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskReportTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -193,8 +186,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskReportTemplate>> createReportTemplateWithHttpInfo(List<ReportTemplateCreationParams> reportTemplateCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createReportTemplateValidateBeforeCall(reportTemplateCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskReportTemplate>> createReportTemplateWithHttpInfo(List<ReportTemplateCreationParams> reportTemplateCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createReportTemplateValidateBeforeCall(reportTemplateCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskReportTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -203,7 +196,6 @@ public class ReportTemplateApi {
      *  (asynchronously)
      * 
      * @param reportTemplateCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -214,9 +206,9 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createReportTemplateAsync(List<ReportTemplateCreationParams> reportTemplateCreationParams, String contentLanguage, final ApiCallback<List<WithTaskReportTemplate>> _callback) throws ApiException {
+    public okhttp3.Call createReportTemplateAsync(List<ReportTemplateCreationParams> reportTemplateCreationParams, final ApiCallback<List<WithTaskReportTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createReportTemplateValidateBeforeCall(reportTemplateCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createReportTemplateValidateBeforeCall(reportTemplateCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskReportTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -224,7 +216,6 @@ public class ReportTemplateApi {
     /**
      * Build call for deleteReportTemplate
      * @param reportTemplateDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -235,7 +226,7 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteReportTemplateCall(ReportTemplateDeletionParams reportTemplateDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteReportTemplateCall(ReportTemplateDeletionParams reportTemplateDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -261,10 +252,6 @@ public class ReportTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -277,7 +264,7 @@ public class ReportTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -286,7 +273,7 @@ public class ReportTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteReportTemplateValidateBeforeCall(ReportTemplateDeletionParams reportTemplateDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteReportTemplateValidateBeforeCall(ReportTemplateDeletionParams reportTemplateDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'reportTemplateDeletionParams' is set
         if (reportTemplateDeletionParams == null) {
@@ -294,7 +281,7 @@ public class ReportTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteReportTemplateCall(reportTemplateDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteReportTemplateCall(reportTemplateDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -303,7 +290,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reportTemplateDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteReportTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -313,8 +299,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteReportTemplate> deleteReportTemplate(ReportTemplateDeletionParams reportTemplateDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteReportTemplate>> localVarResp = deleteReportTemplateWithHttpInfo(reportTemplateDeletionParams, contentLanguage);
+    public List<WithTaskDeleteReportTemplate> deleteReportTemplate(ReportTemplateDeletionParams reportTemplateDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteReportTemplate>> localVarResp = deleteReportTemplateWithHttpInfo(reportTemplateDeletionParams);
         return localVarResp.getData();
     }
 
@@ -322,7 +308,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reportTemplateDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteReportTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -332,8 +317,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteReportTemplate>> deleteReportTemplateWithHttpInfo(ReportTemplateDeletionParams reportTemplateDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteReportTemplateValidateBeforeCall(reportTemplateDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteReportTemplate>> deleteReportTemplateWithHttpInfo(ReportTemplateDeletionParams reportTemplateDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteReportTemplateValidateBeforeCall(reportTemplateDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteReportTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -342,7 +327,6 @@ public class ReportTemplateApi {
      *  (asynchronously)
      * 
      * @param reportTemplateDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -353,9 +337,9 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteReportTemplateAsync(ReportTemplateDeletionParams reportTemplateDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteReportTemplate>> _callback) throws ApiException {
+    public okhttp3.Call deleteReportTemplateAsync(ReportTemplateDeletionParams reportTemplateDeletionParams, final ApiCallback<List<WithTaskDeleteReportTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteReportTemplateValidateBeforeCall(reportTemplateDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteReportTemplateValidateBeforeCall(reportTemplateDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteReportTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -363,7 +347,6 @@ public class ReportTemplateApi {
     /**
      * Build call for generateFromReportTemplate
      * @param reporteTemplateGenerationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -374,7 +357,7 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call generateFromReportTemplateCall(ReporteTemplateGenerationParams reporteTemplateGenerationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call generateFromReportTemplateCall(ReporteTemplateGenerationParams reporteTemplateGenerationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -400,10 +383,6 @@ public class ReportTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -416,7 +395,7 @@ public class ReportTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -425,7 +404,7 @@ public class ReportTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call generateFromReportTemplateValidateBeforeCall(ReporteTemplateGenerationParams reporteTemplateGenerationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call generateFromReportTemplateValidateBeforeCall(ReporteTemplateGenerationParams reporteTemplateGenerationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'reporteTemplateGenerationParams' is set
         if (reporteTemplateGenerationParams == null) {
@@ -433,7 +412,7 @@ public class ReportTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = generateFromReportTemplateCall(reporteTemplateGenerationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = generateFromReportTemplateCall(reporteTemplateGenerationParams, _callback);
         return localVarCall;
 
     }
@@ -442,7 +421,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reporteTemplateGenerationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskReportTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -452,8 +430,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskReportTask> generateFromReportTemplate(ReporteTemplateGenerationParams reporteTemplateGenerationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskReportTask>> localVarResp = generateFromReportTemplateWithHttpInfo(reporteTemplateGenerationParams, contentLanguage);
+    public List<WithTaskReportTask> generateFromReportTemplate(ReporteTemplateGenerationParams reporteTemplateGenerationParams) throws ApiException {
+        ApiResponse<List<WithTaskReportTask>> localVarResp = generateFromReportTemplateWithHttpInfo(reporteTemplateGenerationParams);
         return localVarResp.getData();
     }
 
@@ -461,7 +439,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reporteTemplateGenerationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskReportTask&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -471,8 +448,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskReportTask>> generateFromReportTemplateWithHttpInfo(ReporteTemplateGenerationParams reporteTemplateGenerationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = generateFromReportTemplateValidateBeforeCall(reporteTemplateGenerationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskReportTask>> generateFromReportTemplateWithHttpInfo(ReporteTemplateGenerationParams reporteTemplateGenerationParams) throws ApiException {
+        okhttp3.Call localVarCall = generateFromReportTemplateValidateBeforeCall(reporteTemplateGenerationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskReportTask>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -481,7 +458,6 @@ public class ReportTemplateApi {
      *  (asynchronously)
      * 
      * @param reporteTemplateGenerationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -492,9 +468,9 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call generateFromReportTemplateAsync(ReporteTemplateGenerationParams reporteTemplateGenerationParams, String contentLanguage, final ApiCallback<List<WithTaskReportTask>> _callback) throws ApiException {
+    public okhttp3.Call generateFromReportTemplateAsync(ReporteTemplateGenerationParams reporteTemplateGenerationParams, final ApiCallback<List<WithTaskReportTask>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = generateFromReportTemplateValidateBeforeCall(reporteTemplateGenerationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = generateFromReportTemplateValidateBeforeCall(reporteTemplateGenerationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskReportTask>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -502,7 +478,6 @@ public class ReportTemplateApi {
     /**
      * Build call for getReportTemplates
      * @param getReportTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -513,7 +488,7 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTemplatesCall(GetReportTemplatesRequestBody getReportTemplatesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getReportTemplatesCall(GetReportTemplatesRequestBody getReportTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -539,10 +514,6 @@ public class ReportTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -555,7 +526,7 @@ public class ReportTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -564,7 +535,7 @@ public class ReportTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getReportTemplatesValidateBeforeCall(GetReportTemplatesRequestBody getReportTemplatesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getReportTemplatesValidateBeforeCall(GetReportTemplatesRequestBody getReportTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getReportTemplatesRequestBody' is set
         if (getReportTemplatesRequestBody == null) {
@@ -572,7 +543,7 @@ public class ReportTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = getReportTemplatesCall(getReportTemplatesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getReportTemplatesCall(getReportTemplatesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -581,7 +552,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param getReportTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ReportTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -591,8 +561,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ReportTemplate> getReportTemplates(GetReportTemplatesRequestBody getReportTemplatesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ReportTemplate>> localVarResp = getReportTemplatesWithHttpInfo(getReportTemplatesRequestBody, contentLanguage);
+    public List<ReportTemplate> getReportTemplates(GetReportTemplatesRequestBody getReportTemplatesRequestBody) throws ApiException {
+        ApiResponse<List<ReportTemplate>> localVarResp = getReportTemplatesWithHttpInfo(getReportTemplatesRequestBody);
         return localVarResp.getData();
     }
 
@@ -600,7 +570,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param getReportTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ReportTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -610,8 +579,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ReportTemplate>> getReportTemplatesWithHttpInfo(GetReportTemplatesRequestBody getReportTemplatesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getReportTemplatesValidateBeforeCall(getReportTemplatesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ReportTemplate>> getReportTemplatesWithHttpInfo(GetReportTemplatesRequestBody getReportTemplatesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getReportTemplatesValidateBeforeCall(getReportTemplatesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ReportTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -620,7 +589,6 @@ public class ReportTemplateApi {
      *  (asynchronously)
      * 
      * @param getReportTemplatesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -631,9 +599,9 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTemplatesAsync(GetReportTemplatesRequestBody getReportTemplatesRequestBody, String contentLanguage, final ApiCallback<List<ReportTemplate>> _callback) throws ApiException {
+    public okhttp3.Call getReportTemplatesAsync(GetReportTemplatesRequestBody getReportTemplatesRequestBody, final ApiCallback<List<ReportTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getReportTemplatesValidateBeforeCall(getReportTemplatesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getReportTemplatesValidateBeforeCall(getReportTemplatesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ReportTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -641,7 +609,6 @@ public class ReportTemplateApi {
     /**
      * Build call for getReportTemplatesConnection
      * @param getReportTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -652,7 +619,7 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTemplatesConnectionCall(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getReportTemplatesConnectionCall(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -678,10 +645,6 @@ public class ReportTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -694,7 +657,7 @@ public class ReportTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -703,7 +666,7 @@ public class ReportTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getReportTemplatesConnectionValidateBeforeCall(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getReportTemplatesConnectionValidateBeforeCall(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getReportTemplatesConnectionRequestBody' is set
         if (getReportTemplatesConnectionRequestBody == null) {
@@ -711,7 +674,7 @@ public class ReportTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = getReportTemplatesConnectionCall(getReportTemplatesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getReportTemplatesConnectionCall(getReportTemplatesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -720,7 +683,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param getReportTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ReportTemplateConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -730,8 +692,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ReportTemplateConnection getReportTemplatesConnection(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ReportTemplateConnection> localVarResp = getReportTemplatesConnectionWithHttpInfo(getReportTemplatesConnectionRequestBody, contentLanguage);
+    public ReportTemplateConnection getReportTemplatesConnection(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody) throws ApiException {
+        ApiResponse<ReportTemplateConnection> localVarResp = getReportTemplatesConnectionWithHttpInfo(getReportTemplatesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -739,7 +701,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param getReportTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ReportTemplateConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -749,8 +710,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ReportTemplateConnection> getReportTemplatesConnectionWithHttpInfo(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getReportTemplatesConnectionValidateBeforeCall(getReportTemplatesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ReportTemplateConnection> getReportTemplatesConnectionWithHttpInfo(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getReportTemplatesConnectionValidateBeforeCall(getReportTemplatesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ReportTemplateConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -759,7 +720,6 @@ public class ReportTemplateApi {
      *  (asynchronously)
      * 
      * @param getReportTemplatesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -770,9 +730,9 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getReportTemplatesConnectionAsync(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, String contentLanguage, final ApiCallback<ReportTemplateConnection> _callback) throws ApiException {
+    public okhttp3.Call getReportTemplatesConnectionAsync(GetReportTemplatesConnectionRequestBody getReportTemplatesConnectionRequestBody, final ApiCallback<ReportTemplateConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getReportTemplatesConnectionValidateBeforeCall(getReportTemplatesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getReportTemplatesConnectionValidateBeforeCall(getReportTemplatesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ReportTemplateConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -780,7 +740,6 @@ public class ReportTemplateApi {
     /**
      * Build call for updateReportTemplate
      * @param reportTemplateUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -791,7 +750,7 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateReportTemplateCall(ReportTemplateUpdationParams reportTemplateUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateReportTemplateCall(ReportTemplateUpdationParams reportTemplateUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -817,10 +776,6 @@ public class ReportTemplateApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -833,7 +788,7 @@ public class ReportTemplateApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -842,7 +797,7 @@ public class ReportTemplateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateReportTemplateValidateBeforeCall(ReportTemplateUpdationParams reportTemplateUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateReportTemplateValidateBeforeCall(ReportTemplateUpdationParams reportTemplateUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'reportTemplateUpdationParams' is set
         if (reportTemplateUpdationParams == null) {
@@ -850,7 +805,7 @@ public class ReportTemplateApi {
         }
         
 
-        okhttp3.Call localVarCall = updateReportTemplateCall(reportTemplateUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateReportTemplateCall(reportTemplateUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -859,7 +814,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reportTemplateUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskReportTemplate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -869,8 +823,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskReportTemplate> updateReportTemplate(ReportTemplateUpdationParams reportTemplateUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskReportTemplate>> localVarResp = updateReportTemplateWithHttpInfo(reportTemplateUpdationParams, contentLanguage);
+    public List<WithTaskReportTemplate> updateReportTemplate(ReportTemplateUpdationParams reportTemplateUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskReportTemplate>> localVarResp = updateReportTemplateWithHttpInfo(reportTemplateUpdationParams);
         return localVarResp.getData();
     }
 
@@ -878,7 +832,6 @@ public class ReportTemplateApi {
      * 
      * 
      * @param reportTemplateUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskReportTemplate&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -888,8 +841,8 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskReportTemplate>> updateReportTemplateWithHttpInfo(ReportTemplateUpdationParams reportTemplateUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateReportTemplateValidateBeforeCall(reportTemplateUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskReportTemplate>> updateReportTemplateWithHttpInfo(ReportTemplateUpdationParams reportTemplateUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateReportTemplateValidateBeforeCall(reportTemplateUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskReportTemplate>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -898,7 +851,6 @@ public class ReportTemplateApi {
      *  (asynchronously)
      * 
      * @param reportTemplateUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -909,9 +861,9 @@ public class ReportTemplateApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateReportTemplateAsync(ReportTemplateUpdationParams reportTemplateUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskReportTemplate>> _callback) throws ApiException {
+    public okhttp3.Call updateReportTemplateAsync(ReportTemplateUpdationParams reportTemplateUpdationParams, final ApiCallback<List<WithTaskReportTemplate>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateReportTemplateValidateBeforeCall(reportTemplateUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateReportTemplateValidateBeforeCall(reportTemplateUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskReportTemplate>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -44,7 +44,7 @@ public class ITDiscoveredHost extends ITBase {
       // parse params from json payload
       GetDiscoverHostsRequestBody params = gson.fromJson(payload, new TypeToken<GetDiscoverHostsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<DiscoveredHost> result = api.getDiscoverHosts(params, contentLanguage);
+      List<DiscoveredHost> result = api.getDiscoverHosts(params);
       assertThat(result).as("check result of getDiscoverHosts").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

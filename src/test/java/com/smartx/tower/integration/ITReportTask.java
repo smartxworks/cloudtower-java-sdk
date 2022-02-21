@@ -44,7 +44,7 @@ public class ITReportTask extends ITBase {
       // parse params from json payload
       GetReportTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ReportTask> result = api.getReportTasks(params, contentLanguage);
+      List<ReportTask> result = api.getReportTasks(params);
       assertThat(result).as("check result of getReportTasks").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITReportTask extends ITBase {
       // parse params from json payload
       GetReportTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ReportTaskConnection result = api.getReportTasksConnection(params, contentLanguage);
+      ReportTaskConnection result = api.getReportTasksConnection(params);
       assertThat(result).as("check result of getReportTasksConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

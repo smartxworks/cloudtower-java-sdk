@@ -44,7 +44,7 @@ public class ITVsphereEsxiAccount extends ITBase {
       // parse params from json payload
       GetVsphereEsxiAccountsRequestBody params = gson.fromJson(payload, new TypeToken<GetVsphereEsxiAccountsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VsphereEsxiAccount> result = api.getVsphereEsxiAccounts(params, contentLanguage);
+      List<VsphereEsxiAccount> result = api.getVsphereEsxiAccounts(params);
       assertThat(result).as("check result of getVsphereEsxiAccounts").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVsphereEsxiAccount extends ITBase {
       // parse params from json payload
       GetVsphereEsxiAccountsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVsphereEsxiAccountsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VsphereEsxiAccountConnection result = api.getVsphereEsxiAccountsConnection(params, contentLanguage);
+      VsphereEsxiAccountConnection result = api.getVsphereEsxiAccountsConnection(params);
       assertThat(result).as("check result of getVsphereEsxiAccountsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

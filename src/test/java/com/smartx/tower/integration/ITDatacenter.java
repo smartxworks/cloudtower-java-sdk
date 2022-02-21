@@ -44,7 +44,7 @@ public class ITDatacenter extends ITBase {
       // parse params from json payload
       List<DatacenterCreationParams> params = gson.fromJson(payload, new TypeToken<List<DatacenterCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDatacenter> result = api.createDatacenter(params, contentLanguage);
+      List<WithTaskDatacenter> result = api.createDatacenter(params);
       assertThat(result).as("check result of createDatacenter").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITDatacenter extends ITBase {
       // parse params from json payload
       DatacenterDeletionParams params = gson.fromJson(payload, new TypeToken<DatacenterDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteDatacenter> result = api.deleteDatacenter(params, contentLanguage);
+      List<WithTaskDeleteDatacenter> result = api.deleteDatacenter(params);
       assertThat(result).as("check result of deleteDatacenter").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITDatacenter extends ITBase {
       // parse params from json payload
       GetDatacentersRequestBody params = gson.fromJson(payload, new TypeToken<GetDatacentersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Datacenter> result = api.getDatacenters(params, contentLanguage);
+      List<Datacenter> result = api.getDatacenters(params);
       assertThat(result).as("check result of getDatacenters").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITDatacenter extends ITBase {
       // parse params from json payload
       GetDatacentersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetDatacentersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      DatacenterConnection result = api.getDatacentersConnection(params, contentLanguage);
+      DatacenterConnection result = api.getDatacentersConnection(params);
       assertThat(result).as("check result of getDatacentersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITDatacenter extends ITBase {
       // parse params from json payload
       DatacenterUpdationParams params = gson.fromJson(payload, new TypeToken<DatacenterUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDatacenter> result = api.updateDatacenter(params, contentLanguage);
+      List<WithTaskDatacenter> result = api.updateDatacenter(params);
       assertThat(result).as("check result of updateDatacenter").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

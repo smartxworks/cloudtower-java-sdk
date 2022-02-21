@@ -44,7 +44,7 @@ public class ITAlertNotifier extends ITBase {
       // parse params from json payload
       GetAlertNotifiersRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertNotifiersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<AlertNotifier> result = api.getAlertNotifiers(params, contentLanguage);
+      List<AlertNotifier> result = api.getAlertNotifiers(params);
       assertThat(result).as("check result of getAlertNotifiers").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITAlertNotifier extends ITBase {
       // parse params from json payload
       GetAlertNotifiersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertNotifiersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      AlertNotifierConnection result = api.getAlertNotifiersConnection(params, contentLanguage);
+      AlertNotifierConnection result = api.getAlertNotifiersConnection(params);
       assertThat(result).as("check result of getAlertNotifiersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

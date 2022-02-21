@@ -78,7 +78,6 @@ public class DeployApi {
     /**
      * Build call for getDeploys
      * @param getDeploysRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDeploysCall(GetDeploysRequestBody getDeploysRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDeploysCall(GetDeploysRequestBody getDeploysRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class DeployApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class DeployApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class DeployApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDeploysValidateBeforeCall(GetDeploysRequestBody getDeploysRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDeploysValidateBeforeCall(GetDeploysRequestBody getDeploysRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDeploysRequestBody' is set
         if (getDeploysRequestBody == null) {
@@ -148,7 +143,7 @@ public class DeployApi {
         }
         
 
-        okhttp3.Call localVarCall = getDeploysCall(getDeploysRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDeploysCall(getDeploysRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class DeployApi {
      * 
      * 
      * @param getDeploysRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Deploy&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Deploy> getDeploys(GetDeploysRequestBody getDeploysRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Deploy>> localVarResp = getDeploysWithHttpInfo(getDeploysRequestBody, contentLanguage);
+    public List<Deploy> getDeploys(GetDeploysRequestBody getDeploysRequestBody) throws ApiException {
+        ApiResponse<List<Deploy>> localVarResp = getDeploysWithHttpInfo(getDeploysRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class DeployApi {
      * 
      * 
      * @param getDeploysRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Deploy&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Deploy>> getDeploysWithHttpInfo(GetDeploysRequestBody getDeploysRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getDeploysValidateBeforeCall(getDeploysRequestBody, contentLanguage, null);
+    public ApiResponse<List<Deploy>> getDeploysWithHttpInfo(GetDeploysRequestBody getDeploysRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getDeploysValidateBeforeCall(getDeploysRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Deploy>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class DeployApi {
      *  (asynchronously)
      * 
      * @param getDeploysRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDeploysAsync(GetDeploysRequestBody getDeploysRequestBody, String contentLanguage, final ApiCallback<List<Deploy>> _callback) throws ApiException {
+    public okhttp3.Call getDeploysAsync(GetDeploysRequestBody getDeploysRequestBody, final ApiCallback<List<Deploy>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDeploysValidateBeforeCall(getDeploysRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDeploysValidateBeforeCall(getDeploysRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Deploy>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class DeployApi {
     /**
      * Build call for getDeploysConnection
      * @param getDeploysConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDeploysConnectionCall(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDeploysConnectionCall(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class DeployApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class DeployApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class DeployApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDeploysConnectionValidateBeforeCall(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDeploysConnectionValidateBeforeCall(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getDeploysConnectionRequestBody' is set
         if (getDeploysConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class DeployApi {
         }
         
 
-        okhttp3.Call localVarCall = getDeploysConnectionCall(getDeploysConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDeploysConnectionCall(getDeploysConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class DeployApi {
      * 
      * 
      * @param getDeploysConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return DeployConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public DeployConnection getDeploysConnection(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<DeployConnection> localVarResp = getDeploysConnectionWithHttpInfo(getDeploysConnectionRequestBody, contentLanguage);
+    public DeployConnection getDeploysConnection(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody) throws ApiException {
+        ApiResponse<DeployConnection> localVarResp = getDeploysConnectionWithHttpInfo(getDeploysConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class DeployApi {
      * 
      * 
      * @param getDeploysConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;DeployConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DeployConnection> getDeploysConnectionWithHttpInfo(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getDeploysConnectionValidateBeforeCall(getDeploysConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<DeployConnection> getDeploysConnectionWithHttpInfo(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getDeploysConnectionValidateBeforeCall(getDeploysConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<DeployConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class DeployApi {
      *  (asynchronously)
      * 
      * @param getDeploysConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class DeployApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDeploysConnectionAsync(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, String contentLanguage, final ApiCallback<DeployConnection> _callback) throws ApiException {
+    public okhttp3.Call getDeploysConnectionAsync(GetDeploysConnectionRequestBody getDeploysConnectionRequestBody, final ApiCallback<DeployConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDeploysConnectionValidateBeforeCall(getDeploysConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getDeploysConnectionValidateBeforeCall(getDeploysConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<DeployConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

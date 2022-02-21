@@ -78,7 +78,6 @@ public class LogCollectionApi {
     /**
      * Build call for getLogCollections
      * @param getLogCollectionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLogCollectionsCall(GetLogCollectionsRequestBody getLogCollectionsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLogCollectionsCall(GetLogCollectionsRequestBody getLogCollectionsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class LogCollectionApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class LogCollectionApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class LogCollectionApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLogCollectionsValidateBeforeCall(GetLogCollectionsRequestBody getLogCollectionsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getLogCollectionsValidateBeforeCall(GetLogCollectionsRequestBody getLogCollectionsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getLogCollectionsRequestBody' is set
         if (getLogCollectionsRequestBody == null) {
@@ -148,7 +143,7 @@ public class LogCollectionApi {
         }
         
 
-        okhttp3.Call localVarCall = getLogCollectionsCall(getLogCollectionsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLogCollectionsCall(getLogCollectionsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class LogCollectionApi {
      * 
      * 
      * @param getLogCollectionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;LogCollection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<LogCollection> getLogCollections(GetLogCollectionsRequestBody getLogCollectionsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<LogCollection>> localVarResp = getLogCollectionsWithHttpInfo(getLogCollectionsRequestBody, contentLanguage);
+    public List<LogCollection> getLogCollections(GetLogCollectionsRequestBody getLogCollectionsRequestBody) throws ApiException {
+        ApiResponse<List<LogCollection>> localVarResp = getLogCollectionsWithHttpInfo(getLogCollectionsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class LogCollectionApi {
      * 
      * 
      * @param getLogCollectionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;LogCollection&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<LogCollection>> getLogCollectionsWithHttpInfo(GetLogCollectionsRequestBody getLogCollectionsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getLogCollectionsValidateBeforeCall(getLogCollectionsRequestBody, contentLanguage, null);
+    public ApiResponse<List<LogCollection>> getLogCollectionsWithHttpInfo(GetLogCollectionsRequestBody getLogCollectionsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getLogCollectionsValidateBeforeCall(getLogCollectionsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<LogCollection>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class LogCollectionApi {
      *  (asynchronously)
      * 
      * @param getLogCollectionsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLogCollectionsAsync(GetLogCollectionsRequestBody getLogCollectionsRequestBody, String contentLanguage, final ApiCallback<List<LogCollection>> _callback) throws ApiException {
+    public okhttp3.Call getLogCollectionsAsync(GetLogCollectionsRequestBody getLogCollectionsRequestBody, final ApiCallback<List<LogCollection>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getLogCollectionsValidateBeforeCall(getLogCollectionsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLogCollectionsValidateBeforeCall(getLogCollectionsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<LogCollection>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class LogCollectionApi {
     /**
      * Build call for getLogCollectionsConnection
      * @param getLogCollectionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLogCollectionsConnectionCall(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLogCollectionsConnectionCall(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class LogCollectionApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class LogCollectionApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class LogCollectionApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLogCollectionsConnectionValidateBeforeCall(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getLogCollectionsConnectionValidateBeforeCall(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getLogCollectionsConnectionRequestBody' is set
         if (getLogCollectionsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class LogCollectionApi {
         }
         
 
-        okhttp3.Call localVarCall = getLogCollectionsConnectionCall(getLogCollectionsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLogCollectionsConnectionCall(getLogCollectionsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class LogCollectionApi {
      * 
      * 
      * @param getLogCollectionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return LogCollectionConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public LogCollectionConnection getLogCollectionsConnection(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<LogCollectionConnection> localVarResp = getLogCollectionsConnectionWithHttpInfo(getLogCollectionsConnectionRequestBody, contentLanguage);
+    public LogCollectionConnection getLogCollectionsConnection(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody) throws ApiException {
+        ApiResponse<LogCollectionConnection> localVarResp = getLogCollectionsConnectionWithHttpInfo(getLogCollectionsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class LogCollectionApi {
      * 
      * 
      * @param getLogCollectionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;LogCollectionConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<LogCollectionConnection> getLogCollectionsConnectionWithHttpInfo(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getLogCollectionsConnectionValidateBeforeCall(getLogCollectionsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<LogCollectionConnection> getLogCollectionsConnectionWithHttpInfo(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getLogCollectionsConnectionValidateBeforeCall(getLogCollectionsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<LogCollectionConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class LogCollectionApi {
      *  (asynchronously)
      * 
      * @param getLogCollectionsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class LogCollectionApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLogCollectionsConnectionAsync(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, String contentLanguage, final ApiCallback<LogCollectionConnection> _callback) throws ApiException {
+    public okhttp3.Call getLogCollectionsConnectionAsync(GetLogCollectionsConnectionRequestBody getLogCollectionsConnectionRequestBody, final ApiCallback<LogCollectionConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getLogCollectionsConnectionValidateBeforeCall(getLogCollectionsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLogCollectionsConnectionValidateBeforeCall(getLogCollectionsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<LogCollectionConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

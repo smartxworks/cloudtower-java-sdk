@@ -44,7 +44,7 @@ public class ITSystemAuditLog extends ITBase {
       // parse params from json payload
       GetSystemAuditLogsRequestBody params = gson.fromJson(payload, new TypeToken<GetSystemAuditLogsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SystemAuditLog> result = api.getSystemAuditLogs(params, contentLanguage);
+      List<SystemAuditLog> result = api.getSystemAuditLogs(params);
       assertThat(result).as("check result of getSystemAuditLogs").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSystemAuditLog extends ITBase {
       // parse params from json payload
       GetSystemAuditLogsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSystemAuditLogsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SystemAuditLogConnection result = api.getSystemAuditLogsConnection(params, contentLanguage);
+      SystemAuditLogConnection result = api.getSystemAuditLogsConnection(params);
       assertThat(result).as("check result of getSystemAuditLogsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

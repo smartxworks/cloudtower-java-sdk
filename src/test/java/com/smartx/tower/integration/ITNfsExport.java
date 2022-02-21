@@ -44,7 +44,7 @@ public class ITNfsExport extends ITBase {
       // parse params from json payload
       List<NfsExportCreationParams> params = gson.fromJson(payload, new TypeToken<List<NfsExportCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNfsExport> result = api.createNfsExport(params, contentLanguage);
+      List<WithTaskNfsExport> result = api.createNfsExport(params);
       assertThat(result).as("check result of createNfsExport").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNfsExport extends ITBase {
       // parse params from json payload
       NfsExportDeletionParams params = gson.fromJson(payload, new TypeToken<NfsExportDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteNfsExport> result = api.deleteNfsExport(params, contentLanguage);
+      List<WithTaskDeleteNfsExport> result = api.deleteNfsExport(params);
       assertThat(result).as("check result of deleteNfsExport").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITNfsExport extends ITBase {
       // parse params from json payload
       GetNfsExportsRequestBody params = gson.fromJson(payload, new TypeToken<GetNfsExportsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<NfsExport> result = api.getNfsExports(params, contentLanguage);
+      List<NfsExport> result = api.getNfsExports(params);
       assertThat(result).as("check result of getNfsExports").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITNfsExport extends ITBase {
       // parse params from json payload
       GetNfsExportsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNfsExportsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NfsExportConnection result = api.getNfsExportsConnection(params, contentLanguage);
+      NfsExportConnection result = api.getNfsExportsConnection(params);
       assertThat(result).as("check result of getNfsExportsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITNfsExport extends ITBase {
       // parse params from json payload
       NfsExportUpdationParams params = gson.fromJson(payload, new TypeToken<NfsExportUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNfsExport> result = api.updateNfsExport(params, contentLanguage);
+      List<WithTaskNfsExport> result = api.updateNfsExport(params);
       assertThat(result).as("check result of updateNfsExport").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

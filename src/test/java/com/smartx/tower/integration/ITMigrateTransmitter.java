@@ -44,7 +44,7 @@ public class ITMigrateTransmitter extends ITBase {
       // parse params from json payload
       GetMigrateTransmittersRequestBody params = gson.fromJson(payload, new TypeToken<GetMigrateTransmittersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<MigrateTransmitter> result = api.getMigrateTransmitters(params, contentLanguage);
+      List<MigrateTransmitter> result = api.getMigrateTransmitters(params);
       assertThat(result).as("check result of getMigrateTransmitters").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITMigrateTransmitter extends ITBase {
       // parse params from json payload
       GetMigrateTransmittersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetMigrateTransmittersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      MigrateTransmitterConnection result = api.getMigrateTransmittersConnection(params, contentLanguage);
+      MigrateTransmitterConnection result = api.getMigrateTransmittersConnection(params);
       assertThat(result).as("check result of getMigrateTransmittersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

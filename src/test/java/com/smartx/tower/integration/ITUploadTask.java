@@ -44,7 +44,7 @@ public class ITUploadTask extends ITBase {
       // parse params from json payload
       GetUploadTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetUploadTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<UploadTask> result = api.getUploadTasks(params, contentLanguage);
+      List<UploadTask> result = api.getUploadTasks(params);
       assertThat(result).as("check result of getUploadTasks").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITUploadTask extends ITBase {
       // parse params from json payload
       GetUploadTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUploadTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      UploadTaskConnection result = api.getUploadTasksConnection(params, contentLanguage);
+      UploadTaskConnection result = api.getUploadTasksConnection(params);
       assertThat(result).as("check result of getUploadTasksConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

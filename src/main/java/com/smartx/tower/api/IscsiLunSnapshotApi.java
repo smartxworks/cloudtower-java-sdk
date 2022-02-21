@@ -82,7 +82,6 @@ public class IscsiLunSnapshotApi {
     /**
      * Build call for createIscsiLunSnapshot
      * @param iscsiLunSnapshotCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -93,7 +92,7 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createIscsiLunSnapshotCall(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createIscsiLunSnapshotCall(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -119,10 +118,6 @@ public class IscsiLunSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -135,7 +130,7 @@ public class IscsiLunSnapshotApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -144,7 +139,7 @@ public class IscsiLunSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createIscsiLunSnapshotValidateBeforeCall(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createIscsiLunSnapshotValidateBeforeCall(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'iscsiLunSnapshotCreationParams' is set
         if (iscsiLunSnapshotCreationParams == null) {
@@ -152,7 +147,7 @@ public class IscsiLunSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = createIscsiLunSnapshotCall(iscsiLunSnapshotCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createIscsiLunSnapshotCall(iscsiLunSnapshotCreationParams, _callback);
         return localVarCall;
 
     }
@@ -161,7 +156,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param iscsiLunSnapshotCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskIscsiLunSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -171,8 +165,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskIscsiLunSnapshot> createIscsiLunSnapshot(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskIscsiLunSnapshot>> localVarResp = createIscsiLunSnapshotWithHttpInfo(iscsiLunSnapshotCreationParams, contentLanguage);
+    public List<WithTaskIscsiLunSnapshot> createIscsiLunSnapshot(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskIscsiLunSnapshot>> localVarResp = createIscsiLunSnapshotWithHttpInfo(iscsiLunSnapshotCreationParams);
         return localVarResp.getData();
     }
 
@@ -180,7 +174,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param iscsiLunSnapshotCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskIscsiLunSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -190,8 +183,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskIscsiLunSnapshot>> createIscsiLunSnapshotWithHttpInfo(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskIscsiLunSnapshot>> createIscsiLunSnapshotWithHttpInfo(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskIscsiLunSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -200,7 +193,6 @@ public class IscsiLunSnapshotApi {
      *  (asynchronously)
      * 
      * @param iscsiLunSnapshotCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -211,9 +203,9 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createIscsiLunSnapshotAsync(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, String contentLanguage, final ApiCallback<List<WithTaskIscsiLunSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call createIscsiLunSnapshotAsync(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, final ApiCallback<List<WithTaskIscsiLunSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskIscsiLunSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -221,7 +213,6 @@ public class IscsiLunSnapshotApi {
     /**
      * Build call for deleteIscsiLunSnapshot
      * @param iscsiLunSnapshotDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -232,7 +223,7 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteIscsiLunSnapshotCall(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteIscsiLunSnapshotCall(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -258,10 +249,6 @@ public class IscsiLunSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -274,7 +261,7 @@ public class IscsiLunSnapshotApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -283,7 +270,7 @@ public class IscsiLunSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteIscsiLunSnapshotValidateBeforeCall(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteIscsiLunSnapshotValidateBeforeCall(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'iscsiLunSnapshotDeletionParams' is set
         if (iscsiLunSnapshotDeletionParams == null) {
@@ -291,7 +278,7 @@ public class IscsiLunSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteIscsiLunSnapshotCall(iscsiLunSnapshotDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteIscsiLunSnapshotCall(iscsiLunSnapshotDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -300,7 +287,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param iscsiLunSnapshotDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteIscsiLunSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -310,8 +296,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteIscsiLunSnapshot> deleteIscsiLunSnapshot(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteIscsiLunSnapshot>> localVarResp = deleteIscsiLunSnapshotWithHttpInfo(iscsiLunSnapshotDeletionParams, contentLanguage);
+    public List<WithTaskDeleteIscsiLunSnapshot> deleteIscsiLunSnapshot(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteIscsiLunSnapshot>> localVarResp = deleteIscsiLunSnapshotWithHttpInfo(iscsiLunSnapshotDeletionParams);
         return localVarResp.getData();
     }
 
@@ -319,7 +305,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param iscsiLunSnapshotDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteIscsiLunSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -329,8 +314,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteIscsiLunSnapshot>> deleteIscsiLunSnapshotWithHttpInfo(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteIscsiLunSnapshot>> deleteIscsiLunSnapshotWithHttpInfo(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteIscsiLunSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -339,7 +324,6 @@ public class IscsiLunSnapshotApi {
      *  (asynchronously)
      * 
      * @param iscsiLunSnapshotDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -350,9 +334,9 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteIscsiLunSnapshotAsync(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteIscsiLunSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call deleteIscsiLunSnapshotAsync(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, final ApiCallback<List<WithTaskDeleteIscsiLunSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteIscsiLunSnapshotValidateBeforeCall(iscsiLunSnapshotDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteIscsiLunSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -360,7 +344,6 @@ public class IscsiLunSnapshotApi {
     /**
      * Build call for getIscsiLunSnapshots
      * @param getIscsiLunSnapshotsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -371,7 +354,7 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiLunSnapshotsCall(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIscsiLunSnapshotsCall(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -397,10 +380,6 @@ public class IscsiLunSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -413,7 +392,7 @@ public class IscsiLunSnapshotApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -422,7 +401,7 @@ public class IscsiLunSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIscsiLunSnapshotsValidateBeforeCall(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getIscsiLunSnapshotsValidateBeforeCall(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIscsiLunSnapshotsRequestBody' is set
         if (getIscsiLunSnapshotsRequestBody == null) {
@@ -430,7 +409,7 @@ public class IscsiLunSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = getIscsiLunSnapshotsCall(getIscsiLunSnapshotsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIscsiLunSnapshotsCall(getIscsiLunSnapshotsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -439,7 +418,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param getIscsiLunSnapshotsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;IscsiLunSnapshot&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -449,8 +427,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<IscsiLunSnapshot> getIscsiLunSnapshots(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<IscsiLunSnapshot>> localVarResp = getIscsiLunSnapshotsWithHttpInfo(getIscsiLunSnapshotsRequestBody, contentLanguage);
+    public List<IscsiLunSnapshot> getIscsiLunSnapshots(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody) throws ApiException {
+        ApiResponse<List<IscsiLunSnapshot>> localVarResp = getIscsiLunSnapshotsWithHttpInfo(getIscsiLunSnapshotsRequestBody);
         return localVarResp.getData();
     }
 
@@ -458,7 +436,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param getIscsiLunSnapshotsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;IscsiLunSnapshot&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -468,8 +445,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<IscsiLunSnapshot>> getIscsiLunSnapshotsWithHttpInfo(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getIscsiLunSnapshotsValidateBeforeCall(getIscsiLunSnapshotsRequestBody, contentLanguage, null);
+    public ApiResponse<List<IscsiLunSnapshot>> getIscsiLunSnapshotsWithHttpInfo(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getIscsiLunSnapshotsValidateBeforeCall(getIscsiLunSnapshotsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<IscsiLunSnapshot>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -478,7 +455,6 @@ public class IscsiLunSnapshotApi {
      *  (asynchronously)
      * 
      * @param getIscsiLunSnapshotsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -489,9 +465,9 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiLunSnapshotsAsync(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, String contentLanguage, final ApiCallback<List<IscsiLunSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call getIscsiLunSnapshotsAsync(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, final ApiCallback<List<IscsiLunSnapshot>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIscsiLunSnapshotsValidateBeforeCall(getIscsiLunSnapshotsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIscsiLunSnapshotsValidateBeforeCall(getIscsiLunSnapshotsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<IscsiLunSnapshot>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -499,7 +475,6 @@ public class IscsiLunSnapshotApi {
     /**
      * Build call for getIscsiLunSnapshotsConnection
      * @param getIscsiLunSnapshotsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -510,7 +485,7 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiLunSnapshotsConnectionCall(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIscsiLunSnapshotsConnectionCall(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -536,10 +511,6 @@ public class IscsiLunSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -552,7 +523,7 @@ public class IscsiLunSnapshotApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -561,7 +532,7 @@ public class IscsiLunSnapshotApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIscsiLunSnapshotsConnectionValidateBeforeCall(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getIscsiLunSnapshotsConnectionValidateBeforeCall(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIscsiLunSnapshotsConnectionRequestBody' is set
         if (getIscsiLunSnapshotsConnectionRequestBody == null) {
@@ -569,7 +540,7 @@ public class IscsiLunSnapshotApi {
         }
         
 
-        okhttp3.Call localVarCall = getIscsiLunSnapshotsConnectionCall(getIscsiLunSnapshotsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIscsiLunSnapshotsConnectionCall(getIscsiLunSnapshotsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -578,7 +549,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param getIscsiLunSnapshotsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return IscsiLunSnapshotConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -588,8 +558,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public IscsiLunSnapshotConnection getIscsiLunSnapshotsConnection(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<IscsiLunSnapshotConnection> localVarResp = getIscsiLunSnapshotsConnectionWithHttpInfo(getIscsiLunSnapshotsConnectionRequestBody, contentLanguage);
+    public IscsiLunSnapshotConnection getIscsiLunSnapshotsConnection(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody) throws ApiException {
+        ApiResponse<IscsiLunSnapshotConnection> localVarResp = getIscsiLunSnapshotsConnectionWithHttpInfo(getIscsiLunSnapshotsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -597,7 +567,6 @@ public class IscsiLunSnapshotApi {
      * 
      * 
      * @param getIscsiLunSnapshotsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;IscsiLunSnapshotConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -607,8 +576,8 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IscsiLunSnapshotConnection> getIscsiLunSnapshotsConnectionWithHttpInfo(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getIscsiLunSnapshotsConnectionValidateBeforeCall(getIscsiLunSnapshotsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<IscsiLunSnapshotConnection> getIscsiLunSnapshotsConnectionWithHttpInfo(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getIscsiLunSnapshotsConnectionValidateBeforeCall(getIscsiLunSnapshotsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<IscsiLunSnapshotConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -617,7 +586,6 @@ public class IscsiLunSnapshotApi {
      *  (asynchronously)
      * 
      * @param getIscsiLunSnapshotsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -628,9 +596,9 @@ public class IscsiLunSnapshotApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIscsiLunSnapshotsConnectionAsync(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, String contentLanguage, final ApiCallback<IscsiLunSnapshotConnection> _callback) throws ApiException {
+    public okhttp3.Call getIscsiLunSnapshotsConnectionAsync(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, final ApiCallback<IscsiLunSnapshotConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIscsiLunSnapshotsConnectionValidateBeforeCall(getIscsiLunSnapshotsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIscsiLunSnapshotsConnectionValidateBeforeCall(getIscsiLunSnapshotsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<IscsiLunSnapshotConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

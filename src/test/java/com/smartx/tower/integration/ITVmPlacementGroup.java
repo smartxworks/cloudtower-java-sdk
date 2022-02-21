@@ -54,12 +54,11 @@ public class ITVmPlacementGroup extends ITBase {
           .vmVmPolicyEnabled(true).enabled(true).vmHostPreferPolicy(false).vmHostMustEnabled(false)
           .vmHostMustPolicy(false).vmHostPreferEnabled(false));
       // do some modify to params(optional)
-      List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params, contentLanguage);
+      List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params);
       VmPlacementGroup vmPlacementGroup = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
       waitForTaskSucceed(api.deleteVmPlacementGroup(
-          new VmPlacementGroupDeletionParams().where(new VmPlacementGroupWhereInput().id(vmPlacementGroup.getId())),
-          contentLanguage).get(0).getTaskId());
+          new VmPlacementGroupDeletionParams().where(new VmPlacementGroupWhereInput().id(vmPlacementGroup.getId()))).get(0).getTaskId());
       assertThat(result).as("check result of createVmPlacementGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -75,7 +74,7 @@ public class ITVmPlacementGroup extends ITBase {
       GetVmPlacementGroupsRequestBody params = gson.fromJson(payload, new TypeToken<GetVmPlacementGroupsRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<VmPlacementGroup> result = api.getVmPlacementGroups(params, contentLanguage);
+      List<VmPlacementGroup> result = api.getVmPlacementGroups(params);
       assertThat(result).as("check result of getVmPlacementGroups").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -92,7 +91,7 @@ public class ITVmPlacementGroup extends ITBase {
           new TypeToken<GetVmPlacementGroupsConnectionRequestBody>() {
           }.getType());
       // do some modify to params(optional)
-      VmPlacementGroupConnection result = api.getVmPlacementGroupsConnection(params, contentLanguage);
+      VmPlacementGroupConnection result = api.getVmPlacementGroupsConnection(params);
       assertThat(result).as("check result of getVmPlacementGroupsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -111,7 +110,7 @@ public class ITVmPlacementGroup extends ITBase {
         .name("tower-sdk-test-vm-placement-group" + System.currentTimeMillis()).vmVmPolicy(VmVmPolicy.PREFER_SAME)
         .vmVmPolicyEnabled(true).enabled(true).vmHostPreferPolicy(false).vmHostMustEnabled(false)
         .vmHostMustPolicy(false).vmHostPreferEnabled(false));
-    List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params, contentLanguage);
+    List<WithTaskVmPlacementGroup> result = api.createVmPlacementGroup(params);
     placementGroup = result.get(0).getData();
     waitForTaskSucceed(result.get(0).getTaskId());
   }
@@ -124,8 +123,7 @@ public class ITVmPlacementGroup extends ITBase {
         "getVmPlacementGroups", (new TypeToken<List<VmCreationParams>>() {
         }.getClass()), GetVmPlacementGroupsRequestBody.class);
     waitForTaskSucceed(api.deleteVmPlacementGroup(
-        new VmPlacementGroupDeletionParams().where(new VmPlacementGroupWhereInput().id(placementGroup.getId())),
-        contentLanguage).get(0).getTaskId());
+        new VmPlacementGroupDeletionParams().where(new VmPlacementGroupWhereInput().id(placementGroup.getId()))).get(0).getTaskId());
     placementGroup = null;
   }
 
@@ -138,7 +136,7 @@ public class ITVmPlacementGroup extends ITBase {
       params.where(new VmPlacementGroupWhereInput().id(placementGroup.getId()))
           .data(new VmPlacementGroupUpdationParamsData().description("vm_placement_group_api_test"));
       // do some modify to params(optional)
-      List<WithTaskVmPlacementGroup> result = api.updateVmPlacementGroup(params, contentLanguage);
+      List<WithTaskVmPlacementGroup> result = api.updateVmPlacementGroup(params);
       assertThat(result).as("check result of updateVmPlacementGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

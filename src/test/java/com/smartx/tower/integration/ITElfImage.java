@@ -44,7 +44,7 @@ public class ITElfImage extends ITBase {
   //     // parse params from json payload
   //     File params = gson.fromJson(payload, new TypeToken<File>() {}.getType());
   //     // do some modify to params(optional)
-  //     List<UploadTask> result = api.createElfImage(params, contentLanguage);
+  //     List<UploadTask> result = api.createElfImage(params);
   //     assertThat(result).as("check result of createElfImage").isNotNull();
   //   } catch (ApiException e) {
   //     assertThat(true).as(e.getResponseBody()).isFalse();
@@ -57,7 +57,7 @@ public class ITElfImage extends ITBase {
       // parse params from json payload
       ElfImageDeletionParams params = gson.fromJson(payload, new TypeToken<ElfImageDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteElfImage> result = api.deleteElfImage(params, contentLanguage);
+      List<WithTaskDeleteElfImage> result = api.deleteElfImage(params);
       assertThat(result).as("check result of deleteElfImage").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -72,7 +72,7 @@ public class ITElfImage extends ITBase {
       // parse params from json payload
       GetElfImagesRequestBody params = gson.fromJson(payload, new TypeToken<GetElfImagesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ElfImage> result = api.getElfImages(params, contentLanguage);
+      List<ElfImage> result = api.getElfImages(params);
       assertThat(result).as("check result of getElfImages").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -87,7 +87,7 @@ public class ITElfImage extends ITBase {
       // parse params from json payload
       GetElfImagesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetElfImagesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ElfImageConnection result = api.getElfImagesConnection(params, contentLanguage);
+      ElfImageConnection result = api.getElfImagesConnection(params);
       assertThat(result).as("check result of getElfImagesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -102,7 +102,7 @@ public class ITElfImage extends ITBase {
       // parse params from json payload
       ElfImageUpdationParams params = gson.fromJson(payload, new TypeToken<ElfImageUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskElfImage> result = api.updateElfImage(params, contentLanguage);
+      List<WithTaskElfImage> result = api.updateElfImage(params);
       assertThat(result).as("check result of updateElfImage").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

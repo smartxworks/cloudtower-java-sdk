@@ -44,7 +44,7 @@ public class ITCluster extends ITBase {
       // parse params from json payload
       List<ClusterCreationParams> params = gson.fromJson(payload, new TypeToken<List<ClusterCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskCluster> result = api.connectCluster(params, contentLanguage);
+      List<WithTaskCluster> result = api.connectCluster(params);
       assertThat(result).as("check result of connectCluster").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITCluster extends ITBase {
       // parse params from json payload
       ClusterDeletionParams params = gson.fromJson(payload, new TypeToken<ClusterDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteCluster> result = api.deleteCluster(params, contentLanguage);
+      List<WithTaskDeleteCluster> result = api.deleteCluster(params);
       assertThat(result).as("check result of deleteCluster").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITCluster extends ITBase {
       // parse params from json payload
       GetClustersRequestBody params = gson.fromJson(payload, new TypeToken<GetClustersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Cluster> result = api.getClusters(params, contentLanguage);
+      List<Cluster> result = api.getClusters(params);
       assertThat(result).as("check result of getClusters").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITCluster extends ITBase {
       // parse params from json payload
       GetClustersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClustersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ClusterConnection result = api.getClustersConnection(params, contentLanguage);
+      ClusterConnection result = api.getClustersConnection(params);
       assertThat(result).as("check result of getClustersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITCluster extends ITBase {
       // parse params from json payload
       ClusterUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskCluster> result = api.updateCluster(params, contentLanguage);
+      List<WithTaskCluster> result = api.updateCluster(params);
       assertThat(result).as("check result of updateCluster").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITCluster extends ITBase {
       // parse params from json payload
       ClusterLicenseUpdationParams params = gson.fromJson(payload, new TypeToken<ClusterLicenseUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskCluster> result = api.updateClusterLicense(params, contentLanguage);
+      List<WithTaskCluster> result = api.updateClusterLicense(params);
       assertThat(result).as("check result of updateClusterLicense").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

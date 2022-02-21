@@ -44,7 +44,7 @@ public class ITApplication extends ITBase {
       // parse params from json payload
       GetApplicationsRequestBody params = gson.fromJson(payload, new TypeToken<GetApplicationsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Application> result = api.getApplications(params, contentLanguage);
+      List<Application> result = api.getApplications(params);
       assertThat(result).as("check result of getApplications").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITApplication extends ITBase {
       // parse params from json payload
       GetApplicationsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetApplicationsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ApplicationConnection result = api.getApplicationsConnection(params, contentLanguage);
+      ApplicationConnection result = api.getApplicationsConnection(params);
       assertThat(result).as("check result of getApplicationsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

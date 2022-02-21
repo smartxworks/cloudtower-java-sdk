@@ -45,7 +45,7 @@ public class ITAlert extends ITBase {
       GetAlertsRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertsRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<Alert> result = api.getAlerts(params, contentLanguage);
+      List<Alert> result = api.getAlerts(params);
       assertThat(result).as("check result of getAlerts").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -61,7 +61,7 @@ public class ITAlert extends ITBase {
       GetAlertsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertsConnectionRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      AlertConnection result = api.getAlertsConnection(params, contentLanguage);
+      AlertConnection result = api.getAlertsConnection(params);
       assertThat(result).as("check result of getAlertsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -81,7 +81,7 @@ public class ITAlert extends ITBase {
       where.setId(alertNotEnded.getId());
       params.setWhere(where);
       // do some modify to params(optional)
-      List<WithTaskAlert> result = api.resolveAlert(params, contentLanguage);
+      List<WithTaskAlert> result = api.resolveAlert(params);
       assertThat(result).as("check result of resolveAlert").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

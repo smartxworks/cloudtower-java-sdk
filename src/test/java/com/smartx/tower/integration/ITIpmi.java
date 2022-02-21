@@ -44,7 +44,7 @@ public class ITIpmi extends ITBase {
       // parse params from json payload
       GetIpmisRequestBody params = gson.fromJson(payload, new TypeToken<GetIpmisRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Ipmi> result = api.getIpmis(params, contentLanguage);
+      List<Ipmi> result = api.getIpmis(params);
       assertThat(result).as("check result of getIpmis").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

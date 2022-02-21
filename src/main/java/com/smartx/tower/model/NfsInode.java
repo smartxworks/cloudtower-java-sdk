@@ -45,7 +45,7 @@ public class NfsInode {
 
   public static final String SERIALIZED_NAME_FILE = "file";
   @SerializedName(SERIALIZED_NAME_FILE)
-  private Boolean file;
+  private Boolean _file;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -136,26 +136,26 @@ public class NfsInode {
   }
 
 
-  public NfsInode file(Boolean file) {
+  public NfsInode _file(Boolean _file) {
     
-    this.file = file;
+    this._file = _file;
     return this;
   }
 
    /**
-   * Get file
-   * @return file
+   * Get _file
+   * @return _file
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Boolean getFile() {
-    return file;
+    return _file;
   }
 
 
-  public void setFile(Boolean file) {
-    this.file = file;
+  public void setFile(Boolean _file) {
+    this._file = _file;
   }
 
 
@@ -408,7 +408,7 @@ public class NfsInode {
     NfsInode nfsInode = (NfsInode) o;
     return Objects.equals(this.assignedSize, nfsInode.assignedSize) &&
         Objects.equals(this.entityAsyncStatus, nfsInode.entityAsyncStatus) &&
-        Objects.equals(this.file, nfsInode.file) &&
+        Objects.equals(this._file, nfsInode._file) &&
         Objects.equals(this.id, nfsInode.id) &&
         Objects.equals(this.labels, nfsInode.labels) &&
         Objects.equals(this.localId, nfsInode.localId) &&
@@ -427,7 +427,7 @@ public class NfsInode {
 
   @Override
   public int hashCode() {
-    return Objects.hash(assignedSize, entityAsyncStatus, file, id, labels, localId, localUpdatedAt, name, nfsExport, parentId, sharedSize, snapshotNum, uniqueSize);
+    return Objects.hash(assignedSize, entityAsyncStatus, _file, id, labels, localId, localUpdatedAt, name, nfsExport, parentId, sharedSize, snapshotNum, uniqueSize);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -443,7 +443,7 @@ public class NfsInode {
     sb.append("class NfsInode {\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
-    sb.append("    file: ").append(toIndentedString(file)).append("\n");
+    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");

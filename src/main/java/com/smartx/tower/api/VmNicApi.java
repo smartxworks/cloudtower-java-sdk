@@ -78,7 +78,6 @@ public class VmNicApi {
     /**
      * Build call for getVmNics
      * @param getVmNicsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmNicsCall(GetVmNicsRequestBody getVmNicsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmNicsCall(GetVmNicsRequestBody getVmNicsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class VmNicApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class VmNicApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class VmNicApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmNicsValidateBeforeCall(GetVmNicsRequestBody getVmNicsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmNicsValidateBeforeCall(GetVmNicsRequestBody getVmNicsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmNicsRequestBody' is set
         if (getVmNicsRequestBody == null) {
@@ -148,7 +143,7 @@ public class VmNicApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmNicsCall(getVmNicsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmNicsCall(getVmNicsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class VmNicApi {
      * 
      * 
      * @param getVmNicsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmNic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmNic> getVmNics(GetVmNicsRequestBody getVmNicsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<VmNic>> localVarResp = getVmNicsWithHttpInfo(getVmNicsRequestBody, contentLanguage);
+    public List<VmNic> getVmNics(GetVmNicsRequestBody getVmNicsRequestBody) throws ApiException {
+        ApiResponse<List<VmNic>> localVarResp = getVmNicsWithHttpInfo(getVmNicsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class VmNicApi {
      * 
      * 
      * @param getVmNicsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmNic&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmNic>> getVmNicsWithHttpInfo(GetVmNicsRequestBody getVmNicsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmNicsValidateBeforeCall(getVmNicsRequestBody, contentLanguage, null);
+    public ApiResponse<List<VmNic>> getVmNicsWithHttpInfo(GetVmNicsRequestBody getVmNicsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmNicsValidateBeforeCall(getVmNicsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<VmNic>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class VmNicApi {
      *  (asynchronously)
      * 
      * @param getVmNicsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmNicsAsync(GetVmNicsRequestBody getVmNicsRequestBody, String contentLanguage, final ApiCallback<List<VmNic>> _callback) throws ApiException {
+    public okhttp3.Call getVmNicsAsync(GetVmNicsRequestBody getVmNicsRequestBody, final ApiCallback<List<VmNic>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmNicsValidateBeforeCall(getVmNicsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmNicsValidateBeforeCall(getVmNicsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<VmNic>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class VmNicApi {
     /**
      * Build call for getVmNicsConnection
      * @param getVmNicsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmNicsConnectionCall(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmNicsConnectionCall(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class VmNicApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class VmNicApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class VmNicApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmNicsConnectionValidateBeforeCall(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmNicsConnectionValidateBeforeCall(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmNicsConnectionRequestBody' is set
         if (getVmNicsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class VmNicApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmNicsConnectionCall(getVmNicsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmNicsConnectionCall(getVmNicsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class VmNicApi {
      * 
      * 
      * @param getVmNicsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return VmNicConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmNicConnection getVmNicsConnection(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<VmNicConnection> localVarResp = getVmNicsConnectionWithHttpInfo(getVmNicsConnectionRequestBody, contentLanguage);
+    public VmNicConnection getVmNicsConnection(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody) throws ApiException {
+        ApiResponse<VmNicConnection> localVarResp = getVmNicsConnectionWithHttpInfo(getVmNicsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class VmNicApi {
      * 
      * 
      * @param getVmNicsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmNicConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmNicConnection> getVmNicsConnectionWithHttpInfo(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmNicsConnectionValidateBeforeCall(getVmNicsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<VmNicConnection> getVmNicsConnectionWithHttpInfo(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmNicsConnectionValidateBeforeCall(getVmNicsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<VmNicConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class VmNicApi {
      *  (asynchronously)
      * 
      * @param getVmNicsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class VmNicApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmNicsConnectionAsync(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, String contentLanguage, final ApiCallback<VmNicConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmNicsConnectionAsync(GetVmNicsConnectionRequestBody getVmNicsConnectionRequestBody, final ApiCallback<VmNicConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmNicsConnectionValidateBeforeCall(getVmNicsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmNicsConnectionValidateBeforeCall(getVmNicsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VmNicConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

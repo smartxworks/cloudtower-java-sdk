@@ -44,7 +44,7 @@ public class ITVcenterAccount extends ITBase {
       // parse params from json payload
       GetVcenterAccountsRequestBody params = gson.fromJson(payload, new TypeToken<GetVcenterAccountsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VcenterAccount> result = api.getVcenterAccounts(params, contentLanguage);
+      List<VcenterAccount> result = api.getVcenterAccounts(params);
       assertThat(result).as("check result of getVcenterAccounts").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVcenterAccount extends ITBase {
       // parse params from json payload
       GetVcenterAccountsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVcenterAccountsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VcenterAccountConnection result = api.getVcenterAccountsConnection(params, contentLanguage);
+      VcenterAccountConnection result = api.getVcenterAccountsConnection(params);
       assertThat(result).as("check result of getVcenterAccountsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

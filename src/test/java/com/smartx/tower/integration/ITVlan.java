@@ -44,7 +44,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       List<VmVlanCreationParams> params = gson.fromJson(payload, new TypeToken<List<VmVlanCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVlan> result = api.createVmVlan(params, contentLanguage);
+      List<WithTaskVlan> result = api.createVmVlan(params);
       assertThat(result).as("check result of createVmVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       VlanDeletionParams params = gson.fromJson(payload, new TypeToken<VlanDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteVlan> result = api.deleteVlan(params, contentLanguage);
+      List<WithTaskDeleteVlan> result = api.deleteVlan(params);
       assertThat(result).as("check result of deleteVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       GetVlansRequestBody params = gson.fromJson(payload, new TypeToken<GetVlansRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Vlan> result = api.getVlans(params, contentLanguage);
+      List<Vlan> result = api.getVlans(params);
       assertThat(result).as("check result of getVlans").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       GetVlansConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVlansConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VlanConnection result = api.getVlansConnection(params, contentLanguage);
+      VlanConnection result = api.getVlansConnection(params);
       assertThat(result).as("check result of getVlansConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       ManagementVlanUpdationParams params = gson.fromJson(payload, new TypeToken<ManagementVlanUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVlan> result = api.updateManagementVlan(params, contentLanguage);
+      List<WithTaskVlan> result = api.updateManagementVlan(params);
       assertThat(result).as("check result of updateManagementVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       MigrationVlanUpdationParams params = gson.fromJson(payload, new TypeToken<MigrationVlanUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVlan> result = api.updateMigrationVlan(params, contentLanguage);
+      List<WithTaskVlan> result = api.updateMigrationVlan(params);
       assertThat(result).as("check result of updateMigrationVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -134,7 +134,7 @@ public class ITVlan extends ITBase {
       // parse params from json payload
       VmVlanUpdationParams params = gson.fromJson(payload, new TypeToken<VmVlanUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVlan> result = api.updateVlan(params, contentLanguage);
+      List<WithTaskVlan> result = api.updateVlan(params);
       assertThat(result).as("check result of updateVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

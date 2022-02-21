@@ -20,7 +20,7 @@ public class ITClientFactory {
     try {
       LoginInput loginInput = new LoginInput().password(config.password).username(config.username)
           .source(UserSource.fromValue(config.usersource));
-      com.smartx.tower.model.WithTaskTokenString tokenString = userApi.login(loginInput, config.contentLanguage);
+      com.smartx.tower.model.WithTaskTokenString tokenString = userApi.login(loginInput);
       token = tokenString.getData().getToken();
     } catch (ApiException e) {
       throw e;
@@ -36,7 +36,7 @@ public class ITClientFactory {
     ApiException e = null;
     ApiClient client = new ApiClient();
     client.setBasePath(config.endpoint);
-    while (token.isBlank() && ++retry <= 3) {
+    while (token.isEmpty() && ++retry <= 3) {
       try {
         getToken();
       } catch (ApiException _e) {
@@ -45,7 +45,7 @@ public class ITClientFactory {
         }
       }
     }
-    if (token.isBlank()) {
+    if (token.isEmpty()) {
       throw e != null ? e : new Exception("Cannot Login, unknown Error");
     } else {
       ((ApiKeyAuth) client.getAuthentication("Authorization")).setApiKey(token);

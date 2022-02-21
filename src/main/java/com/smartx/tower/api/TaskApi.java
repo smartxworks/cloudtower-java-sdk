@@ -78,7 +78,6 @@ public class TaskApi {
     /**
      * Build call for getTasks
      * @param getTasksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTasksCall(GetTasksRequestBody getTasksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTasksCall(GetTasksRequestBody getTasksRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class TaskApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class TaskApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class TaskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTasksValidateBeforeCall(GetTasksRequestBody getTasksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTasksValidateBeforeCall(GetTasksRequestBody getTasksRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getTasksRequestBody' is set
         if (getTasksRequestBody == null) {
@@ -148,7 +143,7 @@ public class TaskApi {
         }
         
 
-        okhttp3.Call localVarCall = getTasksCall(getTasksRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getTasksCall(getTasksRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class TaskApi {
      * 
      * 
      * @param getTasksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Task&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Task> getTasks(GetTasksRequestBody getTasksRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Task>> localVarResp = getTasksWithHttpInfo(getTasksRequestBody, contentLanguage);
+    public List<Task> getTasks(GetTasksRequestBody getTasksRequestBody) throws ApiException {
+        ApiResponse<List<Task>> localVarResp = getTasksWithHttpInfo(getTasksRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class TaskApi {
      * 
      * 
      * @param getTasksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Task&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Task>> getTasksWithHttpInfo(GetTasksRequestBody getTasksRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getTasksValidateBeforeCall(getTasksRequestBody, contentLanguage, null);
+    public ApiResponse<List<Task>> getTasksWithHttpInfo(GetTasksRequestBody getTasksRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getTasksValidateBeforeCall(getTasksRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Task>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class TaskApi {
      *  (asynchronously)
      * 
      * @param getTasksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTasksAsync(GetTasksRequestBody getTasksRequestBody, String contentLanguage, final ApiCallback<List<Task>> _callback) throws ApiException {
+    public okhttp3.Call getTasksAsync(GetTasksRequestBody getTasksRequestBody, final ApiCallback<List<Task>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTasksValidateBeforeCall(getTasksRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getTasksValidateBeforeCall(getTasksRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Task>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class TaskApi {
     /**
      * Build call for getTasksConnection
      * @param getTasksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTasksConnectionCall(GetTasksConnectionRequestBody getTasksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTasksConnectionCall(GetTasksConnectionRequestBody getTasksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class TaskApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class TaskApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class TaskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTasksConnectionValidateBeforeCall(GetTasksConnectionRequestBody getTasksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTasksConnectionValidateBeforeCall(GetTasksConnectionRequestBody getTasksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getTasksConnectionRequestBody' is set
         if (getTasksConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class TaskApi {
         }
         
 
-        okhttp3.Call localVarCall = getTasksConnectionCall(getTasksConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getTasksConnectionCall(getTasksConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class TaskApi {
      * 
      * 
      * @param getTasksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return TaskConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public TaskConnection getTasksConnection(GetTasksConnectionRequestBody getTasksConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<TaskConnection> localVarResp = getTasksConnectionWithHttpInfo(getTasksConnectionRequestBody, contentLanguage);
+    public TaskConnection getTasksConnection(GetTasksConnectionRequestBody getTasksConnectionRequestBody) throws ApiException {
+        ApiResponse<TaskConnection> localVarResp = getTasksConnectionWithHttpInfo(getTasksConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class TaskApi {
      * 
      * 
      * @param getTasksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;TaskConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<TaskConnection> getTasksConnectionWithHttpInfo(GetTasksConnectionRequestBody getTasksConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getTasksConnectionValidateBeforeCall(getTasksConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<TaskConnection> getTasksConnectionWithHttpInfo(GetTasksConnectionRequestBody getTasksConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getTasksConnectionValidateBeforeCall(getTasksConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<TaskConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class TaskApi {
      *  (asynchronously)
      * 
      * @param getTasksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class TaskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTasksConnectionAsync(GetTasksConnectionRequestBody getTasksConnectionRequestBody, String contentLanguage, final ApiCallback<TaskConnection> _callback) throws ApiException {
+    public okhttp3.Call getTasksConnectionAsync(GetTasksConnectionRequestBody getTasksConnectionRequestBody, final ApiCallback<TaskConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTasksConnectionValidateBeforeCall(getTasksConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getTasksConnectionValidateBeforeCall(getTasksConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<TaskConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

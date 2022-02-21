@@ -44,7 +44,7 @@ public class ITNfsInode extends ITBase {
       // parse params from json payload
       GetNfsInodesRequestBody params = gson.fromJson(payload, new TypeToken<GetNfsInodesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<NfsInode> result = api.getNfsInodes(params, contentLanguage);
+      List<NfsInode> result = api.getNfsInodes(params);
       assertThat(result).as("check result of getNfsInodes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNfsInode extends ITBase {
       // parse params from json payload
       GetNfsInodesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNfsInodesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NfsInodeConnection result = api.getNfsInodesConnection(params, contentLanguage);
+      NfsInodeConnection result = api.getNfsInodesConnection(params);
       assertThat(result).as("check result of getNfsInodesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

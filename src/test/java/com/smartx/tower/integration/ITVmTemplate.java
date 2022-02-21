@@ -57,7 +57,7 @@ public class ITVmTemplate extends ITBase {
         .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
-    WithTaskVm createResult = vmApi.createVm(params, contentLanguage).get(0);
+    WithTaskVm createResult = vmApi.createVm(params).get(0);
     vm = createResult.getData();
     waitForTaskSucceed(createResult.getTaskId());
   }
@@ -73,10 +73,10 @@ public class ITVmTemplate extends ITBase {
         }.getClass(), GetVmsRequestBody.class);
     if (_vm.getStatus() == VmStatus.RUNNING) {
       waitForTaskSucceed(
-          vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage).get(0)
+          vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId()))).get(0)
               .getTaskId());
     }
-    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
         .get(0).getTaskId());
     vm = null;
   }
@@ -90,16 +90,15 @@ public class ITVmTemplate extends ITBase {
       params.add(new VmTemplateCreationParams().name("tower-api-test-clone-vm-template" + System.currentTimeMillis())
           .clusterId(cluster.getId()).vmId(vm.getId()).cloudInitSupported(false));
       // do some modify to params(optional)
-      List<WithTaskVmTemplate> result = api.cloneVmTemplateFromVm(params, contentLanguage);
+      List<WithTaskVmTemplate> result = api.cloneVmTemplateFromVm(params);
       VmTemplate template = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
       waitForTaskSucceed(api.updateVmTemplate(new VmTemplateUpdationParams()
           .data(new VmTemplateUpdationParamsData()
               .name("tower-sdk-test-clone-vm-template-update" + System.currentTimeMillis()))
-          .where(new VmTemplateWhereInput().id(template.getId())), contentLanguage).get(0).getTaskId());
+          .where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
       waitForTaskSucceed(
-          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())),
-              contentLanguage).get(0).getTaskId());
+          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
       assertThat(result).as("check result of cloneVmTemplateFromVmAndUpdateAndDelete").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -117,16 +116,15 @@ public class ITVmTemplate extends ITBase {
       params.add(new VmTemplateCreationParams().name("tower-sdk-test-convert-vm-template" + System.currentTimeMillis())
           .clusterId(cluster.getId()).vmId(vm.getId()).cloudInitSupported(false));
       // do some modify to params(optional)
-      List<WithTaskVmTemplate> result = api.convertVmTemplateFromVm(params, contentLanguage);
+      List<WithTaskVmTemplate> result = api.convertVmTemplateFromVm(params);
       VmTemplate template = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
       waitForTaskSucceed(api.updateVmTemplate(new VmTemplateUpdationParams()
           .data(new VmTemplateUpdationParamsData()
               .name("tower-sdk-test-clone-vm-template-update" + System.currentTimeMillis()))
-          .where(new VmTemplateWhereInput().id(template.getId())), contentLanguage).get(0).getTaskId());
+          .where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
       waitForTaskSucceed(
-          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())),
-              contentLanguage).get(0).getTaskId());
+          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
       assertThat(result).as("check result of convertVmTemplateFromVmAndDelete").isNotNull();
       vm = null;
     } catch (ApiException e) {
@@ -143,7 +141,7 @@ public class ITVmTemplate extends ITBase {
       GetVmTemplatesRequestBody params = gson.fromJson(payload, new TypeToken<GetVmTemplatesRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<VmTemplate> result = api.getVmTemplates(params, contentLanguage);
+      List<VmTemplate> result = api.getVmTemplates(params);
       assertThat(result).as("check result of getVmTemplates").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -160,7 +158,7 @@ public class ITVmTemplate extends ITBase {
           new TypeToken<GetVmTemplatesConnectionRequestBody>() {
           }.getType());
       // do some modify to params(optional)
-      VmTemplateConnection result = api.getVmTemplatesConnection(params, contentLanguage);
+      VmTemplateConnection result = api.getVmTemplatesConnection(params);
       assertThat(result).as("check result of getVmTemplatesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -178,7 +176,7 @@ public class ITVmTemplate extends ITBase {
     params.add(new VmTemplateCreationParams().name("tower-api-test-clone-vm-template" + System.currentTimeMillis())
         .clusterId(cluster.getId()).vmId(vm.getId()).cloudInitSupported(false));
     // do some modify to params(optional)
-    List<WithTaskVmTemplate> result = api.cloneVmTemplateFromVm(params, contentLanguage);
+    List<WithTaskVmTemplate> result = api.cloneVmTemplateFromVm(params);
     template = result.get(0).getData();
     waitForTaskSucceed(result.get(0).getTaskId());
   }
@@ -193,8 +191,7 @@ public class ITVmTemplate extends ITBase {
         api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
         }.getClass(), GetVmTemplatesRequestBody.class);
     waitForTaskSucceed(
-        api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())),
-            contentLanguage).get(0).getTaskId());
+        api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
   }
 
   @Test(groups = { "need_vm", "need_vm_template" })
@@ -204,10 +201,10 @@ public class ITVmTemplate extends ITBase {
       List<ConvertVmTemplateToVmParams> params = new ArrayList<>();
       params.add(new ConvertVmTemplateToVmParams().convertedFromTemplateId(template.getId())
           .name("tower-sdk-test-vm-convert-from-template" + System.currentTimeMillis()));
-      List<WithTaskVm> result = vmApi.convertVmTemplateToVm(params, contentLanguage);
+      List<WithTaskVm> result = vmApi.convertVmTemplateToVm(params);
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
       assertThat(result).as("check result of convertVmTemplateToVm").isNotNull();
     } catch (ApiException e) {
@@ -225,10 +222,10 @@ public class ITVmTemplate extends ITBase {
       params.add(new VmCreateVmFromTemplateParams().templateId(template.getId())
           .name("tower-sdk-test-vm-create-from-template" + System.currentTimeMillis()).clusterId(cluster.getId())
           .isFullCopy(false));
-      List<WithTaskVm> result = vmApi.createVmFromTemplate(params, contentLanguage);
+      List<WithTaskVm> result = vmApi.createVmFromTemplate(params);
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
       assertThat(result).as("check result of createVmFromTemplate").isNotNull();
       template = null;

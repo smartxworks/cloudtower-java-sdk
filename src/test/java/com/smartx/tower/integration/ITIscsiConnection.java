@@ -44,7 +44,7 @@ public class ITIscsiConnection extends ITBase {
       // parse params from json payload
       GetIscsiConnectionsRequestBody params = gson.fromJson(payload, new TypeToken<GetIscsiConnectionsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<IscsiConnection> result = api.getIscsiConnections(params, contentLanguage);
+      List<IscsiConnection> result = api.getIscsiConnections(params);
       assertThat(result).as("check result of getIscsiConnections").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
