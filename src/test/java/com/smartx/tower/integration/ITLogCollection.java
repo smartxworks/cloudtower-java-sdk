@@ -44,7 +44,7 @@ public class ITLogCollection extends ITBase {
       // parse params from json payload
       GetLogCollectionsRequestBody params = gson.fromJson(payload, new TypeToken<GetLogCollectionsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<LogCollection> result = api.getLogCollections(params, contentLanguage);
+      List<LogCollection> result = api.getLogCollections(params);
       assertThat(result).as("check result of getLogCollections").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITLogCollection extends ITBase {
       // parse params from json payload
       GetLogCollectionsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetLogCollectionsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      LogCollectionConnection result = api.getLogCollectionsConnection(params, contentLanguage);
+      LogCollectionConnection result = api.getLogCollectionsConnection(params);
       assertThat(result).as("check result of getLogCollectionsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -44,7 +44,7 @@ public class ITGraph extends ITBase {
       // parse params from json payload
       List<GraphCreationParams> params = gson.fromJson(payload, new TypeToken<List<GraphCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskGraph> result = api.createGraph(params, contentLanguage);
+      List<WithTaskGraph> result = api.createGraph(params);
       assertThat(result).as("check result of createGraph").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITGraph extends ITBase {
       // parse params from json payload
       GraphDeletionParams params = gson.fromJson(payload, new TypeToken<GraphDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteGraph> result = api.deleteGraph(params, contentLanguage);
+      List<WithTaskDeleteGraph> result = api.deleteGraph(params);
       assertThat(result).as("check result of deleteGraph").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITGraph extends ITBase {
       // parse params from json payload
       GetGraphsRequestBody params = gson.fromJson(payload, new TypeToken<GetGraphsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Graph> result = api.getGraphs(params, contentLanguage);
+      List<Graph> result = api.getGraphs(params);
       assertThat(result).as("check result of getGraphs").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITGraph extends ITBase {
       // parse params from json payload
       GetGraphsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetGraphsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      GraphConnection result = api.getGraphsConnection(params, contentLanguage);
+      GraphConnection result = api.getGraphsConnection(params);
       assertThat(result).as("check result of getGraphsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITGraph extends ITBase {
       // parse params from json payload
       GraphUpdationParams params = gson.fromJson(payload, new TypeToken<GraphUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskGraph> result = api.updateGraph(params, contentLanguage);
+      List<WithTaskGraph> result = api.updateGraph(params);
       assertThat(result).as("check result of updateGraph").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

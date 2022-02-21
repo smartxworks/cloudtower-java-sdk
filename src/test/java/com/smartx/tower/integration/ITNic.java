@@ -44,7 +44,7 @@ public class ITNic extends ITBase {
       // parse params from json payload
       GetNicsRequestBody params = gson.fromJson(payload, new TypeToken<GetNicsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Nic> result = api.getNics(params, contentLanguage);
+      List<Nic> result = api.getNics(params);
       assertThat(result).as("check result of getNics").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNic extends ITBase {
       // parse params from json payload
       GetNicsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNicsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NicConnection result = api.getNicsConnection(params, contentLanguage);
+      NicConnection result = api.getNicsConnection(params);
       assertThat(result).as("check result of getNicsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITNic extends ITBase {
       // parse params from json payload
       NicUpdationParams params = gson.fromJson(payload, new TypeToken<NicUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNic> result = api.updateNic(params, contentLanguage);
+      List<WithTaskNic> result = api.updateNic(params);
       assertThat(result).as("check result of updateNic").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

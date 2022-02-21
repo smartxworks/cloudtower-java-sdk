@@ -44,7 +44,7 @@ public class ITUsbDevice extends ITBase {
       // parse params from json payload
       GetUsbDevicesRequestBody params = gson.fromJson(payload, new TypeToken<GetUsbDevicesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<UsbDevice> result = api.getUsbDevices(params, contentLanguage);
+      List<UsbDevice> result = api.getUsbDevices(params);
       assertThat(result).as("check result of getUsbDevices").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITUsbDevice extends ITBase {
       // parse params from json payload
       GetUsbDevicesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUsbDevicesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      UsbDeviceConnection result = api.getUsbDevicesConnection(params, contentLanguage);
+      UsbDeviceConnection result = api.getUsbDevicesConnection(params);
       assertThat(result).as("check result of getUsbDevicesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITUsbDevice extends ITBase {
       // parse params from json payload
       UsbDeviceMountParams params = gson.fromJson(payload, new TypeToken<UsbDeviceMountParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUsbDevice> result = api.mountUsbDevice(params, contentLanguage);
+      List<WithTaskUsbDevice> result = api.mountUsbDevice(params);
       assertThat(result).as("check result of mountUsbDevice").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITUsbDevice extends ITBase {
       // parse params from json payload
       UsbDeviceUnmountParams params = gson.fromJson(payload, new TypeToken<UsbDeviceUnmountParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUsbDevice> result = api.unmountUsbDevice(params, contentLanguage);
+      List<WithTaskUsbDevice> result = api.unmountUsbDevice(params);
       assertThat(result).as("check result of unmountUsbDevice").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

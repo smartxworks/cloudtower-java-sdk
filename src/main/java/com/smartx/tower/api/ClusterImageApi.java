@@ -78,7 +78,6 @@ public class ClusterImageApi {
     /**
      * Build call for getClusterImages
      * @param getClusterImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterImagesCall(GetClusterImagesRequestBody getClusterImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterImagesCall(GetClusterImagesRequestBody getClusterImagesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ClusterImageApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ClusterImageApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ClusterImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterImagesValidateBeforeCall(GetClusterImagesRequestBody getClusterImagesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterImagesValidateBeforeCall(GetClusterImagesRequestBody getClusterImagesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterImagesRequestBody' is set
         if (getClusterImagesRequestBody == null) {
@@ -148,7 +143,7 @@ public class ClusterImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterImagesCall(getClusterImagesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterImagesCall(getClusterImagesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ClusterImageApi {
      * 
      * 
      * @param getClusterImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;ClusterImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<ClusterImage> getClusterImages(GetClusterImagesRequestBody getClusterImagesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<ClusterImage>> localVarResp = getClusterImagesWithHttpInfo(getClusterImagesRequestBody, contentLanguage);
+    public List<ClusterImage> getClusterImages(GetClusterImagesRequestBody getClusterImagesRequestBody) throws ApiException {
+        ApiResponse<List<ClusterImage>> localVarResp = getClusterImagesWithHttpInfo(getClusterImagesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ClusterImageApi {
      * 
      * 
      * @param getClusterImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;ClusterImage&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ClusterImage>> getClusterImagesWithHttpInfo(GetClusterImagesRequestBody getClusterImagesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterImagesValidateBeforeCall(getClusterImagesRequestBody, contentLanguage, null);
+    public ApiResponse<List<ClusterImage>> getClusterImagesWithHttpInfo(GetClusterImagesRequestBody getClusterImagesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterImagesValidateBeforeCall(getClusterImagesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<ClusterImage>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ClusterImageApi {
      *  (asynchronously)
      * 
      * @param getClusterImagesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterImagesAsync(GetClusterImagesRequestBody getClusterImagesRequestBody, String contentLanguage, final ApiCallback<List<ClusterImage>> _callback) throws ApiException {
+    public okhttp3.Call getClusterImagesAsync(GetClusterImagesRequestBody getClusterImagesRequestBody, final ApiCallback<List<ClusterImage>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterImagesValidateBeforeCall(getClusterImagesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterImagesValidateBeforeCall(getClusterImagesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<ClusterImage>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ClusterImageApi {
     /**
      * Build call for getClusterImagesConnection
      * @param getClusterImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterImagesConnectionCall(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterImagesConnectionCall(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ClusterImageApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ClusterImageApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ClusterImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterImagesConnectionValidateBeforeCall(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getClusterImagesConnectionValidateBeforeCall(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getClusterImagesConnectionRequestBody' is set
         if (getClusterImagesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ClusterImageApi {
         }
         
 
-        okhttp3.Call localVarCall = getClusterImagesConnectionCall(getClusterImagesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterImagesConnectionCall(getClusterImagesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ClusterImageApi {
      * 
      * 
      * @param getClusterImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ClusterImageConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ClusterImageConnection getClusterImagesConnection(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ClusterImageConnection> localVarResp = getClusterImagesConnectionWithHttpInfo(getClusterImagesConnectionRequestBody, contentLanguage);
+    public ClusterImageConnection getClusterImagesConnection(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody) throws ApiException {
+        ApiResponse<ClusterImageConnection> localVarResp = getClusterImagesConnectionWithHttpInfo(getClusterImagesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ClusterImageApi {
      * 
      * 
      * @param getClusterImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ClusterImageConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterImageConnection> getClusterImagesConnectionWithHttpInfo(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getClusterImagesConnectionValidateBeforeCall(getClusterImagesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ClusterImageConnection> getClusterImagesConnectionWithHttpInfo(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getClusterImagesConnectionValidateBeforeCall(getClusterImagesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ClusterImageConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ClusterImageApi {
      *  (asynchronously)
      * 
      * @param getClusterImagesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ClusterImageApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getClusterImagesConnectionAsync(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, String contentLanguage, final ApiCallback<ClusterImageConnection> _callback) throws ApiException {
+    public okhttp3.Call getClusterImagesConnectionAsync(GetClusterImagesConnectionRequestBody getClusterImagesConnectionRequestBody, final ApiCallback<ClusterImageConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterImagesConnectionValidateBeforeCall(getClusterImagesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getClusterImagesConnectionValidateBeforeCall(getClusterImagesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ClusterImageConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

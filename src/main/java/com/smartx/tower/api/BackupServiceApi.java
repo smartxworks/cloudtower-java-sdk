@@ -78,7 +78,6 @@ public class BackupServiceApi {
     /**
      * Build call for getBackupServices
      * @param getBackupServicesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupServicesCall(GetBackupServicesRequestBody getBackupServicesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupServicesCall(GetBackupServicesRequestBody getBackupServicesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class BackupServiceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class BackupServiceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class BackupServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupServicesValidateBeforeCall(GetBackupServicesRequestBody getBackupServicesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupServicesValidateBeforeCall(GetBackupServicesRequestBody getBackupServicesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupServicesRequestBody' is set
         if (getBackupServicesRequestBody == null) {
@@ -148,7 +143,7 @@ public class BackupServiceApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupServicesCall(getBackupServicesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupServicesCall(getBackupServicesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class BackupServiceApi {
      * 
      * 
      * @param getBackupServicesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;BackupService&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<BackupService> getBackupServices(GetBackupServicesRequestBody getBackupServicesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<BackupService>> localVarResp = getBackupServicesWithHttpInfo(getBackupServicesRequestBody, contentLanguage);
+    public List<BackupService> getBackupServices(GetBackupServicesRequestBody getBackupServicesRequestBody) throws ApiException {
+        ApiResponse<List<BackupService>> localVarResp = getBackupServicesWithHttpInfo(getBackupServicesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class BackupServiceApi {
      * 
      * 
      * @param getBackupServicesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;BackupService&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BackupService>> getBackupServicesWithHttpInfo(GetBackupServicesRequestBody getBackupServicesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupServicesValidateBeforeCall(getBackupServicesRequestBody, contentLanguage, null);
+    public ApiResponse<List<BackupService>> getBackupServicesWithHttpInfo(GetBackupServicesRequestBody getBackupServicesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupServicesValidateBeforeCall(getBackupServicesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<BackupService>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class BackupServiceApi {
      *  (asynchronously)
      * 
      * @param getBackupServicesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupServicesAsync(GetBackupServicesRequestBody getBackupServicesRequestBody, String contentLanguage, final ApiCallback<List<BackupService>> _callback) throws ApiException {
+    public okhttp3.Call getBackupServicesAsync(GetBackupServicesRequestBody getBackupServicesRequestBody, final ApiCallback<List<BackupService>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupServicesValidateBeforeCall(getBackupServicesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupServicesValidateBeforeCall(getBackupServicesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<BackupService>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class BackupServiceApi {
     /**
      * Build call for getBackupServicesConnection
      * @param getBackupServicesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupServicesConnectionCall(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBackupServicesConnectionCall(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class BackupServiceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class BackupServiceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class BackupServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBackupServicesConnectionValidateBeforeCall(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBackupServicesConnectionValidateBeforeCall(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBackupServicesConnectionRequestBody' is set
         if (getBackupServicesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class BackupServiceApi {
         }
         
 
-        okhttp3.Call localVarCall = getBackupServicesConnectionCall(getBackupServicesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupServicesConnectionCall(getBackupServicesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class BackupServiceApi {
      * 
      * 
      * @param getBackupServicesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return BackupServiceConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public BackupServiceConnection getBackupServicesConnection(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<BackupServiceConnection> localVarResp = getBackupServicesConnectionWithHttpInfo(getBackupServicesConnectionRequestBody, contentLanguage);
+    public BackupServiceConnection getBackupServicesConnection(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody) throws ApiException {
+        ApiResponse<BackupServiceConnection> localVarResp = getBackupServicesConnectionWithHttpInfo(getBackupServicesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class BackupServiceApi {
      * 
      * 
      * @param getBackupServicesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;BackupServiceConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BackupServiceConnection> getBackupServicesConnectionWithHttpInfo(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBackupServicesConnectionValidateBeforeCall(getBackupServicesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<BackupServiceConnection> getBackupServicesConnectionWithHttpInfo(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBackupServicesConnectionValidateBeforeCall(getBackupServicesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<BackupServiceConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class BackupServiceApi {
      *  (asynchronously)
      * 
      * @param getBackupServicesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class BackupServiceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBackupServicesConnectionAsync(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, String contentLanguage, final ApiCallback<BackupServiceConnection> _callback) throws ApiException {
+    public okhttp3.Call getBackupServicesConnectionAsync(GetBackupServicesConnectionRequestBody getBackupServicesConnectionRequestBody, final ApiCallback<BackupServiceConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBackupServicesConnectionValidateBeforeCall(getBackupServicesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBackupServicesConnectionValidateBeforeCall(getBackupServicesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<BackupServiceConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

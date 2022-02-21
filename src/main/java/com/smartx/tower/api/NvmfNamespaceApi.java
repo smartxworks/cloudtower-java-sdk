@@ -85,7 +85,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for cloneNvmfNamespaceFromSnapshot
      * @param nvmfNamespaceCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -96,7 +95,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cloneNvmfNamespaceFromSnapshotCall(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call cloneNvmfNamespaceFromSnapshotCall(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -122,10 +121,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -138,7 +133,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -147,7 +142,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call cloneNvmfNamespaceFromSnapshotValidateBeforeCall(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call cloneNvmfNamespaceFromSnapshotValidateBeforeCall(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfNamespaceCloneParams' is set
         if (nvmfNamespaceCloneParams == null) {
@@ -155,7 +150,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = cloneNvmfNamespaceFromSnapshotCall(nvmfNamespaceCloneParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = cloneNvmfNamespaceFromSnapshotCall(nvmfNamespaceCloneParams, _callback);
         return localVarCall;
 
     }
@@ -164,7 +159,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNvmfNamespace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -174,8 +168,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNvmfNamespace> cloneNvmfNamespaceFromSnapshot(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = cloneNvmfNamespaceFromSnapshotWithHttpInfo(nvmfNamespaceCloneParams, contentLanguage);
+    public List<WithTaskNvmfNamespace> cloneNvmfNamespaceFromSnapshot(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = cloneNvmfNamespaceFromSnapshotWithHttpInfo(nvmfNamespaceCloneParams);
         return localVarResp.getData();
     }
 
@@ -183,7 +177,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfNamespace&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -193,8 +186,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNvmfNamespace>> cloneNvmfNamespaceFromSnapshotWithHttpInfo(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = cloneNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceCloneParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNvmfNamespace>> cloneNvmfNamespaceFromSnapshotWithHttpInfo(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams) throws ApiException {
+        okhttp3.Call localVarCall = cloneNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceCloneParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -203,7 +196,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param nvmfNamespaceCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -214,9 +206,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cloneNvmfNamespaceFromSnapshotAsync(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, String contentLanguage, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
+    public okhttp3.Call cloneNvmfNamespaceFromSnapshotAsync(List<NvmfNamespaceCloneParams> nvmfNamespaceCloneParams, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = cloneNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceCloneParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = cloneNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceCloneParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -224,7 +216,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for createNvmfNamespace
      * @param nvmfNamespaceCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -235,7 +226,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNvmfNamespaceCall(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createNvmfNamespaceCall(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -261,10 +252,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -277,7 +264,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -286,7 +273,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createNvmfNamespaceValidateBeforeCall(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createNvmfNamespaceValidateBeforeCall(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfNamespaceCreationParams' is set
         if (nvmfNamespaceCreationParams == null) {
@@ -294,7 +281,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = createNvmfNamespaceCall(nvmfNamespaceCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createNvmfNamespaceCall(nvmfNamespaceCreationParams, _callback);
         return localVarCall;
 
     }
@@ -303,7 +290,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNvmfNamespace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -313,8 +299,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNvmfNamespace> createNvmfNamespace(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = createNvmfNamespaceWithHttpInfo(nvmfNamespaceCreationParams, contentLanguage);
+    public List<WithTaskNvmfNamespace> createNvmfNamespace(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = createNvmfNamespaceWithHttpInfo(nvmfNamespaceCreationParams);
         return localVarResp.getData();
     }
 
@@ -322,7 +308,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfNamespace&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -332,8 +317,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNvmfNamespace>> createNvmfNamespaceWithHttpInfo(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createNvmfNamespaceValidateBeforeCall(nvmfNamespaceCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNvmfNamespace>> createNvmfNamespaceWithHttpInfo(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createNvmfNamespaceValidateBeforeCall(nvmfNamespaceCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -342,7 +327,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param nvmfNamespaceCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -353,9 +337,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNvmfNamespaceAsync(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, String contentLanguage, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
+    public okhttp3.Call createNvmfNamespaceAsync(List<NvmfNamespaceCreationParams> nvmfNamespaceCreationParams, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createNvmfNamespaceValidateBeforeCall(nvmfNamespaceCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createNvmfNamespaceValidateBeforeCall(nvmfNamespaceCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -363,7 +347,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for deleteNvmfNamespace
      * @param nvmfNamespaceDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -374,7 +357,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNvmfNamespaceCall(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteNvmfNamespaceCall(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -400,10 +383,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -416,7 +395,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -425,7 +404,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteNvmfNamespaceValidateBeforeCall(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteNvmfNamespaceValidateBeforeCall(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfNamespaceDeletionParams' is set
         if (nvmfNamespaceDeletionParams == null) {
@@ -433,7 +412,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteNvmfNamespaceCall(nvmfNamespaceDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteNvmfNamespaceCall(nvmfNamespaceDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -442,7 +421,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteNvmfNamespace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -452,8 +430,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteNvmfNamespace> deleteNvmfNamespace(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteNvmfNamespace>> localVarResp = deleteNvmfNamespaceWithHttpInfo(nvmfNamespaceDeletionParams, contentLanguage);
+    public List<WithTaskDeleteNvmfNamespace> deleteNvmfNamespace(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteNvmfNamespace>> localVarResp = deleteNvmfNamespaceWithHttpInfo(nvmfNamespaceDeletionParams);
         return localVarResp.getData();
     }
 
@@ -461,7 +439,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteNvmfNamespace&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -471,8 +448,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteNvmfNamespace>> deleteNvmfNamespaceWithHttpInfo(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteNvmfNamespaceValidateBeforeCall(nvmfNamespaceDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteNvmfNamespace>> deleteNvmfNamespaceWithHttpInfo(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteNvmfNamespaceValidateBeforeCall(nvmfNamespaceDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfNamespace>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -481,7 +458,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param nvmfNamespaceDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -492,9 +468,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNvmfNamespaceAsync(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteNvmfNamespace>> _callback) throws ApiException {
+    public okhttp3.Call deleteNvmfNamespaceAsync(NvmfNamespaceDeletionParams nvmfNamespaceDeletionParams, final ApiCallback<List<WithTaskDeleteNvmfNamespace>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteNvmfNamespaceValidateBeforeCall(nvmfNamespaceDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteNvmfNamespaceValidateBeforeCall(nvmfNamespaceDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfNamespace>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -502,7 +478,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for getNvmfNamespaces
      * @param getNvmfNamespacesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -513,7 +488,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfNamespacesCall(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNvmfNamespacesCall(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -539,10 +514,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -555,7 +526,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -564,7 +535,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNvmfNamespacesValidateBeforeCall(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getNvmfNamespacesValidateBeforeCall(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNvmfNamespacesRequestBody' is set
         if (getNvmfNamespacesRequestBody == null) {
@@ -572,7 +543,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = getNvmfNamespacesCall(getNvmfNamespacesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNvmfNamespacesCall(getNvmfNamespacesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -581,7 +552,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param getNvmfNamespacesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;NvmfNamespace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -591,8 +561,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<NvmfNamespace> getNvmfNamespaces(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<NvmfNamespace>> localVarResp = getNvmfNamespacesWithHttpInfo(getNvmfNamespacesRequestBody, contentLanguage);
+    public List<NvmfNamespace> getNvmfNamespaces(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody) throws ApiException {
+        ApiResponse<List<NvmfNamespace>> localVarResp = getNvmfNamespacesWithHttpInfo(getNvmfNamespacesRequestBody);
         return localVarResp.getData();
     }
 
@@ -600,7 +570,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param getNvmfNamespacesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;NvmfNamespace&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -610,8 +579,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<NvmfNamespace>> getNvmfNamespacesWithHttpInfo(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getNvmfNamespacesValidateBeforeCall(getNvmfNamespacesRequestBody, contentLanguage, null);
+    public ApiResponse<List<NvmfNamespace>> getNvmfNamespacesWithHttpInfo(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getNvmfNamespacesValidateBeforeCall(getNvmfNamespacesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<NvmfNamespace>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -620,7 +589,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param getNvmfNamespacesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -631,9 +599,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfNamespacesAsync(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, String contentLanguage, final ApiCallback<List<NvmfNamespace>> _callback) throws ApiException {
+    public okhttp3.Call getNvmfNamespacesAsync(GetNvmfNamespacesRequestBody getNvmfNamespacesRequestBody, final ApiCallback<List<NvmfNamespace>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNvmfNamespacesValidateBeforeCall(getNvmfNamespacesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNvmfNamespacesValidateBeforeCall(getNvmfNamespacesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<NvmfNamespace>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -641,7 +609,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for getNvmfNamespacesConnection
      * @param getNvmfNamespacesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -652,7 +619,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfNamespacesConnectionCall(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNvmfNamespacesConnectionCall(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -678,10 +645,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -694,7 +657,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -703,7 +666,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNvmfNamespacesConnectionValidateBeforeCall(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getNvmfNamespacesConnectionValidateBeforeCall(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getNvmfNamespacesConnectionRequestBody' is set
         if (getNvmfNamespacesConnectionRequestBody == null) {
@@ -711,7 +674,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = getNvmfNamespacesConnectionCall(getNvmfNamespacesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNvmfNamespacesConnectionCall(getNvmfNamespacesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -720,7 +683,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param getNvmfNamespacesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return NvmfNamespaceConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -730,8 +692,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public NvmfNamespaceConnection getNvmfNamespacesConnection(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<NvmfNamespaceConnection> localVarResp = getNvmfNamespacesConnectionWithHttpInfo(getNvmfNamespacesConnectionRequestBody, contentLanguage);
+    public NvmfNamespaceConnection getNvmfNamespacesConnection(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody) throws ApiException {
+        ApiResponse<NvmfNamespaceConnection> localVarResp = getNvmfNamespacesConnectionWithHttpInfo(getNvmfNamespacesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -739,7 +701,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param getNvmfNamespacesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;NvmfNamespaceConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -749,8 +710,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NvmfNamespaceConnection> getNvmfNamespacesConnectionWithHttpInfo(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getNvmfNamespacesConnectionValidateBeforeCall(getNvmfNamespacesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<NvmfNamespaceConnection> getNvmfNamespacesConnectionWithHttpInfo(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getNvmfNamespacesConnectionValidateBeforeCall(getNvmfNamespacesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<NvmfNamespaceConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -759,7 +720,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param getNvmfNamespacesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -770,9 +730,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getNvmfNamespacesConnectionAsync(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, String contentLanguage, final ApiCallback<NvmfNamespaceConnection> _callback) throws ApiException {
+    public okhttp3.Call getNvmfNamespacesConnectionAsync(GetNvmfNamespacesConnectionRequestBody getNvmfNamespacesConnectionRequestBody, final ApiCallback<NvmfNamespaceConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getNvmfNamespacesConnectionValidateBeforeCall(getNvmfNamespacesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getNvmfNamespacesConnectionValidateBeforeCall(getNvmfNamespacesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<NvmfNamespaceConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -780,7 +740,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for rollbackNvmfNamespaceFromSnapshot
      * @param nvmfNamespaceRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -791,7 +750,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call rollbackNvmfNamespaceFromSnapshotCall(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call rollbackNvmfNamespaceFromSnapshotCall(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -817,10 +776,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -833,7 +788,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -842,7 +797,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call rollbackNvmfNamespaceFromSnapshotValidateBeforeCall(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call rollbackNvmfNamespaceFromSnapshotValidateBeforeCall(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfNamespaceRollbackParams' is set
         if (nvmfNamespaceRollbackParams == null) {
@@ -850,7 +805,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = rollbackNvmfNamespaceFromSnapshotCall(nvmfNamespaceRollbackParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = rollbackNvmfNamespaceFromSnapshotCall(nvmfNamespaceRollbackParams, _callback);
         return localVarCall;
 
     }
@@ -859,7 +814,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNvmfNamespace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -869,8 +823,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNvmfNamespace> rollbackNvmfNamespaceFromSnapshot(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = rollbackNvmfNamespaceFromSnapshotWithHttpInfo(nvmfNamespaceRollbackParams, contentLanguage);
+    public List<WithTaskNvmfNamespace> rollbackNvmfNamespaceFromSnapshot(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = rollbackNvmfNamespaceFromSnapshotWithHttpInfo(nvmfNamespaceRollbackParams);
         return localVarResp.getData();
     }
 
@@ -878,7 +832,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfNamespace&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -888,8 +841,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNvmfNamespace>> rollbackNvmfNamespaceFromSnapshotWithHttpInfo(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = rollbackNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceRollbackParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNvmfNamespace>> rollbackNvmfNamespaceFromSnapshotWithHttpInfo(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams) throws ApiException {
+        okhttp3.Call localVarCall = rollbackNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceRollbackParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -898,7 +851,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param nvmfNamespaceRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -909,9 +861,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call rollbackNvmfNamespaceFromSnapshotAsync(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, String contentLanguage, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
+    public okhttp3.Call rollbackNvmfNamespaceFromSnapshotAsync(List<NvmfNamespaceRollbackParams> nvmfNamespaceRollbackParams, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = rollbackNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceRollbackParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = rollbackNvmfNamespaceFromSnapshotValidateBeforeCall(nvmfNamespaceRollbackParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -919,7 +871,6 @@ public class NvmfNamespaceApi {
     /**
      * Build call for updateNvmfNamespace
      * @param nvmfNamespaceUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -930,7 +881,7 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNvmfNamespaceCall(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNvmfNamespaceCall(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -956,10 +907,6 @@ public class NvmfNamespaceApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -972,7 +919,7 @@ public class NvmfNamespaceApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -981,7 +928,7 @@ public class NvmfNamespaceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNvmfNamespaceValidateBeforeCall(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateNvmfNamespaceValidateBeforeCall(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfNamespaceUpdationParams' is set
         if (nvmfNamespaceUpdationParams == null) {
@@ -989,7 +936,7 @@ public class NvmfNamespaceApi {
         }
         
 
-        okhttp3.Call localVarCall = updateNvmfNamespaceCall(nvmfNamespaceUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateNvmfNamespaceCall(nvmfNamespaceUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -998,7 +945,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNvmfNamespace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1008,8 +954,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNvmfNamespace> updateNvmfNamespace(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = updateNvmfNamespaceWithHttpInfo(nvmfNamespaceUpdationParams, contentLanguage);
+    public List<WithTaskNvmfNamespace> updateNvmfNamespace(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfNamespace>> localVarResp = updateNvmfNamespaceWithHttpInfo(nvmfNamespaceUpdationParams);
         return localVarResp.getData();
     }
 
@@ -1017,7 +963,6 @@ public class NvmfNamespaceApi {
      * 
      * 
      * @param nvmfNamespaceUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfNamespace&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1027,8 +972,8 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNvmfNamespace>> updateNvmfNamespaceWithHttpInfo(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateNvmfNamespaceValidateBeforeCall(nvmfNamespaceUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNvmfNamespace>> updateNvmfNamespaceWithHttpInfo(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateNvmfNamespaceValidateBeforeCall(nvmfNamespaceUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1037,7 +982,6 @@ public class NvmfNamespaceApi {
      *  (asynchronously)
      * 
      * @param nvmfNamespaceUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1048,9 +992,9 @@ public class NvmfNamespaceApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNvmfNamespaceAsync(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
+    public okhttp3.Call updateNvmfNamespaceAsync(NvmfNamespaceUpdationParams nvmfNamespaceUpdationParams, final ApiCallback<List<WithTaskNvmfNamespace>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNvmfNamespaceValidateBeforeCall(nvmfNamespaceUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateNvmfNamespaceValidateBeforeCall(nvmfNamespaceUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfNamespace>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

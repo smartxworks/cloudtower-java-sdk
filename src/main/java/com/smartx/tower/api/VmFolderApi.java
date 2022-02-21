@@ -83,7 +83,6 @@ public class VmFolderApi {
     /**
      * Build call for createVmFolder
      * @param vmFolderCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmFolderCall(List<VmFolderCreationParams> vmFolderCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVmFolderCall(List<VmFolderCreationParams> vmFolderCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class VmFolderApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class VmFolderApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class VmFolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVmFolderValidateBeforeCall(List<VmFolderCreationParams> vmFolderCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createVmFolderValidateBeforeCall(List<VmFolderCreationParams> vmFolderCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmFolderCreationParams' is set
         if (vmFolderCreationParams == null) {
@@ -153,7 +148,7 @@ public class VmFolderApi {
         }
         
 
-        okhttp3.Call localVarCall = createVmFolderCall(vmFolderCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createVmFolderCall(vmFolderCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class VmFolderApi {
      * 
      * 
      * @param vmFolderCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmFolder&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmFolder> createVmFolder(List<VmFolderCreationParams> vmFolderCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskVmFolder>> localVarResp = createVmFolderWithHttpInfo(vmFolderCreationParams, contentLanguage);
+    public List<WithTaskVmFolder> createVmFolder(List<VmFolderCreationParams> vmFolderCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskVmFolder>> localVarResp = createVmFolderWithHttpInfo(vmFolderCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class VmFolderApi {
      * 
      * 
      * @param vmFolderCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmFolder&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmFolder>> createVmFolderWithHttpInfo(List<VmFolderCreationParams> vmFolderCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createVmFolderValidateBeforeCall(vmFolderCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskVmFolder>> createVmFolderWithHttpInfo(List<VmFolderCreationParams> vmFolderCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createVmFolderValidateBeforeCall(vmFolderCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmFolder>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class VmFolderApi {
      *  (asynchronously)
      * 
      * @param vmFolderCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createVmFolderAsync(List<VmFolderCreationParams> vmFolderCreationParams, String contentLanguage, final ApiCallback<List<WithTaskVmFolder>> _callback) throws ApiException {
+    public okhttp3.Call createVmFolderAsync(List<VmFolderCreationParams> vmFolderCreationParams, final ApiCallback<List<WithTaskVmFolder>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createVmFolderValidateBeforeCall(vmFolderCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createVmFolderValidateBeforeCall(vmFolderCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmFolder>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class VmFolderApi {
     /**
      * Build call for deleteVmFolder
      * @param vmFolderDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmFolderCall(VmFolderDeletionParams vmFolderDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmFolderCall(VmFolderDeletionParams vmFolderDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class VmFolderApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class VmFolderApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class VmFolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmFolderValidateBeforeCall(VmFolderDeletionParams vmFolderDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteVmFolderValidateBeforeCall(VmFolderDeletionParams vmFolderDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmFolderDeletionParams' is set
         if (vmFolderDeletionParams == null) {
@@ -292,7 +279,7 @@ public class VmFolderApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteVmFolderCall(vmFolderDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteVmFolderCall(vmFolderDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class VmFolderApi {
      * 
      * 
      * @param vmFolderDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteVmFolder&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVmFolder> deleteVmFolder(VmFolderDeletionParams vmFolderDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVmFolder>> localVarResp = deleteVmFolderWithHttpInfo(vmFolderDeletionParams, contentLanguage);
+    public List<WithTaskDeleteVmFolder> deleteVmFolder(VmFolderDeletionParams vmFolderDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVmFolder>> localVarResp = deleteVmFolderWithHttpInfo(vmFolderDeletionParams);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class VmFolderApi {
      * 
      * 
      * @param vmFolderDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVmFolder&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVmFolder>> deleteVmFolderWithHttpInfo(VmFolderDeletionParams vmFolderDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmFolderValidateBeforeCall(vmFolderDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteVmFolder>> deleteVmFolderWithHttpInfo(VmFolderDeletionParams vmFolderDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteVmFolderValidateBeforeCall(vmFolderDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmFolder>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class VmFolderApi {
      *  (asynchronously)
      * 
      * @param vmFolderDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmFolderAsync(VmFolderDeletionParams vmFolderDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteVmFolder>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmFolderAsync(VmFolderDeletionParams vmFolderDeletionParams, final ApiCallback<List<WithTaskDeleteVmFolder>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmFolderValidateBeforeCall(vmFolderDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteVmFolderValidateBeforeCall(vmFolderDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmFolder>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class VmFolderApi {
     /**
      * Build call for getVmFolders
      * @param getVmFoldersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmFoldersCall(GetVmFoldersRequestBody getVmFoldersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmFoldersCall(GetVmFoldersRequestBody getVmFoldersRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class VmFolderApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class VmFolderApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class VmFolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmFoldersValidateBeforeCall(GetVmFoldersRequestBody getVmFoldersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmFoldersValidateBeforeCall(GetVmFoldersRequestBody getVmFoldersRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmFoldersRequestBody' is set
         if (getVmFoldersRequestBody == null) {
@@ -431,7 +410,7 @@ public class VmFolderApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmFoldersCall(getVmFoldersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmFoldersCall(getVmFoldersRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class VmFolderApi {
      * 
      * 
      * @param getVmFoldersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmFolder&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmFolder> getVmFolders(GetVmFoldersRequestBody getVmFoldersRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<VmFolder>> localVarResp = getVmFoldersWithHttpInfo(getVmFoldersRequestBody, contentLanguage);
+    public List<VmFolder> getVmFolders(GetVmFoldersRequestBody getVmFoldersRequestBody) throws ApiException {
+        ApiResponse<List<VmFolder>> localVarResp = getVmFoldersWithHttpInfo(getVmFoldersRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class VmFolderApi {
      * 
      * 
      * @param getVmFoldersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmFolder&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmFolder>> getVmFoldersWithHttpInfo(GetVmFoldersRequestBody getVmFoldersRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmFoldersValidateBeforeCall(getVmFoldersRequestBody, contentLanguage, null);
+    public ApiResponse<List<VmFolder>> getVmFoldersWithHttpInfo(GetVmFoldersRequestBody getVmFoldersRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmFoldersValidateBeforeCall(getVmFoldersRequestBody, null);
         Type localVarReturnType = new TypeToken<List<VmFolder>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class VmFolderApi {
      *  (asynchronously)
      * 
      * @param getVmFoldersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmFoldersAsync(GetVmFoldersRequestBody getVmFoldersRequestBody, String contentLanguage, final ApiCallback<List<VmFolder>> _callback) throws ApiException {
+    public okhttp3.Call getVmFoldersAsync(GetVmFoldersRequestBody getVmFoldersRequestBody, final ApiCallback<List<VmFolder>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmFoldersValidateBeforeCall(getVmFoldersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmFoldersValidateBeforeCall(getVmFoldersRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<VmFolder>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class VmFolderApi {
     /**
      * Build call for getVmFoldersConnection
      * @param getVmFoldersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmFoldersConnectionCall(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmFoldersConnectionCall(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class VmFolderApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class VmFolderApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class VmFolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmFoldersConnectionValidateBeforeCall(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmFoldersConnectionValidateBeforeCall(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmFoldersConnectionRequestBody' is set
         if (getVmFoldersConnectionRequestBody == null) {
@@ -570,7 +541,7 @@ public class VmFolderApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmFoldersConnectionCall(getVmFoldersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmFoldersConnectionCall(getVmFoldersConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class VmFolderApi {
      * 
      * 
      * @param getVmFoldersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return VmFolderConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmFolderConnection getVmFoldersConnection(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<VmFolderConnection> localVarResp = getVmFoldersConnectionWithHttpInfo(getVmFoldersConnectionRequestBody, contentLanguage);
+    public VmFolderConnection getVmFoldersConnection(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody) throws ApiException {
+        ApiResponse<VmFolderConnection> localVarResp = getVmFoldersConnectionWithHttpInfo(getVmFoldersConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class VmFolderApi {
      * 
      * 
      * @param getVmFoldersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmFolderConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmFolderConnection> getVmFoldersConnectionWithHttpInfo(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmFoldersConnectionValidateBeforeCall(getVmFoldersConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<VmFolderConnection> getVmFoldersConnectionWithHttpInfo(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmFoldersConnectionValidateBeforeCall(getVmFoldersConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<VmFolderConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class VmFolderApi {
      *  (asynchronously)
      * 
      * @param getVmFoldersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmFoldersConnectionAsync(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, String contentLanguage, final ApiCallback<VmFolderConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmFoldersConnectionAsync(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, final ApiCallback<VmFolderConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmFoldersConnectionValidateBeforeCall(getVmFoldersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmFoldersConnectionValidateBeforeCall(getVmFoldersConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VmFolderConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class VmFolderApi {
     /**
      * Build call for updateVmFolder
      * @param vmFolderUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmFolderCall(VmFolderUpdationParams vmFolderUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVmFolderCall(VmFolderUpdationParams vmFolderUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class VmFolderApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class VmFolderApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class VmFolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVmFolderValidateBeforeCall(VmFolderUpdationParams vmFolderUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateVmFolderValidateBeforeCall(VmFolderUpdationParams vmFolderUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'vmFolderUpdationParams' is set
         if (vmFolderUpdationParams == null) {
@@ -709,7 +672,7 @@ public class VmFolderApi {
         }
         
 
-        okhttp3.Call localVarCall = updateVmFolderCall(vmFolderUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateVmFolderCall(vmFolderUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class VmFolderApi {
      * 
      * 
      * @param vmFolderUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskVmFolder&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskVmFolder> updateVmFolder(VmFolderUpdationParams vmFolderUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskVmFolder>> localVarResp = updateVmFolderWithHttpInfo(vmFolderUpdationParams, contentLanguage);
+    public List<WithTaskVmFolder> updateVmFolder(VmFolderUpdationParams vmFolderUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskVmFolder>> localVarResp = updateVmFolderWithHttpInfo(vmFolderUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class VmFolderApi {
      * 
      * 
      * @param vmFolderUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskVmFolder&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskVmFolder>> updateVmFolderWithHttpInfo(VmFolderUpdationParams vmFolderUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateVmFolderValidateBeforeCall(vmFolderUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskVmFolder>> updateVmFolderWithHttpInfo(VmFolderUpdationParams vmFolderUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateVmFolderValidateBeforeCall(vmFolderUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVmFolder>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class VmFolderApi {
      *  (asynchronously)
      * 
      * @param vmFolderUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class VmFolderApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmFolderAsync(VmFolderUpdationParams vmFolderUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskVmFolder>> _callback) throws ApiException {
+    public okhttp3.Call updateVmFolderAsync(VmFolderUpdationParams vmFolderUpdationParams, final ApiCallback<List<WithTaskVmFolder>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateVmFolderValidateBeforeCall(vmFolderUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateVmFolderValidateBeforeCall(vmFolderUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVmFolder>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

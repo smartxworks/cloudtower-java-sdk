@@ -44,7 +44,7 @@ public class ITElfDataStore extends ITBase {
       // parse params from json payload
       GetElfDataStoresRequestBody params = gson.fromJson(payload, new TypeToken<GetElfDataStoresRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ElfDataStore> result = api.getElfDataStores(params, contentLanguage);
+      List<ElfDataStore> result = api.getElfDataStores(params);
       assertThat(result).as("check result of getElfDataStores").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITElfDataStore extends ITBase {
       // parse params from json payload
       GetElfDataStoresConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetElfDataStoresConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ElfDataStoreConnection result = api.getElfDataStoresConnection(params, contentLanguage);
+      ElfDataStoreConnection result = api.getElfDataStoresConnection(params);
       assertThat(result).as("check result of getElfDataStoresConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

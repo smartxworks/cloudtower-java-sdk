@@ -44,7 +44,7 @@ public class ITZoneTopo extends ITBase {
       // parse params from json payload
       GetZoneTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetZoneTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ZoneTopo> result = api.getZoneTopoes(params, contentLanguage);
+      List<ZoneTopo> result = api.getZoneTopoes(params);
       assertThat(result).as("check result of getZoneTopoes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITZoneTopo extends ITBase {
       // parse params from json payload
       GetZoneTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetZoneTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ZoneTopoConnection result = api.getZoneTopoesConnection(params, contentLanguage);
+      ZoneTopoConnection result = api.getZoneTopoesConnection(params);
       assertThat(result).as("check result of getZoneTopoesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

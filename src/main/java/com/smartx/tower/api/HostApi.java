@@ -83,7 +83,6 @@ public class HostApi {
     /**
      * Build call for createHost
      * @param hostCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createHostCall(List<HostCreationParams> hostCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createHostCall(List<HostCreationParams> hostCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class HostApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class HostApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class HostApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createHostValidateBeforeCall(List<HostCreationParams> hostCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createHostValidateBeforeCall(List<HostCreationParams> hostCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'hostCreationParams' is set
         if (hostCreationParams == null) {
@@ -153,7 +148,7 @@ public class HostApi {
         }
         
 
-        okhttp3.Call localVarCall = createHostCall(hostCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createHostCall(hostCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class HostApi {
      * 
      * 
      * @param hostCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskBatchHosts&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskBatchHosts> createHost(List<HostCreationParams> hostCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskBatchHosts>> localVarResp = createHostWithHttpInfo(hostCreationParams, contentLanguage);
+    public List<WithTaskBatchHosts> createHost(List<HostCreationParams> hostCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskBatchHosts>> localVarResp = createHostWithHttpInfo(hostCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class HostApi {
      * 
      * 
      * @param hostCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskBatchHosts&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskBatchHosts>> createHostWithHttpInfo(List<HostCreationParams> hostCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createHostValidateBeforeCall(hostCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskBatchHosts>> createHostWithHttpInfo(List<HostCreationParams> hostCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createHostValidateBeforeCall(hostCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskBatchHosts>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class HostApi {
      *  (asynchronously)
      * 
      * @param hostCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createHostAsync(List<HostCreationParams> hostCreationParams, String contentLanguage, final ApiCallback<List<WithTaskBatchHosts>> _callback) throws ApiException {
+    public okhttp3.Call createHostAsync(List<HostCreationParams> hostCreationParams, final ApiCallback<List<WithTaskBatchHosts>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createHostValidateBeforeCall(hostCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createHostValidateBeforeCall(hostCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskBatchHosts>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class HostApi {
     /**
      * Build call for getHosts
      * @param getHostsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getHostsCall(GetHostsRequestBody getHostsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getHostsCall(GetHostsRequestBody getHostsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class HostApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class HostApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class HostApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getHostsValidateBeforeCall(GetHostsRequestBody getHostsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getHostsValidateBeforeCall(GetHostsRequestBody getHostsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getHostsRequestBody' is set
         if (getHostsRequestBody == null) {
@@ -292,7 +279,7 @@ public class HostApi {
         }
         
 
-        okhttp3.Call localVarCall = getHostsCall(getHostsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getHostsCall(getHostsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class HostApi {
      * 
      * 
      * @param getHostsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Host&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Host> getHosts(GetHostsRequestBody getHostsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Host>> localVarResp = getHostsWithHttpInfo(getHostsRequestBody, contentLanguage);
+    public List<Host> getHosts(GetHostsRequestBody getHostsRequestBody) throws ApiException {
+        ApiResponse<List<Host>> localVarResp = getHostsWithHttpInfo(getHostsRequestBody);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class HostApi {
      * 
      * 
      * @param getHostsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Host&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Host>> getHostsWithHttpInfo(GetHostsRequestBody getHostsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getHostsValidateBeforeCall(getHostsRequestBody, contentLanguage, null);
+    public ApiResponse<List<Host>> getHostsWithHttpInfo(GetHostsRequestBody getHostsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getHostsValidateBeforeCall(getHostsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Host>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class HostApi {
      *  (asynchronously)
      * 
      * @param getHostsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getHostsAsync(GetHostsRequestBody getHostsRequestBody, String contentLanguage, final ApiCallback<List<Host>> _callback) throws ApiException {
+    public okhttp3.Call getHostsAsync(GetHostsRequestBody getHostsRequestBody, final ApiCallback<List<Host>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getHostsValidateBeforeCall(getHostsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getHostsValidateBeforeCall(getHostsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Host>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class HostApi {
     /**
      * Build call for getHostsConnection
      * @param getHostsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getHostsConnectionCall(GetHostsConnectionRequestBody getHostsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getHostsConnectionCall(GetHostsConnectionRequestBody getHostsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class HostApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class HostApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class HostApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getHostsConnectionValidateBeforeCall(GetHostsConnectionRequestBody getHostsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getHostsConnectionValidateBeforeCall(GetHostsConnectionRequestBody getHostsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getHostsConnectionRequestBody' is set
         if (getHostsConnectionRequestBody == null) {
@@ -431,7 +410,7 @@ public class HostApi {
         }
         
 
-        okhttp3.Call localVarCall = getHostsConnectionCall(getHostsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getHostsConnectionCall(getHostsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class HostApi {
      * 
      * 
      * @param getHostsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return HostConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public HostConnection getHostsConnection(GetHostsConnectionRequestBody getHostsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<HostConnection> localVarResp = getHostsConnectionWithHttpInfo(getHostsConnectionRequestBody, contentLanguage);
+    public HostConnection getHostsConnection(GetHostsConnectionRequestBody getHostsConnectionRequestBody) throws ApiException {
+        ApiResponse<HostConnection> localVarResp = getHostsConnectionWithHttpInfo(getHostsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class HostApi {
      * 
      * 
      * @param getHostsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;HostConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<HostConnection> getHostsConnectionWithHttpInfo(GetHostsConnectionRequestBody getHostsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getHostsConnectionValidateBeforeCall(getHostsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<HostConnection> getHostsConnectionWithHttpInfo(GetHostsConnectionRequestBody getHostsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getHostsConnectionValidateBeforeCall(getHostsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<HostConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class HostApi {
      *  (asynchronously)
      * 
      * @param getHostsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getHostsConnectionAsync(GetHostsConnectionRequestBody getHostsConnectionRequestBody, String contentLanguage, final ApiCallback<HostConnection> _callback) throws ApiException {
+    public okhttp3.Call getHostsConnectionAsync(GetHostsConnectionRequestBody getHostsConnectionRequestBody, final ApiCallback<HostConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getHostsConnectionValidateBeforeCall(getHostsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getHostsConnectionValidateBeforeCall(getHostsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<HostConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class HostApi {
     /**
      * Build call for triggerDiskBlink
      * @param triggerDiskBlinkParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call triggerDiskBlinkCall(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call triggerDiskBlinkCall(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class HostApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class HostApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class HostApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call triggerDiskBlinkValidateBeforeCall(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call triggerDiskBlinkValidateBeforeCall(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'triggerDiskBlinkParams' is set
         if (triggerDiskBlinkParams == null) {
@@ -570,7 +541,7 @@ public class HostApi {
         }
         
 
-        okhttp3.Call localVarCall = triggerDiskBlinkCall(triggerDiskBlinkParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = triggerDiskBlinkCall(triggerDiskBlinkParams, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class HostApi {
      * 
      * 
      * @param triggerDiskBlinkParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskHost&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskHost> triggerDiskBlink(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskHost>> localVarResp = triggerDiskBlinkWithHttpInfo(triggerDiskBlinkParams, contentLanguage);
+    public List<WithTaskHost> triggerDiskBlink(List<TriggerDiskBlinkParams> triggerDiskBlinkParams) throws ApiException {
+        ApiResponse<List<WithTaskHost>> localVarResp = triggerDiskBlinkWithHttpInfo(triggerDiskBlinkParams);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class HostApi {
      * 
      * 
      * @param triggerDiskBlinkParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskHost&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskHost>> triggerDiskBlinkWithHttpInfo(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = triggerDiskBlinkValidateBeforeCall(triggerDiskBlinkParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskHost>> triggerDiskBlinkWithHttpInfo(List<TriggerDiskBlinkParams> triggerDiskBlinkParams) throws ApiException {
+        okhttp3.Call localVarCall = triggerDiskBlinkValidateBeforeCall(triggerDiskBlinkParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskHost>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class HostApi {
      *  (asynchronously)
      * 
      * @param triggerDiskBlinkParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call triggerDiskBlinkAsync(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, String contentLanguage, final ApiCallback<List<WithTaskHost>> _callback) throws ApiException {
+    public okhttp3.Call triggerDiskBlinkAsync(List<TriggerDiskBlinkParams> triggerDiskBlinkParams, final ApiCallback<List<WithTaskHost>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = triggerDiskBlinkValidateBeforeCall(triggerDiskBlinkParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = triggerDiskBlinkValidateBeforeCall(triggerDiskBlinkParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskHost>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class HostApi {
     /**
      * Build call for updateHost
      * @param hostUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateHostCall(HostUpdationParams hostUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateHostCall(HostUpdationParams hostUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class HostApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class HostApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class HostApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateHostValidateBeforeCall(HostUpdationParams hostUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateHostValidateBeforeCall(HostUpdationParams hostUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'hostUpdationParams' is set
         if (hostUpdationParams == null) {
@@ -709,7 +672,7 @@ public class HostApi {
         }
         
 
-        okhttp3.Call localVarCall = updateHostCall(hostUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateHostCall(hostUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class HostApi {
      * 
      * 
      * @param hostUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskHost&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskHost> updateHost(HostUpdationParams hostUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskHost>> localVarResp = updateHostWithHttpInfo(hostUpdationParams, contentLanguage);
+    public List<WithTaskHost> updateHost(HostUpdationParams hostUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskHost>> localVarResp = updateHostWithHttpInfo(hostUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class HostApi {
      * 
      * 
      * @param hostUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskHost&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskHost>> updateHostWithHttpInfo(HostUpdationParams hostUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateHostValidateBeforeCall(hostUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskHost>> updateHostWithHttpInfo(HostUpdationParams hostUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateHostValidateBeforeCall(hostUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskHost>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class HostApi {
      *  (asynchronously)
      * 
      * @param hostUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class HostApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateHostAsync(HostUpdationParams hostUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskHost>> _callback) throws ApiException {
+    public okhttp3.Call updateHostAsync(HostUpdationParams hostUpdationParams, final ApiCallback<List<WithTaskHost>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateHostValidateBeforeCall(hostUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateHostValidateBeforeCall(hostUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskHost>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

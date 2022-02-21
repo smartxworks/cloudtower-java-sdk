@@ -44,7 +44,7 @@ public class ITAlertRule extends ITBase {
       // parse params from json payload
       GetAlertRulesRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertRulesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<AlertRule> result = api.getAlertRules(params, contentLanguage);
+      List<AlertRule> result = api.getAlertRules(params);
       assertThat(result).as("check result of getAlertRules").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITAlertRule extends ITBase {
       // parse params from json payload
       GetAlertRulesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetAlertRulesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      AlertRuleConnection result = api.getAlertRulesConnection(params, contentLanguage);
+      AlertRuleConnection result = api.getAlertRulesConnection(params);
       assertThat(result).as("check result of getAlertRulesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -78,7 +78,6 @@ public class IsolationPolicyApi {
     /**
      * Build call for getIsolationPolicies
      * @param getIsolationPoliciesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIsolationPoliciesCall(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIsolationPoliciesCall(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class IsolationPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class IsolationPolicyApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class IsolationPolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIsolationPoliciesValidateBeforeCall(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getIsolationPoliciesValidateBeforeCall(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIsolationPoliciesRequestBody' is set
         if (getIsolationPoliciesRequestBody == null) {
@@ -148,7 +143,7 @@ public class IsolationPolicyApi {
         }
         
 
-        okhttp3.Call localVarCall = getIsolationPoliciesCall(getIsolationPoliciesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIsolationPoliciesCall(getIsolationPoliciesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class IsolationPolicyApi {
      * 
      * 
      * @param getIsolationPoliciesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;IsolationPolicy&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<IsolationPolicy> getIsolationPolicies(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<IsolationPolicy>> localVarResp = getIsolationPoliciesWithHttpInfo(getIsolationPoliciesRequestBody, contentLanguage);
+    public List<IsolationPolicy> getIsolationPolicies(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody) throws ApiException {
+        ApiResponse<List<IsolationPolicy>> localVarResp = getIsolationPoliciesWithHttpInfo(getIsolationPoliciesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class IsolationPolicyApi {
      * 
      * 
      * @param getIsolationPoliciesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;IsolationPolicy&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<IsolationPolicy>> getIsolationPoliciesWithHttpInfo(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getIsolationPoliciesValidateBeforeCall(getIsolationPoliciesRequestBody, contentLanguage, null);
+    public ApiResponse<List<IsolationPolicy>> getIsolationPoliciesWithHttpInfo(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getIsolationPoliciesValidateBeforeCall(getIsolationPoliciesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<IsolationPolicy>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class IsolationPolicyApi {
      *  (asynchronously)
      * 
      * @param getIsolationPoliciesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIsolationPoliciesAsync(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, String contentLanguage, final ApiCallback<List<IsolationPolicy>> _callback) throws ApiException {
+    public okhttp3.Call getIsolationPoliciesAsync(GetIsolationPoliciesRequestBody getIsolationPoliciesRequestBody, final ApiCallback<List<IsolationPolicy>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIsolationPoliciesValidateBeforeCall(getIsolationPoliciesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIsolationPoliciesValidateBeforeCall(getIsolationPoliciesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<IsolationPolicy>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class IsolationPolicyApi {
     /**
      * Build call for getIsolationPoliciesConnection
      * @param getIsolationPoliciesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIsolationPoliciesConnectionCall(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIsolationPoliciesConnectionCall(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class IsolationPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class IsolationPolicyApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class IsolationPolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIsolationPoliciesConnectionValidateBeforeCall(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getIsolationPoliciesConnectionValidateBeforeCall(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getIsolationPoliciesConnectionRequestBody' is set
         if (getIsolationPoliciesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class IsolationPolicyApi {
         }
         
 
-        okhttp3.Call localVarCall = getIsolationPoliciesConnectionCall(getIsolationPoliciesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIsolationPoliciesConnectionCall(getIsolationPoliciesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class IsolationPolicyApi {
      * 
      * 
      * @param getIsolationPoliciesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return IsolationPolicyConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public IsolationPolicyConnection getIsolationPoliciesConnection(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<IsolationPolicyConnection> localVarResp = getIsolationPoliciesConnectionWithHttpInfo(getIsolationPoliciesConnectionRequestBody, contentLanguage);
+    public IsolationPolicyConnection getIsolationPoliciesConnection(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody) throws ApiException {
+        ApiResponse<IsolationPolicyConnection> localVarResp = getIsolationPoliciesConnectionWithHttpInfo(getIsolationPoliciesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class IsolationPolicyApi {
      * 
      * 
      * @param getIsolationPoliciesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;IsolationPolicyConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IsolationPolicyConnection> getIsolationPoliciesConnectionWithHttpInfo(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getIsolationPoliciesConnectionValidateBeforeCall(getIsolationPoliciesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<IsolationPolicyConnection> getIsolationPoliciesConnectionWithHttpInfo(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getIsolationPoliciesConnectionValidateBeforeCall(getIsolationPoliciesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<IsolationPolicyConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class IsolationPolicyApi {
      *  (asynchronously)
      * 
      * @param getIsolationPoliciesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class IsolationPolicyApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIsolationPoliciesConnectionAsync(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, String contentLanguage, final ApiCallback<IsolationPolicyConnection> _callback) throws ApiException {
+    public okhttp3.Call getIsolationPoliciesConnectionAsync(GetIsolationPoliciesConnectionRequestBody getIsolationPoliciesConnectionRequestBody, final ApiCallback<IsolationPolicyConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getIsolationPoliciesConnectionValidateBeforeCall(getIsolationPoliciesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getIsolationPoliciesConnectionValidateBeforeCall(getIsolationPoliciesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<IsolationPolicyConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

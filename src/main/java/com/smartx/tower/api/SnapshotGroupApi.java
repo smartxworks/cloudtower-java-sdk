@@ -84,7 +84,6 @@ public class SnapshotGroupApi {
     /**
      * Build call for cloneSnapshotGroup
      * @param snapshotGroupCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -95,7 +94,7 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cloneSnapshotGroupCall(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call cloneSnapshotGroupCall(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -121,10 +120,6 @@ public class SnapshotGroupApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -137,7 +132,7 @@ public class SnapshotGroupApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -146,7 +141,7 @@ public class SnapshotGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call cloneSnapshotGroupValidateBeforeCall(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call cloneSnapshotGroupValidateBeforeCall(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotGroupCloneParams' is set
         if (snapshotGroupCloneParams == null) {
@@ -154,7 +149,7 @@ public class SnapshotGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = cloneSnapshotGroupCall(snapshotGroupCloneParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = cloneSnapshotGroupCall(snapshotGroupCloneParams, _callback);
         return localVarCall;
 
     }
@@ -163,7 +158,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -173,8 +167,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotGroup> cloneSnapshotGroup(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotGroup>> localVarResp = cloneSnapshotGroupWithHttpInfo(snapshotGroupCloneParams, contentLanguage);
+    public List<WithTaskSnapshotGroup> cloneSnapshotGroup(List<SnapshotGroupCloneParams> snapshotGroupCloneParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotGroup>> localVarResp = cloneSnapshotGroupWithHttpInfo(snapshotGroupCloneParams);
         return localVarResp.getData();
     }
 
@@ -182,7 +176,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -192,8 +185,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotGroup>> cloneSnapshotGroupWithHttpInfo(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = cloneSnapshotGroupValidateBeforeCall(snapshotGroupCloneParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotGroup>> cloneSnapshotGroupWithHttpInfo(List<SnapshotGroupCloneParams> snapshotGroupCloneParams) throws ApiException {
+        okhttp3.Call localVarCall = cloneSnapshotGroupValidateBeforeCall(snapshotGroupCloneParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -202,7 +195,6 @@ public class SnapshotGroupApi {
      *  (asynchronously)
      * 
      * @param snapshotGroupCloneParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -213,9 +205,9 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cloneSnapshotGroupAsync(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
+    public okhttp3.Call cloneSnapshotGroupAsync(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = cloneSnapshotGroupValidateBeforeCall(snapshotGroupCloneParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = cloneSnapshotGroupValidateBeforeCall(snapshotGroupCloneParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -223,7 +215,6 @@ public class SnapshotGroupApi {
     /**
      * Build call for deleteSnapshotGroup
      * @param snapshotGroupDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -234,7 +225,7 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnapshotGroupCall(SnapshotGroupDeletionParams snapshotGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteSnapshotGroupCall(SnapshotGroupDeletionParams snapshotGroupDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -260,10 +251,6 @@ public class SnapshotGroupApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -276,7 +263,7 @@ public class SnapshotGroupApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -285,7 +272,7 @@ public class SnapshotGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteSnapshotGroupValidateBeforeCall(SnapshotGroupDeletionParams snapshotGroupDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteSnapshotGroupValidateBeforeCall(SnapshotGroupDeletionParams snapshotGroupDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotGroupDeletionParams' is set
         if (snapshotGroupDeletionParams == null) {
@@ -293,7 +280,7 @@ public class SnapshotGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteSnapshotGroupCall(snapshotGroupDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteSnapshotGroupCall(snapshotGroupDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -302,7 +289,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteSnapshotGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -312,8 +298,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteSnapshotGroup> deleteSnapshotGroup(SnapshotGroupDeletionParams snapshotGroupDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteSnapshotGroup>> localVarResp = deleteSnapshotGroupWithHttpInfo(snapshotGroupDeletionParams, contentLanguage);
+    public List<WithTaskDeleteSnapshotGroup> deleteSnapshotGroup(SnapshotGroupDeletionParams snapshotGroupDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteSnapshotGroup>> localVarResp = deleteSnapshotGroupWithHttpInfo(snapshotGroupDeletionParams);
         return localVarResp.getData();
     }
 
@@ -321,7 +307,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteSnapshotGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -331,8 +316,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteSnapshotGroup>> deleteSnapshotGroupWithHttpInfo(SnapshotGroupDeletionParams snapshotGroupDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteSnapshotGroupValidateBeforeCall(snapshotGroupDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteSnapshotGroup>> deleteSnapshotGroupWithHttpInfo(SnapshotGroupDeletionParams snapshotGroupDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteSnapshotGroupValidateBeforeCall(snapshotGroupDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnapshotGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -341,7 +326,6 @@ public class SnapshotGroupApi {
      *  (asynchronously)
      * 
      * @param snapshotGroupDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -352,9 +336,9 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteSnapshotGroupAsync(SnapshotGroupDeletionParams snapshotGroupDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteSnapshotGroup>> _callback) throws ApiException {
+    public okhttp3.Call deleteSnapshotGroupAsync(SnapshotGroupDeletionParams snapshotGroupDeletionParams, final ApiCallback<List<WithTaskDeleteSnapshotGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteSnapshotGroupValidateBeforeCall(snapshotGroupDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteSnapshotGroupValidateBeforeCall(snapshotGroupDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteSnapshotGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -362,7 +346,6 @@ public class SnapshotGroupApi {
     /**
      * Build call for getSnapshotGroups
      * @param getSnapshotGroupsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -373,7 +356,7 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotGroupsCall(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnapshotGroupsCall(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -399,10 +382,6 @@ public class SnapshotGroupApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -415,7 +394,7 @@ public class SnapshotGroupApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -424,7 +403,7 @@ public class SnapshotGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnapshotGroupsValidateBeforeCall(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSnapshotGroupsValidateBeforeCall(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnapshotGroupsRequestBody' is set
         if (getSnapshotGroupsRequestBody == null) {
@@ -432,7 +411,7 @@ public class SnapshotGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnapshotGroupsCall(getSnapshotGroupsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotGroupsCall(getSnapshotGroupsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -441,7 +420,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param getSnapshotGroupsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;SnapshotGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -451,8 +429,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<SnapshotGroup> getSnapshotGroups(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<SnapshotGroup>> localVarResp = getSnapshotGroupsWithHttpInfo(getSnapshotGroupsRequestBody, contentLanguage);
+    public List<SnapshotGroup> getSnapshotGroups(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody) throws ApiException {
+        ApiResponse<List<SnapshotGroup>> localVarResp = getSnapshotGroupsWithHttpInfo(getSnapshotGroupsRequestBody);
         return localVarResp.getData();
     }
 
@@ -460,7 +438,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param getSnapshotGroupsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;SnapshotGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -470,8 +447,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SnapshotGroup>> getSnapshotGroupsWithHttpInfo(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getSnapshotGroupsValidateBeforeCall(getSnapshotGroupsRequestBody, contentLanguage, null);
+    public ApiResponse<List<SnapshotGroup>> getSnapshotGroupsWithHttpInfo(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getSnapshotGroupsValidateBeforeCall(getSnapshotGroupsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<SnapshotGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -480,7 +457,6 @@ public class SnapshotGroupApi {
      *  (asynchronously)
      * 
      * @param getSnapshotGroupsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -491,9 +467,9 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotGroupsAsync(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, String contentLanguage, final ApiCallback<List<SnapshotGroup>> _callback) throws ApiException {
+    public okhttp3.Call getSnapshotGroupsAsync(GetSnapshotGroupsRequestBody getSnapshotGroupsRequestBody, final ApiCallback<List<SnapshotGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnapshotGroupsValidateBeforeCall(getSnapshotGroupsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotGroupsValidateBeforeCall(getSnapshotGroupsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<SnapshotGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -501,7 +477,6 @@ public class SnapshotGroupApi {
     /**
      * Build call for getSnapshotGroupsConnection
      * @param getSnapshotGroupsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -512,7 +487,7 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotGroupsConnectionCall(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnapshotGroupsConnectionCall(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -538,10 +513,6 @@ public class SnapshotGroupApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -554,7 +525,7 @@ public class SnapshotGroupApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -563,7 +534,7 @@ public class SnapshotGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnapshotGroupsConnectionValidateBeforeCall(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSnapshotGroupsConnectionValidateBeforeCall(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getSnapshotGroupsConnectionRequestBody' is set
         if (getSnapshotGroupsConnectionRequestBody == null) {
@@ -571,7 +542,7 @@ public class SnapshotGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = getSnapshotGroupsConnectionCall(getSnapshotGroupsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotGroupsConnectionCall(getSnapshotGroupsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -580,7 +551,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param getSnapshotGroupsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return SnapshotGroupConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -590,8 +560,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public SnapshotGroupConnection getSnapshotGroupsConnection(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<SnapshotGroupConnection> localVarResp = getSnapshotGroupsConnectionWithHttpInfo(getSnapshotGroupsConnectionRequestBody, contentLanguage);
+    public SnapshotGroupConnection getSnapshotGroupsConnection(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody) throws ApiException {
+        ApiResponse<SnapshotGroupConnection> localVarResp = getSnapshotGroupsConnectionWithHttpInfo(getSnapshotGroupsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -599,7 +569,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param getSnapshotGroupsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;SnapshotGroupConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -609,8 +578,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SnapshotGroupConnection> getSnapshotGroupsConnectionWithHttpInfo(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getSnapshotGroupsConnectionValidateBeforeCall(getSnapshotGroupsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<SnapshotGroupConnection> getSnapshotGroupsConnectionWithHttpInfo(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getSnapshotGroupsConnectionValidateBeforeCall(getSnapshotGroupsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<SnapshotGroupConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -619,7 +588,6 @@ public class SnapshotGroupApi {
      *  (asynchronously)
      * 
      * @param getSnapshotGroupsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -630,9 +598,9 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapshotGroupsConnectionAsync(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, String contentLanguage, final ApiCallback<SnapshotGroupConnection> _callback) throws ApiException {
+    public okhttp3.Call getSnapshotGroupsConnectionAsync(GetSnapshotGroupsConnectionRequestBody getSnapshotGroupsConnectionRequestBody, final ApiCallback<SnapshotGroupConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSnapshotGroupsConnectionValidateBeforeCall(getSnapshotGroupsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getSnapshotGroupsConnectionValidateBeforeCall(getSnapshotGroupsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<SnapshotGroupConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -640,7 +608,6 @@ public class SnapshotGroupApi {
     /**
      * Build call for keepSnapshotGroup
      * @param snapshotGroupKeepParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -651,7 +618,7 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call keepSnapshotGroupCall(SnapshotGroupKeepParams snapshotGroupKeepParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call keepSnapshotGroupCall(SnapshotGroupKeepParams snapshotGroupKeepParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -677,10 +644,6 @@ public class SnapshotGroupApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -693,7 +656,7 @@ public class SnapshotGroupApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -702,7 +665,7 @@ public class SnapshotGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call keepSnapshotGroupValidateBeforeCall(SnapshotGroupKeepParams snapshotGroupKeepParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call keepSnapshotGroupValidateBeforeCall(SnapshotGroupKeepParams snapshotGroupKeepParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotGroupKeepParams' is set
         if (snapshotGroupKeepParams == null) {
@@ -710,7 +673,7 @@ public class SnapshotGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = keepSnapshotGroupCall(snapshotGroupKeepParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = keepSnapshotGroupCall(snapshotGroupKeepParams, _callback);
         return localVarCall;
 
     }
@@ -719,7 +682,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupKeepParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -729,8 +691,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotGroup> keepSnapshotGroup(SnapshotGroupKeepParams snapshotGroupKeepParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotGroup>> localVarResp = keepSnapshotGroupWithHttpInfo(snapshotGroupKeepParams, contentLanguage);
+    public List<WithTaskSnapshotGroup> keepSnapshotGroup(SnapshotGroupKeepParams snapshotGroupKeepParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotGroup>> localVarResp = keepSnapshotGroupWithHttpInfo(snapshotGroupKeepParams);
         return localVarResp.getData();
     }
 
@@ -738,7 +700,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupKeepParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -748,8 +709,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotGroup>> keepSnapshotGroupWithHttpInfo(SnapshotGroupKeepParams snapshotGroupKeepParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = keepSnapshotGroupValidateBeforeCall(snapshotGroupKeepParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotGroup>> keepSnapshotGroupWithHttpInfo(SnapshotGroupKeepParams snapshotGroupKeepParams) throws ApiException {
+        okhttp3.Call localVarCall = keepSnapshotGroupValidateBeforeCall(snapshotGroupKeepParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -758,7 +719,6 @@ public class SnapshotGroupApi {
      *  (asynchronously)
      * 
      * @param snapshotGroupKeepParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -769,9 +729,9 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call keepSnapshotGroupAsync(SnapshotGroupKeepParams snapshotGroupKeepParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
+    public okhttp3.Call keepSnapshotGroupAsync(SnapshotGroupKeepParams snapshotGroupKeepParams, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = keepSnapshotGroupValidateBeforeCall(snapshotGroupKeepParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = keepSnapshotGroupValidateBeforeCall(snapshotGroupKeepParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -779,7 +739,6 @@ public class SnapshotGroupApi {
     /**
      * Build call for rollbackSnapshotGroup
      * @param snapshotGroupRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -790,7 +749,7 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call rollbackSnapshotGroupCall(SnapshotGroupRollbackParams snapshotGroupRollbackParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call rollbackSnapshotGroupCall(SnapshotGroupRollbackParams snapshotGroupRollbackParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -816,10 +775,6 @@ public class SnapshotGroupApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -832,7 +787,7 @@ public class SnapshotGroupApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -841,7 +796,7 @@ public class SnapshotGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call rollbackSnapshotGroupValidateBeforeCall(SnapshotGroupRollbackParams snapshotGroupRollbackParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call rollbackSnapshotGroupValidateBeforeCall(SnapshotGroupRollbackParams snapshotGroupRollbackParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'snapshotGroupRollbackParams' is set
         if (snapshotGroupRollbackParams == null) {
@@ -849,7 +804,7 @@ public class SnapshotGroupApi {
         }
         
 
-        okhttp3.Call localVarCall = rollbackSnapshotGroupCall(snapshotGroupRollbackParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = rollbackSnapshotGroupCall(snapshotGroupRollbackParams, _callback);
         return localVarCall;
 
     }
@@ -858,7 +813,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskSnapshotGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -868,8 +822,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskSnapshotGroup> rollbackSnapshotGroup(SnapshotGroupRollbackParams snapshotGroupRollbackParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskSnapshotGroup>> localVarResp = rollbackSnapshotGroupWithHttpInfo(snapshotGroupRollbackParams, contentLanguage);
+    public List<WithTaskSnapshotGroup> rollbackSnapshotGroup(SnapshotGroupRollbackParams snapshotGroupRollbackParams) throws ApiException {
+        ApiResponse<List<WithTaskSnapshotGroup>> localVarResp = rollbackSnapshotGroupWithHttpInfo(snapshotGroupRollbackParams);
         return localVarResp.getData();
     }
 
@@ -877,7 +831,6 @@ public class SnapshotGroupApi {
      * 
      * 
      * @param snapshotGroupRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskSnapshotGroup&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -887,8 +840,8 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskSnapshotGroup>> rollbackSnapshotGroupWithHttpInfo(SnapshotGroupRollbackParams snapshotGroupRollbackParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = rollbackSnapshotGroupValidateBeforeCall(snapshotGroupRollbackParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskSnapshotGroup>> rollbackSnapshotGroupWithHttpInfo(SnapshotGroupRollbackParams snapshotGroupRollbackParams) throws ApiException {
+        okhttp3.Call localVarCall = rollbackSnapshotGroupValidateBeforeCall(snapshotGroupRollbackParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotGroup>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -897,7 +850,6 @@ public class SnapshotGroupApi {
      *  (asynchronously)
      * 
      * @param snapshotGroupRollbackParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -908,9 +860,9 @@ public class SnapshotGroupApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call rollbackSnapshotGroupAsync(SnapshotGroupRollbackParams snapshotGroupRollbackParams, String contentLanguage, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
+    public okhttp3.Call rollbackSnapshotGroupAsync(SnapshotGroupRollbackParams snapshotGroupRollbackParams, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = rollbackSnapshotGroupValidateBeforeCall(snapshotGroupRollbackParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = rollbackSnapshotGroupValidateBeforeCall(snapshotGroupRollbackParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskSnapshotGroup>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

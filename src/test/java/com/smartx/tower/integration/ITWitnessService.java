@@ -44,7 +44,7 @@ public class ITWitnessService extends ITBase {
       // parse params from json payload
       GetWitnessServicesRequestBody params = gson.fromJson(payload, new TypeToken<GetWitnessServicesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<WitnessService> result = api.getWitnessServices(params, contentLanguage);
+      List<WitnessService> result = api.getWitnessServices(params);
       assertThat(result).as("check result of getWitnessServices").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

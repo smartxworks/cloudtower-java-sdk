@@ -83,7 +83,6 @@ public class GraphApi {
     /**
      * Build call for createGraph
      * @param graphCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createGraphCall(List<GraphCreationParams> graphCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createGraphCall(List<GraphCreationParams> graphCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class GraphApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class GraphApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class GraphApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createGraphValidateBeforeCall(List<GraphCreationParams> graphCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createGraphValidateBeforeCall(List<GraphCreationParams> graphCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'graphCreationParams' is set
         if (graphCreationParams == null) {
@@ -153,7 +148,7 @@ public class GraphApi {
         }
         
 
-        okhttp3.Call localVarCall = createGraphCall(graphCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createGraphCall(graphCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class GraphApi {
      * 
      * 
      * @param graphCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskGraph&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskGraph> createGraph(List<GraphCreationParams> graphCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskGraph>> localVarResp = createGraphWithHttpInfo(graphCreationParams, contentLanguage);
+    public List<WithTaskGraph> createGraph(List<GraphCreationParams> graphCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskGraph>> localVarResp = createGraphWithHttpInfo(graphCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class GraphApi {
      * 
      * 
      * @param graphCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskGraph&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskGraph>> createGraphWithHttpInfo(List<GraphCreationParams> graphCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createGraphValidateBeforeCall(graphCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskGraph>> createGraphWithHttpInfo(List<GraphCreationParams> graphCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createGraphValidateBeforeCall(graphCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskGraph>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class GraphApi {
      *  (asynchronously)
      * 
      * @param graphCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createGraphAsync(List<GraphCreationParams> graphCreationParams, String contentLanguage, final ApiCallback<List<WithTaskGraph>> _callback) throws ApiException {
+    public okhttp3.Call createGraphAsync(List<GraphCreationParams> graphCreationParams, final ApiCallback<List<WithTaskGraph>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createGraphValidateBeforeCall(graphCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createGraphValidateBeforeCall(graphCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskGraph>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class GraphApi {
     /**
      * Build call for deleteGraph
      * @param graphDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteGraphCall(GraphDeletionParams graphDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteGraphCall(GraphDeletionParams graphDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class GraphApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class GraphApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class GraphApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteGraphValidateBeforeCall(GraphDeletionParams graphDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteGraphValidateBeforeCall(GraphDeletionParams graphDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'graphDeletionParams' is set
         if (graphDeletionParams == null) {
@@ -292,7 +279,7 @@ public class GraphApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteGraphCall(graphDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteGraphCall(graphDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class GraphApi {
      * 
      * 
      * @param graphDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteGraph&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteGraph> deleteGraph(GraphDeletionParams graphDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteGraph>> localVarResp = deleteGraphWithHttpInfo(graphDeletionParams, contentLanguage);
+    public List<WithTaskDeleteGraph> deleteGraph(GraphDeletionParams graphDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteGraph>> localVarResp = deleteGraphWithHttpInfo(graphDeletionParams);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class GraphApi {
      * 
      * 
      * @param graphDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteGraph&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteGraph>> deleteGraphWithHttpInfo(GraphDeletionParams graphDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteGraphValidateBeforeCall(graphDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteGraph>> deleteGraphWithHttpInfo(GraphDeletionParams graphDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteGraphValidateBeforeCall(graphDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteGraph>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class GraphApi {
      *  (asynchronously)
      * 
      * @param graphDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteGraphAsync(GraphDeletionParams graphDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteGraph>> _callback) throws ApiException {
+    public okhttp3.Call deleteGraphAsync(GraphDeletionParams graphDeletionParams, final ApiCallback<List<WithTaskDeleteGraph>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteGraphValidateBeforeCall(graphDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteGraphValidateBeforeCall(graphDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteGraph>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class GraphApi {
     /**
      * Build call for getGraphs
      * @param getGraphsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGraphsCall(GetGraphsRequestBody getGraphsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGraphsCall(GetGraphsRequestBody getGraphsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class GraphApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class GraphApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class GraphApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGraphsValidateBeforeCall(GetGraphsRequestBody getGraphsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getGraphsValidateBeforeCall(GetGraphsRequestBody getGraphsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getGraphsRequestBody' is set
         if (getGraphsRequestBody == null) {
@@ -431,7 +410,7 @@ public class GraphApi {
         }
         
 
-        okhttp3.Call localVarCall = getGraphsCall(getGraphsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getGraphsCall(getGraphsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class GraphApi {
      * 
      * 
      * @param getGraphsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Graph&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Graph> getGraphs(GetGraphsRequestBody getGraphsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Graph>> localVarResp = getGraphsWithHttpInfo(getGraphsRequestBody, contentLanguage);
+    public List<Graph> getGraphs(GetGraphsRequestBody getGraphsRequestBody) throws ApiException {
+        ApiResponse<List<Graph>> localVarResp = getGraphsWithHttpInfo(getGraphsRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class GraphApi {
      * 
      * 
      * @param getGraphsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Graph&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Graph>> getGraphsWithHttpInfo(GetGraphsRequestBody getGraphsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getGraphsValidateBeforeCall(getGraphsRequestBody, contentLanguage, null);
+    public ApiResponse<List<Graph>> getGraphsWithHttpInfo(GetGraphsRequestBody getGraphsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getGraphsValidateBeforeCall(getGraphsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Graph>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class GraphApi {
      *  (asynchronously)
      * 
      * @param getGraphsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGraphsAsync(GetGraphsRequestBody getGraphsRequestBody, String contentLanguage, final ApiCallback<List<Graph>> _callback) throws ApiException {
+    public okhttp3.Call getGraphsAsync(GetGraphsRequestBody getGraphsRequestBody, final ApiCallback<List<Graph>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGraphsValidateBeforeCall(getGraphsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getGraphsValidateBeforeCall(getGraphsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Graph>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class GraphApi {
     /**
      * Build call for getGraphsConnection
      * @param getGraphsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGraphsConnectionCall(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGraphsConnectionCall(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class GraphApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class GraphApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class GraphApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGraphsConnectionValidateBeforeCall(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getGraphsConnectionValidateBeforeCall(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getGraphsConnectionRequestBody' is set
         if (getGraphsConnectionRequestBody == null) {
@@ -570,7 +541,7 @@ public class GraphApi {
         }
         
 
-        okhttp3.Call localVarCall = getGraphsConnectionCall(getGraphsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getGraphsConnectionCall(getGraphsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class GraphApi {
      * 
      * 
      * @param getGraphsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return GraphConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public GraphConnection getGraphsConnection(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<GraphConnection> localVarResp = getGraphsConnectionWithHttpInfo(getGraphsConnectionRequestBody, contentLanguage);
+    public GraphConnection getGraphsConnection(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody) throws ApiException {
+        ApiResponse<GraphConnection> localVarResp = getGraphsConnectionWithHttpInfo(getGraphsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class GraphApi {
      * 
      * 
      * @param getGraphsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;GraphConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GraphConnection> getGraphsConnectionWithHttpInfo(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getGraphsConnectionValidateBeforeCall(getGraphsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<GraphConnection> getGraphsConnectionWithHttpInfo(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getGraphsConnectionValidateBeforeCall(getGraphsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<GraphConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class GraphApi {
      *  (asynchronously)
      * 
      * @param getGraphsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGraphsConnectionAsync(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, String contentLanguage, final ApiCallback<GraphConnection> _callback) throws ApiException {
+    public okhttp3.Call getGraphsConnectionAsync(GetGraphsConnectionRequestBody getGraphsConnectionRequestBody, final ApiCallback<GraphConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGraphsConnectionValidateBeforeCall(getGraphsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getGraphsConnectionValidateBeforeCall(getGraphsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<GraphConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class GraphApi {
     /**
      * Build call for updateGraph
      * @param graphUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateGraphCall(GraphUpdationParams graphUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateGraphCall(GraphUpdationParams graphUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class GraphApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class GraphApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class GraphApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateGraphValidateBeforeCall(GraphUpdationParams graphUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateGraphValidateBeforeCall(GraphUpdationParams graphUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'graphUpdationParams' is set
         if (graphUpdationParams == null) {
@@ -709,7 +672,7 @@ public class GraphApi {
         }
         
 
-        okhttp3.Call localVarCall = updateGraphCall(graphUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateGraphCall(graphUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class GraphApi {
      * 
      * 
      * @param graphUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskGraph&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskGraph> updateGraph(GraphUpdationParams graphUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskGraph>> localVarResp = updateGraphWithHttpInfo(graphUpdationParams, contentLanguage);
+    public List<WithTaskGraph> updateGraph(GraphUpdationParams graphUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskGraph>> localVarResp = updateGraphWithHttpInfo(graphUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class GraphApi {
      * 
      * 
      * @param graphUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskGraph&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskGraph>> updateGraphWithHttpInfo(GraphUpdationParams graphUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateGraphValidateBeforeCall(graphUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskGraph>> updateGraphWithHttpInfo(GraphUpdationParams graphUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateGraphValidateBeforeCall(graphUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskGraph>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class GraphApi {
      *  (asynchronously)
      * 
      * @param graphUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class GraphApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateGraphAsync(GraphUpdationParams graphUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskGraph>> _callback) throws ApiException {
+    public okhttp3.Call updateGraphAsync(GraphUpdationParams graphUpdationParams, final ApiCallback<List<WithTaskGraph>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateGraphValidateBeforeCall(graphUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateGraphValidateBeforeCall(graphUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskGraph>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

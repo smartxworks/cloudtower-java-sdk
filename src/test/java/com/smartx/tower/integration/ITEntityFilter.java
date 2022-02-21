@@ -44,7 +44,7 @@ public class ITEntityFilter extends ITBase {
       // parse params from json payload
       List<EntityFilterCreationParams> params = gson.fromJson(payload, new TypeToken<List<EntityFilterCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskEntityFilter> result = api.createEntityFilter(params, contentLanguage);
+      List<WithTaskEntityFilter> result = api.createEntityFilter(params);
       assertThat(result).as("check result of createEntityFilter").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITEntityFilter extends ITBase {
       // parse params from json payload
       EntityFilterDeletionParams params = gson.fromJson(payload, new TypeToken<EntityFilterDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteEntityFilter> result = api.deleteEntityFilter(params, contentLanguage);
+      List<WithTaskDeleteEntityFilter> result = api.deleteEntityFilter(params);
       assertThat(result).as("check result of deleteEntityFilter").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITEntityFilter extends ITBase {
       // parse params from json payload
       GetEntityFiltersRequestBody params = gson.fromJson(payload, new TypeToken<GetEntityFiltersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<EntityFilter> result = api.getEntityFilters(params, contentLanguage);
+      List<EntityFilter> result = api.getEntityFilters(params);
       assertThat(result).as("check result of getEntityFilters").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITEntityFilter extends ITBase {
       // parse params from json payload
       GetEntityFiltersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetEntityFiltersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      EntityFilterConnection result = api.getEntityFiltersConnection(params, contentLanguage);
+      EntityFilterConnection result = api.getEntityFiltersConnection(params);
       assertThat(result).as("check result of getEntityFiltersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITEntityFilter extends ITBase {
       // parse params from json payload
       EntityFilterUpdationParams params = gson.fromJson(payload, new TypeToken<EntityFilterUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskEntityFilter> result = api.updateEntityFilter(params, contentLanguage);
+      List<WithTaskEntityFilter> result = api.updateEntityFilter(params);
       assertThat(result).as("check result of updateEntityFilter").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

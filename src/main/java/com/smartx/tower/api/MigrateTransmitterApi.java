@@ -78,7 +78,6 @@ public class MigrateTransmitterApi {
     /**
      * Build call for getMigrateTransmitters
      * @param getMigrateTransmittersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMigrateTransmittersCall(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMigrateTransmittersCall(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class MigrateTransmitterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class MigrateTransmitterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class MigrateTransmitterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMigrateTransmittersValidateBeforeCall(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMigrateTransmittersValidateBeforeCall(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getMigrateTransmittersRequestBody' is set
         if (getMigrateTransmittersRequestBody == null) {
@@ -148,7 +143,7 @@ public class MigrateTransmitterApi {
         }
         
 
-        okhttp3.Call localVarCall = getMigrateTransmittersCall(getMigrateTransmittersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getMigrateTransmittersCall(getMigrateTransmittersRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class MigrateTransmitterApi {
      * 
      * 
      * @param getMigrateTransmittersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;MigrateTransmitter&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<MigrateTransmitter> getMigrateTransmitters(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<MigrateTransmitter>> localVarResp = getMigrateTransmittersWithHttpInfo(getMigrateTransmittersRequestBody, contentLanguage);
+    public List<MigrateTransmitter> getMigrateTransmitters(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody) throws ApiException {
+        ApiResponse<List<MigrateTransmitter>> localVarResp = getMigrateTransmittersWithHttpInfo(getMigrateTransmittersRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class MigrateTransmitterApi {
      * 
      * 
      * @param getMigrateTransmittersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;MigrateTransmitter&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<MigrateTransmitter>> getMigrateTransmittersWithHttpInfo(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getMigrateTransmittersValidateBeforeCall(getMigrateTransmittersRequestBody, contentLanguage, null);
+    public ApiResponse<List<MigrateTransmitter>> getMigrateTransmittersWithHttpInfo(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getMigrateTransmittersValidateBeforeCall(getMigrateTransmittersRequestBody, null);
         Type localVarReturnType = new TypeToken<List<MigrateTransmitter>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class MigrateTransmitterApi {
      *  (asynchronously)
      * 
      * @param getMigrateTransmittersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMigrateTransmittersAsync(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, String contentLanguage, final ApiCallback<List<MigrateTransmitter>> _callback) throws ApiException {
+    public okhttp3.Call getMigrateTransmittersAsync(GetMigrateTransmittersRequestBody getMigrateTransmittersRequestBody, final ApiCallback<List<MigrateTransmitter>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getMigrateTransmittersValidateBeforeCall(getMigrateTransmittersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getMigrateTransmittersValidateBeforeCall(getMigrateTransmittersRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<MigrateTransmitter>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class MigrateTransmitterApi {
     /**
      * Build call for getMigrateTransmittersConnection
      * @param getMigrateTransmittersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMigrateTransmittersConnectionCall(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMigrateTransmittersConnectionCall(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class MigrateTransmitterApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class MigrateTransmitterApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class MigrateTransmitterApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMigrateTransmittersConnectionValidateBeforeCall(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMigrateTransmittersConnectionValidateBeforeCall(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getMigrateTransmittersConnectionRequestBody' is set
         if (getMigrateTransmittersConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class MigrateTransmitterApi {
         }
         
 
-        okhttp3.Call localVarCall = getMigrateTransmittersConnectionCall(getMigrateTransmittersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getMigrateTransmittersConnectionCall(getMigrateTransmittersConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class MigrateTransmitterApi {
      * 
      * 
      * @param getMigrateTransmittersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return MigrateTransmitterConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public MigrateTransmitterConnection getMigrateTransmittersConnection(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<MigrateTransmitterConnection> localVarResp = getMigrateTransmittersConnectionWithHttpInfo(getMigrateTransmittersConnectionRequestBody, contentLanguage);
+    public MigrateTransmitterConnection getMigrateTransmittersConnection(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody) throws ApiException {
+        ApiResponse<MigrateTransmitterConnection> localVarResp = getMigrateTransmittersConnectionWithHttpInfo(getMigrateTransmittersConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class MigrateTransmitterApi {
      * 
      * 
      * @param getMigrateTransmittersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;MigrateTransmitterConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MigrateTransmitterConnection> getMigrateTransmittersConnectionWithHttpInfo(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getMigrateTransmittersConnectionValidateBeforeCall(getMigrateTransmittersConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<MigrateTransmitterConnection> getMigrateTransmittersConnectionWithHttpInfo(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getMigrateTransmittersConnectionValidateBeforeCall(getMigrateTransmittersConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<MigrateTransmitterConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class MigrateTransmitterApi {
      *  (asynchronously)
      * 
      * @param getMigrateTransmittersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class MigrateTransmitterApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMigrateTransmittersConnectionAsync(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, String contentLanguage, final ApiCallback<MigrateTransmitterConnection> _callback) throws ApiException {
+    public okhttp3.Call getMigrateTransmittersConnectionAsync(GetMigrateTransmittersConnectionRequestBody getMigrateTransmittersConnectionRequestBody, final ApiCallback<MigrateTransmitterConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getMigrateTransmittersConnectionValidateBeforeCall(getMigrateTransmittersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getMigrateTransmittersConnectionValidateBeforeCall(getMigrateTransmittersConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<MigrateTransmitterConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

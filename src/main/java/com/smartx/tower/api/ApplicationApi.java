@@ -78,7 +78,6 @@ public class ApplicationApi {
     /**
      * Build call for getApplications
      * @param getApplicationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getApplicationsCall(GetApplicationsRequestBody getApplicationsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getApplicationsCall(GetApplicationsRequestBody getApplicationsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class ApplicationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class ApplicationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class ApplicationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getApplicationsValidateBeforeCall(GetApplicationsRequestBody getApplicationsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getApplicationsValidateBeforeCall(GetApplicationsRequestBody getApplicationsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getApplicationsRequestBody' is set
         if (getApplicationsRequestBody == null) {
@@ -148,7 +143,7 @@ public class ApplicationApi {
         }
         
 
-        okhttp3.Call localVarCall = getApplicationsCall(getApplicationsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getApplicationsCall(getApplicationsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class ApplicationApi {
      * 
      * 
      * @param getApplicationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Application&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Application> getApplications(GetApplicationsRequestBody getApplicationsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Application>> localVarResp = getApplicationsWithHttpInfo(getApplicationsRequestBody, contentLanguage);
+    public List<Application> getApplications(GetApplicationsRequestBody getApplicationsRequestBody) throws ApiException {
+        ApiResponse<List<Application>> localVarResp = getApplicationsWithHttpInfo(getApplicationsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class ApplicationApi {
      * 
      * 
      * @param getApplicationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Application&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Application>> getApplicationsWithHttpInfo(GetApplicationsRequestBody getApplicationsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getApplicationsValidateBeforeCall(getApplicationsRequestBody, contentLanguage, null);
+    public ApiResponse<List<Application>> getApplicationsWithHttpInfo(GetApplicationsRequestBody getApplicationsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getApplicationsValidateBeforeCall(getApplicationsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Application>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class ApplicationApi {
      *  (asynchronously)
      * 
      * @param getApplicationsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getApplicationsAsync(GetApplicationsRequestBody getApplicationsRequestBody, String contentLanguage, final ApiCallback<List<Application>> _callback) throws ApiException {
+    public okhttp3.Call getApplicationsAsync(GetApplicationsRequestBody getApplicationsRequestBody, final ApiCallback<List<Application>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getApplicationsValidateBeforeCall(getApplicationsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getApplicationsValidateBeforeCall(getApplicationsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Application>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class ApplicationApi {
     /**
      * Build call for getApplicationsConnection
      * @param getApplicationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getApplicationsConnectionCall(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getApplicationsConnectionCall(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class ApplicationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class ApplicationApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class ApplicationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getApplicationsConnectionValidateBeforeCall(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getApplicationsConnectionValidateBeforeCall(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getApplicationsConnectionRequestBody' is set
         if (getApplicationsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class ApplicationApi {
         }
         
 
-        okhttp3.Call localVarCall = getApplicationsConnectionCall(getApplicationsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getApplicationsConnectionCall(getApplicationsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class ApplicationApi {
      * 
      * 
      * @param getApplicationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApplicationConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApplicationConnection getApplicationsConnection(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<ApplicationConnection> localVarResp = getApplicationsConnectionWithHttpInfo(getApplicationsConnectionRequestBody, contentLanguage);
+    public ApplicationConnection getApplicationsConnection(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody) throws ApiException {
+        ApiResponse<ApplicationConnection> localVarResp = getApplicationsConnectionWithHttpInfo(getApplicationsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class ApplicationApi {
      * 
      * 
      * @param getApplicationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;ApplicationConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ApplicationConnection> getApplicationsConnectionWithHttpInfo(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getApplicationsConnectionValidateBeforeCall(getApplicationsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<ApplicationConnection> getApplicationsConnectionWithHttpInfo(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getApplicationsConnectionValidateBeforeCall(getApplicationsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<ApplicationConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class ApplicationApi {
      *  (asynchronously)
      * 
      * @param getApplicationsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class ApplicationApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getApplicationsConnectionAsync(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, String contentLanguage, final ApiCallback<ApplicationConnection> _callback) throws ApiException {
+    public okhttp3.Call getApplicationsConnectionAsync(GetApplicationsConnectionRequestBody getApplicationsConnectionRequestBody, final ApiCallback<ApplicationConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getApplicationsConnectionValidateBeforeCall(getApplicationsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getApplicationsConnectionValidateBeforeCall(getApplicationsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<ApplicationConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

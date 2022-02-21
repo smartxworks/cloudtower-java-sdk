@@ -53,7 +53,7 @@ public class ITVmFolder extends ITBase {
     params.add(new VmFolderCreationParams().clusterId(cluster.getId())
         .name("tower-sdk-test-vm-folder" + System.currentTimeMillis()));
     // do some modify to params(optional)
-    List<WithTaskVmFolder> result = api.createVmFolder(params, contentLanguage);
+    List<WithTaskVmFolder> result = api.createVmFolder(params);
     folder = result.get(0).getData();
     Thread.sleep(1000);
   }
@@ -61,8 +61,7 @@ public class ITVmFolder extends ITBase {
   @AfterMethod(onlyForGroups = { "need_vm_folder" })
   public void deleteVmFolder() throws InterruptedException, ApiException {
     Thread.sleep(1000);
-    api.deleteVmFolder(new VmFolderDeletionParams().where(new VmFolderWhereInput().id(folder.getId())),
-        contentLanguage);
+    api.deleteVmFolder(new VmFolderDeletionParams().where(new VmFolderWhereInput().id(folder.getId())));
     folder = null;
     Thread.sleep(1000);
   }
@@ -75,11 +74,10 @@ public class ITVmFolder extends ITBase {
       params.add(new VmFolderCreationParams().clusterId(cluster.getId())
           .name("tower-sdk-test-vm-folder" + System.currentTimeMillis()));
       // do some modify to params(optional)
-      List<WithTaskVmFolder> result = api.createVmFolder(params, contentLanguage);
+      List<WithTaskVmFolder> result = api.createVmFolder(params);
       VmFolder folder = result.get(0).getData();
       Thread.sleep(1000);
-      api.deleteVmFolder(new VmFolderDeletionParams().where(new VmFolderWhereInput().id(folder.getId())),
-          contentLanguage);
+      api.deleteVmFolder(new VmFolderDeletionParams().where(new VmFolderWhereInput().id(folder.getId())));
       Thread.sleep(1000);
       assertThat(result).as("check result of create and delete vm folder").isNotNull();
     } catch (ApiException e) {
@@ -96,7 +94,7 @@ public class ITVmFolder extends ITBase {
       GetVmFoldersRequestBody params = gson.fromJson(payload, new TypeToken<GetVmFoldersRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<VmFolder> result = api.getVmFolders(params, contentLanguage);
+      List<VmFolder> result = api.getVmFolders(params);
       assertThat(result).as("check result of getVmFolders").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -113,7 +111,7 @@ public class ITVmFolder extends ITBase {
           new TypeToken<GetVmFoldersConnectionRequestBody>() {
           }.getType());
       // do some modify to params(optional)
-      VmFolderConnection result = api.getVmFoldersConnection(params, contentLanguage);
+      VmFolderConnection result = api.getVmFoldersConnection(params);
       assertThat(result).as("check result of getVmFoldersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -131,7 +129,7 @@ public class ITVmFolder extends ITBase {
       params.data(new VmFolderUpdationParamsData().name("tower-sdk-test-vm-folder-update" + System.currentTimeMillis()))
           .where(new VmFolderWhereInput().id(folder.getId()));
       // do some modify to params(optional)
-      List<WithTaskVmFolder> result = api.updateVmFolder(params, contentLanguage);
+      List<WithTaskVmFolder> result = api.updateVmFolder(params);
       assertThat(result).as("check result of updateVmFolder").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -151,7 +149,7 @@ public class ITVmFolder extends ITBase {
         .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
-    WithTaskVm createResult = vmApi.createVm(params, contentLanguage).get(0);
+    WithTaskVm createResult = vmApi.createVm(params).get(0);
     vm = createResult.getData();
     waitForTaskSucceed(createResult.getTaskId());
   }
@@ -165,10 +163,10 @@ public class ITVmFolder extends ITBase {
     // shudown vm first before delete it if itis running;
     if (_vm.getStatus() == VmStatus.RUNNING) {
       waitForTaskSucceed(
-          vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId())), contentLanguage).get(0)
+          vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId()))).get(0)
               .getTaskId());
     }
-    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage)
+    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
         .get(0).getTaskId());
     vm = null;
   }
@@ -181,10 +179,10 @@ public class ITVmFolder extends ITBase {
       VmAddFolderParams params = new VmAddFolderParams();
       // do some modify to params(optional)
       params.where(new VmWhereInput().id(vm.getId())).data(new VmAddFolderParamsData().folderId(folder.getId()));
-      List<WithTaskVm> result = vmApi.addVmToFolder(params, contentLanguage);
+      List<WithTaskVm> result = vmApi.addVmToFolder(params);
       waitForTaskSucceed(result.get(0).getTaskId());
       waitForTaskSucceed(
-          vmApi.removeVmToFolder(new VmOperateParams().where(new VmWhereInput().id(vm.getId())), contentLanguage).get(0)
+          vmApi.removeVmToFolder(new VmOperateParams().where(new VmWhereInput().id(vm.getId()))).get(0)
               .getTaskId());
       assertThat(result).as("check result of addVmToFolder").isNotNull();
     } catch (ApiException e) {

@@ -44,7 +44,7 @@ public class ITSnapshotPlanTask extends ITBase {
       // parse params from json payload
       GetSnapshotPlanTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetSnapshotPlanTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SnapshotPlanTask> result = api.getSnapshotPlanTasks(params, contentLanguage);
+      List<SnapshotPlanTask> result = api.getSnapshotPlanTasks(params);
       assertThat(result).as("check result of getSnapshotPlanTasks").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSnapshotPlanTask extends ITBase {
       // parse params from json payload
       GetSnapshotPlanTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSnapshotPlanTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SnapshotPlanTaskConnection result = api.getSnapshotPlanTasksConnection(params, contentLanguage);
+      SnapshotPlanTaskConnection result = api.getSnapshotPlanTasksConnection(params);
       assertThat(result).as("check result of getSnapshotPlanTasksConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

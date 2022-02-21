@@ -44,7 +44,7 @@ public class ITSecurityPolicy extends ITBase {
       // parse params from json payload
       GetSecurityPoliciesRequestBody params = gson.fromJson(payload, new TypeToken<GetSecurityPoliciesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<SecurityPolicy> result = api.getSecurityPolicies(params, contentLanguage);
+      List<SecurityPolicy> result = api.getSecurityPolicies(params);
       assertThat(result).as("check result of getSecurityPolicies").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITSecurityPolicy extends ITBase {
       // parse params from json payload
       GetSecurityPoliciesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetSecurityPoliciesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      SecurityPolicyConnection result = api.getSecurityPoliciesConnection(params, contentLanguage);
+      SecurityPolicyConnection result = api.getSecurityPoliciesConnection(params);
       assertThat(result).as("check result of getSecurityPoliciesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

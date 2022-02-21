@@ -44,7 +44,7 @@ public class ITOrganization extends ITBase {
       // parse params from json payload
       List<OrganizationCreationParams> params = gson.fromJson(payload, new TypeToken<List<OrganizationCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskOrganization> result = api.createOrganization(params, contentLanguage);
+      List<WithTaskOrganization> result = api.createOrganization(params);
       assertThat(result).as("check result of createOrganization").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITOrganization extends ITBase {
       // parse params from json payload
       OrganizationDeletionParams params = gson.fromJson(payload, new TypeToken<OrganizationDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteOrganization> result = api.deleteOrganization(params, contentLanguage);
+      List<WithTaskDeleteOrganization> result = api.deleteOrganization(params);
       assertThat(result).as("check result of deleteOrganization").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITOrganization extends ITBase {
       // parse params from json payload
       GetOrganizationsRequestBody params = gson.fromJson(payload, new TypeToken<GetOrganizationsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Organization> result = api.getOrganizations(params, contentLanguage);
+      List<Organization> result = api.getOrganizations(params);
       assertThat(result).as("check result of getOrganizations").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITOrganization extends ITBase {
       // parse params from json payload
       GetOrganizationsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetOrganizationsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      OrganizationConnection result = api.getOrganizationsConnection(params, contentLanguage);
+      OrganizationConnection result = api.getOrganizationsConnection(params);
       assertThat(result).as("check result of getOrganizationsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITOrganization extends ITBase {
       // parse params from json payload
       OrganizationUpdationParams params = gson.fromJson(payload, new TypeToken<OrganizationUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskOrganization> result = api.updateOrganization(params, contentLanguage);
+      List<WithTaskOrganization> result = api.updateOrganization(params);
       assertThat(result).as("check result of updateOrganization").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

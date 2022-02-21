@@ -85,18 +85,18 @@ public class ITBase {
     switch (dataType) {
     case "defaultCluster":
       result = new ClusterApi(client)
-          .getClusters(getFixtureData(dataType, GetClustersRequestBody.class), contentLanguage).get(0);
+          .getClusters(getFixtureData(dataType, GetClustersRequestBody.class)).get(0);
       break;
     case "firstAlertNotEnded":
-      result = new AlertApi(client).getAlerts(getFixtureData(dataType, GetAlertsRequestBody.class), contentLanguage)
+      result = new AlertApi(client).getAlerts(getFixtureData(dataType, GetAlertsRequestBody.class))
           .get(0);
       break;
     case "firstGlobalAlertRule":
       result = new GlobalAlertRuleApi(client)
-          .getGlobalAlertRules(getFixtureData(dataType, GetGlobalAlertRulesRequestBody.class), contentLanguage).get(0);
+          .getGlobalAlertRules(getFixtureData(dataType, GetGlobalAlertRulesRequestBody.class)).get(0);
       break;
     case "defaultVlan":
-      result = new VlanApi(client).getVlans(getFixtureData(dataType, GetVlansRequestBody.class), contentLanguage)
+      result = new VlanApi(client).getVlans(getFixtureData(dataType, GetVlansRequestBody.class))
           .get(0);
     }
     if (result == null) {
@@ -119,7 +119,7 @@ public class ITBase {
       NoSuchMethodException, SecurityException {
     Long start = System.currentTimeMillis();
     TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
-        args, contentLanguage);
+        args);
     if (resource instanceof List) {
       List resourceList = (List) resource;
       while (resourceList.size() == 0) {
@@ -130,8 +130,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage);
+        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args);
       }
       if (resourceList.size() > 1) {
         throw new ApiException(400, "Invalid query parameters");
@@ -146,8 +145,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage);
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args);
       }
       if (waitFinish) {
         waitForResourceAsyncStatus(args, api, func, classOfTResource, classOfTArgs);
@@ -161,7 +159,7 @@ public class ITBase {
       IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
     Long start = System.currentTimeMillis();
     TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
-        args, contentLanguage);
+        args);
     if (resource instanceof List) {
       List resourceList = (List) resource;
       if (resourceList.size() > 1) {
@@ -178,8 +176,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage);
+        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args);
         if (resourceList.isEmpty()) {
           throw new ApiException(404, "Resource not found");
         }
@@ -196,8 +193,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage);
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args);
       }
       if (resource == null) {
         throw new ApiException(404, "Resource not found");
@@ -211,7 +207,7 @@ public class ITBase {
       IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, ApiException {
     Long start = System.currentTimeMillis();
     TResource resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api,
-        args, contentLanguage);
+        args);
     if (resource instanceof List) {
       List resourceList = (List) resource;
       while (resourceList.size() > 0) {
@@ -230,8 +226,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage);
+        resourceList = (List) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args);
       }
     } else {
       while (resource != null && classOfTResource.getClass().getDeclaredMethod("getEntityAsyncStatus")
@@ -243,8 +238,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args,
-            contentLanguage);
+        resource = (TResource) api.getClass().getDeclaredMethod(func, classOfTArgs, String.class).invoke(api, args);
       }
       if (resource != null && classOfTResource.getClass().getDeclaredMethod("getEntityAsyncStatus")
           .invoke(resource) != EntityAsyncStatus.DELETING) {
@@ -258,7 +252,7 @@ public class ITBase {
       throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException,
       SecurityException, ApiException {
     Long start = System.currentTimeMillis();
-    TResource resource = (TResource) method.invoke(api, args, contentLanguage);
+    TResource resource = (TResource) method.invoke(api, args);
     if (resource instanceof List) {
       List resourceList = (List) resource;
       while (resourceList.size() > 0) {
@@ -282,7 +276,7 @@ public class ITBase {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        resourceList = (List) method.invoke(api, args, contentLanguage);
+        resourceList = (List) method.invoke(api, args);
       }
     } else {
       while (resource != null) {
@@ -300,7 +294,7 @@ public class ITBase {
         if (cursor.equals(target)) {
           return resource;
         }
-        resource = (TResource) method.invoke(api, args, contentLanguage);
+        resource = (TResource) method.invoke(api, args);
       }
     }
     return null;
@@ -308,7 +302,7 @@ public class ITBase {
 
   protected Vm waitForVmEntityAsyncStatus(String id, VmApi api) throws ApiException {
     Long start = System.currentTimeMillis();
-    Vm vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage).get(0);
+    Vm vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id))).get(0);
     while (vm != null && vm.getEntityAsyncStatus() != null) {
       if (System.currentTimeMillis() - start > TIMEOUT) {
         throw new ApiException(408, "Timeout while waiting for async status");
@@ -317,7 +311,7 @@ public class ITBase {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
       }
-      vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id)), contentLanguage).get(0);
+      vm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(id))).get(0);
       LOGGER.debug(String.format("%s status: %s", vm.getName(), vm.getEntityAsyncStatus()));
     }
     if (vm == null) {
@@ -331,7 +325,7 @@ public class ITBase {
     if (taskApi == null) {
       taskApi = new TaskApi(client);
     }
-    Task task = taskApi.getTasks(new GetTasksRequestBody().where(new TaskWhereInput().id(taskId)), contentLanguage)
+    Task task = taskApi.getTasks(new GetTasksRequestBody().where(new TaskWhereInput().id(taskId)))
         .get(0);
     while (task.getStatus().equals(TaskStatus.EXECUTING) || task.getStatus().equals(TaskStatus.PENDING)) {
       if (System.currentTimeMillis() - start > TIMEOUT) {
@@ -341,7 +335,7 @@ public class ITBase {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
       }
-      task = taskApi.getTasks(new GetTasksRequestBody().where(new TaskWhereInput().id(taskId)), contentLanguage).get(0);
+      task = taskApi.getTasks(new GetTasksRequestBody().where(new TaskWhereInput().id(taskId))).get(0);
     }
     if (!task.getStatus().equals(TaskStatus.SUCCESSED)) {
       throw new ApiException(400, "Task failed");

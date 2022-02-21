@@ -44,7 +44,7 @@ public class ITDisk extends ITBase {
       // parse params from json payload
       GetDisksRequestBody params = gson.fromJson(payload, new TypeToken<GetDisksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Disk> result = api.getDisks(params, contentLanguage);
+      List<Disk> result = api.getDisks(params);
       assertThat(result).as("check result of getDisks").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITDisk extends ITBase {
       // parse params from json payload
       GetDisksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetDisksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      DiskConnection result = api.getDisksConnection(params, contentLanguage);
+      DiskConnection result = api.getDisksConnection(params);
       assertThat(result).as("check result of getDisksConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITDisk extends ITBase {
       // parse params from json payload
       DiskMountParams params = gson.fromJson(payload, new TypeToken<DiskMountParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDisk> result = api.mountDisk(params, contentLanguage);
+      List<WithTaskDisk> result = api.mountDisk(params);
       assertThat(result).as("check result of mountDisk").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITDisk extends ITBase {
       // parse params from json payload
       DiskUnmountParams params = gson.fromJson(payload, new TypeToken<DiskUnmountParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDisk> result = api.unmountDisk(params, contentLanguage);
+      List<WithTaskDisk> result = api.unmountDisk(params);
       assertThat(result).as("check result of unmountDisk").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

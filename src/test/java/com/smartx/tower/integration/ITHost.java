@@ -44,7 +44,7 @@ public class ITHost extends ITBase {
       // parse params from json payload
       List<HostCreationParams> params = gson.fromJson(payload, new TypeToken<List<HostCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskBatchHosts> result = api.createHost(params, contentLanguage);
+      List<WithTaskBatchHosts> result = api.createHost(params);
       assertThat(result).as("check result of createHost").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITHost extends ITBase {
       // parse params from json payload
       GetHostsRequestBody params = gson.fromJson(payload, new TypeToken<GetHostsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Host> result = api.getHosts(params, contentLanguage);
+      List<Host> result = api.getHosts(params);
       assertThat(result).as("check result of getHosts").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITHost extends ITBase {
       // parse params from json payload
       GetHostsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetHostsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      HostConnection result = api.getHostsConnection(params, contentLanguage);
+      HostConnection result = api.getHostsConnection(params);
       assertThat(result).as("check result of getHostsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITHost extends ITBase {
       // parse params from json payload
       List<TriggerDiskBlinkParams> params = gson.fromJson(payload, new TypeToken<List<TriggerDiskBlinkParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskHost> result = api.triggerDiskBlink(params, contentLanguage);
+      List<WithTaskHost> result = api.triggerDiskBlink(params);
       assertThat(result).as("check result of triggerDiskBlink").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITHost extends ITBase {
       // parse params from json payload
       HostUpdationParams params = gson.fromJson(payload, new TypeToken<HostUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskHost> result = api.updateHost(params, contentLanguage);
+      List<WithTaskHost> result = api.updateHost(params);
       assertThat(result).as("check result of updateHost").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

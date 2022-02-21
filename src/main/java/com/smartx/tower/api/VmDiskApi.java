@@ -78,7 +78,6 @@ public class VmDiskApi {
     /**
      * Build call for getVmDisks
      * @param getVmDisksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmDisksCall(GetVmDisksRequestBody getVmDisksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmDisksCall(GetVmDisksRequestBody getVmDisksRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class VmDiskApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class VmDiskApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class VmDiskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmDisksValidateBeforeCall(GetVmDisksRequestBody getVmDisksRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmDisksValidateBeforeCall(GetVmDisksRequestBody getVmDisksRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmDisksRequestBody' is set
         if (getVmDisksRequestBody == null) {
@@ -148,7 +143,7 @@ public class VmDiskApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmDisksCall(getVmDisksRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmDisksCall(getVmDisksRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class VmDiskApi {
      * 
      * 
      * @param getVmDisksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VmDisk&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VmDisk> getVmDisks(GetVmDisksRequestBody getVmDisksRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<VmDisk>> localVarResp = getVmDisksWithHttpInfo(getVmDisksRequestBody, contentLanguage);
+    public List<VmDisk> getVmDisks(GetVmDisksRequestBody getVmDisksRequestBody) throws ApiException {
+        ApiResponse<List<VmDisk>> localVarResp = getVmDisksWithHttpInfo(getVmDisksRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class VmDiskApi {
      * 
      * 
      * @param getVmDisksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VmDisk&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VmDisk>> getVmDisksWithHttpInfo(GetVmDisksRequestBody getVmDisksRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmDisksValidateBeforeCall(getVmDisksRequestBody, contentLanguage, null);
+    public ApiResponse<List<VmDisk>> getVmDisksWithHttpInfo(GetVmDisksRequestBody getVmDisksRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmDisksValidateBeforeCall(getVmDisksRequestBody, null);
         Type localVarReturnType = new TypeToken<List<VmDisk>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class VmDiskApi {
      *  (asynchronously)
      * 
      * @param getVmDisksRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmDisksAsync(GetVmDisksRequestBody getVmDisksRequestBody, String contentLanguage, final ApiCallback<List<VmDisk>> _callback) throws ApiException {
+    public okhttp3.Call getVmDisksAsync(GetVmDisksRequestBody getVmDisksRequestBody, final ApiCallback<List<VmDisk>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmDisksValidateBeforeCall(getVmDisksRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmDisksValidateBeforeCall(getVmDisksRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<VmDisk>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class VmDiskApi {
     /**
      * Build call for getVmDisksConnection
      * @param getVmDisksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmDisksConnectionCall(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmDisksConnectionCall(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class VmDiskApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class VmDiskApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class VmDiskApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmDisksConnectionValidateBeforeCall(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVmDisksConnectionValidateBeforeCall(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVmDisksConnectionRequestBody' is set
         if (getVmDisksConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class VmDiskApi {
         }
         
 
-        okhttp3.Call localVarCall = getVmDisksConnectionCall(getVmDisksConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmDisksConnectionCall(getVmDisksConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class VmDiskApi {
      * 
      * 
      * @param getVmDisksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return VmDiskConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VmDiskConnection getVmDisksConnection(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<VmDiskConnection> localVarResp = getVmDisksConnectionWithHttpInfo(getVmDisksConnectionRequestBody, contentLanguage);
+    public VmDiskConnection getVmDisksConnection(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody) throws ApiException {
+        ApiResponse<VmDiskConnection> localVarResp = getVmDisksConnectionWithHttpInfo(getVmDisksConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class VmDiskApi {
      * 
      * 
      * @param getVmDisksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VmDiskConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VmDiskConnection> getVmDisksConnectionWithHttpInfo(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVmDisksConnectionValidateBeforeCall(getVmDisksConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<VmDiskConnection> getVmDisksConnectionWithHttpInfo(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmDisksConnectionValidateBeforeCall(getVmDisksConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<VmDiskConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class VmDiskApi {
      *  (asynchronously)
      * 
      * @param getVmDisksConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class VmDiskApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVmDisksConnectionAsync(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, String contentLanguage, final ApiCallback<VmDiskConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmDisksConnectionAsync(GetVmDisksConnectionRequestBody getVmDisksConnectionRequestBody, final ApiCallback<VmDiskConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVmDisksConnectionValidateBeforeCall(getVmDisksConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVmDisksConnectionValidateBeforeCall(getVmDisksConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VmDiskConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

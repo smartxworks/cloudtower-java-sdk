@@ -84,7 +84,6 @@ public class LabelApi {
     /**
      * Build call for addLabelsToResources
      * @param addLabelsToResourcesParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -95,7 +94,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addLabelsToResourcesCall(AddLabelsToResourcesParams addLabelsToResourcesParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addLabelsToResourcesCall(AddLabelsToResourcesParams addLabelsToResourcesParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -121,10 +120,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -137,7 +132,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -146,7 +141,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addLabelsToResourcesValidateBeforeCall(AddLabelsToResourcesParams addLabelsToResourcesParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addLabelsToResourcesValidateBeforeCall(AddLabelsToResourcesParams addLabelsToResourcesParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'addLabelsToResourcesParams' is set
         if (addLabelsToResourcesParams == null) {
@@ -154,7 +149,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = addLabelsToResourcesCall(addLabelsToResourcesParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = addLabelsToResourcesCall(addLabelsToResourcesParams, _callback);
         return localVarCall;
 
     }
@@ -163,7 +158,6 @@ public class LabelApi {
      * 
      * 
      * @param addLabelsToResourcesParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskLabel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -173,8 +167,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskLabel> addLabelsToResources(AddLabelsToResourcesParams addLabelsToResourcesParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskLabel>> localVarResp = addLabelsToResourcesWithHttpInfo(addLabelsToResourcesParams, contentLanguage);
+    public List<WithTaskLabel> addLabelsToResources(AddLabelsToResourcesParams addLabelsToResourcesParams) throws ApiException {
+        ApiResponse<List<WithTaskLabel>> localVarResp = addLabelsToResourcesWithHttpInfo(addLabelsToResourcesParams);
         return localVarResp.getData();
     }
 
@@ -182,7 +176,6 @@ public class LabelApi {
      * 
      * 
      * @param addLabelsToResourcesParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskLabel&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -192,8 +185,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskLabel>> addLabelsToResourcesWithHttpInfo(AddLabelsToResourcesParams addLabelsToResourcesParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = addLabelsToResourcesValidateBeforeCall(addLabelsToResourcesParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskLabel>> addLabelsToResourcesWithHttpInfo(AddLabelsToResourcesParams addLabelsToResourcesParams) throws ApiException {
+        okhttp3.Call localVarCall = addLabelsToResourcesValidateBeforeCall(addLabelsToResourcesParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -202,7 +195,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param addLabelsToResourcesParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -213,9 +205,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addLabelsToResourcesAsync(AddLabelsToResourcesParams addLabelsToResourcesParams, String contentLanguage, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
+    public okhttp3.Call addLabelsToResourcesAsync(AddLabelsToResourcesParams addLabelsToResourcesParams, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addLabelsToResourcesValidateBeforeCall(addLabelsToResourcesParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = addLabelsToResourcesValidateBeforeCall(addLabelsToResourcesParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -223,7 +215,6 @@ public class LabelApi {
     /**
      * Build call for createLabel
      * @param labelCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -234,7 +225,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createLabelCall(List<LabelCreationParams> labelCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createLabelCall(List<LabelCreationParams> labelCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -260,10 +251,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -276,7 +263,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -285,7 +272,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createLabelValidateBeforeCall(List<LabelCreationParams> labelCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createLabelValidateBeforeCall(List<LabelCreationParams> labelCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'labelCreationParams' is set
         if (labelCreationParams == null) {
@@ -293,7 +280,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = createLabelCall(labelCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createLabelCall(labelCreationParams, _callback);
         return localVarCall;
 
     }
@@ -302,7 +289,6 @@ public class LabelApi {
      * 
      * 
      * @param labelCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskLabel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -312,8 +298,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskLabel> createLabel(List<LabelCreationParams> labelCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskLabel>> localVarResp = createLabelWithHttpInfo(labelCreationParams, contentLanguage);
+    public List<WithTaskLabel> createLabel(List<LabelCreationParams> labelCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskLabel>> localVarResp = createLabelWithHttpInfo(labelCreationParams);
         return localVarResp.getData();
     }
 
@@ -321,7 +307,6 @@ public class LabelApi {
      * 
      * 
      * @param labelCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskLabel&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -331,8 +316,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskLabel>> createLabelWithHttpInfo(List<LabelCreationParams> labelCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createLabelValidateBeforeCall(labelCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskLabel>> createLabelWithHttpInfo(List<LabelCreationParams> labelCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createLabelValidateBeforeCall(labelCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -341,7 +326,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param labelCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -352,9 +336,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createLabelAsync(List<LabelCreationParams> labelCreationParams, String contentLanguage, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
+    public okhttp3.Call createLabelAsync(List<LabelCreationParams> labelCreationParams, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createLabelValidateBeforeCall(labelCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createLabelValidateBeforeCall(labelCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -362,7 +346,6 @@ public class LabelApi {
     /**
      * Build call for deleteLabel
      * @param labelDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -373,7 +356,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteLabelCall(LabelDeletionParams labelDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteLabelCall(LabelDeletionParams labelDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -399,10 +382,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -415,7 +394,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -424,7 +403,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteLabelValidateBeforeCall(LabelDeletionParams labelDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteLabelValidateBeforeCall(LabelDeletionParams labelDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'labelDeletionParams' is set
         if (labelDeletionParams == null) {
@@ -432,7 +411,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteLabelCall(labelDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteLabelCall(labelDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -441,7 +420,6 @@ public class LabelApi {
      * 
      * 
      * @param labelDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteLabel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -451,8 +429,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteLabel> deleteLabel(LabelDeletionParams labelDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteLabel>> localVarResp = deleteLabelWithHttpInfo(labelDeletionParams, contentLanguage);
+    public List<WithTaskDeleteLabel> deleteLabel(LabelDeletionParams labelDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteLabel>> localVarResp = deleteLabelWithHttpInfo(labelDeletionParams);
         return localVarResp.getData();
     }
 
@@ -460,7 +438,6 @@ public class LabelApi {
      * 
      * 
      * @param labelDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteLabel&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -470,8 +447,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteLabel>> deleteLabelWithHttpInfo(LabelDeletionParams labelDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteLabelValidateBeforeCall(labelDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteLabel>> deleteLabelWithHttpInfo(LabelDeletionParams labelDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteLabelValidateBeforeCall(labelDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteLabel>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -480,7 +457,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param labelDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -491,9 +467,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteLabelAsync(LabelDeletionParams labelDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteLabel>> _callback) throws ApiException {
+    public okhttp3.Call deleteLabelAsync(LabelDeletionParams labelDeletionParams, final ApiCallback<List<WithTaskDeleteLabel>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteLabelValidateBeforeCall(labelDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteLabelValidateBeforeCall(labelDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteLabel>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -501,7 +477,6 @@ public class LabelApi {
     /**
      * Build call for getLabels
      * @param getLabelsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -512,7 +487,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLabelsCall(GetLabelsRequestBody getLabelsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLabelsCall(GetLabelsRequestBody getLabelsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -538,10 +513,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -554,7 +525,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -563,7 +534,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLabelsValidateBeforeCall(GetLabelsRequestBody getLabelsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getLabelsValidateBeforeCall(GetLabelsRequestBody getLabelsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getLabelsRequestBody' is set
         if (getLabelsRequestBody == null) {
@@ -571,7 +542,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = getLabelsCall(getLabelsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLabelsCall(getLabelsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -580,7 +551,6 @@ public class LabelApi {
      * 
      * 
      * @param getLabelsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;Label&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -590,8 +560,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<Label> getLabels(GetLabelsRequestBody getLabelsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<Label>> localVarResp = getLabelsWithHttpInfo(getLabelsRequestBody, contentLanguage);
+    public List<Label> getLabels(GetLabelsRequestBody getLabelsRequestBody) throws ApiException {
+        ApiResponse<List<Label>> localVarResp = getLabelsWithHttpInfo(getLabelsRequestBody);
         return localVarResp.getData();
     }
 
@@ -599,7 +569,6 @@ public class LabelApi {
      * 
      * 
      * @param getLabelsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;Label&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -609,8 +578,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Label>> getLabelsWithHttpInfo(GetLabelsRequestBody getLabelsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getLabelsValidateBeforeCall(getLabelsRequestBody, contentLanguage, null);
+    public ApiResponse<List<Label>> getLabelsWithHttpInfo(GetLabelsRequestBody getLabelsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getLabelsValidateBeforeCall(getLabelsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<Label>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -619,7 +588,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param getLabelsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -630,9 +598,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLabelsAsync(GetLabelsRequestBody getLabelsRequestBody, String contentLanguage, final ApiCallback<List<Label>> _callback) throws ApiException {
+    public okhttp3.Call getLabelsAsync(GetLabelsRequestBody getLabelsRequestBody, final ApiCallback<List<Label>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getLabelsValidateBeforeCall(getLabelsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLabelsValidateBeforeCall(getLabelsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<Label>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -640,7 +608,6 @@ public class LabelApi {
     /**
      * Build call for getLabelsConnection
      * @param getLabelsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -651,7 +618,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLabelsConnectionCall(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLabelsConnectionCall(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -677,10 +644,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -693,7 +656,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -702,7 +665,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLabelsConnectionValidateBeforeCall(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getLabelsConnectionValidateBeforeCall(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getLabelsConnectionRequestBody' is set
         if (getLabelsConnectionRequestBody == null) {
@@ -710,7 +673,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = getLabelsConnectionCall(getLabelsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLabelsConnectionCall(getLabelsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -719,7 +682,6 @@ public class LabelApi {
      * 
      * 
      * @param getLabelsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return LabelConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -729,8 +691,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public LabelConnection getLabelsConnection(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<LabelConnection> localVarResp = getLabelsConnectionWithHttpInfo(getLabelsConnectionRequestBody, contentLanguage);
+    public LabelConnection getLabelsConnection(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody) throws ApiException {
+        ApiResponse<LabelConnection> localVarResp = getLabelsConnectionWithHttpInfo(getLabelsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -738,7 +700,6 @@ public class LabelApi {
      * 
      * 
      * @param getLabelsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;LabelConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -748,8 +709,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<LabelConnection> getLabelsConnectionWithHttpInfo(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getLabelsConnectionValidateBeforeCall(getLabelsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<LabelConnection> getLabelsConnectionWithHttpInfo(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getLabelsConnectionValidateBeforeCall(getLabelsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<LabelConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -758,7 +719,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param getLabelsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -769,9 +729,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLabelsConnectionAsync(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, String contentLanguage, final ApiCallback<LabelConnection> _callback) throws ApiException {
+    public okhttp3.Call getLabelsConnectionAsync(GetLabelsConnectionRequestBody getLabelsConnectionRequestBody, final ApiCallback<LabelConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getLabelsConnectionValidateBeforeCall(getLabelsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getLabelsConnectionValidateBeforeCall(getLabelsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<LabelConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -779,7 +739,6 @@ public class LabelApi {
     /**
      * Build call for removeLabelsFromResources
      * @param body  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -790,7 +749,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call removeLabelsFromResourcesCall(AddLabelsToResourcesParams body, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call removeLabelsFromResourcesCall(AddLabelsToResourcesParams body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -816,10 +775,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -832,7 +787,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -841,7 +796,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeLabelsFromResourcesValidateBeforeCall(AddLabelsToResourcesParams body, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call removeLabelsFromResourcesValidateBeforeCall(AddLabelsToResourcesParams body, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'body' is set
         if (body == null) {
@@ -849,7 +804,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = removeLabelsFromResourcesCall(body, contentLanguage, _callback);
+        okhttp3.Call localVarCall = removeLabelsFromResourcesCall(body, _callback);
         return localVarCall;
 
     }
@@ -858,7 +813,6 @@ public class LabelApi {
      * 
      * 
      * @param body  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskLabel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -868,8 +822,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskLabel> removeLabelsFromResources(AddLabelsToResourcesParams body, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskLabel>> localVarResp = removeLabelsFromResourcesWithHttpInfo(body, contentLanguage);
+    public List<WithTaskLabel> removeLabelsFromResources(AddLabelsToResourcesParams body) throws ApiException {
+        ApiResponse<List<WithTaskLabel>> localVarResp = removeLabelsFromResourcesWithHttpInfo(body);
         return localVarResp.getData();
     }
 
@@ -877,7 +831,6 @@ public class LabelApi {
      * 
      * 
      * @param body  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskLabel&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -887,8 +840,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskLabel>> removeLabelsFromResourcesWithHttpInfo(AddLabelsToResourcesParams body, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = removeLabelsFromResourcesValidateBeforeCall(body, contentLanguage, null);
+    public ApiResponse<List<WithTaskLabel>> removeLabelsFromResourcesWithHttpInfo(AddLabelsToResourcesParams body) throws ApiException {
+        okhttp3.Call localVarCall = removeLabelsFromResourcesValidateBeforeCall(body, null);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -897,7 +850,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param body  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -908,9 +860,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call removeLabelsFromResourcesAsync(AddLabelsToResourcesParams body, String contentLanguage, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
+    public okhttp3.Call removeLabelsFromResourcesAsync(AddLabelsToResourcesParams body, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = removeLabelsFromResourcesValidateBeforeCall(body, contentLanguage, _callback);
+        okhttp3.Call localVarCall = removeLabelsFromResourcesValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -918,7 +870,6 @@ public class LabelApi {
     /**
      * Build call for updateLabel
      * @param labelUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -929,7 +880,7 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateLabelCall(LabelUpdationParams labelUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateLabelCall(LabelUpdationParams labelUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -955,10 +906,6 @@ public class LabelApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -971,7 +918,7 @@ public class LabelApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -980,7 +927,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateLabelValidateBeforeCall(LabelUpdationParams labelUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateLabelValidateBeforeCall(LabelUpdationParams labelUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'labelUpdationParams' is set
         if (labelUpdationParams == null) {
@@ -988,7 +935,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = updateLabelCall(labelUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateLabelCall(labelUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -997,7 +944,6 @@ public class LabelApi {
      * 
      * 
      * @param labelUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskLabel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1007,8 +953,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskLabel> updateLabel(LabelUpdationParams labelUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskLabel>> localVarResp = updateLabelWithHttpInfo(labelUpdationParams, contentLanguage);
+    public List<WithTaskLabel> updateLabel(LabelUpdationParams labelUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskLabel>> localVarResp = updateLabelWithHttpInfo(labelUpdationParams);
         return localVarResp.getData();
     }
 
@@ -1016,7 +962,6 @@ public class LabelApi {
      * 
      * 
      * @param labelUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskLabel&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1026,8 +971,8 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskLabel>> updateLabelWithHttpInfo(LabelUpdationParams labelUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateLabelValidateBeforeCall(labelUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskLabel>> updateLabelWithHttpInfo(LabelUpdationParams labelUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateLabelValidateBeforeCall(labelUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1036,7 +981,6 @@ public class LabelApi {
      *  (asynchronously)
      * 
      * @param labelUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1047,9 +991,9 @@ public class LabelApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateLabelAsync(LabelUpdationParams labelUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
+    public okhttp3.Call updateLabelAsync(LabelUpdationParams labelUpdationParams, final ApiCallback<List<WithTaskLabel>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateLabelValidateBeforeCall(labelUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateLabelValidateBeforeCall(labelUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskLabel>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

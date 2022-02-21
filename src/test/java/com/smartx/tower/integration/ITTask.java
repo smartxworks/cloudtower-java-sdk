@@ -44,7 +44,7 @@ public class ITTask extends ITBase {
       // parse params from json payload
       GetTasksRequestBody params = gson.fromJson(payload, new TypeToken<GetTasksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Task> result = api.getTasks(params, contentLanguage);
+      List<Task> result = api.getTasks(params);
       assertThat(result).as("check result of getTasks").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITTask extends ITBase {
       // parse params from json payload
       GetTasksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetTasksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      TaskConnection result = api.getTasksConnection(params, contentLanguage);
+      TaskConnection result = api.getTasksConnection(params);
       assertThat(result).as("check result of getTasksConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

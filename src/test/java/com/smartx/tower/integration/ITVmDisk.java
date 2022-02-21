@@ -44,7 +44,7 @@ public class ITVmDisk extends ITBase {
       // parse params from json payload
       GetVmDisksRequestBody params = gson.fromJson(payload, new TypeToken<GetVmDisksRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VmDisk> result = api.getVmDisks(params, contentLanguage);
+      List<VmDisk> result = api.getVmDisks(params);
       assertThat(result).as("check result of getVmDisks").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVmDisk extends ITBase {
       // parse params from json payload
       GetVmDisksConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmDisksConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VmDiskConnection result = api.getVmDisksConnection(params, contentLanguage);
+      VmDiskConnection result = api.getVmDisksConnection(params);
       assertThat(result).as("check result of getVmDisksConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

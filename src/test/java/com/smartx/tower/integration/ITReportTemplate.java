@@ -44,7 +44,7 @@ public class ITReportTemplate extends ITBase {
       // parse params from json payload
       List<ReportTemplateCreationParams> params = gson.fromJson(payload, new TypeToken<List<ReportTemplateCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskReportTemplate> result = api.createReportTemplate(params, contentLanguage);
+      List<WithTaskReportTemplate> result = api.createReportTemplate(params);
       assertThat(result).as("check result of createReportTemplate").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITReportTemplate extends ITBase {
       // parse params from json payload
       ReportTemplateDeletionParams params = gson.fromJson(payload, new TypeToken<ReportTemplateDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteReportTemplate> result = api.deleteReportTemplate(params, contentLanguage);
+      List<WithTaskDeleteReportTemplate> result = api.deleteReportTemplate(params);
       assertThat(result).as("check result of deleteReportTemplate").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITReportTemplate extends ITBase {
       // parse params from json payload
       ReporteTemplateGenerationParams params = gson.fromJson(payload, new TypeToken<ReporteTemplateGenerationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskReportTask> result = api.generateFromReportTemplate(params, contentLanguage);
+      List<WithTaskReportTask> result = api.generateFromReportTemplate(params);
       assertThat(result).as("check result of generateFromReportTemplate").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITReportTemplate extends ITBase {
       // parse params from json payload
       GetReportTemplatesRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTemplatesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ReportTemplate> result = api.getReportTemplates(params, contentLanguage);
+      List<ReportTemplate> result = api.getReportTemplates(params);
       assertThat(result).as("check result of getReportTemplates").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITReportTemplate extends ITBase {
       // parse params from json payload
       GetReportTemplatesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetReportTemplatesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ReportTemplateConnection result = api.getReportTemplatesConnection(params, contentLanguage);
+      ReportTemplateConnection result = api.getReportTemplatesConnection(params);
       assertThat(result).as("check result of getReportTemplatesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITReportTemplate extends ITBase {
       // parse params from json payload
       ReportTemplateUpdationParams params = gson.fromJson(payload, new TypeToken<ReportTemplateUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskReportTemplate> result = api.updateReportTemplate(params, contentLanguage);
+      List<WithTaskReportTemplate> result = api.updateReportTemplate(params);
       assertThat(result).as("check result of updateReportTemplate").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

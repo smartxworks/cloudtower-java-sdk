@@ -44,7 +44,7 @@ public class ITNodeTopo extends ITBase {
       // parse params from json payload
       GetNodeTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetNodeTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<NodeTopo> result = api.getNodeTopoes(params, contentLanguage);
+      List<NodeTopo> result = api.getNodeTopoes(params);
       assertThat(result).as("check result of getNodeTopoes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNodeTopo extends ITBase {
       // parse params from json payload
       GetNodeTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNodeTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NodeTopoConnection result = api.getNodeTopoesConnection(params, contentLanguage);
+      NodeTopoConnection result = api.getNodeTopoesConnection(params);
       assertThat(result).as("check result of getNodeTopoesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITNodeTopo extends ITBase {
       // parse params from json payload
       List<Object> params = gson.fromJson(payload, new TypeToken<List<Object>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNodeTopo> result = api.updateNodeTopo(params, contentLanguage);
+      List<WithTaskNodeTopo> result = api.updateNodeTopo(params);
       assertThat(result).as("check result of updateNodeTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -44,7 +44,7 @@ public class ITConsistencyGroup extends ITBase {
       // parse params from json payload
       List<ConsistencyGroupCreationParams> params = gson.fromJson(payload, new TypeToken<List<ConsistencyGroupCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskConsistencyGroup> result = api.createConsistencyGroup(params, contentLanguage);
+      List<WithTaskConsistencyGroup> result = api.createConsistencyGroup(params);
       assertThat(result).as("check result of createConsistencyGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITConsistencyGroup extends ITBase {
       // parse params from json payload
       ConsistencyGroupDeletionParams params = gson.fromJson(payload, new TypeToken<ConsistencyGroupDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteConsistencyGroup> result = api.deleteConsistencyGroup(params, contentLanguage);
+      List<WithTaskDeleteConsistencyGroup> result = api.deleteConsistencyGroup(params);
       assertThat(result).as("check result of deleteConsistencyGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITConsistencyGroup extends ITBase {
       // parse params from json payload
       GetConsistencyGroupsRequestBody params = gson.fromJson(payload, new TypeToken<GetConsistencyGroupsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ConsistencyGroup> result = api.getConsistencyGroups(params, contentLanguage);
+      List<ConsistencyGroup> result = api.getConsistencyGroups(params);
       assertThat(result).as("check result of getConsistencyGroups").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITConsistencyGroup extends ITBase {
       // parse params from json payload
       GetConsistencyGroupsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetConsistencyGroupsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ConsistencyGroupConnection result = api.getConsistencyGroupsConnection(params, contentLanguage);
+      ConsistencyGroupConnection result = api.getConsistencyGroupsConnection(params);
       assertThat(result).as("check result of getConsistencyGroupsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITConsistencyGroup extends ITBase {
       // parse params from json payload
       ConsistencyGroupUpdationParams params = gson.fromJson(payload, new TypeToken<ConsistencyGroupUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskConsistencyGroup> result = api.updateConsistencyGroup(params, contentLanguage);
+      List<WithTaskConsistencyGroup> result = api.updateConsistencyGroup(params);
       assertThat(result).as("check result of updateConsistencyGroup").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

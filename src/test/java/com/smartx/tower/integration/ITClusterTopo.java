@@ -44,7 +44,7 @@ public class ITClusterTopo extends ITBase {
       // parse params from json payload
       GetClusterTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ClusterTopo> result = api.getClusterTopoes(params, contentLanguage);
+      List<ClusterTopo> result = api.getClusterTopoes(params);
       assertThat(result).as("check result of getClusterTopoes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITClusterTopo extends ITBase {
       // parse params from json payload
       GetClusterTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ClusterTopoConnection result = api.getClusterTopoesConnection(params, contentLanguage);
+      ClusterTopoConnection result = api.getClusterTopoesConnection(params);
       assertThat(result).as("check result of getClusterTopoesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

@@ -51,14 +51,13 @@ public class ITVmVolume extends ITBase {
           .name("tower-sdk-test-vm-volume" + System.currentTimeMillis())
           .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION).size(4096).sharing(false));
       // do some modify to params(optional)
-      List<WithTaskVmVolume> result = api.createVmVolume(params, contentLanguage);
+      List<WithTaskVmVolume> result = api.createVmVolume(params);
       try {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
       }
       VmVolume volume = result.get(0).getData();
-      api.deleteVmVolumeFromVm(new VmVolumeDeletionParams().where(new VmVolumeWhereInput().id(volume.getId())),
-          contentLanguage);
+      api.deleteVmVolumeFromVm(new VmVolumeDeletionParams().where(new VmVolumeWhereInput().id(volume.getId())));
       try {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
@@ -78,7 +77,7 @@ public class ITVmVolume extends ITBase {
       GetVmVolumesRequestBody params = gson.fromJson(payload, new TypeToken<GetVmVolumesRequestBody>() {
       }.getType());
       // do some modify to params(optional)
-      List<VmVolume> result = api.getVmVolumes(params, contentLanguage);
+      List<VmVolume> result = api.getVmVolumes(params);
       assertThat(result).as("check result of getVmVolumes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -95,7 +94,7 @@ public class ITVmVolume extends ITBase {
           new TypeToken<GetVmVolumesConnectionRequestBody>() {
           }.getType());
       // do some modify to params(optional)
-      VmVolumeConnection result = api.getVmVolumesConnection(params, contentLanguage);
+      VmVolumeConnection result = api.getVmVolumesConnection(params);
       assertThat(result).as("check result of getVmVolumesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

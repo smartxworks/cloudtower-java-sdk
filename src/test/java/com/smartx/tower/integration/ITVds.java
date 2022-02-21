@@ -44,7 +44,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       List<VdsCreationParams> params = gson.fromJson(payload, new TypeToken<List<VdsCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.createVds(params, contentLanguage);
+      List<WithTaskVds> result = api.createVds(params);
       assertThat(result).as("check result of createVds").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       List<VdsCreationWithMAccessVlanParams> params = gson.fromJson(payload, new TypeToken<List<VdsCreationWithMAccessVlanParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.createVdsWithAccessVlan(params, contentLanguage);
+      List<WithTaskVds> result = api.createVdsWithAccessVlan(params);
       assertThat(result).as("check result of createVdsWithAccessVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       List<VdsCreationWithMigrateVlanParams> params = gson.fromJson(payload, new TypeToken<List<VdsCreationWithMigrateVlanParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.createVdsWithMigrateVlan(params, contentLanguage);
+      List<WithTaskVds> result = api.createVdsWithMigrateVlan(params);
       assertThat(result).as("check result of createVdsWithMigrateVlan").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       VdsDeletionParams params = gson.fromJson(payload, new TypeToken<VdsDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteVds> result = api.deleteVds(params, contentLanguage);
+      List<WithTaskDeleteVds> result = api.deleteVds(params);
       assertThat(result).as("check result of deleteVds").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       GetVdsesRequestBody params = gson.fromJson(payload, new TypeToken<GetVdsesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Vds> result = api.getVdses(params, contentLanguage);
+      List<Vds> result = api.getVdses(params);
       assertThat(result).as("check result of getVdses").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       GetVdsesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVdsesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VdsConnection result = api.getVdsesConnection(params, contentLanguage);
+      VdsConnection result = api.getVdsesConnection(params);
       assertThat(result).as("check result of getVdsesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -134,7 +134,7 @@ public class ITVds extends ITBase {
       // parse params from json payload
       VdsUpdationParams params = gson.fromJson(payload, new TypeToken<VdsUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskVds> result = api.updateVds(params, contentLanguage);
+      List<WithTaskVds> result = api.updateVds(params);
       assertThat(result).as("check result of updateVds").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

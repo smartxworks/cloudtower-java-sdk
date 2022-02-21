@@ -44,7 +44,7 @@ public class ITDeploy extends ITBase {
       // parse params from json payload
       GetDeploysRequestBody params = gson.fromJson(payload, new TypeToken<GetDeploysRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<Deploy> result = api.getDeploys(params, contentLanguage);
+      List<Deploy> result = api.getDeploys(params);
       assertThat(result).as("check result of getDeploys").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITDeploy extends ITBase {
       // parse params from json payload
       GetDeploysConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetDeploysConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      DeployConnection result = api.getDeploysConnection(params, contentLanguage);
+      DeployConnection result = api.getDeploysConnection(params);
       assertThat(result).as("check result of getDeploysConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

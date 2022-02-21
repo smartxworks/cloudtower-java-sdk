@@ -44,7 +44,7 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       // parse params from json payload
       List<NvmfNamespaceSnapshotCreationParams> params = gson.fromJson(payload, new TypeToken<List<NvmfNamespaceSnapshotCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNvmfNamespaceSnapshot> result = api.createNvmfNamespaceSnapshot(params, contentLanguage);
+      List<WithTaskNvmfNamespaceSnapshot> result = api.createNvmfNamespaceSnapshot(params);
       assertThat(result).as("check result of createNvmfNamespaceSnapshot").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       // parse params from json payload
       NvmfNamespaceSnapshotDeletionParams params = gson.fromJson(payload, new TypeToken<NvmfNamespaceSnapshotDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteNvmfNamespaceSnapshot> result = api.deleteNvmfNamespaceSnapshot(params, contentLanguage);
+      List<WithTaskDeleteNvmfNamespaceSnapshot> result = api.deleteNvmfNamespaceSnapshot(params);
       assertThat(result).as("check result of deleteNvmfNamespaceSnapshot").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       // parse params from json payload
       GetNvmfNamespaceSnapshotsRequestBody params = gson.fromJson(payload, new TypeToken<GetNvmfNamespaceSnapshotsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<NvmfNamespaceSnapshot> result = api.getNvmfNamespaceSnapshots(params, contentLanguage);
+      List<NvmfNamespaceSnapshot> result = api.getNvmfNamespaceSnapshots(params);
       assertThat(result).as("check result of getNvmfNamespaceSnapshots").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITNvmfNamespaceSnapshot extends ITBase {
       // parse params from json payload
       GetNvmfNamespaceSnapshotsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetNvmfNamespaceSnapshotsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      NvmfNamespaceSnapshotConnection result = api.getNvmfNamespaceSnapshotsConnection(params, contentLanguage);
+      NvmfNamespaceSnapshotConnection result = api.getNvmfNamespaceSnapshotsConnection(params);
       assertThat(result).as("check result of getNvmfNamespaceSnapshotsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

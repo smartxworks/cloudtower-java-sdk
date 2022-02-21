@@ -26,7 +26,7 @@
       <name>cloud developer</name>
       <email>info@smartx.com</email>
       <organization>SmartX Inc.</organization>
-      <organizationUrl>http://openapitools.org</organizationUrl>
+      <organizationUrl>https://www.smartx.com/</organizationUrl>
     </developer>
   </developers>
 
@@ -169,6 +169,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
+          <argLine>-Xms512m -Xmx2048m</argLine>
+          <maxmemory>1024m</maxmemory>          
           <tags>
             <tag>
               <name>http.response.details</name>

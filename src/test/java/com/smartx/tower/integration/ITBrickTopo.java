@@ -44,7 +44,7 @@ public class ITBrickTopo extends ITBase {
       // parse params from json payload
       List<BrickTopoCreationParams> params = gson.fromJson(payload, new TypeToken<List<BrickTopoCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskBrickTopo> result = api.createBrickTopo(params, contentLanguage);
+      List<WithTaskBrickTopo> result = api.createBrickTopo(params);
       assertThat(result).as("check result of createBrickTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITBrickTopo extends ITBase {
       // parse params from json payload
       BrickTopoDeletionParams params = gson.fromJson(payload, new TypeToken<BrickTopoDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteBrickTopo> result = api.deleteBrickTopo(params, contentLanguage);
+      List<WithTaskDeleteBrickTopo> result = api.deleteBrickTopo(params);
       assertThat(result).as("check result of deleteBrickTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITBrickTopo extends ITBase {
       // parse params from json payload
       GetBrickTopoesRequestBody params = gson.fromJson(payload, new TypeToken<GetBrickTopoesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<BrickTopo> result = api.getBrickTopoes(params, contentLanguage);
+      List<BrickTopo> result = api.getBrickTopoes(params);
       assertThat(result).as("check result of getBrickTopoes").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITBrickTopo extends ITBase {
       // parse params from json payload
       GetBrickTopoesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetBrickTopoesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      BrickTopoConnection result = api.getBrickTopoesConnection(params, contentLanguage);
+      BrickTopoConnection result = api.getBrickTopoesConnection(params);
       assertThat(result).as("check result of getBrickTopoesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITBrickTopo extends ITBase {
       // parse params from json payload
       BrickTopoMoveParams params = gson.fromJson(payload, new TypeToken<BrickTopoMoveParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskBrickTopo> result = api.moveBrickTopo(params, contentLanguage);
+      List<WithTaskBrickTopo> result = api.moveBrickTopo(params);
       assertThat(result).as("check result of moveBrickTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -119,7 +119,7 @@ public class ITBrickTopo extends ITBase {
       // parse params from json payload
       BrickTopoUpdationParams params = gson.fromJson(payload, new TypeToken<BrickTopoUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskBrickTopo> result = api.updateBrickTopo(params, contentLanguage);
+      List<WithTaskBrickTopo> result = api.updateBrickTopo(params);
       assertThat(result).as("check result of updateBrickTopo").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

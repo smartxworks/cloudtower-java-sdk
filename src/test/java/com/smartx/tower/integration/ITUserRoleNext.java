@@ -44,7 +44,7 @@ public class ITUserRoleNext extends ITBase {
       // parse params from json payload
       List<RoleCreationParams> params = gson.fromJson(payload, new TypeToken<List<RoleCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUserRoleNext> result = api.createRole(params, contentLanguage);
+      List<WithTaskUserRoleNext> result = api.createRole(params);
       assertThat(result).as("check result of createRole").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITUserRoleNext extends ITBase {
       // parse params from json payload
       RoleDeletionParams params = gson.fromJson(payload, new TypeToken<RoleDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteRole> result = api.deleteRole(params, contentLanguage);
+      List<WithTaskDeleteRole> result = api.deleteRole(params);
       assertThat(result).as("check result of deleteRole").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITUserRoleNext extends ITBase {
       // parse params from json payload
       GetUserRoleNextsRequestBody params = gson.fromJson(payload, new TypeToken<GetUserRoleNextsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<UserRoleNext> result = api.getUserRoleNexts(params, contentLanguage);
+      List<UserRoleNext> result = api.getUserRoleNexts(params);
       assertThat(result).as("check result of getUserRoleNexts").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITUserRoleNext extends ITBase {
       // parse params from json payload
       GetUserRoleNextsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetUserRoleNextsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      UserRoleNextConnection result = api.getUserRoleNextsConnection(params, contentLanguage);
+      UserRoleNextConnection result = api.getUserRoleNextsConnection(params);
       assertThat(result).as("check result of getUserRoleNextsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITUserRoleNext extends ITBase {
       // parse params from json payload
       RoleUpdationParams params = gson.fromJson(payload, new TypeToken<RoleUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskUserRoleNext> result = api.updateRole(params, contentLanguage);
+      List<WithTaskUserRoleNext> result = api.updateRole(params);
       assertThat(result).as("check result of updateRole").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

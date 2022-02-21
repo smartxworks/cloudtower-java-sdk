@@ -44,7 +44,7 @@ public class ITVmNic extends ITBase {
       // parse params from json payload
       GetVmNicsRequestBody params = gson.fromJson(payload, new TypeToken<GetVmNicsRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<VmNic> result = api.getVmNics(params, contentLanguage);
+      List<VmNic> result = api.getVmNics(params);
       assertThat(result).as("check result of getVmNics").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITVmNic extends ITBase {
       // parse params from json payload
       GetVmNicsConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetVmNicsConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      VmNicConnection result = api.getVmNicsConnection(params, contentLanguage);
+      VmNicConnection result = api.getVmNicsConnection(params);
       assertThat(result).as("check result of getVmNicsConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

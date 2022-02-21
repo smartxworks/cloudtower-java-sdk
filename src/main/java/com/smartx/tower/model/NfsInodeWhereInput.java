@@ -89,7 +89,7 @@ public class NfsInodeWhereInput {
 
   public static final String SERIALIZED_NAME_FILE = "file";
   @SerializedName(SERIALIZED_NAME_FILE)
-  private Boolean file;
+  private Boolean _file;
 
   public static final String SERIALIZED_NAME_FILE_NOT = "file_not";
   @SerializedName(SERIALIZED_NAME_FILE_NOT)
@@ -813,26 +813,26 @@ public class NfsInodeWhereInput {
   }
 
 
-  public NfsInodeWhereInput file(Boolean file) {
+  public NfsInodeWhereInput _file(Boolean _file) {
     
-    this.file = file;
+    this._file = _file;
     return this;
   }
 
    /**
-   * Get file
-   * @return file
+   * Get _file
+   * @return _file
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
   public Boolean getFile() {
-    return file;
+    return _file;
   }
 
 
-  public void setFile(Boolean file) {
-    this.file = file;
+  public void setFile(Boolean _file) {
+    this._file = _file;
   }
 
 
@@ -3187,7 +3187,7 @@ public class NfsInodeWhereInput {
         Objects.equals(this.entityAsyncStatusIn, nfsInodeWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, nfsInodeWhereInput.entityAsyncStatusNot) &&
         Objects.equals(this.entityAsyncStatusNotIn, nfsInodeWhereInput.entityAsyncStatusNotIn) &&
-        Objects.equals(this.file, nfsInodeWhereInput.file) &&
+        Objects.equals(this._file, nfsInodeWhereInput._file) &&
         Objects.equals(this.fileNot, nfsInodeWhereInput.fileNot) &&
         Objects.equals(this.id, nfsInodeWhereInput.id) &&
         Objects.equals(this.idContains, nfsInodeWhereInput.idContains) &&
@@ -3291,7 +3291,7 @@ public class NfsInodeWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, file, fileNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, NOT, OR, parentId, parentIdContains, parentIdEndsWith, parentIdGt, parentIdGte, parentIdIn, parentIdLt, parentIdLte, parentIdNot, parentIdNotContains, parentIdNotEndsWith, parentIdNotIn, parentIdNotStartsWith, parentIdStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, _file, fileNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, NOT, OR, parentId, parentIdContains, parentIdEndsWith, parentIdGt, parentIdGte, parentIdIn, parentIdLt, parentIdLte, parentIdNot, parentIdNotContains, parentIdNotEndsWith, parentIdNotIn, parentIdNotStartsWith, parentIdStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3318,7 +3318,7 @@ public class NfsInodeWhereInput {
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
     sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
-    sb.append("    file: ").append(toIndentedString(file)).append("\n");
+    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    fileNot: ").append(toIndentedString(fileNot)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");

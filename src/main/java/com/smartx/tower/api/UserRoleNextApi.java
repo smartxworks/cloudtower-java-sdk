@@ -83,7 +83,6 @@ public class UserRoleNextApi {
     /**
      * Build call for createRole
      * @param roleCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -94,7 +93,7 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createRoleCall(List<RoleCreationParams> roleCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createRoleCall(List<RoleCreationParams> roleCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -120,10 +119,6 @@ public class UserRoleNextApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -136,7 +131,7 @@ public class UserRoleNextApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -145,7 +140,7 @@ public class UserRoleNextApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createRoleValidateBeforeCall(List<RoleCreationParams> roleCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createRoleValidateBeforeCall(List<RoleCreationParams> roleCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'roleCreationParams' is set
         if (roleCreationParams == null) {
@@ -153,7 +148,7 @@ public class UserRoleNextApi {
         }
         
 
-        okhttp3.Call localVarCall = createRoleCall(roleCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createRoleCall(roleCreationParams, _callback);
         return localVarCall;
 
     }
@@ -162,7 +157,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param roleCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskUserRoleNext&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -172,8 +166,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskUserRoleNext> createRole(List<RoleCreationParams> roleCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskUserRoleNext>> localVarResp = createRoleWithHttpInfo(roleCreationParams, contentLanguage);
+    public List<WithTaskUserRoleNext> createRole(List<RoleCreationParams> roleCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskUserRoleNext>> localVarResp = createRoleWithHttpInfo(roleCreationParams);
         return localVarResp.getData();
     }
 
@@ -181,7 +175,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param roleCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskUserRoleNext&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,8 +184,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskUserRoleNext>> createRoleWithHttpInfo(List<RoleCreationParams> roleCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createRoleValidateBeforeCall(roleCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskUserRoleNext>> createRoleWithHttpInfo(List<RoleCreationParams> roleCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createRoleValidateBeforeCall(roleCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskUserRoleNext>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,7 +194,6 @@ public class UserRoleNextApi {
      *  (asynchronously)
      * 
      * @param roleCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -212,9 +204,9 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createRoleAsync(List<RoleCreationParams> roleCreationParams, String contentLanguage, final ApiCallback<List<WithTaskUserRoleNext>> _callback) throws ApiException {
+    public okhttp3.Call createRoleAsync(List<RoleCreationParams> roleCreationParams, final ApiCallback<List<WithTaskUserRoleNext>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createRoleValidateBeforeCall(roleCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createRoleValidateBeforeCall(roleCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskUserRoleNext>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -222,7 +214,6 @@ public class UserRoleNextApi {
     /**
      * Build call for deleteRole
      * @param roleDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +224,7 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteRoleCall(RoleDeletionParams roleDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteRoleCall(RoleDeletionParams roleDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -259,10 +250,6 @@ public class UserRoleNextApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -275,7 +262,7 @@ public class UserRoleNextApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -284,7 +271,7 @@ public class UserRoleNextApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteRoleValidateBeforeCall(RoleDeletionParams roleDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteRoleValidateBeforeCall(RoleDeletionParams roleDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'roleDeletionParams' is set
         if (roleDeletionParams == null) {
@@ -292,7 +279,7 @@ public class UserRoleNextApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteRoleCall(roleDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteRoleCall(roleDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -301,7 +288,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param roleDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteRole&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -311,8 +297,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteRole> deleteRole(RoleDeletionParams roleDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteRole>> localVarResp = deleteRoleWithHttpInfo(roleDeletionParams, contentLanguage);
+    public List<WithTaskDeleteRole> deleteRole(RoleDeletionParams roleDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteRole>> localVarResp = deleteRoleWithHttpInfo(roleDeletionParams);
         return localVarResp.getData();
     }
 
@@ -320,7 +306,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param roleDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteRole&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +315,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteRole>> deleteRoleWithHttpInfo(RoleDeletionParams roleDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteRoleValidateBeforeCall(roleDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteRole>> deleteRoleWithHttpInfo(RoleDeletionParams roleDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteRoleValidateBeforeCall(roleDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteRole>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -340,7 +325,6 @@ public class UserRoleNextApi {
      *  (asynchronously)
      * 
      * @param roleDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -351,9 +335,9 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteRoleAsync(RoleDeletionParams roleDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteRole>> _callback) throws ApiException {
+    public okhttp3.Call deleteRoleAsync(RoleDeletionParams roleDeletionParams, final ApiCallback<List<WithTaskDeleteRole>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteRoleValidateBeforeCall(roleDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteRoleValidateBeforeCall(roleDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteRole>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -361,7 +345,6 @@ public class UserRoleNextApi {
     /**
      * Build call for getUserRoleNexts
      * @param getUserRoleNextsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +355,7 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUserRoleNextsCall(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUserRoleNextsCall(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -398,10 +381,6 @@ public class UserRoleNextApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -414,7 +393,7 @@ public class UserRoleNextApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -423,7 +402,7 @@ public class UserRoleNextApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUserRoleNextsValidateBeforeCall(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getUserRoleNextsValidateBeforeCall(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUserRoleNextsRequestBody' is set
         if (getUserRoleNextsRequestBody == null) {
@@ -431,7 +410,7 @@ public class UserRoleNextApi {
         }
         
 
-        okhttp3.Call localVarCall = getUserRoleNextsCall(getUserRoleNextsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUserRoleNextsCall(getUserRoleNextsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -440,7 +419,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param getUserRoleNextsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;UserRoleNext&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -450,8 +428,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<UserRoleNext> getUserRoleNexts(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<UserRoleNext>> localVarResp = getUserRoleNextsWithHttpInfo(getUserRoleNextsRequestBody, contentLanguage);
+    public List<UserRoleNext> getUserRoleNexts(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody) throws ApiException {
+        ApiResponse<List<UserRoleNext>> localVarResp = getUserRoleNextsWithHttpInfo(getUserRoleNextsRequestBody);
         return localVarResp.getData();
     }
 
@@ -459,7 +437,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param getUserRoleNextsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;UserRoleNext&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -469,8 +446,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UserRoleNext>> getUserRoleNextsWithHttpInfo(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getUserRoleNextsValidateBeforeCall(getUserRoleNextsRequestBody, contentLanguage, null);
+    public ApiResponse<List<UserRoleNext>> getUserRoleNextsWithHttpInfo(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getUserRoleNextsValidateBeforeCall(getUserRoleNextsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<UserRoleNext>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -479,7 +456,6 @@ public class UserRoleNextApi {
      *  (asynchronously)
      * 
      * @param getUserRoleNextsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -490,9 +466,9 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUserRoleNextsAsync(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, String contentLanguage, final ApiCallback<List<UserRoleNext>> _callback) throws ApiException {
+    public okhttp3.Call getUserRoleNextsAsync(GetUserRoleNextsRequestBody getUserRoleNextsRequestBody, final ApiCallback<List<UserRoleNext>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUserRoleNextsValidateBeforeCall(getUserRoleNextsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUserRoleNextsValidateBeforeCall(getUserRoleNextsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<UserRoleNext>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -500,7 +476,6 @@ public class UserRoleNextApi {
     /**
      * Build call for getUserRoleNextsConnection
      * @param getUserRoleNextsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -511,7 +486,7 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUserRoleNextsConnectionCall(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUserRoleNextsConnectionCall(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -537,10 +512,6 @@ public class UserRoleNextApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -553,7 +524,7 @@ public class UserRoleNextApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -562,7 +533,7 @@ public class UserRoleNextApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUserRoleNextsConnectionValidateBeforeCall(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getUserRoleNextsConnectionValidateBeforeCall(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUserRoleNextsConnectionRequestBody' is set
         if (getUserRoleNextsConnectionRequestBody == null) {
@@ -570,7 +541,7 @@ public class UserRoleNextApi {
         }
         
 
-        okhttp3.Call localVarCall = getUserRoleNextsConnectionCall(getUserRoleNextsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUserRoleNextsConnectionCall(getUserRoleNextsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -579,7 +550,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param getUserRoleNextsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return UserRoleNextConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -589,8 +559,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public UserRoleNextConnection getUserRoleNextsConnection(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<UserRoleNextConnection> localVarResp = getUserRoleNextsConnectionWithHttpInfo(getUserRoleNextsConnectionRequestBody, contentLanguage);
+    public UserRoleNextConnection getUserRoleNextsConnection(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody) throws ApiException {
+        ApiResponse<UserRoleNextConnection> localVarResp = getUserRoleNextsConnectionWithHttpInfo(getUserRoleNextsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -598,7 +568,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param getUserRoleNextsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;UserRoleNextConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,8 +577,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UserRoleNextConnection> getUserRoleNextsConnectionWithHttpInfo(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getUserRoleNextsConnectionValidateBeforeCall(getUserRoleNextsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<UserRoleNextConnection> getUserRoleNextsConnectionWithHttpInfo(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getUserRoleNextsConnectionValidateBeforeCall(getUserRoleNextsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<UserRoleNextConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -618,7 +587,6 @@ public class UserRoleNextApi {
      *  (asynchronously)
      * 
      * @param getUserRoleNextsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -629,9 +597,9 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUserRoleNextsConnectionAsync(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, String contentLanguage, final ApiCallback<UserRoleNextConnection> _callback) throws ApiException {
+    public okhttp3.Call getUserRoleNextsConnectionAsync(GetUserRoleNextsConnectionRequestBody getUserRoleNextsConnectionRequestBody, final ApiCallback<UserRoleNextConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUserRoleNextsConnectionValidateBeforeCall(getUserRoleNextsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUserRoleNextsConnectionValidateBeforeCall(getUserRoleNextsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<UserRoleNextConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -639,7 +607,6 @@ public class UserRoleNextApi {
     /**
      * Build call for updateRole
      * @param roleUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -650,7 +617,7 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateRoleCall(RoleUpdationParams roleUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateRoleCall(RoleUpdationParams roleUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -676,10 +643,6 @@ public class UserRoleNextApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -692,7 +655,7 @@ public class UserRoleNextApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -701,7 +664,7 @@ public class UserRoleNextApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateRoleValidateBeforeCall(RoleUpdationParams roleUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateRoleValidateBeforeCall(RoleUpdationParams roleUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'roleUpdationParams' is set
         if (roleUpdationParams == null) {
@@ -709,7 +672,7 @@ public class UserRoleNextApi {
         }
         
 
-        okhttp3.Call localVarCall = updateRoleCall(roleUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateRoleCall(roleUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -718,7 +681,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param roleUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskUserRoleNext&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -728,8 +690,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskUserRoleNext> updateRole(RoleUpdationParams roleUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskUserRoleNext>> localVarResp = updateRoleWithHttpInfo(roleUpdationParams, contentLanguage);
+    public List<WithTaskUserRoleNext> updateRole(RoleUpdationParams roleUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskUserRoleNext>> localVarResp = updateRoleWithHttpInfo(roleUpdationParams);
         return localVarResp.getData();
     }
 
@@ -737,7 +699,6 @@ public class UserRoleNextApi {
      * 
      * 
      * @param roleUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskUserRoleNext&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -747,8 +708,8 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskUserRoleNext>> updateRoleWithHttpInfo(RoleUpdationParams roleUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateRoleValidateBeforeCall(roleUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskUserRoleNext>> updateRoleWithHttpInfo(RoleUpdationParams roleUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateRoleValidateBeforeCall(roleUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskUserRoleNext>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -757,7 +718,6 @@ public class UserRoleNextApi {
      *  (asynchronously)
      * 
      * @param roleUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -768,9 +728,9 @@ public class UserRoleNextApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateRoleAsync(RoleUpdationParams roleUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskUserRoleNext>> _callback) throws ApiException {
+    public okhttp3.Call updateRoleAsync(RoleUpdationParams roleUpdationParams, final ApiCallback<List<WithTaskUserRoleNext>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateRoleValidateBeforeCall(roleUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateRoleValidateBeforeCall(roleUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskUserRoleNext>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

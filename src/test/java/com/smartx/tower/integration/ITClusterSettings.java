@@ -44,7 +44,7 @@ public class ITClusterSettings extends ITBase {
       // parse params from json payload
       GetClusterSettingsesRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterSettingsesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<ClusterSettings> result = api.getClusterSettingses(params, contentLanguage);
+      List<ClusterSettings> result = api.getClusterSettingses(params);
       assertThat(result).as("check result of getClusterSettingses").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITClusterSettings extends ITBase {
       // parse params from json payload
       GetClusterSettingsesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetClusterSettingsesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      ClusterSettingsConnection result = api.getClusterSettingsesConnection(params, contentLanguage);
+      ClusterSettingsConnection result = api.getClusterSettingsesConnection(params);
       assertThat(result).as("check result of getClusterSettingsesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

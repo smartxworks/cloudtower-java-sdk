@@ -44,7 +44,7 @@ public class ITEveroutePackage extends ITBase {
       // parse params from json payload
       GetEveroutePackagesRequestBody params = gson.fromJson(payload, new TypeToken<GetEveroutePackagesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<EveroutePackage> result = api.getEveroutePackages(params, contentLanguage);
+      List<EveroutePackage> result = api.getEveroutePackages(params);
       assertThat(result).as("check result of getEveroutePackages").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITEveroutePackage extends ITBase {
       // parse params from json payload
       GetEveroutePackagesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetEveroutePackagesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      EveroutePackageConnection result = api.getEveroutePackagesConnection(params, contentLanguage);
+      EveroutePackageConnection result = api.getEveroutePackagesConnection(params);
       assertThat(result).as("check result of getEveroutePackagesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

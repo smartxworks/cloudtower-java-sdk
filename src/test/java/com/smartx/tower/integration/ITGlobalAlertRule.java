@@ -44,7 +44,7 @@ public class ITGlobalAlertRule extends ITBase {
       // parse params from json payload
       GetGlobalAlertRulesRequestBody params = gson.fromJson(payload, new TypeToken<GetGlobalAlertRulesRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<GlobalAlertRule> result = api.getGlobalAlertRules(params, contentLanguage);
+      List<GlobalAlertRule> result = api.getGlobalAlertRules(params);
       assertThat(result).as("check result of getGlobalAlertRules").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITGlobalAlertRule extends ITBase {
       // parse params from json payload
       GetGlobalAlertRulesConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetGlobalAlertRulesConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      GlobalAlertRuleConnection result = api.getGlobalAlertRulesConnection(params, contentLanguage);
+      GlobalAlertRuleConnection result = api.getGlobalAlertRulesConnection(params);
       assertThat(result).as("check result of getGlobalAlertRulesConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITGlobalAlertRule extends ITBase {
       // parse params from json payload
       CustomizeAlertRuleUpdationParams params = gson.fromJson(payload, new TypeToken<CustomizeAlertRuleUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskGlobalAlertRule> result = api.updateCustomizeAlertRule(params, contentLanguage);
+      List<WithTaskGlobalAlertRule> result = api.updateCustomizeAlertRule(params);
       assertThat(result).as("check result of updateCustomizeAlertRule").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -89,7 +89,7 @@ public class ITGlobalAlertRule extends ITBase {
       // parse params from json payload
       GlobalAlertRuleUpdationParams params = gson.fromJson(payload, new TypeToken<GlobalAlertRuleUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskGlobalAlertRule> result = api.updateGlobalAlertRule(params, contentLanguage);
+      List<WithTaskGlobalAlertRule> result = api.updateGlobalAlertRule(params);
       assertThat(result).as("check result of updateGlobalAlertRule").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

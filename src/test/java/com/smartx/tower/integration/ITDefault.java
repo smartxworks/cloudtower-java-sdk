@@ -44,7 +44,7 @@ public class ITDefault extends ITBase {
       // parse params from json payload
       List<NvmfSubsystemCreationParams> params = gson.fromJson(payload, new TypeToken<List<NvmfSubsystemCreationParams>>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNvmfSubsystem> result = api.createNvmfSubsystem(params, contentLanguage);
+      List<WithTaskNvmfSubsystem> result = api.createNvmfSubsystem(params);
       assertThat(result).as("check result of createNvmfSubsystem").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITDefault extends ITBase {
       // parse params from json payload
       NvmfSubsystemDeletionParams params = gson.fromJson(payload, new TypeToken<NvmfSubsystemDeletionParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskDeleteNvmfSubsystem> result = api.deleteNvmfSubsystem(params, contentLanguage);
+      List<WithTaskDeleteNvmfSubsystem> result = api.deleteNvmfSubsystem(params);
       assertThat(result).as("check result of deleteNvmfSubsystem").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -74,7 +74,7 @@ public class ITDefault extends ITBase {
       // parse params from json payload
       NvmfSubsystemUpdationParams params = gson.fromJson(payload, new TypeToken<NvmfSubsystemUpdationParams>() {}.getType());
       // do some modify to params(optional)
-      List<WithTaskNvmfSubsystem> result = api.updateNvmfSubsystem(params, contentLanguage);
+      List<WithTaskNvmfSubsystem> result = api.updateNvmfSubsystem(params);
       assertThat(result).as("check result of updateNvmfSubsystem").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

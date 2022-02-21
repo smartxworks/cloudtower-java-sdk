@@ -84,7 +84,6 @@ public class BrickTopoApi {
     /**
      * Build call for createBrickTopo
      * @param brickTopoCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -95,7 +94,7 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createBrickTopoCall(List<BrickTopoCreationParams> brickTopoCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createBrickTopoCall(List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -121,10 +120,6 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -137,7 +132,7 @@ public class BrickTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -146,7 +141,7 @@ public class BrickTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createBrickTopoValidateBeforeCall(List<BrickTopoCreationParams> brickTopoCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createBrickTopoValidateBeforeCall(List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'brickTopoCreationParams' is set
         if (brickTopoCreationParams == null) {
@@ -154,7 +149,7 @@ public class BrickTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = createBrickTopoCall(brickTopoCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createBrickTopoCall(brickTopoCreationParams, _callback);
         return localVarCall;
 
     }
@@ -163,7 +158,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskBrickTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -173,8 +167,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskBrickTopo> createBrickTopo(List<BrickTopoCreationParams> brickTopoCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskBrickTopo>> localVarResp = createBrickTopoWithHttpInfo(brickTopoCreationParams, contentLanguage);
+    public List<WithTaskBrickTopo> createBrickTopo(List<BrickTopoCreationParams> brickTopoCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskBrickTopo>> localVarResp = createBrickTopoWithHttpInfo(brickTopoCreationParams);
         return localVarResp.getData();
     }
 
@@ -182,7 +176,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskBrickTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -192,8 +185,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskBrickTopo>> createBrickTopoWithHttpInfo(List<BrickTopoCreationParams> brickTopoCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createBrickTopoValidateBeforeCall(brickTopoCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskBrickTopo>> createBrickTopoWithHttpInfo(List<BrickTopoCreationParams> brickTopoCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createBrickTopoValidateBeforeCall(brickTopoCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -202,7 +195,6 @@ public class BrickTopoApi {
      *  (asynchronously)
      * 
      * @param brickTopoCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -213,9 +205,9 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createBrickTopoAsync(List<BrickTopoCreationParams> brickTopoCreationParams, String contentLanguage, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call createBrickTopoAsync(List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createBrickTopoValidateBeforeCall(brickTopoCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createBrickTopoValidateBeforeCall(brickTopoCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -223,7 +215,6 @@ public class BrickTopoApi {
     /**
      * Build call for deleteBrickTopo
      * @param brickTopoDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -234,7 +225,7 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteBrickTopoCall(BrickTopoDeletionParams brickTopoDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteBrickTopoCall(BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -260,10 +251,6 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -276,7 +263,7 @@ public class BrickTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -285,7 +272,7 @@ public class BrickTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteBrickTopoValidateBeforeCall(BrickTopoDeletionParams brickTopoDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteBrickTopoValidateBeforeCall(BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'brickTopoDeletionParams' is set
         if (brickTopoDeletionParams == null) {
@@ -293,7 +280,7 @@ public class BrickTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteBrickTopoCall(brickTopoDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteBrickTopoCall(brickTopoDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -302,7 +289,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteBrickTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -312,8 +298,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteBrickTopo> deleteBrickTopo(BrickTopoDeletionParams brickTopoDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteBrickTopo>> localVarResp = deleteBrickTopoWithHttpInfo(brickTopoDeletionParams, contentLanguage);
+    public List<WithTaskDeleteBrickTopo> deleteBrickTopo(BrickTopoDeletionParams brickTopoDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteBrickTopo>> localVarResp = deleteBrickTopoWithHttpInfo(brickTopoDeletionParams);
         return localVarResp.getData();
     }
 
@@ -321,7 +307,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteBrickTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -331,8 +316,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteBrickTopo>> deleteBrickTopoWithHttpInfo(BrickTopoDeletionParams brickTopoDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteBrickTopo>> deleteBrickTopoWithHttpInfo(BrickTopoDeletionParams brickTopoDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteBrickTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -341,7 +326,6 @@ public class BrickTopoApi {
      *  (asynchronously)
      * 
      * @param brickTopoDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -352,9 +336,9 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteBrickTopoAsync(BrickTopoDeletionParams brickTopoDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call deleteBrickTopoAsync(BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback<List<WithTaskDeleteBrickTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteBrickTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -362,7 +346,6 @@ public class BrickTopoApi {
     /**
      * Build call for getBrickTopoes
      * @param getBrickTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -373,7 +356,7 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBrickTopoesCall(GetBrickTopoesRequestBody getBrickTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesCall(GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -399,10 +382,6 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -415,7 +394,7 @@ public class BrickTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -424,7 +403,7 @@ public class BrickTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBrickTopoesValidateBeforeCall(GetBrickTopoesRequestBody getBrickTopoesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBrickTopoesValidateBeforeCall(GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBrickTopoesRequestBody' is set
         if (getBrickTopoesRequestBody == null) {
@@ -432,7 +411,7 @@ public class BrickTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getBrickTopoesCall(getBrickTopoesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBrickTopoesCall(getBrickTopoesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -441,7 +420,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param getBrickTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;BrickTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -451,8 +429,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<BrickTopo> getBrickTopoes(GetBrickTopoesRequestBody getBrickTopoesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<BrickTopo>> localVarResp = getBrickTopoesWithHttpInfo(getBrickTopoesRequestBody, contentLanguage);
+    public List<BrickTopo> getBrickTopoes(GetBrickTopoesRequestBody getBrickTopoesRequestBody) throws ApiException {
+        ApiResponse<List<BrickTopo>> localVarResp = getBrickTopoesWithHttpInfo(getBrickTopoesRequestBody);
         return localVarResp.getData();
     }
 
@@ -460,7 +438,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param getBrickTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;BrickTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -470,8 +447,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<BrickTopo>> getBrickTopoesWithHttpInfo(GetBrickTopoesRequestBody getBrickTopoesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, contentLanguage, null);
+    public ApiResponse<List<BrickTopo>> getBrickTopoesWithHttpInfo(GetBrickTopoesRequestBody getBrickTopoesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<BrickTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -480,7 +457,6 @@ public class BrickTopoApi {
      *  (asynchronously)
      * 
      * @param getBrickTopoesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -491,9 +467,9 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBrickTopoesAsync(GetBrickTopoesRequestBody getBrickTopoesRequestBody, String contentLanguage, final ApiCallback<List<BrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesAsync(GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback<List<BrickTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<BrickTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -501,7 +477,6 @@ public class BrickTopoApi {
     /**
      * Build call for getBrickTopoesConnection
      * @param getBrickTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -512,7 +487,7 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBrickTopoesConnectionCall(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesConnectionCall(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -538,10 +513,6 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -554,7 +525,7 @@ public class BrickTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -563,7 +534,7 @@ public class BrickTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBrickTopoesConnectionValidateBeforeCall(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBrickTopoesConnectionValidateBeforeCall(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getBrickTopoesConnectionRequestBody' is set
         if (getBrickTopoesConnectionRequestBody == null) {
@@ -571,7 +542,7 @@ public class BrickTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = getBrickTopoesConnectionCall(getBrickTopoesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBrickTopoesConnectionCall(getBrickTopoesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -580,7 +551,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param getBrickTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return BrickTopoConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -590,8 +560,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public BrickTopoConnection getBrickTopoesConnection(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<BrickTopoConnection> localVarResp = getBrickTopoesConnectionWithHttpInfo(getBrickTopoesConnectionRequestBody, contentLanguage);
+    public BrickTopoConnection getBrickTopoesConnection(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody) throws ApiException {
+        ApiResponse<BrickTopoConnection> localVarResp = getBrickTopoesConnectionWithHttpInfo(getBrickTopoesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -599,7 +569,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param getBrickTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;BrickTopoConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -609,8 +578,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BrickTopoConnection> getBrickTopoesConnectionWithHttpInfo(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getBrickTopoesConnectionValidateBeforeCall(getBrickTopoesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<BrickTopoConnection> getBrickTopoesConnectionWithHttpInfo(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getBrickTopoesConnectionValidateBeforeCall(getBrickTopoesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<BrickTopoConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -619,7 +588,6 @@ public class BrickTopoApi {
      *  (asynchronously)
      * 
      * @param getBrickTopoesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -630,9 +598,9 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBrickTopoesConnectionAsync(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, String contentLanguage, final ApiCallback<BrickTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesConnectionAsync(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, final ApiCallback<BrickTopoConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getBrickTopoesConnectionValidateBeforeCall(getBrickTopoesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getBrickTopoesConnectionValidateBeforeCall(getBrickTopoesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<BrickTopoConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -640,7 +608,6 @@ public class BrickTopoApi {
     /**
      * Build call for moveBrickTopo
      * @param brickTopoMoveParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -651,7 +618,7 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call moveBrickTopoCall(BrickTopoMoveParams brickTopoMoveParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call moveBrickTopoCall(BrickTopoMoveParams brickTopoMoveParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -677,10 +644,6 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -693,7 +656,7 @@ public class BrickTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -702,7 +665,7 @@ public class BrickTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call moveBrickTopoValidateBeforeCall(BrickTopoMoveParams brickTopoMoveParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call moveBrickTopoValidateBeforeCall(BrickTopoMoveParams brickTopoMoveParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'brickTopoMoveParams' is set
         if (brickTopoMoveParams == null) {
@@ -710,7 +673,7 @@ public class BrickTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = moveBrickTopoCall(brickTopoMoveParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = moveBrickTopoCall(brickTopoMoveParams, _callback);
         return localVarCall;
 
     }
@@ -719,7 +682,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoMoveParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskBrickTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -729,8 +691,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskBrickTopo> moveBrickTopo(BrickTopoMoveParams brickTopoMoveParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskBrickTopo>> localVarResp = moveBrickTopoWithHttpInfo(brickTopoMoveParams, contentLanguage);
+    public List<WithTaskBrickTopo> moveBrickTopo(BrickTopoMoveParams brickTopoMoveParams) throws ApiException {
+        ApiResponse<List<WithTaskBrickTopo>> localVarResp = moveBrickTopoWithHttpInfo(brickTopoMoveParams);
         return localVarResp.getData();
     }
 
@@ -738,7 +700,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoMoveParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskBrickTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -748,8 +709,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskBrickTopo>> moveBrickTopoWithHttpInfo(BrickTopoMoveParams brickTopoMoveParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = moveBrickTopoValidateBeforeCall(brickTopoMoveParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskBrickTopo>> moveBrickTopoWithHttpInfo(BrickTopoMoveParams brickTopoMoveParams) throws ApiException {
+        okhttp3.Call localVarCall = moveBrickTopoValidateBeforeCall(brickTopoMoveParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -758,7 +719,6 @@ public class BrickTopoApi {
      *  (asynchronously)
      * 
      * @param brickTopoMoveParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -769,9 +729,9 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call moveBrickTopoAsync(BrickTopoMoveParams brickTopoMoveParams, String contentLanguage, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call moveBrickTopoAsync(BrickTopoMoveParams brickTopoMoveParams, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = moveBrickTopoValidateBeforeCall(brickTopoMoveParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = moveBrickTopoValidateBeforeCall(brickTopoMoveParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -779,7 +739,6 @@ public class BrickTopoApi {
     /**
      * Build call for updateBrickTopo
      * @param brickTopoUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -790,7 +749,7 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateBrickTopoCall(BrickTopoUpdationParams brickTopoUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateBrickTopoCall(BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -816,10 +775,6 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -832,7 +787,7 @@ public class BrickTopoApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -841,7 +796,7 @@ public class BrickTopoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateBrickTopoValidateBeforeCall(BrickTopoUpdationParams brickTopoUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateBrickTopoValidateBeforeCall(BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'brickTopoUpdationParams' is set
         if (brickTopoUpdationParams == null) {
@@ -849,7 +804,7 @@ public class BrickTopoApi {
         }
         
 
-        okhttp3.Call localVarCall = updateBrickTopoCall(brickTopoUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateBrickTopoCall(brickTopoUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -858,7 +813,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskBrickTopo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -868,8 +822,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskBrickTopo> updateBrickTopo(BrickTopoUpdationParams brickTopoUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskBrickTopo>> localVarResp = updateBrickTopoWithHttpInfo(brickTopoUpdationParams, contentLanguage);
+    public List<WithTaskBrickTopo> updateBrickTopo(BrickTopoUpdationParams brickTopoUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskBrickTopo>> localVarResp = updateBrickTopoWithHttpInfo(brickTopoUpdationParams);
         return localVarResp.getData();
     }
 
@@ -877,7 +831,6 @@ public class BrickTopoApi {
      * 
      * 
      * @param brickTopoUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskBrickTopo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -887,8 +840,8 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskBrickTopo>> updateBrickTopoWithHttpInfo(BrickTopoUpdationParams brickTopoUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskBrickTopo>> updateBrickTopoWithHttpInfo(BrickTopoUpdationParams brickTopoUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -897,7 +850,6 @@ public class BrickTopoApi {
      *  (asynchronously)
      * 
      * @param brickTopoUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -908,9 +860,9 @@ public class BrickTopoApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateBrickTopoAsync(BrickTopoUpdationParams brickTopoUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call updateBrickTopoAsync(BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

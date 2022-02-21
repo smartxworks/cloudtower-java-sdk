@@ -78,7 +78,6 @@ public class VcenterAccountApi {
     /**
      * Build call for getVcenterAccounts
      * @param getVcenterAccountsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVcenterAccountsCall(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVcenterAccountsCall(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class VcenterAccountApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class VcenterAccountApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class VcenterAccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVcenterAccountsValidateBeforeCall(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVcenterAccountsValidateBeforeCall(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVcenterAccountsRequestBody' is set
         if (getVcenterAccountsRequestBody == null) {
@@ -148,7 +143,7 @@ public class VcenterAccountApi {
         }
         
 
-        okhttp3.Call localVarCall = getVcenterAccountsCall(getVcenterAccountsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVcenterAccountsCall(getVcenterAccountsRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class VcenterAccountApi {
      * 
      * 
      * @param getVcenterAccountsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;VcenterAccount&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<VcenterAccount> getVcenterAccounts(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<VcenterAccount>> localVarResp = getVcenterAccountsWithHttpInfo(getVcenterAccountsRequestBody, contentLanguage);
+    public List<VcenterAccount> getVcenterAccounts(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody) throws ApiException {
+        ApiResponse<List<VcenterAccount>> localVarResp = getVcenterAccountsWithHttpInfo(getVcenterAccountsRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class VcenterAccountApi {
      * 
      * 
      * @param getVcenterAccountsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;VcenterAccount&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VcenterAccount>> getVcenterAccountsWithHttpInfo(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVcenterAccountsValidateBeforeCall(getVcenterAccountsRequestBody, contentLanguage, null);
+    public ApiResponse<List<VcenterAccount>> getVcenterAccountsWithHttpInfo(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVcenterAccountsValidateBeforeCall(getVcenterAccountsRequestBody, null);
         Type localVarReturnType = new TypeToken<List<VcenterAccount>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class VcenterAccountApi {
      *  (asynchronously)
      * 
      * @param getVcenterAccountsRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVcenterAccountsAsync(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, String contentLanguage, final ApiCallback<List<VcenterAccount>> _callback) throws ApiException {
+    public okhttp3.Call getVcenterAccountsAsync(GetVcenterAccountsRequestBody getVcenterAccountsRequestBody, final ApiCallback<List<VcenterAccount>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVcenterAccountsValidateBeforeCall(getVcenterAccountsRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVcenterAccountsValidateBeforeCall(getVcenterAccountsRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<VcenterAccount>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class VcenterAccountApi {
     /**
      * Build call for getVcenterAccountsConnection
      * @param getVcenterAccountsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVcenterAccountsConnectionCall(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVcenterAccountsConnectionCall(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class VcenterAccountApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class VcenterAccountApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class VcenterAccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVcenterAccountsConnectionValidateBeforeCall(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVcenterAccountsConnectionValidateBeforeCall(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getVcenterAccountsConnectionRequestBody' is set
         if (getVcenterAccountsConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class VcenterAccountApi {
         }
         
 
-        okhttp3.Call localVarCall = getVcenterAccountsConnectionCall(getVcenterAccountsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVcenterAccountsConnectionCall(getVcenterAccountsConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class VcenterAccountApi {
      * 
      * 
      * @param getVcenterAccountsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return VcenterAccountConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public VcenterAccountConnection getVcenterAccountsConnection(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<VcenterAccountConnection> localVarResp = getVcenterAccountsConnectionWithHttpInfo(getVcenterAccountsConnectionRequestBody, contentLanguage);
+    public VcenterAccountConnection getVcenterAccountsConnection(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody) throws ApiException {
+        ApiResponse<VcenterAccountConnection> localVarResp = getVcenterAccountsConnectionWithHttpInfo(getVcenterAccountsConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class VcenterAccountApi {
      * 
      * 
      * @param getVcenterAccountsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;VcenterAccountConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<VcenterAccountConnection> getVcenterAccountsConnectionWithHttpInfo(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getVcenterAccountsConnectionValidateBeforeCall(getVcenterAccountsConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<VcenterAccountConnection> getVcenterAccountsConnectionWithHttpInfo(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVcenterAccountsConnectionValidateBeforeCall(getVcenterAccountsConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<VcenterAccountConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class VcenterAccountApi {
      *  (asynchronously)
      * 
      * @param getVcenterAccountsConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class VcenterAccountApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getVcenterAccountsConnectionAsync(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, String contentLanguage, final ApiCallback<VcenterAccountConnection> _callback) throws ApiException {
+    public okhttp3.Call getVcenterAccountsConnectionAsync(GetVcenterAccountsConnectionRequestBody getVcenterAccountsConnectionRequestBody, final ApiCallback<VcenterAccountConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getVcenterAccountsConnectionValidateBeforeCall(getVcenterAccountsConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getVcenterAccountsConnectionValidateBeforeCall(getVcenterAccountsConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VcenterAccountConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

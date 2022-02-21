@@ -78,7 +78,6 @@ public class EverouteLicenseApi {
     /**
      * Build call for getEverouteLicenses
      * @param getEverouteLicensesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -89,7 +88,7 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteLicensesCall(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesCall(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -115,10 +114,6 @@ public class EverouteLicenseApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -131,7 +126,7 @@ public class EverouteLicenseApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -140,7 +135,7 @@ public class EverouteLicenseApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEverouteLicensesValidateBeforeCall(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEverouteLicensesValidateBeforeCall(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEverouteLicensesRequestBody' is set
         if (getEverouteLicensesRequestBody == null) {
@@ -148,7 +143,7 @@ public class EverouteLicenseApi {
         }
         
 
-        okhttp3.Call localVarCall = getEverouteLicensesCall(getEverouteLicensesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getEverouteLicensesCall(getEverouteLicensesRequestBody, _callback);
         return localVarCall;
 
     }
@@ -157,7 +152,6 @@ public class EverouteLicenseApi {
      * 
      * 
      * @param getEverouteLicensesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;EverouteLicense&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -167,8 +161,8 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<EverouteLicense> getEverouteLicenses(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<EverouteLicense>> localVarResp = getEverouteLicensesWithHttpInfo(getEverouteLicensesRequestBody, contentLanguage);
+    public List<EverouteLicense> getEverouteLicenses(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody) throws ApiException {
+        ApiResponse<List<EverouteLicense>> localVarResp = getEverouteLicensesWithHttpInfo(getEverouteLicensesRequestBody);
         return localVarResp.getData();
     }
 
@@ -176,7 +170,6 @@ public class EverouteLicenseApi {
      * 
      * 
      * @param getEverouteLicensesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;EverouteLicense&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +179,8 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<EverouteLicense>> getEverouteLicensesWithHttpInfo(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, contentLanguage, null);
+    public ApiResponse<List<EverouteLicense>> getEverouteLicensesWithHttpInfo(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, null);
         Type localVarReturnType = new TypeToken<List<EverouteLicense>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -196,7 +189,6 @@ public class EverouteLicenseApi {
      *  (asynchronously)
      * 
      * @param getEverouteLicensesRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +199,9 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteLicensesAsync(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, String contentLanguage, final ApiCallback<List<EverouteLicense>> _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesAsync(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, final ApiCallback<List<EverouteLicense>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<EverouteLicense>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -217,7 +209,6 @@ public class EverouteLicenseApi {
     /**
      * Build call for getEverouteLicensesConnection
      * @param getEverouteLicensesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +219,7 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteLicensesConnectionCall(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesConnectionCall(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +245,6 @@ public class EverouteLicenseApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +257,7 @@ public class EverouteLicenseApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +266,7 @@ public class EverouteLicenseApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEverouteLicensesConnectionValidateBeforeCall(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEverouteLicensesConnectionValidateBeforeCall(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getEverouteLicensesConnectionRequestBody' is set
         if (getEverouteLicensesConnectionRequestBody == null) {
@@ -287,7 +274,7 @@ public class EverouteLicenseApi {
         }
         
 
-        okhttp3.Call localVarCall = getEverouteLicensesConnectionCall(getEverouteLicensesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getEverouteLicensesConnectionCall(getEverouteLicensesConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -296,7 +283,6 @@ public class EverouteLicenseApi {
      * 
      * 
      * @param getEverouteLicensesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return EverouteLicenseConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +292,8 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public EverouteLicenseConnection getEverouteLicensesConnection(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<EverouteLicenseConnection> localVarResp = getEverouteLicensesConnectionWithHttpInfo(getEverouteLicensesConnectionRequestBody, contentLanguage);
+    public EverouteLicenseConnection getEverouteLicensesConnection(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody) throws ApiException {
+        ApiResponse<EverouteLicenseConnection> localVarResp = getEverouteLicensesConnectionWithHttpInfo(getEverouteLicensesConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -315,7 +301,6 @@ public class EverouteLicenseApi {
      * 
      * 
      * @param getEverouteLicensesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;EverouteLicenseConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +310,8 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EverouteLicenseConnection> getEverouteLicensesConnectionWithHttpInfo(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getEverouteLicensesConnectionValidateBeforeCall(getEverouteLicensesConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<EverouteLicenseConnection> getEverouteLicensesConnectionWithHttpInfo(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getEverouteLicensesConnectionValidateBeforeCall(getEverouteLicensesConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<EverouteLicenseConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +320,6 @@ public class EverouteLicenseApi {
      *  (asynchronously)
      * 
      * @param getEverouteLicensesConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +330,9 @@ public class EverouteLicenseApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEverouteLicensesConnectionAsync(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, String contentLanguage, final ApiCallback<EverouteLicenseConnection> _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesConnectionAsync(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, final ApiCallback<EverouteLicenseConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEverouteLicensesConnectionValidateBeforeCall(getEverouteLicensesConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getEverouteLicensesConnectionValidateBeforeCall(getEverouteLicensesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<EverouteLicenseConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

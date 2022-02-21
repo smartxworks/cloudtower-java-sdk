@@ -85,7 +85,6 @@ public class UserApi {
     /**
      * Build call for createUser
      * @param userCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -96,7 +95,7 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createUserCall(List<UserCreationParams> userCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createUserCall(List<UserCreationParams> userCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -122,10 +121,6 @@ public class UserApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -138,7 +133,7 @@ public class UserApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -147,7 +142,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createUserValidateBeforeCall(List<UserCreationParams> userCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createUserValidateBeforeCall(List<UserCreationParams> userCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'userCreationParams' is set
         if (userCreationParams == null) {
@@ -155,7 +150,7 @@ public class UserApi {
         }
         
 
-        okhttp3.Call localVarCall = createUserCall(userCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createUserCall(userCreationParams, _callback);
         return localVarCall;
 
     }
@@ -164,7 +159,6 @@ public class UserApi {
      * 
      * 
      * @param userCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskUser&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -174,8 +168,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskUser> createUser(List<UserCreationParams> userCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskUser>> localVarResp = createUserWithHttpInfo(userCreationParams, contentLanguage);
+    public List<WithTaskUser> createUser(List<UserCreationParams> userCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskUser>> localVarResp = createUserWithHttpInfo(userCreationParams);
         return localVarResp.getData();
     }
 
@@ -183,7 +177,6 @@ public class UserApi {
      * 
      * 
      * @param userCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskUser&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -193,8 +186,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskUser>> createUserWithHttpInfo(List<UserCreationParams> userCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createUserValidateBeforeCall(userCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskUser>> createUserWithHttpInfo(List<UserCreationParams> userCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createUserValidateBeforeCall(userCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskUser>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -203,7 +196,6 @@ public class UserApi {
      *  (asynchronously)
      * 
      * @param userCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -214,9 +206,9 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createUserAsync(List<UserCreationParams> userCreationParams, String contentLanguage, final ApiCallback<List<WithTaskUser>> _callback) throws ApiException {
+    public okhttp3.Call createUserAsync(List<UserCreationParams> userCreationParams, final ApiCallback<List<WithTaskUser>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createUserValidateBeforeCall(userCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createUserValidateBeforeCall(userCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskUser>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -224,7 +216,6 @@ public class UserApi {
     /**
      * Build call for deleteUser
      * @param userDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -235,7 +226,7 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteUserCall(UserDeletionParams userDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteUserCall(UserDeletionParams userDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -261,10 +252,6 @@ public class UserApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -277,7 +264,7 @@ public class UserApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -286,7 +273,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteUserValidateBeforeCall(UserDeletionParams userDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteUserValidateBeforeCall(UserDeletionParams userDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'userDeletionParams' is set
         if (userDeletionParams == null) {
@@ -294,7 +281,7 @@ public class UserApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteUserCall(userDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteUserCall(userDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -303,7 +290,6 @@ public class UserApi {
      * 
      * 
      * @param userDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteUser&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -313,8 +299,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteUser> deleteUser(UserDeletionParams userDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteUser>> localVarResp = deleteUserWithHttpInfo(userDeletionParams, contentLanguage);
+    public List<WithTaskDeleteUser> deleteUser(UserDeletionParams userDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteUser>> localVarResp = deleteUserWithHttpInfo(userDeletionParams);
         return localVarResp.getData();
     }
 
@@ -322,7 +308,6 @@ public class UserApi {
      * 
      * 
      * @param userDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteUser&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -332,8 +317,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteUser>> deleteUserWithHttpInfo(UserDeletionParams userDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteUserValidateBeforeCall(userDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteUser>> deleteUserWithHttpInfo(UserDeletionParams userDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteUserValidateBeforeCall(userDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteUser>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -342,7 +327,6 @@ public class UserApi {
      *  (asynchronously)
      * 
      * @param userDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -353,9 +337,9 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteUserAsync(UserDeletionParams userDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteUser>> _callback) throws ApiException {
+    public okhttp3.Call deleteUserAsync(UserDeletionParams userDeletionParams, final ApiCallback<List<WithTaskDeleteUser>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteUserValidateBeforeCall(userDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteUserValidateBeforeCall(userDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteUser>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -363,7 +347,6 @@ public class UserApi {
     /**
      * Build call for getUsers
      * @param getUsersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -374,7 +357,7 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsersCall(GetUsersRequestBody getUsersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUsersCall(GetUsersRequestBody getUsersRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -400,10 +383,6 @@ public class UserApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -416,7 +395,7 @@ public class UserApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -425,7 +404,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUsersValidateBeforeCall(GetUsersRequestBody getUsersRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getUsersValidateBeforeCall(GetUsersRequestBody getUsersRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUsersRequestBody' is set
         if (getUsersRequestBody == null) {
@@ -433,7 +412,7 @@ public class UserApi {
         }
         
 
-        okhttp3.Call localVarCall = getUsersCall(getUsersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUsersCall(getUsersRequestBody, _callback);
         return localVarCall;
 
     }
@@ -442,7 +421,6 @@ public class UserApi {
      * 
      * 
      * @param getUsersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;User&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -452,8 +430,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<User> getUsers(GetUsersRequestBody getUsersRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<List<User>> localVarResp = getUsersWithHttpInfo(getUsersRequestBody, contentLanguage);
+    public List<User> getUsers(GetUsersRequestBody getUsersRequestBody) throws ApiException {
+        ApiResponse<List<User>> localVarResp = getUsersWithHttpInfo(getUsersRequestBody);
         return localVarResp.getData();
     }
 
@@ -461,7 +439,6 @@ public class UserApi {
      * 
      * 
      * @param getUsersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;User&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -471,8 +448,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<User>> getUsersWithHttpInfo(GetUsersRequestBody getUsersRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getUsersValidateBeforeCall(getUsersRequestBody, contentLanguage, null);
+    public ApiResponse<List<User>> getUsersWithHttpInfo(GetUsersRequestBody getUsersRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getUsersValidateBeforeCall(getUsersRequestBody, null);
         Type localVarReturnType = new TypeToken<List<User>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -481,7 +458,6 @@ public class UserApi {
      *  (asynchronously)
      * 
      * @param getUsersRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -492,9 +468,9 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsersAsync(GetUsersRequestBody getUsersRequestBody, String contentLanguage, final ApiCallback<List<User>> _callback) throws ApiException {
+    public okhttp3.Call getUsersAsync(GetUsersRequestBody getUsersRequestBody, final ApiCallback<List<User>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUsersValidateBeforeCall(getUsersRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUsersValidateBeforeCall(getUsersRequestBody, _callback);
         Type localVarReturnType = new TypeToken<List<User>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -502,7 +478,6 @@ public class UserApi {
     /**
      * Build call for getUsersConnection
      * @param getUsersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -513,7 +488,7 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsersConnectionCall(GetUsersConnectionRequestBody getUsersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getUsersConnectionCall(GetUsersConnectionRequestBody getUsersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -539,10 +514,6 @@ public class UserApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -555,7 +526,7 @@ public class UserApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -564,7 +535,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getUsersConnectionValidateBeforeCall(GetUsersConnectionRequestBody getUsersConnectionRequestBody, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getUsersConnectionValidateBeforeCall(GetUsersConnectionRequestBody getUsersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'getUsersConnectionRequestBody' is set
         if (getUsersConnectionRequestBody == null) {
@@ -572,7 +543,7 @@ public class UserApi {
         }
         
 
-        okhttp3.Call localVarCall = getUsersConnectionCall(getUsersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUsersConnectionCall(getUsersConnectionRequestBody, _callback);
         return localVarCall;
 
     }
@@ -581,7 +552,6 @@ public class UserApi {
      * 
      * 
      * @param getUsersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return UserConnection
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -591,8 +561,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public UserConnection getUsersConnection(GetUsersConnectionRequestBody getUsersConnectionRequestBody, String contentLanguage) throws ApiException {
-        ApiResponse<UserConnection> localVarResp = getUsersConnectionWithHttpInfo(getUsersConnectionRequestBody, contentLanguage);
+    public UserConnection getUsersConnection(GetUsersConnectionRequestBody getUsersConnectionRequestBody) throws ApiException {
+        ApiResponse<UserConnection> localVarResp = getUsersConnectionWithHttpInfo(getUsersConnectionRequestBody);
         return localVarResp.getData();
     }
 
@@ -600,7 +570,6 @@ public class UserApi {
      * 
      * 
      * @param getUsersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;UserConnection&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -610,8 +579,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UserConnection> getUsersConnectionWithHttpInfo(GetUsersConnectionRequestBody getUsersConnectionRequestBody, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = getUsersConnectionValidateBeforeCall(getUsersConnectionRequestBody, contentLanguage, null);
+    public ApiResponse<UserConnection> getUsersConnectionWithHttpInfo(GetUsersConnectionRequestBody getUsersConnectionRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getUsersConnectionValidateBeforeCall(getUsersConnectionRequestBody, null);
         Type localVarReturnType = new TypeToken<UserConnection>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -620,7 +589,6 @@ public class UserApi {
      *  (asynchronously)
      * 
      * @param getUsersConnectionRequestBody  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -631,9 +599,9 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUsersConnectionAsync(GetUsersConnectionRequestBody getUsersConnectionRequestBody, String contentLanguage, final ApiCallback<UserConnection> _callback) throws ApiException {
+    public okhttp3.Call getUsersConnectionAsync(GetUsersConnectionRequestBody getUsersConnectionRequestBody, final ApiCallback<UserConnection> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getUsersConnectionValidateBeforeCall(getUsersConnectionRequestBody, contentLanguage, _callback);
+        okhttp3.Call localVarCall = getUsersConnectionValidateBeforeCall(getUsersConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<UserConnection>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -641,7 +609,6 @@ public class UserApi {
     /**
      * Build call for login
      * @param loginInput  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -652,7 +619,7 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call loginCall(LoginInput loginInput, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call loginCall(LoginInput loginInput, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -678,10 +645,6 @@ public class UserApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -694,7 +657,7 @@ public class UserApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -703,7 +666,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call loginValidateBeforeCall(LoginInput loginInput, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call loginValidateBeforeCall(LoginInput loginInput, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'loginInput' is set
         if (loginInput == null) {
@@ -711,7 +674,7 @@ public class UserApi {
         }
         
 
-        okhttp3.Call localVarCall = loginCall(loginInput, contentLanguage, _callback);
+        okhttp3.Call localVarCall = loginCall(loginInput, _callback);
         return localVarCall;
 
     }
@@ -720,7 +683,6 @@ public class UserApi {
      * 
      * 
      * @param loginInput  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return WithTaskTokenString
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -730,8 +692,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public WithTaskTokenString login(LoginInput loginInput, String contentLanguage) throws ApiException {
-        ApiResponse<WithTaskTokenString> localVarResp = loginWithHttpInfo(loginInput, contentLanguage);
+    public WithTaskTokenString login(LoginInput loginInput) throws ApiException {
+        ApiResponse<WithTaskTokenString> localVarResp = loginWithHttpInfo(loginInput);
         return localVarResp.getData();
     }
 
@@ -739,7 +701,6 @@ public class UserApi {
      * 
      * 
      * @param loginInput  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;WithTaskTokenString&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -749,8 +710,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<WithTaskTokenString> loginWithHttpInfo(LoginInput loginInput, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = loginValidateBeforeCall(loginInput, contentLanguage, null);
+    public ApiResponse<WithTaskTokenString> loginWithHttpInfo(LoginInput loginInput) throws ApiException {
+        okhttp3.Call localVarCall = loginValidateBeforeCall(loginInput, null);
         Type localVarReturnType = new TypeToken<WithTaskTokenString>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -759,7 +720,6 @@ public class UserApi {
      *  (asynchronously)
      * 
      * @param loginInput  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -770,9 +730,9 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call loginAsync(LoginInput loginInput, String contentLanguage, final ApiCallback<WithTaskTokenString> _callback) throws ApiException {
+    public okhttp3.Call loginAsync(LoginInput loginInput, final ApiCallback<WithTaskTokenString> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = loginValidateBeforeCall(loginInput, contentLanguage, _callback);
+        okhttp3.Call localVarCall = loginValidateBeforeCall(loginInput, _callback);
         Type localVarReturnType = new TypeToken<WithTaskTokenString>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -780,7 +740,6 @@ public class UserApi {
     /**
      * Build call for updateUser
      * @param userUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -791,7 +750,7 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateUserCall(UserUpdationParams userUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateUserCall(UserUpdationParams userUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -817,10 +776,6 @@ public class UserApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -833,7 +788,7 @@ public class UserApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -842,7 +797,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateUserValidateBeforeCall(UserUpdationParams userUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateUserValidateBeforeCall(UserUpdationParams userUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'userUpdationParams' is set
         if (userUpdationParams == null) {
@@ -850,7 +805,7 @@ public class UserApi {
         }
         
 
-        okhttp3.Call localVarCall = updateUserCall(userUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateUserCall(userUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -859,7 +814,6 @@ public class UserApi {
      * 
      * 
      * @param userUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskUser&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -869,8 +823,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskUser> updateUser(UserUpdationParams userUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskUser>> localVarResp = updateUserWithHttpInfo(userUpdationParams, contentLanguage);
+    public List<WithTaskUser> updateUser(UserUpdationParams userUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskUser>> localVarResp = updateUserWithHttpInfo(userUpdationParams);
         return localVarResp.getData();
     }
 
@@ -878,7 +832,6 @@ public class UserApi {
      * 
      * 
      * @param userUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskUser&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -888,8 +841,8 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskUser>> updateUserWithHttpInfo(UserUpdationParams userUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateUserValidateBeforeCall(userUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskUser>> updateUserWithHttpInfo(UserUpdationParams userUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateUserValidateBeforeCall(userUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskUser>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -898,7 +851,6 @@ public class UserApi {
      *  (asynchronously)
      * 
      * @param userUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -909,9 +861,9 @@ public class UserApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateUserAsync(UserUpdationParams userUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskUser>> _callback) throws ApiException {
+    public okhttp3.Call updateUserAsync(UserUpdationParams userUpdationParams, final ApiCallback<List<WithTaskUser>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateUserValidateBeforeCall(userUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateUserValidateBeforeCall(userUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskUser>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

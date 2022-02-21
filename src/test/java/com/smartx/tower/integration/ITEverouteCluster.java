@@ -44,7 +44,7 @@ public class ITEverouteCluster extends ITBase {
       // parse params from json payload
       GetEverouteClustersRequestBody params = gson.fromJson(payload, new TypeToken<GetEverouteClustersRequestBody>() {}.getType());
       // do some modify to params(optional)
-      List<EverouteCluster> result = api.getEverouteClusters(params, contentLanguage);
+      List<EverouteCluster> result = api.getEverouteClusters(params);
       assertThat(result).as("check result of getEverouteClusters").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -59,7 +59,7 @@ public class ITEverouteCluster extends ITBase {
       // parse params from json payload
       GetEverouteClustersConnectionRequestBody params = gson.fromJson(payload, new TypeToken<GetEverouteClustersConnectionRequestBody>() {}.getType());
       // do some modify to params(optional)
-      EverouteClusterConnection result = api.getEverouteClustersConnection(params, contentLanguage);
+      EverouteClusterConnection result = api.getEverouteClustersConnection(params);
       assertThat(result).as("check result of getEverouteClustersConnection").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

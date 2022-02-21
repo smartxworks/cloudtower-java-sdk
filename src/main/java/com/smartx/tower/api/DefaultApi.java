@@ -134,7 +134,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -217,7 +217,6 @@ public class DefaultApi {
     /**
      * Build call for createNvmfSubsystem
      * @param nvmfSubsystemCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -228,7 +227,7 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNvmfSubsystemCall(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createNvmfSubsystemCall(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -254,10 +253,6 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -270,7 +265,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -279,7 +274,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createNvmfSubsystemValidateBeforeCall(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createNvmfSubsystemValidateBeforeCall(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfSubsystemCreationParams' is set
         if (nvmfSubsystemCreationParams == null) {
@@ -287,7 +282,7 @@ public class DefaultApi {
         }
         
 
-        okhttp3.Call localVarCall = createNvmfSubsystemCall(nvmfSubsystemCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createNvmfSubsystemCall(nvmfSubsystemCreationParams, _callback);
         return localVarCall;
 
     }
@@ -296,7 +291,6 @@ public class DefaultApi {
      * 
      * 
      * @param nvmfSubsystemCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNvmfSubsystem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,8 +300,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNvmfSubsystem> createNvmfSubsystem(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp = createNvmfSubsystemWithHttpInfo(nvmfSubsystemCreationParams, contentLanguage);
+    public List<WithTaskNvmfSubsystem> createNvmfSubsystem(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp = createNvmfSubsystemWithHttpInfo(nvmfSubsystemCreationParams);
         return localVarResp.getData();
     }
 
@@ -315,7 +309,6 @@ public class DefaultApi {
      * 
      * 
      * @param nvmfSubsystemCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfSubsystem&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +318,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNvmfSubsystem>> createNvmfSubsystemWithHttpInfo(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNvmfSubsystem>> createNvmfSubsystemWithHttpInfo(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams) throws ApiException {
+        okhttp3.Call localVarCall = createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -335,7 +328,6 @@ public class DefaultApi {
      *  (asynchronously)
      * 
      * @param nvmfSubsystemCreationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -346,9 +338,9 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createNvmfSubsystemAsync(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, String contentLanguage, final ApiCallback<List<WithTaskNvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call createNvmfSubsystemAsync(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, final ApiCallback<List<WithTaskNvmfSubsystem>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -404,7 +396,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -487,7 +479,6 @@ public class DefaultApi {
     /**
      * Build call for deleteNvmfSubsystem
      * @param nvmfSubsystemDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -498,7 +489,7 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNvmfSubsystemCall(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteNvmfSubsystemCall(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -524,10 +515,6 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -540,7 +527,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -549,7 +536,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteNvmfSubsystemValidateBeforeCall(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteNvmfSubsystemValidateBeforeCall(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfSubsystemDeletionParams' is set
         if (nvmfSubsystemDeletionParams == null) {
@@ -557,7 +544,7 @@ public class DefaultApi {
         }
         
 
-        okhttp3.Call localVarCall = deleteNvmfSubsystemCall(nvmfSubsystemDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteNvmfSubsystemCall(nvmfSubsystemDeletionParams, _callback);
         return localVarCall;
 
     }
@@ -566,7 +553,6 @@ public class DefaultApi {
      * 
      * 
      * @param nvmfSubsystemDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskDeleteNvmfSubsystem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -576,8 +562,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteNvmfSubsystem> deleteNvmfSubsystem(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskDeleteNvmfSubsystem>> localVarResp = deleteNvmfSubsystemWithHttpInfo(nvmfSubsystemDeletionParams, contentLanguage);
+    public List<WithTaskDeleteNvmfSubsystem> deleteNvmfSubsystem(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteNvmfSubsystem>> localVarResp = deleteNvmfSubsystemWithHttpInfo(nvmfSubsystemDeletionParams);
         return localVarResp.getData();
     }
 
@@ -585,7 +571,6 @@ public class DefaultApi {
      * 
      * 
      * @param nvmfSubsystemDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteNvmfSubsystem&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -595,8 +580,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteNvmfSubsystem>> deleteNvmfSubsystemWithHttpInfo(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskDeleteNvmfSubsystem>> deleteNvmfSubsystemWithHttpInfo(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfSubsystem>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -605,7 +590,6 @@ public class DefaultApi {
      *  (asynchronously)
      * 
      * @param nvmfSubsystemDeletionParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -616,9 +600,9 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteNvmfSubsystemAsync(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, String contentLanguage, final ApiCallback<List<WithTaskDeleteNvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call deleteNvmfSubsystemAsync(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback<List<WithTaskDeleteNvmfSubsystem>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfSubsystem>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -674,7 +658,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -805,7 +789,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -888,7 +872,6 @@ public class DefaultApi {
     /**
      * Build call for updateNvmfSubsystem
      * @param nvmfSubsystemUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -899,7 +882,7 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNvmfSubsystemCall(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNvmfSubsystemCall(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -925,10 +908,6 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (contentLanguage != null) {
-            localVarHeaderParams.put("content-language", localVarApiClient.parameterToString(contentLanguage));
-        }
-
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -941,7 +920,7 @@ public class DefaultApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -950,7 +929,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNvmfSubsystemValidateBeforeCall(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, String contentLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateNvmfSubsystemValidateBeforeCall(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'nvmfSubsystemUpdationParams' is set
         if (nvmfSubsystemUpdationParams == null) {
@@ -958,7 +937,7 @@ public class DefaultApi {
         }
         
 
-        okhttp3.Call localVarCall = updateNvmfSubsystemCall(nvmfSubsystemUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateNvmfSubsystemCall(nvmfSubsystemUpdationParams, _callback);
         return localVarCall;
 
     }
@@ -967,7 +946,6 @@ public class DefaultApi {
      * 
      * 
      * @param nvmfSubsystemUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return List&lt;WithTaskNvmfSubsystem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -977,8 +955,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public List<WithTaskNvmfSubsystem> updateNvmfSubsystem(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, String contentLanguage) throws ApiException {
-        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp = updateNvmfSubsystemWithHttpInfo(nvmfSubsystemUpdationParams, contentLanguage);
+    public List<WithTaskNvmfSubsystem> updateNvmfSubsystem(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp = updateNvmfSubsystemWithHttpInfo(nvmfSubsystemUpdationParams);
         return localVarResp.getData();
     }
 
@@ -986,7 +964,6 @@ public class DefaultApi {
      * 
      * 
      * @param nvmfSubsystemUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfSubsystem&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -996,8 +973,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskNvmfSubsystem>> updateNvmfSubsystemWithHttpInfo(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, String contentLanguage) throws ApiException {
-        okhttp3.Call localVarCall = updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, contentLanguage, null);
+    public ApiResponse<List<WithTaskNvmfSubsystem>> updateNvmfSubsystemWithHttpInfo(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall = updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1006,7 +983,6 @@ public class DefaultApi {
      *  (asynchronously)
      * 
      * @param nvmfSubsystemUpdationParams  (required)
-     * @param contentLanguage  (optional, default to en-US)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1017,9 +993,9 @@ public class DefaultApi {
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateNvmfSubsystemAsync(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, String contentLanguage, final ApiCallback<List<WithTaskNvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call updateNvmfSubsystemAsync(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback<List<WithTaskNvmfSubsystem>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, contentLanguage, _callback);
+        okhttp3.Call localVarCall = updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
