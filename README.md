@@ -232,10 +232,12 @@ List<Vm> vmCpuGtN = vmApi.getVms(body);
 VmApi vmApi = new VmApi(client);
 List<VmCreateVmFromTemplateParams> params = new ArrayList<VmCreateVmFromTemplateParams>(2);
 VmCreateVmFromTemplateParams param1 = new VmCreateVmFromTemplateParams()
+    .clusterId("clusterID")
     .templateId("templateId")
     .name("vm_name")
     .isFullCopy(false);
 VmCreateVmFromTemplateParams param2 = new VmCreateVmFromTemplateParams()
+    .clusterId("clusterID")
     .templateId("templateId")
     .name("vm_name2")
     .isFullCopy(false);
@@ -270,12 +272,10 @@ VmCreateVmFromTemplateParamsDiskOperate diskOperate = new VmCreateVmFromTemplate
         new VmDiskParams()
             .addMountCdRomsItem(
                 new VmCdRomParams()
-                    .index(0)
                     .boot(0)
                     .elfImageId("elf_image_id"))
             .addMountDisksItem(
                 new MountDisksParams()
-                    .index(1)
                     .boot(1)
                     .bus(Bus.VIRTIO)
                     .vmVolumeId("vm_volume_id_1"))
@@ -287,10 +287,10 @@ VmCreateVmFromTemplateParamsDiskOperate diskOperate = new VmCreateVmFromTemplate
                             .size((double) 4 * 1024 * 1024 * 1024)
                             .name("disk_name"))
                     .boot(3)
-                    .index(3)
                     .bus(Bus.VIRTIO)));
 VmCreateVmFromTemplateParams createParam = new VmCreateVmFromTemplateParams()
     .templateId("templateId")
+    .clusterId("clusterID")
     .name("vm_name")
     .isFullCopy(false)
     .diskOperate(diskOperate);
@@ -313,6 +313,7 @@ List<VmCreateVmFromTemplateParams> params = new ArrayList<VmCreateVmFromTemplate
 
 VmCreateVmFromTemplateParams createParam = new VmCreateVmFromTemplateParams()
     .templateId("templateId")
+    .clusterId("clusterID")
     .name("vm_name")
     .isFullCopy(false)
     .addVmNicsItem(
@@ -1267,7 +1268,7 @@ public BackupResult vmBackup(ApiClient client, String vmId, String snapshotName,
     lunSnapshots = iscsiLunSnapshotApi.getIscsiLunSnapshots(
         new GetIscsiLunSnapshotsRequestBody()
             .where(new IscsiLunSnapshotWhereInput()
-                .localIdIn(lunSnapshotIds)));
+                .nameIn(lunSnapshotIds)));
   }
   return new BackupResult(snapshot, lunSnapshots);
 }
