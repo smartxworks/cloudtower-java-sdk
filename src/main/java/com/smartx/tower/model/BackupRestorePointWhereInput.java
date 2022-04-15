@@ -326,35 +326,35 @@ public class BackupRestorePointWhereInput {
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE = "logical_size";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE)
-  private Double logicalSize;
+  private Long logicalSize;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_GT = "logical_size_gt";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_GT)
-  private Double logicalSizeGt;
+  private Long logicalSizeGt;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_GTE = "logical_size_gte";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_GTE)
-  private Double logicalSizeGte;
+  private Long logicalSizeGte;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_IN = "logical_size_in";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_IN)
-  private List<Double> logicalSizeIn = null;
+  private List<Long> logicalSizeIn = null;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_LT = "logical_size_lt";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_LT)
-  private Double logicalSizeLt;
+  private Long logicalSizeLt;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_LTE = "logical_size_lte";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_LTE)
-  private Double logicalSizeLte;
+  private Long logicalSizeLte;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_NOT = "logical_size_not";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_NOT)
-  private Double logicalSizeNot;
+  private Long logicalSizeNot;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_NOT_IN = "logical_size_not_in";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_NOT_IN)
-  private List<Double> logicalSizeNotIn = null;
+  private List<Long> logicalSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_N_O_T = "NOT";
   @SerializedName(SERIALIZED_NAME_N_O_T)
@@ -422,35 +422,35 @@ public class BackupRestorePointWhereInput {
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE = "physical_size";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE)
-  private Double physicalSize;
+  private Long physicalSize;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_GT = "physical_size_gt";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_GT)
-  private Double physicalSizeGt;
+  private Long physicalSizeGt;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_GTE = "physical_size_gte";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_GTE)
-  private Double physicalSizeGte;
+  private Long physicalSizeGte;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_IN = "physical_size_in";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_IN)
-  private List<Double> physicalSizeIn = null;
+  private List<Long> physicalSizeIn = null;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_LT = "physical_size_lt";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_LT)
-  private Double physicalSizeLt;
+  private Long physicalSizeLt;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_LTE = "physical_size_lte";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_LTE)
-  private Double physicalSizeLte;
+  private Long physicalSizeLte;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_NOT = "physical_size_not";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_NOT)
-  private Double physicalSizeNot;
+  private Long physicalSizeNot;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_NOT_IN = "physical_size_not_in";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_NOT_IN)
-  private List<Double> physicalSizeNotIn = null;
+  private List<Long> physicalSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_RESOURCE_VERSION_GT = "resource_version_gt";
   @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_GT)
@@ -482,35 +482,35 @@ public class BackupRestorePointWhereInput {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SIZE_GT = "size_gt";
   @SerializedName(SERIALIZED_NAME_SIZE_GT)
-  private Double sizeGt;
+  private Long sizeGt;
 
   public static final String SERIALIZED_NAME_SIZE_GTE = "size_gte";
   @SerializedName(SERIALIZED_NAME_SIZE_GTE)
-  private Double sizeGte;
+  private Long sizeGte;
 
   public static final String SERIALIZED_NAME_SIZE_IN = "size_in";
   @SerializedName(SERIALIZED_NAME_SIZE_IN)
-  private List<Double> sizeIn = null;
+  private List<Long> sizeIn = null;
 
   public static final String SERIALIZED_NAME_SIZE_LT = "size_lt";
   @SerializedName(SERIALIZED_NAME_SIZE_LT)
-  private Double sizeLt;
+  private Long sizeLt;
 
   public static final String SERIALIZED_NAME_SIZE_LTE = "size_lte";
   @SerializedName(SERIALIZED_NAME_SIZE_LTE)
-  private Double sizeLte;
+  private Long sizeLte;
 
   public static final String SERIALIZED_NAME_SIZE_NOT = "size_not";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT)
-  private Double sizeNot;
+  private Long sizeNot;
 
   public static final String SERIALIZED_NAME_SIZE_NOT_IN = "size_not_in";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
-  private List<Double> sizeNotIn = null;
+  private List<Long> sizeNotIn = null;
 
   public static final String SERIALIZED_NAME_SLICE = "slice";
   @SerializedName(SERIALIZED_NAME_SLICE)
@@ -586,67 +586,67 @@ public class BackupRestorePointWhereInput {
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY = "valid_capacity";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY)
-  private Double validCapacity;
+  private Long validCapacity;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_GT = "valid_capacity_gt";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_GT)
-  private Double validCapacityGt;
+  private Long validCapacityGt;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_GTE = "valid_capacity_gte";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_GTE)
-  private Double validCapacityGte;
+  private Long validCapacityGte;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_IN = "valid_capacity_in";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_IN)
-  private List<Double> validCapacityIn = null;
+  private List<Long> validCapacityIn = null;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_LT = "valid_capacity_lt";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_LT)
-  private Double validCapacityLt;
+  private Long validCapacityLt;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_LTE = "valid_capacity_lte";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_LTE)
-  private Double validCapacityLte;
+  private Long validCapacityLte;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_NOT = "valid_capacity_not";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_NOT)
-  private Double validCapacityNot;
+  private Long validCapacityNot;
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY_NOT_IN = "valid_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY_NOT_IN)
-  private List<Double> validCapacityNotIn = null;
+  private List<Long> validCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_VALID_SIZE = "valid_size";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE)
-  private Double validSize;
+  private Long validSize;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_GT = "valid_size_gt";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_GT)
-  private Double validSizeGt;
+  private Long validSizeGt;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_GTE = "valid_size_gte";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_GTE)
-  private Double validSizeGte;
+  private Long validSizeGte;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_IN = "valid_size_in";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_IN)
-  private List<Double> validSizeIn = null;
+  private List<Long> validSizeIn = null;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_LT = "valid_size_lt";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_LT)
-  private Double validSizeLt;
+  private Long validSizeLt;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_LTE = "valid_size_lte";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_LTE)
-  private Double validSizeLte;
+  private Long validSizeLte;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_NOT = "valid_size_not";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_NOT)
-  private Double validSizeNot;
+  private Long validSizeNot;
 
   public static final String SERIALIZED_NAME_VALID_SIZE_NOT_IN = "valid_size_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_NOT_IN)
-  private List<Double> validSizeNotIn = null;
+  private List<Long> validSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
@@ -2520,7 +2520,7 @@ public class BackupRestorePointWhereInput {
   }
 
 
-  public BackupRestorePointWhereInput logicalSize(Double logicalSize) {
+  public BackupRestorePointWhereInput logicalSize(Long logicalSize) {
     
     this.logicalSize = logicalSize;
     return this;
@@ -2533,17 +2533,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSize() {
+  public Long getLogicalSize() {
     return logicalSize;
   }
 
 
-  public void setLogicalSize(Double logicalSize) {
+  public void setLogicalSize(Long logicalSize) {
     this.logicalSize = logicalSize;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeGt(Double logicalSizeGt) {
+  public BackupRestorePointWhereInput logicalSizeGt(Long logicalSizeGt) {
     
     this.logicalSizeGt = logicalSizeGt;
     return this;
@@ -2556,17 +2556,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeGt() {
+  public Long getLogicalSizeGt() {
     return logicalSizeGt;
   }
 
 
-  public void setLogicalSizeGt(Double logicalSizeGt) {
+  public void setLogicalSizeGt(Long logicalSizeGt) {
     this.logicalSizeGt = logicalSizeGt;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeGte(Double logicalSizeGte) {
+  public BackupRestorePointWhereInput logicalSizeGte(Long logicalSizeGte) {
     
     this.logicalSizeGte = logicalSizeGte;
     return this;
@@ -2579,25 +2579,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeGte() {
+  public Long getLogicalSizeGte() {
     return logicalSizeGte;
   }
 
 
-  public void setLogicalSizeGte(Double logicalSizeGte) {
+  public void setLogicalSizeGte(Long logicalSizeGte) {
     this.logicalSizeGte = logicalSizeGte;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeIn(List<Double> logicalSizeIn) {
+  public BackupRestorePointWhereInput logicalSizeIn(List<Long> logicalSizeIn) {
     
     this.logicalSizeIn = logicalSizeIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addLogicalSizeInItem(Double logicalSizeInItem) {
+  public BackupRestorePointWhereInput addLogicalSizeInItem(Long logicalSizeInItem) {
     if (this.logicalSizeIn == null) {
-      this.logicalSizeIn = new ArrayList<Double>();
+      this.logicalSizeIn = new ArrayList<Long>();
     }
     this.logicalSizeIn.add(logicalSizeInItem);
     return this;
@@ -2610,17 +2610,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getLogicalSizeIn() {
+  public List<Long> getLogicalSizeIn() {
     return logicalSizeIn;
   }
 
 
-  public void setLogicalSizeIn(List<Double> logicalSizeIn) {
+  public void setLogicalSizeIn(List<Long> logicalSizeIn) {
     this.logicalSizeIn = logicalSizeIn;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeLt(Double logicalSizeLt) {
+  public BackupRestorePointWhereInput logicalSizeLt(Long logicalSizeLt) {
     
     this.logicalSizeLt = logicalSizeLt;
     return this;
@@ -2633,17 +2633,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeLt() {
+  public Long getLogicalSizeLt() {
     return logicalSizeLt;
   }
 
 
-  public void setLogicalSizeLt(Double logicalSizeLt) {
+  public void setLogicalSizeLt(Long logicalSizeLt) {
     this.logicalSizeLt = logicalSizeLt;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeLte(Double logicalSizeLte) {
+  public BackupRestorePointWhereInput logicalSizeLte(Long logicalSizeLte) {
     
     this.logicalSizeLte = logicalSizeLte;
     return this;
@@ -2656,17 +2656,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeLte() {
+  public Long getLogicalSizeLte() {
     return logicalSizeLte;
   }
 
 
-  public void setLogicalSizeLte(Double logicalSizeLte) {
+  public void setLogicalSizeLte(Long logicalSizeLte) {
     this.logicalSizeLte = logicalSizeLte;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeNot(Double logicalSizeNot) {
+  public BackupRestorePointWhereInput logicalSizeNot(Long logicalSizeNot) {
     
     this.logicalSizeNot = logicalSizeNot;
     return this;
@@ -2679,25 +2679,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeNot() {
+  public Long getLogicalSizeNot() {
     return logicalSizeNot;
   }
 
 
-  public void setLogicalSizeNot(Double logicalSizeNot) {
+  public void setLogicalSizeNot(Long logicalSizeNot) {
     this.logicalSizeNot = logicalSizeNot;
   }
 
 
-  public BackupRestorePointWhereInput logicalSizeNotIn(List<Double> logicalSizeNotIn) {
+  public BackupRestorePointWhereInput logicalSizeNotIn(List<Long> logicalSizeNotIn) {
     
     this.logicalSizeNotIn = logicalSizeNotIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addLogicalSizeNotInItem(Double logicalSizeNotInItem) {
+  public BackupRestorePointWhereInput addLogicalSizeNotInItem(Long logicalSizeNotInItem) {
     if (this.logicalSizeNotIn == null) {
-      this.logicalSizeNotIn = new ArrayList<Double>();
+      this.logicalSizeNotIn = new ArrayList<Long>();
     }
     this.logicalSizeNotIn.add(logicalSizeNotInItem);
     return this;
@@ -2710,12 +2710,12 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getLogicalSizeNotIn() {
+  public List<Long> getLogicalSizeNotIn() {
     return logicalSizeNotIn;
   }
 
 
-  public void setLogicalSizeNotIn(List<Double> logicalSizeNotIn) {
+  public void setLogicalSizeNotIn(List<Long> logicalSizeNotIn) {
     this.logicalSizeNotIn = logicalSizeNotIn;
   }
 
@@ -3120,7 +3120,7 @@ public class BackupRestorePointWhereInput {
   }
 
 
-  public BackupRestorePointWhereInput physicalSize(Double physicalSize) {
+  public BackupRestorePointWhereInput physicalSize(Long physicalSize) {
     
     this.physicalSize = physicalSize;
     return this;
@@ -3133,17 +3133,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSize() {
+  public Long getPhysicalSize() {
     return physicalSize;
   }
 
 
-  public void setPhysicalSize(Double physicalSize) {
+  public void setPhysicalSize(Long physicalSize) {
     this.physicalSize = physicalSize;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeGt(Double physicalSizeGt) {
+  public BackupRestorePointWhereInput physicalSizeGt(Long physicalSizeGt) {
     
     this.physicalSizeGt = physicalSizeGt;
     return this;
@@ -3156,17 +3156,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeGt() {
+  public Long getPhysicalSizeGt() {
     return physicalSizeGt;
   }
 
 
-  public void setPhysicalSizeGt(Double physicalSizeGt) {
+  public void setPhysicalSizeGt(Long physicalSizeGt) {
     this.physicalSizeGt = physicalSizeGt;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeGte(Double physicalSizeGte) {
+  public BackupRestorePointWhereInput physicalSizeGte(Long physicalSizeGte) {
     
     this.physicalSizeGte = physicalSizeGte;
     return this;
@@ -3179,25 +3179,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeGte() {
+  public Long getPhysicalSizeGte() {
     return physicalSizeGte;
   }
 
 
-  public void setPhysicalSizeGte(Double physicalSizeGte) {
+  public void setPhysicalSizeGte(Long physicalSizeGte) {
     this.physicalSizeGte = physicalSizeGte;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeIn(List<Double> physicalSizeIn) {
+  public BackupRestorePointWhereInput physicalSizeIn(List<Long> physicalSizeIn) {
     
     this.physicalSizeIn = physicalSizeIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addPhysicalSizeInItem(Double physicalSizeInItem) {
+  public BackupRestorePointWhereInput addPhysicalSizeInItem(Long physicalSizeInItem) {
     if (this.physicalSizeIn == null) {
-      this.physicalSizeIn = new ArrayList<Double>();
+      this.physicalSizeIn = new ArrayList<Long>();
     }
     this.physicalSizeIn.add(physicalSizeInItem);
     return this;
@@ -3210,17 +3210,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPhysicalSizeIn() {
+  public List<Long> getPhysicalSizeIn() {
     return physicalSizeIn;
   }
 
 
-  public void setPhysicalSizeIn(List<Double> physicalSizeIn) {
+  public void setPhysicalSizeIn(List<Long> physicalSizeIn) {
     this.physicalSizeIn = physicalSizeIn;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeLt(Double physicalSizeLt) {
+  public BackupRestorePointWhereInput physicalSizeLt(Long physicalSizeLt) {
     
     this.physicalSizeLt = physicalSizeLt;
     return this;
@@ -3233,17 +3233,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeLt() {
+  public Long getPhysicalSizeLt() {
     return physicalSizeLt;
   }
 
 
-  public void setPhysicalSizeLt(Double physicalSizeLt) {
+  public void setPhysicalSizeLt(Long physicalSizeLt) {
     this.physicalSizeLt = physicalSizeLt;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeLte(Double physicalSizeLte) {
+  public BackupRestorePointWhereInput physicalSizeLte(Long physicalSizeLte) {
     
     this.physicalSizeLte = physicalSizeLte;
     return this;
@@ -3256,17 +3256,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeLte() {
+  public Long getPhysicalSizeLte() {
     return physicalSizeLte;
   }
 
 
-  public void setPhysicalSizeLte(Double physicalSizeLte) {
+  public void setPhysicalSizeLte(Long physicalSizeLte) {
     this.physicalSizeLte = physicalSizeLte;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeNot(Double physicalSizeNot) {
+  public BackupRestorePointWhereInput physicalSizeNot(Long physicalSizeNot) {
     
     this.physicalSizeNot = physicalSizeNot;
     return this;
@@ -3279,25 +3279,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeNot() {
+  public Long getPhysicalSizeNot() {
     return physicalSizeNot;
   }
 
 
-  public void setPhysicalSizeNot(Double physicalSizeNot) {
+  public void setPhysicalSizeNot(Long physicalSizeNot) {
     this.physicalSizeNot = physicalSizeNot;
   }
 
 
-  public BackupRestorePointWhereInput physicalSizeNotIn(List<Double> physicalSizeNotIn) {
+  public BackupRestorePointWhereInput physicalSizeNotIn(List<Long> physicalSizeNotIn) {
     
     this.physicalSizeNotIn = physicalSizeNotIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addPhysicalSizeNotInItem(Double physicalSizeNotInItem) {
+  public BackupRestorePointWhereInput addPhysicalSizeNotInItem(Long physicalSizeNotInItem) {
     if (this.physicalSizeNotIn == null) {
-      this.physicalSizeNotIn = new ArrayList<Double>();
+      this.physicalSizeNotIn = new ArrayList<Long>();
     }
     this.physicalSizeNotIn.add(physicalSizeNotInItem);
     return this;
@@ -3310,12 +3310,12 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPhysicalSizeNotIn() {
+  public List<Long> getPhysicalSizeNotIn() {
     return physicalSizeNotIn;
   }
 
 
-  public void setPhysicalSizeNotIn(List<Double> physicalSizeNotIn) {
+  public void setPhysicalSizeNotIn(List<Long> physicalSizeNotIn) {
     this.physicalSizeNotIn = physicalSizeNotIn;
   }
 
@@ -3497,7 +3497,7 @@ public class BackupRestorePointWhereInput {
   }
 
 
-  public BackupRestorePointWhereInput size(Double size) {
+  public BackupRestorePointWhereInput size(Long size) {
     
     this.size = size;
     return this;
@@ -3510,17 +3510,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
 
-  public BackupRestorePointWhereInput sizeGt(Double sizeGt) {
+  public BackupRestorePointWhereInput sizeGt(Long sizeGt) {
     
     this.sizeGt = sizeGt;
     return this;
@@ -3533,17 +3533,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGt() {
+  public Long getSizeGt() {
     return sizeGt;
   }
 
 
-  public void setSizeGt(Double sizeGt) {
+  public void setSizeGt(Long sizeGt) {
     this.sizeGt = sizeGt;
   }
 
 
-  public BackupRestorePointWhereInput sizeGte(Double sizeGte) {
+  public BackupRestorePointWhereInput sizeGte(Long sizeGte) {
     
     this.sizeGte = sizeGte;
     return this;
@@ -3556,25 +3556,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGte() {
+  public Long getSizeGte() {
     return sizeGte;
   }
 
 
-  public void setSizeGte(Double sizeGte) {
+  public void setSizeGte(Long sizeGte) {
     this.sizeGte = sizeGte;
   }
 
 
-  public BackupRestorePointWhereInput sizeIn(List<Double> sizeIn) {
+  public BackupRestorePointWhereInput sizeIn(List<Long> sizeIn) {
     
     this.sizeIn = sizeIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addSizeInItem(Double sizeInItem) {
+  public BackupRestorePointWhereInput addSizeInItem(Long sizeInItem) {
     if (this.sizeIn == null) {
-      this.sizeIn = new ArrayList<Double>();
+      this.sizeIn = new ArrayList<Long>();
     }
     this.sizeIn.add(sizeInItem);
     return this;
@@ -3587,17 +3587,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeIn() {
+  public List<Long> getSizeIn() {
     return sizeIn;
   }
 
 
-  public void setSizeIn(List<Double> sizeIn) {
+  public void setSizeIn(List<Long> sizeIn) {
     this.sizeIn = sizeIn;
   }
 
 
-  public BackupRestorePointWhereInput sizeLt(Double sizeLt) {
+  public BackupRestorePointWhereInput sizeLt(Long sizeLt) {
     
     this.sizeLt = sizeLt;
     return this;
@@ -3610,17 +3610,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLt() {
+  public Long getSizeLt() {
     return sizeLt;
   }
 
 
-  public void setSizeLt(Double sizeLt) {
+  public void setSizeLt(Long sizeLt) {
     this.sizeLt = sizeLt;
   }
 
 
-  public BackupRestorePointWhereInput sizeLte(Double sizeLte) {
+  public BackupRestorePointWhereInput sizeLte(Long sizeLte) {
     
     this.sizeLte = sizeLte;
     return this;
@@ -3633,17 +3633,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLte() {
+  public Long getSizeLte() {
     return sizeLte;
   }
 
 
-  public void setSizeLte(Double sizeLte) {
+  public void setSizeLte(Long sizeLte) {
     this.sizeLte = sizeLte;
   }
 
 
-  public BackupRestorePointWhereInput sizeNot(Double sizeNot) {
+  public BackupRestorePointWhereInput sizeNot(Long sizeNot) {
     
     this.sizeNot = sizeNot;
     return this;
@@ -3656,25 +3656,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeNot() {
+  public Long getSizeNot() {
     return sizeNot;
   }
 
 
-  public void setSizeNot(Double sizeNot) {
+  public void setSizeNot(Long sizeNot) {
     this.sizeNot = sizeNot;
   }
 
 
-  public BackupRestorePointWhereInput sizeNotIn(List<Double> sizeNotIn) {
+  public BackupRestorePointWhereInput sizeNotIn(List<Long> sizeNotIn) {
     
     this.sizeNotIn = sizeNotIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addSizeNotInItem(Double sizeNotInItem) {
+  public BackupRestorePointWhereInput addSizeNotInItem(Long sizeNotInItem) {
     if (this.sizeNotIn == null) {
-      this.sizeNotIn = new ArrayList<Double>();
+      this.sizeNotIn = new ArrayList<Long>();
     }
     this.sizeNotIn.add(sizeNotInItem);
     return this;
@@ -3687,12 +3687,12 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeNotIn() {
+  public List<Long> getSizeNotIn() {
     return sizeNotIn;
   }
 
 
-  public void setSizeNotIn(List<Double> sizeNotIn) {
+  public void setSizeNotIn(List<Long> sizeNotIn) {
     this.sizeNotIn = sizeNotIn;
   }
 
@@ -4143,7 +4143,7 @@ public class BackupRestorePointWhereInput {
   }
 
 
-  public BackupRestorePointWhereInput validCapacity(Double validCapacity) {
+  public BackupRestorePointWhereInput validCapacity(Long validCapacity) {
     
     this.validCapacity = validCapacity;
     return this;
@@ -4156,17 +4156,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacity() {
+  public Long getValidCapacity() {
     return validCapacity;
   }
 
 
-  public void setValidCapacity(Double validCapacity) {
+  public void setValidCapacity(Long validCapacity) {
     this.validCapacity = validCapacity;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityGt(Double validCapacityGt) {
+  public BackupRestorePointWhereInput validCapacityGt(Long validCapacityGt) {
     
     this.validCapacityGt = validCapacityGt;
     return this;
@@ -4179,17 +4179,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacityGt() {
+  public Long getValidCapacityGt() {
     return validCapacityGt;
   }
 
 
-  public void setValidCapacityGt(Double validCapacityGt) {
+  public void setValidCapacityGt(Long validCapacityGt) {
     this.validCapacityGt = validCapacityGt;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityGte(Double validCapacityGte) {
+  public BackupRestorePointWhereInput validCapacityGte(Long validCapacityGte) {
     
     this.validCapacityGte = validCapacityGte;
     return this;
@@ -4202,25 +4202,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacityGte() {
+  public Long getValidCapacityGte() {
     return validCapacityGte;
   }
 
 
-  public void setValidCapacityGte(Double validCapacityGte) {
+  public void setValidCapacityGte(Long validCapacityGte) {
     this.validCapacityGte = validCapacityGte;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityIn(List<Double> validCapacityIn) {
+  public BackupRestorePointWhereInput validCapacityIn(List<Long> validCapacityIn) {
     
     this.validCapacityIn = validCapacityIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addValidCapacityInItem(Double validCapacityInItem) {
+  public BackupRestorePointWhereInput addValidCapacityInItem(Long validCapacityInItem) {
     if (this.validCapacityIn == null) {
-      this.validCapacityIn = new ArrayList<Double>();
+      this.validCapacityIn = new ArrayList<Long>();
     }
     this.validCapacityIn.add(validCapacityInItem);
     return this;
@@ -4233,17 +4233,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidCapacityIn() {
+  public List<Long> getValidCapacityIn() {
     return validCapacityIn;
   }
 
 
-  public void setValidCapacityIn(List<Double> validCapacityIn) {
+  public void setValidCapacityIn(List<Long> validCapacityIn) {
     this.validCapacityIn = validCapacityIn;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityLt(Double validCapacityLt) {
+  public BackupRestorePointWhereInput validCapacityLt(Long validCapacityLt) {
     
     this.validCapacityLt = validCapacityLt;
     return this;
@@ -4256,17 +4256,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacityLt() {
+  public Long getValidCapacityLt() {
     return validCapacityLt;
   }
 
 
-  public void setValidCapacityLt(Double validCapacityLt) {
+  public void setValidCapacityLt(Long validCapacityLt) {
     this.validCapacityLt = validCapacityLt;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityLte(Double validCapacityLte) {
+  public BackupRestorePointWhereInput validCapacityLte(Long validCapacityLte) {
     
     this.validCapacityLte = validCapacityLte;
     return this;
@@ -4279,17 +4279,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacityLte() {
+  public Long getValidCapacityLte() {
     return validCapacityLte;
   }
 
 
-  public void setValidCapacityLte(Double validCapacityLte) {
+  public void setValidCapacityLte(Long validCapacityLte) {
     this.validCapacityLte = validCapacityLte;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityNot(Double validCapacityNot) {
+  public BackupRestorePointWhereInput validCapacityNot(Long validCapacityNot) {
     
     this.validCapacityNot = validCapacityNot;
     return this;
@@ -4302,25 +4302,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacityNot() {
+  public Long getValidCapacityNot() {
     return validCapacityNot;
   }
 
 
-  public void setValidCapacityNot(Double validCapacityNot) {
+  public void setValidCapacityNot(Long validCapacityNot) {
     this.validCapacityNot = validCapacityNot;
   }
 
 
-  public BackupRestorePointWhereInput validCapacityNotIn(List<Double> validCapacityNotIn) {
+  public BackupRestorePointWhereInput validCapacityNotIn(List<Long> validCapacityNotIn) {
     
     this.validCapacityNotIn = validCapacityNotIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addValidCapacityNotInItem(Double validCapacityNotInItem) {
+  public BackupRestorePointWhereInput addValidCapacityNotInItem(Long validCapacityNotInItem) {
     if (this.validCapacityNotIn == null) {
-      this.validCapacityNotIn = new ArrayList<Double>();
+      this.validCapacityNotIn = new ArrayList<Long>();
     }
     this.validCapacityNotIn.add(validCapacityNotInItem);
     return this;
@@ -4333,17 +4333,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidCapacityNotIn() {
+  public List<Long> getValidCapacityNotIn() {
     return validCapacityNotIn;
   }
 
 
-  public void setValidCapacityNotIn(List<Double> validCapacityNotIn) {
+  public void setValidCapacityNotIn(List<Long> validCapacityNotIn) {
     this.validCapacityNotIn = validCapacityNotIn;
   }
 
 
-  public BackupRestorePointWhereInput validSize(Double validSize) {
+  public BackupRestorePointWhereInput validSize(Long validSize) {
     
     this.validSize = validSize;
     return this;
@@ -4356,17 +4356,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSize() {
+  public Long getValidSize() {
     return validSize;
   }
 
 
-  public void setValidSize(Double validSize) {
+  public void setValidSize(Long validSize) {
     this.validSize = validSize;
   }
 
 
-  public BackupRestorePointWhereInput validSizeGt(Double validSizeGt) {
+  public BackupRestorePointWhereInput validSizeGt(Long validSizeGt) {
     
     this.validSizeGt = validSizeGt;
     return this;
@@ -4379,17 +4379,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSizeGt() {
+  public Long getValidSizeGt() {
     return validSizeGt;
   }
 
 
-  public void setValidSizeGt(Double validSizeGt) {
+  public void setValidSizeGt(Long validSizeGt) {
     this.validSizeGt = validSizeGt;
   }
 
 
-  public BackupRestorePointWhereInput validSizeGte(Double validSizeGte) {
+  public BackupRestorePointWhereInput validSizeGte(Long validSizeGte) {
     
     this.validSizeGte = validSizeGte;
     return this;
@@ -4402,25 +4402,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSizeGte() {
+  public Long getValidSizeGte() {
     return validSizeGte;
   }
 
 
-  public void setValidSizeGte(Double validSizeGte) {
+  public void setValidSizeGte(Long validSizeGte) {
     this.validSizeGte = validSizeGte;
   }
 
 
-  public BackupRestorePointWhereInput validSizeIn(List<Double> validSizeIn) {
+  public BackupRestorePointWhereInput validSizeIn(List<Long> validSizeIn) {
     
     this.validSizeIn = validSizeIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addValidSizeInItem(Double validSizeInItem) {
+  public BackupRestorePointWhereInput addValidSizeInItem(Long validSizeInItem) {
     if (this.validSizeIn == null) {
-      this.validSizeIn = new ArrayList<Double>();
+      this.validSizeIn = new ArrayList<Long>();
     }
     this.validSizeIn.add(validSizeInItem);
     return this;
@@ -4433,17 +4433,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidSizeIn() {
+  public List<Long> getValidSizeIn() {
     return validSizeIn;
   }
 
 
-  public void setValidSizeIn(List<Double> validSizeIn) {
+  public void setValidSizeIn(List<Long> validSizeIn) {
     this.validSizeIn = validSizeIn;
   }
 
 
-  public BackupRestorePointWhereInput validSizeLt(Double validSizeLt) {
+  public BackupRestorePointWhereInput validSizeLt(Long validSizeLt) {
     
     this.validSizeLt = validSizeLt;
     return this;
@@ -4456,17 +4456,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSizeLt() {
+  public Long getValidSizeLt() {
     return validSizeLt;
   }
 
 
-  public void setValidSizeLt(Double validSizeLt) {
+  public void setValidSizeLt(Long validSizeLt) {
     this.validSizeLt = validSizeLt;
   }
 
 
-  public BackupRestorePointWhereInput validSizeLte(Double validSizeLte) {
+  public BackupRestorePointWhereInput validSizeLte(Long validSizeLte) {
     
     this.validSizeLte = validSizeLte;
     return this;
@@ -4479,17 +4479,17 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSizeLte() {
+  public Long getValidSizeLte() {
     return validSizeLte;
   }
 
 
-  public void setValidSizeLte(Double validSizeLte) {
+  public void setValidSizeLte(Long validSizeLte) {
     this.validSizeLte = validSizeLte;
   }
 
 
-  public BackupRestorePointWhereInput validSizeNot(Double validSizeNot) {
+  public BackupRestorePointWhereInput validSizeNot(Long validSizeNot) {
     
     this.validSizeNot = validSizeNot;
     return this;
@@ -4502,25 +4502,25 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSizeNot() {
+  public Long getValidSizeNot() {
     return validSizeNot;
   }
 
 
-  public void setValidSizeNot(Double validSizeNot) {
+  public void setValidSizeNot(Long validSizeNot) {
     this.validSizeNot = validSizeNot;
   }
 
 
-  public BackupRestorePointWhereInput validSizeNotIn(List<Double> validSizeNotIn) {
+  public BackupRestorePointWhereInput validSizeNotIn(List<Long> validSizeNotIn) {
     
     this.validSizeNotIn = validSizeNotIn;
     return this;
   }
 
-  public BackupRestorePointWhereInput addValidSizeNotInItem(Double validSizeNotInItem) {
+  public BackupRestorePointWhereInput addValidSizeNotInItem(Long validSizeNotInItem) {
     if (this.validSizeNotIn == null) {
-      this.validSizeNotIn = new ArrayList<Double>();
+      this.validSizeNotIn = new ArrayList<Long>();
     }
     this.validSizeNotIn.add(validSizeNotInItem);
     return this;
@@ -4533,12 +4533,12 @@ public class BackupRestorePointWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidSizeNotIn() {
+  public List<Long> getValidSizeNotIn() {
     return validSizeNotIn;
   }
 
 
-  public void setValidSizeNotIn(List<Double> validSizeNotIn) {
+  public void setValidSizeNotIn(List<Long> validSizeNotIn) {
     this.validSizeNotIn = validSizeNotIn;
   }
 

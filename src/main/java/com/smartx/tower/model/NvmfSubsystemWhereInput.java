@@ -44,291 +44,291 @@ public class NvmfSubsystemWhereInput {
 
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)
-  private Double bps;
+  private Long bps;
 
   public static final String SERIALIZED_NAME_BPS_GT = "bps_gt";
   @SerializedName(SERIALIZED_NAME_BPS_GT)
-  private Double bpsGt;
+  private Long bpsGt;
 
   public static final String SERIALIZED_NAME_BPS_GTE = "bps_gte";
   @SerializedName(SERIALIZED_NAME_BPS_GTE)
-  private Double bpsGte;
+  private Long bpsGte;
 
   public static final String SERIALIZED_NAME_BPS_IN = "bps_in";
   @SerializedName(SERIALIZED_NAME_BPS_IN)
-  private List<Double> bpsIn = null;
+  private List<Long> bpsIn = null;
 
   public static final String SERIALIZED_NAME_BPS_LT = "bps_lt";
   @SerializedName(SERIALIZED_NAME_BPS_LT)
-  private Double bpsLt;
+  private Long bpsLt;
 
   public static final String SERIALIZED_NAME_BPS_LTE = "bps_lte";
   @SerializedName(SERIALIZED_NAME_BPS_LTE)
-  private Double bpsLte;
+  private Long bpsLte;
 
   public static final String SERIALIZED_NAME_BPS_MAX = "bps_max";
   @SerializedName(SERIALIZED_NAME_BPS_MAX)
-  private Double bpsMax;
+  private Long bpsMax;
 
   public static final String SERIALIZED_NAME_BPS_MAX_GT = "bps_max_gt";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_GT)
-  private Double bpsMaxGt;
+  private Long bpsMaxGt;
 
   public static final String SERIALIZED_NAME_BPS_MAX_GTE = "bps_max_gte";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_GTE)
-  private Double bpsMaxGte;
+  private Long bpsMaxGte;
 
   public static final String SERIALIZED_NAME_BPS_MAX_IN = "bps_max_in";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_IN)
-  private List<Double> bpsMaxIn = null;
+  private List<Long> bpsMaxIn = null;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH = "bps_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH)
-  private Double bpsMaxLength;
+  private Long bpsMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_GT = "bps_max_length_gt";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_GT)
-  private Double bpsMaxLengthGt;
+  private Long bpsMaxLengthGt;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_GTE = "bps_max_length_gte";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_GTE)
-  private Double bpsMaxLengthGte;
+  private Long bpsMaxLengthGte;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_IN = "bps_max_length_in";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_IN)
-  private List<Double> bpsMaxLengthIn = null;
+  private List<Long> bpsMaxLengthIn = null;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_LT = "bps_max_length_lt";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_LT)
-  private Double bpsMaxLengthLt;
+  private Long bpsMaxLengthLt;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_LTE = "bps_max_length_lte";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_LTE)
-  private Double bpsMaxLengthLte;
+  private Long bpsMaxLengthLte;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_NOT = "bps_max_length_not";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_NOT)
-  private Double bpsMaxLengthNot;
+  private Long bpsMaxLengthNot;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH_NOT_IN = "bps_max_length_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH_NOT_IN)
-  private List<Double> bpsMaxLengthNotIn = null;
+  private List<Long> bpsMaxLengthNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LT = "bps_max_lt";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LT)
-  private Double bpsMaxLt;
+  private Long bpsMaxLt;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LTE = "bps_max_lte";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LTE)
-  private Double bpsMaxLte;
+  private Long bpsMaxLte;
 
   public static final String SERIALIZED_NAME_BPS_MAX_NOT = "bps_max_not";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_NOT)
-  private Double bpsMaxNot;
+  private Long bpsMaxNot;
 
   public static final String SERIALIZED_NAME_BPS_MAX_NOT_IN = "bps_max_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_NOT_IN)
-  private List<Double> bpsMaxNotIn = null;
+  private List<Long> bpsMaxNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_NOT = "bps_not";
   @SerializedName(SERIALIZED_NAME_BPS_NOT)
-  private Double bpsNot;
+  private Long bpsNot;
 
   public static final String SERIALIZED_NAME_BPS_NOT_IN = "bps_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_NOT_IN)
-  private List<Double> bpsNotIn = null;
+  private List<Long> bpsNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_RD = "bps_rd";
   @SerializedName(SERIALIZED_NAME_BPS_RD)
-  private Double bpsRd;
+  private Long bpsRd;
 
   public static final String SERIALIZED_NAME_BPS_RD_GT = "bps_rd_gt";
   @SerializedName(SERIALIZED_NAME_BPS_RD_GT)
-  private Double bpsRdGt;
+  private Long bpsRdGt;
 
   public static final String SERIALIZED_NAME_BPS_RD_GTE = "bps_rd_gte";
   @SerializedName(SERIALIZED_NAME_BPS_RD_GTE)
-  private Double bpsRdGte;
+  private Long bpsRdGte;
 
   public static final String SERIALIZED_NAME_BPS_RD_IN = "bps_rd_in";
   @SerializedName(SERIALIZED_NAME_BPS_RD_IN)
-  private List<Double> bpsRdIn = null;
+  private List<Long> bpsRdIn = null;
 
   public static final String SERIALIZED_NAME_BPS_RD_LT = "bps_rd_lt";
   @SerializedName(SERIALIZED_NAME_BPS_RD_LT)
-  private Double bpsRdLt;
+  private Long bpsRdLt;
 
   public static final String SERIALIZED_NAME_BPS_RD_LTE = "bps_rd_lte";
   @SerializedName(SERIALIZED_NAME_BPS_RD_LTE)
-  private Double bpsRdLte;
+  private Long bpsRdLte;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX = "bps_rd_max";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX)
-  private Double bpsRdMax;
+  private Long bpsRdMax;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_GT = "bps_rd_max_gt";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_GT)
-  private Double bpsRdMaxGt;
+  private Long bpsRdMaxGt;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_GTE = "bps_rd_max_gte";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_GTE)
-  private Double bpsRdMaxGte;
+  private Long bpsRdMaxGte;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_IN = "bps_rd_max_in";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_IN)
-  private List<Double> bpsRdMaxIn = null;
+  private List<Long> bpsRdMaxIn = null;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH = "bps_rd_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH)
-  private Double bpsRdMaxLength;
+  private Long bpsRdMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_GT = "bps_rd_max_length_gt";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_GT)
-  private Double bpsRdMaxLengthGt;
+  private Long bpsRdMaxLengthGt;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_GTE = "bps_rd_max_length_gte";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_GTE)
-  private Double bpsRdMaxLengthGte;
+  private Long bpsRdMaxLengthGte;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_IN = "bps_rd_max_length_in";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_IN)
-  private List<Double> bpsRdMaxLengthIn = null;
+  private List<Long> bpsRdMaxLengthIn = null;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_LT = "bps_rd_max_length_lt";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_LT)
-  private Double bpsRdMaxLengthLt;
+  private Long bpsRdMaxLengthLt;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_LTE = "bps_rd_max_length_lte";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_LTE)
-  private Double bpsRdMaxLengthLte;
+  private Long bpsRdMaxLengthLte;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_NOT = "bps_rd_max_length_not";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_NOT)
-  private Double bpsRdMaxLengthNot;
+  private Long bpsRdMaxLengthNot;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH_NOT_IN = "bps_rd_max_length_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH_NOT_IN)
-  private List<Double> bpsRdMaxLengthNotIn = null;
+  private List<Long> bpsRdMaxLengthNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LT = "bps_rd_max_lt";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LT)
-  private Double bpsRdMaxLt;
+  private Long bpsRdMaxLt;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LTE = "bps_rd_max_lte";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LTE)
-  private Double bpsRdMaxLte;
+  private Long bpsRdMaxLte;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_NOT = "bps_rd_max_not";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_NOT)
-  private Double bpsRdMaxNot;
+  private Long bpsRdMaxNot;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_NOT_IN = "bps_rd_max_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_NOT_IN)
-  private List<Double> bpsRdMaxNotIn = null;
+  private List<Long> bpsRdMaxNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_RD_NOT = "bps_rd_not";
   @SerializedName(SERIALIZED_NAME_BPS_RD_NOT)
-  private Double bpsRdNot;
+  private Long bpsRdNot;
 
   public static final String SERIALIZED_NAME_BPS_RD_NOT_IN = "bps_rd_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_RD_NOT_IN)
-  private List<Double> bpsRdNotIn = null;
+  private List<Long> bpsRdNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_WR = "bps_wr";
   @SerializedName(SERIALIZED_NAME_BPS_WR)
-  private Double bpsWr;
+  private Long bpsWr;
 
   public static final String SERIALIZED_NAME_BPS_WR_GT = "bps_wr_gt";
   @SerializedName(SERIALIZED_NAME_BPS_WR_GT)
-  private Double bpsWrGt;
+  private Long bpsWrGt;
 
   public static final String SERIALIZED_NAME_BPS_WR_GTE = "bps_wr_gte";
   @SerializedName(SERIALIZED_NAME_BPS_WR_GTE)
-  private Double bpsWrGte;
+  private Long bpsWrGte;
 
   public static final String SERIALIZED_NAME_BPS_WR_IN = "bps_wr_in";
   @SerializedName(SERIALIZED_NAME_BPS_WR_IN)
-  private List<Double> bpsWrIn = null;
+  private List<Long> bpsWrIn = null;
 
   public static final String SERIALIZED_NAME_BPS_WR_LT = "bps_wr_lt";
   @SerializedName(SERIALIZED_NAME_BPS_WR_LT)
-  private Double bpsWrLt;
+  private Long bpsWrLt;
 
   public static final String SERIALIZED_NAME_BPS_WR_LTE = "bps_wr_lte";
   @SerializedName(SERIALIZED_NAME_BPS_WR_LTE)
-  private Double bpsWrLte;
+  private Long bpsWrLte;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX = "bps_wr_max";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX)
-  private Double bpsWrMax;
+  private Long bpsWrMax;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_GT = "bps_wr_max_gt";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_GT)
-  private Double bpsWrMaxGt;
+  private Long bpsWrMaxGt;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_GTE = "bps_wr_max_gte";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_GTE)
-  private Double bpsWrMaxGte;
+  private Long bpsWrMaxGte;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_IN = "bps_wr_max_in";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_IN)
-  private List<Double> bpsWrMaxIn = null;
+  private List<Long> bpsWrMaxIn = null;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
-  private Double bpsWrMaxLength;
+  private Long bpsWrMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_GT = "bps_wr_max_length_gt";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_GT)
-  private Double bpsWrMaxLengthGt;
+  private Long bpsWrMaxLengthGt;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_GTE = "bps_wr_max_length_gte";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_GTE)
-  private Double bpsWrMaxLengthGte;
+  private Long bpsWrMaxLengthGte;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_IN = "bps_wr_max_length_in";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_IN)
-  private List<Double> bpsWrMaxLengthIn = null;
+  private List<Long> bpsWrMaxLengthIn = null;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_LT = "bps_wr_max_length_lt";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_LT)
-  private Double bpsWrMaxLengthLt;
+  private Long bpsWrMaxLengthLt;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_LTE = "bps_wr_max_length_lte";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_LTE)
-  private Double bpsWrMaxLengthLte;
+  private Long bpsWrMaxLengthLte;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_NOT = "bps_wr_max_length_not";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_NOT)
-  private Double bpsWrMaxLengthNot;
+  private Long bpsWrMaxLengthNot;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH_NOT_IN = "bps_wr_max_length_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH_NOT_IN)
-  private List<Double> bpsWrMaxLengthNotIn = null;
+  private List<Long> bpsWrMaxLengthNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LT = "bps_wr_max_lt";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LT)
-  private Double bpsWrMaxLt;
+  private Long bpsWrMaxLt;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LTE = "bps_wr_max_lte";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LTE)
-  private Double bpsWrMaxLte;
+  private Long bpsWrMaxLte;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_NOT = "bps_wr_max_not";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_NOT)
-  private Double bpsWrMaxNot;
+  private Long bpsWrMaxNot;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_NOT_IN = "bps_wr_max_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_NOT_IN)
-  private List<Double> bpsWrMaxNotIn = null;
+  private List<Long> bpsWrMaxNotIn = null;
 
   public static final String SERIALIZED_NAME_BPS_WR_NOT = "bps_wr_not";
   @SerializedName(SERIALIZED_NAME_BPS_WR_NOT)
-  private Double bpsWrNot;
+  private Long bpsWrNot;
 
   public static final String SERIALIZED_NAME_BPS_WR_NOT_IN = "bps_wr_not_in";
   @SerializedName(SERIALIZED_NAME_BPS_WR_NOT_IN)
-  private List<Double> bpsWrNotIn = null;
+  private List<Long> bpsWrNotIn = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -480,323 +480,323 @@ public class NvmfSubsystemWhereInput {
 
   public static final String SERIALIZED_NAME_IO_SIZE = "io_size";
   @SerializedName(SERIALIZED_NAME_IO_SIZE)
-  private Double ioSize;
+  private Long ioSize;
 
   public static final String SERIALIZED_NAME_IO_SIZE_GT = "io_size_gt";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_GT)
-  private Double ioSizeGt;
+  private Long ioSizeGt;
 
   public static final String SERIALIZED_NAME_IO_SIZE_GTE = "io_size_gte";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_GTE)
-  private Double ioSizeGte;
+  private Long ioSizeGte;
 
   public static final String SERIALIZED_NAME_IO_SIZE_IN = "io_size_in";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_IN)
-  private List<Double> ioSizeIn = null;
+  private List<Long> ioSizeIn = null;
 
   public static final String SERIALIZED_NAME_IO_SIZE_LT = "io_size_lt";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_LT)
-  private Double ioSizeLt;
+  private Long ioSizeLt;
 
   public static final String SERIALIZED_NAME_IO_SIZE_LTE = "io_size_lte";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_LTE)
-  private Double ioSizeLte;
+  private Long ioSizeLte;
 
   public static final String SERIALIZED_NAME_IO_SIZE_NOT = "io_size_not";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_NOT)
-  private Double ioSizeNot;
+  private Long ioSizeNot;
 
   public static final String SERIALIZED_NAME_IO_SIZE_NOT_IN = "io_size_not_in";
   @SerializedName(SERIALIZED_NAME_IO_SIZE_NOT_IN)
-  private List<Double> ioSizeNotIn = null;
+  private List<Long> ioSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS = "iops";
   @SerializedName(SERIALIZED_NAME_IOPS)
-  private Double iops;
+  private Long iops;
 
   public static final String SERIALIZED_NAME_IOPS_GT = "iops_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_GT)
-  private Double iopsGt;
+  private Long iopsGt;
 
   public static final String SERIALIZED_NAME_IOPS_GTE = "iops_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_GTE)
-  private Double iopsGte;
+  private Long iopsGte;
 
   public static final String SERIALIZED_NAME_IOPS_IN = "iops_in";
   @SerializedName(SERIALIZED_NAME_IOPS_IN)
-  private List<Double> iopsIn = null;
+  private List<Long> iopsIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_LT = "iops_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_LT)
-  private Double iopsLt;
+  private Long iopsLt;
 
   public static final String SERIALIZED_NAME_IOPS_LTE = "iops_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_LTE)
-  private Double iopsLte;
+  private Long iopsLte;
 
   public static final String SERIALIZED_NAME_IOPS_MAX = "iops_max";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX)
-  private Double iopsMax;
+  private Long iopsMax;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_GT = "iops_max_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_GT)
-  private Double iopsMaxGt;
+  private Long iopsMaxGt;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_GTE = "iops_max_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_GTE)
-  private Double iopsMaxGte;
+  private Long iopsMaxGte;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_IN = "iops_max_in";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_IN)
-  private List<Double> iopsMaxIn = null;
+  private List<Long> iopsMaxIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH = "iops_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH)
-  private Double iopsMaxLength;
+  private Long iopsMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_GT = "iops_max_length_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_GT)
-  private Double iopsMaxLengthGt;
+  private Long iopsMaxLengthGt;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_GTE = "iops_max_length_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_GTE)
-  private Double iopsMaxLengthGte;
+  private Long iopsMaxLengthGte;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_IN = "iops_max_length_in";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_IN)
-  private List<Double> iopsMaxLengthIn = null;
+  private List<Long> iopsMaxLengthIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_LT = "iops_max_length_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_LT)
-  private Double iopsMaxLengthLt;
+  private Long iopsMaxLengthLt;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_LTE = "iops_max_length_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_LTE)
-  private Double iopsMaxLengthLte;
+  private Long iopsMaxLengthLte;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_NOT = "iops_max_length_not";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_NOT)
-  private Double iopsMaxLengthNot;
+  private Long iopsMaxLengthNot;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH_NOT_IN = "iops_max_length_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH_NOT_IN)
-  private List<Double> iopsMaxLengthNotIn = null;
+  private List<Long> iopsMaxLengthNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LT = "iops_max_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LT)
-  private Double iopsMaxLt;
+  private Long iopsMaxLt;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LTE = "iops_max_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LTE)
-  private Double iopsMaxLte;
+  private Long iopsMaxLte;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_NOT = "iops_max_not";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_NOT)
-  private Double iopsMaxNot;
+  private Long iopsMaxNot;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_NOT_IN = "iops_max_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_NOT_IN)
-  private List<Double> iopsMaxNotIn = null;
+  private List<Long> iopsMaxNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_NOT = "iops_not";
   @SerializedName(SERIALIZED_NAME_IOPS_NOT)
-  private Double iopsNot;
+  private Long iopsNot;
 
   public static final String SERIALIZED_NAME_IOPS_NOT_IN = "iops_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_NOT_IN)
-  private List<Double> iopsNotIn = null;
+  private List<Long> iopsNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_RD = "iops_rd";
   @SerializedName(SERIALIZED_NAME_IOPS_RD)
-  private Double iopsRd;
+  private Long iopsRd;
 
   public static final String SERIALIZED_NAME_IOPS_RD_GT = "iops_rd_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_GT)
-  private Double iopsRdGt;
+  private Long iopsRdGt;
 
   public static final String SERIALIZED_NAME_IOPS_RD_GTE = "iops_rd_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_GTE)
-  private Double iopsRdGte;
+  private Long iopsRdGte;
 
   public static final String SERIALIZED_NAME_IOPS_RD_IN = "iops_rd_in";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_IN)
-  private List<Double> iopsRdIn = null;
+  private List<Long> iopsRdIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_RD_LT = "iops_rd_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_LT)
-  private Double iopsRdLt;
+  private Long iopsRdLt;
 
   public static final String SERIALIZED_NAME_IOPS_RD_LTE = "iops_rd_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_LTE)
-  private Double iopsRdLte;
+  private Long iopsRdLte;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX = "iops_rd_max";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX)
-  private Double iopsRdMax;
+  private Long iopsRdMax;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_GT = "iops_rd_max_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_GT)
-  private Double iopsRdMaxGt;
+  private Long iopsRdMaxGt;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_GTE = "iops_rd_max_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_GTE)
-  private Double iopsRdMaxGte;
+  private Long iopsRdMaxGte;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_IN = "iops_rd_max_in";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_IN)
-  private List<Double> iopsRdMaxIn = null;
+  private List<Long> iopsRdMaxIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH = "iops_rd_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH)
-  private Double iopsRdMaxLength;
+  private Long iopsRdMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_GT = "iops_rd_max_length_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_GT)
-  private Double iopsRdMaxLengthGt;
+  private Long iopsRdMaxLengthGt;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_GTE = "iops_rd_max_length_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_GTE)
-  private Double iopsRdMaxLengthGte;
+  private Long iopsRdMaxLengthGte;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_IN = "iops_rd_max_length_in";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_IN)
-  private List<Double> iopsRdMaxLengthIn = null;
+  private List<Long> iopsRdMaxLengthIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_LT = "iops_rd_max_length_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_LT)
-  private Double iopsRdMaxLengthLt;
+  private Long iopsRdMaxLengthLt;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_LTE = "iops_rd_max_length_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_LTE)
-  private Double iopsRdMaxLengthLte;
+  private Long iopsRdMaxLengthLte;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_NOT = "iops_rd_max_length_not";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_NOT)
-  private Double iopsRdMaxLengthNot;
+  private Long iopsRdMaxLengthNot;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_NOT_IN = "iops_rd_max_length_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH_NOT_IN)
-  private List<Double> iopsRdMaxLengthNotIn = null;
+  private List<Long> iopsRdMaxLengthNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LT = "iops_rd_max_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LT)
-  private Double iopsRdMaxLt;
+  private Long iopsRdMaxLt;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LTE = "iops_rd_max_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LTE)
-  private Double iopsRdMaxLte;
+  private Long iopsRdMaxLte;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_NOT = "iops_rd_max_not";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_NOT)
-  private Double iopsRdMaxNot;
+  private Long iopsRdMaxNot;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_NOT_IN = "iops_rd_max_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_NOT_IN)
-  private List<Double> iopsRdMaxNotIn = null;
+  private List<Long> iopsRdMaxNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_RD_NOT = "iops_rd_not";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_NOT)
-  private Double iopsRdNot;
+  private Long iopsRdNot;
 
   public static final String SERIALIZED_NAME_IOPS_RD_NOT_IN = "iops_rd_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_NOT_IN)
-  private List<Double> iopsRdNotIn = null;
+  private List<Long> iopsRdNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_WR = "iops_wr";
   @SerializedName(SERIALIZED_NAME_IOPS_WR)
-  private Double iopsWr;
+  private Long iopsWr;
 
   public static final String SERIALIZED_NAME_IOPS_WR_GT = "iops_wr_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_GT)
-  private Double iopsWrGt;
+  private Long iopsWrGt;
 
   public static final String SERIALIZED_NAME_IOPS_WR_GTE = "iops_wr_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_GTE)
-  private Double iopsWrGte;
+  private Long iopsWrGte;
 
   public static final String SERIALIZED_NAME_IOPS_WR_IN = "iops_wr_in";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_IN)
-  private List<Double> iopsWrIn = null;
+  private List<Long> iopsWrIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_WR_LT = "iops_wr_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_LT)
-  private Double iopsWrLt;
+  private Long iopsWrLt;
 
   public static final String SERIALIZED_NAME_IOPS_WR_LTE = "iops_wr_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_LTE)
-  private Double iopsWrLte;
+  private Long iopsWrLte;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX = "iops_wr_max";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX)
-  private Double iopsWrMax;
+  private Long iopsWrMax;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_GT = "iops_wr_max_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_GT)
-  private Double iopsWrMaxGt;
+  private Long iopsWrMaxGt;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_GTE = "iops_wr_max_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_GTE)
-  private Double iopsWrMaxGte;
+  private Long iopsWrMaxGte;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_IN = "iops_wr_max_in";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_IN)
-  private List<Double> iopsWrMaxIn = null;
+  private List<Long> iopsWrMaxIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH = "iops_wr_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH)
-  private Double iopsWrMaxLength;
+  private Long iopsWrMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_GT = "iops_wr_max_length_gt";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_GT)
-  private Double iopsWrMaxLengthGt;
+  private Long iopsWrMaxLengthGt;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_GTE = "iops_wr_max_length_gte";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_GTE)
-  private Double iopsWrMaxLengthGte;
+  private Long iopsWrMaxLengthGte;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_IN = "iops_wr_max_length_in";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_IN)
-  private List<Double> iopsWrMaxLengthIn = null;
+  private List<Long> iopsWrMaxLengthIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_LT = "iops_wr_max_length_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_LT)
-  private Double iopsWrMaxLengthLt;
+  private Long iopsWrMaxLengthLt;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_LTE = "iops_wr_max_length_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_LTE)
-  private Double iopsWrMaxLengthLte;
+  private Long iopsWrMaxLengthLte;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_NOT = "iops_wr_max_length_not";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_NOT)
-  private Double iopsWrMaxLengthNot;
+  private Long iopsWrMaxLengthNot;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_NOT_IN = "iops_wr_max_length_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH_NOT_IN)
-  private List<Double> iopsWrMaxLengthNotIn = null;
+  private List<Long> iopsWrMaxLengthNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LT = "iops_wr_max_lt";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LT)
-  private Double iopsWrMaxLt;
+  private Long iopsWrMaxLt;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LTE = "iops_wr_max_lte";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LTE)
-  private Double iopsWrMaxLte;
+  private Long iopsWrMaxLte;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_NOT = "iops_wr_max_not";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_NOT)
-  private Double iopsWrMaxNot;
+  private Long iopsWrMaxNot;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_NOT_IN = "iops_wr_max_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_NOT_IN)
-  private List<Double> iopsWrMaxNotIn = null;
+  private List<Long> iopsWrMaxNotIn = null;
 
   public static final String SERIALIZED_NAME_IOPS_WR_NOT = "iops_wr_not";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_NOT)
-  private Double iopsWrNot;
+  private Long iopsWrNot;
 
   public static final String SERIALIZED_NAME_IOPS_WR_NOT_IN = "iops_wr_not_in";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_NOT_IN)
-  private List<Double> iopsWrNotIn = null;
+  private List<Long> iopsWrNotIn = null;
 
   public static final String SERIALIZED_NAME_IP_WHITELIST = "ip_whitelist";
   @SerializedName(SERIALIZED_NAME_IP_WHITELIST)
@@ -1204,35 +1204,35 @@ public class NvmfSubsystemWhereInput {
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
-  private Double stripeSize;
+  private Long stripeSize;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_GT = "stripe_size_gt";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_GT)
-  private Double stripeSizeGt;
+  private Long stripeSizeGt;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_GTE = "stripe_size_gte";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_GTE)
-  private Double stripeSizeGte;
+  private Long stripeSizeGte;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_IN = "stripe_size_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_IN)
-  private List<Double> stripeSizeIn = null;
+  private List<Long> stripeSizeIn = null;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_LT = "stripe_size_lt";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_LT)
-  private Double stripeSizeLt;
+  private Long stripeSizeLt;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_LTE = "stripe_size_lte";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_LTE)
-  private Double stripeSizeLte;
+  private Long stripeSizeLte;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_NOT = "stripe_size_not";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_NOT)
-  private Double stripeSizeNot;
+  private Long stripeSizeNot;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE_NOT_IN = "stripe_size_not_in";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_NOT_IN)
-  private List<Double> stripeSizeNotIn = null;
+  private List<Long> stripeSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -1276,7 +1276,7 @@ public class NvmfSubsystemWhereInput {
   }
 
 
-  public NvmfSubsystemWhereInput bps(Double bps) {
+  public NvmfSubsystemWhereInput bps(Long bps) {
     
     this.bps = bps;
     return this;
@@ -1289,17 +1289,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBps() {
+  public Long getBps() {
     return bps;
   }
 
 
-  public void setBps(Double bps) {
+  public void setBps(Long bps) {
     this.bps = bps;
   }
 
 
-  public NvmfSubsystemWhereInput bpsGt(Double bpsGt) {
+  public NvmfSubsystemWhereInput bpsGt(Long bpsGt) {
     
     this.bpsGt = bpsGt;
     return this;
@@ -1312,17 +1312,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsGt() {
+  public Long getBpsGt() {
     return bpsGt;
   }
 
 
-  public void setBpsGt(Double bpsGt) {
+  public void setBpsGt(Long bpsGt) {
     this.bpsGt = bpsGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsGte(Double bpsGte) {
+  public NvmfSubsystemWhereInput bpsGte(Long bpsGte) {
     
     this.bpsGte = bpsGte;
     return this;
@@ -1335,25 +1335,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsGte() {
+  public Long getBpsGte() {
     return bpsGte;
   }
 
 
-  public void setBpsGte(Double bpsGte) {
+  public void setBpsGte(Long bpsGte) {
     this.bpsGte = bpsGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsIn(List<Double> bpsIn) {
+  public NvmfSubsystemWhereInput bpsIn(List<Long> bpsIn) {
     
     this.bpsIn = bpsIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsInItem(Double bpsInItem) {
+  public NvmfSubsystemWhereInput addBpsInItem(Long bpsInItem) {
     if (this.bpsIn == null) {
-      this.bpsIn = new ArrayList<Double>();
+      this.bpsIn = new ArrayList<Long>();
     }
     this.bpsIn.add(bpsInItem);
     return this;
@@ -1366,17 +1366,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsIn() {
+  public List<Long> getBpsIn() {
     return bpsIn;
   }
 
 
-  public void setBpsIn(List<Double> bpsIn) {
+  public void setBpsIn(List<Long> bpsIn) {
     this.bpsIn = bpsIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsLt(Double bpsLt) {
+  public NvmfSubsystemWhereInput bpsLt(Long bpsLt) {
     
     this.bpsLt = bpsLt;
     return this;
@@ -1389,17 +1389,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsLt() {
+  public Long getBpsLt() {
     return bpsLt;
   }
 
 
-  public void setBpsLt(Double bpsLt) {
+  public void setBpsLt(Long bpsLt) {
     this.bpsLt = bpsLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsLte(Double bpsLte) {
+  public NvmfSubsystemWhereInput bpsLte(Long bpsLte) {
     
     this.bpsLte = bpsLte;
     return this;
@@ -1412,17 +1412,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsLte() {
+  public Long getBpsLte() {
     return bpsLte;
   }
 
 
-  public void setBpsLte(Double bpsLte) {
+  public void setBpsLte(Long bpsLte) {
     this.bpsLte = bpsLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMax(Double bpsMax) {
+  public NvmfSubsystemWhereInput bpsMax(Long bpsMax) {
     
     this.bpsMax = bpsMax;
     return this;
@@ -1435,17 +1435,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMax() {
+  public Long getBpsMax() {
     return bpsMax;
   }
 
 
-  public void setBpsMax(Double bpsMax) {
+  public void setBpsMax(Long bpsMax) {
     this.bpsMax = bpsMax;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxGt(Double bpsMaxGt) {
+  public NvmfSubsystemWhereInput bpsMaxGt(Long bpsMaxGt) {
     
     this.bpsMaxGt = bpsMaxGt;
     return this;
@@ -1458,17 +1458,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxGt() {
+  public Long getBpsMaxGt() {
     return bpsMaxGt;
   }
 
 
-  public void setBpsMaxGt(Double bpsMaxGt) {
+  public void setBpsMaxGt(Long bpsMaxGt) {
     this.bpsMaxGt = bpsMaxGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxGte(Double bpsMaxGte) {
+  public NvmfSubsystemWhereInput bpsMaxGte(Long bpsMaxGte) {
     
     this.bpsMaxGte = bpsMaxGte;
     return this;
@@ -1481,25 +1481,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxGte() {
+  public Long getBpsMaxGte() {
     return bpsMaxGte;
   }
 
 
-  public void setBpsMaxGte(Double bpsMaxGte) {
+  public void setBpsMaxGte(Long bpsMaxGte) {
     this.bpsMaxGte = bpsMaxGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxIn(List<Double> bpsMaxIn) {
+  public NvmfSubsystemWhereInput bpsMaxIn(List<Long> bpsMaxIn) {
     
     this.bpsMaxIn = bpsMaxIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsMaxInItem(Double bpsMaxInItem) {
+  public NvmfSubsystemWhereInput addBpsMaxInItem(Long bpsMaxInItem) {
     if (this.bpsMaxIn == null) {
-      this.bpsMaxIn = new ArrayList<Double>();
+      this.bpsMaxIn = new ArrayList<Long>();
     }
     this.bpsMaxIn.add(bpsMaxInItem);
     return this;
@@ -1512,17 +1512,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsMaxIn() {
+  public List<Long> getBpsMaxIn() {
     return bpsMaxIn;
   }
 
 
-  public void setBpsMaxIn(List<Double> bpsMaxIn) {
+  public void setBpsMaxIn(List<Long> bpsMaxIn) {
     this.bpsMaxIn = bpsMaxIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLength(Double bpsMaxLength) {
+  public NvmfSubsystemWhereInput bpsMaxLength(Long bpsMaxLength) {
     
     this.bpsMaxLength = bpsMaxLength;
     return this;
@@ -1535,17 +1535,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLength() {
+  public Long getBpsMaxLength() {
     return bpsMaxLength;
   }
 
 
-  public void setBpsMaxLength(Double bpsMaxLength) {
+  public void setBpsMaxLength(Long bpsMaxLength) {
     this.bpsMaxLength = bpsMaxLength;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthGt(Double bpsMaxLengthGt) {
+  public NvmfSubsystemWhereInput bpsMaxLengthGt(Long bpsMaxLengthGt) {
     
     this.bpsMaxLengthGt = bpsMaxLengthGt;
     return this;
@@ -1558,17 +1558,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLengthGt() {
+  public Long getBpsMaxLengthGt() {
     return bpsMaxLengthGt;
   }
 
 
-  public void setBpsMaxLengthGt(Double bpsMaxLengthGt) {
+  public void setBpsMaxLengthGt(Long bpsMaxLengthGt) {
     this.bpsMaxLengthGt = bpsMaxLengthGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthGte(Double bpsMaxLengthGte) {
+  public NvmfSubsystemWhereInput bpsMaxLengthGte(Long bpsMaxLengthGte) {
     
     this.bpsMaxLengthGte = bpsMaxLengthGte;
     return this;
@@ -1581,25 +1581,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLengthGte() {
+  public Long getBpsMaxLengthGte() {
     return bpsMaxLengthGte;
   }
 
 
-  public void setBpsMaxLengthGte(Double bpsMaxLengthGte) {
+  public void setBpsMaxLengthGte(Long bpsMaxLengthGte) {
     this.bpsMaxLengthGte = bpsMaxLengthGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthIn(List<Double> bpsMaxLengthIn) {
+  public NvmfSubsystemWhereInput bpsMaxLengthIn(List<Long> bpsMaxLengthIn) {
     
     this.bpsMaxLengthIn = bpsMaxLengthIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsMaxLengthInItem(Double bpsMaxLengthInItem) {
+  public NvmfSubsystemWhereInput addBpsMaxLengthInItem(Long bpsMaxLengthInItem) {
     if (this.bpsMaxLengthIn == null) {
-      this.bpsMaxLengthIn = new ArrayList<Double>();
+      this.bpsMaxLengthIn = new ArrayList<Long>();
     }
     this.bpsMaxLengthIn.add(bpsMaxLengthInItem);
     return this;
@@ -1612,17 +1612,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsMaxLengthIn() {
+  public List<Long> getBpsMaxLengthIn() {
     return bpsMaxLengthIn;
   }
 
 
-  public void setBpsMaxLengthIn(List<Double> bpsMaxLengthIn) {
+  public void setBpsMaxLengthIn(List<Long> bpsMaxLengthIn) {
     this.bpsMaxLengthIn = bpsMaxLengthIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthLt(Double bpsMaxLengthLt) {
+  public NvmfSubsystemWhereInput bpsMaxLengthLt(Long bpsMaxLengthLt) {
     
     this.bpsMaxLengthLt = bpsMaxLengthLt;
     return this;
@@ -1635,17 +1635,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLengthLt() {
+  public Long getBpsMaxLengthLt() {
     return bpsMaxLengthLt;
   }
 
 
-  public void setBpsMaxLengthLt(Double bpsMaxLengthLt) {
+  public void setBpsMaxLengthLt(Long bpsMaxLengthLt) {
     this.bpsMaxLengthLt = bpsMaxLengthLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthLte(Double bpsMaxLengthLte) {
+  public NvmfSubsystemWhereInput bpsMaxLengthLte(Long bpsMaxLengthLte) {
     
     this.bpsMaxLengthLte = bpsMaxLengthLte;
     return this;
@@ -1658,17 +1658,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLengthLte() {
+  public Long getBpsMaxLengthLte() {
     return bpsMaxLengthLte;
   }
 
 
-  public void setBpsMaxLengthLte(Double bpsMaxLengthLte) {
+  public void setBpsMaxLengthLte(Long bpsMaxLengthLte) {
     this.bpsMaxLengthLte = bpsMaxLengthLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthNot(Double bpsMaxLengthNot) {
+  public NvmfSubsystemWhereInput bpsMaxLengthNot(Long bpsMaxLengthNot) {
     
     this.bpsMaxLengthNot = bpsMaxLengthNot;
     return this;
@@ -1681,25 +1681,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLengthNot() {
+  public Long getBpsMaxLengthNot() {
     return bpsMaxLengthNot;
   }
 
 
-  public void setBpsMaxLengthNot(Double bpsMaxLengthNot) {
+  public void setBpsMaxLengthNot(Long bpsMaxLengthNot) {
     this.bpsMaxLengthNot = bpsMaxLengthNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLengthNotIn(List<Double> bpsMaxLengthNotIn) {
+  public NvmfSubsystemWhereInput bpsMaxLengthNotIn(List<Long> bpsMaxLengthNotIn) {
     
     this.bpsMaxLengthNotIn = bpsMaxLengthNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsMaxLengthNotInItem(Double bpsMaxLengthNotInItem) {
+  public NvmfSubsystemWhereInput addBpsMaxLengthNotInItem(Long bpsMaxLengthNotInItem) {
     if (this.bpsMaxLengthNotIn == null) {
-      this.bpsMaxLengthNotIn = new ArrayList<Double>();
+      this.bpsMaxLengthNotIn = new ArrayList<Long>();
     }
     this.bpsMaxLengthNotIn.add(bpsMaxLengthNotInItem);
     return this;
@@ -1712,17 +1712,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsMaxLengthNotIn() {
+  public List<Long> getBpsMaxLengthNotIn() {
     return bpsMaxLengthNotIn;
   }
 
 
-  public void setBpsMaxLengthNotIn(List<Double> bpsMaxLengthNotIn) {
+  public void setBpsMaxLengthNotIn(List<Long> bpsMaxLengthNotIn) {
     this.bpsMaxLengthNotIn = bpsMaxLengthNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLt(Double bpsMaxLt) {
+  public NvmfSubsystemWhereInput bpsMaxLt(Long bpsMaxLt) {
     
     this.bpsMaxLt = bpsMaxLt;
     return this;
@@ -1735,17 +1735,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLt() {
+  public Long getBpsMaxLt() {
     return bpsMaxLt;
   }
 
 
-  public void setBpsMaxLt(Double bpsMaxLt) {
+  public void setBpsMaxLt(Long bpsMaxLt) {
     this.bpsMaxLt = bpsMaxLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxLte(Double bpsMaxLte) {
+  public NvmfSubsystemWhereInput bpsMaxLte(Long bpsMaxLte) {
     
     this.bpsMaxLte = bpsMaxLte;
     return this;
@@ -1758,17 +1758,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLte() {
+  public Long getBpsMaxLte() {
     return bpsMaxLte;
   }
 
 
-  public void setBpsMaxLte(Double bpsMaxLte) {
+  public void setBpsMaxLte(Long bpsMaxLte) {
     this.bpsMaxLte = bpsMaxLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxNot(Double bpsMaxNot) {
+  public NvmfSubsystemWhereInput bpsMaxNot(Long bpsMaxNot) {
     
     this.bpsMaxNot = bpsMaxNot;
     return this;
@@ -1781,25 +1781,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxNot() {
+  public Long getBpsMaxNot() {
     return bpsMaxNot;
   }
 
 
-  public void setBpsMaxNot(Double bpsMaxNot) {
+  public void setBpsMaxNot(Long bpsMaxNot) {
     this.bpsMaxNot = bpsMaxNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsMaxNotIn(List<Double> bpsMaxNotIn) {
+  public NvmfSubsystemWhereInput bpsMaxNotIn(List<Long> bpsMaxNotIn) {
     
     this.bpsMaxNotIn = bpsMaxNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsMaxNotInItem(Double bpsMaxNotInItem) {
+  public NvmfSubsystemWhereInput addBpsMaxNotInItem(Long bpsMaxNotInItem) {
     if (this.bpsMaxNotIn == null) {
-      this.bpsMaxNotIn = new ArrayList<Double>();
+      this.bpsMaxNotIn = new ArrayList<Long>();
     }
     this.bpsMaxNotIn.add(bpsMaxNotInItem);
     return this;
@@ -1812,17 +1812,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsMaxNotIn() {
+  public List<Long> getBpsMaxNotIn() {
     return bpsMaxNotIn;
   }
 
 
-  public void setBpsMaxNotIn(List<Double> bpsMaxNotIn) {
+  public void setBpsMaxNotIn(List<Long> bpsMaxNotIn) {
     this.bpsMaxNotIn = bpsMaxNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsNot(Double bpsNot) {
+  public NvmfSubsystemWhereInput bpsNot(Long bpsNot) {
     
     this.bpsNot = bpsNot;
     return this;
@@ -1835,25 +1835,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsNot() {
+  public Long getBpsNot() {
     return bpsNot;
   }
 
 
-  public void setBpsNot(Double bpsNot) {
+  public void setBpsNot(Long bpsNot) {
     this.bpsNot = bpsNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsNotIn(List<Double> bpsNotIn) {
+  public NvmfSubsystemWhereInput bpsNotIn(List<Long> bpsNotIn) {
     
     this.bpsNotIn = bpsNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsNotInItem(Double bpsNotInItem) {
+  public NvmfSubsystemWhereInput addBpsNotInItem(Long bpsNotInItem) {
     if (this.bpsNotIn == null) {
-      this.bpsNotIn = new ArrayList<Double>();
+      this.bpsNotIn = new ArrayList<Long>();
     }
     this.bpsNotIn.add(bpsNotInItem);
     return this;
@@ -1866,17 +1866,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsNotIn() {
+  public List<Long> getBpsNotIn() {
     return bpsNotIn;
   }
 
 
-  public void setBpsNotIn(List<Double> bpsNotIn) {
+  public void setBpsNotIn(List<Long> bpsNotIn) {
     this.bpsNotIn = bpsNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRd(Double bpsRd) {
+  public NvmfSubsystemWhereInput bpsRd(Long bpsRd) {
     
     this.bpsRd = bpsRd;
     return this;
@@ -1889,17 +1889,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRd() {
+  public Long getBpsRd() {
     return bpsRd;
   }
 
 
-  public void setBpsRd(Double bpsRd) {
+  public void setBpsRd(Long bpsRd) {
     this.bpsRd = bpsRd;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdGt(Double bpsRdGt) {
+  public NvmfSubsystemWhereInput bpsRdGt(Long bpsRdGt) {
     
     this.bpsRdGt = bpsRdGt;
     return this;
@@ -1912,17 +1912,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdGt() {
+  public Long getBpsRdGt() {
     return bpsRdGt;
   }
 
 
-  public void setBpsRdGt(Double bpsRdGt) {
+  public void setBpsRdGt(Long bpsRdGt) {
     this.bpsRdGt = bpsRdGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdGte(Double bpsRdGte) {
+  public NvmfSubsystemWhereInput bpsRdGte(Long bpsRdGte) {
     
     this.bpsRdGte = bpsRdGte;
     return this;
@@ -1935,25 +1935,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdGte() {
+  public Long getBpsRdGte() {
     return bpsRdGte;
   }
 
 
-  public void setBpsRdGte(Double bpsRdGte) {
+  public void setBpsRdGte(Long bpsRdGte) {
     this.bpsRdGte = bpsRdGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdIn(List<Double> bpsRdIn) {
+  public NvmfSubsystemWhereInput bpsRdIn(List<Long> bpsRdIn) {
     
     this.bpsRdIn = bpsRdIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsRdInItem(Double bpsRdInItem) {
+  public NvmfSubsystemWhereInput addBpsRdInItem(Long bpsRdInItem) {
     if (this.bpsRdIn == null) {
-      this.bpsRdIn = new ArrayList<Double>();
+      this.bpsRdIn = new ArrayList<Long>();
     }
     this.bpsRdIn.add(bpsRdInItem);
     return this;
@@ -1966,17 +1966,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsRdIn() {
+  public List<Long> getBpsRdIn() {
     return bpsRdIn;
   }
 
 
-  public void setBpsRdIn(List<Double> bpsRdIn) {
+  public void setBpsRdIn(List<Long> bpsRdIn) {
     this.bpsRdIn = bpsRdIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdLt(Double bpsRdLt) {
+  public NvmfSubsystemWhereInput bpsRdLt(Long bpsRdLt) {
     
     this.bpsRdLt = bpsRdLt;
     return this;
@@ -1989,17 +1989,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdLt() {
+  public Long getBpsRdLt() {
     return bpsRdLt;
   }
 
 
-  public void setBpsRdLt(Double bpsRdLt) {
+  public void setBpsRdLt(Long bpsRdLt) {
     this.bpsRdLt = bpsRdLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdLte(Double bpsRdLte) {
+  public NvmfSubsystemWhereInput bpsRdLte(Long bpsRdLte) {
     
     this.bpsRdLte = bpsRdLte;
     return this;
@@ -2012,17 +2012,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdLte() {
+  public Long getBpsRdLte() {
     return bpsRdLte;
   }
 
 
-  public void setBpsRdLte(Double bpsRdLte) {
+  public void setBpsRdLte(Long bpsRdLte) {
     this.bpsRdLte = bpsRdLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMax(Double bpsRdMax) {
+  public NvmfSubsystemWhereInput bpsRdMax(Long bpsRdMax) {
     
     this.bpsRdMax = bpsRdMax;
     return this;
@@ -2035,17 +2035,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMax() {
+  public Long getBpsRdMax() {
     return bpsRdMax;
   }
 
 
-  public void setBpsRdMax(Double bpsRdMax) {
+  public void setBpsRdMax(Long bpsRdMax) {
     this.bpsRdMax = bpsRdMax;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxGt(Double bpsRdMaxGt) {
+  public NvmfSubsystemWhereInput bpsRdMaxGt(Long bpsRdMaxGt) {
     
     this.bpsRdMaxGt = bpsRdMaxGt;
     return this;
@@ -2058,17 +2058,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxGt() {
+  public Long getBpsRdMaxGt() {
     return bpsRdMaxGt;
   }
 
 
-  public void setBpsRdMaxGt(Double bpsRdMaxGt) {
+  public void setBpsRdMaxGt(Long bpsRdMaxGt) {
     this.bpsRdMaxGt = bpsRdMaxGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxGte(Double bpsRdMaxGte) {
+  public NvmfSubsystemWhereInput bpsRdMaxGte(Long bpsRdMaxGte) {
     
     this.bpsRdMaxGte = bpsRdMaxGte;
     return this;
@@ -2081,25 +2081,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxGte() {
+  public Long getBpsRdMaxGte() {
     return bpsRdMaxGte;
   }
 
 
-  public void setBpsRdMaxGte(Double bpsRdMaxGte) {
+  public void setBpsRdMaxGte(Long bpsRdMaxGte) {
     this.bpsRdMaxGte = bpsRdMaxGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxIn(List<Double> bpsRdMaxIn) {
+  public NvmfSubsystemWhereInput bpsRdMaxIn(List<Long> bpsRdMaxIn) {
     
     this.bpsRdMaxIn = bpsRdMaxIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsRdMaxInItem(Double bpsRdMaxInItem) {
+  public NvmfSubsystemWhereInput addBpsRdMaxInItem(Long bpsRdMaxInItem) {
     if (this.bpsRdMaxIn == null) {
-      this.bpsRdMaxIn = new ArrayList<Double>();
+      this.bpsRdMaxIn = new ArrayList<Long>();
     }
     this.bpsRdMaxIn.add(bpsRdMaxInItem);
     return this;
@@ -2112,17 +2112,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsRdMaxIn() {
+  public List<Long> getBpsRdMaxIn() {
     return bpsRdMaxIn;
   }
 
 
-  public void setBpsRdMaxIn(List<Double> bpsRdMaxIn) {
+  public void setBpsRdMaxIn(List<Long> bpsRdMaxIn) {
     this.bpsRdMaxIn = bpsRdMaxIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLength(Double bpsRdMaxLength) {
+  public NvmfSubsystemWhereInput bpsRdMaxLength(Long bpsRdMaxLength) {
     
     this.bpsRdMaxLength = bpsRdMaxLength;
     return this;
@@ -2135,17 +2135,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLength() {
+  public Long getBpsRdMaxLength() {
     return bpsRdMaxLength;
   }
 
 
-  public void setBpsRdMaxLength(Double bpsRdMaxLength) {
+  public void setBpsRdMaxLength(Long bpsRdMaxLength) {
     this.bpsRdMaxLength = bpsRdMaxLength;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthGt(Double bpsRdMaxLengthGt) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthGt(Long bpsRdMaxLengthGt) {
     
     this.bpsRdMaxLengthGt = bpsRdMaxLengthGt;
     return this;
@@ -2158,17 +2158,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLengthGt() {
+  public Long getBpsRdMaxLengthGt() {
     return bpsRdMaxLengthGt;
   }
 
 
-  public void setBpsRdMaxLengthGt(Double bpsRdMaxLengthGt) {
+  public void setBpsRdMaxLengthGt(Long bpsRdMaxLengthGt) {
     this.bpsRdMaxLengthGt = bpsRdMaxLengthGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthGte(Double bpsRdMaxLengthGte) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthGte(Long bpsRdMaxLengthGte) {
     
     this.bpsRdMaxLengthGte = bpsRdMaxLengthGte;
     return this;
@@ -2181,25 +2181,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLengthGte() {
+  public Long getBpsRdMaxLengthGte() {
     return bpsRdMaxLengthGte;
   }
 
 
-  public void setBpsRdMaxLengthGte(Double bpsRdMaxLengthGte) {
+  public void setBpsRdMaxLengthGte(Long bpsRdMaxLengthGte) {
     this.bpsRdMaxLengthGte = bpsRdMaxLengthGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthIn(List<Double> bpsRdMaxLengthIn) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthIn(List<Long> bpsRdMaxLengthIn) {
     
     this.bpsRdMaxLengthIn = bpsRdMaxLengthIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsRdMaxLengthInItem(Double bpsRdMaxLengthInItem) {
+  public NvmfSubsystemWhereInput addBpsRdMaxLengthInItem(Long bpsRdMaxLengthInItem) {
     if (this.bpsRdMaxLengthIn == null) {
-      this.bpsRdMaxLengthIn = new ArrayList<Double>();
+      this.bpsRdMaxLengthIn = new ArrayList<Long>();
     }
     this.bpsRdMaxLengthIn.add(bpsRdMaxLengthInItem);
     return this;
@@ -2212,17 +2212,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsRdMaxLengthIn() {
+  public List<Long> getBpsRdMaxLengthIn() {
     return bpsRdMaxLengthIn;
   }
 
 
-  public void setBpsRdMaxLengthIn(List<Double> bpsRdMaxLengthIn) {
+  public void setBpsRdMaxLengthIn(List<Long> bpsRdMaxLengthIn) {
     this.bpsRdMaxLengthIn = bpsRdMaxLengthIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthLt(Double bpsRdMaxLengthLt) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthLt(Long bpsRdMaxLengthLt) {
     
     this.bpsRdMaxLengthLt = bpsRdMaxLengthLt;
     return this;
@@ -2235,17 +2235,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLengthLt() {
+  public Long getBpsRdMaxLengthLt() {
     return bpsRdMaxLengthLt;
   }
 
 
-  public void setBpsRdMaxLengthLt(Double bpsRdMaxLengthLt) {
+  public void setBpsRdMaxLengthLt(Long bpsRdMaxLengthLt) {
     this.bpsRdMaxLengthLt = bpsRdMaxLengthLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthLte(Double bpsRdMaxLengthLte) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthLte(Long bpsRdMaxLengthLte) {
     
     this.bpsRdMaxLengthLte = bpsRdMaxLengthLte;
     return this;
@@ -2258,17 +2258,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLengthLte() {
+  public Long getBpsRdMaxLengthLte() {
     return bpsRdMaxLengthLte;
   }
 
 
-  public void setBpsRdMaxLengthLte(Double bpsRdMaxLengthLte) {
+  public void setBpsRdMaxLengthLte(Long bpsRdMaxLengthLte) {
     this.bpsRdMaxLengthLte = bpsRdMaxLengthLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthNot(Double bpsRdMaxLengthNot) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthNot(Long bpsRdMaxLengthNot) {
     
     this.bpsRdMaxLengthNot = bpsRdMaxLengthNot;
     return this;
@@ -2281,25 +2281,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLengthNot() {
+  public Long getBpsRdMaxLengthNot() {
     return bpsRdMaxLengthNot;
   }
 
 
-  public void setBpsRdMaxLengthNot(Double bpsRdMaxLengthNot) {
+  public void setBpsRdMaxLengthNot(Long bpsRdMaxLengthNot) {
     this.bpsRdMaxLengthNot = bpsRdMaxLengthNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLengthNotIn(List<Double> bpsRdMaxLengthNotIn) {
+  public NvmfSubsystemWhereInput bpsRdMaxLengthNotIn(List<Long> bpsRdMaxLengthNotIn) {
     
     this.bpsRdMaxLengthNotIn = bpsRdMaxLengthNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsRdMaxLengthNotInItem(Double bpsRdMaxLengthNotInItem) {
+  public NvmfSubsystemWhereInput addBpsRdMaxLengthNotInItem(Long bpsRdMaxLengthNotInItem) {
     if (this.bpsRdMaxLengthNotIn == null) {
-      this.bpsRdMaxLengthNotIn = new ArrayList<Double>();
+      this.bpsRdMaxLengthNotIn = new ArrayList<Long>();
     }
     this.bpsRdMaxLengthNotIn.add(bpsRdMaxLengthNotInItem);
     return this;
@@ -2312,17 +2312,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsRdMaxLengthNotIn() {
+  public List<Long> getBpsRdMaxLengthNotIn() {
     return bpsRdMaxLengthNotIn;
   }
 
 
-  public void setBpsRdMaxLengthNotIn(List<Double> bpsRdMaxLengthNotIn) {
+  public void setBpsRdMaxLengthNotIn(List<Long> bpsRdMaxLengthNotIn) {
     this.bpsRdMaxLengthNotIn = bpsRdMaxLengthNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLt(Double bpsRdMaxLt) {
+  public NvmfSubsystemWhereInput bpsRdMaxLt(Long bpsRdMaxLt) {
     
     this.bpsRdMaxLt = bpsRdMaxLt;
     return this;
@@ -2335,17 +2335,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLt() {
+  public Long getBpsRdMaxLt() {
     return bpsRdMaxLt;
   }
 
 
-  public void setBpsRdMaxLt(Double bpsRdMaxLt) {
+  public void setBpsRdMaxLt(Long bpsRdMaxLt) {
     this.bpsRdMaxLt = bpsRdMaxLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxLte(Double bpsRdMaxLte) {
+  public NvmfSubsystemWhereInput bpsRdMaxLte(Long bpsRdMaxLte) {
     
     this.bpsRdMaxLte = bpsRdMaxLte;
     return this;
@@ -2358,17 +2358,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLte() {
+  public Long getBpsRdMaxLte() {
     return bpsRdMaxLte;
   }
 
 
-  public void setBpsRdMaxLte(Double bpsRdMaxLte) {
+  public void setBpsRdMaxLte(Long bpsRdMaxLte) {
     this.bpsRdMaxLte = bpsRdMaxLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxNot(Double bpsRdMaxNot) {
+  public NvmfSubsystemWhereInput bpsRdMaxNot(Long bpsRdMaxNot) {
     
     this.bpsRdMaxNot = bpsRdMaxNot;
     return this;
@@ -2381,25 +2381,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxNot() {
+  public Long getBpsRdMaxNot() {
     return bpsRdMaxNot;
   }
 
 
-  public void setBpsRdMaxNot(Double bpsRdMaxNot) {
+  public void setBpsRdMaxNot(Long bpsRdMaxNot) {
     this.bpsRdMaxNot = bpsRdMaxNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdMaxNotIn(List<Double> bpsRdMaxNotIn) {
+  public NvmfSubsystemWhereInput bpsRdMaxNotIn(List<Long> bpsRdMaxNotIn) {
     
     this.bpsRdMaxNotIn = bpsRdMaxNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsRdMaxNotInItem(Double bpsRdMaxNotInItem) {
+  public NvmfSubsystemWhereInput addBpsRdMaxNotInItem(Long bpsRdMaxNotInItem) {
     if (this.bpsRdMaxNotIn == null) {
-      this.bpsRdMaxNotIn = new ArrayList<Double>();
+      this.bpsRdMaxNotIn = new ArrayList<Long>();
     }
     this.bpsRdMaxNotIn.add(bpsRdMaxNotInItem);
     return this;
@@ -2412,17 +2412,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsRdMaxNotIn() {
+  public List<Long> getBpsRdMaxNotIn() {
     return bpsRdMaxNotIn;
   }
 
 
-  public void setBpsRdMaxNotIn(List<Double> bpsRdMaxNotIn) {
+  public void setBpsRdMaxNotIn(List<Long> bpsRdMaxNotIn) {
     this.bpsRdMaxNotIn = bpsRdMaxNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdNot(Double bpsRdNot) {
+  public NvmfSubsystemWhereInput bpsRdNot(Long bpsRdNot) {
     
     this.bpsRdNot = bpsRdNot;
     return this;
@@ -2435,25 +2435,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdNot() {
+  public Long getBpsRdNot() {
     return bpsRdNot;
   }
 
 
-  public void setBpsRdNot(Double bpsRdNot) {
+  public void setBpsRdNot(Long bpsRdNot) {
     this.bpsRdNot = bpsRdNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsRdNotIn(List<Double> bpsRdNotIn) {
+  public NvmfSubsystemWhereInput bpsRdNotIn(List<Long> bpsRdNotIn) {
     
     this.bpsRdNotIn = bpsRdNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsRdNotInItem(Double bpsRdNotInItem) {
+  public NvmfSubsystemWhereInput addBpsRdNotInItem(Long bpsRdNotInItem) {
     if (this.bpsRdNotIn == null) {
-      this.bpsRdNotIn = new ArrayList<Double>();
+      this.bpsRdNotIn = new ArrayList<Long>();
     }
     this.bpsRdNotIn.add(bpsRdNotInItem);
     return this;
@@ -2466,17 +2466,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsRdNotIn() {
+  public List<Long> getBpsRdNotIn() {
     return bpsRdNotIn;
   }
 
 
-  public void setBpsRdNotIn(List<Double> bpsRdNotIn) {
+  public void setBpsRdNotIn(List<Long> bpsRdNotIn) {
     this.bpsRdNotIn = bpsRdNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWr(Double bpsWr) {
+  public NvmfSubsystemWhereInput bpsWr(Long bpsWr) {
     
     this.bpsWr = bpsWr;
     return this;
@@ -2489,17 +2489,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWr() {
+  public Long getBpsWr() {
     return bpsWr;
   }
 
 
-  public void setBpsWr(Double bpsWr) {
+  public void setBpsWr(Long bpsWr) {
     this.bpsWr = bpsWr;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrGt(Double bpsWrGt) {
+  public NvmfSubsystemWhereInput bpsWrGt(Long bpsWrGt) {
     
     this.bpsWrGt = bpsWrGt;
     return this;
@@ -2512,17 +2512,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrGt() {
+  public Long getBpsWrGt() {
     return bpsWrGt;
   }
 
 
-  public void setBpsWrGt(Double bpsWrGt) {
+  public void setBpsWrGt(Long bpsWrGt) {
     this.bpsWrGt = bpsWrGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrGte(Double bpsWrGte) {
+  public NvmfSubsystemWhereInput bpsWrGte(Long bpsWrGte) {
     
     this.bpsWrGte = bpsWrGte;
     return this;
@@ -2535,25 +2535,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrGte() {
+  public Long getBpsWrGte() {
     return bpsWrGte;
   }
 
 
-  public void setBpsWrGte(Double bpsWrGte) {
+  public void setBpsWrGte(Long bpsWrGte) {
     this.bpsWrGte = bpsWrGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrIn(List<Double> bpsWrIn) {
+  public NvmfSubsystemWhereInput bpsWrIn(List<Long> bpsWrIn) {
     
     this.bpsWrIn = bpsWrIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsWrInItem(Double bpsWrInItem) {
+  public NvmfSubsystemWhereInput addBpsWrInItem(Long bpsWrInItem) {
     if (this.bpsWrIn == null) {
-      this.bpsWrIn = new ArrayList<Double>();
+      this.bpsWrIn = new ArrayList<Long>();
     }
     this.bpsWrIn.add(bpsWrInItem);
     return this;
@@ -2566,17 +2566,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsWrIn() {
+  public List<Long> getBpsWrIn() {
     return bpsWrIn;
   }
 
 
-  public void setBpsWrIn(List<Double> bpsWrIn) {
+  public void setBpsWrIn(List<Long> bpsWrIn) {
     this.bpsWrIn = bpsWrIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrLt(Double bpsWrLt) {
+  public NvmfSubsystemWhereInput bpsWrLt(Long bpsWrLt) {
     
     this.bpsWrLt = bpsWrLt;
     return this;
@@ -2589,17 +2589,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrLt() {
+  public Long getBpsWrLt() {
     return bpsWrLt;
   }
 
 
-  public void setBpsWrLt(Double bpsWrLt) {
+  public void setBpsWrLt(Long bpsWrLt) {
     this.bpsWrLt = bpsWrLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrLte(Double bpsWrLte) {
+  public NvmfSubsystemWhereInput bpsWrLte(Long bpsWrLte) {
     
     this.bpsWrLte = bpsWrLte;
     return this;
@@ -2612,17 +2612,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrLte() {
+  public Long getBpsWrLte() {
     return bpsWrLte;
   }
 
 
-  public void setBpsWrLte(Double bpsWrLte) {
+  public void setBpsWrLte(Long bpsWrLte) {
     this.bpsWrLte = bpsWrLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMax(Double bpsWrMax) {
+  public NvmfSubsystemWhereInput bpsWrMax(Long bpsWrMax) {
     
     this.bpsWrMax = bpsWrMax;
     return this;
@@ -2635,17 +2635,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMax() {
+  public Long getBpsWrMax() {
     return bpsWrMax;
   }
 
 
-  public void setBpsWrMax(Double bpsWrMax) {
+  public void setBpsWrMax(Long bpsWrMax) {
     this.bpsWrMax = bpsWrMax;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxGt(Double bpsWrMaxGt) {
+  public NvmfSubsystemWhereInput bpsWrMaxGt(Long bpsWrMaxGt) {
     
     this.bpsWrMaxGt = bpsWrMaxGt;
     return this;
@@ -2658,17 +2658,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxGt() {
+  public Long getBpsWrMaxGt() {
     return bpsWrMaxGt;
   }
 
 
-  public void setBpsWrMaxGt(Double bpsWrMaxGt) {
+  public void setBpsWrMaxGt(Long bpsWrMaxGt) {
     this.bpsWrMaxGt = bpsWrMaxGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxGte(Double bpsWrMaxGte) {
+  public NvmfSubsystemWhereInput bpsWrMaxGte(Long bpsWrMaxGte) {
     
     this.bpsWrMaxGte = bpsWrMaxGte;
     return this;
@@ -2681,25 +2681,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxGte() {
+  public Long getBpsWrMaxGte() {
     return bpsWrMaxGte;
   }
 
 
-  public void setBpsWrMaxGte(Double bpsWrMaxGte) {
+  public void setBpsWrMaxGte(Long bpsWrMaxGte) {
     this.bpsWrMaxGte = bpsWrMaxGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxIn(List<Double> bpsWrMaxIn) {
+  public NvmfSubsystemWhereInput bpsWrMaxIn(List<Long> bpsWrMaxIn) {
     
     this.bpsWrMaxIn = bpsWrMaxIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsWrMaxInItem(Double bpsWrMaxInItem) {
+  public NvmfSubsystemWhereInput addBpsWrMaxInItem(Long bpsWrMaxInItem) {
     if (this.bpsWrMaxIn == null) {
-      this.bpsWrMaxIn = new ArrayList<Double>();
+      this.bpsWrMaxIn = new ArrayList<Long>();
     }
     this.bpsWrMaxIn.add(bpsWrMaxInItem);
     return this;
@@ -2712,17 +2712,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsWrMaxIn() {
+  public List<Long> getBpsWrMaxIn() {
     return bpsWrMaxIn;
   }
 
 
-  public void setBpsWrMaxIn(List<Double> bpsWrMaxIn) {
+  public void setBpsWrMaxIn(List<Long> bpsWrMaxIn) {
     this.bpsWrMaxIn = bpsWrMaxIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLength(Double bpsWrMaxLength) {
+  public NvmfSubsystemWhereInput bpsWrMaxLength(Long bpsWrMaxLength) {
     
     this.bpsWrMaxLength = bpsWrMaxLength;
     return this;
@@ -2735,17 +2735,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLength() {
+  public Long getBpsWrMaxLength() {
     return bpsWrMaxLength;
   }
 
 
-  public void setBpsWrMaxLength(Double bpsWrMaxLength) {
+  public void setBpsWrMaxLength(Long bpsWrMaxLength) {
     this.bpsWrMaxLength = bpsWrMaxLength;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthGt(Double bpsWrMaxLengthGt) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthGt(Long bpsWrMaxLengthGt) {
     
     this.bpsWrMaxLengthGt = bpsWrMaxLengthGt;
     return this;
@@ -2758,17 +2758,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLengthGt() {
+  public Long getBpsWrMaxLengthGt() {
     return bpsWrMaxLengthGt;
   }
 
 
-  public void setBpsWrMaxLengthGt(Double bpsWrMaxLengthGt) {
+  public void setBpsWrMaxLengthGt(Long bpsWrMaxLengthGt) {
     this.bpsWrMaxLengthGt = bpsWrMaxLengthGt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthGte(Double bpsWrMaxLengthGte) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthGte(Long bpsWrMaxLengthGte) {
     
     this.bpsWrMaxLengthGte = bpsWrMaxLengthGte;
     return this;
@@ -2781,25 +2781,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLengthGte() {
+  public Long getBpsWrMaxLengthGte() {
     return bpsWrMaxLengthGte;
   }
 
 
-  public void setBpsWrMaxLengthGte(Double bpsWrMaxLengthGte) {
+  public void setBpsWrMaxLengthGte(Long bpsWrMaxLengthGte) {
     this.bpsWrMaxLengthGte = bpsWrMaxLengthGte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthIn(List<Double> bpsWrMaxLengthIn) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthIn(List<Long> bpsWrMaxLengthIn) {
     
     this.bpsWrMaxLengthIn = bpsWrMaxLengthIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsWrMaxLengthInItem(Double bpsWrMaxLengthInItem) {
+  public NvmfSubsystemWhereInput addBpsWrMaxLengthInItem(Long bpsWrMaxLengthInItem) {
     if (this.bpsWrMaxLengthIn == null) {
-      this.bpsWrMaxLengthIn = new ArrayList<Double>();
+      this.bpsWrMaxLengthIn = new ArrayList<Long>();
     }
     this.bpsWrMaxLengthIn.add(bpsWrMaxLengthInItem);
     return this;
@@ -2812,17 +2812,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsWrMaxLengthIn() {
+  public List<Long> getBpsWrMaxLengthIn() {
     return bpsWrMaxLengthIn;
   }
 
 
-  public void setBpsWrMaxLengthIn(List<Double> bpsWrMaxLengthIn) {
+  public void setBpsWrMaxLengthIn(List<Long> bpsWrMaxLengthIn) {
     this.bpsWrMaxLengthIn = bpsWrMaxLengthIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthLt(Double bpsWrMaxLengthLt) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthLt(Long bpsWrMaxLengthLt) {
     
     this.bpsWrMaxLengthLt = bpsWrMaxLengthLt;
     return this;
@@ -2835,17 +2835,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLengthLt() {
+  public Long getBpsWrMaxLengthLt() {
     return bpsWrMaxLengthLt;
   }
 
 
-  public void setBpsWrMaxLengthLt(Double bpsWrMaxLengthLt) {
+  public void setBpsWrMaxLengthLt(Long bpsWrMaxLengthLt) {
     this.bpsWrMaxLengthLt = bpsWrMaxLengthLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthLte(Double bpsWrMaxLengthLte) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthLte(Long bpsWrMaxLengthLte) {
     
     this.bpsWrMaxLengthLte = bpsWrMaxLengthLte;
     return this;
@@ -2858,17 +2858,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLengthLte() {
+  public Long getBpsWrMaxLengthLte() {
     return bpsWrMaxLengthLte;
   }
 
 
-  public void setBpsWrMaxLengthLte(Double bpsWrMaxLengthLte) {
+  public void setBpsWrMaxLengthLte(Long bpsWrMaxLengthLte) {
     this.bpsWrMaxLengthLte = bpsWrMaxLengthLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthNot(Double bpsWrMaxLengthNot) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthNot(Long bpsWrMaxLengthNot) {
     
     this.bpsWrMaxLengthNot = bpsWrMaxLengthNot;
     return this;
@@ -2881,25 +2881,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLengthNot() {
+  public Long getBpsWrMaxLengthNot() {
     return bpsWrMaxLengthNot;
   }
 
 
-  public void setBpsWrMaxLengthNot(Double bpsWrMaxLengthNot) {
+  public void setBpsWrMaxLengthNot(Long bpsWrMaxLengthNot) {
     this.bpsWrMaxLengthNot = bpsWrMaxLengthNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLengthNotIn(List<Double> bpsWrMaxLengthNotIn) {
+  public NvmfSubsystemWhereInput bpsWrMaxLengthNotIn(List<Long> bpsWrMaxLengthNotIn) {
     
     this.bpsWrMaxLengthNotIn = bpsWrMaxLengthNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsWrMaxLengthNotInItem(Double bpsWrMaxLengthNotInItem) {
+  public NvmfSubsystemWhereInput addBpsWrMaxLengthNotInItem(Long bpsWrMaxLengthNotInItem) {
     if (this.bpsWrMaxLengthNotIn == null) {
-      this.bpsWrMaxLengthNotIn = new ArrayList<Double>();
+      this.bpsWrMaxLengthNotIn = new ArrayList<Long>();
     }
     this.bpsWrMaxLengthNotIn.add(bpsWrMaxLengthNotInItem);
     return this;
@@ -2912,17 +2912,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsWrMaxLengthNotIn() {
+  public List<Long> getBpsWrMaxLengthNotIn() {
     return bpsWrMaxLengthNotIn;
   }
 
 
-  public void setBpsWrMaxLengthNotIn(List<Double> bpsWrMaxLengthNotIn) {
+  public void setBpsWrMaxLengthNotIn(List<Long> bpsWrMaxLengthNotIn) {
     this.bpsWrMaxLengthNotIn = bpsWrMaxLengthNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLt(Double bpsWrMaxLt) {
+  public NvmfSubsystemWhereInput bpsWrMaxLt(Long bpsWrMaxLt) {
     
     this.bpsWrMaxLt = bpsWrMaxLt;
     return this;
@@ -2935,17 +2935,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLt() {
+  public Long getBpsWrMaxLt() {
     return bpsWrMaxLt;
   }
 
 
-  public void setBpsWrMaxLt(Double bpsWrMaxLt) {
+  public void setBpsWrMaxLt(Long bpsWrMaxLt) {
     this.bpsWrMaxLt = bpsWrMaxLt;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxLte(Double bpsWrMaxLte) {
+  public NvmfSubsystemWhereInput bpsWrMaxLte(Long bpsWrMaxLte) {
     
     this.bpsWrMaxLte = bpsWrMaxLte;
     return this;
@@ -2958,17 +2958,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLte() {
+  public Long getBpsWrMaxLte() {
     return bpsWrMaxLte;
   }
 
 
-  public void setBpsWrMaxLte(Double bpsWrMaxLte) {
+  public void setBpsWrMaxLte(Long bpsWrMaxLte) {
     this.bpsWrMaxLte = bpsWrMaxLte;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxNot(Double bpsWrMaxNot) {
+  public NvmfSubsystemWhereInput bpsWrMaxNot(Long bpsWrMaxNot) {
     
     this.bpsWrMaxNot = bpsWrMaxNot;
     return this;
@@ -2981,25 +2981,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxNot() {
+  public Long getBpsWrMaxNot() {
     return bpsWrMaxNot;
   }
 
 
-  public void setBpsWrMaxNot(Double bpsWrMaxNot) {
+  public void setBpsWrMaxNot(Long bpsWrMaxNot) {
     this.bpsWrMaxNot = bpsWrMaxNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrMaxNotIn(List<Double> bpsWrMaxNotIn) {
+  public NvmfSubsystemWhereInput bpsWrMaxNotIn(List<Long> bpsWrMaxNotIn) {
     
     this.bpsWrMaxNotIn = bpsWrMaxNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsWrMaxNotInItem(Double bpsWrMaxNotInItem) {
+  public NvmfSubsystemWhereInput addBpsWrMaxNotInItem(Long bpsWrMaxNotInItem) {
     if (this.bpsWrMaxNotIn == null) {
-      this.bpsWrMaxNotIn = new ArrayList<Double>();
+      this.bpsWrMaxNotIn = new ArrayList<Long>();
     }
     this.bpsWrMaxNotIn.add(bpsWrMaxNotInItem);
     return this;
@@ -3012,17 +3012,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsWrMaxNotIn() {
+  public List<Long> getBpsWrMaxNotIn() {
     return bpsWrMaxNotIn;
   }
 
 
-  public void setBpsWrMaxNotIn(List<Double> bpsWrMaxNotIn) {
+  public void setBpsWrMaxNotIn(List<Long> bpsWrMaxNotIn) {
     this.bpsWrMaxNotIn = bpsWrMaxNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrNot(Double bpsWrNot) {
+  public NvmfSubsystemWhereInput bpsWrNot(Long bpsWrNot) {
     
     this.bpsWrNot = bpsWrNot;
     return this;
@@ -3035,25 +3035,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrNot() {
+  public Long getBpsWrNot() {
     return bpsWrNot;
   }
 
 
-  public void setBpsWrNot(Double bpsWrNot) {
+  public void setBpsWrNot(Long bpsWrNot) {
     this.bpsWrNot = bpsWrNot;
   }
 
 
-  public NvmfSubsystemWhereInput bpsWrNotIn(List<Double> bpsWrNotIn) {
+  public NvmfSubsystemWhereInput bpsWrNotIn(List<Long> bpsWrNotIn) {
     
     this.bpsWrNotIn = bpsWrNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addBpsWrNotInItem(Double bpsWrNotInItem) {
+  public NvmfSubsystemWhereInput addBpsWrNotInItem(Long bpsWrNotInItem) {
     if (this.bpsWrNotIn == null) {
-      this.bpsWrNotIn = new ArrayList<Double>();
+      this.bpsWrNotIn = new ArrayList<Long>();
     }
     this.bpsWrNotIn.add(bpsWrNotInItem);
     return this;
@@ -3066,12 +3066,12 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBpsWrNotIn() {
+  public List<Long> getBpsWrNotIn() {
     return bpsWrNotIn;
   }
 
 
-  public void setBpsWrNotIn(List<Double> bpsWrNotIn) {
+  public void setBpsWrNotIn(List<Long> bpsWrNotIn) {
     this.bpsWrNotIn = bpsWrNotIn;
   }
 
@@ -3975,7 +3975,7 @@ public class NvmfSubsystemWhereInput {
   }
 
 
-  public NvmfSubsystemWhereInput ioSize(Double ioSize) {
+  public NvmfSubsystemWhereInput ioSize(Long ioSize) {
     
     this.ioSize = ioSize;
     return this;
@@ -3988,17 +3988,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIoSize() {
+  public Long getIoSize() {
     return ioSize;
   }
 
 
-  public void setIoSize(Double ioSize) {
+  public void setIoSize(Long ioSize) {
     this.ioSize = ioSize;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeGt(Double ioSizeGt) {
+  public NvmfSubsystemWhereInput ioSizeGt(Long ioSizeGt) {
     
     this.ioSizeGt = ioSizeGt;
     return this;
@@ -4011,17 +4011,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIoSizeGt() {
+  public Long getIoSizeGt() {
     return ioSizeGt;
   }
 
 
-  public void setIoSizeGt(Double ioSizeGt) {
+  public void setIoSizeGt(Long ioSizeGt) {
     this.ioSizeGt = ioSizeGt;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeGte(Double ioSizeGte) {
+  public NvmfSubsystemWhereInput ioSizeGte(Long ioSizeGte) {
     
     this.ioSizeGte = ioSizeGte;
     return this;
@@ -4034,25 +4034,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIoSizeGte() {
+  public Long getIoSizeGte() {
     return ioSizeGte;
   }
 
 
-  public void setIoSizeGte(Double ioSizeGte) {
+  public void setIoSizeGte(Long ioSizeGte) {
     this.ioSizeGte = ioSizeGte;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeIn(List<Double> ioSizeIn) {
+  public NvmfSubsystemWhereInput ioSizeIn(List<Long> ioSizeIn) {
     
     this.ioSizeIn = ioSizeIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIoSizeInItem(Double ioSizeInItem) {
+  public NvmfSubsystemWhereInput addIoSizeInItem(Long ioSizeInItem) {
     if (this.ioSizeIn == null) {
-      this.ioSizeIn = new ArrayList<Double>();
+      this.ioSizeIn = new ArrayList<Long>();
     }
     this.ioSizeIn.add(ioSizeInItem);
     return this;
@@ -4065,17 +4065,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIoSizeIn() {
+  public List<Long> getIoSizeIn() {
     return ioSizeIn;
   }
 
 
-  public void setIoSizeIn(List<Double> ioSizeIn) {
+  public void setIoSizeIn(List<Long> ioSizeIn) {
     this.ioSizeIn = ioSizeIn;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeLt(Double ioSizeLt) {
+  public NvmfSubsystemWhereInput ioSizeLt(Long ioSizeLt) {
     
     this.ioSizeLt = ioSizeLt;
     return this;
@@ -4088,17 +4088,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIoSizeLt() {
+  public Long getIoSizeLt() {
     return ioSizeLt;
   }
 
 
-  public void setIoSizeLt(Double ioSizeLt) {
+  public void setIoSizeLt(Long ioSizeLt) {
     this.ioSizeLt = ioSizeLt;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeLte(Double ioSizeLte) {
+  public NvmfSubsystemWhereInput ioSizeLte(Long ioSizeLte) {
     
     this.ioSizeLte = ioSizeLte;
     return this;
@@ -4111,17 +4111,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIoSizeLte() {
+  public Long getIoSizeLte() {
     return ioSizeLte;
   }
 
 
-  public void setIoSizeLte(Double ioSizeLte) {
+  public void setIoSizeLte(Long ioSizeLte) {
     this.ioSizeLte = ioSizeLte;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeNot(Double ioSizeNot) {
+  public NvmfSubsystemWhereInput ioSizeNot(Long ioSizeNot) {
     
     this.ioSizeNot = ioSizeNot;
     return this;
@@ -4134,25 +4134,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIoSizeNot() {
+  public Long getIoSizeNot() {
     return ioSizeNot;
   }
 
 
-  public void setIoSizeNot(Double ioSizeNot) {
+  public void setIoSizeNot(Long ioSizeNot) {
     this.ioSizeNot = ioSizeNot;
   }
 
 
-  public NvmfSubsystemWhereInput ioSizeNotIn(List<Double> ioSizeNotIn) {
+  public NvmfSubsystemWhereInput ioSizeNotIn(List<Long> ioSizeNotIn) {
     
     this.ioSizeNotIn = ioSizeNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIoSizeNotInItem(Double ioSizeNotInItem) {
+  public NvmfSubsystemWhereInput addIoSizeNotInItem(Long ioSizeNotInItem) {
     if (this.ioSizeNotIn == null) {
-      this.ioSizeNotIn = new ArrayList<Double>();
+      this.ioSizeNotIn = new ArrayList<Long>();
     }
     this.ioSizeNotIn.add(ioSizeNotInItem);
     return this;
@@ -4165,17 +4165,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIoSizeNotIn() {
+  public List<Long> getIoSizeNotIn() {
     return ioSizeNotIn;
   }
 
 
-  public void setIoSizeNotIn(List<Double> ioSizeNotIn) {
+  public void setIoSizeNotIn(List<Long> ioSizeNotIn) {
     this.ioSizeNotIn = ioSizeNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iops(Double iops) {
+  public NvmfSubsystemWhereInput iops(Long iops) {
     
     this.iops = iops;
     return this;
@@ -4188,17 +4188,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIops() {
+  public Long getIops() {
     return iops;
   }
 
 
-  public void setIops(Double iops) {
+  public void setIops(Long iops) {
     this.iops = iops;
   }
 
 
-  public NvmfSubsystemWhereInput iopsGt(Double iopsGt) {
+  public NvmfSubsystemWhereInput iopsGt(Long iopsGt) {
     
     this.iopsGt = iopsGt;
     return this;
@@ -4211,17 +4211,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsGt() {
+  public Long getIopsGt() {
     return iopsGt;
   }
 
 
-  public void setIopsGt(Double iopsGt) {
+  public void setIopsGt(Long iopsGt) {
     this.iopsGt = iopsGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsGte(Double iopsGte) {
+  public NvmfSubsystemWhereInput iopsGte(Long iopsGte) {
     
     this.iopsGte = iopsGte;
     return this;
@@ -4234,25 +4234,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsGte() {
+  public Long getIopsGte() {
     return iopsGte;
   }
 
 
-  public void setIopsGte(Double iopsGte) {
+  public void setIopsGte(Long iopsGte) {
     this.iopsGte = iopsGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsIn(List<Double> iopsIn) {
+  public NvmfSubsystemWhereInput iopsIn(List<Long> iopsIn) {
     
     this.iopsIn = iopsIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsInItem(Double iopsInItem) {
+  public NvmfSubsystemWhereInput addIopsInItem(Long iopsInItem) {
     if (this.iopsIn == null) {
-      this.iopsIn = new ArrayList<Double>();
+      this.iopsIn = new ArrayList<Long>();
     }
     this.iopsIn.add(iopsInItem);
     return this;
@@ -4265,17 +4265,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsIn() {
+  public List<Long> getIopsIn() {
     return iopsIn;
   }
 
 
-  public void setIopsIn(List<Double> iopsIn) {
+  public void setIopsIn(List<Long> iopsIn) {
     this.iopsIn = iopsIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsLt(Double iopsLt) {
+  public NvmfSubsystemWhereInput iopsLt(Long iopsLt) {
     
     this.iopsLt = iopsLt;
     return this;
@@ -4288,17 +4288,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsLt() {
+  public Long getIopsLt() {
     return iopsLt;
   }
 
 
-  public void setIopsLt(Double iopsLt) {
+  public void setIopsLt(Long iopsLt) {
     this.iopsLt = iopsLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsLte(Double iopsLte) {
+  public NvmfSubsystemWhereInput iopsLte(Long iopsLte) {
     
     this.iopsLte = iopsLte;
     return this;
@@ -4311,17 +4311,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsLte() {
+  public Long getIopsLte() {
     return iopsLte;
   }
 
 
-  public void setIopsLte(Double iopsLte) {
+  public void setIopsLte(Long iopsLte) {
     this.iopsLte = iopsLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMax(Double iopsMax) {
+  public NvmfSubsystemWhereInput iopsMax(Long iopsMax) {
     
     this.iopsMax = iopsMax;
     return this;
@@ -4334,17 +4334,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMax() {
+  public Long getIopsMax() {
     return iopsMax;
   }
 
 
-  public void setIopsMax(Double iopsMax) {
+  public void setIopsMax(Long iopsMax) {
     this.iopsMax = iopsMax;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxGt(Double iopsMaxGt) {
+  public NvmfSubsystemWhereInput iopsMaxGt(Long iopsMaxGt) {
     
     this.iopsMaxGt = iopsMaxGt;
     return this;
@@ -4357,17 +4357,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxGt() {
+  public Long getIopsMaxGt() {
     return iopsMaxGt;
   }
 
 
-  public void setIopsMaxGt(Double iopsMaxGt) {
+  public void setIopsMaxGt(Long iopsMaxGt) {
     this.iopsMaxGt = iopsMaxGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxGte(Double iopsMaxGte) {
+  public NvmfSubsystemWhereInput iopsMaxGte(Long iopsMaxGte) {
     
     this.iopsMaxGte = iopsMaxGte;
     return this;
@@ -4380,25 +4380,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxGte() {
+  public Long getIopsMaxGte() {
     return iopsMaxGte;
   }
 
 
-  public void setIopsMaxGte(Double iopsMaxGte) {
+  public void setIopsMaxGte(Long iopsMaxGte) {
     this.iopsMaxGte = iopsMaxGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxIn(List<Double> iopsMaxIn) {
+  public NvmfSubsystemWhereInput iopsMaxIn(List<Long> iopsMaxIn) {
     
     this.iopsMaxIn = iopsMaxIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsMaxInItem(Double iopsMaxInItem) {
+  public NvmfSubsystemWhereInput addIopsMaxInItem(Long iopsMaxInItem) {
     if (this.iopsMaxIn == null) {
-      this.iopsMaxIn = new ArrayList<Double>();
+      this.iopsMaxIn = new ArrayList<Long>();
     }
     this.iopsMaxIn.add(iopsMaxInItem);
     return this;
@@ -4411,17 +4411,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsMaxIn() {
+  public List<Long> getIopsMaxIn() {
     return iopsMaxIn;
   }
 
 
-  public void setIopsMaxIn(List<Double> iopsMaxIn) {
+  public void setIopsMaxIn(List<Long> iopsMaxIn) {
     this.iopsMaxIn = iopsMaxIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLength(Double iopsMaxLength) {
+  public NvmfSubsystemWhereInput iopsMaxLength(Long iopsMaxLength) {
     
     this.iopsMaxLength = iopsMaxLength;
     return this;
@@ -4434,17 +4434,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLength() {
+  public Long getIopsMaxLength() {
     return iopsMaxLength;
   }
 
 
-  public void setIopsMaxLength(Double iopsMaxLength) {
+  public void setIopsMaxLength(Long iopsMaxLength) {
     this.iopsMaxLength = iopsMaxLength;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthGt(Double iopsMaxLengthGt) {
+  public NvmfSubsystemWhereInput iopsMaxLengthGt(Long iopsMaxLengthGt) {
     
     this.iopsMaxLengthGt = iopsMaxLengthGt;
     return this;
@@ -4457,17 +4457,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLengthGt() {
+  public Long getIopsMaxLengthGt() {
     return iopsMaxLengthGt;
   }
 
 
-  public void setIopsMaxLengthGt(Double iopsMaxLengthGt) {
+  public void setIopsMaxLengthGt(Long iopsMaxLengthGt) {
     this.iopsMaxLengthGt = iopsMaxLengthGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthGte(Double iopsMaxLengthGte) {
+  public NvmfSubsystemWhereInput iopsMaxLengthGte(Long iopsMaxLengthGte) {
     
     this.iopsMaxLengthGte = iopsMaxLengthGte;
     return this;
@@ -4480,25 +4480,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLengthGte() {
+  public Long getIopsMaxLengthGte() {
     return iopsMaxLengthGte;
   }
 
 
-  public void setIopsMaxLengthGte(Double iopsMaxLengthGte) {
+  public void setIopsMaxLengthGte(Long iopsMaxLengthGte) {
     this.iopsMaxLengthGte = iopsMaxLengthGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthIn(List<Double> iopsMaxLengthIn) {
+  public NvmfSubsystemWhereInput iopsMaxLengthIn(List<Long> iopsMaxLengthIn) {
     
     this.iopsMaxLengthIn = iopsMaxLengthIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsMaxLengthInItem(Double iopsMaxLengthInItem) {
+  public NvmfSubsystemWhereInput addIopsMaxLengthInItem(Long iopsMaxLengthInItem) {
     if (this.iopsMaxLengthIn == null) {
-      this.iopsMaxLengthIn = new ArrayList<Double>();
+      this.iopsMaxLengthIn = new ArrayList<Long>();
     }
     this.iopsMaxLengthIn.add(iopsMaxLengthInItem);
     return this;
@@ -4511,17 +4511,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsMaxLengthIn() {
+  public List<Long> getIopsMaxLengthIn() {
     return iopsMaxLengthIn;
   }
 
 
-  public void setIopsMaxLengthIn(List<Double> iopsMaxLengthIn) {
+  public void setIopsMaxLengthIn(List<Long> iopsMaxLengthIn) {
     this.iopsMaxLengthIn = iopsMaxLengthIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthLt(Double iopsMaxLengthLt) {
+  public NvmfSubsystemWhereInput iopsMaxLengthLt(Long iopsMaxLengthLt) {
     
     this.iopsMaxLengthLt = iopsMaxLengthLt;
     return this;
@@ -4534,17 +4534,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLengthLt() {
+  public Long getIopsMaxLengthLt() {
     return iopsMaxLengthLt;
   }
 
 
-  public void setIopsMaxLengthLt(Double iopsMaxLengthLt) {
+  public void setIopsMaxLengthLt(Long iopsMaxLengthLt) {
     this.iopsMaxLengthLt = iopsMaxLengthLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthLte(Double iopsMaxLengthLte) {
+  public NvmfSubsystemWhereInput iopsMaxLengthLte(Long iopsMaxLengthLte) {
     
     this.iopsMaxLengthLte = iopsMaxLengthLte;
     return this;
@@ -4557,17 +4557,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLengthLte() {
+  public Long getIopsMaxLengthLte() {
     return iopsMaxLengthLte;
   }
 
 
-  public void setIopsMaxLengthLte(Double iopsMaxLengthLte) {
+  public void setIopsMaxLengthLte(Long iopsMaxLengthLte) {
     this.iopsMaxLengthLte = iopsMaxLengthLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthNot(Double iopsMaxLengthNot) {
+  public NvmfSubsystemWhereInput iopsMaxLengthNot(Long iopsMaxLengthNot) {
     
     this.iopsMaxLengthNot = iopsMaxLengthNot;
     return this;
@@ -4580,25 +4580,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLengthNot() {
+  public Long getIopsMaxLengthNot() {
     return iopsMaxLengthNot;
   }
 
 
-  public void setIopsMaxLengthNot(Double iopsMaxLengthNot) {
+  public void setIopsMaxLengthNot(Long iopsMaxLengthNot) {
     this.iopsMaxLengthNot = iopsMaxLengthNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLengthNotIn(List<Double> iopsMaxLengthNotIn) {
+  public NvmfSubsystemWhereInput iopsMaxLengthNotIn(List<Long> iopsMaxLengthNotIn) {
     
     this.iopsMaxLengthNotIn = iopsMaxLengthNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsMaxLengthNotInItem(Double iopsMaxLengthNotInItem) {
+  public NvmfSubsystemWhereInput addIopsMaxLengthNotInItem(Long iopsMaxLengthNotInItem) {
     if (this.iopsMaxLengthNotIn == null) {
-      this.iopsMaxLengthNotIn = new ArrayList<Double>();
+      this.iopsMaxLengthNotIn = new ArrayList<Long>();
     }
     this.iopsMaxLengthNotIn.add(iopsMaxLengthNotInItem);
     return this;
@@ -4611,17 +4611,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsMaxLengthNotIn() {
+  public List<Long> getIopsMaxLengthNotIn() {
     return iopsMaxLengthNotIn;
   }
 
 
-  public void setIopsMaxLengthNotIn(List<Double> iopsMaxLengthNotIn) {
+  public void setIopsMaxLengthNotIn(List<Long> iopsMaxLengthNotIn) {
     this.iopsMaxLengthNotIn = iopsMaxLengthNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLt(Double iopsMaxLt) {
+  public NvmfSubsystemWhereInput iopsMaxLt(Long iopsMaxLt) {
     
     this.iopsMaxLt = iopsMaxLt;
     return this;
@@ -4634,17 +4634,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLt() {
+  public Long getIopsMaxLt() {
     return iopsMaxLt;
   }
 
 
-  public void setIopsMaxLt(Double iopsMaxLt) {
+  public void setIopsMaxLt(Long iopsMaxLt) {
     this.iopsMaxLt = iopsMaxLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxLte(Double iopsMaxLte) {
+  public NvmfSubsystemWhereInput iopsMaxLte(Long iopsMaxLte) {
     
     this.iopsMaxLte = iopsMaxLte;
     return this;
@@ -4657,17 +4657,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLte() {
+  public Long getIopsMaxLte() {
     return iopsMaxLte;
   }
 
 
-  public void setIopsMaxLte(Double iopsMaxLte) {
+  public void setIopsMaxLte(Long iopsMaxLte) {
     this.iopsMaxLte = iopsMaxLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxNot(Double iopsMaxNot) {
+  public NvmfSubsystemWhereInput iopsMaxNot(Long iopsMaxNot) {
     
     this.iopsMaxNot = iopsMaxNot;
     return this;
@@ -4680,25 +4680,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxNot() {
+  public Long getIopsMaxNot() {
     return iopsMaxNot;
   }
 
 
-  public void setIopsMaxNot(Double iopsMaxNot) {
+  public void setIopsMaxNot(Long iopsMaxNot) {
     this.iopsMaxNot = iopsMaxNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsMaxNotIn(List<Double> iopsMaxNotIn) {
+  public NvmfSubsystemWhereInput iopsMaxNotIn(List<Long> iopsMaxNotIn) {
     
     this.iopsMaxNotIn = iopsMaxNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsMaxNotInItem(Double iopsMaxNotInItem) {
+  public NvmfSubsystemWhereInput addIopsMaxNotInItem(Long iopsMaxNotInItem) {
     if (this.iopsMaxNotIn == null) {
-      this.iopsMaxNotIn = new ArrayList<Double>();
+      this.iopsMaxNotIn = new ArrayList<Long>();
     }
     this.iopsMaxNotIn.add(iopsMaxNotInItem);
     return this;
@@ -4711,17 +4711,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsMaxNotIn() {
+  public List<Long> getIopsMaxNotIn() {
     return iopsMaxNotIn;
   }
 
 
-  public void setIopsMaxNotIn(List<Double> iopsMaxNotIn) {
+  public void setIopsMaxNotIn(List<Long> iopsMaxNotIn) {
     this.iopsMaxNotIn = iopsMaxNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsNot(Double iopsNot) {
+  public NvmfSubsystemWhereInput iopsNot(Long iopsNot) {
     
     this.iopsNot = iopsNot;
     return this;
@@ -4734,25 +4734,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsNot() {
+  public Long getIopsNot() {
     return iopsNot;
   }
 
 
-  public void setIopsNot(Double iopsNot) {
+  public void setIopsNot(Long iopsNot) {
     this.iopsNot = iopsNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsNotIn(List<Double> iopsNotIn) {
+  public NvmfSubsystemWhereInput iopsNotIn(List<Long> iopsNotIn) {
     
     this.iopsNotIn = iopsNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsNotInItem(Double iopsNotInItem) {
+  public NvmfSubsystemWhereInput addIopsNotInItem(Long iopsNotInItem) {
     if (this.iopsNotIn == null) {
-      this.iopsNotIn = new ArrayList<Double>();
+      this.iopsNotIn = new ArrayList<Long>();
     }
     this.iopsNotIn.add(iopsNotInItem);
     return this;
@@ -4765,17 +4765,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsNotIn() {
+  public List<Long> getIopsNotIn() {
     return iopsNotIn;
   }
 
 
-  public void setIopsNotIn(List<Double> iopsNotIn) {
+  public void setIopsNotIn(List<Long> iopsNotIn) {
     this.iopsNotIn = iopsNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRd(Double iopsRd) {
+  public NvmfSubsystemWhereInput iopsRd(Long iopsRd) {
     
     this.iopsRd = iopsRd;
     return this;
@@ -4788,17 +4788,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRd() {
+  public Long getIopsRd() {
     return iopsRd;
   }
 
 
-  public void setIopsRd(Double iopsRd) {
+  public void setIopsRd(Long iopsRd) {
     this.iopsRd = iopsRd;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdGt(Double iopsRdGt) {
+  public NvmfSubsystemWhereInput iopsRdGt(Long iopsRdGt) {
     
     this.iopsRdGt = iopsRdGt;
     return this;
@@ -4811,17 +4811,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdGt() {
+  public Long getIopsRdGt() {
     return iopsRdGt;
   }
 
 
-  public void setIopsRdGt(Double iopsRdGt) {
+  public void setIopsRdGt(Long iopsRdGt) {
     this.iopsRdGt = iopsRdGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdGte(Double iopsRdGte) {
+  public NvmfSubsystemWhereInput iopsRdGte(Long iopsRdGte) {
     
     this.iopsRdGte = iopsRdGte;
     return this;
@@ -4834,25 +4834,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdGte() {
+  public Long getIopsRdGte() {
     return iopsRdGte;
   }
 
 
-  public void setIopsRdGte(Double iopsRdGte) {
+  public void setIopsRdGte(Long iopsRdGte) {
     this.iopsRdGte = iopsRdGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdIn(List<Double> iopsRdIn) {
+  public NvmfSubsystemWhereInput iopsRdIn(List<Long> iopsRdIn) {
     
     this.iopsRdIn = iopsRdIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsRdInItem(Double iopsRdInItem) {
+  public NvmfSubsystemWhereInput addIopsRdInItem(Long iopsRdInItem) {
     if (this.iopsRdIn == null) {
-      this.iopsRdIn = new ArrayList<Double>();
+      this.iopsRdIn = new ArrayList<Long>();
     }
     this.iopsRdIn.add(iopsRdInItem);
     return this;
@@ -4865,17 +4865,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsRdIn() {
+  public List<Long> getIopsRdIn() {
     return iopsRdIn;
   }
 
 
-  public void setIopsRdIn(List<Double> iopsRdIn) {
+  public void setIopsRdIn(List<Long> iopsRdIn) {
     this.iopsRdIn = iopsRdIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdLt(Double iopsRdLt) {
+  public NvmfSubsystemWhereInput iopsRdLt(Long iopsRdLt) {
     
     this.iopsRdLt = iopsRdLt;
     return this;
@@ -4888,17 +4888,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdLt() {
+  public Long getIopsRdLt() {
     return iopsRdLt;
   }
 
 
-  public void setIopsRdLt(Double iopsRdLt) {
+  public void setIopsRdLt(Long iopsRdLt) {
     this.iopsRdLt = iopsRdLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdLte(Double iopsRdLte) {
+  public NvmfSubsystemWhereInput iopsRdLte(Long iopsRdLte) {
     
     this.iopsRdLte = iopsRdLte;
     return this;
@@ -4911,17 +4911,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdLte() {
+  public Long getIopsRdLte() {
     return iopsRdLte;
   }
 
 
-  public void setIopsRdLte(Double iopsRdLte) {
+  public void setIopsRdLte(Long iopsRdLte) {
     this.iopsRdLte = iopsRdLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMax(Double iopsRdMax) {
+  public NvmfSubsystemWhereInput iopsRdMax(Long iopsRdMax) {
     
     this.iopsRdMax = iopsRdMax;
     return this;
@@ -4934,17 +4934,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMax() {
+  public Long getIopsRdMax() {
     return iopsRdMax;
   }
 
 
-  public void setIopsRdMax(Double iopsRdMax) {
+  public void setIopsRdMax(Long iopsRdMax) {
     this.iopsRdMax = iopsRdMax;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxGt(Double iopsRdMaxGt) {
+  public NvmfSubsystemWhereInput iopsRdMaxGt(Long iopsRdMaxGt) {
     
     this.iopsRdMaxGt = iopsRdMaxGt;
     return this;
@@ -4957,17 +4957,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxGt() {
+  public Long getIopsRdMaxGt() {
     return iopsRdMaxGt;
   }
 
 
-  public void setIopsRdMaxGt(Double iopsRdMaxGt) {
+  public void setIopsRdMaxGt(Long iopsRdMaxGt) {
     this.iopsRdMaxGt = iopsRdMaxGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxGte(Double iopsRdMaxGte) {
+  public NvmfSubsystemWhereInput iopsRdMaxGte(Long iopsRdMaxGte) {
     
     this.iopsRdMaxGte = iopsRdMaxGte;
     return this;
@@ -4980,25 +4980,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxGte() {
+  public Long getIopsRdMaxGte() {
     return iopsRdMaxGte;
   }
 
 
-  public void setIopsRdMaxGte(Double iopsRdMaxGte) {
+  public void setIopsRdMaxGte(Long iopsRdMaxGte) {
     this.iopsRdMaxGte = iopsRdMaxGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxIn(List<Double> iopsRdMaxIn) {
+  public NvmfSubsystemWhereInput iopsRdMaxIn(List<Long> iopsRdMaxIn) {
     
     this.iopsRdMaxIn = iopsRdMaxIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsRdMaxInItem(Double iopsRdMaxInItem) {
+  public NvmfSubsystemWhereInput addIopsRdMaxInItem(Long iopsRdMaxInItem) {
     if (this.iopsRdMaxIn == null) {
-      this.iopsRdMaxIn = new ArrayList<Double>();
+      this.iopsRdMaxIn = new ArrayList<Long>();
     }
     this.iopsRdMaxIn.add(iopsRdMaxInItem);
     return this;
@@ -5011,17 +5011,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsRdMaxIn() {
+  public List<Long> getIopsRdMaxIn() {
     return iopsRdMaxIn;
   }
 
 
-  public void setIopsRdMaxIn(List<Double> iopsRdMaxIn) {
+  public void setIopsRdMaxIn(List<Long> iopsRdMaxIn) {
     this.iopsRdMaxIn = iopsRdMaxIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLength(Double iopsRdMaxLength) {
+  public NvmfSubsystemWhereInput iopsRdMaxLength(Long iopsRdMaxLength) {
     
     this.iopsRdMaxLength = iopsRdMaxLength;
     return this;
@@ -5034,17 +5034,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLength() {
+  public Long getIopsRdMaxLength() {
     return iopsRdMaxLength;
   }
 
 
-  public void setIopsRdMaxLength(Double iopsRdMaxLength) {
+  public void setIopsRdMaxLength(Long iopsRdMaxLength) {
     this.iopsRdMaxLength = iopsRdMaxLength;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthGt(Double iopsRdMaxLengthGt) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthGt(Long iopsRdMaxLengthGt) {
     
     this.iopsRdMaxLengthGt = iopsRdMaxLengthGt;
     return this;
@@ -5057,17 +5057,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLengthGt() {
+  public Long getIopsRdMaxLengthGt() {
     return iopsRdMaxLengthGt;
   }
 
 
-  public void setIopsRdMaxLengthGt(Double iopsRdMaxLengthGt) {
+  public void setIopsRdMaxLengthGt(Long iopsRdMaxLengthGt) {
     this.iopsRdMaxLengthGt = iopsRdMaxLengthGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthGte(Double iopsRdMaxLengthGte) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthGte(Long iopsRdMaxLengthGte) {
     
     this.iopsRdMaxLengthGte = iopsRdMaxLengthGte;
     return this;
@@ -5080,25 +5080,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLengthGte() {
+  public Long getIopsRdMaxLengthGte() {
     return iopsRdMaxLengthGte;
   }
 
 
-  public void setIopsRdMaxLengthGte(Double iopsRdMaxLengthGte) {
+  public void setIopsRdMaxLengthGte(Long iopsRdMaxLengthGte) {
     this.iopsRdMaxLengthGte = iopsRdMaxLengthGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthIn(List<Double> iopsRdMaxLengthIn) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthIn(List<Long> iopsRdMaxLengthIn) {
     
     this.iopsRdMaxLengthIn = iopsRdMaxLengthIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsRdMaxLengthInItem(Double iopsRdMaxLengthInItem) {
+  public NvmfSubsystemWhereInput addIopsRdMaxLengthInItem(Long iopsRdMaxLengthInItem) {
     if (this.iopsRdMaxLengthIn == null) {
-      this.iopsRdMaxLengthIn = new ArrayList<Double>();
+      this.iopsRdMaxLengthIn = new ArrayList<Long>();
     }
     this.iopsRdMaxLengthIn.add(iopsRdMaxLengthInItem);
     return this;
@@ -5111,17 +5111,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsRdMaxLengthIn() {
+  public List<Long> getIopsRdMaxLengthIn() {
     return iopsRdMaxLengthIn;
   }
 
 
-  public void setIopsRdMaxLengthIn(List<Double> iopsRdMaxLengthIn) {
+  public void setIopsRdMaxLengthIn(List<Long> iopsRdMaxLengthIn) {
     this.iopsRdMaxLengthIn = iopsRdMaxLengthIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthLt(Double iopsRdMaxLengthLt) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthLt(Long iopsRdMaxLengthLt) {
     
     this.iopsRdMaxLengthLt = iopsRdMaxLengthLt;
     return this;
@@ -5134,17 +5134,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLengthLt() {
+  public Long getIopsRdMaxLengthLt() {
     return iopsRdMaxLengthLt;
   }
 
 
-  public void setIopsRdMaxLengthLt(Double iopsRdMaxLengthLt) {
+  public void setIopsRdMaxLengthLt(Long iopsRdMaxLengthLt) {
     this.iopsRdMaxLengthLt = iopsRdMaxLengthLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthLte(Double iopsRdMaxLengthLte) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthLte(Long iopsRdMaxLengthLte) {
     
     this.iopsRdMaxLengthLte = iopsRdMaxLengthLte;
     return this;
@@ -5157,17 +5157,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLengthLte() {
+  public Long getIopsRdMaxLengthLte() {
     return iopsRdMaxLengthLte;
   }
 
 
-  public void setIopsRdMaxLengthLte(Double iopsRdMaxLengthLte) {
+  public void setIopsRdMaxLengthLte(Long iopsRdMaxLengthLte) {
     this.iopsRdMaxLengthLte = iopsRdMaxLengthLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthNot(Double iopsRdMaxLengthNot) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthNot(Long iopsRdMaxLengthNot) {
     
     this.iopsRdMaxLengthNot = iopsRdMaxLengthNot;
     return this;
@@ -5180,25 +5180,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLengthNot() {
+  public Long getIopsRdMaxLengthNot() {
     return iopsRdMaxLengthNot;
   }
 
 
-  public void setIopsRdMaxLengthNot(Double iopsRdMaxLengthNot) {
+  public void setIopsRdMaxLengthNot(Long iopsRdMaxLengthNot) {
     this.iopsRdMaxLengthNot = iopsRdMaxLengthNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLengthNotIn(List<Double> iopsRdMaxLengthNotIn) {
+  public NvmfSubsystemWhereInput iopsRdMaxLengthNotIn(List<Long> iopsRdMaxLengthNotIn) {
     
     this.iopsRdMaxLengthNotIn = iopsRdMaxLengthNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsRdMaxLengthNotInItem(Double iopsRdMaxLengthNotInItem) {
+  public NvmfSubsystemWhereInput addIopsRdMaxLengthNotInItem(Long iopsRdMaxLengthNotInItem) {
     if (this.iopsRdMaxLengthNotIn == null) {
-      this.iopsRdMaxLengthNotIn = new ArrayList<Double>();
+      this.iopsRdMaxLengthNotIn = new ArrayList<Long>();
     }
     this.iopsRdMaxLengthNotIn.add(iopsRdMaxLengthNotInItem);
     return this;
@@ -5211,17 +5211,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsRdMaxLengthNotIn() {
+  public List<Long> getIopsRdMaxLengthNotIn() {
     return iopsRdMaxLengthNotIn;
   }
 
 
-  public void setIopsRdMaxLengthNotIn(List<Double> iopsRdMaxLengthNotIn) {
+  public void setIopsRdMaxLengthNotIn(List<Long> iopsRdMaxLengthNotIn) {
     this.iopsRdMaxLengthNotIn = iopsRdMaxLengthNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLt(Double iopsRdMaxLt) {
+  public NvmfSubsystemWhereInput iopsRdMaxLt(Long iopsRdMaxLt) {
     
     this.iopsRdMaxLt = iopsRdMaxLt;
     return this;
@@ -5234,17 +5234,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLt() {
+  public Long getIopsRdMaxLt() {
     return iopsRdMaxLt;
   }
 
 
-  public void setIopsRdMaxLt(Double iopsRdMaxLt) {
+  public void setIopsRdMaxLt(Long iopsRdMaxLt) {
     this.iopsRdMaxLt = iopsRdMaxLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxLte(Double iopsRdMaxLte) {
+  public NvmfSubsystemWhereInput iopsRdMaxLte(Long iopsRdMaxLte) {
     
     this.iopsRdMaxLte = iopsRdMaxLte;
     return this;
@@ -5257,17 +5257,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLte() {
+  public Long getIopsRdMaxLte() {
     return iopsRdMaxLte;
   }
 
 
-  public void setIopsRdMaxLte(Double iopsRdMaxLte) {
+  public void setIopsRdMaxLte(Long iopsRdMaxLte) {
     this.iopsRdMaxLte = iopsRdMaxLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxNot(Double iopsRdMaxNot) {
+  public NvmfSubsystemWhereInput iopsRdMaxNot(Long iopsRdMaxNot) {
     
     this.iopsRdMaxNot = iopsRdMaxNot;
     return this;
@@ -5280,25 +5280,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxNot() {
+  public Long getIopsRdMaxNot() {
     return iopsRdMaxNot;
   }
 
 
-  public void setIopsRdMaxNot(Double iopsRdMaxNot) {
+  public void setIopsRdMaxNot(Long iopsRdMaxNot) {
     this.iopsRdMaxNot = iopsRdMaxNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdMaxNotIn(List<Double> iopsRdMaxNotIn) {
+  public NvmfSubsystemWhereInput iopsRdMaxNotIn(List<Long> iopsRdMaxNotIn) {
     
     this.iopsRdMaxNotIn = iopsRdMaxNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsRdMaxNotInItem(Double iopsRdMaxNotInItem) {
+  public NvmfSubsystemWhereInput addIopsRdMaxNotInItem(Long iopsRdMaxNotInItem) {
     if (this.iopsRdMaxNotIn == null) {
-      this.iopsRdMaxNotIn = new ArrayList<Double>();
+      this.iopsRdMaxNotIn = new ArrayList<Long>();
     }
     this.iopsRdMaxNotIn.add(iopsRdMaxNotInItem);
     return this;
@@ -5311,17 +5311,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsRdMaxNotIn() {
+  public List<Long> getIopsRdMaxNotIn() {
     return iopsRdMaxNotIn;
   }
 
 
-  public void setIopsRdMaxNotIn(List<Double> iopsRdMaxNotIn) {
+  public void setIopsRdMaxNotIn(List<Long> iopsRdMaxNotIn) {
     this.iopsRdMaxNotIn = iopsRdMaxNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdNot(Double iopsRdNot) {
+  public NvmfSubsystemWhereInput iopsRdNot(Long iopsRdNot) {
     
     this.iopsRdNot = iopsRdNot;
     return this;
@@ -5334,25 +5334,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdNot() {
+  public Long getIopsRdNot() {
     return iopsRdNot;
   }
 
 
-  public void setIopsRdNot(Double iopsRdNot) {
+  public void setIopsRdNot(Long iopsRdNot) {
     this.iopsRdNot = iopsRdNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsRdNotIn(List<Double> iopsRdNotIn) {
+  public NvmfSubsystemWhereInput iopsRdNotIn(List<Long> iopsRdNotIn) {
     
     this.iopsRdNotIn = iopsRdNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsRdNotInItem(Double iopsRdNotInItem) {
+  public NvmfSubsystemWhereInput addIopsRdNotInItem(Long iopsRdNotInItem) {
     if (this.iopsRdNotIn == null) {
-      this.iopsRdNotIn = new ArrayList<Double>();
+      this.iopsRdNotIn = new ArrayList<Long>();
     }
     this.iopsRdNotIn.add(iopsRdNotInItem);
     return this;
@@ -5365,17 +5365,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsRdNotIn() {
+  public List<Long> getIopsRdNotIn() {
     return iopsRdNotIn;
   }
 
 
-  public void setIopsRdNotIn(List<Double> iopsRdNotIn) {
+  public void setIopsRdNotIn(List<Long> iopsRdNotIn) {
     this.iopsRdNotIn = iopsRdNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWr(Double iopsWr) {
+  public NvmfSubsystemWhereInput iopsWr(Long iopsWr) {
     
     this.iopsWr = iopsWr;
     return this;
@@ -5388,17 +5388,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWr() {
+  public Long getIopsWr() {
     return iopsWr;
   }
 
 
-  public void setIopsWr(Double iopsWr) {
+  public void setIopsWr(Long iopsWr) {
     this.iopsWr = iopsWr;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrGt(Double iopsWrGt) {
+  public NvmfSubsystemWhereInput iopsWrGt(Long iopsWrGt) {
     
     this.iopsWrGt = iopsWrGt;
     return this;
@@ -5411,17 +5411,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrGt() {
+  public Long getIopsWrGt() {
     return iopsWrGt;
   }
 
 
-  public void setIopsWrGt(Double iopsWrGt) {
+  public void setIopsWrGt(Long iopsWrGt) {
     this.iopsWrGt = iopsWrGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrGte(Double iopsWrGte) {
+  public NvmfSubsystemWhereInput iopsWrGte(Long iopsWrGte) {
     
     this.iopsWrGte = iopsWrGte;
     return this;
@@ -5434,25 +5434,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrGte() {
+  public Long getIopsWrGte() {
     return iopsWrGte;
   }
 
 
-  public void setIopsWrGte(Double iopsWrGte) {
+  public void setIopsWrGte(Long iopsWrGte) {
     this.iopsWrGte = iopsWrGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrIn(List<Double> iopsWrIn) {
+  public NvmfSubsystemWhereInput iopsWrIn(List<Long> iopsWrIn) {
     
     this.iopsWrIn = iopsWrIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsWrInItem(Double iopsWrInItem) {
+  public NvmfSubsystemWhereInput addIopsWrInItem(Long iopsWrInItem) {
     if (this.iopsWrIn == null) {
-      this.iopsWrIn = new ArrayList<Double>();
+      this.iopsWrIn = new ArrayList<Long>();
     }
     this.iopsWrIn.add(iopsWrInItem);
     return this;
@@ -5465,17 +5465,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsWrIn() {
+  public List<Long> getIopsWrIn() {
     return iopsWrIn;
   }
 
 
-  public void setIopsWrIn(List<Double> iopsWrIn) {
+  public void setIopsWrIn(List<Long> iopsWrIn) {
     this.iopsWrIn = iopsWrIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrLt(Double iopsWrLt) {
+  public NvmfSubsystemWhereInput iopsWrLt(Long iopsWrLt) {
     
     this.iopsWrLt = iopsWrLt;
     return this;
@@ -5488,17 +5488,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrLt() {
+  public Long getIopsWrLt() {
     return iopsWrLt;
   }
 
 
-  public void setIopsWrLt(Double iopsWrLt) {
+  public void setIopsWrLt(Long iopsWrLt) {
     this.iopsWrLt = iopsWrLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrLte(Double iopsWrLte) {
+  public NvmfSubsystemWhereInput iopsWrLte(Long iopsWrLte) {
     
     this.iopsWrLte = iopsWrLte;
     return this;
@@ -5511,17 +5511,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrLte() {
+  public Long getIopsWrLte() {
     return iopsWrLte;
   }
 
 
-  public void setIopsWrLte(Double iopsWrLte) {
+  public void setIopsWrLte(Long iopsWrLte) {
     this.iopsWrLte = iopsWrLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMax(Double iopsWrMax) {
+  public NvmfSubsystemWhereInput iopsWrMax(Long iopsWrMax) {
     
     this.iopsWrMax = iopsWrMax;
     return this;
@@ -5534,17 +5534,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMax() {
+  public Long getIopsWrMax() {
     return iopsWrMax;
   }
 
 
-  public void setIopsWrMax(Double iopsWrMax) {
+  public void setIopsWrMax(Long iopsWrMax) {
     this.iopsWrMax = iopsWrMax;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxGt(Double iopsWrMaxGt) {
+  public NvmfSubsystemWhereInput iopsWrMaxGt(Long iopsWrMaxGt) {
     
     this.iopsWrMaxGt = iopsWrMaxGt;
     return this;
@@ -5557,17 +5557,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxGt() {
+  public Long getIopsWrMaxGt() {
     return iopsWrMaxGt;
   }
 
 
-  public void setIopsWrMaxGt(Double iopsWrMaxGt) {
+  public void setIopsWrMaxGt(Long iopsWrMaxGt) {
     this.iopsWrMaxGt = iopsWrMaxGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxGte(Double iopsWrMaxGte) {
+  public NvmfSubsystemWhereInput iopsWrMaxGte(Long iopsWrMaxGte) {
     
     this.iopsWrMaxGte = iopsWrMaxGte;
     return this;
@@ -5580,25 +5580,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxGte() {
+  public Long getIopsWrMaxGte() {
     return iopsWrMaxGte;
   }
 
 
-  public void setIopsWrMaxGte(Double iopsWrMaxGte) {
+  public void setIopsWrMaxGte(Long iopsWrMaxGte) {
     this.iopsWrMaxGte = iopsWrMaxGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxIn(List<Double> iopsWrMaxIn) {
+  public NvmfSubsystemWhereInput iopsWrMaxIn(List<Long> iopsWrMaxIn) {
     
     this.iopsWrMaxIn = iopsWrMaxIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsWrMaxInItem(Double iopsWrMaxInItem) {
+  public NvmfSubsystemWhereInput addIopsWrMaxInItem(Long iopsWrMaxInItem) {
     if (this.iopsWrMaxIn == null) {
-      this.iopsWrMaxIn = new ArrayList<Double>();
+      this.iopsWrMaxIn = new ArrayList<Long>();
     }
     this.iopsWrMaxIn.add(iopsWrMaxInItem);
     return this;
@@ -5611,17 +5611,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsWrMaxIn() {
+  public List<Long> getIopsWrMaxIn() {
     return iopsWrMaxIn;
   }
 
 
-  public void setIopsWrMaxIn(List<Double> iopsWrMaxIn) {
+  public void setIopsWrMaxIn(List<Long> iopsWrMaxIn) {
     this.iopsWrMaxIn = iopsWrMaxIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLength(Double iopsWrMaxLength) {
+  public NvmfSubsystemWhereInput iopsWrMaxLength(Long iopsWrMaxLength) {
     
     this.iopsWrMaxLength = iopsWrMaxLength;
     return this;
@@ -5634,17 +5634,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLength() {
+  public Long getIopsWrMaxLength() {
     return iopsWrMaxLength;
   }
 
 
-  public void setIopsWrMaxLength(Double iopsWrMaxLength) {
+  public void setIopsWrMaxLength(Long iopsWrMaxLength) {
     this.iopsWrMaxLength = iopsWrMaxLength;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthGt(Double iopsWrMaxLengthGt) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthGt(Long iopsWrMaxLengthGt) {
     
     this.iopsWrMaxLengthGt = iopsWrMaxLengthGt;
     return this;
@@ -5657,17 +5657,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLengthGt() {
+  public Long getIopsWrMaxLengthGt() {
     return iopsWrMaxLengthGt;
   }
 
 
-  public void setIopsWrMaxLengthGt(Double iopsWrMaxLengthGt) {
+  public void setIopsWrMaxLengthGt(Long iopsWrMaxLengthGt) {
     this.iopsWrMaxLengthGt = iopsWrMaxLengthGt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthGte(Double iopsWrMaxLengthGte) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthGte(Long iopsWrMaxLengthGte) {
     
     this.iopsWrMaxLengthGte = iopsWrMaxLengthGte;
     return this;
@@ -5680,25 +5680,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLengthGte() {
+  public Long getIopsWrMaxLengthGte() {
     return iopsWrMaxLengthGte;
   }
 
 
-  public void setIopsWrMaxLengthGte(Double iopsWrMaxLengthGte) {
+  public void setIopsWrMaxLengthGte(Long iopsWrMaxLengthGte) {
     this.iopsWrMaxLengthGte = iopsWrMaxLengthGte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthIn(List<Double> iopsWrMaxLengthIn) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthIn(List<Long> iopsWrMaxLengthIn) {
     
     this.iopsWrMaxLengthIn = iopsWrMaxLengthIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsWrMaxLengthInItem(Double iopsWrMaxLengthInItem) {
+  public NvmfSubsystemWhereInput addIopsWrMaxLengthInItem(Long iopsWrMaxLengthInItem) {
     if (this.iopsWrMaxLengthIn == null) {
-      this.iopsWrMaxLengthIn = new ArrayList<Double>();
+      this.iopsWrMaxLengthIn = new ArrayList<Long>();
     }
     this.iopsWrMaxLengthIn.add(iopsWrMaxLengthInItem);
     return this;
@@ -5711,17 +5711,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsWrMaxLengthIn() {
+  public List<Long> getIopsWrMaxLengthIn() {
     return iopsWrMaxLengthIn;
   }
 
 
-  public void setIopsWrMaxLengthIn(List<Double> iopsWrMaxLengthIn) {
+  public void setIopsWrMaxLengthIn(List<Long> iopsWrMaxLengthIn) {
     this.iopsWrMaxLengthIn = iopsWrMaxLengthIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthLt(Double iopsWrMaxLengthLt) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthLt(Long iopsWrMaxLengthLt) {
     
     this.iopsWrMaxLengthLt = iopsWrMaxLengthLt;
     return this;
@@ -5734,17 +5734,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLengthLt() {
+  public Long getIopsWrMaxLengthLt() {
     return iopsWrMaxLengthLt;
   }
 
 
-  public void setIopsWrMaxLengthLt(Double iopsWrMaxLengthLt) {
+  public void setIopsWrMaxLengthLt(Long iopsWrMaxLengthLt) {
     this.iopsWrMaxLengthLt = iopsWrMaxLengthLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthLte(Double iopsWrMaxLengthLte) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthLte(Long iopsWrMaxLengthLte) {
     
     this.iopsWrMaxLengthLte = iopsWrMaxLengthLte;
     return this;
@@ -5757,17 +5757,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLengthLte() {
+  public Long getIopsWrMaxLengthLte() {
     return iopsWrMaxLengthLte;
   }
 
 
-  public void setIopsWrMaxLengthLte(Double iopsWrMaxLengthLte) {
+  public void setIopsWrMaxLengthLte(Long iopsWrMaxLengthLte) {
     this.iopsWrMaxLengthLte = iopsWrMaxLengthLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthNot(Double iopsWrMaxLengthNot) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthNot(Long iopsWrMaxLengthNot) {
     
     this.iopsWrMaxLengthNot = iopsWrMaxLengthNot;
     return this;
@@ -5780,25 +5780,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLengthNot() {
+  public Long getIopsWrMaxLengthNot() {
     return iopsWrMaxLengthNot;
   }
 
 
-  public void setIopsWrMaxLengthNot(Double iopsWrMaxLengthNot) {
+  public void setIopsWrMaxLengthNot(Long iopsWrMaxLengthNot) {
     this.iopsWrMaxLengthNot = iopsWrMaxLengthNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLengthNotIn(List<Double> iopsWrMaxLengthNotIn) {
+  public NvmfSubsystemWhereInput iopsWrMaxLengthNotIn(List<Long> iopsWrMaxLengthNotIn) {
     
     this.iopsWrMaxLengthNotIn = iopsWrMaxLengthNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsWrMaxLengthNotInItem(Double iopsWrMaxLengthNotInItem) {
+  public NvmfSubsystemWhereInput addIopsWrMaxLengthNotInItem(Long iopsWrMaxLengthNotInItem) {
     if (this.iopsWrMaxLengthNotIn == null) {
-      this.iopsWrMaxLengthNotIn = new ArrayList<Double>();
+      this.iopsWrMaxLengthNotIn = new ArrayList<Long>();
     }
     this.iopsWrMaxLengthNotIn.add(iopsWrMaxLengthNotInItem);
     return this;
@@ -5811,17 +5811,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsWrMaxLengthNotIn() {
+  public List<Long> getIopsWrMaxLengthNotIn() {
     return iopsWrMaxLengthNotIn;
   }
 
 
-  public void setIopsWrMaxLengthNotIn(List<Double> iopsWrMaxLengthNotIn) {
+  public void setIopsWrMaxLengthNotIn(List<Long> iopsWrMaxLengthNotIn) {
     this.iopsWrMaxLengthNotIn = iopsWrMaxLengthNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLt(Double iopsWrMaxLt) {
+  public NvmfSubsystemWhereInput iopsWrMaxLt(Long iopsWrMaxLt) {
     
     this.iopsWrMaxLt = iopsWrMaxLt;
     return this;
@@ -5834,17 +5834,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLt() {
+  public Long getIopsWrMaxLt() {
     return iopsWrMaxLt;
   }
 
 
-  public void setIopsWrMaxLt(Double iopsWrMaxLt) {
+  public void setIopsWrMaxLt(Long iopsWrMaxLt) {
     this.iopsWrMaxLt = iopsWrMaxLt;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxLte(Double iopsWrMaxLte) {
+  public NvmfSubsystemWhereInput iopsWrMaxLte(Long iopsWrMaxLte) {
     
     this.iopsWrMaxLte = iopsWrMaxLte;
     return this;
@@ -5857,17 +5857,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLte() {
+  public Long getIopsWrMaxLte() {
     return iopsWrMaxLte;
   }
 
 
-  public void setIopsWrMaxLte(Double iopsWrMaxLte) {
+  public void setIopsWrMaxLte(Long iopsWrMaxLte) {
     this.iopsWrMaxLte = iopsWrMaxLte;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxNot(Double iopsWrMaxNot) {
+  public NvmfSubsystemWhereInput iopsWrMaxNot(Long iopsWrMaxNot) {
     
     this.iopsWrMaxNot = iopsWrMaxNot;
     return this;
@@ -5880,25 +5880,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxNot() {
+  public Long getIopsWrMaxNot() {
     return iopsWrMaxNot;
   }
 
 
-  public void setIopsWrMaxNot(Double iopsWrMaxNot) {
+  public void setIopsWrMaxNot(Long iopsWrMaxNot) {
     this.iopsWrMaxNot = iopsWrMaxNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrMaxNotIn(List<Double> iopsWrMaxNotIn) {
+  public NvmfSubsystemWhereInput iopsWrMaxNotIn(List<Long> iopsWrMaxNotIn) {
     
     this.iopsWrMaxNotIn = iopsWrMaxNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsWrMaxNotInItem(Double iopsWrMaxNotInItem) {
+  public NvmfSubsystemWhereInput addIopsWrMaxNotInItem(Long iopsWrMaxNotInItem) {
     if (this.iopsWrMaxNotIn == null) {
-      this.iopsWrMaxNotIn = new ArrayList<Double>();
+      this.iopsWrMaxNotIn = new ArrayList<Long>();
     }
     this.iopsWrMaxNotIn.add(iopsWrMaxNotInItem);
     return this;
@@ -5911,17 +5911,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsWrMaxNotIn() {
+  public List<Long> getIopsWrMaxNotIn() {
     return iopsWrMaxNotIn;
   }
 
 
-  public void setIopsWrMaxNotIn(List<Double> iopsWrMaxNotIn) {
+  public void setIopsWrMaxNotIn(List<Long> iopsWrMaxNotIn) {
     this.iopsWrMaxNotIn = iopsWrMaxNotIn;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrNot(Double iopsWrNot) {
+  public NvmfSubsystemWhereInput iopsWrNot(Long iopsWrNot) {
     
     this.iopsWrNot = iopsWrNot;
     return this;
@@ -5934,25 +5934,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrNot() {
+  public Long getIopsWrNot() {
     return iopsWrNot;
   }
 
 
-  public void setIopsWrNot(Double iopsWrNot) {
+  public void setIopsWrNot(Long iopsWrNot) {
     this.iopsWrNot = iopsWrNot;
   }
 
 
-  public NvmfSubsystemWhereInput iopsWrNotIn(List<Double> iopsWrNotIn) {
+  public NvmfSubsystemWhereInput iopsWrNotIn(List<Long> iopsWrNotIn) {
     
     this.iopsWrNotIn = iopsWrNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addIopsWrNotInItem(Double iopsWrNotInItem) {
+  public NvmfSubsystemWhereInput addIopsWrNotInItem(Long iopsWrNotInItem) {
     if (this.iopsWrNotIn == null) {
-      this.iopsWrNotIn = new ArrayList<Double>();
+      this.iopsWrNotIn = new ArrayList<Long>();
     }
     this.iopsWrNotIn.add(iopsWrNotInItem);
     return this;
@@ -5965,12 +5965,12 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getIopsWrNotIn() {
+  public List<Long> getIopsWrNotIn() {
     return iopsWrNotIn;
   }
 
 
-  public void setIopsWrNotIn(List<Double> iopsWrNotIn) {
+  public void setIopsWrNotIn(List<Long> iopsWrNotIn) {
     this.iopsWrNotIn = iopsWrNotIn;
   }
 
@@ -8442,7 +8442,7 @@ public class NvmfSubsystemWhereInput {
   }
 
 
-  public NvmfSubsystemWhereInput stripeSize(Double stripeSize) {
+  public NvmfSubsystemWhereInput stripeSize(Long stripeSize) {
     
     this.stripeSize = stripeSize;
     return this;
@@ -8455,17 +8455,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeSize() {
+  public Long getStripeSize() {
     return stripeSize;
   }
 
 
-  public void setStripeSize(Double stripeSize) {
+  public void setStripeSize(Long stripeSize) {
     this.stripeSize = stripeSize;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeGt(Double stripeSizeGt) {
+  public NvmfSubsystemWhereInput stripeSizeGt(Long stripeSizeGt) {
     
     this.stripeSizeGt = stripeSizeGt;
     return this;
@@ -8478,17 +8478,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeSizeGt() {
+  public Long getStripeSizeGt() {
     return stripeSizeGt;
   }
 
 
-  public void setStripeSizeGt(Double stripeSizeGt) {
+  public void setStripeSizeGt(Long stripeSizeGt) {
     this.stripeSizeGt = stripeSizeGt;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeGte(Double stripeSizeGte) {
+  public NvmfSubsystemWhereInput stripeSizeGte(Long stripeSizeGte) {
     
     this.stripeSizeGte = stripeSizeGte;
     return this;
@@ -8501,25 +8501,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeSizeGte() {
+  public Long getStripeSizeGte() {
     return stripeSizeGte;
   }
 
 
-  public void setStripeSizeGte(Double stripeSizeGte) {
+  public void setStripeSizeGte(Long stripeSizeGte) {
     this.stripeSizeGte = stripeSizeGte;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeIn(List<Double> stripeSizeIn) {
+  public NvmfSubsystemWhereInput stripeSizeIn(List<Long> stripeSizeIn) {
     
     this.stripeSizeIn = stripeSizeIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addStripeSizeInItem(Double stripeSizeInItem) {
+  public NvmfSubsystemWhereInput addStripeSizeInItem(Long stripeSizeInItem) {
     if (this.stripeSizeIn == null) {
-      this.stripeSizeIn = new ArrayList<Double>();
+      this.stripeSizeIn = new ArrayList<Long>();
     }
     this.stripeSizeIn.add(stripeSizeInItem);
     return this;
@@ -8532,17 +8532,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeSizeIn() {
+  public List<Long> getStripeSizeIn() {
     return stripeSizeIn;
   }
 
 
-  public void setStripeSizeIn(List<Double> stripeSizeIn) {
+  public void setStripeSizeIn(List<Long> stripeSizeIn) {
     this.stripeSizeIn = stripeSizeIn;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeLt(Double stripeSizeLt) {
+  public NvmfSubsystemWhereInput stripeSizeLt(Long stripeSizeLt) {
     
     this.stripeSizeLt = stripeSizeLt;
     return this;
@@ -8555,17 +8555,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeSizeLt() {
+  public Long getStripeSizeLt() {
     return stripeSizeLt;
   }
 
 
-  public void setStripeSizeLt(Double stripeSizeLt) {
+  public void setStripeSizeLt(Long stripeSizeLt) {
     this.stripeSizeLt = stripeSizeLt;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeLte(Double stripeSizeLte) {
+  public NvmfSubsystemWhereInput stripeSizeLte(Long stripeSizeLte) {
     
     this.stripeSizeLte = stripeSizeLte;
     return this;
@@ -8578,17 +8578,17 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeSizeLte() {
+  public Long getStripeSizeLte() {
     return stripeSizeLte;
   }
 
 
-  public void setStripeSizeLte(Double stripeSizeLte) {
+  public void setStripeSizeLte(Long stripeSizeLte) {
     this.stripeSizeLte = stripeSizeLte;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeNot(Double stripeSizeNot) {
+  public NvmfSubsystemWhereInput stripeSizeNot(Long stripeSizeNot) {
     
     this.stripeSizeNot = stripeSizeNot;
     return this;
@@ -8601,25 +8601,25 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getStripeSizeNot() {
+  public Long getStripeSizeNot() {
     return stripeSizeNot;
   }
 
 
-  public void setStripeSizeNot(Double stripeSizeNot) {
+  public void setStripeSizeNot(Long stripeSizeNot) {
     this.stripeSizeNot = stripeSizeNot;
   }
 
 
-  public NvmfSubsystemWhereInput stripeSizeNotIn(List<Double> stripeSizeNotIn) {
+  public NvmfSubsystemWhereInput stripeSizeNotIn(List<Long> stripeSizeNotIn) {
     
     this.stripeSizeNotIn = stripeSizeNotIn;
     return this;
   }
 
-  public NvmfSubsystemWhereInput addStripeSizeNotInItem(Double stripeSizeNotInItem) {
+  public NvmfSubsystemWhereInput addStripeSizeNotInItem(Long stripeSizeNotInItem) {
     if (this.stripeSizeNotIn == null) {
-      this.stripeSizeNotIn = new ArrayList<Double>();
+      this.stripeSizeNotIn = new ArrayList<Long>();
     }
     this.stripeSizeNotIn.add(stripeSizeNotInItem);
     return this;
@@ -8632,12 +8632,12 @@ public class NvmfSubsystemWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getStripeSizeNotIn() {
+  public List<Long> getStripeSizeNotIn() {
     return stripeSizeNotIn;
   }
 
 
-  public void setStripeSizeNotIn(List<Double> stripeSizeNotIn) {
+  public void setStripeSizeNotIn(List<Long> stripeSizeNotIn) {
     this.stripeSizeNotIn = stripeSizeNotIn;
   }
 

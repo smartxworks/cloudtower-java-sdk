@@ -52,7 +52,7 @@ public class ClusterImage {
 
   public static final String SERIALIZED_NAME_META_SIZE = "meta_size";
   @SerializedName(SERIALIZED_NAME_META_SIZE)
-  private Double metaSize;
+  private Long metaSize;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -60,7 +60,7 @@ public class ClusterImage {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_UPGRADE_FROM = "upgrade_from";
   @SerializedName(SERIALIZED_NAME_UPGRADE_FROM)
@@ -169,7 +169,7 @@ public class ClusterImage {
   }
 
 
-  public ClusterImage metaSize(Double metaSize) {
+  public ClusterImage metaSize(Long metaSize) {
     
     this.metaSize = metaSize;
     return this;
@@ -182,12 +182,12 @@ public class ClusterImage {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMetaSize() {
+  public Long getMetaSize() {
     return metaSize;
   }
 
 
-  public void setMetaSize(Double metaSize) {
+  public void setMetaSize(Long metaSize) {
     this.metaSize = metaSize;
   }
 
@@ -215,7 +215,7 @@ public class ClusterImage {
   }
 
 
-  public ClusterImage size(Double size) {
+  public ClusterImage size(Long size) {
     
     this.size = size;
     return this;
@@ -228,12 +228,12 @@ public class ClusterImage {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

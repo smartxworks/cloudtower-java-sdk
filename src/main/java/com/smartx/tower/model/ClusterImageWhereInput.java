@@ -172,35 +172,35 @@ public class ClusterImageWhereInput {
 
   public static final String SERIALIZED_NAME_META_SIZE = "meta_size";
   @SerializedName(SERIALIZED_NAME_META_SIZE)
-  private Double metaSize;
+  private Long metaSize;
 
   public static final String SERIALIZED_NAME_META_SIZE_GT = "meta_size_gt";
   @SerializedName(SERIALIZED_NAME_META_SIZE_GT)
-  private Double metaSizeGt;
+  private Long metaSizeGt;
 
   public static final String SERIALIZED_NAME_META_SIZE_GTE = "meta_size_gte";
   @SerializedName(SERIALIZED_NAME_META_SIZE_GTE)
-  private Double metaSizeGte;
+  private Long metaSizeGte;
 
   public static final String SERIALIZED_NAME_META_SIZE_IN = "meta_size_in";
   @SerializedName(SERIALIZED_NAME_META_SIZE_IN)
-  private List<Double> metaSizeIn = null;
+  private List<Long> metaSizeIn = null;
 
   public static final String SERIALIZED_NAME_META_SIZE_LT = "meta_size_lt";
   @SerializedName(SERIALIZED_NAME_META_SIZE_LT)
-  private Double metaSizeLt;
+  private Long metaSizeLt;
 
   public static final String SERIALIZED_NAME_META_SIZE_LTE = "meta_size_lte";
   @SerializedName(SERIALIZED_NAME_META_SIZE_LTE)
-  private Double metaSizeLte;
+  private Long metaSizeLte;
 
   public static final String SERIALIZED_NAME_META_SIZE_NOT = "meta_size_not";
   @SerializedName(SERIALIZED_NAME_META_SIZE_NOT)
-  private Double metaSizeNot;
+  private Long metaSizeNot;
 
   public static final String SERIALIZED_NAME_META_SIZE_NOT_IN = "meta_size_not_in";
   @SerializedName(SERIALIZED_NAME_META_SIZE_NOT_IN)
-  private List<Double> metaSizeNotIn = null;
+  private List<Long> metaSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -268,35 +268,35 @@ public class ClusterImageWhereInput {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SIZE_GT = "size_gt";
   @SerializedName(SERIALIZED_NAME_SIZE_GT)
-  private Double sizeGt;
+  private Long sizeGt;
 
   public static final String SERIALIZED_NAME_SIZE_GTE = "size_gte";
   @SerializedName(SERIALIZED_NAME_SIZE_GTE)
-  private Double sizeGte;
+  private Long sizeGte;
 
   public static final String SERIALIZED_NAME_SIZE_IN = "size_in";
   @SerializedName(SERIALIZED_NAME_SIZE_IN)
-  private List<Double> sizeIn = null;
+  private List<Long> sizeIn = null;
 
   public static final String SERIALIZED_NAME_SIZE_LT = "size_lt";
   @SerializedName(SERIALIZED_NAME_SIZE_LT)
-  private Double sizeLt;
+  private Long sizeLt;
 
   public static final String SERIALIZED_NAME_SIZE_LTE = "size_lte";
   @SerializedName(SERIALIZED_NAME_SIZE_LTE)
-  private Double sizeLte;
+  private Long sizeLte;
 
   public static final String SERIALIZED_NAME_SIZE_NOT = "size_not";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT)
-  private Double sizeNot;
+  private Long sizeNot;
 
   public static final String SERIALIZED_NAME_SIZE_NOT_IN = "size_not_in";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
-  private List<Double> sizeNotIn = null;
+  private List<Long> sizeNotIn = null;
 
   public static final String SERIALIZED_NAME_UPGRADE_TOOL_VERSION = "upgrade_tool_version";
   @SerializedName(SERIALIZED_NAME_UPGRADE_TOOL_VERSION)
@@ -1267,7 +1267,7 @@ public class ClusterImageWhereInput {
   }
 
 
-  public ClusterImageWhereInput metaSize(Double metaSize) {
+  public ClusterImageWhereInput metaSize(Long metaSize) {
     
     this.metaSize = metaSize;
     return this;
@@ -1280,17 +1280,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetaSize() {
+  public Long getMetaSize() {
     return metaSize;
   }
 
 
-  public void setMetaSize(Double metaSize) {
+  public void setMetaSize(Long metaSize) {
     this.metaSize = metaSize;
   }
 
 
-  public ClusterImageWhereInput metaSizeGt(Double metaSizeGt) {
+  public ClusterImageWhereInput metaSizeGt(Long metaSizeGt) {
     
     this.metaSizeGt = metaSizeGt;
     return this;
@@ -1303,17 +1303,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetaSizeGt() {
+  public Long getMetaSizeGt() {
     return metaSizeGt;
   }
 
 
-  public void setMetaSizeGt(Double metaSizeGt) {
+  public void setMetaSizeGt(Long metaSizeGt) {
     this.metaSizeGt = metaSizeGt;
   }
 
 
-  public ClusterImageWhereInput metaSizeGte(Double metaSizeGte) {
+  public ClusterImageWhereInput metaSizeGte(Long metaSizeGte) {
     
     this.metaSizeGte = metaSizeGte;
     return this;
@@ -1326,25 +1326,25 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetaSizeGte() {
+  public Long getMetaSizeGte() {
     return metaSizeGte;
   }
 
 
-  public void setMetaSizeGte(Double metaSizeGte) {
+  public void setMetaSizeGte(Long metaSizeGte) {
     this.metaSizeGte = metaSizeGte;
   }
 
 
-  public ClusterImageWhereInput metaSizeIn(List<Double> metaSizeIn) {
+  public ClusterImageWhereInput metaSizeIn(List<Long> metaSizeIn) {
     
     this.metaSizeIn = metaSizeIn;
     return this;
   }
 
-  public ClusterImageWhereInput addMetaSizeInItem(Double metaSizeInItem) {
+  public ClusterImageWhereInput addMetaSizeInItem(Long metaSizeInItem) {
     if (this.metaSizeIn == null) {
-      this.metaSizeIn = new ArrayList<Double>();
+      this.metaSizeIn = new ArrayList<Long>();
     }
     this.metaSizeIn.add(metaSizeInItem);
     return this;
@@ -1357,17 +1357,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMetaSizeIn() {
+  public List<Long> getMetaSizeIn() {
     return metaSizeIn;
   }
 
 
-  public void setMetaSizeIn(List<Double> metaSizeIn) {
+  public void setMetaSizeIn(List<Long> metaSizeIn) {
     this.metaSizeIn = metaSizeIn;
   }
 
 
-  public ClusterImageWhereInput metaSizeLt(Double metaSizeLt) {
+  public ClusterImageWhereInput metaSizeLt(Long metaSizeLt) {
     
     this.metaSizeLt = metaSizeLt;
     return this;
@@ -1380,17 +1380,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetaSizeLt() {
+  public Long getMetaSizeLt() {
     return metaSizeLt;
   }
 
 
-  public void setMetaSizeLt(Double metaSizeLt) {
+  public void setMetaSizeLt(Long metaSizeLt) {
     this.metaSizeLt = metaSizeLt;
   }
 
 
-  public ClusterImageWhereInput metaSizeLte(Double metaSizeLte) {
+  public ClusterImageWhereInput metaSizeLte(Long metaSizeLte) {
     
     this.metaSizeLte = metaSizeLte;
     return this;
@@ -1403,17 +1403,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetaSizeLte() {
+  public Long getMetaSizeLte() {
     return metaSizeLte;
   }
 
 
-  public void setMetaSizeLte(Double metaSizeLte) {
+  public void setMetaSizeLte(Long metaSizeLte) {
     this.metaSizeLte = metaSizeLte;
   }
 
 
-  public ClusterImageWhereInput metaSizeNot(Double metaSizeNot) {
+  public ClusterImageWhereInput metaSizeNot(Long metaSizeNot) {
     
     this.metaSizeNot = metaSizeNot;
     return this;
@@ -1426,25 +1426,25 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMetaSizeNot() {
+  public Long getMetaSizeNot() {
     return metaSizeNot;
   }
 
 
-  public void setMetaSizeNot(Double metaSizeNot) {
+  public void setMetaSizeNot(Long metaSizeNot) {
     this.metaSizeNot = metaSizeNot;
   }
 
 
-  public ClusterImageWhereInput metaSizeNotIn(List<Double> metaSizeNotIn) {
+  public ClusterImageWhereInput metaSizeNotIn(List<Long> metaSizeNotIn) {
     
     this.metaSizeNotIn = metaSizeNotIn;
     return this;
   }
 
-  public ClusterImageWhereInput addMetaSizeNotInItem(Double metaSizeNotInItem) {
+  public ClusterImageWhereInput addMetaSizeNotInItem(Long metaSizeNotInItem) {
     if (this.metaSizeNotIn == null) {
-      this.metaSizeNotIn = new ArrayList<Double>();
+      this.metaSizeNotIn = new ArrayList<Long>();
     }
     this.metaSizeNotIn.add(metaSizeNotInItem);
     return this;
@@ -1457,12 +1457,12 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMetaSizeNotIn() {
+  public List<Long> getMetaSizeNotIn() {
     return metaSizeNotIn;
   }
 
 
-  public void setMetaSizeNotIn(List<Double> metaSizeNotIn) {
+  public void setMetaSizeNotIn(List<Long> metaSizeNotIn) {
     this.metaSizeNotIn = metaSizeNotIn;
   }
 
@@ -1867,7 +1867,7 @@ public class ClusterImageWhereInput {
   }
 
 
-  public ClusterImageWhereInput size(Double size) {
+  public ClusterImageWhereInput size(Long size) {
     
     this.size = size;
     return this;
@@ -1880,17 +1880,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
 
-  public ClusterImageWhereInput sizeGt(Double sizeGt) {
+  public ClusterImageWhereInput sizeGt(Long sizeGt) {
     
     this.sizeGt = sizeGt;
     return this;
@@ -1903,17 +1903,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGt() {
+  public Long getSizeGt() {
     return sizeGt;
   }
 
 
-  public void setSizeGt(Double sizeGt) {
+  public void setSizeGt(Long sizeGt) {
     this.sizeGt = sizeGt;
   }
 
 
-  public ClusterImageWhereInput sizeGte(Double sizeGte) {
+  public ClusterImageWhereInput sizeGte(Long sizeGte) {
     
     this.sizeGte = sizeGte;
     return this;
@@ -1926,25 +1926,25 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGte() {
+  public Long getSizeGte() {
     return sizeGte;
   }
 
 
-  public void setSizeGte(Double sizeGte) {
+  public void setSizeGte(Long sizeGte) {
     this.sizeGte = sizeGte;
   }
 
 
-  public ClusterImageWhereInput sizeIn(List<Double> sizeIn) {
+  public ClusterImageWhereInput sizeIn(List<Long> sizeIn) {
     
     this.sizeIn = sizeIn;
     return this;
   }
 
-  public ClusterImageWhereInput addSizeInItem(Double sizeInItem) {
+  public ClusterImageWhereInput addSizeInItem(Long sizeInItem) {
     if (this.sizeIn == null) {
-      this.sizeIn = new ArrayList<Double>();
+      this.sizeIn = new ArrayList<Long>();
     }
     this.sizeIn.add(sizeInItem);
     return this;
@@ -1957,17 +1957,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeIn() {
+  public List<Long> getSizeIn() {
     return sizeIn;
   }
 
 
-  public void setSizeIn(List<Double> sizeIn) {
+  public void setSizeIn(List<Long> sizeIn) {
     this.sizeIn = sizeIn;
   }
 
 
-  public ClusterImageWhereInput sizeLt(Double sizeLt) {
+  public ClusterImageWhereInput sizeLt(Long sizeLt) {
     
     this.sizeLt = sizeLt;
     return this;
@@ -1980,17 +1980,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLt() {
+  public Long getSizeLt() {
     return sizeLt;
   }
 
 
-  public void setSizeLt(Double sizeLt) {
+  public void setSizeLt(Long sizeLt) {
     this.sizeLt = sizeLt;
   }
 
 
-  public ClusterImageWhereInput sizeLte(Double sizeLte) {
+  public ClusterImageWhereInput sizeLte(Long sizeLte) {
     
     this.sizeLte = sizeLte;
     return this;
@@ -2003,17 +2003,17 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLte() {
+  public Long getSizeLte() {
     return sizeLte;
   }
 
 
-  public void setSizeLte(Double sizeLte) {
+  public void setSizeLte(Long sizeLte) {
     this.sizeLte = sizeLte;
   }
 
 
-  public ClusterImageWhereInput sizeNot(Double sizeNot) {
+  public ClusterImageWhereInput sizeNot(Long sizeNot) {
     
     this.sizeNot = sizeNot;
     return this;
@@ -2026,25 +2026,25 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeNot() {
+  public Long getSizeNot() {
     return sizeNot;
   }
 
 
-  public void setSizeNot(Double sizeNot) {
+  public void setSizeNot(Long sizeNot) {
     this.sizeNot = sizeNot;
   }
 
 
-  public ClusterImageWhereInput sizeNotIn(List<Double> sizeNotIn) {
+  public ClusterImageWhereInput sizeNotIn(List<Long> sizeNotIn) {
     
     this.sizeNotIn = sizeNotIn;
     return this;
   }
 
-  public ClusterImageWhereInput addSizeNotInItem(Double sizeNotInItem) {
+  public ClusterImageWhereInput addSizeNotInItem(Long sizeNotInItem) {
     if (this.sizeNotIn == null) {
-      this.sizeNotIn = new ArrayList<Double>();
+      this.sizeNotIn = new ArrayList<Long>();
     }
     this.sizeNotIn.add(sizeNotInItem);
     return this;
@@ -2057,12 +2057,12 @@ public class ClusterImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeNotIn() {
+  public List<Long> getSizeNotIn() {
     return sizeNotIn;
   }
 
 
-  public void setSizeNotIn(List<Double> sizeNotIn) {
+  public void setSizeNotIn(List<Long> sizeNotIn) {
     this.sizeNotIn = sizeNotIn;
   }
 

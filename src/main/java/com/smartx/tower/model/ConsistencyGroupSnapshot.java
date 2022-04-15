@@ -75,7 +75,7 @@ public class ConsistencyGroupSnapshot {
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public ConsistencyGroupSnapshot() { 
   }
@@ -311,7 +311,7 @@ public class ConsistencyGroupSnapshot {
   }
 
 
-  public ConsistencyGroupSnapshot uniqueSize(Double uniqueSize) {
+  public ConsistencyGroupSnapshot uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -324,12 +324,12 @@ public class ConsistencyGroupSnapshot {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 

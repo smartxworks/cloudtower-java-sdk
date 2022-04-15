@@ -82,7 +82,7 @@ public class LogCollection {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_STARTED_AT = "started_at";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
@@ -370,7 +370,7 @@ public class LogCollection {
   }
 
 
-  public LogCollection size(Double size) {
+  public LogCollection size(Long size) {
     
     this.size = size;
     return this;
@@ -383,12 +383,12 @@ public class LogCollection {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

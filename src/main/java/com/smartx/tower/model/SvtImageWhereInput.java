@@ -325,35 +325,35 @@ public class SvtImageWhereInput {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SIZE_GT = "size_gt";
   @SerializedName(SERIALIZED_NAME_SIZE_GT)
-  private Double sizeGt;
+  private Long sizeGt;
 
   public static final String SERIALIZED_NAME_SIZE_GTE = "size_gte";
   @SerializedName(SERIALIZED_NAME_SIZE_GTE)
-  private Double sizeGte;
+  private Long sizeGte;
 
   public static final String SERIALIZED_NAME_SIZE_IN = "size_in";
   @SerializedName(SERIALIZED_NAME_SIZE_IN)
-  private List<Double> sizeIn = null;
+  private List<Long> sizeIn = null;
 
   public static final String SERIALIZED_NAME_SIZE_LT = "size_lt";
   @SerializedName(SERIALIZED_NAME_SIZE_LT)
-  private Double sizeLt;
+  private Long sizeLt;
 
   public static final String SERIALIZED_NAME_SIZE_LTE = "size_lte";
   @SerializedName(SERIALIZED_NAME_SIZE_LTE)
-  private Double sizeLte;
+  private Long sizeLte;
 
   public static final String SERIALIZED_NAME_SIZE_NOT = "size_not";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT)
-  private Double sizeNot;
+  private Long sizeNot;
 
   public static final String SERIALIZED_NAME_SIZE_NOT_IN = "size_not_in";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
-  private List<Double> sizeNotIn = null;
+  private List<Long> sizeNotIn = null;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -2178,7 +2178,7 @@ public class SvtImageWhereInput {
   }
 
 
-  public SvtImageWhereInput size(Double size) {
+  public SvtImageWhereInput size(Long size) {
     
     this.size = size;
     return this;
@@ -2191,17 +2191,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
 
-  public SvtImageWhereInput sizeGt(Double sizeGt) {
+  public SvtImageWhereInput sizeGt(Long sizeGt) {
     
     this.sizeGt = sizeGt;
     return this;
@@ -2214,17 +2214,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGt() {
+  public Long getSizeGt() {
     return sizeGt;
   }
 
 
-  public void setSizeGt(Double sizeGt) {
+  public void setSizeGt(Long sizeGt) {
     this.sizeGt = sizeGt;
   }
 
 
-  public SvtImageWhereInput sizeGte(Double sizeGte) {
+  public SvtImageWhereInput sizeGte(Long sizeGte) {
     
     this.sizeGte = sizeGte;
     return this;
@@ -2237,25 +2237,25 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGte() {
+  public Long getSizeGte() {
     return sizeGte;
   }
 
 
-  public void setSizeGte(Double sizeGte) {
+  public void setSizeGte(Long sizeGte) {
     this.sizeGte = sizeGte;
   }
 
 
-  public SvtImageWhereInput sizeIn(List<Double> sizeIn) {
+  public SvtImageWhereInput sizeIn(List<Long> sizeIn) {
     
     this.sizeIn = sizeIn;
     return this;
   }
 
-  public SvtImageWhereInput addSizeInItem(Double sizeInItem) {
+  public SvtImageWhereInput addSizeInItem(Long sizeInItem) {
     if (this.sizeIn == null) {
-      this.sizeIn = new ArrayList<Double>();
+      this.sizeIn = new ArrayList<Long>();
     }
     this.sizeIn.add(sizeInItem);
     return this;
@@ -2268,17 +2268,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeIn() {
+  public List<Long> getSizeIn() {
     return sizeIn;
   }
 
 
-  public void setSizeIn(List<Double> sizeIn) {
+  public void setSizeIn(List<Long> sizeIn) {
     this.sizeIn = sizeIn;
   }
 
 
-  public SvtImageWhereInput sizeLt(Double sizeLt) {
+  public SvtImageWhereInput sizeLt(Long sizeLt) {
     
     this.sizeLt = sizeLt;
     return this;
@@ -2291,17 +2291,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLt() {
+  public Long getSizeLt() {
     return sizeLt;
   }
 
 
-  public void setSizeLt(Double sizeLt) {
+  public void setSizeLt(Long sizeLt) {
     this.sizeLt = sizeLt;
   }
 
 
-  public SvtImageWhereInput sizeLte(Double sizeLte) {
+  public SvtImageWhereInput sizeLte(Long sizeLte) {
     
     this.sizeLte = sizeLte;
     return this;
@@ -2314,17 +2314,17 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLte() {
+  public Long getSizeLte() {
     return sizeLte;
   }
 
 
-  public void setSizeLte(Double sizeLte) {
+  public void setSizeLte(Long sizeLte) {
     this.sizeLte = sizeLte;
   }
 
 
-  public SvtImageWhereInput sizeNot(Double sizeNot) {
+  public SvtImageWhereInput sizeNot(Long sizeNot) {
     
     this.sizeNot = sizeNot;
     return this;
@@ -2337,25 +2337,25 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeNot() {
+  public Long getSizeNot() {
     return sizeNot;
   }
 
 
-  public void setSizeNot(Double sizeNot) {
+  public void setSizeNot(Long sizeNot) {
     this.sizeNot = sizeNot;
   }
 
 
-  public SvtImageWhereInput sizeNotIn(List<Double> sizeNotIn) {
+  public SvtImageWhereInput sizeNotIn(List<Long> sizeNotIn) {
     
     this.sizeNotIn = sizeNotIn;
     return this;
   }
 
-  public SvtImageWhereInput addSizeNotInItem(Double sizeNotInItem) {
+  public SvtImageWhereInput addSizeNotInItem(Long sizeNotInItem) {
     if (this.sizeNotIn == null) {
-      this.sizeNotIn = new ArrayList<Double>();
+      this.sizeNotIn = new ArrayList<Long>();
     }
     this.sizeNotIn.add(sizeNotInItem);
     return this;
@@ -2368,12 +2368,12 @@ public class SvtImageWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeNotIn() {
+  public List<Long> getSizeNotIn() {
     return sizeNotIn;
   }
 
 
-  public void setSizeNotIn(List<Double> sizeNotIn) {
+  public void setSizeNotIn(List<Long> sizeNotIn) {
     this.sizeNotIn = sizeNotIn;
   }
 

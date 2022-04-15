@@ -37,7 +37,7 @@ public class Witness {
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE = "cpu_hz_per_core";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE)
-  private Double cpuHzPerCore;
+  private Long cpuHzPerCore;
 
   public static final String SERIALIZED_NAME_DATA_IP = "data_ip";
   @SerializedName(SERIALIZED_NAME_DATA_IP)
@@ -57,11 +57,11 @@ public class Witness {
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY = "system_data_capacity";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY)
-  private Double systemDataCapacity;
+  private Long systemDataCapacity;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE = "system_used_data_space";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE)
-  private Double systemUsedDataSpace;
+  private Long systemUsedDataSpace;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -69,11 +69,11 @@ public class Witness {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public Witness() { 
   }
@@ -101,7 +101,7 @@ public class Witness {
   }
 
 
-  public Witness cpuHzPerCore(Double cpuHzPerCore) {
+  public Witness cpuHzPerCore(Long cpuHzPerCore) {
     
     this.cpuHzPerCore = cpuHzPerCore;
     return this;
@@ -114,12 +114,12 @@ public class Witness {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCpuHzPerCore() {
+  public Long getCpuHzPerCore() {
     return cpuHzPerCore;
   }
 
 
-  public void setCpuHzPerCore(Double cpuHzPerCore) {
+  public void setCpuHzPerCore(Long cpuHzPerCore) {
     this.cpuHzPerCore = cpuHzPerCore;
   }
 
@@ -216,7 +216,7 @@ public class Witness {
   }
 
 
-  public Witness systemDataCapacity(Double systemDataCapacity) {
+  public Witness systemDataCapacity(Long systemDataCapacity) {
     
     this.systemDataCapacity = systemDataCapacity;
     return this;
@@ -229,17 +229,17 @@ public class Witness {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSystemDataCapacity() {
+  public Long getSystemDataCapacity() {
     return systemDataCapacity;
   }
 
 
-  public void setSystemDataCapacity(Double systemDataCapacity) {
+  public void setSystemDataCapacity(Long systemDataCapacity) {
     this.systemDataCapacity = systemDataCapacity;
   }
 
 
-  public Witness systemUsedDataSpace(Double systemUsedDataSpace) {
+  public Witness systemUsedDataSpace(Long systemUsedDataSpace) {
     
     this.systemUsedDataSpace = systemUsedDataSpace;
     return this;
@@ -252,12 +252,12 @@ public class Witness {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSystemUsedDataSpace() {
+  public Long getSystemUsedDataSpace() {
     return systemUsedDataSpace;
   }
 
 
-  public void setSystemUsedDataSpace(Double systemUsedDataSpace) {
+  public void setSystemUsedDataSpace(Long systemUsedDataSpace) {
     this.systemUsedDataSpace = systemUsedDataSpace;
   }
 
@@ -285,7 +285,7 @@ public class Witness {
   }
 
 
-  public Witness totalCpuHz(Double totalCpuHz) {
+  public Witness totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -298,17 +298,17 @@ public class Witness {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
 
-  public Witness totalMemoryBytes(Double totalMemoryBytes) {
+  public Witness totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -321,12 +321,12 @@ public class Witness {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 

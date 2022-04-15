@@ -732,35 +732,35 @@ public class BackupStoreRepositoryWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY = "total_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY)
-  private Double totalCapacity;
+  private Long totalCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_GT = "total_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_GT)
-  private Double totalCapacityGt;
+  private Long totalCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_GTE = "total_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_GTE)
-  private Double totalCapacityGte;
+  private Long totalCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_IN = "total_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_IN)
-  private List<Double> totalCapacityIn = null;
+  private List<Long> totalCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_LT = "total_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_LT)
-  private Double totalCapacityLt;
+  private Long totalCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_LTE = "total_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_LTE)
-  private Double totalCapacityLte;
+  private Long totalCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_NOT = "total_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_NOT)
-  private Double totalCapacityNot;
+  private Long totalCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY_NOT_IN = "total_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY_NOT_IN)
-  private List<Double> totalCapacityNotIn = null;
+  private List<Long> totalCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -780,67 +780,67 @@ public class BackupStoreRepositoryWhereInput {
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GT = "used_data_space_gt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GT)
-  private Double usedDataSpaceGt;
+  private Long usedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GTE = "used_data_space_gte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GTE)
-  private Double usedDataSpaceGte;
+  private Long usedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_IN = "used_data_space_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_IN)
-  private List<Double> usedDataSpaceIn = null;
+  private List<Long> usedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LT = "used_data_space_lt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LT)
-  private Double usedDataSpaceLt;
+  private Long usedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LTE = "used_data_space_lte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LTE)
-  private Double usedDataSpaceLte;
+  private Long usedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT = "used_data_space_not";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT)
-  private Double usedDataSpaceNot;
+  private Long usedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN = "used_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN)
-  private List<Double> usedDataSpaceNotIn = null;
+  private List<Long> usedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE)
-  private Double validDataSpace;
+  private Long validDataSpace;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_GT = "valid_data_space_gt";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_GT)
-  private Double validDataSpaceGt;
+  private Long validDataSpaceGt;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_GTE = "valid_data_space_gte";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_GTE)
-  private Double validDataSpaceGte;
+  private Long validDataSpaceGte;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_IN = "valid_data_space_in";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_IN)
-  private List<Double> validDataSpaceIn = null;
+  private List<Long> validDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_LT = "valid_data_space_lt";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_LT)
-  private Double validDataSpaceLt;
+  private Long validDataSpaceLt;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_LTE = "valid_data_space_lte";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_LTE)
-  private Double validDataSpaceLte;
+  private Long validDataSpaceLte;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_NOT = "valid_data_space_not";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_NOT)
-  private Double validDataSpaceNot;
+  private Long validDataSpaceNot;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_NOT_IN = "valid_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_NOT_IN)
-  private List<Double> validDataSpaceNotIn = null;
+  private List<Long> validDataSpaceNotIn = null;
 
   public BackupStoreRepositoryWhereInput() { 
   }
@@ -5072,7 +5072,7 @@ public class BackupStoreRepositoryWhereInput {
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacity(Double totalCapacity) {
+  public BackupStoreRepositoryWhereInput totalCapacity(Long totalCapacity) {
     
     this.totalCapacity = totalCapacity;
     return this;
@@ -5085,17 +5085,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCapacity() {
+  public Long getTotalCapacity() {
     return totalCapacity;
   }
 
 
-  public void setTotalCapacity(Double totalCapacity) {
+  public void setTotalCapacity(Long totalCapacity) {
     this.totalCapacity = totalCapacity;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityGt(Double totalCapacityGt) {
+  public BackupStoreRepositoryWhereInput totalCapacityGt(Long totalCapacityGt) {
     
     this.totalCapacityGt = totalCapacityGt;
     return this;
@@ -5108,17 +5108,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCapacityGt() {
+  public Long getTotalCapacityGt() {
     return totalCapacityGt;
   }
 
 
-  public void setTotalCapacityGt(Double totalCapacityGt) {
+  public void setTotalCapacityGt(Long totalCapacityGt) {
     this.totalCapacityGt = totalCapacityGt;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityGte(Double totalCapacityGte) {
+  public BackupStoreRepositoryWhereInput totalCapacityGte(Long totalCapacityGte) {
     
     this.totalCapacityGte = totalCapacityGte;
     return this;
@@ -5131,25 +5131,25 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCapacityGte() {
+  public Long getTotalCapacityGte() {
     return totalCapacityGte;
   }
 
 
-  public void setTotalCapacityGte(Double totalCapacityGte) {
+  public void setTotalCapacityGte(Long totalCapacityGte) {
     this.totalCapacityGte = totalCapacityGte;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityIn(List<Double> totalCapacityIn) {
+  public BackupStoreRepositoryWhereInput totalCapacityIn(List<Long> totalCapacityIn) {
     
     this.totalCapacityIn = totalCapacityIn;
     return this;
   }
 
-  public BackupStoreRepositoryWhereInput addTotalCapacityInItem(Double totalCapacityInItem) {
+  public BackupStoreRepositoryWhereInput addTotalCapacityInItem(Long totalCapacityInItem) {
     if (this.totalCapacityIn == null) {
-      this.totalCapacityIn = new ArrayList<Double>();
+      this.totalCapacityIn = new ArrayList<Long>();
     }
     this.totalCapacityIn.add(totalCapacityInItem);
     return this;
@@ -5162,17 +5162,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCapacityIn() {
+  public List<Long> getTotalCapacityIn() {
     return totalCapacityIn;
   }
 
 
-  public void setTotalCapacityIn(List<Double> totalCapacityIn) {
+  public void setTotalCapacityIn(List<Long> totalCapacityIn) {
     this.totalCapacityIn = totalCapacityIn;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityLt(Double totalCapacityLt) {
+  public BackupStoreRepositoryWhereInput totalCapacityLt(Long totalCapacityLt) {
     
     this.totalCapacityLt = totalCapacityLt;
     return this;
@@ -5185,17 +5185,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCapacityLt() {
+  public Long getTotalCapacityLt() {
     return totalCapacityLt;
   }
 
 
-  public void setTotalCapacityLt(Double totalCapacityLt) {
+  public void setTotalCapacityLt(Long totalCapacityLt) {
     this.totalCapacityLt = totalCapacityLt;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityLte(Double totalCapacityLte) {
+  public BackupStoreRepositoryWhereInput totalCapacityLte(Long totalCapacityLte) {
     
     this.totalCapacityLte = totalCapacityLte;
     return this;
@@ -5208,17 +5208,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCapacityLte() {
+  public Long getTotalCapacityLte() {
     return totalCapacityLte;
   }
 
 
-  public void setTotalCapacityLte(Double totalCapacityLte) {
+  public void setTotalCapacityLte(Long totalCapacityLte) {
     this.totalCapacityLte = totalCapacityLte;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityNot(Double totalCapacityNot) {
+  public BackupStoreRepositoryWhereInput totalCapacityNot(Long totalCapacityNot) {
     
     this.totalCapacityNot = totalCapacityNot;
     return this;
@@ -5231,25 +5231,25 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCapacityNot() {
+  public Long getTotalCapacityNot() {
     return totalCapacityNot;
   }
 
 
-  public void setTotalCapacityNot(Double totalCapacityNot) {
+  public void setTotalCapacityNot(Long totalCapacityNot) {
     this.totalCapacityNot = totalCapacityNot;
   }
 
 
-  public BackupStoreRepositoryWhereInput totalCapacityNotIn(List<Double> totalCapacityNotIn) {
+  public BackupStoreRepositoryWhereInput totalCapacityNotIn(List<Long> totalCapacityNotIn) {
     
     this.totalCapacityNotIn = totalCapacityNotIn;
     return this;
   }
 
-  public BackupStoreRepositoryWhereInput addTotalCapacityNotInItem(Double totalCapacityNotInItem) {
+  public BackupStoreRepositoryWhereInput addTotalCapacityNotInItem(Long totalCapacityNotInItem) {
     if (this.totalCapacityNotIn == null) {
-      this.totalCapacityNotIn = new ArrayList<Double>();
+      this.totalCapacityNotIn = new ArrayList<Long>();
     }
     this.totalCapacityNotIn.add(totalCapacityNotInItem);
     return this;
@@ -5262,12 +5262,12 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCapacityNotIn() {
+  public List<Long> getTotalCapacityNotIn() {
     return totalCapacityNotIn;
   }
 
 
-  public void setTotalCapacityNotIn(List<Double> totalCapacityNotIn) {
+  public void setTotalCapacityNotIn(List<Long> totalCapacityNotIn) {
     this.totalCapacityNotIn = totalCapacityNotIn;
   }
 
@@ -5380,7 +5380,7 @@ public class BackupStoreRepositoryWhereInput {
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpace(Double usedDataSpace) {
+  public BackupStoreRepositoryWhereInput usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -5393,17 +5393,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceGt(Double usedDataSpaceGt) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceGt(Long usedDataSpaceGt) {
     
     this.usedDataSpaceGt = usedDataSpaceGt;
     return this;
@@ -5416,17 +5416,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGt() {
+  public Long getUsedDataSpaceGt() {
     return usedDataSpaceGt;
   }
 
 
-  public void setUsedDataSpaceGt(Double usedDataSpaceGt) {
+  public void setUsedDataSpaceGt(Long usedDataSpaceGt) {
     this.usedDataSpaceGt = usedDataSpaceGt;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceGte(Double usedDataSpaceGte) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceGte(Long usedDataSpaceGte) {
     
     this.usedDataSpaceGte = usedDataSpaceGte;
     return this;
@@ -5439,25 +5439,25 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGte() {
+  public Long getUsedDataSpaceGte() {
     return usedDataSpaceGte;
   }
 
 
-  public void setUsedDataSpaceGte(Double usedDataSpaceGte) {
+  public void setUsedDataSpaceGte(Long usedDataSpaceGte) {
     this.usedDataSpaceGte = usedDataSpaceGte;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceIn(List<Long> usedDataSpaceIn) {
     
     this.usedDataSpaceIn = usedDataSpaceIn;
     return this;
   }
 
-  public BackupStoreRepositoryWhereInput addUsedDataSpaceInItem(Double usedDataSpaceInItem) {
+  public BackupStoreRepositoryWhereInput addUsedDataSpaceInItem(Long usedDataSpaceInItem) {
     if (this.usedDataSpaceIn == null) {
-      this.usedDataSpaceIn = new ArrayList<Double>();
+      this.usedDataSpaceIn = new ArrayList<Long>();
     }
     this.usedDataSpaceIn.add(usedDataSpaceInItem);
     return this;
@@ -5470,17 +5470,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceIn() {
+  public List<Long> getUsedDataSpaceIn() {
     return usedDataSpaceIn;
   }
 
 
-  public void setUsedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public void setUsedDataSpaceIn(List<Long> usedDataSpaceIn) {
     this.usedDataSpaceIn = usedDataSpaceIn;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceLt(Double usedDataSpaceLt) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceLt(Long usedDataSpaceLt) {
     
     this.usedDataSpaceLt = usedDataSpaceLt;
     return this;
@@ -5493,17 +5493,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLt() {
+  public Long getUsedDataSpaceLt() {
     return usedDataSpaceLt;
   }
 
 
-  public void setUsedDataSpaceLt(Double usedDataSpaceLt) {
+  public void setUsedDataSpaceLt(Long usedDataSpaceLt) {
     this.usedDataSpaceLt = usedDataSpaceLt;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceLte(Double usedDataSpaceLte) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceLte(Long usedDataSpaceLte) {
     
     this.usedDataSpaceLte = usedDataSpaceLte;
     return this;
@@ -5516,17 +5516,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLte() {
+  public Long getUsedDataSpaceLte() {
     return usedDataSpaceLte;
   }
 
 
-  public void setUsedDataSpaceLte(Double usedDataSpaceLte) {
+  public void setUsedDataSpaceLte(Long usedDataSpaceLte) {
     this.usedDataSpaceLte = usedDataSpaceLte;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceNot(Double usedDataSpaceNot) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceNot(Long usedDataSpaceNot) {
     
     this.usedDataSpaceNot = usedDataSpaceNot;
     return this;
@@ -5539,25 +5539,25 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceNot() {
+  public Long getUsedDataSpaceNot() {
     return usedDataSpaceNot;
   }
 
 
-  public void setUsedDataSpaceNot(Double usedDataSpaceNot) {
+  public void setUsedDataSpaceNot(Long usedDataSpaceNot) {
     this.usedDataSpaceNot = usedDataSpaceNot;
   }
 
 
-  public BackupStoreRepositoryWhereInput usedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public BackupStoreRepositoryWhereInput usedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
     return this;
   }
 
-  public BackupStoreRepositoryWhereInput addUsedDataSpaceNotInItem(Double usedDataSpaceNotInItem) {
+  public BackupStoreRepositoryWhereInput addUsedDataSpaceNotInItem(Long usedDataSpaceNotInItem) {
     if (this.usedDataSpaceNotIn == null) {
-      this.usedDataSpaceNotIn = new ArrayList<Double>();
+      this.usedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.usedDataSpaceNotIn.add(usedDataSpaceNotInItem);
     return this;
@@ -5570,17 +5570,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceNotIn() {
+  public List<Long> getUsedDataSpaceNotIn() {
     return usedDataSpaceNotIn;
   }
 
 
-  public void setUsedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public void setUsedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpace(Double validDataSpace) {
+  public BackupStoreRepositoryWhereInput validDataSpace(Long validDataSpace) {
     
     this.validDataSpace = validDataSpace;
     return this;
@@ -5593,17 +5593,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpace() {
+  public Long getValidDataSpace() {
     return validDataSpace;
   }
 
 
-  public void setValidDataSpace(Double validDataSpace) {
+  public void setValidDataSpace(Long validDataSpace) {
     this.validDataSpace = validDataSpace;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceGt(Double validDataSpaceGt) {
+  public BackupStoreRepositoryWhereInput validDataSpaceGt(Long validDataSpaceGt) {
     
     this.validDataSpaceGt = validDataSpaceGt;
     return this;
@@ -5616,17 +5616,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceGt() {
+  public Long getValidDataSpaceGt() {
     return validDataSpaceGt;
   }
 
 
-  public void setValidDataSpaceGt(Double validDataSpaceGt) {
+  public void setValidDataSpaceGt(Long validDataSpaceGt) {
     this.validDataSpaceGt = validDataSpaceGt;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceGte(Double validDataSpaceGte) {
+  public BackupStoreRepositoryWhereInput validDataSpaceGte(Long validDataSpaceGte) {
     
     this.validDataSpaceGte = validDataSpaceGte;
     return this;
@@ -5639,25 +5639,25 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceGte() {
+  public Long getValidDataSpaceGte() {
     return validDataSpaceGte;
   }
 
 
-  public void setValidDataSpaceGte(Double validDataSpaceGte) {
+  public void setValidDataSpaceGte(Long validDataSpaceGte) {
     this.validDataSpaceGte = validDataSpaceGte;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceIn(List<Double> validDataSpaceIn) {
+  public BackupStoreRepositoryWhereInput validDataSpaceIn(List<Long> validDataSpaceIn) {
     
     this.validDataSpaceIn = validDataSpaceIn;
     return this;
   }
 
-  public BackupStoreRepositoryWhereInput addValidDataSpaceInItem(Double validDataSpaceInItem) {
+  public BackupStoreRepositoryWhereInput addValidDataSpaceInItem(Long validDataSpaceInItem) {
     if (this.validDataSpaceIn == null) {
-      this.validDataSpaceIn = new ArrayList<Double>();
+      this.validDataSpaceIn = new ArrayList<Long>();
     }
     this.validDataSpaceIn.add(validDataSpaceInItem);
     return this;
@@ -5670,17 +5670,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidDataSpaceIn() {
+  public List<Long> getValidDataSpaceIn() {
     return validDataSpaceIn;
   }
 
 
-  public void setValidDataSpaceIn(List<Double> validDataSpaceIn) {
+  public void setValidDataSpaceIn(List<Long> validDataSpaceIn) {
     this.validDataSpaceIn = validDataSpaceIn;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceLt(Double validDataSpaceLt) {
+  public BackupStoreRepositoryWhereInput validDataSpaceLt(Long validDataSpaceLt) {
     
     this.validDataSpaceLt = validDataSpaceLt;
     return this;
@@ -5693,17 +5693,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceLt() {
+  public Long getValidDataSpaceLt() {
     return validDataSpaceLt;
   }
 
 
-  public void setValidDataSpaceLt(Double validDataSpaceLt) {
+  public void setValidDataSpaceLt(Long validDataSpaceLt) {
     this.validDataSpaceLt = validDataSpaceLt;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceLte(Double validDataSpaceLte) {
+  public BackupStoreRepositoryWhereInput validDataSpaceLte(Long validDataSpaceLte) {
     
     this.validDataSpaceLte = validDataSpaceLte;
     return this;
@@ -5716,17 +5716,17 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceLte() {
+  public Long getValidDataSpaceLte() {
     return validDataSpaceLte;
   }
 
 
-  public void setValidDataSpaceLte(Double validDataSpaceLte) {
+  public void setValidDataSpaceLte(Long validDataSpaceLte) {
     this.validDataSpaceLte = validDataSpaceLte;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceNot(Double validDataSpaceNot) {
+  public BackupStoreRepositoryWhereInput validDataSpaceNot(Long validDataSpaceNot) {
     
     this.validDataSpaceNot = validDataSpaceNot;
     return this;
@@ -5739,25 +5739,25 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceNot() {
+  public Long getValidDataSpaceNot() {
     return validDataSpaceNot;
   }
 
 
-  public void setValidDataSpaceNot(Double validDataSpaceNot) {
+  public void setValidDataSpaceNot(Long validDataSpaceNot) {
     this.validDataSpaceNot = validDataSpaceNot;
   }
 
 
-  public BackupStoreRepositoryWhereInput validDataSpaceNotIn(List<Double> validDataSpaceNotIn) {
+  public BackupStoreRepositoryWhereInput validDataSpaceNotIn(List<Long> validDataSpaceNotIn) {
     
     this.validDataSpaceNotIn = validDataSpaceNotIn;
     return this;
   }
 
-  public BackupStoreRepositoryWhereInput addValidDataSpaceNotInItem(Double validDataSpaceNotInItem) {
+  public BackupStoreRepositoryWhereInput addValidDataSpaceNotInItem(Long validDataSpaceNotInItem) {
     if (this.validDataSpaceNotIn == null) {
-      this.validDataSpaceNotIn = new ArrayList<Double>();
+      this.validDataSpaceNotIn = new ArrayList<Long>();
     }
     this.validDataSpaceNotIn.add(validDataSpaceNotInItem);
     return this;
@@ -5770,12 +5770,12 @@ public class BackupStoreRepositoryWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidDataSpaceNotIn() {
+  public List<Long> getValidDataSpaceNotIn() {
     return validDataSpaceNotIn;
   }
 
 
-  public void setValidDataSpaceNotIn(List<Double> validDataSpaceNotIn) {
+  public void setValidDataSpaceNotIn(List<Long> validDataSpaceNotIn) {
     this.validDataSpaceNotIn = validDataSpaceNotIn;
   }
 

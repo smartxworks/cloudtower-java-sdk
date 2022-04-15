@@ -49,7 +49,7 @@ public class ITVmVolume extends ITBase {
       List<VmVolumeCreationParams> params = new ArrayList<>();
       params.add(new VmVolumeCreationParams().clusterId(cluster.getId())
           .name("tower-sdk-test-vm-volume" + System.currentTimeMillis())
-          .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION).size(4096).sharing(false));
+          .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION).size(4096L).sharing(false));
       // do some modify to params(optional)
       List<WithTaskVmVolume> result = api.createVmVolume(params);
       try {

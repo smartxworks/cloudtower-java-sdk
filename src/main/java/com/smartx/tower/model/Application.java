@@ -56,7 +56,7 @@ public class Application {
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
-  private Double memory;
+  private Long memory;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
@@ -88,7 +88,7 @@ public class Application {
 
   public static final String SERIALIZED_NAME_VOLUME_SIZE = "volume_size";
   @SerializedName(SERIALIZED_NAME_VOLUME_SIZE)
-  private Double volumeSize;
+  private Long volumeSize;
 
   public Application() { 
   }
@@ -208,7 +208,7 @@ public class Application {
   }
 
 
-  public Application memory(Double memory) {
+  public Application memory(Long memory) {
     
     this.memory = memory;
     return this;
@@ -221,12 +221,12 @@ public class Application {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMemory() {
+  public Long getMemory() {
     return memory;
   }
 
 
-  public void setMemory(Double memory) {
+  public void setMemory(Long memory) {
     this.memory = memory;
   }
 
@@ -392,7 +392,7 @@ public class Application {
   }
 
 
-  public Application volumeSize(Double volumeSize) {
+  public Application volumeSize(Long volumeSize) {
     
     this.volumeSize = volumeSize;
     return this;
@@ -405,12 +405,12 @@ public class Application {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVolumeSize() {
+  public Long getVolumeSize() {
     return volumeSize;
   }
 
 
-  public void setVolumeSize(Double volumeSize) {
+  public void setVolumeSize(Long volumeSize) {
     this.volumeSize = volumeSize;
   }
 

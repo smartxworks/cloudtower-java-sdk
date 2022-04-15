@@ -264,35 +264,35 @@ public class BackupRestoreExecutionWhereInput {
 
   public static final String SERIALIZED_NAME_READ_BYTES = "read_bytes";
   @SerializedName(SERIALIZED_NAME_READ_BYTES)
-  private Double readBytes;
+  private Long readBytes;
 
   public static final String SERIALIZED_NAME_READ_BYTES_GT = "read_bytes_gt";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_GT)
-  private Double readBytesGt;
+  private Long readBytesGt;
 
   public static final String SERIALIZED_NAME_READ_BYTES_GTE = "read_bytes_gte";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_GTE)
-  private Double readBytesGte;
+  private Long readBytesGte;
 
   public static final String SERIALIZED_NAME_READ_BYTES_IN = "read_bytes_in";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_IN)
-  private List<Double> readBytesIn = null;
+  private List<Long> readBytesIn = null;
 
   public static final String SERIALIZED_NAME_READ_BYTES_LT = "read_bytes_lt";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_LT)
-  private Double readBytesLt;
+  private Long readBytesLt;
 
   public static final String SERIALIZED_NAME_READ_BYTES_LTE = "read_bytes_lte";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_LTE)
-  private Double readBytesLte;
+  private Long readBytesLte;
 
   public static final String SERIALIZED_NAME_READ_BYTES_NOT = "read_bytes_not";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_NOT)
-  private Double readBytesNot;
+  private Long readBytesNot;
 
   public static final String SERIALIZED_NAME_READ_BYTES_NOT_IN = "read_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_READ_BYTES_NOT_IN)
-  private List<Double> readBytesNotIn = null;
+  private List<Long> readBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_REBUILD_NAME = "rebuild_name";
   @SerializedName(SERIALIZED_NAME_REBUILD_NAME)
@@ -412,35 +412,35 @@ public class BackupRestoreExecutionWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES = "total_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES)
-  private Double totalBytes;
+  private Long totalBytes;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_GT = "total_bytes_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_GT)
-  private Double totalBytesGt;
+  private Long totalBytesGt;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_GTE = "total_bytes_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_GTE)
-  private Double totalBytesGte;
+  private Long totalBytesGte;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_IN = "total_bytes_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_IN)
-  private List<Double> totalBytesIn = null;
+  private List<Long> totalBytesIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_LT = "total_bytes_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_LT)
-  private Double totalBytesLt;
+  private Long totalBytesLt;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_LTE = "total_bytes_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_LTE)
-  private Double totalBytesLte;
+  private Long totalBytesLte;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_NOT = "total_bytes_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_NOT)
-  private Double totalBytesNot;
+  private Long totalBytesNot;
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES_NOT_IN = "total_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES_NOT_IN)
-  private List<Double> totalBytesNotIn = null;
+  private List<Long> totalBytesNotIn = null;
 
   public BackupRestoreExecutionWhereInput() { 
   }
@@ -1853,7 +1853,7 @@ public class BackupRestoreExecutionWhereInput {
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytes(Double readBytes) {
+  public BackupRestoreExecutionWhereInput readBytes(Long readBytes) {
     
     this.readBytes = readBytes;
     return this;
@@ -1866,17 +1866,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytes() {
+  public Long getReadBytes() {
     return readBytes;
   }
 
 
-  public void setReadBytes(Double readBytes) {
+  public void setReadBytes(Long readBytes) {
     this.readBytes = readBytes;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesGt(Double readBytesGt) {
+  public BackupRestoreExecutionWhereInput readBytesGt(Long readBytesGt) {
     
     this.readBytesGt = readBytesGt;
     return this;
@@ -1889,17 +1889,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytesGt() {
+  public Long getReadBytesGt() {
     return readBytesGt;
   }
 
 
-  public void setReadBytesGt(Double readBytesGt) {
+  public void setReadBytesGt(Long readBytesGt) {
     this.readBytesGt = readBytesGt;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesGte(Double readBytesGte) {
+  public BackupRestoreExecutionWhereInput readBytesGte(Long readBytesGte) {
     
     this.readBytesGte = readBytesGte;
     return this;
@@ -1912,25 +1912,25 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytesGte() {
+  public Long getReadBytesGte() {
     return readBytesGte;
   }
 
 
-  public void setReadBytesGte(Double readBytesGte) {
+  public void setReadBytesGte(Long readBytesGte) {
     this.readBytesGte = readBytesGte;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesIn(List<Double> readBytesIn) {
+  public BackupRestoreExecutionWhereInput readBytesIn(List<Long> readBytesIn) {
     
     this.readBytesIn = readBytesIn;
     return this;
   }
 
-  public BackupRestoreExecutionWhereInput addReadBytesInItem(Double readBytesInItem) {
+  public BackupRestoreExecutionWhereInput addReadBytesInItem(Long readBytesInItem) {
     if (this.readBytesIn == null) {
-      this.readBytesIn = new ArrayList<Double>();
+      this.readBytesIn = new ArrayList<Long>();
     }
     this.readBytesIn.add(readBytesInItem);
     return this;
@@ -1943,17 +1943,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReadBytesIn() {
+  public List<Long> getReadBytesIn() {
     return readBytesIn;
   }
 
 
-  public void setReadBytesIn(List<Double> readBytesIn) {
+  public void setReadBytesIn(List<Long> readBytesIn) {
     this.readBytesIn = readBytesIn;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesLt(Double readBytesLt) {
+  public BackupRestoreExecutionWhereInput readBytesLt(Long readBytesLt) {
     
     this.readBytesLt = readBytesLt;
     return this;
@@ -1966,17 +1966,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytesLt() {
+  public Long getReadBytesLt() {
     return readBytesLt;
   }
 
 
-  public void setReadBytesLt(Double readBytesLt) {
+  public void setReadBytesLt(Long readBytesLt) {
     this.readBytesLt = readBytesLt;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesLte(Double readBytesLte) {
+  public BackupRestoreExecutionWhereInput readBytesLte(Long readBytesLte) {
     
     this.readBytesLte = readBytesLte;
     return this;
@@ -1989,17 +1989,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytesLte() {
+  public Long getReadBytesLte() {
     return readBytesLte;
   }
 
 
-  public void setReadBytesLte(Double readBytesLte) {
+  public void setReadBytesLte(Long readBytesLte) {
     this.readBytesLte = readBytesLte;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesNot(Double readBytesNot) {
+  public BackupRestoreExecutionWhereInput readBytesNot(Long readBytesNot) {
     
     this.readBytesNot = readBytesNot;
     return this;
@@ -2012,25 +2012,25 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytesNot() {
+  public Long getReadBytesNot() {
     return readBytesNot;
   }
 
 
-  public void setReadBytesNot(Double readBytesNot) {
+  public void setReadBytesNot(Long readBytesNot) {
     this.readBytesNot = readBytesNot;
   }
 
 
-  public BackupRestoreExecutionWhereInput readBytesNotIn(List<Double> readBytesNotIn) {
+  public BackupRestoreExecutionWhereInput readBytesNotIn(List<Long> readBytesNotIn) {
     
     this.readBytesNotIn = readBytesNotIn;
     return this;
   }
 
-  public BackupRestoreExecutionWhereInput addReadBytesNotInItem(Double readBytesNotInItem) {
+  public BackupRestoreExecutionWhereInput addReadBytesNotInItem(Long readBytesNotInItem) {
     if (this.readBytesNotIn == null) {
-      this.readBytesNotIn = new ArrayList<Double>();
+      this.readBytesNotIn = new ArrayList<Long>();
     }
     this.readBytesNotIn.add(readBytesNotInItem);
     return this;
@@ -2043,12 +2043,12 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getReadBytesNotIn() {
+  public List<Long> getReadBytesNotIn() {
     return readBytesNotIn;
   }
 
 
-  public void setReadBytesNotIn(List<Double> readBytesNotIn) {
+  public void setReadBytesNotIn(List<Long> readBytesNotIn) {
     this.readBytesNotIn = readBytesNotIn;
   }
 
@@ -2768,7 +2768,7 @@ public class BackupRestoreExecutionWhereInput {
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytes(Double totalBytes) {
+  public BackupRestoreExecutionWhereInput totalBytes(Long totalBytes) {
     
     this.totalBytes = totalBytes;
     return this;
@@ -2781,17 +2781,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytes() {
+  public Long getTotalBytes() {
     return totalBytes;
   }
 
 
-  public void setTotalBytes(Double totalBytes) {
+  public void setTotalBytes(Long totalBytes) {
     this.totalBytes = totalBytes;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesGt(Double totalBytesGt) {
+  public BackupRestoreExecutionWhereInput totalBytesGt(Long totalBytesGt) {
     
     this.totalBytesGt = totalBytesGt;
     return this;
@@ -2804,17 +2804,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytesGt() {
+  public Long getTotalBytesGt() {
     return totalBytesGt;
   }
 
 
-  public void setTotalBytesGt(Double totalBytesGt) {
+  public void setTotalBytesGt(Long totalBytesGt) {
     this.totalBytesGt = totalBytesGt;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesGte(Double totalBytesGte) {
+  public BackupRestoreExecutionWhereInput totalBytesGte(Long totalBytesGte) {
     
     this.totalBytesGte = totalBytesGte;
     return this;
@@ -2827,25 +2827,25 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytesGte() {
+  public Long getTotalBytesGte() {
     return totalBytesGte;
   }
 
 
-  public void setTotalBytesGte(Double totalBytesGte) {
+  public void setTotalBytesGte(Long totalBytesGte) {
     this.totalBytesGte = totalBytesGte;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesIn(List<Double> totalBytesIn) {
+  public BackupRestoreExecutionWhereInput totalBytesIn(List<Long> totalBytesIn) {
     
     this.totalBytesIn = totalBytesIn;
     return this;
   }
 
-  public BackupRestoreExecutionWhereInput addTotalBytesInItem(Double totalBytesInItem) {
+  public BackupRestoreExecutionWhereInput addTotalBytesInItem(Long totalBytesInItem) {
     if (this.totalBytesIn == null) {
-      this.totalBytesIn = new ArrayList<Double>();
+      this.totalBytesIn = new ArrayList<Long>();
     }
     this.totalBytesIn.add(totalBytesInItem);
     return this;
@@ -2858,17 +2858,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalBytesIn() {
+  public List<Long> getTotalBytesIn() {
     return totalBytesIn;
   }
 
 
-  public void setTotalBytesIn(List<Double> totalBytesIn) {
+  public void setTotalBytesIn(List<Long> totalBytesIn) {
     this.totalBytesIn = totalBytesIn;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesLt(Double totalBytesLt) {
+  public BackupRestoreExecutionWhereInput totalBytesLt(Long totalBytesLt) {
     
     this.totalBytesLt = totalBytesLt;
     return this;
@@ -2881,17 +2881,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytesLt() {
+  public Long getTotalBytesLt() {
     return totalBytesLt;
   }
 
 
-  public void setTotalBytesLt(Double totalBytesLt) {
+  public void setTotalBytesLt(Long totalBytesLt) {
     this.totalBytesLt = totalBytesLt;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesLte(Double totalBytesLte) {
+  public BackupRestoreExecutionWhereInput totalBytesLte(Long totalBytesLte) {
     
     this.totalBytesLte = totalBytesLte;
     return this;
@@ -2904,17 +2904,17 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytesLte() {
+  public Long getTotalBytesLte() {
     return totalBytesLte;
   }
 
 
-  public void setTotalBytesLte(Double totalBytesLte) {
+  public void setTotalBytesLte(Long totalBytesLte) {
     this.totalBytesLte = totalBytesLte;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesNot(Double totalBytesNot) {
+  public BackupRestoreExecutionWhereInput totalBytesNot(Long totalBytesNot) {
     
     this.totalBytesNot = totalBytesNot;
     return this;
@@ -2927,25 +2927,25 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytesNot() {
+  public Long getTotalBytesNot() {
     return totalBytesNot;
   }
 
 
-  public void setTotalBytesNot(Double totalBytesNot) {
+  public void setTotalBytesNot(Long totalBytesNot) {
     this.totalBytesNot = totalBytesNot;
   }
 
 
-  public BackupRestoreExecutionWhereInput totalBytesNotIn(List<Double> totalBytesNotIn) {
+  public BackupRestoreExecutionWhereInput totalBytesNotIn(List<Long> totalBytesNotIn) {
     
     this.totalBytesNotIn = totalBytesNotIn;
     return this;
   }
 
-  public BackupRestoreExecutionWhereInput addTotalBytesNotInItem(Double totalBytesNotInItem) {
+  public BackupRestoreExecutionWhereInput addTotalBytesNotInItem(Long totalBytesNotInItem) {
     if (this.totalBytesNotIn == null) {
-      this.totalBytesNotIn = new ArrayList<Double>();
+      this.totalBytesNotIn = new ArrayList<Long>();
     }
     this.totalBytesNotIn.add(totalBytesNotInItem);
     return this;
@@ -2958,12 +2958,12 @@ public class BackupRestoreExecutionWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalBytesNotIn() {
+  public List<Long> getTotalBytesNotIn() {
     return totalBytesNotIn;
   }
 
 
-  public void setTotalBytesNotIn(List<Double> totalBytesNotIn) {
+  public void setTotalBytesNotIn(List<Long> totalBytesNotIn) {
     this.totalBytesNotIn = totalBytesNotIn;
   }
 

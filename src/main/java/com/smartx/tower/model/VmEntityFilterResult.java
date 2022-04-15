@@ -43,7 +43,7 @@ public class VmEntityFilterResult {
 
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
-  private List<Double> result = new ArrayList<Double>();
+  private List<Long> result = new ArrayList<Long>();
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
@@ -98,13 +98,13 @@ public class VmEntityFilterResult {
   }
 
 
-  public VmEntityFilterResult result(List<Double> result) {
+  public VmEntityFilterResult result(List<Long> result) {
     
     this.result = result;
     return this;
   }
 
-  public VmEntityFilterResult addResultItem(Double resultItem) {
+  public VmEntityFilterResult addResultItem(Long resultItem) {
     this.result.add(resultItem);
     return this;
   }
@@ -116,12 +116,12 @@ public class VmEntityFilterResult {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<Double> getResult() {
+  public List<Long> getResult() {
     return result;
   }
 
 
-  public void setResult(List<Double> result) {
+  public void setResult(List<Long> result) {
     this.result = result;
   }
 

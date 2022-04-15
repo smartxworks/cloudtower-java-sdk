@@ -41,7 +41,7 @@ public class NestedPartition {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_USAGE = "usage";
   @SerializedName(SERIALIZED_NAME_USAGE)
@@ -49,7 +49,7 @@ public class NestedPartition {
 
   public static final String SERIALIZED_NAME_USED_SIZE = "used_size";
   @SerializedName(SERIALIZED_NAME_USED_SIZE)
-  private Double usedSize;
+  private Long usedSize;
 
   public NestedPartition() { 
   }
@@ -100,7 +100,7 @@ public class NestedPartition {
   }
 
 
-  public NestedPartition size(Double size) {
+  public NestedPartition size(Long size) {
     
     this.size = size;
     return this;
@@ -113,12 +113,12 @@ public class NestedPartition {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
@@ -146,7 +146,7 @@ public class NestedPartition {
   }
 
 
-  public NestedPartition usedSize(Double usedSize) {
+  public NestedPartition usedSize(Long usedSize) {
     
     this.usedSize = usedSize;
     return this;
@@ -159,12 +159,12 @@ public class NestedPartition {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUsedSize() {
+  public Long getUsedSize() {
     return usedSize;
   }
 
 
-  public void setUsedSize(Double usedSize) {
+  public void setUsedSize(Long usedSize) {
     this.usedSize = usedSize;
   }
 

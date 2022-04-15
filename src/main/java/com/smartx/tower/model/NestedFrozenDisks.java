@@ -35,7 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NestedFrozenDisks {
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
-  private Double boot;
+  private Long boot;
 
   public static final String SERIALIZED_NAME_BUS = "bus";
   @SerializedName(SERIALIZED_NAME_BUS)
@@ -67,7 +67,7 @@ public class NestedFrozenDisks {
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -87,7 +87,7 @@ public class NestedFrozenDisks {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_LOCAL_ID = "snapshot_local_id";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_LOCAL_ID)
@@ -112,7 +112,7 @@ public class NestedFrozenDisks {
   public NestedFrozenDisks() { 
   }
 
-  public NestedFrozenDisks boot(Double boot) {
+  public NestedFrozenDisks boot(Long boot) {
     
     this.boot = boot;
     return this;
@@ -125,12 +125,12 @@ public class NestedFrozenDisks {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBoot() {
+  public Long getBoot() {
     return boot;
   }
 
 
-  public void setBoot(Double boot) {
+  public void setBoot(Long boot) {
     this.boot = boot;
   }
 
@@ -296,7 +296,7 @@ public class NestedFrozenDisks {
   }
 
 
-  public NestedFrozenDisks maxBandwidth(Double maxBandwidth) {
+  public NestedFrozenDisks maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -309,12 +309,12 @@ public class NestedFrozenDisks {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
@@ -411,7 +411,7 @@ public class NestedFrozenDisks {
   }
 
 
-  public NestedFrozenDisks size(Double size) {
+  public NestedFrozenDisks size(Long size) {
     
     this.size = size;
     return this;
@@ -424,12 +424,12 @@ public class NestedFrozenDisks {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

@@ -49,35 +49,35 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
-  private Double failureDataSpace;
+  private Long failureDataSpace;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GT = "failure_data_space_gt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GT)
-  private Double failureDataSpaceGt;
+  private Long failureDataSpaceGt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE = "failure_data_space_gte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE)
-  private Double failureDataSpaceGte;
+  private Long failureDataSpaceGte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_IN = "failure_data_space_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_IN)
-  private List<Double> failureDataSpaceIn = null;
+  private List<Long> failureDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LT = "failure_data_space_lt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LT)
-  private Double failureDataSpaceLt;
+  private Long failureDataSpaceLt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE = "failure_data_space_lte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE)
-  private Double failureDataSpaceLte;
+  private Long failureDataSpaceLte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT = "failure_data_space_not";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT)
-  private Double failureDataSpaceNot;
+  private Long failureDataSpaceNot;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN = "failure_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN)
-  private List<Double> failureDataSpaceNotIn = null;
+  private List<Long> failureDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
@@ -317,67 +317,67 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE = "provisioned_data_space";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE)
-  private Double provisionedDataSpace;
+  private Long provisionedDataSpace;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_GT = "provisioned_data_space_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_GT)
-  private Double provisionedDataSpaceGt;
+  private Long provisionedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_GTE = "provisioned_data_space_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_GTE)
-  private Double provisionedDataSpaceGte;
+  private Long provisionedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_IN = "provisioned_data_space_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_IN)
-  private List<Double> provisionedDataSpaceIn = null;
+  private List<Long> provisionedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_LT = "provisioned_data_space_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_LT)
-  private Double provisionedDataSpaceLt;
+  private Long provisionedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_LTE = "provisioned_data_space_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_LTE)
-  private Double provisionedDataSpaceLte;
+  private Long provisionedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_NOT = "provisioned_data_space_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_NOT)
-  private Double provisionedDataSpaceNot;
+  private Long provisionedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_DATA_SPACE_NOT_IN = "provisioned_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_DATA_SPACE_NOT_IN)
-  private List<Double> provisionedDataSpaceNotIn = null;
+  private List<Long> provisionedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
-  private Double provisionedMemoryBytes;
+  private Long provisionedMemoryBytes;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GT = "provisioned_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GT)
-  private Double provisionedMemoryBytesGt;
+  private Long provisionedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GTE = "provisioned_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GTE)
-  private Double provisionedMemoryBytesGte;
+  private Long provisionedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_IN = "provisioned_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_IN)
-  private List<Double> provisionedMemoryBytesIn = null;
+  private List<Long> provisionedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LT = "provisioned_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LT)
-  private Double provisionedMemoryBytesLt;
+  private Long provisionedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LTE = "provisioned_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LTE)
-  private Double provisionedMemoryBytesLte;
+  private Long provisionedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT = "provisioned_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT)
-  private Double provisionedMemoryBytesNot;
+  private Long provisionedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN = "provisioned_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN)
-  private List<Double> provisionedMemoryBytesNotIn = null;
+  private List<Long> provisionedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
@@ -477,35 +477,35 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
-  private Double totalCacheCapacity;
+  private Long totalCacheCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GT = "total_cache_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GT)
-  private Double totalCacheCapacityGt;
+  private Long totalCacheCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GTE = "total_cache_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GTE)
-  private Double totalCacheCapacityGte;
+  private Long totalCacheCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_IN = "total_cache_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_IN)
-  private List<Double> totalCacheCapacityIn = null;
+  private List<Long> totalCacheCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LT = "total_cache_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LT)
-  private Double totalCacheCapacityLt;
+  private Long totalCacheCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LTE = "total_cache_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LTE)
-  private Double totalCacheCapacityLte;
+  private Long totalCacheCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT = "total_cache_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT)
-  private Double totalCacheCapacityNot;
+  private Long totalCacheCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT_IN = "total_cache_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT_IN)
-  private List<Double> totalCacheCapacityNotIn = null;
+  private List<Long> totalCacheCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -541,163 +541,163 @@ public class ZoneWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GT = "total_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GT)
-  private Double totalCpuHzGt;
+  private Long totalCpuHzGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GTE = "total_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GTE)
-  private Double totalCpuHzGte;
+  private Long totalCpuHzGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_IN = "total_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_IN)
-  private List<Double> totalCpuHzIn = null;
+  private List<Long> totalCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LT = "total_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LT)
-  private Double totalCpuHzLt;
+  private Long totalCpuHzLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LTE = "total_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LTE)
-  private Double totalCpuHzLte;
+  private Long totalCpuHzLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT = "total_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT)
-  private Double totalCpuHzNot;
+  private Long totalCpuHzNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN = "total_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN)
-  private List<Double> totalCpuHzNotIn = null;
+  private List<Long> totalCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
-  private Double totalDataCapacity;
+  private Long totalDataCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT = "total_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT)
-  private Double totalDataCapacityGt;
+  private Long totalDataCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE = "total_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE)
-  private Double totalDataCapacityGte;
+  private Long totalDataCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN = "total_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN)
-  private List<Double> totalDataCapacityIn = null;
+  private List<Long> totalDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT = "total_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT)
-  private Double totalDataCapacityLt;
+  private Long totalDataCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE = "total_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE)
-  private Double totalDataCapacityLte;
+  private Long totalDataCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT = "total_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT)
-  private Double totalDataCapacityNot;
+  private Long totalDataCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN = "total_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN)
-  private List<Double> totalDataCapacityNotIn = null;
+  private List<Long> totalDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT = "total_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT)
-  private Double totalMemoryBytesGt;
+  private Long totalMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE = "total_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE)
-  private Double totalMemoryBytesGte;
+  private Long totalMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN = "total_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN)
-  private List<Double> totalMemoryBytesIn = null;
+  private List<Long> totalMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT = "total_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT)
-  private Double totalMemoryBytesLt;
+  private Long totalMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE = "total_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE)
-  private Double totalMemoryBytesLte;
+  private Long totalMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT = "total_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT)
-  private Double totalMemoryBytesNot;
+  private Long totalMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN = "total_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
-  private List<Double> totalMemoryBytesNotIn = null;
+  private List<Long> totalMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GT = "used_data_space_gt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GT)
-  private Double usedDataSpaceGt;
+  private Long usedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GTE = "used_data_space_gte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GTE)
-  private Double usedDataSpaceGte;
+  private Long usedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_IN = "used_data_space_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_IN)
-  private List<Double> usedDataSpaceIn = null;
+  private List<Long> usedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LT = "used_data_space_lt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LT)
-  private Double usedDataSpaceLt;
+  private Long usedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LTE = "used_data_space_lte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LTE)
-  private Double usedDataSpaceLte;
+  private Long usedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT = "used_data_space_not";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT)
-  private Double usedDataSpaceNot;
+  private Long usedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN = "used_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN)
-  private List<Double> usedDataSpaceNotIn = null;
+  private List<Long> usedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE)
-  private Double validDataSpace;
+  private Long validDataSpace;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_GT = "valid_data_space_gt";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_GT)
-  private Double validDataSpaceGt;
+  private Long validDataSpaceGt;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_GTE = "valid_data_space_gte";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_GTE)
-  private Double validDataSpaceGte;
+  private Long validDataSpaceGte;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_IN = "valid_data_space_in";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_IN)
-  private List<Double> validDataSpaceIn = null;
+  private List<Long> validDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_LT = "valid_data_space_lt";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_LT)
-  private Double validDataSpaceLt;
+  private Long validDataSpaceLt;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_LTE = "valid_data_space_lte";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_LTE)
-  private Double validDataSpaceLte;
+  private Long validDataSpaceLte;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_NOT = "valid_data_space_not";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_NOT)
-  private Double validDataSpaceNot;
+  private Long validDataSpaceNot;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_NOT_IN = "valid_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_NOT_IN)
-  private List<Double> validDataSpaceNotIn = null;
+  private List<Long> validDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -811,7 +811,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput failureDataSpace(Double failureDataSpace) {
+  public ZoneWhereInput failureDataSpace(Long failureDataSpace) {
     
     this.failureDataSpace = failureDataSpace;
     return this;
@@ -824,17 +824,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpace() {
+  public Long getFailureDataSpace() {
     return failureDataSpace;
   }
 
 
-  public void setFailureDataSpace(Double failureDataSpace) {
+  public void setFailureDataSpace(Long failureDataSpace) {
     this.failureDataSpace = failureDataSpace;
   }
 
 
-  public ZoneWhereInput failureDataSpaceGt(Double failureDataSpaceGt) {
+  public ZoneWhereInput failureDataSpaceGt(Long failureDataSpaceGt) {
     
     this.failureDataSpaceGt = failureDataSpaceGt;
     return this;
@@ -847,17 +847,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGt() {
+  public Long getFailureDataSpaceGt() {
     return failureDataSpaceGt;
   }
 
 
-  public void setFailureDataSpaceGt(Double failureDataSpaceGt) {
+  public void setFailureDataSpaceGt(Long failureDataSpaceGt) {
     this.failureDataSpaceGt = failureDataSpaceGt;
   }
 
 
-  public ZoneWhereInput failureDataSpaceGte(Double failureDataSpaceGte) {
+  public ZoneWhereInput failureDataSpaceGte(Long failureDataSpaceGte) {
     
     this.failureDataSpaceGte = failureDataSpaceGte;
     return this;
@@ -870,25 +870,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGte() {
+  public Long getFailureDataSpaceGte() {
     return failureDataSpaceGte;
   }
 
 
-  public void setFailureDataSpaceGte(Double failureDataSpaceGte) {
+  public void setFailureDataSpaceGte(Long failureDataSpaceGte) {
     this.failureDataSpaceGte = failureDataSpaceGte;
   }
 
 
-  public ZoneWhereInput failureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public ZoneWhereInput failureDataSpaceIn(List<Long> failureDataSpaceIn) {
     
     this.failureDataSpaceIn = failureDataSpaceIn;
     return this;
   }
 
-  public ZoneWhereInput addFailureDataSpaceInItem(Double failureDataSpaceInItem) {
+  public ZoneWhereInput addFailureDataSpaceInItem(Long failureDataSpaceInItem) {
     if (this.failureDataSpaceIn == null) {
-      this.failureDataSpaceIn = new ArrayList<Double>();
+      this.failureDataSpaceIn = new ArrayList<Long>();
     }
     this.failureDataSpaceIn.add(failureDataSpaceInItem);
     return this;
@@ -901,17 +901,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceIn() {
+  public List<Long> getFailureDataSpaceIn() {
     return failureDataSpaceIn;
   }
 
 
-  public void setFailureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public void setFailureDataSpaceIn(List<Long> failureDataSpaceIn) {
     this.failureDataSpaceIn = failureDataSpaceIn;
   }
 
 
-  public ZoneWhereInput failureDataSpaceLt(Double failureDataSpaceLt) {
+  public ZoneWhereInput failureDataSpaceLt(Long failureDataSpaceLt) {
     
     this.failureDataSpaceLt = failureDataSpaceLt;
     return this;
@@ -924,17 +924,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLt() {
+  public Long getFailureDataSpaceLt() {
     return failureDataSpaceLt;
   }
 
 
-  public void setFailureDataSpaceLt(Double failureDataSpaceLt) {
+  public void setFailureDataSpaceLt(Long failureDataSpaceLt) {
     this.failureDataSpaceLt = failureDataSpaceLt;
   }
 
 
-  public ZoneWhereInput failureDataSpaceLte(Double failureDataSpaceLte) {
+  public ZoneWhereInput failureDataSpaceLte(Long failureDataSpaceLte) {
     
     this.failureDataSpaceLte = failureDataSpaceLte;
     return this;
@@ -947,17 +947,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLte() {
+  public Long getFailureDataSpaceLte() {
     return failureDataSpaceLte;
   }
 
 
-  public void setFailureDataSpaceLte(Double failureDataSpaceLte) {
+  public void setFailureDataSpaceLte(Long failureDataSpaceLte) {
     this.failureDataSpaceLte = failureDataSpaceLte;
   }
 
 
-  public ZoneWhereInput failureDataSpaceNot(Double failureDataSpaceNot) {
+  public ZoneWhereInput failureDataSpaceNot(Long failureDataSpaceNot) {
     
     this.failureDataSpaceNot = failureDataSpaceNot;
     return this;
@@ -970,25 +970,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceNot() {
+  public Long getFailureDataSpaceNot() {
     return failureDataSpaceNot;
   }
 
 
-  public void setFailureDataSpaceNot(Double failureDataSpaceNot) {
+  public void setFailureDataSpaceNot(Long failureDataSpaceNot) {
     this.failureDataSpaceNot = failureDataSpaceNot;
   }
 
 
-  public ZoneWhereInput failureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public ZoneWhereInput failureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
     return this;
   }
 
-  public ZoneWhereInput addFailureDataSpaceNotInItem(Double failureDataSpaceNotInItem) {
+  public ZoneWhereInput addFailureDataSpaceNotInItem(Long failureDataSpaceNotInItem) {
     if (this.failureDataSpaceNotIn == null) {
-      this.failureDataSpaceNotIn = new ArrayList<Double>();
+      this.failureDataSpaceNotIn = new ArrayList<Long>();
     }
     this.failureDataSpaceNotIn.add(failureDataSpaceNotInItem);
     return this;
@@ -1001,12 +1001,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceNotIn() {
+  public List<Long> getFailureDataSpaceNotIn() {
     return failureDataSpaceNotIn;
   }
 
 
-  public void setFailureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public void setFailureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
   }
 
@@ -2464,7 +2464,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput provisionedDataSpace(Double provisionedDataSpace) {
+  public ZoneWhereInput provisionedDataSpace(Long provisionedDataSpace) {
     
     this.provisionedDataSpace = provisionedDataSpace;
     return this;
@@ -2477,17 +2477,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedDataSpace() {
+  public Long getProvisionedDataSpace() {
     return provisionedDataSpace;
   }
 
 
-  public void setProvisionedDataSpace(Double provisionedDataSpace) {
+  public void setProvisionedDataSpace(Long provisionedDataSpace) {
     this.provisionedDataSpace = provisionedDataSpace;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceGt(Double provisionedDataSpaceGt) {
+  public ZoneWhereInput provisionedDataSpaceGt(Long provisionedDataSpaceGt) {
     
     this.provisionedDataSpaceGt = provisionedDataSpaceGt;
     return this;
@@ -2500,17 +2500,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedDataSpaceGt() {
+  public Long getProvisionedDataSpaceGt() {
     return provisionedDataSpaceGt;
   }
 
 
-  public void setProvisionedDataSpaceGt(Double provisionedDataSpaceGt) {
+  public void setProvisionedDataSpaceGt(Long provisionedDataSpaceGt) {
     this.provisionedDataSpaceGt = provisionedDataSpaceGt;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceGte(Double provisionedDataSpaceGte) {
+  public ZoneWhereInput provisionedDataSpaceGte(Long provisionedDataSpaceGte) {
     
     this.provisionedDataSpaceGte = provisionedDataSpaceGte;
     return this;
@@ -2523,25 +2523,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedDataSpaceGte() {
+  public Long getProvisionedDataSpaceGte() {
     return provisionedDataSpaceGte;
   }
 
 
-  public void setProvisionedDataSpaceGte(Double provisionedDataSpaceGte) {
+  public void setProvisionedDataSpaceGte(Long provisionedDataSpaceGte) {
     this.provisionedDataSpaceGte = provisionedDataSpaceGte;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceIn(List<Double> provisionedDataSpaceIn) {
+  public ZoneWhereInput provisionedDataSpaceIn(List<Long> provisionedDataSpaceIn) {
     
     this.provisionedDataSpaceIn = provisionedDataSpaceIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedDataSpaceInItem(Double provisionedDataSpaceInItem) {
+  public ZoneWhereInput addProvisionedDataSpaceInItem(Long provisionedDataSpaceInItem) {
     if (this.provisionedDataSpaceIn == null) {
-      this.provisionedDataSpaceIn = new ArrayList<Double>();
+      this.provisionedDataSpaceIn = new ArrayList<Long>();
     }
     this.provisionedDataSpaceIn.add(provisionedDataSpaceInItem);
     return this;
@@ -2554,17 +2554,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedDataSpaceIn() {
+  public List<Long> getProvisionedDataSpaceIn() {
     return provisionedDataSpaceIn;
   }
 
 
-  public void setProvisionedDataSpaceIn(List<Double> provisionedDataSpaceIn) {
+  public void setProvisionedDataSpaceIn(List<Long> provisionedDataSpaceIn) {
     this.provisionedDataSpaceIn = provisionedDataSpaceIn;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceLt(Double provisionedDataSpaceLt) {
+  public ZoneWhereInput provisionedDataSpaceLt(Long provisionedDataSpaceLt) {
     
     this.provisionedDataSpaceLt = provisionedDataSpaceLt;
     return this;
@@ -2577,17 +2577,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedDataSpaceLt() {
+  public Long getProvisionedDataSpaceLt() {
     return provisionedDataSpaceLt;
   }
 
 
-  public void setProvisionedDataSpaceLt(Double provisionedDataSpaceLt) {
+  public void setProvisionedDataSpaceLt(Long provisionedDataSpaceLt) {
     this.provisionedDataSpaceLt = provisionedDataSpaceLt;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceLte(Double provisionedDataSpaceLte) {
+  public ZoneWhereInput provisionedDataSpaceLte(Long provisionedDataSpaceLte) {
     
     this.provisionedDataSpaceLte = provisionedDataSpaceLte;
     return this;
@@ -2600,17 +2600,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedDataSpaceLte() {
+  public Long getProvisionedDataSpaceLte() {
     return provisionedDataSpaceLte;
   }
 
 
-  public void setProvisionedDataSpaceLte(Double provisionedDataSpaceLte) {
+  public void setProvisionedDataSpaceLte(Long provisionedDataSpaceLte) {
     this.provisionedDataSpaceLte = provisionedDataSpaceLte;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceNot(Double provisionedDataSpaceNot) {
+  public ZoneWhereInput provisionedDataSpaceNot(Long provisionedDataSpaceNot) {
     
     this.provisionedDataSpaceNot = provisionedDataSpaceNot;
     return this;
@@ -2623,25 +2623,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedDataSpaceNot() {
+  public Long getProvisionedDataSpaceNot() {
     return provisionedDataSpaceNot;
   }
 
 
-  public void setProvisionedDataSpaceNot(Double provisionedDataSpaceNot) {
+  public void setProvisionedDataSpaceNot(Long provisionedDataSpaceNot) {
     this.provisionedDataSpaceNot = provisionedDataSpaceNot;
   }
 
 
-  public ZoneWhereInput provisionedDataSpaceNotIn(List<Double> provisionedDataSpaceNotIn) {
+  public ZoneWhereInput provisionedDataSpaceNotIn(List<Long> provisionedDataSpaceNotIn) {
     
     this.provisionedDataSpaceNotIn = provisionedDataSpaceNotIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedDataSpaceNotInItem(Double provisionedDataSpaceNotInItem) {
+  public ZoneWhereInput addProvisionedDataSpaceNotInItem(Long provisionedDataSpaceNotInItem) {
     if (this.provisionedDataSpaceNotIn == null) {
-      this.provisionedDataSpaceNotIn = new ArrayList<Double>();
+      this.provisionedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.provisionedDataSpaceNotIn.add(provisionedDataSpaceNotInItem);
     return this;
@@ -2654,17 +2654,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedDataSpaceNotIn() {
+  public List<Long> getProvisionedDataSpaceNotIn() {
     return provisionedDataSpaceNotIn;
   }
 
 
-  public void setProvisionedDataSpaceNotIn(List<Double> provisionedDataSpaceNotIn) {
+  public void setProvisionedDataSpaceNotIn(List<Long> provisionedDataSpaceNotIn) {
     this.provisionedDataSpaceNotIn = provisionedDataSpaceNotIn;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public ZoneWhereInput provisionedMemoryBytes(Long provisionedMemoryBytes) {
     
     this.provisionedMemoryBytes = provisionedMemoryBytes;
     return this;
@@ -2677,17 +2677,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytes() {
+  public Long getProvisionedMemoryBytes() {
     return provisionedMemoryBytes;
   }
 
 
-  public void setProvisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public void setProvisionedMemoryBytes(Long provisionedMemoryBytes) {
     this.provisionedMemoryBytes = provisionedMemoryBytes;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesGt(Double provisionedMemoryBytesGt) {
+  public ZoneWhereInput provisionedMemoryBytesGt(Long provisionedMemoryBytesGt) {
     
     this.provisionedMemoryBytesGt = provisionedMemoryBytesGt;
     return this;
@@ -2700,17 +2700,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesGt() {
+  public Long getProvisionedMemoryBytesGt() {
     return provisionedMemoryBytesGt;
   }
 
 
-  public void setProvisionedMemoryBytesGt(Double provisionedMemoryBytesGt) {
+  public void setProvisionedMemoryBytesGt(Long provisionedMemoryBytesGt) {
     this.provisionedMemoryBytesGt = provisionedMemoryBytesGt;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesGte(Double provisionedMemoryBytesGte) {
+  public ZoneWhereInput provisionedMemoryBytesGte(Long provisionedMemoryBytesGte) {
     
     this.provisionedMemoryBytesGte = provisionedMemoryBytesGte;
     return this;
@@ -2723,25 +2723,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesGte() {
+  public Long getProvisionedMemoryBytesGte() {
     return provisionedMemoryBytesGte;
   }
 
 
-  public void setProvisionedMemoryBytesGte(Double provisionedMemoryBytesGte) {
+  public void setProvisionedMemoryBytesGte(Long provisionedMemoryBytesGte) {
     this.provisionedMemoryBytesGte = provisionedMemoryBytesGte;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesIn(List<Double> provisionedMemoryBytesIn) {
+  public ZoneWhereInput provisionedMemoryBytesIn(List<Long> provisionedMemoryBytesIn) {
     
     this.provisionedMemoryBytesIn = provisionedMemoryBytesIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedMemoryBytesInItem(Double provisionedMemoryBytesInItem) {
+  public ZoneWhereInput addProvisionedMemoryBytesInItem(Long provisionedMemoryBytesInItem) {
     if (this.provisionedMemoryBytesIn == null) {
-      this.provisionedMemoryBytesIn = new ArrayList<Double>();
+      this.provisionedMemoryBytesIn = new ArrayList<Long>();
     }
     this.provisionedMemoryBytesIn.add(provisionedMemoryBytesInItem);
     return this;
@@ -2754,17 +2754,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedMemoryBytesIn() {
+  public List<Long> getProvisionedMemoryBytesIn() {
     return provisionedMemoryBytesIn;
   }
 
 
-  public void setProvisionedMemoryBytesIn(List<Double> provisionedMemoryBytesIn) {
+  public void setProvisionedMemoryBytesIn(List<Long> provisionedMemoryBytesIn) {
     this.provisionedMemoryBytesIn = provisionedMemoryBytesIn;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesLt(Double provisionedMemoryBytesLt) {
+  public ZoneWhereInput provisionedMemoryBytesLt(Long provisionedMemoryBytesLt) {
     
     this.provisionedMemoryBytesLt = provisionedMemoryBytesLt;
     return this;
@@ -2777,17 +2777,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesLt() {
+  public Long getProvisionedMemoryBytesLt() {
     return provisionedMemoryBytesLt;
   }
 
 
-  public void setProvisionedMemoryBytesLt(Double provisionedMemoryBytesLt) {
+  public void setProvisionedMemoryBytesLt(Long provisionedMemoryBytesLt) {
     this.provisionedMemoryBytesLt = provisionedMemoryBytesLt;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesLte(Double provisionedMemoryBytesLte) {
+  public ZoneWhereInput provisionedMemoryBytesLte(Long provisionedMemoryBytesLte) {
     
     this.provisionedMemoryBytesLte = provisionedMemoryBytesLte;
     return this;
@@ -2800,17 +2800,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesLte() {
+  public Long getProvisionedMemoryBytesLte() {
     return provisionedMemoryBytesLte;
   }
 
 
-  public void setProvisionedMemoryBytesLte(Double provisionedMemoryBytesLte) {
+  public void setProvisionedMemoryBytesLte(Long provisionedMemoryBytesLte) {
     this.provisionedMemoryBytesLte = provisionedMemoryBytesLte;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesNot(Double provisionedMemoryBytesNot) {
+  public ZoneWhereInput provisionedMemoryBytesNot(Long provisionedMemoryBytesNot) {
     
     this.provisionedMemoryBytesNot = provisionedMemoryBytesNot;
     return this;
@@ -2823,25 +2823,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesNot() {
+  public Long getProvisionedMemoryBytesNot() {
     return provisionedMemoryBytesNot;
   }
 
 
-  public void setProvisionedMemoryBytesNot(Double provisionedMemoryBytesNot) {
+  public void setProvisionedMemoryBytesNot(Long provisionedMemoryBytesNot) {
     this.provisionedMemoryBytesNot = provisionedMemoryBytesNot;
   }
 
 
-  public ZoneWhereInput provisionedMemoryBytesNotIn(List<Double> provisionedMemoryBytesNotIn) {
+  public ZoneWhereInput provisionedMemoryBytesNotIn(List<Long> provisionedMemoryBytesNotIn) {
     
     this.provisionedMemoryBytesNotIn = provisionedMemoryBytesNotIn;
     return this;
   }
 
-  public ZoneWhereInput addProvisionedMemoryBytesNotInItem(Double provisionedMemoryBytesNotInItem) {
+  public ZoneWhereInput addProvisionedMemoryBytesNotInItem(Long provisionedMemoryBytesNotInItem) {
     if (this.provisionedMemoryBytesNotIn == null) {
-      this.provisionedMemoryBytesNotIn = new ArrayList<Double>();
+      this.provisionedMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.provisionedMemoryBytesNotIn.add(provisionedMemoryBytesNotInItem);
     return this;
@@ -2854,12 +2854,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedMemoryBytesNotIn() {
+  public List<Long> getProvisionedMemoryBytesNotIn() {
     return provisionedMemoryBytesNotIn;
   }
 
 
-  public void setProvisionedMemoryBytesNotIn(List<Double> provisionedMemoryBytesNotIn) {
+  public void setProvisionedMemoryBytesNotIn(List<Long> provisionedMemoryBytesNotIn) {
     this.provisionedMemoryBytesNotIn = provisionedMemoryBytesNotIn;
   }
 
@@ -3464,7 +3464,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput totalCacheCapacity(Double totalCacheCapacity) {
+  public ZoneWhereInput totalCacheCapacity(Long totalCacheCapacity) {
     
     this.totalCacheCapacity = totalCacheCapacity;
     return this;
@@ -3477,17 +3477,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacity() {
+  public Long getTotalCacheCapacity() {
     return totalCacheCapacity;
   }
 
 
-  public void setTotalCacheCapacity(Double totalCacheCapacity) {
+  public void setTotalCacheCapacity(Long totalCacheCapacity) {
     this.totalCacheCapacity = totalCacheCapacity;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityGt(Double totalCacheCapacityGt) {
+  public ZoneWhereInput totalCacheCapacityGt(Long totalCacheCapacityGt) {
     
     this.totalCacheCapacityGt = totalCacheCapacityGt;
     return this;
@@ -3500,17 +3500,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityGt() {
+  public Long getTotalCacheCapacityGt() {
     return totalCacheCapacityGt;
   }
 
 
-  public void setTotalCacheCapacityGt(Double totalCacheCapacityGt) {
+  public void setTotalCacheCapacityGt(Long totalCacheCapacityGt) {
     this.totalCacheCapacityGt = totalCacheCapacityGt;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityGte(Double totalCacheCapacityGte) {
+  public ZoneWhereInput totalCacheCapacityGte(Long totalCacheCapacityGte) {
     
     this.totalCacheCapacityGte = totalCacheCapacityGte;
     return this;
@@ -3523,25 +3523,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityGte() {
+  public Long getTotalCacheCapacityGte() {
     return totalCacheCapacityGte;
   }
 
 
-  public void setTotalCacheCapacityGte(Double totalCacheCapacityGte) {
+  public void setTotalCacheCapacityGte(Long totalCacheCapacityGte) {
     this.totalCacheCapacityGte = totalCacheCapacityGte;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityIn(List<Double> totalCacheCapacityIn) {
+  public ZoneWhereInput totalCacheCapacityIn(List<Long> totalCacheCapacityIn) {
     
     this.totalCacheCapacityIn = totalCacheCapacityIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalCacheCapacityInItem(Double totalCacheCapacityInItem) {
+  public ZoneWhereInput addTotalCacheCapacityInItem(Long totalCacheCapacityInItem) {
     if (this.totalCacheCapacityIn == null) {
-      this.totalCacheCapacityIn = new ArrayList<Double>();
+      this.totalCacheCapacityIn = new ArrayList<Long>();
     }
     this.totalCacheCapacityIn.add(totalCacheCapacityInItem);
     return this;
@@ -3554,17 +3554,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCacheCapacityIn() {
+  public List<Long> getTotalCacheCapacityIn() {
     return totalCacheCapacityIn;
   }
 
 
-  public void setTotalCacheCapacityIn(List<Double> totalCacheCapacityIn) {
+  public void setTotalCacheCapacityIn(List<Long> totalCacheCapacityIn) {
     this.totalCacheCapacityIn = totalCacheCapacityIn;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityLt(Double totalCacheCapacityLt) {
+  public ZoneWhereInput totalCacheCapacityLt(Long totalCacheCapacityLt) {
     
     this.totalCacheCapacityLt = totalCacheCapacityLt;
     return this;
@@ -3577,17 +3577,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityLt() {
+  public Long getTotalCacheCapacityLt() {
     return totalCacheCapacityLt;
   }
 
 
-  public void setTotalCacheCapacityLt(Double totalCacheCapacityLt) {
+  public void setTotalCacheCapacityLt(Long totalCacheCapacityLt) {
     this.totalCacheCapacityLt = totalCacheCapacityLt;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityLte(Double totalCacheCapacityLte) {
+  public ZoneWhereInput totalCacheCapacityLte(Long totalCacheCapacityLte) {
     
     this.totalCacheCapacityLte = totalCacheCapacityLte;
     return this;
@@ -3600,17 +3600,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityLte() {
+  public Long getTotalCacheCapacityLte() {
     return totalCacheCapacityLte;
   }
 
 
-  public void setTotalCacheCapacityLte(Double totalCacheCapacityLte) {
+  public void setTotalCacheCapacityLte(Long totalCacheCapacityLte) {
     this.totalCacheCapacityLte = totalCacheCapacityLte;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityNot(Double totalCacheCapacityNot) {
+  public ZoneWhereInput totalCacheCapacityNot(Long totalCacheCapacityNot) {
     
     this.totalCacheCapacityNot = totalCacheCapacityNot;
     return this;
@@ -3623,25 +3623,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityNot() {
+  public Long getTotalCacheCapacityNot() {
     return totalCacheCapacityNot;
   }
 
 
-  public void setTotalCacheCapacityNot(Double totalCacheCapacityNot) {
+  public void setTotalCacheCapacityNot(Long totalCacheCapacityNot) {
     this.totalCacheCapacityNot = totalCacheCapacityNot;
   }
 
 
-  public ZoneWhereInput totalCacheCapacityNotIn(List<Double> totalCacheCapacityNotIn) {
+  public ZoneWhereInput totalCacheCapacityNotIn(List<Long> totalCacheCapacityNotIn) {
     
     this.totalCacheCapacityNotIn = totalCacheCapacityNotIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalCacheCapacityNotInItem(Double totalCacheCapacityNotInItem) {
+  public ZoneWhereInput addTotalCacheCapacityNotInItem(Long totalCacheCapacityNotInItem) {
     if (this.totalCacheCapacityNotIn == null) {
-      this.totalCacheCapacityNotIn = new ArrayList<Double>();
+      this.totalCacheCapacityNotIn = new ArrayList<Long>();
     }
     this.totalCacheCapacityNotIn.add(totalCacheCapacityNotInItem);
     return this;
@@ -3654,12 +3654,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCacheCapacityNotIn() {
+  public List<Long> getTotalCacheCapacityNotIn() {
     return totalCacheCapacityNotIn;
   }
 
 
-  public void setTotalCacheCapacityNotIn(List<Double> totalCacheCapacityNotIn) {
+  public void setTotalCacheCapacityNotIn(List<Long> totalCacheCapacityNotIn) {
     this.totalCacheCapacityNotIn = totalCacheCapacityNotIn;
   }
 
@@ -3864,7 +3864,7 @@ public class ZoneWhereInput {
   }
 
 
-  public ZoneWhereInput totalCpuHz(Double totalCpuHz) {
+  public ZoneWhereInput totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -3877,17 +3877,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
 
-  public ZoneWhereInput totalCpuHzGt(Double totalCpuHzGt) {
+  public ZoneWhereInput totalCpuHzGt(Long totalCpuHzGt) {
     
     this.totalCpuHzGt = totalCpuHzGt;
     return this;
@@ -3900,17 +3900,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGt() {
+  public Long getTotalCpuHzGt() {
     return totalCpuHzGt;
   }
 
 
-  public void setTotalCpuHzGt(Double totalCpuHzGt) {
+  public void setTotalCpuHzGt(Long totalCpuHzGt) {
     this.totalCpuHzGt = totalCpuHzGt;
   }
 
 
-  public ZoneWhereInput totalCpuHzGte(Double totalCpuHzGte) {
+  public ZoneWhereInput totalCpuHzGte(Long totalCpuHzGte) {
     
     this.totalCpuHzGte = totalCpuHzGte;
     return this;
@@ -3923,25 +3923,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGte() {
+  public Long getTotalCpuHzGte() {
     return totalCpuHzGte;
   }
 
 
-  public void setTotalCpuHzGte(Double totalCpuHzGte) {
+  public void setTotalCpuHzGte(Long totalCpuHzGte) {
     this.totalCpuHzGte = totalCpuHzGte;
   }
 
 
-  public ZoneWhereInput totalCpuHzIn(List<Double> totalCpuHzIn) {
+  public ZoneWhereInput totalCpuHzIn(List<Long> totalCpuHzIn) {
     
     this.totalCpuHzIn = totalCpuHzIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalCpuHzInItem(Double totalCpuHzInItem) {
+  public ZoneWhereInput addTotalCpuHzInItem(Long totalCpuHzInItem) {
     if (this.totalCpuHzIn == null) {
-      this.totalCpuHzIn = new ArrayList<Double>();
+      this.totalCpuHzIn = new ArrayList<Long>();
     }
     this.totalCpuHzIn.add(totalCpuHzInItem);
     return this;
@@ -3954,17 +3954,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzIn() {
+  public List<Long> getTotalCpuHzIn() {
     return totalCpuHzIn;
   }
 
 
-  public void setTotalCpuHzIn(List<Double> totalCpuHzIn) {
+  public void setTotalCpuHzIn(List<Long> totalCpuHzIn) {
     this.totalCpuHzIn = totalCpuHzIn;
   }
 
 
-  public ZoneWhereInput totalCpuHzLt(Double totalCpuHzLt) {
+  public ZoneWhereInput totalCpuHzLt(Long totalCpuHzLt) {
     
     this.totalCpuHzLt = totalCpuHzLt;
     return this;
@@ -3977,17 +3977,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLt() {
+  public Long getTotalCpuHzLt() {
     return totalCpuHzLt;
   }
 
 
-  public void setTotalCpuHzLt(Double totalCpuHzLt) {
+  public void setTotalCpuHzLt(Long totalCpuHzLt) {
     this.totalCpuHzLt = totalCpuHzLt;
   }
 
 
-  public ZoneWhereInput totalCpuHzLte(Double totalCpuHzLte) {
+  public ZoneWhereInput totalCpuHzLte(Long totalCpuHzLte) {
     
     this.totalCpuHzLte = totalCpuHzLte;
     return this;
@@ -4000,17 +4000,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLte() {
+  public Long getTotalCpuHzLte() {
     return totalCpuHzLte;
   }
 
 
-  public void setTotalCpuHzLte(Double totalCpuHzLte) {
+  public void setTotalCpuHzLte(Long totalCpuHzLte) {
     this.totalCpuHzLte = totalCpuHzLte;
   }
 
 
-  public ZoneWhereInput totalCpuHzNot(Double totalCpuHzNot) {
+  public ZoneWhereInput totalCpuHzNot(Long totalCpuHzNot) {
     
     this.totalCpuHzNot = totalCpuHzNot;
     return this;
@@ -4023,25 +4023,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzNot() {
+  public Long getTotalCpuHzNot() {
     return totalCpuHzNot;
   }
 
 
-  public void setTotalCpuHzNot(Double totalCpuHzNot) {
+  public void setTotalCpuHzNot(Long totalCpuHzNot) {
     this.totalCpuHzNot = totalCpuHzNot;
   }
 
 
-  public ZoneWhereInput totalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public ZoneWhereInput totalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     
     this.totalCpuHzNotIn = totalCpuHzNotIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalCpuHzNotInItem(Double totalCpuHzNotInItem) {
+  public ZoneWhereInput addTotalCpuHzNotInItem(Long totalCpuHzNotInItem) {
     if (this.totalCpuHzNotIn == null) {
-      this.totalCpuHzNotIn = new ArrayList<Double>();
+      this.totalCpuHzNotIn = new ArrayList<Long>();
     }
     this.totalCpuHzNotIn.add(totalCpuHzNotInItem);
     return this;
@@ -4054,17 +4054,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzNotIn() {
+  public List<Long> getTotalCpuHzNotIn() {
     return totalCpuHzNotIn;
   }
 
 
-  public void setTotalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public void setTotalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     this.totalCpuHzNotIn = totalCpuHzNotIn;
   }
 
 
-  public ZoneWhereInput totalDataCapacity(Double totalDataCapacity) {
+  public ZoneWhereInput totalDataCapacity(Long totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
     return this;
@@ -4077,17 +4077,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacity() {
+  public Long getTotalDataCapacity() {
     return totalDataCapacity;
   }
 
 
-  public void setTotalDataCapacity(Double totalDataCapacity) {
+  public void setTotalDataCapacity(Long totalDataCapacity) {
     this.totalDataCapacity = totalDataCapacity;
   }
 
 
-  public ZoneWhereInput totalDataCapacityGt(Double totalDataCapacityGt) {
+  public ZoneWhereInput totalDataCapacityGt(Long totalDataCapacityGt) {
     
     this.totalDataCapacityGt = totalDataCapacityGt;
     return this;
@@ -4100,17 +4100,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGt() {
+  public Long getTotalDataCapacityGt() {
     return totalDataCapacityGt;
   }
 
 
-  public void setTotalDataCapacityGt(Double totalDataCapacityGt) {
+  public void setTotalDataCapacityGt(Long totalDataCapacityGt) {
     this.totalDataCapacityGt = totalDataCapacityGt;
   }
 
 
-  public ZoneWhereInput totalDataCapacityGte(Double totalDataCapacityGte) {
+  public ZoneWhereInput totalDataCapacityGte(Long totalDataCapacityGte) {
     
     this.totalDataCapacityGte = totalDataCapacityGte;
     return this;
@@ -4123,25 +4123,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGte() {
+  public Long getTotalDataCapacityGte() {
     return totalDataCapacityGte;
   }
 
 
-  public void setTotalDataCapacityGte(Double totalDataCapacityGte) {
+  public void setTotalDataCapacityGte(Long totalDataCapacityGte) {
     this.totalDataCapacityGte = totalDataCapacityGte;
   }
 
 
-  public ZoneWhereInput totalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public ZoneWhereInput totalDataCapacityIn(List<Long> totalDataCapacityIn) {
     
     this.totalDataCapacityIn = totalDataCapacityIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalDataCapacityInItem(Double totalDataCapacityInItem) {
+  public ZoneWhereInput addTotalDataCapacityInItem(Long totalDataCapacityInItem) {
     if (this.totalDataCapacityIn == null) {
-      this.totalDataCapacityIn = new ArrayList<Double>();
+      this.totalDataCapacityIn = new ArrayList<Long>();
     }
     this.totalDataCapacityIn.add(totalDataCapacityInItem);
     return this;
@@ -4154,17 +4154,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityIn() {
+  public List<Long> getTotalDataCapacityIn() {
     return totalDataCapacityIn;
   }
 
 
-  public void setTotalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public void setTotalDataCapacityIn(List<Long> totalDataCapacityIn) {
     this.totalDataCapacityIn = totalDataCapacityIn;
   }
 
 
-  public ZoneWhereInput totalDataCapacityLt(Double totalDataCapacityLt) {
+  public ZoneWhereInput totalDataCapacityLt(Long totalDataCapacityLt) {
     
     this.totalDataCapacityLt = totalDataCapacityLt;
     return this;
@@ -4177,17 +4177,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLt() {
+  public Long getTotalDataCapacityLt() {
     return totalDataCapacityLt;
   }
 
 
-  public void setTotalDataCapacityLt(Double totalDataCapacityLt) {
+  public void setTotalDataCapacityLt(Long totalDataCapacityLt) {
     this.totalDataCapacityLt = totalDataCapacityLt;
   }
 
 
-  public ZoneWhereInput totalDataCapacityLte(Double totalDataCapacityLte) {
+  public ZoneWhereInput totalDataCapacityLte(Long totalDataCapacityLte) {
     
     this.totalDataCapacityLte = totalDataCapacityLte;
     return this;
@@ -4200,17 +4200,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLte() {
+  public Long getTotalDataCapacityLte() {
     return totalDataCapacityLte;
   }
 
 
-  public void setTotalDataCapacityLte(Double totalDataCapacityLte) {
+  public void setTotalDataCapacityLte(Long totalDataCapacityLte) {
     this.totalDataCapacityLte = totalDataCapacityLte;
   }
 
 
-  public ZoneWhereInput totalDataCapacityNot(Double totalDataCapacityNot) {
+  public ZoneWhereInput totalDataCapacityNot(Long totalDataCapacityNot) {
     
     this.totalDataCapacityNot = totalDataCapacityNot;
     return this;
@@ -4223,25 +4223,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityNot() {
+  public Long getTotalDataCapacityNot() {
     return totalDataCapacityNot;
   }
 
 
-  public void setTotalDataCapacityNot(Double totalDataCapacityNot) {
+  public void setTotalDataCapacityNot(Long totalDataCapacityNot) {
     this.totalDataCapacityNot = totalDataCapacityNot;
   }
 
 
-  public ZoneWhereInput totalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public ZoneWhereInput totalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalDataCapacityNotInItem(Double totalDataCapacityNotInItem) {
+  public ZoneWhereInput addTotalDataCapacityNotInItem(Long totalDataCapacityNotInItem) {
     if (this.totalDataCapacityNotIn == null) {
-      this.totalDataCapacityNotIn = new ArrayList<Double>();
+      this.totalDataCapacityNotIn = new ArrayList<Long>();
     }
     this.totalDataCapacityNotIn.add(totalDataCapacityNotInItem);
     return this;
@@ -4254,17 +4254,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityNotIn() {
+  public List<Long> getTotalDataCapacityNotIn() {
     return totalDataCapacityNotIn;
   }
 
 
-  public void setTotalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public void setTotalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
   }
 
 
-  public ZoneWhereInput totalMemoryBytes(Double totalMemoryBytes) {
+  public ZoneWhereInput totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -4277,17 +4277,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public ZoneWhereInput totalMemoryBytesGt(Long totalMemoryBytesGt) {
     
     this.totalMemoryBytesGt = totalMemoryBytesGt;
     return this;
@@ -4300,17 +4300,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGt() {
+  public Long getTotalMemoryBytesGt() {
     return totalMemoryBytesGt;
   }
 
 
-  public void setTotalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public void setTotalMemoryBytesGt(Long totalMemoryBytesGt) {
     this.totalMemoryBytesGt = totalMemoryBytesGt;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public ZoneWhereInput totalMemoryBytesGte(Long totalMemoryBytesGte) {
     
     this.totalMemoryBytesGte = totalMemoryBytesGte;
     return this;
@@ -4323,25 +4323,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGte() {
+  public Long getTotalMemoryBytesGte() {
     return totalMemoryBytesGte;
   }
 
 
-  public void setTotalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public void setTotalMemoryBytesGte(Long totalMemoryBytesGte) {
     this.totalMemoryBytesGte = totalMemoryBytesGte;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public ZoneWhereInput totalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     
     this.totalMemoryBytesIn = totalMemoryBytesIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalMemoryBytesInItem(Double totalMemoryBytesInItem) {
+  public ZoneWhereInput addTotalMemoryBytesInItem(Long totalMemoryBytesInItem) {
     if (this.totalMemoryBytesIn == null) {
-      this.totalMemoryBytesIn = new ArrayList<Double>();
+      this.totalMemoryBytesIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesIn.add(totalMemoryBytesInItem);
     return this;
@@ -4354,17 +4354,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesIn() {
+  public List<Long> getTotalMemoryBytesIn() {
     return totalMemoryBytesIn;
   }
 
 
-  public void setTotalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public void setTotalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     this.totalMemoryBytesIn = totalMemoryBytesIn;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public ZoneWhereInput totalMemoryBytesLt(Long totalMemoryBytesLt) {
     
     this.totalMemoryBytesLt = totalMemoryBytesLt;
     return this;
@@ -4377,17 +4377,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLt() {
+  public Long getTotalMemoryBytesLt() {
     return totalMemoryBytesLt;
   }
 
 
-  public void setTotalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public void setTotalMemoryBytesLt(Long totalMemoryBytesLt) {
     this.totalMemoryBytesLt = totalMemoryBytesLt;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public ZoneWhereInput totalMemoryBytesLte(Long totalMemoryBytesLte) {
     
     this.totalMemoryBytesLte = totalMemoryBytesLte;
     return this;
@@ -4400,17 +4400,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLte() {
+  public Long getTotalMemoryBytesLte() {
     return totalMemoryBytesLte;
   }
 
 
-  public void setTotalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public void setTotalMemoryBytesLte(Long totalMemoryBytesLte) {
     this.totalMemoryBytesLte = totalMemoryBytesLte;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public ZoneWhereInput totalMemoryBytesNot(Long totalMemoryBytesNot) {
     
     this.totalMemoryBytesNot = totalMemoryBytesNot;
     return this;
@@ -4423,25 +4423,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesNot() {
+  public Long getTotalMemoryBytesNot() {
     return totalMemoryBytesNot;
   }
 
 
-  public void setTotalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public void setTotalMemoryBytesNot(Long totalMemoryBytesNot) {
     this.totalMemoryBytesNot = totalMemoryBytesNot;
   }
 
 
-  public ZoneWhereInput totalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public ZoneWhereInput totalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
     return this;
   }
 
-  public ZoneWhereInput addTotalMemoryBytesNotInItem(Double totalMemoryBytesNotInItem) {
+  public ZoneWhereInput addTotalMemoryBytesNotInItem(Long totalMemoryBytesNotInItem) {
     if (this.totalMemoryBytesNotIn == null) {
-      this.totalMemoryBytesNotIn = new ArrayList<Double>();
+      this.totalMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesNotIn.add(totalMemoryBytesNotInItem);
     return this;
@@ -4454,17 +4454,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesNotIn() {
+  public List<Long> getTotalMemoryBytesNotIn() {
     return totalMemoryBytesNotIn;
   }
 
 
-  public void setTotalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public void setTotalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
   }
 
 
-  public ZoneWhereInput usedDataSpace(Double usedDataSpace) {
+  public ZoneWhereInput usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -4477,17 +4477,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public ZoneWhereInput usedDataSpaceGt(Double usedDataSpaceGt) {
+  public ZoneWhereInput usedDataSpaceGt(Long usedDataSpaceGt) {
     
     this.usedDataSpaceGt = usedDataSpaceGt;
     return this;
@@ -4500,17 +4500,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGt() {
+  public Long getUsedDataSpaceGt() {
     return usedDataSpaceGt;
   }
 
 
-  public void setUsedDataSpaceGt(Double usedDataSpaceGt) {
+  public void setUsedDataSpaceGt(Long usedDataSpaceGt) {
     this.usedDataSpaceGt = usedDataSpaceGt;
   }
 
 
-  public ZoneWhereInput usedDataSpaceGte(Double usedDataSpaceGte) {
+  public ZoneWhereInput usedDataSpaceGte(Long usedDataSpaceGte) {
     
     this.usedDataSpaceGte = usedDataSpaceGte;
     return this;
@@ -4523,25 +4523,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGte() {
+  public Long getUsedDataSpaceGte() {
     return usedDataSpaceGte;
   }
 
 
-  public void setUsedDataSpaceGte(Double usedDataSpaceGte) {
+  public void setUsedDataSpaceGte(Long usedDataSpaceGte) {
     this.usedDataSpaceGte = usedDataSpaceGte;
   }
 
 
-  public ZoneWhereInput usedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public ZoneWhereInput usedDataSpaceIn(List<Long> usedDataSpaceIn) {
     
     this.usedDataSpaceIn = usedDataSpaceIn;
     return this;
   }
 
-  public ZoneWhereInput addUsedDataSpaceInItem(Double usedDataSpaceInItem) {
+  public ZoneWhereInput addUsedDataSpaceInItem(Long usedDataSpaceInItem) {
     if (this.usedDataSpaceIn == null) {
-      this.usedDataSpaceIn = new ArrayList<Double>();
+      this.usedDataSpaceIn = new ArrayList<Long>();
     }
     this.usedDataSpaceIn.add(usedDataSpaceInItem);
     return this;
@@ -4554,17 +4554,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceIn() {
+  public List<Long> getUsedDataSpaceIn() {
     return usedDataSpaceIn;
   }
 
 
-  public void setUsedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public void setUsedDataSpaceIn(List<Long> usedDataSpaceIn) {
     this.usedDataSpaceIn = usedDataSpaceIn;
   }
 
 
-  public ZoneWhereInput usedDataSpaceLt(Double usedDataSpaceLt) {
+  public ZoneWhereInput usedDataSpaceLt(Long usedDataSpaceLt) {
     
     this.usedDataSpaceLt = usedDataSpaceLt;
     return this;
@@ -4577,17 +4577,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLt() {
+  public Long getUsedDataSpaceLt() {
     return usedDataSpaceLt;
   }
 
 
-  public void setUsedDataSpaceLt(Double usedDataSpaceLt) {
+  public void setUsedDataSpaceLt(Long usedDataSpaceLt) {
     this.usedDataSpaceLt = usedDataSpaceLt;
   }
 
 
-  public ZoneWhereInput usedDataSpaceLte(Double usedDataSpaceLte) {
+  public ZoneWhereInput usedDataSpaceLte(Long usedDataSpaceLte) {
     
     this.usedDataSpaceLte = usedDataSpaceLte;
     return this;
@@ -4600,17 +4600,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLte() {
+  public Long getUsedDataSpaceLte() {
     return usedDataSpaceLte;
   }
 
 
-  public void setUsedDataSpaceLte(Double usedDataSpaceLte) {
+  public void setUsedDataSpaceLte(Long usedDataSpaceLte) {
     this.usedDataSpaceLte = usedDataSpaceLte;
   }
 
 
-  public ZoneWhereInput usedDataSpaceNot(Double usedDataSpaceNot) {
+  public ZoneWhereInput usedDataSpaceNot(Long usedDataSpaceNot) {
     
     this.usedDataSpaceNot = usedDataSpaceNot;
     return this;
@@ -4623,25 +4623,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceNot() {
+  public Long getUsedDataSpaceNot() {
     return usedDataSpaceNot;
   }
 
 
-  public void setUsedDataSpaceNot(Double usedDataSpaceNot) {
+  public void setUsedDataSpaceNot(Long usedDataSpaceNot) {
     this.usedDataSpaceNot = usedDataSpaceNot;
   }
 
 
-  public ZoneWhereInput usedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public ZoneWhereInput usedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
     return this;
   }
 
-  public ZoneWhereInput addUsedDataSpaceNotInItem(Double usedDataSpaceNotInItem) {
+  public ZoneWhereInput addUsedDataSpaceNotInItem(Long usedDataSpaceNotInItem) {
     if (this.usedDataSpaceNotIn == null) {
-      this.usedDataSpaceNotIn = new ArrayList<Double>();
+      this.usedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.usedDataSpaceNotIn.add(usedDataSpaceNotInItem);
     return this;
@@ -4654,17 +4654,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceNotIn() {
+  public List<Long> getUsedDataSpaceNotIn() {
     return usedDataSpaceNotIn;
   }
 
 
-  public void setUsedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public void setUsedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
   }
 
 
-  public ZoneWhereInput validDataSpace(Double validDataSpace) {
+  public ZoneWhereInput validDataSpace(Long validDataSpace) {
     
     this.validDataSpace = validDataSpace;
     return this;
@@ -4677,17 +4677,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpace() {
+  public Long getValidDataSpace() {
     return validDataSpace;
   }
 
 
-  public void setValidDataSpace(Double validDataSpace) {
+  public void setValidDataSpace(Long validDataSpace) {
     this.validDataSpace = validDataSpace;
   }
 
 
-  public ZoneWhereInput validDataSpaceGt(Double validDataSpaceGt) {
+  public ZoneWhereInput validDataSpaceGt(Long validDataSpaceGt) {
     
     this.validDataSpaceGt = validDataSpaceGt;
     return this;
@@ -4700,17 +4700,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceGt() {
+  public Long getValidDataSpaceGt() {
     return validDataSpaceGt;
   }
 
 
-  public void setValidDataSpaceGt(Double validDataSpaceGt) {
+  public void setValidDataSpaceGt(Long validDataSpaceGt) {
     this.validDataSpaceGt = validDataSpaceGt;
   }
 
 
-  public ZoneWhereInput validDataSpaceGte(Double validDataSpaceGte) {
+  public ZoneWhereInput validDataSpaceGte(Long validDataSpaceGte) {
     
     this.validDataSpaceGte = validDataSpaceGte;
     return this;
@@ -4723,25 +4723,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceGte() {
+  public Long getValidDataSpaceGte() {
     return validDataSpaceGte;
   }
 
 
-  public void setValidDataSpaceGte(Double validDataSpaceGte) {
+  public void setValidDataSpaceGte(Long validDataSpaceGte) {
     this.validDataSpaceGte = validDataSpaceGte;
   }
 
 
-  public ZoneWhereInput validDataSpaceIn(List<Double> validDataSpaceIn) {
+  public ZoneWhereInput validDataSpaceIn(List<Long> validDataSpaceIn) {
     
     this.validDataSpaceIn = validDataSpaceIn;
     return this;
   }
 
-  public ZoneWhereInput addValidDataSpaceInItem(Double validDataSpaceInItem) {
+  public ZoneWhereInput addValidDataSpaceInItem(Long validDataSpaceInItem) {
     if (this.validDataSpaceIn == null) {
-      this.validDataSpaceIn = new ArrayList<Double>();
+      this.validDataSpaceIn = new ArrayList<Long>();
     }
     this.validDataSpaceIn.add(validDataSpaceInItem);
     return this;
@@ -4754,17 +4754,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidDataSpaceIn() {
+  public List<Long> getValidDataSpaceIn() {
     return validDataSpaceIn;
   }
 
 
-  public void setValidDataSpaceIn(List<Double> validDataSpaceIn) {
+  public void setValidDataSpaceIn(List<Long> validDataSpaceIn) {
     this.validDataSpaceIn = validDataSpaceIn;
   }
 
 
-  public ZoneWhereInput validDataSpaceLt(Double validDataSpaceLt) {
+  public ZoneWhereInput validDataSpaceLt(Long validDataSpaceLt) {
     
     this.validDataSpaceLt = validDataSpaceLt;
     return this;
@@ -4777,17 +4777,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceLt() {
+  public Long getValidDataSpaceLt() {
     return validDataSpaceLt;
   }
 
 
-  public void setValidDataSpaceLt(Double validDataSpaceLt) {
+  public void setValidDataSpaceLt(Long validDataSpaceLt) {
     this.validDataSpaceLt = validDataSpaceLt;
   }
 
 
-  public ZoneWhereInput validDataSpaceLte(Double validDataSpaceLte) {
+  public ZoneWhereInput validDataSpaceLte(Long validDataSpaceLte) {
     
     this.validDataSpaceLte = validDataSpaceLte;
     return this;
@@ -4800,17 +4800,17 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceLte() {
+  public Long getValidDataSpaceLte() {
     return validDataSpaceLte;
   }
 
 
-  public void setValidDataSpaceLte(Double validDataSpaceLte) {
+  public void setValidDataSpaceLte(Long validDataSpaceLte) {
     this.validDataSpaceLte = validDataSpaceLte;
   }
 
 
-  public ZoneWhereInput validDataSpaceNot(Double validDataSpaceNot) {
+  public ZoneWhereInput validDataSpaceNot(Long validDataSpaceNot) {
     
     this.validDataSpaceNot = validDataSpaceNot;
     return this;
@@ -4823,25 +4823,25 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceNot() {
+  public Long getValidDataSpaceNot() {
     return validDataSpaceNot;
   }
 
 
-  public void setValidDataSpaceNot(Double validDataSpaceNot) {
+  public void setValidDataSpaceNot(Long validDataSpaceNot) {
     this.validDataSpaceNot = validDataSpaceNot;
   }
 
 
-  public ZoneWhereInput validDataSpaceNotIn(List<Double> validDataSpaceNotIn) {
+  public ZoneWhereInput validDataSpaceNotIn(List<Long> validDataSpaceNotIn) {
     
     this.validDataSpaceNotIn = validDataSpaceNotIn;
     return this;
   }
 
-  public ZoneWhereInput addValidDataSpaceNotInItem(Double validDataSpaceNotInItem) {
+  public ZoneWhereInput addValidDataSpaceNotInItem(Long validDataSpaceNotInItem) {
     if (this.validDataSpaceNotIn == null) {
-      this.validDataSpaceNotIn = new ArrayList<Double>();
+      this.validDataSpaceNotIn = new ArrayList<Long>();
     }
     this.validDataSpaceNotIn.add(validDataSpaceNotInItem);
     return this;
@@ -4854,12 +4854,12 @@ public class ZoneWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidDataSpaceNotIn() {
+  public List<Long> getValidDataSpaceNotIn() {
     return validDataSpaceNotIn;
   }
 
 
-  public void setValidDataSpaceNotIn(List<Double> validDataSpaceNotIn) {
+  public void setValidDataSpaceNotIn(List<Long> validDataSpaceNotIn) {
     this.validDataSpaceNotIn = validDataSpaceNotIn;
   }
 

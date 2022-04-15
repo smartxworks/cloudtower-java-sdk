@@ -105,7 +105,7 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -121,7 +121,7 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
-  private Double memory;
+  private Long memory;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -129,7 +129,7 @@ public class VmTemplate {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
@@ -507,7 +507,7 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate maxBandwidth(Double maxBandwidth) {
+  public VmTemplate maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -520,12 +520,12 @@ public class VmTemplate {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
@@ -599,7 +599,7 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate memory(Double memory) {
+  public VmTemplate memory(Long memory) {
     
     this.memory = memory;
     return this;
@@ -612,12 +612,12 @@ public class VmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMemory() {
+  public Long getMemory() {
     return memory;
   }
 
 
-  public void setMemory(Double memory) {
+  public void setMemory(Long memory) {
     this.memory = memory;
   }
 
@@ -645,7 +645,7 @@ public class VmTemplate {
   }
 
 
-  public VmTemplate size(Double size) {
+  public VmTemplate size(Long size) {
     
     this.size = size;
     return this;
@@ -658,12 +658,12 @@ public class VmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

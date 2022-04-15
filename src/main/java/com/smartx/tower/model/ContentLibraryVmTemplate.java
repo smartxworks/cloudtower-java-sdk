@@ -71,7 +71,7 @@ public class ContentLibraryVmTemplate {
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
-  private Double memory;
+  private Long memory;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -83,7 +83,7 @@ public class ContentLibraryVmTemplate {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
@@ -300,7 +300,7 @@ public class ContentLibraryVmTemplate {
   }
 
 
-  public ContentLibraryVmTemplate memory(Double memory) {
+  public ContentLibraryVmTemplate memory(Long memory) {
     
     this.memory = memory;
     return this;
@@ -313,12 +313,12 @@ public class ContentLibraryVmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMemory() {
+  public Long getMemory() {
     return memory;
   }
 
 
-  public void setMemory(Double memory) {
+  public void setMemory(Long memory) {
     this.memory = memory;
   }
 
@@ -369,7 +369,7 @@ public class ContentLibraryVmTemplate {
   }
 
 
-  public ContentLibraryVmTemplate size(Double size) {
+  public ContentLibraryVmTemplate size(Long size) {
     
     this.size = size;
     return this;
@@ -382,12 +382,12 @@ public class ContentLibraryVmTemplate {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

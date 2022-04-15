@@ -72,7 +72,7 @@ public class BackupPlan {
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE = "backup_total_size";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE)
-  private Double backupTotalSize;
+  private Long backupTotalSize;
 
   public static final String SERIALIZED_NAME_COMPRESSION = "compression";
   @SerializedName(SERIALIZED_NAME_COMPRESSION)
@@ -335,7 +335,7 @@ public class BackupPlan {
   }
 
 
-  public BackupPlan backupTotalSize(Double backupTotalSize) {
+  public BackupPlan backupTotalSize(Long backupTotalSize) {
     
     this.backupTotalSize = backupTotalSize;
     return this;
@@ -348,12 +348,12 @@ public class BackupPlan {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSize() {
+  public Long getBackupTotalSize() {
     return backupTotalSize;
   }
 
 
-  public void setBackupTotalSize(Double backupTotalSize) {
+  public void setBackupTotalSize(Long backupTotalSize) {
     this.backupTotalSize = backupTotalSize;
   }
 

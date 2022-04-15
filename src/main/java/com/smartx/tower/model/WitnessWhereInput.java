@@ -43,35 +43,35 @@ public class WitnessWhereInput {
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE = "cpu_hz_per_core";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE)
-  private Double cpuHzPerCore;
+  private Long cpuHzPerCore;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_GT = "cpu_hz_per_core_gt";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_GT)
-  private Double cpuHzPerCoreGt;
+  private Long cpuHzPerCoreGt;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_GTE = "cpu_hz_per_core_gte";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_GTE)
-  private Double cpuHzPerCoreGte;
+  private Long cpuHzPerCoreGte;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_IN = "cpu_hz_per_core_in";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_IN)
-  private List<Double> cpuHzPerCoreIn = null;
+  private List<Long> cpuHzPerCoreIn = null;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_LT = "cpu_hz_per_core_lt";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_LT)
-  private Double cpuHzPerCoreLt;
+  private Long cpuHzPerCoreLt;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_LTE = "cpu_hz_per_core_lte";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_LTE)
-  private Double cpuHzPerCoreLte;
+  private Long cpuHzPerCoreLte;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT = "cpu_hz_per_core_not";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT)
-  private Double cpuHzPerCoreNot;
+  private Long cpuHzPerCoreNot;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT_IN = "cpu_hz_per_core_not_in";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT_IN)
-  private List<Double> cpuHzPerCoreNotIn = null;
+  private List<Long> cpuHzPerCoreNotIn = null;
 
   public static final String SERIALIZED_NAME_DATA_IP = "data_ip";
   @SerializedName(SERIALIZED_NAME_DATA_IP)
@@ -307,67 +307,67 @@ public class WitnessWhereInput {
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY = "system_data_capacity";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY)
-  private Double systemDataCapacity;
+  private Long systemDataCapacity;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_GT = "system_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_GT)
-  private Double systemDataCapacityGt;
+  private Long systemDataCapacityGt;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_GTE = "system_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_GTE)
-  private Double systemDataCapacityGte;
+  private Long systemDataCapacityGte;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_IN = "system_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_IN)
-  private List<Double> systemDataCapacityIn = null;
+  private List<Long> systemDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_LT = "system_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_LT)
-  private Double systemDataCapacityLt;
+  private Long systemDataCapacityLt;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_LTE = "system_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_LTE)
-  private Double systemDataCapacityLte;
+  private Long systemDataCapacityLte;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_NOT = "system_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_NOT)
-  private Double systemDataCapacityNot;
+  private Long systemDataCapacityNot;
 
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_NOT_IN = "system_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY_NOT_IN)
-  private List<Double> systemDataCapacityNotIn = null;
+  private List<Long> systemDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE = "system_used_data_space";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE)
-  private Double systemUsedDataSpace;
+  private Long systemUsedDataSpace;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_GT = "system_used_data_space_gt";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_GT)
-  private Double systemUsedDataSpaceGt;
+  private Long systemUsedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_GTE = "system_used_data_space_gte";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_GTE)
-  private Double systemUsedDataSpaceGte;
+  private Long systemUsedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_IN = "system_used_data_space_in";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_IN)
-  private List<Double> systemUsedDataSpaceIn = null;
+  private List<Long> systemUsedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_LT = "system_used_data_space_lt";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_LT)
-  private Double systemUsedDataSpaceLt;
+  private Long systemUsedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_LTE = "system_used_data_space_lte";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_LTE)
-  private Double systemUsedDataSpaceLte;
+  private Long systemUsedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_NOT = "system_used_data_space_not";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_NOT)
-  private Double systemUsedDataSpaceNot;
+  private Long systemUsedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_NOT_IN = "system_used_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_SYSTEM_USED_DATA_SPACE_NOT_IN)
-  private List<Double> systemUsedDataSpaceNotIn = null;
+  private List<Long> systemUsedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -403,67 +403,67 @@ public class WitnessWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GT = "total_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GT)
-  private Double totalCpuHzGt;
+  private Long totalCpuHzGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GTE = "total_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GTE)
-  private Double totalCpuHzGte;
+  private Long totalCpuHzGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_IN = "total_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_IN)
-  private List<Double> totalCpuHzIn = null;
+  private List<Long> totalCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LT = "total_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LT)
-  private Double totalCpuHzLt;
+  private Long totalCpuHzLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LTE = "total_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LTE)
-  private Double totalCpuHzLte;
+  private Long totalCpuHzLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT = "total_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT)
-  private Double totalCpuHzNot;
+  private Long totalCpuHzNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN = "total_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN)
-  private List<Double> totalCpuHzNotIn = null;
+  private List<Long> totalCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT = "total_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT)
-  private Double totalMemoryBytesGt;
+  private Long totalMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE = "total_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE)
-  private Double totalMemoryBytesGte;
+  private Long totalMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN = "total_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN)
-  private List<Double> totalMemoryBytesIn = null;
+  private List<Long> totalMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT = "total_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT)
-  private Double totalMemoryBytesLt;
+  private Long totalMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE = "total_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE)
-  private Double totalMemoryBytesLte;
+  private Long totalMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT = "total_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT)
-  private Double totalMemoryBytesNot;
+  private Long totalMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN = "total_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
-  private List<Double> totalMemoryBytesNotIn = null;
+  private List<Long> totalMemoryBytesNotIn = null;
 
   public WitnessWhereInput() { 
   }
@@ -522,7 +522,7 @@ public class WitnessWhereInput {
   }
 
 
-  public WitnessWhereInput cpuHzPerCore(Double cpuHzPerCore) {
+  public WitnessWhereInput cpuHzPerCore(Long cpuHzPerCore) {
     
     this.cpuHzPerCore = cpuHzPerCore;
     return this;
@@ -535,17 +535,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCore() {
+  public Long getCpuHzPerCore() {
     return cpuHzPerCore;
   }
 
 
-  public void setCpuHzPerCore(Double cpuHzPerCore) {
+  public void setCpuHzPerCore(Long cpuHzPerCore) {
     this.cpuHzPerCore = cpuHzPerCore;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreGt(Double cpuHzPerCoreGt) {
+  public WitnessWhereInput cpuHzPerCoreGt(Long cpuHzPerCoreGt) {
     
     this.cpuHzPerCoreGt = cpuHzPerCoreGt;
     return this;
@@ -558,17 +558,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreGt() {
+  public Long getCpuHzPerCoreGt() {
     return cpuHzPerCoreGt;
   }
 
 
-  public void setCpuHzPerCoreGt(Double cpuHzPerCoreGt) {
+  public void setCpuHzPerCoreGt(Long cpuHzPerCoreGt) {
     this.cpuHzPerCoreGt = cpuHzPerCoreGt;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreGte(Double cpuHzPerCoreGte) {
+  public WitnessWhereInput cpuHzPerCoreGte(Long cpuHzPerCoreGte) {
     
     this.cpuHzPerCoreGte = cpuHzPerCoreGte;
     return this;
@@ -581,25 +581,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreGte() {
+  public Long getCpuHzPerCoreGte() {
     return cpuHzPerCoreGte;
   }
 
 
-  public void setCpuHzPerCoreGte(Double cpuHzPerCoreGte) {
+  public void setCpuHzPerCoreGte(Long cpuHzPerCoreGte) {
     this.cpuHzPerCoreGte = cpuHzPerCoreGte;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreIn(List<Double> cpuHzPerCoreIn) {
+  public WitnessWhereInput cpuHzPerCoreIn(List<Long> cpuHzPerCoreIn) {
     
     this.cpuHzPerCoreIn = cpuHzPerCoreIn;
     return this;
   }
 
-  public WitnessWhereInput addCpuHzPerCoreInItem(Double cpuHzPerCoreInItem) {
+  public WitnessWhereInput addCpuHzPerCoreInItem(Long cpuHzPerCoreInItem) {
     if (this.cpuHzPerCoreIn == null) {
-      this.cpuHzPerCoreIn = new ArrayList<Double>();
+      this.cpuHzPerCoreIn = new ArrayList<Long>();
     }
     this.cpuHzPerCoreIn.add(cpuHzPerCoreInItem);
     return this;
@@ -612,17 +612,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getCpuHzPerCoreIn() {
+  public List<Long> getCpuHzPerCoreIn() {
     return cpuHzPerCoreIn;
   }
 
 
-  public void setCpuHzPerCoreIn(List<Double> cpuHzPerCoreIn) {
+  public void setCpuHzPerCoreIn(List<Long> cpuHzPerCoreIn) {
     this.cpuHzPerCoreIn = cpuHzPerCoreIn;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreLt(Double cpuHzPerCoreLt) {
+  public WitnessWhereInput cpuHzPerCoreLt(Long cpuHzPerCoreLt) {
     
     this.cpuHzPerCoreLt = cpuHzPerCoreLt;
     return this;
@@ -635,17 +635,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreLt() {
+  public Long getCpuHzPerCoreLt() {
     return cpuHzPerCoreLt;
   }
 
 
-  public void setCpuHzPerCoreLt(Double cpuHzPerCoreLt) {
+  public void setCpuHzPerCoreLt(Long cpuHzPerCoreLt) {
     this.cpuHzPerCoreLt = cpuHzPerCoreLt;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreLte(Double cpuHzPerCoreLte) {
+  public WitnessWhereInput cpuHzPerCoreLte(Long cpuHzPerCoreLte) {
     
     this.cpuHzPerCoreLte = cpuHzPerCoreLte;
     return this;
@@ -658,17 +658,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreLte() {
+  public Long getCpuHzPerCoreLte() {
     return cpuHzPerCoreLte;
   }
 
 
-  public void setCpuHzPerCoreLte(Double cpuHzPerCoreLte) {
+  public void setCpuHzPerCoreLte(Long cpuHzPerCoreLte) {
     this.cpuHzPerCoreLte = cpuHzPerCoreLte;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreNot(Double cpuHzPerCoreNot) {
+  public WitnessWhereInput cpuHzPerCoreNot(Long cpuHzPerCoreNot) {
     
     this.cpuHzPerCoreNot = cpuHzPerCoreNot;
     return this;
@@ -681,25 +681,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreNot() {
+  public Long getCpuHzPerCoreNot() {
     return cpuHzPerCoreNot;
   }
 
 
-  public void setCpuHzPerCoreNot(Double cpuHzPerCoreNot) {
+  public void setCpuHzPerCoreNot(Long cpuHzPerCoreNot) {
     this.cpuHzPerCoreNot = cpuHzPerCoreNot;
   }
 
 
-  public WitnessWhereInput cpuHzPerCoreNotIn(List<Double> cpuHzPerCoreNotIn) {
+  public WitnessWhereInput cpuHzPerCoreNotIn(List<Long> cpuHzPerCoreNotIn) {
     
     this.cpuHzPerCoreNotIn = cpuHzPerCoreNotIn;
     return this;
   }
 
-  public WitnessWhereInput addCpuHzPerCoreNotInItem(Double cpuHzPerCoreNotInItem) {
+  public WitnessWhereInput addCpuHzPerCoreNotInItem(Long cpuHzPerCoreNotInItem) {
     if (this.cpuHzPerCoreNotIn == null) {
-      this.cpuHzPerCoreNotIn = new ArrayList<Double>();
+      this.cpuHzPerCoreNotIn = new ArrayList<Long>();
     }
     this.cpuHzPerCoreNotIn.add(cpuHzPerCoreNotInItem);
     return this;
@@ -712,12 +712,12 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getCpuHzPerCoreNotIn() {
+  public List<Long> getCpuHzPerCoreNotIn() {
     return cpuHzPerCoreNotIn;
   }
 
 
-  public void setCpuHzPerCoreNotIn(List<Double> cpuHzPerCoreNotIn) {
+  public void setCpuHzPerCoreNotIn(List<Long> cpuHzPerCoreNotIn) {
     this.cpuHzPerCoreNotIn = cpuHzPerCoreNotIn;
   }
 
@@ -2136,7 +2136,7 @@ public class WitnessWhereInput {
   }
 
 
-  public WitnessWhereInput systemDataCapacity(Double systemDataCapacity) {
+  public WitnessWhereInput systemDataCapacity(Long systemDataCapacity) {
     
     this.systemDataCapacity = systemDataCapacity;
     return this;
@@ -2149,17 +2149,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemDataCapacity() {
+  public Long getSystemDataCapacity() {
     return systemDataCapacity;
   }
 
 
-  public void setSystemDataCapacity(Double systemDataCapacity) {
+  public void setSystemDataCapacity(Long systemDataCapacity) {
     this.systemDataCapacity = systemDataCapacity;
   }
 
 
-  public WitnessWhereInput systemDataCapacityGt(Double systemDataCapacityGt) {
+  public WitnessWhereInput systemDataCapacityGt(Long systemDataCapacityGt) {
     
     this.systemDataCapacityGt = systemDataCapacityGt;
     return this;
@@ -2172,17 +2172,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemDataCapacityGt() {
+  public Long getSystemDataCapacityGt() {
     return systemDataCapacityGt;
   }
 
 
-  public void setSystemDataCapacityGt(Double systemDataCapacityGt) {
+  public void setSystemDataCapacityGt(Long systemDataCapacityGt) {
     this.systemDataCapacityGt = systemDataCapacityGt;
   }
 
 
-  public WitnessWhereInput systemDataCapacityGte(Double systemDataCapacityGte) {
+  public WitnessWhereInput systemDataCapacityGte(Long systemDataCapacityGte) {
     
     this.systemDataCapacityGte = systemDataCapacityGte;
     return this;
@@ -2195,25 +2195,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemDataCapacityGte() {
+  public Long getSystemDataCapacityGte() {
     return systemDataCapacityGte;
   }
 
 
-  public void setSystemDataCapacityGte(Double systemDataCapacityGte) {
+  public void setSystemDataCapacityGte(Long systemDataCapacityGte) {
     this.systemDataCapacityGte = systemDataCapacityGte;
   }
 
 
-  public WitnessWhereInput systemDataCapacityIn(List<Double> systemDataCapacityIn) {
+  public WitnessWhereInput systemDataCapacityIn(List<Long> systemDataCapacityIn) {
     
     this.systemDataCapacityIn = systemDataCapacityIn;
     return this;
   }
 
-  public WitnessWhereInput addSystemDataCapacityInItem(Double systemDataCapacityInItem) {
+  public WitnessWhereInput addSystemDataCapacityInItem(Long systemDataCapacityInItem) {
     if (this.systemDataCapacityIn == null) {
-      this.systemDataCapacityIn = new ArrayList<Double>();
+      this.systemDataCapacityIn = new ArrayList<Long>();
     }
     this.systemDataCapacityIn.add(systemDataCapacityInItem);
     return this;
@@ -2226,17 +2226,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSystemDataCapacityIn() {
+  public List<Long> getSystemDataCapacityIn() {
     return systemDataCapacityIn;
   }
 
 
-  public void setSystemDataCapacityIn(List<Double> systemDataCapacityIn) {
+  public void setSystemDataCapacityIn(List<Long> systemDataCapacityIn) {
     this.systemDataCapacityIn = systemDataCapacityIn;
   }
 
 
-  public WitnessWhereInput systemDataCapacityLt(Double systemDataCapacityLt) {
+  public WitnessWhereInput systemDataCapacityLt(Long systemDataCapacityLt) {
     
     this.systemDataCapacityLt = systemDataCapacityLt;
     return this;
@@ -2249,17 +2249,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemDataCapacityLt() {
+  public Long getSystemDataCapacityLt() {
     return systemDataCapacityLt;
   }
 
 
-  public void setSystemDataCapacityLt(Double systemDataCapacityLt) {
+  public void setSystemDataCapacityLt(Long systemDataCapacityLt) {
     this.systemDataCapacityLt = systemDataCapacityLt;
   }
 
 
-  public WitnessWhereInput systemDataCapacityLte(Double systemDataCapacityLte) {
+  public WitnessWhereInput systemDataCapacityLte(Long systemDataCapacityLte) {
     
     this.systemDataCapacityLte = systemDataCapacityLte;
     return this;
@@ -2272,17 +2272,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemDataCapacityLte() {
+  public Long getSystemDataCapacityLte() {
     return systemDataCapacityLte;
   }
 
 
-  public void setSystemDataCapacityLte(Double systemDataCapacityLte) {
+  public void setSystemDataCapacityLte(Long systemDataCapacityLte) {
     this.systemDataCapacityLte = systemDataCapacityLte;
   }
 
 
-  public WitnessWhereInput systemDataCapacityNot(Double systemDataCapacityNot) {
+  public WitnessWhereInput systemDataCapacityNot(Long systemDataCapacityNot) {
     
     this.systemDataCapacityNot = systemDataCapacityNot;
     return this;
@@ -2295,25 +2295,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemDataCapacityNot() {
+  public Long getSystemDataCapacityNot() {
     return systemDataCapacityNot;
   }
 
 
-  public void setSystemDataCapacityNot(Double systemDataCapacityNot) {
+  public void setSystemDataCapacityNot(Long systemDataCapacityNot) {
     this.systemDataCapacityNot = systemDataCapacityNot;
   }
 
 
-  public WitnessWhereInput systemDataCapacityNotIn(List<Double> systemDataCapacityNotIn) {
+  public WitnessWhereInput systemDataCapacityNotIn(List<Long> systemDataCapacityNotIn) {
     
     this.systemDataCapacityNotIn = systemDataCapacityNotIn;
     return this;
   }
 
-  public WitnessWhereInput addSystemDataCapacityNotInItem(Double systemDataCapacityNotInItem) {
+  public WitnessWhereInput addSystemDataCapacityNotInItem(Long systemDataCapacityNotInItem) {
     if (this.systemDataCapacityNotIn == null) {
-      this.systemDataCapacityNotIn = new ArrayList<Double>();
+      this.systemDataCapacityNotIn = new ArrayList<Long>();
     }
     this.systemDataCapacityNotIn.add(systemDataCapacityNotInItem);
     return this;
@@ -2326,17 +2326,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSystemDataCapacityNotIn() {
+  public List<Long> getSystemDataCapacityNotIn() {
     return systemDataCapacityNotIn;
   }
 
 
-  public void setSystemDataCapacityNotIn(List<Double> systemDataCapacityNotIn) {
+  public void setSystemDataCapacityNotIn(List<Long> systemDataCapacityNotIn) {
     this.systemDataCapacityNotIn = systemDataCapacityNotIn;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpace(Double systemUsedDataSpace) {
+  public WitnessWhereInput systemUsedDataSpace(Long systemUsedDataSpace) {
     
     this.systemUsedDataSpace = systemUsedDataSpace;
     return this;
@@ -2349,17 +2349,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemUsedDataSpace() {
+  public Long getSystemUsedDataSpace() {
     return systemUsedDataSpace;
   }
 
 
-  public void setSystemUsedDataSpace(Double systemUsedDataSpace) {
+  public void setSystemUsedDataSpace(Long systemUsedDataSpace) {
     this.systemUsedDataSpace = systemUsedDataSpace;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceGt(Double systemUsedDataSpaceGt) {
+  public WitnessWhereInput systemUsedDataSpaceGt(Long systemUsedDataSpaceGt) {
     
     this.systemUsedDataSpaceGt = systemUsedDataSpaceGt;
     return this;
@@ -2372,17 +2372,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemUsedDataSpaceGt() {
+  public Long getSystemUsedDataSpaceGt() {
     return systemUsedDataSpaceGt;
   }
 
 
-  public void setSystemUsedDataSpaceGt(Double systemUsedDataSpaceGt) {
+  public void setSystemUsedDataSpaceGt(Long systemUsedDataSpaceGt) {
     this.systemUsedDataSpaceGt = systemUsedDataSpaceGt;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceGte(Double systemUsedDataSpaceGte) {
+  public WitnessWhereInput systemUsedDataSpaceGte(Long systemUsedDataSpaceGte) {
     
     this.systemUsedDataSpaceGte = systemUsedDataSpaceGte;
     return this;
@@ -2395,25 +2395,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemUsedDataSpaceGte() {
+  public Long getSystemUsedDataSpaceGte() {
     return systemUsedDataSpaceGte;
   }
 
 
-  public void setSystemUsedDataSpaceGte(Double systemUsedDataSpaceGte) {
+  public void setSystemUsedDataSpaceGte(Long systemUsedDataSpaceGte) {
     this.systemUsedDataSpaceGte = systemUsedDataSpaceGte;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceIn(List<Double> systemUsedDataSpaceIn) {
+  public WitnessWhereInput systemUsedDataSpaceIn(List<Long> systemUsedDataSpaceIn) {
     
     this.systemUsedDataSpaceIn = systemUsedDataSpaceIn;
     return this;
   }
 
-  public WitnessWhereInput addSystemUsedDataSpaceInItem(Double systemUsedDataSpaceInItem) {
+  public WitnessWhereInput addSystemUsedDataSpaceInItem(Long systemUsedDataSpaceInItem) {
     if (this.systemUsedDataSpaceIn == null) {
-      this.systemUsedDataSpaceIn = new ArrayList<Double>();
+      this.systemUsedDataSpaceIn = new ArrayList<Long>();
     }
     this.systemUsedDataSpaceIn.add(systemUsedDataSpaceInItem);
     return this;
@@ -2426,17 +2426,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSystemUsedDataSpaceIn() {
+  public List<Long> getSystemUsedDataSpaceIn() {
     return systemUsedDataSpaceIn;
   }
 
 
-  public void setSystemUsedDataSpaceIn(List<Double> systemUsedDataSpaceIn) {
+  public void setSystemUsedDataSpaceIn(List<Long> systemUsedDataSpaceIn) {
     this.systemUsedDataSpaceIn = systemUsedDataSpaceIn;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceLt(Double systemUsedDataSpaceLt) {
+  public WitnessWhereInput systemUsedDataSpaceLt(Long systemUsedDataSpaceLt) {
     
     this.systemUsedDataSpaceLt = systemUsedDataSpaceLt;
     return this;
@@ -2449,17 +2449,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemUsedDataSpaceLt() {
+  public Long getSystemUsedDataSpaceLt() {
     return systemUsedDataSpaceLt;
   }
 
 
-  public void setSystemUsedDataSpaceLt(Double systemUsedDataSpaceLt) {
+  public void setSystemUsedDataSpaceLt(Long systemUsedDataSpaceLt) {
     this.systemUsedDataSpaceLt = systemUsedDataSpaceLt;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceLte(Double systemUsedDataSpaceLte) {
+  public WitnessWhereInput systemUsedDataSpaceLte(Long systemUsedDataSpaceLte) {
     
     this.systemUsedDataSpaceLte = systemUsedDataSpaceLte;
     return this;
@@ -2472,17 +2472,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemUsedDataSpaceLte() {
+  public Long getSystemUsedDataSpaceLte() {
     return systemUsedDataSpaceLte;
   }
 
 
-  public void setSystemUsedDataSpaceLte(Double systemUsedDataSpaceLte) {
+  public void setSystemUsedDataSpaceLte(Long systemUsedDataSpaceLte) {
     this.systemUsedDataSpaceLte = systemUsedDataSpaceLte;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceNot(Double systemUsedDataSpaceNot) {
+  public WitnessWhereInput systemUsedDataSpaceNot(Long systemUsedDataSpaceNot) {
     
     this.systemUsedDataSpaceNot = systemUsedDataSpaceNot;
     return this;
@@ -2495,25 +2495,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSystemUsedDataSpaceNot() {
+  public Long getSystemUsedDataSpaceNot() {
     return systemUsedDataSpaceNot;
   }
 
 
-  public void setSystemUsedDataSpaceNot(Double systemUsedDataSpaceNot) {
+  public void setSystemUsedDataSpaceNot(Long systemUsedDataSpaceNot) {
     this.systemUsedDataSpaceNot = systemUsedDataSpaceNot;
   }
 
 
-  public WitnessWhereInput systemUsedDataSpaceNotIn(List<Double> systemUsedDataSpaceNotIn) {
+  public WitnessWhereInput systemUsedDataSpaceNotIn(List<Long> systemUsedDataSpaceNotIn) {
     
     this.systemUsedDataSpaceNotIn = systemUsedDataSpaceNotIn;
     return this;
   }
 
-  public WitnessWhereInput addSystemUsedDataSpaceNotInItem(Double systemUsedDataSpaceNotInItem) {
+  public WitnessWhereInput addSystemUsedDataSpaceNotInItem(Long systemUsedDataSpaceNotInItem) {
     if (this.systemUsedDataSpaceNotIn == null) {
-      this.systemUsedDataSpaceNotIn = new ArrayList<Double>();
+      this.systemUsedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.systemUsedDataSpaceNotIn.add(systemUsedDataSpaceNotInItem);
     return this;
@@ -2526,12 +2526,12 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSystemUsedDataSpaceNotIn() {
+  public List<Long> getSystemUsedDataSpaceNotIn() {
     return systemUsedDataSpaceNotIn;
   }
 
 
-  public void setSystemUsedDataSpaceNotIn(List<Double> systemUsedDataSpaceNotIn) {
+  public void setSystemUsedDataSpaceNotIn(List<Long> systemUsedDataSpaceNotIn) {
     this.systemUsedDataSpaceNotIn = systemUsedDataSpaceNotIn;
   }
 
@@ -2736,7 +2736,7 @@ public class WitnessWhereInput {
   }
 
 
-  public WitnessWhereInput totalCpuHz(Double totalCpuHz) {
+  public WitnessWhereInput totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -2749,17 +2749,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
 
-  public WitnessWhereInput totalCpuHzGt(Double totalCpuHzGt) {
+  public WitnessWhereInput totalCpuHzGt(Long totalCpuHzGt) {
     
     this.totalCpuHzGt = totalCpuHzGt;
     return this;
@@ -2772,17 +2772,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGt() {
+  public Long getTotalCpuHzGt() {
     return totalCpuHzGt;
   }
 
 
-  public void setTotalCpuHzGt(Double totalCpuHzGt) {
+  public void setTotalCpuHzGt(Long totalCpuHzGt) {
     this.totalCpuHzGt = totalCpuHzGt;
   }
 
 
-  public WitnessWhereInput totalCpuHzGte(Double totalCpuHzGte) {
+  public WitnessWhereInput totalCpuHzGte(Long totalCpuHzGte) {
     
     this.totalCpuHzGte = totalCpuHzGte;
     return this;
@@ -2795,25 +2795,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGte() {
+  public Long getTotalCpuHzGte() {
     return totalCpuHzGte;
   }
 
 
-  public void setTotalCpuHzGte(Double totalCpuHzGte) {
+  public void setTotalCpuHzGte(Long totalCpuHzGte) {
     this.totalCpuHzGte = totalCpuHzGte;
   }
 
 
-  public WitnessWhereInput totalCpuHzIn(List<Double> totalCpuHzIn) {
+  public WitnessWhereInput totalCpuHzIn(List<Long> totalCpuHzIn) {
     
     this.totalCpuHzIn = totalCpuHzIn;
     return this;
   }
 
-  public WitnessWhereInput addTotalCpuHzInItem(Double totalCpuHzInItem) {
+  public WitnessWhereInput addTotalCpuHzInItem(Long totalCpuHzInItem) {
     if (this.totalCpuHzIn == null) {
-      this.totalCpuHzIn = new ArrayList<Double>();
+      this.totalCpuHzIn = new ArrayList<Long>();
     }
     this.totalCpuHzIn.add(totalCpuHzInItem);
     return this;
@@ -2826,17 +2826,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzIn() {
+  public List<Long> getTotalCpuHzIn() {
     return totalCpuHzIn;
   }
 
 
-  public void setTotalCpuHzIn(List<Double> totalCpuHzIn) {
+  public void setTotalCpuHzIn(List<Long> totalCpuHzIn) {
     this.totalCpuHzIn = totalCpuHzIn;
   }
 
 
-  public WitnessWhereInput totalCpuHzLt(Double totalCpuHzLt) {
+  public WitnessWhereInput totalCpuHzLt(Long totalCpuHzLt) {
     
     this.totalCpuHzLt = totalCpuHzLt;
     return this;
@@ -2849,17 +2849,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLt() {
+  public Long getTotalCpuHzLt() {
     return totalCpuHzLt;
   }
 
 
-  public void setTotalCpuHzLt(Double totalCpuHzLt) {
+  public void setTotalCpuHzLt(Long totalCpuHzLt) {
     this.totalCpuHzLt = totalCpuHzLt;
   }
 
 
-  public WitnessWhereInput totalCpuHzLte(Double totalCpuHzLte) {
+  public WitnessWhereInput totalCpuHzLte(Long totalCpuHzLte) {
     
     this.totalCpuHzLte = totalCpuHzLte;
     return this;
@@ -2872,17 +2872,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLte() {
+  public Long getTotalCpuHzLte() {
     return totalCpuHzLte;
   }
 
 
-  public void setTotalCpuHzLte(Double totalCpuHzLte) {
+  public void setTotalCpuHzLte(Long totalCpuHzLte) {
     this.totalCpuHzLte = totalCpuHzLte;
   }
 
 
-  public WitnessWhereInput totalCpuHzNot(Double totalCpuHzNot) {
+  public WitnessWhereInput totalCpuHzNot(Long totalCpuHzNot) {
     
     this.totalCpuHzNot = totalCpuHzNot;
     return this;
@@ -2895,25 +2895,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzNot() {
+  public Long getTotalCpuHzNot() {
     return totalCpuHzNot;
   }
 
 
-  public void setTotalCpuHzNot(Double totalCpuHzNot) {
+  public void setTotalCpuHzNot(Long totalCpuHzNot) {
     this.totalCpuHzNot = totalCpuHzNot;
   }
 
 
-  public WitnessWhereInput totalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public WitnessWhereInput totalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     
     this.totalCpuHzNotIn = totalCpuHzNotIn;
     return this;
   }
 
-  public WitnessWhereInput addTotalCpuHzNotInItem(Double totalCpuHzNotInItem) {
+  public WitnessWhereInput addTotalCpuHzNotInItem(Long totalCpuHzNotInItem) {
     if (this.totalCpuHzNotIn == null) {
-      this.totalCpuHzNotIn = new ArrayList<Double>();
+      this.totalCpuHzNotIn = new ArrayList<Long>();
     }
     this.totalCpuHzNotIn.add(totalCpuHzNotInItem);
     return this;
@@ -2926,17 +2926,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzNotIn() {
+  public List<Long> getTotalCpuHzNotIn() {
     return totalCpuHzNotIn;
   }
 
 
-  public void setTotalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public void setTotalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     this.totalCpuHzNotIn = totalCpuHzNotIn;
   }
 
 
-  public WitnessWhereInput totalMemoryBytes(Double totalMemoryBytes) {
+  public WitnessWhereInput totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -2949,17 +2949,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public WitnessWhereInput totalMemoryBytesGt(Long totalMemoryBytesGt) {
     
     this.totalMemoryBytesGt = totalMemoryBytesGt;
     return this;
@@ -2972,17 +2972,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGt() {
+  public Long getTotalMemoryBytesGt() {
     return totalMemoryBytesGt;
   }
 
 
-  public void setTotalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public void setTotalMemoryBytesGt(Long totalMemoryBytesGt) {
     this.totalMemoryBytesGt = totalMemoryBytesGt;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public WitnessWhereInput totalMemoryBytesGte(Long totalMemoryBytesGte) {
     
     this.totalMemoryBytesGte = totalMemoryBytesGte;
     return this;
@@ -2995,25 +2995,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGte() {
+  public Long getTotalMemoryBytesGte() {
     return totalMemoryBytesGte;
   }
 
 
-  public void setTotalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public void setTotalMemoryBytesGte(Long totalMemoryBytesGte) {
     this.totalMemoryBytesGte = totalMemoryBytesGte;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public WitnessWhereInput totalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     
     this.totalMemoryBytesIn = totalMemoryBytesIn;
     return this;
   }
 
-  public WitnessWhereInput addTotalMemoryBytesInItem(Double totalMemoryBytesInItem) {
+  public WitnessWhereInput addTotalMemoryBytesInItem(Long totalMemoryBytesInItem) {
     if (this.totalMemoryBytesIn == null) {
-      this.totalMemoryBytesIn = new ArrayList<Double>();
+      this.totalMemoryBytesIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesIn.add(totalMemoryBytesInItem);
     return this;
@@ -3026,17 +3026,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesIn() {
+  public List<Long> getTotalMemoryBytesIn() {
     return totalMemoryBytesIn;
   }
 
 
-  public void setTotalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public void setTotalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     this.totalMemoryBytesIn = totalMemoryBytesIn;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public WitnessWhereInput totalMemoryBytesLt(Long totalMemoryBytesLt) {
     
     this.totalMemoryBytesLt = totalMemoryBytesLt;
     return this;
@@ -3049,17 +3049,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLt() {
+  public Long getTotalMemoryBytesLt() {
     return totalMemoryBytesLt;
   }
 
 
-  public void setTotalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public void setTotalMemoryBytesLt(Long totalMemoryBytesLt) {
     this.totalMemoryBytesLt = totalMemoryBytesLt;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public WitnessWhereInput totalMemoryBytesLte(Long totalMemoryBytesLte) {
     
     this.totalMemoryBytesLte = totalMemoryBytesLte;
     return this;
@@ -3072,17 +3072,17 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLte() {
+  public Long getTotalMemoryBytesLte() {
     return totalMemoryBytesLte;
   }
 
 
-  public void setTotalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public void setTotalMemoryBytesLte(Long totalMemoryBytesLte) {
     this.totalMemoryBytesLte = totalMemoryBytesLte;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public WitnessWhereInput totalMemoryBytesNot(Long totalMemoryBytesNot) {
     
     this.totalMemoryBytesNot = totalMemoryBytesNot;
     return this;
@@ -3095,25 +3095,25 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesNot() {
+  public Long getTotalMemoryBytesNot() {
     return totalMemoryBytesNot;
   }
 
 
-  public void setTotalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public void setTotalMemoryBytesNot(Long totalMemoryBytesNot) {
     this.totalMemoryBytesNot = totalMemoryBytesNot;
   }
 
 
-  public WitnessWhereInput totalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public WitnessWhereInput totalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
     return this;
   }
 
-  public WitnessWhereInput addTotalMemoryBytesNotInItem(Double totalMemoryBytesNotInItem) {
+  public WitnessWhereInput addTotalMemoryBytesNotInItem(Long totalMemoryBytesNotInItem) {
     if (this.totalMemoryBytesNotIn == null) {
-      this.totalMemoryBytesNotIn = new ArrayList<Double>();
+      this.totalMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesNotIn.add(totalMemoryBytesNotInItem);
     return this;
@@ -3126,12 +3126,12 @@ public class WitnessWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesNotIn() {
+  public List<Long> getTotalMemoryBytesNotIn() {
     return totalMemoryBytesNotIn;
   }
 
 
-  public void setTotalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public void setTotalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
   }
 

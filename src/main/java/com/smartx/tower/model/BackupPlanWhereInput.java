@@ -130,35 +130,35 @@ public class BackupPlanWhereInput {
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE = "backup_total_size";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE)
-  private Double backupTotalSize;
+  private Long backupTotalSize;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GT = "backup_total_size_gt";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GT)
-  private Double backupTotalSizeGt;
+  private Long backupTotalSizeGt;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GTE = "backup_total_size_gte";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GTE)
-  private Double backupTotalSizeGte;
+  private Long backupTotalSizeGte;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_IN = "backup_total_size_in";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_IN)
-  private List<Double> backupTotalSizeIn = null;
+  private List<Long> backupTotalSizeIn = null;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LT = "backup_total_size_lt";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LT)
-  private Double backupTotalSizeLt;
+  private Long backupTotalSizeLt;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LTE = "backup_total_size_lte";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LTE)
-  private Double backupTotalSizeLte;
+  private Long backupTotalSizeLte;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT = "backup_total_size_not";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT)
-  private Double backupTotalSizeNot;
+  private Long backupTotalSizeNot;
 
   public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT_IN = "backup_total_size_not_in";
   @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT_IN)
-  private List<Double> backupTotalSizeNotIn = null;
+  private List<Long> backupTotalSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_COMPRESSION = "compression";
   @SerializedName(SERIALIZED_NAME_COMPRESSION)
@@ -1446,7 +1446,7 @@ public class BackupPlanWhereInput {
   }
 
 
-  public BackupPlanWhereInput backupTotalSize(Double backupTotalSize) {
+  public BackupPlanWhereInput backupTotalSize(Long backupTotalSize) {
     
     this.backupTotalSize = backupTotalSize;
     return this;
@@ -1459,17 +1459,17 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSize() {
+  public Long getBackupTotalSize() {
     return backupTotalSize;
   }
 
 
-  public void setBackupTotalSize(Double backupTotalSize) {
+  public void setBackupTotalSize(Long backupTotalSize) {
     this.backupTotalSize = backupTotalSize;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeGt(Double backupTotalSizeGt) {
+  public BackupPlanWhereInput backupTotalSizeGt(Long backupTotalSizeGt) {
     
     this.backupTotalSizeGt = backupTotalSizeGt;
     return this;
@@ -1482,17 +1482,17 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSizeGt() {
+  public Long getBackupTotalSizeGt() {
     return backupTotalSizeGt;
   }
 
 
-  public void setBackupTotalSizeGt(Double backupTotalSizeGt) {
+  public void setBackupTotalSizeGt(Long backupTotalSizeGt) {
     this.backupTotalSizeGt = backupTotalSizeGt;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeGte(Double backupTotalSizeGte) {
+  public BackupPlanWhereInput backupTotalSizeGte(Long backupTotalSizeGte) {
     
     this.backupTotalSizeGte = backupTotalSizeGte;
     return this;
@@ -1505,25 +1505,25 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSizeGte() {
+  public Long getBackupTotalSizeGte() {
     return backupTotalSizeGte;
   }
 
 
-  public void setBackupTotalSizeGte(Double backupTotalSizeGte) {
+  public void setBackupTotalSizeGte(Long backupTotalSizeGte) {
     this.backupTotalSizeGte = backupTotalSizeGte;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeIn(List<Double> backupTotalSizeIn) {
+  public BackupPlanWhereInput backupTotalSizeIn(List<Long> backupTotalSizeIn) {
     
     this.backupTotalSizeIn = backupTotalSizeIn;
     return this;
   }
 
-  public BackupPlanWhereInput addBackupTotalSizeInItem(Double backupTotalSizeInItem) {
+  public BackupPlanWhereInput addBackupTotalSizeInItem(Long backupTotalSizeInItem) {
     if (this.backupTotalSizeIn == null) {
-      this.backupTotalSizeIn = new ArrayList<Double>();
+      this.backupTotalSizeIn = new ArrayList<Long>();
     }
     this.backupTotalSizeIn.add(backupTotalSizeInItem);
     return this;
@@ -1536,17 +1536,17 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBackupTotalSizeIn() {
+  public List<Long> getBackupTotalSizeIn() {
     return backupTotalSizeIn;
   }
 
 
-  public void setBackupTotalSizeIn(List<Double> backupTotalSizeIn) {
+  public void setBackupTotalSizeIn(List<Long> backupTotalSizeIn) {
     this.backupTotalSizeIn = backupTotalSizeIn;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeLt(Double backupTotalSizeLt) {
+  public BackupPlanWhereInput backupTotalSizeLt(Long backupTotalSizeLt) {
     
     this.backupTotalSizeLt = backupTotalSizeLt;
     return this;
@@ -1559,17 +1559,17 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSizeLt() {
+  public Long getBackupTotalSizeLt() {
     return backupTotalSizeLt;
   }
 
 
-  public void setBackupTotalSizeLt(Double backupTotalSizeLt) {
+  public void setBackupTotalSizeLt(Long backupTotalSizeLt) {
     this.backupTotalSizeLt = backupTotalSizeLt;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeLte(Double backupTotalSizeLte) {
+  public BackupPlanWhereInput backupTotalSizeLte(Long backupTotalSizeLte) {
     
     this.backupTotalSizeLte = backupTotalSizeLte;
     return this;
@@ -1582,17 +1582,17 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSizeLte() {
+  public Long getBackupTotalSizeLte() {
     return backupTotalSizeLte;
   }
 
 
-  public void setBackupTotalSizeLte(Double backupTotalSizeLte) {
+  public void setBackupTotalSizeLte(Long backupTotalSizeLte) {
     this.backupTotalSizeLte = backupTotalSizeLte;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeNot(Double backupTotalSizeNot) {
+  public BackupPlanWhereInput backupTotalSizeNot(Long backupTotalSizeNot) {
     
     this.backupTotalSizeNot = backupTotalSizeNot;
     return this;
@@ -1605,25 +1605,25 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBackupTotalSizeNot() {
+  public Long getBackupTotalSizeNot() {
     return backupTotalSizeNot;
   }
 
 
-  public void setBackupTotalSizeNot(Double backupTotalSizeNot) {
+  public void setBackupTotalSizeNot(Long backupTotalSizeNot) {
     this.backupTotalSizeNot = backupTotalSizeNot;
   }
 
 
-  public BackupPlanWhereInput backupTotalSizeNotIn(List<Double> backupTotalSizeNotIn) {
+  public BackupPlanWhereInput backupTotalSizeNotIn(List<Long> backupTotalSizeNotIn) {
     
     this.backupTotalSizeNotIn = backupTotalSizeNotIn;
     return this;
   }
 
-  public BackupPlanWhereInput addBackupTotalSizeNotInItem(Double backupTotalSizeNotInItem) {
+  public BackupPlanWhereInput addBackupTotalSizeNotInItem(Long backupTotalSizeNotInItem) {
     if (this.backupTotalSizeNotIn == null) {
-      this.backupTotalSizeNotIn = new ArrayList<Double>();
+      this.backupTotalSizeNotIn = new ArrayList<Long>();
     }
     this.backupTotalSizeNotIn.add(backupTotalSizeNotInItem);
     return this;
@@ -1636,12 +1636,12 @@ public class BackupPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getBackupTotalSizeNotIn() {
+  public List<Long> getBackupTotalSizeNotIn() {
     return backupTotalSizeNotIn;
   }
 
 
-  public void setBackupTotalSizeNotIn(List<Double> backupTotalSizeNotIn) {
+  public void setBackupTotalSizeNotIn(List<Long> backupTotalSizeNotIn) {
     this.backupTotalSizeNotIn = backupTotalSizeNotIn;
   }
 

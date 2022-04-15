@@ -54,7 +54,7 @@ public class ITVmSnapshot extends ITBase {
     Vlan vlan = getData("defaultVlan", Vlan.class);
     cluster = getData("defaultCluster", Cluster.class);
     params.add(new VmCreationParams().name("tower-sdk-test-snapshot-vm" + System.currentTimeMillis()).cpuCores(1)
-        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+        .cpuSockets(1).memory(4294967296L).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     WithTaskVm createResult = vmApi.createVm(params).get(0);

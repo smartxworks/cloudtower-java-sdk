@@ -42,43 +42,43 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
-  private Double assignedSize;
+  private Long assignedSize;
 
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)
-  private Double bps;
+  private Long bps;
 
   public static final String SERIALIZED_NAME_BPS_MAX = "bps_max";
   @SerializedName(SERIALIZED_NAME_BPS_MAX)
-  private Double bpsMax;
+  private Long bpsMax;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH = "bps_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH)
-  private Double bpsMaxLength;
+  private Long bpsMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_RD = "bps_rd";
   @SerializedName(SERIALIZED_NAME_BPS_RD)
-  private Double bpsRd;
+  private Long bpsRd;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX = "bps_rd_max";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX)
-  private Double bpsRdMax;
+  private Long bpsRdMax;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH = "bps_rd_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH)
-  private Double bpsRdMaxLength;
+  private Long bpsRdMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_WR = "bps_wr";
   @SerializedName(SERIALIZED_NAME_BPS_WR)
-  private Double bpsWr;
+  private Long bpsWr;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX = "bps_wr_max";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX)
-  private Double bpsWrMax;
+  private Long bpsWrMax;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
-  private Double bpsWrMaxLength;
+  private Long bpsWrMaxLength;
 
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP = "consistency_group";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP)
@@ -94,43 +94,43 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_IO_SIZE = "io_size";
   @SerializedName(SERIALIZED_NAME_IO_SIZE)
-  private Double ioSize;
+  private Long ioSize;
 
   public static final String SERIALIZED_NAME_IOPS = "iops";
   @SerializedName(SERIALIZED_NAME_IOPS)
-  private Double iops;
+  private Long iops;
 
   public static final String SERIALIZED_NAME_IOPS_MAX = "iops_max";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX)
-  private Double iopsMax;
+  private Long iopsMax;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH = "iops_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH)
-  private Double iopsMaxLength;
+  private Long iopsMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_RD = "iops_rd";
   @SerializedName(SERIALIZED_NAME_IOPS_RD)
-  private Double iopsRd;
+  private Long iopsRd;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX = "iops_rd_max";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX)
-  private Double iopsRdMax;
+  private Long iopsRdMax;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH = "iops_rd_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH)
-  private Double iopsRdMaxLength;
+  private Long iopsRdMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_WR = "iops_wr";
   @SerializedName(SERIALIZED_NAME_IOPS_WR)
-  private Double iopsWr;
+  private Long iopsWr;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX = "iops_wr_max";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX)
-  private Double iopsWrMax;
+  private Long iopsWrMax;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH = "iops_wr_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH)
-  private Double iopsWrMaxLength;
+  private Long iopsWrMaxLength;
 
   public static final String SERIALIZED_NAME_ISCSI_TARGET = "iscsi_target";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
@@ -162,7 +162,7 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
   @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
-  private Double sharedSize;
+  private Long sharedSize;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
@@ -174,7 +174,7 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
-  private Double stripeSize;
+  private Long stripeSize;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -182,7 +182,7 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public static final String SERIALIZED_NAME_ZBS_VOLUME_ID = "zbs_volume_id";
   @SerializedName(SERIALIZED_NAME_ZBS_VOLUME_ID)
@@ -214,7 +214,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun assignedSize(Double assignedSize) {
+  public IscsiLun assignedSize(Long assignedSize) {
     
     this.assignedSize = assignedSize;
     return this;
@@ -227,17 +227,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAssignedSize() {
+  public Long getAssignedSize() {
     return assignedSize;
   }
 
 
-  public void setAssignedSize(Double assignedSize) {
+  public void setAssignedSize(Long assignedSize) {
     this.assignedSize = assignedSize;
   }
 
 
-  public IscsiLun bps(Double bps) {
+  public IscsiLun bps(Long bps) {
     
     this.bps = bps;
     return this;
@@ -250,17 +250,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBps() {
+  public Long getBps() {
     return bps;
   }
 
 
-  public void setBps(Double bps) {
+  public void setBps(Long bps) {
     this.bps = bps;
   }
 
 
-  public IscsiLun bpsMax(Double bpsMax) {
+  public IscsiLun bpsMax(Long bpsMax) {
     
     this.bpsMax = bpsMax;
     return this;
@@ -273,17 +273,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsMax() {
+  public Long getBpsMax() {
     return bpsMax;
   }
 
 
-  public void setBpsMax(Double bpsMax) {
+  public void setBpsMax(Long bpsMax) {
     this.bpsMax = bpsMax;
   }
 
 
-  public IscsiLun bpsMaxLength(Double bpsMaxLength) {
+  public IscsiLun bpsMaxLength(Long bpsMaxLength) {
     
     this.bpsMaxLength = bpsMaxLength;
     return this;
@@ -296,17 +296,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsMaxLength() {
+  public Long getBpsMaxLength() {
     return bpsMaxLength;
   }
 
 
-  public void setBpsMaxLength(Double bpsMaxLength) {
+  public void setBpsMaxLength(Long bpsMaxLength) {
     this.bpsMaxLength = bpsMaxLength;
   }
 
 
-  public IscsiLun bpsRd(Double bpsRd) {
+  public IscsiLun bpsRd(Long bpsRd) {
     
     this.bpsRd = bpsRd;
     return this;
@@ -319,17 +319,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsRd() {
+  public Long getBpsRd() {
     return bpsRd;
   }
 
 
-  public void setBpsRd(Double bpsRd) {
+  public void setBpsRd(Long bpsRd) {
     this.bpsRd = bpsRd;
   }
 
 
-  public IscsiLun bpsRdMax(Double bpsRdMax) {
+  public IscsiLun bpsRdMax(Long bpsRdMax) {
     
     this.bpsRdMax = bpsRdMax;
     return this;
@@ -342,17 +342,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsRdMax() {
+  public Long getBpsRdMax() {
     return bpsRdMax;
   }
 
 
-  public void setBpsRdMax(Double bpsRdMax) {
+  public void setBpsRdMax(Long bpsRdMax) {
     this.bpsRdMax = bpsRdMax;
   }
 
 
-  public IscsiLun bpsRdMaxLength(Double bpsRdMaxLength) {
+  public IscsiLun bpsRdMaxLength(Long bpsRdMaxLength) {
     
     this.bpsRdMaxLength = bpsRdMaxLength;
     return this;
@@ -365,17 +365,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsRdMaxLength() {
+  public Long getBpsRdMaxLength() {
     return bpsRdMaxLength;
   }
 
 
-  public void setBpsRdMaxLength(Double bpsRdMaxLength) {
+  public void setBpsRdMaxLength(Long bpsRdMaxLength) {
     this.bpsRdMaxLength = bpsRdMaxLength;
   }
 
 
-  public IscsiLun bpsWr(Double bpsWr) {
+  public IscsiLun bpsWr(Long bpsWr) {
     
     this.bpsWr = bpsWr;
     return this;
@@ -388,17 +388,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsWr() {
+  public Long getBpsWr() {
     return bpsWr;
   }
 
 
-  public void setBpsWr(Double bpsWr) {
+  public void setBpsWr(Long bpsWr) {
     this.bpsWr = bpsWr;
   }
 
 
-  public IscsiLun bpsWrMax(Double bpsWrMax) {
+  public IscsiLun bpsWrMax(Long bpsWrMax) {
     
     this.bpsWrMax = bpsWrMax;
     return this;
@@ -411,17 +411,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsWrMax() {
+  public Long getBpsWrMax() {
     return bpsWrMax;
   }
 
 
-  public void setBpsWrMax(Double bpsWrMax) {
+  public void setBpsWrMax(Long bpsWrMax) {
     this.bpsWrMax = bpsWrMax;
   }
 
 
-  public IscsiLun bpsWrMaxLength(Double bpsWrMaxLength) {
+  public IscsiLun bpsWrMaxLength(Long bpsWrMaxLength) {
     
     this.bpsWrMaxLength = bpsWrMaxLength;
     return this;
@@ -434,12 +434,12 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBpsWrMaxLength() {
+  public Long getBpsWrMaxLength() {
     return bpsWrMaxLength;
   }
 
 
-  public void setBpsWrMaxLength(Double bpsWrMaxLength) {
+  public void setBpsWrMaxLength(Long bpsWrMaxLength) {
     this.bpsWrMaxLength = bpsWrMaxLength;
   }
 
@@ -513,7 +513,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun ioSize(Double ioSize) {
+  public IscsiLun ioSize(Long ioSize) {
     
     this.ioSize = ioSize;
     return this;
@@ -526,17 +526,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIoSize() {
+  public Long getIoSize() {
     return ioSize;
   }
 
 
-  public void setIoSize(Double ioSize) {
+  public void setIoSize(Long ioSize) {
     this.ioSize = ioSize;
   }
 
 
-  public IscsiLun iops(Double iops) {
+  public IscsiLun iops(Long iops) {
     
     this.iops = iops;
     return this;
@@ -549,17 +549,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIops() {
+  public Long getIops() {
     return iops;
   }
 
 
-  public void setIops(Double iops) {
+  public void setIops(Long iops) {
     this.iops = iops;
   }
 
 
-  public IscsiLun iopsMax(Double iopsMax) {
+  public IscsiLun iopsMax(Long iopsMax) {
     
     this.iopsMax = iopsMax;
     return this;
@@ -572,17 +572,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsMax() {
+  public Long getIopsMax() {
     return iopsMax;
   }
 
 
-  public void setIopsMax(Double iopsMax) {
+  public void setIopsMax(Long iopsMax) {
     this.iopsMax = iopsMax;
   }
 
 
-  public IscsiLun iopsMaxLength(Double iopsMaxLength) {
+  public IscsiLun iopsMaxLength(Long iopsMaxLength) {
     
     this.iopsMaxLength = iopsMaxLength;
     return this;
@@ -595,17 +595,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsMaxLength() {
+  public Long getIopsMaxLength() {
     return iopsMaxLength;
   }
 
 
-  public void setIopsMaxLength(Double iopsMaxLength) {
+  public void setIopsMaxLength(Long iopsMaxLength) {
     this.iopsMaxLength = iopsMaxLength;
   }
 
 
-  public IscsiLun iopsRd(Double iopsRd) {
+  public IscsiLun iopsRd(Long iopsRd) {
     
     this.iopsRd = iopsRd;
     return this;
@@ -618,17 +618,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsRd() {
+  public Long getIopsRd() {
     return iopsRd;
   }
 
 
-  public void setIopsRd(Double iopsRd) {
+  public void setIopsRd(Long iopsRd) {
     this.iopsRd = iopsRd;
   }
 
 
-  public IscsiLun iopsRdMax(Double iopsRdMax) {
+  public IscsiLun iopsRdMax(Long iopsRdMax) {
     
     this.iopsRdMax = iopsRdMax;
     return this;
@@ -641,17 +641,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsRdMax() {
+  public Long getIopsRdMax() {
     return iopsRdMax;
   }
 
 
-  public void setIopsRdMax(Double iopsRdMax) {
+  public void setIopsRdMax(Long iopsRdMax) {
     this.iopsRdMax = iopsRdMax;
   }
 
 
-  public IscsiLun iopsRdMaxLength(Double iopsRdMaxLength) {
+  public IscsiLun iopsRdMaxLength(Long iopsRdMaxLength) {
     
     this.iopsRdMaxLength = iopsRdMaxLength;
     return this;
@@ -664,17 +664,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsRdMaxLength() {
+  public Long getIopsRdMaxLength() {
     return iopsRdMaxLength;
   }
 
 
-  public void setIopsRdMaxLength(Double iopsRdMaxLength) {
+  public void setIopsRdMaxLength(Long iopsRdMaxLength) {
     this.iopsRdMaxLength = iopsRdMaxLength;
   }
 
 
-  public IscsiLun iopsWr(Double iopsWr) {
+  public IscsiLun iopsWr(Long iopsWr) {
     
     this.iopsWr = iopsWr;
     return this;
@@ -687,17 +687,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsWr() {
+  public Long getIopsWr() {
     return iopsWr;
   }
 
 
-  public void setIopsWr(Double iopsWr) {
+  public void setIopsWr(Long iopsWr) {
     this.iopsWr = iopsWr;
   }
 
 
-  public IscsiLun iopsWrMax(Double iopsWrMax) {
+  public IscsiLun iopsWrMax(Long iopsWrMax) {
     
     this.iopsWrMax = iopsWrMax;
     return this;
@@ -710,17 +710,17 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsWrMax() {
+  public Long getIopsWrMax() {
     return iopsWrMax;
   }
 
 
-  public void setIopsWrMax(Double iopsWrMax) {
+  public void setIopsWrMax(Long iopsWrMax) {
     this.iopsWrMax = iopsWrMax;
   }
 
 
-  public IscsiLun iopsWrMaxLength(Double iopsWrMaxLength) {
+  public IscsiLun iopsWrMaxLength(Long iopsWrMaxLength) {
     
     this.iopsWrMaxLength = iopsWrMaxLength;
     return this;
@@ -733,12 +733,12 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getIopsWrMaxLength() {
+  public Long getIopsWrMaxLength() {
     return iopsWrMaxLength;
   }
 
 
-  public void setIopsWrMaxLength(Double iopsWrMaxLength) {
+  public void setIopsWrMaxLength(Long iopsWrMaxLength) {
     this.iopsWrMaxLength = iopsWrMaxLength;
   }
 
@@ -912,7 +912,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun sharedSize(Double sharedSize) {
+  public IscsiLun sharedSize(Long sharedSize) {
     
     this.sharedSize = sharedSize;
     return this;
@@ -925,12 +925,12 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSharedSize() {
+  public Long getSharedSize() {
     return sharedSize;
   }
 
 
-  public void setSharedSize(Double sharedSize) {
+  public void setSharedSize(Long sharedSize) {
     this.sharedSize = sharedSize;
   }
 
@@ -981,7 +981,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun stripeSize(Double stripeSize) {
+  public IscsiLun stripeSize(Long stripeSize) {
     
     this.stripeSize = stripeSize;
     return this;
@@ -994,12 +994,12 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeSize() {
+  public Long getStripeSize() {
     return stripeSize;
   }
 
 
-  public void setStripeSize(Double stripeSize) {
+  public void setStripeSize(Long stripeSize) {
     this.stripeSize = stripeSize;
   }
 
@@ -1027,7 +1027,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun uniqueSize(Double uniqueSize) {
+  public IscsiLun uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -1040,12 +1040,12 @@ public class IscsiLun {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 

@@ -54,7 +54,7 @@ public class ITVmTemplate extends ITBase {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
     params.add(new VmCreationParams().name("tower-sdk-test-template-vm" + System.currentTimeMillis()).cpuCores(1)
-        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+        .cpuSockets(1).memory(4294967296L).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     WithTaskVm createResult = vmApi.createVm(params).get(0);
@@ -98,7 +98,8 @@ public class ITVmTemplate extends ITBase {
               .name("tower-sdk-test-clone-vm-template-update" + System.currentTimeMillis()))
           .where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
       waitForTaskSucceed(
-          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
+          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())))
+              .get(0).getTaskId());
       assertThat(result).as("check result of cloneVmTemplateFromVmAndUpdateAndDelete").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -124,7 +125,8 @@ public class ITVmTemplate extends ITBase {
               .name("tower-sdk-test-clone-vm-template-update" + System.currentTimeMillis()))
           .where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
       waitForTaskSucceed(
-          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
+          api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())))
+              .get(0).getTaskId());
       assertThat(result).as("check result of convertVmTemplateFromVmAndDelete").isNotNull();
       vm = null;
     } catch (ApiException e) {
@@ -191,7 +193,8 @@ public class ITVmTemplate extends ITBase {
         api, "getVmTemplates", new TypeToken<List<VmTemplate>>() {
         }.getClass(), GetVmTemplatesRequestBody.class);
     waitForTaskSucceed(
-        api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId()))).get(0).getTaskId());
+        api.deleteVmTemplate(new VmTemplateDeletionParams().where(new VmTemplateWhereInput().id(template.getId())))
+            .get(0).getTaskId());
   }
 
   @Test(groups = { "need_vm", "need_vm_template" })

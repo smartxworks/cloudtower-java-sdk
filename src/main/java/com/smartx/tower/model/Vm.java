@@ -123,7 +123,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE = "guest_used_size";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE)
-  private Double guestUsedSize;
+  private Long guestUsedSize;
 
   public static final String SERIALIZED_NAME_HA = "ha";
   @SerializedName(SERIALIZED_NAME_HA)
@@ -187,11 +187,11 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES = "logical_size_bytes";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES)
-  private Double logicalSizeBytes;
+  private Long logicalSizeBytes;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -207,7 +207,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
-  private Double memory;
+  private Long memory;
 
   public static final String SERIALIZED_NAME_MEMORY_USAGE = "memory_usage";
   @SerializedName(SERIALIZED_NAME_MEMORY_USAGE)
@@ -243,11 +243,11 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_PROVISIONED_SIZE = "provisioned_size";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_SIZE)
-  private Double provisionedSize;
+  private Long provisionedSize;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshot_plan";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
@@ -263,7 +263,7 @@ public class Vm {
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
@@ -692,7 +692,7 @@ public class Vm {
   }
 
 
-  public Vm guestUsedSize(Double guestUsedSize) {
+  public Vm guestUsedSize(Long guestUsedSize) {
     
     this.guestUsedSize = guestUsedSize;
     return this;
@@ -705,12 +705,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSize() {
+  public Long getGuestUsedSize() {
     return guestUsedSize;
   }
 
 
-  public void setGuestUsedSize(Double guestUsedSize) {
+  public void setGuestUsedSize(Long guestUsedSize) {
     this.guestUsedSize = guestUsedSize;
   }
 
@@ -1068,7 +1068,7 @@ public class Vm {
   }
 
 
-  public Vm logicalSizeBytes(Double logicalSizeBytes) {
+  public Vm logicalSizeBytes(Long logicalSizeBytes) {
     
     this.logicalSizeBytes = logicalSizeBytes;
     return this;
@@ -1081,17 +1081,17 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytes() {
+  public Long getLogicalSizeBytes() {
     return logicalSizeBytes;
   }
 
 
-  public void setLogicalSizeBytes(Double logicalSizeBytes) {
+  public void setLogicalSizeBytes(Long logicalSizeBytes) {
     this.logicalSizeBytes = logicalSizeBytes;
   }
 
 
-  public Vm maxBandwidth(Double maxBandwidth) {
+  public Vm maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -1104,12 +1104,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
@@ -1183,7 +1183,7 @@ public class Vm {
   }
 
 
-  public Vm memory(Double memory) {
+  public Vm memory(Long memory) {
     
     this.memory = memory;
     return this;
@@ -1196,12 +1196,12 @@ public class Vm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMemory() {
+  public Long getMemory() {
     return memory;
   }
 
 
-  public void setMemory(Double memory) {
+  public void setMemory(Long memory) {
     this.memory = memory;
   }
 
@@ -1395,7 +1395,7 @@ public class Vm {
   }
 
 
-  public Vm provisionedSize(Double provisionedSize) {
+  public Vm provisionedSize(Long provisionedSize) {
     
     this.provisionedSize = provisionedSize;
     return this;
@@ -1408,17 +1408,17 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedSize() {
+  public Long getProvisionedSize() {
     return provisionedSize;
   }
 
 
-  public void setProvisionedSize(Double provisionedSize) {
+  public void setProvisionedSize(Long provisionedSize) {
     this.provisionedSize = provisionedSize;
   }
 
 
-  public Vm size(Double size) {
+  public Vm size(Long size) {
     
     this.size = size;
     return this;
@@ -1431,12 +1431,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
@@ -1518,7 +1518,7 @@ public class Vm {
   }
 
 
-  public Vm uniqueSize(Double uniqueSize) {
+  public Vm uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -1531,12 +1531,12 @@ public class Vm {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 

@@ -307,35 +307,35 @@ public class ConsistencyGroupSnapshotWhereInput {
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_GT = "unique_size_gt";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_GT)
-  private Double uniqueSizeGt;
+  private Long uniqueSizeGt;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_GTE = "unique_size_gte";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_GTE)
-  private Double uniqueSizeGte;
+  private Long uniqueSizeGte;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_IN = "unique_size_in";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_IN)
-  private List<Double> uniqueSizeIn = null;
+  private List<Long> uniqueSizeIn = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_LT = "unique_size_lt";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_LT)
-  private Double uniqueSizeLt;
+  private Long uniqueSizeLt;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_LTE = "unique_size_lte";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_LTE)
-  private Double uniqueSizeLte;
+  private Long uniqueSizeLte;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_NOT = "unique_size_not";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_NOT)
-  private Double uniqueSizeNot;
+  private Long uniqueSizeNot;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_NOT_IN = "unique_size_not_in";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_NOT_IN)
-  private List<Double> uniqueSizeNotIn = null;
+  private List<Long> uniqueSizeNotIn = null;
 
   public ConsistencyGroupSnapshotWhereInput() { 
   }
@@ -1985,7 +1985,7 @@ public class ConsistencyGroupSnapshotWhereInput {
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSize(Double uniqueSize) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -1998,17 +1998,17 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeGt(Double uniqueSizeGt) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeGt(Long uniqueSizeGt) {
     
     this.uniqueSizeGt = uniqueSizeGt;
     return this;
@@ -2021,17 +2021,17 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeGt() {
+  public Long getUniqueSizeGt() {
     return uniqueSizeGt;
   }
 
 
-  public void setUniqueSizeGt(Double uniqueSizeGt) {
+  public void setUniqueSizeGt(Long uniqueSizeGt) {
     this.uniqueSizeGt = uniqueSizeGt;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeGte(Double uniqueSizeGte) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeGte(Long uniqueSizeGte) {
     
     this.uniqueSizeGte = uniqueSizeGte;
     return this;
@@ -2044,25 +2044,25 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeGte() {
+  public Long getUniqueSizeGte() {
     return uniqueSizeGte;
   }
 
 
-  public void setUniqueSizeGte(Double uniqueSizeGte) {
+  public void setUniqueSizeGte(Long uniqueSizeGte) {
     this.uniqueSizeGte = uniqueSizeGte;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeIn(List<Double> uniqueSizeIn) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeIn(List<Long> uniqueSizeIn) {
     
     this.uniqueSizeIn = uniqueSizeIn;
     return this;
   }
 
-  public ConsistencyGroupSnapshotWhereInput addUniqueSizeInItem(Double uniqueSizeInItem) {
+  public ConsistencyGroupSnapshotWhereInput addUniqueSizeInItem(Long uniqueSizeInItem) {
     if (this.uniqueSizeIn == null) {
-      this.uniqueSizeIn = new ArrayList<Double>();
+      this.uniqueSizeIn = new ArrayList<Long>();
     }
     this.uniqueSizeIn.add(uniqueSizeInItem);
     return this;
@@ -2075,17 +2075,17 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUniqueSizeIn() {
+  public List<Long> getUniqueSizeIn() {
     return uniqueSizeIn;
   }
 
 
-  public void setUniqueSizeIn(List<Double> uniqueSizeIn) {
+  public void setUniqueSizeIn(List<Long> uniqueSizeIn) {
     this.uniqueSizeIn = uniqueSizeIn;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeLt(Double uniqueSizeLt) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeLt(Long uniqueSizeLt) {
     
     this.uniqueSizeLt = uniqueSizeLt;
     return this;
@@ -2098,17 +2098,17 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeLt() {
+  public Long getUniqueSizeLt() {
     return uniqueSizeLt;
   }
 
 
-  public void setUniqueSizeLt(Double uniqueSizeLt) {
+  public void setUniqueSizeLt(Long uniqueSizeLt) {
     this.uniqueSizeLt = uniqueSizeLt;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeLte(Double uniqueSizeLte) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeLte(Long uniqueSizeLte) {
     
     this.uniqueSizeLte = uniqueSizeLte;
     return this;
@@ -2121,17 +2121,17 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeLte() {
+  public Long getUniqueSizeLte() {
     return uniqueSizeLte;
   }
 
 
-  public void setUniqueSizeLte(Double uniqueSizeLte) {
+  public void setUniqueSizeLte(Long uniqueSizeLte) {
     this.uniqueSizeLte = uniqueSizeLte;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeNot(Double uniqueSizeNot) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeNot(Long uniqueSizeNot) {
     
     this.uniqueSizeNot = uniqueSizeNot;
     return this;
@@ -2144,25 +2144,25 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeNot() {
+  public Long getUniqueSizeNot() {
     return uniqueSizeNot;
   }
 
 
-  public void setUniqueSizeNot(Double uniqueSizeNot) {
+  public void setUniqueSizeNot(Long uniqueSizeNot) {
     this.uniqueSizeNot = uniqueSizeNot;
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput uniqueSizeNotIn(List<Double> uniqueSizeNotIn) {
+  public ConsistencyGroupSnapshotWhereInput uniqueSizeNotIn(List<Long> uniqueSizeNotIn) {
     
     this.uniqueSizeNotIn = uniqueSizeNotIn;
     return this;
   }
 
-  public ConsistencyGroupSnapshotWhereInput addUniqueSizeNotInItem(Double uniqueSizeNotInItem) {
+  public ConsistencyGroupSnapshotWhereInput addUniqueSizeNotInItem(Long uniqueSizeNotInItem) {
     if (this.uniqueSizeNotIn == null) {
-      this.uniqueSizeNotIn = new ArrayList<Double>();
+      this.uniqueSizeNotIn = new ArrayList<Long>();
     }
     this.uniqueSizeNotIn.add(uniqueSizeNotInItem);
     return this;
@@ -2175,12 +2175,12 @@ public class ConsistencyGroupSnapshotWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUniqueSizeNotIn() {
+  public List<Long> getUniqueSizeNotIn() {
     return uniqueSizeNotIn;
   }
 
 
-  public void setUniqueSizeNotIn(List<Double> uniqueSizeNotIn) {
+  public void setUniqueSizeNotIn(List<Long> uniqueSizeNotIn) {
     this.uniqueSizeNotIn = uniqueSizeNotIn;
   }
 

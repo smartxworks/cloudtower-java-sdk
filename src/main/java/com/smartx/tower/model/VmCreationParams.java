@@ -44,7 +44,7 @@ public class VmCreationParams {
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -84,7 +84,7 @@ public class VmCreationParams {
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
-  private Double memory;
+  private Long memory;
 
   public static final String SERIALIZED_NAME_CPU_CORES = "cpu_cores";
   @SerializedName(SERIALIZED_NAME_CPU_CORES)
@@ -144,7 +144,7 @@ public class VmCreationParams {
   }
 
 
-  public VmCreationParams maxBandwidth(Double maxBandwidth) {
+  public VmCreationParams maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -157,12 +157,12 @@ public class VmCreationParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
@@ -379,7 +379,7 @@ public class VmCreationParams {
   }
 
 
-  public VmCreationParams memory(Double memory) {
+  public VmCreationParams memory(Long memory) {
     
     this.memory = memory;
     return this;
@@ -392,12 +392,12 @@ public class VmCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMemory() {
+  public Long getMemory() {
     return memory;
   }
 
 
-  public void setMemory(Double memory) {
+  public void setMemory(Long memory) {
     this.memory = memory;
   }
 

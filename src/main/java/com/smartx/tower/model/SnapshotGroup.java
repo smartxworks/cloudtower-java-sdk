@@ -75,7 +75,7 @@ public class SnapshotGroup {
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES = "logical_size_bytes";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES)
-  private Double logicalSizeBytes;
+  private Long logicalSizeBytes;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -307,7 +307,7 @@ public class SnapshotGroup {
   }
 
 
-  public SnapshotGroup logicalSizeBytes(Double logicalSizeBytes) {
+  public SnapshotGroup logicalSizeBytes(Long logicalSizeBytes) {
     
     this.logicalSizeBytes = logicalSizeBytes;
     return this;
@@ -320,12 +320,12 @@ public class SnapshotGroup {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getLogicalSizeBytes() {
+  public Long getLogicalSizeBytes() {
     return logicalSizeBytes;
   }
 
 
-  public void setLogicalSizeBytes(Double logicalSizeBytes) {
+  public void setLogicalSizeBytes(Long logicalSizeBytes) {
     this.logicalSizeBytes = logicalSizeBytes;
   }
 
