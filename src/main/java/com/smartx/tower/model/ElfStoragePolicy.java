@@ -66,7 +66,7 @@ public class ElfStoragePolicy {
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
-  private Double stripeSize;
+  private Long stripeSize;
 
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
@@ -259,7 +259,7 @@ public class ElfStoragePolicy {
   }
 
 
-  public ElfStoragePolicy stripeSize(Double stripeSize) {
+  public ElfStoragePolicy stripeSize(Long stripeSize) {
     
     this.stripeSize = stripeSize;
     return this;
@@ -272,12 +272,12 @@ public class ElfStoragePolicy {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeSize() {
+  public Long getStripeSize() {
     return stripeSize;
   }
 
 
-  public void setStripeSize(Double stripeSize) {
+  public void setStripeSize(Long stripeSize) {
     this.stripeSize = stripeSize;
   }
 

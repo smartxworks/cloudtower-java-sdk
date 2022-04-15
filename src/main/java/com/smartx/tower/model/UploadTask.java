@@ -38,7 +38,7 @@ public class UploadTask {
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE = "chunk_size";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE)
-  private Double chunkSize;
+  private Long chunkSize;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK = "current_chunk";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK)
@@ -58,7 +58,7 @@ public class UploadTask {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_STARTED_AT = "started_at";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
@@ -98,7 +98,7 @@ public class UploadTask {
   }
 
 
-  public UploadTask chunkSize(Double chunkSize) {
+  public UploadTask chunkSize(Long chunkSize) {
     
     this.chunkSize = chunkSize;
     return this;
@@ -111,12 +111,12 @@ public class UploadTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getChunkSize() {
+  public Long getChunkSize() {
     return chunkSize;
   }
 
 
-  public void setChunkSize(Double chunkSize) {
+  public void setChunkSize(Long chunkSize) {
     this.chunkSize = chunkSize;
   }
 
@@ -213,7 +213,7 @@ public class UploadTask {
   }
 
 
-  public UploadTask size(Double size) {
+  public UploadTask size(Long size) {
     
     this.size = size;
     return this;
@@ -226,12 +226,12 @@ public class UploadTask {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

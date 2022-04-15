@@ -36,7 +36,7 @@ public class VmVolumeCreationParams {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Integer size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SHARING = "sharing";
   @SerializedName(SERIALIZED_NAME_SHARING)
@@ -76,7 +76,7 @@ public class VmVolumeCreationParams {
   }
 
 
-  public VmVolumeCreationParams size(Integer size) {
+  public VmVolumeCreationParams size(Long size) {
     
     this.size = size;
     return this;
@@ -89,12 +89,12 @@ public class VmVolumeCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Integer getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Integer size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

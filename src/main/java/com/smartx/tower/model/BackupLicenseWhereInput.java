@@ -201,35 +201,35 @@ public class BackupLicenseWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY = "max_capacity";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY)
-  private Double maxCapacity;
+  private Long maxCapacity;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_GT = "max_capacity_gt";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_GT)
-  private Double maxCapacityGt;
+  private Long maxCapacityGt;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_GTE = "max_capacity_gte";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_GTE)
-  private Double maxCapacityGte;
+  private Long maxCapacityGte;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_IN = "max_capacity_in";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_IN)
-  private List<Double> maxCapacityIn = null;
+  private List<Long> maxCapacityIn = null;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_LT = "max_capacity_lt";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_LT)
-  private Double maxCapacityLt;
+  private Long maxCapacityLt;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_LTE = "max_capacity_lte";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_LTE)
-  private Double maxCapacityLte;
+  private Long maxCapacityLte;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_NOT = "max_capacity_not";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_NOT)
-  private Double maxCapacityNot;
+  private Long maxCapacityNot;
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY_NOT_IN = "max_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY_NOT_IN)
-  private List<Double> maxCapacityNotIn = null;
+  private List<Long> maxCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_N_O_T = "NOT";
   @SerializedName(SERIALIZED_NAME_N_O_T)
@@ -1321,7 +1321,7 @@ public class BackupLicenseWhereInput {
   }
 
 
-  public BackupLicenseWhereInput maxCapacity(Double maxCapacity) {
+  public BackupLicenseWhereInput maxCapacity(Long maxCapacity) {
     
     this.maxCapacity = maxCapacity;
     return this;
@@ -1334,17 +1334,17 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxCapacity() {
+  public Long getMaxCapacity() {
     return maxCapacity;
   }
 
 
-  public void setMaxCapacity(Double maxCapacity) {
+  public void setMaxCapacity(Long maxCapacity) {
     this.maxCapacity = maxCapacity;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityGt(Double maxCapacityGt) {
+  public BackupLicenseWhereInput maxCapacityGt(Long maxCapacityGt) {
     
     this.maxCapacityGt = maxCapacityGt;
     return this;
@@ -1357,17 +1357,17 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxCapacityGt() {
+  public Long getMaxCapacityGt() {
     return maxCapacityGt;
   }
 
 
-  public void setMaxCapacityGt(Double maxCapacityGt) {
+  public void setMaxCapacityGt(Long maxCapacityGt) {
     this.maxCapacityGt = maxCapacityGt;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityGte(Double maxCapacityGte) {
+  public BackupLicenseWhereInput maxCapacityGte(Long maxCapacityGte) {
     
     this.maxCapacityGte = maxCapacityGte;
     return this;
@@ -1380,25 +1380,25 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxCapacityGte() {
+  public Long getMaxCapacityGte() {
     return maxCapacityGte;
   }
 
 
-  public void setMaxCapacityGte(Double maxCapacityGte) {
+  public void setMaxCapacityGte(Long maxCapacityGte) {
     this.maxCapacityGte = maxCapacityGte;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityIn(List<Double> maxCapacityIn) {
+  public BackupLicenseWhereInput maxCapacityIn(List<Long> maxCapacityIn) {
     
     this.maxCapacityIn = maxCapacityIn;
     return this;
   }
 
-  public BackupLicenseWhereInput addMaxCapacityInItem(Double maxCapacityInItem) {
+  public BackupLicenseWhereInput addMaxCapacityInItem(Long maxCapacityInItem) {
     if (this.maxCapacityIn == null) {
-      this.maxCapacityIn = new ArrayList<Double>();
+      this.maxCapacityIn = new ArrayList<Long>();
     }
     this.maxCapacityIn.add(maxCapacityInItem);
     return this;
@@ -1411,17 +1411,17 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxCapacityIn() {
+  public List<Long> getMaxCapacityIn() {
     return maxCapacityIn;
   }
 
 
-  public void setMaxCapacityIn(List<Double> maxCapacityIn) {
+  public void setMaxCapacityIn(List<Long> maxCapacityIn) {
     this.maxCapacityIn = maxCapacityIn;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityLt(Double maxCapacityLt) {
+  public BackupLicenseWhereInput maxCapacityLt(Long maxCapacityLt) {
     
     this.maxCapacityLt = maxCapacityLt;
     return this;
@@ -1434,17 +1434,17 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxCapacityLt() {
+  public Long getMaxCapacityLt() {
     return maxCapacityLt;
   }
 
 
-  public void setMaxCapacityLt(Double maxCapacityLt) {
+  public void setMaxCapacityLt(Long maxCapacityLt) {
     this.maxCapacityLt = maxCapacityLt;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityLte(Double maxCapacityLte) {
+  public BackupLicenseWhereInput maxCapacityLte(Long maxCapacityLte) {
     
     this.maxCapacityLte = maxCapacityLte;
     return this;
@@ -1457,17 +1457,17 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxCapacityLte() {
+  public Long getMaxCapacityLte() {
     return maxCapacityLte;
   }
 
 
-  public void setMaxCapacityLte(Double maxCapacityLte) {
+  public void setMaxCapacityLte(Long maxCapacityLte) {
     this.maxCapacityLte = maxCapacityLte;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityNot(Double maxCapacityNot) {
+  public BackupLicenseWhereInput maxCapacityNot(Long maxCapacityNot) {
     
     this.maxCapacityNot = maxCapacityNot;
     return this;
@@ -1480,25 +1480,25 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxCapacityNot() {
+  public Long getMaxCapacityNot() {
     return maxCapacityNot;
   }
 
 
-  public void setMaxCapacityNot(Double maxCapacityNot) {
+  public void setMaxCapacityNot(Long maxCapacityNot) {
     this.maxCapacityNot = maxCapacityNot;
   }
 
 
-  public BackupLicenseWhereInput maxCapacityNotIn(List<Double> maxCapacityNotIn) {
+  public BackupLicenseWhereInput maxCapacityNotIn(List<Long> maxCapacityNotIn) {
     
     this.maxCapacityNotIn = maxCapacityNotIn;
     return this;
   }
 
-  public BackupLicenseWhereInput addMaxCapacityNotInItem(Double maxCapacityNotInItem) {
+  public BackupLicenseWhereInput addMaxCapacityNotInItem(Long maxCapacityNotInItem) {
     if (this.maxCapacityNotIn == null) {
-      this.maxCapacityNotIn = new ArrayList<Double>();
+      this.maxCapacityNotIn = new ArrayList<Long>();
     }
     this.maxCapacityNotIn.add(maxCapacityNotInItem);
     return this;
@@ -1511,12 +1511,12 @@ public class BackupLicenseWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxCapacityNotIn() {
+  public List<Long> getMaxCapacityNotIn() {
     return maxCapacityNotIn;
   }
 
 
-  public void setMaxCapacityNotIn(List<Double> maxCapacityNotIn) {
+  public void setMaxCapacityNotIn(List<Long> maxCapacityNotIn) {
     this.maxCapacityNotIn = maxCapacityNotIn;
   }
 

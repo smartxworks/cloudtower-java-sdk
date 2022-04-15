@@ -75,7 +75,7 @@ public class IscsiLunSnapshot {
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public IscsiLunSnapshot() { 
   }
@@ -295,7 +295,7 @@ public class IscsiLunSnapshot {
   }
 
 
-  public IscsiLunSnapshot uniqueSize(Double uniqueSize) {
+  public IscsiLunSnapshot uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -308,12 +308,12 @@ public class IscsiLunSnapshot {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 

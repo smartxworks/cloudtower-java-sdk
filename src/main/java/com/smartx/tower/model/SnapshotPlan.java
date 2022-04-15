@@ -105,7 +105,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES = "logical_size_bytes";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES)
-  private Double logicalSizeBytes;
+  private Long logicalSizeBytes;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM = "manual_delete_num";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM)
@@ -133,7 +133,7 @@ public class SnapshotPlan {
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES = "physical_size_bytes";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES)
-  private Double physicalSizeBytes;
+  private Long physicalSizeBytes;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM = "remain_snapshot_num";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM)
@@ -539,7 +539,7 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan logicalSizeBytes(Double logicalSizeBytes) {
+  public SnapshotPlan logicalSizeBytes(Long logicalSizeBytes) {
     
     this.logicalSizeBytes = logicalSizeBytes;
     return this;
@@ -552,12 +552,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getLogicalSizeBytes() {
+  public Long getLogicalSizeBytes() {
     return logicalSizeBytes;
   }
 
 
-  public void setLogicalSizeBytes(Double logicalSizeBytes) {
+  public void setLogicalSizeBytes(Long logicalSizeBytes) {
     this.logicalSizeBytes = logicalSizeBytes;
   }
 
@@ -700,7 +700,7 @@ public class SnapshotPlan {
   }
 
 
-  public SnapshotPlan physicalSizeBytes(Double physicalSizeBytes) {
+  public SnapshotPlan physicalSizeBytes(Long physicalSizeBytes) {
     
     this.physicalSizeBytes = physicalSizeBytes;
     return this;
@@ -713,12 +713,12 @@ public class SnapshotPlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPhysicalSizeBytes() {
+  public Long getPhysicalSizeBytes() {
     return physicalSizeBytes;
   }
 
 
-  public void setPhysicalSizeBytes(Double physicalSizeBytes) {
+  public void setPhysicalSizeBytes(Long physicalSizeBytes) {
     this.physicalSizeBytes = physicalSizeBytes;
   }
 

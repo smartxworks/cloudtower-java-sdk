@@ -51,7 +51,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES = "allocatable_memory_bytes";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES)
-  private Double allocatableMemoryBytes;
+  private Long allocatableMemoryBytes;
 
   public static final String SERIALIZED_NAME_CHUNK_ID = "chunk_id";
   @SerializedName(SERIALIZED_NAME_CHUNK_ID)
@@ -79,7 +79,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE = "cpu_hz_per_core";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE)
-  private Double cpuHzPerCore;
+  private Long cpuHzPerCore;
 
   public static final String SERIALIZED_NAME_CPU_MODEL = "cpu_model";
   @SerializedName(SERIALIZED_NAME_CPU_MODEL)
@@ -99,11 +99,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
-  private Double failureDataSpace;
+  private Long failureDataSpace;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY = "hdd_data_capacity";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY)
-  private Double hddDataCapacity;
+  private Long hddDataCapacity;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT = "hdd_disk_count";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT)
@@ -163,7 +163,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES = "os_memory_bytes";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES)
-  private Double osMemoryBytes;
+  private Long osMemoryBytes;
 
   public static final String SERIALIZED_NAME_OS_VERSION = "os_version";
   @SerializedName(SERIALIZED_NAME_OS_VERSION)
@@ -171,7 +171,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY = "pmem_dimm_capacity";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY)
-  private Double pmemDimmCapacity;
+  private Long pmemDimmCapacity;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT = "pmem_dimm_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT)
@@ -191,11 +191,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
-  private Double provisionedMemoryBytes;
+  private Long provisionedMemoryBytes;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES = "running_pause_vm_memory_bytes";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES)
-  private Double runningPauseVmMemoryBytes;
+  private Long runningPauseVmMemoryBytes;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
@@ -203,11 +203,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_SCVM_CPU = "scvm_cpu";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU)
-  private Double scvmCpu;
+  private Integer scvmCpu;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY = "scvm_memory";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY)
-  private Double scvmMemory;
+  private Long scvmMemory;
 
   public static final String SERIALIZED_NAME_SCVM_NAME = "scvm_name";
   @SerializedName(SERIALIZED_NAME_SCVM_NAME)
@@ -219,7 +219,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY = "ssd_data_capacity";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY)
-  private Double ssdDataCapacity;
+  private Long ssdDataCapacity;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT = "ssd_disk_count";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT)
@@ -243,7 +243,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
-  private Double totalCacheCapacity;
+  private Long totalCacheCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -251,7 +251,7 @@ public class Host {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
@@ -259,11 +259,11 @@ public class Host {
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
-  private Double totalDataCapacity;
+  private Long totalDataCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
@@ -271,15 +271,15 @@ public class Host {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Double usedCpuHz;
+  private Long usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Double usedMemoryBytes;
+  private Long usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -331,7 +331,7 @@ public class Host {
   }
 
 
-  public Host allocatableMemoryBytes(Double allocatableMemoryBytes) {
+  public Host allocatableMemoryBytes(Long allocatableMemoryBytes) {
     
     this.allocatableMemoryBytes = allocatableMemoryBytes;
     return this;
@@ -344,12 +344,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAllocatableMemoryBytes() {
+  public Long getAllocatableMemoryBytes() {
     return allocatableMemoryBytes;
   }
 
 
-  public void setAllocatableMemoryBytes(Double allocatableMemoryBytes) {
+  public void setAllocatableMemoryBytes(Long allocatableMemoryBytes) {
     this.allocatableMemoryBytes = allocatableMemoryBytes;
   }
 
@@ -502,7 +502,7 @@ public class Host {
   }
 
 
-  public Host cpuHzPerCore(Double cpuHzPerCore) {
+  public Host cpuHzPerCore(Long cpuHzPerCore) {
     
     this.cpuHzPerCore = cpuHzPerCore;
     return this;
@@ -515,12 +515,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCpuHzPerCore() {
+  public Long getCpuHzPerCore() {
     return cpuHzPerCore;
   }
 
 
-  public void setCpuHzPerCore(Double cpuHzPerCore) {
+  public void setCpuHzPerCore(Long cpuHzPerCore) {
     this.cpuHzPerCore = cpuHzPerCore;
   }
 
@@ -630,7 +630,7 @@ public class Host {
   }
 
 
-  public Host failureDataSpace(Double failureDataSpace) {
+  public Host failureDataSpace(Long failureDataSpace) {
     
     this.failureDataSpace = failureDataSpace;
     return this;
@@ -643,17 +643,17 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getFailureDataSpace() {
+  public Long getFailureDataSpace() {
     return failureDataSpace;
   }
 
 
-  public void setFailureDataSpace(Double failureDataSpace) {
+  public void setFailureDataSpace(Long failureDataSpace) {
     this.failureDataSpace = failureDataSpace;
   }
 
 
-  public Host hddDataCapacity(Double hddDataCapacity) {
+  public Host hddDataCapacity(Long hddDataCapacity) {
     
     this.hddDataCapacity = hddDataCapacity;
     return this;
@@ -666,12 +666,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getHddDataCapacity() {
+  public Long getHddDataCapacity() {
     return hddDataCapacity;
   }
 
 
-  public void setHddDataCapacity(Double hddDataCapacity) {
+  public void setHddDataCapacity(Long hddDataCapacity) {
     this.hddDataCapacity = hddDataCapacity;
   }
 
@@ -1014,7 +1014,7 @@ public class Host {
   }
 
 
-  public Host osMemoryBytes(Double osMemoryBytes) {
+  public Host osMemoryBytes(Long osMemoryBytes) {
     
     this.osMemoryBytes = osMemoryBytes;
     return this;
@@ -1027,12 +1027,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getOsMemoryBytes() {
+  public Long getOsMemoryBytes() {
     return osMemoryBytes;
   }
 
 
-  public void setOsMemoryBytes(Double osMemoryBytes) {
+  public void setOsMemoryBytes(Long osMemoryBytes) {
     this.osMemoryBytes = osMemoryBytes;
   }
 
@@ -1060,7 +1060,7 @@ public class Host {
   }
 
 
-  public Host pmemDimmCapacity(Double pmemDimmCapacity) {
+  public Host pmemDimmCapacity(Long pmemDimmCapacity) {
     
     this.pmemDimmCapacity = pmemDimmCapacity;
     return this;
@@ -1073,12 +1073,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getPmemDimmCapacity() {
+  public Long getPmemDimmCapacity() {
     return pmemDimmCapacity;
   }
 
 
-  public void setPmemDimmCapacity(Double pmemDimmCapacity) {
+  public void setPmemDimmCapacity(Long pmemDimmCapacity) {
     this.pmemDimmCapacity = pmemDimmCapacity;
   }
 
@@ -1183,7 +1183,7 @@ public class Host {
   }
 
 
-  public Host provisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public Host provisionedMemoryBytes(Long provisionedMemoryBytes) {
     
     this.provisionedMemoryBytes = provisionedMemoryBytes;
     return this;
@@ -1196,17 +1196,17 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getProvisionedMemoryBytes() {
+  public Long getProvisionedMemoryBytes() {
     return provisionedMemoryBytes;
   }
 
 
-  public void setProvisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public void setProvisionedMemoryBytes(Long provisionedMemoryBytes) {
     this.provisionedMemoryBytes = provisionedMemoryBytes;
   }
 
 
-  public Host runningPauseVmMemoryBytes(Double runningPauseVmMemoryBytes) {
+  public Host runningPauseVmMemoryBytes(Long runningPauseVmMemoryBytes) {
     
     this.runningPauseVmMemoryBytes = runningPauseVmMemoryBytes;
     return this;
@@ -1219,12 +1219,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getRunningPauseVmMemoryBytes() {
+  public Long getRunningPauseVmMemoryBytes() {
     return runningPauseVmMemoryBytes;
   }
 
 
-  public void setRunningPauseVmMemoryBytes(Double runningPauseVmMemoryBytes) {
+  public void setRunningPauseVmMemoryBytes(Long runningPauseVmMemoryBytes) {
     this.runningPauseVmMemoryBytes = runningPauseVmMemoryBytes;
   }
 
@@ -1252,7 +1252,7 @@ public class Host {
   }
 
 
-  public Host scvmCpu(Double scvmCpu) {
+  public Host scvmCpu(Integer scvmCpu) {
     
     this.scvmCpu = scvmCpu;
     return this;
@@ -1265,17 +1265,17 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpu() {
+  public Integer getScvmCpu() {
     return scvmCpu;
   }
 
 
-  public void setScvmCpu(Double scvmCpu) {
+  public void setScvmCpu(Integer scvmCpu) {
     this.scvmCpu = scvmCpu;
   }
 
 
-  public Host scvmMemory(Double scvmMemory) {
+  public Host scvmMemory(Long scvmMemory) {
     
     this.scvmMemory = scvmMemory;
     return this;
@@ -1288,12 +1288,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemory() {
+  public Long getScvmMemory() {
     return scvmMemory;
   }
 
 
-  public void setScvmMemory(Double scvmMemory) {
+  public void setScvmMemory(Long scvmMemory) {
     this.scvmMemory = scvmMemory;
   }
 
@@ -1344,7 +1344,7 @@ public class Host {
   }
 
 
-  public Host ssdDataCapacity(Double ssdDataCapacity) {
+  public Host ssdDataCapacity(Long ssdDataCapacity) {
     
     this.ssdDataCapacity = ssdDataCapacity;
     return this;
@@ -1357,12 +1357,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSsdDataCapacity() {
+  public Long getSsdDataCapacity() {
     return ssdDataCapacity;
   }
 
 
-  public void setSsdDataCapacity(Double ssdDataCapacity) {
+  public void setSsdDataCapacity(Long ssdDataCapacity) {
     this.ssdDataCapacity = ssdDataCapacity;
   }
 
@@ -1482,7 +1482,7 @@ public class Host {
   }
 
 
-  public Host totalCacheCapacity(Double totalCacheCapacity) {
+  public Host totalCacheCapacity(Long totalCacheCapacity) {
     
     this.totalCacheCapacity = totalCacheCapacity;
     return this;
@@ -1495,12 +1495,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacity() {
+  public Long getTotalCacheCapacity() {
     return totalCacheCapacity;
   }
 
 
-  public void setTotalCacheCapacity(Double totalCacheCapacity) {
+  public void setTotalCacheCapacity(Long totalCacheCapacity) {
     this.totalCacheCapacity = totalCacheCapacity;
   }
 
@@ -1528,7 +1528,7 @@ public class Host {
   }
 
 
-  public Host totalCpuHz(Double totalCpuHz) {
+  public Host totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -1541,12 +1541,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
@@ -1574,7 +1574,7 @@ public class Host {
   }
 
 
-  public Host totalDataCapacity(Double totalDataCapacity) {
+  public Host totalDataCapacity(Long totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
     return this;
@@ -1587,17 +1587,17 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalDataCapacity() {
+  public Long getTotalDataCapacity() {
     return totalDataCapacity;
   }
 
 
-  public void setTotalDataCapacity(Double totalDataCapacity) {
+  public void setTotalDataCapacity(Long totalDataCapacity) {
     this.totalDataCapacity = totalDataCapacity;
   }
 
 
-  public Host totalMemoryBytes(Double totalMemoryBytes) {
+  public Host totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -1610,12 +1610,12 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
@@ -1651,7 +1651,7 @@ public class Host {
   }
 
 
-  public Host usedCpuHz(Double usedCpuHz) {
+  public Host usedCpuHz(Long usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -1664,17 +1664,17 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHz() {
+  public Long getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Double usedCpuHz) {
+  public void setUsedCpuHz(Long usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public Host usedDataSpace(Double usedDataSpace) {
+  public Host usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -1687,17 +1687,17 @@ public class Host {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public Host usedMemoryBytes(Double usedMemoryBytes) {
+  public Host usedMemoryBytes(Long usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -1710,12 +1710,12 @@ public class Host {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytes() {
+  public Long getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Double usedMemoryBytes) {
+  public void setUsedMemoryBytes(Long usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 

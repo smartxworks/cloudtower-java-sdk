@@ -47,7 +47,7 @@ public class WitnessService {
 
   public static final String SERIALIZED_NAME_STATE_DURATION = "state_duration";
   @SerializedName(SERIALIZED_NAME_STATE_DURATION)
-  private Double stateDuration;
+  private Long stateDuration;
 
   public WitnessService() { 
   }
@@ -144,7 +144,7 @@ public class WitnessService {
   }
 
 
-  public WitnessService stateDuration(Double stateDuration) {
+  public WitnessService stateDuration(Long stateDuration) {
     
     this.stateDuration = stateDuration;
     return this;
@@ -157,12 +157,12 @@ public class WitnessService {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStateDuration() {
+  public Long getStateDuration() {
     return stateDuration;
   }
 
 
-  public void setStateDuration(Double stateDuration) {
+  public void setStateDuration(Long stateDuration) {
     this.stateDuration = stateDuration;
   }
 

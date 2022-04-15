@@ -185,43 +185,145 @@ alerts = alertApi.getAlerts(new GetAlertsRequestBody().first(1));
 #### 获取所有虚拟机
 
 ```java
-VmApi vmApi = new VmApi(client);
-List<Vm> vms = vmApi.getVms(new GetVmsRequestBody());
+package com.smartx.tower;
+
+import java.util.*;
+
+import com.smartx.tower.model.*;
+import com.smartx.tower.api.*;
+
+public class App {
+
+  public static void main(String[] args) throws ApiException {
+    ApiClient client = new ApiClient();
+    client.setBasePath("http://python-sdk.dev-cloudtower.smartx.com/v2/api");
+    client.setApiKey(
+        "eyJhbGciOiJIUzI1NiJ9.Y2wwMjNwMW1zMDQyNTBhOTg1cXUxNWhoNg.zcdOFi2xManeVRzHvxajG2qEF8qOBDburnx4iw_ueSQ");
+    List<Vm> vms = getAllVms(client);
+  }
+
+  public static List<Vm> getAllVms(ApiClient client) throws ApiException {
+    VmApi vmApi = new VmApi(client);
+    return vmApi.getVms(new GetVmsRequestBody());
+  }
+}
 ```
 
 #### 分页获取虚拟机
 
 ```java
-VmApi vmApi = new VmApi(client);
-GetVmsRequestBody body = new GetVmsRequestBody().skip(50).first(50);
-List<Vm> vmsFrom51To100 = vmApi.getVms(body);
+package com.smartx.tower;
+
+import java.util.*;
+
+import com.smartx.tower.model.*;
+import com.smartx.tower.api.*;
+
+public class App {
+
+  public static void main(String[] args) throws ApiException {
+    ApiClient client = new ApiClient();
+    client.setBasePath("http://python-sdk.dev-cloudtower.smartx.com/v2/api");
+    client.setApiKey(
+        "eyJhbGciOiJIUzI1NiJ9.Y2wwMjNwMW1zMDQyNTBhOTg1cXUxNWhoNg.zcdOFi2xManeVRzHvxajG2qEF8qOBDburnx4iw_ueSQ");
+    List<Vm> vms = getVmsByPagination(client, 50, 100);
+  }
+
+  public static List<Vm> getVmsByPagination(ApiClient client, int from, int to) throws ApiException {
+    VmApi vmApi = new VmApi(client);
+    GetVmsRequestBody body = new GetVmsRequestBody().skip(from - 1).first(to - from);
+    return vmApi.getVms(body);
+  }
+}
 ```
 
 #### 获取所有已开机虚拟机
 
 ```java
-VmApi vmApi = new VmApi(client);
-VmWhereInput where = new VmWhereInput().status(VmStatus.RUNNING);
-GetVmsRequestBody body = new GetVmsRequestBody().where(where);
-List<Vm> runningVms = vmApi.getVms(body);
+package com.smartx.tower;
+
+import java.util.*;
+
+import com.smartx.tower.model.*;
+import com.smartx.tower.api.*;
+
+public class App {
+
+  public static void main(String[] args) throws ApiException {
+    ApiClient client = new ApiClient();
+    client.setBasePath("http://python-sdk.dev-cloudtower.smartx.com/v2/api");
+    client.setApiKey(
+        "eyJhbGciOiJIUzI1NiJ9.Y2wwMjNwMW1zMDQyNTBhOTg1cXUxNWhoNg.zcdOFi2xManeVRzHvxajG2qEF8qOBDburnx4iw_ueSQ");
+    List<Vm> vms = getAllRunningVms(client);
+  }
+
+  public static List<Vm> getAllRunningVms(ApiClient client) throws ApiException {
+    VmApi vmApi = new VmApi(client);
+    VmWhereInput where = new VmWhereInput().status(VmStatus.RUNNING);
+    GetVmsRequestBody body = new GetVmsRequestBody().where(where);
+    return vmApi.getVms(body);
+  }
+}
 ```
 
 #### 获取名称或描述中包含特定字符串的虚拟机
 
 ```java
-VmApi vmApi = new VmApi(client);
-VmWhereInput where = new VmWhereInput().nameContains("matching_word");
-GetVmsRequestBody body = new GetVmsRequestBody().where(where);
-List<Vm> matchedVms = vmApi.getVms(body);
+package com.smartx.tower;
+
+import java.util.*;
+
+import com.smartx.tower.model.*;
+import com.smartx.tower.api.*;
+
+public class App {
+
+  public static void main(String[] args) throws ApiException {
+    ApiClient client = new ApiClient();
+    client.setBasePath("http://python-sdk.dev-cloudtower.smartx.com/v2/api");
+    client.setApiKey(
+        "eyJhbGciOiJIUzI1NiJ9.Y2wwMjNwMW1zMDQyNTBhOTg1cXUxNWhoNg.zcdOFi2xManeVRzHvxajG2qEF8qOBDburnx4iw_ueSQ");
+    List<Vm> vms = getVmsByNameMatching(client, "yinsw");
+    System.out.print(vms);
+  }
+
+  public static List<Vm> getVmsByNameMatching(ApiClient client, String matching) throws ApiException {
+    VmApi vmApi = new VmApi(client);
+    VmWhereInput where = new VmWhereInput().nameContains(matching);
+    GetVmsRequestBody body = new GetVmsRequestBody().where(where);
+    return vmApi.getVms(body);
+  }
+}
 ```
 
 #### 获取所有 vcpu > n 的虚拟机
 
 ```java
-VmApi vmApi = new VmApi(client);
-VmWhereInput where = new VmWhereInput().vcpuGt(n);
-GetVmsRequestBody body = new GetVmsRequestBody().where(where);
-List<Vm> vmCpuGtN = vmApi.getVms(body);
+package com.smartx.tower;
+
+import java.util.*;
+
+import com.smartx.tower.model.*;
+import com.smartx.tower.api.*;
+
+public class App {
+
+  public static void main(String[] args) throws ApiException {
+    ApiClient client = new ApiClient();
+    client.setBasePath("http://python-sdk.dev-cloudtower.smartx.com/v2/api");
+    client.setApiKey(
+        "eyJhbGciOiJIUzI1NiJ9.Y2wwMjNwMW1zMDQyNTBhOTg1cXUxNWhoNg.zcdOFi2xManeVRzHvxajG2qEF8qOBDburnx4iw_ueSQ");
+    List<Vm> vms = getVmsHasNMoreCpuCore(client, 4);
+    System.out.print(vms);
+  }
+
+  public static List<Vm> getVmsHasNMoreCpuCore(ApiClient client, int n) throws ApiException {
+    VmApi vmApi = new VmApi(client);
+    VmWhereInput where = new VmWhereInput().vcpuGt(n);
+    GetVmsRequestBody body = new GetVmsRequestBody().where(where);
+    return vmApi.getVms(body);
+  }
+}
 ```
 
 ### 从模版创建虚拟机
@@ -272,10 +374,12 @@ VmCreateVmFromTemplateParamsDiskOperate diskOperate = new VmCreateVmFromTemplate
         new VmDiskParams()
             .addMountCdRomsItem(
                 new VmCdRomParams()
-                    .boot(0)
+                    .boot(3)
+                    .index(0)
                     .elfImageId("elf_image_id"))
             .addMountDisksItem(
                 new MountDisksParams()
+                    .index(4)
                     .boot(1)
                     .bus(Bus.VIRTIO)
                     .vmVolumeId("vm_volume_id_1"))
@@ -284,7 +388,7 @@ VmCreateVmFromTemplateParamsDiskOperate diskOperate = new VmCreateVmFromTemplate
                     .vmVolume(
                         new MountNewCreateDisksParamsVmVolume()
                             .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION)
-                            .size((double) 4 * 1024 * 1024 * 1024)
+                            .size(4L * 1024 * 1024 * 1024)
                             .name("disk_name"))
                     .boot(3)
                     .bus(Bus.VIRTIO)));
@@ -345,7 +449,7 @@ VmCreationParams param1 = new VmCreationParams()
     .ha(true)
     .cpuCores(4)
     .cpuSockets(4)
-    .memory((double) 4 * 1024 * 1024 * 1024)
+    .memory(4L * 1024 * 1024 * 1024)
     .vcpu(16)
     .status(VmStatus.STOPPED)
     .firmware(VmFirmware.BIOS)
@@ -368,7 +472,7 @@ VmCreationParams param2 = new VmCreationParams()
     .ha(true)
     .cpuCores(4)
     .cpuSockets(4)
-    .memory((double) 4 * 1024 * 1024 * 1024)
+    .memory(4L * 1024 * 1024 * 1024)
     .vcpu(16)
     .status(VmStatus.STOPPED)
     .firmware(VmFirmware.BIOS)
@@ -414,7 +518,7 @@ VmCreationParams param = new VmCreationParams()
     .ha(true)
     .cpuCores(4)
     .cpuSockets(4)
-    .memory((double) 4 * 1024 * 1024 * 1024)
+    .memory(4L * 1024 * 1024 * 1024)
     .vcpu(16)
     .status(VmStatus.STOPPED)
     .firmware(VmFirmware.BIOS)
@@ -451,7 +555,7 @@ VmCreationParams param = new VmCreationParams()
     .ha(true)
     .cpuCores(4)
     .cpuSockets(4)
-    .memory((double) 4 * 1024 * 1024 * 1024)
+    .memory(4L * 1024 * 1024 * 1024)
     .vcpu(16)
     .status(VmStatus.STOPPED)
     .firmware(VmFirmware.BIOS)
@@ -489,7 +593,7 @@ VmCreationParams param = new VmCreationParams()
     .ha(true)
     .cpuCores(4)
     .cpuSockets(4)
-    .memory((double) 4 * 1024 * 1024 * 1024)
+    .memory(4L * 1024 * 1024 * 1024)
     .vcpu(16)
     .status(VmStatus.STOPPED)
     .firmware(VmFirmware.BIOS)
@@ -505,7 +609,7 @@ VmCreationParams param = new VmCreationParams()
                         new MountNewCreateDisksParamsVmVolume()
                             .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION)
                             .name("disk_name")
-                            .size((double) 4 * 1024 * 1024 * 1024))));
+                            .size(4L * 1024 * 1024 * 1024))));
 List<VmCreationParams> params = new ArrayList<VmCreationParams>(1) {
   {
     add(param);
@@ -531,7 +635,7 @@ Vm createdVm = vmApi
           .ha(true)
           .cpuCores(4)
           .cpuSockets(4)
-          .memory((double) 4 * 1024 * 1024 * 1024)
+          .memory(4L * 1024 * 1024 * 1024)
           .vcpu(16)
           .status(VmStatus.STOPPED)
           .firmware(VmFirmware.BIOS)
@@ -586,7 +690,7 @@ VmUpdateParams param = new VmUpdateParams()
         .cpuCores(2)
         .cpuSockets(8)
         .vcpu(2 * 8)
-        .memory((double) 8 * 1024 * 1024 * 1024));
+        .memory(8L * 1024 * 1024 * 1024));
 WithTaskVm withTaskVm = vmApi.updateVm(param).get(0);
 TaskUtil.WaitTask(withTaskVm.getTaskId(), client);
 Vm updatedVm = vmApi
@@ -681,7 +785,7 @@ VmAddDiskParams param = new VmAddDiskParams()
             new VmAddDiskParamsDataVmDisks()
                 .addMountDisksItem(
                     new MountDisksParams()
-                        .boot(1)
+                        .index(1)
                         .boot(1)
                         .bus(Bus.VIRTIO)
                         .vmVolumeId("vm_volume_id"))));

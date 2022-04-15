@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class NfsInode {
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
-  private Double assignedSize;
+  private Long assignedSize;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -77,7 +77,7 @@ public class NfsInode {
 
   public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
   @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
-  private Double sharedSize;
+  private Long sharedSize;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
@@ -85,12 +85,12 @@ public class NfsInode {
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public NfsInode() { 
   }
 
-  public NfsInode assignedSize(Double assignedSize) {
+  public NfsInode assignedSize(Long assignedSize) {
     
     this.assignedSize = assignedSize;
     return this;
@@ -103,12 +103,12 @@ public class NfsInode {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAssignedSize() {
+  public Long getAssignedSize() {
     return assignedSize;
   }
 
 
-  public void setAssignedSize(Double assignedSize) {
+  public void setAssignedSize(Long assignedSize) {
     this.assignedSize = assignedSize;
   }
 
@@ -328,7 +328,7 @@ public class NfsInode {
   }
 
 
-  public NfsInode sharedSize(Double sharedSize) {
+  public NfsInode sharedSize(Long sharedSize) {
     
     this.sharedSize = sharedSize;
     return this;
@@ -341,12 +341,12 @@ public class NfsInode {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSharedSize() {
+  public Long getSharedSize() {
     return sharedSize;
   }
 
 
-  public void setSharedSize(Double sharedSize) {
+  public void setSharedSize(Long sharedSize) {
     this.sharedSize = sharedSize;
   }
 
@@ -374,7 +374,7 @@ public class NfsInode {
   }
 
 
-  public NfsInode uniqueSize(Double uniqueSize) {
+  public NfsInode uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -387,12 +387,12 @@ public class NfsInode {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 

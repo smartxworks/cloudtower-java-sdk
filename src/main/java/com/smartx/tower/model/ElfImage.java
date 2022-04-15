@@ -82,7 +82,7 @@ public class ElfImage {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_UPLOAD_TASK = "upload_task";
   @SerializedName(SERIALIZED_NAME_UPLOAD_TASK)
@@ -341,7 +341,7 @@ public class ElfImage {
   }
 
 
-  public ElfImage size(Double size) {
+  public ElfImage size(Long size) {
     
     this.size = size;
     return this;
@@ -354,12 +354,12 @@ public class ElfImage {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

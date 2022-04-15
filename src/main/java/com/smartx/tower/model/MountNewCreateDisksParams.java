@@ -38,7 +38,7 @@ public class MountNewCreateDisksParams {
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
@@ -94,7 +94,7 @@ public class MountNewCreateDisksParams {
   }
 
 
-  public MountNewCreateDisksParams maxBandwidth(Double maxBandwidth) {
+  public MountNewCreateDisksParams maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -107,12 +107,12 @@ public class MountNewCreateDisksParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 

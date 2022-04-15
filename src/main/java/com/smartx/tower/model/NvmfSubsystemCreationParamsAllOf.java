@@ -40,7 +40,7 @@ public class NvmfSubsystemCreationParamsAllOf {
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
-  private Double stripeSize;
+  private Long stripeSize;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
@@ -107,7 +107,7 @@ public class NvmfSubsystemCreationParamsAllOf {
   }
 
 
-  public NvmfSubsystemCreationParamsAllOf stripeSize(Double stripeSize) {
+  public NvmfSubsystemCreationParamsAllOf stripeSize(Long stripeSize) {
     
     this.stripeSize = stripeSize;
     return this;
@@ -120,12 +120,12 @@ public class NvmfSubsystemCreationParamsAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeSize() {
+  public Long getStripeSize() {
     return stripeSize;
   }
 
 
-  public void setStripeSize(Double stripeSize) {
+  public void setStripeSize(Long stripeSize) {
     this.stripeSize = stripeSize;
   }
 

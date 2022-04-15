@@ -151,35 +151,35 @@ public class VmVolumeWhereInput {
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE = "guest_used_size";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE)
-  private Double guestUsedSize;
+  private Long guestUsedSize;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_GT = "guest_used_size_gt";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_GT)
-  private Double guestUsedSizeGt;
+  private Long guestUsedSizeGt;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_GTE = "guest_used_size_gte";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_GTE)
-  private Double guestUsedSizeGte;
+  private Long guestUsedSizeGte;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_IN = "guest_used_size_in";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_IN)
-  private List<Double> guestUsedSizeIn = null;
+  private List<Long> guestUsedSizeIn = null;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_LT = "guest_used_size_lt";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_LT)
-  private Double guestUsedSizeLt;
+  private Long guestUsedSizeLt;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_LTE = "guest_used_size_lte";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_LTE)
-  private Double guestUsedSizeLte;
+  private Long guestUsedSizeLte;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_NOT = "guest_used_size_not";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_NOT)
-  private Double guestUsedSizeNot;
+  private Long guestUsedSizeNot;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE_NOT_IN = "guest_used_size_not_in";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE_NOT_IN)
-  private List<Double> guestUsedSizeNotIn = null;
+  private List<Long> guestUsedSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -479,67 +479,67 @@ public class VmVolumeWhereInput {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SIZE_GT = "size_gt";
   @SerializedName(SERIALIZED_NAME_SIZE_GT)
-  private Double sizeGt;
+  private Long sizeGt;
 
   public static final String SERIALIZED_NAME_SIZE_GTE = "size_gte";
   @SerializedName(SERIALIZED_NAME_SIZE_GTE)
-  private Double sizeGte;
+  private Long sizeGte;
 
   public static final String SERIALIZED_NAME_SIZE_IN = "size_in";
   @SerializedName(SERIALIZED_NAME_SIZE_IN)
-  private List<Double> sizeIn = null;
+  private List<Long> sizeIn = null;
 
   public static final String SERIALIZED_NAME_SIZE_LT = "size_lt";
   @SerializedName(SERIALIZED_NAME_SIZE_LT)
-  private Double sizeLt;
+  private Long sizeLt;
 
   public static final String SERIALIZED_NAME_SIZE_LTE = "size_lte";
   @SerializedName(SERIALIZED_NAME_SIZE_LTE)
-  private Double sizeLte;
+  private Long sizeLte;
 
   public static final String SERIALIZED_NAME_SIZE_NOT = "size_not";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT)
-  private Double sizeNot;
+  private Long sizeNot;
 
   public static final String SERIALIZED_NAME_SIZE_NOT_IN = "size_not_in";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
-  private List<Double> sizeNotIn = null;
+  private List<Long> sizeNotIn = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_GT = "unique_size_gt";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_GT)
-  private Double uniqueSizeGt;
+  private Long uniqueSizeGt;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_GTE = "unique_size_gte";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_GTE)
-  private Double uniqueSizeGte;
+  private Long uniqueSizeGte;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_IN = "unique_size_in";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_IN)
-  private List<Double> uniqueSizeIn = null;
+  private List<Long> uniqueSizeIn = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_LT = "unique_size_lt";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_LT)
-  private Double uniqueSizeLt;
+  private Long uniqueSizeLt;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_LTE = "unique_size_lte";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_LTE)
-  private Double uniqueSizeLte;
+  private Long uniqueSizeLte;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_NOT = "unique_size_not";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_NOT)
-  private Double uniqueSizeNot;
+  private Long uniqueSizeNot;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE_NOT_IN = "unique_size_not_in";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_NOT_IN)
-  private List<Double> uniqueSizeNotIn = null;
+  private List<Long> uniqueSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_DISKS_EVERY = "vm_disks_every";
   @SerializedName(SERIALIZED_NAME_VM_DISKS_EVERY)
@@ -1256,7 +1256,7 @@ public class VmVolumeWhereInput {
   }
 
 
-  public VmVolumeWhereInput guestUsedSize(Double guestUsedSize) {
+  public VmVolumeWhereInput guestUsedSize(Long guestUsedSize) {
     
     this.guestUsedSize = guestUsedSize;
     return this;
@@ -1269,17 +1269,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSize() {
+  public Long getGuestUsedSize() {
     return guestUsedSize;
   }
 
 
-  public void setGuestUsedSize(Double guestUsedSize) {
+  public void setGuestUsedSize(Long guestUsedSize) {
     this.guestUsedSize = guestUsedSize;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeGt(Double guestUsedSizeGt) {
+  public VmVolumeWhereInput guestUsedSizeGt(Long guestUsedSizeGt) {
     
     this.guestUsedSizeGt = guestUsedSizeGt;
     return this;
@@ -1292,17 +1292,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSizeGt() {
+  public Long getGuestUsedSizeGt() {
     return guestUsedSizeGt;
   }
 
 
-  public void setGuestUsedSizeGt(Double guestUsedSizeGt) {
+  public void setGuestUsedSizeGt(Long guestUsedSizeGt) {
     this.guestUsedSizeGt = guestUsedSizeGt;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeGte(Double guestUsedSizeGte) {
+  public VmVolumeWhereInput guestUsedSizeGte(Long guestUsedSizeGte) {
     
     this.guestUsedSizeGte = guestUsedSizeGte;
     return this;
@@ -1315,25 +1315,25 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSizeGte() {
+  public Long getGuestUsedSizeGte() {
     return guestUsedSizeGte;
   }
 
 
-  public void setGuestUsedSizeGte(Double guestUsedSizeGte) {
+  public void setGuestUsedSizeGte(Long guestUsedSizeGte) {
     this.guestUsedSizeGte = guestUsedSizeGte;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeIn(List<Double> guestUsedSizeIn) {
+  public VmVolumeWhereInput guestUsedSizeIn(List<Long> guestUsedSizeIn) {
     
     this.guestUsedSizeIn = guestUsedSizeIn;
     return this;
   }
 
-  public VmVolumeWhereInput addGuestUsedSizeInItem(Double guestUsedSizeInItem) {
+  public VmVolumeWhereInput addGuestUsedSizeInItem(Long guestUsedSizeInItem) {
     if (this.guestUsedSizeIn == null) {
-      this.guestUsedSizeIn = new ArrayList<Double>();
+      this.guestUsedSizeIn = new ArrayList<Long>();
     }
     this.guestUsedSizeIn.add(guestUsedSizeInItem);
     return this;
@@ -1346,17 +1346,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getGuestUsedSizeIn() {
+  public List<Long> getGuestUsedSizeIn() {
     return guestUsedSizeIn;
   }
 
 
-  public void setGuestUsedSizeIn(List<Double> guestUsedSizeIn) {
+  public void setGuestUsedSizeIn(List<Long> guestUsedSizeIn) {
     this.guestUsedSizeIn = guestUsedSizeIn;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeLt(Double guestUsedSizeLt) {
+  public VmVolumeWhereInput guestUsedSizeLt(Long guestUsedSizeLt) {
     
     this.guestUsedSizeLt = guestUsedSizeLt;
     return this;
@@ -1369,17 +1369,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSizeLt() {
+  public Long getGuestUsedSizeLt() {
     return guestUsedSizeLt;
   }
 
 
-  public void setGuestUsedSizeLt(Double guestUsedSizeLt) {
+  public void setGuestUsedSizeLt(Long guestUsedSizeLt) {
     this.guestUsedSizeLt = guestUsedSizeLt;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeLte(Double guestUsedSizeLte) {
+  public VmVolumeWhereInput guestUsedSizeLte(Long guestUsedSizeLte) {
     
     this.guestUsedSizeLte = guestUsedSizeLte;
     return this;
@@ -1392,17 +1392,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSizeLte() {
+  public Long getGuestUsedSizeLte() {
     return guestUsedSizeLte;
   }
 
 
-  public void setGuestUsedSizeLte(Double guestUsedSizeLte) {
+  public void setGuestUsedSizeLte(Long guestUsedSizeLte) {
     this.guestUsedSizeLte = guestUsedSizeLte;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeNot(Double guestUsedSizeNot) {
+  public VmVolumeWhereInput guestUsedSizeNot(Long guestUsedSizeNot) {
     
     this.guestUsedSizeNot = guestUsedSizeNot;
     return this;
@@ -1415,25 +1415,25 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSizeNot() {
+  public Long getGuestUsedSizeNot() {
     return guestUsedSizeNot;
   }
 
 
-  public void setGuestUsedSizeNot(Double guestUsedSizeNot) {
+  public void setGuestUsedSizeNot(Long guestUsedSizeNot) {
     this.guestUsedSizeNot = guestUsedSizeNot;
   }
 
 
-  public VmVolumeWhereInput guestUsedSizeNotIn(List<Double> guestUsedSizeNotIn) {
+  public VmVolumeWhereInput guestUsedSizeNotIn(List<Long> guestUsedSizeNotIn) {
     
     this.guestUsedSizeNotIn = guestUsedSizeNotIn;
     return this;
   }
 
-  public VmVolumeWhereInput addGuestUsedSizeNotInItem(Double guestUsedSizeNotInItem) {
+  public VmVolumeWhereInput addGuestUsedSizeNotInItem(Long guestUsedSizeNotInItem) {
     if (this.guestUsedSizeNotIn == null) {
-      this.guestUsedSizeNotIn = new ArrayList<Double>();
+      this.guestUsedSizeNotIn = new ArrayList<Long>();
     }
     this.guestUsedSizeNotIn.add(guestUsedSizeNotInItem);
     return this;
@@ -1446,12 +1446,12 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getGuestUsedSizeNotIn() {
+  public List<Long> getGuestUsedSizeNotIn() {
     return guestUsedSizeNotIn;
   }
 
 
-  public void setGuestUsedSizeNotIn(List<Double> guestUsedSizeNotIn) {
+  public void setGuestUsedSizeNotIn(List<Long> guestUsedSizeNotIn) {
     this.guestUsedSizeNotIn = guestUsedSizeNotIn;
   }
 
@@ -3254,7 +3254,7 @@ public class VmVolumeWhereInput {
   }
 
 
-  public VmVolumeWhereInput size(Double size) {
+  public VmVolumeWhereInput size(Long size) {
     
     this.size = size;
     return this;
@@ -3267,17 +3267,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
 
-  public VmVolumeWhereInput sizeGt(Double sizeGt) {
+  public VmVolumeWhereInput sizeGt(Long sizeGt) {
     
     this.sizeGt = sizeGt;
     return this;
@@ -3290,17 +3290,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGt() {
+  public Long getSizeGt() {
     return sizeGt;
   }
 
 
-  public void setSizeGt(Double sizeGt) {
+  public void setSizeGt(Long sizeGt) {
     this.sizeGt = sizeGt;
   }
 
 
-  public VmVolumeWhereInput sizeGte(Double sizeGte) {
+  public VmVolumeWhereInput sizeGte(Long sizeGte) {
     
     this.sizeGte = sizeGte;
     return this;
@@ -3313,25 +3313,25 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGte() {
+  public Long getSizeGte() {
     return sizeGte;
   }
 
 
-  public void setSizeGte(Double sizeGte) {
+  public void setSizeGte(Long sizeGte) {
     this.sizeGte = sizeGte;
   }
 
 
-  public VmVolumeWhereInput sizeIn(List<Double> sizeIn) {
+  public VmVolumeWhereInput sizeIn(List<Long> sizeIn) {
     
     this.sizeIn = sizeIn;
     return this;
   }
 
-  public VmVolumeWhereInput addSizeInItem(Double sizeInItem) {
+  public VmVolumeWhereInput addSizeInItem(Long sizeInItem) {
     if (this.sizeIn == null) {
-      this.sizeIn = new ArrayList<Double>();
+      this.sizeIn = new ArrayList<Long>();
     }
     this.sizeIn.add(sizeInItem);
     return this;
@@ -3344,17 +3344,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeIn() {
+  public List<Long> getSizeIn() {
     return sizeIn;
   }
 
 
-  public void setSizeIn(List<Double> sizeIn) {
+  public void setSizeIn(List<Long> sizeIn) {
     this.sizeIn = sizeIn;
   }
 
 
-  public VmVolumeWhereInput sizeLt(Double sizeLt) {
+  public VmVolumeWhereInput sizeLt(Long sizeLt) {
     
     this.sizeLt = sizeLt;
     return this;
@@ -3367,17 +3367,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLt() {
+  public Long getSizeLt() {
     return sizeLt;
   }
 
 
-  public void setSizeLt(Double sizeLt) {
+  public void setSizeLt(Long sizeLt) {
     this.sizeLt = sizeLt;
   }
 
 
-  public VmVolumeWhereInput sizeLte(Double sizeLte) {
+  public VmVolumeWhereInput sizeLte(Long sizeLte) {
     
     this.sizeLte = sizeLte;
     return this;
@@ -3390,17 +3390,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLte() {
+  public Long getSizeLte() {
     return sizeLte;
   }
 
 
-  public void setSizeLte(Double sizeLte) {
+  public void setSizeLte(Long sizeLte) {
     this.sizeLte = sizeLte;
   }
 
 
-  public VmVolumeWhereInput sizeNot(Double sizeNot) {
+  public VmVolumeWhereInput sizeNot(Long sizeNot) {
     
     this.sizeNot = sizeNot;
     return this;
@@ -3413,25 +3413,25 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeNot() {
+  public Long getSizeNot() {
     return sizeNot;
   }
 
 
-  public void setSizeNot(Double sizeNot) {
+  public void setSizeNot(Long sizeNot) {
     this.sizeNot = sizeNot;
   }
 
 
-  public VmVolumeWhereInput sizeNotIn(List<Double> sizeNotIn) {
+  public VmVolumeWhereInput sizeNotIn(List<Long> sizeNotIn) {
     
     this.sizeNotIn = sizeNotIn;
     return this;
   }
 
-  public VmVolumeWhereInput addSizeNotInItem(Double sizeNotInItem) {
+  public VmVolumeWhereInput addSizeNotInItem(Long sizeNotInItem) {
     if (this.sizeNotIn == null) {
-      this.sizeNotIn = new ArrayList<Double>();
+      this.sizeNotIn = new ArrayList<Long>();
     }
     this.sizeNotIn.add(sizeNotInItem);
     return this;
@@ -3444,17 +3444,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeNotIn() {
+  public List<Long> getSizeNotIn() {
     return sizeNotIn;
   }
 
 
-  public void setSizeNotIn(List<Double> sizeNotIn) {
+  public void setSizeNotIn(List<Long> sizeNotIn) {
     this.sizeNotIn = sizeNotIn;
   }
 
 
-  public VmVolumeWhereInput uniqueSize(Double uniqueSize) {
+  public VmVolumeWhereInput uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -3467,17 +3467,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeGt(Double uniqueSizeGt) {
+  public VmVolumeWhereInput uniqueSizeGt(Long uniqueSizeGt) {
     
     this.uniqueSizeGt = uniqueSizeGt;
     return this;
@@ -3490,17 +3490,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeGt() {
+  public Long getUniqueSizeGt() {
     return uniqueSizeGt;
   }
 
 
-  public void setUniqueSizeGt(Double uniqueSizeGt) {
+  public void setUniqueSizeGt(Long uniqueSizeGt) {
     this.uniqueSizeGt = uniqueSizeGt;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeGte(Double uniqueSizeGte) {
+  public VmVolumeWhereInput uniqueSizeGte(Long uniqueSizeGte) {
     
     this.uniqueSizeGte = uniqueSizeGte;
     return this;
@@ -3513,25 +3513,25 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeGte() {
+  public Long getUniqueSizeGte() {
     return uniqueSizeGte;
   }
 
 
-  public void setUniqueSizeGte(Double uniqueSizeGte) {
+  public void setUniqueSizeGte(Long uniqueSizeGte) {
     this.uniqueSizeGte = uniqueSizeGte;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeIn(List<Double> uniqueSizeIn) {
+  public VmVolumeWhereInput uniqueSizeIn(List<Long> uniqueSizeIn) {
     
     this.uniqueSizeIn = uniqueSizeIn;
     return this;
   }
 
-  public VmVolumeWhereInput addUniqueSizeInItem(Double uniqueSizeInItem) {
+  public VmVolumeWhereInput addUniqueSizeInItem(Long uniqueSizeInItem) {
     if (this.uniqueSizeIn == null) {
-      this.uniqueSizeIn = new ArrayList<Double>();
+      this.uniqueSizeIn = new ArrayList<Long>();
     }
     this.uniqueSizeIn.add(uniqueSizeInItem);
     return this;
@@ -3544,17 +3544,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUniqueSizeIn() {
+  public List<Long> getUniqueSizeIn() {
     return uniqueSizeIn;
   }
 
 
-  public void setUniqueSizeIn(List<Double> uniqueSizeIn) {
+  public void setUniqueSizeIn(List<Long> uniqueSizeIn) {
     this.uniqueSizeIn = uniqueSizeIn;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeLt(Double uniqueSizeLt) {
+  public VmVolumeWhereInput uniqueSizeLt(Long uniqueSizeLt) {
     
     this.uniqueSizeLt = uniqueSizeLt;
     return this;
@@ -3567,17 +3567,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeLt() {
+  public Long getUniqueSizeLt() {
     return uniqueSizeLt;
   }
 
 
-  public void setUniqueSizeLt(Double uniqueSizeLt) {
+  public void setUniqueSizeLt(Long uniqueSizeLt) {
     this.uniqueSizeLt = uniqueSizeLt;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeLte(Double uniqueSizeLte) {
+  public VmVolumeWhereInput uniqueSizeLte(Long uniqueSizeLte) {
     
     this.uniqueSizeLte = uniqueSizeLte;
     return this;
@@ -3590,17 +3590,17 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeLte() {
+  public Long getUniqueSizeLte() {
     return uniqueSizeLte;
   }
 
 
-  public void setUniqueSizeLte(Double uniqueSizeLte) {
+  public void setUniqueSizeLte(Long uniqueSizeLte) {
     this.uniqueSizeLte = uniqueSizeLte;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeNot(Double uniqueSizeNot) {
+  public VmVolumeWhereInput uniqueSizeNot(Long uniqueSizeNot) {
     
     this.uniqueSizeNot = uniqueSizeNot;
     return this;
@@ -3613,25 +3613,25 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSizeNot() {
+  public Long getUniqueSizeNot() {
     return uniqueSizeNot;
   }
 
 
-  public void setUniqueSizeNot(Double uniqueSizeNot) {
+  public void setUniqueSizeNot(Long uniqueSizeNot) {
     this.uniqueSizeNot = uniqueSizeNot;
   }
 
 
-  public VmVolumeWhereInput uniqueSizeNotIn(List<Double> uniqueSizeNotIn) {
+  public VmVolumeWhereInput uniqueSizeNotIn(List<Long> uniqueSizeNotIn) {
     
     this.uniqueSizeNotIn = uniqueSizeNotIn;
     return this;
   }
 
-  public VmVolumeWhereInput addUniqueSizeNotInItem(Double uniqueSizeNotInItem) {
+  public VmVolumeWhereInput addUniqueSizeNotInItem(Long uniqueSizeNotInItem) {
     if (this.uniqueSizeNotIn == null) {
-      this.uniqueSizeNotIn = new ArrayList<Double>();
+      this.uniqueSizeNotIn = new ArrayList<Long>();
     }
     this.uniqueSizeNotIn.add(uniqueSizeNotInItem);
     return this;
@@ -3644,12 +3644,12 @@ public class VmVolumeWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUniqueSizeNotIn() {
+  public List<Long> getUniqueSizeNotIn() {
     return uniqueSizeNotIn;
   }
 
 
-  public void setUniqueSizeNotIn(List<Double> uniqueSizeNotIn) {
+  public void setUniqueSizeNotIn(List<Long> uniqueSizeNotIn) {
     this.uniqueSizeNotIn = uniqueSizeNotIn;
   }
 

@@ -31,7 +31,7 @@ import java.io.IOException;
 public class IscsiLunUpdationParamsDataAllOf {
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
-  private Double assignedSize;
+  private Long assignedSize;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -40,7 +40,7 @@ public class IscsiLunUpdationParamsDataAllOf {
   public IscsiLunUpdationParamsDataAllOf() { 
   }
 
-  public IscsiLunUpdationParamsDataAllOf assignedSize(Double assignedSize) {
+  public IscsiLunUpdationParamsDataAllOf assignedSize(Long assignedSize) {
     
     this.assignedSize = assignedSize;
     return this;
@@ -53,12 +53,12 @@ public class IscsiLunUpdationParamsDataAllOf {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAssignedSize() {
+  public Long getAssignedSize() {
     return assignedSize;
   }
 
 
-  public void setAssignedSize(Double assignedSize) {
+  public void setAssignedSize(Long assignedSize) {
     this.assignedSize = assignedSize;
   }
 

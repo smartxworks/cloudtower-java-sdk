@@ -78,7 +78,7 @@ public class BackupTargetExecution {
 
   public static final String SERIALIZED_NAME_READ_BYTES = "read_bytes";
   @SerializedName(SERIALIZED_NAME_READ_BYTES)
-  private Double readBytes;
+  private Long readBytes;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -86,7 +86,7 @@ public class BackupTargetExecution {
 
   public static final String SERIALIZED_NAME_TOTAL_BYTES = "total_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_BYTES)
-  private Double totalBytes;
+  private Long totalBytes;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -337,7 +337,7 @@ public class BackupTargetExecution {
   }
 
 
-  public BackupTargetExecution readBytes(Double readBytes) {
+  public BackupTargetExecution readBytes(Long readBytes) {
     
     this.readBytes = readBytes;
     return this;
@@ -350,12 +350,12 @@ public class BackupTargetExecution {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getReadBytes() {
+  public Long getReadBytes() {
     return readBytes;
   }
 
 
-  public void setReadBytes(Double readBytes) {
+  public void setReadBytes(Long readBytes) {
     this.readBytes = readBytes;
   }
 
@@ -383,7 +383,7 @@ public class BackupTargetExecution {
   }
 
 
-  public BackupTargetExecution totalBytes(Double totalBytes) {
+  public BackupTargetExecution totalBytes(Long totalBytes) {
     
     this.totalBytes = totalBytes;
     return this;
@@ -396,12 +396,12 @@ public class BackupTargetExecution {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalBytes() {
+  public Long getTotalBytes() {
     return totalBytes;
   }
 
 
-  public void setTotalBytes(Double totalBytes) {
+  public void setTotalBytes(Long totalBytes) {
     this.totalBytes = totalBytes;
   }
 

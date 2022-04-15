@@ -115,7 +115,7 @@ public class Nic {
 
   public static final String SERIALIZED_NAME_SPEED = "speed";
   @SerializedName(SERIALIZED_NAME_SPEED)
-  private Double speed;
+  private Long speed;
 
   public static final String SERIALIZED_NAME_SUBNET_MASK = "subnet_mask";
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)
@@ -589,7 +589,7 @@ public class Nic {
   }
 
 
-  public Nic speed(Double speed) {
+  public Nic speed(Long speed) {
     
     this.speed = speed;
     return this;
@@ -602,12 +602,12 @@ public class Nic {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSpeed() {
+  public Long getSpeed() {
     return speed;
   }
 
 
-  public void setSpeed(Double speed) {
+  public void setSpeed(Long speed) {
     this.speed = speed;
   }
 

@@ -60,7 +60,7 @@ public class NestedDiscoveredHostIface {
 
   public static final String SERIALIZED_NAME_SPEED = "speed";
   @SerializedName(SERIALIZED_NAME_SPEED)
-  private Double speed;
+  private Long speed;
 
   public static final String SERIALIZED_NAME_UP = "up";
   @SerializedName(SERIALIZED_NAME_UP)
@@ -230,7 +230,7 @@ public class NestedDiscoveredHostIface {
   }
 
 
-  public NestedDiscoveredHostIface speed(Double speed) {
+  public NestedDiscoveredHostIface speed(Long speed) {
     
     this.speed = speed;
     return this;
@@ -243,12 +243,12 @@ public class NestedDiscoveredHostIface {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSpeed() {
+  public Long getSpeed() {
     return speed;
   }
 
 
-  public void setSpeed(Double speed) {
+  public void setSpeed(Long speed) {
     this.speed = speed;
   }
 

@@ -55,7 +55,7 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE = "guest_used_size";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE)
-  private Double guestUsedSize;
+  private Long guestUsedSize;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -95,11 +95,11 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Double uniqueSize;
+  private Long uniqueSize;
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
@@ -200,7 +200,7 @@ public class VmVolume {
   }
 
 
-  public VmVolume guestUsedSize(Double guestUsedSize) {
+  public VmVolume guestUsedSize(Long guestUsedSize) {
     
     this.guestUsedSize = guestUsedSize;
     return this;
@@ -213,12 +213,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getGuestUsedSize() {
+  public Long getGuestUsedSize() {
     return guestUsedSize;
   }
 
 
-  public void setGuestUsedSize(Double guestUsedSize) {
+  public void setGuestUsedSize(Long guestUsedSize) {
     this.guestUsedSize = guestUsedSize;
   }
 
@@ -438,7 +438,7 @@ public class VmVolume {
   }
 
 
-  public VmVolume size(Double size) {
+  public VmVolume size(Long size) {
     
     this.size = size;
     return this;
@@ -451,17 +451,17 @@ public class VmVolume {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
 
-  public VmVolume uniqueSize(Double uniqueSize) {
+  public VmVolume uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
     return this;
@@ -474,12 +474,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUniqueSize() {
+  public Long getUniqueSize() {
     return uniqueSize;
   }
 
 
-  public void setUniqueSize(Double uniqueSize) {
+  public void setUniqueSize(Long uniqueSize) {
     this.uniqueSize = uniqueSize;
   }
 

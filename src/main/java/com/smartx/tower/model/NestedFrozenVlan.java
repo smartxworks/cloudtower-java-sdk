@@ -39,7 +39,7 @@ public class NestedFrozenVlan {
 
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
-  private Double vlanId;
+  private Long vlanId;
 
   public static final String SERIALIZED_NAME_VLAN_LOCAL_ID = "vlan_local_id";
   @SerializedName(SERIALIZED_NAME_VLAN_LOCAL_ID)
@@ -94,7 +94,7 @@ public class NestedFrozenVlan {
   }
 
 
-  public NestedFrozenVlan vlanId(Double vlanId) {
+  public NestedFrozenVlan vlanId(Long vlanId) {
     
     this.vlanId = vlanId;
     return this;
@@ -107,12 +107,12 @@ public class NestedFrozenVlan {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getVlanId() {
+  public Long getVlanId() {
     return vlanId;
   }
 
 
-  public void setVlanId(Double vlanId) {
+  public void setVlanId(Long vlanId) {
     this.vlanId = vlanId;
   }
 

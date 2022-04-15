@@ -59,7 +59,7 @@ public class ITVm extends ITBase {
       List<VmCreationParams> params = new ArrayList<>();
       params.add(new VmCreationParams().clusterId(cluster.getId())
           .addVmNicsItem(new VmNicParams().connectVlanId(vlan.getId()).localId(""))
-          .name("tower-sdk-test-create-vm" + System.currentTimeMillis()).cpuCores(1).cpuSockets(1).memory(4294967296.0)
+          .name("tower-sdk-test-create-vm" + System.currentTimeMillis()).cpuCores(1).cpuSockets(1).memory(4294967296L)
           .ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
           .vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1))));
       // do some modify to params(optional)
@@ -87,7 +87,7 @@ public class ITVm extends ITBase {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
     params.add(new VmCreationParams().name("tower-sdk-test-stopped-vm" + System.currentTimeMillis()).cpuCores(1)
-        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
+        .cpuSockets(1).memory(4294967296L).ha(true).vcpu(1).status(VmStatus.STOPPED).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     WithTaskVm result = api.createVm(params).get(0);
@@ -200,7 +200,7 @@ public class ITVm extends ITBase {
     List<VmCreationParams> params = new ArrayList<>();
     Vlan vlan = getData("defaultVlan", Vlan.class);
     params.add(new VmCreationParams().name("tower-sdk-test-running-vm" + System.currentTimeMillis()).cpuCores(1)
-        .cpuSockets(1).memory(4294967296.0).ha(true).vcpu(1).status(VmStatus.RUNNING).firmware(VmFirmware.BIOS)
+        .cpuSockets(1).memory(4294967296L).ha(true).vcpu(1).status(VmStatus.RUNNING).firmware(VmFirmware.BIOS)
         .clusterId(cluster.getId()).vmDisks(new VmDiskParams().addMountCdRomsItem(new VmCdRomParams().boot(1).index(1)))
         .addVmNicsItem(new VmNicParams().localId("").connectVlanId(vlan.getId())));
     WithTaskVm result = api.createVm(params).get(0);
@@ -395,7 +395,8 @@ public class ITVm extends ITBase {
               .addMountNewCreateDisksItem(new MountNewCreateDisksParams().bus(Bus.IDE).boot(0)
                   .vmVolume(new MountNewCreateDisksParamsVmVolume()
                       .elfStoragePolicy(VmVolumeElfStoragePolicyType._2_THIN_PROVISION)
-                      .name("tower-sdk-test-vm-operate-disk-volume" + System.currentTimeMillis()).size(1073741824.0)))));
+                      .name("tower-sdk-test-vm-operate-disk-volume" + System.currentTimeMillis())
+                      .size(1073741824L)))));
       // do some modify to params(optional)
       List<WithTaskVm> addResult = api.addVmDisk(addParams);
       waitForTaskSucceed(addResult.get(0).getTaskId());
@@ -482,7 +483,8 @@ public class ITVm extends ITBase {
       waitForTaskSucceed(result.get(0).getTaskId());
       if (isRecycleBinEnabled) {
         GlobalSettings updatingSetting = settingApi.updateGlobalRecycleBinSetting(
-            new GlobalRecycleBinUpdationParams().enabled(false).retain(settings.getVmRecycleBin().getRetain())).getData();
+            new GlobalRecycleBinUpdationParams().enabled(false).retain(settings.getVmRecycleBin().getRetain()))
+            .getData();
 
         waitForResourceUpdationToTargetValue(
             new GetGlobalSettingsesRequestBody().where(new GlobalSettingsWhereInput().id(updatingSetting.getId())),

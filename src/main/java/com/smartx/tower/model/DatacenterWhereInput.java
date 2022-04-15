@@ -85,35 +85,35 @@ public class DatacenterWhereInput {
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
-  private Double failureDataSpace;
+  private Long failureDataSpace;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GT = "failure_data_space_gt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GT)
-  private Double failureDataSpaceGt;
+  private Long failureDataSpaceGt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE = "failure_data_space_gte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE)
-  private Double failureDataSpaceGte;
+  private Long failureDataSpaceGte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_IN = "failure_data_space_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_IN)
-  private List<Double> failureDataSpaceIn = null;
+  private List<Long> failureDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LT = "failure_data_space_lt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LT)
-  private Double failureDataSpaceLt;
+  private Long failureDataSpaceLt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE = "failure_data_space_lte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE)
-  private Double failureDataSpaceLte;
+  private Long failureDataSpaceLte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT = "failure_data_space_not";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT)
-  private Double failureDataSpaceNot;
+  private Long failureDataSpaceNot;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN = "failure_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN)
-  private List<Double> failureDataSpaceNotIn = null;
+  private List<Long> failureDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
@@ -285,195 +285,195 @@ public class DatacenterWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GT = "total_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GT)
-  private Double totalCpuHzGt;
+  private Long totalCpuHzGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GTE = "total_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GTE)
-  private Double totalCpuHzGte;
+  private Long totalCpuHzGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_IN = "total_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_IN)
-  private List<Double> totalCpuHzIn = null;
+  private List<Long> totalCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LT = "total_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LT)
-  private Double totalCpuHzLt;
+  private Long totalCpuHzLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LTE = "total_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LTE)
-  private Double totalCpuHzLte;
+  private Long totalCpuHzLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT = "total_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT)
-  private Double totalCpuHzNot;
+  private Long totalCpuHzNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN = "total_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN)
-  private List<Double> totalCpuHzNotIn = null;
+  private List<Long> totalCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
-  private Double totalDataCapacity;
+  private Long totalDataCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT = "total_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT)
-  private Double totalDataCapacityGt;
+  private Long totalDataCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE = "total_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE)
-  private Double totalDataCapacityGte;
+  private Long totalDataCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN = "total_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN)
-  private List<Double> totalDataCapacityIn = null;
+  private List<Long> totalDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT = "total_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT)
-  private Double totalDataCapacityLt;
+  private Long totalDataCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE = "total_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE)
-  private Double totalDataCapacityLte;
+  private Long totalDataCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT = "total_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT)
-  private Double totalDataCapacityNot;
+  private Long totalDataCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN = "total_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN)
-  private List<Double> totalDataCapacityNotIn = null;
+  private List<Long> totalDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT = "total_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT)
-  private Double totalMemoryBytesGt;
+  private Long totalMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE = "total_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE)
-  private Double totalMemoryBytesGte;
+  private Long totalMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN = "total_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN)
-  private List<Double> totalMemoryBytesIn = null;
+  private List<Long> totalMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT = "total_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT)
-  private Double totalMemoryBytesLt;
+  private Long totalMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE = "total_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE)
-  private Double totalMemoryBytesLte;
+  private Long totalMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT = "total_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT)
-  private Double totalMemoryBytesNot;
+  private Long totalMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN = "total_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
-  private List<Double> totalMemoryBytesNotIn = null;
+  private List<Long> totalMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Double usedCpuHz;
+  private Long usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GT = "used_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GT)
-  private Double usedCpuHzGt;
+  private Long usedCpuHzGt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GTE = "used_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GTE)
-  private Double usedCpuHzGte;
+  private Long usedCpuHzGte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_IN = "used_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_IN)
-  private List<Double> usedCpuHzIn = null;
+  private List<Long> usedCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LT = "used_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LT)
-  private Double usedCpuHzLt;
+  private Long usedCpuHzLt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LTE = "used_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LTE)
-  private Double usedCpuHzLte;
+  private Long usedCpuHzLte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT = "used_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT)
-  private Double usedCpuHzNot;
+  private Long usedCpuHzNot;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT_IN = "used_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT_IN)
-  private List<Double> usedCpuHzNotIn = null;
+  private List<Long> usedCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GT = "used_data_space_gt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GT)
-  private Double usedDataSpaceGt;
+  private Long usedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GTE = "used_data_space_gte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GTE)
-  private Double usedDataSpaceGte;
+  private Long usedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_IN = "used_data_space_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_IN)
-  private List<Double> usedDataSpaceIn = null;
+  private List<Long> usedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LT = "used_data_space_lt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LT)
-  private Double usedDataSpaceLt;
+  private Long usedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LTE = "used_data_space_lte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LTE)
-  private Double usedDataSpaceLte;
+  private Long usedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT = "used_data_space_not";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT)
-  private Double usedDataSpaceNot;
+  private Long usedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN = "used_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN)
-  private List<Double> usedDataSpaceNotIn = null;
+  private List<Long> usedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Double usedMemoryBytes;
+  private Long usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GT = "used_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GT)
-  private Double usedMemoryBytesGt;
+  private Long usedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GTE = "used_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GTE)
-  private Double usedMemoryBytesGte;
+  private Long usedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_IN = "used_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_IN)
-  private List<Double> usedMemoryBytesIn = null;
+  private List<Long> usedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LT = "used_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LT)
-  private Double usedMemoryBytesLt;
+  private Long usedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LTE = "used_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LTE)
-  private Double usedMemoryBytesLte;
+  private Long usedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT = "used_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT)
-  private Double usedMemoryBytesNot;
+  private Long usedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN = "used_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
-  private List<Double> usedMemoryBytesNotIn = null;
+  private List<Long> usedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -810,7 +810,7 @@ public class DatacenterWhereInput {
   }
 
 
-  public DatacenterWhereInput failureDataSpace(Double failureDataSpace) {
+  public DatacenterWhereInput failureDataSpace(Long failureDataSpace) {
     
     this.failureDataSpace = failureDataSpace;
     return this;
@@ -823,17 +823,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpace() {
+  public Long getFailureDataSpace() {
     return failureDataSpace;
   }
 
 
-  public void setFailureDataSpace(Double failureDataSpace) {
+  public void setFailureDataSpace(Long failureDataSpace) {
     this.failureDataSpace = failureDataSpace;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceGt(Double failureDataSpaceGt) {
+  public DatacenterWhereInput failureDataSpaceGt(Long failureDataSpaceGt) {
     
     this.failureDataSpaceGt = failureDataSpaceGt;
     return this;
@@ -846,17 +846,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGt() {
+  public Long getFailureDataSpaceGt() {
     return failureDataSpaceGt;
   }
 
 
-  public void setFailureDataSpaceGt(Double failureDataSpaceGt) {
+  public void setFailureDataSpaceGt(Long failureDataSpaceGt) {
     this.failureDataSpaceGt = failureDataSpaceGt;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceGte(Double failureDataSpaceGte) {
+  public DatacenterWhereInput failureDataSpaceGte(Long failureDataSpaceGte) {
     
     this.failureDataSpaceGte = failureDataSpaceGte;
     return this;
@@ -869,25 +869,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGte() {
+  public Long getFailureDataSpaceGte() {
     return failureDataSpaceGte;
   }
 
 
-  public void setFailureDataSpaceGte(Double failureDataSpaceGte) {
+  public void setFailureDataSpaceGte(Long failureDataSpaceGte) {
     this.failureDataSpaceGte = failureDataSpaceGte;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public DatacenterWhereInput failureDataSpaceIn(List<Long> failureDataSpaceIn) {
     
     this.failureDataSpaceIn = failureDataSpaceIn;
     return this;
   }
 
-  public DatacenterWhereInput addFailureDataSpaceInItem(Double failureDataSpaceInItem) {
+  public DatacenterWhereInput addFailureDataSpaceInItem(Long failureDataSpaceInItem) {
     if (this.failureDataSpaceIn == null) {
-      this.failureDataSpaceIn = new ArrayList<Double>();
+      this.failureDataSpaceIn = new ArrayList<Long>();
     }
     this.failureDataSpaceIn.add(failureDataSpaceInItem);
     return this;
@@ -900,17 +900,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceIn() {
+  public List<Long> getFailureDataSpaceIn() {
     return failureDataSpaceIn;
   }
 
 
-  public void setFailureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public void setFailureDataSpaceIn(List<Long> failureDataSpaceIn) {
     this.failureDataSpaceIn = failureDataSpaceIn;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceLt(Double failureDataSpaceLt) {
+  public DatacenterWhereInput failureDataSpaceLt(Long failureDataSpaceLt) {
     
     this.failureDataSpaceLt = failureDataSpaceLt;
     return this;
@@ -923,17 +923,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLt() {
+  public Long getFailureDataSpaceLt() {
     return failureDataSpaceLt;
   }
 
 
-  public void setFailureDataSpaceLt(Double failureDataSpaceLt) {
+  public void setFailureDataSpaceLt(Long failureDataSpaceLt) {
     this.failureDataSpaceLt = failureDataSpaceLt;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceLte(Double failureDataSpaceLte) {
+  public DatacenterWhereInput failureDataSpaceLte(Long failureDataSpaceLte) {
     
     this.failureDataSpaceLte = failureDataSpaceLte;
     return this;
@@ -946,17 +946,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLte() {
+  public Long getFailureDataSpaceLte() {
     return failureDataSpaceLte;
   }
 
 
-  public void setFailureDataSpaceLte(Double failureDataSpaceLte) {
+  public void setFailureDataSpaceLte(Long failureDataSpaceLte) {
     this.failureDataSpaceLte = failureDataSpaceLte;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceNot(Double failureDataSpaceNot) {
+  public DatacenterWhereInput failureDataSpaceNot(Long failureDataSpaceNot) {
     
     this.failureDataSpaceNot = failureDataSpaceNot;
     return this;
@@ -969,25 +969,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceNot() {
+  public Long getFailureDataSpaceNot() {
     return failureDataSpaceNot;
   }
 
 
-  public void setFailureDataSpaceNot(Double failureDataSpaceNot) {
+  public void setFailureDataSpaceNot(Long failureDataSpaceNot) {
     this.failureDataSpaceNot = failureDataSpaceNot;
   }
 
 
-  public DatacenterWhereInput failureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public DatacenterWhereInput failureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addFailureDataSpaceNotInItem(Double failureDataSpaceNotInItem) {
+  public DatacenterWhereInput addFailureDataSpaceNotInItem(Long failureDataSpaceNotInItem) {
     if (this.failureDataSpaceNotIn == null) {
-      this.failureDataSpaceNotIn = new ArrayList<Double>();
+      this.failureDataSpaceNotIn = new ArrayList<Long>();
     }
     this.failureDataSpaceNotIn.add(failureDataSpaceNotInItem);
     return this;
@@ -1000,12 +1000,12 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceNotIn() {
+  public List<Long> getFailureDataSpaceNotIn() {
     return failureDataSpaceNotIn;
   }
 
 
-  public void setFailureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public void setFailureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
   }
 
@@ -2040,7 +2040,7 @@ public class DatacenterWhereInput {
   }
 
 
-  public DatacenterWhereInput totalCpuHz(Double totalCpuHz) {
+  public DatacenterWhereInput totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -2053,17 +2053,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
 
-  public DatacenterWhereInput totalCpuHzGt(Double totalCpuHzGt) {
+  public DatacenterWhereInput totalCpuHzGt(Long totalCpuHzGt) {
     
     this.totalCpuHzGt = totalCpuHzGt;
     return this;
@@ -2076,17 +2076,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGt() {
+  public Long getTotalCpuHzGt() {
     return totalCpuHzGt;
   }
 
 
-  public void setTotalCpuHzGt(Double totalCpuHzGt) {
+  public void setTotalCpuHzGt(Long totalCpuHzGt) {
     this.totalCpuHzGt = totalCpuHzGt;
   }
 
 
-  public DatacenterWhereInput totalCpuHzGte(Double totalCpuHzGte) {
+  public DatacenterWhereInput totalCpuHzGte(Long totalCpuHzGte) {
     
     this.totalCpuHzGte = totalCpuHzGte;
     return this;
@@ -2099,25 +2099,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGte() {
+  public Long getTotalCpuHzGte() {
     return totalCpuHzGte;
   }
 
 
-  public void setTotalCpuHzGte(Double totalCpuHzGte) {
+  public void setTotalCpuHzGte(Long totalCpuHzGte) {
     this.totalCpuHzGte = totalCpuHzGte;
   }
 
 
-  public DatacenterWhereInput totalCpuHzIn(List<Double> totalCpuHzIn) {
+  public DatacenterWhereInput totalCpuHzIn(List<Long> totalCpuHzIn) {
     
     this.totalCpuHzIn = totalCpuHzIn;
     return this;
   }
 
-  public DatacenterWhereInput addTotalCpuHzInItem(Double totalCpuHzInItem) {
+  public DatacenterWhereInput addTotalCpuHzInItem(Long totalCpuHzInItem) {
     if (this.totalCpuHzIn == null) {
-      this.totalCpuHzIn = new ArrayList<Double>();
+      this.totalCpuHzIn = new ArrayList<Long>();
     }
     this.totalCpuHzIn.add(totalCpuHzInItem);
     return this;
@@ -2130,17 +2130,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzIn() {
+  public List<Long> getTotalCpuHzIn() {
     return totalCpuHzIn;
   }
 
 
-  public void setTotalCpuHzIn(List<Double> totalCpuHzIn) {
+  public void setTotalCpuHzIn(List<Long> totalCpuHzIn) {
     this.totalCpuHzIn = totalCpuHzIn;
   }
 
 
-  public DatacenterWhereInput totalCpuHzLt(Double totalCpuHzLt) {
+  public DatacenterWhereInput totalCpuHzLt(Long totalCpuHzLt) {
     
     this.totalCpuHzLt = totalCpuHzLt;
     return this;
@@ -2153,17 +2153,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLt() {
+  public Long getTotalCpuHzLt() {
     return totalCpuHzLt;
   }
 
 
-  public void setTotalCpuHzLt(Double totalCpuHzLt) {
+  public void setTotalCpuHzLt(Long totalCpuHzLt) {
     this.totalCpuHzLt = totalCpuHzLt;
   }
 
 
-  public DatacenterWhereInput totalCpuHzLte(Double totalCpuHzLte) {
+  public DatacenterWhereInput totalCpuHzLte(Long totalCpuHzLte) {
     
     this.totalCpuHzLte = totalCpuHzLte;
     return this;
@@ -2176,17 +2176,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLte() {
+  public Long getTotalCpuHzLte() {
     return totalCpuHzLte;
   }
 
 
-  public void setTotalCpuHzLte(Double totalCpuHzLte) {
+  public void setTotalCpuHzLte(Long totalCpuHzLte) {
     this.totalCpuHzLte = totalCpuHzLte;
   }
 
 
-  public DatacenterWhereInput totalCpuHzNot(Double totalCpuHzNot) {
+  public DatacenterWhereInput totalCpuHzNot(Long totalCpuHzNot) {
     
     this.totalCpuHzNot = totalCpuHzNot;
     return this;
@@ -2199,25 +2199,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzNot() {
+  public Long getTotalCpuHzNot() {
     return totalCpuHzNot;
   }
 
 
-  public void setTotalCpuHzNot(Double totalCpuHzNot) {
+  public void setTotalCpuHzNot(Long totalCpuHzNot) {
     this.totalCpuHzNot = totalCpuHzNot;
   }
 
 
-  public DatacenterWhereInput totalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public DatacenterWhereInput totalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     
     this.totalCpuHzNotIn = totalCpuHzNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addTotalCpuHzNotInItem(Double totalCpuHzNotInItem) {
+  public DatacenterWhereInput addTotalCpuHzNotInItem(Long totalCpuHzNotInItem) {
     if (this.totalCpuHzNotIn == null) {
-      this.totalCpuHzNotIn = new ArrayList<Double>();
+      this.totalCpuHzNotIn = new ArrayList<Long>();
     }
     this.totalCpuHzNotIn.add(totalCpuHzNotInItem);
     return this;
@@ -2230,17 +2230,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzNotIn() {
+  public List<Long> getTotalCpuHzNotIn() {
     return totalCpuHzNotIn;
   }
 
 
-  public void setTotalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public void setTotalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     this.totalCpuHzNotIn = totalCpuHzNotIn;
   }
 
 
-  public DatacenterWhereInput totalDataCapacity(Double totalDataCapacity) {
+  public DatacenterWhereInput totalDataCapacity(Long totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
     return this;
@@ -2253,17 +2253,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacity() {
+  public Long getTotalDataCapacity() {
     return totalDataCapacity;
   }
 
 
-  public void setTotalDataCapacity(Double totalDataCapacity) {
+  public void setTotalDataCapacity(Long totalDataCapacity) {
     this.totalDataCapacity = totalDataCapacity;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityGt(Double totalDataCapacityGt) {
+  public DatacenterWhereInput totalDataCapacityGt(Long totalDataCapacityGt) {
     
     this.totalDataCapacityGt = totalDataCapacityGt;
     return this;
@@ -2276,17 +2276,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGt() {
+  public Long getTotalDataCapacityGt() {
     return totalDataCapacityGt;
   }
 
 
-  public void setTotalDataCapacityGt(Double totalDataCapacityGt) {
+  public void setTotalDataCapacityGt(Long totalDataCapacityGt) {
     this.totalDataCapacityGt = totalDataCapacityGt;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityGte(Double totalDataCapacityGte) {
+  public DatacenterWhereInput totalDataCapacityGte(Long totalDataCapacityGte) {
     
     this.totalDataCapacityGte = totalDataCapacityGte;
     return this;
@@ -2299,25 +2299,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGte() {
+  public Long getTotalDataCapacityGte() {
     return totalDataCapacityGte;
   }
 
 
-  public void setTotalDataCapacityGte(Double totalDataCapacityGte) {
+  public void setTotalDataCapacityGte(Long totalDataCapacityGte) {
     this.totalDataCapacityGte = totalDataCapacityGte;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public DatacenterWhereInput totalDataCapacityIn(List<Long> totalDataCapacityIn) {
     
     this.totalDataCapacityIn = totalDataCapacityIn;
     return this;
   }
 
-  public DatacenterWhereInput addTotalDataCapacityInItem(Double totalDataCapacityInItem) {
+  public DatacenterWhereInput addTotalDataCapacityInItem(Long totalDataCapacityInItem) {
     if (this.totalDataCapacityIn == null) {
-      this.totalDataCapacityIn = new ArrayList<Double>();
+      this.totalDataCapacityIn = new ArrayList<Long>();
     }
     this.totalDataCapacityIn.add(totalDataCapacityInItem);
     return this;
@@ -2330,17 +2330,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityIn() {
+  public List<Long> getTotalDataCapacityIn() {
     return totalDataCapacityIn;
   }
 
 
-  public void setTotalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public void setTotalDataCapacityIn(List<Long> totalDataCapacityIn) {
     this.totalDataCapacityIn = totalDataCapacityIn;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityLt(Double totalDataCapacityLt) {
+  public DatacenterWhereInput totalDataCapacityLt(Long totalDataCapacityLt) {
     
     this.totalDataCapacityLt = totalDataCapacityLt;
     return this;
@@ -2353,17 +2353,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLt() {
+  public Long getTotalDataCapacityLt() {
     return totalDataCapacityLt;
   }
 
 
-  public void setTotalDataCapacityLt(Double totalDataCapacityLt) {
+  public void setTotalDataCapacityLt(Long totalDataCapacityLt) {
     this.totalDataCapacityLt = totalDataCapacityLt;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityLte(Double totalDataCapacityLte) {
+  public DatacenterWhereInput totalDataCapacityLte(Long totalDataCapacityLte) {
     
     this.totalDataCapacityLte = totalDataCapacityLte;
     return this;
@@ -2376,17 +2376,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLte() {
+  public Long getTotalDataCapacityLte() {
     return totalDataCapacityLte;
   }
 
 
-  public void setTotalDataCapacityLte(Double totalDataCapacityLte) {
+  public void setTotalDataCapacityLte(Long totalDataCapacityLte) {
     this.totalDataCapacityLte = totalDataCapacityLte;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityNot(Double totalDataCapacityNot) {
+  public DatacenterWhereInput totalDataCapacityNot(Long totalDataCapacityNot) {
     
     this.totalDataCapacityNot = totalDataCapacityNot;
     return this;
@@ -2399,25 +2399,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityNot() {
+  public Long getTotalDataCapacityNot() {
     return totalDataCapacityNot;
   }
 
 
-  public void setTotalDataCapacityNot(Double totalDataCapacityNot) {
+  public void setTotalDataCapacityNot(Long totalDataCapacityNot) {
     this.totalDataCapacityNot = totalDataCapacityNot;
   }
 
 
-  public DatacenterWhereInput totalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public DatacenterWhereInput totalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addTotalDataCapacityNotInItem(Double totalDataCapacityNotInItem) {
+  public DatacenterWhereInput addTotalDataCapacityNotInItem(Long totalDataCapacityNotInItem) {
     if (this.totalDataCapacityNotIn == null) {
-      this.totalDataCapacityNotIn = new ArrayList<Double>();
+      this.totalDataCapacityNotIn = new ArrayList<Long>();
     }
     this.totalDataCapacityNotIn.add(totalDataCapacityNotInItem);
     return this;
@@ -2430,17 +2430,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityNotIn() {
+  public List<Long> getTotalDataCapacityNotIn() {
     return totalDataCapacityNotIn;
   }
 
 
-  public void setTotalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public void setTotalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytes(Double totalMemoryBytes) {
+  public DatacenterWhereInput totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -2453,17 +2453,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public DatacenterWhereInput totalMemoryBytesGt(Long totalMemoryBytesGt) {
     
     this.totalMemoryBytesGt = totalMemoryBytesGt;
     return this;
@@ -2476,17 +2476,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGt() {
+  public Long getTotalMemoryBytesGt() {
     return totalMemoryBytesGt;
   }
 
 
-  public void setTotalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public void setTotalMemoryBytesGt(Long totalMemoryBytesGt) {
     this.totalMemoryBytesGt = totalMemoryBytesGt;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public DatacenterWhereInput totalMemoryBytesGte(Long totalMemoryBytesGte) {
     
     this.totalMemoryBytesGte = totalMemoryBytesGte;
     return this;
@@ -2499,25 +2499,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGte() {
+  public Long getTotalMemoryBytesGte() {
     return totalMemoryBytesGte;
   }
 
 
-  public void setTotalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public void setTotalMemoryBytesGte(Long totalMemoryBytesGte) {
     this.totalMemoryBytesGte = totalMemoryBytesGte;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public DatacenterWhereInput totalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     
     this.totalMemoryBytesIn = totalMemoryBytesIn;
     return this;
   }
 
-  public DatacenterWhereInput addTotalMemoryBytesInItem(Double totalMemoryBytesInItem) {
+  public DatacenterWhereInput addTotalMemoryBytesInItem(Long totalMemoryBytesInItem) {
     if (this.totalMemoryBytesIn == null) {
-      this.totalMemoryBytesIn = new ArrayList<Double>();
+      this.totalMemoryBytesIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesIn.add(totalMemoryBytesInItem);
     return this;
@@ -2530,17 +2530,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesIn() {
+  public List<Long> getTotalMemoryBytesIn() {
     return totalMemoryBytesIn;
   }
 
 
-  public void setTotalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public void setTotalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     this.totalMemoryBytesIn = totalMemoryBytesIn;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public DatacenterWhereInput totalMemoryBytesLt(Long totalMemoryBytesLt) {
     
     this.totalMemoryBytesLt = totalMemoryBytesLt;
     return this;
@@ -2553,17 +2553,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLt() {
+  public Long getTotalMemoryBytesLt() {
     return totalMemoryBytesLt;
   }
 
 
-  public void setTotalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public void setTotalMemoryBytesLt(Long totalMemoryBytesLt) {
     this.totalMemoryBytesLt = totalMemoryBytesLt;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public DatacenterWhereInput totalMemoryBytesLte(Long totalMemoryBytesLte) {
     
     this.totalMemoryBytesLte = totalMemoryBytesLte;
     return this;
@@ -2576,17 +2576,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLte() {
+  public Long getTotalMemoryBytesLte() {
     return totalMemoryBytesLte;
   }
 
 
-  public void setTotalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public void setTotalMemoryBytesLte(Long totalMemoryBytesLte) {
     this.totalMemoryBytesLte = totalMemoryBytesLte;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public DatacenterWhereInput totalMemoryBytesNot(Long totalMemoryBytesNot) {
     
     this.totalMemoryBytesNot = totalMemoryBytesNot;
     return this;
@@ -2599,25 +2599,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesNot() {
+  public Long getTotalMemoryBytesNot() {
     return totalMemoryBytesNot;
   }
 
 
-  public void setTotalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public void setTotalMemoryBytesNot(Long totalMemoryBytesNot) {
     this.totalMemoryBytesNot = totalMemoryBytesNot;
   }
 
 
-  public DatacenterWhereInput totalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public DatacenterWhereInput totalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addTotalMemoryBytesNotInItem(Double totalMemoryBytesNotInItem) {
+  public DatacenterWhereInput addTotalMemoryBytesNotInItem(Long totalMemoryBytesNotInItem) {
     if (this.totalMemoryBytesNotIn == null) {
-      this.totalMemoryBytesNotIn = new ArrayList<Double>();
+      this.totalMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesNotIn.add(totalMemoryBytesNotInItem);
     return this;
@@ -2630,17 +2630,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesNotIn() {
+  public List<Long> getTotalMemoryBytesNotIn() {
     return totalMemoryBytesNotIn;
   }
 
 
-  public void setTotalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public void setTotalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
   }
 
 
-  public DatacenterWhereInput usedCpuHz(Double usedCpuHz) {
+  public DatacenterWhereInput usedCpuHz(Long usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -2653,17 +2653,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHz() {
+  public Long getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Double usedCpuHz) {
+  public void setUsedCpuHz(Long usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public DatacenterWhereInput usedCpuHzGt(Double usedCpuHzGt) {
+  public DatacenterWhereInput usedCpuHzGt(Long usedCpuHzGt) {
     
     this.usedCpuHzGt = usedCpuHzGt;
     return this;
@@ -2676,17 +2676,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzGt() {
+  public Long getUsedCpuHzGt() {
     return usedCpuHzGt;
   }
 
 
-  public void setUsedCpuHzGt(Double usedCpuHzGt) {
+  public void setUsedCpuHzGt(Long usedCpuHzGt) {
     this.usedCpuHzGt = usedCpuHzGt;
   }
 
 
-  public DatacenterWhereInput usedCpuHzGte(Double usedCpuHzGte) {
+  public DatacenterWhereInput usedCpuHzGte(Long usedCpuHzGte) {
     
     this.usedCpuHzGte = usedCpuHzGte;
     return this;
@@ -2699,25 +2699,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzGte() {
+  public Long getUsedCpuHzGte() {
     return usedCpuHzGte;
   }
 
 
-  public void setUsedCpuHzGte(Double usedCpuHzGte) {
+  public void setUsedCpuHzGte(Long usedCpuHzGte) {
     this.usedCpuHzGte = usedCpuHzGte;
   }
 
 
-  public DatacenterWhereInput usedCpuHzIn(List<Double> usedCpuHzIn) {
+  public DatacenterWhereInput usedCpuHzIn(List<Long> usedCpuHzIn) {
     
     this.usedCpuHzIn = usedCpuHzIn;
     return this;
   }
 
-  public DatacenterWhereInput addUsedCpuHzInItem(Double usedCpuHzInItem) {
+  public DatacenterWhereInput addUsedCpuHzInItem(Long usedCpuHzInItem) {
     if (this.usedCpuHzIn == null) {
-      this.usedCpuHzIn = new ArrayList<Double>();
+      this.usedCpuHzIn = new ArrayList<Long>();
     }
     this.usedCpuHzIn.add(usedCpuHzInItem);
     return this;
@@ -2730,17 +2730,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedCpuHzIn() {
+  public List<Long> getUsedCpuHzIn() {
     return usedCpuHzIn;
   }
 
 
-  public void setUsedCpuHzIn(List<Double> usedCpuHzIn) {
+  public void setUsedCpuHzIn(List<Long> usedCpuHzIn) {
     this.usedCpuHzIn = usedCpuHzIn;
   }
 
 
-  public DatacenterWhereInput usedCpuHzLt(Double usedCpuHzLt) {
+  public DatacenterWhereInput usedCpuHzLt(Long usedCpuHzLt) {
     
     this.usedCpuHzLt = usedCpuHzLt;
     return this;
@@ -2753,17 +2753,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzLt() {
+  public Long getUsedCpuHzLt() {
     return usedCpuHzLt;
   }
 
 
-  public void setUsedCpuHzLt(Double usedCpuHzLt) {
+  public void setUsedCpuHzLt(Long usedCpuHzLt) {
     this.usedCpuHzLt = usedCpuHzLt;
   }
 
 
-  public DatacenterWhereInput usedCpuHzLte(Double usedCpuHzLte) {
+  public DatacenterWhereInput usedCpuHzLte(Long usedCpuHzLte) {
     
     this.usedCpuHzLte = usedCpuHzLte;
     return this;
@@ -2776,17 +2776,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzLte() {
+  public Long getUsedCpuHzLte() {
     return usedCpuHzLte;
   }
 
 
-  public void setUsedCpuHzLte(Double usedCpuHzLte) {
+  public void setUsedCpuHzLte(Long usedCpuHzLte) {
     this.usedCpuHzLte = usedCpuHzLte;
   }
 
 
-  public DatacenterWhereInput usedCpuHzNot(Double usedCpuHzNot) {
+  public DatacenterWhereInput usedCpuHzNot(Long usedCpuHzNot) {
     
     this.usedCpuHzNot = usedCpuHzNot;
     return this;
@@ -2799,25 +2799,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzNot() {
+  public Long getUsedCpuHzNot() {
     return usedCpuHzNot;
   }
 
 
-  public void setUsedCpuHzNot(Double usedCpuHzNot) {
+  public void setUsedCpuHzNot(Long usedCpuHzNot) {
     this.usedCpuHzNot = usedCpuHzNot;
   }
 
 
-  public DatacenterWhereInput usedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
+  public DatacenterWhereInput usedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
     
     this.usedCpuHzNotIn = usedCpuHzNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addUsedCpuHzNotInItem(Double usedCpuHzNotInItem) {
+  public DatacenterWhereInput addUsedCpuHzNotInItem(Long usedCpuHzNotInItem) {
     if (this.usedCpuHzNotIn == null) {
-      this.usedCpuHzNotIn = new ArrayList<Double>();
+      this.usedCpuHzNotIn = new ArrayList<Long>();
     }
     this.usedCpuHzNotIn.add(usedCpuHzNotInItem);
     return this;
@@ -2830,17 +2830,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedCpuHzNotIn() {
+  public List<Long> getUsedCpuHzNotIn() {
     return usedCpuHzNotIn;
   }
 
 
-  public void setUsedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
+  public void setUsedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
     this.usedCpuHzNotIn = usedCpuHzNotIn;
   }
 
 
-  public DatacenterWhereInput usedDataSpace(Double usedDataSpace) {
+  public DatacenterWhereInput usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -2853,17 +2853,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceGt(Double usedDataSpaceGt) {
+  public DatacenterWhereInput usedDataSpaceGt(Long usedDataSpaceGt) {
     
     this.usedDataSpaceGt = usedDataSpaceGt;
     return this;
@@ -2876,17 +2876,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGt() {
+  public Long getUsedDataSpaceGt() {
     return usedDataSpaceGt;
   }
 
 
-  public void setUsedDataSpaceGt(Double usedDataSpaceGt) {
+  public void setUsedDataSpaceGt(Long usedDataSpaceGt) {
     this.usedDataSpaceGt = usedDataSpaceGt;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceGte(Double usedDataSpaceGte) {
+  public DatacenterWhereInput usedDataSpaceGte(Long usedDataSpaceGte) {
     
     this.usedDataSpaceGte = usedDataSpaceGte;
     return this;
@@ -2899,25 +2899,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGte() {
+  public Long getUsedDataSpaceGte() {
     return usedDataSpaceGte;
   }
 
 
-  public void setUsedDataSpaceGte(Double usedDataSpaceGte) {
+  public void setUsedDataSpaceGte(Long usedDataSpaceGte) {
     this.usedDataSpaceGte = usedDataSpaceGte;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public DatacenterWhereInput usedDataSpaceIn(List<Long> usedDataSpaceIn) {
     
     this.usedDataSpaceIn = usedDataSpaceIn;
     return this;
   }
 
-  public DatacenterWhereInput addUsedDataSpaceInItem(Double usedDataSpaceInItem) {
+  public DatacenterWhereInput addUsedDataSpaceInItem(Long usedDataSpaceInItem) {
     if (this.usedDataSpaceIn == null) {
-      this.usedDataSpaceIn = new ArrayList<Double>();
+      this.usedDataSpaceIn = new ArrayList<Long>();
     }
     this.usedDataSpaceIn.add(usedDataSpaceInItem);
     return this;
@@ -2930,17 +2930,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceIn() {
+  public List<Long> getUsedDataSpaceIn() {
     return usedDataSpaceIn;
   }
 
 
-  public void setUsedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public void setUsedDataSpaceIn(List<Long> usedDataSpaceIn) {
     this.usedDataSpaceIn = usedDataSpaceIn;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceLt(Double usedDataSpaceLt) {
+  public DatacenterWhereInput usedDataSpaceLt(Long usedDataSpaceLt) {
     
     this.usedDataSpaceLt = usedDataSpaceLt;
     return this;
@@ -2953,17 +2953,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLt() {
+  public Long getUsedDataSpaceLt() {
     return usedDataSpaceLt;
   }
 
 
-  public void setUsedDataSpaceLt(Double usedDataSpaceLt) {
+  public void setUsedDataSpaceLt(Long usedDataSpaceLt) {
     this.usedDataSpaceLt = usedDataSpaceLt;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceLte(Double usedDataSpaceLte) {
+  public DatacenterWhereInput usedDataSpaceLte(Long usedDataSpaceLte) {
     
     this.usedDataSpaceLte = usedDataSpaceLte;
     return this;
@@ -2976,17 +2976,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLte() {
+  public Long getUsedDataSpaceLte() {
     return usedDataSpaceLte;
   }
 
 
-  public void setUsedDataSpaceLte(Double usedDataSpaceLte) {
+  public void setUsedDataSpaceLte(Long usedDataSpaceLte) {
     this.usedDataSpaceLte = usedDataSpaceLte;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceNot(Double usedDataSpaceNot) {
+  public DatacenterWhereInput usedDataSpaceNot(Long usedDataSpaceNot) {
     
     this.usedDataSpaceNot = usedDataSpaceNot;
     return this;
@@ -2999,25 +2999,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceNot() {
+  public Long getUsedDataSpaceNot() {
     return usedDataSpaceNot;
   }
 
 
-  public void setUsedDataSpaceNot(Double usedDataSpaceNot) {
+  public void setUsedDataSpaceNot(Long usedDataSpaceNot) {
     this.usedDataSpaceNot = usedDataSpaceNot;
   }
 
 
-  public DatacenterWhereInput usedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public DatacenterWhereInput usedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addUsedDataSpaceNotInItem(Double usedDataSpaceNotInItem) {
+  public DatacenterWhereInput addUsedDataSpaceNotInItem(Long usedDataSpaceNotInItem) {
     if (this.usedDataSpaceNotIn == null) {
-      this.usedDataSpaceNotIn = new ArrayList<Double>();
+      this.usedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.usedDataSpaceNotIn.add(usedDataSpaceNotInItem);
     return this;
@@ -3030,17 +3030,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceNotIn() {
+  public List<Long> getUsedDataSpaceNotIn() {
     return usedDataSpaceNotIn;
   }
 
 
-  public void setUsedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public void setUsedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytes(Double usedMemoryBytes) {
+  public DatacenterWhereInput usedMemoryBytes(Long usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -3053,17 +3053,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytes() {
+  public Long getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Double usedMemoryBytes) {
+  public void setUsedMemoryBytes(Long usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesGt(Double usedMemoryBytesGt) {
+  public DatacenterWhereInput usedMemoryBytesGt(Long usedMemoryBytesGt) {
     
     this.usedMemoryBytesGt = usedMemoryBytesGt;
     return this;
@@ -3076,17 +3076,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesGt() {
+  public Long getUsedMemoryBytesGt() {
     return usedMemoryBytesGt;
   }
 
 
-  public void setUsedMemoryBytesGt(Double usedMemoryBytesGt) {
+  public void setUsedMemoryBytesGt(Long usedMemoryBytesGt) {
     this.usedMemoryBytesGt = usedMemoryBytesGt;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesGte(Double usedMemoryBytesGte) {
+  public DatacenterWhereInput usedMemoryBytesGte(Long usedMemoryBytesGte) {
     
     this.usedMemoryBytesGte = usedMemoryBytesGte;
     return this;
@@ -3099,25 +3099,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesGte() {
+  public Long getUsedMemoryBytesGte() {
     return usedMemoryBytesGte;
   }
 
 
-  public void setUsedMemoryBytesGte(Double usedMemoryBytesGte) {
+  public void setUsedMemoryBytesGte(Long usedMemoryBytesGte) {
     this.usedMemoryBytesGte = usedMemoryBytesGte;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
+  public DatacenterWhereInput usedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
     
     this.usedMemoryBytesIn = usedMemoryBytesIn;
     return this;
   }
 
-  public DatacenterWhereInput addUsedMemoryBytesInItem(Double usedMemoryBytesInItem) {
+  public DatacenterWhereInput addUsedMemoryBytesInItem(Long usedMemoryBytesInItem) {
     if (this.usedMemoryBytesIn == null) {
-      this.usedMemoryBytesIn = new ArrayList<Double>();
+      this.usedMemoryBytesIn = new ArrayList<Long>();
     }
     this.usedMemoryBytesIn.add(usedMemoryBytesInItem);
     return this;
@@ -3130,17 +3130,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedMemoryBytesIn() {
+  public List<Long> getUsedMemoryBytesIn() {
     return usedMemoryBytesIn;
   }
 
 
-  public void setUsedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
+  public void setUsedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
     this.usedMemoryBytesIn = usedMemoryBytesIn;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesLt(Double usedMemoryBytesLt) {
+  public DatacenterWhereInput usedMemoryBytesLt(Long usedMemoryBytesLt) {
     
     this.usedMemoryBytesLt = usedMemoryBytesLt;
     return this;
@@ -3153,17 +3153,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesLt() {
+  public Long getUsedMemoryBytesLt() {
     return usedMemoryBytesLt;
   }
 
 
-  public void setUsedMemoryBytesLt(Double usedMemoryBytesLt) {
+  public void setUsedMemoryBytesLt(Long usedMemoryBytesLt) {
     this.usedMemoryBytesLt = usedMemoryBytesLt;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesLte(Double usedMemoryBytesLte) {
+  public DatacenterWhereInput usedMemoryBytesLte(Long usedMemoryBytesLte) {
     
     this.usedMemoryBytesLte = usedMemoryBytesLte;
     return this;
@@ -3176,17 +3176,17 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesLte() {
+  public Long getUsedMemoryBytesLte() {
     return usedMemoryBytesLte;
   }
 
 
-  public void setUsedMemoryBytesLte(Double usedMemoryBytesLte) {
+  public void setUsedMemoryBytesLte(Long usedMemoryBytesLte) {
     this.usedMemoryBytesLte = usedMemoryBytesLte;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesNot(Double usedMemoryBytesNot) {
+  public DatacenterWhereInput usedMemoryBytesNot(Long usedMemoryBytesNot) {
     
     this.usedMemoryBytesNot = usedMemoryBytesNot;
     return this;
@@ -3199,25 +3199,25 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesNot() {
+  public Long getUsedMemoryBytesNot() {
     return usedMemoryBytesNot;
   }
 
 
-  public void setUsedMemoryBytesNot(Double usedMemoryBytesNot) {
+  public void setUsedMemoryBytesNot(Long usedMemoryBytesNot) {
     this.usedMemoryBytesNot = usedMemoryBytesNot;
   }
 
 
-  public DatacenterWhereInput usedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
+  public DatacenterWhereInput usedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
     
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
     return this;
   }
 
-  public DatacenterWhereInput addUsedMemoryBytesNotInItem(Double usedMemoryBytesNotInItem) {
+  public DatacenterWhereInput addUsedMemoryBytesNotInItem(Long usedMemoryBytesNotInItem) {
     if (this.usedMemoryBytesNotIn == null) {
-      this.usedMemoryBytesNotIn = new ArrayList<Double>();
+      this.usedMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.usedMemoryBytesNotIn.add(usedMemoryBytesNotInItem);
     return this;
@@ -3230,12 +3230,12 @@ public class DatacenterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedMemoryBytesNotIn() {
+  public List<Long> getUsedMemoryBytesNotIn() {
     return usedMemoryBytesNotIn;
   }
 
 
-  public void setUsedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
+  public void setUsedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
   }
 

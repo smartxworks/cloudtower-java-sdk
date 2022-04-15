@@ -51,7 +51,7 @@ public class BackupLicense {
 
   public static final String SERIALIZED_NAME_MAX_CAPACITY = "max_capacity";
   @SerializedName(SERIALIZED_NAME_MAX_CAPACITY)
-  private Double maxCapacity;
+  private Long maxCapacity;
 
   public static final String SERIALIZED_NAME_SIGN_DATE = "sign_date";
   @SerializedName(SERIALIZED_NAME_SIGN_DATE)
@@ -160,7 +160,7 @@ public class BackupLicense {
   }
 
 
-  public BackupLicense maxCapacity(Double maxCapacity) {
+  public BackupLicense maxCapacity(Long maxCapacity) {
     
     this.maxCapacity = maxCapacity;
     return this;
@@ -173,12 +173,12 @@ public class BackupLicense {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getMaxCapacity() {
+  public Long getMaxCapacity() {
     return maxCapacity;
   }
 
 
-  public void setMaxCapacity(Double maxCapacity) {
+  public void setMaxCapacity(Long maxCapacity) {
     this.maxCapacity = maxCapacity;
   }
 

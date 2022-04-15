@@ -50,7 +50,7 @@ public class ITIscsiTarget extends ITBase {
       // parse params from json payload
       List<IscsiTargetCreationParams> createParams = new ArrayList<IscsiTargetCreationParams>();
       createParams.add(new IscsiTargetCreationParams().clusterId(cluster.getId()).thinProvision(true).replicaNum(2)
-          .stripeNum(4).stripeSize(262144.0).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
+          .stripeNum(4).stripeSize(262144L).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
       List<WithTaskIscsiTarget> createResult = api.createIscsiTarget(createParams);
       IscsiTarget target = createResult.get(0).getData();
       waitForTaskSucceed(createResult.get(0).getTaskId());

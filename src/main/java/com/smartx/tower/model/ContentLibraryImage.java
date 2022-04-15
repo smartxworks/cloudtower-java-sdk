@@ -81,7 +81,7 @@ public class ContentLibraryImage {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
@@ -357,7 +357,7 @@ public class ContentLibraryImage {
   }
 
 
-  public ContentLibraryImage size(Double size) {
+  public ContentLibraryImage size(Long size) {
     
     this.size = size;
     return this;
@@ -370,12 +370,12 @@ public class ContentLibraryImage {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

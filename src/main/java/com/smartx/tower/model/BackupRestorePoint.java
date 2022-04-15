@@ -84,7 +84,7 @@ public class BackupRestorePoint {
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE = "logical_size";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE)
-  private Double logicalSize;
+  private Long logicalSize;
 
   public static final String SERIALIZED_NAME_PARENT_RESTORE_POINT = "parent_restore_point";
   @SerializedName(SERIALIZED_NAME_PARENT_RESTORE_POINT)
@@ -92,11 +92,11 @@ public class BackupRestorePoint {
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE = "physical_size";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE)
-  private Double physicalSize;
+  private Long physicalSize;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SLICE = "slice";
   @SerializedName(SERIALIZED_NAME_SLICE)
@@ -108,11 +108,11 @@ public class BackupRestorePoint {
 
   public static final String SERIALIZED_NAME_VALID_CAPACITY = "valid_capacity";
   @SerializedName(SERIALIZED_NAME_VALID_CAPACITY)
-  private Double validCapacity;
+  private Long validCapacity;
 
   public static final String SERIALIZED_NAME_VALID_SIZE = "valid_size";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE)
-  private Double validSize;
+  private Long validSize;
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
@@ -382,7 +382,7 @@ public class BackupRestorePoint {
   }
 
 
-  public BackupRestorePoint logicalSize(Double logicalSize) {
+  public BackupRestorePoint logicalSize(Long logicalSize) {
     
     this.logicalSize = logicalSize;
     return this;
@@ -395,12 +395,12 @@ public class BackupRestorePoint {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSize() {
+  public Long getLogicalSize() {
     return logicalSize;
   }
 
 
-  public void setLogicalSize(Double logicalSize) {
+  public void setLogicalSize(Long logicalSize) {
     this.logicalSize = logicalSize;
   }
 
@@ -428,7 +428,7 @@ public class BackupRestorePoint {
   }
 
 
-  public BackupRestorePoint physicalSize(Double physicalSize) {
+  public BackupRestorePoint physicalSize(Long physicalSize) {
     
     this.physicalSize = physicalSize;
     return this;
@@ -441,17 +441,17 @@ public class BackupRestorePoint {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSize() {
+  public Long getPhysicalSize() {
     return physicalSize;
   }
 
 
-  public void setPhysicalSize(Double physicalSize) {
+  public void setPhysicalSize(Long physicalSize) {
     this.physicalSize = physicalSize;
   }
 
 
-  public BackupRestorePoint size(Double size) {
+  public BackupRestorePoint size(Long size) {
     
     this.size = size;
     return this;
@@ -464,12 +464,12 @@ public class BackupRestorePoint {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
@@ -520,7 +520,7 @@ public class BackupRestorePoint {
   }
 
 
-  public BackupRestorePoint validCapacity(Double validCapacity) {
+  public BackupRestorePoint validCapacity(Long validCapacity) {
     
     this.validCapacity = validCapacity;
     return this;
@@ -533,17 +533,17 @@ public class BackupRestorePoint {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidCapacity() {
+  public Long getValidCapacity() {
     return validCapacity;
   }
 
 
-  public void setValidCapacity(Double validCapacity) {
+  public void setValidCapacity(Long validCapacity) {
     this.validCapacity = validCapacity;
   }
 
 
-  public BackupRestorePoint validSize(Double validSize) {
+  public BackupRestorePoint validSize(Long validSize) {
     
     this.validSize = validSize;
     return this;
@@ -556,12 +556,12 @@ public class BackupRestorePoint {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidSize() {
+  public Long getValidSize() {
     return validSize;
   }
 
 
-  public void setValidSize(Double validSize) {
+  public void setValidSize(Long validSize) {
     this.validSize = validSize;
   }
 

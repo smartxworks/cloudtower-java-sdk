@@ -52,7 +52,7 @@ public class NestedDiskFailureInformation {
 
   public static final String SERIALIZED_NAME_IOSTAT_LATENCY_MS = "iostat_latency_ms";
   @SerializedName(SERIALIZED_NAME_IOSTAT_LATENCY_MS)
-  private Double iostatLatencyMs;
+  private Long iostatLatencyMs;
 
   public static final String SERIALIZED_NAME_SMART_CHECK = "smart_check";
   @SerializedName(SERIALIZED_NAME_SMART_CHECK)
@@ -176,7 +176,7 @@ public class NestedDiskFailureInformation {
   }
 
 
-  public NestedDiskFailureInformation iostatLatencyMs(Double iostatLatencyMs) {
+  public NestedDiskFailureInformation iostatLatencyMs(Long iostatLatencyMs) {
     
     this.iostatLatencyMs = iostatLatencyMs;
     return this;
@@ -189,12 +189,12 @@ public class NestedDiskFailureInformation {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIostatLatencyMs() {
+  public Long getIostatLatencyMs() {
     return iostatLatencyMs;
   }
 
 
-  public void setIostatLatencyMs(Double iostatLatencyMs) {
+  public void setIostatLatencyMs(Long iostatLatencyMs) {
     this.iostatLatencyMs = iostatLatencyMs;
   }
 

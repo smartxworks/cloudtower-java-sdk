@@ -53,7 +53,7 @@ public class ITIscsiLun extends ITBase {
       NoSuchMethodException, SecurityException, ApiException {
     List<IscsiTargetCreationParams> params = new ArrayList<IscsiTargetCreationParams>();
     params.add(new IscsiTargetCreationParams().clusterId(cluster.getId()).thinProvision(true).replicaNum(2).stripeNum(4)
-        .stripeSize(262144.0).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
+        .stripeSize(262144L).name("tower-sdk-test-iscsi-target" + System.currentTimeMillis()));
     WithTaskIscsiTarget createResult = targetApi.createIscsiTarget(params).get(0);
     target = createResult.getData();
     waitForTaskSucceed(createResult.getTaskId());
@@ -79,7 +79,7 @@ public class ITIscsiLun extends ITBase {
       List<IscsiLunCreationParams> createParams = new ArrayList<IscsiLunCreationParams>();
       createParams.add(new IscsiLunCreationParams().iscsiTargetId(target.getId())
           .name("tower-sdk-test-iscsi-lun" + System.currentTimeMillis()).replicaNum(2)
-          .assignedSize(30.0 * 1024 * 1024 * 1024));
+          .assignedSize(30L * 1024 * 1024 * 1024));
       // do some modify to params(optional)
       List<WithTaskIscsiLun> createResult = api.createIscsiLun(createParams);
       IscsiLun lun = createResult.get(0).getData();

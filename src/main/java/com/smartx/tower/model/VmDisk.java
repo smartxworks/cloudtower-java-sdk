@@ -75,7 +75,7 @@ public class VmDisk {
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -331,7 +331,7 @@ public class VmDisk {
   }
 
 
-  public VmDisk maxBandwidth(Double maxBandwidth) {
+  public VmDisk maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -344,12 +344,12 @@ public class VmDisk {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 

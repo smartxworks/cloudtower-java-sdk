@@ -35,7 +35,7 @@ public class IscsiLunCreationParamsAllOf {
 
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
-  private Double assignedSize;
+  private Long assignedSize;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
@@ -75,7 +75,7 @@ public class IscsiLunCreationParamsAllOf {
   }
 
 
-  public IscsiLunCreationParamsAllOf assignedSize(Double assignedSize) {
+  public IscsiLunCreationParamsAllOf assignedSize(Long assignedSize) {
     
     this.assignedSize = assignedSize;
     return this;
@@ -88,12 +88,12 @@ public class IscsiLunCreationParamsAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAssignedSize() {
+  public Long getAssignedSize() {
     return assignedSize;
   }
 
 
-  public void setAssignedSize(Double assignedSize) {
+  public void setAssignedSize(Long assignedSize) {
     this.assignedSize = assignedSize;
   }
 

@@ -111,7 +111,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
-  private Double failureDataSpace;
+  private Long failureDataSpace;
 
   public static final String SERIALIZED_NAME_HAS_METROX = "has_metrox";
   @SerializedName(SERIALIZED_NAME_HAS_METROX)
@@ -191,11 +191,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY = "max_physical_data_capacity";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY)
-  private Double maxPhysicalDataCapacity;
+  private Long maxPhysicalDataCapacity;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE = "max_physical_data_capacity_per_node";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE)
-  private Double maxPhysicalDataCapacityPerNode;
+  private Long maxPhysicalDataCapacityPerNode;
 
   public static final String SERIALIZED_NAME_METRO_AVAILABILITY_CHECKLIST = "metro_availability_checklist";
   @SerializedName(SERIALIZED_NAME_METRO_AVAILABILITY_CHECKLIST)
@@ -211,11 +211,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE = "migration_data_size";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE)
-  private Double migrationDataSize;
+  private Long migrationDataSize;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED = "migration_speed";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED)
-  private Double migrationSpeed;
+  private Long migrationSpeed;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -251,7 +251,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
-  private Double provisionedMemoryBytes;
+  private Long provisionedMemoryBytes;
 
   public static final String SERIALIZED_NAME_PROVISIONED_RATIO = "provisioned_ratio";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_RATIO)
@@ -267,11 +267,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE = "recover_data_size";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE)
-  private Double recoverDataSize;
+  private Long recoverDataSize;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED = "recover_speed";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED)
-  private Double recoverSpeed;
+  private Long recoverSpeed;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE = "reserved_cpu_cores_for_system_service";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE)
@@ -303,7 +303,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
-  private Double totalCacheCapacity;
+  private Long totalCacheCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -311,7 +311,7 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_MODELS = "total_cpu_models";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_MODELS)
@@ -323,11 +323,11 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
-  private Double totalDataCapacity;
+  private Long totalDataCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -339,19 +339,19 @@ public class Cluster {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Double usedCpuHz;
+  private Long usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Double usedMemoryBytes;
+  private Long usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE)
-  private Double validDataSpace;
+  private Long validDataSpace;
 
   public static final String SERIALIZED_NAME_VCENTER_ACCOUNT = "vcenterAccount";
   @SerializedName(SERIALIZED_NAME_VCENTER_ACCOUNT)
@@ -724,7 +724,7 @@ public class Cluster {
   }
 
 
-  public Cluster failureDataSpace(Double failureDataSpace) {
+  public Cluster failureDataSpace(Long failureDataSpace) {
     
     this.failureDataSpace = failureDataSpace;
     return this;
@@ -737,12 +737,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpace() {
+  public Long getFailureDataSpace() {
     return failureDataSpace;
   }
 
 
-  public void setFailureDataSpace(Double failureDataSpace) {
+  public void setFailureDataSpace(Long failureDataSpace) {
     this.failureDataSpace = failureDataSpace;
   }
 
@@ -1200,7 +1200,7 @@ public class Cluster {
   }
 
 
-  public Cluster maxPhysicalDataCapacity(Double maxPhysicalDataCapacity) {
+  public Cluster maxPhysicalDataCapacity(Long maxPhysicalDataCapacity) {
     
     this.maxPhysicalDataCapacity = maxPhysicalDataCapacity;
     return this;
@@ -1213,17 +1213,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacity() {
+  public Long getMaxPhysicalDataCapacity() {
     return maxPhysicalDataCapacity;
   }
 
 
-  public void setMaxPhysicalDataCapacity(Double maxPhysicalDataCapacity) {
+  public void setMaxPhysicalDataCapacity(Long maxPhysicalDataCapacity) {
     this.maxPhysicalDataCapacity = maxPhysicalDataCapacity;
   }
 
 
-  public Cluster maxPhysicalDataCapacityPerNode(Double maxPhysicalDataCapacityPerNode) {
+  public Cluster maxPhysicalDataCapacityPerNode(Long maxPhysicalDataCapacityPerNode) {
     
     this.maxPhysicalDataCapacityPerNode = maxPhysicalDataCapacityPerNode;
     return this;
@@ -1236,12 +1236,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNode() {
+  public Long getMaxPhysicalDataCapacityPerNode() {
     return maxPhysicalDataCapacityPerNode;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNode(Double maxPhysicalDataCapacityPerNode) {
+  public void setMaxPhysicalDataCapacityPerNode(Long maxPhysicalDataCapacityPerNode) {
     this.maxPhysicalDataCapacityPerNode = maxPhysicalDataCapacityPerNode;
   }
 
@@ -1315,7 +1315,7 @@ public class Cluster {
   }
 
 
-  public Cluster migrationDataSize(Double migrationDataSize) {
+  public Cluster migrationDataSize(Long migrationDataSize) {
     
     this.migrationDataSize = migrationDataSize;
     return this;
@@ -1328,17 +1328,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSize() {
+  public Long getMigrationDataSize() {
     return migrationDataSize;
   }
 
 
-  public void setMigrationDataSize(Double migrationDataSize) {
+  public void setMigrationDataSize(Long migrationDataSize) {
     this.migrationDataSize = migrationDataSize;
   }
 
 
-  public Cluster migrationSpeed(Double migrationSpeed) {
+  public Cluster migrationSpeed(Long migrationSpeed) {
     
     this.migrationSpeed = migrationSpeed;
     return this;
@@ -1351,12 +1351,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeed() {
+  public Long getMigrationSpeed() {
     return migrationSpeed;
   }
 
 
-  public void setMigrationSpeed(Double migrationSpeed) {
+  public void setMigrationSpeed(Long migrationSpeed) {
     this.migrationSpeed = migrationSpeed;
   }
 
@@ -1550,7 +1550,7 @@ public class Cluster {
   }
 
 
-  public Cluster provisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public Cluster provisionedMemoryBytes(Long provisionedMemoryBytes) {
     
     this.provisionedMemoryBytes = provisionedMemoryBytes;
     return this;
@@ -1563,12 +1563,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytes() {
+  public Long getProvisionedMemoryBytes() {
     return provisionedMemoryBytes;
   }
 
 
-  public void setProvisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public void setProvisionedMemoryBytes(Long provisionedMemoryBytes) {
     this.provisionedMemoryBytes = provisionedMemoryBytes;
   }
 
@@ -1647,7 +1647,7 @@ public class Cluster {
   }
 
 
-  public Cluster recoverDataSize(Double recoverDataSize) {
+  public Cluster recoverDataSize(Long recoverDataSize) {
     
     this.recoverDataSize = recoverDataSize;
     return this;
@@ -1660,17 +1660,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSize() {
+  public Long getRecoverDataSize() {
     return recoverDataSize;
   }
 
 
-  public void setRecoverDataSize(Double recoverDataSize) {
+  public void setRecoverDataSize(Long recoverDataSize) {
     this.recoverDataSize = recoverDataSize;
   }
 
 
-  public Cluster recoverSpeed(Double recoverSpeed) {
+  public Cluster recoverSpeed(Long recoverSpeed) {
     
     this.recoverSpeed = recoverSpeed;
     return this;
@@ -1683,12 +1683,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeed() {
+  public Long getRecoverSpeed() {
     return recoverSpeed;
   }
 
 
-  public void setRecoverSpeed(Double recoverSpeed) {
+  public void setRecoverSpeed(Long recoverSpeed) {
     this.recoverSpeed = recoverSpeed;
   }
 
@@ -1854,7 +1854,7 @@ public class Cluster {
   }
 
 
-  public Cluster totalCacheCapacity(Double totalCacheCapacity) {
+  public Cluster totalCacheCapacity(Long totalCacheCapacity) {
     
     this.totalCacheCapacity = totalCacheCapacity;
     return this;
@@ -1867,12 +1867,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacity() {
+  public Long getTotalCacheCapacity() {
     return totalCacheCapacity;
   }
 
 
-  public void setTotalCacheCapacity(Double totalCacheCapacity) {
+  public void setTotalCacheCapacity(Long totalCacheCapacity) {
     this.totalCacheCapacity = totalCacheCapacity;
   }
 
@@ -1900,7 +1900,7 @@ public class Cluster {
   }
 
 
-  public Cluster totalCpuHz(Double totalCpuHz) {
+  public Cluster totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -1913,12 +1913,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
@@ -1974,7 +1974,7 @@ public class Cluster {
   }
 
 
-  public Cluster totalDataCapacity(Double totalDataCapacity) {
+  public Cluster totalDataCapacity(Long totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
     return this;
@@ -1987,17 +1987,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacity() {
+  public Long getTotalDataCapacity() {
     return totalDataCapacity;
   }
 
 
-  public void setTotalDataCapacity(Double totalDataCapacity) {
+  public void setTotalDataCapacity(Long totalDataCapacity) {
     this.totalDataCapacity = totalDataCapacity;
   }
 
 
-  public Cluster totalMemoryBytes(Double totalMemoryBytes) {
+  public Cluster totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -2010,12 +2010,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
@@ -2066,7 +2066,7 @@ public class Cluster {
   }
 
 
-  public Cluster usedCpuHz(Double usedCpuHz) {
+  public Cluster usedCpuHz(Long usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -2079,17 +2079,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHz() {
+  public Long getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Double usedCpuHz) {
+  public void setUsedCpuHz(Long usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public Cluster usedDataSpace(Double usedDataSpace) {
+  public Cluster usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -2102,17 +2102,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public Cluster usedMemoryBytes(Double usedMemoryBytes) {
+  public Cluster usedMemoryBytes(Long usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -2125,17 +2125,17 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytes() {
+  public Long getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Double usedMemoryBytes) {
+  public void setUsedMemoryBytes(Long usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
 
-  public Cluster validDataSpace(Double validDataSpace) {
+  public Cluster validDataSpace(Long validDataSpace) {
     
     this.validDataSpace = validDataSpace;
     return this;
@@ -2148,12 +2148,12 @@ public class Cluster {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpace() {
+  public Long getValidDataSpace() {
     return validDataSpace;
   }
 
 
-  public void setValidDataSpace(Double validDataSpace) {
+  public void setValidDataSpace(Long validDataSpace) {
     this.validDataSpace = validDataSpace;
   }
 

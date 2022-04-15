@@ -34,75 +34,75 @@ import java.util.List;
 public class IscsiTargetCommonParams {
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
-  private Double bpsWrMaxLength;
+  private Long bpsWrMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_WR_MAX = "bps_wr_max";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX)
-  private Double bpsWrMax;
+  private Long bpsWrMax;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH = "bps_rd_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH)
-  private Double bpsRdMaxLength;
+  private Long bpsRdMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_RD_MAX = "bps_rd_max";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX)
-  private Double bpsRdMax;
+  private Long bpsRdMax;
 
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH = "bps_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH)
-  private Double bpsMaxLength;
+  private Long bpsMaxLength;
 
   public static final String SERIALIZED_NAME_BPS_MAX = "bps_max";
   @SerializedName(SERIALIZED_NAME_BPS_MAX)
-  private Double bpsMax;
+  private Long bpsMax;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH = "iops_wr_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH)
-  private Double iopsWrMaxLength;
+  private Long iopsWrMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_WR_MAX = "iops_wr_max";
   @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX)
-  private Double iopsWrMax;
+  private Long iopsWrMax;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH = "iops_rd_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH)
-  private Double iopsRdMaxLength;
+  private Long iopsRdMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_RD_MAX = "iops_rd_max";
   @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX)
-  private Double iopsRdMax;
+  private Long iopsRdMax;
 
   public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH = "iops_max_length";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH)
-  private Double iopsMaxLength;
+  private Long iopsMaxLength;
 
   public static final String SERIALIZED_NAME_IOPS_MAX = "iops_max";
   @SerializedName(SERIALIZED_NAME_IOPS_MAX)
-  private Double iopsMax;
+  private Long iopsMax;
 
   public static final String SERIALIZED_NAME_BPS_WR = "bps_wr";
   @SerializedName(SERIALIZED_NAME_BPS_WR)
-  private Double bpsWr;
+  private Long bpsWr;
 
   public static final String SERIALIZED_NAME_BPS_RD = "bps_rd";
   @SerializedName(SERIALIZED_NAME_BPS_RD)
-  private Double bpsRd;
+  private Long bpsRd;
 
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)
-  private Double bps;
+  private Long bps;
 
   public static final String SERIALIZED_NAME_IOPS_WR = "iops_wr";
   @SerializedName(SERIALIZED_NAME_IOPS_WR)
-  private Double iopsWr;
+  private Long iopsWr;
 
   public static final String SERIALIZED_NAME_IOPS_RD = "iops_rd";
   @SerializedName(SERIALIZED_NAME_IOPS_RD)
-  private Double iopsRd;
+  private Long iopsRd;
 
   public static final String SERIALIZED_NAME_IOPS = "iops";
   @SerializedName(SERIALIZED_NAME_IOPS)
-  private Double iops;
+  private Long iops;
 
   public static final String SERIALIZED_NAME_INITIATOR_CHAPS = "initiator_chaps";
   @SerializedName(SERIALIZED_NAME_INITIATOR_CHAPS)
@@ -135,7 +135,7 @@ public class IscsiTargetCommonParams {
   public IscsiTargetCommonParams() { 
   }
 
-  public IscsiTargetCommonParams bpsWrMaxLength(Double bpsWrMaxLength) {
+  public IscsiTargetCommonParams bpsWrMaxLength(Long bpsWrMaxLength) {
     
     this.bpsWrMaxLength = bpsWrMaxLength;
     return this;
@@ -148,17 +148,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMaxLength() {
+  public Long getBpsWrMaxLength() {
     return bpsWrMaxLength;
   }
 
 
-  public void setBpsWrMaxLength(Double bpsWrMaxLength) {
+  public void setBpsWrMaxLength(Long bpsWrMaxLength) {
     this.bpsWrMaxLength = bpsWrMaxLength;
   }
 
 
-  public IscsiTargetCommonParams bpsWrMax(Double bpsWrMax) {
+  public IscsiTargetCommonParams bpsWrMax(Long bpsWrMax) {
     
     this.bpsWrMax = bpsWrMax;
     return this;
@@ -171,17 +171,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWrMax() {
+  public Long getBpsWrMax() {
     return bpsWrMax;
   }
 
 
-  public void setBpsWrMax(Double bpsWrMax) {
+  public void setBpsWrMax(Long bpsWrMax) {
     this.bpsWrMax = bpsWrMax;
   }
 
 
-  public IscsiTargetCommonParams bpsRdMaxLength(Double bpsRdMaxLength) {
+  public IscsiTargetCommonParams bpsRdMaxLength(Long bpsRdMaxLength) {
     
     this.bpsRdMaxLength = bpsRdMaxLength;
     return this;
@@ -194,17 +194,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMaxLength() {
+  public Long getBpsRdMaxLength() {
     return bpsRdMaxLength;
   }
 
 
-  public void setBpsRdMaxLength(Double bpsRdMaxLength) {
+  public void setBpsRdMaxLength(Long bpsRdMaxLength) {
     this.bpsRdMaxLength = bpsRdMaxLength;
   }
 
 
-  public IscsiTargetCommonParams bpsRdMax(Double bpsRdMax) {
+  public IscsiTargetCommonParams bpsRdMax(Long bpsRdMax) {
     
     this.bpsRdMax = bpsRdMax;
     return this;
@@ -217,17 +217,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRdMax() {
+  public Long getBpsRdMax() {
     return bpsRdMax;
   }
 
 
-  public void setBpsRdMax(Double bpsRdMax) {
+  public void setBpsRdMax(Long bpsRdMax) {
     this.bpsRdMax = bpsRdMax;
   }
 
 
-  public IscsiTargetCommonParams bpsMaxLength(Double bpsMaxLength) {
+  public IscsiTargetCommonParams bpsMaxLength(Long bpsMaxLength) {
     
     this.bpsMaxLength = bpsMaxLength;
     return this;
@@ -240,17 +240,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMaxLength() {
+  public Long getBpsMaxLength() {
     return bpsMaxLength;
   }
 
 
-  public void setBpsMaxLength(Double bpsMaxLength) {
+  public void setBpsMaxLength(Long bpsMaxLength) {
     this.bpsMaxLength = bpsMaxLength;
   }
 
 
-  public IscsiTargetCommonParams bpsMax(Double bpsMax) {
+  public IscsiTargetCommonParams bpsMax(Long bpsMax) {
     
     this.bpsMax = bpsMax;
     return this;
@@ -263,17 +263,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsMax() {
+  public Long getBpsMax() {
     return bpsMax;
   }
 
 
-  public void setBpsMax(Double bpsMax) {
+  public void setBpsMax(Long bpsMax) {
     this.bpsMax = bpsMax;
   }
 
 
-  public IscsiTargetCommonParams iopsWrMaxLength(Double iopsWrMaxLength) {
+  public IscsiTargetCommonParams iopsWrMaxLength(Long iopsWrMaxLength) {
     
     this.iopsWrMaxLength = iopsWrMaxLength;
     return this;
@@ -286,17 +286,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMaxLength() {
+  public Long getIopsWrMaxLength() {
     return iopsWrMaxLength;
   }
 
 
-  public void setIopsWrMaxLength(Double iopsWrMaxLength) {
+  public void setIopsWrMaxLength(Long iopsWrMaxLength) {
     this.iopsWrMaxLength = iopsWrMaxLength;
   }
 
 
-  public IscsiTargetCommonParams iopsWrMax(Double iopsWrMax) {
+  public IscsiTargetCommonParams iopsWrMax(Long iopsWrMax) {
     
     this.iopsWrMax = iopsWrMax;
     return this;
@@ -309,17 +309,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWrMax() {
+  public Long getIopsWrMax() {
     return iopsWrMax;
   }
 
 
-  public void setIopsWrMax(Double iopsWrMax) {
+  public void setIopsWrMax(Long iopsWrMax) {
     this.iopsWrMax = iopsWrMax;
   }
 
 
-  public IscsiTargetCommonParams iopsRdMaxLength(Double iopsRdMaxLength) {
+  public IscsiTargetCommonParams iopsRdMaxLength(Long iopsRdMaxLength) {
     
     this.iopsRdMaxLength = iopsRdMaxLength;
     return this;
@@ -332,17 +332,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMaxLength() {
+  public Long getIopsRdMaxLength() {
     return iopsRdMaxLength;
   }
 
 
-  public void setIopsRdMaxLength(Double iopsRdMaxLength) {
+  public void setIopsRdMaxLength(Long iopsRdMaxLength) {
     this.iopsRdMaxLength = iopsRdMaxLength;
   }
 
 
-  public IscsiTargetCommonParams iopsRdMax(Double iopsRdMax) {
+  public IscsiTargetCommonParams iopsRdMax(Long iopsRdMax) {
     
     this.iopsRdMax = iopsRdMax;
     return this;
@@ -355,17 +355,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRdMax() {
+  public Long getIopsRdMax() {
     return iopsRdMax;
   }
 
 
-  public void setIopsRdMax(Double iopsRdMax) {
+  public void setIopsRdMax(Long iopsRdMax) {
     this.iopsRdMax = iopsRdMax;
   }
 
 
-  public IscsiTargetCommonParams iopsMaxLength(Double iopsMaxLength) {
+  public IscsiTargetCommonParams iopsMaxLength(Long iopsMaxLength) {
     
     this.iopsMaxLength = iopsMaxLength;
     return this;
@@ -378,17 +378,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMaxLength() {
+  public Long getIopsMaxLength() {
     return iopsMaxLength;
   }
 
 
-  public void setIopsMaxLength(Double iopsMaxLength) {
+  public void setIopsMaxLength(Long iopsMaxLength) {
     this.iopsMaxLength = iopsMaxLength;
   }
 
 
-  public IscsiTargetCommonParams iopsMax(Double iopsMax) {
+  public IscsiTargetCommonParams iopsMax(Long iopsMax) {
     
     this.iopsMax = iopsMax;
     return this;
@@ -401,17 +401,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsMax() {
+  public Long getIopsMax() {
     return iopsMax;
   }
 
 
-  public void setIopsMax(Double iopsMax) {
+  public void setIopsMax(Long iopsMax) {
     this.iopsMax = iopsMax;
   }
 
 
-  public IscsiTargetCommonParams bpsWr(Double bpsWr) {
+  public IscsiTargetCommonParams bpsWr(Long bpsWr) {
     
     this.bpsWr = bpsWr;
     return this;
@@ -424,17 +424,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsWr() {
+  public Long getBpsWr() {
     return bpsWr;
   }
 
 
-  public void setBpsWr(Double bpsWr) {
+  public void setBpsWr(Long bpsWr) {
     this.bpsWr = bpsWr;
   }
 
 
-  public IscsiTargetCommonParams bpsRd(Double bpsRd) {
+  public IscsiTargetCommonParams bpsRd(Long bpsRd) {
     
     this.bpsRd = bpsRd;
     return this;
@@ -447,17 +447,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBpsRd() {
+  public Long getBpsRd() {
     return bpsRd;
   }
 
 
-  public void setBpsRd(Double bpsRd) {
+  public void setBpsRd(Long bpsRd) {
     this.bpsRd = bpsRd;
   }
 
 
-  public IscsiTargetCommonParams bps(Double bps) {
+  public IscsiTargetCommonParams bps(Long bps) {
     
     this.bps = bps;
     return this;
@@ -470,17 +470,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getBps() {
+  public Long getBps() {
     return bps;
   }
 
 
-  public void setBps(Double bps) {
+  public void setBps(Long bps) {
     this.bps = bps;
   }
 
 
-  public IscsiTargetCommonParams iopsWr(Double iopsWr) {
+  public IscsiTargetCommonParams iopsWr(Long iopsWr) {
     
     this.iopsWr = iopsWr;
     return this;
@@ -493,17 +493,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsWr() {
+  public Long getIopsWr() {
     return iopsWr;
   }
 
 
-  public void setIopsWr(Double iopsWr) {
+  public void setIopsWr(Long iopsWr) {
     this.iopsWr = iopsWr;
   }
 
 
-  public IscsiTargetCommonParams iopsRd(Double iopsRd) {
+  public IscsiTargetCommonParams iopsRd(Long iopsRd) {
     
     this.iopsRd = iopsRd;
     return this;
@@ -516,17 +516,17 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIopsRd() {
+  public Long getIopsRd() {
     return iopsRd;
   }
 
 
-  public void setIopsRd(Double iopsRd) {
+  public void setIopsRd(Long iopsRd) {
     this.iopsRd = iopsRd;
   }
 
 
-  public IscsiTargetCommonParams iops(Double iops) {
+  public IscsiTargetCommonParams iops(Long iops) {
     
     this.iops = iops;
     return this;
@@ -539,12 +539,12 @@ public class IscsiTargetCommonParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getIops() {
+  public Long getIops() {
     return iops;
   }
 
 
-  public void setIops(Double iops) {
+  public void setIops(Long iops) {
     this.iops = iops;
   }
 

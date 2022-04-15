@@ -35,7 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 public class PmemDimm {
   public static final String SERIALIZED_NAME_CAPACITY = "capacity";
   @SerializedName(SERIALIZED_NAME_CAPACITY)
-  private Double capacity;
+  private Long capacity;
 
   public static final String SERIALIZED_NAME_DEVICE_LOCATOR = "device_locator";
   @SerializedName(SERIALIZED_NAME_DEVICE_LOCATOR)
@@ -84,7 +84,7 @@ public class PmemDimm {
   public PmemDimm() { 
   }
 
-  public PmemDimm capacity(Double capacity) {
+  public PmemDimm capacity(Long capacity) {
     
     this.capacity = capacity;
     return this;
@@ -97,12 +97,12 @@ public class PmemDimm {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getCapacity() {
+  public Long getCapacity() {
     return capacity;
   }
 
 
-  public void setCapacity(Double capacity) {
+  public void setCapacity(Long capacity) {
     this.capacity = capacity;
   }
 

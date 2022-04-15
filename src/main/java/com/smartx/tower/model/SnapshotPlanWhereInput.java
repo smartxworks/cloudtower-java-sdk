@@ -445,35 +445,35 @@ public class SnapshotPlanWhereInput {
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES = "logical_size_bytes";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES)
-  private Double logicalSizeBytes;
+  private Long logicalSizeBytes;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_GT = "logical_size_bytes_gt";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_GT)
-  private Double logicalSizeBytesGt;
+  private Long logicalSizeBytesGt;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_GTE = "logical_size_bytes_gte";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_GTE)
-  private Double logicalSizeBytesGte;
+  private Long logicalSizeBytesGte;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_IN = "logical_size_bytes_in";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_IN)
-  private List<Double> logicalSizeBytesIn = null;
+  private List<Long> logicalSizeBytesIn = null;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_LT = "logical_size_bytes_lt";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_LT)
-  private Double logicalSizeBytesLt;
+  private Long logicalSizeBytesLt;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_LTE = "logical_size_bytes_lte";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_LTE)
-  private Double logicalSizeBytesLte;
+  private Long logicalSizeBytesLte;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_NOT = "logical_size_bytes_not";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_NOT)
-  private Double logicalSizeBytesNot;
+  private Long logicalSizeBytesNot;
 
   public static final String SERIALIZED_NAME_LOGICAL_SIZE_BYTES_NOT_IN = "logical_size_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_BYTES_NOT_IN)
-  private List<Double> logicalSizeBytesNotIn = null;
+  private List<Long> logicalSizeBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_MANUAL_DELETE_NUM = "manual_delete_num";
   @SerializedName(SERIALIZED_NAME_MANUAL_DELETE_NUM)
@@ -677,35 +677,35 @@ public class SnapshotPlanWhereInput {
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES = "physical_size_bytes";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES)
-  private Double physicalSizeBytes;
+  private Long physicalSizeBytes;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_GT = "physical_size_bytes_gt";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_GT)
-  private Double physicalSizeBytesGt;
+  private Long physicalSizeBytesGt;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_GTE = "physical_size_bytes_gte";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_GTE)
-  private Double physicalSizeBytesGte;
+  private Long physicalSizeBytesGte;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_IN = "physical_size_bytes_in";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_IN)
-  private List<Double> physicalSizeBytesIn = null;
+  private List<Long> physicalSizeBytesIn = null;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_LT = "physical_size_bytes_lt";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_LT)
-  private Double physicalSizeBytesLt;
+  private Long physicalSizeBytesLt;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_LTE = "physical_size_bytes_lte";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_LTE)
-  private Double physicalSizeBytesLte;
+  private Long physicalSizeBytesLte;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_NOT = "physical_size_bytes_not";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_NOT)
-  private Double physicalSizeBytesNot;
+  private Long physicalSizeBytesNot;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_NOT_IN = "physical_size_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES_NOT_IN)
-  private List<Double> physicalSizeBytesNotIn = null;
+  private List<Long> physicalSizeBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM = "remain_snapshot_num";
   @SerializedName(SERIALIZED_NAME_REMAIN_SNAPSHOT_NUM)
@@ -3341,7 +3341,7 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytes(Double logicalSizeBytes) {
+  public SnapshotPlanWhereInput logicalSizeBytes(Long logicalSizeBytes) {
     
     this.logicalSizeBytes = logicalSizeBytes;
     return this;
@@ -3354,17 +3354,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytes() {
+  public Long getLogicalSizeBytes() {
     return logicalSizeBytes;
   }
 
 
-  public void setLogicalSizeBytes(Double logicalSizeBytes) {
+  public void setLogicalSizeBytes(Long logicalSizeBytes) {
     this.logicalSizeBytes = logicalSizeBytes;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesGt(Double logicalSizeBytesGt) {
+  public SnapshotPlanWhereInput logicalSizeBytesGt(Long logicalSizeBytesGt) {
     
     this.logicalSizeBytesGt = logicalSizeBytesGt;
     return this;
@@ -3377,17 +3377,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytesGt() {
+  public Long getLogicalSizeBytesGt() {
     return logicalSizeBytesGt;
   }
 
 
-  public void setLogicalSizeBytesGt(Double logicalSizeBytesGt) {
+  public void setLogicalSizeBytesGt(Long logicalSizeBytesGt) {
     this.logicalSizeBytesGt = logicalSizeBytesGt;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesGte(Double logicalSizeBytesGte) {
+  public SnapshotPlanWhereInput logicalSizeBytesGte(Long logicalSizeBytesGte) {
     
     this.logicalSizeBytesGte = logicalSizeBytesGte;
     return this;
@@ -3400,25 +3400,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytesGte() {
+  public Long getLogicalSizeBytesGte() {
     return logicalSizeBytesGte;
   }
 
 
-  public void setLogicalSizeBytesGte(Double logicalSizeBytesGte) {
+  public void setLogicalSizeBytesGte(Long logicalSizeBytesGte) {
     this.logicalSizeBytesGte = logicalSizeBytesGte;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesIn(List<Double> logicalSizeBytesIn) {
+  public SnapshotPlanWhereInput logicalSizeBytesIn(List<Long> logicalSizeBytesIn) {
     
     this.logicalSizeBytesIn = logicalSizeBytesIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addLogicalSizeBytesInItem(Double logicalSizeBytesInItem) {
+  public SnapshotPlanWhereInput addLogicalSizeBytesInItem(Long logicalSizeBytesInItem) {
     if (this.logicalSizeBytesIn == null) {
-      this.logicalSizeBytesIn = new ArrayList<Double>();
+      this.logicalSizeBytesIn = new ArrayList<Long>();
     }
     this.logicalSizeBytesIn.add(logicalSizeBytesInItem);
     return this;
@@ -3431,17 +3431,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getLogicalSizeBytesIn() {
+  public List<Long> getLogicalSizeBytesIn() {
     return logicalSizeBytesIn;
   }
 
 
-  public void setLogicalSizeBytesIn(List<Double> logicalSizeBytesIn) {
+  public void setLogicalSizeBytesIn(List<Long> logicalSizeBytesIn) {
     this.logicalSizeBytesIn = logicalSizeBytesIn;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesLt(Double logicalSizeBytesLt) {
+  public SnapshotPlanWhereInput logicalSizeBytesLt(Long logicalSizeBytesLt) {
     
     this.logicalSizeBytesLt = logicalSizeBytesLt;
     return this;
@@ -3454,17 +3454,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytesLt() {
+  public Long getLogicalSizeBytesLt() {
     return logicalSizeBytesLt;
   }
 
 
-  public void setLogicalSizeBytesLt(Double logicalSizeBytesLt) {
+  public void setLogicalSizeBytesLt(Long logicalSizeBytesLt) {
     this.logicalSizeBytesLt = logicalSizeBytesLt;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesLte(Double logicalSizeBytesLte) {
+  public SnapshotPlanWhereInput logicalSizeBytesLte(Long logicalSizeBytesLte) {
     
     this.logicalSizeBytesLte = logicalSizeBytesLte;
     return this;
@@ -3477,17 +3477,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytesLte() {
+  public Long getLogicalSizeBytesLte() {
     return logicalSizeBytesLte;
   }
 
 
-  public void setLogicalSizeBytesLte(Double logicalSizeBytesLte) {
+  public void setLogicalSizeBytesLte(Long logicalSizeBytesLte) {
     this.logicalSizeBytesLte = logicalSizeBytesLte;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesNot(Double logicalSizeBytesNot) {
+  public SnapshotPlanWhereInput logicalSizeBytesNot(Long logicalSizeBytesNot) {
     
     this.logicalSizeBytesNot = logicalSizeBytesNot;
     return this;
@@ -3500,25 +3500,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getLogicalSizeBytesNot() {
+  public Long getLogicalSizeBytesNot() {
     return logicalSizeBytesNot;
   }
 
 
-  public void setLogicalSizeBytesNot(Double logicalSizeBytesNot) {
+  public void setLogicalSizeBytesNot(Long logicalSizeBytesNot) {
     this.logicalSizeBytesNot = logicalSizeBytesNot;
   }
 
 
-  public SnapshotPlanWhereInput logicalSizeBytesNotIn(List<Double> logicalSizeBytesNotIn) {
+  public SnapshotPlanWhereInput logicalSizeBytesNotIn(List<Long> logicalSizeBytesNotIn) {
     
     this.logicalSizeBytesNotIn = logicalSizeBytesNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addLogicalSizeBytesNotInItem(Double logicalSizeBytesNotInItem) {
+  public SnapshotPlanWhereInput addLogicalSizeBytesNotInItem(Long logicalSizeBytesNotInItem) {
     if (this.logicalSizeBytesNotIn == null) {
-      this.logicalSizeBytesNotIn = new ArrayList<Double>();
+      this.logicalSizeBytesNotIn = new ArrayList<Long>();
     }
     this.logicalSizeBytesNotIn.add(logicalSizeBytesNotInItem);
     return this;
@@ -3531,12 +3531,12 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getLogicalSizeBytesNotIn() {
+  public List<Long> getLogicalSizeBytesNotIn() {
     return logicalSizeBytesNotIn;
   }
 
 
-  public void setLogicalSizeBytesNotIn(List<Double> logicalSizeBytesNotIn) {
+  public void setLogicalSizeBytesNotIn(List<Long> logicalSizeBytesNotIn) {
     this.logicalSizeBytesNotIn = logicalSizeBytesNotIn;
   }
 
@@ -4787,7 +4787,7 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytes(Double physicalSizeBytes) {
+  public SnapshotPlanWhereInput physicalSizeBytes(Long physicalSizeBytes) {
     
     this.physicalSizeBytes = physicalSizeBytes;
     return this;
@@ -4800,17 +4800,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeBytes() {
+  public Long getPhysicalSizeBytes() {
     return physicalSizeBytes;
   }
 
 
-  public void setPhysicalSizeBytes(Double physicalSizeBytes) {
+  public void setPhysicalSizeBytes(Long physicalSizeBytes) {
     this.physicalSizeBytes = physicalSizeBytes;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesGt(Double physicalSizeBytesGt) {
+  public SnapshotPlanWhereInput physicalSizeBytesGt(Long physicalSizeBytesGt) {
     
     this.physicalSizeBytesGt = physicalSizeBytesGt;
     return this;
@@ -4823,17 +4823,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeBytesGt() {
+  public Long getPhysicalSizeBytesGt() {
     return physicalSizeBytesGt;
   }
 
 
-  public void setPhysicalSizeBytesGt(Double physicalSizeBytesGt) {
+  public void setPhysicalSizeBytesGt(Long physicalSizeBytesGt) {
     this.physicalSizeBytesGt = physicalSizeBytesGt;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesGte(Double physicalSizeBytesGte) {
+  public SnapshotPlanWhereInput physicalSizeBytesGte(Long physicalSizeBytesGte) {
     
     this.physicalSizeBytesGte = physicalSizeBytesGte;
     return this;
@@ -4846,25 +4846,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeBytesGte() {
+  public Long getPhysicalSizeBytesGte() {
     return physicalSizeBytesGte;
   }
 
 
-  public void setPhysicalSizeBytesGte(Double physicalSizeBytesGte) {
+  public void setPhysicalSizeBytesGte(Long physicalSizeBytesGte) {
     this.physicalSizeBytesGte = physicalSizeBytesGte;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesIn(List<Double> physicalSizeBytesIn) {
+  public SnapshotPlanWhereInput physicalSizeBytesIn(List<Long> physicalSizeBytesIn) {
     
     this.physicalSizeBytesIn = physicalSizeBytesIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addPhysicalSizeBytesInItem(Double physicalSizeBytesInItem) {
+  public SnapshotPlanWhereInput addPhysicalSizeBytesInItem(Long physicalSizeBytesInItem) {
     if (this.physicalSizeBytesIn == null) {
-      this.physicalSizeBytesIn = new ArrayList<Double>();
+      this.physicalSizeBytesIn = new ArrayList<Long>();
     }
     this.physicalSizeBytesIn.add(physicalSizeBytesInItem);
     return this;
@@ -4877,17 +4877,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPhysicalSizeBytesIn() {
+  public List<Long> getPhysicalSizeBytesIn() {
     return physicalSizeBytesIn;
   }
 
 
-  public void setPhysicalSizeBytesIn(List<Double> physicalSizeBytesIn) {
+  public void setPhysicalSizeBytesIn(List<Long> physicalSizeBytesIn) {
     this.physicalSizeBytesIn = physicalSizeBytesIn;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesLt(Double physicalSizeBytesLt) {
+  public SnapshotPlanWhereInput physicalSizeBytesLt(Long physicalSizeBytesLt) {
     
     this.physicalSizeBytesLt = physicalSizeBytesLt;
     return this;
@@ -4900,17 +4900,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeBytesLt() {
+  public Long getPhysicalSizeBytesLt() {
     return physicalSizeBytesLt;
   }
 
 
-  public void setPhysicalSizeBytesLt(Double physicalSizeBytesLt) {
+  public void setPhysicalSizeBytesLt(Long physicalSizeBytesLt) {
     this.physicalSizeBytesLt = physicalSizeBytesLt;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesLte(Double physicalSizeBytesLte) {
+  public SnapshotPlanWhereInput physicalSizeBytesLte(Long physicalSizeBytesLte) {
     
     this.physicalSizeBytesLte = physicalSizeBytesLte;
     return this;
@@ -4923,17 +4923,17 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeBytesLte() {
+  public Long getPhysicalSizeBytesLte() {
     return physicalSizeBytesLte;
   }
 
 
-  public void setPhysicalSizeBytesLte(Double physicalSizeBytesLte) {
+  public void setPhysicalSizeBytesLte(Long physicalSizeBytesLte) {
     this.physicalSizeBytesLte = physicalSizeBytesLte;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesNot(Double physicalSizeBytesNot) {
+  public SnapshotPlanWhereInput physicalSizeBytesNot(Long physicalSizeBytesNot) {
     
     this.physicalSizeBytesNot = physicalSizeBytesNot;
     return this;
@@ -4946,25 +4946,25 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPhysicalSizeBytesNot() {
+  public Long getPhysicalSizeBytesNot() {
     return physicalSizeBytesNot;
   }
 
 
-  public void setPhysicalSizeBytesNot(Double physicalSizeBytesNot) {
+  public void setPhysicalSizeBytesNot(Long physicalSizeBytesNot) {
     this.physicalSizeBytesNot = physicalSizeBytesNot;
   }
 
 
-  public SnapshotPlanWhereInput physicalSizeBytesNotIn(List<Double> physicalSizeBytesNotIn) {
+  public SnapshotPlanWhereInput physicalSizeBytesNotIn(List<Long> physicalSizeBytesNotIn) {
     
     this.physicalSizeBytesNotIn = physicalSizeBytesNotIn;
     return this;
   }
 
-  public SnapshotPlanWhereInput addPhysicalSizeBytesNotInItem(Double physicalSizeBytesNotInItem) {
+  public SnapshotPlanWhereInput addPhysicalSizeBytesNotInItem(Long physicalSizeBytesNotInItem) {
     if (this.physicalSizeBytesNotIn == null) {
-      this.physicalSizeBytesNotIn = new ArrayList<Double>();
+      this.physicalSizeBytesNotIn = new ArrayList<Long>();
     }
     this.physicalSizeBytesNotIn.add(physicalSizeBytesNotInItem);
     return this;
@@ -4977,12 +4977,12 @@ public class SnapshotPlanWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPhysicalSizeBytesNotIn() {
+  public List<Long> getPhysicalSizeBytesNotIn() {
     return physicalSizeBytesNotIn;
   }
 
 
-  public void setPhysicalSizeBytesNotIn(List<Double> physicalSizeBytesNotIn) {
+  public void setPhysicalSizeBytesNotIn(List<Long> physicalSizeBytesNotIn) {
     this.physicalSizeBytesNotIn = physicalSizeBytesNotIn;
   }
 

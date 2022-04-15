@@ -39,7 +39,7 @@ public class VmUpdateParamsData {
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
-  private Double memory;
+  private Long memory;
 
   public static final String SERIALIZED_NAME_CPU_CORES = "cpu_cores";
   @SerializedName(SERIALIZED_NAME_CPU_CORES)
@@ -106,7 +106,7 @@ public class VmUpdateParamsData {
   }
 
 
-  public VmUpdateParamsData memory(Double memory) {
+  public VmUpdateParamsData memory(Long memory) {
     
     this.memory = memory;
     return this;
@@ -119,12 +119,12 @@ public class VmUpdateParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMemory() {
+  public Long getMemory() {
     return memory;
   }
 
 
-  public void setMemory(Double memory) {
+  public void setMemory(Long memory) {
     this.memory = memory;
   }
 

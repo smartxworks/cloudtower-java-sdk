@@ -103,35 +103,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES = "allocatable_memory_bytes";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES)
-  private Double allocatableMemoryBytes;
+  private Long allocatableMemoryBytes;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_GT = "allocatable_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_GT)
-  private Double allocatableMemoryBytesGt;
+  private Long allocatableMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_GTE = "allocatable_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_GTE)
-  private Double allocatableMemoryBytesGte;
+  private Long allocatableMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_IN = "allocatable_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_IN)
-  private List<Double> allocatableMemoryBytesIn = null;
+  private List<Long> allocatableMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_LT = "allocatable_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_LT)
-  private Double allocatableMemoryBytesLt;
+  private Long allocatableMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_LTE = "allocatable_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_LTE)
-  private Double allocatableMemoryBytesLte;
+  private Long allocatableMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT = "allocatable_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT)
-  private Double allocatableMemoryBytesNot;
+  private Long allocatableMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT_IN = "allocatable_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT_IN)
-  private List<Double> allocatableMemoryBytesNotIn = null;
+  private List<Long> allocatableMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)
@@ -271,35 +271,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE = "cpu_hz_per_core";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE)
-  private Double cpuHzPerCore;
+  private Long cpuHzPerCore;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_GT = "cpu_hz_per_core_gt";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_GT)
-  private Double cpuHzPerCoreGt;
+  private Long cpuHzPerCoreGt;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_GTE = "cpu_hz_per_core_gte";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_GTE)
-  private Double cpuHzPerCoreGte;
+  private Long cpuHzPerCoreGte;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_IN = "cpu_hz_per_core_in";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_IN)
-  private List<Double> cpuHzPerCoreIn = null;
+  private List<Long> cpuHzPerCoreIn = null;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_LT = "cpu_hz_per_core_lt";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_LT)
-  private Double cpuHzPerCoreLt;
+  private Long cpuHzPerCoreLt;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_LTE = "cpu_hz_per_core_lte";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_LTE)
-  private Double cpuHzPerCoreLte;
+  private Long cpuHzPerCoreLte;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT = "cpu_hz_per_core_not";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT)
-  private Double cpuHzPerCoreNot;
+  private Long cpuHzPerCoreNot;
 
   public static final String SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT_IN = "cpu_hz_per_core_not_in";
   @SerializedName(SERIALIZED_NAME_CPU_HZ_PER_CORE_NOT_IN)
-  private List<Double> cpuHzPerCoreNotIn = null;
+  private List<Long> cpuHzPerCoreNotIn = null;
 
   public static final String SERIALIZED_NAME_CPU_MODEL = "cpu_model";
   @SerializedName(SERIALIZED_NAME_CPU_MODEL)
@@ -427,67 +427,67 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
-  private Double failureDataSpace;
+  private Long failureDataSpace;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GT = "failure_data_space_gt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GT)
-  private Double failureDataSpaceGt;
+  private Long failureDataSpaceGt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE = "failure_data_space_gte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE)
-  private Double failureDataSpaceGte;
+  private Long failureDataSpaceGte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_IN = "failure_data_space_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_IN)
-  private List<Double> failureDataSpaceIn = null;
+  private List<Long> failureDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LT = "failure_data_space_lt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LT)
-  private Double failureDataSpaceLt;
+  private Long failureDataSpaceLt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE = "failure_data_space_lte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE)
-  private Double failureDataSpaceLte;
+  private Long failureDataSpaceLte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT = "failure_data_space_not";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT)
-  private Double failureDataSpaceNot;
+  private Long failureDataSpaceNot;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN = "failure_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN)
-  private List<Double> failureDataSpaceNotIn = null;
+  private List<Long> failureDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY = "hdd_data_capacity";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY)
-  private Double hddDataCapacity;
+  private Long hddDataCapacity;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_GT = "hdd_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_GT)
-  private Double hddDataCapacityGt;
+  private Long hddDataCapacityGt;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_GTE = "hdd_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_GTE)
-  private Double hddDataCapacityGte;
+  private Long hddDataCapacityGte;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_IN = "hdd_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_IN)
-  private List<Double> hddDataCapacityIn = null;
+  private List<Long> hddDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_LT = "hdd_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_LT)
-  private Double hddDataCapacityLt;
+  private Long hddDataCapacityLt;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_LTE = "hdd_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_LTE)
-  private Double hddDataCapacityLte;
+  private Long hddDataCapacityLte;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_NOT = "hdd_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_NOT)
-  private Double hddDataCapacityNot;
+  private Long hddDataCapacityNot;
 
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY_NOT_IN = "hdd_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY_NOT_IN)
-  private List<Double> hddDataCapacityNotIn = null;
+  private List<Long> hddDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_HDD_DISK_COUNT = "hdd_disk_count";
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT)
@@ -951,35 +951,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES = "os_memory_bytes";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES)
-  private Double osMemoryBytes;
+  private Long osMemoryBytes;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_GT = "os_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_GT)
-  private Double osMemoryBytesGt;
+  private Long osMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_GTE = "os_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_GTE)
-  private Double osMemoryBytesGte;
+  private Long osMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_IN = "os_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_IN)
-  private List<Double> osMemoryBytesIn = null;
+  private List<Long> osMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_LT = "os_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_LT)
-  private Double osMemoryBytesLt;
+  private Long osMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_LTE = "os_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_LTE)
-  private Double osMemoryBytesLte;
+  private Long osMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_NOT = "os_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_NOT)
-  private Double osMemoryBytesNot;
+  private Long osMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_OS_MEMORY_BYTES_NOT_IN = "os_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_OS_MEMORY_BYTES_NOT_IN)
-  private List<Double> osMemoryBytesNotIn = null;
+  private List<Long> osMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_OS_VERSION = "os_version";
   @SerializedName(SERIALIZED_NAME_OS_VERSION)
@@ -1039,35 +1039,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY = "pmem_dimm_capacity";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY)
-  private Double pmemDimmCapacity;
+  private Long pmemDimmCapacity;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_GT = "pmem_dimm_capacity_gt";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_GT)
-  private Double pmemDimmCapacityGt;
+  private Long pmemDimmCapacityGt;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_GTE = "pmem_dimm_capacity_gte";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_GTE)
-  private Double pmemDimmCapacityGte;
+  private Long pmemDimmCapacityGte;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_IN = "pmem_dimm_capacity_in";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_IN)
-  private List<Double> pmemDimmCapacityIn = null;
+  private List<Long> pmemDimmCapacityIn = null;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_LT = "pmem_dimm_capacity_lt";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_LT)
-  private Double pmemDimmCapacityLt;
+  private Long pmemDimmCapacityLt;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_LTE = "pmem_dimm_capacity_lte";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_LTE)
-  private Double pmemDimmCapacityLte;
+  private Long pmemDimmCapacityLte;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_NOT = "pmem_dimm_capacity_not";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_NOT)
-  private Double pmemDimmCapacityNot;
+  private Long pmemDimmCapacityNot;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY_NOT_IN = "pmem_dimm_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY_NOT_IN)
-  private List<Double> pmemDimmCapacityNotIn = null;
+  private List<Long> pmemDimmCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_PMEM_DIMM_COUNT = "pmem_dimm_count";
   @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT)
@@ -1179,67 +1179,67 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
-  private Double provisionedMemoryBytes;
+  private Long provisionedMemoryBytes;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GT = "provisioned_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GT)
-  private Double provisionedMemoryBytesGt;
+  private Long provisionedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GTE = "provisioned_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GTE)
-  private Double provisionedMemoryBytesGte;
+  private Long provisionedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_IN = "provisioned_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_IN)
-  private List<Double> provisionedMemoryBytesIn = null;
+  private List<Long> provisionedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LT = "provisioned_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LT)
-  private Double provisionedMemoryBytesLt;
+  private Long provisionedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LTE = "provisioned_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LTE)
-  private Double provisionedMemoryBytesLte;
+  private Long provisionedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT = "provisioned_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT)
-  private Double provisionedMemoryBytesNot;
+  private Long provisionedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN = "provisioned_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN)
-  private List<Double> provisionedMemoryBytesNotIn = null;
+  private List<Long> provisionedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES = "running_pause_vm_memory_bytes";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES)
-  private Double runningPauseVmMemoryBytes;
+  private Long runningPauseVmMemoryBytes;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_GT = "running_pause_vm_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_GT)
-  private Double runningPauseVmMemoryBytesGt;
+  private Long runningPauseVmMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_GTE = "running_pause_vm_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_GTE)
-  private Double runningPauseVmMemoryBytesGte;
+  private Long runningPauseVmMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_IN = "running_pause_vm_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_IN)
-  private List<Double> runningPauseVmMemoryBytesIn = null;
+  private List<Long> runningPauseVmMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_LT = "running_pause_vm_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_LT)
-  private Double runningPauseVmMemoryBytesLt;
+  private Long runningPauseVmMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_LTE = "running_pause_vm_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_LTE)
-  private Double runningPauseVmMemoryBytesLte;
+  private Long runningPauseVmMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_NOT = "running_pause_vm_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_NOT)
-  private Double runningPauseVmMemoryBytesNot;
+  private Long runningPauseVmMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_NOT_IN = "running_pause_vm_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES_NOT_IN)
-  private List<Double> runningPauseVmMemoryBytesNotIn = null;
+  private List<Long> runningPauseVmMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_RUNNING_VM_NUM = "running_vm_num";
   @SerializedName(SERIALIZED_NAME_RUNNING_VM_NUM)
@@ -1275,67 +1275,67 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_SCVM_CPU = "scvm_cpu";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU)
-  private Double scvmCpu;
+  private Integer scvmCpu;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_GT = "scvm_cpu_gt";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_GT)
-  private Double scvmCpuGt;
+  private Integer scvmCpuGt;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_GTE = "scvm_cpu_gte";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_GTE)
-  private Double scvmCpuGte;
+  private Integer scvmCpuGte;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_IN = "scvm_cpu_in";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_IN)
-  private List<Double> scvmCpuIn = null;
+  private List<Integer> scvmCpuIn = null;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_LT = "scvm_cpu_lt";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_LT)
-  private Double scvmCpuLt;
+  private Integer scvmCpuLt;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_LTE = "scvm_cpu_lte";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_LTE)
-  private Double scvmCpuLte;
+  private Integer scvmCpuLte;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_NOT = "scvm_cpu_not";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_NOT)
-  private Double scvmCpuNot;
+  private Integer scvmCpuNot;
 
   public static final String SERIALIZED_NAME_SCVM_CPU_NOT_IN = "scvm_cpu_not_in";
   @SerializedName(SERIALIZED_NAME_SCVM_CPU_NOT_IN)
-  private List<Double> scvmCpuNotIn = null;
+  private List<Integer> scvmCpuNotIn = null;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY = "scvm_memory";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY)
-  private Double scvmMemory;
+  private Long scvmMemory;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_GT = "scvm_memory_gt";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_GT)
-  private Double scvmMemoryGt;
+  private Long scvmMemoryGt;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_GTE = "scvm_memory_gte";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_GTE)
-  private Double scvmMemoryGte;
+  private Long scvmMemoryGte;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_IN = "scvm_memory_in";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_IN)
-  private List<Double> scvmMemoryIn = null;
+  private List<Long> scvmMemoryIn = null;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_LT = "scvm_memory_lt";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_LT)
-  private Double scvmMemoryLt;
+  private Long scvmMemoryLt;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_LTE = "scvm_memory_lte";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_LTE)
-  private Double scvmMemoryLte;
+  private Long scvmMemoryLte;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_NOT = "scvm_memory_not";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_NOT)
-  private Double scvmMemoryNot;
+  private Long scvmMemoryNot;
 
   public static final String SERIALIZED_NAME_SCVM_MEMORY_NOT_IN = "scvm_memory_not_in";
   @SerializedName(SERIALIZED_NAME_SCVM_MEMORY_NOT_IN)
-  private List<Double> scvmMemoryNotIn = null;
+  private List<Long> scvmMemoryNotIn = null;
 
   public static final String SERIALIZED_NAME_SCVM_NAME = "scvm_name";
   @SerializedName(SERIALIZED_NAME_SCVM_NAME)
@@ -1451,35 +1451,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY = "ssd_data_capacity";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY)
-  private Double ssdDataCapacity;
+  private Long ssdDataCapacity;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_GT = "ssd_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_GT)
-  private Double ssdDataCapacityGt;
+  private Long ssdDataCapacityGt;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_GTE = "ssd_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_GTE)
-  private Double ssdDataCapacityGte;
+  private Long ssdDataCapacityGte;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_IN = "ssd_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_IN)
-  private List<Double> ssdDataCapacityIn = null;
+  private List<Long> ssdDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_LT = "ssd_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_LT)
-  private Double ssdDataCapacityLt;
+  private Long ssdDataCapacityLt;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_LTE = "ssd_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_LTE)
-  private Double ssdDataCapacityLte;
+  private Long ssdDataCapacityLte;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_NOT = "ssd_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_NOT)
-  private Double ssdDataCapacityNot;
+  private Long ssdDataCapacityNot;
 
   public static final String SERIALIZED_NAME_SSD_DATA_CAPACITY_NOT_IN = "ssd_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_SSD_DATA_CAPACITY_NOT_IN)
-  private List<Double> ssdDataCapacityNotIn = null;
+  private List<Long> ssdDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_SSD_DISK_COUNT = "ssd_disk_count";
   @SerializedName(SERIALIZED_NAME_SSD_DISK_COUNT)
@@ -1611,35 +1611,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
-  private Double totalCacheCapacity;
+  private Long totalCacheCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GT = "total_cache_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GT)
-  private Double totalCacheCapacityGt;
+  private Long totalCacheCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GTE = "total_cache_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GTE)
-  private Double totalCacheCapacityGte;
+  private Long totalCacheCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_IN = "total_cache_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_IN)
-  private List<Double> totalCacheCapacityIn = null;
+  private List<Long> totalCacheCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LT = "total_cache_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LT)
-  private Double totalCacheCapacityLt;
+  private Long totalCacheCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LTE = "total_cache_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LTE)
-  private Double totalCacheCapacityLte;
+  private Long totalCacheCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT = "total_cache_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT)
-  private Double totalCacheCapacityNot;
+  private Long totalCacheCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT_IN = "total_cache_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT_IN)
-  private List<Double> totalCacheCapacityNotIn = null;
+  private List<Long> totalCacheCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -1675,35 +1675,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GT = "total_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GT)
-  private Double totalCpuHzGt;
+  private Long totalCpuHzGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GTE = "total_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GTE)
-  private Double totalCpuHzGte;
+  private Long totalCpuHzGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_IN = "total_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_IN)
-  private List<Double> totalCpuHzIn = null;
+  private List<Long> totalCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LT = "total_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LT)
-  private Double totalCpuHzLt;
+  private Long totalCpuHzLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LTE = "total_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LTE)
-  private Double totalCpuHzLte;
+  private Long totalCpuHzLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT = "total_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT)
-  private Double totalCpuHzNot;
+  private Long totalCpuHzNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN = "total_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN)
-  private List<Double> totalCpuHzNotIn = null;
+  private List<Long> totalCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
@@ -1739,67 +1739,67 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
-  private Double totalDataCapacity;
+  private Long totalDataCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT = "total_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT)
-  private Double totalDataCapacityGt;
+  private Long totalDataCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE = "total_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE)
-  private Double totalDataCapacityGte;
+  private Long totalDataCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN = "total_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN)
-  private List<Double> totalDataCapacityIn = null;
+  private List<Long> totalDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT = "total_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT)
-  private Double totalDataCapacityLt;
+  private Long totalDataCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE = "total_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE)
-  private Double totalDataCapacityLte;
+  private Long totalDataCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT = "total_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT)
-  private Double totalDataCapacityNot;
+  private Long totalDataCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN = "total_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN)
-  private List<Double> totalDataCapacityNotIn = null;
+  private List<Long> totalDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT = "total_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT)
-  private Double totalMemoryBytesGt;
+  private Long totalMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE = "total_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE)
-  private Double totalMemoryBytesGte;
+  private Long totalMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN = "total_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN)
-  private List<Double> totalMemoryBytesIn = null;
+  private List<Long> totalMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT = "total_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT)
-  private Double totalMemoryBytesLt;
+  private Long totalMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE = "total_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE)
-  private Double totalMemoryBytesLte;
+  private Long totalMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT = "total_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT)
-  private Double totalMemoryBytesNot;
+  private Long totalMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN = "total_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
-  private List<Double> totalMemoryBytesNotIn = null;
+  private List<Long> totalMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_USB_DEVICES_EVERY = "usb_devices_every";
   @SerializedName(SERIALIZED_NAME_USB_DEVICES_EVERY)
@@ -1815,99 +1815,99 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Double usedCpuHz;
+  private Long usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GT = "used_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GT)
-  private Double usedCpuHzGt;
+  private Long usedCpuHzGt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GTE = "used_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GTE)
-  private Double usedCpuHzGte;
+  private Long usedCpuHzGte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_IN = "used_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_IN)
-  private List<Double> usedCpuHzIn = null;
+  private List<Long> usedCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LT = "used_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LT)
-  private Double usedCpuHzLt;
+  private Long usedCpuHzLt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LTE = "used_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LTE)
-  private Double usedCpuHzLte;
+  private Long usedCpuHzLte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT = "used_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT)
-  private Double usedCpuHzNot;
+  private Long usedCpuHzNot;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT_IN = "used_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT_IN)
-  private List<Double> usedCpuHzNotIn = null;
+  private List<Long> usedCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GT = "used_data_space_gt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GT)
-  private Double usedDataSpaceGt;
+  private Long usedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GTE = "used_data_space_gte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GTE)
-  private Double usedDataSpaceGte;
+  private Long usedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_IN = "used_data_space_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_IN)
-  private List<Double> usedDataSpaceIn = null;
+  private List<Long> usedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LT = "used_data_space_lt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LT)
-  private Double usedDataSpaceLt;
+  private Long usedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LTE = "used_data_space_lte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LTE)
-  private Double usedDataSpaceLte;
+  private Long usedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT = "used_data_space_not";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT)
-  private Double usedDataSpaceNot;
+  private Long usedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN = "used_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN)
-  private List<Double> usedDataSpaceNotIn = null;
+  private List<Long> usedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Double usedMemoryBytes;
+  private Long usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GT = "used_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GT)
-  private Double usedMemoryBytesGt;
+  private Long usedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GTE = "used_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GTE)
-  private Double usedMemoryBytesGte;
+  private Long usedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_IN = "used_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_IN)
-  private List<Double> usedMemoryBytesIn = null;
+  private List<Long> usedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LT = "used_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LT)
-  private Double usedMemoryBytesLt;
+  private Long usedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LTE = "used_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LTE)
-  private Double usedMemoryBytesLte;
+  private Long usedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT = "used_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT)
-  private Double usedMemoryBytesNot;
+  private Long usedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN = "used_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
-  private List<Double> usedMemoryBytesNotIn = null;
+  private List<Long> usedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -2366,7 +2366,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput allocatableMemoryBytes(Double allocatableMemoryBytes) {
+  public HostWhereInput allocatableMemoryBytes(Long allocatableMemoryBytes) {
     
     this.allocatableMemoryBytes = allocatableMemoryBytes;
     return this;
@@ -2379,17 +2379,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAllocatableMemoryBytes() {
+  public Long getAllocatableMemoryBytes() {
     return allocatableMemoryBytes;
   }
 
 
-  public void setAllocatableMemoryBytes(Double allocatableMemoryBytes) {
+  public void setAllocatableMemoryBytes(Long allocatableMemoryBytes) {
     this.allocatableMemoryBytes = allocatableMemoryBytes;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesGt(Double allocatableMemoryBytesGt) {
+  public HostWhereInput allocatableMemoryBytesGt(Long allocatableMemoryBytesGt) {
     
     this.allocatableMemoryBytesGt = allocatableMemoryBytesGt;
     return this;
@@ -2402,17 +2402,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAllocatableMemoryBytesGt() {
+  public Long getAllocatableMemoryBytesGt() {
     return allocatableMemoryBytesGt;
   }
 
 
-  public void setAllocatableMemoryBytesGt(Double allocatableMemoryBytesGt) {
+  public void setAllocatableMemoryBytesGt(Long allocatableMemoryBytesGt) {
     this.allocatableMemoryBytesGt = allocatableMemoryBytesGt;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesGte(Double allocatableMemoryBytesGte) {
+  public HostWhereInput allocatableMemoryBytesGte(Long allocatableMemoryBytesGte) {
     
     this.allocatableMemoryBytesGte = allocatableMemoryBytesGte;
     return this;
@@ -2425,25 +2425,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAllocatableMemoryBytesGte() {
+  public Long getAllocatableMemoryBytesGte() {
     return allocatableMemoryBytesGte;
   }
 
 
-  public void setAllocatableMemoryBytesGte(Double allocatableMemoryBytesGte) {
+  public void setAllocatableMemoryBytesGte(Long allocatableMemoryBytesGte) {
     this.allocatableMemoryBytesGte = allocatableMemoryBytesGte;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesIn(List<Double> allocatableMemoryBytesIn) {
+  public HostWhereInput allocatableMemoryBytesIn(List<Long> allocatableMemoryBytesIn) {
     
     this.allocatableMemoryBytesIn = allocatableMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addAllocatableMemoryBytesInItem(Double allocatableMemoryBytesInItem) {
+  public HostWhereInput addAllocatableMemoryBytesInItem(Long allocatableMemoryBytesInItem) {
     if (this.allocatableMemoryBytesIn == null) {
-      this.allocatableMemoryBytesIn = new ArrayList<Double>();
+      this.allocatableMemoryBytesIn = new ArrayList<Long>();
     }
     this.allocatableMemoryBytesIn.add(allocatableMemoryBytesInItem);
     return this;
@@ -2456,17 +2456,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getAllocatableMemoryBytesIn() {
+  public List<Long> getAllocatableMemoryBytesIn() {
     return allocatableMemoryBytesIn;
   }
 
 
-  public void setAllocatableMemoryBytesIn(List<Double> allocatableMemoryBytesIn) {
+  public void setAllocatableMemoryBytesIn(List<Long> allocatableMemoryBytesIn) {
     this.allocatableMemoryBytesIn = allocatableMemoryBytesIn;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesLt(Double allocatableMemoryBytesLt) {
+  public HostWhereInput allocatableMemoryBytesLt(Long allocatableMemoryBytesLt) {
     
     this.allocatableMemoryBytesLt = allocatableMemoryBytesLt;
     return this;
@@ -2479,17 +2479,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAllocatableMemoryBytesLt() {
+  public Long getAllocatableMemoryBytesLt() {
     return allocatableMemoryBytesLt;
   }
 
 
-  public void setAllocatableMemoryBytesLt(Double allocatableMemoryBytesLt) {
+  public void setAllocatableMemoryBytesLt(Long allocatableMemoryBytesLt) {
     this.allocatableMemoryBytesLt = allocatableMemoryBytesLt;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesLte(Double allocatableMemoryBytesLte) {
+  public HostWhereInput allocatableMemoryBytesLte(Long allocatableMemoryBytesLte) {
     
     this.allocatableMemoryBytesLte = allocatableMemoryBytesLte;
     return this;
@@ -2502,17 +2502,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAllocatableMemoryBytesLte() {
+  public Long getAllocatableMemoryBytesLte() {
     return allocatableMemoryBytesLte;
   }
 
 
-  public void setAllocatableMemoryBytesLte(Double allocatableMemoryBytesLte) {
+  public void setAllocatableMemoryBytesLte(Long allocatableMemoryBytesLte) {
     this.allocatableMemoryBytesLte = allocatableMemoryBytesLte;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesNot(Double allocatableMemoryBytesNot) {
+  public HostWhereInput allocatableMemoryBytesNot(Long allocatableMemoryBytesNot) {
     
     this.allocatableMemoryBytesNot = allocatableMemoryBytesNot;
     return this;
@@ -2525,25 +2525,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getAllocatableMemoryBytesNot() {
+  public Long getAllocatableMemoryBytesNot() {
     return allocatableMemoryBytesNot;
   }
 
 
-  public void setAllocatableMemoryBytesNot(Double allocatableMemoryBytesNot) {
+  public void setAllocatableMemoryBytesNot(Long allocatableMemoryBytesNot) {
     this.allocatableMemoryBytesNot = allocatableMemoryBytesNot;
   }
 
 
-  public HostWhereInput allocatableMemoryBytesNotIn(List<Double> allocatableMemoryBytesNotIn) {
+  public HostWhereInput allocatableMemoryBytesNotIn(List<Long> allocatableMemoryBytesNotIn) {
     
     this.allocatableMemoryBytesNotIn = allocatableMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addAllocatableMemoryBytesNotInItem(Double allocatableMemoryBytesNotInItem) {
+  public HostWhereInput addAllocatableMemoryBytesNotInItem(Long allocatableMemoryBytesNotInItem) {
     if (this.allocatableMemoryBytesNotIn == null) {
-      this.allocatableMemoryBytesNotIn = new ArrayList<Double>();
+      this.allocatableMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.allocatableMemoryBytesNotIn.add(allocatableMemoryBytesNotInItem);
     return this;
@@ -2556,12 +2556,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getAllocatableMemoryBytesNotIn() {
+  public List<Long> getAllocatableMemoryBytesNotIn() {
     return allocatableMemoryBytesNotIn;
   }
 
 
-  public void setAllocatableMemoryBytesNotIn(List<Double> allocatableMemoryBytesNotIn) {
+  public void setAllocatableMemoryBytesNotIn(List<Long> allocatableMemoryBytesNotIn) {
     this.allocatableMemoryBytesNotIn = allocatableMemoryBytesNotIn;
   }
 
@@ -3404,7 +3404,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput cpuHzPerCore(Double cpuHzPerCore) {
+  public HostWhereInput cpuHzPerCore(Long cpuHzPerCore) {
     
     this.cpuHzPerCore = cpuHzPerCore;
     return this;
@@ -3417,17 +3417,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCore() {
+  public Long getCpuHzPerCore() {
     return cpuHzPerCore;
   }
 
 
-  public void setCpuHzPerCore(Double cpuHzPerCore) {
+  public void setCpuHzPerCore(Long cpuHzPerCore) {
     this.cpuHzPerCore = cpuHzPerCore;
   }
 
 
-  public HostWhereInput cpuHzPerCoreGt(Double cpuHzPerCoreGt) {
+  public HostWhereInput cpuHzPerCoreGt(Long cpuHzPerCoreGt) {
     
     this.cpuHzPerCoreGt = cpuHzPerCoreGt;
     return this;
@@ -3440,17 +3440,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreGt() {
+  public Long getCpuHzPerCoreGt() {
     return cpuHzPerCoreGt;
   }
 
 
-  public void setCpuHzPerCoreGt(Double cpuHzPerCoreGt) {
+  public void setCpuHzPerCoreGt(Long cpuHzPerCoreGt) {
     this.cpuHzPerCoreGt = cpuHzPerCoreGt;
   }
 
 
-  public HostWhereInput cpuHzPerCoreGte(Double cpuHzPerCoreGte) {
+  public HostWhereInput cpuHzPerCoreGte(Long cpuHzPerCoreGte) {
     
     this.cpuHzPerCoreGte = cpuHzPerCoreGte;
     return this;
@@ -3463,25 +3463,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreGte() {
+  public Long getCpuHzPerCoreGte() {
     return cpuHzPerCoreGte;
   }
 
 
-  public void setCpuHzPerCoreGte(Double cpuHzPerCoreGte) {
+  public void setCpuHzPerCoreGte(Long cpuHzPerCoreGte) {
     this.cpuHzPerCoreGte = cpuHzPerCoreGte;
   }
 
 
-  public HostWhereInput cpuHzPerCoreIn(List<Double> cpuHzPerCoreIn) {
+  public HostWhereInput cpuHzPerCoreIn(List<Long> cpuHzPerCoreIn) {
     
     this.cpuHzPerCoreIn = cpuHzPerCoreIn;
     return this;
   }
 
-  public HostWhereInput addCpuHzPerCoreInItem(Double cpuHzPerCoreInItem) {
+  public HostWhereInput addCpuHzPerCoreInItem(Long cpuHzPerCoreInItem) {
     if (this.cpuHzPerCoreIn == null) {
-      this.cpuHzPerCoreIn = new ArrayList<Double>();
+      this.cpuHzPerCoreIn = new ArrayList<Long>();
     }
     this.cpuHzPerCoreIn.add(cpuHzPerCoreInItem);
     return this;
@@ -3494,17 +3494,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getCpuHzPerCoreIn() {
+  public List<Long> getCpuHzPerCoreIn() {
     return cpuHzPerCoreIn;
   }
 
 
-  public void setCpuHzPerCoreIn(List<Double> cpuHzPerCoreIn) {
+  public void setCpuHzPerCoreIn(List<Long> cpuHzPerCoreIn) {
     this.cpuHzPerCoreIn = cpuHzPerCoreIn;
   }
 
 
-  public HostWhereInput cpuHzPerCoreLt(Double cpuHzPerCoreLt) {
+  public HostWhereInput cpuHzPerCoreLt(Long cpuHzPerCoreLt) {
     
     this.cpuHzPerCoreLt = cpuHzPerCoreLt;
     return this;
@@ -3517,17 +3517,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreLt() {
+  public Long getCpuHzPerCoreLt() {
     return cpuHzPerCoreLt;
   }
 
 
-  public void setCpuHzPerCoreLt(Double cpuHzPerCoreLt) {
+  public void setCpuHzPerCoreLt(Long cpuHzPerCoreLt) {
     this.cpuHzPerCoreLt = cpuHzPerCoreLt;
   }
 
 
-  public HostWhereInput cpuHzPerCoreLte(Double cpuHzPerCoreLte) {
+  public HostWhereInput cpuHzPerCoreLte(Long cpuHzPerCoreLte) {
     
     this.cpuHzPerCoreLte = cpuHzPerCoreLte;
     return this;
@@ -3540,17 +3540,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreLte() {
+  public Long getCpuHzPerCoreLte() {
     return cpuHzPerCoreLte;
   }
 
 
-  public void setCpuHzPerCoreLte(Double cpuHzPerCoreLte) {
+  public void setCpuHzPerCoreLte(Long cpuHzPerCoreLte) {
     this.cpuHzPerCoreLte = cpuHzPerCoreLte;
   }
 
 
-  public HostWhereInput cpuHzPerCoreNot(Double cpuHzPerCoreNot) {
+  public HostWhereInput cpuHzPerCoreNot(Long cpuHzPerCoreNot) {
     
     this.cpuHzPerCoreNot = cpuHzPerCoreNot;
     return this;
@@ -3563,25 +3563,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getCpuHzPerCoreNot() {
+  public Long getCpuHzPerCoreNot() {
     return cpuHzPerCoreNot;
   }
 
 
-  public void setCpuHzPerCoreNot(Double cpuHzPerCoreNot) {
+  public void setCpuHzPerCoreNot(Long cpuHzPerCoreNot) {
     this.cpuHzPerCoreNot = cpuHzPerCoreNot;
   }
 
 
-  public HostWhereInput cpuHzPerCoreNotIn(List<Double> cpuHzPerCoreNotIn) {
+  public HostWhereInput cpuHzPerCoreNotIn(List<Long> cpuHzPerCoreNotIn) {
     
     this.cpuHzPerCoreNotIn = cpuHzPerCoreNotIn;
     return this;
   }
 
-  public HostWhereInput addCpuHzPerCoreNotInItem(Double cpuHzPerCoreNotInItem) {
+  public HostWhereInput addCpuHzPerCoreNotInItem(Long cpuHzPerCoreNotInItem) {
     if (this.cpuHzPerCoreNotIn == null) {
-      this.cpuHzPerCoreNotIn = new ArrayList<Double>();
+      this.cpuHzPerCoreNotIn = new ArrayList<Long>();
     }
     this.cpuHzPerCoreNotIn.add(cpuHzPerCoreNotInItem);
     return this;
@@ -3594,12 +3594,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getCpuHzPerCoreNotIn() {
+  public List<Long> getCpuHzPerCoreNotIn() {
     return cpuHzPerCoreNotIn;
   }
 
 
-  public void setCpuHzPerCoreNotIn(List<Double> cpuHzPerCoreNotIn) {
+  public void setCpuHzPerCoreNotIn(List<Long> cpuHzPerCoreNotIn) {
     this.cpuHzPerCoreNotIn = cpuHzPerCoreNotIn;
   }
 
@@ -4349,7 +4349,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput failureDataSpace(Double failureDataSpace) {
+  public HostWhereInput failureDataSpace(Long failureDataSpace) {
     
     this.failureDataSpace = failureDataSpace;
     return this;
@@ -4362,17 +4362,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpace() {
+  public Long getFailureDataSpace() {
     return failureDataSpace;
   }
 
 
-  public void setFailureDataSpace(Double failureDataSpace) {
+  public void setFailureDataSpace(Long failureDataSpace) {
     this.failureDataSpace = failureDataSpace;
   }
 
 
-  public HostWhereInput failureDataSpaceGt(Double failureDataSpaceGt) {
+  public HostWhereInput failureDataSpaceGt(Long failureDataSpaceGt) {
     
     this.failureDataSpaceGt = failureDataSpaceGt;
     return this;
@@ -4385,17 +4385,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGt() {
+  public Long getFailureDataSpaceGt() {
     return failureDataSpaceGt;
   }
 
 
-  public void setFailureDataSpaceGt(Double failureDataSpaceGt) {
+  public void setFailureDataSpaceGt(Long failureDataSpaceGt) {
     this.failureDataSpaceGt = failureDataSpaceGt;
   }
 
 
-  public HostWhereInput failureDataSpaceGte(Double failureDataSpaceGte) {
+  public HostWhereInput failureDataSpaceGte(Long failureDataSpaceGte) {
     
     this.failureDataSpaceGte = failureDataSpaceGte;
     return this;
@@ -4408,25 +4408,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGte() {
+  public Long getFailureDataSpaceGte() {
     return failureDataSpaceGte;
   }
 
 
-  public void setFailureDataSpaceGte(Double failureDataSpaceGte) {
+  public void setFailureDataSpaceGte(Long failureDataSpaceGte) {
     this.failureDataSpaceGte = failureDataSpaceGte;
   }
 
 
-  public HostWhereInput failureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public HostWhereInput failureDataSpaceIn(List<Long> failureDataSpaceIn) {
     
     this.failureDataSpaceIn = failureDataSpaceIn;
     return this;
   }
 
-  public HostWhereInput addFailureDataSpaceInItem(Double failureDataSpaceInItem) {
+  public HostWhereInput addFailureDataSpaceInItem(Long failureDataSpaceInItem) {
     if (this.failureDataSpaceIn == null) {
-      this.failureDataSpaceIn = new ArrayList<Double>();
+      this.failureDataSpaceIn = new ArrayList<Long>();
     }
     this.failureDataSpaceIn.add(failureDataSpaceInItem);
     return this;
@@ -4439,17 +4439,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceIn() {
+  public List<Long> getFailureDataSpaceIn() {
     return failureDataSpaceIn;
   }
 
 
-  public void setFailureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public void setFailureDataSpaceIn(List<Long> failureDataSpaceIn) {
     this.failureDataSpaceIn = failureDataSpaceIn;
   }
 
 
-  public HostWhereInput failureDataSpaceLt(Double failureDataSpaceLt) {
+  public HostWhereInput failureDataSpaceLt(Long failureDataSpaceLt) {
     
     this.failureDataSpaceLt = failureDataSpaceLt;
     return this;
@@ -4462,17 +4462,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLt() {
+  public Long getFailureDataSpaceLt() {
     return failureDataSpaceLt;
   }
 
 
-  public void setFailureDataSpaceLt(Double failureDataSpaceLt) {
+  public void setFailureDataSpaceLt(Long failureDataSpaceLt) {
     this.failureDataSpaceLt = failureDataSpaceLt;
   }
 
 
-  public HostWhereInput failureDataSpaceLte(Double failureDataSpaceLte) {
+  public HostWhereInput failureDataSpaceLte(Long failureDataSpaceLte) {
     
     this.failureDataSpaceLte = failureDataSpaceLte;
     return this;
@@ -4485,17 +4485,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLte() {
+  public Long getFailureDataSpaceLte() {
     return failureDataSpaceLte;
   }
 
 
-  public void setFailureDataSpaceLte(Double failureDataSpaceLte) {
+  public void setFailureDataSpaceLte(Long failureDataSpaceLte) {
     this.failureDataSpaceLte = failureDataSpaceLte;
   }
 
 
-  public HostWhereInput failureDataSpaceNot(Double failureDataSpaceNot) {
+  public HostWhereInput failureDataSpaceNot(Long failureDataSpaceNot) {
     
     this.failureDataSpaceNot = failureDataSpaceNot;
     return this;
@@ -4508,25 +4508,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceNot() {
+  public Long getFailureDataSpaceNot() {
     return failureDataSpaceNot;
   }
 
 
-  public void setFailureDataSpaceNot(Double failureDataSpaceNot) {
+  public void setFailureDataSpaceNot(Long failureDataSpaceNot) {
     this.failureDataSpaceNot = failureDataSpaceNot;
   }
 
 
-  public HostWhereInput failureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public HostWhereInput failureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
     return this;
   }
 
-  public HostWhereInput addFailureDataSpaceNotInItem(Double failureDataSpaceNotInItem) {
+  public HostWhereInput addFailureDataSpaceNotInItem(Long failureDataSpaceNotInItem) {
     if (this.failureDataSpaceNotIn == null) {
-      this.failureDataSpaceNotIn = new ArrayList<Double>();
+      this.failureDataSpaceNotIn = new ArrayList<Long>();
     }
     this.failureDataSpaceNotIn.add(failureDataSpaceNotInItem);
     return this;
@@ -4539,17 +4539,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceNotIn() {
+  public List<Long> getFailureDataSpaceNotIn() {
     return failureDataSpaceNotIn;
   }
 
 
-  public void setFailureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public void setFailureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
   }
 
 
-  public HostWhereInput hddDataCapacity(Double hddDataCapacity) {
+  public HostWhereInput hddDataCapacity(Long hddDataCapacity) {
     
     this.hddDataCapacity = hddDataCapacity;
     return this;
@@ -4562,17 +4562,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDataCapacity() {
+  public Long getHddDataCapacity() {
     return hddDataCapacity;
   }
 
 
-  public void setHddDataCapacity(Double hddDataCapacity) {
+  public void setHddDataCapacity(Long hddDataCapacity) {
     this.hddDataCapacity = hddDataCapacity;
   }
 
 
-  public HostWhereInput hddDataCapacityGt(Double hddDataCapacityGt) {
+  public HostWhereInput hddDataCapacityGt(Long hddDataCapacityGt) {
     
     this.hddDataCapacityGt = hddDataCapacityGt;
     return this;
@@ -4585,17 +4585,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDataCapacityGt() {
+  public Long getHddDataCapacityGt() {
     return hddDataCapacityGt;
   }
 
 
-  public void setHddDataCapacityGt(Double hddDataCapacityGt) {
+  public void setHddDataCapacityGt(Long hddDataCapacityGt) {
     this.hddDataCapacityGt = hddDataCapacityGt;
   }
 
 
-  public HostWhereInput hddDataCapacityGte(Double hddDataCapacityGte) {
+  public HostWhereInput hddDataCapacityGte(Long hddDataCapacityGte) {
     
     this.hddDataCapacityGte = hddDataCapacityGte;
     return this;
@@ -4608,25 +4608,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDataCapacityGte() {
+  public Long getHddDataCapacityGte() {
     return hddDataCapacityGte;
   }
 
 
-  public void setHddDataCapacityGte(Double hddDataCapacityGte) {
+  public void setHddDataCapacityGte(Long hddDataCapacityGte) {
     this.hddDataCapacityGte = hddDataCapacityGte;
   }
 
 
-  public HostWhereInput hddDataCapacityIn(List<Double> hddDataCapacityIn) {
+  public HostWhereInput hddDataCapacityIn(List<Long> hddDataCapacityIn) {
     
     this.hddDataCapacityIn = hddDataCapacityIn;
     return this;
   }
 
-  public HostWhereInput addHddDataCapacityInItem(Double hddDataCapacityInItem) {
+  public HostWhereInput addHddDataCapacityInItem(Long hddDataCapacityInItem) {
     if (this.hddDataCapacityIn == null) {
-      this.hddDataCapacityIn = new ArrayList<Double>();
+      this.hddDataCapacityIn = new ArrayList<Long>();
     }
     this.hddDataCapacityIn.add(hddDataCapacityInItem);
     return this;
@@ -4639,17 +4639,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHddDataCapacityIn() {
+  public List<Long> getHddDataCapacityIn() {
     return hddDataCapacityIn;
   }
 
 
-  public void setHddDataCapacityIn(List<Double> hddDataCapacityIn) {
+  public void setHddDataCapacityIn(List<Long> hddDataCapacityIn) {
     this.hddDataCapacityIn = hddDataCapacityIn;
   }
 
 
-  public HostWhereInput hddDataCapacityLt(Double hddDataCapacityLt) {
+  public HostWhereInput hddDataCapacityLt(Long hddDataCapacityLt) {
     
     this.hddDataCapacityLt = hddDataCapacityLt;
     return this;
@@ -4662,17 +4662,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDataCapacityLt() {
+  public Long getHddDataCapacityLt() {
     return hddDataCapacityLt;
   }
 
 
-  public void setHddDataCapacityLt(Double hddDataCapacityLt) {
+  public void setHddDataCapacityLt(Long hddDataCapacityLt) {
     this.hddDataCapacityLt = hddDataCapacityLt;
   }
 
 
-  public HostWhereInput hddDataCapacityLte(Double hddDataCapacityLte) {
+  public HostWhereInput hddDataCapacityLte(Long hddDataCapacityLte) {
     
     this.hddDataCapacityLte = hddDataCapacityLte;
     return this;
@@ -4685,17 +4685,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDataCapacityLte() {
+  public Long getHddDataCapacityLte() {
     return hddDataCapacityLte;
   }
 
 
-  public void setHddDataCapacityLte(Double hddDataCapacityLte) {
+  public void setHddDataCapacityLte(Long hddDataCapacityLte) {
     this.hddDataCapacityLte = hddDataCapacityLte;
   }
 
 
-  public HostWhereInput hddDataCapacityNot(Double hddDataCapacityNot) {
+  public HostWhereInput hddDataCapacityNot(Long hddDataCapacityNot) {
     
     this.hddDataCapacityNot = hddDataCapacityNot;
     return this;
@@ -4708,25 +4708,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getHddDataCapacityNot() {
+  public Long getHddDataCapacityNot() {
     return hddDataCapacityNot;
   }
 
 
-  public void setHddDataCapacityNot(Double hddDataCapacityNot) {
+  public void setHddDataCapacityNot(Long hddDataCapacityNot) {
     this.hddDataCapacityNot = hddDataCapacityNot;
   }
 
 
-  public HostWhereInput hddDataCapacityNotIn(List<Double> hddDataCapacityNotIn) {
+  public HostWhereInput hddDataCapacityNotIn(List<Long> hddDataCapacityNotIn) {
     
     this.hddDataCapacityNotIn = hddDataCapacityNotIn;
     return this;
   }
 
-  public HostWhereInput addHddDataCapacityNotInItem(Double hddDataCapacityNotInItem) {
+  public HostWhereInput addHddDataCapacityNotInItem(Long hddDataCapacityNotInItem) {
     if (this.hddDataCapacityNotIn == null) {
-      this.hddDataCapacityNotIn = new ArrayList<Double>();
+      this.hddDataCapacityNotIn = new ArrayList<Long>();
     }
     this.hddDataCapacityNotIn.add(hddDataCapacityNotInItem);
     return this;
@@ -4739,12 +4739,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getHddDataCapacityNotIn() {
+  public List<Long> getHddDataCapacityNotIn() {
     return hddDataCapacityNotIn;
   }
 
 
-  public void setHddDataCapacityNotIn(List<Double> hddDataCapacityNotIn) {
+  public void setHddDataCapacityNotIn(List<Long> hddDataCapacityNotIn) {
     this.hddDataCapacityNotIn = hddDataCapacityNotIn;
   }
 
@@ -7538,7 +7538,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput osMemoryBytes(Double osMemoryBytes) {
+  public HostWhereInput osMemoryBytes(Long osMemoryBytes) {
     
     this.osMemoryBytes = osMemoryBytes;
     return this;
@@ -7551,17 +7551,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOsMemoryBytes() {
+  public Long getOsMemoryBytes() {
     return osMemoryBytes;
   }
 
 
-  public void setOsMemoryBytes(Double osMemoryBytes) {
+  public void setOsMemoryBytes(Long osMemoryBytes) {
     this.osMemoryBytes = osMemoryBytes;
   }
 
 
-  public HostWhereInput osMemoryBytesGt(Double osMemoryBytesGt) {
+  public HostWhereInput osMemoryBytesGt(Long osMemoryBytesGt) {
     
     this.osMemoryBytesGt = osMemoryBytesGt;
     return this;
@@ -7574,17 +7574,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOsMemoryBytesGt() {
+  public Long getOsMemoryBytesGt() {
     return osMemoryBytesGt;
   }
 
 
-  public void setOsMemoryBytesGt(Double osMemoryBytesGt) {
+  public void setOsMemoryBytesGt(Long osMemoryBytesGt) {
     this.osMemoryBytesGt = osMemoryBytesGt;
   }
 
 
-  public HostWhereInput osMemoryBytesGte(Double osMemoryBytesGte) {
+  public HostWhereInput osMemoryBytesGte(Long osMemoryBytesGte) {
     
     this.osMemoryBytesGte = osMemoryBytesGte;
     return this;
@@ -7597,25 +7597,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOsMemoryBytesGte() {
+  public Long getOsMemoryBytesGte() {
     return osMemoryBytesGte;
   }
 
 
-  public void setOsMemoryBytesGte(Double osMemoryBytesGte) {
+  public void setOsMemoryBytesGte(Long osMemoryBytesGte) {
     this.osMemoryBytesGte = osMemoryBytesGte;
   }
 
 
-  public HostWhereInput osMemoryBytesIn(List<Double> osMemoryBytesIn) {
+  public HostWhereInput osMemoryBytesIn(List<Long> osMemoryBytesIn) {
     
     this.osMemoryBytesIn = osMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addOsMemoryBytesInItem(Double osMemoryBytesInItem) {
+  public HostWhereInput addOsMemoryBytesInItem(Long osMemoryBytesInItem) {
     if (this.osMemoryBytesIn == null) {
-      this.osMemoryBytesIn = new ArrayList<Double>();
+      this.osMemoryBytesIn = new ArrayList<Long>();
     }
     this.osMemoryBytesIn.add(osMemoryBytesInItem);
     return this;
@@ -7628,17 +7628,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getOsMemoryBytesIn() {
+  public List<Long> getOsMemoryBytesIn() {
     return osMemoryBytesIn;
   }
 
 
-  public void setOsMemoryBytesIn(List<Double> osMemoryBytesIn) {
+  public void setOsMemoryBytesIn(List<Long> osMemoryBytesIn) {
     this.osMemoryBytesIn = osMemoryBytesIn;
   }
 
 
-  public HostWhereInput osMemoryBytesLt(Double osMemoryBytesLt) {
+  public HostWhereInput osMemoryBytesLt(Long osMemoryBytesLt) {
     
     this.osMemoryBytesLt = osMemoryBytesLt;
     return this;
@@ -7651,17 +7651,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOsMemoryBytesLt() {
+  public Long getOsMemoryBytesLt() {
     return osMemoryBytesLt;
   }
 
 
-  public void setOsMemoryBytesLt(Double osMemoryBytesLt) {
+  public void setOsMemoryBytesLt(Long osMemoryBytesLt) {
     this.osMemoryBytesLt = osMemoryBytesLt;
   }
 
 
-  public HostWhereInput osMemoryBytesLte(Double osMemoryBytesLte) {
+  public HostWhereInput osMemoryBytesLte(Long osMemoryBytesLte) {
     
     this.osMemoryBytesLte = osMemoryBytesLte;
     return this;
@@ -7674,17 +7674,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOsMemoryBytesLte() {
+  public Long getOsMemoryBytesLte() {
     return osMemoryBytesLte;
   }
 
 
-  public void setOsMemoryBytesLte(Double osMemoryBytesLte) {
+  public void setOsMemoryBytesLte(Long osMemoryBytesLte) {
     this.osMemoryBytesLte = osMemoryBytesLte;
   }
 
 
-  public HostWhereInput osMemoryBytesNot(Double osMemoryBytesNot) {
+  public HostWhereInput osMemoryBytesNot(Long osMemoryBytesNot) {
     
     this.osMemoryBytesNot = osMemoryBytesNot;
     return this;
@@ -7697,25 +7697,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getOsMemoryBytesNot() {
+  public Long getOsMemoryBytesNot() {
     return osMemoryBytesNot;
   }
 
 
-  public void setOsMemoryBytesNot(Double osMemoryBytesNot) {
+  public void setOsMemoryBytesNot(Long osMemoryBytesNot) {
     this.osMemoryBytesNot = osMemoryBytesNot;
   }
 
 
-  public HostWhereInput osMemoryBytesNotIn(List<Double> osMemoryBytesNotIn) {
+  public HostWhereInput osMemoryBytesNotIn(List<Long> osMemoryBytesNotIn) {
     
     this.osMemoryBytesNotIn = osMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addOsMemoryBytesNotInItem(Double osMemoryBytesNotInItem) {
+  public HostWhereInput addOsMemoryBytesNotInItem(Long osMemoryBytesNotInItem) {
     if (this.osMemoryBytesNotIn == null) {
-      this.osMemoryBytesNotIn = new ArrayList<Double>();
+      this.osMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.osMemoryBytesNotIn.add(osMemoryBytesNotInItem);
     return this;
@@ -7728,12 +7728,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getOsMemoryBytesNotIn() {
+  public List<Long> getOsMemoryBytesNotIn() {
     return osMemoryBytesNotIn;
   }
 
 
-  public void setOsMemoryBytesNotIn(List<Double> osMemoryBytesNotIn) {
+  public void setOsMemoryBytesNotIn(List<Long> osMemoryBytesNotIn) {
     this.osMemoryBytesNotIn = osMemoryBytesNotIn;
   }
 
@@ -8076,7 +8076,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput pmemDimmCapacity(Double pmemDimmCapacity) {
+  public HostWhereInput pmemDimmCapacity(Long pmemDimmCapacity) {
     
     this.pmemDimmCapacity = pmemDimmCapacity;
     return this;
@@ -8089,17 +8089,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCapacity() {
+  public Long getPmemDimmCapacity() {
     return pmemDimmCapacity;
   }
 
 
-  public void setPmemDimmCapacity(Double pmemDimmCapacity) {
+  public void setPmemDimmCapacity(Long pmemDimmCapacity) {
     this.pmemDimmCapacity = pmemDimmCapacity;
   }
 
 
-  public HostWhereInput pmemDimmCapacityGt(Double pmemDimmCapacityGt) {
+  public HostWhereInput pmemDimmCapacityGt(Long pmemDimmCapacityGt) {
     
     this.pmemDimmCapacityGt = pmemDimmCapacityGt;
     return this;
@@ -8112,17 +8112,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCapacityGt() {
+  public Long getPmemDimmCapacityGt() {
     return pmemDimmCapacityGt;
   }
 
 
-  public void setPmemDimmCapacityGt(Double pmemDimmCapacityGt) {
+  public void setPmemDimmCapacityGt(Long pmemDimmCapacityGt) {
     this.pmemDimmCapacityGt = pmemDimmCapacityGt;
   }
 
 
-  public HostWhereInput pmemDimmCapacityGte(Double pmemDimmCapacityGte) {
+  public HostWhereInput pmemDimmCapacityGte(Long pmemDimmCapacityGte) {
     
     this.pmemDimmCapacityGte = pmemDimmCapacityGte;
     return this;
@@ -8135,25 +8135,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCapacityGte() {
+  public Long getPmemDimmCapacityGte() {
     return pmemDimmCapacityGte;
   }
 
 
-  public void setPmemDimmCapacityGte(Double pmemDimmCapacityGte) {
+  public void setPmemDimmCapacityGte(Long pmemDimmCapacityGte) {
     this.pmemDimmCapacityGte = pmemDimmCapacityGte;
   }
 
 
-  public HostWhereInput pmemDimmCapacityIn(List<Double> pmemDimmCapacityIn) {
+  public HostWhereInput pmemDimmCapacityIn(List<Long> pmemDimmCapacityIn) {
     
     this.pmemDimmCapacityIn = pmemDimmCapacityIn;
     return this;
   }
 
-  public HostWhereInput addPmemDimmCapacityInItem(Double pmemDimmCapacityInItem) {
+  public HostWhereInput addPmemDimmCapacityInItem(Long pmemDimmCapacityInItem) {
     if (this.pmemDimmCapacityIn == null) {
-      this.pmemDimmCapacityIn = new ArrayList<Double>();
+      this.pmemDimmCapacityIn = new ArrayList<Long>();
     }
     this.pmemDimmCapacityIn.add(pmemDimmCapacityInItem);
     return this;
@@ -8166,17 +8166,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPmemDimmCapacityIn() {
+  public List<Long> getPmemDimmCapacityIn() {
     return pmemDimmCapacityIn;
   }
 
 
-  public void setPmemDimmCapacityIn(List<Double> pmemDimmCapacityIn) {
+  public void setPmemDimmCapacityIn(List<Long> pmemDimmCapacityIn) {
     this.pmemDimmCapacityIn = pmemDimmCapacityIn;
   }
 
 
-  public HostWhereInput pmemDimmCapacityLt(Double pmemDimmCapacityLt) {
+  public HostWhereInput pmemDimmCapacityLt(Long pmemDimmCapacityLt) {
     
     this.pmemDimmCapacityLt = pmemDimmCapacityLt;
     return this;
@@ -8189,17 +8189,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCapacityLt() {
+  public Long getPmemDimmCapacityLt() {
     return pmemDimmCapacityLt;
   }
 
 
-  public void setPmemDimmCapacityLt(Double pmemDimmCapacityLt) {
+  public void setPmemDimmCapacityLt(Long pmemDimmCapacityLt) {
     this.pmemDimmCapacityLt = pmemDimmCapacityLt;
   }
 
 
-  public HostWhereInput pmemDimmCapacityLte(Double pmemDimmCapacityLte) {
+  public HostWhereInput pmemDimmCapacityLte(Long pmemDimmCapacityLte) {
     
     this.pmemDimmCapacityLte = pmemDimmCapacityLte;
     return this;
@@ -8212,17 +8212,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCapacityLte() {
+  public Long getPmemDimmCapacityLte() {
     return pmemDimmCapacityLte;
   }
 
 
-  public void setPmemDimmCapacityLte(Double pmemDimmCapacityLte) {
+  public void setPmemDimmCapacityLte(Long pmemDimmCapacityLte) {
     this.pmemDimmCapacityLte = pmemDimmCapacityLte;
   }
 
 
-  public HostWhereInput pmemDimmCapacityNot(Double pmemDimmCapacityNot) {
+  public HostWhereInput pmemDimmCapacityNot(Long pmemDimmCapacityNot) {
     
     this.pmemDimmCapacityNot = pmemDimmCapacityNot;
     return this;
@@ -8235,25 +8235,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getPmemDimmCapacityNot() {
+  public Long getPmemDimmCapacityNot() {
     return pmemDimmCapacityNot;
   }
 
 
-  public void setPmemDimmCapacityNot(Double pmemDimmCapacityNot) {
+  public void setPmemDimmCapacityNot(Long pmemDimmCapacityNot) {
     this.pmemDimmCapacityNot = pmemDimmCapacityNot;
   }
 
 
-  public HostWhereInput pmemDimmCapacityNotIn(List<Double> pmemDimmCapacityNotIn) {
+  public HostWhereInput pmemDimmCapacityNotIn(List<Long> pmemDimmCapacityNotIn) {
     
     this.pmemDimmCapacityNotIn = pmemDimmCapacityNotIn;
     return this;
   }
 
-  public HostWhereInput addPmemDimmCapacityNotInItem(Double pmemDimmCapacityNotInItem) {
+  public HostWhereInput addPmemDimmCapacityNotInItem(Long pmemDimmCapacityNotInItem) {
     if (this.pmemDimmCapacityNotIn == null) {
-      this.pmemDimmCapacityNotIn = new ArrayList<Double>();
+      this.pmemDimmCapacityNotIn = new ArrayList<Long>();
     }
     this.pmemDimmCapacityNotIn.add(pmemDimmCapacityNotInItem);
     return this;
@@ -8266,12 +8266,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getPmemDimmCapacityNotIn() {
+  public List<Long> getPmemDimmCapacityNotIn() {
     return pmemDimmCapacityNotIn;
   }
 
 
-  public void setPmemDimmCapacityNotIn(List<Double> pmemDimmCapacityNotIn) {
+  public void setPmemDimmCapacityNotIn(List<Long> pmemDimmCapacityNotIn) {
     this.pmemDimmCapacityNotIn = pmemDimmCapacityNotIn;
   }
 
@@ -8945,7 +8945,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput provisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public HostWhereInput provisionedMemoryBytes(Long provisionedMemoryBytes) {
     
     this.provisionedMemoryBytes = provisionedMemoryBytes;
     return this;
@@ -8958,17 +8958,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytes() {
+  public Long getProvisionedMemoryBytes() {
     return provisionedMemoryBytes;
   }
 
 
-  public void setProvisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public void setProvisionedMemoryBytes(Long provisionedMemoryBytes) {
     this.provisionedMemoryBytes = provisionedMemoryBytes;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesGt(Double provisionedMemoryBytesGt) {
+  public HostWhereInput provisionedMemoryBytesGt(Long provisionedMemoryBytesGt) {
     
     this.provisionedMemoryBytesGt = provisionedMemoryBytesGt;
     return this;
@@ -8981,17 +8981,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesGt() {
+  public Long getProvisionedMemoryBytesGt() {
     return provisionedMemoryBytesGt;
   }
 
 
-  public void setProvisionedMemoryBytesGt(Double provisionedMemoryBytesGt) {
+  public void setProvisionedMemoryBytesGt(Long provisionedMemoryBytesGt) {
     this.provisionedMemoryBytesGt = provisionedMemoryBytesGt;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesGte(Double provisionedMemoryBytesGte) {
+  public HostWhereInput provisionedMemoryBytesGte(Long provisionedMemoryBytesGte) {
     
     this.provisionedMemoryBytesGte = provisionedMemoryBytesGte;
     return this;
@@ -9004,25 +9004,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesGte() {
+  public Long getProvisionedMemoryBytesGte() {
     return provisionedMemoryBytesGte;
   }
 
 
-  public void setProvisionedMemoryBytesGte(Double provisionedMemoryBytesGte) {
+  public void setProvisionedMemoryBytesGte(Long provisionedMemoryBytesGte) {
     this.provisionedMemoryBytesGte = provisionedMemoryBytesGte;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesIn(List<Double> provisionedMemoryBytesIn) {
+  public HostWhereInput provisionedMemoryBytesIn(List<Long> provisionedMemoryBytesIn) {
     
     this.provisionedMemoryBytesIn = provisionedMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addProvisionedMemoryBytesInItem(Double provisionedMemoryBytesInItem) {
+  public HostWhereInput addProvisionedMemoryBytesInItem(Long provisionedMemoryBytesInItem) {
     if (this.provisionedMemoryBytesIn == null) {
-      this.provisionedMemoryBytesIn = new ArrayList<Double>();
+      this.provisionedMemoryBytesIn = new ArrayList<Long>();
     }
     this.provisionedMemoryBytesIn.add(provisionedMemoryBytesInItem);
     return this;
@@ -9035,17 +9035,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedMemoryBytesIn() {
+  public List<Long> getProvisionedMemoryBytesIn() {
     return provisionedMemoryBytesIn;
   }
 
 
-  public void setProvisionedMemoryBytesIn(List<Double> provisionedMemoryBytesIn) {
+  public void setProvisionedMemoryBytesIn(List<Long> provisionedMemoryBytesIn) {
     this.provisionedMemoryBytesIn = provisionedMemoryBytesIn;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesLt(Double provisionedMemoryBytesLt) {
+  public HostWhereInput provisionedMemoryBytesLt(Long provisionedMemoryBytesLt) {
     
     this.provisionedMemoryBytesLt = provisionedMemoryBytesLt;
     return this;
@@ -9058,17 +9058,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesLt() {
+  public Long getProvisionedMemoryBytesLt() {
     return provisionedMemoryBytesLt;
   }
 
 
-  public void setProvisionedMemoryBytesLt(Double provisionedMemoryBytesLt) {
+  public void setProvisionedMemoryBytesLt(Long provisionedMemoryBytesLt) {
     this.provisionedMemoryBytesLt = provisionedMemoryBytesLt;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesLte(Double provisionedMemoryBytesLte) {
+  public HostWhereInput provisionedMemoryBytesLte(Long provisionedMemoryBytesLte) {
     
     this.provisionedMemoryBytesLte = provisionedMemoryBytesLte;
     return this;
@@ -9081,17 +9081,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesLte() {
+  public Long getProvisionedMemoryBytesLte() {
     return provisionedMemoryBytesLte;
   }
 
 
-  public void setProvisionedMemoryBytesLte(Double provisionedMemoryBytesLte) {
+  public void setProvisionedMemoryBytesLte(Long provisionedMemoryBytesLte) {
     this.provisionedMemoryBytesLte = provisionedMemoryBytesLte;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesNot(Double provisionedMemoryBytesNot) {
+  public HostWhereInput provisionedMemoryBytesNot(Long provisionedMemoryBytesNot) {
     
     this.provisionedMemoryBytesNot = provisionedMemoryBytesNot;
     return this;
@@ -9104,25 +9104,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesNot() {
+  public Long getProvisionedMemoryBytesNot() {
     return provisionedMemoryBytesNot;
   }
 
 
-  public void setProvisionedMemoryBytesNot(Double provisionedMemoryBytesNot) {
+  public void setProvisionedMemoryBytesNot(Long provisionedMemoryBytesNot) {
     this.provisionedMemoryBytesNot = provisionedMemoryBytesNot;
   }
 
 
-  public HostWhereInput provisionedMemoryBytesNotIn(List<Double> provisionedMemoryBytesNotIn) {
+  public HostWhereInput provisionedMemoryBytesNotIn(List<Long> provisionedMemoryBytesNotIn) {
     
     this.provisionedMemoryBytesNotIn = provisionedMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addProvisionedMemoryBytesNotInItem(Double provisionedMemoryBytesNotInItem) {
+  public HostWhereInput addProvisionedMemoryBytesNotInItem(Long provisionedMemoryBytesNotInItem) {
     if (this.provisionedMemoryBytesNotIn == null) {
-      this.provisionedMemoryBytesNotIn = new ArrayList<Double>();
+      this.provisionedMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.provisionedMemoryBytesNotIn.add(provisionedMemoryBytesNotInItem);
     return this;
@@ -9135,17 +9135,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedMemoryBytesNotIn() {
+  public List<Long> getProvisionedMemoryBytesNotIn() {
     return provisionedMemoryBytesNotIn;
   }
 
 
-  public void setProvisionedMemoryBytesNotIn(List<Double> provisionedMemoryBytesNotIn) {
+  public void setProvisionedMemoryBytesNotIn(List<Long> provisionedMemoryBytesNotIn) {
     this.provisionedMemoryBytesNotIn = provisionedMemoryBytesNotIn;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytes(Double runningPauseVmMemoryBytes) {
+  public HostWhereInput runningPauseVmMemoryBytes(Long runningPauseVmMemoryBytes) {
     
     this.runningPauseVmMemoryBytes = runningPauseVmMemoryBytes;
     return this;
@@ -9158,17 +9158,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningPauseVmMemoryBytes() {
+  public Long getRunningPauseVmMemoryBytes() {
     return runningPauseVmMemoryBytes;
   }
 
 
-  public void setRunningPauseVmMemoryBytes(Double runningPauseVmMemoryBytes) {
+  public void setRunningPauseVmMemoryBytes(Long runningPauseVmMemoryBytes) {
     this.runningPauseVmMemoryBytes = runningPauseVmMemoryBytes;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesGt(Double runningPauseVmMemoryBytesGt) {
+  public HostWhereInput runningPauseVmMemoryBytesGt(Long runningPauseVmMemoryBytesGt) {
     
     this.runningPauseVmMemoryBytesGt = runningPauseVmMemoryBytesGt;
     return this;
@@ -9181,17 +9181,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningPauseVmMemoryBytesGt() {
+  public Long getRunningPauseVmMemoryBytesGt() {
     return runningPauseVmMemoryBytesGt;
   }
 
 
-  public void setRunningPauseVmMemoryBytesGt(Double runningPauseVmMemoryBytesGt) {
+  public void setRunningPauseVmMemoryBytesGt(Long runningPauseVmMemoryBytesGt) {
     this.runningPauseVmMemoryBytesGt = runningPauseVmMemoryBytesGt;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesGte(Double runningPauseVmMemoryBytesGte) {
+  public HostWhereInput runningPauseVmMemoryBytesGte(Long runningPauseVmMemoryBytesGte) {
     
     this.runningPauseVmMemoryBytesGte = runningPauseVmMemoryBytesGte;
     return this;
@@ -9204,25 +9204,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningPauseVmMemoryBytesGte() {
+  public Long getRunningPauseVmMemoryBytesGte() {
     return runningPauseVmMemoryBytesGte;
   }
 
 
-  public void setRunningPauseVmMemoryBytesGte(Double runningPauseVmMemoryBytesGte) {
+  public void setRunningPauseVmMemoryBytesGte(Long runningPauseVmMemoryBytesGte) {
     this.runningPauseVmMemoryBytesGte = runningPauseVmMemoryBytesGte;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesIn(List<Double> runningPauseVmMemoryBytesIn) {
+  public HostWhereInput runningPauseVmMemoryBytesIn(List<Long> runningPauseVmMemoryBytesIn) {
     
     this.runningPauseVmMemoryBytesIn = runningPauseVmMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addRunningPauseVmMemoryBytesInItem(Double runningPauseVmMemoryBytesInItem) {
+  public HostWhereInput addRunningPauseVmMemoryBytesInItem(Long runningPauseVmMemoryBytesInItem) {
     if (this.runningPauseVmMemoryBytesIn == null) {
-      this.runningPauseVmMemoryBytesIn = new ArrayList<Double>();
+      this.runningPauseVmMemoryBytesIn = new ArrayList<Long>();
     }
     this.runningPauseVmMemoryBytesIn.add(runningPauseVmMemoryBytesInItem);
     return this;
@@ -9235,17 +9235,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningPauseVmMemoryBytesIn() {
+  public List<Long> getRunningPauseVmMemoryBytesIn() {
     return runningPauseVmMemoryBytesIn;
   }
 
 
-  public void setRunningPauseVmMemoryBytesIn(List<Double> runningPauseVmMemoryBytesIn) {
+  public void setRunningPauseVmMemoryBytesIn(List<Long> runningPauseVmMemoryBytesIn) {
     this.runningPauseVmMemoryBytesIn = runningPauseVmMemoryBytesIn;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesLt(Double runningPauseVmMemoryBytesLt) {
+  public HostWhereInput runningPauseVmMemoryBytesLt(Long runningPauseVmMemoryBytesLt) {
     
     this.runningPauseVmMemoryBytesLt = runningPauseVmMemoryBytesLt;
     return this;
@@ -9258,17 +9258,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningPauseVmMemoryBytesLt() {
+  public Long getRunningPauseVmMemoryBytesLt() {
     return runningPauseVmMemoryBytesLt;
   }
 
 
-  public void setRunningPauseVmMemoryBytesLt(Double runningPauseVmMemoryBytesLt) {
+  public void setRunningPauseVmMemoryBytesLt(Long runningPauseVmMemoryBytesLt) {
     this.runningPauseVmMemoryBytesLt = runningPauseVmMemoryBytesLt;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesLte(Double runningPauseVmMemoryBytesLte) {
+  public HostWhereInput runningPauseVmMemoryBytesLte(Long runningPauseVmMemoryBytesLte) {
     
     this.runningPauseVmMemoryBytesLte = runningPauseVmMemoryBytesLte;
     return this;
@@ -9281,17 +9281,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningPauseVmMemoryBytesLte() {
+  public Long getRunningPauseVmMemoryBytesLte() {
     return runningPauseVmMemoryBytesLte;
   }
 
 
-  public void setRunningPauseVmMemoryBytesLte(Double runningPauseVmMemoryBytesLte) {
+  public void setRunningPauseVmMemoryBytesLte(Long runningPauseVmMemoryBytesLte) {
     this.runningPauseVmMemoryBytesLte = runningPauseVmMemoryBytesLte;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesNot(Double runningPauseVmMemoryBytesNot) {
+  public HostWhereInput runningPauseVmMemoryBytesNot(Long runningPauseVmMemoryBytesNot) {
     
     this.runningPauseVmMemoryBytesNot = runningPauseVmMemoryBytesNot;
     return this;
@@ -9304,25 +9304,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRunningPauseVmMemoryBytesNot() {
+  public Long getRunningPauseVmMemoryBytesNot() {
     return runningPauseVmMemoryBytesNot;
   }
 
 
-  public void setRunningPauseVmMemoryBytesNot(Double runningPauseVmMemoryBytesNot) {
+  public void setRunningPauseVmMemoryBytesNot(Long runningPauseVmMemoryBytesNot) {
     this.runningPauseVmMemoryBytesNot = runningPauseVmMemoryBytesNot;
   }
 
 
-  public HostWhereInput runningPauseVmMemoryBytesNotIn(List<Double> runningPauseVmMemoryBytesNotIn) {
+  public HostWhereInput runningPauseVmMemoryBytesNotIn(List<Long> runningPauseVmMemoryBytesNotIn) {
     
     this.runningPauseVmMemoryBytesNotIn = runningPauseVmMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addRunningPauseVmMemoryBytesNotInItem(Double runningPauseVmMemoryBytesNotInItem) {
+  public HostWhereInput addRunningPauseVmMemoryBytesNotInItem(Long runningPauseVmMemoryBytesNotInItem) {
     if (this.runningPauseVmMemoryBytesNotIn == null) {
-      this.runningPauseVmMemoryBytesNotIn = new ArrayList<Double>();
+      this.runningPauseVmMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.runningPauseVmMemoryBytesNotIn.add(runningPauseVmMemoryBytesNotInItem);
     return this;
@@ -9335,12 +9335,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRunningPauseVmMemoryBytesNotIn() {
+  public List<Long> getRunningPauseVmMemoryBytesNotIn() {
     return runningPauseVmMemoryBytesNotIn;
   }
 
 
-  public void setRunningPauseVmMemoryBytesNotIn(List<Double> runningPauseVmMemoryBytesNotIn) {
+  public void setRunningPauseVmMemoryBytesNotIn(List<Long> runningPauseVmMemoryBytesNotIn) {
     this.runningPauseVmMemoryBytesNotIn = runningPauseVmMemoryBytesNotIn;
   }
 
@@ -9545,7 +9545,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput scvmCpu(Double scvmCpu) {
+  public HostWhereInput scvmCpu(Integer scvmCpu) {
     
     this.scvmCpu = scvmCpu;
     return this;
@@ -9558,17 +9558,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpu() {
+  public Integer getScvmCpu() {
     return scvmCpu;
   }
 
 
-  public void setScvmCpu(Double scvmCpu) {
+  public void setScvmCpu(Integer scvmCpu) {
     this.scvmCpu = scvmCpu;
   }
 
 
-  public HostWhereInput scvmCpuGt(Double scvmCpuGt) {
+  public HostWhereInput scvmCpuGt(Integer scvmCpuGt) {
     
     this.scvmCpuGt = scvmCpuGt;
     return this;
@@ -9581,17 +9581,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpuGt() {
+  public Integer getScvmCpuGt() {
     return scvmCpuGt;
   }
 
 
-  public void setScvmCpuGt(Double scvmCpuGt) {
+  public void setScvmCpuGt(Integer scvmCpuGt) {
     this.scvmCpuGt = scvmCpuGt;
   }
 
 
-  public HostWhereInput scvmCpuGte(Double scvmCpuGte) {
+  public HostWhereInput scvmCpuGte(Integer scvmCpuGte) {
     
     this.scvmCpuGte = scvmCpuGte;
     return this;
@@ -9604,25 +9604,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpuGte() {
+  public Integer getScvmCpuGte() {
     return scvmCpuGte;
   }
 
 
-  public void setScvmCpuGte(Double scvmCpuGte) {
+  public void setScvmCpuGte(Integer scvmCpuGte) {
     this.scvmCpuGte = scvmCpuGte;
   }
 
 
-  public HostWhereInput scvmCpuIn(List<Double> scvmCpuIn) {
+  public HostWhereInput scvmCpuIn(List<Integer> scvmCpuIn) {
     
     this.scvmCpuIn = scvmCpuIn;
     return this;
   }
 
-  public HostWhereInput addScvmCpuInItem(Double scvmCpuInItem) {
+  public HostWhereInput addScvmCpuInItem(Integer scvmCpuInItem) {
     if (this.scvmCpuIn == null) {
-      this.scvmCpuIn = new ArrayList<Double>();
+      this.scvmCpuIn = new ArrayList<Integer>();
     }
     this.scvmCpuIn.add(scvmCpuInItem);
     return this;
@@ -9635,17 +9635,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getScvmCpuIn() {
+  public List<Integer> getScvmCpuIn() {
     return scvmCpuIn;
   }
 
 
-  public void setScvmCpuIn(List<Double> scvmCpuIn) {
+  public void setScvmCpuIn(List<Integer> scvmCpuIn) {
     this.scvmCpuIn = scvmCpuIn;
   }
 
 
-  public HostWhereInput scvmCpuLt(Double scvmCpuLt) {
+  public HostWhereInput scvmCpuLt(Integer scvmCpuLt) {
     
     this.scvmCpuLt = scvmCpuLt;
     return this;
@@ -9658,17 +9658,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpuLt() {
+  public Integer getScvmCpuLt() {
     return scvmCpuLt;
   }
 
 
-  public void setScvmCpuLt(Double scvmCpuLt) {
+  public void setScvmCpuLt(Integer scvmCpuLt) {
     this.scvmCpuLt = scvmCpuLt;
   }
 
 
-  public HostWhereInput scvmCpuLte(Double scvmCpuLte) {
+  public HostWhereInput scvmCpuLte(Integer scvmCpuLte) {
     
     this.scvmCpuLte = scvmCpuLte;
     return this;
@@ -9681,17 +9681,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpuLte() {
+  public Integer getScvmCpuLte() {
     return scvmCpuLte;
   }
 
 
-  public void setScvmCpuLte(Double scvmCpuLte) {
+  public void setScvmCpuLte(Integer scvmCpuLte) {
     this.scvmCpuLte = scvmCpuLte;
   }
 
 
-  public HostWhereInput scvmCpuNot(Double scvmCpuNot) {
+  public HostWhereInput scvmCpuNot(Integer scvmCpuNot) {
     
     this.scvmCpuNot = scvmCpuNot;
     return this;
@@ -9704,25 +9704,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmCpuNot() {
+  public Integer getScvmCpuNot() {
     return scvmCpuNot;
   }
 
 
-  public void setScvmCpuNot(Double scvmCpuNot) {
+  public void setScvmCpuNot(Integer scvmCpuNot) {
     this.scvmCpuNot = scvmCpuNot;
   }
 
 
-  public HostWhereInput scvmCpuNotIn(List<Double> scvmCpuNotIn) {
+  public HostWhereInput scvmCpuNotIn(List<Integer> scvmCpuNotIn) {
     
     this.scvmCpuNotIn = scvmCpuNotIn;
     return this;
   }
 
-  public HostWhereInput addScvmCpuNotInItem(Double scvmCpuNotInItem) {
+  public HostWhereInput addScvmCpuNotInItem(Integer scvmCpuNotInItem) {
     if (this.scvmCpuNotIn == null) {
-      this.scvmCpuNotIn = new ArrayList<Double>();
+      this.scvmCpuNotIn = new ArrayList<Integer>();
     }
     this.scvmCpuNotIn.add(scvmCpuNotInItem);
     return this;
@@ -9735,17 +9735,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getScvmCpuNotIn() {
+  public List<Integer> getScvmCpuNotIn() {
     return scvmCpuNotIn;
   }
 
 
-  public void setScvmCpuNotIn(List<Double> scvmCpuNotIn) {
+  public void setScvmCpuNotIn(List<Integer> scvmCpuNotIn) {
     this.scvmCpuNotIn = scvmCpuNotIn;
   }
 
 
-  public HostWhereInput scvmMemory(Double scvmMemory) {
+  public HostWhereInput scvmMemory(Long scvmMemory) {
     
     this.scvmMemory = scvmMemory;
     return this;
@@ -9758,17 +9758,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemory() {
+  public Long getScvmMemory() {
     return scvmMemory;
   }
 
 
-  public void setScvmMemory(Double scvmMemory) {
+  public void setScvmMemory(Long scvmMemory) {
     this.scvmMemory = scvmMemory;
   }
 
 
-  public HostWhereInput scvmMemoryGt(Double scvmMemoryGt) {
+  public HostWhereInput scvmMemoryGt(Long scvmMemoryGt) {
     
     this.scvmMemoryGt = scvmMemoryGt;
     return this;
@@ -9781,17 +9781,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemoryGt() {
+  public Long getScvmMemoryGt() {
     return scvmMemoryGt;
   }
 
 
-  public void setScvmMemoryGt(Double scvmMemoryGt) {
+  public void setScvmMemoryGt(Long scvmMemoryGt) {
     this.scvmMemoryGt = scvmMemoryGt;
   }
 
 
-  public HostWhereInput scvmMemoryGte(Double scvmMemoryGte) {
+  public HostWhereInput scvmMemoryGte(Long scvmMemoryGte) {
     
     this.scvmMemoryGte = scvmMemoryGte;
     return this;
@@ -9804,25 +9804,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemoryGte() {
+  public Long getScvmMemoryGte() {
     return scvmMemoryGte;
   }
 
 
-  public void setScvmMemoryGte(Double scvmMemoryGte) {
+  public void setScvmMemoryGte(Long scvmMemoryGte) {
     this.scvmMemoryGte = scvmMemoryGte;
   }
 
 
-  public HostWhereInput scvmMemoryIn(List<Double> scvmMemoryIn) {
+  public HostWhereInput scvmMemoryIn(List<Long> scvmMemoryIn) {
     
     this.scvmMemoryIn = scvmMemoryIn;
     return this;
   }
 
-  public HostWhereInput addScvmMemoryInItem(Double scvmMemoryInItem) {
+  public HostWhereInput addScvmMemoryInItem(Long scvmMemoryInItem) {
     if (this.scvmMemoryIn == null) {
-      this.scvmMemoryIn = new ArrayList<Double>();
+      this.scvmMemoryIn = new ArrayList<Long>();
     }
     this.scvmMemoryIn.add(scvmMemoryInItem);
     return this;
@@ -9835,17 +9835,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getScvmMemoryIn() {
+  public List<Long> getScvmMemoryIn() {
     return scvmMemoryIn;
   }
 
 
-  public void setScvmMemoryIn(List<Double> scvmMemoryIn) {
+  public void setScvmMemoryIn(List<Long> scvmMemoryIn) {
     this.scvmMemoryIn = scvmMemoryIn;
   }
 
 
-  public HostWhereInput scvmMemoryLt(Double scvmMemoryLt) {
+  public HostWhereInput scvmMemoryLt(Long scvmMemoryLt) {
     
     this.scvmMemoryLt = scvmMemoryLt;
     return this;
@@ -9858,17 +9858,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemoryLt() {
+  public Long getScvmMemoryLt() {
     return scvmMemoryLt;
   }
 
 
-  public void setScvmMemoryLt(Double scvmMemoryLt) {
+  public void setScvmMemoryLt(Long scvmMemoryLt) {
     this.scvmMemoryLt = scvmMemoryLt;
   }
 
 
-  public HostWhereInput scvmMemoryLte(Double scvmMemoryLte) {
+  public HostWhereInput scvmMemoryLte(Long scvmMemoryLte) {
     
     this.scvmMemoryLte = scvmMemoryLte;
     return this;
@@ -9881,17 +9881,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemoryLte() {
+  public Long getScvmMemoryLte() {
     return scvmMemoryLte;
   }
 
 
-  public void setScvmMemoryLte(Double scvmMemoryLte) {
+  public void setScvmMemoryLte(Long scvmMemoryLte) {
     this.scvmMemoryLte = scvmMemoryLte;
   }
 
 
-  public HostWhereInput scvmMemoryNot(Double scvmMemoryNot) {
+  public HostWhereInput scvmMemoryNot(Long scvmMemoryNot) {
     
     this.scvmMemoryNot = scvmMemoryNot;
     return this;
@@ -9904,25 +9904,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getScvmMemoryNot() {
+  public Long getScvmMemoryNot() {
     return scvmMemoryNot;
   }
 
 
-  public void setScvmMemoryNot(Double scvmMemoryNot) {
+  public void setScvmMemoryNot(Long scvmMemoryNot) {
     this.scvmMemoryNot = scvmMemoryNot;
   }
 
 
-  public HostWhereInput scvmMemoryNotIn(List<Double> scvmMemoryNotIn) {
+  public HostWhereInput scvmMemoryNotIn(List<Long> scvmMemoryNotIn) {
     
     this.scvmMemoryNotIn = scvmMemoryNotIn;
     return this;
   }
 
-  public HostWhereInput addScvmMemoryNotInItem(Double scvmMemoryNotInItem) {
+  public HostWhereInput addScvmMemoryNotInItem(Long scvmMemoryNotInItem) {
     if (this.scvmMemoryNotIn == null) {
-      this.scvmMemoryNotIn = new ArrayList<Double>();
+      this.scvmMemoryNotIn = new ArrayList<Long>();
     }
     this.scvmMemoryNotIn.add(scvmMemoryNotInItem);
     return this;
@@ -9935,12 +9935,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getScvmMemoryNotIn() {
+  public List<Long> getScvmMemoryNotIn() {
     return scvmMemoryNotIn;
   }
 
 
-  public void setScvmMemoryNotIn(List<Double> scvmMemoryNotIn) {
+  public void setScvmMemoryNotIn(List<Long> scvmMemoryNotIn) {
     this.scvmMemoryNotIn = scvmMemoryNotIn;
   }
 
@@ -10621,7 +10621,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput ssdDataCapacity(Double ssdDataCapacity) {
+  public HostWhereInput ssdDataCapacity(Long ssdDataCapacity) {
     
     this.ssdDataCapacity = ssdDataCapacity;
     return this;
@@ -10634,17 +10634,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDataCapacity() {
+  public Long getSsdDataCapacity() {
     return ssdDataCapacity;
   }
 
 
-  public void setSsdDataCapacity(Double ssdDataCapacity) {
+  public void setSsdDataCapacity(Long ssdDataCapacity) {
     this.ssdDataCapacity = ssdDataCapacity;
   }
 
 
-  public HostWhereInput ssdDataCapacityGt(Double ssdDataCapacityGt) {
+  public HostWhereInput ssdDataCapacityGt(Long ssdDataCapacityGt) {
     
     this.ssdDataCapacityGt = ssdDataCapacityGt;
     return this;
@@ -10657,17 +10657,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDataCapacityGt() {
+  public Long getSsdDataCapacityGt() {
     return ssdDataCapacityGt;
   }
 
 
-  public void setSsdDataCapacityGt(Double ssdDataCapacityGt) {
+  public void setSsdDataCapacityGt(Long ssdDataCapacityGt) {
     this.ssdDataCapacityGt = ssdDataCapacityGt;
   }
 
 
-  public HostWhereInput ssdDataCapacityGte(Double ssdDataCapacityGte) {
+  public HostWhereInput ssdDataCapacityGte(Long ssdDataCapacityGte) {
     
     this.ssdDataCapacityGte = ssdDataCapacityGte;
     return this;
@@ -10680,25 +10680,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDataCapacityGte() {
+  public Long getSsdDataCapacityGte() {
     return ssdDataCapacityGte;
   }
 
 
-  public void setSsdDataCapacityGte(Double ssdDataCapacityGte) {
+  public void setSsdDataCapacityGte(Long ssdDataCapacityGte) {
     this.ssdDataCapacityGte = ssdDataCapacityGte;
   }
 
 
-  public HostWhereInput ssdDataCapacityIn(List<Double> ssdDataCapacityIn) {
+  public HostWhereInput ssdDataCapacityIn(List<Long> ssdDataCapacityIn) {
     
     this.ssdDataCapacityIn = ssdDataCapacityIn;
     return this;
   }
 
-  public HostWhereInput addSsdDataCapacityInItem(Double ssdDataCapacityInItem) {
+  public HostWhereInput addSsdDataCapacityInItem(Long ssdDataCapacityInItem) {
     if (this.ssdDataCapacityIn == null) {
-      this.ssdDataCapacityIn = new ArrayList<Double>();
+      this.ssdDataCapacityIn = new ArrayList<Long>();
     }
     this.ssdDataCapacityIn.add(ssdDataCapacityInItem);
     return this;
@@ -10711,17 +10711,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSsdDataCapacityIn() {
+  public List<Long> getSsdDataCapacityIn() {
     return ssdDataCapacityIn;
   }
 
 
-  public void setSsdDataCapacityIn(List<Double> ssdDataCapacityIn) {
+  public void setSsdDataCapacityIn(List<Long> ssdDataCapacityIn) {
     this.ssdDataCapacityIn = ssdDataCapacityIn;
   }
 
 
-  public HostWhereInput ssdDataCapacityLt(Double ssdDataCapacityLt) {
+  public HostWhereInput ssdDataCapacityLt(Long ssdDataCapacityLt) {
     
     this.ssdDataCapacityLt = ssdDataCapacityLt;
     return this;
@@ -10734,17 +10734,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDataCapacityLt() {
+  public Long getSsdDataCapacityLt() {
     return ssdDataCapacityLt;
   }
 
 
-  public void setSsdDataCapacityLt(Double ssdDataCapacityLt) {
+  public void setSsdDataCapacityLt(Long ssdDataCapacityLt) {
     this.ssdDataCapacityLt = ssdDataCapacityLt;
   }
 
 
-  public HostWhereInput ssdDataCapacityLte(Double ssdDataCapacityLte) {
+  public HostWhereInput ssdDataCapacityLte(Long ssdDataCapacityLte) {
     
     this.ssdDataCapacityLte = ssdDataCapacityLte;
     return this;
@@ -10757,17 +10757,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDataCapacityLte() {
+  public Long getSsdDataCapacityLte() {
     return ssdDataCapacityLte;
   }
 
 
-  public void setSsdDataCapacityLte(Double ssdDataCapacityLte) {
+  public void setSsdDataCapacityLte(Long ssdDataCapacityLte) {
     this.ssdDataCapacityLte = ssdDataCapacityLte;
   }
 
 
-  public HostWhereInput ssdDataCapacityNot(Double ssdDataCapacityNot) {
+  public HostWhereInput ssdDataCapacityNot(Long ssdDataCapacityNot) {
     
     this.ssdDataCapacityNot = ssdDataCapacityNot;
     return this;
@@ -10780,25 +10780,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSsdDataCapacityNot() {
+  public Long getSsdDataCapacityNot() {
     return ssdDataCapacityNot;
   }
 
 
-  public void setSsdDataCapacityNot(Double ssdDataCapacityNot) {
+  public void setSsdDataCapacityNot(Long ssdDataCapacityNot) {
     this.ssdDataCapacityNot = ssdDataCapacityNot;
   }
 
 
-  public HostWhereInput ssdDataCapacityNotIn(List<Double> ssdDataCapacityNotIn) {
+  public HostWhereInput ssdDataCapacityNotIn(List<Long> ssdDataCapacityNotIn) {
     
     this.ssdDataCapacityNotIn = ssdDataCapacityNotIn;
     return this;
   }
 
-  public HostWhereInput addSsdDataCapacityNotInItem(Double ssdDataCapacityNotInItem) {
+  public HostWhereInput addSsdDataCapacityNotInItem(Long ssdDataCapacityNotInItem) {
     if (this.ssdDataCapacityNotIn == null) {
-      this.ssdDataCapacityNotIn = new ArrayList<Double>();
+      this.ssdDataCapacityNotIn = new ArrayList<Long>();
     }
     this.ssdDataCapacityNotIn.add(ssdDataCapacityNotInItem);
     return this;
@@ -10811,12 +10811,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSsdDataCapacityNotIn() {
+  public List<Long> getSsdDataCapacityNotIn() {
     return ssdDataCapacityNotIn;
   }
 
 
-  public void setSsdDataCapacityNotIn(List<Double> ssdDataCapacityNotIn) {
+  public void setSsdDataCapacityNotIn(List<Long> ssdDataCapacityNotIn) {
     this.ssdDataCapacityNotIn = ssdDataCapacityNotIn;
   }
 
@@ -11637,7 +11637,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput totalCacheCapacity(Double totalCacheCapacity) {
+  public HostWhereInput totalCacheCapacity(Long totalCacheCapacity) {
     
     this.totalCacheCapacity = totalCacheCapacity;
     return this;
@@ -11650,17 +11650,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacity() {
+  public Long getTotalCacheCapacity() {
     return totalCacheCapacity;
   }
 
 
-  public void setTotalCacheCapacity(Double totalCacheCapacity) {
+  public void setTotalCacheCapacity(Long totalCacheCapacity) {
     this.totalCacheCapacity = totalCacheCapacity;
   }
 
 
-  public HostWhereInput totalCacheCapacityGt(Double totalCacheCapacityGt) {
+  public HostWhereInput totalCacheCapacityGt(Long totalCacheCapacityGt) {
     
     this.totalCacheCapacityGt = totalCacheCapacityGt;
     return this;
@@ -11673,17 +11673,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityGt() {
+  public Long getTotalCacheCapacityGt() {
     return totalCacheCapacityGt;
   }
 
 
-  public void setTotalCacheCapacityGt(Double totalCacheCapacityGt) {
+  public void setTotalCacheCapacityGt(Long totalCacheCapacityGt) {
     this.totalCacheCapacityGt = totalCacheCapacityGt;
   }
 
 
-  public HostWhereInput totalCacheCapacityGte(Double totalCacheCapacityGte) {
+  public HostWhereInput totalCacheCapacityGte(Long totalCacheCapacityGte) {
     
     this.totalCacheCapacityGte = totalCacheCapacityGte;
     return this;
@@ -11696,25 +11696,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityGte() {
+  public Long getTotalCacheCapacityGte() {
     return totalCacheCapacityGte;
   }
 
 
-  public void setTotalCacheCapacityGte(Double totalCacheCapacityGte) {
+  public void setTotalCacheCapacityGte(Long totalCacheCapacityGte) {
     this.totalCacheCapacityGte = totalCacheCapacityGte;
   }
 
 
-  public HostWhereInput totalCacheCapacityIn(List<Double> totalCacheCapacityIn) {
+  public HostWhereInput totalCacheCapacityIn(List<Long> totalCacheCapacityIn) {
     
     this.totalCacheCapacityIn = totalCacheCapacityIn;
     return this;
   }
 
-  public HostWhereInput addTotalCacheCapacityInItem(Double totalCacheCapacityInItem) {
+  public HostWhereInput addTotalCacheCapacityInItem(Long totalCacheCapacityInItem) {
     if (this.totalCacheCapacityIn == null) {
-      this.totalCacheCapacityIn = new ArrayList<Double>();
+      this.totalCacheCapacityIn = new ArrayList<Long>();
     }
     this.totalCacheCapacityIn.add(totalCacheCapacityInItem);
     return this;
@@ -11727,17 +11727,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCacheCapacityIn() {
+  public List<Long> getTotalCacheCapacityIn() {
     return totalCacheCapacityIn;
   }
 
 
-  public void setTotalCacheCapacityIn(List<Double> totalCacheCapacityIn) {
+  public void setTotalCacheCapacityIn(List<Long> totalCacheCapacityIn) {
     this.totalCacheCapacityIn = totalCacheCapacityIn;
   }
 
 
-  public HostWhereInput totalCacheCapacityLt(Double totalCacheCapacityLt) {
+  public HostWhereInput totalCacheCapacityLt(Long totalCacheCapacityLt) {
     
     this.totalCacheCapacityLt = totalCacheCapacityLt;
     return this;
@@ -11750,17 +11750,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityLt() {
+  public Long getTotalCacheCapacityLt() {
     return totalCacheCapacityLt;
   }
 
 
-  public void setTotalCacheCapacityLt(Double totalCacheCapacityLt) {
+  public void setTotalCacheCapacityLt(Long totalCacheCapacityLt) {
     this.totalCacheCapacityLt = totalCacheCapacityLt;
   }
 
 
-  public HostWhereInput totalCacheCapacityLte(Double totalCacheCapacityLte) {
+  public HostWhereInput totalCacheCapacityLte(Long totalCacheCapacityLte) {
     
     this.totalCacheCapacityLte = totalCacheCapacityLte;
     return this;
@@ -11773,17 +11773,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityLte() {
+  public Long getTotalCacheCapacityLte() {
     return totalCacheCapacityLte;
   }
 
 
-  public void setTotalCacheCapacityLte(Double totalCacheCapacityLte) {
+  public void setTotalCacheCapacityLte(Long totalCacheCapacityLte) {
     this.totalCacheCapacityLte = totalCacheCapacityLte;
   }
 
 
-  public HostWhereInput totalCacheCapacityNot(Double totalCacheCapacityNot) {
+  public HostWhereInput totalCacheCapacityNot(Long totalCacheCapacityNot) {
     
     this.totalCacheCapacityNot = totalCacheCapacityNot;
     return this;
@@ -11796,25 +11796,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityNot() {
+  public Long getTotalCacheCapacityNot() {
     return totalCacheCapacityNot;
   }
 
 
-  public void setTotalCacheCapacityNot(Double totalCacheCapacityNot) {
+  public void setTotalCacheCapacityNot(Long totalCacheCapacityNot) {
     this.totalCacheCapacityNot = totalCacheCapacityNot;
   }
 
 
-  public HostWhereInput totalCacheCapacityNotIn(List<Double> totalCacheCapacityNotIn) {
+  public HostWhereInput totalCacheCapacityNotIn(List<Long> totalCacheCapacityNotIn) {
     
     this.totalCacheCapacityNotIn = totalCacheCapacityNotIn;
     return this;
   }
 
-  public HostWhereInput addTotalCacheCapacityNotInItem(Double totalCacheCapacityNotInItem) {
+  public HostWhereInput addTotalCacheCapacityNotInItem(Long totalCacheCapacityNotInItem) {
     if (this.totalCacheCapacityNotIn == null) {
-      this.totalCacheCapacityNotIn = new ArrayList<Double>();
+      this.totalCacheCapacityNotIn = new ArrayList<Long>();
     }
     this.totalCacheCapacityNotIn.add(totalCacheCapacityNotInItem);
     return this;
@@ -11827,12 +11827,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCacheCapacityNotIn() {
+  public List<Long> getTotalCacheCapacityNotIn() {
     return totalCacheCapacityNotIn;
   }
 
 
-  public void setTotalCacheCapacityNotIn(List<Double> totalCacheCapacityNotIn) {
+  public void setTotalCacheCapacityNotIn(List<Long> totalCacheCapacityNotIn) {
     this.totalCacheCapacityNotIn = totalCacheCapacityNotIn;
   }
 
@@ -12037,7 +12037,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput totalCpuHz(Double totalCpuHz) {
+  public HostWhereInput totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -12050,17 +12050,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
 
-  public HostWhereInput totalCpuHzGt(Double totalCpuHzGt) {
+  public HostWhereInput totalCpuHzGt(Long totalCpuHzGt) {
     
     this.totalCpuHzGt = totalCpuHzGt;
     return this;
@@ -12073,17 +12073,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGt() {
+  public Long getTotalCpuHzGt() {
     return totalCpuHzGt;
   }
 
 
-  public void setTotalCpuHzGt(Double totalCpuHzGt) {
+  public void setTotalCpuHzGt(Long totalCpuHzGt) {
     this.totalCpuHzGt = totalCpuHzGt;
   }
 
 
-  public HostWhereInput totalCpuHzGte(Double totalCpuHzGte) {
+  public HostWhereInput totalCpuHzGte(Long totalCpuHzGte) {
     
     this.totalCpuHzGte = totalCpuHzGte;
     return this;
@@ -12096,25 +12096,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGte() {
+  public Long getTotalCpuHzGte() {
     return totalCpuHzGte;
   }
 
 
-  public void setTotalCpuHzGte(Double totalCpuHzGte) {
+  public void setTotalCpuHzGte(Long totalCpuHzGte) {
     this.totalCpuHzGte = totalCpuHzGte;
   }
 
 
-  public HostWhereInput totalCpuHzIn(List<Double> totalCpuHzIn) {
+  public HostWhereInput totalCpuHzIn(List<Long> totalCpuHzIn) {
     
     this.totalCpuHzIn = totalCpuHzIn;
     return this;
   }
 
-  public HostWhereInput addTotalCpuHzInItem(Double totalCpuHzInItem) {
+  public HostWhereInput addTotalCpuHzInItem(Long totalCpuHzInItem) {
     if (this.totalCpuHzIn == null) {
-      this.totalCpuHzIn = new ArrayList<Double>();
+      this.totalCpuHzIn = new ArrayList<Long>();
     }
     this.totalCpuHzIn.add(totalCpuHzInItem);
     return this;
@@ -12127,17 +12127,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzIn() {
+  public List<Long> getTotalCpuHzIn() {
     return totalCpuHzIn;
   }
 
 
-  public void setTotalCpuHzIn(List<Double> totalCpuHzIn) {
+  public void setTotalCpuHzIn(List<Long> totalCpuHzIn) {
     this.totalCpuHzIn = totalCpuHzIn;
   }
 
 
-  public HostWhereInput totalCpuHzLt(Double totalCpuHzLt) {
+  public HostWhereInput totalCpuHzLt(Long totalCpuHzLt) {
     
     this.totalCpuHzLt = totalCpuHzLt;
     return this;
@@ -12150,17 +12150,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLt() {
+  public Long getTotalCpuHzLt() {
     return totalCpuHzLt;
   }
 
 
-  public void setTotalCpuHzLt(Double totalCpuHzLt) {
+  public void setTotalCpuHzLt(Long totalCpuHzLt) {
     this.totalCpuHzLt = totalCpuHzLt;
   }
 
 
-  public HostWhereInput totalCpuHzLte(Double totalCpuHzLte) {
+  public HostWhereInput totalCpuHzLte(Long totalCpuHzLte) {
     
     this.totalCpuHzLte = totalCpuHzLte;
     return this;
@@ -12173,17 +12173,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLte() {
+  public Long getTotalCpuHzLte() {
     return totalCpuHzLte;
   }
 
 
-  public void setTotalCpuHzLte(Double totalCpuHzLte) {
+  public void setTotalCpuHzLte(Long totalCpuHzLte) {
     this.totalCpuHzLte = totalCpuHzLte;
   }
 
 
-  public HostWhereInput totalCpuHzNot(Double totalCpuHzNot) {
+  public HostWhereInput totalCpuHzNot(Long totalCpuHzNot) {
     
     this.totalCpuHzNot = totalCpuHzNot;
     return this;
@@ -12196,25 +12196,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzNot() {
+  public Long getTotalCpuHzNot() {
     return totalCpuHzNot;
   }
 
 
-  public void setTotalCpuHzNot(Double totalCpuHzNot) {
+  public void setTotalCpuHzNot(Long totalCpuHzNot) {
     this.totalCpuHzNot = totalCpuHzNot;
   }
 
 
-  public HostWhereInput totalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public HostWhereInput totalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     
     this.totalCpuHzNotIn = totalCpuHzNotIn;
     return this;
   }
 
-  public HostWhereInput addTotalCpuHzNotInItem(Double totalCpuHzNotInItem) {
+  public HostWhereInput addTotalCpuHzNotInItem(Long totalCpuHzNotInItem) {
     if (this.totalCpuHzNotIn == null) {
-      this.totalCpuHzNotIn = new ArrayList<Double>();
+      this.totalCpuHzNotIn = new ArrayList<Long>();
     }
     this.totalCpuHzNotIn.add(totalCpuHzNotInItem);
     return this;
@@ -12227,12 +12227,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzNotIn() {
+  public List<Long> getTotalCpuHzNotIn() {
     return totalCpuHzNotIn;
   }
 
 
-  public void setTotalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public void setTotalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     this.totalCpuHzNotIn = totalCpuHzNotIn;
   }
 
@@ -12437,7 +12437,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput totalDataCapacity(Double totalDataCapacity) {
+  public HostWhereInput totalDataCapacity(Long totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
     return this;
@@ -12450,17 +12450,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacity() {
+  public Long getTotalDataCapacity() {
     return totalDataCapacity;
   }
 
 
-  public void setTotalDataCapacity(Double totalDataCapacity) {
+  public void setTotalDataCapacity(Long totalDataCapacity) {
     this.totalDataCapacity = totalDataCapacity;
   }
 
 
-  public HostWhereInput totalDataCapacityGt(Double totalDataCapacityGt) {
+  public HostWhereInput totalDataCapacityGt(Long totalDataCapacityGt) {
     
     this.totalDataCapacityGt = totalDataCapacityGt;
     return this;
@@ -12473,17 +12473,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGt() {
+  public Long getTotalDataCapacityGt() {
     return totalDataCapacityGt;
   }
 
 
-  public void setTotalDataCapacityGt(Double totalDataCapacityGt) {
+  public void setTotalDataCapacityGt(Long totalDataCapacityGt) {
     this.totalDataCapacityGt = totalDataCapacityGt;
   }
 
 
-  public HostWhereInput totalDataCapacityGte(Double totalDataCapacityGte) {
+  public HostWhereInput totalDataCapacityGte(Long totalDataCapacityGte) {
     
     this.totalDataCapacityGte = totalDataCapacityGte;
     return this;
@@ -12496,25 +12496,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGte() {
+  public Long getTotalDataCapacityGte() {
     return totalDataCapacityGte;
   }
 
 
-  public void setTotalDataCapacityGte(Double totalDataCapacityGte) {
+  public void setTotalDataCapacityGte(Long totalDataCapacityGte) {
     this.totalDataCapacityGte = totalDataCapacityGte;
   }
 
 
-  public HostWhereInput totalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public HostWhereInput totalDataCapacityIn(List<Long> totalDataCapacityIn) {
     
     this.totalDataCapacityIn = totalDataCapacityIn;
     return this;
   }
 
-  public HostWhereInput addTotalDataCapacityInItem(Double totalDataCapacityInItem) {
+  public HostWhereInput addTotalDataCapacityInItem(Long totalDataCapacityInItem) {
     if (this.totalDataCapacityIn == null) {
-      this.totalDataCapacityIn = new ArrayList<Double>();
+      this.totalDataCapacityIn = new ArrayList<Long>();
     }
     this.totalDataCapacityIn.add(totalDataCapacityInItem);
     return this;
@@ -12527,17 +12527,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityIn() {
+  public List<Long> getTotalDataCapacityIn() {
     return totalDataCapacityIn;
   }
 
 
-  public void setTotalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public void setTotalDataCapacityIn(List<Long> totalDataCapacityIn) {
     this.totalDataCapacityIn = totalDataCapacityIn;
   }
 
 
-  public HostWhereInput totalDataCapacityLt(Double totalDataCapacityLt) {
+  public HostWhereInput totalDataCapacityLt(Long totalDataCapacityLt) {
     
     this.totalDataCapacityLt = totalDataCapacityLt;
     return this;
@@ -12550,17 +12550,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLt() {
+  public Long getTotalDataCapacityLt() {
     return totalDataCapacityLt;
   }
 
 
-  public void setTotalDataCapacityLt(Double totalDataCapacityLt) {
+  public void setTotalDataCapacityLt(Long totalDataCapacityLt) {
     this.totalDataCapacityLt = totalDataCapacityLt;
   }
 
 
-  public HostWhereInput totalDataCapacityLte(Double totalDataCapacityLte) {
+  public HostWhereInput totalDataCapacityLte(Long totalDataCapacityLte) {
     
     this.totalDataCapacityLte = totalDataCapacityLte;
     return this;
@@ -12573,17 +12573,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLte() {
+  public Long getTotalDataCapacityLte() {
     return totalDataCapacityLte;
   }
 
 
-  public void setTotalDataCapacityLte(Double totalDataCapacityLte) {
+  public void setTotalDataCapacityLte(Long totalDataCapacityLte) {
     this.totalDataCapacityLte = totalDataCapacityLte;
   }
 
 
-  public HostWhereInput totalDataCapacityNot(Double totalDataCapacityNot) {
+  public HostWhereInput totalDataCapacityNot(Long totalDataCapacityNot) {
     
     this.totalDataCapacityNot = totalDataCapacityNot;
     return this;
@@ -12596,25 +12596,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityNot() {
+  public Long getTotalDataCapacityNot() {
     return totalDataCapacityNot;
   }
 
 
-  public void setTotalDataCapacityNot(Double totalDataCapacityNot) {
+  public void setTotalDataCapacityNot(Long totalDataCapacityNot) {
     this.totalDataCapacityNot = totalDataCapacityNot;
   }
 
 
-  public HostWhereInput totalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public HostWhereInput totalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
     return this;
   }
 
-  public HostWhereInput addTotalDataCapacityNotInItem(Double totalDataCapacityNotInItem) {
+  public HostWhereInput addTotalDataCapacityNotInItem(Long totalDataCapacityNotInItem) {
     if (this.totalDataCapacityNotIn == null) {
-      this.totalDataCapacityNotIn = new ArrayList<Double>();
+      this.totalDataCapacityNotIn = new ArrayList<Long>();
     }
     this.totalDataCapacityNotIn.add(totalDataCapacityNotInItem);
     return this;
@@ -12627,17 +12627,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityNotIn() {
+  public List<Long> getTotalDataCapacityNotIn() {
     return totalDataCapacityNotIn;
   }
 
 
-  public void setTotalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public void setTotalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
   }
 
 
-  public HostWhereInput totalMemoryBytes(Double totalMemoryBytes) {
+  public HostWhereInput totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -12650,17 +12650,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
 
-  public HostWhereInput totalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public HostWhereInput totalMemoryBytesGt(Long totalMemoryBytesGt) {
     
     this.totalMemoryBytesGt = totalMemoryBytesGt;
     return this;
@@ -12673,17 +12673,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGt() {
+  public Long getTotalMemoryBytesGt() {
     return totalMemoryBytesGt;
   }
 
 
-  public void setTotalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public void setTotalMemoryBytesGt(Long totalMemoryBytesGt) {
     this.totalMemoryBytesGt = totalMemoryBytesGt;
   }
 
 
-  public HostWhereInput totalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public HostWhereInput totalMemoryBytesGte(Long totalMemoryBytesGte) {
     
     this.totalMemoryBytesGte = totalMemoryBytesGte;
     return this;
@@ -12696,25 +12696,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGte() {
+  public Long getTotalMemoryBytesGte() {
     return totalMemoryBytesGte;
   }
 
 
-  public void setTotalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public void setTotalMemoryBytesGte(Long totalMemoryBytesGte) {
     this.totalMemoryBytesGte = totalMemoryBytesGte;
   }
 
 
-  public HostWhereInput totalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public HostWhereInput totalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     
     this.totalMemoryBytesIn = totalMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addTotalMemoryBytesInItem(Double totalMemoryBytesInItem) {
+  public HostWhereInput addTotalMemoryBytesInItem(Long totalMemoryBytesInItem) {
     if (this.totalMemoryBytesIn == null) {
-      this.totalMemoryBytesIn = new ArrayList<Double>();
+      this.totalMemoryBytesIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesIn.add(totalMemoryBytesInItem);
     return this;
@@ -12727,17 +12727,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesIn() {
+  public List<Long> getTotalMemoryBytesIn() {
     return totalMemoryBytesIn;
   }
 
 
-  public void setTotalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public void setTotalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     this.totalMemoryBytesIn = totalMemoryBytesIn;
   }
 
 
-  public HostWhereInput totalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public HostWhereInput totalMemoryBytesLt(Long totalMemoryBytesLt) {
     
     this.totalMemoryBytesLt = totalMemoryBytesLt;
     return this;
@@ -12750,17 +12750,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLt() {
+  public Long getTotalMemoryBytesLt() {
     return totalMemoryBytesLt;
   }
 
 
-  public void setTotalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public void setTotalMemoryBytesLt(Long totalMemoryBytesLt) {
     this.totalMemoryBytesLt = totalMemoryBytesLt;
   }
 
 
-  public HostWhereInput totalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public HostWhereInput totalMemoryBytesLte(Long totalMemoryBytesLte) {
     
     this.totalMemoryBytesLte = totalMemoryBytesLte;
     return this;
@@ -12773,17 +12773,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLte() {
+  public Long getTotalMemoryBytesLte() {
     return totalMemoryBytesLte;
   }
 
 
-  public void setTotalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public void setTotalMemoryBytesLte(Long totalMemoryBytesLte) {
     this.totalMemoryBytesLte = totalMemoryBytesLte;
   }
 
 
-  public HostWhereInput totalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public HostWhereInput totalMemoryBytesNot(Long totalMemoryBytesNot) {
     
     this.totalMemoryBytesNot = totalMemoryBytesNot;
     return this;
@@ -12796,25 +12796,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesNot() {
+  public Long getTotalMemoryBytesNot() {
     return totalMemoryBytesNot;
   }
 
 
-  public void setTotalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public void setTotalMemoryBytesNot(Long totalMemoryBytesNot) {
     this.totalMemoryBytesNot = totalMemoryBytesNot;
   }
 
 
-  public HostWhereInput totalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public HostWhereInput totalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addTotalMemoryBytesNotInItem(Double totalMemoryBytesNotInItem) {
+  public HostWhereInput addTotalMemoryBytesNotInItem(Long totalMemoryBytesNotInItem) {
     if (this.totalMemoryBytesNotIn == null) {
-      this.totalMemoryBytesNotIn = new ArrayList<Double>();
+      this.totalMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesNotIn.add(totalMemoryBytesNotInItem);
     return this;
@@ -12827,12 +12827,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesNotIn() {
+  public List<Long> getTotalMemoryBytesNotIn() {
     return totalMemoryBytesNotIn;
   }
 
 
-  public void setTotalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public void setTotalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
   }
 
@@ -12906,7 +12906,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput usedCpuHz(Double usedCpuHz) {
+  public HostWhereInput usedCpuHz(Long usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -12919,17 +12919,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHz() {
+  public Long getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Double usedCpuHz) {
+  public void setUsedCpuHz(Long usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public HostWhereInput usedCpuHzGt(Double usedCpuHzGt) {
+  public HostWhereInput usedCpuHzGt(Long usedCpuHzGt) {
     
     this.usedCpuHzGt = usedCpuHzGt;
     return this;
@@ -12942,17 +12942,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzGt() {
+  public Long getUsedCpuHzGt() {
     return usedCpuHzGt;
   }
 
 
-  public void setUsedCpuHzGt(Double usedCpuHzGt) {
+  public void setUsedCpuHzGt(Long usedCpuHzGt) {
     this.usedCpuHzGt = usedCpuHzGt;
   }
 
 
-  public HostWhereInput usedCpuHzGte(Double usedCpuHzGte) {
+  public HostWhereInput usedCpuHzGte(Long usedCpuHzGte) {
     
     this.usedCpuHzGte = usedCpuHzGte;
     return this;
@@ -12965,25 +12965,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzGte() {
+  public Long getUsedCpuHzGte() {
     return usedCpuHzGte;
   }
 
 
-  public void setUsedCpuHzGte(Double usedCpuHzGte) {
+  public void setUsedCpuHzGte(Long usedCpuHzGte) {
     this.usedCpuHzGte = usedCpuHzGte;
   }
 
 
-  public HostWhereInput usedCpuHzIn(List<Double> usedCpuHzIn) {
+  public HostWhereInput usedCpuHzIn(List<Long> usedCpuHzIn) {
     
     this.usedCpuHzIn = usedCpuHzIn;
     return this;
   }
 
-  public HostWhereInput addUsedCpuHzInItem(Double usedCpuHzInItem) {
+  public HostWhereInput addUsedCpuHzInItem(Long usedCpuHzInItem) {
     if (this.usedCpuHzIn == null) {
-      this.usedCpuHzIn = new ArrayList<Double>();
+      this.usedCpuHzIn = new ArrayList<Long>();
     }
     this.usedCpuHzIn.add(usedCpuHzInItem);
     return this;
@@ -12996,17 +12996,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedCpuHzIn() {
+  public List<Long> getUsedCpuHzIn() {
     return usedCpuHzIn;
   }
 
 
-  public void setUsedCpuHzIn(List<Double> usedCpuHzIn) {
+  public void setUsedCpuHzIn(List<Long> usedCpuHzIn) {
     this.usedCpuHzIn = usedCpuHzIn;
   }
 
 
-  public HostWhereInput usedCpuHzLt(Double usedCpuHzLt) {
+  public HostWhereInput usedCpuHzLt(Long usedCpuHzLt) {
     
     this.usedCpuHzLt = usedCpuHzLt;
     return this;
@@ -13019,17 +13019,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzLt() {
+  public Long getUsedCpuHzLt() {
     return usedCpuHzLt;
   }
 
 
-  public void setUsedCpuHzLt(Double usedCpuHzLt) {
+  public void setUsedCpuHzLt(Long usedCpuHzLt) {
     this.usedCpuHzLt = usedCpuHzLt;
   }
 
 
-  public HostWhereInput usedCpuHzLte(Double usedCpuHzLte) {
+  public HostWhereInput usedCpuHzLte(Long usedCpuHzLte) {
     
     this.usedCpuHzLte = usedCpuHzLte;
     return this;
@@ -13042,17 +13042,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzLte() {
+  public Long getUsedCpuHzLte() {
     return usedCpuHzLte;
   }
 
 
-  public void setUsedCpuHzLte(Double usedCpuHzLte) {
+  public void setUsedCpuHzLte(Long usedCpuHzLte) {
     this.usedCpuHzLte = usedCpuHzLte;
   }
 
 
-  public HostWhereInput usedCpuHzNot(Double usedCpuHzNot) {
+  public HostWhereInput usedCpuHzNot(Long usedCpuHzNot) {
     
     this.usedCpuHzNot = usedCpuHzNot;
     return this;
@@ -13065,25 +13065,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzNot() {
+  public Long getUsedCpuHzNot() {
     return usedCpuHzNot;
   }
 
 
-  public void setUsedCpuHzNot(Double usedCpuHzNot) {
+  public void setUsedCpuHzNot(Long usedCpuHzNot) {
     this.usedCpuHzNot = usedCpuHzNot;
   }
 
 
-  public HostWhereInput usedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
+  public HostWhereInput usedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
     
     this.usedCpuHzNotIn = usedCpuHzNotIn;
     return this;
   }
 
-  public HostWhereInput addUsedCpuHzNotInItem(Double usedCpuHzNotInItem) {
+  public HostWhereInput addUsedCpuHzNotInItem(Long usedCpuHzNotInItem) {
     if (this.usedCpuHzNotIn == null) {
-      this.usedCpuHzNotIn = new ArrayList<Double>();
+      this.usedCpuHzNotIn = new ArrayList<Long>();
     }
     this.usedCpuHzNotIn.add(usedCpuHzNotInItem);
     return this;
@@ -13096,17 +13096,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedCpuHzNotIn() {
+  public List<Long> getUsedCpuHzNotIn() {
     return usedCpuHzNotIn;
   }
 
 
-  public void setUsedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
+  public void setUsedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
     this.usedCpuHzNotIn = usedCpuHzNotIn;
   }
 
 
-  public HostWhereInput usedDataSpace(Double usedDataSpace) {
+  public HostWhereInput usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -13119,17 +13119,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public HostWhereInput usedDataSpaceGt(Double usedDataSpaceGt) {
+  public HostWhereInput usedDataSpaceGt(Long usedDataSpaceGt) {
     
     this.usedDataSpaceGt = usedDataSpaceGt;
     return this;
@@ -13142,17 +13142,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGt() {
+  public Long getUsedDataSpaceGt() {
     return usedDataSpaceGt;
   }
 
 
-  public void setUsedDataSpaceGt(Double usedDataSpaceGt) {
+  public void setUsedDataSpaceGt(Long usedDataSpaceGt) {
     this.usedDataSpaceGt = usedDataSpaceGt;
   }
 
 
-  public HostWhereInput usedDataSpaceGte(Double usedDataSpaceGte) {
+  public HostWhereInput usedDataSpaceGte(Long usedDataSpaceGte) {
     
     this.usedDataSpaceGte = usedDataSpaceGte;
     return this;
@@ -13165,25 +13165,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGte() {
+  public Long getUsedDataSpaceGte() {
     return usedDataSpaceGte;
   }
 
 
-  public void setUsedDataSpaceGte(Double usedDataSpaceGte) {
+  public void setUsedDataSpaceGte(Long usedDataSpaceGte) {
     this.usedDataSpaceGte = usedDataSpaceGte;
   }
 
 
-  public HostWhereInput usedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public HostWhereInput usedDataSpaceIn(List<Long> usedDataSpaceIn) {
     
     this.usedDataSpaceIn = usedDataSpaceIn;
     return this;
   }
 
-  public HostWhereInput addUsedDataSpaceInItem(Double usedDataSpaceInItem) {
+  public HostWhereInput addUsedDataSpaceInItem(Long usedDataSpaceInItem) {
     if (this.usedDataSpaceIn == null) {
-      this.usedDataSpaceIn = new ArrayList<Double>();
+      this.usedDataSpaceIn = new ArrayList<Long>();
     }
     this.usedDataSpaceIn.add(usedDataSpaceInItem);
     return this;
@@ -13196,17 +13196,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceIn() {
+  public List<Long> getUsedDataSpaceIn() {
     return usedDataSpaceIn;
   }
 
 
-  public void setUsedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public void setUsedDataSpaceIn(List<Long> usedDataSpaceIn) {
     this.usedDataSpaceIn = usedDataSpaceIn;
   }
 
 
-  public HostWhereInput usedDataSpaceLt(Double usedDataSpaceLt) {
+  public HostWhereInput usedDataSpaceLt(Long usedDataSpaceLt) {
     
     this.usedDataSpaceLt = usedDataSpaceLt;
     return this;
@@ -13219,17 +13219,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLt() {
+  public Long getUsedDataSpaceLt() {
     return usedDataSpaceLt;
   }
 
 
-  public void setUsedDataSpaceLt(Double usedDataSpaceLt) {
+  public void setUsedDataSpaceLt(Long usedDataSpaceLt) {
     this.usedDataSpaceLt = usedDataSpaceLt;
   }
 
 
-  public HostWhereInput usedDataSpaceLte(Double usedDataSpaceLte) {
+  public HostWhereInput usedDataSpaceLte(Long usedDataSpaceLte) {
     
     this.usedDataSpaceLte = usedDataSpaceLte;
     return this;
@@ -13242,17 +13242,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLte() {
+  public Long getUsedDataSpaceLte() {
     return usedDataSpaceLte;
   }
 
 
-  public void setUsedDataSpaceLte(Double usedDataSpaceLte) {
+  public void setUsedDataSpaceLte(Long usedDataSpaceLte) {
     this.usedDataSpaceLte = usedDataSpaceLte;
   }
 
 
-  public HostWhereInput usedDataSpaceNot(Double usedDataSpaceNot) {
+  public HostWhereInput usedDataSpaceNot(Long usedDataSpaceNot) {
     
     this.usedDataSpaceNot = usedDataSpaceNot;
     return this;
@@ -13265,25 +13265,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceNot() {
+  public Long getUsedDataSpaceNot() {
     return usedDataSpaceNot;
   }
 
 
-  public void setUsedDataSpaceNot(Double usedDataSpaceNot) {
+  public void setUsedDataSpaceNot(Long usedDataSpaceNot) {
     this.usedDataSpaceNot = usedDataSpaceNot;
   }
 
 
-  public HostWhereInput usedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public HostWhereInput usedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
     return this;
   }
 
-  public HostWhereInput addUsedDataSpaceNotInItem(Double usedDataSpaceNotInItem) {
+  public HostWhereInput addUsedDataSpaceNotInItem(Long usedDataSpaceNotInItem) {
     if (this.usedDataSpaceNotIn == null) {
-      this.usedDataSpaceNotIn = new ArrayList<Double>();
+      this.usedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.usedDataSpaceNotIn.add(usedDataSpaceNotInItem);
     return this;
@@ -13296,17 +13296,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceNotIn() {
+  public List<Long> getUsedDataSpaceNotIn() {
     return usedDataSpaceNotIn;
   }
 
 
-  public void setUsedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public void setUsedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
   }
 
 
-  public HostWhereInput usedMemoryBytes(Double usedMemoryBytes) {
+  public HostWhereInput usedMemoryBytes(Long usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -13319,17 +13319,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytes() {
+  public Long getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Double usedMemoryBytes) {
+  public void setUsedMemoryBytes(Long usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
 
-  public HostWhereInput usedMemoryBytesGt(Double usedMemoryBytesGt) {
+  public HostWhereInput usedMemoryBytesGt(Long usedMemoryBytesGt) {
     
     this.usedMemoryBytesGt = usedMemoryBytesGt;
     return this;
@@ -13342,17 +13342,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesGt() {
+  public Long getUsedMemoryBytesGt() {
     return usedMemoryBytesGt;
   }
 
 
-  public void setUsedMemoryBytesGt(Double usedMemoryBytesGt) {
+  public void setUsedMemoryBytesGt(Long usedMemoryBytesGt) {
     this.usedMemoryBytesGt = usedMemoryBytesGt;
   }
 
 
-  public HostWhereInput usedMemoryBytesGte(Double usedMemoryBytesGte) {
+  public HostWhereInput usedMemoryBytesGte(Long usedMemoryBytesGte) {
     
     this.usedMemoryBytesGte = usedMemoryBytesGte;
     return this;
@@ -13365,25 +13365,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesGte() {
+  public Long getUsedMemoryBytesGte() {
     return usedMemoryBytesGte;
   }
 
 
-  public void setUsedMemoryBytesGte(Double usedMemoryBytesGte) {
+  public void setUsedMemoryBytesGte(Long usedMemoryBytesGte) {
     this.usedMemoryBytesGte = usedMemoryBytesGte;
   }
 
 
-  public HostWhereInput usedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
+  public HostWhereInput usedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
     
     this.usedMemoryBytesIn = usedMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addUsedMemoryBytesInItem(Double usedMemoryBytesInItem) {
+  public HostWhereInput addUsedMemoryBytesInItem(Long usedMemoryBytesInItem) {
     if (this.usedMemoryBytesIn == null) {
-      this.usedMemoryBytesIn = new ArrayList<Double>();
+      this.usedMemoryBytesIn = new ArrayList<Long>();
     }
     this.usedMemoryBytesIn.add(usedMemoryBytesInItem);
     return this;
@@ -13396,17 +13396,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedMemoryBytesIn() {
+  public List<Long> getUsedMemoryBytesIn() {
     return usedMemoryBytesIn;
   }
 
 
-  public void setUsedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
+  public void setUsedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
     this.usedMemoryBytesIn = usedMemoryBytesIn;
   }
 
 
-  public HostWhereInput usedMemoryBytesLt(Double usedMemoryBytesLt) {
+  public HostWhereInput usedMemoryBytesLt(Long usedMemoryBytesLt) {
     
     this.usedMemoryBytesLt = usedMemoryBytesLt;
     return this;
@@ -13419,17 +13419,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesLt() {
+  public Long getUsedMemoryBytesLt() {
     return usedMemoryBytesLt;
   }
 
 
-  public void setUsedMemoryBytesLt(Double usedMemoryBytesLt) {
+  public void setUsedMemoryBytesLt(Long usedMemoryBytesLt) {
     this.usedMemoryBytesLt = usedMemoryBytesLt;
   }
 
 
-  public HostWhereInput usedMemoryBytesLte(Double usedMemoryBytesLte) {
+  public HostWhereInput usedMemoryBytesLte(Long usedMemoryBytesLte) {
     
     this.usedMemoryBytesLte = usedMemoryBytesLte;
     return this;
@@ -13442,17 +13442,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesLte() {
+  public Long getUsedMemoryBytesLte() {
     return usedMemoryBytesLte;
   }
 
 
-  public void setUsedMemoryBytesLte(Double usedMemoryBytesLte) {
+  public void setUsedMemoryBytesLte(Long usedMemoryBytesLte) {
     this.usedMemoryBytesLte = usedMemoryBytesLte;
   }
 
 
-  public HostWhereInput usedMemoryBytesNot(Double usedMemoryBytesNot) {
+  public HostWhereInput usedMemoryBytesNot(Long usedMemoryBytesNot) {
     
     this.usedMemoryBytesNot = usedMemoryBytesNot;
     return this;
@@ -13465,25 +13465,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesNot() {
+  public Long getUsedMemoryBytesNot() {
     return usedMemoryBytesNot;
   }
 
 
-  public void setUsedMemoryBytesNot(Double usedMemoryBytesNot) {
+  public void setUsedMemoryBytesNot(Long usedMemoryBytesNot) {
     this.usedMemoryBytesNot = usedMemoryBytesNot;
   }
 
 
-  public HostWhereInput usedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
+  public HostWhereInput usedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
     
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addUsedMemoryBytesNotInItem(Double usedMemoryBytesNotInItem) {
+  public HostWhereInput addUsedMemoryBytesNotInItem(Long usedMemoryBytesNotInItem) {
     if (this.usedMemoryBytesNotIn == null) {
-      this.usedMemoryBytesNotIn = new ArrayList<Double>();
+      this.usedMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.usedMemoryBytesNotIn.add(usedMemoryBytesNotInItem);
     return this;
@@ -13496,12 +13496,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedMemoryBytesNotIn() {
+  public List<Long> getUsedMemoryBytesNotIn() {
     return usedMemoryBytesNotIn;
   }
 
 
-  public void setUsedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
+  public void setUsedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
   }
 

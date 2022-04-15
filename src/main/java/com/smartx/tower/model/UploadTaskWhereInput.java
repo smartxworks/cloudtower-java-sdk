@@ -40,35 +40,35 @@ public class UploadTaskWhereInput {
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE = "chunk_size";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE)
-  private Double chunkSize;
+  private Long chunkSize;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_GT = "chunk_size_gt";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_GT)
-  private Double chunkSizeGt;
+  private Long chunkSizeGt;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_GTE = "chunk_size_gte";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_GTE)
-  private Double chunkSizeGte;
+  private Long chunkSizeGte;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_IN = "chunk_size_in";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_IN)
-  private List<Double> chunkSizeIn = null;
+  private List<Long> chunkSizeIn = null;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_LT = "chunk_size_lt";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_LT)
-  private Double chunkSizeLt;
+  private Long chunkSizeLt;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_LTE = "chunk_size_lte";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_LTE)
-  private Double chunkSizeLte;
+  private Long chunkSizeLte;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_NOT = "chunk_size_not";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_NOT)
-  private Double chunkSizeNot;
+  private Long chunkSizeNot;
 
   public static final String SERIALIZED_NAME_CHUNK_SIZE_NOT_IN = "chunk_size_not_in";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE_NOT_IN)
-  private List<Double> chunkSizeNotIn = null;
+  private List<Long> chunkSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_CURRENT_CHUNK = "current_chunk";
   @SerializedName(SERIALIZED_NAME_CURRENT_CHUNK)
@@ -216,35 +216,35 @@ public class UploadTaskWhereInput {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_SIZE_GT = "size_gt";
   @SerializedName(SERIALIZED_NAME_SIZE_GT)
-  private Double sizeGt;
+  private Long sizeGt;
 
   public static final String SERIALIZED_NAME_SIZE_GTE = "size_gte";
   @SerializedName(SERIALIZED_NAME_SIZE_GTE)
-  private Double sizeGte;
+  private Long sizeGte;
 
   public static final String SERIALIZED_NAME_SIZE_IN = "size_in";
   @SerializedName(SERIALIZED_NAME_SIZE_IN)
-  private List<Double> sizeIn = null;
+  private List<Long> sizeIn = null;
 
   public static final String SERIALIZED_NAME_SIZE_LT = "size_lt";
   @SerializedName(SERIALIZED_NAME_SIZE_LT)
-  private Double sizeLt;
+  private Long sizeLt;
 
   public static final String SERIALIZED_NAME_SIZE_LTE = "size_lte";
   @SerializedName(SERIALIZED_NAME_SIZE_LTE)
-  private Double sizeLte;
+  private Long sizeLte;
 
   public static final String SERIALIZED_NAME_SIZE_NOT = "size_not";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT)
-  private Double sizeNot;
+  private Long sizeNot;
 
   public static final String SERIALIZED_NAME_SIZE_NOT_IN = "size_not_in";
   @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
-  private List<Double> sizeNotIn = null;
+  private List<Long> sizeNotIn = null;
 
   public static final String SERIALIZED_NAME_STARTED_AT = "started_at";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
@@ -360,7 +360,7 @@ public class UploadTaskWhereInput {
   }
 
 
-  public UploadTaskWhereInput chunkSize(Double chunkSize) {
+  public UploadTaskWhereInput chunkSize(Long chunkSize) {
     
     this.chunkSize = chunkSize;
     return this;
@@ -373,17 +373,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getChunkSize() {
+  public Long getChunkSize() {
     return chunkSize;
   }
 
 
-  public void setChunkSize(Double chunkSize) {
+  public void setChunkSize(Long chunkSize) {
     this.chunkSize = chunkSize;
   }
 
 
-  public UploadTaskWhereInput chunkSizeGt(Double chunkSizeGt) {
+  public UploadTaskWhereInput chunkSizeGt(Long chunkSizeGt) {
     
     this.chunkSizeGt = chunkSizeGt;
     return this;
@@ -396,17 +396,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getChunkSizeGt() {
+  public Long getChunkSizeGt() {
     return chunkSizeGt;
   }
 
 
-  public void setChunkSizeGt(Double chunkSizeGt) {
+  public void setChunkSizeGt(Long chunkSizeGt) {
     this.chunkSizeGt = chunkSizeGt;
   }
 
 
-  public UploadTaskWhereInput chunkSizeGte(Double chunkSizeGte) {
+  public UploadTaskWhereInput chunkSizeGte(Long chunkSizeGte) {
     
     this.chunkSizeGte = chunkSizeGte;
     return this;
@@ -419,25 +419,25 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getChunkSizeGte() {
+  public Long getChunkSizeGte() {
     return chunkSizeGte;
   }
 
 
-  public void setChunkSizeGte(Double chunkSizeGte) {
+  public void setChunkSizeGte(Long chunkSizeGte) {
     this.chunkSizeGte = chunkSizeGte;
   }
 
 
-  public UploadTaskWhereInput chunkSizeIn(List<Double> chunkSizeIn) {
+  public UploadTaskWhereInput chunkSizeIn(List<Long> chunkSizeIn) {
     
     this.chunkSizeIn = chunkSizeIn;
     return this;
   }
 
-  public UploadTaskWhereInput addChunkSizeInItem(Double chunkSizeInItem) {
+  public UploadTaskWhereInput addChunkSizeInItem(Long chunkSizeInItem) {
     if (this.chunkSizeIn == null) {
-      this.chunkSizeIn = new ArrayList<Double>();
+      this.chunkSizeIn = new ArrayList<Long>();
     }
     this.chunkSizeIn.add(chunkSizeInItem);
     return this;
@@ -450,17 +450,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getChunkSizeIn() {
+  public List<Long> getChunkSizeIn() {
     return chunkSizeIn;
   }
 
 
-  public void setChunkSizeIn(List<Double> chunkSizeIn) {
+  public void setChunkSizeIn(List<Long> chunkSizeIn) {
     this.chunkSizeIn = chunkSizeIn;
   }
 
 
-  public UploadTaskWhereInput chunkSizeLt(Double chunkSizeLt) {
+  public UploadTaskWhereInput chunkSizeLt(Long chunkSizeLt) {
     
     this.chunkSizeLt = chunkSizeLt;
     return this;
@@ -473,17 +473,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getChunkSizeLt() {
+  public Long getChunkSizeLt() {
     return chunkSizeLt;
   }
 
 
-  public void setChunkSizeLt(Double chunkSizeLt) {
+  public void setChunkSizeLt(Long chunkSizeLt) {
     this.chunkSizeLt = chunkSizeLt;
   }
 
 
-  public UploadTaskWhereInput chunkSizeLte(Double chunkSizeLte) {
+  public UploadTaskWhereInput chunkSizeLte(Long chunkSizeLte) {
     
     this.chunkSizeLte = chunkSizeLte;
     return this;
@@ -496,17 +496,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getChunkSizeLte() {
+  public Long getChunkSizeLte() {
     return chunkSizeLte;
   }
 
 
-  public void setChunkSizeLte(Double chunkSizeLte) {
+  public void setChunkSizeLte(Long chunkSizeLte) {
     this.chunkSizeLte = chunkSizeLte;
   }
 
 
-  public UploadTaskWhereInput chunkSizeNot(Double chunkSizeNot) {
+  public UploadTaskWhereInput chunkSizeNot(Long chunkSizeNot) {
     
     this.chunkSizeNot = chunkSizeNot;
     return this;
@@ -519,25 +519,25 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getChunkSizeNot() {
+  public Long getChunkSizeNot() {
     return chunkSizeNot;
   }
 
 
-  public void setChunkSizeNot(Double chunkSizeNot) {
+  public void setChunkSizeNot(Long chunkSizeNot) {
     this.chunkSizeNot = chunkSizeNot;
   }
 
 
-  public UploadTaskWhereInput chunkSizeNotIn(List<Double> chunkSizeNotIn) {
+  public UploadTaskWhereInput chunkSizeNotIn(List<Long> chunkSizeNotIn) {
     
     this.chunkSizeNotIn = chunkSizeNotIn;
     return this;
   }
 
-  public UploadTaskWhereInput addChunkSizeNotInItem(Double chunkSizeNotInItem) {
+  public UploadTaskWhereInput addChunkSizeNotInItem(Long chunkSizeNotInItem) {
     if (this.chunkSizeNotIn == null) {
-      this.chunkSizeNotIn = new ArrayList<Double>();
+      this.chunkSizeNotIn = new ArrayList<Long>();
     }
     this.chunkSizeNotIn.add(chunkSizeNotInItem);
     return this;
@@ -550,12 +550,12 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getChunkSizeNotIn() {
+  public List<Long> getChunkSizeNotIn() {
     return chunkSizeNotIn;
   }
 
 
-  public void setChunkSizeNotIn(List<Double> chunkSizeNotIn) {
+  public void setChunkSizeNotIn(List<Long> chunkSizeNotIn) {
     this.chunkSizeNotIn = chunkSizeNotIn;
   }
 
@@ -1468,7 +1468,7 @@ public class UploadTaskWhereInput {
   }
 
 
-  public UploadTaskWhereInput size(Double size) {
+  public UploadTaskWhereInput size(Long size) {
     
     this.size = size;
     return this;
@@ -1481,17 +1481,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
 
-  public UploadTaskWhereInput sizeGt(Double sizeGt) {
+  public UploadTaskWhereInput sizeGt(Long sizeGt) {
     
     this.sizeGt = sizeGt;
     return this;
@@ -1504,17 +1504,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGt() {
+  public Long getSizeGt() {
     return sizeGt;
   }
 
 
-  public void setSizeGt(Double sizeGt) {
+  public void setSizeGt(Long sizeGt) {
     this.sizeGt = sizeGt;
   }
 
 
-  public UploadTaskWhereInput sizeGte(Double sizeGte) {
+  public UploadTaskWhereInput sizeGte(Long sizeGte) {
     
     this.sizeGte = sizeGte;
     return this;
@@ -1527,25 +1527,25 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeGte() {
+  public Long getSizeGte() {
     return sizeGte;
   }
 
 
-  public void setSizeGte(Double sizeGte) {
+  public void setSizeGte(Long sizeGte) {
     this.sizeGte = sizeGte;
   }
 
 
-  public UploadTaskWhereInput sizeIn(List<Double> sizeIn) {
+  public UploadTaskWhereInput sizeIn(List<Long> sizeIn) {
     
     this.sizeIn = sizeIn;
     return this;
   }
 
-  public UploadTaskWhereInput addSizeInItem(Double sizeInItem) {
+  public UploadTaskWhereInput addSizeInItem(Long sizeInItem) {
     if (this.sizeIn == null) {
-      this.sizeIn = new ArrayList<Double>();
+      this.sizeIn = new ArrayList<Long>();
     }
     this.sizeIn.add(sizeInItem);
     return this;
@@ -1558,17 +1558,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeIn() {
+  public List<Long> getSizeIn() {
     return sizeIn;
   }
 
 
-  public void setSizeIn(List<Double> sizeIn) {
+  public void setSizeIn(List<Long> sizeIn) {
     this.sizeIn = sizeIn;
   }
 
 
-  public UploadTaskWhereInput sizeLt(Double sizeLt) {
+  public UploadTaskWhereInput sizeLt(Long sizeLt) {
     
     this.sizeLt = sizeLt;
     return this;
@@ -1581,17 +1581,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLt() {
+  public Long getSizeLt() {
     return sizeLt;
   }
 
 
-  public void setSizeLt(Double sizeLt) {
+  public void setSizeLt(Long sizeLt) {
     this.sizeLt = sizeLt;
   }
 
 
-  public UploadTaskWhereInput sizeLte(Double sizeLte) {
+  public UploadTaskWhereInput sizeLte(Long sizeLte) {
     
     this.sizeLte = sizeLte;
     return this;
@@ -1604,17 +1604,17 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeLte() {
+  public Long getSizeLte() {
     return sizeLte;
   }
 
 
-  public void setSizeLte(Double sizeLte) {
+  public void setSizeLte(Long sizeLte) {
     this.sizeLte = sizeLte;
   }
 
 
-  public UploadTaskWhereInput sizeNot(Double sizeNot) {
+  public UploadTaskWhereInput sizeNot(Long sizeNot) {
     
     this.sizeNot = sizeNot;
     return this;
@@ -1627,25 +1627,25 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getSizeNot() {
+  public Long getSizeNot() {
     return sizeNot;
   }
 
 
-  public void setSizeNot(Double sizeNot) {
+  public void setSizeNot(Long sizeNot) {
     this.sizeNot = sizeNot;
   }
 
 
-  public UploadTaskWhereInput sizeNotIn(List<Double> sizeNotIn) {
+  public UploadTaskWhereInput sizeNotIn(List<Long> sizeNotIn) {
     
     this.sizeNotIn = sizeNotIn;
     return this;
   }
 
-  public UploadTaskWhereInput addSizeNotInItem(Double sizeNotInItem) {
+  public UploadTaskWhereInput addSizeNotInItem(Long sizeNotInItem) {
     if (this.sizeNotIn == null) {
-      this.sizeNotIn = new ArrayList<Double>();
+      this.sizeNotIn = new ArrayList<Long>();
     }
     this.sizeNotIn.add(sizeNotInItem);
     return this;
@@ -1658,12 +1658,12 @@ public class UploadTaskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getSizeNotIn() {
+  public List<Long> getSizeNotIn() {
     return sizeNotIn;
   }
 
 
-  public void setSizeNotIn(List<Double> sizeNotIn) {
+  public void setSizeNotIn(List<Long> sizeNotIn) {
     this.sizeNotIn = sizeNotIn;
   }
 

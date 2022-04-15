@@ -104,7 +104,7 @@ public class BackupStoreRepository {
 
   public static final String SERIALIZED_NAME_TOTAL_CAPACITY = "total_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CAPACITY)
-  private Double totalCapacity;
+  private Long totalCapacity;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -112,11 +112,11 @@ public class BackupStoreRepository {
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE)
-  private Double validDataSpace;
+  private Long validDataSpace;
 
   public BackupStoreRepository() { 
   }
@@ -505,7 +505,7 @@ public class BackupStoreRepository {
   }
 
 
-  public BackupStoreRepository totalCapacity(Double totalCapacity) {
+  public BackupStoreRepository totalCapacity(Long totalCapacity) {
     
     this.totalCapacity = totalCapacity;
     return this;
@@ -518,12 +518,12 @@ public class BackupStoreRepository {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getTotalCapacity() {
+  public Long getTotalCapacity() {
     return totalCapacity;
   }
 
 
-  public void setTotalCapacity(Double totalCapacity) {
+  public void setTotalCapacity(Long totalCapacity) {
     this.totalCapacity = totalCapacity;
   }
 
@@ -551,7 +551,7 @@ public class BackupStoreRepository {
   }
 
 
-  public BackupStoreRepository usedDataSpace(Double usedDataSpace) {
+  public BackupStoreRepository usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -564,17 +564,17 @@ public class BackupStoreRepository {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public BackupStoreRepository validDataSpace(Double validDataSpace) {
+  public BackupStoreRepository validDataSpace(Long validDataSpace) {
     
     this.validDataSpace = validDataSpace;
     return this;
@@ -587,12 +587,12 @@ public class BackupStoreRepository {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpace() {
+  public Long getValidDataSpace() {
     return validDataSpace;
   }
 
 
-  public void setValidDataSpace(Double validDataSpace) {
+  public void setValidDataSpace(Long validDataSpace) {
     this.validDataSpace = validDataSpace;
   }
 

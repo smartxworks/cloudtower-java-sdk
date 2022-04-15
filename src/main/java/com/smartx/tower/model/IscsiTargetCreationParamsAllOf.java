@@ -31,7 +31,7 @@ import java.io.IOException;
 public class IscsiTargetCreationParamsAllOf {
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
-  private Double stripeSize;
+  private Long stripeSize;
 
   public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
   @SerializedName(SERIALIZED_NAME_STRIPE_NUM)
@@ -56,7 +56,7 @@ public class IscsiTargetCreationParamsAllOf {
   public IscsiTargetCreationParamsAllOf() { 
   }
 
-  public IscsiTargetCreationParamsAllOf stripeSize(Double stripeSize) {
+  public IscsiTargetCreationParamsAllOf stripeSize(Long stripeSize) {
     
     this.stripeSize = stripeSize;
     return this;
@@ -69,12 +69,12 @@ public class IscsiTargetCreationParamsAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getStripeSize() {
+  public Long getStripeSize() {
     return stripeSize;
   }
 
 
-  public void setStripeSize(Double stripeSize) {
+  public void setStripeSize(Long stripeSize) {
     this.stripeSize = stripeSize;
   }
 

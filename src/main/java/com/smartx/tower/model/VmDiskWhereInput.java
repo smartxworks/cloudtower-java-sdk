@@ -361,35 +361,35 @@ public class VmDiskWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
-  private Double maxBandwidth;
+  private Long maxBandwidth;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_GT = "max_bandwidth_gt";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_GT)
-  private Double maxBandwidthGt;
+  private Long maxBandwidthGt;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_GTE = "max_bandwidth_gte";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_GTE)
-  private Double maxBandwidthGte;
+  private Long maxBandwidthGte;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_IN = "max_bandwidth_in";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_IN)
-  private List<Double> maxBandwidthIn = null;
+  private List<Long> maxBandwidthIn = null;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_LT = "max_bandwidth_lt";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_LT)
-  private Double maxBandwidthLt;
+  private Long maxBandwidthLt;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_LTE = "max_bandwidth_lte";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_LTE)
-  private Double maxBandwidthLte;
+  private Long maxBandwidthLte;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_NOT = "max_bandwidth_not";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_NOT)
-  private Double maxBandwidthNot;
+  private Long maxBandwidthNot;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_NOT_IN = "max_bandwidth_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_NOT_IN)
-  private List<Double> maxBandwidthNotIn = null;
+  private List<Long> maxBandwidthNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -2678,7 +2678,7 @@ public class VmDiskWhereInput {
   }
 
 
-  public VmDiskWhereInput maxBandwidth(Double maxBandwidth) {
+  public VmDiskWhereInput maxBandwidth(Long maxBandwidth) {
     
     this.maxBandwidth = maxBandwidth;
     return this;
@@ -2691,17 +2691,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidth() {
+  public Long getMaxBandwidth() {
     return maxBandwidth;
   }
 
 
-  public void setMaxBandwidth(Double maxBandwidth) {
+  public void setMaxBandwidth(Long maxBandwidth) {
     this.maxBandwidth = maxBandwidth;
   }
 
 
-  public VmDiskWhereInput maxBandwidthGt(Double maxBandwidthGt) {
+  public VmDiskWhereInput maxBandwidthGt(Long maxBandwidthGt) {
     
     this.maxBandwidthGt = maxBandwidthGt;
     return this;
@@ -2714,17 +2714,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidthGt() {
+  public Long getMaxBandwidthGt() {
     return maxBandwidthGt;
   }
 
 
-  public void setMaxBandwidthGt(Double maxBandwidthGt) {
+  public void setMaxBandwidthGt(Long maxBandwidthGt) {
     this.maxBandwidthGt = maxBandwidthGt;
   }
 
 
-  public VmDiskWhereInput maxBandwidthGte(Double maxBandwidthGte) {
+  public VmDiskWhereInput maxBandwidthGte(Long maxBandwidthGte) {
     
     this.maxBandwidthGte = maxBandwidthGte;
     return this;
@@ -2737,25 +2737,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidthGte() {
+  public Long getMaxBandwidthGte() {
     return maxBandwidthGte;
   }
 
 
-  public void setMaxBandwidthGte(Double maxBandwidthGte) {
+  public void setMaxBandwidthGte(Long maxBandwidthGte) {
     this.maxBandwidthGte = maxBandwidthGte;
   }
 
 
-  public VmDiskWhereInput maxBandwidthIn(List<Double> maxBandwidthIn) {
+  public VmDiskWhereInput maxBandwidthIn(List<Long> maxBandwidthIn) {
     
     this.maxBandwidthIn = maxBandwidthIn;
     return this;
   }
 
-  public VmDiskWhereInput addMaxBandwidthInItem(Double maxBandwidthInItem) {
+  public VmDiskWhereInput addMaxBandwidthInItem(Long maxBandwidthInItem) {
     if (this.maxBandwidthIn == null) {
-      this.maxBandwidthIn = new ArrayList<Double>();
+      this.maxBandwidthIn = new ArrayList<Long>();
     }
     this.maxBandwidthIn.add(maxBandwidthInItem);
     return this;
@@ -2768,17 +2768,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxBandwidthIn() {
+  public List<Long> getMaxBandwidthIn() {
     return maxBandwidthIn;
   }
 
 
-  public void setMaxBandwidthIn(List<Double> maxBandwidthIn) {
+  public void setMaxBandwidthIn(List<Long> maxBandwidthIn) {
     this.maxBandwidthIn = maxBandwidthIn;
   }
 
 
-  public VmDiskWhereInput maxBandwidthLt(Double maxBandwidthLt) {
+  public VmDiskWhereInput maxBandwidthLt(Long maxBandwidthLt) {
     
     this.maxBandwidthLt = maxBandwidthLt;
     return this;
@@ -2791,17 +2791,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidthLt() {
+  public Long getMaxBandwidthLt() {
     return maxBandwidthLt;
   }
 
 
-  public void setMaxBandwidthLt(Double maxBandwidthLt) {
+  public void setMaxBandwidthLt(Long maxBandwidthLt) {
     this.maxBandwidthLt = maxBandwidthLt;
   }
 
 
-  public VmDiskWhereInput maxBandwidthLte(Double maxBandwidthLte) {
+  public VmDiskWhereInput maxBandwidthLte(Long maxBandwidthLte) {
     
     this.maxBandwidthLte = maxBandwidthLte;
     return this;
@@ -2814,17 +2814,17 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidthLte() {
+  public Long getMaxBandwidthLte() {
     return maxBandwidthLte;
   }
 
 
-  public void setMaxBandwidthLte(Double maxBandwidthLte) {
+  public void setMaxBandwidthLte(Long maxBandwidthLte) {
     this.maxBandwidthLte = maxBandwidthLte;
   }
 
 
-  public VmDiskWhereInput maxBandwidthNot(Double maxBandwidthNot) {
+  public VmDiskWhereInput maxBandwidthNot(Long maxBandwidthNot) {
     
     this.maxBandwidthNot = maxBandwidthNot;
     return this;
@@ -2837,25 +2837,25 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxBandwidthNot() {
+  public Long getMaxBandwidthNot() {
     return maxBandwidthNot;
   }
 
 
-  public void setMaxBandwidthNot(Double maxBandwidthNot) {
+  public void setMaxBandwidthNot(Long maxBandwidthNot) {
     this.maxBandwidthNot = maxBandwidthNot;
   }
 
 
-  public VmDiskWhereInput maxBandwidthNotIn(List<Double> maxBandwidthNotIn) {
+  public VmDiskWhereInput maxBandwidthNotIn(List<Long> maxBandwidthNotIn) {
     
     this.maxBandwidthNotIn = maxBandwidthNotIn;
     return this;
   }
 
-  public VmDiskWhereInput addMaxBandwidthNotInItem(Double maxBandwidthNotInItem) {
+  public VmDiskWhereInput addMaxBandwidthNotInItem(Long maxBandwidthNotInItem) {
     if (this.maxBandwidthNotIn == null) {
-      this.maxBandwidthNotIn = new ArrayList<Double>();
+      this.maxBandwidthNotIn = new ArrayList<Long>();
     }
     this.maxBandwidthNotIn.add(maxBandwidthNotInItem);
     return this;
@@ -2868,12 +2868,12 @@ public class VmDiskWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxBandwidthNotIn() {
+  public List<Long> getMaxBandwidthNotIn() {
     return maxBandwidthNotIn;
   }
 
 
-  public void setMaxBandwidthNotIn(List<Double> maxBandwidthNotIn) {
+  public void setMaxBandwidthNotIn(List<Long> maxBandwidthNotIn) {
     this.maxBandwidthNotIn = maxBandwidthNotIn;
   }
 

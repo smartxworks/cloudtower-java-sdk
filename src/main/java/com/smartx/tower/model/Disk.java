@@ -137,7 +137,7 @@ public class Disk {
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
-  private Double size;
+  private Long size;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -704,7 +704,7 @@ public class Disk {
   }
 
 
-  public Disk size(Double size) {
+  public Disk size(Long size) {
     
     this.size = size;
     return this;
@@ -717,12 +717,12 @@ public class Disk {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getSize() {
+  public Long getSize() {
     return size;
   }
 
 
-  public void setSize(Double size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 

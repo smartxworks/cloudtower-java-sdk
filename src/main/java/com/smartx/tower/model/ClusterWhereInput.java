@@ -266,35 +266,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
-  private Double failureDataSpace;
+  private Long failureDataSpace;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GT = "failure_data_space_gt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GT)
-  private Double failureDataSpaceGt;
+  private Long failureDataSpaceGt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE = "failure_data_space_gte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_GTE)
-  private Double failureDataSpaceGte;
+  private Long failureDataSpaceGte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_IN = "failure_data_space_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_IN)
-  private List<Double> failureDataSpaceIn = null;
+  private List<Long> failureDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LT = "failure_data_space_lt";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LT)
-  private Double failureDataSpaceLt;
+  private Long failureDataSpaceLt;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE = "failure_data_space_lte";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_LTE)
-  private Double failureDataSpaceLte;
+  private Long failureDataSpaceLte;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT = "failure_data_space_not";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT)
-  private Double failureDataSpaceNot;
+  private Long failureDataSpaceNot;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN = "failure_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE_NOT_IN)
-  private List<Double> failureDataSpaceNotIn = null;
+  private List<Long> failureDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_HAS_METROX = "has_metrox";
   @SerializedName(SERIALIZED_NAME_HAS_METROX)
@@ -906,67 +906,67 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY = "max_physical_data_capacity";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY)
-  private Double maxPhysicalDataCapacity;
+  private Long maxPhysicalDataCapacity;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_GT = "max_physical_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_GT)
-  private Double maxPhysicalDataCapacityGt;
+  private Long maxPhysicalDataCapacityGt;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_GTE = "max_physical_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_GTE)
-  private Double maxPhysicalDataCapacityGte;
+  private Long maxPhysicalDataCapacityGte;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_IN = "max_physical_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_IN)
-  private List<Double> maxPhysicalDataCapacityIn = null;
+  private List<Long> maxPhysicalDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_LT = "max_physical_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_LT)
-  private Double maxPhysicalDataCapacityLt;
+  private Long maxPhysicalDataCapacityLt;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_LTE = "max_physical_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_LTE)
-  private Double maxPhysicalDataCapacityLte;
+  private Long maxPhysicalDataCapacityLte;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_NOT = "max_physical_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_NOT)
-  private Double maxPhysicalDataCapacityNot;
+  private Long maxPhysicalDataCapacityNot;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_NOT_IN = "max_physical_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_NOT_IN)
-  private List<Double> maxPhysicalDataCapacityNotIn = null;
+  private List<Long> maxPhysicalDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE = "max_physical_data_capacity_per_node";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE)
-  private Double maxPhysicalDataCapacityPerNode;
+  private Long maxPhysicalDataCapacityPerNode;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_GT = "max_physical_data_capacity_per_node_gt";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_GT)
-  private Double maxPhysicalDataCapacityPerNodeGt;
+  private Long maxPhysicalDataCapacityPerNodeGt;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_GTE = "max_physical_data_capacity_per_node_gte";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_GTE)
-  private Double maxPhysicalDataCapacityPerNodeGte;
+  private Long maxPhysicalDataCapacityPerNodeGte;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_IN = "max_physical_data_capacity_per_node_in";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_IN)
-  private List<Double> maxPhysicalDataCapacityPerNodeIn = null;
+  private List<Long> maxPhysicalDataCapacityPerNodeIn = null;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_LT = "max_physical_data_capacity_per_node_lt";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_LT)
-  private Double maxPhysicalDataCapacityPerNodeLt;
+  private Long maxPhysicalDataCapacityPerNodeLt;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_LTE = "max_physical_data_capacity_per_node_lte";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_LTE)
-  private Double maxPhysicalDataCapacityPerNodeLte;
+  private Long maxPhysicalDataCapacityPerNodeLte;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_NOT = "max_physical_data_capacity_per_node_not";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_NOT)
-  private Double maxPhysicalDataCapacityPerNodeNot;
+  private Long maxPhysicalDataCapacityPerNodeNot;
 
   public static final String SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_NOT_IN = "max_physical_data_capacity_per_node_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_NOT_IN)
-  private List<Double> maxPhysicalDataCapacityPerNodeNotIn = null;
+  private List<Long> maxPhysicalDataCapacityPerNodeNotIn = null;
 
   public static final String SERIALIZED_NAME_MGT_GATEWAY = "mgt_gateway";
   @SerializedName(SERIALIZED_NAME_MGT_GATEWAY)
@@ -1082,67 +1082,67 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE = "migration_data_size";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE)
-  private Double migrationDataSize;
+  private Long migrationDataSize;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_GT = "migration_data_size_gt";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_GT)
-  private Double migrationDataSizeGt;
+  private Long migrationDataSizeGt;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_GTE = "migration_data_size_gte";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_GTE)
-  private Double migrationDataSizeGte;
+  private Long migrationDataSizeGte;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_IN = "migration_data_size_in";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_IN)
-  private List<Double> migrationDataSizeIn = null;
+  private List<Long> migrationDataSizeIn = null;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_LT = "migration_data_size_lt";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_LT)
-  private Double migrationDataSizeLt;
+  private Long migrationDataSizeLt;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_LTE = "migration_data_size_lte";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_LTE)
-  private Double migrationDataSizeLte;
+  private Long migrationDataSizeLte;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_NOT = "migration_data_size_not";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_NOT)
-  private Double migrationDataSizeNot;
+  private Long migrationDataSizeNot;
 
   public static final String SERIALIZED_NAME_MIGRATION_DATA_SIZE_NOT_IN = "migration_data_size_not_in";
   @SerializedName(SERIALIZED_NAME_MIGRATION_DATA_SIZE_NOT_IN)
-  private List<Double> migrationDataSizeNotIn = null;
+  private List<Long> migrationDataSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED = "migration_speed";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED)
-  private Double migrationSpeed;
+  private Long migrationSpeed;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_GT = "migration_speed_gt";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_GT)
-  private Double migrationSpeedGt;
+  private Long migrationSpeedGt;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_GTE = "migration_speed_gte";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_GTE)
-  private Double migrationSpeedGte;
+  private Long migrationSpeedGte;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_IN = "migration_speed_in";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_IN)
-  private List<Double> migrationSpeedIn = null;
+  private List<Long> migrationSpeedIn = null;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_LT = "migration_speed_lt";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_LT)
-  private Double migrationSpeedLt;
+  private Long migrationSpeedLt;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_LTE = "migration_speed_lte";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_LTE)
-  private Double migrationSpeedLte;
+  private Long migrationSpeedLte;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_NOT = "migration_speed_not";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_NOT)
-  private Double migrationSpeedNot;
+  private Long migrationSpeedNot;
 
   public static final String SERIALIZED_NAME_MIGRATION_SPEED_NOT_IN = "migration_speed_not_in";
   @SerializedName(SERIALIZED_NAME_MIGRATION_SPEED_NOT_IN)
-  private List<Double> migrationSpeedNotIn = null;
+  private List<Long> migrationSpeedNotIn = null;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -1394,35 +1394,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES = "provisioned_memory_bytes";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
-  private Double provisionedMemoryBytes;
+  private Long provisionedMemoryBytes;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GT = "provisioned_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GT)
-  private Double provisionedMemoryBytesGt;
+  private Long provisionedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GTE = "provisioned_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_GTE)
-  private Double provisionedMemoryBytesGte;
+  private Long provisionedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_IN = "provisioned_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_IN)
-  private List<Double> provisionedMemoryBytesIn = null;
+  private List<Long> provisionedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LT = "provisioned_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LT)
-  private Double provisionedMemoryBytesLt;
+  private Long provisionedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LTE = "provisioned_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_LTE)
-  private Double provisionedMemoryBytesLte;
+  private Long provisionedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT = "provisioned_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT)
-  private Double provisionedMemoryBytesNot;
+  private Long provisionedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN = "provisioned_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN)
-  private List<Double> provisionedMemoryBytesNotIn = null;
+  private List<Long> provisionedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_PROVISIONED_RATIO = "provisioned_ratio";
   @SerializedName(SERIALIZED_NAME_PROVISIONED_RATIO)
@@ -1466,67 +1466,67 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE = "recover_data_size";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE)
-  private Double recoverDataSize;
+  private Long recoverDataSize;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_GT = "recover_data_size_gt";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_GT)
-  private Double recoverDataSizeGt;
+  private Long recoverDataSizeGt;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_GTE = "recover_data_size_gte";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_GTE)
-  private Double recoverDataSizeGte;
+  private Long recoverDataSizeGte;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_IN = "recover_data_size_in";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_IN)
-  private List<Double> recoverDataSizeIn = null;
+  private List<Long> recoverDataSizeIn = null;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_LT = "recover_data_size_lt";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_LT)
-  private Double recoverDataSizeLt;
+  private Long recoverDataSizeLt;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_LTE = "recover_data_size_lte";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_LTE)
-  private Double recoverDataSizeLte;
+  private Long recoverDataSizeLte;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_NOT = "recover_data_size_not";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_NOT)
-  private Double recoverDataSizeNot;
+  private Long recoverDataSizeNot;
 
   public static final String SERIALIZED_NAME_RECOVER_DATA_SIZE_NOT_IN = "recover_data_size_not_in";
   @SerializedName(SERIALIZED_NAME_RECOVER_DATA_SIZE_NOT_IN)
-  private List<Double> recoverDataSizeNotIn = null;
+  private List<Long> recoverDataSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED = "recover_speed";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED)
-  private Double recoverSpeed;
+  private Long recoverSpeed;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_GT = "recover_speed_gt";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_GT)
-  private Double recoverSpeedGt;
+  private Long recoverSpeedGt;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_GTE = "recover_speed_gte";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_GTE)
-  private Double recoverSpeedGte;
+  private Long recoverSpeedGte;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_IN = "recover_speed_in";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_IN)
-  private List<Double> recoverSpeedIn = null;
+  private List<Long> recoverSpeedIn = null;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_LT = "recover_speed_lt";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_LT)
-  private Double recoverSpeedLt;
+  private Long recoverSpeedLt;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_LTE = "recover_speed_lte";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_LTE)
-  private Double recoverSpeedLte;
+  private Long recoverSpeedLte;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_NOT = "recover_speed_not";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_NOT)
-  private Double recoverSpeedNot;
+  private Long recoverSpeedNot;
 
   public static final String SERIALIZED_NAME_RECOVER_SPEED_NOT_IN = "recover_speed_not_in";
   @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_NOT_IN)
-  private List<Double> recoverSpeedNotIn = null;
+  private List<Long> recoverSpeedNotIn = null;
 
   public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE = "reserved_cpu_cores_for_system_service";
   @SerializedName(SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE)
@@ -1686,35 +1686,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY = "total_cache_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY)
-  private Double totalCacheCapacity;
+  private Long totalCacheCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GT = "total_cache_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GT)
-  private Double totalCacheCapacityGt;
+  private Long totalCacheCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GTE = "total_cache_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_GTE)
-  private Double totalCacheCapacityGte;
+  private Long totalCacheCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_IN = "total_cache_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_IN)
-  private List<Double> totalCacheCapacityIn = null;
+  private List<Long> totalCacheCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LT = "total_cache_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LT)
-  private Double totalCacheCapacityLt;
+  private Long totalCacheCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LTE = "total_cache_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_LTE)
-  private Double totalCacheCapacityLte;
+  private Long totalCacheCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT = "total_cache_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT)
-  private Double totalCacheCapacityNot;
+  private Long totalCacheCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT_IN = "total_cache_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CACHE_CAPACITY_NOT_IN)
-  private List<Double> totalCacheCapacityNotIn = null;
+  private List<Long> totalCacheCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_CORES = "total_cpu_cores";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_CORES)
@@ -1750,35 +1750,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ = "total_cpu_hz";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ)
-  private Double totalCpuHz;
+  private Long totalCpuHz;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GT = "total_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GT)
-  private Double totalCpuHzGt;
+  private Long totalCpuHzGt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_GTE = "total_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_GTE)
-  private Double totalCpuHzGte;
+  private Long totalCpuHzGte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_IN = "total_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_IN)
-  private List<Double> totalCpuHzIn = null;
+  private List<Long> totalCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LT = "total_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LT)
-  private Double totalCpuHzLt;
+  private Long totalCpuHzLt;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_LTE = "total_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_LTE)
-  private Double totalCpuHzLte;
+  private Long totalCpuHzLte;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT = "total_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT)
-  private Double totalCpuHzNot;
+  private Long totalCpuHzNot;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN = "total_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_HZ_NOT_IN)
-  private List<Double> totalCpuHzNotIn = null;
+  private List<Long> totalCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_CPU_SOCKETS = "total_cpu_sockets";
   @SerializedName(SERIALIZED_NAME_TOTAL_CPU_SOCKETS)
@@ -1814,67 +1814,67 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY = "total_data_capacity";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
-  private Double totalDataCapacity;
+  private Long totalDataCapacity;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT = "total_data_capacity_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GT)
-  private Double totalDataCapacityGt;
+  private Long totalDataCapacityGt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE = "total_data_capacity_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_GTE)
-  private Double totalDataCapacityGte;
+  private Long totalDataCapacityGte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN = "total_data_capacity_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_IN)
-  private List<Double> totalDataCapacityIn = null;
+  private List<Long> totalDataCapacityIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT = "total_data_capacity_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LT)
-  private Double totalDataCapacityLt;
+  private Long totalDataCapacityLt;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE = "total_data_capacity_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_LTE)
-  private Double totalDataCapacityLte;
+  private Long totalDataCapacityLte;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT = "total_data_capacity_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT)
-  private Double totalDataCapacityNot;
+  private Long totalDataCapacityNot;
 
   public static final String SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN = "total_data_capacity_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN)
-  private List<Double> totalDataCapacityNotIn = null;
+  private List<Long> totalDataCapacityNotIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
-  private Double totalMemoryBytes;
+  private Long totalMemoryBytes;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT = "total_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GT)
-  private Double totalMemoryBytesGt;
+  private Long totalMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE = "total_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_GTE)
-  private Double totalMemoryBytesGte;
+  private Long totalMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN = "total_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_IN)
-  private List<Double> totalMemoryBytesIn = null;
+  private List<Long> totalMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT = "total_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LT)
-  private Double totalMemoryBytesLt;
+  private Long totalMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE = "total_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_LTE)
-  private Double totalMemoryBytesLte;
+  private Long totalMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT = "total_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT)
-  private Double totalMemoryBytesNot;
+  private Long totalMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN = "total_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
-  private List<Double> totalMemoryBytesNotIn = null;
+  private List<Long> totalMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -1950,99 +1950,99 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Double usedCpuHz;
+  private Long usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GT = "used_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GT)
-  private Double usedCpuHzGt;
+  private Long usedCpuHzGt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GTE = "used_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GTE)
-  private Double usedCpuHzGte;
+  private Long usedCpuHzGte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_IN = "used_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_IN)
-  private List<Double> usedCpuHzIn = null;
+  private List<Long> usedCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LT = "used_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LT)
-  private Double usedCpuHzLt;
+  private Long usedCpuHzLt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LTE = "used_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LTE)
-  private Double usedCpuHzLte;
+  private Long usedCpuHzLte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT = "used_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT)
-  private Double usedCpuHzNot;
+  private Long usedCpuHzNot;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT_IN = "used_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT_IN)
-  private List<Double> usedCpuHzNotIn = null;
+  private List<Long> usedCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
-  private Double usedDataSpace;
+  private Long usedDataSpace;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GT = "used_data_space_gt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GT)
-  private Double usedDataSpaceGt;
+  private Long usedDataSpaceGt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_GTE = "used_data_space_gte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_GTE)
-  private Double usedDataSpaceGte;
+  private Long usedDataSpaceGte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_IN = "used_data_space_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_IN)
-  private List<Double> usedDataSpaceIn = null;
+  private List<Long> usedDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LT = "used_data_space_lt";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LT)
-  private Double usedDataSpaceLt;
+  private Long usedDataSpaceLt;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_LTE = "used_data_space_lte";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_LTE)
-  private Double usedDataSpaceLte;
+  private Long usedDataSpaceLte;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT = "used_data_space_not";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT)
-  private Double usedDataSpaceNot;
+  private Long usedDataSpaceNot;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN = "used_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE_NOT_IN)
-  private List<Double> usedDataSpaceNotIn = null;
+  private List<Long> usedDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Double usedMemoryBytes;
+  private Long usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GT = "used_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GT)
-  private Double usedMemoryBytesGt;
+  private Long usedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GTE = "used_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GTE)
-  private Double usedMemoryBytesGte;
+  private Long usedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_IN = "used_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_IN)
-  private List<Double> usedMemoryBytesIn = null;
+  private List<Long> usedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LT = "used_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LT)
-  private Double usedMemoryBytesLt;
+  private Long usedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LTE = "used_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LTE)
-  private Double usedMemoryBytesLte;
+  private Long usedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT = "used_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT)
-  private Double usedMemoryBytesNot;
+  private Long usedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN = "used_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
-  private List<Double> usedMemoryBytesNotIn = null;
+  private List<Long> usedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
@@ -2102,35 +2102,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE)
-  private Double validDataSpace;
+  private Long validDataSpace;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_GT = "valid_data_space_gt";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_GT)
-  private Double validDataSpaceGt;
+  private Long validDataSpaceGt;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_GTE = "valid_data_space_gte";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_GTE)
-  private Double validDataSpaceGte;
+  private Long validDataSpaceGte;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_IN = "valid_data_space_in";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_IN)
-  private List<Double> validDataSpaceIn = null;
+  private List<Long> validDataSpaceIn = null;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_LT = "valid_data_space_lt";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_LT)
-  private Double validDataSpaceLt;
+  private Long validDataSpaceLt;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_LTE = "valid_data_space_lte";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_LTE)
-  private Double validDataSpaceLte;
+  private Long validDataSpaceLte;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_NOT = "valid_data_space_not";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_NOT)
-  private Double validDataSpaceNot;
+  private Long validDataSpaceNot;
 
   public static final String SERIALIZED_NAME_VALID_DATA_SPACE_NOT_IN = "valid_data_space_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_DATA_SPACE_NOT_IN)
-  private List<Double> validDataSpaceNotIn = null;
+  private List<Long> validDataSpaceNotIn = null;
 
   public static final String SERIALIZED_NAME_VCENTER_ACCOUNT = "vcenterAccount";
   @SerializedName(SERIALIZED_NAME_VCENTER_ACCOUNT)
@@ -3615,7 +3615,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput failureDataSpace(Double failureDataSpace) {
+  public ClusterWhereInput failureDataSpace(Long failureDataSpace) {
     
     this.failureDataSpace = failureDataSpace;
     return this;
@@ -3628,17 +3628,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpace() {
+  public Long getFailureDataSpace() {
     return failureDataSpace;
   }
 
 
-  public void setFailureDataSpace(Double failureDataSpace) {
+  public void setFailureDataSpace(Long failureDataSpace) {
     this.failureDataSpace = failureDataSpace;
   }
 
 
-  public ClusterWhereInput failureDataSpaceGt(Double failureDataSpaceGt) {
+  public ClusterWhereInput failureDataSpaceGt(Long failureDataSpaceGt) {
     
     this.failureDataSpaceGt = failureDataSpaceGt;
     return this;
@@ -3651,17 +3651,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGt() {
+  public Long getFailureDataSpaceGt() {
     return failureDataSpaceGt;
   }
 
 
-  public void setFailureDataSpaceGt(Double failureDataSpaceGt) {
+  public void setFailureDataSpaceGt(Long failureDataSpaceGt) {
     this.failureDataSpaceGt = failureDataSpaceGt;
   }
 
 
-  public ClusterWhereInput failureDataSpaceGte(Double failureDataSpaceGte) {
+  public ClusterWhereInput failureDataSpaceGte(Long failureDataSpaceGte) {
     
     this.failureDataSpaceGte = failureDataSpaceGte;
     return this;
@@ -3674,25 +3674,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceGte() {
+  public Long getFailureDataSpaceGte() {
     return failureDataSpaceGte;
   }
 
 
-  public void setFailureDataSpaceGte(Double failureDataSpaceGte) {
+  public void setFailureDataSpaceGte(Long failureDataSpaceGte) {
     this.failureDataSpaceGte = failureDataSpaceGte;
   }
 
 
-  public ClusterWhereInput failureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public ClusterWhereInput failureDataSpaceIn(List<Long> failureDataSpaceIn) {
     
     this.failureDataSpaceIn = failureDataSpaceIn;
     return this;
   }
 
-  public ClusterWhereInput addFailureDataSpaceInItem(Double failureDataSpaceInItem) {
+  public ClusterWhereInput addFailureDataSpaceInItem(Long failureDataSpaceInItem) {
     if (this.failureDataSpaceIn == null) {
-      this.failureDataSpaceIn = new ArrayList<Double>();
+      this.failureDataSpaceIn = new ArrayList<Long>();
     }
     this.failureDataSpaceIn.add(failureDataSpaceInItem);
     return this;
@@ -3705,17 +3705,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceIn() {
+  public List<Long> getFailureDataSpaceIn() {
     return failureDataSpaceIn;
   }
 
 
-  public void setFailureDataSpaceIn(List<Double> failureDataSpaceIn) {
+  public void setFailureDataSpaceIn(List<Long> failureDataSpaceIn) {
     this.failureDataSpaceIn = failureDataSpaceIn;
   }
 
 
-  public ClusterWhereInput failureDataSpaceLt(Double failureDataSpaceLt) {
+  public ClusterWhereInput failureDataSpaceLt(Long failureDataSpaceLt) {
     
     this.failureDataSpaceLt = failureDataSpaceLt;
     return this;
@@ -3728,17 +3728,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLt() {
+  public Long getFailureDataSpaceLt() {
     return failureDataSpaceLt;
   }
 
 
-  public void setFailureDataSpaceLt(Double failureDataSpaceLt) {
+  public void setFailureDataSpaceLt(Long failureDataSpaceLt) {
     this.failureDataSpaceLt = failureDataSpaceLt;
   }
 
 
-  public ClusterWhereInput failureDataSpaceLte(Double failureDataSpaceLte) {
+  public ClusterWhereInput failureDataSpaceLte(Long failureDataSpaceLte) {
     
     this.failureDataSpaceLte = failureDataSpaceLte;
     return this;
@@ -3751,17 +3751,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceLte() {
+  public Long getFailureDataSpaceLte() {
     return failureDataSpaceLte;
   }
 
 
-  public void setFailureDataSpaceLte(Double failureDataSpaceLte) {
+  public void setFailureDataSpaceLte(Long failureDataSpaceLte) {
     this.failureDataSpaceLte = failureDataSpaceLte;
   }
 
 
-  public ClusterWhereInput failureDataSpaceNot(Double failureDataSpaceNot) {
+  public ClusterWhereInput failureDataSpaceNot(Long failureDataSpaceNot) {
     
     this.failureDataSpaceNot = failureDataSpaceNot;
     return this;
@@ -3774,25 +3774,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getFailureDataSpaceNot() {
+  public Long getFailureDataSpaceNot() {
     return failureDataSpaceNot;
   }
 
 
-  public void setFailureDataSpaceNot(Double failureDataSpaceNot) {
+  public void setFailureDataSpaceNot(Long failureDataSpaceNot) {
     this.failureDataSpaceNot = failureDataSpaceNot;
   }
 
 
-  public ClusterWhereInput failureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public ClusterWhereInput failureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
     return this;
   }
 
-  public ClusterWhereInput addFailureDataSpaceNotInItem(Double failureDataSpaceNotInItem) {
+  public ClusterWhereInput addFailureDataSpaceNotInItem(Long failureDataSpaceNotInItem) {
     if (this.failureDataSpaceNotIn == null) {
-      this.failureDataSpaceNotIn = new ArrayList<Double>();
+      this.failureDataSpaceNotIn = new ArrayList<Long>();
     }
     this.failureDataSpaceNotIn.add(failureDataSpaceNotInItem);
     return this;
@@ -3805,12 +3805,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getFailureDataSpaceNotIn() {
+  public List<Long> getFailureDataSpaceNotIn() {
     return failureDataSpaceNotIn;
   }
 
 
-  public void setFailureDataSpaceNotIn(List<Double> failureDataSpaceNotIn) {
+  public void setFailureDataSpaceNotIn(List<Long> failureDataSpaceNotIn) {
     this.failureDataSpaceNotIn = failureDataSpaceNotIn;
   }
 
@@ -7535,7 +7535,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacity(Double maxPhysicalDataCapacity) {
+  public ClusterWhereInput maxPhysicalDataCapacity(Long maxPhysicalDataCapacity) {
     
     this.maxPhysicalDataCapacity = maxPhysicalDataCapacity;
     return this;
@@ -7548,17 +7548,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacity() {
+  public Long getMaxPhysicalDataCapacity() {
     return maxPhysicalDataCapacity;
   }
 
 
-  public void setMaxPhysicalDataCapacity(Double maxPhysicalDataCapacity) {
+  public void setMaxPhysicalDataCapacity(Long maxPhysicalDataCapacity) {
     this.maxPhysicalDataCapacity = maxPhysicalDataCapacity;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityGt(Double maxPhysicalDataCapacityGt) {
+  public ClusterWhereInput maxPhysicalDataCapacityGt(Long maxPhysicalDataCapacityGt) {
     
     this.maxPhysicalDataCapacityGt = maxPhysicalDataCapacityGt;
     return this;
@@ -7571,17 +7571,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityGt() {
+  public Long getMaxPhysicalDataCapacityGt() {
     return maxPhysicalDataCapacityGt;
   }
 
 
-  public void setMaxPhysicalDataCapacityGt(Double maxPhysicalDataCapacityGt) {
+  public void setMaxPhysicalDataCapacityGt(Long maxPhysicalDataCapacityGt) {
     this.maxPhysicalDataCapacityGt = maxPhysicalDataCapacityGt;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityGte(Double maxPhysicalDataCapacityGte) {
+  public ClusterWhereInput maxPhysicalDataCapacityGte(Long maxPhysicalDataCapacityGte) {
     
     this.maxPhysicalDataCapacityGte = maxPhysicalDataCapacityGte;
     return this;
@@ -7594,25 +7594,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityGte() {
+  public Long getMaxPhysicalDataCapacityGte() {
     return maxPhysicalDataCapacityGte;
   }
 
 
-  public void setMaxPhysicalDataCapacityGte(Double maxPhysicalDataCapacityGte) {
+  public void setMaxPhysicalDataCapacityGte(Long maxPhysicalDataCapacityGte) {
     this.maxPhysicalDataCapacityGte = maxPhysicalDataCapacityGte;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityIn(List<Double> maxPhysicalDataCapacityIn) {
+  public ClusterWhereInput maxPhysicalDataCapacityIn(List<Long> maxPhysicalDataCapacityIn) {
     
     this.maxPhysicalDataCapacityIn = maxPhysicalDataCapacityIn;
     return this;
   }
 
-  public ClusterWhereInput addMaxPhysicalDataCapacityInItem(Double maxPhysicalDataCapacityInItem) {
+  public ClusterWhereInput addMaxPhysicalDataCapacityInItem(Long maxPhysicalDataCapacityInItem) {
     if (this.maxPhysicalDataCapacityIn == null) {
-      this.maxPhysicalDataCapacityIn = new ArrayList<Double>();
+      this.maxPhysicalDataCapacityIn = new ArrayList<Long>();
     }
     this.maxPhysicalDataCapacityIn.add(maxPhysicalDataCapacityInItem);
     return this;
@@ -7625,17 +7625,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxPhysicalDataCapacityIn() {
+  public List<Long> getMaxPhysicalDataCapacityIn() {
     return maxPhysicalDataCapacityIn;
   }
 
 
-  public void setMaxPhysicalDataCapacityIn(List<Double> maxPhysicalDataCapacityIn) {
+  public void setMaxPhysicalDataCapacityIn(List<Long> maxPhysicalDataCapacityIn) {
     this.maxPhysicalDataCapacityIn = maxPhysicalDataCapacityIn;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityLt(Double maxPhysicalDataCapacityLt) {
+  public ClusterWhereInput maxPhysicalDataCapacityLt(Long maxPhysicalDataCapacityLt) {
     
     this.maxPhysicalDataCapacityLt = maxPhysicalDataCapacityLt;
     return this;
@@ -7648,17 +7648,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityLt() {
+  public Long getMaxPhysicalDataCapacityLt() {
     return maxPhysicalDataCapacityLt;
   }
 
 
-  public void setMaxPhysicalDataCapacityLt(Double maxPhysicalDataCapacityLt) {
+  public void setMaxPhysicalDataCapacityLt(Long maxPhysicalDataCapacityLt) {
     this.maxPhysicalDataCapacityLt = maxPhysicalDataCapacityLt;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityLte(Double maxPhysicalDataCapacityLte) {
+  public ClusterWhereInput maxPhysicalDataCapacityLte(Long maxPhysicalDataCapacityLte) {
     
     this.maxPhysicalDataCapacityLte = maxPhysicalDataCapacityLte;
     return this;
@@ -7671,17 +7671,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityLte() {
+  public Long getMaxPhysicalDataCapacityLte() {
     return maxPhysicalDataCapacityLte;
   }
 
 
-  public void setMaxPhysicalDataCapacityLte(Double maxPhysicalDataCapacityLte) {
+  public void setMaxPhysicalDataCapacityLte(Long maxPhysicalDataCapacityLte) {
     this.maxPhysicalDataCapacityLte = maxPhysicalDataCapacityLte;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityNot(Double maxPhysicalDataCapacityNot) {
+  public ClusterWhereInput maxPhysicalDataCapacityNot(Long maxPhysicalDataCapacityNot) {
     
     this.maxPhysicalDataCapacityNot = maxPhysicalDataCapacityNot;
     return this;
@@ -7694,25 +7694,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityNot() {
+  public Long getMaxPhysicalDataCapacityNot() {
     return maxPhysicalDataCapacityNot;
   }
 
 
-  public void setMaxPhysicalDataCapacityNot(Double maxPhysicalDataCapacityNot) {
+  public void setMaxPhysicalDataCapacityNot(Long maxPhysicalDataCapacityNot) {
     this.maxPhysicalDataCapacityNot = maxPhysicalDataCapacityNot;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityNotIn(List<Double> maxPhysicalDataCapacityNotIn) {
+  public ClusterWhereInput maxPhysicalDataCapacityNotIn(List<Long> maxPhysicalDataCapacityNotIn) {
     
     this.maxPhysicalDataCapacityNotIn = maxPhysicalDataCapacityNotIn;
     return this;
   }
 
-  public ClusterWhereInput addMaxPhysicalDataCapacityNotInItem(Double maxPhysicalDataCapacityNotInItem) {
+  public ClusterWhereInput addMaxPhysicalDataCapacityNotInItem(Long maxPhysicalDataCapacityNotInItem) {
     if (this.maxPhysicalDataCapacityNotIn == null) {
-      this.maxPhysicalDataCapacityNotIn = new ArrayList<Double>();
+      this.maxPhysicalDataCapacityNotIn = new ArrayList<Long>();
     }
     this.maxPhysicalDataCapacityNotIn.add(maxPhysicalDataCapacityNotInItem);
     return this;
@@ -7725,17 +7725,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxPhysicalDataCapacityNotIn() {
+  public List<Long> getMaxPhysicalDataCapacityNotIn() {
     return maxPhysicalDataCapacityNotIn;
   }
 
 
-  public void setMaxPhysicalDataCapacityNotIn(List<Double> maxPhysicalDataCapacityNotIn) {
+  public void setMaxPhysicalDataCapacityNotIn(List<Long> maxPhysicalDataCapacityNotIn) {
     this.maxPhysicalDataCapacityNotIn = maxPhysicalDataCapacityNotIn;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNode(Double maxPhysicalDataCapacityPerNode) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNode(Long maxPhysicalDataCapacityPerNode) {
     
     this.maxPhysicalDataCapacityPerNode = maxPhysicalDataCapacityPerNode;
     return this;
@@ -7748,17 +7748,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNode() {
+  public Long getMaxPhysicalDataCapacityPerNode() {
     return maxPhysicalDataCapacityPerNode;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNode(Double maxPhysicalDataCapacityPerNode) {
+  public void setMaxPhysicalDataCapacityPerNode(Long maxPhysicalDataCapacityPerNode) {
     this.maxPhysicalDataCapacityPerNode = maxPhysicalDataCapacityPerNode;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeGt(Double maxPhysicalDataCapacityPerNodeGt) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeGt(Long maxPhysicalDataCapacityPerNodeGt) {
     
     this.maxPhysicalDataCapacityPerNodeGt = maxPhysicalDataCapacityPerNodeGt;
     return this;
@@ -7771,17 +7771,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNodeGt() {
+  public Long getMaxPhysicalDataCapacityPerNodeGt() {
     return maxPhysicalDataCapacityPerNodeGt;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeGt(Double maxPhysicalDataCapacityPerNodeGt) {
+  public void setMaxPhysicalDataCapacityPerNodeGt(Long maxPhysicalDataCapacityPerNodeGt) {
     this.maxPhysicalDataCapacityPerNodeGt = maxPhysicalDataCapacityPerNodeGt;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeGte(Double maxPhysicalDataCapacityPerNodeGte) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeGte(Long maxPhysicalDataCapacityPerNodeGte) {
     
     this.maxPhysicalDataCapacityPerNodeGte = maxPhysicalDataCapacityPerNodeGte;
     return this;
@@ -7794,25 +7794,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNodeGte() {
+  public Long getMaxPhysicalDataCapacityPerNodeGte() {
     return maxPhysicalDataCapacityPerNodeGte;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeGte(Double maxPhysicalDataCapacityPerNodeGte) {
+  public void setMaxPhysicalDataCapacityPerNodeGte(Long maxPhysicalDataCapacityPerNodeGte) {
     this.maxPhysicalDataCapacityPerNodeGte = maxPhysicalDataCapacityPerNodeGte;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeIn(List<Double> maxPhysicalDataCapacityPerNodeIn) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeIn(List<Long> maxPhysicalDataCapacityPerNodeIn) {
     
     this.maxPhysicalDataCapacityPerNodeIn = maxPhysicalDataCapacityPerNodeIn;
     return this;
   }
 
-  public ClusterWhereInput addMaxPhysicalDataCapacityPerNodeInItem(Double maxPhysicalDataCapacityPerNodeInItem) {
+  public ClusterWhereInput addMaxPhysicalDataCapacityPerNodeInItem(Long maxPhysicalDataCapacityPerNodeInItem) {
     if (this.maxPhysicalDataCapacityPerNodeIn == null) {
-      this.maxPhysicalDataCapacityPerNodeIn = new ArrayList<Double>();
+      this.maxPhysicalDataCapacityPerNodeIn = new ArrayList<Long>();
     }
     this.maxPhysicalDataCapacityPerNodeIn.add(maxPhysicalDataCapacityPerNodeInItem);
     return this;
@@ -7825,17 +7825,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxPhysicalDataCapacityPerNodeIn() {
+  public List<Long> getMaxPhysicalDataCapacityPerNodeIn() {
     return maxPhysicalDataCapacityPerNodeIn;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeIn(List<Double> maxPhysicalDataCapacityPerNodeIn) {
+  public void setMaxPhysicalDataCapacityPerNodeIn(List<Long> maxPhysicalDataCapacityPerNodeIn) {
     this.maxPhysicalDataCapacityPerNodeIn = maxPhysicalDataCapacityPerNodeIn;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeLt(Double maxPhysicalDataCapacityPerNodeLt) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeLt(Long maxPhysicalDataCapacityPerNodeLt) {
     
     this.maxPhysicalDataCapacityPerNodeLt = maxPhysicalDataCapacityPerNodeLt;
     return this;
@@ -7848,17 +7848,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNodeLt() {
+  public Long getMaxPhysicalDataCapacityPerNodeLt() {
     return maxPhysicalDataCapacityPerNodeLt;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeLt(Double maxPhysicalDataCapacityPerNodeLt) {
+  public void setMaxPhysicalDataCapacityPerNodeLt(Long maxPhysicalDataCapacityPerNodeLt) {
     this.maxPhysicalDataCapacityPerNodeLt = maxPhysicalDataCapacityPerNodeLt;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeLte(Double maxPhysicalDataCapacityPerNodeLte) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeLte(Long maxPhysicalDataCapacityPerNodeLte) {
     
     this.maxPhysicalDataCapacityPerNodeLte = maxPhysicalDataCapacityPerNodeLte;
     return this;
@@ -7871,17 +7871,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNodeLte() {
+  public Long getMaxPhysicalDataCapacityPerNodeLte() {
     return maxPhysicalDataCapacityPerNodeLte;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeLte(Double maxPhysicalDataCapacityPerNodeLte) {
+  public void setMaxPhysicalDataCapacityPerNodeLte(Long maxPhysicalDataCapacityPerNodeLte) {
     this.maxPhysicalDataCapacityPerNodeLte = maxPhysicalDataCapacityPerNodeLte;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeNot(Double maxPhysicalDataCapacityPerNodeNot) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeNot(Long maxPhysicalDataCapacityPerNodeNot) {
     
     this.maxPhysicalDataCapacityPerNodeNot = maxPhysicalDataCapacityPerNodeNot;
     return this;
@@ -7894,25 +7894,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMaxPhysicalDataCapacityPerNodeNot() {
+  public Long getMaxPhysicalDataCapacityPerNodeNot() {
     return maxPhysicalDataCapacityPerNodeNot;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeNot(Double maxPhysicalDataCapacityPerNodeNot) {
+  public void setMaxPhysicalDataCapacityPerNodeNot(Long maxPhysicalDataCapacityPerNodeNot) {
     this.maxPhysicalDataCapacityPerNodeNot = maxPhysicalDataCapacityPerNodeNot;
   }
 
 
-  public ClusterWhereInput maxPhysicalDataCapacityPerNodeNotIn(List<Double> maxPhysicalDataCapacityPerNodeNotIn) {
+  public ClusterWhereInput maxPhysicalDataCapacityPerNodeNotIn(List<Long> maxPhysicalDataCapacityPerNodeNotIn) {
     
     this.maxPhysicalDataCapacityPerNodeNotIn = maxPhysicalDataCapacityPerNodeNotIn;
     return this;
   }
 
-  public ClusterWhereInput addMaxPhysicalDataCapacityPerNodeNotInItem(Double maxPhysicalDataCapacityPerNodeNotInItem) {
+  public ClusterWhereInput addMaxPhysicalDataCapacityPerNodeNotInItem(Long maxPhysicalDataCapacityPerNodeNotInItem) {
     if (this.maxPhysicalDataCapacityPerNodeNotIn == null) {
-      this.maxPhysicalDataCapacityPerNodeNotIn = new ArrayList<Double>();
+      this.maxPhysicalDataCapacityPerNodeNotIn = new ArrayList<Long>();
     }
     this.maxPhysicalDataCapacityPerNodeNotIn.add(maxPhysicalDataCapacityPerNodeNotInItem);
     return this;
@@ -7925,12 +7925,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMaxPhysicalDataCapacityPerNodeNotIn() {
+  public List<Long> getMaxPhysicalDataCapacityPerNodeNotIn() {
     return maxPhysicalDataCapacityPerNodeNotIn;
   }
 
 
-  public void setMaxPhysicalDataCapacityPerNodeNotIn(List<Double> maxPhysicalDataCapacityPerNodeNotIn) {
+  public void setMaxPhysicalDataCapacityPerNodeNotIn(List<Long> maxPhysicalDataCapacityPerNodeNotIn) {
     this.maxPhysicalDataCapacityPerNodeNotIn = maxPhysicalDataCapacityPerNodeNotIn;
   }
 
@@ -8611,7 +8611,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput migrationDataSize(Double migrationDataSize) {
+  public ClusterWhereInput migrationDataSize(Long migrationDataSize) {
     
     this.migrationDataSize = migrationDataSize;
     return this;
@@ -8624,17 +8624,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSize() {
+  public Long getMigrationDataSize() {
     return migrationDataSize;
   }
 
 
-  public void setMigrationDataSize(Double migrationDataSize) {
+  public void setMigrationDataSize(Long migrationDataSize) {
     this.migrationDataSize = migrationDataSize;
   }
 
 
-  public ClusterWhereInput migrationDataSizeGt(Double migrationDataSizeGt) {
+  public ClusterWhereInput migrationDataSizeGt(Long migrationDataSizeGt) {
     
     this.migrationDataSizeGt = migrationDataSizeGt;
     return this;
@@ -8647,17 +8647,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSizeGt() {
+  public Long getMigrationDataSizeGt() {
     return migrationDataSizeGt;
   }
 
 
-  public void setMigrationDataSizeGt(Double migrationDataSizeGt) {
+  public void setMigrationDataSizeGt(Long migrationDataSizeGt) {
     this.migrationDataSizeGt = migrationDataSizeGt;
   }
 
 
-  public ClusterWhereInput migrationDataSizeGte(Double migrationDataSizeGte) {
+  public ClusterWhereInput migrationDataSizeGte(Long migrationDataSizeGte) {
     
     this.migrationDataSizeGte = migrationDataSizeGte;
     return this;
@@ -8670,25 +8670,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSizeGte() {
+  public Long getMigrationDataSizeGte() {
     return migrationDataSizeGte;
   }
 
 
-  public void setMigrationDataSizeGte(Double migrationDataSizeGte) {
+  public void setMigrationDataSizeGte(Long migrationDataSizeGte) {
     this.migrationDataSizeGte = migrationDataSizeGte;
   }
 
 
-  public ClusterWhereInput migrationDataSizeIn(List<Double> migrationDataSizeIn) {
+  public ClusterWhereInput migrationDataSizeIn(List<Long> migrationDataSizeIn) {
     
     this.migrationDataSizeIn = migrationDataSizeIn;
     return this;
   }
 
-  public ClusterWhereInput addMigrationDataSizeInItem(Double migrationDataSizeInItem) {
+  public ClusterWhereInput addMigrationDataSizeInItem(Long migrationDataSizeInItem) {
     if (this.migrationDataSizeIn == null) {
-      this.migrationDataSizeIn = new ArrayList<Double>();
+      this.migrationDataSizeIn = new ArrayList<Long>();
     }
     this.migrationDataSizeIn.add(migrationDataSizeInItem);
     return this;
@@ -8701,17 +8701,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMigrationDataSizeIn() {
+  public List<Long> getMigrationDataSizeIn() {
     return migrationDataSizeIn;
   }
 
 
-  public void setMigrationDataSizeIn(List<Double> migrationDataSizeIn) {
+  public void setMigrationDataSizeIn(List<Long> migrationDataSizeIn) {
     this.migrationDataSizeIn = migrationDataSizeIn;
   }
 
 
-  public ClusterWhereInput migrationDataSizeLt(Double migrationDataSizeLt) {
+  public ClusterWhereInput migrationDataSizeLt(Long migrationDataSizeLt) {
     
     this.migrationDataSizeLt = migrationDataSizeLt;
     return this;
@@ -8724,17 +8724,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSizeLt() {
+  public Long getMigrationDataSizeLt() {
     return migrationDataSizeLt;
   }
 
 
-  public void setMigrationDataSizeLt(Double migrationDataSizeLt) {
+  public void setMigrationDataSizeLt(Long migrationDataSizeLt) {
     this.migrationDataSizeLt = migrationDataSizeLt;
   }
 
 
-  public ClusterWhereInput migrationDataSizeLte(Double migrationDataSizeLte) {
+  public ClusterWhereInput migrationDataSizeLte(Long migrationDataSizeLte) {
     
     this.migrationDataSizeLte = migrationDataSizeLte;
     return this;
@@ -8747,17 +8747,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSizeLte() {
+  public Long getMigrationDataSizeLte() {
     return migrationDataSizeLte;
   }
 
 
-  public void setMigrationDataSizeLte(Double migrationDataSizeLte) {
+  public void setMigrationDataSizeLte(Long migrationDataSizeLte) {
     this.migrationDataSizeLte = migrationDataSizeLte;
   }
 
 
-  public ClusterWhereInput migrationDataSizeNot(Double migrationDataSizeNot) {
+  public ClusterWhereInput migrationDataSizeNot(Long migrationDataSizeNot) {
     
     this.migrationDataSizeNot = migrationDataSizeNot;
     return this;
@@ -8770,25 +8770,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationDataSizeNot() {
+  public Long getMigrationDataSizeNot() {
     return migrationDataSizeNot;
   }
 
 
-  public void setMigrationDataSizeNot(Double migrationDataSizeNot) {
+  public void setMigrationDataSizeNot(Long migrationDataSizeNot) {
     this.migrationDataSizeNot = migrationDataSizeNot;
   }
 
 
-  public ClusterWhereInput migrationDataSizeNotIn(List<Double> migrationDataSizeNotIn) {
+  public ClusterWhereInput migrationDataSizeNotIn(List<Long> migrationDataSizeNotIn) {
     
     this.migrationDataSizeNotIn = migrationDataSizeNotIn;
     return this;
   }
 
-  public ClusterWhereInput addMigrationDataSizeNotInItem(Double migrationDataSizeNotInItem) {
+  public ClusterWhereInput addMigrationDataSizeNotInItem(Long migrationDataSizeNotInItem) {
     if (this.migrationDataSizeNotIn == null) {
-      this.migrationDataSizeNotIn = new ArrayList<Double>();
+      this.migrationDataSizeNotIn = new ArrayList<Long>();
     }
     this.migrationDataSizeNotIn.add(migrationDataSizeNotInItem);
     return this;
@@ -8801,17 +8801,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMigrationDataSizeNotIn() {
+  public List<Long> getMigrationDataSizeNotIn() {
     return migrationDataSizeNotIn;
   }
 
 
-  public void setMigrationDataSizeNotIn(List<Double> migrationDataSizeNotIn) {
+  public void setMigrationDataSizeNotIn(List<Long> migrationDataSizeNotIn) {
     this.migrationDataSizeNotIn = migrationDataSizeNotIn;
   }
 
 
-  public ClusterWhereInput migrationSpeed(Double migrationSpeed) {
+  public ClusterWhereInput migrationSpeed(Long migrationSpeed) {
     
     this.migrationSpeed = migrationSpeed;
     return this;
@@ -8824,17 +8824,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeed() {
+  public Long getMigrationSpeed() {
     return migrationSpeed;
   }
 
 
-  public void setMigrationSpeed(Double migrationSpeed) {
+  public void setMigrationSpeed(Long migrationSpeed) {
     this.migrationSpeed = migrationSpeed;
   }
 
 
-  public ClusterWhereInput migrationSpeedGt(Double migrationSpeedGt) {
+  public ClusterWhereInput migrationSpeedGt(Long migrationSpeedGt) {
     
     this.migrationSpeedGt = migrationSpeedGt;
     return this;
@@ -8847,17 +8847,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeedGt() {
+  public Long getMigrationSpeedGt() {
     return migrationSpeedGt;
   }
 
 
-  public void setMigrationSpeedGt(Double migrationSpeedGt) {
+  public void setMigrationSpeedGt(Long migrationSpeedGt) {
     this.migrationSpeedGt = migrationSpeedGt;
   }
 
 
-  public ClusterWhereInput migrationSpeedGte(Double migrationSpeedGte) {
+  public ClusterWhereInput migrationSpeedGte(Long migrationSpeedGte) {
     
     this.migrationSpeedGte = migrationSpeedGte;
     return this;
@@ -8870,25 +8870,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeedGte() {
+  public Long getMigrationSpeedGte() {
     return migrationSpeedGte;
   }
 
 
-  public void setMigrationSpeedGte(Double migrationSpeedGte) {
+  public void setMigrationSpeedGte(Long migrationSpeedGte) {
     this.migrationSpeedGte = migrationSpeedGte;
   }
 
 
-  public ClusterWhereInput migrationSpeedIn(List<Double> migrationSpeedIn) {
+  public ClusterWhereInput migrationSpeedIn(List<Long> migrationSpeedIn) {
     
     this.migrationSpeedIn = migrationSpeedIn;
     return this;
   }
 
-  public ClusterWhereInput addMigrationSpeedInItem(Double migrationSpeedInItem) {
+  public ClusterWhereInput addMigrationSpeedInItem(Long migrationSpeedInItem) {
     if (this.migrationSpeedIn == null) {
-      this.migrationSpeedIn = new ArrayList<Double>();
+      this.migrationSpeedIn = new ArrayList<Long>();
     }
     this.migrationSpeedIn.add(migrationSpeedInItem);
     return this;
@@ -8901,17 +8901,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMigrationSpeedIn() {
+  public List<Long> getMigrationSpeedIn() {
     return migrationSpeedIn;
   }
 
 
-  public void setMigrationSpeedIn(List<Double> migrationSpeedIn) {
+  public void setMigrationSpeedIn(List<Long> migrationSpeedIn) {
     this.migrationSpeedIn = migrationSpeedIn;
   }
 
 
-  public ClusterWhereInput migrationSpeedLt(Double migrationSpeedLt) {
+  public ClusterWhereInput migrationSpeedLt(Long migrationSpeedLt) {
     
     this.migrationSpeedLt = migrationSpeedLt;
     return this;
@@ -8924,17 +8924,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeedLt() {
+  public Long getMigrationSpeedLt() {
     return migrationSpeedLt;
   }
 
 
-  public void setMigrationSpeedLt(Double migrationSpeedLt) {
+  public void setMigrationSpeedLt(Long migrationSpeedLt) {
     this.migrationSpeedLt = migrationSpeedLt;
   }
 
 
-  public ClusterWhereInput migrationSpeedLte(Double migrationSpeedLte) {
+  public ClusterWhereInput migrationSpeedLte(Long migrationSpeedLte) {
     
     this.migrationSpeedLte = migrationSpeedLte;
     return this;
@@ -8947,17 +8947,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeedLte() {
+  public Long getMigrationSpeedLte() {
     return migrationSpeedLte;
   }
 
 
-  public void setMigrationSpeedLte(Double migrationSpeedLte) {
+  public void setMigrationSpeedLte(Long migrationSpeedLte) {
     this.migrationSpeedLte = migrationSpeedLte;
   }
 
 
-  public ClusterWhereInput migrationSpeedNot(Double migrationSpeedNot) {
+  public ClusterWhereInput migrationSpeedNot(Long migrationSpeedNot) {
     
     this.migrationSpeedNot = migrationSpeedNot;
     return this;
@@ -8970,25 +8970,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getMigrationSpeedNot() {
+  public Long getMigrationSpeedNot() {
     return migrationSpeedNot;
   }
 
 
-  public void setMigrationSpeedNot(Double migrationSpeedNot) {
+  public void setMigrationSpeedNot(Long migrationSpeedNot) {
     this.migrationSpeedNot = migrationSpeedNot;
   }
 
 
-  public ClusterWhereInput migrationSpeedNotIn(List<Double> migrationSpeedNotIn) {
+  public ClusterWhereInput migrationSpeedNotIn(List<Long> migrationSpeedNotIn) {
     
     this.migrationSpeedNotIn = migrationSpeedNotIn;
     return this;
   }
 
-  public ClusterWhereInput addMigrationSpeedNotInItem(Double migrationSpeedNotInItem) {
+  public ClusterWhereInput addMigrationSpeedNotInItem(Long migrationSpeedNotInItem) {
     if (this.migrationSpeedNotIn == null) {
-      this.migrationSpeedNotIn = new ArrayList<Double>();
+      this.migrationSpeedNotIn = new ArrayList<Long>();
     }
     this.migrationSpeedNotIn.add(migrationSpeedNotInItem);
     return this;
@@ -9001,12 +9001,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getMigrationSpeedNotIn() {
+  public List<Long> getMigrationSpeedNotIn() {
     return migrationSpeedNotIn;
   }
 
 
-  public void setMigrationSpeedNotIn(List<Double> migrationSpeedNotIn) {
+  public void setMigrationSpeedNotIn(List<Long> migrationSpeedNotIn) {
     this.migrationSpeedNotIn = migrationSpeedNotIn;
   }
 
@@ -10549,7 +10549,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public ClusterWhereInput provisionedMemoryBytes(Long provisionedMemoryBytes) {
     
     this.provisionedMemoryBytes = provisionedMemoryBytes;
     return this;
@@ -10562,17 +10562,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytes() {
+  public Long getProvisionedMemoryBytes() {
     return provisionedMemoryBytes;
   }
 
 
-  public void setProvisionedMemoryBytes(Double provisionedMemoryBytes) {
+  public void setProvisionedMemoryBytes(Long provisionedMemoryBytes) {
     this.provisionedMemoryBytes = provisionedMemoryBytes;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesGt(Double provisionedMemoryBytesGt) {
+  public ClusterWhereInput provisionedMemoryBytesGt(Long provisionedMemoryBytesGt) {
     
     this.provisionedMemoryBytesGt = provisionedMemoryBytesGt;
     return this;
@@ -10585,17 +10585,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesGt() {
+  public Long getProvisionedMemoryBytesGt() {
     return provisionedMemoryBytesGt;
   }
 
 
-  public void setProvisionedMemoryBytesGt(Double provisionedMemoryBytesGt) {
+  public void setProvisionedMemoryBytesGt(Long provisionedMemoryBytesGt) {
     this.provisionedMemoryBytesGt = provisionedMemoryBytesGt;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesGte(Double provisionedMemoryBytesGte) {
+  public ClusterWhereInput provisionedMemoryBytesGte(Long provisionedMemoryBytesGte) {
     
     this.provisionedMemoryBytesGte = provisionedMemoryBytesGte;
     return this;
@@ -10608,25 +10608,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesGte() {
+  public Long getProvisionedMemoryBytesGte() {
     return provisionedMemoryBytesGte;
   }
 
 
-  public void setProvisionedMemoryBytesGte(Double provisionedMemoryBytesGte) {
+  public void setProvisionedMemoryBytesGte(Long provisionedMemoryBytesGte) {
     this.provisionedMemoryBytesGte = provisionedMemoryBytesGte;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesIn(List<Double> provisionedMemoryBytesIn) {
+  public ClusterWhereInput provisionedMemoryBytesIn(List<Long> provisionedMemoryBytesIn) {
     
     this.provisionedMemoryBytesIn = provisionedMemoryBytesIn;
     return this;
   }
 
-  public ClusterWhereInput addProvisionedMemoryBytesInItem(Double provisionedMemoryBytesInItem) {
+  public ClusterWhereInput addProvisionedMemoryBytesInItem(Long provisionedMemoryBytesInItem) {
     if (this.provisionedMemoryBytesIn == null) {
-      this.provisionedMemoryBytesIn = new ArrayList<Double>();
+      this.provisionedMemoryBytesIn = new ArrayList<Long>();
     }
     this.provisionedMemoryBytesIn.add(provisionedMemoryBytesInItem);
     return this;
@@ -10639,17 +10639,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedMemoryBytesIn() {
+  public List<Long> getProvisionedMemoryBytesIn() {
     return provisionedMemoryBytesIn;
   }
 
 
-  public void setProvisionedMemoryBytesIn(List<Double> provisionedMemoryBytesIn) {
+  public void setProvisionedMemoryBytesIn(List<Long> provisionedMemoryBytesIn) {
     this.provisionedMemoryBytesIn = provisionedMemoryBytesIn;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesLt(Double provisionedMemoryBytesLt) {
+  public ClusterWhereInput provisionedMemoryBytesLt(Long provisionedMemoryBytesLt) {
     
     this.provisionedMemoryBytesLt = provisionedMemoryBytesLt;
     return this;
@@ -10662,17 +10662,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesLt() {
+  public Long getProvisionedMemoryBytesLt() {
     return provisionedMemoryBytesLt;
   }
 
 
-  public void setProvisionedMemoryBytesLt(Double provisionedMemoryBytesLt) {
+  public void setProvisionedMemoryBytesLt(Long provisionedMemoryBytesLt) {
     this.provisionedMemoryBytesLt = provisionedMemoryBytesLt;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesLte(Double provisionedMemoryBytesLte) {
+  public ClusterWhereInput provisionedMemoryBytesLte(Long provisionedMemoryBytesLte) {
     
     this.provisionedMemoryBytesLte = provisionedMemoryBytesLte;
     return this;
@@ -10685,17 +10685,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesLte() {
+  public Long getProvisionedMemoryBytesLte() {
     return provisionedMemoryBytesLte;
   }
 
 
-  public void setProvisionedMemoryBytesLte(Double provisionedMemoryBytesLte) {
+  public void setProvisionedMemoryBytesLte(Long provisionedMemoryBytesLte) {
     this.provisionedMemoryBytesLte = provisionedMemoryBytesLte;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesNot(Double provisionedMemoryBytesNot) {
+  public ClusterWhereInput provisionedMemoryBytesNot(Long provisionedMemoryBytesNot) {
     
     this.provisionedMemoryBytesNot = provisionedMemoryBytesNot;
     return this;
@@ -10708,25 +10708,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getProvisionedMemoryBytesNot() {
+  public Long getProvisionedMemoryBytesNot() {
     return provisionedMemoryBytesNot;
   }
 
 
-  public void setProvisionedMemoryBytesNot(Double provisionedMemoryBytesNot) {
+  public void setProvisionedMemoryBytesNot(Long provisionedMemoryBytesNot) {
     this.provisionedMemoryBytesNot = provisionedMemoryBytesNot;
   }
 
 
-  public ClusterWhereInput provisionedMemoryBytesNotIn(List<Double> provisionedMemoryBytesNotIn) {
+  public ClusterWhereInput provisionedMemoryBytesNotIn(List<Long> provisionedMemoryBytesNotIn) {
     
     this.provisionedMemoryBytesNotIn = provisionedMemoryBytesNotIn;
     return this;
   }
 
-  public ClusterWhereInput addProvisionedMemoryBytesNotInItem(Double provisionedMemoryBytesNotInItem) {
+  public ClusterWhereInput addProvisionedMemoryBytesNotInItem(Long provisionedMemoryBytesNotInItem) {
     if (this.provisionedMemoryBytesNotIn == null) {
-      this.provisionedMemoryBytesNotIn = new ArrayList<Double>();
+      this.provisionedMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.provisionedMemoryBytesNotIn.add(provisionedMemoryBytesNotInItem);
     return this;
@@ -10739,12 +10739,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getProvisionedMemoryBytesNotIn() {
+  public List<Long> getProvisionedMemoryBytesNotIn() {
     return provisionedMemoryBytesNotIn;
   }
 
 
-  public void setProvisionedMemoryBytesNotIn(List<Double> provisionedMemoryBytesNotIn) {
+  public void setProvisionedMemoryBytesNotIn(List<Long> provisionedMemoryBytesNotIn) {
     this.provisionedMemoryBytesNotIn = provisionedMemoryBytesNotIn;
   }
 
@@ -10995,7 +10995,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput recoverDataSize(Double recoverDataSize) {
+  public ClusterWhereInput recoverDataSize(Long recoverDataSize) {
     
     this.recoverDataSize = recoverDataSize;
     return this;
@@ -11008,17 +11008,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSize() {
+  public Long getRecoverDataSize() {
     return recoverDataSize;
   }
 
 
-  public void setRecoverDataSize(Double recoverDataSize) {
+  public void setRecoverDataSize(Long recoverDataSize) {
     this.recoverDataSize = recoverDataSize;
   }
 
 
-  public ClusterWhereInput recoverDataSizeGt(Double recoverDataSizeGt) {
+  public ClusterWhereInput recoverDataSizeGt(Long recoverDataSizeGt) {
     
     this.recoverDataSizeGt = recoverDataSizeGt;
     return this;
@@ -11031,17 +11031,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSizeGt() {
+  public Long getRecoverDataSizeGt() {
     return recoverDataSizeGt;
   }
 
 
-  public void setRecoverDataSizeGt(Double recoverDataSizeGt) {
+  public void setRecoverDataSizeGt(Long recoverDataSizeGt) {
     this.recoverDataSizeGt = recoverDataSizeGt;
   }
 
 
-  public ClusterWhereInput recoverDataSizeGte(Double recoverDataSizeGte) {
+  public ClusterWhereInput recoverDataSizeGte(Long recoverDataSizeGte) {
     
     this.recoverDataSizeGte = recoverDataSizeGte;
     return this;
@@ -11054,25 +11054,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSizeGte() {
+  public Long getRecoverDataSizeGte() {
     return recoverDataSizeGte;
   }
 
 
-  public void setRecoverDataSizeGte(Double recoverDataSizeGte) {
+  public void setRecoverDataSizeGte(Long recoverDataSizeGte) {
     this.recoverDataSizeGte = recoverDataSizeGte;
   }
 
 
-  public ClusterWhereInput recoverDataSizeIn(List<Double> recoverDataSizeIn) {
+  public ClusterWhereInput recoverDataSizeIn(List<Long> recoverDataSizeIn) {
     
     this.recoverDataSizeIn = recoverDataSizeIn;
     return this;
   }
 
-  public ClusterWhereInput addRecoverDataSizeInItem(Double recoverDataSizeInItem) {
+  public ClusterWhereInput addRecoverDataSizeInItem(Long recoverDataSizeInItem) {
     if (this.recoverDataSizeIn == null) {
-      this.recoverDataSizeIn = new ArrayList<Double>();
+      this.recoverDataSizeIn = new ArrayList<Long>();
     }
     this.recoverDataSizeIn.add(recoverDataSizeInItem);
     return this;
@@ -11085,17 +11085,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRecoverDataSizeIn() {
+  public List<Long> getRecoverDataSizeIn() {
     return recoverDataSizeIn;
   }
 
 
-  public void setRecoverDataSizeIn(List<Double> recoverDataSizeIn) {
+  public void setRecoverDataSizeIn(List<Long> recoverDataSizeIn) {
     this.recoverDataSizeIn = recoverDataSizeIn;
   }
 
 
-  public ClusterWhereInput recoverDataSizeLt(Double recoverDataSizeLt) {
+  public ClusterWhereInput recoverDataSizeLt(Long recoverDataSizeLt) {
     
     this.recoverDataSizeLt = recoverDataSizeLt;
     return this;
@@ -11108,17 +11108,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSizeLt() {
+  public Long getRecoverDataSizeLt() {
     return recoverDataSizeLt;
   }
 
 
-  public void setRecoverDataSizeLt(Double recoverDataSizeLt) {
+  public void setRecoverDataSizeLt(Long recoverDataSizeLt) {
     this.recoverDataSizeLt = recoverDataSizeLt;
   }
 
 
-  public ClusterWhereInput recoverDataSizeLte(Double recoverDataSizeLte) {
+  public ClusterWhereInput recoverDataSizeLte(Long recoverDataSizeLte) {
     
     this.recoverDataSizeLte = recoverDataSizeLte;
     return this;
@@ -11131,17 +11131,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSizeLte() {
+  public Long getRecoverDataSizeLte() {
     return recoverDataSizeLte;
   }
 
 
-  public void setRecoverDataSizeLte(Double recoverDataSizeLte) {
+  public void setRecoverDataSizeLte(Long recoverDataSizeLte) {
     this.recoverDataSizeLte = recoverDataSizeLte;
   }
 
 
-  public ClusterWhereInput recoverDataSizeNot(Double recoverDataSizeNot) {
+  public ClusterWhereInput recoverDataSizeNot(Long recoverDataSizeNot) {
     
     this.recoverDataSizeNot = recoverDataSizeNot;
     return this;
@@ -11154,25 +11154,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverDataSizeNot() {
+  public Long getRecoverDataSizeNot() {
     return recoverDataSizeNot;
   }
 
 
-  public void setRecoverDataSizeNot(Double recoverDataSizeNot) {
+  public void setRecoverDataSizeNot(Long recoverDataSizeNot) {
     this.recoverDataSizeNot = recoverDataSizeNot;
   }
 
 
-  public ClusterWhereInput recoverDataSizeNotIn(List<Double> recoverDataSizeNotIn) {
+  public ClusterWhereInput recoverDataSizeNotIn(List<Long> recoverDataSizeNotIn) {
     
     this.recoverDataSizeNotIn = recoverDataSizeNotIn;
     return this;
   }
 
-  public ClusterWhereInput addRecoverDataSizeNotInItem(Double recoverDataSizeNotInItem) {
+  public ClusterWhereInput addRecoverDataSizeNotInItem(Long recoverDataSizeNotInItem) {
     if (this.recoverDataSizeNotIn == null) {
-      this.recoverDataSizeNotIn = new ArrayList<Double>();
+      this.recoverDataSizeNotIn = new ArrayList<Long>();
     }
     this.recoverDataSizeNotIn.add(recoverDataSizeNotInItem);
     return this;
@@ -11185,17 +11185,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRecoverDataSizeNotIn() {
+  public List<Long> getRecoverDataSizeNotIn() {
     return recoverDataSizeNotIn;
   }
 
 
-  public void setRecoverDataSizeNotIn(List<Double> recoverDataSizeNotIn) {
+  public void setRecoverDataSizeNotIn(List<Long> recoverDataSizeNotIn) {
     this.recoverDataSizeNotIn = recoverDataSizeNotIn;
   }
 
 
-  public ClusterWhereInput recoverSpeed(Double recoverSpeed) {
+  public ClusterWhereInput recoverSpeed(Long recoverSpeed) {
     
     this.recoverSpeed = recoverSpeed;
     return this;
@@ -11208,17 +11208,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeed() {
+  public Long getRecoverSpeed() {
     return recoverSpeed;
   }
 
 
-  public void setRecoverSpeed(Double recoverSpeed) {
+  public void setRecoverSpeed(Long recoverSpeed) {
     this.recoverSpeed = recoverSpeed;
   }
 
 
-  public ClusterWhereInput recoverSpeedGt(Double recoverSpeedGt) {
+  public ClusterWhereInput recoverSpeedGt(Long recoverSpeedGt) {
     
     this.recoverSpeedGt = recoverSpeedGt;
     return this;
@@ -11231,17 +11231,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeedGt() {
+  public Long getRecoverSpeedGt() {
     return recoverSpeedGt;
   }
 
 
-  public void setRecoverSpeedGt(Double recoverSpeedGt) {
+  public void setRecoverSpeedGt(Long recoverSpeedGt) {
     this.recoverSpeedGt = recoverSpeedGt;
   }
 
 
-  public ClusterWhereInput recoverSpeedGte(Double recoverSpeedGte) {
+  public ClusterWhereInput recoverSpeedGte(Long recoverSpeedGte) {
     
     this.recoverSpeedGte = recoverSpeedGte;
     return this;
@@ -11254,25 +11254,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeedGte() {
+  public Long getRecoverSpeedGte() {
     return recoverSpeedGte;
   }
 
 
-  public void setRecoverSpeedGte(Double recoverSpeedGte) {
+  public void setRecoverSpeedGte(Long recoverSpeedGte) {
     this.recoverSpeedGte = recoverSpeedGte;
   }
 
 
-  public ClusterWhereInput recoverSpeedIn(List<Double> recoverSpeedIn) {
+  public ClusterWhereInput recoverSpeedIn(List<Long> recoverSpeedIn) {
     
     this.recoverSpeedIn = recoverSpeedIn;
     return this;
   }
 
-  public ClusterWhereInput addRecoverSpeedInItem(Double recoverSpeedInItem) {
+  public ClusterWhereInput addRecoverSpeedInItem(Long recoverSpeedInItem) {
     if (this.recoverSpeedIn == null) {
-      this.recoverSpeedIn = new ArrayList<Double>();
+      this.recoverSpeedIn = new ArrayList<Long>();
     }
     this.recoverSpeedIn.add(recoverSpeedInItem);
     return this;
@@ -11285,17 +11285,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRecoverSpeedIn() {
+  public List<Long> getRecoverSpeedIn() {
     return recoverSpeedIn;
   }
 
 
-  public void setRecoverSpeedIn(List<Double> recoverSpeedIn) {
+  public void setRecoverSpeedIn(List<Long> recoverSpeedIn) {
     this.recoverSpeedIn = recoverSpeedIn;
   }
 
 
-  public ClusterWhereInput recoverSpeedLt(Double recoverSpeedLt) {
+  public ClusterWhereInput recoverSpeedLt(Long recoverSpeedLt) {
     
     this.recoverSpeedLt = recoverSpeedLt;
     return this;
@@ -11308,17 +11308,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeedLt() {
+  public Long getRecoverSpeedLt() {
     return recoverSpeedLt;
   }
 
 
-  public void setRecoverSpeedLt(Double recoverSpeedLt) {
+  public void setRecoverSpeedLt(Long recoverSpeedLt) {
     this.recoverSpeedLt = recoverSpeedLt;
   }
 
 
-  public ClusterWhereInput recoverSpeedLte(Double recoverSpeedLte) {
+  public ClusterWhereInput recoverSpeedLte(Long recoverSpeedLte) {
     
     this.recoverSpeedLte = recoverSpeedLte;
     return this;
@@ -11331,17 +11331,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeedLte() {
+  public Long getRecoverSpeedLte() {
     return recoverSpeedLte;
   }
 
 
-  public void setRecoverSpeedLte(Double recoverSpeedLte) {
+  public void setRecoverSpeedLte(Long recoverSpeedLte) {
     this.recoverSpeedLte = recoverSpeedLte;
   }
 
 
-  public ClusterWhereInput recoverSpeedNot(Double recoverSpeedNot) {
+  public ClusterWhereInput recoverSpeedNot(Long recoverSpeedNot) {
     
     this.recoverSpeedNot = recoverSpeedNot;
     return this;
@@ -11354,25 +11354,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getRecoverSpeedNot() {
+  public Long getRecoverSpeedNot() {
     return recoverSpeedNot;
   }
 
 
-  public void setRecoverSpeedNot(Double recoverSpeedNot) {
+  public void setRecoverSpeedNot(Long recoverSpeedNot) {
     this.recoverSpeedNot = recoverSpeedNot;
   }
 
 
-  public ClusterWhereInput recoverSpeedNotIn(List<Double> recoverSpeedNotIn) {
+  public ClusterWhereInput recoverSpeedNotIn(List<Long> recoverSpeedNotIn) {
     
     this.recoverSpeedNotIn = recoverSpeedNotIn;
     return this;
   }
 
-  public ClusterWhereInput addRecoverSpeedNotInItem(Double recoverSpeedNotInItem) {
+  public ClusterWhereInput addRecoverSpeedNotInItem(Long recoverSpeedNotInItem) {
     if (this.recoverSpeedNotIn == null) {
-      this.recoverSpeedNotIn = new ArrayList<Double>();
+      this.recoverSpeedNotIn = new ArrayList<Long>();
     }
     this.recoverSpeedNotIn.add(recoverSpeedNotInItem);
     return this;
@@ -11385,12 +11385,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getRecoverSpeedNotIn() {
+  public List<Long> getRecoverSpeedNotIn() {
     return recoverSpeedNotIn;
   }
 
 
-  public void setRecoverSpeedNotIn(List<Double> recoverSpeedNotIn) {
+  public void setRecoverSpeedNotIn(List<Long> recoverSpeedNotIn) {
     this.recoverSpeedNotIn = recoverSpeedNotIn;
   }
 
@@ -12372,7 +12372,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput totalCacheCapacity(Double totalCacheCapacity) {
+  public ClusterWhereInput totalCacheCapacity(Long totalCacheCapacity) {
     
     this.totalCacheCapacity = totalCacheCapacity;
     return this;
@@ -12385,17 +12385,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacity() {
+  public Long getTotalCacheCapacity() {
     return totalCacheCapacity;
   }
 
 
-  public void setTotalCacheCapacity(Double totalCacheCapacity) {
+  public void setTotalCacheCapacity(Long totalCacheCapacity) {
     this.totalCacheCapacity = totalCacheCapacity;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityGt(Double totalCacheCapacityGt) {
+  public ClusterWhereInput totalCacheCapacityGt(Long totalCacheCapacityGt) {
     
     this.totalCacheCapacityGt = totalCacheCapacityGt;
     return this;
@@ -12408,17 +12408,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityGt() {
+  public Long getTotalCacheCapacityGt() {
     return totalCacheCapacityGt;
   }
 
 
-  public void setTotalCacheCapacityGt(Double totalCacheCapacityGt) {
+  public void setTotalCacheCapacityGt(Long totalCacheCapacityGt) {
     this.totalCacheCapacityGt = totalCacheCapacityGt;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityGte(Double totalCacheCapacityGte) {
+  public ClusterWhereInput totalCacheCapacityGte(Long totalCacheCapacityGte) {
     
     this.totalCacheCapacityGte = totalCacheCapacityGte;
     return this;
@@ -12431,25 +12431,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityGte() {
+  public Long getTotalCacheCapacityGte() {
     return totalCacheCapacityGte;
   }
 
 
-  public void setTotalCacheCapacityGte(Double totalCacheCapacityGte) {
+  public void setTotalCacheCapacityGte(Long totalCacheCapacityGte) {
     this.totalCacheCapacityGte = totalCacheCapacityGte;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityIn(List<Double> totalCacheCapacityIn) {
+  public ClusterWhereInput totalCacheCapacityIn(List<Long> totalCacheCapacityIn) {
     
     this.totalCacheCapacityIn = totalCacheCapacityIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCacheCapacityInItem(Double totalCacheCapacityInItem) {
+  public ClusterWhereInput addTotalCacheCapacityInItem(Long totalCacheCapacityInItem) {
     if (this.totalCacheCapacityIn == null) {
-      this.totalCacheCapacityIn = new ArrayList<Double>();
+      this.totalCacheCapacityIn = new ArrayList<Long>();
     }
     this.totalCacheCapacityIn.add(totalCacheCapacityInItem);
     return this;
@@ -12462,17 +12462,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCacheCapacityIn() {
+  public List<Long> getTotalCacheCapacityIn() {
     return totalCacheCapacityIn;
   }
 
 
-  public void setTotalCacheCapacityIn(List<Double> totalCacheCapacityIn) {
+  public void setTotalCacheCapacityIn(List<Long> totalCacheCapacityIn) {
     this.totalCacheCapacityIn = totalCacheCapacityIn;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityLt(Double totalCacheCapacityLt) {
+  public ClusterWhereInput totalCacheCapacityLt(Long totalCacheCapacityLt) {
     
     this.totalCacheCapacityLt = totalCacheCapacityLt;
     return this;
@@ -12485,17 +12485,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityLt() {
+  public Long getTotalCacheCapacityLt() {
     return totalCacheCapacityLt;
   }
 
 
-  public void setTotalCacheCapacityLt(Double totalCacheCapacityLt) {
+  public void setTotalCacheCapacityLt(Long totalCacheCapacityLt) {
     this.totalCacheCapacityLt = totalCacheCapacityLt;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityLte(Double totalCacheCapacityLte) {
+  public ClusterWhereInput totalCacheCapacityLte(Long totalCacheCapacityLte) {
     
     this.totalCacheCapacityLte = totalCacheCapacityLte;
     return this;
@@ -12508,17 +12508,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityLte() {
+  public Long getTotalCacheCapacityLte() {
     return totalCacheCapacityLte;
   }
 
 
-  public void setTotalCacheCapacityLte(Double totalCacheCapacityLte) {
+  public void setTotalCacheCapacityLte(Long totalCacheCapacityLte) {
     this.totalCacheCapacityLte = totalCacheCapacityLte;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityNot(Double totalCacheCapacityNot) {
+  public ClusterWhereInput totalCacheCapacityNot(Long totalCacheCapacityNot) {
     
     this.totalCacheCapacityNot = totalCacheCapacityNot;
     return this;
@@ -12531,25 +12531,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCacheCapacityNot() {
+  public Long getTotalCacheCapacityNot() {
     return totalCacheCapacityNot;
   }
 
 
-  public void setTotalCacheCapacityNot(Double totalCacheCapacityNot) {
+  public void setTotalCacheCapacityNot(Long totalCacheCapacityNot) {
     this.totalCacheCapacityNot = totalCacheCapacityNot;
   }
 
 
-  public ClusterWhereInput totalCacheCapacityNotIn(List<Double> totalCacheCapacityNotIn) {
+  public ClusterWhereInput totalCacheCapacityNotIn(List<Long> totalCacheCapacityNotIn) {
     
     this.totalCacheCapacityNotIn = totalCacheCapacityNotIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCacheCapacityNotInItem(Double totalCacheCapacityNotInItem) {
+  public ClusterWhereInput addTotalCacheCapacityNotInItem(Long totalCacheCapacityNotInItem) {
     if (this.totalCacheCapacityNotIn == null) {
-      this.totalCacheCapacityNotIn = new ArrayList<Double>();
+      this.totalCacheCapacityNotIn = new ArrayList<Long>();
     }
     this.totalCacheCapacityNotIn.add(totalCacheCapacityNotInItem);
     return this;
@@ -12562,12 +12562,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCacheCapacityNotIn() {
+  public List<Long> getTotalCacheCapacityNotIn() {
     return totalCacheCapacityNotIn;
   }
 
 
-  public void setTotalCacheCapacityNotIn(List<Double> totalCacheCapacityNotIn) {
+  public void setTotalCacheCapacityNotIn(List<Long> totalCacheCapacityNotIn) {
     this.totalCacheCapacityNotIn = totalCacheCapacityNotIn;
   }
 
@@ -12772,7 +12772,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput totalCpuHz(Double totalCpuHz) {
+  public ClusterWhereInput totalCpuHz(Long totalCpuHz) {
     
     this.totalCpuHz = totalCpuHz;
     return this;
@@ -12785,17 +12785,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHz() {
+  public Long getTotalCpuHz() {
     return totalCpuHz;
   }
 
 
-  public void setTotalCpuHz(Double totalCpuHz) {
+  public void setTotalCpuHz(Long totalCpuHz) {
     this.totalCpuHz = totalCpuHz;
   }
 
 
-  public ClusterWhereInput totalCpuHzGt(Double totalCpuHzGt) {
+  public ClusterWhereInput totalCpuHzGt(Long totalCpuHzGt) {
     
     this.totalCpuHzGt = totalCpuHzGt;
     return this;
@@ -12808,17 +12808,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGt() {
+  public Long getTotalCpuHzGt() {
     return totalCpuHzGt;
   }
 
 
-  public void setTotalCpuHzGt(Double totalCpuHzGt) {
+  public void setTotalCpuHzGt(Long totalCpuHzGt) {
     this.totalCpuHzGt = totalCpuHzGt;
   }
 
 
-  public ClusterWhereInput totalCpuHzGte(Double totalCpuHzGte) {
+  public ClusterWhereInput totalCpuHzGte(Long totalCpuHzGte) {
     
     this.totalCpuHzGte = totalCpuHzGte;
     return this;
@@ -12831,25 +12831,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzGte() {
+  public Long getTotalCpuHzGte() {
     return totalCpuHzGte;
   }
 
 
-  public void setTotalCpuHzGte(Double totalCpuHzGte) {
+  public void setTotalCpuHzGte(Long totalCpuHzGte) {
     this.totalCpuHzGte = totalCpuHzGte;
   }
 
 
-  public ClusterWhereInput totalCpuHzIn(List<Double> totalCpuHzIn) {
+  public ClusterWhereInput totalCpuHzIn(List<Long> totalCpuHzIn) {
     
     this.totalCpuHzIn = totalCpuHzIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCpuHzInItem(Double totalCpuHzInItem) {
+  public ClusterWhereInput addTotalCpuHzInItem(Long totalCpuHzInItem) {
     if (this.totalCpuHzIn == null) {
-      this.totalCpuHzIn = new ArrayList<Double>();
+      this.totalCpuHzIn = new ArrayList<Long>();
     }
     this.totalCpuHzIn.add(totalCpuHzInItem);
     return this;
@@ -12862,17 +12862,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzIn() {
+  public List<Long> getTotalCpuHzIn() {
     return totalCpuHzIn;
   }
 
 
-  public void setTotalCpuHzIn(List<Double> totalCpuHzIn) {
+  public void setTotalCpuHzIn(List<Long> totalCpuHzIn) {
     this.totalCpuHzIn = totalCpuHzIn;
   }
 
 
-  public ClusterWhereInput totalCpuHzLt(Double totalCpuHzLt) {
+  public ClusterWhereInput totalCpuHzLt(Long totalCpuHzLt) {
     
     this.totalCpuHzLt = totalCpuHzLt;
     return this;
@@ -12885,17 +12885,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLt() {
+  public Long getTotalCpuHzLt() {
     return totalCpuHzLt;
   }
 
 
-  public void setTotalCpuHzLt(Double totalCpuHzLt) {
+  public void setTotalCpuHzLt(Long totalCpuHzLt) {
     this.totalCpuHzLt = totalCpuHzLt;
   }
 
 
-  public ClusterWhereInput totalCpuHzLte(Double totalCpuHzLte) {
+  public ClusterWhereInput totalCpuHzLte(Long totalCpuHzLte) {
     
     this.totalCpuHzLte = totalCpuHzLte;
     return this;
@@ -12908,17 +12908,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzLte() {
+  public Long getTotalCpuHzLte() {
     return totalCpuHzLte;
   }
 
 
-  public void setTotalCpuHzLte(Double totalCpuHzLte) {
+  public void setTotalCpuHzLte(Long totalCpuHzLte) {
     this.totalCpuHzLte = totalCpuHzLte;
   }
 
 
-  public ClusterWhereInput totalCpuHzNot(Double totalCpuHzNot) {
+  public ClusterWhereInput totalCpuHzNot(Long totalCpuHzNot) {
     
     this.totalCpuHzNot = totalCpuHzNot;
     return this;
@@ -12931,25 +12931,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalCpuHzNot() {
+  public Long getTotalCpuHzNot() {
     return totalCpuHzNot;
   }
 
 
-  public void setTotalCpuHzNot(Double totalCpuHzNot) {
+  public void setTotalCpuHzNot(Long totalCpuHzNot) {
     this.totalCpuHzNot = totalCpuHzNot;
   }
 
 
-  public ClusterWhereInput totalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public ClusterWhereInput totalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     
     this.totalCpuHzNotIn = totalCpuHzNotIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalCpuHzNotInItem(Double totalCpuHzNotInItem) {
+  public ClusterWhereInput addTotalCpuHzNotInItem(Long totalCpuHzNotInItem) {
     if (this.totalCpuHzNotIn == null) {
-      this.totalCpuHzNotIn = new ArrayList<Double>();
+      this.totalCpuHzNotIn = new ArrayList<Long>();
     }
     this.totalCpuHzNotIn.add(totalCpuHzNotInItem);
     return this;
@@ -12962,12 +12962,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalCpuHzNotIn() {
+  public List<Long> getTotalCpuHzNotIn() {
     return totalCpuHzNotIn;
   }
 
 
-  public void setTotalCpuHzNotIn(List<Double> totalCpuHzNotIn) {
+  public void setTotalCpuHzNotIn(List<Long> totalCpuHzNotIn) {
     this.totalCpuHzNotIn = totalCpuHzNotIn;
   }
 
@@ -13172,7 +13172,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput totalDataCapacity(Double totalDataCapacity) {
+  public ClusterWhereInput totalDataCapacity(Long totalDataCapacity) {
     
     this.totalDataCapacity = totalDataCapacity;
     return this;
@@ -13185,17 +13185,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacity() {
+  public Long getTotalDataCapacity() {
     return totalDataCapacity;
   }
 
 
-  public void setTotalDataCapacity(Double totalDataCapacity) {
+  public void setTotalDataCapacity(Long totalDataCapacity) {
     this.totalDataCapacity = totalDataCapacity;
   }
 
 
-  public ClusterWhereInput totalDataCapacityGt(Double totalDataCapacityGt) {
+  public ClusterWhereInput totalDataCapacityGt(Long totalDataCapacityGt) {
     
     this.totalDataCapacityGt = totalDataCapacityGt;
     return this;
@@ -13208,17 +13208,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGt() {
+  public Long getTotalDataCapacityGt() {
     return totalDataCapacityGt;
   }
 
 
-  public void setTotalDataCapacityGt(Double totalDataCapacityGt) {
+  public void setTotalDataCapacityGt(Long totalDataCapacityGt) {
     this.totalDataCapacityGt = totalDataCapacityGt;
   }
 
 
-  public ClusterWhereInput totalDataCapacityGte(Double totalDataCapacityGte) {
+  public ClusterWhereInput totalDataCapacityGte(Long totalDataCapacityGte) {
     
     this.totalDataCapacityGte = totalDataCapacityGte;
     return this;
@@ -13231,25 +13231,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityGte() {
+  public Long getTotalDataCapacityGte() {
     return totalDataCapacityGte;
   }
 
 
-  public void setTotalDataCapacityGte(Double totalDataCapacityGte) {
+  public void setTotalDataCapacityGte(Long totalDataCapacityGte) {
     this.totalDataCapacityGte = totalDataCapacityGte;
   }
 
 
-  public ClusterWhereInput totalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public ClusterWhereInput totalDataCapacityIn(List<Long> totalDataCapacityIn) {
     
     this.totalDataCapacityIn = totalDataCapacityIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalDataCapacityInItem(Double totalDataCapacityInItem) {
+  public ClusterWhereInput addTotalDataCapacityInItem(Long totalDataCapacityInItem) {
     if (this.totalDataCapacityIn == null) {
-      this.totalDataCapacityIn = new ArrayList<Double>();
+      this.totalDataCapacityIn = new ArrayList<Long>();
     }
     this.totalDataCapacityIn.add(totalDataCapacityInItem);
     return this;
@@ -13262,17 +13262,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityIn() {
+  public List<Long> getTotalDataCapacityIn() {
     return totalDataCapacityIn;
   }
 
 
-  public void setTotalDataCapacityIn(List<Double> totalDataCapacityIn) {
+  public void setTotalDataCapacityIn(List<Long> totalDataCapacityIn) {
     this.totalDataCapacityIn = totalDataCapacityIn;
   }
 
 
-  public ClusterWhereInput totalDataCapacityLt(Double totalDataCapacityLt) {
+  public ClusterWhereInput totalDataCapacityLt(Long totalDataCapacityLt) {
     
     this.totalDataCapacityLt = totalDataCapacityLt;
     return this;
@@ -13285,17 +13285,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLt() {
+  public Long getTotalDataCapacityLt() {
     return totalDataCapacityLt;
   }
 
 
-  public void setTotalDataCapacityLt(Double totalDataCapacityLt) {
+  public void setTotalDataCapacityLt(Long totalDataCapacityLt) {
     this.totalDataCapacityLt = totalDataCapacityLt;
   }
 
 
-  public ClusterWhereInput totalDataCapacityLte(Double totalDataCapacityLte) {
+  public ClusterWhereInput totalDataCapacityLte(Long totalDataCapacityLte) {
     
     this.totalDataCapacityLte = totalDataCapacityLte;
     return this;
@@ -13308,17 +13308,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityLte() {
+  public Long getTotalDataCapacityLte() {
     return totalDataCapacityLte;
   }
 
 
-  public void setTotalDataCapacityLte(Double totalDataCapacityLte) {
+  public void setTotalDataCapacityLte(Long totalDataCapacityLte) {
     this.totalDataCapacityLte = totalDataCapacityLte;
   }
 
 
-  public ClusterWhereInput totalDataCapacityNot(Double totalDataCapacityNot) {
+  public ClusterWhereInput totalDataCapacityNot(Long totalDataCapacityNot) {
     
     this.totalDataCapacityNot = totalDataCapacityNot;
     return this;
@@ -13331,25 +13331,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalDataCapacityNot() {
+  public Long getTotalDataCapacityNot() {
     return totalDataCapacityNot;
   }
 
 
-  public void setTotalDataCapacityNot(Double totalDataCapacityNot) {
+  public void setTotalDataCapacityNot(Long totalDataCapacityNot) {
     this.totalDataCapacityNot = totalDataCapacityNot;
   }
 
 
-  public ClusterWhereInput totalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public ClusterWhereInput totalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalDataCapacityNotInItem(Double totalDataCapacityNotInItem) {
+  public ClusterWhereInput addTotalDataCapacityNotInItem(Long totalDataCapacityNotInItem) {
     if (this.totalDataCapacityNotIn == null) {
-      this.totalDataCapacityNotIn = new ArrayList<Double>();
+      this.totalDataCapacityNotIn = new ArrayList<Long>();
     }
     this.totalDataCapacityNotIn.add(totalDataCapacityNotInItem);
     return this;
@@ -13362,17 +13362,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalDataCapacityNotIn() {
+  public List<Long> getTotalDataCapacityNotIn() {
     return totalDataCapacityNotIn;
   }
 
 
-  public void setTotalDataCapacityNotIn(List<Double> totalDataCapacityNotIn) {
+  public void setTotalDataCapacityNotIn(List<Long> totalDataCapacityNotIn) {
     this.totalDataCapacityNotIn = totalDataCapacityNotIn;
   }
 
 
-  public ClusterWhereInput totalMemoryBytes(Double totalMemoryBytes) {
+  public ClusterWhereInput totalMemoryBytes(Long totalMemoryBytes) {
     
     this.totalMemoryBytes = totalMemoryBytes;
     return this;
@@ -13385,17 +13385,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytes() {
+  public Long getTotalMemoryBytes() {
     return totalMemoryBytes;
   }
 
 
-  public void setTotalMemoryBytes(Double totalMemoryBytes) {
+  public void setTotalMemoryBytes(Long totalMemoryBytes) {
     this.totalMemoryBytes = totalMemoryBytes;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public ClusterWhereInput totalMemoryBytesGt(Long totalMemoryBytesGt) {
     
     this.totalMemoryBytesGt = totalMemoryBytesGt;
     return this;
@@ -13408,17 +13408,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGt() {
+  public Long getTotalMemoryBytesGt() {
     return totalMemoryBytesGt;
   }
 
 
-  public void setTotalMemoryBytesGt(Double totalMemoryBytesGt) {
+  public void setTotalMemoryBytesGt(Long totalMemoryBytesGt) {
     this.totalMemoryBytesGt = totalMemoryBytesGt;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public ClusterWhereInput totalMemoryBytesGte(Long totalMemoryBytesGte) {
     
     this.totalMemoryBytesGte = totalMemoryBytesGte;
     return this;
@@ -13431,25 +13431,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesGte() {
+  public Long getTotalMemoryBytesGte() {
     return totalMemoryBytesGte;
   }
 
 
-  public void setTotalMemoryBytesGte(Double totalMemoryBytesGte) {
+  public void setTotalMemoryBytesGte(Long totalMemoryBytesGte) {
     this.totalMemoryBytesGte = totalMemoryBytesGte;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public ClusterWhereInput totalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     
     this.totalMemoryBytesIn = totalMemoryBytesIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalMemoryBytesInItem(Double totalMemoryBytesInItem) {
+  public ClusterWhereInput addTotalMemoryBytesInItem(Long totalMemoryBytesInItem) {
     if (this.totalMemoryBytesIn == null) {
-      this.totalMemoryBytesIn = new ArrayList<Double>();
+      this.totalMemoryBytesIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesIn.add(totalMemoryBytesInItem);
     return this;
@@ -13462,17 +13462,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesIn() {
+  public List<Long> getTotalMemoryBytesIn() {
     return totalMemoryBytesIn;
   }
 
 
-  public void setTotalMemoryBytesIn(List<Double> totalMemoryBytesIn) {
+  public void setTotalMemoryBytesIn(List<Long> totalMemoryBytesIn) {
     this.totalMemoryBytesIn = totalMemoryBytesIn;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public ClusterWhereInput totalMemoryBytesLt(Long totalMemoryBytesLt) {
     
     this.totalMemoryBytesLt = totalMemoryBytesLt;
     return this;
@@ -13485,17 +13485,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLt() {
+  public Long getTotalMemoryBytesLt() {
     return totalMemoryBytesLt;
   }
 
 
-  public void setTotalMemoryBytesLt(Double totalMemoryBytesLt) {
+  public void setTotalMemoryBytesLt(Long totalMemoryBytesLt) {
     this.totalMemoryBytesLt = totalMemoryBytesLt;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public ClusterWhereInput totalMemoryBytesLte(Long totalMemoryBytesLte) {
     
     this.totalMemoryBytesLte = totalMemoryBytesLte;
     return this;
@@ -13508,17 +13508,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesLte() {
+  public Long getTotalMemoryBytesLte() {
     return totalMemoryBytesLte;
   }
 
 
-  public void setTotalMemoryBytesLte(Double totalMemoryBytesLte) {
+  public void setTotalMemoryBytesLte(Long totalMemoryBytesLte) {
     this.totalMemoryBytesLte = totalMemoryBytesLte;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public ClusterWhereInput totalMemoryBytesNot(Long totalMemoryBytesNot) {
     
     this.totalMemoryBytesNot = totalMemoryBytesNot;
     return this;
@@ -13531,25 +13531,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getTotalMemoryBytesNot() {
+  public Long getTotalMemoryBytesNot() {
     return totalMemoryBytesNot;
   }
 
 
-  public void setTotalMemoryBytesNot(Double totalMemoryBytesNot) {
+  public void setTotalMemoryBytesNot(Long totalMemoryBytesNot) {
     this.totalMemoryBytesNot = totalMemoryBytesNot;
   }
 
 
-  public ClusterWhereInput totalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public ClusterWhereInput totalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
     return this;
   }
 
-  public ClusterWhereInput addTotalMemoryBytesNotInItem(Double totalMemoryBytesNotInItem) {
+  public ClusterWhereInput addTotalMemoryBytesNotInItem(Long totalMemoryBytesNotInItem) {
     if (this.totalMemoryBytesNotIn == null) {
-      this.totalMemoryBytesNotIn = new ArrayList<Double>();
+      this.totalMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.totalMemoryBytesNotIn.add(totalMemoryBytesNotInItem);
     return this;
@@ -13562,12 +13562,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getTotalMemoryBytesNotIn() {
+  public List<Long> getTotalMemoryBytesNotIn() {
     return totalMemoryBytesNotIn;
   }
 
 
-  public void setTotalMemoryBytesNotIn(List<Double> totalMemoryBytesNotIn) {
+  public void setTotalMemoryBytesNotIn(List<Long> totalMemoryBytesNotIn) {
     this.totalMemoryBytesNotIn = totalMemoryBytesNotIn;
   }
 
@@ -14018,7 +14018,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput usedCpuHz(Double usedCpuHz) {
+  public ClusterWhereInput usedCpuHz(Long usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -14031,17 +14031,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHz() {
+  public Long getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Double usedCpuHz) {
+  public void setUsedCpuHz(Long usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public ClusterWhereInput usedCpuHzGt(Double usedCpuHzGt) {
+  public ClusterWhereInput usedCpuHzGt(Long usedCpuHzGt) {
     
     this.usedCpuHzGt = usedCpuHzGt;
     return this;
@@ -14054,17 +14054,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzGt() {
+  public Long getUsedCpuHzGt() {
     return usedCpuHzGt;
   }
 
 
-  public void setUsedCpuHzGt(Double usedCpuHzGt) {
+  public void setUsedCpuHzGt(Long usedCpuHzGt) {
     this.usedCpuHzGt = usedCpuHzGt;
   }
 
 
-  public ClusterWhereInput usedCpuHzGte(Double usedCpuHzGte) {
+  public ClusterWhereInput usedCpuHzGte(Long usedCpuHzGte) {
     
     this.usedCpuHzGte = usedCpuHzGte;
     return this;
@@ -14077,25 +14077,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzGte() {
+  public Long getUsedCpuHzGte() {
     return usedCpuHzGte;
   }
 
 
-  public void setUsedCpuHzGte(Double usedCpuHzGte) {
+  public void setUsedCpuHzGte(Long usedCpuHzGte) {
     this.usedCpuHzGte = usedCpuHzGte;
   }
 
 
-  public ClusterWhereInput usedCpuHzIn(List<Double> usedCpuHzIn) {
+  public ClusterWhereInput usedCpuHzIn(List<Long> usedCpuHzIn) {
     
     this.usedCpuHzIn = usedCpuHzIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedCpuHzInItem(Double usedCpuHzInItem) {
+  public ClusterWhereInput addUsedCpuHzInItem(Long usedCpuHzInItem) {
     if (this.usedCpuHzIn == null) {
-      this.usedCpuHzIn = new ArrayList<Double>();
+      this.usedCpuHzIn = new ArrayList<Long>();
     }
     this.usedCpuHzIn.add(usedCpuHzInItem);
     return this;
@@ -14108,17 +14108,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedCpuHzIn() {
+  public List<Long> getUsedCpuHzIn() {
     return usedCpuHzIn;
   }
 
 
-  public void setUsedCpuHzIn(List<Double> usedCpuHzIn) {
+  public void setUsedCpuHzIn(List<Long> usedCpuHzIn) {
     this.usedCpuHzIn = usedCpuHzIn;
   }
 
 
-  public ClusterWhereInput usedCpuHzLt(Double usedCpuHzLt) {
+  public ClusterWhereInput usedCpuHzLt(Long usedCpuHzLt) {
     
     this.usedCpuHzLt = usedCpuHzLt;
     return this;
@@ -14131,17 +14131,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzLt() {
+  public Long getUsedCpuHzLt() {
     return usedCpuHzLt;
   }
 
 
-  public void setUsedCpuHzLt(Double usedCpuHzLt) {
+  public void setUsedCpuHzLt(Long usedCpuHzLt) {
     this.usedCpuHzLt = usedCpuHzLt;
   }
 
 
-  public ClusterWhereInput usedCpuHzLte(Double usedCpuHzLte) {
+  public ClusterWhereInput usedCpuHzLte(Long usedCpuHzLte) {
     
     this.usedCpuHzLte = usedCpuHzLte;
     return this;
@@ -14154,17 +14154,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzLte() {
+  public Long getUsedCpuHzLte() {
     return usedCpuHzLte;
   }
 
 
-  public void setUsedCpuHzLte(Double usedCpuHzLte) {
+  public void setUsedCpuHzLte(Long usedCpuHzLte) {
     this.usedCpuHzLte = usedCpuHzLte;
   }
 
 
-  public ClusterWhereInput usedCpuHzNot(Double usedCpuHzNot) {
+  public ClusterWhereInput usedCpuHzNot(Long usedCpuHzNot) {
     
     this.usedCpuHzNot = usedCpuHzNot;
     return this;
@@ -14177,25 +14177,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedCpuHzNot() {
+  public Long getUsedCpuHzNot() {
     return usedCpuHzNot;
   }
 
 
-  public void setUsedCpuHzNot(Double usedCpuHzNot) {
+  public void setUsedCpuHzNot(Long usedCpuHzNot) {
     this.usedCpuHzNot = usedCpuHzNot;
   }
 
 
-  public ClusterWhereInput usedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
+  public ClusterWhereInput usedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
     
     this.usedCpuHzNotIn = usedCpuHzNotIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedCpuHzNotInItem(Double usedCpuHzNotInItem) {
+  public ClusterWhereInput addUsedCpuHzNotInItem(Long usedCpuHzNotInItem) {
     if (this.usedCpuHzNotIn == null) {
-      this.usedCpuHzNotIn = new ArrayList<Double>();
+      this.usedCpuHzNotIn = new ArrayList<Long>();
     }
     this.usedCpuHzNotIn.add(usedCpuHzNotInItem);
     return this;
@@ -14208,17 +14208,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedCpuHzNotIn() {
+  public List<Long> getUsedCpuHzNotIn() {
     return usedCpuHzNotIn;
   }
 
 
-  public void setUsedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
+  public void setUsedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
     this.usedCpuHzNotIn = usedCpuHzNotIn;
   }
 
 
-  public ClusterWhereInput usedDataSpace(Double usedDataSpace) {
+  public ClusterWhereInput usedDataSpace(Long usedDataSpace) {
     
     this.usedDataSpace = usedDataSpace;
     return this;
@@ -14231,17 +14231,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpace() {
+  public Long getUsedDataSpace() {
     return usedDataSpace;
   }
 
 
-  public void setUsedDataSpace(Double usedDataSpace) {
+  public void setUsedDataSpace(Long usedDataSpace) {
     this.usedDataSpace = usedDataSpace;
   }
 
 
-  public ClusterWhereInput usedDataSpaceGt(Double usedDataSpaceGt) {
+  public ClusterWhereInput usedDataSpaceGt(Long usedDataSpaceGt) {
     
     this.usedDataSpaceGt = usedDataSpaceGt;
     return this;
@@ -14254,17 +14254,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGt() {
+  public Long getUsedDataSpaceGt() {
     return usedDataSpaceGt;
   }
 
 
-  public void setUsedDataSpaceGt(Double usedDataSpaceGt) {
+  public void setUsedDataSpaceGt(Long usedDataSpaceGt) {
     this.usedDataSpaceGt = usedDataSpaceGt;
   }
 
 
-  public ClusterWhereInput usedDataSpaceGte(Double usedDataSpaceGte) {
+  public ClusterWhereInput usedDataSpaceGte(Long usedDataSpaceGte) {
     
     this.usedDataSpaceGte = usedDataSpaceGte;
     return this;
@@ -14277,25 +14277,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceGte() {
+  public Long getUsedDataSpaceGte() {
     return usedDataSpaceGte;
   }
 
 
-  public void setUsedDataSpaceGte(Double usedDataSpaceGte) {
+  public void setUsedDataSpaceGte(Long usedDataSpaceGte) {
     this.usedDataSpaceGte = usedDataSpaceGte;
   }
 
 
-  public ClusterWhereInput usedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public ClusterWhereInput usedDataSpaceIn(List<Long> usedDataSpaceIn) {
     
     this.usedDataSpaceIn = usedDataSpaceIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedDataSpaceInItem(Double usedDataSpaceInItem) {
+  public ClusterWhereInput addUsedDataSpaceInItem(Long usedDataSpaceInItem) {
     if (this.usedDataSpaceIn == null) {
-      this.usedDataSpaceIn = new ArrayList<Double>();
+      this.usedDataSpaceIn = new ArrayList<Long>();
     }
     this.usedDataSpaceIn.add(usedDataSpaceInItem);
     return this;
@@ -14308,17 +14308,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceIn() {
+  public List<Long> getUsedDataSpaceIn() {
     return usedDataSpaceIn;
   }
 
 
-  public void setUsedDataSpaceIn(List<Double> usedDataSpaceIn) {
+  public void setUsedDataSpaceIn(List<Long> usedDataSpaceIn) {
     this.usedDataSpaceIn = usedDataSpaceIn;
   }
 
 
-  public ClusterWhereInput usedDataSpaceLt(Double usedDataSpaceLt) {
+  public ClusterWhereInput usedDataSpaceLt(Long usedDataSpaceLt) {
     
     this.usedDataSpaceLt = usedDataSpaceLt;
     return this;
@@ -14331,17 +14331,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLt() {
+  public Long getUsedDataSpaceLt() {
     return usedDataSpaceLt;
   }
 
 
-  public void setUsedDataSpaceLt(Double usedDataSpaceLt) {
+  public void setUsedDataSpaceLt(Long usedDataSpaceLt) {
     this.usedDataSpaceLt = usedDataSpaceLt;
   }
 
 
-  public ClusterWhereInput usedDataSpaceLte(Double usedDataSpaceLte) {
+  public ClusterWhereInput usedDataSpaceLte(Long usedDataSpaceLte) {
     
     this.usedDataSpaceLte = usedDataSpaceLte;
     return this;
@@ -14354,17 +14354,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceLte() {
+  public Long getUsedDataSpaceLte() {
     return usedDataSpaceLte;
   }
 
 
-  public void setUsedDataSpaceLte(Double usedDataSpaceLte) {
+  public void setUsedDataSpaceLte(Long usedDataSpaceLte) {
     this.usedDataSpaceLte = usedDataSpaceLte;
   }
 
 
-  public ClusterWhereInput usedDataSpaceNot(Double usedDataSpaceNot) {
+  public ClusterWhereInput usedDataSpaceNot(Long usedDataSpaceNot) {
     
     this.usedDataSpaceNot = usedDataSpaceNot;
     return this;
@@ -14377,25 +14377,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedDataSpaceNot() {
+  public Long getUsedDataSpaceNot() {
     return usedDataSpaceNot;
   }
 
 
-  public void setUsedDataSpaceNot(Double usedDataSpaceNot) {
+  public void setUsedDataSpaceNot(Long usedDataSpaceNot) {
     this.usedDataSpaceNot = usedDataSpaceNot;
   }
 
 
-  public ClusterWhereInput usedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public ClusterWhereInput usedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedDataSpaceNotInItem(Double usedDataSpaceNotInItem) {
+  public ClusterWhereInput addUsedDataSpaceNotInItem(Long usedDataSpaceNotInItem) {
     if (this.usedDataSpaceNotIn == null) {
-      this.usedDataSpaceNotIn = new ArrayList<Double>();
+      this.usedDataSpaceNotIn = new ArrayList<Long>();
     }
     this.usedDataSpaceNotIn.add(usedDataSpaceNotInItem);
     return this;
@@ -14408,17 +14408,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedDataSpaceNotIn() {
+  public List<Long> getUsedDataSpaceNotIn() {
     return usedDataSpaceNotIn;
   }
 
 
-  public void setUsedDataSpaceNotIn(List<Double> usedDataSpaceNotIn) {
+  public void setUsedDataSpaceNotIn(List<Long> usedDataSpaceNotIn) {
     this.usedDataSpaceNotIn = usedDataSpaceNotIn;
   }
 
 
-  public ClusterWhereInput usedMemoryBytes(Double usedMemoryBytes) {
+  public ClusterWhereInput usedMemoryBytes(Long usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -14431,17 +14431,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytes() {
+  public Long getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Double usedMemoryBytes) {
+  public void setUsedMemoryBytes(Long usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesGt(Double usedMemoryBytesGt) {
+  public ClusterWhereInput usedMemoryBytesGt(Long usedMemoryBytesGt) {
     
     this.usedMemoryBytesGt = usedMemoryBytesGt;
     return this;
@@ -14454,17 +14454,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesGt() {
+  public Long getUsedMemoryBytesGt() {
     return usedMemoryBytesGt;
   }
 
 
-  public void setUsedMemoryBytesGt(Double usedMemoryBytesGt) {
+  public void setUsedMemoryBytesGt(Long usedMemoryBytesGt) {
     this.usedMemoryBytesGt = usedMemoryBytesGt;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesGte(Double usedMemoryBytesGte) {
+  public ClusterWhereInput usedMemoryBytesGte(Long usedMemoryBytesGte) {
     
     this.usedMemoryBytesGte = usedMemoryBytesGte;
     return this;
@@ -14477,25 +14477,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesGte() {
+  public Long getUsedMemoryBytesGte() {
     return usedMemoryBytesGte;
   }
 
 
-  public void setUsedMemoryBytesGte(Double usedMemoryBytesGte) {
+  public void setUsedMemoryBytesGte(Long usedMemoryBytesGte) {
     this.usedMemoryBytesGte = usedMemoryBytesGte;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
+  public ClusterWhereInput usedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
     
     this.usedMemoryBytesIn = usedMemoryBytesIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedMemoryBytesInItem(Double usedMemoryBytesInItem) {
+  public ClusterWhereInput addUsedMemoryBytesInItem(Long usedMemoryBytesInItem) {
     if (this.usedMemoryBytesIn == null) {
-      this.usedMemoryBytesIn = new ArrayList<Double>();
+      this.usedMemoryBytesIn = new ArrayList<Long>();
     }
     this.usedMemoryBytesIn.add(usedMemoryBytesInItem);
     return this;
@@ -14508,17 +14508,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedMemoryBytesIn() {
+  public List<Long> getUsedMemoryBytesIn() {
     return usedMemoryBytesIn;
   }
 
 
-  public void setUsedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
+  public void setUsedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
     this.usedMemoryBytesIn = usedMemoryBytesIn;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesLt(Double usedMemoryBytesLt) {
+  public ClusterWhereInput usedMemoryBytesLt(Long usedMemoryBytesLt) {
     
     this.usedMemoryBytesLt = usedMemoryBytesLt;
     return this;
@@ -14531,17 +14531,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesLt() {
+  public Long getUsedMemoryBytesLt() {
     return usedMemoryBytesLt;
   }
 
 
-  public void setUsedMemoryBytesLt(Double usedMemoryBytesLt) {
+  public void setUsedMemoryBytesLt(Long usedMemoryBytesLt) {
     this.usedMemoryBytesLt = usedMemoryBytesLt;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesLte(Double usedMemoryBytesLte) {
+  public ClusterWhereInput usedMemoryBytesLte(Long usedMemoryBytesLte) {
     
     this.usedMemoryBytesLte = usedMemoryBytesLte;
     return this;
@@ -14554,17 +14554,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesLte() {
+  public Long getUsedMemoryBytesLte() {
     return usedMemoryBytesLte;
   }
 
 
-  public void setUsedMemoryBytesLte(Double usedMemoryBytesLte) {
+  public void setUsedMemoryBytesLte(Long usedMemoryBytesLte) {
     this.usedMemoryBytesLte = usedMemoryBytesLte;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesNot(Double usedMemoryBytesNot) {
+  public ClusterWhereInput usedMemoryBytesNot(Long usedMemoryBytesNot) {
     
     this.usedMemoryBytesNot = usedMemoryBytesNot;
     return this;
@@ -14577,25 +14577,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getUsedMemoryBytesNot() {
+  public Long getUsedMemoryBytesNot() {
     return usedMemoryBytesNot;
   }
 
 
-  public void setUsedMemoryBytesNot(Double usedMemoryBytesNot) {
+  public void setUsedMemoryBytesNot(Long usedMemoryBytesNot) {
     this.usedMemoryBytesNot = usedMemoryBytesNot;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
+  public ClusterWhereInput usedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
     
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedMemoryBytesNotInItem(Double usedMemoryBytesNotInItem) {
+  public ClusterWhereInput addUsedMemoryBytesNotInItem(Long usedMemoryBytesNotInItem) {
     if (this.usedMemoryBytesNotIn == null) {
-      this.usedMemoryBytesNotIn = new ArrayList<Double>();
+      this.usedMemoryBytesNotIn = new ArrayList<Long>();
     }
     this.usedMemoryBytesNotIn.add(usedMemoryBytesNotInItem);
     return this;
@@ -14608,12 +14608,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getUsedMemoryBytesNotIn() {
+  public List<Long> getUsedMemoryBytesNotIn() {
     return usedMemoryBytesNotIn;
   }
 
 
-  public void setUsedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
+  public void setUsedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
   }
 
@@ -14956,7 +14956,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput validDataSpace(Double validDataSpace) {
+  public ClusterWhereInput validDataSpace(Long validDataSpace) {
     
     this.validDataSpace = validDataSpace;
     return this;
@@ -14969,17 +14969,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpace() {
+  public Long getValidDataSpace() {
     return validDataSpace;
   }
 
 
-  public void setValidDataSpace(Double validDataSpace) {
+  public void setValidDataSpace(Long validDataSpace) {
     this.validDataSpace = validDataSpace;
   }
 
 
-  public ClusterWhereInput validDataSpaceGt(Double validDataSpaceGt) {
+  public ClusterWhereInput validDataSpaceGt(Long validDataSpaceGt) {
     
     this.validDataSpaceGt = validDataSpaceGt;
     return this;
@@ -14992,17 +14992,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceGt() {
+  public Long getValidDataSpaceGt() {
     return validDataSpaceGt;
   }
 
 
-  public void setValidDataSpaceGt(Double validDataSpaceGt) {
+  public void setValidDataSpaceGt(Long validDataSpaceGt) {
     this.validDataSpaceGt = validDataSpaceGt;
   }
 
 
-  public ClusterWhereInput validDataSpaceGte(Double validDataSpaceGte) {
+  public ClusterWhereInput validDataSpaceGte(Long validDataSpaceGte) {
     
     this.validDataSpaceGte = validDataSpaceGte;
     return this;
@@ -15015,25 +15015,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceGte() {
+  public Long getValidDataSpaceGte() {
     return validDataSpaceGte;
   }
 
 
-  public void setValidDataSpaceGte(Double validDataSpaceGte) {
+  public void setValidDataSpaceGte(Long validDataSpaceGte) {
     this.validDataSpaceGte = validDataSpaceGte;
   }
 
 
-  public ClusterWhereInput validDataSpaceIn(List<Double> validDataSpaceIn) {
+  public ClusterWhereInput validDataSpaceIn(List<Long> validDataSpaceIn) {
     
     this.validDataSpaceIn = validDataSpaceIn;
     return this;
   }
 
-  public ClusterWhereInput addValidDataSpaceInItem(Double validDataSpaceInItem) {
+  public ClusterWhereInput addValidDataSpaceInItem(Long validDataSpaceInItem) {
     if (this.validDataSpaceIn == null) {
-      this.validDataSpaceIn = new ArrayList<Double>();
+      this.validDataSpaceIn = new ArrayList<Long>();
     }
     this.validDataSpaceIn.add(validDataSpaceInItem);
     return this;
@@ -15046,17 +15046,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidDataSpaceIn() {
+  public List<Long> getValidDataSpaceIn() {
     return validDataSpaceIn;
   }
 
 
-  public void setValidDataSpaceIn(List<Double> validDataSpaceIn) {
+  public void setValidDataSpaceIn(List<Long> validDataSpaceIn) {
     this.validDataSpaceIn = validDataSpaceIn;
   }
 
 
-  public ClusterWhereInput validDataSpaceLt(Double validDataSpaceLt) {
+  public ClusterWhereInput validDataSpaceLt(Long validDataSpaceLt) {
     
     this.validDataSpaceLt = validDataSpaceLt;
     return this;
@@ -15069,17 +15069,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceLt() {
+  public Long getValidDataSpaceLt() {
     return validDataSpaceLt;
   }
 
 
-  public void setValidDataSpaceLt(Double validDataSpaceLt) {
+  public void setValidDataSpaceLt(Long validDataSpaceLt) {
     this.validDataSpaceLt = validDataSpaceLt;
   }
 
 
-  public ClusterWhereInput validDataSpaceLte(Double validDataSpaceLte) {
+  public ClusterWhereInput validDataSpaceLte(Long validDataSpaceLte) {
     
     this.validDataSpaceLte = validDataSpaceLte;
     return this;
@@ -15092,17 +15092,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceLte() {
+  public Long getValidDataSpaceLte() {
     return validDataSpaceLte;
   }
 
 
-  public void setValidDataSpaceLte(Double validDataSpaceLte) {
+  public void setValidDataSpaceLte(Long validDataSpaceLte) {
     this.validDataSpaceLte = validDataSpaceLte;
   }
 
 
-  public ClusterWhereInput validDataSpaceNot(Double validDataSpaceNot) {
+  public ClusterWhereInput validDataSpaceNot(Long validDataSpaceNot) {
     
     this.validDataSpaceNot = validDataSpaceNot;
     return this;
@@ -15115,25 +15115,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Double getValidDataSpaceNot() {
+  public Long getValidDataSpaceNot() {
     return validDataSpaceNot;
   }
 
 
-  public void setValidDataSpaceNot(Double validDataSpaceNot) {
+  public void setValidDataSpaceNot(Long validDataSpaceNot) {
     this.validDataSpaceNot = validDataSpaceNot;
   }
 
 
-  public ClusterWhereInput validDataSpaceNotIn(List<Double> validDataSpaceNotIn) {
+  public ClusterWhereInput validDataSpaceNotIn(List<Long> validDataSpaceNotIn) {
     
     this.validDataSpaceNotIn = validDataSpaceNotIn;
     return this;
   }
 
-  public ClusterWhereInput addValidDataSpaceNotInItem(Double validDataSpaceNotInItem) {
+  public ClusterWhereInput addValidDataSpaceNotInItem(Long validDataSpaceNotInItem) {
     if (this.validDataSpaceNotIn == null) {
-      this.validDataSpaceNotIn = new ArrayList<Double>();
+      this.validDataSpaceNotIn = new ArrayList<Long>();
     }
     this.validDataSpaceNotIn.add(validDataSpaceNotInItem);
     return this;
@@ -15146,12 +15146,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Double> getValidDataSpaceNotIn() {
+  public List<Long> getValidDataSpaceNotIn() {
     return validDataSpaceNotIn;
   }
 
 
-  public void setValidDataSpaceNotIn(List<Double> validDataSpaceNotIn) {
+  public void setValidDataSpaceNotIn(List<Long> validDataSpaceNotIn) {
     this.validDataSpaceNotIn = validDataSpaceNotIn;
   }
 
