@@ -68,4 +68,49 @@ public class ITNvmfSubsystem extends ITBase {
     }
   }
 
+  @Test(dataProvider = "nvmfSubsystemPayload")
+  public void createNvmfSubsystem(String payload) {
+    try {
+      // parse params from json payload
+      List<NvmfSubsystemCreationParams> params = gson.fromJson(payload, new TypeToken<List<NvmfSubsystemCreationParams>>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskNvmfSubsystem> result = api.createNvmfSubsystem(params);
+      assertThat(result).as("check result of createNvmfSubsystem").isNotNull();
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "nvmfSubsystemPayload")
+  public void deleteNvmfSubsystem(String payload) {
+    try {
+      // parse params from json payload
+      NvmfSubsystemDeletionParams params = gson.fromJson(payload, new TypeToken<NvmfSubsystemDeletionParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskDeleteNvmfSubsystem> result = api.deleteNvmfSubsystem(params);
+      assertThat(result).as("check result of deleteNvmfSubsystem").isNotNull();
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
+  @Test(dataProvider = "nvmfSubsystemPayload")
+  public void updateNvmfSubsystem(String payload) {
+    try {
+      // parse params from json payload
+      NvmfSubsystemUpdationParams params = gson.fromJson(payload, new TypeToken<NvmfSubsystemUpdationParams>() {}.getType());
+      // do some modify to params(optional)
+      List<WithTaskNvmfSubsystem> result = api.updateNvmfSubsystem(params);
+      assertThat(result).as("check result of updateNvmfSubsystem").isNotNull();
+    } catch (ApiException e) {
+      LOGGER.error(e.getResponseBody());
+      LOGGER.error(e.getCode());
+      assertThat(true).as(e.getResponseBody()).isFalse();
+    }
+  }
+
 }

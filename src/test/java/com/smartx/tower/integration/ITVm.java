@@ -275,15 +275,15 @@ public class ITVm extends ITBase {
   }
 
   @Test(dataProvider = "vmPayload", groups = { "need_running_vm" })
-  public void forceShutDownVm(String payload) {
+  public void powerOffVm(String payload) {
     try {
       // parse params from json payload
       VmOperateParams params = gson.fromJson(payload, new TypeToken<VmOperateParams>() {
       }.getType());
       params.where(new VmWhereInput().id(runningVM.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.forceShutDownVm(params);
-      assertThat(result).as("check result of forceShutDownVm").isNotNull();
+      List<WithTaskVm> result = api.poweroffVm(params);
+      assertThat(result).as("check result of powerOffVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
       LOGGER.error(e.getCode());
@@ -402,6 +402,17 @@ public class ITVm extends ITBase {
       waitForTaskSucceed(addResult.get(0).getTaskId());
       assertThat(addResult).as("check result of addVmDisk").isNotNull();
 
+      VmExpandVmDiskParams expandParams = new VmExpandVmDiskParams()
+          .where(
+              new VmDiskWhereInput()
+                  .vm(new VmWhereInput().id(stoppedVm.getId())).type(VmDiskType.DISK))
+          .size(1073741824L * 2);
+      List<WithTaskVm> expandResult = api.expandVmDisk(expandParams);
+      waitForTaskSucceed(expandResult.get(0).getTaskId());
+      assertThat(expandResult).as("check result of expandVmdisk").isNotNull();
+
+      // after update vm, disk id has changed
+      stoppedVm = api.getVms(new GetVmsRequestBody().where(new VmWhereInput().id(stoppedVm.getId()))).get(0);
       VmUpdateDiskParams updateParams = new VmUpdateDiskParams().where(new VmWhereInput().id(stoppedVm.getId())).data(
           new VmUpdateDiskParamsData().bus(Bus.SCSI).vmDiskId(addResult.get(0).getData().getVmDisks().get(0).getId()));
       List<WithTaskVm> updateresults = api.updateVmDisk(updateParams);

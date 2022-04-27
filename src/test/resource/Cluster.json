@@ -1,9 +1,9 @@
 {
   "connectCluster": [
     {
-      "ip": "192.168.17.65",
+      "ip": "192.168.31.16",
       "password": "root",
-      "username": "tower2020"
+      "username": "111111"
     }
   ]
 }

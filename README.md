@@ -904,15 +904,14 @@ Vm updatedVm = vmApi
 
 ```java
 VmApi vmApi = new VmApi(client);
-VmRemoveNicParams param = new VmRemoveNicParams()
+VmMigrateParams param = new VmMigrateParams()
     .where(new VmWhereInput()
         .id("vm_id"))
-    .data(new VmRemoveNicParamsData()
-        .addNicIndexItem(0)
-        .addNicIndexItem(1));
-WithTaskVm withTaskVm = vmApi.removeVmNic(param).get(0);
+    .data(new VmMigrateParamsData()
+        .hostId("target_host_id"));
+WithTaskVm withTaskVm = vmApi.migRateVm(param).get(0);
 TaskUtil.WaitTask(withTaskVm.getTaskId(), client);
-Vm updatedVm = vmApi
+Vm migratedVm = vmApi
     .getVms(
         new GetVmsRequestBody()
             .where(new VmWhereInput()

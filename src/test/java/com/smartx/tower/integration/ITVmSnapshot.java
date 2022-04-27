@@ -152,7 +152,8 @@ public class ITVmSnapshot extends ITBase {
         api, "getVmSnapshots", new TypeToken<List<VmSnapshot>>() {
         }.getClass(), GetVmSnapshotsRequestBody.class);
     waitForTaskSucceed(
-        api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId()))).get(0).getTaskId());
+        api.deleteVmSnapshot(new VmSnapshotDeletionParams().where(new VmSnapshotWhereInput().id(snapshot.getId())))
+            .get(0).getTaskId());
     snapshot = null;
   }
 
