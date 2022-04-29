@@ -13,7 +13,7 @@
   },
   "defaultCluster": {
     "where": {
-      "name": "nestedcluster-sdk-testX20211103175908"
+      "name": "xiaojun-502-ELF-nestedX20220426111859"
     }
   },
   "defaultVlan": {
@@ -21,7 +21,7 @@
       "name": "default",
       "vds": {
         "cluster": {
-          "name": "nestedcluster-sdk-testX20211103175908",
+          "name": "xiaojun-502-ELF-nestedX20220426111859",
           "connect_state_not_in": ["DISCONNECTED", "REMOVING"]
         },
         "internal": false
