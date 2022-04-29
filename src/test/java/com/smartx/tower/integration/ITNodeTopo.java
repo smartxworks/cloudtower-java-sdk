@@ -72,7 +72,7 @@ public class ITNodeTopo extends ITBase {
   public void updateNodeTopo(String payload) {
     try {
       // parse params from json payload
-      List<Object> params = gson.fromJson(payload, new TypeToken<List<Object>>() {}.getType());
+      List<NodeTopUpdationParam> params = gson.fromJson(payload, new TypeToken<List<NodeTopUpdationParam>>() {}.getType());
       // do some modify to params(optional)
       List<WithTaskNodeTopo> result = api.updateNodeTopo(params);
       assertThat(result).as("check result of updateNodeTopo").isNotNull();
