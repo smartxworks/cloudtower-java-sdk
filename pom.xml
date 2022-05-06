@@ -4,7 +4,7 @@
   <artifactId>cloudtower-java-sdk</artifactId>
   <packaging>jar</packaging>
   <name>cloudtower-java-sdk</name>
-  <version>1.10.0-rc1</version>
+  <version>1.10.0</version>
   <url>https://github.com/openapitools/openapi-generator</url>
   <description>cloudtower Java SDK based on openapi generator</description>
   <scm>

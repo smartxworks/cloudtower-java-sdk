@@ -51,7 +51,7 @@ public class VmVolume {
 
   public static final String SERIALIZED_NAME_GUEST_SIZE_USAGE = "guest_size_usage";
   @SerializedName(SERIALIZED_NAME_GUEST_SIZE_USAGE)
-  private Long guestSizeUsage;
+  private Double guestSizeUsage;
 
   public static final String SERIALIZED_NAME_GUEST_USED_SIZE = "guest_used_size";
   @SerializedName(SERIALIZED_NAME_GUEST_USED_SIZE)
@@ -177,7 +177,7 @@ public class VmVolume {
   }
 
 
-  public VmVolume guestSizeUsage(Long guestSizeUsage) {
+  public VmVolume guestSizeUsage(Double guestSizeUsage) {
     
     this.guestSizeUsage = guestSizeUsage;
     return this;
@@ -190,12 +190,12 @@ public class VmVolume {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getGuestSizeUsage() {
+  public Double getGuestSizeUsage() {
     return guestSizeUsage;
   }
 
 
-  public void setGuestSizeUsage(Long guestSizeUsage) {
+  public void setGuestSizeUsage(Double guestSizeUsage) {
     this.guestSizeUsage = guestSizeUsage;
   }
 
