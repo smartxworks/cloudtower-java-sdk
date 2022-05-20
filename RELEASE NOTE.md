@@ -1,11 +1,23 @@
 # RELEASE NOTE
 
+## release 日期：2022-05-20
+
+v2.0.0 release
+
+- feature: 开放内容库相关 Api [ContentLibraryImage], [ContentLibraryVMTemplate]
+- feature: 新增 [Metric] 功能，用于查询资源性能指标
+- bugfix: 移除 [Witness] 中的 [management_ip] 字段
+
 ## release 日期：2022-05-07
+
 v1.10.0 release
+
 - bugfix: [VmVolume],[VmVolumeWhereInput]: 修复 `guestSizeUsage` 的数据类型 Long -> Double
 
 ## release 日期：2022-04-29
+
 v1.10.0-rc1 release
+
 - feature: UserApi: [createRootUser]: 创建初始 root 用户，创建用户需要传递 role id，而获取 role id 需要鉴权，提供一个接口在没有账号被建立的情况下创建一个默认的 root 用户，不需要鉴权；
 - feature: VmApi: [expandVmDisk]: 提供扩容指定虚拟盘的能力；
 - feature: VmApi: [ejectIsoFromVmCdRom]: 将 iso 从 vm cdrom 中卸载；

@@ -49,10 +49,6 @@ public enum WitnessOrderByInput {
   
   LOCAL_ID_DESC("local_id_DESC"),
   
-  MANAGEMENT_IP_ASC("management_ip_ASC"),
-  
-  MANAGEMENT_IP_DESC("management_ip_DESC"),
-  
   NAME_ASC("name_ASC"),
   
   NAME_DESC("name_DESC"),
