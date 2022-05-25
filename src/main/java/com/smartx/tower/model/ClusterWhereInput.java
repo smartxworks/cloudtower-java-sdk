@@ -2022,35 +2022,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Long usedCpuHz;
+  private Double usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GT = "used_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GT)
-  private Long usedCpuHzGt;
+  private Double usedCpuHzGt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GTE = "used_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GTE)
-  private Long usedCpuHzGte;
+  private Double usedCpuHzGte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_IN = "used_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_IN)
-  private List<Long> usedCpuHzIn = null;
+  private List<Double> usedCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LT = "used_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LT)
-  private Long usedCpuHzLt;
+  private Double usedCpuHzLt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LTE = "used_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LTE)
-  private Long usedCpuHzLte;
+  private Double usedCpuHzLte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT = "used_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT)
-  private Long usedCpuHzNot;
+  private Double usedCpuHzNot;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT_IN = "used_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT_IN)
-  private List<Long> usedCpuHzNotIn = null;
+  private List<Double> usedCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
@@ -2086,35 +2086,35 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Long usedMemoryBytes;
+  private Double usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GT = "used_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GT)
-  private Long usedMemoryBytesGt;
+  private Double usedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GTE = "used_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GTE)
-  private Long usedMemoryBytesGte;
+  private Double usedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_IN = "used_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_IN)
-  private List<Long> usedMemoryBytesIn = null;
+  private List<Double> usedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LT = "used_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LT)
-  private Long usedMemoryBytesLt;
+  private Double usedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LTE = "used_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LTE)
-  private Long usedMemoryBytesLte;
+  private Double usedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT = "used_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT)
-  private Long usedMemoryBytesNot;
+  private Double usedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN = "used_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
-  private List<Long> usedMemoryBytesNotIn = null;
+  private List<Double> usedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
@@ -14520,7 +14520,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput usedCpuHz(Long usedCpuHz) {
+  public ClusterWhereInput usedCpuHz(Double usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -14533,17 +14533,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHz() {
+  public Double getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Long usedCpuHz) {
+  public void setUsedCpuHz(Double usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public ClusterWhereInput usedCpuHzGt(Long usedCpuHzGt) {
+  public ClusterWhereInput usedCpuHzGt(Double usedCpuHzGt) {
     
     this.usedCpuHzGt = usedCpuHzGt;
     return this;
@@ -14556,17 +14556,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzGt() {
+  public Double getUsedCpuHzGt() {
     return usedCpuHzGt;
   }
 
 
-  public void setUsedCpuHzGt(Long usedCpuHzGt) {
+  public void setUsedCpuHzGt(Double usedCpuHzGt) {
     this.usedCpuHzGt = usedCpuHzGt;
   }
 
 
-  public ClusterWhereInput usedCpuHzGte(Long usedCpuHzGte) {
+  public ClusterWhereInput usedCpuHzGte(Double usedCpuHzGte) {
     
     this.usedCpuHzGte = usedCpuHzGte;
     return this;
@@ -14579,25 +14579,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzGte() {
+  public Double getUsedCpuHzGte() {
     return usedCpuHzGte;
   }
 
 
-  public void setUsedCpuHzGte(Long usedCpuHzGte) {
+  public void setUsedCpuHzGte(Double usedCpuHzGte) {
     this.usedCpuHzGte = usedCpuHzGte;
   }
 
 
-  public ClusterWhereInput usedCpuHzIn(List<Long> usedCpuHzIn) {
+  public ClusterWhereInput usedCpuHzIn(List<Double> usedCpuHzIn) {
     
     this.usedCpuHzIn = usedCpuHzIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedCpuHzInItem(Long usedCpuHzInItem) {
+  public ClusterWhereInput addUsedCpuHzInItem(Double usedCpuHzInItem) {
     if (this.usedCpuHzIn == null) {
-      this.usedCpuHzIn = new ArrayList<Long>();
+      this.usedCpuHzIn = new ArrayList<Double>();
     }
     this.usedCpuHzIn.add(usedCpuHzInItem);
     return this;
@@ -14610,17 +14610,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedCpuHzIn() {
+  public List<Double> getUsedCpuHzIn() {
     return usedCpuHzIn;
   }
 
 
-  public void setUsedCpuHzIn(List<Long> usedCpuHzIn) {
+  public void setUsedCpuHzIn(List<Double> usedCpuHzIn) {
     this.usedCpuHzIn = usedCpuHzIn;
   }
 
 
-  public ClusterWhereInput usedCpuHzLt(Long usedCpuHzLt) {
+  public ClusterWhereInput usedCpuHzLt(Double usedCpuHzLt) {
     
     this.usedCpuHzLt = usedCpuHzLt;
     return this;
@@ -14633,17 +14633,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzLt() {
+  public Double getUsedCpuHzLt() {
     return usedCpuHzLt;
   }
 
 
-  public void setUsedCpuHzLt(Long usedCpuHzLt) {
+  public void setUsedCpuHzLt(Double usedCpuHzLt) {
     this.usedCpuHzLt = usedCpuHzLt;
   }
 
 
-  public ClusterWhereInput usedCpuHzLte(Long usedCpuHzLte) {
+  public ClusterWhereInput usedCpuHzLte(Double usedCpuHzLte) {
     
     this.usedCpuHzLte = usedCpuHzLte;
     return this;
@@ -14656,17 +14656,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzLte() {
+  public Double getUsedCpuHzLte() {
     return usedCpuHzLte;
   }
 
 
-  public void setUsedCpuHzLte(Long usedCpuHzLte) {
+  public void setUsedCpuHzLte(Double usedCpuHzLte) {
     this.usedCpuHzLte = usedCpuHzLte;
   }
 
 
-  public ClusterWhereInput usedCpuHzNot(Long usedCpuHzNot) {
+  public ClusterWhereInput usedCpuHzNot(Double usedCpuHzNot) {
     
     this.usedCpuHzNot = usedCpuHzNot;
     return this;
@@ -14679,25 +14679,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzNot() {
+  public Double getUsedCpuHzNot() {
     return usedCpuHzNot;
   }
 
 
-  public void setUsedCpuHzNot(Long usedCpuHzNot) {
+  public void setUsedCpuHzNot(Double usedCpuHzNot) {
     this.usedCpuHzNot = usedCpuHzNot;
   }
 
 
-  public ClusterWhereInput usedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
+  public ClusterWhereInput usedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
     
     this.usedCpuHzNotIn = usedCpuHzNotIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedCpuHzNotInItem(Long usedCpuHzNotInItem) {
+  public ClusterWhereInput addUsedCpuHzNotInItem(Double usedCpuHzNotInItem) {
     if (this.usedCpuHzNotIn == null) {
-      this.usedCpuHzNotIn = new ArrayList<Long>();
+      this.usedCpuHzNotIn = new ArrayList<Double>();
     }
     this.usedCpuHzNotIn.add(usedCpuHzNotInItem);
     return this;
@@ -14710,12 +14710,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedCpuHzNotIn() {
+  public List<Double> getUsedCpuHzNotIn() {
     return usedCpuHzNotIn;
   }
 
 
-  public void setUsedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
+  public void setUsedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
     this.usedCpuHzNotIn = usedCpuHzNotIn;
   }
 
@@ -14920,7 +14920,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput usedMemoryBytes(Long usedMemoryBytes) {
+  public ClusterWhereInput usedMemoryBytes(Double usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -14933,17 +14933,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytes() {
+  public Double getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Long usedMemoryBytes) {
+  public void setUsedMemoryBytes(Double usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesGt(Long usedMemoryBytesGt) {
+  public ClusterWhereInput usedMemoryBytesGt(Double usedMemoryBytesGt) {
     
     this.usedMemoryBytesGt = usedMemoryBytesGt;
     return this;
@@ -14956,17 +14956,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesGt() {
+  public Double getUsedMemoryBytesGt() {
     return usedMemoryBytesGt;
   }
 
 
-  public void setUsedMemoryBytesGt(Long usedMemoryBytesGt) {
+  public void setUsedMemoryBytesGt(Double usedMemoryBytesGt) {
     this.usedMemoryBytesGt = usedMemoryBytesGt;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesGte(Long usedMemoryBytesGte) {
+  public ClusterWhereInput usedMemoryBytesGte(Double usedMemoryBytesGte) {
     
     this.usedMemoryBytesGte = usedMemoryBytesGte;
     return this;
@@ -14979,25 +14979,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesGte() {
+  public Double getUsedMemoryBytesGte() {
     return usedMemoryBytesGte;
   }
 
 
-  public void setUsedMemoryBytesGte(Long usedMemoryBytesGte) {
+  public void setUsedMemoryBytesGte(Double usedMemoryBytesGte) {
     this.usedMemoryBytesGte = usedMemoryBytesGte;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
+  public ClusterWhereInput usedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
     
     this.usedMemoryBytesIn = usedMemoryBytesIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedMemoryBytesInItem(Long usedMemoryBytesInItem) {
+  public ClusterWhereInput addUsedMemoryBytesInItem(Double usedMemoryBytesInItem) {
     if (this.usedMemoryBytesIn == null) {
-      this.usedMemoryBytesIn = new ArrayList<Long>();
+      this.usedMemoryBytesIn = new ArrayList<Double>();
     }
     this.usedMemoryBytesIn.add(usedMemoryBytesInItem);
     return this;
@@ -15010,17 +15010,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedMemoryBytesIn() {
+  public List<Double> getUsedMemoryBytesIn() {
     return usedMemoryBytesIn;
   }
 
 
-  public void setUsedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
+  public void setUsedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
     this.usedMemoryBytesIn = usedMemoryBytesIn;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesLt(Long usedMemoryBytesLt) {
+  public ClusterWhereInput usedMemoryBytesLt(Double usedMemoryBytesLt) {
     
     this.usedMemoryBytesLt = usedMemoryBytesLt;
     return this;
@@ -15033,17 +15033,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesLt() {
+  public Double getUsedMemoryBytesLt() {
     return usedMemoryBytesLt;
   }
 
 
-  public void setUsedMemoryBytesLt(Long usedMemoryBytesLt) {
+  public void setUsedMemoryBytesLt(Double usedMemoryBytesLt) {
     this.usedMemoryBytesLt = usedMemoryBytesLt;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesLte(Long usedMemoryBytesLte) {
+  public ClusterWhereInput usedMemoryBytesLte(Double usedMemoryBytesLte) {
     
     this.usedMemoryBytesLte = usedMemoryBytesLte;
     return this;
@@ -15056,17 +15056,17 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesLte() {
+  public Double getUsedMemoryBytesLte() {
     return usedMemoryBytesLte;
   }
 
 
-  public void setUsedMemoryBytesLte(Long usedMemoryBytesLte) {
+  public void setUsedMemoryBytesLte(Double usedMemoryBytesLte) {
     this.usedMemoryBytesLte = usedMemoryBytesLte;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesNot(Long usedMemoryBytesNot) {
+  public ClusterWhereInput usedMemoryBytesNot(Double usedMemoryBytesNot) {
     
     this.usedMemoryBytesNot = usedMemoryBytesNot;
     return this;
@@ -15079,25 +15079,25 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesNot() {
+  public Double getUsedMemoryBytesNot() {
     return usedMemoryBytesNot;
   }
 
 
-  public void setUsedMemoryBytesNot(Long usedMemoryBytesNot) {
+  public void setUsedMemoryBytesNot(Double usedMemoryBytesNot) {
     this.usedMemoryBytesNot = usedMemoryBytesNot;
   }
 
 
-  public ClusterWhereInput usedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
+  public ClusterWhereInput usedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
     
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
     return this;
   }
 
-  public ClusterWhereInput addUsedMemoryBytesNotInItem(Long usedMemoryBytesNotInItem) {
+  public ClusterWhereInput addUsedMemoryBytesNotInItem(Double usedMemoryBytesNotInItem) {
     if (this.usedMemoryBytesNotIn == null) {
-      this.usedMemoryBytesNotIn = new ArrayList<Long>();
+      this.usedMemoryBytesNotIn = new ArrayList<Double>();
     }
     this.usedMemoryBytesNotIn.add(usedMemoryBytesNotInItem);
     return this;
@@ -15110,12 +15110,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedMemoryBytesNotIn() {
+  public List<Double> getUsedMemoryBytesNotIn() {
     return usedMemoryBytesNotIn;
   }
 
 
-  public void setUsedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
+  public void setUsedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
   }
 
