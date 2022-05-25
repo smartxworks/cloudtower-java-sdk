@@ -1927,35 +1927,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Long usedCpuHz;
+  private Double usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GT = "used_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GT)
-  private Long usedCpuHzGt;
+  private Double usedCpuHzGt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GTE = "used_cpu_hz_gte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GTE)
-  private Long usedCpuHzGte;
+  private Double usedCpuHzGte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_IN = "used_cpu_hz_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_IN)
-  private List<Long> usedCpuHzIn = null;
+  private List<Double> usedCpuHzIn = null;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LT = "used_cpu_hz_lt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LT)
-  private Long usedCpuHzLt;
+  private Double usedCpuHzLt;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_LTE = "used_cpu_hz_lte";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_LTE)
-  private Long usedCpuHzLte;
+  private Double usedCpuHzLte;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT = "used_cpu_hz_not";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT)
-  private Long usedCpuHzNot;
+  private Double usedCpuHzNot;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_NOT_IN = "used_cpu_hz_not_in";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_NOT_IN)
-  private List<Long> usedCpuHzNotIn = null;
+  private List<Double> usedCpuHzNotIn = null;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
@@ -1991,35 +1991,35 @@ public class HostWhereInput {
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Long usedMemoryBytes;
+  private Double usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GT = "used_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GT)
-  private Long usedMemoryBytesGt;
+  private Double usedMemoryBytesGt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GTE = "used_memory_bytes_gte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GTE)
-  private Long usedMemoryBytesGte;
+  private Double usedMemoryBytesGte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_IN = "used_memory_bytes_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_IN)
-  private List<Long> usedMemoryBytesIn = null;
+  private List<Double> usedMemoryBytesIn = null;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LT = "used_memory_bytes_lt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LT)
-  private Long usedMemoryBytesLt;
+  private Double usedMemoryBytesLt;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_LTE = "used_memory_bytes_lte";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_LTE)
-  private Long usedMemoryBytesLte;
+  private Double usedMemoryBytesLte;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT = "used_memory_bytes_not";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT)
-  private Long usedMemoryBytesNot;
+  private Double usedMemoryBytesNot;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN = "used_memory_bytes_not_in";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
-  private List<Long> usedMemoryBytesNotIn = null;
+  private List<Double> usedMemoryBytesNotIn = null;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -13694,7 +13694,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput usedCpuHz(Long usedCpuHz) {
+  public HostWhereInput usedCpuHz(Double usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -13707,17 +13707,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHz() {
+  public Double getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Long usedCpuHz) {
+  public void setUsedCpuHz(Double usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
 
-  public HostWhereInput usedCpuHzGt(Long usedCpuHzGt) {
+  public HostWhereInput usedCpuHzGt(Double usedCpuHzGt) {
     
     this.usedCpuHzGt = usedCpuHzGt;
     return this;
@@ -13730,17 +13730,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzGt() {
+  public Double getUsedCpuHzGt() {
     return usedCpuHzGt;
   }
 
 
-  public void setUsedCpuHzGt(Long usedCpuHzGt) {
+  public void setUsedCpuHzGt(Double usedCpuHzGt) {
     this.usedCpuHzGt = usedCpuHzGt;
   }
 
 
-  public HostWhereInput usedCpuHzGte(Long usedCpuHzGte) {
+  public HostWhereInput usedCpuHzGte(Double usedCpuHzGte) {
     
     this.usedCpuHzGte = usedCpuHzGte;
     return this;
@@ -13753,25 +13753,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzGte() {
+  public Double getUsedCpuHzGte() {
     return usedCpuHzGte;
   }
 
 
-  public void setUsedCpuHzGte(Long usedCpuHzGte) {
+  public void setUsedCpuHzGte(Double usedCpuHzGte) {
     this.usedCpuHzGte = usedCpuHzGte;
   }
 
 
-  public HostWhereInput usedCpuHzIn(List<Long> usedCpuHzIn) {
+  public HostWhereInput usedCpuHzIn(List<Double> usedCpuHzIn) {
     
     this.usedCpuHzIn = usedCpuHzIn;
     return this;
   }
 
-  public HostWhereInput addUsedCpuHzInItem(Long usedCpuHzInItem) {
+  public HostWhereInput addUsedCpuHzInItem(Double usedCpuHzInItem) {
     if (this.usedCpuHzIn == null) {
-      this.usedCpuHzIn = new ArrayList<Long>();
+      this.usedCpuHzIn = new ArrayList<Double>();
     }
     this.usedCpuHzIn.add(usedCpuHzInItem);
     return this;
@@ -13784,17 +13784,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedCpuHzIn() {
+  public List<Double> getUsedCpuHzIn() {
     return usedCpuHzIn;
   }
 
 
-  public void setUsedCpuHzIn(List<Long> usedCpuHzIn) {
+  public void setUsedCpuHzIn(List<Double> usedCpuHzIn) {
     this.usedCpuHzIn = usedCpuHzIn;
   }
 
 
-  public HostWhereInput usedCpuHzLt(Long usedCpuHzLt) {
+  public HostWhereInput usedCpuHzLt(Double usedCpuHzLt) {
     
     this.usedCpuHzLt = usedCpuHzLt;
     return this;
@@ -13807,17 +13807,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzLt() {
+  public Double getUsedCpuHzLt() {
     return usedCpuHzLt;
   }
 
 
-  public void setUsedCpuHzLt(Long usedCpuHzLt) {
+  public void setUsedCpuHzLt(Double usedCpuHzLt) {
     this.usedCpuHzLt = usedCpuHzLt;
   }
 
 
-  public HostWhereInput usedCpuHzLte(Long usedCpuHzLte) {
+  public HostWhereInput usedCpuHzLte(Double usedCpuHzLte) {
     
     this.usedCpuHzLte = usedCpuHzLte;
     return this;
@@ -13830,17 +13830,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzLte() {
+  public Double getUsedCpuHzLte() {
     return usedCpuHzLte;
   }
 
 
-  public void setUsedCpuHzLte(Long usedCpuHzLte) {
+  public void setUsedCpuHzLte(Double usedCpuHzLte) {
     this.usedCpuHzLte = usedCpuHzLte;
   }
 
 
-  public HostWhereInput usedCpuHzNot(Long usedCpuHzNot) {
+  public HostWhereInput usedCpuHzNot(Double usedCpuHzNot) {
     
     this.usedCpuHzNot = usedCpuHzNot;
     return this;
@@ -13853,25 +13853,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHzNot() {
+  public Double getUsedCpuHzNot() {
     return usedCpuHzNot;
   }
 
 
-  public void setUsedCpuHzNot(Long usedCpuHzNot) {
+  public void setUsedCpuHzNot(Double usedCpuHzNot) {
     this.usedCpuHzNot = usedCpuHzNot;
   }
 
 
-  public HostWhereInput usedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
+  public HostWhereInput usedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
     
     this.usedCpuHzNotIn = usedCpuHzNotIn;
     return this;
   }
 
-  public HostWhereInput addUsedCpuHzNotInItem(Long usedCpuHzNotInItem) {
+  public HostWhereInput addUsedCpuHzNotInItem(Double usedCpuHzNotInItem) {
     if (this.usedCpuHzNotIn == null) {
-      this.usedCpuHzNotIn = new ArrayList<Long>();
+      this.usedCpuHzNotIn = new ArrayList<Double>();
     }
     this.usedCpuHzNotIn.add(usedCpuHzNotInItem);
     return this;
@@ -13884,12 +13884,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedCpuHzNotIn() {
+  public List<Double> getUsedCpuHzNotIn() {
     return usedCpuHzNotIn;
   }
 
 
-  public void setUsedCpuHzNotIn(List<Long> usedCpuHzNotIn) {
+  public void setUsedCpuHzNotIn(List<Double> usedCpuHzNotIn) {
     this.usedCpuHzNotIn = usedCpuHzNotIn;
   }
 
@@ -14094,7 +14094,7 @@ public class HostWhereInput {
   }
 
 
-  public HostWhereInput usedMemoryBytes(Long usedMemoryBytes) {
+  public HostWhereInput usedMemoryBytes(Double usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -14107,17 +14107,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytes() {
+  public Double getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Long usedMemoryBytes) {
+  public void setUsedMemoryBytes(Double usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
 
-  public HostWhereInput usedMemoryBytesGt(Long usedMemoryBytesGt) {
+  public HostWhereInput usedMemoryBytesGt(Double usedMemoryBytesGt) {
     
     this.usedMemoryBytesGt = usedMemoryBytesGt;
     return this;
@@ -14130,17 +14130,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesGt() {
+  public Double getUsedMemoryBytesGt() {
     return usedMemoryBytesGt;
   }
 
 
-  public void setUsedMemoryBytesGt(Long usedMemoryBytesGt) {
+  public void setUsedMemoryBytesGt(Double usedMemoryBytesGt) {
     this.usedMemoryBytesGt = usedMemoryBytesGt;
   }
 
 
-  public HostWhereInput usedMemoryBytesGte(Long usedMemoryBytesGte) {
+  public HostWhereInput usedMemoryBytesGte(Double usedMemoryBytesGte) {
     
     this.usedMemoryBytesGte = usedMemoryBytesGte;
     return this;
@@ -14153,25 +14153,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesGte() {
+  public Double getUsedMemoryBytesGte() {
     return usedMemoryBytesGte;
   }
 
 
-  public void setUsedMemoryBytesGte(Long usedMemoryBytesGte) {
+  public void setUsedMemoryBytesGte(Double usedMemoryBytesGte) {
     this.usedMemoryBytesGte = usedMemoryBytesGte;
   }
 
 
-  public HostWhereInput usedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
+  public HostWhereInput usedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
     
     this.usedMemoryBytesIn = usedMemoryBytesIn;
     return this;
   }
 
-  public HostWhereInput addUsedMemoryBytesInItem(Long usedMemoryBytesInItem) {
+  public HostWhereInput addUsedMemoryBytesInItem(Double usedMemoryBytesInItem) {
     if (this.usedMemoryBytesIn == null) {
-      this.usedMemoryBytesIn = new ArrayList<Long>();
+      this.usedMemoryBytesIn = new ArrayList<Double>();
     }
     this.usedMemoryBytesIn.add(usedMemoryBytesInItem);
     return this;
@@ -14184,17 +14184,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedMemoryBytesIn() {
+  public List<Double> getUsedMemoryBytesIn() {
     return usedMemoryBytesIn;
   }
 
 
-  public void setUsedMemoryBytesIn(List<Long> usedMemoryBytesIn) {
+  public void setUsedMemoryBytesIn(List<Double> usedMemoryBytesIn) {
     this.usedMemoryBytesIn = usedMemoryBytesIn;
   }
 
 
-  public HostWhereInput usedMemoryBytesLt(Long usedMemoryBytesLt) {
+  public HostWhereInput usedMemoryBytesLt(Double usedMemoryBytesLt) {
     
     this.usedMemoryBytesLt = usedMemoryBytesLt;
     return this;
@@ -14207,17 +14207,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesLt() {
+  public Double getUsedMemoryBytesLt() {
     return usedMemoryBytesLt;
   }
 
 
-  public void setUsedMemoryBytesLt(Long usedMemoryBytesLt) {
+  public void setUsedMemoryBytesLt(Double usedMemoryBytesLt) {
     this.usedMemoryBytesLt = usedMemoryBytesLt;
   }
 
 
-  public HostWhereInput usedMemoryBytesLte(Long usedMemoryBytesLte) {
+  public HostWhereInput usedMemoryBytesLte(Double usedMemoryBytesLte) {
     
     this.usedMemoryBytesLte = usedMemoryBytesLte;
     return this;
@@ -14230,17 +14230,17 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesLte() {
+  public Double getUsedMemoryBytesLte() {
     return usedMemoryBytesLte;
   }
 
 
-  public void setUsedMemoryBytesLte(Long usedMemoryBytesLte) {
+  public void setUsedMemoryBytesLte(Double usedMemoryBytesLte) {
     this.usedMemoryBytesLte = usedMemoryBytesLte;
   }
 
 
-  public HostWhereInput usedMemoryBytesNot(Long usedMemoryBytesNot) {
+  public HostWhereInput usedMemoryBytesNot(Double usedMemoryBytesNot) {
     
     this.usedMemoryBytesNot = usedMemoryBytesNot;
     return this;
@@ -14253,25 +14253,25 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytesNot() {
+  public Double getUsedMemoryBytesNot() {
     return usedMemoryBytesNot;
   }
 
 
-  public void setUsedMemoryBytesNot(Long usedMemoryBytesNot) {
+  public void setUsedMemoryBytesNot(Double usedMemoryBytesNot) {
     this.usedMemoryBytesNot = usedMemoryBytesNot;
   }
 
 
-  public HostWhereInput usedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
+  public HostWhereInput usedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
     
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
     return this;
   }
 
-  public HostWhereInput addUsedMemoryBytesNotInItem(Long usedMemoryBytesNotInItem) {
+  public HostWhereInput addUsedMemoryBytesNotInItem(Double usedMemoryBytesNotInItem) {
     if (this.usedMemoryBytesNotIn == null) {
-      this.usedMemoryBytesNotIn = new ArrayList<Long>();
+      this.usedMemoryBytesNotIn = new ArrayList<Double>();
     }
     this.usedMemoryBytesNotIn.add(usedMemoryBytesNotInItem);
     return this;
@@ -14284,12 +14284,12 @@ public class HostWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUsedMemoryBytesNotIn() {
+  public List<Double> getUsedMemoryBytesNotIn() {
     return usedMemoryBytesNotIn;
   }
 
 
-  public void setUsedMemoryBytesNotIn(List<Long> usedMemoryBytesNotIn) {
+  public void setUsedMemoryBytesNotIn(List<Double> usedMemoryBytesNotIn) {
     this.usedMemoryBytesNotIn = usedMemoryBytesNotIn;
   }
 
