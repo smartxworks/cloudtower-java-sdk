@@ -1436,4 +1436,31 @@ public class ApiClient {
         // empty http request body
         return "";
     }
+
+    /**
+   * Remove a default header.
+   *
+   * @param key   The header's key
+   * @return ApiClient
+   */
+  public ApiClient removeDefaultHeader(String key) {
+    if (defaultHeaderMap.containsKey(key)) {
+      defaultHeaderMap.remove(key);
+    }
+    return this;
+  }
+
+/**
+   * Remove a default cookie.
+   *
+   * @param key The cookie's key
+   * @return ApiClient
+   */
+  public ApiClient removeDefaultCookie(String key) {
+    if (defaultCookieMap.containsKey(key)) {
+      defaultCookieMap.remove(key);
+    }
+    return this;
+  }
+
 }
