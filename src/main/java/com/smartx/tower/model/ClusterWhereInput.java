@@ -1953,7 +1953,7 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Long usedCpuHz;
+  private Double usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ_GT = "used_cpu_hz_gt";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ_GT)
@@ -2017,7 +2017,7 @@ public class ClusterWhereInput {
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Long usedMemoryBytes;
+  private Double usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES_GT = "used_memory_bytes_gt";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_GT)
@@ -13972,7 +13972,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput usedCpuHz(Long usedCpuHz) {
+  public ClusterWhereInput usedCpuHz(Double usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -13985,12 +13985,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHz() {
+  public Double getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Long usedCpuHz) {
+  public void setUsedCpuHz(Double usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
@@ -14372,7 +14372,7 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput usedMemoryBytes(Long usedMemoryBytes) {
+  public ClusterWhereInput usedMemoryBytes(Double usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -14385,12 +14385,12 @@ public class ClusterWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytes() {
+  public Double getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Long usedMemoryBytes) {
+  public void setUsedMemoryBytes(Double usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 

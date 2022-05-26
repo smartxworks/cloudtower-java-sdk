@@ -81,7 +81,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
   @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
-  private Long usedCpuHz;
+  private Double usedCpuHz;
 
   public static final String SERIALIZED_NAME_USED_DATA_SPACE = "used_data_space";
   @SerializedName(SERIALIZED_NAME_USED_DATA_SPACE)
@@ -89,7 +89,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_USED_MEMORY_BYTES = "used_memory_bytes";
   @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
-  private Long usedMemoryBytes;
+  private Double usedMemoryBytes;
 
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -367,7 +367,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter usedCpuHz(Long usedCpuHz) {
+  public Datacenter usedCpuHz(Double usedCpuHz) {
     
     this.usedCpuHz = usedCpuHz;
     return this;
@@ -380,12 +380,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedCpuHz() {
+  public Double getUsedCpuHz() {
     return usedCpuHz;
   }
 
 
-  public void setUsedCpuHz(Long usedCpuHz) {
+  public void setUsedCpuHz(Double usedCpuHz) {
     this.usedCpuHz = usedCpuHz;
   }
 
@@ -413,7 +413,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter usedMemoryBytes(Long usedMemoryBytes) {
+  public Datacenter usedMemoryBytes(Double usedMemoryBytes) {
     
     this.usedMemoryBytes = usedMemoryBytes;
     return this;
@@ -426,12 +426,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUsedMemoryBytes() {
+  public Double getUsedMemoryBytes() {
     return usedMemoryBytes;
   }
 
 
-  public void setUsedMemoryBytes(Long usedMemoryBytes) {
+  public void setUsedMemoryBytes(Double usedMemoryBytes) {
     this.usedMemoryBytes = usedMemoryBytes;
   }
 
