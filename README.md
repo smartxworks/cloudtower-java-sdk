@@ -46,6 +46,14 @@ VmApi vmApi = new VmApi(client);
 
 ### 鉴权
 
+> 可以通过封装的 `ClientUtil.login` 方法来鉴权一个 `ApiClient`
+
+```java
+  ClientUtil.login("root", "password", client) // 默认使用 LOCAL 作为 UserSource，可以添加第四个参数来指定 UserSource
+```
+
+> 也可以通过直接将 token 设置为 ApiKey 来鉴权
+
 ```java
 // 通过 UserApi 中的 login 方法来获得 token。
 UserApi userApi = new UserApi(client);
@@ -58,10 +66,18 @@ WithTaskTokenString token = userApi.login(loginInput);
 
 ### 发送请求
 
+#### 构建请求体
+
+> 每一个 Api 都会有自己的请求体结构，用于构建请求的参数
+
+```java
+GetVmsRequestBody requestBody = new GetVmsRequestBody().first(10);
+```
+
 #### 获取资源
 
 ```java
-List<Vm> vms = vmApi.getVms(new GetVmsRequestBody().first(1));
+List<Vm> vms = vmApi.getVms(requestBody);
 ```
 
 #### 更新资源

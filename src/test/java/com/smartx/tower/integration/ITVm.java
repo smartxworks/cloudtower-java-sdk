@@ -181,7 +181,7 @@ public class ITVm extends ITBase {
       }.getType());
       params.where(new VmWhereInput().id(stoppedVm.getId())).data(new VmStartParamsData().hostId(host.getId()));
       // do some modify to params(optional)
-      List<WithTaskVm> result = api.migRateVm(params);
+      List<WithTaskVm> result = api.migrateVm(params);
       assertThat(result).as("check result of migRateVm").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
