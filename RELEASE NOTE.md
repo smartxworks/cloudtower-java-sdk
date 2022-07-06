@@ -1,8 +1,42 @@
 # RELEASE NOTE
 
+## release 日期 2022-07-08
+
+v2.1.0 release
+
+- feature:ClusterApi: [updateClusterNetworkSetting] 新增更新集群网络配置 api
+- feature:ClusterApi: [updateClusterVirtualizationSetting] 新增更新集群虚拟化设置 api
+- feature:ClusterApi: [updateClusterHaSetting] 新增更新集群高可用设置 api
+- feature:ClusterApi: [updateClusterEnableISCSISetting] 新增更新集群块功能启用设置 api
+- feature:VmApi: [migrateVmAcrossCluster] 新增跨集群迁移虚拟机 api
+- feature:VmApi: [abortMigrateVmAcrossCluster] 新增取消跨集群迁移 api
+- feature:VmApi: [stopVmInCutoverMigration] 新增关闭源虚拟机 api
+- feature:VmApi: [updateVmHostOptions] 新增更新虚拟机 guest os 设置 api，更新 dns, hostname 与 ntp server，需要虚拟机工具的支持。
+- feature:VmApi: [resetVmGuestOsPassword] 新增更新虚拟机 guest os 用户密码 api，需要虚拟机工具的支持。
+- feature:VmApi: [updateVmOwner] 新增更新虚拟机拥有者 api
+- feature:SecurityApi: [updatePasswordSecurity] 新增更新密码安全设置 api
+- feature:SecurityApi: [updateAccessRestriction] 新增更新访问限制 api
+- feature:SecurityApi: [updateSessionTimeout] 新增更新会话超时 api
+- feature:VcenterAccountApi: [updateVcenterAccount] 新增更新 vcenter 账号 api
+- feature:VcenterAccountApi: [createVcenterAccount] 新增添加 vcenter 账号 api
+- feature:VsphereEsxiAccountApi: [updateVsphereEsxiAccount] 新增更新 vsphere esxi 账号 api
+- feature:SvtImageApi: [UploadSvtImage] 新增上传虚拟机镜像 api 工具
+- feature:TableReporterApi: [exportCSV] 新增导出 CSV 报表 api
+- feature:UploadTaskApi: [cancelUploadTask] 新增取消上传 api
+- feature:LabelApi: [addLabelsToResources],[removeLabelsFromResources] 新增想内容库模板，内容库镜像，隔离策略，安全策略添加，删除标签
+
+- bugfix:ContentLibraryImageApi,ElfImageApi: 修复了上传类 Api 无法正确执行的问题，并优化了上传类 Api 的执行逻辑，第一次上传时会上传第一个分片而非只是创建一个上传任务，详见[示例](/examples/upload/upload.md)
+
+- optimize:VmTemplateApi: 优化了模板创建时根据传入的 cpu 参数和模板参数计算缺省值的逻辑
+- optimize:ContentLibraryImageApi: 优化了分发的逻辑，不再同时上传一个镜像至多个集群，等待上传置单个集群后再分发。
+- optimize:ContentLibraryImageApi,ElfImageApi: 所有上传类 Api 接受的文件类型参数都由 `System.io.File` 变为了 `byte[]` 使分片上传更加容易实现
+- optimize: 添加了 `ClientUtil.login` 方法来维护登录逻辑，不再需要手动赋值 token。
+- optimize: 添加了 `IsoUtil.getSvtIsoVersion` 方法来获得虚拟机工具镜像的版本号。
+
 ## release 日期：2022-05-26
 
 v2.0.0+rev1 release
+
 - bugfix: [Cluster],[ClusterWhereInput]: 修复 `usedMemoryBytes`, `usedCpuUsage` 的数据类型 Long -> Double
 - bugfix: [Host],[HostWhereInput]: 修复 `usedMemoryBytes`, `usedCpuUsage`的数据类型 Long -> Double
 - bugfix: [Datacenter],[DatacenterWhereInput]: 修复 `usedMemoryBytes`, `usedCpuUsage` 的数据类型 Long -> Double
