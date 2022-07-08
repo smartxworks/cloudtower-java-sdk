@@ -25,7 +25,7 @@ v2.1.0 release
 - feature:UploadTaskApi: [cancelUploadTask] 新增取消上传 api
 - feature:LabelApi: [addLabelsToResources],[removeLabelsFromResources] 新增想内容库模板，内容库镜像，隔离策略，安全策略添加，删除标签
 
-- bugfix:ContentLibraryImageApi,ElfImageApi: 修复了上传类 Api 无法正确执行的问题，并优化了上传类 Api 的执行逻辑，第一次上传时会上传第一个分片而非只是创建一个上传任务，详见[示例](/examples/upload/upload.md)
+- bugfix:ContentLibraryImageApi,ElfImageApi: 修复了上传类 Api 无法正确执行的问题，并优化了上传类 Api 的执行逻辑，第一次上传时会上传第一个分片而非只是创建一个上传任务，详见[示例](/examples/upload/readme.md)
 
 - optimize:VmTemplateApi: 优化了模板创建时根据传入的 cpu 参数和模板参数计算缺省值的逻辑
 - optimize:ContentLibraryImageApi: 优化了分发的逻辑，不再同时上传一个镜像至多个集群，等待上传置单个集群后再分发。
