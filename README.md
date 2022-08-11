@@ -47,7 +47,6 @@ VmApi vmApi = new VmApi(client);
 ### 鉴权
 
 > 可以通过封装的 `ClientUtil.login` 方法来鉴权一个 `ApiClient`
-
 ```java
   ClientUtil.login("root", "HC!r0cks", client) // 默认使用 LOCAL 作为 UserSource，可以添加第四个参数来指定 UserSource
 ```
@@ -69,7 +68,6 @@ WithTaskTokenString token = userApi.login(loginInput);
 #### 构建请求体
 
 > 每一个 Api 都会有自己的请求体结构，用于构建请求的参数
-
 ```java
 GetVmsRequestBody requestBody = new GetVmsRequestBody().first(10);
 ```
@@ -347,9 +345,9 @@ public class App {
     ApiClient client = new ApiClient();
     client.setBasePath("http://192.168.96.133/v2/api");
     client.setApiKey("token");
-    VmCreateVmFromTemplateParamsDiskOperate diskOperate = new VmCreateVmFromTemplateParamsDiskOperate()
+    VmDiskOperate diskOperate = new VmDiskOperate()
         .removeDisks(
-            new VmCreateVmFromTemplateParamsDiskOperateRemoveDisks()
+            new VmDiskOperateRemoveDisks()
                 .addDiskIndexItem(1))
         .newDisks(
             new VmDiskParams()
