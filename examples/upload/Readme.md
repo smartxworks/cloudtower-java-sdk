@@ -24,12 +24,12 @@ public class App {
     ApiClient client = new ApiClient();
     client.setBasePath(String.format("%s/v2/api", END_POINT));
     // client.setBasePath("http://localhost:8090");
-    ClientUtil.login("root", "HC!r0cks", client);
+    ClientUtil.login("root", "password", client);
     client.setReadTimeout(0).setConnectTimeout(0).setWriteTimeout(0);
     client.setVerifyingSsl(false);
     try {
       uploadSVTImageByOapi(client,
-          Path.of("D:\\SMTX_VMTOOLS_2_12_1_20210521153518.iso"),
+          Path.of("path_to_iso"),
           "cl3kursoo2pxm0858veopm4qs");
     } catch (Exception e) {
       e.printStackTrace();

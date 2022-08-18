@@ -48,7 +48,7 @@ VmApi vmApi = new VmApi(client);
 
 > 可以通过封装的 `ClientUtil.login` 方法来鉴权一个 `ApiClient`
 ```java
-  ClientUtil.login("root", "HC!r0cks", client) // 默认使用 LOCAL 作为 UserSource，可以添加第四个参数来指定 UserSource
+  ClientUtil.login("root", "password", client) // 默认使用 LOCAL 作为 UserSource，可以添加第四个参数来指定 UserSource
 ```
 
 > 也可以通过直接将 token 设置为 ApiKey 来鉴权
