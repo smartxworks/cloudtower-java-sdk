@@ -20,6 +20,8 @@ public enum NetworkPolicyRuleType {
   
   IP_BLOCK("IP_BLOCK"),
   
+  SECURITY_GROUP("SECURITY_GROUP"),
+  
   SELECTOR("SELECTOR");
 
   private String value;

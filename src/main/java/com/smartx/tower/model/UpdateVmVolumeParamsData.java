@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -16,6 +17,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class UpdateVmVolumeParamsData {
+  public static final String SERIALIZED_NAME_SIZE_UNIT = "size_unit";
+  @SerializedName(SERIALIZED_NAME_SIZE_UNIT)
+  private ByteUnit sizeUnit;
+
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -30,6 +35,29 @@ public class UpdateVmVolumeParamsData {
 
   public UpdateVmVolumeParamsData() { 
   }
+
+  public UpdateVmVolumeParamsData sizeUnit(ByteUnit sizeUnit) {
+    
+    this.sizeUnit = sizeUnit;
+    return this;
+  }
+
+   /**
+   * Get sizeUnit
+   * @return sizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getSizeUnit() {
+    return sizeUnit;
+  }
+
+
+  public void setSizeUnit(ByteUnit sizeUnit) {
+    this.sizeUnit = sizeUnit;
+  }
+
 
   public UpdateVmVolumeParamsData size(Long size) {
     
@@ -109,20 +137,22 @@ public class UpdateVmVolumeParamsData {
       return false;
     }
     UpdateVmVolumeParamsData updateVmVolumeParamsData = (UpdateVmVolumeParamsData) o;
-    return Objects.equals(this.size, updateVmVolumeParamsData.size) &&
+    return Objects.equals(this.sizeUnit, updateVmVolumeParamsData.sizeUnit) &&
+        Objects.equals(this.size, updateVmVolumeParamsData.size) &&
         Objects.equals(this.description, updateVmVolumeParamsData.description) &&
         Objects.equals(this.name, updateVmVolumeParamsData.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(size, description, name);
+    return Objects.hash(sizeUnit, size, description, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UpdateVmVolumeParamsData {\n");
+    sb.append("    sizeUnit: ").append(toIndentedString(sizeUnit)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

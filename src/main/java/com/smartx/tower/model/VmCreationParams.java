@@ -7,6 +7,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BPSUnit;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
@@ -28,6 +30,10 @@ public class VmCreationParams {
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
   private VmDiskIoRestrictType maxBandwidthPolicy;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_UNIT = "max_bandwidth_unit";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT)
+  private BPSUnit maxBandwidthUnit;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
@@ -68,6 +74,10 @@ public class VmCreationParams {
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
   private VmDiskParams vmDisks;
+
+  public static final String SERIALIZED_NAME_MEMORY_UNIT = "memory_unit";
+  @SerializedName(SERIALIZED_NAME_MEMORY_UNIT)
+  private ByteUnit memoryUnit;
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
@@ -128,6 +138,29 @@ public class VmCreationParams {
 
   public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
+  }
+
+
+  public VmCreationParams maxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    
+    this.maxBandwidthUnit = maxBandwidthUnit;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthUnit
+   * @return maxBandwidthUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getMaxBandwidthUnit() {
+    return maxBandwidthUnit;
+  }
+
+
+  public void setMaxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    this.maxBandwidthUnit = maxBandwidthUnit;
   }
 
 
@@ -366,6 +399,29 @@ public class VmCreationParams {
   }
 
 
+  public VmCreationParams memoryUnit(ByteUnit memoryUnit) {
+    
+    this.memoryUnit = memoryUnit;
+    return this;
+  }
+
+   /**
+   * Get memoryUnit
+   * @return memoryUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getMemoryUnit() {
+    return memoryUnit;
+  }
+
+
+  public void setMemoryUnit(ByteUnit memoryUnit) {
+    this.memoryUnit = memoryUnit;
+  }
+
+
   public VmCreationParams memory(Long memory) {
     
     this.memory = memory;
@@ -583,6 +639,7 @@ public class VmCreationParams {
     }
     VmCreationParams vmCreationParams = (VmCreationParams) o;
     return Objects.equals(this.maxBandwidthPolicy, vmCreationParams.maxBandwidthPolicy) &&
+        Objects.equals(this.maxBandwidthUnit, vmCreationParams.maxBandwidthUnit) &&
         Objects.equals(this.maxBandwidth, vmCreationParams.maxBandwidth) &&
         Objects.equals(this.maxIopsPolicy, vmCreationParams.maxIopsPolicy) &&
         Objects.equals(this.maxIops, vmCreationParams.maxIops) &&
@@ -593,6 +650,7 @@ public class VmCreationParams {
         Objects.equals(this.ha, vmCreationParams.ha) &&
         Objects.equals(this.vmNics, vmCreationParams.vmNics) &&
         Objects.equals(this.vmDisks, vmCreationParams.vmDisks) &&
+        Objects.equals(this.memoryUnit, vmCreationParams.memoryUnit) &&
         Objects.equals(this.memory, vmCreationParams.memory) &&
         Objects.equals(this.cpuCores, vmCreationParams.cpuCores) &&
         Objects.equals(this.cpuSockets, vmCreationParams.cpuSockets) &&
@@ -606,7 +664,7 @@ public class VmCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxBandwidthPolicy, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
@@ -614,6 +672,7 @@ public class VmCreationParams {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCreationParams {\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
+    sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");
     sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
     sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
     sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
@@ -624,6 +683,7 @@ public class VmCreationParams {
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
+    sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");
     sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
     sb.append("    cpuCores: ").append(toIndentedString(cpuCores)).append("\n");
     sb.append("    cpuSockets: ").append(toIndentedString(cpuSockets)).append("\n");

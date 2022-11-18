@@ -19,7 +19,6 @@ import com.smartx.tower.model.ConvertVmTemplateToVmParams;
 import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetVmsConnectionRequestBody;
 import com.smartx.tower.model.GetVmsRequestBody;
-import com.smartx.tower.model.InlineResponse200;
 import com.smartx.tower.model.InstallVmtoolsParams;
 import com.smartx.tower.model.StopVmInCutoverMigrationParams;
 import com.smartx.tower.model.Task;
@@ -49,6 +48,7 @@ import com.smartx.tower.model.VmToggleCdRomDisableParams;
 import com.smartx.tower.model.VmUpdateAdvancedOptionsParams;
 import com.smartx.tower.model.VmUpdateDiskParams;
 import com.smartx.tower.model.VmUpdateHostOptionsParams;
+import com.smartx.tower.model.VmUpdateIoPolicyParams;
 import com.smartx.tower.model.VmUpdateNicAdvanceInfoParams;
 import com.smartx.tower.model.VmUpdateNicBasicInfoParams;
 import com.smartx.tower.model.VmUpdateNicParams;
@@ -3941,7 +3941,7 @@ public class VmApi {
      * 
      * 
      * @param vmResetGuestOsPasswordParams  (required)
-     * @return List&lt;Object&gt;
+     * @return List&lt;WithTaskVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3953,8 +3953,8 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public List<Object> resetVmGuestOsPassword(VmResetGuestOsPasswordParams vmResetGuestOsPasswordParams) throws ApiException {
-        ApiResponse<List<Object>> localVarResp = resetVmGuestOsPasswordWithHttpInfo(vmResetGuestOsPasswordParams);
+    public List<WithTaskVm> resetVmGuestOsPassword(VmResetGuestOsPasswordParams vmResetGuestOsPasswordParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = resetVmGuestOsPasswordWithHttpInfo(vmResetGuestOsPasswordParams);
         return localVarResp.getData();
     }
 
@@ -3962,7 +3962,7 @@ public class VmApi {
      * 
      * 
      * @param vmResetGuestOsPasswordParams  (required)
-     * @return ApiResponse&lt;List&lt;Object&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3974,9 +3974,9 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Object>> resetVmGuestOsPasswordWithHttpInfo(VmResetGuestOsPasswordParams vmResetGuestOsPasswordParams) throws ApiException {
+    public ApiResponse<List<WithTaskVm>> resetVmGuestOsPasswordWithHttpInfo(VmResetGuestOsPasswordParams vmResetGuestOsPasswordParams) throws ApiException {
         okhttp3.Call localVarCall = resetVmGuestOsPasswordValidateBeforeCall(vmResetGuestOsPasswordParams, null);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3997,10 +3997,10 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call resetVmGuestOsPasswordAsync(VmResetGuestOsPasswordParams vmResetGuestOsPasswordParams, final ApiCallback<List<Object>> _callback) throws ApiException {
+    public okhttp3.Call resetVmGuestOsPasswordAsync(VmResetGuestOsPasswordParams vmResetGuestOsPasswordParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = resetVmGuestOsPasswordValidateBeforeCall(vmResetGuestOsPasswordParams, _callback);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -5681,6 +5681,149 @@ public class VmApi {
         return localVarCall;
     }
     /**
+     * Build call for updateVmIoPolicy
+     * @param vmUpdateIoPolicyParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateVmIoPolicyCall(VmUpdateIoPolicyParams vmUpdateIoPolicyParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmUpdateIoPolicyParams;
+
+        // create path and map variables
+        String localVarPath = "/update-vm-io-policy";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateVmIoPolicyValidateBeforeCall(VmUpdateIoPolicyParams vmUpdateIoPolicyParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'vmUpdateIoPolicyParams' is set
+        if (vmUpdateIoPolicyParams == null) {
+            throw new ApiException("Missing the required parameter 'vmUpdateIoPolicyParams' when calling updateVmIoPolicy(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = updateVmIoPolicyCall(vmUpdateIoPolicyParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param vmUpdateIoPolicyParams  (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<WithTaskVm> updateVmIoPolicy(VmUpdateIoPolicyParams vmUpdateIoPolicyParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = updateVmIoPolicyWithHttpInfo(vmUpdateIoPolicyParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param vmUpdateIoPolicyParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVm>> updateVmIoPolicyWithHttpInfo(VmUpdateIoPolicyParams vmUpdateIoPolicyParams) throws ApiException {
+        okhttp3.Call localVarCall = updateVmIoPolicyValidateBeforeCall(vmUpdateIoPolicyParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param vmUpdateIoPolicyParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateVmIoPolicyAsync(VmUpdateIoPolicyParams vmUpdateIoPolicyParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateVmIoPolicyValidateBeforeCall(vmUpdateIoPolicyParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for updateVmNic
      * @param vmUpdateNicParams  (required)
      * @param _callback Callback for upload/download progress
@@ -5899,7 +6042,7 @@ public class VmApi {
      * 
      * 
      * @param vmUpdateNicAdvanceInfoParams  (required)
-     * @return List&lt;InlineResponse200&gt;
+     * @return List&lt;WithTaskVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -5911,8 +6054,8 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse200> updateVmNicAdvanceInfo(VmUpdateNicAdvanceInfoParams vmUpdateNicAdvanceInfoParams) throws ApiException {
-        ApiResponse<List<InlineResponse200>> localVarResp = updateVmNicAdvanceInfoWithHttpInfo(vmUpdateNicAdvanceInfoParams);
+    public List<WithTaskVm> updateVmNicAdvanceInfo(VmUpdateNicAdvanceInfoParams vmUpdateNicAdvanceInfoParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = updateVmNicAdvanceInfoWithHttpInfo(vmUpdateNicAdvanceInfoParams);
         return localVarResp.getData();
     }
 
@@ -5920,7 +6063,7 @@ public class VmApi {
      * 
      * 
      * @param vmUpdateNicAdvanceInfoParams  (required)
-     * @return ApiResponse&lt;List&lt;InlineResponse200&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -5932,9 +6075,9 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse200>> updateVmNicAdvanceInfoWithHttpInfo(VmUpdateNicAdvanceInfoParams vmUpdateNicAdvanceInfoParams) throws ApiException {
+    public ApiResponse<List<WithTaskVm>> updateVmNicAdvanceInfoWithHttpInfo(VmUpdateNicAdvanceInfoParams vmUpdateNicAdvanceInfoParams) throws ApiException {
         okhttp3.Call localVarCall = updateVmNicAdvanceInfoValidateBeforeCall(vmUpdateNicAdvanceInfoParams, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -5955,10 +6098,10 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmNicAdvanceInfoAsync(VmUpdateNicAdvanceInfoParams vmUpdateNicAdvanceInfoParams, final ApiCallback<List<InlineResponse200>> _callback) throws ApiException {
+    public okhttp3.Call updateVmNicAdvanceInfoAsync(VmUpdateNicAdvanceInfoParams vmUpdateNicAdvanceInfoParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateVmNicAdvanceInfoValidateBeforeCall(vmUpdateNicAdvanceInfoParams, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -6042,7 +6185,7 @@ public class VmApi {
      * 
      * 
      * @param vmUpdateNicBasicInfoParams  (required)
-     * @return List&lt;InlineResponse200&gt;
+     * @return List&lt;WithTaskVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -6054,8 +6197,8 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse200> updateVmNicBasicInfo(VmUpdateNicBasicInfoParams vmUpdateNicBasicInfoParams) throws ApiException {
-        ApiResponse<List<InlineResponse200>> localVarResp = updateVmNicBasicInfoWithHttpInfo(vmUpdateNicBasicInfoParams);
+    public List<WithTaskVm> updateVmNicBasicInfo(VmUpdateNicBasicInfoParams vmUpdateNicBasicInfoParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = updateVmNicBasicInfoWithHttpInfo(vmUpdateNicBasicInfoParams);
         return localVarResp.getData();
     }
 
@@ -6063,7 +6206,7 @@ public class VmApi {
      * 
      * 
      * @param vmUpdateNicBasicInfoParams  (required)
-     * @return ApiResponse&lt;List&lt;InlineResponse200&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -6075,9 +6218,9 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse200>> updateVmNicBasicInfoWithHttpInfo(VmUpdateNicBasicInfoParams vmUpdateNicBasicInfoParams) throws ApiException {
+    public ApiResponse<List<WithTaskVm>> updateVmNicBasicInfoWithHttpInfo(VmUpdateNicBasicInfoParams vmUpdateNicBasicInfoParams) throws ApiException {
         okhttp3.Call localVarCall = updateVmNicBasicInfoValidateBeforeCall(vmUpdateNicBasicInfoParams, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -6098,10 +6241,10 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmNicBasicInfoAsync(VmUpdateNicBasicInfoParams vmUpdateNicBasicInfoParams, final ApiCallback<List<InlineResponse200>> _callback) throws ApiException {
+    public okhttp3.Call updateVmNicBasicInfoAsync(VmUpdateNicBasicInfoParams vmUpdateNicBasicInfoParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateVmNicBasicInfoValidateBeforeCall(vmUpdateNicBasicInfoParams, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -6185,7 +6328,7 @@ public class VmApi {
      * 
      * 
      * @param vmUpdateOwnerParams  (required)
-     * @return List&lt;Object&gt;
+     * @return List&lt;WithTaskVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -6197,8 +6340,8 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public List<Object> updateVmOwner(VmUpdateOwnerParams vmUpdateOwnerParams) throws ApiException {
-        ApiResponse<List<Object>> localVarResp = updateVmOwnerWithHttpInfo(vmUpdateOwnerParams);
+    public List<WithTaskVm> updateVmOwner(VmUpdateOwnerParams vmUpdateOwnerParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = updateVmOwnerWithHttpInfo(vmUpdateOwnerParams);
         return localVarResp.getData();
     }
 
@@ -6206,7 +6349,7 @@ public class VmApi {
      * 
      * 
      * @param vmUpdateOwnerParams  (required)
-     * @return ApiResponse&lt;List&lt;Object&gt;&gt;
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -6218,9 +6361,9 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Object>> updateVmOwnerWithHttpInfo(VmUpdateOwnerParams vmUpdateOwnerParams) throws ApiException {
+    public ApiResponse<List<WithTaskVm>> updateVmOwnerWithHttpInfo(VmUpdateOwnerParams vmUpdateOwnerParams) throws ApiException {
         okhttp3.Call localVarCall = updateVmOwnerValidateBeforeCall(vmUpdateOwnerParams, null);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -6241,10 +6384,10 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVmOwnerAsync(VmUpdateOwnerParams vmUpdateOwnerParams, final ApiCallback<List<Object>> _callback) throws ApiException {
+    public okhttp3.Call updateVmOwnerAsync(VmUpdateOwnerParams vmUpdateOwnerParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateVmOwnerValidateBeforeCall(vmUpdateOwnerParams, _callback);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

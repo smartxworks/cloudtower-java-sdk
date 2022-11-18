@@ -348,6 +348,7 @@ public class SvtImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param version  (optional)
      * @param uploadTaskId  (optional)
      * @param _callback Callback for upload/download progress
@@ -362,7 +363,7 @@ public class SvtImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uploadSvtImageCall(byte[] _file, String clusterId, String name, String size, String version, String uploadTaskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uploadSvtImageCall(byte[] _file, String clusterId, String name, String size, String sizeUnit, String version, String uploadTaskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -404,6 +405,10 @@ public class SvtImageApi {
             localVarFormParams.put("size", size);
         }
 
+        if (sizeUnit != null) {
+            localVarFormParams.put("size_unit", sizeUnit);
+        }
+
         if (version != null) {
             localVarFormParams.put("version", version);
         }
@@ -433,7 +438,7 @@ public class SvtImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uploadSvtImageValidateBeforeCall(byte[] _file, String clusterId, String name, String size, String version, String uploadTaskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call uploadSvtImageValidateBeforeCall(byte[] _file, String clusterId, String name, String size, String sizeUnit, String version, String uploadTaskId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter '_file' is set
         if (_file == null) {
@@ -441,7 +446,7 @@ public class SvtImageApi {
         }
         
 
-        okhttp3.Call localVarCall = uploadSvtImageCall(_file, clusterId, name, size, version, uploadTaskId, _callback);
+        okhttp3.Call localVarCall = uploadSvtImageCall(_file, clusterId, name, size, sizeUnit, version, uploadTaskId, _callback);
         return localVarCall;
 
     }
@@ -453,6 +458,7 @@ public class SvtImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param version  (optional)
      * @param uploadTaskId  (optional)
      * @return List&lt;UploadTask&gt;
@@ -466,8 +472,8 @@ public class SvtImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public List<UploadTask> uploadSvtImage(byte[] _file, String clusterId, String name, String size, String version, String uploadTaskId) throws ApiException {
-        ApiResponse<List<UploadTask>> localVarResp = uploadSvtImageWithHttpInfo(_file, clusterId, name, size, version, uploadTaskId);
+    public List<UploadTask> uploadSvtImage(byte[] _file, String clusterId, String name, String size, String sizeUnit, String version, String uploadTaskId) throws ApiException {
+        ApiResponse<List<UploadTask>> localVarResp = uploadSvtImageWithHttpInfo(_file, clusterId, name, size, sizeUnit, version, uploadTaskId);
         return localVarResp.getData();
     }
 
@@ -478,6 +484,7 @@ public class SvtImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param version  (optional)
      * @param uploadTaskId  (optional)
      * @return ApiResponse&lt;List&lt;UploadTask&gt;&gt;
@@ -491,8 +498,8 @@ public class SvtImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UploadTask>> uploadSvtImageWithHttpInfo(byte[] _file, String clusterId, String name, String size, String version, String uploadTaskId) throws ApiException {
-        okhttp3.Call localVarCall = uploadSvtImageValidateBeforeCall(_file, clusterId, name, size, version, uploadTaskId, null);
+    public ApiResponse<List<UploadTask>> uploadSvtImageWithHttpInfo(byte[] _file, String clusterId, String name, String size, String sizeUnit, String version, String uploadTaskId) throws ApiException {
+        okhttp3.Call localVarCall = uploadSvtImageValidateBeforeCall(_file, clusterId, name, size, sizeUnit, version, uploadTaskId, null);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -504,6 +511,7 @@ public class SvtImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param version  (optional)
      * @param uploadTaskId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -518,9 +526,9 @@ public class SvtImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uploadSvtImageAsync(byte[] _file, String clusterId, String name, String size, String version, String uploadTaskId, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
+    public okhttp3.Call uploadSvtImageAsync(byte[] _file, String clusterId, String name, String size, String sizeUnit, String version, String uploadTaskId, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uploadSvtImageValidateBeforeCall(_file, clusterId, name, size, version, uploadTaskId, _callback);
+        okhttp3.Call localVarCall = uploadSvtImageValidateBeforeCall(_file, clusterId, name, size, sizeUnit, version, uploadTaskId, _callback);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
