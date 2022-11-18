@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -19,6 +20,10 @@ public class IscsiLunCreationParamsAllOf {
   public static final String SERIALIZED_NAME_LUN_ID = "lun_id";
   @SerializedName(SERIALIZED_NAME_LUN_ID)
   private Integer lunId;
+
+  public static final String SERIALIZED_NAME_ASSIGNED_SIZE_UNIT = "assigned_size_unit";
+  @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE_UNIT)
+  private ByteUnit assignedSizeUnit;
 
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
@@ -59,6 +64,29 @@ public class IscsiLunCreationParamsAllOf {
 
   public void setLunId(Integer lunId) {
     this.lunId = lunId;
+  }
+
+
+  public IscsiLunCreationParamsAllOf assignedSizeUnit(ByteUnit assignedSizeUnit) {
+    
+    this.assignedSizeUnit = assignedSizeUnit;
+    return this;
+  }
+
+   /**
+   * Get assignedSizeUnit
+   * @return assignedSizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getAssignedSizeUnit() {
+    return assignedSizeUnit;
+  }
+
+
+  public void setAssignedSizeUnit(ByteUnit assignedSizeUnit) {
+    this.assignedSizeUnit = assignedSizeUnit;
   }
 
 
@@ -164,6 +192,7 @@ public class IscsiLunCreationParamsAllOf {
     }
     IscsiLunCreationParamsAllOf iscsiLunCreationParamsAllOf = (IscsiLunCreationParamsAllOf) o;
     return Objects.equals(this.lunId, iscsiLunCreationParamsAllOf.lunId) &&
+        Objects.equals(this.assignedSizeUnit, iscsiLunCreationParamsAllOf.assignedSizeUnit) &&
         Objects.equals(this.assignedSize, iscsiLunCreationParamsAllOf.assignedSize) &&
         Objects.equals(this.replicaNum, iscsiLunCreationParamsAllOf.replicaNum) &&
         Objects.equals(this.iscsiTargetId, iscsiLunCreationParamsAllOf.iscsiTargetId) &&
@@ -172,7 +201,7 @@ public class IscsiLunCreationParamsAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(lunId, assignedSize, replicaNum, iscsiTargetId, name);
+    return Objects.hash(lunId, assignedSizeUnit, assignedSize, replicaNum, iscsiTargetId, name);
   }
 
   @Override
@@ -180,6 +209,7 @@ public class IscsiLunCreationParamsAllOf {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiLunCreationParamsAllOf {\n");
     sb.append("    lunId: ").append(toIndentedString(lunId)).append("\n");
+    sb.append("    assignedSizeUnit: ").append(toIndentedString(assignedSizeUnit)).append("\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    iscsiTargetId: ").append(toIndentedString(iscsiTargetId)).append("\n");

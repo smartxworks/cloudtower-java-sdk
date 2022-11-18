@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.NvmfSubsystemPolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,6 +25,10 @@ public class NvmfSubsystemCreationParamsAllOf {
   public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
   private Boolean thinProvision;
+
+  public static final String SERIALIZED_NAME_STRIPE_SIZE_UNIT = "stripe_size_unit";
+  @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_UNIT)
+  private ByteUnit stripeSizeUnit;
 
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
@@ -91,6 +96,29 @@ public class NvmfSubsystemCreationParamsAllOf {
 
   public void setThinProvision(Boolean thinProvision) {
     this.thinProvision = thinProvision;
+  }
+
+
+  public NvmfSubsystemCreationParamsAllOf stripeSizeUnit(ByteUnit stripeSizeUnit) {
+    
+    this.stripeSizeUnit = stripeSizeUnit;
+    return this;
+  }
+
+   /**
+   * Get stripeSizeUnit
+   * @return stripeSizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getStripeSizeUnit() {
+    return stripeSizeUnit;
+  }
+
+
+  public void setStripeSizeUnit(ByteUnit stripeSizeUnit) {
+    this.stripeSizeUnit = stripeSizeUnit;
   }
 
 
@@ -220,6 +248,7 @@ public class NvmfSubsystemCreationParamsAllOf {
     NvmfSubsystemCreationParamsAllOf nvmfSubsystemCreationParamsAllOf = (NvmfSubsystemCreationParamsAllOf) o;
     return Objects.equals(this.replicaNum, nvmfSubsystemCreationParamsAllOf.replicaNum) &&
         Objects.equals(this.thinProvision, nvmfSubsystemCreationParamsAllOf.thinProvision) &&
+        Objects.equals(this.stripeSizeUnit, nvmfSubsystemCreationParamsAllOf.stripeSizeUnit) &&
         Objects.equals(this.stripeSize, nvmfSubsystemCreationParamsAllOf.stripeSize) &&
         Objects.equals(this.stripeNum, nvmfSubsystemCreationParamsAllOf.stripeNum) &&
         Objects.equals(this.policy, nvmfSubsystemCreationParamsAllOf.policy) &&
@@ -229,7 +258,7 @@ public class NvmfSubsystemCreationParamsAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(replicaNum, thinProvision, stripeSize, stripeNum, policy, clusterId, name);
+    return Objects.hash(replicaNum, thinProvision, stripeSizeUnit, stripeSize, stripeNum, policy, clusterId, name);
   }
 
   @Override
@@ -238,6 +267,7 @@ public class NvmfSubsystemCreationParamsAllOf {
     sb.append("class NvmfSubsystemCreationParamsAllOf {\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
+    sb.append("    stripeSizeUnit: ").append(toIndentedString(stripeSizeUnit)).append("\n");
     sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
     sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
     sb.append("    policy: ").append(toIndentedString(policy)).append("\n");

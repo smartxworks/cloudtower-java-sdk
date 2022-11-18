@@ -7,6 +7,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BPSUnit;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.TemplateCloudInit;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
@@ -41,6 +43,10 @@ public class VmCreateVmFromTemplateParams {
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
   private VmDiskIoRestrictType maxBandwidthPolicy;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_UNIT = "max_bandwidth_unit";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT)
+  private BPSUnit maxBandwidthUnit;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
@@ -81,6 +87,10 @@ public class VmCreateVmFromTemplateParams {
   public static final String SERIALIZED_NAME_DISK_OPERATE = "disk_operate";
   @SerializedName(SERIALIZED_NAME_DISK_OPERATE)
   private VmDiskOperate diskOperate;
+
+  public static final String SERIALIZED_NAME_MEMORY_UNIT = "memory_unit";
+  @SerializedName(SERIALIZED_NAME_MEMORY_UNIT)
+  private ByteUnit memoryUnit;
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
@@ -210,6 +220,29 @@ public class VmCreateVmFromTemplateParams {
 
   public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
+  }
+
+
+  public VmCreateVmFromTemplateParams maxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    
+    this.maxBandwidthUnit = maxBandwidthUnit;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthUnit
+   * @return maxBandwidthUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getMaxBandwidthUnit() {
+    return maxBandwidthUnit;
+  }
+
+
+  public void setMaxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    this.maxBandwidthUnit = maxBandwidthUnit;
   }
 
 
@@ -451,6 +484,29 @@ public class VmCreateVmFromTemplateParams {
   }
 
 
+  public VmCreateVmFromTemplateParams memoryUnit(ByteUnit memoryUnit) {
+    
+    this.memoryUnit = memoryUnit;
+    return this;
+  }
+
+   /**
+   * Get memoryUnit
+   * @return memoryUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getMemoryUnit() {
+    return memoryUnit;
+  }
+
+
+  public void setMemoryUnit(ByteUnit memoryUnit) {
+    this.memoryUnit = memoryUnit;
+  }
+
+
   public VmCreateVmFromTemplateParams memory(Long memory) {
     
     this.memory = memory;
@@ -671,6 +727,7 @@ public class VmCreateVmFromTemplateParams {
         Objects.equals(this.isFullCopy, vmCreateVmFromTemplateParams.isFullCopy) &&
         Objects.equals(this.templateId, vmCreateVmFromTemplateParams.templateId) &&
         Objects.equals(this.maxBandwidthPolicy, vmCreateVmFromTemplateParams.maxBandwidthPolicy) &&
+        Objects.equals(this.maxBandwidthUnit, vmCreateVmFromTemplateParams.maxBandwidthUnit) &&
         Objects.equals(this.maxBandwidth, vmCreateVmFromTemplateParams.maxBandwidth) &&
         Objects.equals(this.maxIopsPolicy, vmCreateVmFromTemplateParams.maxIopsPolicy) &&
         Objects.equals(this.maxIops, vmCreateVmFromTemplateParams.maxIops) &&
@@ -681,6 +738,7 @@ public class VmCreateVmFromTemplateParams {
         Objects.equals(this.ha, vmCreateVmFromTemplateParams.ha) &&
         Objects.equals(this.vmNics, vmCreateVmFromTemplateParams.vmNics) &&
         Objects.equals(this.diskOperate, vmCreateVmFromTemplateParams.diskOperate) &&
+        Objects.equals(this.memoryUnit, vmCreateVmFromTemplateParams.memoryUnit) &&
         Objects.equals(this.memory, vmCreateVmFromTemplateParams.memory) &&
         Objects.equals(this.cpuCores, vmCreateVmFromTemplateParams.cpuCores) &&
         Objects.equals(this.cpuSockets, vmCreateVmFromTemplateParams.cpuSockets) &&
@@ -694,7 +752,7 @@ public class VmCreateVmFromTemplateParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cloudInit, isFullCopy, templateId, maxBandwidthPolicy, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, diskOperate, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(cloudInit, isFullCopy, templateId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, diskOperate, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
@@ -705,6 +763,7 @@ public class VmCreateVmFromTemplateParams {
     sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
+    sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");
     sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
     sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
     sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
@@ -715,6 +774,7 @@ public class VmCreateVmFromTemplateParams {
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    diskOperate: ").append(toIndentedString(diskOperate)).append("\n");
+    sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");
     sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
     sb.append("    cpuCores: ").append(toIndentedString(cpuCores)).append("\n");
     sb.append("    cpuSockets: ").append(toIndentedString(cpuSockets)).append("\n");

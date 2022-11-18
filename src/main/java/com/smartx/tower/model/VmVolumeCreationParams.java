@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -20,6 +21,10 @@ public class VmVolumeCreationParams {
   public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
   @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
   private VmVolumeElfStoragePolicyType elfStoragePolicy;
+
+  public static final String SERIALIZED_NAME_SIZE_UNIT = "size_unit";
+  @SerializedName(SERIALIZED_NAME_SIZE_UNIT)
+  private ByteUnit sizeUnit;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
@@ -60,6 +65,29 @@ public class VmVolumeCreationParams {
 
   public void setElfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
     this.elfStoragePolicy = elfStoragePolicy;
+  }
+
+
+  public VmVolumeCreationParams sizeUnit(ByteUnit sizeUnit) {
+    
+    this.sizeUnit = sizeUnit;
+    return this;
+  }
+
+   /**
+   * Get sizeUnit
+   * @return sizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getSizeUnit() {
+    return sizeUnit;
+  }
+
+
+  public void setSizeUnit(ByteUnit sizeUnit) {
+    this.sizeUnit = sizeUnit;
   }
 
 
@@ -165,6 +193,7 @@ public class VmVolumeCreationParams {
     }
     VmVolumeCreationParams vmVolumeCreationParams = (VmVolumeCreationParams) o;
     return Objects.equals(this.elfStoragePolicy, vmVolumeCreationParams.elfStoragePolicy) &&
+        Objects.equals(this.sizeUnit, vmVolumeCreationParams.sizeUnit) &&
         Objects.equals(this.size, vmVolumeCreationParams.size) &&
         Objects.equals(this.sharing, vmVolumeCreationParams.sharing) &&
         Objects.equals(this.clusterId, vmVolumeCreationParams.clusterId) &&
@@ -173,7 +202,7 @@ public class VmVolumeCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(elfStoragePolicy, size, sharing, clusterId, name);
+    return Objects.hash(elfStoragePolicy, sizeUnit, size, sharing, clusterId, name);
   }
 
   @Override
@@ -181,6 +210,7 @@ public class VmVolumeCreationParams {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmVolumeCreationParams {\n");
     sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
+    sb.append("    sizeUnit: ").append(toIndentedString(sizeUnit)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    sharing: ").append(toIndentedString(sharing)).append("\n");
     sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");

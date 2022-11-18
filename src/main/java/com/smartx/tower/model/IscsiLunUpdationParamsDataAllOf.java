@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -16,6 +17,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class IscsiLunUpdationParamsDataAllOf {
+  public static final String SERIALIZED_NAME_ASSIGNED_SIZE_UNIT = "assigned_size_unit";
+  @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE_UNIT)
+  private ByteUnit assignedSizeUnit;
+
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
   private Long assignedSize;
@@ -26,6 +31,29 @@ public class IscsiLunUpdationParamsDataAllOf {
 
   public IscsiLunUpdationParamsDataAllOf() { 
   }
+
+  public IscsiLunUpdationParamsDataAllOf assignedSizeUnit(ByteUnit assignedSizeUnit) {
+    
+    this.assignedSizeUnit = assignedSizeUnit;
+    return this;
+  }
+
+   /**
+   * Get assignedSizeUnit
+   * @return assignedSizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getAssignedSizeUnit() {
+    return assignedSizeUnit;
+  }
+
+
+  public void setAssignedSizeUnit(ByteUnit assignedSizeUnit) {
+    this.assignedSizeUnit = assignedSizeUnit;
+  }
+
 
   public IscsiLunUpdationParamsDataAllOf assignedSize(Long assignedSize) {
     
@@ -82,19 +110,21 @@ public class IscsiLunUpdationParamsDataAllOf {
       return false;
     }
     IscsiLunUpdationParamsDataAllOf iscsiLunUpdationParamsDataAllOf = (IscsiLunUpdationParamsDataAllOf) o;
-    return Objects.equals(this.assignedSize, iscsiLunUpdationParamsDataAllOf.assignedSize) &&
+    return Objects.equals(this.assignedSizeUnit, iscsiLunUpdationParamsDataAllOf.assignedSizeUnit) &&
+        Objects.equals(this.assignedSize, iscsiLunUpdationParamsDataAllOf.assignedSize) &&
         Objects.equals(this.name, iscsiLunUpdationParamsDataAllOf.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(assignedSize, name);
+    return Objects.hash(assignedSizeUnit, assignedSize, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiLunUpdationParamsDataAllOf {\n");
+    sb.append("    assignedSizeUnit: ").append(toIndentedString(assignedSizeUnit)).append("\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");

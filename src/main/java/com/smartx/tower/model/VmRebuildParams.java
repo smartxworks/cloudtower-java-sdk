@@ -7,6 +7,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BPSUnit;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
@@ -25,6 +27,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmRebuildParams {
+  public static final String SERIALIZED_NAME_IS_FULL_COPY = "is_full_copy";
+  @SerializedName(SERIALIZED_NAME_IS_FULL_COPY)
+  private Boolean isFullCopy;
+
   public static final String SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID = "rebuild_from_snapshot_id";
   @SerializedName(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID)
   private String rebuildFromSnapshotId;
@@ -32,6 +38,10 @@ public class VmRebuildParams {
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
   private VmDiskIoRestrictType maxBandwidthPolicy;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_UNIT = "max_bandwidth_unit";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT)
+  private BPSUnit maxBandwidthUnit;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
@@ -73,6 +83,10 @@ public class VmRebuildParams {
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
   private VmDiskParams vmDisks;
 
+  public static final String SERIALIZED_NAME_MEMORY_UNIT = "memory_unit";
+  @SerializedName(SERIALIZED_NAME_MEMORY_UNIT)
+  private ByteUnit memoryUnit;
+
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
   private Long memory;
@@ -111,6 +125,29 @@ public class VmRebuildParams {
 
   public VmRebuildParams() { 
   }
+
+  public VmRebuildParams isFullCopy(Boolean isFullCopy) {
+    
+    this.isFullCopy = isFullCopy;
+    return this;
+  }
+
+   /**
+   * Get isFullCopy
+   * @return isFullCopy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIsFullCopy() {
+    return isFullCopy;
+  }
+
+
+  public void setIsFullCopy(Boolean isFullCopy) {
+    this.isFullCopy = isFullCopy;
+  }
+
 
   public VmRebuildParams rebuildFromSnapshotId(String rebuildFromSnapshotId) {
     
@@ -155,6 +192,29 @@ public class VmRebuildParams {
 
   public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
+  }
+
+
+  public VmRebuildParams maxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    
+    this.maxBandwidthUnit = maxBandwidthUnit;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthUnit
+   * @return maxBandwidthUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getMaxBandwidthUnit() {
+    return maxBandwidthUnit;
+  }
+
+
+  public void setMaxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    this.maxBandwidthUnit = maxBandwidthUnit;
   }
 
 
@@ -396,6 +456,29 @@ public class VmRebuildParams {
   }
 
 
+  public VmRebuildParams memoryUnit(ByteUnit memoryUnit) {
+    
+    this.memoryUnit = memoryUnit;
+    return this;
+  }
+
+   /**
+   * Get memoryUnit
+   * @return memoryUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getMemoryUnit() {
+    return memoryUnit;
+  }
+
+
+  public void setMemoryUnit(ByteUnit memoryUnit) {
+    this.memoryUnit = memoryUnit;
+  }
+
+
   public VmRebuildParams memory(Long memory) {
     
     this.memory = memory;
@@ -612,8 +695,10 @@ public class VmRebuildParams {
       return false;
     }
     VmRebuildParams vmRebuildParams = (VmRebuildParams) o;
-    return Objects.equals(this.rebuildFromSnapshotId, vmRebuildParams.rebuildFromSnapshotId) &&
+    return Objects.equals(this.isFullCopy, vmRebuildParams.isFullCopy) &&
+        Objects.equals(this.rebuildFromSnapshotId, vmRebuildParams.rebuildFromSnapshotId) &&
         Objects.equals(this.maxBandwidthPolicy, vmRebuildParams.maxBandwidthPolicy) &&
+        Objects.equals(this.maxBandwidthUnit, vmRebuildParams.maxBandwidthUnit) &&
         Objects.equals(this.maxBandwidth, vmRebuildParams.maxBandwidth) &&
         Objects.equals(this.maxIopsPolicy, vmRebuildParams.maxIopsPolicy) &&
         Objects.equals(this.maxIops, vmRebuildParams.maxIops) &&
@@ -624,6 +709,7 @@ public class VmRebuildParams {
         Objects.equals(this.ha, vmRebuildParams.ha) &&
         Objects.equals(this.vmNics, vmRebuildParams.vmNics) &&
         Objects.equals(this.vmDisks, vmRebuildParams.vmDisks) &&
+        Objects.equals(this.memoryUnit, vmRebuildParams.memoryUnit) &&
         Objects.equals(this.memory, vmRebuildParams.memory) &&
         Objects.equals(this.cpuCores, vmRebuildParams.cpuCores) &&
         Objects.equals(this.cpuSockets, vmRebuildParams.cpuSockets) &&
@@ -637,15 +723,17 @@ public class VmRebuildParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(rebuildFromSnapshotId, maxBandwidthPolicy, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(isFullCopy, rebuildFromSnapshotId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmRebuildParams {\n");
+    sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
     sb.append("    rebuildFromSnapshotId: ").append(toIndentedString(rebuildFromSnapshotId)).append("\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
+    sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");
     sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
     sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
     sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
@@ -656,6 +744,7 @@ public class VmRebuildParams {
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
+    sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");
     sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
     sb.append("    cpuCores: ").append(toIndentedString(cpuCores)).append("\n");
     sb.append("    cpuSockets: ").append(toIndentedString(cpuSockets)).append("\n");

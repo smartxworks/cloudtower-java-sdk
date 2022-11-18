@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,6 +25,10 @@ public class MountNewCreateDisksParamsVmVolume {
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
   private String path;
+
+  public static final String SERIALIZED_NAME_SIZE_UNIT = "size_unit";
+  @SerializedName(SERIALIZED_NAME_SIZE_UNIT)
+  private ByteUnit sizeUnit;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
@@ -79,6 +84,29 @@ public class MountNewCreateDisksParamsVmVolume {
 
   public void setPath(String path) {
     this.path = path;
+  }
+
+
+  public MountNewCreateDisksParamsVmVolume sizeUnit(ByteUnit sizeUnit) {
+    
+    this.sizeUnit = sizeUnit;
+    return this;
+  }
+
+   /**
+   * Get sizeUnit
+   * @return sizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getSizeUnit() {
+    return sizeUnit;
+  }
+
+
+  public void setSizeUnit(ByteUnit sizeUnit) {
+    this.sizeUnit = sizeUnit;
   }
 
 
@@ -139,13 +167,14 @@ public class MountNewCreateDisksParamsVmVolume {
     MountNewCreateDisksParamsVmVolume mountNewCreateDisksParamsVmVolume = (MountNewCreateDisksParamsVmVolume) o;
     return Objects.equals(this.elfStoragePolicy, mountNewCreateDisksParamsVmVolume.elfStoragePolicy) &&
         Objects.equals(this.path, mountNewCreateDisksParamsVmVolume.path) &&
+        Objects.equals(this.sizeUnit, mountNewCreateDisksParamsVmVolume.sizeUnit) &&
         Objects.equals(this.size, mountNewCreateDisksParamsVmVolume.size) &&
         Objects.equals(this.name, mountNewCreateDisksParamsVmVolume.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(elfStoragePolicy, path, size, name);
+    return Objects.hash(elfStoragePolicy, path, sizeUnit, size, name);
   }
 
   @Override
@@ -154,6 +183,7 @@ public class MountNewCreateDisksParamsVmVolume {
     sb.append("class MountNewCreateDisksParamsVmVolume {\n");
     sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    sizeUnit: ").append(toIndentedString(sizeUnit)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
