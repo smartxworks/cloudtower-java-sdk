@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import com.smartx.tower.model.VmDiskWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -17,6 +18,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmExpandVmDiskParams {
+  public static final String SERIALIZED_NAME_SIZE_UNIT = "size_unit";
+  @SerializedName(SERIALIZED_NAME_SIZE_UNIT)
+  private ByteUnit sizeUnit;
+
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -27,6 +32,29 @@ public class VmExpandVmDiskParams {
 
   public VmExpandVmDiskParams() { 
   }
+
+  public VmExpandVmDiskParams sizeUnit(ByteUnit sizeUnit) {
+    
+    this.sizeUnit = sizeUnit;
+    return this;
+  }
+
+   /**
+   * Get sizeUnit
+   * @return sizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getSizeUnit() {
+    return sizeUnit;
+  }
+
+
+  public void setSizeUnit(ByteUnit sizeUnit) {
+    this.sizeUnit = sizeUnit;
+  }
+
 
   public VmExpandVmDiskParams size(Long size) {
     
@@ -83,19 +111,21 @@ public class VmExpandVmDiskParams {
       return false;
     }
     VmExpandVmDiskParams vmExpandVmDiskParams = (VmExpandVmDiskParams) o;
-    return Objects.equals(this.size, vmExpandVmDiskParams.size) &&
+    return Objects.equals(this.sizeUnit, vmExpandVmDiskParams.sizeUnit) &&
+        Objects.equals(this.size, vmExpandVmDiskParams.size) &&
         Objects.equals(this.where, vmExpandVmDiskParams.where);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(size, where);
+    return Objects.hash(sizeUnit, size, where);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmExpandVmDiskParams {\n");
+    sb.append("    sizeUnit: ").append(toIndentedString(sizeUnit)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    where: ").append(toIndentedString(where)).append("\n");
     sb.append("}");

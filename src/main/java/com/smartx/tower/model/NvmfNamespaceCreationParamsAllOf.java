@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,6 +28,10 @@ public class NvmfNamespaceCreationParamsAllOf {
   public static final String SERIALIZED_NAME_IS_SHARED = "is_shared";
   @SerializedName(SERIALIZED_NAME_IS_SHARED)
   private Boolean isShared;
+
+  public static final String SERIALIZED_NAME_ASSIGNED_SIZE_UNIT = "assigned_size_unit";
+  @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE_UNIT)
+  private ByteUnit assignedSizeUnit;
 
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
@@ -113,6 +118,29 @@ public class NvmfNamespaceCreationParamsAllOf {
 
   public void setIsShared(Boolean isShared) {
     this.isShared = isShared;
+  }
+
+
+  public NvmfNamespaceCreationParamsAllOf assignedSizeUnit(ByteUnit assignedSizeUnit) {
+    
+    this.assignedSizeUnit = assignedSizeUnit;
+    return this;
+  }
+
+   /**
+   * Get assignedSizeUnit
+   * @return assignedSizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getAssignedSizeUnit() {
+    return assignedSizeUnit;
+  }
+
+
+  public void setAssignedSizeUnit(ByteUnit assignedSizeUnit) {
+    this.assignedSizeUnit = assignedSizeUnit;
   }
 
 
@@ -220,6 +248,7 @@ public class NvmfNamespaceCreationParamsAllOf {
     return Objects.equals(this.namespaceId, nvmfNamespaceCreationParamsAllOf.namespaceId) &&
         Objects.equals(this.groupId, nvmfNamespaceCreationParamsAllOf.groupId) &&
         Objects.equals(this.isShared, nvmfNamespaceCreationParamsAllOf.isShared) &&
+        Objects.equals(this.assignedSizeUnit, nvmfNamespaceCreationParamsAllOf.assignedSizeUnit) &&
         Objects.equals(this.assignedSize, nvmfNamespaceCreationParamsAllOf.assignedSize) &&
         Objects.equals(this.replicaNum, nvmfNamespaceCreationParamsAllOf.replicaNum) &&
         Objects.equals(this.nvmfSubsystemId, nvmfNamespaceCreationParamsAllOf.nvmfSubsystemId) &&
@@ -228,7 +257,7 @@ public class NvmfNamespaceCreationParamsAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(namespaceId, groupId, isShared, assignedSize, replicaNum, nvmfSubsystemId, name);
+    return Objects.hash(namespaceId, groupId, isShared, assignedSizeUnit, assignedSize, replicaNum, nvmfSubsystemId, name);
   }
 
   @Override
@@ -238,6 +267,7 @@ public class NvmfNamespaceCreationParamsAllOf {
     sb.append("    namespaceId: ").append(toIndentedString(namespaceId)).append("\n");
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    isShared: ").append(toIndentedString(isShared)).append("\n");
+    sb.append("    assignedSizeUnit: ").append(toIndentedString(assignedSizeUnit)).append("\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    nvmfSubsystemId: ").append(toIndentedString(nvmfSubsystemId)).append("\n");

@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -23,6 +24,10 @@ public class VmUpdateParamsData {
   public static final String SERIALIZED_NAME_HA = "ha";
   @SerializedName(SERIALIZED_NAME_HA)
   private Boolean ha;
+
+  public static final String SERIALIZED_NAME_MEMORY_UNIT = "memory_unit";
+  @SerializedName(SERIALIZED_NAME_MEMORY_UNIT)
+  private ByteUnit memoryUnit;
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
@@ -90,6 +95,29 @@ public class VmUpdateParamsData {
 
   public void setHa(Boolean ha) {
     this.ha = ha;
+  }
+
+
+  public VmUpdateParamsData memoryUnit(ByteUnit memoryUnit) {
+    
+    this.memoryUnit = memoryUnit;
+    return this;
+  }
+
+   /**
+   * Get memoryUnit
+   * @return memoryUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getMemoryUnit() {
+    return memoryUnit;
+  }
+
+
+  public void setMemoryUnit(ByteUnit memoryUnit) {
+    this.memoryUnit = memoryUnit;
   }
 
 
@@ -219,6 +247,7 @@ public class VmUpdateParamsData {
     VmUpdateParamsData vmUpdateParamsData = (VmUpdateParamsData) o;
     return Objects.equals(this.vcpu, vmUpdateParamsData.vcpu) &&
         Objects.equals(this.ha, vmUpdateParamsData.ha) &&
+        Objects.equals(this.memoryUnit, vmUpdateParamsData.memoryUnit) &&
         Objects.equals(this.memory, vmUpdateParamsData.memory) &&
         Objects.equals(this.cpuCores, vmUpdateParamsData.cpuCores) &&
         Objects.equals(this.cpuSockets, vmUpdateParamsData.cpuSockets) &&
@@ -228,7 +257,7 @@ public class VmUpdateParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(vcpu, ha, memory, cpuCores, cpuSockets, description, name);
+    return Objects.hash(vcpu, ha, memoryUnit, memory, cpuCores, cpuSockets, description, name);
   }
 
   @Override
@@ -237,6 +266,7 @@ public class VmUpdateParamsData {
     sb.append("class VmUpdateParamsData {\n");
     sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+    sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");
     sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
     sb.append("    cpuCores: ").append(toIndentedString(cpuCores)).append("\n");
     sb.append("    cpuSockets: ").append(toIndentedString(cpuSockets)).append("\n");

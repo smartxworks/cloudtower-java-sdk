@@ -20,6 +20,8 @@ public enum VmUsage {
   
   BACKUP_CONTROLLER("BACKUP_CONTROLLER"),
   
+  CLOUDTOWER("CLOUDTOWER"),
+  
   EVEROUTE_CONTROLLER("EVEROUTE_CONTROLLER");
 
   private String value;

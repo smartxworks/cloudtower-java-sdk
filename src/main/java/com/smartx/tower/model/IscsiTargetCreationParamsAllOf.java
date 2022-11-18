@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ByteUnit;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -16,6 +17,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class IscsiTargetCreationParamsAllOf {
+  public static final String SERIALIZED_NAME_STRIPE_SIZE_UNIT = "stripe_size_unit";
+  @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_UNIT)
+  private ByteUnit stripeSizeUnit;
+
   public static final String SERIALIZED_NAME_STRIPE_SIZE = "stripe_size";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE)
   private Long stripeSize;
@@ -42,6 +47,29 @@ public class IscsiTargetCreationParamsAllOf {
 
   public IscsiTargetCreationParamsAllOf() { 
   }
+
+  public IscsiTargetCreationParamsAllOf stripeSizeUnit(ByteUnit stripeSizeUnit) {
+    
+    this.stripeSizeUnit = stripeSizeUnit;
+    return this;
+  }
+
+   /**
+   * Get stripeSizeUnit
+   * @return stripeSizeUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ByteUnit getStripeSizeUnit() {
+    return stripeSizeUnit;
+  }
+
+
+  public void setStripeSizeUnit(ByteUnit stripeSizeUnit) {
+    this.stripeSizeUnit = stripeSizeUnit;
+  }
+
 
   public IscsiTargetCreationParamsAllOf stripeSize(Long stripeSize) {
     
@@ -190,7 +218,8 @@ public class IscsiTargetCreationParamsAllOf {
       return false;
     }
     IscsiTargetCreationParamsAllOf iscsiTargetCreationParamsAllOf = (IscsiTargetCreationParamsAllOf) o;
-    return Objects.equals(this.stripeSize, iscsiTargetCreationParamsAllOf.stripeSize) &&
+    return Objects.equals(this.stripeSizeUnit, iscsiTargetCreationParamsAllOf.stripeSizeUnit) &&
+        Objects.equals(this.stripeSize, iscsiTargetCreationParamsAllOf.stripeSize) &&
         Objects.equals(this.stripeNum, iscsiTargetCreationParamsAllOf.stripeNum) &&
         Objects.equals(this.replicaNum, iscsiTargetCreationParamsAllOf.replicaNum) &&
         Objects.equals(this.thinProvision, iscsiTargetCreationParamsAllOf.thinProvision) &&
@@ -200,13 +229,14 @@ public class IscsiTargetCreationParamsAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(stripeSize, stripeNum, replicaNum, thinProvision, clusterId, name);
+    return Objects.hash(stripeSizeUnit, stripeSize, stripeNum, replicaNum, thinProvision, clusterId, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiTargetCreationParamsAllOf {\n");
+    sb.append("    stripeSizeUnit: ").append(toIndentedString(stripeSizeUnit)).append("\n");
     sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
     sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");

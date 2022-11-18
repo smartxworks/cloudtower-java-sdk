@@ -7,50 +7,28 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.VmRestrictIoParamsData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * InlineResponse200
+ * VmUpdateEachDiskIoPolicyParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class InlineResponse200 {
-  public static final String SERIALIZED_NAME_TASK_ID = "task_id";
-  @SerializedName(SERIALIZED_NAME_TASK_ID)
-  private Object taskId = null;
-
+public class VmUpdateEachDiskIoPolicyParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private Object data = null;
+  private VmRestrictIoParamsData data;
 
-  public InlineResponse200() { 
+  public static final String SERIALIZED_NAME_BOOT = "boot";
+  @SerializedName(SERIALIZED_NAME_BOOT)
+  private Integer boot;
+
+  public VmUpdateEachDiskIoPolicyParams() { 
   }
 
-  public InlineResponse200 taskId(Object taskId) {
-    
-    this.taskId = taskId;
-    return this;
-  }
-
-   /**
-   * Get taskId
-   * @return taskId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
-
-  public Object getTaskId() {
-    return taskId;
-  }
-
-
-  public void setTaskId(Object taskId) {
-    this.taskId = taskId;
-  }
-
-
-  public InlineResponse200 data(Object data) {
+  public VmUpdateEachDiskIoPolicyParams data(VmRestrictIoParamsData data) {
     
     this.data = data;
     return this;
@@ -60,16 +38,39 @@ public class InlineResponse200 {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Object getData() {
+  public VmRestrictIoParamsData getData() {
     return data;
   }
 
 
-  public void setData(Object data) {
+  public void setData(VmRestrictIoParamsData data) {
     this.data = data;
+  }
+
+
+  public VmUpdateEachDiskIoPolicyParams boot(Integer boot) {
+    
+    this.boot = boot;
+    return this;
+  }
+
+   /**
+   * Get boot
+   * @return boot
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Integer getBoot() {
+    return boot;
+  }
+
+
+  public void setBoot(Integer boot) {
+    this.boot = boot;
   }
 
 
@@ -81,22 +82,22 @@ public class InlineResponse200 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse200 inlineResponse200 = (InlineResponse200) o;
-    return Objects.equals(this.taskId, inlineResponse200.taskId) &&
-        Objects.equals(this.data, inlineResponse200.data);
+    VmUpdateEachDiskIoPolicyParams vmUpdateEachDiskIoPolicyParams = (VmUpdateEachDiskIoPolicyParams) o;
+    return Objects.equals(this.data, vmUpdateEachDiskIoPolicyParams.data) &&
+        Objects.equals(this.boot, vmUpdateEachDiskIoPolicyParams.boot);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(taskId, data);
+    return Objects.hash(data, boot);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse200 {\n");
-    sb.append("    taskId: ").append(toIndentedString(taskId)).append("\n");
+    sb.append("class VmUpdateEachDiskIoPolicyParams {\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    boot: ").append(toIndentedString(boot)).append("\n");
     sb.append("}");
     return sb.toString();
   }

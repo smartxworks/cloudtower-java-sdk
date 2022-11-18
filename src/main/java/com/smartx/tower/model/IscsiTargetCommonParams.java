@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BPSUnit;
 import com.smartx.tower.model.IscsiTargetCommonParamsInitiatorChaps;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,6 +24,10 @@ public class IscsiTargetCommonParams {
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
   private Long bpsWrMaxLength;
 
+  public static final String SERIALIZED_NAME_BPS_WR_MAX_SIZE = "bps_wr_max_size";
+  @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_SIZE)
+  private BPSUnit bpsWrMaxSize;
+
   public static final String SERIALIZED_NAME_BPS_WR_MAX = "bps_wr_max";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX)
   private Long bpsWrMax;
@@ -31,6 +36,10 @@ public class IscsiTargetCommonParams {
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH)
   private Long bpsRdMaxLength;
 
+  public static final String SERIALIZED_NAME_BPS_RD_MAX_UNIT = "bps_rd_max_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_UNIT)
+  private BPSUnit bpsRdMaxUnit;
+
   public static final String SERIALIZED_NAME_BPS_RD_MAX = "bps_rd_max";
   @SerializedName(SERIALIZED_NAME_BPS_RD_MAX)
   private Long bpsRdMax;
@@ -38,6 +47,10 @@ public class IscsiTargetCommonParams {
   public static final String SERIALIZED_NAME_BPS_MAX_LENGTH = "bps_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH)
   private Long bpsMaxLength;
+
+  public static final String SERIALIZED_NAME_BPS_MAX_UNIT = "bps_max_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_MAX_UNIT)
+  private BPSUnit bpsMaxUnit;
 
   public static final String SERIALIZED_NAME_BPS_MAX = "bps_max";
   @SerializedName(SERIALIZED_NAME_BPS_MAX)
@@ -67,13 +80,25 @@ public class IscsiTargetCommonParams {
   @SerializedName(SERIALIZED_NAME_IOPS_MAX)
   private Long iopsMax;
 
+  public static final String SERIALIZED_NAME_BPS_WR_UNIT = "bps_wr_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_WR_UNIT)
+  private BPSUnit bpsWrUnit;
+
   public static final String SERIALIZED_NAME_BPS_WR = "bps_wr";
   @SerializedName(SERIALIZED_NAME_BPS_WR)
   private Long bpsWr;
 
+  public static final String SERIALIZED_NAME_BPS_RD_UNIT = "bps_rd_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_RD_UNIT)
+  private BPSUnit bpsRdUnit;
+
   public static final String SERIALIZED_NAME_BPS_RD = "bps_rd";
   @SerializedName(SERIALIZED_NAME_BPS_RD)
   private Long bpsRd;
+
+  public static final String SERIALIZED_NAME_BPS_UNIT = "bps_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_UNIT)
+  private BPSUnit bpsUnit;
 
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)
@@ -145,6 +170,29 @@ public class IscsiTargetCommonParams {
   }
 
 
+  public IscsiTargetCommonParams bpsWrMaxSize(BPSUnit bpsWrMaxSize) {
+    
+    this.bpsWrMaxSize = bpsWrMaxSize;
+    return this;
+  }
+
+   /**
+   * Get bpsWrMaxSize
+   * @return bpsWrMaxSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsWrMaxSize() {
+    return bpsWrMaxSize;
+  }
+
+
+  public void setBpsWrMaxSize(BPSUnit bpsWrMaxSize) {
+    this.bpsWrMaxSize = bpsWrMaxSize;
+  }
+
+
   public IscsiTargetCommonParams bpsWrMax(Long bpsWrMax) {
     
     this.bpsWrMax = bpsWrMax;
@@ -191,6 +239,29 @@ public class IscsiTargetCommonParams {
   }
 
 
+  public IscsiTargetCommonParams bpsRdMaxUnit(BPSUnit bpsRdMaxUnit) {
+    
+    this.bpsRdMaxUnit = bpsRdMaxUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsRdMaxUnit
+   * @return bpsRdMaxUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsRdMaxUnit() {
+    return bpsRdMaxUnit;
+  }
+
+
+  public void setBpsRdMaxUnit(BPSUnit bpsRdMaxUnit) {
+    this.bpsRdMaxUnit = bpsRdMaxUnit;
+  }
+
+
   public IscsiTargetCommonParams bpsRdMax(Long bpsRdMax) {
     
     this.bpsRdMax = bpsRdMax;
@@ -234,6 +305,29 @@ public class IscsiTargetCommonParams {
 
   public void setBpsMaxLength(Long bpsMaxLength) {
     this.bpsMaxLength = bpsMaxLength;
+  }
+
+
+  public IscsiTargetCommonParams bpsMaxUnit(BPSUnit bpsMaxUnit) {
+    
+    this.bpsMaxUnit = bpsMaxUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsMaxUnit
+   * @return bpsMaxUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsMaxUnit() {
+    return bpsMaxUnit;
+  }
+
+
+  public void setBpsMaxUnit(BPSUnit bpsMaxUnit) {
+    this.bpsMaxUnit = bpsMaxUnit;
   }
 
 
@@ -398,6 +492,29 @@ public class IscsiTargetCommonParams {
   }
 
 
+  public IscsiTargetCommonParams bpsWrUnit(BPSUnit bpsWrUnit) {
+    
+    this.bpsWrUnit = bpsWrUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsWrUnit
+   * @return bpsWrUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsWrUnit() {
+    return bpsWrUnit;
+  }
+
+
+  public void setBpsWrUnit(BPSUnit bpsWrUnit) {
+    this.bpsWrUnit = bpsWrUnit;
+  }
+
+
   public IscsiTargetCommonParams bpsWr(Long bpsWr) {
     
     this.bpsWr = bpsWr;
@@ -421,6 +538,29 @@ public class IscsiTargetCommonParams {
   }
 
 
+  public IscsiTargetCommonParams bpsRdUnit(BPSUnit bpsRdUnit) {
+    
+    this.bpsRdUnit = bpsRdUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsRdUnit
+   * @return bpsRdUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsRdUnit() {
+    return bpsRdUnit;
+  }
+
+
+  public void setBpsRdUnit(BPSUnit bpsRdUnit) {
+    this.bpsRdUnit = bpsRdUnit;
+  }
+
+
   public IscsiTargetCommonParams bpsRd(Long bpsRd) {
     
     this.bpsRd = bpsRd;
@@ -441,6 +581,29 @@ public class IscsiTargetCommonParams {
 
   public void setBpsRd(Long bpsRd) {
     this.bpsRd = bpsRd;
+  }
+
+
+  public IscsiTargetCommonParams bpsUnit(BPSUnit bpsUnit) {
+    
+    this.bpsUnit = bpsUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsUnit
+   * @return bpsUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsUnit() {
+    return bpsUnit;
+  }
+
+
+  public void setBpsUnit(BPSUnit bpsUnit) {
+    this.bpsUnit = bpsUnit;
   }
 
 
@@ -715,10 +878,13 @@ public class IscsiTargetCommonParams {
     }
     IscsiTargetCommonParams iscsiTargetCommonParams = (IscsiTargetCommonParams) o;
     return Objects.equals(this.bpsWrMaxLength, iscsiTargetCommonParams.bpsWrMaxLength) &&
+        Objects.equals(this.bpsWrMaxSize, iscsiTargetCommonParams.bpsWrMaxSize) &&
         Objects.equals(this.bpsWrMax, iscsiTargetCommonParams.bpsWrMax) &&
         Objects.equals(this.bpsRdMaxLength, iscsiTargetCommonParams.bpsRdMaxLength) &&
+        Objects.equals(this.bpsRdMaxUnit, iscsiTargetCommonParams.bpsRdMaxUnit) &&
         Objects.equals(this.bpsRdMax, iscsiTargetCommonParams.bpsRdMax) &&
         Objects.equals(this.bpsMaxLength, iscsiTargetCommonParams.bpsMaxLength) &&
+        Objects.equals(this.bpsMaxUnit, iscsiTargetCommonParams.bpsMaxUnit) &&
         Objects.equals(this.bpsMax, iscsiTargetCommonParams.bpsMax) &&
         Objects.equals(this.iopsWrMaxLength, iscsiTargetCommonParams.iopsWrMaxLength) &&
         Objects.equals(this.iopsWrMax, iscsiTargetCommonParams.iopsWrMax) &&
@@ -726,8 +892,11 @@ public class IscsiTargetCommonParams {
         Objects.equals(this.iopsRdMax, iscsiTargetCommonParams.iopsRdMax) &&
         Objects.equals(this.iopsMaxLength, iscsiTargetCommonParams.iopsMaxLength) &&
         Objects.equals(this.iopsMax, iscsiTargetCommonParams.iopsMax) &&
+        Objects.equals(this.bpsWrUnit, iscsiTargetCommonParams.bpsWrUnit) &&
         Objects.equals(this.bpsWr, iscsiTargetCommonParams.bpsWr) &&
+        Objects.equals(this.bpsRdUnit, iscsiTargetCommonParams.bpsRdUnit) &&
         Objects.equals(this.bpsRd, iscsiTargetCommonParams.bpsRd) &&
+        Objects.equals(this.bpsUnit, iscsiTargetCommonParams.bpsUnit) &&
         Objects.equals(this.bps, iscsiTargetCommonParams.bps) &&
         Objects.equals(this.iopsWr, iscsiTargetCommonParams.iopsWr) &&
         Objects.equals(this.iopsRd, iscsiTargetCommonParams.iopsRd) &&
@@ -743,7 +912,7 @@ public class IscsiTargetCommonParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bpsWrMaxLength, bpsWrMax, bpsRdMaxLength, bpsRdMax, bpsMaxLength, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWr, bpsRd, bps, iopsWr, iopsRd, iops, initiatorChaps, chapSecret, chapName, chapEnabled, description, iqnWhitelist, ipWhitelist);
+    return Objects.hash(bpsWrMaxLength, bpsWrMaxSize, bpsWrMax, bpsRdMaxLength, bpsRdMaxUnit, bpsRdMax, bpsMaxLength, bpsMaxUnit, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWrUnit, bpsWr, bpsRdUnit, bpsRd, bpsUnit, bps, iopsWr, iopsRd, iops, initiatorChaps, chapSecret, chapName, chapEnabled, description, iqnWhitelist, ipWhitelist);
   }
 
   @Override
@@ -751,10 +920,13 @@ public class IscsiTargetCommonParams {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiTargetCommonParams {\n");
     sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+    sb.append("    bpsWrMaxSize: ").append(toIndentedString(bpsWrMaxSize)).append("\n");
     sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
     sb.append("    bpsRdMaxLength: ").append(toIndentedString(bpsRdMaxLength)).append("\n");
+    sb.append("    bpsRdMaxUnit: ").append(toIndentedString(bpsRdMaxUnit)).append("\n");
     sb.append("    bpsRdMax: ").append(toIndentedString(bpsRdMax)).append("\n");
     sb.append("    bpsMaxLength: ").append(toIndentedString(bpsMaxLength)).append("\n");
+    sb.append("    bpsMaxUnit: ").append(toIndentedString(bpsMaxUnit)).append("\n");
     sb.append("    bpsMax: ").append(toIndentedString(bpsMax)).append("\n");
     sb.append("    iopsWrMaxLength: ").append(toIndentedString(iopsWrMaxLength)).append("\n");
     sb.append("    iopsWrMax: ").append(toIndentedString(iopsWrMax)).append("\n");
@@ -762,8 +934,11 @@ public class IscsiTargetCommonParams {
     sb.append("    iopsRdMax: ").append(toIndentedString(iopsRdMax)).append("\n");
     sb.append("    iopsMaxLength: ").append(toIndentedString(iopsMaxLength)).append("\n");
     sb.append("    iopsMax: ").append(toIndentedString(iopsMax)).append("\n");
+    sb.append("    bpsWrUnit: ").append(toIndentedString(bpsWrUnit)).append("\n");
     sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
+    sb.append("    bpsRdUnit: ").append(toIndentedString(bpsRdUnit)).append("\n");
     sb.append("    bpsRd: ").append(toIndentedString(bpsRd)).append("\n");
+    sb.append("    bpsUnit: ").append(toIndentedString(bpsUnit)).append("\n");
     sb.append("    bps: ").append(toIndentedString(bps)).append("\n");
     sb.append("    iopsWr: ").append(toIndentedString(iopsWr)).append("\n");
     sb.append("    iopsRd: ").append(toIndentedString(iopsRd)).append("\n");

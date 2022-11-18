@@ -79,6 +79,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -154,6 +155,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -174,6 +176,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -196,6 +199,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -774,6 +778,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -849,6 +854,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -869,6 +875,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -891,6 +898,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -913,6 +921,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -988,6 +997,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -1008,6 +1018,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
@@ -1030,6 +1041,7 @@ public class LabelApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>

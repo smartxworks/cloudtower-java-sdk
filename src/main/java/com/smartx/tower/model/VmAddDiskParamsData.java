@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BPSUnit;
 import com.smartx.tower.model.VmAddDiskParamsDataVmDisks;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
@@ -22,6 +23,10 @@ public class VmAddDiskParamsData {
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
   private VmDiskIoRestrictType maxBandwidthPolicy;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_UNIT = "max_bandwidth_unit";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT)
+  private BPSUnit maxBandwidthUnit;
 
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
@@ -66,6 +71,29 @@ public class VmAddDiskParamsData {
 
   public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     this.maxBandwidthPolicy = maxBandwidthPolicy;
+  }
+
+
+  public VmAddDiskParamsData maxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    
+    this.maxBandwidthUnit = maxBandwidthUnit;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthUnit
+   * @return maxBandwidthUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getMaxBandwidthUnit() {
+    return maxBandwidthUnit;
+  }
+
+
+  public void setMaxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+    this.maxBandwidthUnit = maxBandwidthUnit;
   }
 
 
@@ -194,6 +222,7 @@ public class VmAddDiskParamsData {
     }
     VmAddDiskParamsData vmAddDiskParamsData = (VmAddDiskParamsData) o;
     return Objects.equals(this.maxBandwidthPolicy, vmAddDiskParamsData.maxBandwidthPolicy) &&
+        Objects.equals(this.maxBandwidthUnit, vmAddDiskParamsData.maxBandwidthUnit) &&
         Objects.equals(this.maxBandwidth, vmAddDiskParamsData.maxBandwidth) &&
         Objects.equals(this.maxIopsPolicy, vmAddDiskParamsData.maxIopsPolicy) &&
         Objects.equals(this.maxIops, vmAddDiskParamsData.maxIops) &&
@@ -203,7 +232,7 @@ public class VmAddDiskParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxBandwidthPolicy, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vmDisks);
+    return Objects.hash(maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vmDisks);
   }
 
   @Override
@@ -211,6 +240,7 @@ public class VmAddDiskParamsData {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmAddDiskParamsData {\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
+    sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");
     sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
     sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
     sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
