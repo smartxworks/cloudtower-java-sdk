@@ -119,6 +119,8 @@ src/main/java/com/smartx/tower/auth/HttpBasicAuth.java
 src/main/java/com/smartx/tower/auth/HttpBearerAuth.java
 src/main/java/com/smartx/tower/model/AbortMigrateVmAcrossClusterParams.java
 src/main/java/com/smartx/tower/model/AccessMode.java
+src/main/java/com/smartx/tower/model/AddClustersToDatacenterParams.java
+src/main/java/com/smartx/tower/model/AddClustersToDatacenterParamsData.java
 src/main/java/com/smartx/tower/model/AddLabelsToResourcesParams.java
 src/main/java/com/smartx/tower/model/AddLabelsToResourcesParamsData.java
 src/main/java/com/smartx/tower/model/Alert.java
@@ -279,6 +281,7 @@ src/main/java/com/smartx/tower/model/DatacenterOrderByInput.java
 src/main/java/com/smartx/tower/model/DatacenterUpdationParams.java
 src/main/java/com/smartx/tower/model/DatacenterUpdationParamsData.java
 src/main/java/com/smartx/tower/model/DatacenterWhereInput.java
+src/main/java/com/smartx/tower/model/DatacenterWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/DeleteBrickTopo.java
 src/main/java/com/smartx/tower/model/DeleteCloudTowerApplicationPackage.java
 src/main/java/com/smartx/tower/model/DeleteCloudTowerApplicationPackageParams.java
@@ -474,6 +477,7 @@ src/main/java/com/smartx/tower/model/GetLogCollectionsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetLogCollectionsRequestBody.java
 src/main/java/com/smartx/tower/model/GetLogServiceConfigsRequestBody.java
 src/main/java/com/smartx/tower/model/GetLunMetricInput.java
+src/main/java/com/smartx/tower/model/GetMetaLeaderRequestBody.java
 src/main/java/com/smartx/tower/model/GetNamespaceGroupsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetNamespaceGroupsRequestBody.java
 src/main/java/com/smartx/tower/model/GetNfsExportsConnectionRequestBody.java
@@ -633,6 +637,7 @@ src/main/java/com/smartx/tower/model/IscsiLunOrderByInput.java
 src/main/java/com/smartx/tower/model/IscsiLunRollbackParams.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshot.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshotConnection.java
+src/main/java/com/smartx/tower/model/IscsiLunSnapshotCreationEffect.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshotCreationParams.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshotDeletionParams.java
 src/main/java/com/smartx/tower/model/IscsiLunSnapshotOrderByInput.java
@@ -681,8 +686,10 @@ src/main/java/com/smartx/tower/model/LogCollectionWhereInput.java
 src/main/java/com/smartx/tower/model/LogServiceConfig.java
 src/main/java/com/smartx/tower/model/LogServiceConfigsInput.java
 src/main/java/com/smartx/tower/model/LoginInput.java
+src/main/java/com/smartx/tower/model/LoginResponse.java
 src/main/java/com/smartx/tower/model/ManagementVlanUpdationParams.java
 src/main/java/com/smartx/tower/model/ManagementVlanUpdationParamsData.java
+src/main/java/com/smartx/tower/model/MetaLeader.java
 src/main/java/com/smartx/tower/model/Metric.java
 src/main/java/com/smartx/tower/model/MetricLabel.java
 src/main/java/com/smartx/tower/model/MetricSample.java
@@ -984,6 +991,7 @@ src/main/java/com/smartx/tower/model/RackTopoOrderByInput.java
 src/main/java/com/smartx/tower/model/RackTopoUpdationParams.java
 src/main/java/com/smartx/tower/model/RackTopoUpdationParamsData.java
 src/main/java/com/smartx/tower/model/RackTopoWhereInput.java
+src/main/java/com/smartx/tower/model/RemoveClustersFromDatacenterParams.java
 src/main/java/com/smartx/tower/model/ReportResourceInputEnum.java
 src/main/java/com/smartx/tower/model/ReportTask.java
 src/main/java/com/smartx/tower/model/ReportTaskConnection.java
@@ -1111,6 +1119,7 @@ src/main/java/com/smartx/tower/model/UsbDeviceMountParamsData.java
 src/main/java/com/smartx/tower/model/UsbDeviceOrderByInput.java
 src/main/java/com/smartx/tower/model/UsbDeviceStatus.java
 src/main/java/com/smartx/tower/model/UsbDeviceUnmountParams.java
+src/main/java/com/smartx/tower/model/UsbDeviceUnmountParamsData.java
 src/main/java/com/smartx/tower/model/UsbDeviceWhereInput.java
 src/main/java/com/smartx/tower/model/User.java
 src/main/java/com/smartx/tower/model/UserAuditLog.java
@@ -1372,6 +1381,7 @@ src/main/java/com/smartx/tower/model/WithTaskIscsiTarget.java
 src/main/java/com/smartx/tower/model/WithTaskLabel.java
 src/main/java/com/smartx/tower/model/WithTaskLicense.java
 src/main/java/com/smartx/tower/model/WithTaskLogCollection.java
+src/main/java/com/smartx/tower/model/WithTaskLoginResponse.java
 src/main/java/com/smartx/tower/model/WithTaskMetric.java
 src/main/java/com/smartx/tower/model/WithTaskNamespaceGroup.java
 src/main/java/com/smartx/tower/model/WithTaskNfsExport.java
@@ -1388,8 +1398,6 @@ src/main/java/com/smartx/tower/model/WithTaskSnapshotGroup.java
 src/main/java/com/smartx/tower/model/WithTaskSnapshotPlan.java
 src/main/java/com/smartx/tower/model/WithTaskSnmpTransport.java
 src/main/java/com/smartx/tower/model/WithTaskSnmpTrapReceiver.java
-src/main/java/com/smartx/tower/model/WithTaskTokenString.java
-src/main/java/com/smartx/tower/model/WithTaskTokenStringData.java
 src/main/java/com/smartx/tower/model/WithTaskUsbDevice.java
 src/main/java/com/smartx/tower/model/WithTaskUser.java
 src/main/java/com/smartx/tower/model/WithTaskUserRoleNext.java

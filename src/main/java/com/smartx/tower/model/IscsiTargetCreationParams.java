@@ -55,6 +55,10 @@ public class IscsiTargetCreationParams {
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
   private Long bpsWrMaxLength;
 
+  public static final String SERIALIZED_NAME_BPS_WR_MAX_UNIT = "bps_wr_max_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_UNIT)
+  private BPSUnit bpsWrMaxUnit;
+
   public static final String SERIALIZED_NAME_BPS_WR_MAX_SIZE = "bps_wr_max_size";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_SIZE)
   private BPSUnit bpsWrMaxSize;
@@ -359,6 +363,29 @@ public class IscsiTargetCreationParams {
 
   public void setBpsWrMaxLength(Long bpsWrMaxLength) {
     this.bpsWrMaxLength = bpsWrMaxLength;
+  }
+
+
+  public IscsiTargetCreationParams bpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
+    
+    this.bpsWrMaxUnit = bpsWrMaxUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsWrMaxUnit
+   * @return bpsWrMaxUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsWrMaxUnit() {
+    return bpsWrMaxUnit;
+  }
+
+
+  public void setBpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
+    this.bpsWrMaxUnit = bpsWrMaxUnit;
   }
 
 
@@ -1077,6 +1104,7 @@ public class IscsiTargetCreationParams {
         Objects.equals(this.clusterId, iscsiTargetCreationParams.clusterId) &&
         Objects.equals(this.name, iscsiTargetCreationParams.name) &&
         Objects.equals(this.bpsWrMaxLength, iscsiTargetCreationParams.bpsWrMaxLength) &&
+        Objects.equals(this.bpsWrMaxUnit, iscsiTargetCreationParams.bpsWrMaxUnit) &&
         Objects.equals(this.bpsWrMaxSize, iscsiTargetCreationParams.bpsWrMaxSize) &&
         Objects.equals(this.bpsWrMax, iscsiTargetCreationParams.bpsWrMax) &&
         Objects.equals(this.bpsRdMaxLength, iscsiTargetCreationParams.bpsRdMaxLength) &&
@@ -1111,7 +1139,7 @@ public class IscsiTargetCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(stripeSizeUnit, stripeSize, stripeNum, replicaNum, thinProvision, clusterId, name, bpsWrMaxLength, bpsWrMaxSize, bpsWrMax, bpsRdMaxLength, bpsRdMaxUnit, bpsRdMax, bpsMaxLength, bpsMaxUnit, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWrUnit, bpsWr, bpsRdUnit, bpsRd, bpsUnit, bps, iopsWr, iopsRd, iops, initiatorChaps, chapSecret, chapName, chapEnabled, description, iqnWhitelist, ipWhitelist);
+    return Objects.hash(stripeSizeUnit, stripeSize, stripeNum, replicaNum, thinProvision, clusterId, name, bpsWrMaxLength, bpsWrMaxUnit, bpsWrMaxSize, bpsWrMax, bpsRdMaxLength, bpsRdMaxUnit, bpsRdMax, bpsMaxLength, bpsMaxUnit, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWrUnit, bpsWr, bpsRdUnit, bpsRd, bpsUnit, bps, iopsWr, iopsRd, iops, initiatorChaps, chapSecret, chapName, chapEnabled, description, iqnWhitelist, ipWhitelist);
   }
 
   @Override
@@ -1126,6 +1154,7 @@ public class IscsiTargetCreationParams {
     sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+    sb.append("    bpsWrMaxUnit: ").append(toIndentedString(bpsWrMaxUnit)).append("\n");
     sb.append("    bpsWrMaxSize: ").append(toIndentedString(bpsWrMaxSize)).append("\n");
     sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
     sb.append("    bpsRdMaxLength: ").append(toIndentedString(bpsRdMaxLength)).append("\n");

@@ -38,6 +38,10 @@ public class Metric {
   @SerializedName(SERIALIZED_NAME_SAMPLE_STREAMS)
   private List<MetricStream> sampleStreams = null;
 
+  public static final String SERIALIZED_NAME_DROPPED = "dropped";
+  @SerializedName(SERIALIZED_NAME_DROPPED)
+  private Boolean dropped;
+
   /**
    * Gets or Sets typename
    */
@@ -198,6 +202,29 @@ public class Metric {
   }
 
 
+  public Metric dropped(Boolean dropped) {
+    
+    this.dropped = dropped;
+    return this;
+  }
+
+   /**
+   * Get dropped
+   * @return dropped
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Boolean getDropped() {
+    return dropped;
+  }
+
+
+  public void setDropped(Boolean dropped) {
+    this.dropped = dropped;
+  }
+
+
   public Metric typename(TypenameEnum typename) {
     
     this.typename = typename;
@@ -234,6 +261,7 @@ public class Metric {
         Objects.equals(this.step, metric.step) &&
         Objects.equals(this.samples, metric.samples) &&
         Objects.equals(this.sampleStreams, metric.sampleStreams) &&
+        Objects.equals(this.dropped, metric.dropped) &&
         Objects.equals(this.typename, metric.typename);
   }
 
@@ -243,7 +271,7 @@ public class Metric {
 
   @Override
   public int hashCode() {
-    return Objects.hash(unit, step, samples, sampleStreams, typename);
+    return Objects.hash(unit, step, samples, sampleStreams, dropped, typename);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -261,6 +289,7 @@ public class Metric {
     sb.append("    step: ").append(toIndentedString(step)).append("\n");
     sb.append("    samples: ").append(toIndentedString(samples)).append("\n");
     sb.append("    sampleStreams: ").append(toIndentedString(sampleStreams)).append("\n");
+    sb.append("    dropped: ").append(toIndentedString(dropped)).append("\n");
     sb.append("    typename: ").append(toIndentedString(typename)).append("\n");
     sb.append("}");
     return sb.toString();

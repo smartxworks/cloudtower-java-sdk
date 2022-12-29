@@ -13,6 +13,8 @@ import com.smartx.tower.model.UsbDeviceStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
@@ -63,6 +65,10 @@ public class UsbDevice {
   public static final String SERIALIZED_NAME_USB_TYPE = "usb_type";
   @SerializedName(SERIALIZED_NAME_USB_TYPE)
   private String usbType;
+
+  public static final String SERIALIZED_NAME_VMS = "vms";
+  @SerializedName(SERIALIZED_NAME_VMS)
+  private List<NestedVm> vms = null;
 
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
@@ -324,6 +330,37 @@ public class UsbDevice {
   }
 
 
+  public UsbDevice vms(List<NestedVm> vms) {
+    
+    this.vms = vms;
+    return this;
+  }
+
+  public UsbDevice addVmsItem(NestedVm vmsItem) {
+    if (this.vms == null) {
+      this.vms = new ArrayList<NestedVm>();
+    }
+    this.vms.add(vmsItem);
+    return this;
+  }
+
+   /**
+   * Get vms
+   * @return vms
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedVm> getVms() {
+    return vms;
+  }
+
+
+  public void setVms(List<NestedVm> vms) {
+    this.vms = vms;
+  }
+
+
   public UsbDevice vm(NestedVm vm) {
     
     this.vm = vm;
@@ -333,7 +370,9 @@ public class UsbDevice {
    /**
    * Get vm
    * @return vm
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -367,6 +406,7 @@ public class UsbDevice {
         Objects.equals(this.size, usbDevice.size) &&
         Objects.equals(this.status, usbDevice.status) &&
         Objects.equals(this.usbType, usbDevice.usbType) &&
+        Objects.equals(this.vms, usbDevice.vms) &&
         Objects.equals(this.vm, usbDevice.vm);
   }
 
@@ -376,7 +416,7 @@ public class UsbDevice {
 
   @Override
   public int hashCode() {
-    return Objects.hash(binded, description, host, id, localCreatedAt, localId, manufacturer, name, size, status, usbType, vm);
+    return Objects.hash(binded, description, host, id, localCreatedAt, localId, manufacturer, name, size, status, usbType, vms, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -401,6 +441,7 @@ public class UsbDevice {
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    usbType: ").append(toIndentedString(usbType)).append("\n");
+    sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
     sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
     sb.append("}");
     return sb.toString();

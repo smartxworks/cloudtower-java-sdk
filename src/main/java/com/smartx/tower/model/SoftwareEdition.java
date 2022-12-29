@@ -22,6 +22,8 @@ public enum SoftwareEdition {
   
   ESSENTIAL("ESSENTIAL"),
   
+  EXPRESS("EXPRESS"),
+  
   STANDARD("STANDARD"),
   
   TRIAL("TRIAL");

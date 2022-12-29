@@ -462,9 +462,17 @@ public class UsbDeviceWhereInput {
   @SerializedName(SERIALIZED_NAME_USB_TYPE_STARTS_WITH)
   private String usbTypeStartsWith;
 
-  public static final String SERIALIZED_NAME_VM = "vm";
-  @SerializedName(SERIALIZED_NAME_VM)
-  private VmWhereInput vm;
+  public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
+  @SerializedName(SERIALIZED_NAME_VMS_EVERY)
+  private VmWhereInput vmsEvery;
+
+  public static final String SERIALIZED_NAME_VMS_NONE = "vms_none";
+  @SerializedName(SERIALIZED_NAME_VMS_NONE)
+  private VmWhereInput vmsNone;
+
+  public static final String SERIALIZED_NAME_VMS_SOME = "vms_some";
+  @SerializedName(SERIALIZED_NAME_VMS_SOME)
+  private VmWhereInput vmsSome;
 
   public UsbDeviceWhereInput() { 
   }
@@ -3167,26 +3175,72 @@ public class UsbDeviceWhereInput {
   }
 
 
-  public UsbDeviceWhereInput vm(VmWhereInput vm) {
+  public UsbDeviceWhereInput vmsEvery(VmWhereInput vmsEvery) {
     
-    this.vm = vm;
+    this.vmsEvery = vmsEvery;
     return this;
   }
 
    /**
-   * Get vm
-   * @return vm
+   * Get vmsEvery
+   * @return vmsEvery
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public VmWhereInput getVm() {
-    return vm;
+  public VmWhereInput getVmsEvery() {
+    return vmsEvery;
   }
 
 
-  public void setVm(VmWhereInput vm) {
-    this.vm = vm;
+  public void setVmsEvery(VmWhereInput vmsEvery) {
+    this.vmsEvery = vmsEvery;
+  }
+
+
+  public UsbDeviceWhereInput vmsNone(VmWhereInput vmsNone) {
+    
+    this.vmsNone = vmsNone;
+    return this;
+  }
+
+   /**
+   * Get vmsNone
+   * @return vmsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsNone() {
+    return vmsNone;
+  }
+
+
+  public void setVmsNone(VmWhereInput vmsNone) {
+    this.vmsNone = vmsNone;
+  }
+
+
+  public UsbDeviceWhereInput vmsSome(VmWhereInput vmsSome) {
+    
+    this.vmsSome = vmsSome;
+    return this;
+  }
+
+   /**
+   * Get vmsSome
+   * @return vmsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsSome() {
+    return vmsSome;
+  }
+
+
+  public void setVmsSome(VmWhereInput vmsSome) {
+    this.vmsSome = vmsSome;
   }
 
 
@@ -3309,7 +3363,9 @@ public class UsbDeviceWhereInput {
         Objects.equals(this.usbTypeNotIn, usbDeviceWhereInput.usbTypeNotIn) &&
         Objects.equals(this.usbTypeNotStartsWith, usbDeviceWhereInput.usbTypeNotStartsWith) &&
         Objects.equals(this.usbTypeStartsWith, usbDeviceWhereInput.usbTypeStartsWith) &&
-        Objects.equals(this.vm, usbDeviceWhereInput.vm);
+        Objects.equals(this.vmsEvery, usbDeviceWhereInput.vmsEvery) &&
+        Objects.equals(this.vmsNone, usbDeviceWhereInput.vmsNone) &&
+        Objects.equals(this.vmsSome, usbDeviceWhereInput.vmsSome);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3318,7 +3374,7 @@ public class UsbDeviceWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, binded, bindedNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, manufacturer, manufacturerContains, manufacturerEndsWith, manufacturerGt, manufacturerGte, manufacturerIn, manufacturerLt, manufacturerLte, manufacturerNot, manufacturerNotContains, manufacturerNotEndsWith, manufacturerNotIn, manufacturerNotStartsWith, manufacturerStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, status, statusIn, statusNot, statusNotIn, usbType, usbTypeContains, usbTypeEndsWith, usbTypeGt, usbTypeGte, usbTypeIn, usbTypeLt, usbTypeLte, usbTypeNot, usbTypeNotContains, usbTypeNotEndsWith, usbTypeNotIn, usbTypeNotStartsWith, usbTypeStartsWith, vm);
+    return Objects.hash(AND, binded, bindedNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, manufacturer, manufacturerContains, manufacturerEndsWith, manufacturerGt, manufacturerGte, manufacturerIn, manufacturerLt, manufacturerLte, manufacturerNot, manufacturerNotContains, manufacturerNotEndsWith, manufacturerNotIn, manufacturerNotStartsWith, manufacturerStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, status, statusIn, statusNot, statusNotIn, usbType, usbTypeContains, usbTypeEndsWith, usbTypeGt, usbTypeGte, usbTypeIn, usbTypeLt, usbTypeLte, usbTypeNot, usbTypeNotContains, usbTypeNotEndsWith, usbTypeNotIn, usbTypeNotStartsWith, usbTypeStartsWith, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3442,7 +3498,9 @@ public class UsbDeviceWhereInput {
     sb.append("    usbTypeNotIn: ").append(toIndentedString(usbTypeNotIn)).append("\n");
     sb.append("    usbTypeNotStartsWith: ").append(toIndentedString(usbTypeNotStartsWith)).append("\n");
     sb.append("    usbTypeStartsWith: ").append(toIndentedString(usbTypeStartsWith)).append("\n");
-    sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
+    sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
+    sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
+    sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.IscsiLunSnapshotCreationEffect;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -16,6 +17,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class IscsiLunSnapshotCreationParams {
+  public static final String SERIALIZED_NAME_EFFECT = "effect";
+  @SerializedName(SERIALIZED_NAME_EFFECT)
+  private IscsiLunSnapshotCreationEffect effect;
+
   public static final String SERIALIZED_NAME_ISCSI_TARGET_ID = "iscsi_target_id";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_ID)
   private String iscsiTargetId;
@@ -30,6 +35,29 @@ public class IscsiLunSnapshotCreationParams {
 
   public IscsiLunSnapshotCreationParams() { 
   }
+
+  public IscsiLunSnapshotCreationParams effect(IscsiLunSnapshotCreationEffect effect) {
+    
+    this.effect = effect;
+    return this;
+  }
+
+   /**
+   * Get effect
+   * @return effect
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IscsiLunSnapshotCreationEffect getEffect() {
+    return effect;
+  }
+
+
+  public void setEffect(IscsiLunSnapshotCreationEffect effect) {
+    this.effect = effect;
+  }
+
 
   public IscsiLunSnapshotCreationParams iscsiTargetId(String iscsiTargetId) {
     
@@ -109,20 +137,22 @@ public class IscsiLunSnapshotCreationParams {
       return false;
     }
     IscsiLunSnapshotCreationParams iscsiLunSnapshotCreationParams = (IscsiLunSnapshotCreationParams) o;
-    return Objects.equals(this.iscsiTargetId, iscsiLunSnapshotCreationParams.iscsiTargetId) &&
+    return Objects.equals(this.effect, iscsiLunSnapshotCreationParams.effect) &&
+        Objects.equals(this.iscsiTargetId, iscsiLunSnapshotCreationParams.iscsiTargetId) &&
         Objects.equals(this.name, iscsiLunSnapshotCreationParams.name) &&
         Objects.equals(this.iscsiLunId, iscsiLunSnapshotCreationParams.iscsiLunId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iscsiTargetId, name, iscsiLunId);
+    return Objects.hash(effect, iscsiTargetId, name, iscsiLunId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiLunSnapshotCreationParams {\n");
+    sb.append("    effect: ").append(toIndentedString(effect)).append("\n");
     sb.append("    iscsiTargetId: ").append(toIndentedString(iscsiTargetId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    iscsiLunId: ").append(toIndentedString(iscsiLunId)).append("\n");

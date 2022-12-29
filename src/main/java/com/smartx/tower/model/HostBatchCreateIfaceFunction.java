@@ -20,6 +20,8 @@ public enum HostBatchCreateIfaceFunction {
   
   MANAGEMENT("MANAGEMENT"),
   
+  MIGRATION("MIGRATION"),
+  
   STORAGE("STORAGE"),
   
   VMWARE_ACCESS("VMWARE_ACCESS");
