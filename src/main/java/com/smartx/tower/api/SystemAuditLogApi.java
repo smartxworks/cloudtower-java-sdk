@@ -72,10 +72,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getSystemAuditLogsCall(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, final ApiCallback _callback) throws ApiException {
@@ -147,10 +147,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<SystemAuditLog> getSystemAuditLogs(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody) throws ApiException {
@@ -167,10 +167,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<SystemAuditLog>> getSystemAuditLogsWithHttpInfo(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody) throws ApiException {
@@ -189,10 +189,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getSystemAuditLogsAsync(GetSystemAuditLogsRequestBody getSystemAuditLogsRequestBody, final ApiCallback<List<SystemAuditLog>> _callback) throws ApiException {
@@ -211,10 +211,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getSystemAuditLogsConnectionCall(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -286,10 +286,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public SystemAuditLogConnection getSystemAuditLogsConnection(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody) throws ApiException {
@@ -306,10 +306,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<SystemAuditLogConnection> getSystemAuditLogsConnectionWithHttpInfo(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody) throws ApiException {
@@ -328,10 +328,10 @@ public class SystemAuditLogApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getSystemAuditLogsConnectionAsync(GetSystemAuditLogsConnectionRequestBody getSystemAuditLogsConnectionRequestBody, final ApiCallback<SystemAuditLogConnection> _callback) throws ApiException {

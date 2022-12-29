@@ -80,10 +80,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneVmVolumeCall(List<CloneVmVolumeParams> cloneVmVolumeParams, final ApiCallback _callback) throws ApiException {
@@ -155,10 +155,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmVolume> cloneVmVolume(List<CloneVmVolumeParams> cloneVmVolumeParams) throws ApiException {
@@ -175,10 +175,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmVolume>> cloneVmVolumeWithHttpInfo(List<CloneVmVolumeParams> cloneVmVolumeParams) throws ApiException {
@@ -197,10 +197,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneVmVolumeAsync(List<CloneVmVolumeParams> cloneVmVolumeParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
@@ -219,10 +219,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createVmVolumeCall(List<VmVolumeCreationParams> vmVolumeCreationParams, final ApiCallback _callback) throws ApiException {
@@ -294,10 +294,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmVolume> createVmVolume(List<VmVolumeCreationParams> vmVolumeCreationParams) throws ApiException {
@@ -314,10 +314,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmVolume>> createVmVolumeWithHttpInfo(List<VmVolumeCreationParams> vmVolumeCreationParams) throws ApiException {
@@ -336,10 +336,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createVmVolumeAsync(List<VmVolumeCreationParams> vmVolumeCreationParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
@@ -358,10 +358,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteVmVolumeFromVmCall(VmVolumeDeletionParams vmVolumeDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -433,10 +433,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteVmVolume> deleteVmVolumeFromVm(VmVolumeDeletionParams vmVolumeDeletionParams) throws ApiException {
@@ -453,10 +453,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteVmVolume>> deleteVmVolumeFromVmWithHttpInfo(VmVolumeDeletionParams vmVolumeDeletionParams) throws ApiException {
@@ -475,10 +475,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteVmVolumeFromVmAsync(VmVolumeDeletionParams vmVolumeDeletionParams, final ApiCallback<List<WithTaskDeleteVmVolume>> _callback) throws ApiException {
@@ -497,10 +497,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmVolumesCall(GetVmVolumesRequestBody getVmVolumesRequestBody, final ApiCallback _callback) throws ApiException {
@@ -572,10 +572,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<VmVolume> getVmVolumes(GetVmVolumesRequestBody getVmVolumesRequestBody) throws ApiException {
@@ -592,10 +592,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<VmVolume>> getVmVolumesWithHttpInfo(GetVmVolumesRequestBody getVmVolumesRequestBody) throws ApiException {
@@ -614,10 +614,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmVolumesAsync(GetVmVolumesRequestBody getVmVolumesRequestBody, final ApiCallback<List<VmVolume>> _callback) throws ApiException {
@@ -636,10 +636,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmVolumesConnectionCall(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -711,10 +711,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public VmVolumeConnection getVmVolumesConnection(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody) throws ApiException {
@@ -731,10 +731,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<VmVolumeConnection> getVmVolumesConnectionWithHttpInfo(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody) throws ApiException {
@@ -753,10 +753,10 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmVolumesConnectionAsync(GetVmVolumesConnectionRequestBody getVmVolumesConnectionRequestBody, final ApiCallback<VmVolumeConnection> _callback) throws ApiException {
@@ -775,11 +775,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rebuildVmVolumeCall(List<VmVolumeRebuildParams> vmVolumeRebuildParams, final ApiCallback _callback) throws ApiException {
@@ -851,11 +851,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmVolume> rebuildVmVolume(List<VmVolumeRebuildParams> vmVolumeRebuildParams) throws ApiException {
@@ -872,11 +872,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmVolume>> rebuildVmVolumeWithHttpInfo(List<VmVolumeRebuildParams> vmVolumeRebuildParams) throws ApiException {
@@ -895,11 +895,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rebuildVmVolumeAsync(List<VmVolumeRebuildParams> vmVolumeRebuildParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
@@ -918,11 +918,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rollbackVmVolumeCall(List<VmVolumeRollbackParams> vmVolumeRollbackParams, final ApiCallback _callback) throws ApiException {
@@ -994,11 +994,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmVolume> rollbackVmVolume(List<VmVolumeRollbackParams> vmVolumeRollbackParams) throws ApiException {
@@ -1015,11 +1015,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmVolume>> rollbackVmVolumeWithHttpInfo(List<VmVolumeRollbackParams> vmVolumeRollbackParams) throws ApiException {
@@ -1038,11 +1038,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rollbackVmVolumeAsync(List<VmVolumeRollbackParams> vmVolumeRollbackParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
@@ -1061,11 +1061,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateVmVolumeCall(UpdateVmVolumeParams updateVmVolumeParams, final ApiCallback _callback) throws ApiException {
@@ -1137,11 +1137,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmVolume> updateVmVolume(UpdateVmVolumeParams updateVmVolumeParams) throws ApiException {
@@ -1158,11 +1158,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmVolume>> updateVmVolumeWithHttpInfo(UpdateVmVolumeParams updateVmVolumeParams) throws ApiException {
@@ -1181,11 +1181,11 @@ public class VmVolumeApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateVmVolumeAsync(UpdateVmVolumeParams updateVmVolumeParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {

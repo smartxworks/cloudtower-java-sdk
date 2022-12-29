@@ -79,10 +79,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneIscsiLunFromSnapshotCall(List<IscsiLunCloneParams> iscsiLunCloneParams, final ApiCallback _callback) throws ApiException {
@@ -154,10 +154,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskIscsiLun> cloneIscsiLunFromSnapshot(List<IscsiLunCloneParams> iscsiLunCloneParams) throws ApiException {
@@ -174,10 +174,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskIscsiLun>> cloneIscsiLunFromSnapshotWithHttpInfo(List<IscsiLunCloneParams> iscsiLunCloneParams) throws ApiException {
@@ -196,10 +196,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneIscsiLunFromSnapshotAsync(List<IscsiLunCloneParams> iscsiLunCloneParams, final ApiCallback<List<WithTaskIscsiLun>> _callback) throws ApiException {
@@ -218,10 +218,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createIscsiLunCall(List<IscsiLunCreationParams> iscsiLunCreationParams, final ApiCallback _callback) throws ApiException {
@@ -293,10 +293,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskIscsiLun> createIscsiLun(List<IscsiLunCreationParams> iscsiLunCreationParams) throws ApiException {
@@ -313,10 +313,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskIscsiLun>> createIscsiLunWithHttpInfo(List<IscsiLunCreationParams> iscsiLunCreationParams) throws ApiException {
@@ -335,10 +335,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createIscsiLunAsync(List<IscsiLunCreationParams> iscsiLunCreationParams, final ApiCallback<List<WithTaskIscsiLun>> _callback) throws ApiException {
@@ -357,10 +357,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteIscsiLunCall(IscsiLunDeletionParams iscsiLunDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -432,10 +432,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteIscsiLun> deleteIscsiLun(IscsiLunDeletionParams iscsiLunDeletionParams) throws ApiException {
@@ -452,10 +452,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteIscsiLun>> deleteIscsiLunWithHttpInfo(IscsiLunDeletionParams iscsiLunDeletionParams) throws ApiException {
@@ -474,10 +474,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteIscsiLunAsync(IscsiLunDeletionParams iscsiLunDeletionParams, final ApiCallback<List<WithTaskDeleteIscsiLun>> _callback) throws ApiException {
@@ -496,10 +496,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunsCall(GetIscsiLunsRequestBody getIscsiLunsRequestBody, final ApiCallback _callback) throws ApiException {
@@ -571,10 +571,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<IscsiLun> getIscsiLuns(GetIscsiLunsRequestBody getIscsiLunsRequestBody) throws ApiException {
@@ -591,10 +591,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<IscsiLun>> getIscsiLunsWithHttpInfo(GetIscsiLunsRequestBody getIscsiLunsRequestBody) throws ApiException {
@@ -613,10 +613,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunsAsync(GetIscsiLunsRequestBody getIscsiLunsRequestBody, final ApiCallback<List<IscsiLun>> _callback) throws ApiException {
@@ -635,10 +635,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunsConnectionCall(GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -710,10 +710,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public IscsiLunConnection getIscsiLunsConnection(GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody) throws ApiException {
@@ -730,10 +730,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<IscsiLunConnection> getIscsiLunsConnectionWithHttpInfo(GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody) throws ApiException {
@@ -752,10 +752,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunsConnectionAsync(GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody, final ApiCallback<IscsiLunConnection> _callback) throws ApiException {
@@ -774,10 +774,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rollbackIscsiLunFromSnapshotCall(List<IscsiLunRollbackParams> iscsiLunRollbackParams, final ApiCallback _callback) throws ApiException {
@@ -849,10 +849,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskIscsiLun> rollbackIscsiLunFromSnapshot(List<IscsiLunRollbackParams> iscsiLunRollbackParams) throws ApiException {
@@ -869,10 +869,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskIscsiLun>> rollbackIscsiLunFromSnapshotWithHttpInfo(List<IscsiLunRollbackParams> iscsiLunRollbackParams) throws ApiException {
@@ -891,10 +891,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rollbackIscsiLunFromSnapshotAsync(List<IscsiLunRollbackParams> iscsiLunRollbackParams, final ApiCallback<List<WithTaskIscsiLun>> _callback) throws ApiException {
@@ -913,10 +913,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateIscsiLunCall(IscsiLunUpdationParams iscsiLunUpdationParams, final ApiCallback _callback) throws ApiException {
@@ -988,10 +988,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskIscsiLun> updateIscsiLun(IscsiLunUpdationParams iscsiLunUpdationParams) throws ApiException {
@@ -1008,10 +1008,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskIscsiLun>> updateIscsiLunWithHttpInfo(IscsiLunUpdationParams iscsiLunUpdationParams) throws ApiException {
@@ -1030,10 +1030,10 @@ public class IscsiLunApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateIscsiLunAsync(IscsiLunUpdationParams iscsiLunUpdationParams, final ApiCallback<List<WithTaskIscsiLun>> _callback) throws ApiException {

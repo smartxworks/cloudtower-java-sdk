@@ -77,10 +77,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createVmFolderCall(List<VmFolderCreationParams> vmFolderCreationParams, final ApiCallback _callback) throws ApiException {
@@ -152,10 +152,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmFolder> createVmFolder(List<VmFolderCreationParams> vmFolderCreationParams) throws ApiException {
@@ -172,10 +172,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmFolder>> createVmFolderWithHttpInfo(List<VmFolderCreationParams> vmFolderCreationParams) throws ApiException {
@@ -194,10 +194,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createVmFolderAsync(List<VmFolderCreationParams> vmFolderCreationParams, final ApiCallback<List<WithTaskVmFolder>> _callback) throws ApiException {
@@ -216,10 +216,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteVmFolderCall(VmFolderDeletionParams vmFolderDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -291,10 +291,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteVmFolder> deleteVmFolder(VmFolderDeletionParams vmFolderDeletionParams) throws ApiException {
@@ -311,10 +311,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteVmFolder>> deleteVmFolderWithHttpInfo(VmFolderDeletionParams vmFolderDeletionParams) throws ApiException {
@@ -333,10 +333,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteVmFolderAsync(VmFolderDeletionParams vmFolderDeletionParams, final ApiCallback<List<WithTaskDeleteVmFolder>> _callback) throws ApiException {
@@ -355,10 +355,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmFoldersCall(GetVmFoldersRequestBody getVmFoldersRequestBody, final ApiCallback _callback) throws ApiException {
@@ -430,10 +430,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<VmFolder> getVmFolders(GetVmFoldersRequestBody getVmFoldersRequestBody) throws ApiException {
@@ -450,10 +450,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<VmFolder>> getVmFoldersWithHttpInfo(GetVmFoldersRequestBody getVmFoldersRequestBody) throws ApiException {
@@ -472,10 +472,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmFoldersAsync(GetVmFoldersRequestBody getVmFoldersRequestBody, final ApiCallback<List<VmFolder>> _callback) throws ApiException {
@@ -494,10 +494,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmFoldersConnectionCall(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -569,10 +569,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public VmFolderConnection getVmFoldersConnection(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody) throws ApiException {
@@ -589,10 +589,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<VmFolderConnection> getVmFoldersConnectionWithHttpInfo(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody) throws ApiException {
@@ -611,10 +611,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmFoldersConnectionAsync(GetVmFoldersConnectionRequestBody getVmFoldersConnectionRequestBody, final ApiCallback<VmFolderConnection> _callback) throws ApiException {
@@ -633,10 +633,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateVmFolderCall(VmFolderUpdationParams vmFolderUpdationParams, final ApiCallback _callback) throws ApiException {
@@ -708,10 +708,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVmFolder> updateVmFolder(VmFolderUpdationParams vmFolderUpdationParams) throws ApiException {
@@ -728,10 +728,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVmFolder>> updateVmFolderWithHttpInfo(VmFolderUpdationParams vmFolderUpdationParams) throws ApiException {
@@ -750,10 +750,10 @@ public class VmFolderApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateVmFolderAsync(VmFolderUpdationParams vmFolderUpdationParams, final ApiCallback<List<WithTaskVmFolder>> _callback) throws ApiException {

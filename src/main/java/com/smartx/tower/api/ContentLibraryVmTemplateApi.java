@@ -78,10 +78,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneContentLibraryVmTemplateFromVmCall(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams, final ApiCallback _callback) throws ApiException {
@@ -153,10 +153,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskContentLibraryVmTemplate> cloneContentLibraryVmTemplateFromVm(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams) throws ApiException {
@@ -173,10 +173,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskContentLibraryVmTemplate>> cloneContentLibraryVmTemplateFromVmWithHttpInfo(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams) throws ApiException {
@@ -195,10 +195,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneContentLibraryVmTemplateFromVmAsync(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams, final ApiCallback<List<WithTaskContentLibraryVmTemplate>> _callback) throws ApiException {
@@ -217,10 +217,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call convertContentLibraryVmTemplateFromVmCall(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams, final ApiCallback _callback) throws ApiException {
@@ -292,10 +292,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskContentLibraryVmTemplate> convertContentLibraryVmTemplateFromVm(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams) throws ApiException {
@@ -312,10 +312,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskContentLibraryVmTemplate>> convertContentLibraryVmTemplateFromVmWithHttpInfo(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams) throws ApiException {
@@ -334,10 +334,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call convertContentLibraryVmTemplateFromVmAsync(List<ContentLibraryVmTemplateCreationParams> contentLibraryVmTemplateCreationParams, final ApiCallback<List<WithTaskContentLibraryVmTemplate>> _callback) throws ApiException {
@@ -356,10 +356,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteContentLibraryVmTemplateCall(ContentLibraryVmTemplateDeletionParams contentLibraryVmTemplateDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -431,10 +431,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteContentLibraryVmTemplate> deleteContentLibraryVmTemplate(ContentLibraryVmTemplateDeletionParams contentLibraryVmTemplateDeletionParams) throws ApiException {
@@ -451,10 +451,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteContentLibraryVmTemplate>> deleteContentLibraryVmTemplateWithHttpInfo(ContentLibraryVmTemplateDeletionParams contentLibraryVmTemplateDeletionParams) throws ApiException {
@@ -473,10 +473,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteContentLibraryVmTemplateAsync(ContentLibraryVmTemplateDeletionParams contentLibraryVmTemplateDeletionParams, final ApiCallback<List<WithTaskDeleteContentLibraryVmTemplate>> _callback) throws ApiException {
@@ -495,10 +495,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call distributeContentLibraryVmtemplateClustersCall(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams, final ApiCallback _callback) throws ApiException {
@@ -570,10 +570,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskContentLibraryVmTemplate> distributeContentLibraryVmtemplateClusters(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams) throws ApiException {
@@ -590,10 +590,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskContentLibraryVmTemplate>> distributeContentLibraryVmtemplateClustersWithHttpInfo(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams) throws ApiException {
@@ -612,10 +612,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call distributeContentLibraryVmtemplateClustersAsync(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams, final ApiCallback<List<WithTaskContentLibraryVmTemplate>> _callback) throws ApiException {
@@ -634,10 +634,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryVmTemplatesCall(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
@@ -709,10 +709,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<ContentLibraryVmTemplate> getContentLibraryVmTemplates(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody) throws ApiException {
@@ -729,10 +729,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<ContentLibraryVmTemplate>> getContentLibraryVmTemplatesWithHttpInfo(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody) throws ApiException {
@@ -751,10 +751,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryVmTemplatesAsync(GetContentLibraryVmTemplatesRequestBody getContentLibraryVmTemplatesRequestBody, final ApiCallback<List<ContentLibraryVmTemplate>> _callback) throws ApiException {
@@ -773,10 +773,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryVmTemplatesConnectionCall(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -848,10 +848,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ContentLibraryVmTemplateConnection getContentLibraryVmTemplatesConnection(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody) throws ApiException {
@@ -868,10 +868,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<ContentLibraryVmTemplateConnection> getContentLibraryVmTemplatesConnectionWithHttpInfo(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody) throws ApiException {
@@ -890,10 +890,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryVmTemplatesConnectionAsync(GetContentLibraryVmTemplatesConnectionRequestBody getContentLibraryVmTemplatesConnectionRequestBody, final ApiCallback<ContentLibraryVmTemplateConnection> _callback) throws ApiException {
@@ -912,10 +912,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call removeContentLibraryVmTemplateClustersCall(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams, final ApiCallback _callback) throws ApiException {
@@ -987,10 +987,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskContentLibraryVmTemplate> removeContentLibraryVmTemplateClusters(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams) throws ApiException {
@@ -1007,10 +1007,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskContentLibraryVmTemplate>> removeContentLibraryVmTemplateClustersWithHttpInfo(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams) throws ApiException {
@@ -1029,10 +1029,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call removeContentLibraryVmTemplateClustersAsync(ContentLibraryVmTemplateUpdationClusterParams contentLibraryVmTemplateUpdationClusterParams, final ApiCallback<List<WithTaskContentLibraryVmTemplate>> _callback) throws ApiException {
@@ -1051,10 +1051,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateContentLibraryVmTemplateCall(ContentLibraryVmTemplateUpdationParams contentLibraryVmTemplateUpdationParams, final ApiCallback _callback) throws ApiException {
@@ -1126,10 +1126,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskContentLibraryVmTemplate> updateContentLibraryVmTemplate(ContentLibraryVmTemplateUpdationParams contentLibraryVmTemplateUpdationParams) throws ApiException {
@@ -1146,10 +1146,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskContentLibraryVmTemplate>> updateContentLibraryVmTemplateWithHttpInfo(ContentLibraryVmTemplateUpdationParams contentLibraryVmTemplateUpdationParams) throws ApiException {
@@ -1168,10 +1168,10 @@ public class ContentLibraryVmTemplateApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Ok </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateContentLibraryVmTemplateAsync(ContentLibraryVmTemplateUpdationParams contentLibraryVmTemplateUpdationParams, final ApiCallback<List<WithTaskContentLibraryVmTemplate>> _callback) throws ApiException {

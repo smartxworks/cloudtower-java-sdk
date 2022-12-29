@@ -24,6 +24,10 @@ public class IscsiTargetCommonParams {
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
   private Long bpsWrMaxLength;
 
+  public static final String SERIALIZED_NAME_BPS_WR_MAX_UNIT = "bps_wr_max_unit";
+  @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_UNIT)
+  private BPSUnit bpsWrMaxUnit;
+
   public static final String SERIALIZED_NAME_BPS_WR_MAX_SIZE = "bps_wr_max_size";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_SIZE)
   private BPSUnit bpsWrMaxSize;
@@ -167,6 +171,29 @@ public class IscsiTargetCommonParams {
 
   public void setBpsWrMaxLength(Long bpsWrMaxLength) {
     this.bpsWrMaxLength = bpsWrMaxLength;
+  }
+
+
+  public IscsiTargetCommonParams bpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
+    
+    this.bpsWrMaxUnit = bpsWrMaxUnit;
+    return this;
+  }
+
+   /**
+   * Get bpsWrMaxUnit
+   * @return bpsWrMaxUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BPSUnit getBpsWrMaxUnit() {
+    return bpsWrMaxUnit;
+  }
+
+
+  public void setBpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
+    this.bpsWrMaxUnit = bpsWrMaxUnit;
   }
 
 
@@ -878,6 +905,7 @@ public class IscsiTargetCommonParams {
     }
     IscsiTargetCommonParams iscsiTargetCommonParams = (IscsiTargetCommonParams) o;
     return Objects.equals(this.bpsWrMaxLength, iscsiTargetCommonParams.bpsWrMaxLength) &&
+        Objects.equals(this.bpsWrMaxUnit, iscsiTargetCommonParams.bpsWrMaxUnit) &&
         Objects.equals(this.bpsWrMaxSize, iscsiTargetCommonParams.bpsWrMaxSize) &&
         Objects.equals(this.bpsWrMax, iscsiTargetCommonParams.bpsWrMax) &&
         Objects.equals(this.bpsRdMaxLength, iscsiTargetCommonParams.bpsRdMaxLength) &&
@@ -912,7 +940,7 @@ public class IscsiTargetCommonParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bpsWrMaxLength, bpsWrMaxSize, bpsWrMax, bpsRdMaxLength, bpsRdMaxUnit, bpsRdMax, bpsMaxLength, bpsMaxUnit, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWrUnit, bpsWr, bpsRdUnit, bpsRd, bpsUnit, bps, iopsWr, iopsRd, iops, initiatorChaps, chapSecret, chapName, chapEnabled, description, iqnWhitelist, ipWhitelist);
+    return Objects.hash(bpsWrMaxLength, bpsWrMaxUnit, bpsWrMaxSize, bpsWrMax, bpsRdMaxLength, bpsRdMaxUnit, bpsRdMax, bpsMaxLength, bpsMaxUnit, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWrUnit, bpsWr, bpsRdUnit, bpsRd, bpsUnit, bps, iopsWr, iopsRd, iops, initiatorChaps, chapSecret, chapName, chapEnabled, description, iqnWhitelist, ipWhitelist);
   }
 
   @Override
@@ -920,6 +948,7 @@ public class IscsiTargetCommonParams {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiTargetCommonParams {\n");
     sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+    sb.append("    bpsWrMaxUnit: ").append(toIndentedString(bpsWrMaxUnit)).append("\n");
     sb.append("    bpsWrMaxSize: ").append(toIndentedString(bpsWrMaxSize)).append("\n");
     sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
     sb.append("    bpsRdMaxLength: ").append(toIndentedString(bpsRdMaxLength)).append("\n");

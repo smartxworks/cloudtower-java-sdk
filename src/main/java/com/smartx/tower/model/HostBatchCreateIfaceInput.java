@@ -31,6 +31,10 @@ public class HostBatchCreateIfaceInput {
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
 
+  public static final String SERIALIZED_NAME_GATEWAY_IP = "gateway_ip";
+  @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
+  private String gatewayIp;
+
   public static final String SERIALIZED_NAME_FUNCTION = "function";
   @SerializedName(SERIALIZED_NAME_FUNCTION)
   private HostBatchCreateIfaceFunction function;
@@ -112,6 +116,29 @@ public class HostBatchCreateIfaceInput {
   }
 
 
+  public HostBatchCreateIfaceInput gatewayIp(String gatewayIp) {
+    
+    this.gatewayIp = gatewayIp;
+    return this;
+  }
+
+   /**
+   * Get gatewayIp
+   * @return gatewayIp
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getGatewayIp() {
+    return gatewayIp;
+  }
+
+
+  public void setGatewayIp(String gatewayIp) {
+    this.gatewayIp = gatewayIp;
+  }
+
+
   public HostBatchCreateIfaceInput function(HostBatchCreateIfaceFunction function) {
     
     this.function = function;
@@ -147,12 +174,13 @@ public class HostBatchCreateIfaceInput {
     return Objects.equals(this.netmask, hostBatchCreateIfaceInput.netmask) &&
         Objects.equals(this.name, hostBatchCreateIfaceInput.name) &&
         Objects.equals(this.ip, hostBatchCreateIfaceInput.ip) &&
+        Objects.equals(this.gatewayIp, hostBatchCreateIfaceInput.gatewayIp) &&
         Objects.equals(this.function, hostBatchCreateIfaceInput.function);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(netmask, name, ip, function);
+    return Objects.hash(netmask, name, ip, gatewayIp, function);
   }
 
   @Override
@@ -162,6 +190,7 @@ public class HostBatchCreateIfaceInput {
     sb.append("    netmask: ").append(toIndentedString(netmask)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+    sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("    function: ").append(toIndentedString(function)).append("\n");
     sb.append("}");
     return sb.toString();

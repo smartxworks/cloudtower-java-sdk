@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -16,12 +17,39 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class UsbDeviceMountParamsData {
+  public static final String SERIALIZED_NAME_VMS = "vms";
+  @SerializedName(SERIALIZED_NAME_VMS)
+  private VmWhereInput vms;
+
   public static final String SERIALIZED_NAME_VM_ID = "vm_id";
   @SerializedName(SERIALIZED_NAME_VM_ID)
   private String vmId;
 
   public UsbDeviceMountParamsData() { 
   }
+
+  public UsbDeviceMountParamsData vms(VmWhereInput vms) {
+    
+    this.vms = vms;
+    return this;
+  }
+
+   /**
+   * Get vms
+   * @return vms
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVms() {
+    return vms;
+  }
+
+
+  public void setVms(VmWhereInput vms) {
+    this.vms = vms;
+  }
+
 
   public UsbDeviceMountParamsData vmId(String vmId) {
     
@@ -32,9 +60,11 @@ public class UsbDeviceMountParamsData {
    /**
    * Get vmId
    * @return vmId
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @Deprecated
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getVmId() {
     return vmId;
@@ -55,18 +85,20 @@ public class UsbDeviceMountParamsData {
       return false;
     }
     UsbDeviceMountParamsData usbDeviceMountParamsData = (UsbDeviceMountParamsData) o;
-    return Objects.equals(this.vmId, usbDeviceMountParamsData.vmId);
+    return Objects.equals(this.vms, usbDeviceMountParamsData.vms) &&
+        Objects.equals(this.vmId, usbDeviceMountParamsData.vmId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(vmId);
+    return Objects.hash(vms, vmId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsbDeviceMountParamsData {\n");
+    sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
     sb.append("    vmId: ").append(toIndentedString(vmId)).append("\n");
     sb.append("}");
     return sb.toString();

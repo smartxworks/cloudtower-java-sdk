@@ -20,6 +20,10 @@ public class NestedHost {
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
+  public static final String SERIALIZED_NAME_MANAGEMENT_IP = "management_ip";
+  @SerializedName(SERIALIZED_NAME_MANAGEMENT_IP)
+  private String managementIp;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -47,6 +51,29 @@ public class NestedHost {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+  public NestedHost managementIp(String managementIp) {
+    
+    this.managementIp = managementIp;
+    return this;
+  }
+
+   /**
+   * Get managementIp
+   * @return managementIp
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getManagementIp() {
+    return managementIp;
+  }
+
+
+  public void setManagementIp(String managementIp) {
+    this.managementIp = managementIp;
   }
 
 
@@ -83,12 +110,13 @@ public class NestedHost {
     }
     NestedHost nestedHost = (NestedHost) o;
     return Objects.equals(this.id, nestedHost.id) &&
+        Objects.equals(this.managementIp, nestedHost.managementIp) &&
         Objects.equals(this.name, nestedHost.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name);
+    return Objects.hash(id, managementIp, name);
   }
 
   @Override
@@ -96,6 +124,7 @@ public class NestedHost {
     StringBuilder sb = new StringBuilder();
     sb.append("class NestedHost {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    managementIp: ").append(toIndentedString(managementIp)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
