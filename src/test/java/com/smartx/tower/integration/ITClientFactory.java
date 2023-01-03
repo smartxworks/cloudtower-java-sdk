@@ -20,7 +20,7 @@ public class ITClientFactory {
     try {
       LoginInput loginInput = new LoginInput().password(config.password).username(config.username)
           .source(UserSource.fromValue(config.usersource));
-      com.smartx.tower.model.WithTaskTokenString tokenString = userApi.login(loginInput);
+      com.smartx.tower.model.WithTaskLoginResponse tokenString = userApi.login(loginInput);
       token = tokenString.getData().getToken();
     } catch (ApiException e) {
       throw e;
