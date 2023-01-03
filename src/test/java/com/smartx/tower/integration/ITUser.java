@@ -104,7 +104,7 @@ public class ITUser extends ITBase {
       // parse params from json payload
       LoginInput params = gson.fromJson(payload, new TypeToken<LoginInput>() {}.getType());
       // do some modify to params(optional)
-      WithTaskTokenString result = api.login(params);
+      WithTaskLoginResponse result = api.login(params);
       assertThat(result).as("check result of login").isNotNull();
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

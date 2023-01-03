@@ -60,7 +60,7 @@ UserApi userApi = new UserApi(client);
 LoginInput loginInput = new LoginInput()
     .username("root")
     .password("!QAZ2wsx").source(UserSource.LOCAL);
-WithTaskTokenString token = userApi.login(loginInput);
+WithTaskLoginResponse token = userApi.login(loginInput);
 ((ApiKeyAuth) client.getAuthentication("Authorization")).setApiKey(token.getData().getToken());
 ```
 

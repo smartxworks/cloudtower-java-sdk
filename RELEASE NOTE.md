@@ -9,6 +9,7 @@ v2.5.0 release
 - feature: ClusterApi: [getMetaLeader]: 增加了获取集群 meta leader 的 api
 - optimize: 增加 header 定义，可以从返回值中获取对应的 x-tower-request-id
 - optimize: [NestedHost]: 嵌套的主机类型额外返回 management_ip
+- optimize: UserApi: [login] 返回值重命名为 WithTaskLoginResponse
 
 ## release 日期 2022-11-18
 
