@@ -73,7 +73,7 @@ public class ITVmSnapshot extends ITBase {
           vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId()))).get(0)
               .getTaskId());
     }
-    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+    waitForTaskSucceed(vmApi.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
         .get(0).getTaskId());
   }
 
@@ -170,7 +170,7 @@ public class ITVmSnapshot extends ITBase {
       assertThat(result).as("check result of rebuildVm").isNotNull();
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+      waitForTaskSucceed(vmApi.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());

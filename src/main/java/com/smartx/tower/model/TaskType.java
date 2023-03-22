@@ -20,6 +20,8 @@ public enum TaskType {
   
   BACKUP("BACKUP"),
   
+  HOST_PLUGIN("HOST_PLUGIN"),
+  
   RESOLVER("RESOLVER");
 
   private String value;

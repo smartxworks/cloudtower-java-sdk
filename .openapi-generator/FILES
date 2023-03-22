@@ -1191,6 +1191,8 @@ src/main/java/com/smartx/tower/model/VmConnection.java
 src/main/java/com/smartx/tower/model/VmCreateVmFromContentLibraryTemplateParams.java
 src/main/java/com/smartx/tower/model/VmCreateVmFromTemplateParams.java
 src/main/java/com/smartx/tower/model/VmCreationParams.java
+src/main/java/com/smartx/tower/model/VmDeleteParams.java
+src/main/java/com/smartx/tower/model/VmDeleteParamsEffect.java
 src/main/java/com/smartx/tower/model/VmDisk.java
 src/main/java/com/smartx/tower/model/VmDiskConnection.java
 src/main/java/com/smartx/tower/model/VmDiskIoPolicy.java

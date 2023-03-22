@@ -32,6 +32,7 @@ import com.smartx.tower.model.VmConnection;
 import com.smartx.tower.model.VmCreateVmFromContentLibraryTemplateParams;
 import com.smartx.tower.model.VmCreateVmFromTemplateParams;
 import com.smartx.tower.model.VmCreationParams;
+import com.smartx.tower.model.VmDeleteParams;
 import com.smartx.tower.model.VmEjectCdRomParams;
 import com.smartx.tower.model.VmExpandVmDiskParams;
 import com.smartx.tower.model.VmMigrateAcrossClusterParams;
@@ -1496,7 +1497,7 @@ public class VmApi {
     }
     /**
      * Build call for deleteVm
-     * @param vmOperateParams  (required)
+     * @param vmDeleteParams  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1509,7 +1510,7 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmCall(VmOperateParams vmOperateParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmCall(VmDeleteParams vmDeleteParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -1524,7 +1525,7 @@ public class VmApi {
             basePath = null;
         }
 
-        Object localVarPostBody = vmOperateParams;
+        Object localVarPostBody = vmDeleteParams;
 
         // create path and map variables
         String localVarPath = "/delete-vm";
@@ -1556,15 +1557,15 @@ public class VmApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmValidateBeforeCall(VmOperateParams vmOperateParams, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteVmValidateBeforeCall(VmDeleteParams vmDeleteParams, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'vmOperateParams' is set
-        if (vmOperateParams == null) {
-            throw new ApiException("Missing the required parameter 'vmOperateParams' when calling deleteVm(Async)");
+        // verify the required parameter 'vmDeleteParams' is set
+        if (vmDeleteParams == null) {
+            throw new ApiException("Missing the required parameter 'vmDeleteParams' when calling deleteVm(Async)");
         }
         
 
-        okhttp3.Call localVarCall = deleteVmCall(vmOperateParams, _callback);
+        okhttp3.Call localVarCall = deleteVmCall(vmDeleteParams, _callback);
         return localVarCall;
 
     }
@@ -1572,7 +1573,7 @@ public class VmApi {
     /**
      * 
      * 
-     * @param vmOperateParams  (required)
+     * @param vmDeleteParams  (required)
      * @return List&lt;WithTaskDeleteVm&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1584,15 +1585,15 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public List<WithTaskDeleteVm> deleteVm(VmOperateParams vmOperateParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVm>> localVarResp = deleteVmWithHttpInfo(vmOperateParams);
+    public List<WithTaskDeleteVm> deleteVm(VmDeleteParams vmDeleteParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVm>> localVarResp = deleteVmWithHttpInfo(vmDeleteParams);
         return localVarResp.getData();
     }
 
     /**
      * 
      * 
-     * @param vmOperateParams  (required)
+     * @param vmDeleteParams  (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVm&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1604,8 +1605,8 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<List<WithTaskDeleteVm>> deleteVmWithHttpInfo(VmOperateParams vmOperateParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmOperateParams, null);
+    public ApiResponse<List<WithTaskDeleteVm>> deleteVmWithHttpInfo(VmDeleteParams vmDeleteParams) throws ApiException {
+        okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmDeleteParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1613,7 +1614,7 @@ public class VmApi {
     /**
      *  (asynchronously)
      * 
-     * @param vmOperateParams  (required)
+     * @param vmDeleteParams  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1626,9 +1627,9 @@ public class VmApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteVmAsync(VmOperateParams vmOperateParams, final ApiCallback<List<WithTaskDeleteVm>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmAsync(VmDeleteParams vmDeleteParams, final ApiCallback<List<WithTaskDeleteVm>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmOperateParams, _callback);
+        okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmDeleteParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

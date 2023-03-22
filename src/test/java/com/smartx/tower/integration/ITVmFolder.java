@@ -166,7 +166,7 @@ public class ITVmFolder extends ITBase {
           vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId()))).get(0)
               .getTaskId());
     }
-    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+    waitForTaskSucceed(vmApi.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
         .get(0).getTaskId());
     vm = null;
   }
