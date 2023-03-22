@@ -67,7 +67,7 @@ public class ITVm extends ITBase {
       assertThat(result).as("check result of createVm").isNotNull();
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+      waitForTaskSucceed(api.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -104,7 +104,7 @@ public class ITVm extends ITBase {
       waitForTaskSucceed(api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     }
-    VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(stoppedVm.getId()));
+    VmDeleteParams params = new VmDeleteParams().where(new VmWhereInput().id(stoppedVm.getId()));
     ;
     waitForTaskSucceed(api.deleteVm(params).get(0).getTaskId());
     stoppedVm = null;
@@ -125,7 +125,7 @@ public class ITVm extends ITBase {
       Vm clonedVm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
       waitForTaskSucceed(
-          api.deleteVm(new VmOperateParams().where(new VmWhereInput().id(clonedVm.getId()))).get(0)
+          api.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(clonedVm.getId()))).get(0)
               .getTaskId());
     } catch (ApiException e) {
       LOGGER.error(e.getResponseBody());
@@ -217,7 +217,7 @@ public class ITVm extends ITBase {
       waitForTaskSucceed(api.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
     }
-    VmOperateParams params = new VmOperateParams().where(new VmWhereInput().id(runningVM.getId()));
+    VmDeleteParams params = new VmDeleteParams().where(new VmWhereInput().id(runningVM.getId()));
     waitForTaskSucceed(api.deleteVm(params).get(0).getTaskId());
     runningVM = null;
   }

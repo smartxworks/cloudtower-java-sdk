@@ -76,7 +76,7 @@ public class ITVmTemplate extends ITBase {
           vmApi.shutDownVm(new VmOperateParams().where(new VmWhereInput().id(_vm.getId()))).get(0)
               .getTaskId());
     }
-    waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+    waitForTaskSucceed(vmApi.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
         .get(0).getTaskId());
     vm = null;
   }
@@ -207,7 +207,7 @@ public class ITVmTemplate extends ITBase {
       List<WithTaskVm> result = vmApi.convertVmTemplateToVm(params);
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+      waitForTaskSucceed(vmApi.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
       assertThat(result).as("check result of convertVmTemplateToVm").isNotNull();
     } catch (ApiException e) {
@@ -228,7 +228,7 @@ public class ITVmTemplate extends ITBase {
       List<WithTaskVm> result = vmApi.createVmFromTemplate(params);
       Vm vm = result.get(0).getData();
       waitForTaskSucceed(result.get(0).getTaskId());
-      waitForTaskSucceed(vmApi.deleteVm(new VmOperateParams().where(new VmWhereInput().id(vm.getId())))
+      waitForTaskSucceed(vmApi.deleteVm(new VmDeleteParams().where(new VmWhereInput().id(vm.getId())))
           .get(0).getTaskId());
       assertThat(result).as("check result of createVmFromTemplate").isNotNull();
       template = null;

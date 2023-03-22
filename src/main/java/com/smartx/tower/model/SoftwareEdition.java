@@ -20,6 +20,8 @@ public enum SoftwareEdition {
   
   ENTERPRISE("ENTERPRISE"),
   
+  ENTERPRISE_PLUS("ENTERPRISE_PLUS"),
+  
   ESSENTIAL("ESSENTIAL"),
   
   EXPRESS("EXPRESS"),
