@@ -123,6 +123,8 @@ public class ManagementVlanUpdationParamsData {
 
    /**
    * Get vlanId
+   * minimum: 0
+   * maximum: 4095
    * @return vlanId
   **/
   @javax.annotation.Nullable
