@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.HostWhereInput;
 import com.smartx.tower.model.UsbDeviceStatus;
 import com.smartx.tower.model.VmWhereInput;
@@ -89,6 +90,22 @@ public class UsbDeviceWhereInput {
   public static final String SERIALIZED_NAME_DESCRIPTION_STARTS_WITH = "description_starts_with";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
   private String descriptionStartsWith;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN = "entityAsyncStatus_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT = "entityAsyncStatus_not";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT)
+  private EntityAsyncStatus entityAsyncStatusNot;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
@@ -889,6 +906,114 @@ public class UsbDeviceWhereInput {
 
   public void setDescriptionStartsWith(String descriptionStartsWith) {
     this.descriptionStartsWith = descriptionStartsWith;
+  }
+
+
+  public UsbDeviceWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
+  public UsbDeviceWhereInput entityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+    return this;
+  }
+
+  public UsbDeviceWhereInput addEntityAsyncStatusInItem(EntityAsyncStatus entityAsyncStatusInItem) {
+    if (this.entityAsyncStatusIn == null) {
+      this.entityAsyncStatusIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusIn.add(entityAsyncStatusInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusIn
+   * @return entityAsyncStatusIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusIn() {
+    return entityAsyncStatusIn;
+  }
+
+
+  public void setEntityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+  }
+
+
+  public UsbDeviceWhereInput entityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNot
+   * @return entityAsyncStatusNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatusNot() {
+    return entityAsyncStatusNot;
+  }
+
+
+  public void setEntityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+  }
+
+
+  public UsbDeviceWhereInput entityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+    return this;
+  }
+
+  public UsbDeviceWhereInput addEntityAsyncStatusNotInItem(EntityAsyncStatus entityAsyncStatusNotInItem) {
+    if (this.entityAsyncStatusNotIn == null) {
+      this.entityAsyncStatusNotIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusNotIn.add(entityAsyncStatusNotInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNotIn
+   * @return entityAsyncStatusNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusNotIn() {
+    return entityAsyncStatusNotIn;
+  }
+
+
+  public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
   }
 
 
@@ -3270,6 +3395,10 @@ public class UsbDeviceWhereInput {
         Objects.equals(this.descriptionNotIn, usbDeviceWhereInput.descriptionNotIn) &&
         Objects.equals(this.descriptionNotStartsWith, usbDeviceWhereInput.descriptionNotStartsWith) &&
         Objects.equals(this.descriptionStartsWith, usbDeviceWhereInput.descriptionStartsWith) &&
+        Objects.equals(this.entityAsyncStatus, usbDeviceWhereInput.entityAsyncStatus) &&
+        Objects.equals(this.entityAsyncStatusIn, usbDeviceWhereInput.entityAsyncStatusIn) &&
+        Objects.equals(this.entityAsyncStatusNot, usbDeviceWhereInput.entityAsyncStatusNot) &&
+        Objects.equals(this.entityAsyncStatusNotIn, usbDeviceWhereInput.entityAsyncStatusNotIn) &&
         Objects.equals(this.host, usbDeviceWhereInput.host) &&
         Objects.equals(this.id, usbDeviceWhereInput.id) &&
         Objects.equals(this.idContains, usbDeviceWhereInput.idContains) &&
@@ -3374,7 +3503,7 @@ public class UsbDeviceWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, binded, bindedNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, manufacturer, manufacturerContains, manufacturerEndsWith, manufacturerGt, manufacturerGte, manufacturerIn, manufacturerLt, manufacturerLte, manufacturerNot, manufacturerNotContains, manufacturerNotEndsWith, manufacturerNotIn, manufacturerNotStartsWith, manufacturerStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, status, statusIn, statusNot, statusNotIn, usbType, usbTypeContains, usbTypeEndsWith, usbTypeGt, usbTypeGte, usbTypeIn, usbTypeLt, usbTypeLte, usbTypeNot, usbTypeNotContains, usbTypeNotEndsWith, usbTypeNotIn, usbTypeNotStartsWith, usbTypeStartsWith, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, binded, bindedNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, manufacturer, manufacturerContains, manufacturerEndsWith, manufacturerGt, manufacturerGte, manufacturerIn, manufacturerLt, manufacturerLte, manufacturerNot, manufacturerNotContains, manufacturerNotEndsWith, manufacturerNotIn, manufacturerNotStartsWith, manufacturerStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, status, statusIn, statusNot, statusNotIn, usbType, usbTypeContains, usbTypeEndsWith, usbTypeGt, usbTypeGte, usbTypeIn, usbTypeLt, usbTypeLte, usbTypeNot, usbTypeNotContains, usbTypeNotEndsWith, usbTypeNotIn, usbTypeNotStartsWith, usbTypeStartsWith, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3405,6 +3534,10 @@ public class UsbDeviceWhereInput {
     sb.append("    descriptionNotIn: ").append(toIndentedString(descriptionNotIn)).append("\n");
     sb.append("    descriptionNotStartsWith: ").append(toIndentedString(descriptionNotStartsWith)).append("\n");
     sb.append("    descriptionStartsWith: ").append(toIndentedString(descriptionStartsWith)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
+    sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
+    sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");

@@ -7,10 +7,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.MfaType;
 import com.smartx.tower.model.UserSource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * LoginInput
@@ -28,6 +30,14 @@ public class LoginInput {
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
+
+  public static final String SERIALIZED_NAME_MFA_TYPE = "mfa_type";
+  @SerializedName(SERIALIZED_NAME_MFA_TYPE)
+  private MfaType mfaType;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID = "auth_config_id";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID)
+  private String authConfigId;
 
   public LoginInput() { 
   }
@@ -65,8 +75,8 @@ public class LoginInput {
    * Get source
    * @return source
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public UserSource getSource() {
     return source;
@@ -101,6 +111,52 @@ public class LoginInput {
   }
 
 
+  public LoginInput mfaType(MfaType mfaType) {
+    
+    this.mfaType = mfaType;
+    return this;
+  }
+
+   /**
+   * Get mfaType
+   * @return mfaType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public MfaType getMfaType() {
+    return mfaType;
+  }
+
+
+  public void setMfaType(MfaType mfaType) {
+    this.mfaType = mfaType;
+  }
+
+
+  public LoginInput authConfigId(String authConfigId) {
+    
+    this.authConfigId = authConfigId;
+    return this;
+  }
+
+   /**
+   * Get authConfigId
+   * @return authConfigId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigId() {
+    return authConfigId;
+  }
+
+
+  public void setAuthConfigId(String authConfigId) {
+    this.authConfigId = authConfigId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -112,12 +168,25 @@ public class LoginInput {
     LoginInput loginInput = (LoginInput) o;
     return Objects.equals(this.username, loginInput.username) &&
         Objects.equals(this.source, loginInput.source) &&
-        Objects.equals(this.password, loginInput.password);
+        Objects.equals(this.password, loginInput.password) &&
+        Objects.equals(this.mfaType, loginInput.mfaType) &&
+        Objects.equals(this.authConfigId, loginInput.authConfigId);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(username, source, password);
+    return Objects.hash(username, source, password, mfaType, authConfigId);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -127,6 +196,8 @@ public class LoginInput {
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    mfaType: ").append(toIndentedString(mfaType)).append("\n");
+    sb.append("    authConfigId: ").append(toIndentedString(authConfigId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

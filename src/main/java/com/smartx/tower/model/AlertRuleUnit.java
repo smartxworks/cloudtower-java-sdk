@@ -26,6 +26,8 @@ public enum AlertRuleUnit {
   
   HERTZ("HERTZ"),
   
+  MICROSECOND("MICROSECOND"),
+  
   NANOSECOND("NANOSECOND"),
   
   PERCENT("PERCENT"),

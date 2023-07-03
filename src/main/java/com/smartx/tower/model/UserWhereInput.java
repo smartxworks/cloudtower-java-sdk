@@ -26,6 +26,118 @@ public class UserWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<UserWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID = "auth_config_id";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID)
+  private String authConfigId;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_CONTAINS = "auth_config_id_contains";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_CONTAINS)
+  private String authConfigIdContains;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_ENDS_WITH = "auth_config_id_ends_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_ENDS_WITH)
+  private String authConfigIdEndsWith;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_GT = "auth_config_id_gt";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_GT)
+  private String authConfigIdGt;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_GTE = "auth_config_id_gte";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_GTE)
+  private String authConfigIdGte;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_IN = "auth_config_id_in";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_IN)
+  private List<String> authConfigIdIn = null;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_LT = "auth_config_id_lt";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_LT)
+  private String authConfigIdLt;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_LTE = "auth_config_id_lte";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_LTE)
+  private String authConfigIdLte;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_NOT = "auth_config_id_not";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_NOT)
+  private String authConfigIdNot;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_CONTAINS = "auth_config_id_not_contains";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_CONTAINS)
+  private String authConfigIdNotContains;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_ENDS_WITH = "auth_config_id_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_ENDS_WITH)
+  private String authConfigIdNotEndsWith;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_IN = "auth_config_id_not_in";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_IN)
+  private List<String> authConfigIdNotIn = null;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_STARTS_WITH = "auth_config_id_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_NOT_STARTS_WITH)
+  private String authConfigIdNotStartsWith;
+
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID_STARTS_WITH = "auth_config_id_starts_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID_STARTS_WITH)
+  private String authConfigIdStartsWith;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME = "display_username";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME)
+  private String displayUsername;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_CONTAINS = "display_username_contains";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_CONTAINS)
+  private String displayUsernameContains;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_ENDS_WITH = "display_username_ends_with";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_ENDS_WITH)
+  private String displayUsernameEndsWith;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_GT = "display_username_gt";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_GT)
+  private String displayUsernameGt;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_GTE = "display_username_gte";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_GTE)
+  private String displayUsernameGte;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_IN = "display_username_in";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_IN)
+  private List<String> displayUsernameIn = null;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_LT = "display_username_lt";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_LT)
+  private String displayUsernameLt;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_LTE = "display_username_lte";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_LTE)
+  private String displayUsernameLte;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_NOT = "display_username_not";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_NOT)
+  private String displayUsernameNot;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_NOT_CONTAINS = "display_username_not_contains";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_NOT_CONTAINS)
+  private String displayUsernameNotContains;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_NOT_ENDS_WITH = "display_username_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_NOT_ENDS_WITH)
+  private String displayUsernameNotEndsWith;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_NOT_IN = "display_username_not_in";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_NOT_IN)
+  private List<String> displayUsernameNotIn = null;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_NOT_STARTS_WITH = "display_username_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_NOT_STARTS_WITH)
+  private String displayUsernameNotStartsWith;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME_STARTS_WITH = "display_username_starts_with";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME_STARTS_WITH)
+  private String displayUsernameStartsWith;
+
   public static final String SERIALIZED_NAME_EMAIL_ADDRESS = "email_address";
   @SerializedName(SERIALIZED_NAME_EMAIL_ADDRESS)
   private String emailAddress;
@@ -493,6 +605,682 @@ public class UserWhereInput {
 
   public void setAND(List<UserWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public UserWhereInput authConfigId(String authConfigId) {
+    
+    this.authConfigId = authConfigId;
+    return this;
+  }
+
+   /**
+   * Get authConfigId
+   * @return authConfigId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigId() {
+    return authConfigId;
+  }
+
+
+  public void setAuthConfigId(String authConfigId) {
+    this.authConfigId = authConfigId;
+  }
+
+
+  public UserWhereInput authConfigIdContains(String authConfigIdContains) {
+    
+    this.authConfigIdContains = authConfigIdContains;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdContains
+   * @return authConfigIdContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdContains() {
+    return authConfigIdContains;
+  }
+
+
+  public void setAuthConfigIdContains(String authConfigIdContains) {
+    this.authConfigIdContains = authConfigIdContains;
+  }
+
+
+  public UserWhereInput authConfigIdEndsWith(String authConfigIdEndsWith) {
+    
+    this.authConfigIdEndsWith = authConfigIdEndsWith;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdEndsWith
+   * @return authConfigIdEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdEndsWith() {
+    return authConfigIdEndsWith;
+  }
+
+
+  public void setAuthConfigIdEndsWith(String authConfigIdEndsWith) {
+    this.authConfigIdEndsWith = authConfigIdEndsWith;
+  }
+
+
+  public UserWhereInput authConfigIdGt(String authConfigIdGt) {
+    
+    this.authConfigIdGt = authConfigIdGt;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdGt
+   * @return authConfigIdGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdGt() {
+    return authConfigIdGt;
+  }
+
+
+  public void setAuthConfigIdGt(String authConfigIdGt) {
+    this.authConfigIdGt = authConfigIdGt;
+  }
+
+
+  public UserWhereInput authConfigIdGte(String authConfigIdGte) {
+    
+    this.authConfigIdGte = authConfigIdGte;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdGte
+   * @return authConfigIdGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdGte() {
+    return authConfigIdGte;
+  }
+
+
+  public void setAuthConfigIdGte(String authConfigIdGte) {
+    this.authConfigIdGte = authConfigIdGte;
+  }
+
+
+  public UserWhereInput authConfigIdIn(List<String> authConfigIdIn) {
+    
+    this.authConfigIdIn = authConfigIdIn;
+    return this;
+  }
+
+  public UserWhereInput addAuthConfigIdInItem(String authConfigIdInItem) {
+    if (this.authConfigIdIn == null) {
+      this.authConfigIdIn = new ArrayList<String>();
+    }
+    this.authConfigIdIn.add(authConfigIdInItem);
+    return this;
+  }
+
+   /**
+   * Get authConfigIdIn
+   * @return authConfigIdIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getAuthConfigIdIn() {
+    return authConfigIdIn;
+  }
+
+
+  public void setAuthConfigIdIn(List<String> authConfigIdIn) {
+    this.authConfigIdIn = authConfigIdIn;
+  }
+
+
+  public UserWhereInput authConfigIdLt(String authConfigIdLt) {
+    
+    this.authConfigIdLt = authConfigIdLt;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdLt
+   * @return authConfigIdLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdLt() {
+    return authConfigIdLt;
+  }
+
+
+  public void setAuthConfigIdLt(String authConfigIdLt) {
+    this.authConfigIdLt = authConfigIdLt;
+  }
+
+
+  public UserWhereInput authConfigIdLte(String authConfigIdLte) {
+    
+    this.authConfigIdLte = authConfigIdLte;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdLte
+   * @return authConfigIdLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdLte() {
+    return authConfigIdLte;
+  }
+
+
+  public void setAuthConfigIdLte(String authConfigIdLte) {
+    this.authConfigIdLte = authConfigIdLte;
+  }
+
+
+  public UserWhereInput authConfigIdNot(String authConfigIdNot) {
+    
+    this.authConfigIdNot = authConfigIdNot;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdNot
+   * @return authConfigIdNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdNot() {
+    return authConfigIdNot;
+  }
+
+
+  public void setAuthConfigIdNot(String authConfigIdNot) {
+    this.authConfigIdNot = authConfigIdNot;
+  }
+
+
+  public UserWhereInput authConfigIdNotContains(String authConfigIdNotContains) {
+    
+    this.authConfigIdNotContains = authConfigIdNotContains;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdNotContains
+   * @return authConfigIdNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdNotContains() {
+    return authConfigIdNotContains;
+  }
+
+
+  public void setAuthConfigIdNotContains(String authConfigIdNotContains) {
+    this.authConfigIdNotContains = authConfigIdNotContains;
+  }
+
+
+  public UserWhereInput authConfigIdNotEndsWith(String authConfigIdNotEndsWith) {
+    
+    this.authConfigIdNotEndsWith = authConfigIdNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdNotEndsWith
+   * @return authConfigIdNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdNotEndsWith() {
+    return authConfigIdNotEndsWith;
+  }
+
+
+  public void setAuthConfigIdNotEndsWith(String authConfigIdNotEndsWith) {
+    this.authConfigIdNotEndsWith = authConfigIdNotEndsWith;
+  }
+
+
+  public UserWhereInput authConfigIdNotIn(List<String> authConfigIdNotIn) {
+    
+    this.authConfigIdNotIn = authConfigIdNotIn;
+    return this;
+  }
+
+  public UserWhereInput addAuthConfigIdNotInItem(String authConfigIdNotInItem) {
+    if (this.authConfigIdNotIn == null) {
+      this.authConfigIdNotIn = new ArrayList<String>();
+    }
+    this.authConfigIdNotIn.add(authConfigIdNotInItem);
+    return this;
+  }
+
+   /**
+   * Get authConfigIdNotIn
+   * @return authConfigIdNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getAuthConfigIdNotIn() {
+    return authConfigIdNotIn;
+  }
+
+
+  public void setAuthConfigIdNotIn(List<String> authConfigIdNotIn) {
+    this.authConfigIdNotIn = authConfigIdNotIn;
+  }
+
+
+  public UserWhereInput authConfigIdNotStartsWith(String authConfigIdNotStartsWith) {
+    
+    this.authConfigIdNotStartsWith = authConfigIdNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdNotStartsWith
+   * @return authConfigIdNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdNotStartsWith() {
+    return authConfigIdNotStartsWith;
+  }
+
+
+  public void setAuthConfigIdNotStartsWith(String authConfigIdNotStartsWith) {
+    this.authConfigIdNotStartsWith = authConfigIdNotStartsWith;
+  }
+
+
+  public UserWhereInput authConfigIdStartsWith(String authConfigIdStartsWith) {
+    
+    this.authConfigIdStartsWith = authConfigIdStartsWith;
+    return this;
+  }
+
+   /**
+   * Get authConfigIdStartsWith
+   * @return authConfigIdStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigIdStartsWith() {
+    return authConfigIdStartsWith;
+  }
+
+
+  public void setAuthConfigIdStartsWith(String authConfigIdStartsWith) {
+    this.authConfigIdStartsWith = authConfigIdStartsWith;
+  }
+
+
+  public UserWhereInput displayUsername(String displayUsername) {
+    
+    this.displayUsername = displayUsername;
+    return this;
+  }
+
+   /**
+   * Get displayUsername
+   * @return displayUsername
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsername() {
+    return displayUsername;
+  }
+
+
+  public void setDisplayUsername(String displayUsername) {
+    this.displayUsername = displayUsername;
+  }
+
+
+  public UserWhereInput displayUsernameContains(String displayUsernameContains) {
+    
+    this.displayUsernameContains = displayUsernameContains;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameContains
+   * @return displayUsernameContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameContains() {
+    return displayUsernameContains;
+  }
+
+
+  public void setDisplayUsernameContains(String displayUsernameContains) {
+    this.displayUsernameContains = displayUsernameContains;
+  }
+
+
+  public UserWhereInput displayUsernameEndsWith(String displayUsernameEndsWith) {
+    
+    this.displayUsernameEndsWith = displayUsernameEndsWith;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameEndsWith
+   * @return displayUsernameEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameEndsWith() {
+    return displayUsernameEndsWith;
+  }
+
+
+  public void setDisplayUsernameEndsWith(String displayUsernameEndsWith) {
+    this.displayUsernameEndsWith = displayUsernameEndsWith;
+  }
+
+
+  public UserWhereInput displayUsernameGt(String displayUsernameGt) {
+    
+    this.displayUsernameGt = displayUsernameGt;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameGt
+   * @return displayUsernameGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameGt() {
+    return displayUsernameGt;
+  }
+
+
+  public void setDisplayUsernameGt(String displayUsernameGt) {
+    this.displayUsernameGt = displayUsernameGt;
+  }
+
+
+  public UserWhereInput displayUsernameGte(String displayUsernameGte) {
+    
+    this.displayUsernameGte = displayUsernameGte;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameGte
+   * @return displayUsernameGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameGte() {
+    return displayUsernameGte;
+  }
+
+
+  public void setDisplayUsernameGte(String displayUsernameGte) {
+    this.displayUsernameGte = displayUsernameGte;
+  }
+
+
+  public UserWhereInput displayUsernameIn(List<String> displayUsernameIn) {
+    
+    this.displayUsernameIn = displayUsernameIn;
+    return this;
+  }
+
+  public UserWhereInput addDisplayUsernameInItem(String displayUsernameInItem) {
+    if (this.displayUsernameIn == null) {
+      this.displayUsernameIn = new ArrayList<String>();
+    }
+    this.displayUsernameIn.add(displayUsernameInItem);
+    return this;
+  }
+
+   /**
+   * Get displayUsernameIn
+   * @return displayUsernameIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getDisplayUsernameIn() {
+    return displayUsernameIn;
+  }
+
+
+  public void setDisplayUsernameIn(List<String> displayUsernameIn) {
+    this.displayUsernameIn = displayUsernameIn;
+  }
+
+
+  public UserWhereInput displayUsernameLt(String displayUsernameLt) {
+    
+    this.displayUsernameLt = displayUsernameLt;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameLt
+   * @return displayUsernameLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameLt() {
+    return displayUsernameLt;
+  }
+
+
+  public void setDisplayUsernameLt(String displayUsernameLt) {
+    this.displayUsernameLt = displayUsernameLt;
+  }
+
+
+  public UserWhereInput displayUsernameLte(String displayUsernameLte) {
+    
+    this.displayUsernameLte = displayUsernameLte;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameLte
+   * @return displayUsernameLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameLte() {
+    return displayUsernameLte;
+  }
+
+
+  public void setDisplayUsernameLte(String displayUsernameLte) {
+    this.displayUsernameLte = displayUsernameLte;
+  }
+
+
+  public UserWhereInput displayUsernameNot(String displayUsernameNot) {
+    
+    this.displayUsernameNot = displayUsernameNot;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameNot
+   * @return displayUsernameNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameNot() {
+    return displayUsernameNot;
+  }
+
+
+  public void setDisplayUsernameNot(String displayUsernameNot) {
+    this.displayUsernameNot = displayUsernameNot;
+  }
+
+
+  public UserWhereInput displayUsernameNotContains(String displayUsernameNotContains) {
+    
+    this.displayUsernameNotContains = displayUsernameNotContains;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameNotContains
+   * @return displayUsernameNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameNotContains() {
+    return displayUsernameNotContains;
+  }
+
+
+  public void setDisplayUsernameNotContains(String displayUsernameNotContains) {
+    this.displayUsernameNotContains = displayUsernameNotContains;
+  }
+
+
+  public UserWhereInput displayUsernameNotEndsWith(String displayUsernameNotEndsWith) {
+    
+    this.displayUsernameNotEndsWith = displayUsernameNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameNotEndsWith
+   * @return displayUsernameNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameNotEndsWith() {
+    return displayUsernameNotEndsWith;
+  }
+
+
+  public void setDisplayUsernameNotEndsWith(String displayUsernameNotEndsWith) {
+    this.displayUsernameNotEndsWith = displayUsernameNotEndsWith;
+  }
+
+
+  public UserWhereInput displayUsernameNotIn(List<String> displayUsernameNotIn) {
+    
+    this.displayUsernameNotIn = displayUsernameNotIn;
+    return this;
+  }
+
+  public UserWhereInput addDisplayUsernameNotInItem(String displayUsernameNotInItem) {
+    if (this.displayUsernameNotIn == null) {
+      this.displayUsernameNotIn = new ArrayList<String>();
+    }
+    this.displayUsernameNotIn.add(displayUsernameNotInItem);
+    return this;
+  }
+
+   /**
+   * Get displayUsernameNotIn
+   * @return displayUsernameNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getDisplayUsernameNotIn() {
+    return displayUsernameNotIn;
+  }
+
+
+  public void setDisplayUsernameNotIn(List<String> displayUsernameNotIn) {
+    this.displayUsernameNotIn = displayUsernameNotIn;
+  }
+
+
+  public UserWhereInput displayUsernameNotStartsWith(String displayUsernameNotStartsWith) {
+    
+    this.displayUsernameNotStartsWith = displayUsernameNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameNotStartsWith
+   * @return displayUsernameNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameNotStartsWith() {
+    return displayUsernameNotStartsWith;
+  }
+
+
+  public void setDisplayUsernameNotStartsWith(String displayUsernameNotStartsWith) {
+    this.displayUsernameNotStartsWith = displayUsernameNotStartsWith;
+  }
+
+
+  public UserWhereInput displayUsernameStartsWith(String displayUsernameStartsWith) {
+    
+    this.displayUsernameStartsWith = displayUsernameStartsWith;
+    return this;
+  }
+
+   /**
+   * Get displayUsernameStartsWith
+   * @return displayUsernameStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDisplayUsernameStartsWith() {
+    return displayUsernameStartsWith;
+  }
+
+
+  public void setDisplayUsernameStartsWith(String displayUsernameStartsWith) {
+    this.displayUsernameStartsWith = displayUsernameStartsWith;
   }
 
 
@@ -3173,6 +3961,34 @@ public class UserWhereInput {
     }
     UserWhereInput userWhereInput = (UserWhereInput) o;
     return Objects.equals(this.AND, userWhereInput.AND) &&
+        Objects.equals(this.authConfigId, userWhereInput.authConfigId) &&
+        Objects.equals(this.authConfigIdContains, userWhereInput.authConfigIdContains) &&
+        Objects.equals(this.authConfigIdEndsWith, userWhereInput.authConfigIdEndsWith) &&
+        Objects.equals(this.authConfigIdGt, userWhereInput.authConfigIdGt) &&
+        Objects.equals(this.authConfigIdGte, userWhereInput.authConfigIdGte) &&
+        Objects.equals(this.authConfigIdIn, userWhereInput.authConfigIdIn) &&
+        Objects.equals(this.authConfigIdLt, userWhereInput.authConfigIdLt) &&
+        Objects.equals(this.authConfigIdLte, userWhereInput.authConfigIdLte) &&
+        Objects.equals(this.authConfigIdNot, userWhereInput.authConfigIdNot) &&
+        Objects.equals(this.authConfigIdNotContains, userWhereInput.authConfigIdNotContains) &&
+        Objects.equals(this.authConfigIdNotEndsWith, userWhereInput.authConfigIdNotEndsWith) &&
+        Objects.equals(this.authConfigIdNotIn, userWhereInput.authConfigIdNotIn) &&
+        Objects.equals(this.authConfigIdNotStartsWith, userWhereInput.authConfigIdNotStartsWith) &&
+        Objects.equals(this.authConfigIdStartsWith, userWhereInput.authConfigIdStartsWith) &&
+        Objects.equals(this.displayUsername, userWhereInput.displayUsername) &&
+        Objects.equals(this.displayUsernameContains, userWhereInput.displayUsernameContains) &&
+        Objects.equals(this.displayUsernameEndsWith, userWhereInput.displayUsernameEndsWith) &&
+        Objects.equals(this.displayUsernameGt, userWhereInput.displayUsernameGt) &&
+        Objects.equals(this.displayUsernameGte, userWhereInput.displayUsernameGte) &&
+        Objects.equals(this.displayUsernameIn, userWhereInput.displayUsernameIn) &&
+        Objects.equals(this.displayUsernameLt, userWhereInput.displayUsernameLt) &&
+        Objects.equals(this.displayUsernameLte, userWhereInput.displayUsernameLte) &&
+        Objects.equals(this.displayUsernameNot, userWhereInput.displayUsernameNot) &&
+        Objects.equals(this.displayUsernameNotContains, userWhereInput.displayUsernameNotContains) &&
+        Objects.equals(this.displayUsernameNotEndsWith, userWhereInput.displayUsernameNotEndsWith) &&
+        Objects.equals(this.displayUsernameNotIn, userWhereInput.displayUsernameNotIn) &&
+        Objects.equals(this.displayUsernameNotStartsWith, userWhereInput.displayUsernameNotStartsWith) &&
+        Objects.equals(this.displayUsernameStartsWith, userWhereInput.displayUsernameStartsWith) &&
         Objects.equals(this.emailAddress, userWhereInput.emailAddress) &&
         Objects.equals(this.emailAddressContains, userWhereInput.emailAddressContains) &&
         Objects.equals(this.emailAddressEndsWith, userWhereInput.emailAddressEndsWith) &&
@@ -3290,7 +4106,7 @@ public class UserWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, emailAddress, emailAddressContains, emailAddressEndsWith, emailAddressGt, emailAddressGte, emailAddressIn, emailAddressLt, emailAddressLte, emailAddressNot, emailAddressNotContains, emailAddressNotEndsWith, emailAddressNotIn, emailAddressNotStartsWith, emailAddressStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ldapDn, ldapDnContains, ldapDnEndsWith, ldapDnGt, ldapDnGte, ldapDnIn, ldapDnLt, ldapDnLte, ldapDnNot, ldapDnNotContains, ldapDnNotEndsWith, ldapDnNotIn, ldapDnNotStartsWith, ldapDnStartsWith, mobilePhone, mobilePhoneContains, mobilePhoneEndsWith, mobilePhoneGt, mobilePhoneGte, mobilePhoneIn, mobilePhoneLt, mobilePhoneLte, mobilePhoneNot, mobilePhoneNotContains, mobilePhoneNotEndsWith, mobilePhoneNotIn, mobilePhoneNotStartsWith, mobilePhoneStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, passwordExpired, passwordExpiredNot, passwordUpdatedAt, passwordUpdatedAtGt, passwordUpdatedAtGte, passwordUpdatedAtIn, passwordUpdatedAtLt, passwordUpdatedAtLte, passwordUpdatedAtNot, passwordUpdatedAtNotIn, role, roleIn, roleNot, roleNotIn, rolesEvery, rolesNone, rolesSome, source, sourceIn, sourceNot, sourceNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, authConfigId, authConfigIdContains, authConfigIdEndsWith, authConfigIdGt, authConfigIdGte, authConfigIdIn, authConfigIdLt, authConfigIdLte, authConfigIdNot, authConfigIdNotContains, authConfigIdNotEndsWith, authConfigIdNotIn, authConfigIdNotStartsWith, authConfigIdStartsWith, displayUsername, displayUsernameContains, displayUsernameEndsWith, displayUsernameGt, displayUsernameGte, displayUsernameIn, displayUsernameLt, displayUsernameLte, displayUsernameNot, displayUsernameNotContains, displayUsernameNotEndsWith, displayUsernameNotIn, displayUsernameNotStartsWith, displayUsernameStartsWith, emailAddress, emailAddressContains, emailAddressEndsWith, emailAddressGt, emailAddressGte, emailAddressIn, emailAddressLt, emailAddressLte, emailAddressNot, emailAddressNotContains, emailAddressNotEndsWith, emailAddressNotIn, emailAddressNotStartsWith, emailAddressStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ldapDn, ldapDnContains, ldapDnEndsWith, ldapDnGt, ldapDnGte, ldapDnIn, ldapDnLt, ldapDnLte, ldapDnNot, ldapDnNotContains, ldapDnNotEndsWith, ldapDnNotIn, ldapDnNotStartsWith, ldapDnStartsWith, mobilePhone, mobilePhoneContains, mobilePhoneEndsWith, mobilePhoneGt, mobilePhoneGte, mobilePhoneIn, mobilePhoneLt, mobilePhoneLte, mobilePhoneNot, mobilePhoneNotContains, mobilePhoneNotEndsWith, mobilePhoneNotIn, mobilePhoneNotStartsWith, mobilePhoneStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, passwordExpired, passwordExpiredNot, passwordUpdatedAt, passwordUpdatedAtGt, passwordUpdatedAtGte, passwordUpdatedAtIn, passwordUpdatedAtLt, passwordUpdatedAtLte, passwordUpdatedAtNot, passwordUpdatedAtNotIn, role, roleIn, roleNot, roleNotIn, rolesEvery, rolesNone, rolesSome, source, sourceIn, sourceNot, sourceNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3305,6 +4121,34 @@ public class UserWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    authConfigId: ").append(toIndentedString(authConfigId)).append("\n");
+    sb.append("    authConfigIdContains: ").append(toIndentedString(authConfigIdContains)).append("\n");
+    sb.append("    authConfigIdEndsWith: ").append(toIndentedString(authConfigIdEndsWith)).append("\n");
+    sb.append("    authConfigIdGt: ").append(toIndentedString(authConfigIdGt)).append("\n");
+    sb.append("    authConfigIdGte: ").append(toIndentedString(authConfigIdGte)).append("\n");
+    sb.append("    authConfigIdIn: ").append(toIndentedString(authConfigIdIn)).append("\n");
+    sb.append("    authConfigIdLt: ").append(toIndentedString(authConfigIdLt)).append("\n");
+    sb.append("    authConfigIdLte: ").append(toIndentedString(authConfigIdLte)).append("\n");
+    sb.append("    authConfigIdNot: ").append(toIndentedString(authConfigIdNot)).append("\n");
+    sb.append("    authConfigIdNotContains: ").append(toIndentedString(authConfigIdNotContains)).append("\n");
+    sb.append("    authConfigIdNotEndsWith: ").append(toIndentedString(authConfigIdNotEndsWith)).append("\n");
+    sb.append("    authConfigIdNotIn: ").append(toIndentedString(authConfigIdNotIn)).append("\n");
+    sb.append("    authConfigIdNotStartsWith: ").append(toIndentedString(authConfigIdNotStartsWith)).append("\n");
+    sb.append("    authConfigIdStartsWith: ").append(toIndentedString(authConfigIdStartsWith)).append("\n");
+    sb.append("    displayUsername: ").append(toIndentedString(displayUsername)).append("\n");
+    sb.append("    displayUsernameContains: ").append(toIndentedString(displayUsernameContains)).append("\n");
+    sb.append("    displayUsernameEndsWith: ").append(toIndentedString(displayUsernameEndsWith)).append("\n");
+    sb.append("    displayUsernameGt: ").append(toIndentedString(displayUsernameGt)).append("\n");
+    sb.append("    displayUsernameGte: ").append(toIndentedString(displayUsernameGte)).append("\n");
+    sb.append("    displayUsernameIn: ").append(toIndentedString(displayUsernameIn)).append("\n");
+    sb.append("    displayUsernameLt: ").append(toIndentedString(displayUsernameLt)).append("\n");
+    sb.append("    displayUsernameLte: ").append(toIndentedString(displayUsernameLte)).append("\n");
+    sb.append("    displayUsernameNot: ").append(toIndentedString(displayUsernameNot)).append("\n");
+    sb.append("    displayUsernameNotContains: ").append(toIndentedString(displayUsernameNotContains)).append("\n");
+    sb.append("    displayUsernameNotEndsWith: ").append(toIndentedString(displayUsernameNotEndsWith)).append("\n");
+    sb.append("    displayUsernameNotIn: ").append(toIndentedString(displayUsernameNotIn)).append("\n");
+    sb.append("    displayUsernameNotStartsWith: ").append(toIndentedString(displayUsernameNotStartsWith)).append("\n");
+    sb.append("    displayUsernameStartsWith: ").append(toIndentedString(displayUsernameStartsWith)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    emailAddressContains: ").append(toIndentedString(emailAddressContains)).append("\n");
     sb.append("    emailAddressEndsWith: ").append(toIndentedString(emailAddressEndsWith)).append("\n");

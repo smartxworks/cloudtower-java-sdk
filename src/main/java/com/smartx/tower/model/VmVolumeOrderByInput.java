@@ -24,6 +24,10 @@ public enum VmVolumeOrderByInput {
   
   ELF_STORAGE_POLICY_DESC("elf_storage_policy_DESC"),
   
+  ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
+  
+  ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+  
   GUEST_SIZE_USAGE_ASC("guest_size_usage_ASC"),
   
   GUEST_SIZE_USAGE_DESC("guest_size_usage_DESC"),

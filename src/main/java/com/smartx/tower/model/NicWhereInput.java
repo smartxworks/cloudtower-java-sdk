@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.HostWhereInput;
 import com.smartx.tower.model.LabelWhereInput;
 import com.smartx.tower.model.NetworkType;
@@ -99,6 +100,22 @@ public class NicWhereInput {
   public static final String SERIALIZED_NAME_DRIVER_STATE_NOT_IN = "driver_state_not_in";
   @SerializedName(SERIALIZED_NAME_DRIVER_STATE_NOT_IN)
   private List<NicDriverState> driverStateNotIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN = "entityAsyncStatus_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT = "entityAsyncStatus_not";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT)
+  private EntityAsyncStatus entityAsyncStatusNot;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
 
   public static final String SERIALIZED_NAME_GATEWAY_IP = "gateway_ip";
   @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
@@ -1381,6 +1398,114 @@ public class NicWhereInput {
 
   public void setDriverStateNotIn(List<NicDriverState> driverStateNotIn) {
     this.driverStateNotIn = driverStateNotIn;
+  }
+
+
+  public NicWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
+  public NicWhereInput entityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+    return this;
+  }
+
+  public NicWhereInput addEntityAsyncStatusInItem(EntityAsyncStatus entityAsyncStatusInItem) {
+    if (this.entityAsyncStatusIn == null) {
+      this.entityAsyncStatusIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusIn.add(entityAsyncStatusInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusIn
+   * @return entityAsyncStatusIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusIn() {
+    return entityAsyncStatusIn;
+  }
+
+
+  public void setEntityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+  }
+
+
+  public NicWhereInput entityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNot
+   * @return entityAsyncStatusNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatusNot() {
+    return entityAsyncStatusNot;
+  }
+
+
+  public void setEntityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+  }
+
+
+  public NicWhereInput entityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+    return this;
+  }
+
+  public NicWhereInput addEntityAsyncStatusNotInItem(EntityAsyncStatus entityAsyncStatusNotInItem) {
+    if (this.entityAsyncStatusNotIn == null) {
+      this.entityAsyncStatusNotIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusNotIn.add(entityAsyncStatusNotInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNotIn
+   * @return entityAsyncStatusNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusNotIn() {
+    return entityAsyncStatusNotIn;
+  }
+
+
+  public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
   }
 
 
@@ -6307,6 +6432,10 @@ public class NicWhereInput {
         Objects.equals(this.driverStateIn, nicWhereInput.driverStateIn) &&
         Objects.equals(this.driverStateNot, nicWhereInput.driverStateNot) &&
         Objects.equals(this.driverStateNotIn, nicWhereInput.driverStateNotIn) &&
+        Objects.equals(this.entityAsyncStatus, nicWhereInput.entityAsyncStatus) &&
+        Objects.equals(this.entityAsyncStatusIn, nicWhereInput.entityAsyncStatusIn) &&
+        Objects.equals(this.entityAsyncStatusNot, nicWhereInput.entityAsyncStatusNot) &&
+        Objects.equals(this.entityAsyncStatusNotIn, nicWhereInput.entityAsyncStatusNotIn) &&
         Objects.equals(this.gatewayIp, nicWhereInput.gatewayIp) &&
         Objects.equals(this.gatewayIpContains, nicWhereInput.gatewayIpContains) &&
         Objects.equals(this.gatewayIpEndsWith, nicWhereInput.gatewayIpEndsWith) &&
@@ -6516,7 +6645,7 @@ public class NicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, driver, driverContains, driverEndsWith, driverGt, driverGte, driverIn, driverLt, driverLte, driverNot, driverNotContains, driverNotEndsWith, driverNotIn, driverNotStartsWith, driverStartsWith, driverState, driverStateIn, driverStateNot, driverStateNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, host, ibdev, ibdevContains, ibdevEndsWith, ibdevGt, ibdevGte, ibdevIn, ibdevLt, ibdevLte, ibdevNot, ibdevNotContains, ibdevNotEndsWith, ibdevNotIn, ibdevNotStartsWith, ibdevStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, isSriov, isSriovNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, maxVfNum, maxVfNumGt, maxVfNumGte, maxVfNumIn, maxVfNumLt, maxVfNumLte, maxVfNumNot, maxVfNumNotIn, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicUuid, nicUuidContains, nicUuidEndsWith, nicUuidGt, nicUuidGte, nicUuidIn, nicUuidLt, nicUuidLte, nicUuidNot, nicUuidNotContains, nicUuidNotEndsWith, nicUuidNotIn, nicUuidNotStartsWith, nicUuidStartsWith, NOT, OR, physical, physicalNot, rdmaEnabled, rdmaEnabledNot, running, runningNot, speed, speedGt, speedGte, speedIn, speedLt, speedLte, speedNot, speedNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, totalVfNum, totalVfNumGt, totalVfNumGte, totalVfNumIn, totalVfNumLt, totalVfNumLte, totalVfNumNot, totalVfNumNotIn, type, typeIn, typeNot, typeNotIn, up, upNot, usedVfNum, usedVfNumGt, usedVfNumGte, usedVfNumIn, usedVfNumLt, usedVfNumLte, usedVfNumNot, usedVfNumNotIn, vds);
+    return Objects.hash(AND, driver, driverContains, driverEndsWith, driverGt, driverGte, driverIn, driverLt, driverLte, driverNot, driverNotContains, driverNotEndsWith, driverNotIn, driverNotStartsWith, driverStartsWith, driverState, driverStateIn, driverStateNot, driverStateNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, host, ibdev, ibdevContains, ibdevEndsWith, ibdevGt, ibdevGte, ibdevIn, ibdevLt, ibdevLte, ibdevNot, ibdevNotContains, ibdevNotEndsWith, ibdevNotIn, ibdevNotStartsWith, ibdevStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, isSriov, isSriovNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, maxVfNum, maxVfNumGt, maxVfNumGte, maxVfNumIn, maxVfNumLt, maxVfNumLte, maxVfNumNot, maxVfNumNotIn, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicUuid, nicUuidContains, nicUuidEndsWith, nicUuidGt, nicUuidGte, nicUuidIn, nicUuidLt, nicUuidLte, nicUuidNot, nicUuidNotContains, nicUuidNotEndsWith, nicUuidNotIn, nicUuidNotStartsWith, nicUuidStartsWith, NOT, OR, physical, physicalNot, rdmaEnabled, rdmaEnabledNot, running, runningNot, speed, speedGt, speedGte, speedIn, speedLt, speedLte, speedNot, speedNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, totalVfNum, totalVfNumGt, totalVfNumGte, totalVfNumIn, totalVfNumLt, totalVfNumLte, totalVfNumNot, totalVfNumNotIn, type, typeIn, typeNot, typeNotIn, up, upNot, usedVfNum, usedVfNumGt, usedVfNumGte, usedVfNumIn, usedVfNumLt, usedVfNumLte, usedVfNumNot, usedVfNumNotIn, vds);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -6549,6 +6678,10 @@ public class NicWhereInput {
     sb.append("    driverStateIn: ").append(toIndentedString(driverStateIn)).append("\n");
     sb.append("    driverStateNot: ").append(toIndentedString(driverStateNot)).append("\n");
     sb.append("    driverStateNotIn: ").append(toIndentedString(driverStateNotIn)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
+    sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
+    sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
     sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("    gatewayIpContains: ").append(toIndentedString(gatewayIpContains)).append("\n");
     sb.append("    gatewayIpEndsWith: ").append(toIndentedString(gatewayIpEndsWith)).append("\n");

@@ -11,6 +11,7 @@ import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.LabelWhereInput;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.VdsWhereInput;
+import com.smartx.tower.model.VlanModeType;
 import com.smartx.tower.model.VmNicWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -280,6 +281,22 @@ public class VlanWhereInput {
   @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
   private String localIdStartsWith;
 
+  public static final String SERIALIZED_NAME_MODE_TYPE = "mode_type";
+  @SerializedName(SERIALIZED_NAME_MODE_TYPE)
+  private VlanModeType modeType;
+
+  public static final String SERIALIZED_NAME_MODE_TYPE_IN = "mode_type_in";
+  @SerializedName(SERIALIZED_NAME_MODE_TYPE_IN)
+  private List<VlanModeType> modeTypeIn = null;
+
+  public static final String SERIALIZED_NAME_MODE_TYPE_NOT = "mode_type_not";
+  @SerializedName(SERIALIZED_NAME_MODE_TYPE_NOT)
+  private VlanModeType modeTypeNot;
+
+  public static final String SERIALIZED_NAME_MODE_TYPE_NOT_IN = "mode_type_not_in";
+  @SerializedName(SERIALIZED_NAME_MODE_TYPE_NOT_IN)
+  private List<VlanModeType> modeTypeNotIn = null;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -343,6 +360,102 @@ public class VlanWhereInput {
   public static final String SERIALIZED_NAME_O_R = "OR";
   @SerializedName(SERIALIZED_NAME_O_R)
   private List<VlanWhereInput> OR = null;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH = "qos_max_bandwidth";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH)
+  private Double qosMaxBandwidth;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_GT = "qos_max_bandwidth_gt";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_GT)
+  private Double qosMaxBandwidthGt;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_GTE = "qos_max_bandwidth_gte";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_GTE)
+  private Double qosMaxBandwidthGte;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_IN = "qos_max_bandwidth_in";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_IN)
+  private List<Double> qosMaxBandwidthIn = null;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_LT = "qos_max_bandwidth_lt";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_LT)
+  private Double qosMaxBandwidthLt;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_LTE = "qos_max_bandwidth_lte";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_LTE)
+  private Double qosMaxBandwidthLte;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_NOT = "qos_max_bandwidth_not";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_NOT)
+  private Double qosMaxBandwidthNot;
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH_NOT_IN = "qos_max_bandwidth_not_in";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH_NOT_IN)
+  private List<Double> qosMaxBandwidthNotIn = null;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH = "qos_min_bandwidth";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH)
+  private Double qosMinBandwidth;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_GT = "qos_min_bandwidth_gt";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_GT)
+  private Double qosMinBandwidthGt;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_GTE = "qos_min_bandwidth_gte";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_GTE)
+  private Double qosMinBandwidthGte;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_IN = "qos_min_bandwidth_in";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_IN)
+  private List<Double> qosMinBandwidthIn = null;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_LT = "qos_min_bandwidth_lt";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_LT)
+  private Double qosMinBandwidthLt;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_LTE = "qos_min_bandwidth_lte";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_LTE)
+  private Double qosMinBandwidthLte;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_NOT = "qos_min_bandwidth_not";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_NOT)
+  private Double qosMinBandwidthNot;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH_NOT_IN = "qos_min_bandwidth_not_in";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH_NOT_IN)
+  private List<Double> qosMinBandwidthNotIn = null;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY = "qos_priority";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY)
+  private Integer qosPriority;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_GT = "qos_priority_gt";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_GT)
+  private Integer qosPriorityGt;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_GTE = "qos_priority_gte";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_GTE)
+  private Integer qosPriorityGte;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_IN = "qos_priority_in";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_IN)
+  private List<Integer> qosPriorityIn = null;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_LT = "qos_priority_lt";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_LT)
+  private Integer qosPriorityLt;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_LTE = "qos_priority_lte";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_LTE)
+  private Integer qosPriorityLte;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_NOT = "qos_priority_not";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_NOT)
+  private Integer qosPriorityNot;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY_NOT_IN = "qos_priority_not_in";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY_NOT_IN)
+  private List<Integer> qosPriorityNotIn = null;
 
   public static final String SERIALIZED_NAME_SUBNETMASK = "subnetmask";
   @SerializedName(SERIALIZED_NAME_SUBNETMASK)
@@ -2027,6 +2140,114 @@ public class VlanWhereInput {
   }
 
 
+  public VlanWhereInput modeType(VlanModeType modeType) {
+    
+    this.modeType = modeType;
+    return this;
+  }
+
+   /**
+   * Get modeType
+   * @return modeType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VlanModeType getModeType() {
+    return modeType;
+  }
+
+
+  public void setModeType(VlanModeType modeType) {
+    this.modeType = modeType;
+  }
+
+
+  public VlanWhereInput modeTypeIn(List<VlanModeType> modeTypeIn) {
+    
+    this.modeTypeIn = modeTypeIn;
+    return this;
+  }
+
+  public VlanWhereInput addModeTypeInItem(VlanModeType modeTypeInItem) {
+    if (this.modeTypeIn == null) {
+      this.modeTypeIn = new ArrayList<VlanModeType>();
+    }
+    this.modeTypeIn.add(modeTypeInItem);
+    return this;
+  }
+
+   /**
+   * Get modeTypeIn
+   * @return modeTypeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VlanModeType> getModeTypeIn() {
+    return modeTypeIn;
+  }
+
+
+  public void setModeTypeIn(List<VlanModeType> modeTypeIn) {
+    this.modeTypeIn = modeTypeIn;
+  }
+
+
+  public VlanWhereInput modeTypeNot(VlanModeType modeTypeNot) {
+    
+    this.modeTypeNot = modeTypeNot;
+    return this;
+  }
+
+   /**
+   * Get modeTypeNot
+   * @return modeTypeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VlanModeType getModeTypeNot() {
+    return modeTypeNot;
+  }
+
+
+  public void setModeTypeNot(VlanModeType modeTypeNot) {
+    this.modeTypeNot = modeTypeNot;
+  }
+
+
+  public VlanWhereInput modeTypeNotIn(List<VlanModeType> modeTypeNotIn) {
+    
+    this.modeTypeNotIn = modeTypeNotIn;
+    return this;
+  }
+
+  public VlanWhereInput addModeTypeNotInItem(VlanModeType modeTypeNotInItem) {
+    if (this.modeTypeNotIn == null) {
+      this.modeTypeNotIn = new ArrayList<VlanModeType>();
+    }
+    this.modeTypeNotIn.add(modeTypeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get modeTypeNotIn
+   * @return modeTypeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VlanModeType> getModeTypeNotIn() {
+    return modeTypeNotIn;
+  }
+
+
+  public void setModeTypeNotIn(List<VlanModeType> modeTypeNotIn) {
+    this.modeTypeNotIn = modeTypeNotIn;
+  }
+
+
   public VlanWhereInput name(String name) {
     
     this.name = name;
@@ -2424,6 +2645,606 @@ public class VlanWhereInput {
 
   public void setOR(List<VlanWhereInput> OR) {
     this.OR = OR;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidth(Double qosMaxBandwidth) {
+    
+    this.qosMaxBandwidth = qosMaxBandwidth;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidth
+   * @return qosMaxBandwidth
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidth() {
+    return qosMaxBandwidth;
+  }
+
+
+  public void setQosMaxBandwidth(Double qosMaxBandwidth) {
+    this.qosMaxBandwidth = qosMaxBandwidth;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthGt(Double qosMaxBandwidthGt) {
+    
+    this.qosMaxBandwidthGt = qosMaxBandwidthGt;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthGt
+   * @return qosMaxBandwidthGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidthGt() {
+    return qosMaxBandwidthGt;
+  }
+
+
+  public void setQosMaxBandwidthGt(Double qosMaxBandwidthGt) {
+    this.qosMaxBandwidthGt = qosMaxBandwidthGt;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthGte(Double qosMaxBandwidthGte) {
+    
+    this.qosMaxBandwidthGte = qosMaxBandwidthGte;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthGte
+   * @return qosMaxBandwidthGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidthGte() {
+    return qosMaxBandwidthGte;
+  }
+
+
+  public void setQosMaxBandwidthGte(Double qosMaxBandwidthGte) {
+    this.qosMaxBandwidthGte = qosMaxBandwidthGte;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthIn(List<Double> qosMaxBandwidthIn) {
+    
+    this.qosMaxBandwidthIn = qosMaxBandwidthIn;
+    return this;
+  }
+
+  public VlanWhereInput addQosMaxBandwidthInItem(Double qosMaxBandwidthInItem) {
+    if (this.qosMaxBandwidthIn == null) {
+      this.qosMaxBandwidthIn = new ArrayList<Double>();
+    }
+    this.qosMaxBandwidthIn.add(qosMaxBandwidthInItem);
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthIn
+   * @return qosMaxBandwidthIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getQosMaxBandwidthIn() {
+    return qosMaxBandwidthIn;
+  }
+
+
+  public void setQosMaxBandwidthIn(List<Double> qosMaxBandwidthIn) {
+    this.qosMaxBandwidthIn = qosMaxBandwidthIn;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthLt(Double qosMaxBandwidthLt) {
+    
+    this.qosMaxBandwidthLt = qosMaxBandwidthLt;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthLt
+   * @return qosMaxBandwidthLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidthLt() {
+    return qosMaxBandwidthLt;
+  }
+
+
+  public void setQosMaxBandwidthLt(Double qosMaxBandwidthLt) {
+    this.qosMaxBandwidthLt = qosMaxBandwidthLt;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthLte(Double qosMaxBandwidthLte) {
+    
+    this.qosMaxBandwidthLte = qosMaxBandwidthLte;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthLte
+   * @return qosMaxBandwidthLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidthLte() {
+    return qosMaxBandwidthLte;
+  }
+
+
+  public void setQosMaxBandwidthLte(Double qosMaxBandwidthLte) {
+    this.qosMaxBandwidthLte = qosMaxBandwidthLte;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthNot(Double qosMaxBandwidthNot) {
+    
+    this.qosMaxBandwidthNot = qosMaxBandwidthNot;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthNot
+   * @return qosMaxBandwidthNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidthNot() {
+    return qosMaxBandwidthNot;
+  }
+
+
+  public void setQosMaxBandwidthNot(Double qosMaxBandwidthNot) {
+    this.qosMaxBandwidthNot = qosMaxBandwidthNot;
+  }
+
+
+  public VlanWhereInput qosMaxBandwidthNotIn(List<Double> qosMaxBandwidthNotIn) {
+    
+    this.qosMaxBandwidthNotIn = qosMaxBandwidthNotIn;
+    return this;
+  }
+
+  public VlanWhereInput addQosMaxBandwidthNotInItem(Double qosMaxBandwidthNotInItem) {
+    if (this.qosMaxBandwidthNotIn == null) {
+      this.qosMaxBandwidthNotIn = new ArrayList<Double>();
+    }
+    this.qosMaxBandwidthNotIn.add(qosMaxBandwidthNotInItem);
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidthNotIn
+   * @return qosMaxBandwidthNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getQosMaxBandwidthNotIn() {
+    return qosMaxBandwidthNotIn;
+  }
+
+
+  public void setQosMaxBandwidthNotIn(List<Double> qosMaxBandwidthNotIn) {
+    this.qosMaxBandwidthNotIn = qosMaxBandwidthNotIn;
+  }
+
+
+  public VlanWhereInput qosMinBandwidth(Double qosMinBandwidth) {
+    
+    this.qosMinBandwidth = qosMinBandwidth;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidth
+   * @return qosMinBandwidth
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidth() {
+    return qosMinBandwidth;
+  }
+
+
+  public void setQosMinBandwidth(Double qosMinBandwidth) {
+    this.qosMinBandwidth = qosMinBandwidth;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthGt(Double qosMinBandwidthGt) {
+    
+    this.qosMinBandwidthGt = qosMinBandwidthGt;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthGt
+   * @return qosMinBandwidthGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidthGt() {
+    return qosMinBandwidthGt;
+  }
+
+
+  public void setQosMinBandwidthGt(Double qosMinBandwidthGt) {
+    this.qosMinBandwidthGt = qosMinBandwidthGt;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthGte(Double qosMinBandwidthGte) {
+    
+    this.qosMinBandwidthGte = qosMinBandwidthGte;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthGte
+   * @return qosMinBandwidthGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidthGte() {
+    return qosMinBandwidthGte;
+  }
+
+
+  public void setQosMinBandwidthGte(Double qosMinBandwidthGte) {
+    this.qosMinBandwidthGte = qosMinBandwidthGte;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthIn(List<Double> qosMinBandwidthIn) {
+    
+    this.qosMinBandwidthIn = qosMinBandwidthIn;
+    return this;
+  }
+
+  public VlanWhereInput addQosMinBandwidthInItem(Double qosMinBandwidthInItem) {
+    if (this.qosMinBandwidthIn == null) {
+      this.qosMinBandwidthIn = new ArrayList<Double>();
+    }
+    this.qosMinBandwidthIn.add(qosMinBandwidthInItem);
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthIn
+   * @return qosMinBandwidthIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getQosMinBandwidthIn() {
+    return qosMinBandwidthIn;
+  }
+
+
+  public void setQosMinBandwidthIn(List<Double> qosMinBandwidthIn) {
+    this.qosMinBandwidthIn = qosMinBandwidthIn;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthLt(Double qosMinBandwidthLt) {
+    
+    this.qosMinBandwidthLt = qosMinBandwidthLt;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthLt
+   * @return qosMinBandwidthLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidthLt() {
+    return qosMinBandwidthLt;
+  }
+
+
+  public void setQosMinBandwidthLt(Double qosMinBandwidthLt) {
+    this.qosMinBandwidthLt = qosMinBandwidthLt;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthLte(Double qosMinBandwidthLte) {
+    
+    this.qosMinBandwidthLte = qosMinBandwidthLte;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthLte
+   * @return qosMinBandwidthLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidthLte() {
+    return qosMinBandwidthLte;
+  }
+
+
+  public void setQosMinBandwidthLte(Double qosMinBandwidthLte) {
+    this.qosMinBandwidthLte = qosMinBandwidthLte;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthNot(Double qosMinBandwidthNot) {
+    
+    this.qosMinBandwidthNot = qosMinBandwidthNot;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthNot
+   * @return qosMinBandwidthNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidthNot() {
+    return qosMinBandwidthNot;
+  }
+
+
+  public void setQosMinBandwidthNot(Double qosMinBandwidthNot) {
+    this.qosMinBandwidthNot = qosMinBandwidthNot;
+  }
+
+
+  public VlanWhereInput qosMinBandwidthNotIn(List<Double> qosMinBandwidthNotIn) {
+    
+    this.qosMinBandwidthNotIn = qosMinBandwidthNotIn;
+    return this;
+  }
+
+  public VlanWhereInput addQosMinBandwidthNotInItem(Double qosMinBandwidthNotInItem) {
+    if (this.qosMinBandwidthNotIn == null) {
+      this.qosMinBandwidthNotIn = new ArrayList<Double>();
+    }
+    this.qosMinBandwidthNotIn.add(qosMinBandwidthNotInItem);
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidthNotIn
+   * @return qosMinBandwidthNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getQosMinBandwidthNotIn() {
+    return qosMinBandwidthNotIn;
+  }
+
+
+  public void setQosMinBandwidthNotIn(List<Double> qosMinBandwidthNotIn) {
+    this.qosMinBandwidthNotIn = qosMinBandwidthNotIn;
+  }
+
+
+  public VlanWhereInput qosPriority(Integer qosPriority) {
+    
+    this.qosPriority = qosPriority;
+    return this;
+  }
+
+   /**
+   * Get qosPriority
+   * @return qosPriority
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriority() {
+    return qosPriority;
+  }
+
+
+  public void setQosPriority(Integer qosPriority) {
+    this.qosPriority = qosPriority;
+  }
+
+
+  public VlanWhereInput qosPriorityGt(Integer qosPriorityGt) {
+    
+    this.qosPriorityGt = qosPriorityGt;
+    return this;
+  }
+
+   /**
+   * Get qosPriorityGt
+   * @return qosPriorityGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriorityGt() {
+    return qosPriorityGt;
+  }
+
+
+  public void setQosPriorityGt(Integer qosPriorityGt) {
+    this.qosPriorityGt = qosPriorityGt;
+  }
+
+
+  public VlanWhereInput qosPriorityGte(Integer qosPriorityGte) {
+    
+    this.qosPriorityGte = qosPriorityGte;
+    return this;
+  }
+
+   /**
+   * Get qosPriorityGte
+   * @return qosPriorityGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriorityGte() {
+    return qosPriorityGte;
+  }
+
+
+  public void setQosPriorityGte(Integer qosPriorityGte) {
+    this.qosPriorityGte = qosPriorityGte;
+  }
+
+
+  public VlanWhereInput qosPriorityIn(List<Integer> qosPriorityIn) {
+    
+    this.qosPriorityIn = qosPriorityIn;
+    return this;
+  }
+
+  public VlanWhereInput addQosPriorityInItem(Integer qosPriorityInItem) {
+    if (this.qosPriorityIn == null) {
+      this.qosPriorityIn = new ArrayList<Integer>();
+    }
+    this.qosPriorityIn.add(qosPriorityInItem);
+    return this;
+  }
+
+   /**
+   * Get qosPriorityIn
+   * @return qosPriorityIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getQosPriorityIn() {
+    return qosPriorityIn;
+  }
+
+
+  public void setQosPriorityIn(List<Integer> qosPriorityIn) {
+    this.qosPriorityIn = qosPriorityIn;
+  }
+
+
+  public VlanWhereInput qosPriorityLt(Integer qosPriorityLt) {
+    
+    this.qosPriorityLt = qosPriorityLt;
+    return this;
+  }
+
+   /**
+   * Get qosPriorityLt
+   * @return qosPriorityLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriorityLt() {
+    return qosPriorityLt;
+  }
+
+
+  public void setQosPriorityLt(Integer qosPriorityLt) {
+    this.qosPriorityLt = qosPriorityLt;
+  }
+
+
+  public VlanWhereInput qosPriorityLte(Integer qosPriorityLte) {
+    
+    this.qosPriorityLte = qosPriorityLte;
+    return this;
+  }
+
+   /**
+   * Get qosPriorityLte
+   * @return qosPriorityLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriorityLte() {
+    return qosPriorityLte;
+  }
+
+
+  public void setQosPriorityLte(Integer qosPriorityLte) {
+    this.qosPriorityLte = qosPriorityLte;
+  }
+
+
+  public VlanWhereInput qosPriorityNot(Integer qosPriorityNot) {
+    
+    this.qosPriorityNot = qosPriorityNot;
+    return this;
+  }
+
+   /**
+   * Get qosPriorityNot
+   * @return qosPriorityNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriorityNot() {
+    return qosPriorityNot;
+  }
+
+
+  public void setQosPriorityNot(Integer qosPriorityNot) {
+    this.qosPriorityNot = qosPriorityNot;
+  }
+
+
+  public VlanWhereInput qosPriorityNotIn(List<Integer> qosPriorityNotIn) {
+    
+    this.qosPriorityNotIn = qosPriorityNotIn;
+    return this;
+  }
+
+  public VlanWhereInput addQosPriorityNotInItem(Integer qosPriorityNotInItem) {
+    if (this.qosPriorityNotIn == null) {
+      this.qosPriorityNotIn = new ArrayList<Integer>();
+    }
+    this.qosPriorityNotIn.add(qosPriorityNotInItem);
+    return this;
+  }
+
+   /**
+   * Get qosPriorityNotIn
+   * @return qosPriorityNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getQosPriorityNotIn() {
+    return qosPriorityNotIn;
+  }
+
+
+  public void setQosPriorityNotIn(List<Integer> qosPriorityNotIn) {
+    this.qosPriorityNotIn = qosPriorityNotIn;
   }
 
 
@@ -3238,6 +4059,10 @@ public class VlanWhereInput {
         Objects.equals(this.localIdNotIn, vlanWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, vlanWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, vlanWhereInput.localIdStartsWith) &&
+        Objects.equals(this.modeType, vlanWhereInput.modeType) &&
+        Objects.equals(this.modeTypeIn, vlanWhereInput.modeTypeIn) &&
+        Objects.equals(this.modeTypeNot, vlanWhereInput.modeTypeNot) &&
+        Objects.equals(this.modeTypeNotIn, vlanWhereInput.modeTypeNotIn) &&
         Objects.equals(this.name, vlanWhereInput.name) &&
         Objects.equals(this.nameContains, vlanWhereInput.nameContains) &&
         Objects.equals(this.nameEndsWith, vlanWhereInput.nameEndsWith) &&
@@ -3254,6 +4079,30 @@ public class VlanWhereInput {
         Objects.equals(this.nameStartsWith, vlanWhereInput.nameStartsWith) &&
         Objects.equals(this.NOT, vlanWhereInput.NOT) &&
         Objects.equals(this.OR, vlanWhereInput.OR) &&
+        Objects.equals(this.qosMaxBandwidth, vlanWhereInput.qosMaxBandwidth) &&
+        Objects.equals(this.qosMaxBandwidthGt, vlanWhereInput.qosMaxBandwidthGt) &&
+        Objects.equals(this.qosMaxBandwidthGte, vlanWhereInput.qosMaxBandwidthGte) &&
+        Objects.equals(this.qosMaxBandwidthIn, vlanWhereInput.qosMaxBandwidthIn) &&
+        Objects.equals(this.qosMaxBandwidthLt, vlanWhereInput.qosMaxBandwidthLt) &&
+        Objects.equals(this.qosMaxBandwidthLte, vlanWhereInput.qosMaxBandwidthLte) &&
+        Objects.equals(this.qosMaxBandwidthNot, vlanWhereInput.qosMaxBandwidthNot) &&
+        Objects.equals(this.qosMaxBandwidthNotIn, vlanWhereInput.qosMaxBandwidthNotIn) &&
+        Objects.equals(this.qosMinBandwidth, vlanWhereInput.qosMinBandwidth) &&
+        Objects.equals(this.qosMinBandwidthGt, vlanWhereInput.qosMinBandwidthGt) &&
+        Objects.equals(this.qosMinBandwidthGte, vlanWhereInput.qosMinBandwidthGte) &&
+        Objects.equals(this.qosMinBandwidthIn, vlanWhereInput.qosMinBandwidthIn) &&
+        Objects.equals(this.qosMinBandwidthLt, vlanWhereInput.qosMinBandwidthLt) &&
+        Objects.equals(this.qosMinBandwidthLte, vlanWhereInput.qosMinBandwidthLte) &&
+        Objects.equals(this.qosMinBandwidthNot, vlanWhereInput.qosMinBandwidthNot) &&
+        Objects.equals(this.qosMinBandwidthNotIn, vlanWhereInput.qosMinBandwidthNotIn) &&
+        Objects.equals(this.qosPriority, vlanWhereInput.qosPriority) &&
+        Objects.equals(this.qosPriorityGt, vlanWhereInput.qosPriorityGt) &&
+        Objects.equals(this.qosPriorityGte, vlanWhereInput.qosPriorityGte) &&
+        Objects.equals(this.qosPriorityIn, vlanWhereInput.qosPriorityIn) &&
+        Objects.equals(this.qosPriorityLt, vlanWhereInput.qosPriorityLt) &&
+        Objects.equals(this.qosPriorityLte, vlanWhereInput.qosPriorityLte) &&
+        Objects.equals(this.qosPriorityNot, vlanWhereInput.qosPriorityNot) &&
+        Objects.equals(this.qosPriorityNotIn, vlanWhereInput.qosPriorityNotIn) &&
         Objects.equals(this.subnetmask, vlanWhereInput.subnetmask) &&
         Objects.equals(this.subnetmaskContains, vlanWhereInput.subnetmaskContains) &&
         Objects.equals(this.subnetmaskEndsWith, vlanWhereInput.subnetmaskEndsWith) &&
@@ -3292,7 +4141,7 @@ public class VlanWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, gatewaySubnetmask, gatewaySubnetmaskContains, gatewaySubnetmaskEndsWith, gatewaySubnetmaskGt, gatewaySubnetmaskGte, gatewaySubnetmaskIn, gatewaySubnetmaskLt, gatewaySubnetmaskLte, gatewaySubnetmaskNot, gatewaySubnetmaskNotContains, gatewaySubnetmaskNotEndsWith, gatewaySubnetmaskNotIn, gatewaySubnetmaskNotStartsWith, gatewaySubnetmaskStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, subnetmask, subnetmaskContains, subnetmaskEndsWith, subnetmaskGt, subnetmaskGte, subnetmaskIn, subnetmaskLt, subnetmaskLte, subnetmaskNot, subnetmaskNotContains, subnetmaskNotEndsWith, subnetmaskNotIn, subnetmaskNotStartsWith, subnetmaskStartsWith, type, typeIn, typeNot, typeNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn, vmNicsEvery, vmNicsNone, vmNicsSome);
+    return Objects.hash(AND, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, gatewaySubnetmask, gatewaySubnetmaskContains, gatewaySubnetmaskEndsWith, gatewaySubnetmaskGt, gatewaySubnetmaskGte, gatewaySubnetmaskIn, gatewaySubnetmaskLt, gatewaySubnetmaskLte, gatewaySubnetmaskNot, gatewaySubnetmaskNotContains, gatewaySubnetmaskNotEndsWith, gatewaySubnetmaskNotIn, gatewaySubnetmaskNotStartsWith, gatewaySubnetmaskStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, modeType, modeTypeIn, modeTypeNot, modeTypeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, qosMaxBandwidth, qosMaxBandwidthGt, qosMaxBandwidthGte, qosMaxBandwidthIn, qosMaxBandwidthLt, qosMaxBandwidthLte, qosMaxBandwidthNot, qosMaxBandwidthNotIn, qosMinBandwidth, qosMinBandwidthGt, qosMinBandwidthGte, qosMinBandwidthIn, qosMinBandwidthLt, qosMinBandwidthLte, qosMinBandwidthNot, qosMinBandwidthNotIn, qosPriority, qosPriorityGt, qosPriorityGte, qosPriorityIn, qosPriorityLt, qosPriorityLte, qosPriorityNot, qosPriorityNotIn, subnetmask, subnetmaskContains, subnetmaskEndsWith, subnetmaskGt, subnetmaskGte, subnetmaskIn, subnetmaskLt, subnetmaskLte, subnetmaskNot, subnetmaskNotContains, subnetmaskNotEndsWith, subnetmaskNotIn, subnetmaskNotStartsWith, subnetmaskStartsWith, type, typeIn, typeNot, typeNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn, vmNicsEvery, vmNicsNone, vmNicsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3370,6 +4219,10 @@ public class VlanWhereInput {
     sb.append("    localIdNotIn: ").append(toIndentedString(localIdNotIn)).append("\n");
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
+    sb.append("    modeType: ").append(toIndentedString(modeType)).append("\n");
+    sb.append("    modeTypeIn: ").append(toIndentedString(modeTypeIn)).append("\n");
+    sb.append("    modeTypeNot: ").append(toIndentedString(modeTypeNot)).append("\n");
+    sb.append("    modeTypeNotIn: ").append(toIndentedString(modeTypeNotIn)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameContains: ").append(toIndentedString(nameContains)).append("\n");
     sb.append("    nameEndsWith: ").append(toIndentedString(nameEndsWith)).append("\n");
@@ -3386,6 +4239,30 @@ public class VlanWhereInput {
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
     sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+    sb.append("    qosMaxBandwidth: ").append(toIndentedString(qosMaxBandwidth)).append("\n");
+    sb.append("    qosMaxBandwidthGt: ").append(toIndentedString(qosMaxBandwidthGt)).append("\n");
+    sb.append("    qosMaxBandwidthGte: ").append(toIndentedString(qosMaxBandwidthGte)).append("\n");
+    sb.append("    qosMaxBandwidthIn: ").append(toIndentedString(qosMaxBandwidthIn)).append("\n");
+    sb.append("    qosMaxBandwidthLt: ").append(toIndentedString(qosMaxBandwidthLt)).append("\n");
+    sb.append("    qosMaxBandwidthLte: ").append(toIndentedString(qosMaxBandwidthLte)).append("\n");
+    sb.append("    qosMaxBandwidthNot: ").append(toIndentedString(qosMaxBandwidthNot)).append("\n");
+    sb.append("    qosMaxBandwidthNotIn: ").append(toIndentedString(qosMaxBandwidthNotIn)).append("\n");
+    sb.append("    qosMinBandwidth: ").append(toIndentedString(qosMinBandwidth)).append("\n");
+    sb.append("    qosMinBandwidthGt: ").append(toIndentedString(qosMinBandwidthGt)).append("\n");
+    sb.append("    qosMinBandwidthGte: ").append(toIndentedString(qosMinBandwidthGte)).append("\n");
+    sb.append("    qosMinBandwidthIn: ").append(toIndentedString(qosMinBandwidthIn)).append("\n");
+    sb.append("    qosMinBandwidthLt: ").append(toIndentedString(qosMinBandwidthLt)).append("\n");
+    sb.append("    qosMinBandwidthLte: ").append(toIndentedString(qosMinBandwidthLte)).append("\n");
+    sb.append("    qosMinBandwidthNot: ").append(toIndentedString(qosMinBandwidthNot)).append("\n");
+    sb.append("    qosMinBandwidthNotIn: ").append(toIndentedString(qosMinBandwidthNotIn)).append("\n");
+    sb.append("    qosPriority: ").append(toIndentedString(qosPriority)).append("\n");
+    sb.append("    qosPriorityGt: ").append(toIndentedString(qosPriorityGt)).append("\n");
+    sb.append("    qosPriorityGte: ").append(toIndentedString(qosPriorityGte)).append("\n");
+    sb.append("    qosPriorityIn: ").append(toIndentedString(qosPriorityIn)).append("\n");
+    sb.append("    qosPriorityLt: ").append(toIndentedString(qosPriorityLt)).append("\n");
+    sb.append("    qosPriorityLte: ").append(toIndentedString(qosPriorityLte)).append("\n");
+    sb.append("    qosPriorityNot: ").append(toIndentedString(qosPriorityNot)).append("\n");
+    sb.append("    qosPriorityNotIn: ").append(toIndentedString(qosPriorityNotIn)).append("\n");
     sb.append("    subnetmask: ").append(toIndentedString(subnetmask)).append("\n");
     sb.append("    subnetmaskContains: ").append(toIndentedString(subnetmaskContains)).append("\n");
     sb.append("    subnetmaskEndsWith: ").append(toIndentedString(subnetmaskEndsWith)).append("\n");

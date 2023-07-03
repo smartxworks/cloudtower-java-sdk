@@ -24,6 +24,10 @@ public enum UsbDeviceOrderByInput {
   
   DESCRIPTION_DESC("description_DESC"),
   
+  ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
+  
+  ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+  
   ID_ASC("id_ASC"),
   
   ID_DESC("id_DESC"),

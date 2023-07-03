@@ -85,6 +85,10 @@ public class MetricLabel {
   @SerializedName(SERIALIZED_NAME_HOST)
   private String host;
 
+  public static final String SERIALIZED_NAME_ESXI_UUID = "_esxi_uuid";
+  @SerializedName(SERIALIZED_NAME_ESXI_UUID)
+  private String esxiUuid;
+
   public static final String SERIALIZED_NAME_DEVICE = "_device";
   @SerializedName(SERIALIZED_NAME_DEVICE)
   private String device;
@@ -540,6 +544,29 @@ public class MetricLabel {
   }
 
 
+  public MetricLabel esxiUuid(String esxiUuid) {
+    
+    this.esxiUuid = esxiUuid;
+    return this;
+  }
+
+   /**
+   * Get esxiUuid
+   * @return esxiUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getEsxiUuid() {
+    return esxiUuid;
+  }
+
+
+  public void setEsxiUuid(String esxiUuid) {
+    this.esxiUuid = esxiUuid;
+  }
+
+
   public MetricLabel device(String device) {
     
     this.device = device;
@@ -658,6 +685,7 @@ public class MetricLabel {
         Objects.equals(this.network, metricLabel.network) &&
         Objects.equals(this.mac, metricLabel.mac) &&
         Objects.equals(this.host, metricLabel.host) &&
+        Objects.equals(this.esxiUuid, metricLabel.esxiUuid) &&
         Objects.equals(this.device, metricLabel.device) &&
         Objects.equals(this.cluster, metricLabel.cluster) &&
         Objects.equals(this.chunk, metricLabel.chunk) &&
@@ -670,7 +698,7 @@ public class MetricLabel {
 
   @Override
   public int hashCode() {
-    return Objects.hash(toHostname, serialNumber, pool, name, metricName, job, instance, zone, witness, volume, vm, toUuid, service, scvm, network, mac, host, device, cluster, chunk, typename);
+    return Objects.hash(toHostname, serialNumber, pool, name, metricName, job, instance, zone, witness, volume, vm, toUuid, service, scvm, network, mac, host, esxiUuid, device, cluster, chunk, typename);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -701,6 +729,7 @@ public class MetricLabel {
     sb.append("    network: ").append(toIndentedString(network)).append("\n");
     sb.append("    mac: ").append(toIndentedString(mac)).append("\n");
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
+    sb.append("    esxiUuid: ").append(toIndentedString(esxiUuid)).append("\n");
     sb.append("    device: ").append(toIndentedString(device)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    chunk: ").append(toIndentedString(chunk)).append("\n");

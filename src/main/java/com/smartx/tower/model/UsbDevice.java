@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedHost;
 import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.UsbDeviceStatus;
@@ -29,6 +30,10 @@ public class UsbDevice {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
@@ -120,6 +125,29 @@ public class UsbDevice {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+
+  public UsbDevice entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
   }
 
 
@@ -397,6 +425,7 @@ public class UsbDevice {
     UsbDevice usbDevice = (UsbDevice) o;
     return Objects.equals(this.binded, usbDevice.binded) &&
         Objects.equals(this.description, usbDevice.description) &&
+        Objects.equals(this.entityAsyncStatus, usbDevice.entityAsyncStatus) &&
         Objects.equals(this.host, usbDevice.host) &&
         Objects.equals(this.id, usbDevice.id) &&
         Objects.equals(this.localCreatedAt, usbDevice.localCreatedAt) &&
@@ -416,7 +445,7 @@ public class UsbDevice {
 
   @Override
   public int hashCode() {
-    return Objects.hash(binded, description, host, id, localCreatedAt, localId, manufacturer, name, size, status, usbType, vms, vm);
+    return Objects.hash(binded, description, entityAsyncStatus, host, id, localCreatedAt, localId, manufacturer, name, size, status, usbType, vms, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -432,6 +461,7 @@ public class UsbDevice {
     sb.append("class UsbDevice {\n");
     sb.append("    binded: ").append(toIndentedString(binded)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    localCreatedAt: ").append(toIndentedString(localCreatedAt)).append("\n");

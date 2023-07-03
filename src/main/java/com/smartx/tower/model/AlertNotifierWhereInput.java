@@ -7,6 +7,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ClusterWhereInput;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NotifierLanguageCode;
 import com.smartx.tower.model.NotifierSecurityMode;
 import io.swagger.annotations.ApiModel;
@@ -24,6 +26,18 @@ public class AlertNotifierWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<AlertNotifierWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_CLUSTERS_EVERY = "clusters_every";
+  @SerializedName(SERIALIZED_NAME_CLUSTERS_EVERY)
+  private ClusterWhereInput clustersEvery;
+
+  public static final String SERIALIZED_NAME_CLUSTERS_NONE = "clusters_none";
+  @SerializedName(SERIALIZED_NAME_CLUSTERS_NONE)
+  private ClusterWhereInput clustersNone;
+
+  public static final String SERIALIZED_NAME_CLUSTERS_SOME = "clusters_some";
+  @SerializedName(SERIALIZED_NAME_CLUSTERS_SOME)
+  private ClusterWhereInput clustersSome;
 
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
@@ -88,6 +102,22 @@ public class AlertNotifierWhereInput {
   public static final String SERIALIZED_NAME_EMAIL_FROM_STARTS_WITH = "email_from_starts_with";
   @SerializedName(SERIALIZED_NAME_EMAIL_FROM_STARTS_WITH)
   private String emailFromStartsWith;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN = "entityAsyncStatus_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT = "entityAsyncStatus_not";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT)
+  private EntityAsyncStatus entityAsyncStatusNot;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -160,6 +190,62 @@ public class AlertNotifierWhereInput {
   public static final String SERIALIZED_NAME_LANGUAGE_CODE_NOT_IN = "language_code_not_in";
   @SerializedName(SERIALIZED_NAME_LANGUAGE_CODE_NOT_IN)
   private List<NotifierLanguageCode> languageCodeNotIn = null;
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+  public static final String SERIALIZED_NAME_NAME_CONTAINS = "name_contains";
+  @SerializedName(SERIALIZED_NAME_NAME_CONTAINS)
+  private String nameContains;
+
+  public static final String SERIALIZED_NAME_NAME_ENDS_WITH = "name_ends_with";
+  @SerializedName(SERIALIZED_NAME_NAME_ENDS_WITH)
+  private String nameEndsWith;
+
+  public static final String SERIALIZED_NAME_NAME_GT = "name_gt";
+  @SerializedName(SERIALIZED_NAME_NAME_GT)
+  private String nameGt;
+
+  public static final String SERIALIZED_NAME_NAME_GTE = "name_gte";
+  @SerializedName(SERIALIZED_NAME_NAME_GTE)
+  private String nameGte;
+
+  public static final String SERIALIZED_NAME_NAME_IN = "name_in";
+  @SerializedName(SERIALIZED_NAME_NAME_IN)
+  private List<String> nameIn = null;
+
+  public static final String SERIALIZED_NAME_NAME_LT = "name_lt";
+  @SerializedName(SERIALIZED_NAME_NAME_LT)
+  private String nameLt;
+
+  public static final String SERIALIZED_NAME_NAME_LTE = "name_lte";
+  @SerializedName(SERIALIZED_NAME_NAME_LTE)
+  private String nameLte;
+
+  public static final String SERIALIZED_NAME_NAME_NOT = "name_not";
+  @SerializedName(SERIALIZED_NAME_NAME_NOT)
+  private String nameNot;
+
+  public static final String SERIALIZED_NAME_NAME_NOT_CONTAINS = "name_not_contains";
+  @SerializedName(SERIALIZED_NAME_NAME_NOT_CONTAINS)
+  private String nameNotContains;
+
+  public static final String SERIALIZED_NAME_NAME_NOT_ENDS_WITH = "name_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_NAME_NOT_ENDS_WITH)
+  private String nameNotEndsWith;
+
+  public static final String SERIALIZED_NAME_NAME_NOT_IN = "name_not_in";
+  @SerializedName(SERIALIZED_NAME_NAME_NOT_IN)
+  private List<String> nameNotIn = null;
+
+  public static final String SERIALIZED_NAME_NAME_NOT_STARTS_WITH = "name_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_NAME_NOT_STARTS_WITH)
+  private String nameNotStartsWith;
+
+  public static final String SERIALIZED_NAME_NAME_STARTS_WITH = "name_starts_with";
+  @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
+  private String nameStartsWith;
 
   public static final String SERIALIZED_NAME_N_O_T = "NOT";
   @SerializedName(SERIALIZED_NAME_N_O_T)
@@ -360,6 +446,75 @@ public class AlertNotifierWhereInput {
 
   public void setAND(List<AlertNotifierWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public AlertNotifierWhereInput clustersEvery(ClusterWhereInput clustersEvery) {
+    
+    this.clustersEvery = clustersEvery;
+    return this;
+  }
+
+   /**
+   * Get clustersEvery
+   * @return clustersEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ClusterWhereInput getClustersEvery() {
+    return clustersEvery;
+  }
+
+
+  public void setClustersEvery(ClusterWhereInput clustersEvery) {
+    this.clustersEvery = clustersEvery;
+  }
+
+
+  public AlertNotifierWhereInput clustersNone(ClusterWhereInput clustersNone) {
+    
+    this.clustersNone = clustersNone;
+    return this;
+  }
+
+   /**
+   * Get clustersNone
+   * @return clustersNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ClusterWhereInput getClustersNone() {
+    return clustersNone;
+  }
+
+
+  public void setClustersNone(ClusterWhereInput clustersNone) {
+    this.clustersNone = clustersNone;
+  }
+
+
+  public AlertNotifierWhereInput clustersSome(ClusterWhereInput clustersSome) {
+    
+    this.clustersSome = clustersSome;
+    return this;
+  }
+
+   /**
+   * Get clustersSome
+   * @return clustersSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ClusterWhereInput getClustersSome() {
+    return clustersSome;
+  }
+
+
+  public void setClustersSome(ClusterWhereInput clustersSome) {
+    this.clustersSome = clustersSome;
   }
 
 
@@ -744,6 +899,114 @@ public class AlertNotifierWhereInput {
 
   public void setEmailFromStartsWith(String emailFromStartsWith) {
     this.emailFromStartsWith = emailFromStartsWith;
+  }
+
+
+  public AlertNotifierWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
+  public AlertNotifierWhereInput entityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+    return this;
+  }
+
+  public AlertNotifierWhereInput addEntityAsyncStatusInItem(EntityAsyncStatus entityAsyncStatusInItem) {
+    if (this.entityAsyncStatusIn == null) {
+      this.entityAsyncStatusIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusIn.add(entityAsyncStatusInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusIn
+   * @return entityAsyncStatusIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusIn() {
+    return entityAsyncStatusIn;
+  }
+
+
+  public void setEntityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+  }
+
+
+  public AlertNotifierWhereInput entityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNot
+   * @return entityAsyncStatusNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatusNot() {
+    return entityAsyncStatusNot;
+  }
+
+
+  public void setEntityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+  }
+
+
+  public AlertNotifierWhereInput entityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+    return this;
+  }
+
+  public AlertNotifierWhereInput addEntityAsyncStatusNotInItem(EntityAsyncStatus entityAsyncStatusNotInItem) {
+    if (this.entityAsyncStatusNotIn == null) {
+      this.entityAsyncStatusNotIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusNotIn.add(entityAsyncStatusNotInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNotIn
+   * @return entityAsyncStatusNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusNotIn() {
+    return entityAsyncStatusNotIn;
+  }
+
+
+  public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
   }
 
 
@@ -1190,6 +1453,344 @@ public class AlertNotifierWhereInput {
 
   public void setLanguageCodeNotIn(List<NotifierLanguageCode> languageCodeNotIn) {
     this.languageCodeNotIn = languageCodeNotIn;
+  }
+
+
+  public AlertNotifierWhereInput name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public AlertNotifierWhereInput nameContains(String nameContains) {
+    
+    this.nameContains = nameContains;
+    return this;
+  }
+
+   /**
+   * Get nameContains
+   * @return nameContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameContains() {
+    return nameContains;
+  }
+
+
+  public void setNameContains(String nameContains) {
+    this.nameContains = nameContains;
+  }
+
+
+  public AlertNotifierWhereInput nameEndsWith(String nameEndsWith) {
+    
+    this.nameEndsWith = nameEndsWith;
+    return this;
+  }
+
+   /**
+   * Get nameEndsWith
+   * @return nameEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameEndsWith() {
+    return nameEndsWith;
+  }
+
+
+  public void setNameEndsWith(String nameEndsWith) {
+    this.nameEndsWith = nameEndsWith;
+  }
+
+
+  public AlertNotifierWhereInput nameGt(String nameGt) {
+    
+    this.nameGt = nameGt;
+    return this;
+  }
+
+   /**
+   * Get nameGt
+   * @return nameGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameGt() {
+    return nameGt;
+  }
+
+
+  public void setNameGt(String nameGt) {
+    this.nameGt = nameGt;
+  }
+
+
+  public AlertNotifierWhereInput nameGte(String nameGte) {
+    
+    this.nameGte = nameGte;
+    return this;
+  }
+
+   /**
+   * Get nameGte
+   * @return nameGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameGte() {
+    return nameGte;
+  }
+
+
+  public void setNameGte(String nameGte) {
+    this.nameGte = nameGte;
+  }
+
+
+  public AlertNotifierWhereInput nameIn(List<String> nameIn) {
+    
+    this.nameIn = nameIn;
+    return this;
+  }
+
+  public AlertNotifierWhereInput addNameInItem(String nameInItem) {
+    if (this.nameIn == null) {
+      this.nameIn = new ArrayList<String>();
+    }
+    this.nameIn.add(nameInItem);
+    return this;
+  }
+
+   /**
+   * Get nameIn
+   * @return nameIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getNameIn() {
+    return nameIn;
+  }
+
+
+  public void setNameIn(List<String> nameIn) {
+    this.nameIn = nameIn;
+  }
+
+
+  public AlertNotifierWhereInput nameLt(String nameLt) {
+    
+    this.nameLt = nameLt;
+    return this;
+  }
+
+   /**
+   * Get nameLt
+   * @return nameLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameLt() {
+    return nameLt;
+  }
+
+
+  public void setNameLt(String nameLt) {
+    this.nameLt = nameLt;
+  }
+
+
+  public AlertNotifierWhereInput nameLte(String nameLte) {
+    
+    this.nameLte = nameLte;
+    return this;
+  }
+
+   /**
+   * Get nameLte
+   * @return nameLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameLte() {
+    return nameLte;
+  }
+
+
+  public void setNameLte(String nameLte) {
+    this.nameLte = nameLte;
+  }
+
+
+  public AlertNotifierWhereInput nameNot(String nameNot) {
+    
+    this.nameNot = nameNot;
+    return this;
+  }
+
+   /**
+   * Get nameNot
+   * @return nameNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameNot() {
+    return nameNot;
+  }
+
+
+  public void setNameNot(String nameNot) {
+    this.nameNot = nameNot;
+  }
+
+
+  public AlertNotifierWhereInput nameNotContains(String nameNotContains) {
+    
+    this.nameNotContains = nameNotContains;
+    return this;
+  }
+
+   /**
+   * Get nameNotContains
+   * @return nameNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameNotContains() {
+    return nameNotContains;
+  }
+
+
+  public void setNameNotContains(String nameNotContains) {
+    this.nameNotContains = nameNotContains;
+  }
+
+
+  public AlertNotifierWhereInput nameNotEndsWith(String nameNotEndsWith) {
+    
+    this.nameNotEndsWith = nameNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get nameNotEndsWith
+   * @return nameNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameNotEndsWith() {
+    return nameNotEndsWith;
+  }
+
+
+  public void setNameNotEndsWith(String nameNotEndsWith) {
+    this.nameNotEndsWith = nameNotEndsWith;
+  }
+
+
+  public AlertNotifierWhereInput nameNotIn(List<String> nameNotIn) {
+    
+    this.nameNotIn = nameNotIn;
+    return this;
+  }
+
+  public AlertNotifierWhereInput addNameNotInItem(String nameNotInItem) {
+    if (this.nameNotIn == null) {
+      this.nameNotIn = new ArrayList<String>();
+    }
+    this.nameNotIn.add(nameNotInItem);
+    return this;
+  }
+
+   /**
+   * Get nameNotIn
+   * @return nameNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getNameNotIn() {
+    return nameNotIn;
+  }
+
+
+  public void setNameNotIn(List<String> nameNotIn) {
+    this.nameNotIn = nameNotIn;
+  }
+
+
+  public AlertNotifierWhereInput nameNotStartsWith(String nameNotStartsWith) {
+    
+    this.nameNotStartsWith = nameNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get nameNotStartsWith
+   * @return nameNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameNotStartsWith() {
+    return nameNotStartsWith;
+  }
+
+
+  public void setNameNotStartsWith(String nameNotStartsWith) {
+    this.nameNotStartsWith = nameNotStartsWith;
+  }
+
+
+  public AlertNotifierWhereInput nameStartsWith(String nameStartsWith) {
+    
+    this.nameStartsWith = nameStartsWith;
+    return this;
+  }
+
+   /**
+   * Get nameStartsWith
+   * @return nameStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getNameStartsWith() {
+    return nameStartsWith;
+  }
+
+
+  public void setNameStartsWith(String nameStartsWith) {
+    this.nameStartsWith = nameStartsWith;
   }
 
 
@@ -2249,6 +2850,9 @@ public class AlertNotifierWhereInput {
     }
     AlertNotifierWhereInput alertNotifierWhereInput = (AlertNotifierWhereInput) o;
     return Objects.equals(this.AND, alertNotifierWhereInput.AND) &&
+        Objects.equals(this.clustersEvery, alertNotifierWhereInput.clustersEvery) &&
+        Objects.equals(this.clustersNone, alertNotifierWhereInput.clustersNone) &&
+        Objects.equals(this.clustersSome, alertNotifierWhereInput.clustersSome) &&
         Objects.equals(this.disabled, alertNotifierWhereInput.disabled) &&
         Objects.equals(this.disabledNot, alertNotifierWhereInput.disabledNot) &&
         Objects.equals(this.emailFrom, alertNotifierWhereInput.emailFrom) &&
@@ -2265,6 +2869,10 @@ public class AlertNotifierWhereInput {
         Objects.equals(this.emailFromNotIn, alertNotifierWhereInput.emailFromNotIn) &&
         Objects.equals(this.emailFromNotStartsWith, alertNotifierWhereInput.emailFromNotStartsWith) &&
         Objects.equals(this.emailFromStartsWith, alertNotifierWhereInput.emailFromStartsWith) &&
+        Objects.equals(this.entityAsyncStatus, alertNotifierWhereInput.entityAsyncStatus) &&
+        Objects.equals(this.entityAsyncStatusIn, alertNotifierWhereInput.entityAsyncStatusIn) &&
+        Objects.equals(this.entityAsyncStatusNot, alertNotifierWhereInput.entityAsyncStatusNot) &&
+        Objects.equals(this.entityAsyncStatusNotIn, alertNotifierWhereInput.entityAsyncStatusNotIn) &&
         Objects.equals(this.id, alertNotifierWhereInput.id) &&
         Objects.equals(this.idContains, alertNotifierWhereInput.idContains) &&
         Objects.equals(this.idEndsWith, alertNotifierWhereInput.idEndsWith) &&
@@ -2283,6 +2891,20 @@ public class AlertNotifierWhereInput {
         Objects.equals(this.languageCodeIn, alertNotifierWhereInput.languageCodeIn) &&
         Objects.equals(this.languageCodeNot, alertNotifierWhereInput.languageCodeNot) &&
         Objects.equals(this.languageCodeNotIn, alertNotifierWhereInput.languageCodeNotIn) &&
+        Objects.equals(this.name, alertNotifierWhereInput.name) &&
+        Objects.equals(this.nameContains, alertNotifierWhereInput.nameContains) &&
+        Objects.equals(this.nameEndsWith, alertNotifierWhereInput.nameEndsWith) &&
+        Objects.equals(this.nameGt, alertNotifierWhereInput.nameGt) &&
+        Objects.equals(this.nameGte, alertNotifierWhereInput.nameGte) &&
+        Objects.equals(this.nameIn, alertNotifierWhereInput.nameIn) &&
+        Objects.equals(this.nameLt, alertNotifierWhereInput.nameLt) &&
+        Objects.equals(this.nameLte, alertNotifierWhereInput.nameLte) &&
+        Objects.equals(this.nameNot, alertNotifierWhereInput.nameNot) &&
+        Objects.equals(this.nameNotContains, alertNotifierWhereInput.nameNotContains) &&
+        Objects.equals(this.nameNotEndsWith, alertNotifierWhereInput.nameNotEndsWith) &&
+        Objects.equals(this.nameNotIn, alertNotifierWhereInput.nameNotIn) &&
+        Objects.equals(this.nameNotStartsWith, alertNotifierWhereInput.nameNotStartsWith) &&
+        Objects.equals(this.nameStartsWith, alertNotifierWhereInput.nameStartsWith) &&
         Objects.equals(this.NOT, alertNotifierWhereInput.NOT) &&
         Objects.equals(this.OR, alertNotifierWhereInput.OR) &&
         Objects.equals(this.securityMode, alertNotifierWhereInput.securityMode) &&
@@ -2333,7 +2955,7 @@ public class AlertNotifierWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, disabled, disabledNot, emailFrom, emailFromContains, emailFromEndsWith, emailFromGt, emailFromGte, emailFromIn, emailFromLt, emailFromLte, emailFromNot, emailFromNotContains, emailFromNotEndsWith, emailFromNotIn, emailFromNotStartsWith, emailFromStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, NOT, OR, securityMode, securityModeIn, securityModeNot, securityModeNotIn, smtpServerHost, smtpServerHostContains, smtpServerHostEndsWith, smtpServerHostGt, smtpServerHostGte, smtpServerHostIn, smtpServerHostLt, smtpServerHostLte, smtpServerHostNot, smtpServerHostNotContains, smtpServerHostNotEndsWith, smtpServerHostNotIn, smtpServerHostNotStartsWith, smtpServerHostStartsWith, smtpServerPort, smtpServerPortGt, smtpServerPortGte, smtpServerPortIn, smtpServerPortLt, smtpServerPortLte, smtpServerPortNot, smtpServerPortNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, clustersEvery, clustersNone, clustersSome, disabled, disabledNot, emailFrom, emailFromContains, emailFromEndsWith, emailFromGt, emailFromGte, emailFromIn, emailFromLt, emailFromLte, emailFromNot, emailFromNotContains, emailFromNotEndsWith, emailFromNotIn, emailFromNotStartsWith, emailFromStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, securityMode, securityModeIn, securityModeNot, securityModeNotIn, smtpServerHost, smtpServerHostContains, smtpServerHostEndsWith, smtpServerHostGt, smtpServerHostGte, smtpServerHostIn, smtpServerHostLt, smtpServerHostLte, smtpServerHostNot, smtpServerHostNotContains, smtpServerHostNotEndsWith, smtpServerHostNotIn, smtpServerHostNotStartsWith, smtpServerHostStartsWith, smtpServerPort, smtpServerPortGt, smtpServerPortGte, smtpServerPortIn, smtpServerPortLt, smtpServerPortLte, smtpServerPortNot, smtpServerPortNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2348,6 +2970,9 @@ public class AlertNotifierWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class AlertNotifierWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    clustersEvery: ").append(toIndentedString(clustersEvery)).append("\n");
+    sb.append("    clustersNone: ").append(toIndentedString(clustersNone)).append("\n");
+    sb.append("    clustersSome: ").append(toIndentedString(clustersSome)).append("\n");
     sb.append("    disabled: ").append(toIndentedString(disabled)).append("\n");
     sb.append("    disabledNot: ").append(toIndentedString(disabledNot)).append("\n");
     sb.append("    emailFrom: ").append(toIndentedString(emailFrom)).append("\n");
@@ -2364,6 +2989,10 @@ public class AlertNotifierWhereInput {
     sb.append("    emailFromNotIn: ").append(toIndentedString(emailFromNotIn)).append("\n");
     sb.append("    emailFromNotStartsWith: ").append(toIndentedString(emailFromNotStartsWith)).append("\n");
     sb.append("    emailFromStartsWith: ").append(toIndentedString(emailFromStartsWith)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
+    sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
+    sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
     sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");
@@ -2382,6 +3011,20 @@ public class AlertNotifierWhereInput {
     sb.append("    languageCodeIn: ").append(toIndentedString(languageCodeIn)).append("\n");
     sb.append("    languageCodeNot: ").append(toIndentedString(languageCodeNot)).append("\n");
     sb.append("    languageCodeNotIn: ").append(toIndentedString(languageCodeNotIn)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameContains: ").append(toIndentedString(nameContains)).append("\n");
+    sb.append("    nameEndsWith: ").append(toIndentedString(nameEndsWith)).append("\n");
+    sb.append("    nameGt: ").append(toIndentedString(nameGt)).append("\n");
+    sb.append("    nameGte: ").append(toIndentedString(nameGte)).append("\n");
+    sb.append("    nameIn: ").append(toIndentedString(nameIn)).append("\n");
+    sb.append("    nameLt: ").append(toIndentedString(nameLt)).append("\n");
+    sb.append("    nameLte: ").append(toIndentedString(nameLte)).append("\n");
+    sb.append("    nameNot: ").append(toIndentedString(nameNot)).append("\n");
+    sb.append("    nameNotContains: ").append(toIndentedString(nameNotContains)).append("\n");
+    sb.append("    nameNotEndsWith: ").append(toIndentedString(nameNotEndsWith)).append("\n");
+    sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
+    sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
+    sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
     sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    securityMode: ").append(toIndentedString(securityMode)).append("\n");

@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedIscsiLun;
 import com.smartx.tower.model.NestedLabel;
@@ -36,6 +37,10 @@ public class VmVolume {
   public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
   @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
   private VmVolumeElfStoragePolicyType elfStoragePolicy;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
 
   public static final String SERIALIZED_NAME_GUEST_SIZE_USAGE = "guest_size_usage";
   @SerializedName(SERIALIZED_NAME_GUEST_SIZE_USAGE)
@@ -166,6 +171,29 @@ public class VmVolume {
 
   public void setElfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
     this.elfStoragePolicy = elfStoragePolicy;
+  }
+
+
+  public VmVolume entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
   }
 
 
@@ -542,6 +570,7 @@ public class VmVolume {
     return Objects.equals(this.cluster, vmVolume.cluster) &&
         Objects.equals(this.description, vmVolume.description) &&
         Objects.equals(this.elfStoragePolicy, vmVolume.elfStoragePolicy) &&
+        Objects.equals(this.entityAsyncStatus, vmVolume.entityAsyncStatus) &&
         Objects.equals(this.guestSizeUsage, vmVolume.guestSizeUsage) &&
         Objects.equals(this.guestUsedSize, vmVolume.guestUsedSize) &&
         Objects.equals(this.id, vmVolume.id) &&
@@ -565,7 +594,7 @@ public class VmVolume {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, description, elfStoragePolicy, guestSizeUsage, guestUsedSize, id, labels, localCreatedAt, localId, lun, mounting, name, path, sharing, size, type, uniqueSize, vmDisks);
+    return Objects.hash(cluster, description, elfStoragePolicy, entityAsyncStatus, guestSizeUsage, guestUsedSize, id, labels, localCreatedAt, localId, lun, mounting, name, path, sharing, size, type, uniqueSize, vmDisks);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -582,6 +611,7 @@ public class VmVolume {
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    guestSizeUsage: ").append(toIndentedString(guestSizeUsage)).append("\n");
     sb.append("    guestUsedSize: ").append(toIndentedString(guestUsedSize)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

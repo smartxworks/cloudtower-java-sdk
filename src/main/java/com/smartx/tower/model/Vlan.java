@@ -12,6 +12,7 @@ import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedVds;
 import com.smartx.tower.model.NestedVmNic;
 import com.smartx.tower.model.NetworkType;
+import com.smartx.tower.model.VlanModeType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -48,9 +49,29 @@ public class Vlan {
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
   private String localId;
 
+  public static final String SERIALIZED_NAME_MODE_TYPE = "mode_type";
+  @SerializedName(SERIALIZED_NAME_MODE_TYPE)
+  private VlanModeType modeType;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
+  public static final String SERIALIZED_NAME_NETWORK_IDS = "network_ids";
+  @SerializedName(SERIALIZED_NAME_NETWORK_IDS)
+  private List<String> networkIds = new ArrayList<String>();
+
+  public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH = "qos_max_bandwidth";
+  @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH)
+  private Double qosMaxBandwidth;
+
+  public static final String SERIALIZED_NAME_QOS_MIN_BANDWIDTH = "qos_min_bandwidth";
+  @SerializedName(SERIALIZED_NAME_QOS_MIN_BANDWIDTH)
+  private Double qosMinBandwidth;
+
+  public static final String SERIALIZED_NAME_QOS_PRIORITY = "qos_priority";
+  @SerializedName(SERIALIZED_NAME_QOS_PRIORITY)
+  private Integer qosPriority;
 
   public static final String SERIALIZED_NAME_SUBNETMASK = "subnetmask";
   @SerializedName(SERIALIZED_NAME_SUBNETMASK)
@@ -221,6 +242,29 @@ public class Vlan {
   }
 
 
+  public Vlan modeType(VlanModeType modeType) {
+    
+    this.modeType = modeType;
+    return this;
+  }
+
+   /**
+   * Get modeType
+   * @return modeType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VlanModeType getModeType() {
+    return modeType;
+  }
+
+
+  public void setModeType(VlanModeType modeType) {
+    this.modeType = modeType;
+  }
+
+
   public Vlan name(String name) {
     
     this.name = name;
@@ -241,6 +285,103 @@ public class Vlan {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+
+  public Vlan networkIds(List<String> networkIds) {
+    
+    this.networkIds = networkIds;
+    return this;
+  }
+
+  public Vlan addNetworkIdsItem(String networkIdsItem) {
+    this.networkIds.add(networkIdsItem);
+    return this;
+  }
+
+   /**
+   * Get networkIds
+   * @return networkIds
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<String> getNetworkIds() {
+    return networkIds;
+  }
+
+
+  public void setNetworkIds(List<String> networkIds) {
+    this.networkIds = networkIds;
+  }
+
+
+  public Vlan qosMaxBandwidth(Double qosMaxBandwidth) {
+    
+    this.qosMaxBandwidth = qosMaxBandwidth;
+    return this;
+  }
+
+   /**
+   * Get qosMaxBandwidth
+   * @return qosMaxBandwidth
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMaxBandwidth() {
+    return qosMaxBandwidth;
+  }
+
+
+  public void setQosMaxBandwidth(Double qosMaxBandwidth) {
+    this.qosMaxBandwidth = qosMaxBandwidth;
+  }
+
+
+  public Vlan qosMinBandwidth(Double qosMinBandwidth) {
+    
+    this.qosMinBandwidth = qosMinBandwidth;
+    return this;
+  }
+
+   /**
+   * Get qosMinBandwidth
+   * @return qosMinBandwidth
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosMinBandwidth() {
+    return qosMinBandwidth;
+  }
+
+
+  public void setQosMinBandwidth(Double qosMinBandwidth) {
+    this.qosMinBandwidth = qosMinBandwidth;
+  }
+
+
+  public Vlan qosPriority(Integer qosPriority) {
+    
+    this.qosPriority = qosPriority;
+    return this;
+  }
+
+   /**
+   * Get qosPriority
+   * @return qosPriority
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getQosPriority() {
+    return qosPriority;
+  }
+
+
+  public void setQosPriority(Integer qosPriority) {
+    this.qosPriority = qosPriority;
   }
 
 
@@ -382,7 +523,12 @@ public class Vlan {
         Objects.equals(this.id, vlan.id) &&
         Objects.equals(this.labels, vlan.labels) &&
         Objects.equals(this.localId, vlan.localId) &&
+        Objects.equals(this.modeType, vlan.modeType) &&
         Objects.equals(this.name, vlan.name) &&
+        Objects.equals(this.networkIds, vlan.networkIds) &&
+        Objects.equals(this.qosMaxBandwidth, vlan.qosMaxBandwidth) &&
+        Objects.equals(this.qosMinBandwidth, vlan.qosMinBandwidth) &&
+        Objects.equals(this.qosPriority, vlan.qosPriority) &&
         Objects.equals(this.subnetmask, vlan.subnetmask) &&
         Objects.equals(this.type, vlan.type) &&
         Objects.equals(this.vds, vlan.vds) &&
@@ -396,7 +542,7 @@ public class Vlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entityAsyncStatus, gatewayIp, gatewaySubnetmask, id, labels, localId, name, subnetmask, type, vds, vlanId, vmNics);
+    return Objects.hash(entityAsyncStatus, gatewayIp, gatewaySubnetmask, id, labels, localId, modeType, name, networkIds, qosMaxBandwidth, qosMinBandwidth, qosPriority, subnetmask, type, vds, vlanId, vmNics);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -416,7 +562,12 @@ public class Vlan {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
+    sb.append("    modeType: ").append(toIndentedString(modeType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    networkIds: ").append(toIndentedString(networkIds)).append("\n");
+    sb.append("    qosMaxBandwidth: ").append(toIndentedString(qosMaxBandwidth)).append("\n");
+    sb.append("    qosMinBandwidth: ").append(toIndentedString(qosMinBandwidth)).append("\n");
+    sb.append("    qosPriority: ").append(toIndentedString(qosPriority)).append("\n");
     sb.append("    subnetmask: ").append(toIndentedString(subnetmask)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");

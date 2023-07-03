@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.CpuFanSpeedUnit;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.HostState;
 import com.smartx.tower.model.HostStatus;
 import com.smartx.tower.model.NestedCluster;
@@ -87,6 +88,10 @@ public class Host {
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)
   private List<NestedDisk> disks = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
 
   public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
@@ -645,6 +650,29 @@ public class Host {
 
   public void setDisks(List<NestedDisk> disks) {
     this.disks = disks;
+  }
+
+
+  public Host entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
   }
 
 
@@ -1930,6 +1958,7 @@ public class Host {
         Objects.equals(this.cpuVendor, host.cpuVendor) &&
         Objects.equals(this.dataIp, host.dataIp) &&
         Objects.equals(this.disks, host.disks) &&
+        Objects.equals(this.entityAsyncStatus, host.entityAsyncStatus) &&
         Objects.equals(this.failureDataSpace, host.failureDataSpace) &&
         Objects.equals(this.hddDataCapacity, host.hddDataCapacity) &&
         Objects.equals(this.hddDiskCount, host.hddDiskCount) &&
@@ -1991,7 +2020,7 @@ public class Host {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessIp, allocatableMemoryBytes, chunkId, cluster, compatibleCpuModels, cpuBrand, cpuFanSpeed, cpuFanSpeedUnit, cpuHzPerCore, cpuModel, cpuTemperatureCelsius, cpuVendor, dataIp, disks, failureDataSpace, hddDataCapacity, hddDiskCount, hypervisorIp, id, ipmi, isOsInRaid1, labels, localId, lsmCapDiskSafeUmount, managementIp, model, name, nestedVirtualization, nicCount, nics, nodeTopoLocalId, osMemoryBytes, osVersion, pmemDimmCapacity, pmemDimmCount, pmemDimms, pmemDiskCount, provisionedCpuCores, provisionedMemoryBytes, runningPauseVmMemoryBytes, runningVmNum, scvmCpu, scvmMemory, scvmName, serial, ssdDataCapacity, ssdDiskCount, state, status, stoppedVmNum, suspendedVmNum, totalCacheCapacity, totalCpuCores, totalCpuHz, totalCpuSockets, totalDataCapacity, totalMemoryBytes, usbDevices, usedCpuHz, usedDataSpace, usedMemoryBytes, vmNum, vmotionIp, vms, vsphereEsxiAccount, withFasterSsdAsCache, zone);
+    return Objects.hash(accessIp, allocatableMemoryBytes, chunkId, cluster, compatibleCpuModels, cpuBrand, cpuFanSpeed, cpuFanSpeedUnit, cpuHzPerCore, cpuModel, cpuTemperatureCelsius, cpuVendor, dataIp, disks, entityAsyncStatus, failureDataSpace, hddDataCapacity, hddDiskCount, hypervisorIp, id, ipmi, isOsInRaid1, labels, localId, lsmCapDiskSafeUmount, managementIp, model, name, nestedVirtualization, nicCount, nics, nodeTopoLocalId, osMemoryBytes, osVersion, pmemDimmCapacity, pmemDimmCount, pmemDimms, pmemDiskCount, provisionedCpuCores, provisionedMemoryBytes, runningPauseVmMemoryBytes, runningVmNum, scvmCpu, scvmMemory, scvmName, serial, ssdDataCapacity, ssdDiskCount, state, status, stoppedVmNum, suspendedVmNum, totalCacheCapacity, totalCpuCores, totalCpuHz, totalCpuSockets, totalDataCapacity, totalMemoryBytes, usbDevices, usedCpuHz, usedDataSpace, usedMemoryBytes, vmNum, vmotionIp, vms, vsphereEsxiAccount, withFasterSsdAsCache, zone);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2019,6 +2048,7 @@ public class Host {
     sb.append("    cpuVendor: ").append(toIndentedString(cpuVendor)).append("\n");
     sb.append("    dataIp: ").append(toIndentedString(dataIp)).append("\n");
     sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
     sb.append("    hddDataCapacity: ").append(toIndentedString(hddDataCapacity)).append("\n");
     sb.append("    hddDiskCount: ").append(toIndentedString(hddDiskCount)).append("\n");

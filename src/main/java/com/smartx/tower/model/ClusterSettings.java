@@ -9,6 +9,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedVmRecycleBin;
+import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -26,6 +27,10 @@ public class ClusterSettings {
   public static final String SERIALIZED_NAME_DEFAULT_HA = "default_ha";
   @SerializedName(SERIALIZED_NAME_DEFAULT_HA)
   private Boolean defaultHa;
+
+  public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY = "default_storage_policy";
+  @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY)
+  private VmVolumeElfStoragePolicyType defaultStoragePolicy;
 
   public static final String SERIALIZED_NAME_ENABLED_ISCSI = "enabled_iscsi";
   @SerializedName(SERIALIZED_NAME_ENABLED_ISCSI)
@@ -85,6 +90,29 @@ public class ClusterSettings {
 
   public void setDefaultHa(Boolean defaultHa) {
     this.defaultHa = defaultHa;
+  }
+
+
+  public ClusterSettings defaultStoragePolicy(VmVolumeElfStoragePolicyType defaultStoragePolicy) {
+    
+    this.defaultStoragePolicy = defaultStoragePolicy;
+    return this;
+  }
+
+   /**
+   * Get defaultStoragePolicy
+   * @return defaultStoragePolicy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeElfStoragePolicyType getDefaultStoragePolicy() {
+    return defaultStoragePolicy;
+  }
+
+
+  public void setDefaultStoragePolicy(VmVolumeElfStoragePolicyType defaultStoragePolicy) {
+    this.defaultStoragePolicy = defaultStoragePolicy;
   }
 
 
@@ -168,6 +196,7 @@ public class ClusterSettings {
     ClusterSettings clusterSettings = (ClusterSettings) o;
     return Objects.equals(this.cluster, clusterSettings.cluster) &&
         Objects.equals(this.defaultHa, clusterSettings.defaultHa) &&
+        Objects.equals(this.defaultStoragePolicy, clusterSettings.defaultStoragePolicy) &&
         Objects.equals(this.enabledIscsi, clusterSettings.enabledIscsi) &&
         Objects.equals(this.id, clusterSettings.id) &&
         Objects.equals(this.vmRecycleBin, clusterSettings.vmRecycleBin);
@@ -179,7 +208,7 @@ public class ClusterSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, defaultHa, enabledIscsi, id, vmRecycleBin);
+    return Objects.hash(cluster, defaultHa, defaultStoragePolicy, enabledIscsi, id, vmRecycleBin);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -195,6 +224,7 @@ public class ClusterSettings {
     sb.append("class ClusterSettings {\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    defaultHa: ").append(toIndentedString(defaultHa)).append("\n");
+    sb.append("    defaultStoragePolicy: ").append(toIndentedString(defaultStoragePolicy)).append("\n");
     sb.append("    enabledIscsi: ").append(toIndentedString(enabledIscsi)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    vmRecycleBin: ").append(toIndentedString(vmRecycleBin)).append("\n");

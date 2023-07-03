@@ -23,6 +23,14 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class User {
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID = "auth_config_id";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID)
+  private String authConfigId;
+
+  public static final String SERIALIZED_NAME_DISPLAY_USERNAME = "display_username";
+  @SerializedName(SERIALIZED_NAME_DISPLAY_USERNAME)
+  private String displayUsername;
+
   public static final String SERIALIZED_NAME_EMAIL_ADDRESS = "email_address";
   @SerializedName(SERIALIZED_NAME_EMAIL_ADDRESS)
   private String emailAddress;
@@ -77,6 +85,52 @@ public class User {
 
   public User() { 
   }
+
+  public User authConfigId(String authConfigId) {
+    
+    this.authConfigId = authConfigId;
+    return this;
+  }
+
+   /**
+   * Get authConfigId
+   * @return authConfigId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigId() {
+    return authConfigId;
+  }
+
+
+  public void setAuthConfigId(String authConfigId) {
+    this.authConfigId = authConfigId;
+  }
+
+
+  public User displayUsername(String displayUsername) {
+    
+    this.displayUsername = displayUsername;
+    return this;
+  }
+
+   /**
+   * Get displayUsername
+   * @return displayUsername
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getDisplayUsername() {
+    return displayUsername;
+  }
+
+
+  public void setDisplayUsername(String displayUsername) {
+    this.displayUsername = displayUsername;
+  }
+
 
   public User emailAddress(String emailAddress) {
     
@@ -394,7 +448,9 @@ public class User {
       return false;
     }
     User user = (User) o;
-    return Objects.equals(this.emailAddress, user.emailAddress) &&
+    return Objects.equals(this.authConfigId, user.authConfigId) &&
+        Objects.equals(this.displayUsername, user.displayUsername) &&
+        Objects.equals(this.emailAddress, user.emailAddress) &&
         Objects.equals(this.id, user.id) &&
         Objects.equals(this.internal, user.internal) &&
         Objects.equals(this.ldapDn, user.ldapDn) &&
@@ -415,7 +471,7 @@ public class User {
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailAddress, id, internal, ldapDn, mobilePhone, name, passwordExpired, passwordRecoverQa, passwordUpdatedAt, role, roles, source, username);
+    return Objects.hash(authConfigId, displayUsername, emailAddress, id, internal, ldapDn, mobilePhone, name, passwordExpired, passwordRecoverQa, passwordUpdatedAt, role, roles, source, username);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -429,6 +485,8 @@ public class User {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class User {\n");
+    sb.append("    authConfigId: ").append(toIndentedString(authConfigId)).append("\n");
+    sb.append("    displayUsername: ").append(toIndentedString(displayUsername)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    internal: ").append(toIndentedString(internal)).append("\n");

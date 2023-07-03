@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
+import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,6 +36,22 @@ public class ClusterSettingsWhereInput {
   public static final String SERIALIZED_NAME_DEFAULT_HA_NOT = "default_ha_not";
   @SerializedName(SERIALIZED_NAME_DEFAULT_HA_NOT)
   private Boolean defaultHaNot;
+
+  public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY = "default_storage_policy";
+  @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY)
+  private VmVolumeElfStoragePolicyType defaultStoragePolicy;
+
+  public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_IN = "default_storage_policy_in";
+  @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_IN)
+  private List<VmVolumeElfStoragePolicyType> defaultStoragePolicyIn = null;
+
+  public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_NOT = "default_storage_policy_not";
+  @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_NOT)
+  private VmVolumeElfStoragePolicyType defaultStoragePolicyNot;
+
+  public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_NOT_IN = "default_storage_policy_not_in";
+  @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_NOT_IN)
+  private List<VmVolumeElfStoragePolicyType> defaultStoragePolicyNotIn = null;
 
   public static final String SERIALIZED_NAME_ENABLED_ISCSI = "enabled_iscsi";
   @SerializedName(SERIALIZED_NAME_ENABLED_ISCSI)
@@ -208,6 +225,114 @@ public class ClusterSettingsWhereInput {
 
   public void setDefaultHaNot(Boolean defaultHaNot) {
     this.defaultHaNot = defaultHaNot;
+  }
+
+
+  public ClusterSettingsWhereInput defaultStoragePolicy(VmVolumeElfStoragePolicyType defaultStoragePolicy) {
+    
+    this.defaultStoragePolicy = defaultStoragePolicy;
+    return this;
+  }
+
+   /**
+   * Get defaultStoragePolicy
+   * @return defaultStoragePolicy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeElfStoragePolicyType getDefaultStoragePolicy() {
+    return defaultStoragePolicy;
+  }
+
+
+  public void setDefaultStoragePolicy(VmVolumeElfStoragePolicyType defaultStoragePolicy) {
+    this.defaultStoragePolicy = defaultStoragePolicy;
+  }
+
+
+  public ClusterSettingsWhereInput defaultStoragePolicyIn(List<VmVolumeElfStoragePolicyType> defaultStoragePolicyIn) {
+    
+    this.defaultStoragePolicyIn = defaultStoragePolicyIn;
+    return this;
+  }
+
+  public ClusterSettingsWhereInput addDefaultStoragePolicyInItem(VmVolumeElfStoragePolicyType defaultStoragePolicyInItem) {
+    if (this.defaultStoragePolicyIn == null) {
+      this.defaultStoragePolicyIn = new ArrayList<VmVolumeElfStoragePolicyType>();
+    }
+    this.defaultStoragePolicyIn.add(defaultStoragePolicyInItem);
+    return this;
+  }
+
+   /**
+   * Get defaultStoragePolicyIn
+   * @return defaultStoragePolicyIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeElfStoragePolicyType> getDefaultStoragePolicyIn() {
+    return defaultStoragePolicyIn;
+  }
+
+
+  public void setDefaultStoragePolicyIn(List<VmVolumeElfStoragePolicyType> defaultStoragePolicyIn) {
+    this.defaultStoragePolicyIn = defaultStoragePolicyIn;
+  }
+
+
+  public ClusterSettingsWhereInput defaultStoragePolicyNot(VmVolumeElfStoragePolicyType defaultStoragePolicyNot) {
+    
+    this.defaultStoragePolicyNot = defaultStoragePolicyNot;
+    return this;
+  }
+
+   /**
+   * Get defaultStoragePolicyNot
+   * @return defaultStoragePolicyNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeElfStoragePolicyType getDefaultStoragePolicyNot() {
+    return defaultStoragePolicyNot;
+  }
+
+
+  public void setDefaultStoragePolicyNot(VmVolumeElfStoragePolicyType defaultStoragePolicyNot) {
+    this.defaultStoragePolicyNot = defaultStoragePolicyNot;
+  }
+
+
+  public ClusterSettingsWhereInput defaultStoragePolicyNotIn(List<VmVolumeElfStoragePolicyType> defaultStoragePolicyNotIn) {
+    
+    this.defaultStoragePolicyNotIn = defaultStoragePolicyNotIn;
+    return this;
+  }
+
+  public ClusterSettingsWhereInput addDefaultStoragePolicyNotInItem(VmVolumeElfStoragePolicyType defaultStoragePolicyNotInItem) {
+    if (this.defaultStoragePolicyNotIn == null) {
+      this.defaultStoragePolicyNotIn = new ArrayList<VmVolumeElfStoragePolicyType>();
+    }
+    this.defaultStoragePolicyNotIn.add(defaultStoragePolicyNotInItem);
+    return this;
+  }
+
+   /**
+   * Get defaultStoragePolicyNotIn
+   * @return defaultStoragePolicyNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeElfStoragePolicyType> getDefaultStoragePolicyNotIn() {
+    return defaultStoragePolicyNotIn;
+  }
+
+
+  public void setDefaultStoragePolicyNotIn(List<VmVolumeElfStoragePolicyType> defaultStoragePolicyNotIn) {
+    this.defaultStoragePolicyNotIn = defaultStoragePolicyNotIn;
   }
 
 
@@ -670,6 +795,10 @@ public class ClusterSettingsWhereInput {
         Objects.equals(this.cluster, clusterSettingsWhereInput.cluster) &&
         Objects.equals(this.defaultHa, clusterSettingsWhereInput.defaultHa) &&
         Objects.equals(this.defaultHaNot, clusterSettingsWhereInput.defaultHaNot) &&
+        Objects.equals(this.defaultStoragePolicy, clusterSettingsWhereInput.defaultStoragePolicy) &&
+        Objects.equals(this.defaultStoragePolicyIn, clusterSettingsWhereInput.defaultStoragePolicyIn) &&
+        Objects.equals(this.defaultStoragePolicyNot, clusterSettingsWhereInput.defaultStoragePolicyNot) &&
+        Objects.equals(this.defaultStoragePolicyNotIn, clusterSettingsWhereInput.defaultStoragePolicyNotIn) &&
         Objects.equals(this.enabledIscsi, clusterSettingsWhereInput.enabledIscsi) &&
         Objects.equals(this.enabledIscsiNot, clusterSettingsWhereInput.enabledIscsiNot) &&
         Objects.equals(this.id, clusterSettingsWhereInput.id) &&
@@ -696,7 +825,7 @@ public class ClusterSettingsWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, defaultHa, defaultHaNot, enabledIscsi, enabledIscsiNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, NOT, OR);
+    return Objects.hash(AND, cluster, defaultHa, defaultHaNot, defaultStoragePolicy, defaultStoragePolicyIn, defaultStoragePolicyNot, defaultStoragePolicyNotIn, enabledIscsi, enabledIscsiNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, NOT, OR);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -714,6 +843,10 @@ public class ClusterSettingsWhereInput {
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    defaultHa: ").append(toIndentedString(defaultHa)).append("\n");
     sb.append("    defaultHaNot: ").append(toIndentedString(defaultHaNot)).append("\n");
+    sb.append("    defaultStoragePolicy: ").append(toIndentedString(defaultStoragePolicy)).append("\n");
+    sb.append("    defaultStoragePolicyIn: ").append(toIndentedString(defaultStoragePolicyIn)).append("\n");
+    sb.append("    defaultStoragePolicyNot: ").append(toIndentedString(defaultStoragePolicyNot)).append("\n");
+    sb.append("    defaultStoragePolicyNotIn: ").append(toIndentedString(defaultStoragePolicyNotIn)).append("\n");
     sb.append("    enabledIscsi: ").append(toIndentedString(enabledIscsi)).append("\n");
     sb.append("    enabledIscsiNot: ").append(toIndentedString(enabledIscsiNot)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

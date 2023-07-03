@@ -16,6 +16,8 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(UserSource.Adapter.class)
 public enum UserSource {
   
+  AUTHN("AUTHN"),
+  
   LDAP("LDAP"),
   
   LOCAL("LOCAL");

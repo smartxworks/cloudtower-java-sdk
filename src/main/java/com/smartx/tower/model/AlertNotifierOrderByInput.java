@@ -24,6 +24,10 @@ public enum AlertNotifierOrderByInput {
   
   EMAIL_FROM_DESC("email_from_DESC"),
   
+  ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
+  
+  ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+  
   ID_ASC("id_ASC"),
   
   ID_DESC("id_DESC"),
@@ -31,6 +35,10 @@ public enum AlertNotifierOrderByInput {
   LANGUAGE_CODE_ASC("language_code_ASC"),
   
   LANGUAGE_CODE_DESC("language_code_DESC"),
+  
+  NAME_ASC("name_ASC"),
+  
+  NAME_DESC("name_DESC"),
   
   SECURITY_MODE_ASC("security_mode_ASC"),
   
