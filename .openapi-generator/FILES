@@ -75,10 +75,12 @@ src/main/java/com/smartx/tower/api/NvmfNamespaceApi.java
 src/main/java/com/smartx/tower/api/NvmfNamespaceSnapshotApi.java
 src/main/java/com/smartx/tower/api/NvmfSubsystemApi.java
 src/main/java/com/smartx/tower/api/OrganizationApi.java
+src/main/java/com/smartx/tower/api/OvfApi.java
 src/main/java/com/smartx/tower/api/PmemDimmApi.java
 src/main/java/com/smartx/tower/api/RackTopoApi.java
 src/main/java/com/smartx/tower/api/ReportTaskApi.java
 src/main/java/com/smartx/tower/api/ReportTemplateApi.java
+src/main/java/com/smartx/tower/api/SecurityGroupApi.java
 src/main/java/com/smartx/tower/api/SecurityPolicyApi.java
 src/main/java/com/smartx/tower/api/SnapshotGroupApi.java
 src/main/java/com/smartx/tower/api/SnapshotPlanApi.java
@@ -101,6 +103,7 @@ src/main/java/com/smartx/tower/api/VlanApi.java
 src/main/java/com/smartx/tower/api/VmApi.java
 src/main/java/com/smartx/tower/api/VmDiskApi.java
 src/main/java/com/smartx/tower/api/VmEntityFilterResultApi.java
+src/main/java/com/smartx/tower/api/VmExportFileApi.java
 src/main/java/com/smartx/tower/api/VmFolderApi.java
 src/main/java/com/smartx/tower/api/VmNicApi.java
 src/main/java/com/smartx/tower/api/VmPlacementGroupApi.java
@@ -309,6 +312,8 @@ src/main/java/com/smartx/tower/model/DeleteOrganization.java
 src/main/java/com/smartx/tower/model/DeleteRackTopo.java
 src/main/java/com/smartx/tower/model/DeleteReportTemplate.java
 src/main/java/com/smartx/tower/model/DeleteRole.java
+src/main/java/com/smartx/tower/model/DeleteSecurityGroup.java
+src/main/java/com/smartx/tower/model/DeleteSecurityPolicy.java
 src/main/java/com/smartx/tower/model/DeleteSnapshotGroup.java
 src/main/java/com/smartx/tower/model/DeleteSnapshotPlan.java
 src/main/java/com/smartx/tower/model/DeleteSnmpTransport.java
@@ -385,6 +390,7 @@ src/main/java/com/smartx/tower/model/EveroutePackageConnection.java
 src/main/java/com/smartx/tower/model/EveroutePackageOrderByInput.java
 src/main/java/com/smartx/tower/model/EveroutePackageWhereInput.java
 src/main/java/com/smartx/tower/model/ExecutePlan.java
+src/main/java/com/smartx/tower/model/ExportFileDownloadLinks.java
 src/main/java/com/smartx/tower/model/ExtraIp.java
 src/main/java/com/smartx/tower/model/FilterRuleAggregationEnum.java
 src/main/java/com/smartx/tower/model/FilterRuleInput.java
@@ -447,6 +453,7 @@ src/main/java/com/smartx/tower/model/GetEverouteLicensesConnectionRequestBody.ja
 src/main/java/com/smartx/tower/model/GetEverouteLicensesRequestBody.java
 src/main/java/com/smartx/tower/model/GetEveroutePackagesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetEveroutePackagesRequestBody.java
+src/main/java/com/smartx/tower/model/GetExportFileDownloadLinksParams.java
 src/main/java/com/smartx/tower/model/GetGlobalAlertRulesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetGlobalAlertRulesRequestBody.java
 src/main/java/com/smartx/tower/model/GetGlobalSettingsesConnectionRequestBody.java
@@ -509,6 +516,8 @@ src/main/java/com/smartx/tower/model/GetSCVMDiskMetricInput.java
 src/main/java/com/smartx/tower/model/GetScvmMetricInput.java
 src/main/java/com/smartx/tower/model/GetScvmNetworkInput.java
 src/main/java/com/smartx/tower/model/GetScvmServiceMetricInput.java
+src/main/java/com/smartx/tower/model/GetSecurityGroupsConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetSecurityGroupsRequestBody.java
 src/main/java/com/smartx/tower/model/GetSecurityPoliciesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetSecurityPoliciesRequestBody.java
 src/main/java/com/smartx/tower/model/GetSnapshotGroupsConnectionRequestBody.java
@@ -550,6 +559,8 @@ src/main/java/com/smartx/tower/model/GetVmDisksConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetVmDisksRequestBody.java
 src/main/java/com/smartx/tower/model/GetVmEntityFilterResultsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetVmEntityFilterResultsRequestBody.java
+src/main/java/com/smartx/tower/model/GetVmExportFilesConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetVmExportFilesRequestBody.java
 src/main/java/com/smartx/tower/model/GetVmFoldersConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetVmFoldersRequestBody.java
 src/main/java/com/smartx/tower/model/GetVmMetricInput.java
@@ -616,6 +627,7 @@ src/main/java/com/smartx/tower/model/HostUpdationParams.java
 src/main/java/com/smartx/tower/model/HostUpdationParamsData.java
 src/main/java/com/smartx/tower/model/HostWhereInput.java
 src/main/java/com/smartx/tower/model/Hypervisor.java
+src/main/java/com/smartx/tower/model/IPSecurityPolicy.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParams.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParamsData.java
 src/main/java/com/smartx/tower/model/Ipmi.java
@@ -697,6 +709,7 @@ src/main/java/com/smartx/tower/model/MetricStream.java
 src/main/java/com/smartx/tower/model/MetricType.java
 src/main/java/com/smartx/tower/model/MetricUnit.java
 src/main/java/com/smartx/tower/model/MetroCheckStatusEnum.java
+src/main/java/com/smartx/tower/model/MfaType.java
 src/main/java/com/smartx/tower/model/MgtIpMapper.java
 src/main/java/com/smartx/tower/model/MigrateType.java
 src/main/java/com/smartx/tower/model/MigrateVmConfig.java
@@ -763,6 +776,7 @@ src/main/java/com/smartx/tower/model/NestedAggregatePmemDimm.java
 src/main/java/com/smartx/tower/model/NestedAggregateRackTopo.java
 src/main/java/com/smartx/tower/model/NestedAggregateReportTask.java
 src/main/java/com/smartx/tower/model/NestedAggregateReportTemplate.java
+src/main/java/com/smartx/tower/model/NestedAggregateSecurityGroup.java
 src/main/java/com/smartx/tower/model/NestedAggregateSecurityPolicy.java
 src/main/java/com/smartx/tower/model/NestedAggregateSnapshotGroup.java
 src/main/java/com/smartx/tower/model/NestedAggregateSnapshotPlan.java
@@ -784,6 +798,7 @@ src/main/java/com/smartx/tower/model/NestedAggregateVlan.java
 src/main/java/com/smartx/tower/model/NestedAggregateVm.java
 src/main/java/com/smartx/tower/model/NestedAggregateVmDisk.java
 src/main/java/com/smartx/tower/model/NestedAggregateVmEntityFilterResult.java
+src/main/java/com/smartx/tower/model/NestedAggregateVmExportFile.java
 src/main/java/com/smartx/tower/model/NestedAggregateVmFolder.java
 src/main/java/com/smartx/tower/model/NestedAggregateVmNic.java
 src/main/java/com/smartx/tower/model/NestedAggregateVmPlacementGroup.java
@@ -847,6 +862,7 @@ src/main/java/com/smartx/tower/model/NestedIscsiLunSnapshot.java
 src/main/java/com/smartx/tower/model/NestedIscsiTarget.java
 src/main/java/com/smartx/tower/model/NestedIsolationPolicy.java
 src/main/java/com/smartx/tower/model/NestedLabel.java
+src/main/java/com/smartx/tower/model/NestedLabelGroup.java
 src/main/java/com/smartx/tower/model/NestedLicense.java
 src/main/java/com/smartx/tower/model/NestedMetroAvailabilityChecklist.java
 src/main/java/com/smartx/tower/model/NestedMetroCheckItem.java
@@ -905,6 +921,7 @@ src/main/java/com/smartx/tower/model/NestedVsphereEsxiAccount.java
 src/main/java/com/smartx/tower/model/NestedWitness.java
 src/main/java/com/smartx/tower/model/NestedZone.java
 src/main/java/com/smartx/tower/model/NestedZoneTopo.java
+src/main/java/com/smartx/tower/model/NetworkPolicyRulePortInput.java
 src/main/java/com/smartx/tower/model/NetworkPolicyRulePortProtocol.java
 src/main/java/com/smartx/tower/model/NetworkPolicyRuleType.java
 src/main/java/com/smartx/tower/model/NetworkType.java
@@ -972,6 +989,11 @@ src/main/java/com/smartx/tower/model/OrganizationDeletionParams.java
 src/main/java/com/smartx/tower/model/OrganizationOrderByInput.java
 src/main/java/com/smartx/tower/model/OrganizationUpdationParams.java
 src/main/java/com/smartx/tower/model/OrganizationWhereInput.java
+src/main/java/com/smartx/tower/model/OvfCpu.java
+src/main/java/com/smartx/tower/model/OvfDisk.java
+src/main/java/com/smartx/tower/model/OvfDiskOperate.java
+src/main/java/com/smartx/tower/model/OvfNic.java
+src/main/java/com/smartx/tower/model/ParsedOVF.java
 src/main/java/com/smartx/tower/model/PartitionUsage.java
 src/main/java/com/smartx/tower/model/PasswordComplexity.java
 src/main/java/com/smartx/tower/model/PmemDimm.java
@@ -1013,9 +1035,25 @@ src/main/java/com/smartx/tower/model/RoleDeletionParams.java
 src/main/java/com/smartx/tower/model/RoleUpdationParams.java
 src/main/java/com/smartx/tower/model/RoleUpdationParamsData.java
 src/main/java/com/smartx/tower/model/RootUserCreationParams.java
+src/main/java/com/smartx/tower/model/SecurityGroup.java
+src/main/java/com/smartx/tower/model/SecurityGroupConnection.java
+src/main/java/com/smartx/tower/model/SecurityGroupCreateParams.java
+src/main/java/com/smartx/tower/model/SecurityGroupDeleteParams.java
+src/main/java/com/smartx/tower/model/SecurityGroupOrderByInput.java
+src/main/java/com/smartx/tower/model/SecurityGroupUpdateBody.java
+src/main/java/com/smartx/tower/model/SecurityGroupUpdateParams.java
+src/main/java/com/smartx/tower/model/SecurityGroupWhereInput.java
 src/main/java/com/smartx/tower/model/SecurityPolicy.java
+src/main/java/com/smartx/tower/model/SecurityPolicyApplyToInput.java
+src/main/java/com/smartx/tower/model/SecurityPolicyApplyToInputTarget.java
 src/main/java/com/smartx/tower/model/SecurityPolicyConnection.java
+src/main/java/com/smartx/tower/model/SecurityPolicyCreateParams.java
+src/main/java/com/smartx/tower/model/SecurityPolicyDeleteParams.java
+src/main/java/com/smartx/tower/model/SecurityPolicyIngressEgressInput.java
+src/main/java/com/smartx/tower/model/SecurityPolicyIngressEgressInputTarget.java
 src/main/java/com/smartx/tower/model/SecurityPolicyOrderByInput.java
+src/main/java/com/smartx/tower/model/SecurityPolicyUpdateBody.java
+src/main/java/com/smartx/tower/model/SecurityPolicyUpdateParams.java
 src/main/java/com/smartx/tower/model/SecurityPolicyWhereInput.java
 src/main/java/com/smartx/tower/model/SeverityEnum.java
 src/main/java/com/smartx/tower/model/SnapshotGroup.java
@@ -1172,6 +1210,7 @@ src/main/java/com/smartx/tower/model/Vlan.java
 src/main/java/com/smartx/tower/model/VlanConnection.java
 src/main/java/com/smartx/tower/model/VlanDeletionParams.java
 src/main/java/com/smartx/tower/model/VlanMapping.java
+src/main/java/com/smartx/tower/model/VlanModeType.java
 src/main/java/com/smartx/tower/model/VlanOrderByInput.java
 src/main/java/com/smartx/tower/model/VlanWhereInput.java
 src/main/java/com/smartx/tower/model/Vm.java
@@ -1209,6 +1248,15 @@ src/main/java/com/smartx/tower/model/VmEntityFilterResultConnection.java
 src/main/java/com/smartx/tower/model/VmEntityFilterResultOrderByInput.java
 src/main/java/com/smartx/tower/model/VmEntityFilterResultWhereInput.java
 src/main/java/com/smartx/tower/model/VmExpandVmDiskParams.java
+src/main/java/com/smartx/tower/model/VmExportFile.java
+src/main/java/com/smartx/tower/model/VmExportFileConnection.java
+src/main/java/com/smartx/tower/model/VmExportFileFile.java
+src/main/java/com/smartx/tower/model/VmExportFileOrderByInput.java
+src/main/java/com/smartx/tower/model/VmExportFileType.java
+src/main/java/com/smartx/tower/model/VmExportFileWhereInput.java
+src/main/java/com/smartx/tower/model/VmExportFileWhereUniqueInput.java
+src/main/java/com/smartx/tower/model/VmExportParams.java
+src/main/java/com/smartx/tower/model/VmExportParamsData.java
 src/main/java/com/smartx/tower/model/VmFirmware.java
 src/main/java/com/smartx/tower/model/VmFolder.java
 src/main/java/com/smartx/tower/model/VmFolderConnection.java
@@ -1219,6 +1267,7 @@ src/main/java/com/smartx/tower/model/VmFolderUpdationParams.java
 src/main/java/com/smartx/tower/model/VmFolderUpdationParamsData.java
 src/main/java/com/smartx/tower/model/VmFolderWhereInput.java
 src/main/java/com/smartx/tower/model/VmGuestsOperationSystem.java
+src/main/java/com/smartx/tower/model/VmImportParams.java
 src/main/java/com/smartx/tower/model/VmMigrateAcrossClusterParams.java
 src/main/java/com/smartx/tower/model/VmMigrateAcrossClusterParamsData.java
 src/main/java/com/smartx/tower/model/VmMigrateParams.java
@@ -1315,6 +1364,8 @@ src/main/java/com/smartx/tower/model/VmVolumeWhereInput.java
 src/main/java/com/smartx/tower/model/VmVolumeWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/VmWhereInput.java
 src/main/java/com/smartx/tower/model/VmWhereUniqueInput.java
+src/main/java/com/smartx/tower/model/VmdkCdromModify.java
+src/main/java/com/smartx/tower/model/VmdkDiskModify.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccount.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccountConnection.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccountOrderByInput.java
@@ -1355,6 +1406,8 @@ src/main/java/com/smartx/tower/model/WithTaskDeleteOrganization.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteRackTopo.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteReportTemplate.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteRole.java
+src/main/java/com/smartx/tower/model/WithTaskDeleteSecurityGroup.java
+src/main/java/com/smartx/tower/model/WithTaskDeleteSecurityPolicy.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteSnapshotGroup.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteSnapshotPlan.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteSnmpTransport.java
@@ -1396,6 +1449,8 @@ src/main/java/com/smartx/tower/model/WithTaskOrganization.java
 src/main/java/com/smartx/tower/model/WithTaskRackTopo.java
 src/main/java/com/smartx/tower/model/WithTaskReportTask.java
 src/main/java/com/smartx/tower/model/WithTaskReportTemplate.java
+src/main/java/com/smartx/tower/model/WithTaskSecurityGroup.java
+src/main/java/com/smartx/tower/model/WithTaskSecurityPolicy.java
 src/main/java/com/smartx/tower/model/WithTaskSnapshotGroup.java
 src/main/java/com/smartx/tower/model/WithTaskSnapshotPlan.java
 src/main/java/com/smartx/tower/model/WithTaskSnmpTransport.java
@@ -1408,6 +1463,7 @@ src/main/java/com/smartx/tower/model/WithTaskVds.java
 src/main/java/com/smartx/tower/model/WithTaskView.java
 src/main/java/com/smartx/tower/model/WithTaskVlan.java
 src/main/java/com/smartx/tower/model/WithTaskVm.java
+src/main/java/com/smartx/tower/model/WithTaskVmExportFile.java
 src/main/java/com/smartx/tower/model/WithTaskVmFolder.java
 src/main/java/com/smartx/tower/model/WithTaskVmPlacementGroup.java
 src/main/java/com/smartx/tower/model/WithTaskVmSnapshot.java

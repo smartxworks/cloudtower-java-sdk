@@ -24,6 +24,10 @@ public enum NicOrderByInput {
   
   DRIVER_STATE_DESC("driver_state_DESC"),
   
+  ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
+  
+  ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+  
   GATEWAY_IP_ASC("gateway_ip_ASC"),
   
   GATEWAY_IP_DESC("gateway_ip_DESC"),

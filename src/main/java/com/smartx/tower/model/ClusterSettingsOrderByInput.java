@@ -20,6 +20,10 @@ public enum ClusterSettingsOrderByInput {
   
   DEFAULT_HA_DESC("default_ha_DESC"),
   
+  DEFAULT_STORAGE_POLICY_ASC("default_storage_policy_ASC"),
+  
+  DEFAULT_STORAGE_POLICY_DESC("default_storage_policy_DESC"),
+  
   ENABLED_ISCSI_ASC("enabled_iscsi_ASC"),
   
   ENABLED_ISCSI_DESC("enabled_iscsi_DESC"),

@@ -74,6 +74,7 @@ public class ElfImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param description  (optional)
      * @param uploadTaskId  (optional)
      * @param _callback Callback for upload/download progress
@@ -88,7 +89,7 @@ public class ElfImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call createElfImageCall(byte[] _file, String clusterId, String name, String size, String description, String uploadTaskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createElfImageCall(byte[] _file, String clusterId, String name, String size, String sizeUnit, String description, String uploadTaskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -130,6 +131,10 @@ public class ElfImageApi {
             localVarFormParams.put("size", size);
         }
 
+        if (sizeUnit != null) {
+            localVarFormParams.put("size_unit", sizeUnit);
+        }
+
         if (description != null) {
             localVarFormParams.put("description", description);
         }
@@ -159,7 +164,7 @@ public class ElfImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createElfImageValidateBeforeCall(byte[] _file, String clusterId, String name, String size, String description, String uploadTaskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createElfImageValidateBeforeCall(byte[] _file, String clusterId, String name, String size, String sizeUnit, String description, String uploadTaskId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter '_file' is set
         if (_file == null) {
@@ -167,7 +172,7 @@ public class ElfImageApi {
         }
         
 
-        okhttp3.Call localVarCall = createElfImageCall(_file, clusterId, name, size, description, uploadTaskId, _callback);
+        okhttp3.Call localVarCall = createElfImageCall(_file, clusterId, name, size, sizeUnit, description, uploadTaskId, _callback);
         return localVarCall;
 
     }
@@ -179,6 +184,7 @@ public class ElfImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param description  (optional)
      * @param uploadTaskId  (optional)
      * @return List&lt;UploadTask&gt;
@@ -192,8 +198,8 @@ public class ElfImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public List<UploadTask> createElfImage(byte[] _file, String clusterId, String name, String size, String description, String uploadTaskId) throws ApiException {
-        ApiResponse<List<UploadTask>> localVarResp = createElfImageWithHttpInfo(_file, clusterId, name, size, description, uploadTaskId);
+    public List<UploadTask> createElfImage(byte[] _file, String clusterId, String name, String size, String sizeUnit, String description, String uploadTaskId) throws ApiException {
+        ApiResponse<List<UploadTask>> localVarResp = createElfImageWithHttpInfo(_file, clusterId, name, size, sizeUnit, description, uploadTaskId);
         return localVarResp.getData();
     }
 
@@ -204,6 +210,7 @@ public class ElfImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param description  (optional)
      * @param uploadTaskId  (optional)
      * @return ApiResponse&lt;List&lt;UploadTask&gt;&gt;
@@ -217,8 +224,8 @@ public class ElfImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<List<UploadTask>> createElfImageWithHttpInfo(byte[] _file, String clusterId, String name, String size, String description, String uploadTaskId) throws ApiException {
-        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(_file, clusterId, name, size, description, uploadTaskId, null);
+    public ApiResponse<List<UploadTask>> createElfImageWithHttpInfo(byte[] _file, String clusterId, String name, String size, String sizeUnit, String description, String uploadTaskId) throws ApiException {
+        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(_file, clusterId, name, size, sizeUnit, description, uploadTaskId, null);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -230,6 +237,7 @@ public class ElfImageApi {
      * @param clusterId  (optional)
      * @param name  (optional)
      * @param size  (optional)
+     * @param sizeUnit  (optional)
      * @param description  (optional)
      * @param uploadTaskId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -244,9 +252,9 @@ public class ElfImageApi {
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call createElfImageAsync(byte[] _file, String clusterId, String name, String size, String description, String uploadTaskId, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
+    public okhttp3.Call createElfImageAsync(byte[] _file, String clusterId, String name, String size, String sizeUnit, String description, String uploadTaskId, final ApiCallback<List<UploadTask>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(_file, clusterId, name, size, description, uploadTaskId, _callback);
+        okhttp3.Call localVarCall = createElfImageValidateBeforeCall(_file, clusterId, name, size, sizeUnit, description, uploadTaskId, _callback);
         Type localVarReturnType = new TypeToken<List<UploadTask>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

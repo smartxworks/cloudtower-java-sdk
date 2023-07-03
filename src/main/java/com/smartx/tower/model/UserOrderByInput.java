@@ -16,6 +16,14 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(UserOrderByInput.Adapter.class)
 public enum UserOrderByInput {
   
+  AUTH_CONFIG_ID_ASC("auth_config_id_ASC"),
+  
+  AUTH_CONFIG_ID_DESC("auth_config_id_DESC"),
+  
+  DISPLAY_USERNAME_ASC("display_username_ASC"),
+  
+  DISPLAY_USERNAME_DESC("display_username_DESC"),
+  
   EMAIL_ADDRESS_ASC("email_address_ASC"),
   
   EMAIL_ADDRESS_DESC("email_address_DESC"),

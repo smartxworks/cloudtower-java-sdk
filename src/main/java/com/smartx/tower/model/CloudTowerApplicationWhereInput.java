@@ -9,6 +9,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.CloudTowerApplicationPackageWhereInput;
 import com.smartx.tower.model.CloudTowerApplicationState;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.UserWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,6 +26,22 @@ public class CloudTowerApplicationWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<CloudTowerApplicationWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN = "entityAsyncStatus_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT = "entityAsyncStatus_not";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT)
+  private EntityAsyncStatus entityAsyncStatusNot;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -401,6 +418,114 @@ public class CloudTowerApplicationWhereInput {
 
   public void setAND(List<CloudTowerApplicationWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public CloudTowerApplicationWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
+  public CloudTowerApplicationWhereInput entityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+    return this;
+  }
+
+  public CloudTowerApplicationWhereInput addEntityAsyncStatusInItem(EntityAsyncStatus entityAsyncStatusInItem) {
+    if (this.entityAsyncStatusIn == null) {
+      this.entityAsyncStatusIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusIn.add(entityAsyncStatusInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusIn
+   * @return entityAsyncStatusIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusIn() {
+    return entityAsyncStatusIn;
+  }
+
+
+  public void setEntityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+  }
+
+
+  public CloudTowerApplicationWhereInput entityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNot
+   * @return entityAsyncStatusNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatusNot() {
+    return entityAsyncStatusNot;
+  }
+
+
+  public void setEntityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+  }
+
+
+  public CloudTowerApplicationWhereInput entityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+    return this;
+  }
+
+  public CloudTowerApplicationWhereInput addEntityAsyncStatusNotInItem(EntityAsyncStatus entityAsyncStatusNotInItem) {
+    if (this.entityAsyncStatusNotIn == null) {
+      this.entityAsyncStatusNotIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusNotIn.add(entityAsyncStatusNotInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNotIn
+   * @return entityAsyncStatusNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusNotIn() {
+    return entityAsyncStatusNotIn;
+  }
+
+
+  public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
   }
 
 
@@ -2520,6 +2645,10 @@ public class CloudTowerApplicationWhereInput {
     }
     CloudTowerApplicationWhereInput cloudTowerApplicationWhereInput = (CloudTowerApplicationWhereInput) o;
     return Objects.equals(this.AND, cloudTowerApplicationWhereInput.AND) &&
+        Objects.equals(this.entityAsyncStatus, cloudTowerApplicationWhereInput.entityAsyncStatus) &&
+        Objects.equals(this.entityAsyncStatusIn, cloudTowerApplicationWhereInput.entityAsyncStatusIn) &&
+        Objects.equals(this.entityAsyncStatusNot, cloudTowerApplicationWhereInput.entityAsyncStatusNot) &&
+        Objects.equals(this.entityAsyncStatusNotIn, cloudTowerApplicationWhereInput.entityAsyncStatusNotIn) &&
         Objects.equals(this.id, cloudTowerApplicationWhereInput.id) &&
         Objects.equals(this.idContains, cloudTowerApplicationWhereInput.idContains) &&
         Objects.equals(this.idEndsWith, cloudTowerApplicationWhereInput.idEndsWith) &&
@@ -2614,7 +2743,7 @@ public class CloudTowerApplicationWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, _package, placementSituation, placementSituationContains, placementSituationEndsWith, placementSituationGt, placementSituationGte, placementSituationIn, placementSituationLt, placementSituationLte, placementSituationNot, placementSituationNotContains, placementSituationNotEndsWith, placementSituationNotIn, placementSituationNotStartsWith, placementSituationStartsWith, placementVerb, placementVerbContains, placementVerbEndsWith, placementVerbGt, placementVerbGte, placementVerbIn, placementVerbLt, placementVerbLte, placementVerbNot, placementVerbNotContains, placementVerbNotEndsWith, placementVerbNotIn, placementVerbNotStartsWith, placementVerbStartsWith, resourceVersion, resourceVersionGt, resourceVersionGte, resourceVersionIn, resourceVersionLt, resourceVersionLte, resourceVersionNot, resourceVersionNotIn, state, stateIn, stateNot, stateNotIn, targetPackage, targetPackageContains, targetPackageEndsWith, targetPackageGt, targetPackageGte, targetPackageIn, targetPackageLt, targetPackageLte, targetPackageNot, targetPackageNotContains, targetPackageNotEndsWith, targetPackageNotIn, targetPackageNotStartsWith, targetPackageStartsWith, user);
+    return Objects.hash(AND, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, _package, placementSituation, placementSituationContains, placementSituationEndsWith, placementSituationGt, placementSituationGte, placementSituationIn, placementSituationLt, placementSituationLte, placementSituationNot, placementSituationNotContains, placementSituationNotEndsWith, placementSituationNotIn, placementSituationNotStartsWith, placementSituationStartsWith, placementVerb, placementVerbContains, placementVerbEndsWith, placementVerbGt, placementVerbGte, placementVerbIn, placementVerbLt, placementVerbLte, placementVerbNot, placementVerbNotContains, placementVerbNotEndsWith, placementVerbNotIn, placementVerbNotStartsWith, placementVerbStartsWith, resourceVersion, resourceVersionGt, resourceVersionGte, resourceVersionIn, resourceVersionLt, resourceVersionLte, resourceVersionNot, resourceVersionNotIn, state, stateIn, stateNot, stateNotIn, targetPackage, targetPackageContains, targetPackageEndsWith, targetPackageGt, targetPackageGte, targetPackageIn, targetPackageLt, targetPackageLte, targetPackageNot, targetPackageNotContains, targetPackageNotEndsWith, targetPackageNotIn, targetPackageNotStartsWith, targetPackageStartsWith, user);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2629,6 +2758,10 @@ public class CloudTowerApplicationWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudTowerApplicationWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
+    sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
+    sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
     sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");

@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.VmVolumeSnapshotType;
 import com.smartx.tower.model.VmVolumeWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -117,6 +118,22 @@ public class VmVolumeSnapshotWhereInput {
   public static final String SERIALIZED_NAME_DESCRIPTION_STARTS_WITH = "description_starts_with";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
   private String descriptionStartsWith;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN = "entityAsyncStatus_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT = "entityAsyncStatus_not";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT)
+  private EntityAsyncStatus entityAsyncStatusNot;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
+  private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -1090,6 +1107,114 @@ public class VmVolumeSnapshotWhereInput {
 
   public void setDescriptionStartsWith(String descriptionStartsWith) {
     this.descriptionStartsWith = descriptionStartsWith;
+  }
+
+
+  public VmVolumeSnapshotWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
+  public VmVolumeSnapshotWhereInput entityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addEntityAsyncStatusInItem(EntityAsyncStatus entityAsyncStatusInItem) {
+    if (this.entityAsyncStatusIn == null) {
+      this.entityAsyncStatusIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusIn.add(entityAsyncStatusInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusIn
+   * @return entityAsyncStatusIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusIn() {
+    return entityAsyncStatusIn;
+  }
+
+
+  public void setEntityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+    this.entityAsyncStatusIn = entityAsyncStatusIn;
+  }
+
+
+  public VmVolumeSnapshotWhereInput entityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNot
+   * @return entityAsyncStatusNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatusNot() {
+    return entityAsyncStatusNot;
+  }
+
+
+  public void setEntityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+    this.entityAsyncStatusNot = entityAsyncStatusNot;
+  }
+
+
+  public VmVolumeSnapshotWhereInput entityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addEntityAsyncStatusNotInItem(EntityAsyncStatus entityAsyncStatusNotInItem) {
+    if (this.entityAsyncStatusNotIn == null) {
+      this.entityAsyncStatusNotIn = new ArrayList<EntityAsyncStatus>();
+    }
+    this.entityAsyncStatusNotIn.add(entityAsyncStatusNotInItem);
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatusNotIn
+   * @return entityAsyncStatusNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityAsyncStatus> getEntityAsyncStatusNotIn() {
+    return entityAsyncStatusNotIn;
+  }
+
+
+  public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+    this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
   }
 
 
@@ -3471,6 +3596,10 @@ public class VmVolumeSnapshotWhereInput {
         Objects.equals(this.descriptionNotIn, vmVolumeSnapshotWhereInput.descriptionNotIn) &&
         Objects.equals(this.descriptionNotStartsWith, vmVolumeSnapshotWhereInput.descriptionNotStartsWith) &&
         Objects.equals(this.descriptionStartsWith, vmVolumeSnapshotWhereInput.descriptionStartsWith) &&
+        Objects.equals(this.entityAsyncStatus, vmVolumeSnapshotWhereInput.entityAsyncStatus) &&
+        Objects.equals(this.entityAsyncStatusIn, vmVolumeSnapshotWhereInput.entityAsyncStatusIn) &&
+        Objects.equals(this.entityAsyncStatusNot, vmVolumeSnapshotWhereInput.entityAsyncStatusNot) &&
+        Objects.equals(this.entityAsyncStatusNotIn, vmVolumeSnapshotWhereInput.entityAsyncStatusNotIn) &&
         Objects.equals(this.id, vmVolumeSnapshotWhereInput.id) &&
         Objects.equals(this.idContains, vmVolumeSnapshotWhereInput.idContains) &&
         Objects.equals(this.idEndsWith, vmVolumeSnapshotWhereInput.idEndsWith) &&
@@ -3574,7 +3703,7 @@ public class VmVolumeSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, createAt, createAtGt, createAtGte, createAtIn, createAtLt, createAtLte, createAtNot, createAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmVolume, zbsSnapshotUuid, zbsSnapshotUuidContains, zbsSnapshotUuidEndsWith, zbsSnapshotUuidGt, zbsSnapshotUuidGte, zbsSnapshotUuidIn, zbsSnapshotUuidLt, zbsSnapshotUuidLte, zbsSnapshotUuidNot, zbsSnapshotUuidNotContains, zbsSnapshotUuidNotEndsWith, zbsSnapshotUuidNotIn, zbsSnapshotUuidNotStartsWith, zbsSnapshotUuidStartsWith);
+    return Objects.hash(AND, cluster, createAt, createAtGt, createAtGte, createAtIn, createAtLt, createAtLte, createAtNot, createAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmVolume, zbsSnapshotUuid, zbsSnapshotUuidContains, zbsSnapshotUuidEndsWith, zbsSnapshotUuidGt, zbsSnapshotUuidGte, zbsSnapshotUuidIn, zbsSnapshotUuidLt, zbsSnapshotUuidLte, zbsSnapshotUuidNot, zbsSnapshotUuidNotContains, zbsSnapshotUuidNotEndsWith, zbsSnapshotUuidNotIn, zbsSnapshotUuidNotStartsWith, zbsSnapshotUuidStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3612,6 +3741,10 @@ public class VmVolumeSnapshotWhereInput {
     sb.append("    descriptionNotIn: ").append(toIndentedString(descriptionNotIn)).append("\n");
     sb.append("    descriptionNotStartsWith: ").append(toIndentedString(descriptionNotStartsWith)).append("\n");
     sb.append("    descriptionStartsWith: ").append(toIndentedString(descriptionStartsWith)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
+    sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
+    sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
     sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");

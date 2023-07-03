@@ -52,6 +52,10 @@ public enum HostOrderByInput {
   
   DATA_IP_DESC("data_ip_DESC"),
   
+  ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
+  
+  ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+  
   FAILURE_DATA_SPACE_ASC("failure_data_space_ASC"),
   
   FAILURE_DATA_SPACE_DESC("failure_data_space_DESC"),

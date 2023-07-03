@@ -12,6 +12,29 @@ public class ClientUtil {
     login(username, password, false, client);
   }
 
+  public static void login(String username, String password, String auth_id, ApiClient client) throws ApiException {
+    UserApi userAPi = new UserApi(client);
+    WithTaskLoginResponse response = userAPi.login(
+        new LoginInput()
+            .username(username)
+            .password(password)
+            .authConfigId(auth_id)
+            .source(UserSource.AUTHN));
+    String token = response.getData().getToken();
+    login(token, client);
+  }
+
+  @Deprecated(since = "2.9.0")
+  /**
+   * @deprecated Legacy Ldap is deperated, use
+   *             {@link #login(String username, String password, String auth_id, ApiClient client)}
+   *             instead
+   * @param username
+   * @param password
+   * @param useLDAP
+   * @param client
+   * @throws ApiException
+   */
   public static void login(String username, String password, boolean useLDAP, ApiClient client) throws ApiException {
     UserApi userApi = new UserApi(client);
     WithTaskLoginResponse response = userApi.login(

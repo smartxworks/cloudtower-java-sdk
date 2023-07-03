@@ -7,6 +7,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NotifierLanguageCode;
 import com.smartx.tower.model.NotifierSecurityMode;
 import io.swagger.annotations.ApiModel;
@@ -21,6 +23,10 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class AlertNotifier {
+  public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
+  @SerializedName(SERIALIZED_NAME_CLUSTERS)
+  private List<NestedCluster> clusters = null;
+
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
   private Boolean disabled;
@@ -33,6 +39,10 @@ public class AlertNotifier {
   @SerializedName(SERIALIZED_NAME_EMAIL_TOS)
   private List<String> emailTos = new ArrayList<String>();
 
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -40,6 +50,10 @@ public class AlertNotifier {
   public static final String SERIALIZED_NAME_LANGUAGE_CODE = "language_code";
   @SerializedName(SERIALIZED_NAME_LANGUAGE_CODE)
   private NotifierLanguageCode languageCode;
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
   public static final String SERIALIZED_NAME_NOTICE_SEVERITIES = "notice_severities";
   @SerializedName(SERIALIZED_NAME_NOTICE_SEVERITIES)
@@ -63,6 +77,37 @@ public class AlertNotifier {
 
   public AlertNotifier() { 
   }
+
+  public AlertNotifier clusters(List<NestedCluster> clusters) {
+    
+    this.clusters = clusters;
+    return this;
+  }
+
+  public AlertNotifier addClustersItem(NestedCluster clustersItem) {
+    if (this.clusters == null) {
+      this.clusters = new ArrayList<NestedCluster>();
+    }
+    this.clusters.add(clustersItem);
+    return this;
+  }
+
+   /**
+   * Get clusters
+   * @return clusters
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedCluster> getClusters() {
+    return clusters;
+  }
+
+
+  public void setClusters(List<NestedCluster> clusters) {
+    this.clusters = clusters;
+  }
+
 
   public AlertNotifier disabled(Boolean disabled) {
     
@@ -138,6 +183,29 @@ public class AlertNotifier {
   }
 
 
+  public AlertNotifier entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
   public AlertNotifier id(String id) {
     
     this.id = id;
@@ -181,6 +249,29 @@ public class AlertNotifier {
 
   public void setLanguageCode(NotifierLanguageCode languageCode) {
     this.languageCode = languageCode;
+  }
+
+
+  public AlertNotifier name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -313,11 +404,14 @@ public class AlertNotifier {
       return false;
     }
     AlertNotifier alertNotifier = (AlertNotifier) o;
-    return Objects.equals(this.disabled, alertNotifier.disabled) &&
+    return Objects.equals(this.clusters, alertNotifier.clusters) &&
+        Objects.equals(this.disabled, alertNotifier.disabled) &&
         Objects.equals(this.emailFrom, alertNotifier.emailFrom) &&
         Objects.equals(this.emailTos, alertNotifier.emailTos) &&
+        Objects.equals(this.entityAsyncStatus, alertNotifier.entityAsyncStatus) &&
         Objects.equals(this.id, alertNotifier.id) &&
         Objects.equals(this.languageCode, alertNotifier.languageCode) &&
+        Objects.equals(this.name, alertNotifier.name) &&
         Objects.equals(this.noticeSeverities, alertNotifier.noticeSeverities) &&
         Objects.equals(this.securityMode, alertNotifier.securityMode) &&
         Objects.equals(this.smtpServerHost, alertNotifier.smtpServerHost) &&
@@ -331,7 +425,7 @@ public class AlertNotifier {
 
   @Override
   public int hashCode() {
-    return Objects.hash(disabled, emailFrom, emailTos, id, languageCode, noticeSeverities, securityMode, smtpServerHost, smtpServerPort, username);
+    return Objects.hash(clusters, disabled, emailFrom, emailTos, entityAsyncStatus, id, languageCode, name, noticeSeverities, securityMode, smtpServerHost, smtpServerPort, username);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -345,11 +439,14 @@ public class AlertNotifier {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AlertNotifier {\n");
+    sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
     sb.append("    disabled: ").append(toIndentedString(disabled)).append("\n");
     sb.append("    emailFrom: ").append(toIndentedString(emailFrom)).append("\n");
     sb.append("    emailTos: ").append(toIndentedString(emailTos)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    languageCode: ").append(toIndentedString(languageCode)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    noticeSeverities: ").append(toIndentedString(noticeSeverities)).append("\n");
     sb.append("    securityMode: ").append(toIndentedString(securityMode)).append("\n");
     sb.append("    smtpServerHost: ").append(toIndentedString(smtpServerHost)).append("\n");

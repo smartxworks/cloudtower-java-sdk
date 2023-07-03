@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.UserSource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -16,6 +17,18 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class UserCreationParams {
+  public static final String SERIALIZED_NAME_AUTH_CONFIG_ID = "auth_config_id";
+  @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID)
+  private String authConfigId;
+
+  public static final String SERIALIZED_NAME_LDAP_DN = "ldap_dn";
+  @SerializedName(SERIALIZED_NAME_LDAP_DN)
+  private String ldapDn;
+
+  public static final String SERIALIZED_NAME_SOURCE = "source";
+  @SerializedName(SERIALIZED_NAME_SOURCE)
+  private UserSource source;
+
   public static final String SERIALIZED_NAME_MOBILE_PHONE = "mobile_phone";
   @SerializedName(SERIALIZED_NAME_MOBILE_PHONE)
   private String mobilePhone;
@@ -46,6 +59,75 @@ public class UserCreationParams {
 
   public UserCreationParams() { 
   }
+
+  public UserCreationParams authConfigId(String authConfigId) {
+    
+    this.authConfigId = authConfigId;
+    return this;
+  }
+
+   /**
+   * Get authConfigId
+   * @return authConfigId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthConfigId() {
+    return authConfigId;
+  }
+
+
+  public void setAuthConfigId(String authConfigId) {
+    this.authConfigId = authConfigId;
+  }
+
+
+  public UserCreationParams ldapDn(String ldapDn) {
+    
+    this.ldapDn = ldapDn;
+    return this;
+  }
+
+   /**
+   * Get ldapDn
+   * @return ldapDn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLdapDn() {
+    return ldapDn;
+  }
+
+
+  public void setLdapDn(String ldapDn) {
+    this.ldapDn = ldapDn;
+  }
+
+
+  public UserCreationParams source(UserSource source) {
+    
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * Get source
+   * @return source
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public UserSource getSource() {
+    return source;
+  }
+
+
+  public void setSource(UserSource source) {
+    this.source = source;
+  }
+
 
   public UserCreationParams mobilePhone(String mobilePhone) {
     
@@ -172,8 +254,8 @@ public class UserCreationParams {
    * Get password
    * @return password
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getPassword() {
     return password;
@@ -217,7 +299,10 @@ public class UserCreationParams {
       return false;
     }
     UserCreationParams userCreationParams = (UserCreationParams) o;
-    return Objects.equals(this.mobilePhone, userCreationParams.mobilePhone) &&
+    return Objects.equals(this.authConfigId, userCreationParams.authConfigId) &&
+        Objects.equals(this.ldapDn, userCreationParams.ldapDn) &&
+        Objects.equals(this.source, userCreationParams.source) &&
+        Objects.equals(this.mobilePhone, userCreationParams.mobilePhone) &&
         Objects.equals(this.emailAddress, userCreationParams.emailAddress) &&
         Objects.equals(this.internal, userCreationParams.internal) &&
         Objects.equals(this.roleId, userCreationParams.roleId) &&
@@ -228,13 +313,16 @@ public class UserCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(mobilePhone, emailAddress, internal, roleId, name, password, username);
+    return Objects.hash(authConfigId, ldapDn, source, mobilePhone, emailAddress, internal, roleId, name, password, username);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserCreationParams {\n");
+    sb.append("    authConfigId: ").append(toIndentedString(authConfigId)).append("\n");
+    sb.append("    ldapDn: ").append(toIndentedString(ldapDn)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    mobilePhone: ").append(toIndentedString(mobilePhone)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    internal: ").append(toIndentedString(internal)).append("\n");

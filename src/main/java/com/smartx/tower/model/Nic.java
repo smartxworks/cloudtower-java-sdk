@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedHost;
 import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedVds;
@@ -31,6 +32,10 @@ public class Nic {
   public static final String SERIALIZED_NAME_DRIVER_STATE = "driver_state";
   @SerializedName(SERIALIZED_NAME_DRIVER_STATE)
   private NicDriverState driverState;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
 
   public static final String SERIALIZED_NAME_GATEWAY_IP = "gateway_ip";
   @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
@@ -174,6 +179,29 @@ public class Nic {
 
   public void setDriverState(NicDriverState driverState) {
     this.driverState = driverState;
+  }
+
+
+  public Nic entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
   }
 
 
@@ -748,6 +776,7 @@ public class Nic {
     Nic nic = (Nic) o;
     return Objects.equals(this.driver, nic.driver) &&
         Objects.equals(this.driverState, nic.driverState) &&
+        Objects.equals(this.entityAsyncStatus, nic.entityAsyncStatus) &&
         Objects.equals(this.gatewayIp, nic.gatewayIp) &&
         Objects.equals(this.host, nic.host) &&
         Objects.equals(this.ibdev, nic.ibdev) &&
@@ -780,7 +809,7 @@ public class Nic {
 
   @Override
   public int hashCode() {
-    return Objects.hash(driver, driverState, gatewayIp, host, ibdev, id, ipAddress, isSriov, labels, localId, macAddress, maxVfNum, model, mtu, name, nicUuid, physical, rdmaEnabled, running, speed, subnetMask, totalVfNum, type, up, usedVfNum, vds);
+    return Objects.hash(driver, driverState, entityAsyncStatus, gatewayIp, host, ibdev, id, ipAddress, isSriov, labels, localId, macAddress, maxVfNum, model, mtu, name, nicUuid, physical, rdmaEnabled, running, speed, subnetMask, totalVfNum, type, up, usedVfNum, vds);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -796,6 +825,7 @@ public class Nic {
     sb.append("class Nic {\n");
     sb.append("    driver: ").append(toIndentedString(driver)).append("\n");
     sb.append("    driverState: ").append(toIndentedString(driverState)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("    ibdev: ").append(toIndentedString(ibdev)).append("\n");

@@ -167,8 +167,8 @@ public class Alert {
    * Get cluster
    * @return cluster
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public NestedCluster getCluster() {
     return cluster;

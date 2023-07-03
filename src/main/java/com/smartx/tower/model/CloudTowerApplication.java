@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.CloudTowerApplicationState;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCloudTowerApplicationPackage;
 import com.smartx.tower.model.NestedUser;
 import io.swagger.annotations.ApiModel;
@@ -20,6 +21,10 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class CloudTowerApplication {
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -66,6 +71,29 @@ public class CloudTowerApplication {
 
   public CloudTowerApplication() { 
   }
+
+  public CloudTowerApplication entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
 
   public CloudTowerApplication id(String id) {
     
@@ -329,7 +357,8 @@ public class CloudTowerApplication {
       return false;
     }
     CloudTowerApplication cloudTowerApplication = (CloudTowerApplication) o;
-    return Objects.equals(this.id, cloudTowerApplication.id) &&
+    return Objects.equals(this.entityAsyncStatus, cloudTowerApplication.entityAsyncStatus) &&
+        Objects.equals(this.id, cloudTowerApplication.id) &&
         Objects.equals(this.instanceStatuses, cloudTowerApplication.instanceStatuses) &&
         Objects.equals(this.name, cloudTowerApplication.name) &&
         Objects.equals(this._package, cloudTowerApplication._package) &&
@@ -348,7 +377,7 @@ public class CloudTowerApplication {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, instanceStatuses, name, _package, placementSituation, placementVerb, resourceVersion, state, targetPackage, user, vmSpec);
+    return Objects.hash(entityAsyncStatus, id, instanceStatuses, name, _package, placementSituation, placementVerb, resourceVersion, state, targetPackage, user, vmSpec);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -362,6 +391,7 @@ public class CloudTowerApplication {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudTowerApplication {\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    instanceStatuses: ").append(toIndentedString(instanceStatuses)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

@@ -36,9 +36,25 @@ public enum VlanOrderByInput {
   
   LOCAL_ID_DESC("local_id_DESC"),
   
+  MODE_TYPE_ASC("mode_type_ASC"),
+  
+  MODE_TYPE_DESC("mode_type_DESC"),
+  
   NAME_ASC("name_ASC"),
   
   NAME_DESC("name_DESC"),
+  
+  QOS_MAX_BANDWIDTH_ASC("qos_max_bandwidth_ASC"),
+  
+  QOS_MAX_BANDWIDTH_DESC("qos_max_bandwidth_DESC"),
+  
+  QOS_MIN_BANDWIDTH_ASC("qos_min_bandwidth_ASC"),
+  
+  QOS_MIN_BANDWIDTH_DESC("qos_min_bandwidth_DESC"),
+  
+  QOS_PRIORITY_ASC("qos_priority_ASC"),
+  
+  QOS_PRIORITY_DESC("qos_priority_DESC"),
   
   SUBNETMASK_ASC("subnetmask_ASC"),
   

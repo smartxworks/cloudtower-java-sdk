@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedVmVolume;
 import com.smartx.tower.model.VmVolumeSnapshotType;
@@ -31,6 +32,10 @@ public class VmVolumeSnapshot {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
+
+  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+  private EntityAsyncStatus entityAsyncStatus;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -141,6 +146,29 @@ public class VmVolumeSnapshot {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+
+  public VmVolumeSnapshot entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
   }
 
 
@@ -386,6 +414,7 @@ public class VmVolumeSnapshot {
     return Objects.equals(this.cluster, vmVolumeSnapshot.cluster) &&
         Objects.equals(this.createAt, vmVolumeSnapshot.createAt) &&
         Objects.equals(this.description, vmVolumeSnapshot.description) &&
+        Objects.equals(this.entityAsyncStatus, vmVolumeSnapshot.entityAsyncStatus) &&
         Objects.equals(this.id, vmVolumeSnapshot.id) &&
         Objects.equals(this.localCreatedAt, vmVolumeSnapshot.localCreatedAt) &&
         Objects.equals(this.localId, vmVolumeSnapshot.localId) &&
@@ -404,7 +433,7 @@ public class VmVolumeSnapshot {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, createAt, description, id, localCreatedAt, localId, name, sharedSize, size, type, uniqueSize, vmVolume, zbsSnapshotUuid);
+    return Objects.hash(cluster, createAt, description, entityAsyncStatus, id, localCreatedAt, localId, name, sharedSize, size, type, uniqueSize, vmVolume, zbsSnapshotUuid);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -421,6 +450,7 @@ public class VmVolumeSnapshot {
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    createAt: ").append(toIndentedString(createAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    localCreatedAt: ").append(toIndentedString(localCreatedAt)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
