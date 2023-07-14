@@ -1,5 +1,11 @@
 # RELEASE NOTE
 
+v2.9.1 release
+
+## release 日期 2023-07-18
+
+- optimize: 优化 ClientUtil.login 登陆，当 useLDAP 为 true 时，自动切换成当前的 LDAP 登录源进行登陆，减少迁移成本。
+
 v2.9.0 release
 ## release 日期 2023-07-03
 
