@@ -1,13 +1,15 @@
 # RELEASE NOTE
 
-v2.9.1 release
 
 ## release 日期 2023-07-18
 
+v2.9.1 release
+
 - optimize: 优化 ClientUtil.login 登陆，当 useLDAP 为 true 时，自动切换成当前的 LDAP 登录源进行登陆，减少迁移成本。
 
-v2.9.0 release
 ## release 日期 2023-07-03
+
+v2.9.0 release
 
 - feature: [SecurityGroupApi] 支持创建，更新与删除安全组
 - feature: [SecurityPolicy] 支持创建，更新与删除自定义安全策略
