@@ -301,22 +301,23 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
-    client.setApiKey("token");
 
-    List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromTemplateParams()
-        .clusterId("cl2k0mpoy026d0822xq6ctsim")
-        .templateId("cl2k0tvpw04y608222h8so9ov")
-        .name("createFromVmTemplate")
+    client.setBasePath("http://192.168.96.133/v2/api");
+    ClientUtil.login("username", "password", client);
+    List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromContentLibraryTemplateParams()
+        .clusterId("cluster_id")
+        .templateId("template_id")
+        .name("vm_name")
         .isFullCopy(false));
   }
 
-  public static List<Vm> createVmFromTemplate(ApiClient client, VmCreateVmFromTemplateParams param)
+  public static List<Vm> createVmFromTemplate(ApiClient client, VmCreateVmFromContentLibraryTemplateParams param)
       throws ApiException {
     VmApi vmApi = new VmApi(client);
-    List<VmCreateVmFromTemplateParams> params = new ArrayList<VmCreateVmFromTemplateParams>(1);
+    List<VmCreateVmFromContentLibraryTemplateParams> params = new ArrayList<VmCreateVmFromContentLibraryTemplateParams>(
+        1);
     params.add(param);
-    List<WithTaskVm> withTaskVms = vmApi.createVmFromTemplate(params);
+    List<WithTaskVm> withTaskVms = vmApi.createVmFromContentLibraryTemplate(params);
     List<String> tasks = withTaskVms.stream().map(vms -> vms.getTaskId()).collect(Collectors.toList());
     List<String> ids = withTaskVms.stream().map(vms -> vms.getData().getId()).collect(Collectors.toList());
     TaskUtil.WaitTasks(tasks, client);
@@ -335,13 +336,14 @@ public class App {
 ```java
 public class App {
 
-  public static void main(String[] args) throws ApiException {
+  public static void main(String[] args) throws ApiException, IOException {
     ApiClient client = new ApiClient();
+
     client.setBasePath("http://192.168.96.133/v2/api");
-    client.setApiKey("token");
-    VmCreateVmFromTemplateParamsDiskOperate diskOperate = new VmCreateVmFromTemplateParamsDiskOperate()
+    ClientUtil.login("username", "password", client);
+    VmDiskOperate diskOperate = new VmDiskOperate()
         .removeDisks(
-            new VmCreateVmFromTemplateParamsDiskOperateRemoveDisks()
+            new VmDiskOperateRemoveDisks()
                 .addDiskIndexItem(1))
         .newDisks(
             new VmDiskParams()
@@ -352,7 +354,7 @@ public class App {
                     new MountDisksParams()
                         .boot(1)
                         .bus(Bus.VIRTIO)
-                        .vmVolumeId("cl2k1kohp08up08225yjgfpdz"))
+                        .vmVolumeId("vm_volume_id"))
                 .addMountNewCreateDisksItem(
                     new MountNewCreateDisksParams()
                         .vmVolume(
@@ -363,20 +365,23 @@ public class App {
                         .boot(3)
                         .bus(Bus.VIRTIO)));
 
-    List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromTemplateParams()
-        .clusterId("cl2k0mpoy026d0822xq6ctsim")
-        .templateId("cl2k0tvpw04y608222h8so9ov")
-        .name("createFromVmTemplate")
+    List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromContentLibraryTemplateParams()
+        .clusterId("cluster_id")
+        .templateId("template_id")
+        .name("vm_name")
         .isFullCopy(false)
         .diskOperate(diskOperate));
+    // 处理 vms
+    System.out.println(vms);
   }
 
-  public static List<Vm> createVmFromTemplate(ApiClient client, VmCreateVmFromTemplateParams param)
+  public static List<Vm> createVmFromTemplate(ApiClient client, VmCreateVmFromContentLibraryTemplateParams param)
       throws ApiException {
     VmApi vmApi = new VmApi(client);
-    List<VmCreateVmFromTemplateParams> params = new ArrayList<VmCreateVmFromTemplateParams>(1);
+    List<VmCreateVmFromContentLibraryTemplateParams> params = new ArrayList<VmCreateVmFromContentLibraryTemplateParams>(
+        1);
     params.add(param);
-    List<WithTaskVm> withTaskVms = vmApi.createVmFromTemplate(params);
+    List<WithTaskVm> withTaskVms = vmApi.createVmFromContentLibraryTemplate(params);
     List<String> tasks = withTaskVms.stream().map(vms -> vms.getTaskId()).collect(Collectors.toList());
     List<String> ids = withTaskVms.stream().map(vms -> vms.getData().getId()).collect(Collectors.toList());
     TaskUtil.WaitTasks(tasks, client);
@@ -398,12 +403,12 @@ public class App {
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
     client.setBasePath("http://192.168.96.133/v2/api");
-    client.setApiKey("token");
+    ClientUtil.login("username", "password", client);
     VmNicParams nicParams = new VmNicParams()
-        .connectVlanId("cl2k1ohoq09si0822q648n9v8")
+        .connectVlanId("nic_vlan_id") // 并非 vlan 的 vlan_id（0-4095） 而是 vlan 的 id（uuid）
         .enabled(true)
         .model(VmNicModel.E1000);
-    List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromTemplateParams()
+    List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromContentLibraryTemplateParams()
         .clusterId("cl2k0mpoy026d0822xq6ctsim")
         .templateId("cl2k0tvpw04y608222h8so9ov")
         .name("createFromVmTemplate")
@@ -411,12 +416,13 @@ public class App {
         .addVmNicsItem(nicParams));
   }
 
-  public static List<Vm> createVmFromTemplate(ApiClient client, VmCreateVmFromTemplateParams param)
+  public static List<Vm> createVmFromTemplate(ApiClient client, VmCreateVmFromContentLibraryTemplateParams param)
       throws ApiException {
     VmApi vmApi = new VmApi(client);
-    List<VmCreateVmFromTemplateParams> params = new ArrayList<VmCreateVmFromTemplateParams>(1);
+    List<VmCreateVmFromContentLibraryTemplateParams> params = new ArrayList<VmCreateVmFromContentLibraryTemplateParams>(
+        1);
     params.add(param);
-    List<WithTaskVm> withTaskVms = vmApi.createVmFromTemplate(params);
+    List<WithTaskVm> withTaskVms = vmApi.createVmFromContentLibraryTemplate(params);
     List<String> tasks = withTaskVms.stream().map(vms -> vms.getTaskId()).collect(Collectors.toList());
     List<String> ids = withTaskVms.stream().map(vms -> vms.getData().getId()).collect(Collectors.toList());
     TaskUtil.WaitTasks(tasks, client);
