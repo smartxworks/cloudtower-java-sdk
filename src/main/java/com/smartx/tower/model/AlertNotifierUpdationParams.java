@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.NotifierLanguageCode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -87,6 +88,22 @@ public class AlertNotifierUpdationParams {
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
   private Boolean disabled;
+
+  public static final String SERIALIZED_NAME_SMTP_SERVER_ID = "smtp_server_id";
+  @SerializedName(SERIALIZED_NAME_SMTP_SERVER_ID)
+  private String smtpServerId;
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+  public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
+  @SerializedName(SERIALIZED_NAME_CLUSTERS)
+  private ClusterWhereInput clusters;
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
   public AlertNotifierUpdationParams() { 
   }
@@ -222,6 +239,98 @@ public class AlertNotifierUpdationParams {
   }
 
 
+  public AlertNotifierUpdationParams smtpServerId(String smtpServerId) {
+    
+    this.smtpServerId = smtpServerId;
+    return this;
+  }
+
+   /**
+   * Get smtpServerId
+   * @return smtpServerId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getSmtpServerId() {
+    return smtpServerId;
+  }
+
+
+  public void setSmtpServerId(String smtpServerId) {
+    this.smtpServerId = smtpServerId;
+  }
+
+
+  public AlertNotifierUpdationParams name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public AlertNotifierUpdationParams clusters(ClusterWhereInput clusters) {
+    
+    this.clusters = clusters;
+    return this;
+  }
+
+   /**
+   * Get clusters
+   * @return clusters
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ClusterWhereInput getClusters() {
+    return clusters;
+  }
+
+
+  public void setClusters(ClusterWhereInput clusters) {
+    this.clusters = clusters;
+  }
+
+
+  public AlertNotifierUpdationParams id(String id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -235,12 +344,16 @@ public class AlertNotifierUpdationParams {
         Objects.equals(this.languageCode, alertNotifierUpdationParams.languageCode) &&
         Objects.equals(this.emailTos, alertNotifierUpdationParams.emailTos) &&
         Objects.equals(this.emailFrom, alertNotifierUpdationParams.emailFrom) &&
-        Objects.equals(this.disabled, alertNotifierUpdationParams.disabled);
+        Objects.equals(this.disabled, alertNotifierUpdationParams.disabled) &&
+        Objects.equals(this.smtpServerId, alertNotifierUpdationParams.smtpServerId) &&
+        Objects.equals(this.name, alertNotifierUpdationParams.name) &&
+        Objects.equals(this.clusters, alertNotifierUpdationParams.clusters) &&
+        Objects.equals(this.id, alertNotifierUpdationParams.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(noticeSeverities, languageCode, emailTos, emailFrom, disabled);
+    return Objects.hash(noticeSeverities, languageCode, emailTos, emailFrom, disabled, smtpServerId, name, clusters, id);
   }
 
   @Override
@@ -252,6 +365,10 @@ public class AlertNotifierUpdationParams {
     sb.append("    emailTos: ").append(toIndentedString(emailTos)).append("\n");
     sb.append("    emailFrom: ").append(toIndentedString(emailFrom)).append("\n");
     sb.append("    disabled: ").append(toIndentedString(disabled)).append("\n");
+    sb.append("    smtpServerId: ").append(toIndentedString(smtpServerId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
   }

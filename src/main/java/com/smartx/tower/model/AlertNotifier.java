@@ -9,6 +9,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedSmtpServer;
 import com.smartx.tower.model.NotifierLanguageCode;
 import com.smartx.tower.model.NotifierSecurityMode;
 import io.swagger.annotations.ApiModel;
@@ -62,6 +63,10 @@ public class AlertNotifier {
   public static final String SERIALIZED_NAME_SECURITY_MODE = "security_mode";
   @SerializedName(SERIALIZED_NAME_SECURITY_MODE)
   private NotifierSecurityMode securityMode;
+
+  public static final String SERIALIZED_NAME_SMTP_SERVER_CONFIG = "smtp_server_config";
+  @SerializedName(SERIALIZED_NAME_SMTP_SERVER_CONFIG)
+  private NestedSmtpServer smtpServerConfig;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_HOST = "smtp_server_host";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_HOST)
@@ -326,6 +331,29 @@ public class AlertNotifier {
   }
 
 
+  public AlertNotifier smtpServerConfig(NestedSmtpServer smtpServerConfig) {
+    
+    this.smtpServerConfig = smtpServerConfig;
+    return this;
+  }
+
+   /**
+   * Get smtpServerConfig
+   * @return smtpServerConfig
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedSmtpServer getSmtpServerConfig() {
+    return smtpServerConfig;
+  }
+
+
+  public void setSmtpServerConfig(NestedSmtpServer smtpServerConfig) {
+    this.smtpServerConfig = smtpServerConfig;
+  }
+
+
   public AlertNotifier smtpServerHost(String smtpServerHost) {
     
     this.smtpServerHost = smtpServerHost;
@@ -414,6 +442,7 @@ public class AlertNotifier {
         Objects.equals(this.name, alertNotifier.name) &&
         Objects.equals(this.noticeSeverities, alertNotifier.noticeSeverities) &&
         Objects.equals(this.securityMode, alertNotifier.securityMode) &&
+        Objects.equals(this.smtpServerConfig, alertNotifier.smtpServerConfig) &&
         Objects.equals(this.smtpServerHost, alertNotifier.smtpServerHost) &&
         Objects.equals(this.smtpServerPort, alertNotifier.smtpServerPort) &&
         Objects.equals(this.username, alertNotifier.username);
@@ -425,7 +454,7 @@ public class AlertNotifier {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clusters, disabled, emailFrom, emailTos, entityAsyncStatus, id, languageCode, name, noticeSeverities, securityMode, smtpServerHost, smtpServerPort, username);
+    return Objects.hash(clusters, disabled, emailFrom, emailTos, entityAsyncStatus, id, languageCode, name, noticeSeverities, securityMode, smtpServerConfig, smtpServerHost, smtpServerPort, username);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -449,6 +478,7 @@ public class AlertNotifier {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    noticeSeverities: ").append(toIndentedString(noticeSeverities)).append("\n");
     sb.append("    securityMode: ").append(toIndentedString(securityMode)).append("\n");
+    sb.append("    smtpServerConfig: ").append(toIndentedString(smtpServerConfig)).append("\n");
     sb.append("    smtpServerHost: ").append(toIndentedString(smtpServerHost)).append("\n");
     sb.append("    smtpServerPort: ").append(toIndentedString(smtpServerPort)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");

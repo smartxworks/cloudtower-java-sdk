@@ -130,6 +130,8 @@ src/main/java/com/smartx/tower/model/Alert.java
 src/main/java/com/smartx/tower/model/AlertConnection.java
 src/main/java/com/smartx/tower/model/AlertNotifier.java
 src/main/java/com/smartx/tower/model/AlertNotifierConnection.java
+src/main/java/com/smartx/tower/model/AlertNotifierCreationParams.java
+src/main/java/com/smartx/tower/model/AlertNotifierManyUpdationParams.java
 src/main/java/com/smartx/tower/model/AlertNotifierOrderByInput.java
 src/main/java/com/smartx/tower/model/AlertNotifierUpdationParams.java
 src/main/java/com/smartx/tower/model/AlertNotifierWhereInput.java
@@ -285,6 +287,8 @@ src/main/java/com/smartx/tower/model/DatacenterUpdationParams.java
 src/main/java/com/smartx/tower/model/DatacenterUpdationParamsData.java
 src/main/java/com/smartx/tower/model/DatacenterWhereInput.java
 src/main/java/com/smartx/tower/model/DatacenterWhereUniqueInput.java
+src/main/java/com/smartx/tower/model/DeleteAlertNotifier.java
+src/main/java/com/smartx/tower/model/DeleteAlertNotifierParams.java
 src/main/java/com/smartx/tower/model/DeleteBrickTopo.java
 src/main/java/com/smartx/tower/model/DeleteCloudTowerApplicationPackage.java
 src/main/java/com/smartx/tower/model/DeleteCloudTowerApplicationPackageParams.java
@@ -889,6 +893,7 @@ src/main/java/com/smartx/tower/model/NestedReportTemplate.java
 src/main/java/com/smartx/tower/model/NestedResourceMeta.java
 src/main/java/com/smartx/tower/model/NestedSecurityPolicy.java
 src/main/java/com/smartx/tower/model/NestedSecurityPolicyApply.java
+src/main/java/com/smartx/tower/model/NestedSmtpServer.java
 src/main/java/com/smartx/tower/model/NestedSnapshotGroup.java
 src/main/java/com/smartx/tower/model/NestedSnapshotGroupVmDiskInfo.java
 src/main/java/com/smartx/tower/model/NestedSnapshotGroupVmInfo.java
@@ -1056,6 +1061,8 @@ src/main/java/com/smartx/tower/model/SecurityPolicyUpdateBody.java
 src/main/java/com/smartx/tower/model/SecurityPolicyUpdateParams.java
 src/main/java/com/smartx/tower/model/SecurityPolicyWhereInput.java
 src/main/java/com/smartx/tower/model/SeverityEnum.java
+src/main/java/com/smartx/tower/model/SmtpSecureMode.java
+src/main/java/com/smartx/tower/model/SmtpServerWhereInput.java
 src/main/java/com/smartx/tower/model/SnapshotGroup.java
 src/main/java/com/smartx/tower/model/SnapshotGroupCloneParam.java
 src/main/java/com/smartx/tower/model/SnapshotGroupCloneParams.java
@@ -1381,6 +1388,7 @@ src/main/java/com/smartx/tower/model/WithTaskConsistencyGroupSnapshot.java
 src/main/java/com/smartx/tower/model/WithTaskContentLibraryImage.java
 src/main/java/com/smartx/tower/model/WithTaskContentLibraryVmTemplate.java
 src/main/java/com/smartx/tower/model/WithTaskDatacenter.java
+src/main/java/com/smartx/tower/model/WithTaskDeleteAlertNotifier.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteBrickTopo.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteCluster.java
 src/main/java/com/smartx/tower/model/WithTaskDeleteClusterRecycleBin.java

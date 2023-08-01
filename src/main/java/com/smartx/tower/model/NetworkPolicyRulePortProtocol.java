@@ -16,7 +16,11 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(NetworkPolicyRulePortProtocol.Adapter.class)
 public enum NetworkPolicyRulePortProtocol {
   
+  ALG("ALG"),
+  
   ICMP("ICMP"),
+  
+  IPIP("IPIP"),
   
   TCP("TCP"),
   

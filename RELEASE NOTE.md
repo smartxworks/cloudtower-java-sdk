@@ -1,5 +1,11 @@
 # RELEASE NOTE
 
+## release 日期 2023-08-01
+
+v2.10.0 release
+
+- feature: [AlertNotifierApi] 支持更新，删除以及创建新的报警通知配置
+- optimize: [TaskUtil] WaitTask WaitTasks 现在会额外返回错误 task 的信息
 
 ## release 日期 2023-07-18
 
