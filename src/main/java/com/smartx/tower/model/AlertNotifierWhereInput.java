@@ -11,6 +11,7 @@ import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NotifierLanguageCode;
 import com.smartx.tower.model.NotifierSecurityMode;
+import com.smartx.tower.model.SmtpServerWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -270,6 +271,10 @@ public class AlertNotifierWhereInput {
   public static final String SERIALIZED_NAME_SECURITY_MODE_NOT_IN = "security_mode_not_in";
   @SerializedName(SERIALIZED_NAME_SECURITY_MODE_NOT_IN)
   private List<NotifierSecurityMode> securityModeNotIn = null;
+
+  public static final String SERIALIZED_NAME_SMTP_SERVER_CONFIG = "smtp_server_config";
+  @SerializedName(SERIALIZED_NAME_SMTP_SERVER_CONFIG)
+  private SmtpServerWhereInput smtpServerConfig;
 
   public static final String SERIALIZED_NAME_SMTP_SERVER_HOST = "smtp_server_host";
   @SerializedName(SERIALIZED_NAME_SMTP_SERVER_HOST)
@@ -1964,6 +1969,29 @@ public class AlertNotifierWhereInput {
   }
 
 
+  public AlertNotifierWhereInput smtpServerConfig(SmtpServerWhereInput smtpServerConfig) {
+    
+    this.smtpServerConfig = smtpServerConfig;
+    return this;
+  }
+
+   /**
+   * Get smtpServerConfig
+   * @return smtpServerConfig
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public SmtpServerWhereInput getSmtpServerConfig() {
+    return smtpServerConfig;
+  }
+
+
+  public void setSmtpServerConfig(SmtpServerWhereInput smtpServerConfig) {
+    this.smtpServerConfig = smtpServerConfig;
+  }
+
+
   public AlertNotifierWhereInput smtpServerHost(String smtpServerHost) {
     
     this.smtpServerHost = smtpServerHost;
@@ -2911,6 +2939,7 @@ public class AlertNotifierWhereInput {
         Objects.equals(this.securityModeIn, alertNotifierWhereInput.securityModeIn) &&
         Objects.equals(this.securityModeNot, alertNotifierWhereInput.securityModeNot) &&
         Objects.equals(this.securityModeNotIn, alertNotifierWhereInput.securityModeNotIn) &&
+        Objects.equals(this.smtpServerConfig, alertNotifierWhereInput.smtpServerConfig) &&
         Objects.equals(this.smtpServerHost, alertNotifierWhereInput.smtpServerHost) &&
         Objects.equals(this.smtpServerHostContains, alertNotifierWhereInput.smtpServerHostContains) &&
         Objects.equals(this.smtpServerHostEndsWith, alertNotifierWhereInput.smtpServerHostEndsWith) &&
@@ -2955,7 +2984,7 @@ public class AlertNotifierWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clustersEvery, clustersNone, clustersSome, disabled, disabledNot, emailFrom, emailFromContains, emailFromEndsWith, emailFromGt, emailFromGte, emailFromIn, emailFromLt, emailFromLte, emailFromNot, emailFromNotContains, emailFromNotEndsWith, emailFromNotIn, emailFromNotStartsWith, emailFromStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, securityMode, securityModeIn, securityModeNot, securityModeNotIn, smtpServerHost, smtpServerHostContains, smtpServerHostEndsWith, smtpServerHostGt, smtpServerHostGte, smtpServerHostIn, smtpServerHostLt, smtpServerHostLte, smtpServerHostNot, smtpServerHostNotContains, smtpServerHostNotEndsWith, smtpServerHostNotIn, smtpServerHostNotStartsWith, smtpServerHostStartsWith, smtpServerPort, smtpServerPortGt, smtpServerPortGte, smtpServerPortIn, smtpServerPortLt, smtpServerPortLte, smtpServerPortNot, smtpServerPortNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, clustersEvery, clustersNone, clustersSome, disabled, disabledNot, emailFrom, emailFromContains, emailFromEndsWith, emailFromGt, emailFromGte, emailFromIn, emailFromLt, emailFromLte, emailFromNot, emailFromNotContains, emailFromNotEndsWith, emailFromNotIn, emailFromNotStartsWith, emailFromStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, securityMode, securityModeIn, securityModeNot, securityModeNotIn, smtpServerConfig, smtpServerHost, smtpServerHostContains, smtpServerHostEndsWith, smtpServerHostGt, smtpServerHostGte, smtpServerHostIn, smtpServerHostLt, smtpServerHostLte, smtpServerHostNot, smtpServerHostNotContains, smtpServerHostNotEndsWith, smtpServerHostNotIn, smtpServerHostNotStartsWith, smtpServerHostStartsWith, smtpServerPort, smtpServerPortGt, smtpServerPortGte, smtpServerPortIn, smtpServerPortLt, smtpServerPortLte, smtpServerPortNot, smtpServerPortNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3031,6 +3060,7 @@ public class AlertNotifierWhereInput {
     sb.append("    securityModeIn: ").append(toIndentedString(securityModeIn)).append("\n");
     sb.append("    securityModeNot: ").append(toIndentedString(securityModeNot)).append("\n");
     sb.append("    securityModeNotIn: ").append(toIndentedString(securityModeNotIn)).append("\n");
+    sb.append("    smtpServerConfig: ").append(toIndentedString(smtpServerConfig)).append("\n");
     sb.append("    smtpServerHost: ").append(toIndentedString(smtpServerHost)).append("\n");
     sb.append("    smtpServerHostContains: ").append(toIndentedString(smtpServerHostContains)).append("\n");
     sb.append("    smtpServerHostEndsWith: ").append(toIndentedString(smtpServerHostEndsWith)).append("\n");
