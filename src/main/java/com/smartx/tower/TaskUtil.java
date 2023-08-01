@@ -35,7 +35,7 @@ public class TaskUtil {
         if (task.getStatus() == TaskStatus.SUCCESSED) {
           return;
         } else if (task.getStatus() == TaskStatus.FAILED) {
-          throw new ApiException(500, String.format("Task %s failed.", id));
+          throw new ApiException(500, String.format("Task %s failed: %s", id, task.getErrorMessage()));
         }
       }
       try {
@@ -102,7 +102,7 @@ public class TaskUtil {
     TaskApi api = new TaskApi(apiClient);
     long start = System.currentTimeMillis();
     HashSet<String> doneTasks = new HashSet<>();
-    List<String> errorTasks = new ArrayList<>();
+    List<String> errorMsgs = new ArrayList<>();
     List<String> toQueryTaskIds = ids;
     do {
       if (System.currentTimeMillis() - start > timeout * 1000) {
@@ -112,7 +112,7 @@ public class TaskUtil {
       tasks.forEach(task -> {
         switch (task.getStatus()) {
           case FAILED:
-            errorTasks.add(task.getId());
+            errorMsgs.add(String.format("\n\t%s: %s", task.getId(), task.getErrorMessage()));
           case SUCCESSED:
             doneTasks.add(task.getId());
             break;
@@ -120,7 +120,7 @@ public class TaskUtil {
             break;
         }
       });
-      if (exitOnError && errorTasks.size() > 0) {
+      if (exitOnError && errorMsgs.size() > 0) {
         break;
       }
       toQueryTaskIds = toQueryTaskIds.stream().filter(id -> !doneTasks.contains(id))
@@ -135,8 +135,8 @@ public class TaskUtil {
       }
     } while (true);
 
-    if (errorTasks.size() > 0) {
-      throw new ApiException(500, String.format("Tasks %s failed.", errorTasks.toString()));
+    if (errorMsgs.size() > 0) {
+      throw new ApiException(500, String.format("Tasks failed:%s", String.join("", errorMsgs)));
     }
   }
 }
