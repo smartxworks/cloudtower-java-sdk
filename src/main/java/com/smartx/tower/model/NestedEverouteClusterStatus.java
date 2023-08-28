@@ -145,8 +145,8 @@ public class NestedEverouteClusterStatus {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getMessage() {
     return message;
@@ -191,8 +191,8 @@ public class NestedEverouteClusterStatus {
    * Get reason
    * @return reason
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getReason() {
     return reason;
@@ -214,8 +214,8 @@ public class NestedEverouteClusterStatus {
    * Get retryCount
    * @return retryCount
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public Integer getRetryCount() {
     return retryCount;
@@ -237,8 +237,8 @@ public class NestedEverouteClusterStatus {
    * Get version
    * @return version
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getVersion() {
     return version;

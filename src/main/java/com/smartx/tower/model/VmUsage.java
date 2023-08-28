@@ -30,6 +30,8 @@ public enum VmUsage {
   
   REGISTRY("REGISTRY"),
   
+  REPLICATION_CONTROLLER("REPLICATION_CONTROLLER"),
+  
   SKS_MANAGEMENT("SKS_MANAGEMENT");
 
   private String value;

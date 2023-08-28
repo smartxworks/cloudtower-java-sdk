@@ -65,8 +65,8 @@ public class NestedEverouteControllerStatus {
    * Get ipAddr
    * @return ipAddr
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getIpAddr() {
     return ipAddr;
@@ -111,8 +111,8 @@ public class NestedEverouteControllerStatus {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getMessage() {
     return message;
@@ -180,8 +180,8 @@ public class NestedEverouteControllerStatus {
    * Get reason
    * @return reason
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getReason() {
     return reason;
@@ -226,8 +226,8 @@ public class NestedEverouteControllerStatus {
    * Get vmID
    * @return vmID
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getVmID() {
     return vmID;

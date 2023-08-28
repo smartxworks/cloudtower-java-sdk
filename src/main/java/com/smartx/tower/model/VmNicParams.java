@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.VmNicModel;
+import com.smartx.tower.model.VmNicQosOption;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -17,6 +18,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmNicParams {
+  public static final String SERIALIZED_NAME_QOS = "qos";
+  @SerializedName(SERIALIZED_NAME_QOS)
+  private VmNicQosOption qos;
+
   public static final String SERIALIZED_NAME_SUBNET_MASK = "subnet_mask";
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)
   private String subnetMask;
@@ -59,6 +64,29 @@ public class VmNicParams {
 
   public VmNicParams() { 
   }
+
+  public VmNicParams qos(VmNicQosOption qos) {
+    
+    this.qos = qos;
+    return this;
+  }
+
+   /**
+   * Get qos
+   * @return qos
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmNicQosOption getQos() {
+    return qos;
+  }
+
+
+  public void setQos(VmNicQosOption qos) {
+    this.qos = qos;
+  }
+
 
   public VmNicParams subnetMask(String subnetMask) {
     
@@ -299,7 +327,8 @@ public class VmNicParams {
       return false;
     }
     VmNicParams vmNicParams = (VmNicParams) o;
-    return Objects.equals(this.subnetMask, vmNicParams.subnetMask) &&
+    return Objects.equals(this.qos, vmNicParams.qos) &&
+        Objects.equals(this.subnetMask, vmNicParams.subnetMask) &&
         Objects.equals(this.gateway, vmNicParams.gateway) &&
         Objects.equals(this.ipAddress, vmNicParams.ipAddress) &&
         Objects.equals(this.nicId, vmNicParams.nicId) &&
@@ -313,13 +342,14 @@ public class VmNicParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(subnetMask, gateway, ipAddress, nicId, connectVlanId, mirror, model, enabled, macAddress, localId);
+    return Objects.hash(qos, subnetMask, gateway, ipAddress, nicId, connectVlanId, mirror, model, enabled, macAddress, localId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmNicParams {\n");
+    sb.append("    qos: ").append(toIndentedString(qos)).append("\n");
     sb.append("    subnetMask: ").append(toIndentedString(subnetMask)).append("\n");
     sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");

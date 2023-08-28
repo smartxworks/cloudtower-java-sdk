@@ -83,8 +83,8 @@ public class NestedEverouteAgentStatus {
    * Get hostID
    * @return hostID
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getHostID() {
     return hostID;
@@ -106,8 +106,8 @@ public class NestedEverouteAgentStatus {
    * Get ipAddr
    * @return ipAddr
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getIpAddr() {
     return ipAddr;
@@ -152,8 +152,8 @@ public class NestedEverouteAgentStatus {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getMessage() {
     return message;
@@ -198,8 +198,8 @@ public class NestedEverouteAgentStatus {
    * Get reason
    * @return reason
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getReason() {
     return reason;

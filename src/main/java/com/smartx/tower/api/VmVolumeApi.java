@@ -16,8 +16,10 @@ import java.io.IOException;
 
 import com.smartx.tower.model.CloneVmVolumeParams;
 import com.smartx.tower.model.ErrorBody;
+import com.smartx.tower.model.ExportVmVolumeParams;
 import com.smartx.tower.model.GetVmVolumesConnectionRequestBody;
 import com.smartx.tower.model.GetVmVolumesRequestBody;
+import com.smartx.tower.model.ImportVmVolumeParams;
 import com.smartx.tower.model.UpdateVmVolumeParams;
 import com.smartx.tower.model.VmVolume;
 import com.smartx.tower.model.VmVolumeConnection;
@@ -26,6 +28,7 @@ import com.smartx.tower.model.VmVolumeDeletionParams;
 import com.smartx.tower.model.VmVolumeRebuildParams;
 import com.smartx.tower.model.VmVolumeRollbackParams;
 import com.smartx.tower.model.WithTaskDeleteVmVolume;
+import com.smartx.tower.model.WithTaskVmExportFile;
 import com.smartx.tower.model.WithTaskVmVolume;
 
 import java.lang.reflect.Type;
@@ -489,6 +492,145 @@ public class VmVolumeApi {
         return localVarCall;
     }
     /**
+     * Build call for exportVmVolume
+     * @param exportVmVolumeParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call exportVmVolumeCall(ExportVmVolumeParams exportVmVolumeParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = exportVmVolumeParams;
+
+        // create path and map variables
+        String localVarPath = "/export-vm-volume";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call exportVmVolumeValidateBeforeCall(ExportVmVolumeParams exportVmVolumeParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'exportVmVolumeParams' is set
+        if (exportVmVolumeParams == null) {
+            throw new ApiException("Missing the required parameter 'exportVmVolumeParams' when calling exportVmVolume(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = exportVmVolumeCall(exportVmVolumeParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param exportVmVolumeParams  (required)
+     * @return List&lt;WithTaskVmExportFile&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVmExportFile> exportVmVolume(ExportVmVolumeParams exportVmVolumeParams) throws ApiException {
+        ApiResponse<List<WithTaskVmExportFile>> localVarResp = exportVmVolumeWithHttpInfo(exportVmVolumeParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param exportVmVolumeParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVmExportFile&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVmExportFile>> exportVmVolumeWithHttpInfo(ExportVmVolumeParams exportVmVolumeParams) throws ApiException {
+        okhttp3.Call localVarCall = exportVmVolumeValidateBeforeCall(exportVmVolumeParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVmExportFile>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param exportVmVolumeParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call exportVmVolumeAsync(ExportVmVolumeParams exportVmVolumeParams, final ApiCallback<List<WithTaskVmExportFile>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = exportVmVolumeValidateBeforeCall(exportVmVolumeParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVmExportFile>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getVmVolumes
      * @param getVmVolumesRequestBody  (required)
      * @param _callback Callback for upload/download progress
@@ -763,6 +905,145 @@ public class VmVolumeApi {
 
         okhttp3.Call localVarCall = getVmVolumesConnectionValidateBeforeCall(getVmVolumesConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VmVolumeConnection>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for importVmVolume
+     * @param importVmVolumeParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call importVmVolumeCall(List<ImportVmVolumeParams> importVmVolumeParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = importVmVolumeParams;
+
+        // create path and map variables
+        String localVarPath = "/import-vm-volume";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call importVmVolumeValidateBeforeCall(List<ImportVmVolumeParams> importVmVolumeParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'importVmVolumeParams' is set
+        if (importVmVolumeParams == null) {
+            throw new ApiException("Missing the required parameter 'importVmVolumeParams' when calling importVmVolume(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = importVmVolumeCall(importVmVolumeParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param importVmVolumeParams  (required)
+     * @return List&lt;WithTaskVmVolume&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVmVolume> importVmVolume(List<ImportVmVolumeParams> importVmVolumeParams) throws ApiException {
+        ApiResponse<List<WithTaskVmVolume>> localVarResp = importVmVolumeWithHttpInfo(importVmVolumeParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param importVmVolumeParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVmVolume&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVmVolume>> importVmVolumeWithHttpInfo(List<ImportVmVolumeParams> importVmVolumeParams) throws ApiException {
+        okhttp3.Call localVarCall = importVmVolumeValidateBeforeCall(importVmVolumeParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVmVolume>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param importVmVolumeParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call importVmVolumeAsync(List<ImportVmVolumeParams> importVmVolumeParams, final ApiCallback<List<WithTaskVmVolume>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = importVmVolumeValidateBeforeCall(importVmVolumeParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVmVolume>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
