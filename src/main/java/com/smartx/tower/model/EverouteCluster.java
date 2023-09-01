@@ -367,8 +367,8 @@ public class EverouteCluster {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public NestedEverouteClusterStatus getStatus() {
     return status;

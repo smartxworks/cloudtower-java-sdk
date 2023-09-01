@@ -164,6 +164,8 @@ src/main/java/com/smartx/tower/model/ApplicationWhereInput.java
 src/main/java/com/smartx/tower/model/Architecture.java
 src/main/java/com/smartx/tower/model/BPSUnit.java
 src/main/java/com/smartx/tower/model/BatchHosts.java
+src/main/java/com/smartx/tower/model/BitPSUnit.java
+src/main/java/com/smartx/tower/model/BitUnit.java
 src/main/java/com/smartx/tower/model/BrickPhaseEnum.java
 src/main/java/com/smartx/tower/model/BrickTopo.java
 src/main/java/com/smartx/tower/model/BrickTopoConnection.java
@@ -261,16 +263,22 @@ src/main/java/com/smartx/tower/model/ContentLibraryImageUpdationClusterParamsDat
 src/main/java/com/smartx/tower/model/ContentLibraryImageUpdationParams.java
 src/main/java/com/smartx/tower/model/ContentLibraryImageUpdationParamsData.java
 src/main/java/com/smartx/tower/model/ContentLibraryImageWhereInput.java
+src/main/java/com/smartx/tower/model/ContentLibraryImportVmNic.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplate.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateConnection.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateCreationParams.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateDeletionParams.java
+src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateExportParams.java
+src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateImportParams.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateOrderByInput.java
+src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateOvfDiskOperate.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationClusterParams.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationClusterParamsData.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationParams.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationParamsData.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateWhereInput.java
+src/main/java/com/smartx/tower/model/ContentLibraryVmdkCdromModify.java
+src/main/java/com/smartx/tower/model/ContentLibraryVmdkCdromMount.java
 src/main/java/com/smartx/tower/model/ConvertVmTemplateToVmParams.java
 src/main/java/com/smartx/tower/model/CpuFanSpeedUnit.java
 src/main/java/com/smartx/tower/model/CreateVcenterAccountParams.java
@@ -395,6 +403,8 @@ src/main/java/com/smartx/tower/model/EveroutePackageOrderByInput.java
 src/main/java/com/smartx/tower/model/EveroutePackageWhereInput.java
 src/main/java/com/smartx/tower/model/ExecutePlan.java
 src/main/java/com/smartx/tower/model/ExportFileDownloadLinks.java
+src/main/java/com/smartx/tower/model/ExportVmVolumeParams.java
+src/main/java/com/smartx/tower/model/ExportVmVolumeParamsData.java
 src/main/java/com/smartx/tower/model/ExtraIp.java
 src/main/java/com/smartx/tower/model/FilterRuleAggregationEnum.java
 src/main/java/com/smartx/tower/model/FilterRuleInput.java
@@ -632,6 +642,7 @@ src/main/java/com/smartx/tower/model/HostUpdationParamsData.java
 src/main/java/com/smartx/tower/model/HostWhereInput.java
 src/main/java/com/smartx/tower/model/Hypervisor.java
 src/main/java/com/smartx/tower/model/IPSecurityPolicy.java
+src/main/java/com/smartx/tower/model/ImportVmVolumeParams.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParams.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParamsData.java
 src/main/java/com/smartx/tower/model/Ipmi.java
@@ -1274,6 +1285,7 @@ src/main/java/com/smartx/tower/model/VmFolderUpdationParams.java
 src/main/java/com/smartx/tower/model/VmFolderUpdationParamsData.java
 src/main/java/com/smartx/tower/model/VmFolderWhereInput.java
 src/main/java/com/smartx/tower/model/VmGuestsOperationSystem.java
+src/main/java/com/smartx/tower/model/VmImportNicParams.java
 src/main/java/com/smartx/tower/model/VmImportParams.java
 src/main/java/com/smartx/tower/model/VmMigrateAcrossClusterParams.java
 src/main/java/com/smartx/tower/model/VmMigrateAcrossClusterParamsData.java
@@ -1283,6 +1295,8 @@ src/main/java/com/smartx/tower/model/VmNicConnection.java
 src/main/java/com/smartx/tower/model/VmNicModel.java
 src/main/java/com/smartx/tower/model/VmNicOrderByInput.java
 src/main/java/com/smartx/tower/model/VmNicParams.java
+src/main/java/com/smartx/tower/model/VmNicQosOption.java
+src/main/java/com/smartx/tower/model/VmNicQosTraffic.java
 src/main/java/com/smartx/tower/model/VmNicWhereInput.java
 src/main/java/com/smartx/tower/model/VmOperateParams.java
 src/main/java/com/smartx/tower/model/VmOrderByInput.java
@@ -1341,6 +1355,8 @@ src/main/java/com/smartx/tower/model/VmUpdateNicBasicInfoParams.java
 src/main/java/com/smartx/tower/model/VmUpdateNicBasicInfoParamsData.java
 src/main/java/com/smartx/tower/model/VmUpdateNicParams.java
 src/main/java/com/smartx/tower/model/VmUpdateNicParamsData.java
+src/main/java/com/smartx/tower/model/VmUpdateNicQosOptionsParams.java
+src/main/java/com/smartx/tower/model/VmUpdateNicQosOptionsParamsData.java
 src/main/java/com/smartx/tower/model/VmUpdateOwnerParams.java
 src/main/java/com/smartx/tower/model/VmUpdateOwnerParamsData.java
 src/main/java/com/smartx/tower/model/VmUpdateParams.java
@@ -1356,6 +1372,7 @@ src/main/java/com/smartx/tower/model/VmVolumeConnection.java
 src/main/java/com/smartx/tower/model/VmVolumeCreationParams.java
 src/main/java/com/smartx/tower/model/VmVolumeDeletionParams.java
 src/main/java/com/smartx/tower/model/VmVolumeElfStoragePolicyType.java
+src/main/java/com/smartx/tower/model/VmVolumeExportFileType.java
 src/main/java/com/smartx/tower/model/VmVolumeOrderByInput.java
 src/main/java/com/smartx/tower/model/VmVolumeRebuildParams.java
 src/main/java/com/smartx/tower/model/VmVolumeRollbackParams.java

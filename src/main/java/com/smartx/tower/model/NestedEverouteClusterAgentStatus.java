@@ -54,8 +54,8 @@ public class NestedEverouteClusterAgentStatus {
    * Get currentNumber
    * @return currentNumber
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public Integer getCurrentNumber() {
     return currentNumber;
@@ -77,8 +77,8 @@ public class NestedEverouteClusterAgentStatus {
    * Get expectNumber
    * @return expectNumber
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public Integer getExpectNumber() {
     return expectNumber;
@@ -162,8 +162,8 @@ public class NestedEverouteClusterAgentStatus {
    * Get numberHealth
    * @return numberHealth
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public Integer getNumberHealth() {
     return numberHealth;

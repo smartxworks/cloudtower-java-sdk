@@ -14,7 +14,7 @@ import com.smartx.tower.model.ParsedOVF;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmGuestsOperationSystem;
-import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmImportNicParams;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -65,7 +65,7 @@ public class VmImportParams {
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
-  private List<VmNicParams> vmNics = null;
+  private List<VmImportNicParams> vmNics = null;
 
   public static final String SERIALIZED_NAME_DISK_OPERATE = "disk_operate";
   @SerializedName(SERIALIZED_NAME_DISK_OPERATE)
@@ -333,15 +333,15 @@ public class VmImportParams {
   }
 
 
-  public VmImportParams vmNics(List<VmNicParams> vmNics) {
+  public VmImportParams vmNics(List<VmImportNicParams> vmNics) {
     
     this.vmNics = vmNics;
     return this;
   }
 
-  public VmImportParams addVmNicsItem(VmNicParams vmNicsItem) {
+  public VmImportParams addVmNicsItem(VmImportNicParams vmNicsItem) {
     if (this.vmNics == null) {
-      this.vmNics = new ArrayList<VmNicParams>();
+      this.vmNics = new ArrayList<VmImportNicParams>();
     }
     this.vmNics.add(vmNicsItem);
     return this;
@@ -354,12 +354,12 @@ public class VmImportParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<VmNicParams> getVmNics() {
+  public List<VmImportNicParams> getVmNics() {
     return vmNics;
   }
 
 
-  public void setVmNics(List<VmNicParams> vmNics) {
+  public void setVmNics(List<VmImportNicParams> vmNics) {
     this.vmNics = vmNics;
   }
 
