@@ -22,6 +22,8 @@ public enum TaskType {
   
   HOST_PLUGIN("HOST_PLUGIN"),
   
+  REPLICATION("REPLICATION"),
+  
   RESOLVER("RESOLVER");
 
   private String value;
