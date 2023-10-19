@@ -9,13 +9,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.BPSUnit;
 import com.smartx.tower.model.ByteUnit;
+import com.smartx.tower.model.NicWhereInput;
 import com.smartx.tower.model.TemplateCloudInit;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskOperate;
 import com.smartx.tower.model.VmFirmware;
+import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -28,6 +31,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmCreateVmFromTemplateParams {
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<VmGpuOperationParams> gpuDevices = null;
+
   public static final String SERIALIZED_NAME_CLOUD_INIT = "cloud_init";
   @SerializedName(SERIALIZED_NAME_CLOUD_INIT)
   private TemplateCloudInit cloudInit;
@@ -80,6 +87,14 @@ public class VmCreateVmFromTemplateParams {
   @SerializedName(SERIALIZED_NAME_HA)
   private Boolean ha;
 
+  public static final String SERIALIZED_NAME_PCI_NICS = "pci_nics";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS)
+  private NicWhereInput pciNics;
+
+  public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
+  @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
+  private VmPlacementGroupWhereInput vmPlacementGroup;
+
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
   private List<VmNicParams> vmNics = null;
@@ -130,6 +145,37 @@ public class VmCreateVmFromTemplateParams {
 
   public VmCreateVmFromTemplateParams() { 
   }
+
+  public VmCreateVmFromTemplateParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public VmCreateVmFromTemplateParams addGpuDevicesItem(VmGpuOperationParams gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<VmGpuOperationParams>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmGpuOperationParams> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    this.gpuDevices = gpuDevices;
+  }
+
 
   public VmCreateVmFromTemplateParams cloudInit(TemplateCloudInit cloudInit) {
     
@@ -430,6 +476,52 @@ public class VmCreateVmFromTemplateParams {
   }
 
 
+  public VmCreateVmFromTemplateParams pciNics(NicWhereInput pciNics) {
+    
+    this.pciNics = pciNics;
+    return this;
+  }
+
+   /**
+   * Get pciNics
+   * @return pciNics
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicWhereInput getPciNics() {
+    return pciNics;
+  }
+
+
+  public void setPciNics(NicWhereInput pciNics) {
+    this.pciNics = pciNics;
+  }
+
+
+  public VmCreateVmFromTemplateParams vmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    
+    this.vmPlacementGroup = vmPlacementGroup;
+    return this;
+  }
+
+   /**
+   * Get vmPlacementGroup
+   * @return vmPlacementGroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmPlacementGroupWhereInput getVmPlacementGroup() {
+    return vmPlacementGroup;
+  }
+
+
+  public void setVmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    this.vmPlacementGroup = vmPlacementGroup;
+  }
+
+
   public VmCreateVmFromTemplateParams vmNics(List<VmNicParams> vmNics) {
     
     this.vmNics = vmNics;
@@ -723,7 +815,8 @@ public class VmCreateVmFromTemplateParams {
       return false;
     }
     VmCreateVmFromTemplateParams vmCreateVmFromTemplateParams = (VmCreateVmFromTemplateParams) o;
-    return Objects.equals(this.cloudInit, vmCreateVmFromTemplateParams.cloudInit) &&
+    return Objects.equals(this.gpuDevices, vmCreateVmFromTemplateParams.gpuDevices) &&
+        Objects.equals(this.cloudInit, vmCreateVmFromTemplateParams.cloudInit) &&
         Objects.equals(this.isFullCopy, vmCreateVmFromTemplateParams.isFullCopy) &&
         Objects.equals(this.templateId, vmCreateVmFromTemplateParams.templateId) &&
         Objects.equals(this.maxBandwidthPolicy, vmCreateVmFromTemplateParams.maxBandwidthPolicy) &&
@@ -736,6 +829,8 @@ public class VmCreateVmFromTemplateParams {
         Objects.equals(this.status, vmCreateVmFromTemplateParams.status) &&
         Objects.equals(this.firmware, vmCreateVmFromTemplateParams.firmware) &&
         Objects.equals(this.ha, vmCreateVmFromTemplateParams.ha) &&
+        Objects.equals(this.pciNics, vmCreateVmFromTemplateParams.pciNics) &&
+        Objects.equals(this.vmPlacementGroup, vmCreateVmFromTemplateParams.vmPlacementGroup) &&
         Objects.equals(this.vmNics, vmCreateVmFromTemplateParams.vmNics) &&
         Objects.equals(this.diskOperate, vmCreateVmFromTemplateParams.diskOperate) &&
         Objects.equals(this.memoryUnit, vmCreateVmFromTemplateParams.memoryUnit) &&
@@ -752,13 +847,14 @@ public class VmCreateVmFromTemplateParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cloudInit, isFullCopy, templateId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, diskOperate, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(gpuDevices, cloudInit, isFullCopy, templateId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, diskOperate, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCreateVmFromTemplateParams {\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    cloudInit: ").append(toIndentedString(cloudInit)).append("\n");
     sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
@@ -772,6 +868,8 @@ public class VmCreateVmFromTemplateParams {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+    sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
+    sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    diskOperate: ").append(toIndentedString(diskOperate)).append("\n");
     sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");

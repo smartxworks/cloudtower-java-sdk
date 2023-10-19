@@ -110,7 +110,11 @@ public enum NicOrderByInput {
   
   USED_VF_NUM_ASC("used_vf_num_ASC"),
   
-  USED_VF_NUM_DESC("used_vf_num_DESC");
+  USED_VF_NUM_DESC("used_vf_num_DESC"),
+  
+  USER_USAGE_ASC("user_usage_ASC"),
+  
+  USER_USAGE_DESC("user_usage_DESC");
 
   private String value;
 

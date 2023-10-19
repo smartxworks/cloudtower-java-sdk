@@ -9,12 +9,15 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.BPSUnit;
 import com.smartx.tower.model.ByteUnit;
+import com.smartx.tower.model.NicWhereInput;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
 import com.smartx.tower.model.VmFirmware;
+import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,6 +30,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmCloneParams {
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<VmGpuOperationParams> gpuDevices = null;
+
   public static final String SERIALIZED_NAME_IS_FULL_COPY = "is_full_copy";
   @SerializedName(SERIALIZED_NAME_IS_FULL_COPY)
   private Boolean isFullCopy;
@@ -74,6 +81,14 @@ public class VmCloneParams {
   public static final String SERIALIZED_NAME_HA = "ha";
   @SerializedName(SERIALIZED_NAME_HA)
   private Boolean ha;
+
+  public static final String SERIALIZED_NAME_PCI_NICS = "pci_nics";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS)
+  private NicWhereInput pciNics;
+
+  public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
+  @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
+  private VmPlacementGroupWhereInput vmPlacementGroup;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
@@ -125,6 +140,37 @@ public class VmCloneParams {
 
   public VmCloneParams() { 
   }
+
+  public VmCloneParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public VmCloneParams addGpuDevicesItem(VmGpuOperationParams gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<VmGpuOperationParams>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmGpuOperationParams> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    this.gpuDevices = gpuDevices;
+  }
+
 
   public VmCloneParams isFullCopy(Boolean isFullCopy) {
     
@@ -399,6 +445,52 @@ public class VmCloneParams {
 
   public void setHa(Boolean ha) {
     this.ha = ha;
+  }
+
+
+  public VmCloneParams pciNics(NicWhereInput pciNics) {
+    
+    this.pciNics = pciNics;
+    return this;
+  }
+
+   /**
+   * Get pciNics
+   * @return pciNics
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicWhereInput getPciNics() {
+    return pciNics;
+  }
+
+
+  public void setPciNics(NicWhereInput pciNics) {
+    this.pciNics = pciNics;
+  }
+
+
+  public VmCloneParams vmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    
+    this.vmPlacementGroup = vmPlacementGroup;
+    return this;
+  }
+
+   /**
+   * Get vmPlacementGroup
+   * @return vmPlacementGroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmPlacementGroupWhereInput getVmPlacementGroup() {
+    return vmPlacementGroup;
+  }
+
+
+  public void setVmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    this.vmPlacementGroup = vmPlacementGroup;
   }
 
 
@@ -695,7 +787,8 @@ public class VmCloneParams {
       return false;
     }
     VmCloneParams vmCloneParams = (VmCloneParams) o;
-    return Objects.equals(this.isFullCopy, vmCloneParams.isFullCopy) &&
+    return Objects.equals(this.gpuDevices, vmCloneParams.gpuDevices) &&
+        Objects.equals(this.isFullCopy, vmCloneParams.isFullCopy) &&
         Objects.equals(this.srcVmId, vmCloneParams.srcVmId) &&
         Objects.equals(this.maxBandwidthPolicy, vmCloneParams.maxBandwidthPolicy) &&
         Objects.equals(this.maxBandwidthUnit, vmCloneParams.maxBandwidthUnit) &&
@@ -707,6 +800,8 @@ public class VmCloneParams {
         Objects.equals(this.status, vmCloneParams.status) &&
         Objects.equals(this.firmware, vmCloneParams.firmware) &&
         Objects.equals(this.ha, vmCloneParams.ha) &&
+        Objects.equals(this.pciNics, vmCloneParams.pciNics) &&
+        Objects.equals(this.vmPlacementGroup, vmCloneParams.vmPlacementGroup) &&
         Objects.equals(this.vmNics, vmCloneParams.vmNics) &&
         Objects.equals(this.vmDisks, vmCloneParams.vmDisks) &&
         Objects.equals(this.memoryUnit, vmCloneParams.memoryUnit) &&
@@ -723,13 +818,14 @@ public class VmCloneParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isFullCopy, srcVmId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(gpuDevices, isFullCopy, srcVmId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCloneParams {\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
     sb.append("    srcVmId: ").append(toIndentedString(srcVmId)).append("\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
@@ -742,6 +838,8 @@ public class VmCloneParams {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+    sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
+    sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
     sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");

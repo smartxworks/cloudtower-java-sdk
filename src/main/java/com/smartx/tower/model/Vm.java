@@ -10,9 +10,11 @@ import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedCpu;
+import com.smartx.tower.model.NestedGpuDevice;
 import com.smartx.tower.model.NestedHost;
 import com.smartx.tower.model.NestedIsolationPolicy;
 import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedNic;
 import com.smartx.tower.model.NestedSnapshotPlan;
 import com.smartx.tower.model.NestedUsbDevice;
 import com.smartx.tower.model.NestedVmDisk;
@@ -93,6 +95,10 @@ public class Vm {
   public static final String SERIALIZED_NAME_FOLDER = "folder";
   @SerializedName(SERIALIZED_NAME_FOLDER)
   private NestedVmFolder folder;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<NestedGpuDevice> gpuDevices = null;
 
   public static final String SERIALIZED_NAME_GUEST_CPU_MODEL = "guest_cpu_model";
   @SerializedName(SERIALIZED_NAME_GUEST_CPU_MODEL)
@@ -217,6 +223,10 @@ public class Vm {
   public static final String SERIALIZED_NAME_OUT_UNINSTALL_USB = "out_uninstall_usb";
   @SerializedName(SERIALIZED_NAME_OUT_UNINSTALL_USB)
   private List<String> outUninstallUsb = new ArrayList<String>();
+
+  public static final String SERIALIZED_NAME_PCI_NICS = "pci_nics";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS)
+  private List<NestedNic> pciNics = null;
 
   public static final String SERIALIZED_NAME_PROTECTED = "protected";
   @SerializedName(SERIALIZED_NAME_PROTECTED)
@@ -593,6 +603,37 @@ public class Vm {
 
   public void setFolder(NestedVmFolder folder) {
     this.folder = folder;
+  }
+
+
+  public Vm gpuDevices(List<NestedGpuDevice> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public Vm addGpuDevicesItem(NestedGpuDevice gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<NestedGpuDevice>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedGpuDevice> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<NestedGpuDevice> gpuDevices) {
+    this.gpuDevices = gpuDevices;
   }
 
 
@@ -1322,6 +1363,37 @@ public class Vm {
   }
 
 
+  public Vm pciNics(List<NestedNic> pciNics) {
+    
+    this.pciNics = pciNics;
+    return this;
+  }
+
+  public Vm addPciNicsItem(NestedNic pciNicsItem) {
+    if (this.pciNics == null) {
+      this.pciNics = new ArrayList<NestedNic>();
+    }
+    this.pciNics.add(pciNicsItem);
+    return this;
+  }
+
+   /**
+   * Get pciNics
+   * @return pciNics
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedNic> getPciNics() {
+    return pciNics;
+  }
+
+
+  public void setPciNics(List<NestedNic> pciNics) {
+    this.pciNics = pciNics;
+  }
+
+
   public Vm _protected(Boolean _protected) {
     
     this._protected = _protected;
@@ -1775,6 +1847,7 @@ public class Vm {
         Objects.equals(this.entityAsyncStatus, vm.entityAsyncStatus) &&
         Objects.equals(this.firmware, vm.firmware) &&
         Objects.equals(this.folder, vm.folder) &&
+        Objects.equals(this.gpuDevices, vm.gpuDevices) &&
         Objects.equals(this.guestCpuModel, vm.guestCpuModel) &&
         Objects.equals(this.guestOsType, vm.guestOsType) &&
         Objects.equals(this.guestSizeUsage, vm.guestSizeUsage) &&
@@ -1806,6 +1879,7 @@ public class Vm {
         Objects.equals(this.originalName, vm.originalName) &&
         Objects.equals(this.os, vm.os) &&
         Objects.equals(this.outUninstallUsb, vm.outUninstallUsb) &&
+        Objects.equals(this.pciNics, vm.pciNics) &&
         Objects.equals(this._protected, vm._protected) &&
         Objects.equals(this.provisionedSize, vm.provisionedSize) &&
         Objects.equals(this.size, vm.size) &&
@@ -1831,7 +1905,7 @@ public class Vm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityFilterResults, entityAsyncStatus, firmware, folder, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
+    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityFilterResults, entityAsyncStatus, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1858,6 +1932,7 @@ public class Vm {
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    guestCpuModel: ").append(toIndentedString(guestCpuModel)).append("\n");
     sb.append("    guestOsType: ").append(toIndentedString(guestOsType)).append("\n");
     sb.append("    guestSizeUsage: ").append(toIndentedString(guestSizeUsage)).append("\n");
@@ -1889,6 +1964,7 @@ public class Vm {
     sb.append("    originalName: ").append(toIndentedString(originalName)).append("\n");
     sb.append("    os: ").append(toIndentedString(os)).append("\n");
     sb.append("    outUninstallUsb: ").append(toIndentedString(outUninstallUsb)).append("\n");
+    sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
     sb.append("    _protected: ").append(toIndentedString(_protected)).append("\n");
     sb.append("    provisionedSize: ").append(toIndentedString(provisionedSize)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");

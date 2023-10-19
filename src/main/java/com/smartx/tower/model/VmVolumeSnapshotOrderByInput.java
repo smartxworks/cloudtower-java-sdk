@@ -24,6 +24,10 @@ public enum VmVolumeSnapshotOrderByInput {
   
   DESCRIPTION_DESC("description_DESC"),
   
+  ELF_STORAGE_POLICY_ASC("elf_storage_policy_ASC"),
+  
+  ELF_STORAGE_POLICY_DESC("elf_storage_policy_DESC"),
+  
   ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
   
   ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
@@ -59,6 +63,14 @@ public enum VmVolumeSnapshotOrderByInput {
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
   UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  VOLUME_SHARING_ASC("volume_sharing_ASC"),
+  
+  VOLUME_SHARING_DESC("volume_sharing_DESC"),
+  
+  VOLUME_SIZE_ASC("volume_size_ASC"),
+  
+  VOLUME_SIZE_DESC("volume_size_DESC"),
   
   ZBS_SNAPSHOT_UUID_ASC("zbs_snapshot_uuid_ASC"),
   

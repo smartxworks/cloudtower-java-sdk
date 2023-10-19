@@ -15,6 +15,7 @@ import com.smartx.tower.model.ContentLibraryVmTemplateWhereInput;
 import com.smartx.tower.model.DatacenterWhereInput;
 import com.smartx.tower.model.DiskWhereInput;
 import com.smartx.tower.model.ElfImageWhereInput;
+import com.smartx.tower.model.GpuDeviceWhereInput;
 import com.smartx.tower.model.HostWhereInput;
 import com.smartx.tower.model.IscsiLunSnapshotWhereInput;
 import com.smartx.tower.model.IscsiLunWhereInput;
@@ -32,6 +33,7 @@ import com.smartx.tower.model.VdsWhereInput;
 import com.smartx.tower.model.VlanWhereInput;
 import com.smartx.tower.model.VmSnapshotWhereInput;
 import com.smartx.tower.model.VmTemplateWhereInput;
+import com.smartx.tower.model.VmVolumeSnapshotWhereInput;
 import com.smartx.tower.model.VmVolumeWhereInput;
 import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -43,6 +45,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class AddLabelsToResourcesParamsData {
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private GpuDeviceWhereInput gpuDevices;
+
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES = "content_library_vm_templates";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATES)
   private ContentLibraryVmTemplateWhereInput contentLibraryVmTemplates;
@@ -62,6 +68,10 @@ public class AddLabelsToResourcesParamsData {
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)
   private VmWhereInput vms;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS = "vm_volume_snapshots";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS)
+  private VmVolumeSnapshotWhereInput vmVolumeSnapshots;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES = "vm_volumes";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES)
@@ -153,6 +163,29 @@ public class AddLabelsToResourcesParamsData {
 
   public AddLabelsToResourcesParamsData() { 
   }
+
+  public AddLabelsToResourcesParamsData gpuDevices(GpuDeviceWhereInput gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(GpuDeviceWhereInput gpuDevices) {
+    this.gpuDevices = gpuDevices;
+  }
+
 
   public AddLabelsToResourcesParamsData contentLibraryVmTemplates(ContentLibraryVmTemplateWhereInput contentLibraryVmTemplates) {
     
@@ -266,6 +299,29 @@ public class AddLabelsToResourcesParamsData {
 
   public void setVms(VmWhereInput vms) {
     this.vms = vms;
+  }
+
+
+  public AddLabelsToResourcesParamsData vmVolumeSnapshots(VmVolumeSnapshotWhereInput vmVolumeSnapshots) {
+    
+    this.vmVolumeSnapshots = vmVolumeSnapshots;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshots
+   * @return vmVolumeSnapshots
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeSnapshotWhereInput getVmVolumeSnapshots() {
+    return vmVolumeSnapshots;
+  }
+
+
+  public void setVmVolumeSnapshots(VmVolumeSnapshotWhereInput vmVolumeSnapshots) {
+    this.vmVolumeSnapshots = vmVolumeSnapshots;
   }
 
 
@@ -784,11 +840,13 @@ public class AddLabelsToResourcesParamsData {
       return false;
     }
     AddLabelsToResourcesParamsData addLabelsToResourcesParamsData = (AddLabelsToResourcesParamsData) o;
-    return Objects.equals(this.contentLibraryVmTemplates, addLabelsToResourcesParamsData.contentLibraryVmTemplates) &&
+    return Objects.equals(this.gpuDevices, addLabelsToResourcesParamsData.gpuDevices) &&
+        Objects.equals(this.contentLibraryVmTemplates, addLabelsToResourcesParamsData.contentLibraryVmTemplates) &&
         Objects.equals(this.contentLibraryImages, addLabelsToResourcesParamsData.contentLibraryImages) &&
         Objects.equals(this.isolationPolicies, addLabelsToResourcesParamsData.isolationPolicies) &&
         Objects.equals(this.securityPolicies, addLabelsToResourcesParamsData.securityPolicies) &&
         Objects.equals(this.vms, addLabelsToResourcesParamsData.vms) &&
+        Objects.equals(this.vmVolumeSnapshots, addLabelsToResourcesParamsData.vmVolumeSnapshots) &&
         Objects.equals(this.vmVolumes, addLabelsToResourcesParamsData.vmVolumes) &&
         Objects.equals(this.vmTemplates, addLabelsToResourcesParamsData.vmTemplates) &&
         Objects.equals(this.vmSnapshots, addLabelsToResourcesParamsData.vmSnapshots) &&
@@ -815,18 +873,20 @@ public class AddLabelsToResourcesParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(contentLibraryVmTemplates, contentLibraryImages, isolationPolicies, securityPolicies, vms, vmVolumes, vmTemplates, vmSnapshots, vlans, vdses, nvmfSubsystems, nvmfNamespaceSnapshots, nvmfNamespaces, nics, nfsInodes, nfsExports, namespaceGroups, iscsiTargets, iscsiLunSnapshots, iscsiLuns, hosts, elfImages, disks, datacenters, consistencyGroupSnapshots, consistencyGroups, clusters);
+    return Objects.hash(gpuDevices, contentLibraryVmTemplates, contentLibraryImages, isolationPolicies, securityPolicies, vms, vmVolumeSnapshots, vmVolumes, vmTemplates, vmSnapshots, vlans, vdses, nvmfSubsystems, nvmfNamespaceSnapshots, nvmfNamespaces, nics, nfsInodes, nfsExports, namespaceGroups, iscsiTargets, iscsiLunSnapshots, iscsiLuns, hosts, elfImages, disks, datacenters, consistencyGroupSnapshots, consistencyGroups, clusters);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddLabelsToResourcesParamsData {\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    contentLibraryVmTemplates: ").append(toIndentedString(contentLibraryVmTemplates)).append("\n");
     sb.append("    contentLibraryImages: ").append(toIndentedString(contentLibraryImages)).append("\n");
     sb.append("    isolationPolicies: ").append(toIndentedString(isolationPolicies)).append("\n");
     sb.append("    securityPolicies: ").append(toIndentedString(securityPolicies)).append("\n");
     sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
+    sb.append("    vmVolumeSnapshots: ").append(toIndentedString(vmVolumeSnapshots)).append("\n");
     sb.append("    vmVolumes: ").append(toIndentedString(vmVolumes)).append("\n");
     sb.append("    vmTemplates: ").append(toIndentedString(vmTemplates)).append("\n");
     sb.append("    vmSnapshots: ").append(toIndentedString(vmSnapshots)).append("\n");

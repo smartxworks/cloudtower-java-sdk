@@ -26,6 +26,7 @@ import com.smartx.tower.model.Vm;
 import com.smartx.tower.model.VmAddCdRomParams;
 import com.smartx.tower.model.VmAddDiskParams;
 import com.smartx.tower.model.VmAddFolderParams;
+import com.smartx.tower.model.VmAddGpuDeviceParams;
 import com.smartx.tower.model.VmAddNicParams;
 import com.smartx.tower.model.VmCloneParams;
 import com.smartx.tower.model.VmConnection;
@@ -40,9 +41,12 @@ import com.smartx.tower.model.VmImportParams;
 import com.smartx.tower.model.VmMigrateAcrossClusterParams;
 import com.smartx.tower.model.VmMigrateParams;
 import com.smartx.tower.model.VmOperateParams;
+import com.smartx.tower.model.VmOperatePciNicParams;
 import com.smartx.tower.model.VmRebuildParams;
 import com.smartx.tower.model.VmRemoveCdRomParams;
 import com.smartx.tower.model.VmRemoveDiskParams;
+import com.smartx.tower.model.VmRemoveGpuDeviceParams;
+import com.smartx.tower.model.VmRemoveNicByWhereParams;
 import com.smartx.tower.model.VmRemoveNicParams;
 import com.smartx.tower.model.VmResetGuestOsPasswordParams;
 import com.smartx.tower.model.VmRollbackParams;
@@ -527,6 +531,145 @@ public class VmApi {
         return localVarCall;
     }
     /**
+     * Build call for addVmGpuDevice
+     * @param vmAddGpuDeviceParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addVmGpuDeviceCall(VmAddGpuDeviceParams vmAddGpuDeviceParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmAddGpuDeviceParams;
+
+        // create path and map variables
+        String localVarPath = "/add-vm-gpu-device";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call addVmGpuDeviceValidateBeforeCall(VmAddGpuDeviceParams vmAddGpuDeviceParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'vmAddGpuDeviceParams' is set
+        if (vmAddGpuDeviceParams == null) {
+            throw new ApiException("Missing the required parameter 'vmAddGpuDeviceParams' when calling addVmGpuDevice(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = addVmGpuDeviceCall(vmAddGpuDeviceParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param vmAddGpuDeviceParams  (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVm> addVmGpuDevice(VmAddGpuDeviceParams vmAddGpuDeviceParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = addVmGpuDeviceWithHttpInfo(vmAddGpuDeviceParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param vmAddGpuDeviceParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVm>> addVmGpuDeviceWithHttpInfo(VmAddGpuDeviceParams vmAddGpuDeviceParams) throws ApiException {
+        okhttp3.Call localVarCall = addVmGpuDeviceValidateBeforeCall(vmAddGpuDeviceParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param vmAddGpuDeviceParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addVmGpuDeviceAsync(VmAddGpuDeviceParams vmAddGpuDeviceParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = addVmGpuDeviceValidateBeforeCall(vmAddGpuDeviceParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for addVmNic
      * @param vmAddNicParams  (required)
      * @param _callback Callback for upload/download progress
@@ -661,6 +804,149 @@ public class VmApi {
     public okhttp3.Call addVmNicAsync(VmAddNicParams vmAddNicParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = addVmNicValidateBeforeCall(vmAddNicParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for addVmPciNic
+     * @param vmOperatePciNicParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addVmPciNicCall(VmOperatePciNicParams vmOperatePciNicParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmOperatePciNicParams;
+
+        // create path and map variables
+        String localVarPath = "/add-vm-pci-nic";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call addVmPciNicValidateBeforeCall(VmOperatePciNicParams vmOperatePciNicParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'vmOperatePciNicParams' is set
+        if (vmOperatePciNicParams == null) {
+            throw new ApiException("Missing the required parameter 'vmOperatePciNicParams' when calling addVmPciNic(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = addVmPciNicCall(vmOperatePciNicParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param vmOperatePciNicParams  (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVm> addVmPciNic(VmOperatePciNicParams vmOperatePciNicParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = addVmPciNicWithHttpInfo(vmOperatePciNicParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param vmOperatePciNicParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVm>> addVmPciNicWithHttpInfo(VmOperatePciNicParams vmOperatePciNicParams) throws ApiException {
+        okhttp3.Call localVarCall = addVmPciNicValidateBeforeCall(vmOperatePciNicParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param vmOperatePciNicParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addVmPciNicAsync(VmOperatePciNicParams vmOperatePciNicParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = addVmPciNicValidateBeforeCall(vmOperatePciNicParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3871,6 +4157,145 @@ public class VmApi {
         return localVarCall;
     }
     /**
+     * Build call for removeVmGpuDevice
+     * @param vmRemoveGpuDeviceParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call removeVmGpuDeviceCall(VmRemoveGpuDeviceParams vmRemoveGpuDeviceParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmRemoveGpuDeviceParams;
+
+        // create path and map variables
+        String localVarPath = "/remove-vm-gpu-device";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call removeVmGpuDeviceValidateBeforeCall(VmRemoveGpuDeviceParams vmRemoveGpuDeviceParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'vmRemoveGpuDeviceParams' is set
+        if (vmRemoveGpuDeviceParams == null) {
+            throw new ApiException("Missing the required parameter 'vmRemoveGpuDeviceParams' when calling removeVmGpuDevice(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = removeVmGpuDeviceCall(vmRemoveGpuDeviceParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param vmRemoveGpuDeviceParams  (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVm> removeVmGpuDevice(VmRemoveGpuDeviceParams vmRemoveGpuDeviceParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = removeVmGpuDeviceWithHttpInfo(vmRemoveGpuDeviceParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param vmRemoveGpuDeviceParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVm>> removeVmGpuDeviceWithHttpInfo(VmRemoveGpuDeviceParams vmRemoveGpuDeviceParams) throws ApiException {
+        okhttp3.Call localVarCall = removeVmGpuDeviceValidateBeforeCall(vmRemoveGpuDeviceParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param vmRemoveGpuDeviceParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call removeVmGpuDeviceAsync(VmRemoveGpuDeviceParams vmRemoveGpuDeviceParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = removeVmGpuDeviceValidateBeforeCall(vmRemoveGpuDeviceParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for removeVmNic
      * @param vmRemoveNicParams  (required)
      * @param _callback Callback for upload/download progress
@@ -3884,7 +4309,9 @@ public class VmApi {
         <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call removeVmNicCall(VmRemoveNicParams vmRemoveNicParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
@@ -3931,6 +4358,7 @@ public class VmApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call removeVmNicValidateBeforeCall(VmRemoveNicParams vmRemoveNicParams, final ApiCallback _callback) throws ApiException {
         
@@ -3959,7 +4387,9 @@ public class VmApi {
         <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public List<WithTaskVm> removeVmNic(VmRemoveNicParams vmRemoveNicParams) throws ApiException {
         ApiResponse<List<WithTaskVm>> localVarResp = removeVmNicWithHttpInfo(vmRemoveNicParams);
         return localVarResp.getData();
@@ -3979,7 +4409,9 @@ public class VmApi {
         <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<List<WithTaskVm>> removeVmNicWithHttpInfo(VmRemoveNicParams vmRemoveNicParams) throws ApiException {
         okhttp3.Call localVarCall = removeVmNicValidateBeforeCall(vmRemoveNicParams, null);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
@@ -4001,10 +4433,294 @@ public class VmApi {
         <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call removeVmNicAsync(VmRemoveNicParams vmRemoveNicParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = removeVmNicValidateBeforeCall(vmRemoveNicParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for removeVmNicByWhere
+     * @param vmRemoveNicByWhereParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call removeVmNicByWhereCall(VmRemoveNicByWhereParams vmRemoveNicByWhereParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmRemoveNicByWhereParams;
+
+        // create path and map variables
+        String localVarPath = "/remove-vm-nic-by-where";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call removeVmNicByWhereValidateBeforeCall(VmRemoveNicByWhereParams vmRemoveNicByWhereParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'vmRemoveNicByWhereParams' is set
+        if (vmRemoveNicByWhereParams == null) {
+            throw new ApiException("Missing the required parameter 'vmRemoveNicByWhereParams' when calling removeVmNicByWhere(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = removeVmNicByWhereCall(vmRemoveNicByWhereParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param vmRemoveNicByWhereParams  (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVm> removeVmNicByWhere(VmRemoveNicByWhereParams vmRemoveNicByWhereParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = removeVmNicByWhereWithHttpInfo(vmRemoveNicByWhereParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param vmRemoveNicByWhereParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVm>> removeVmNicByWhereWithHttpInfo(VmRemoveNicByWhereParams vmRemoveNicByWhereParams) throws ApiException {
+        okhttp3.Call localVarCall = removeVmNicByWhereValidateBeforeCall(vmRemoveNicByWhereParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param vmRemoveNicByWhereParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call removeVmNicByWhereAsync(VmRemoveNicByWhereParams vmRemoveNicByWhereParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = removeVmNicByWhereValidateBeforeCall(vmRemoveNicByWhereParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for removeVmPciNic
+     * @param vmOperatePciNicParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call removeVmPciNicCall(VmOperatePciNicParams vmOperatePciNicParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmOperatePciNicParams;
+
+        // create path and map variables
+        String localVarPath = "/remove-vm-pci-nic";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call removeVmPciNicValidateBeforeCall(VmOperatePciNicParams vmOperatePciNicParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'vmOperatePciNicParams' is set
+        if (vmOperatePciNicParams == null) {
+            throw new ApiException("Missing the required parameter 'vmOperatePciNicParams' when calling removeVmPciNic(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = removeVmPciNicCall(vmOperatePciNicParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param vmOperatePciNicParams  (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<WithTaskVm> removeVmPciNic(VmOperatePciNicParams vmOperatePciNicParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp = removeVmPciNicWithHttpInfo(vmOperatePciNicParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param vmOperatePciNicParams  (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<WithTaskVm>> removeVmPciNicWithHttpInfo(VmOperatePciNicParams vmOperatePciNicParams) throws ApiException {
+        okhttp3.Call localVarCall = removeVmPciNicValidateBeforeCall(vmOperatePciNicParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param vmOperatePciNicParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call removeVmPciNicAsync(VmOperatePciNicParams vmOperatePciNicParams, final ApiCallback<List<WithTaskVm>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = removeVmPciNicValidateBeforeCall(vmOperatePciNicParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

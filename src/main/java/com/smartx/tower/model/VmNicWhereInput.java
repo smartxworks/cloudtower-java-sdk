@@ -27,6 +27,78 @@ public class VmNicWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmNicWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT = "egress_rate_limit_burst_in_bit";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT)
+  private Double egressRateLimitBurstInBit;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_GT = "egress_rate_limit_burst_in_bit_gt";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_GT)
+  private Double egressRateLimitBurstInBitGt;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_GTE = "egress_rate_limit_burst_in_bit_gte";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_GTE)
+  private Double egressRateLimitBurstInBitGte;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_IN = "egress_rate_limit_burst_in_bit_in";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_IN)
+  private List<Double> egressRateLimitBurstInBitIn = null;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_LT = "egress_rate_limit_burst_in_bit_lt";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_LT)
+  private Double egressRateLimitBurstInBitLt;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_LTE = "egress_rate_limit_burst_in_bit_lte";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_LTE)
+  private Double egressRateLimitBurstInBitLte;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_NOT = "egress_rate_limit_burst_in_bit_not";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_NOT)
+  private Double egressRateLimitBurstInBitNot;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_NOT_IN = "egress_rate_limit_burst_in_bit_not_in";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT_NOT_IN)
+  private List<Double> egressRateLimitBurstInBitNotIn = null;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_ENABLED = "egress_rate_limit_enabled";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_ENABLED)
+  private Boolean egressRateLimitEnabled;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_ENABLED_NOT = "egress_rate_limit_enabled_not";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_ENABLED_NOT)
+  private Boolean egressRateLimitEnabledNot;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS = "egress_rate_limit_max_rate_in_bitps";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS)
+  private Double egressRateLimitMaxRateInBitps;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GT = "egress_rate_limit_max_rate_in_bitps_gt";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GT)
+  private Double egressRateLimitMaxRateInBitpsGt;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GTE = "egress_rate_limit_max_rate_in_bitps_gte";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GTE)
+  private Double egressRateLimitMaxRateInBitpsGte;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_IN = "egress_rate_limit_max_rate_in_bitps_in";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_IN)
+  private List<Double> egressRateLimitMaxRateInBitpsIn = null;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LT = "egress_rate_limit_max_rate_in_bitps_lt";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LT)
+  private Double egressRateLimitMaxRateInBitpsLt;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LTE = "egress_rate_limit_max_rate_in_bitps_lte";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LTE)
+  private Double egressRateLimitMaxRateInBitpsLte;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT = "egress_rate_limit_max_rate_in_bitps_not";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT)
+  private Double egressRateLimitMaxRateInBitpsNot;
+
+  public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT_IN = "egress_rate_limit_max_rate_in_bitps_not_in";
+  @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT_IN)
+  private List<Double> egressRateLimitMaxRateInBitpsNotIn = null;
+
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
   private Boolean enabled;
@@ -146,6 +218,78 @@ public class VmNicWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT = "ingress_rate_limit_burst_in_bit";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT)
+  private Double ingressRateLimitBurstInBit;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_GT = "ingress_rate_limit_burst_in_bit_gt";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_GT)
+  private Double ingressRateLimitBurstInBitGt;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_GTE = "ingress_rate_limit_burst_in_bit_gte";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_GTE)
+  private Double ingressRateLimitBurstInBitGte;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_IN = "ingress_rate_limit_burst_in_bit_in";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_IN)
+  private List<Double> ingressRateLimitBurstInBitIn = null;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_LT = "ingress_rate_limit_burst_in_bit_lt";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_LT)
+  private Double ingressRateLimitBurstInBitLt;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_LTE = "ingress_rate_limit_burst_in_bit_lte";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_LTE)
+  private Double ingressRateLimitBurstInBitLte;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_NOT = "ingress_rate_limit_burst_in_bit_not";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_NOT)
+  private Double ingressRateLimitBurstInBitNot;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_NOT_IN = "ingress_rate_limit_burst_in_bit_not_in";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_BURST_IN_BIT_NOT_IN)
+  private List<Double> ingressRateLimitBurstInBitNotIn = null;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_ENABLED = "ingress_rate_limit_enabled";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_ENABLED)
+  private Boolean ingressRateLimitEnabled;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_ENABLED_NOT = "ingress_rate_limit_enabled_not";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_ENABLED_NOT)
+  private Boolean ingressRateLimitEnabledNot;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS = "ingress_rate_limit_max_rate_in_bitps";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS)
+  private Double ingressRateLimitMaxRateInBitps;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GT = "ingress_rate_limit_max_rate_in_bitps_gt";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GT)
+  private Double ingressRateLimitMaxRateInBitpsGt;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GTE = "ingress_rate_limit_max_rate_in_bitps_gte";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_GTE)
+  private Double ingressRateLimitMaxRateInBitpsGte;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_IN = "ingress_rate_limit_max_rate_in_bitps_in";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_IN)
+  private List<Double> ingressRateLimitMaxRateInBitpsIn = null;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LT = "ingress_rate_limit_max_rate_in_bitps_lt";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LT)
+  private Double ingressRateLimitMaxRateInBitpsLt;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LTE = "ingress_rate_limit_max_rate_in_bitps_lte";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_LTE)
+  private Double ingressRateLimitMaxRateInBitpsLte;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT = "ingress_rate_limit_max_rate_in_bitps_not";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT)
+  private Double ingressRateLimitMaxRateInBitpsNot;
+
+  public static final String SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT_IN = "ingress_rate_limit_max_rate_in_bitps_not_in";
+  @SerializedName(SERIALIZED_NAME_INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_NOT_IN)
+  private List<Double> ingressRateLimitMaxRateInBitpsNotIn = null;
 
   public static final String SERIALIZED_NAME_INTERFACE_ID = "interface_id";
   @SerializedName(SERIALIZED_NAME_INTERFACE_ID)
@@ -534,6 +678,452 @@ public class VmNicWhereInput {
 
   public void setAND(List<VmNicWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBit(Double egressRateLimitBurstInBit) {
+    
+    this.egressRateLimitBurstInBit = egressRateLimitBurstInBit;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBit
+   * @return egressRateLimitBurstInBit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitBurstInBit() {
+    return egressRateLimitBurstInBit;
+  }
+
+
+  public void setEgressRateLimitBurstInBit(Double egressRateLimitBurstInBit) {
+    this.egressRateLimitBurstInBit = egressRateLimitBurstInBit;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitGt(Double egressRateLimitBurstInBitGt) {
+    
+    this.egressRateLimitBurstInBitGt = egressRateLimitBurstInBitGt;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitGt
+   * @return egressRateLimitBurstInBitGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitBurstInBitGt() {
+    return egressRateLimitBurstInBitGt;
+  }
+
+
+  public void setEgressRateLimitBurstInBitGt(Double egressRateLimitBurstInBitGt) {
+    this.egressRateLimitBurstInBitGt = egressRateLimitBurstInBitGt;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitGte(Double egressRateLimitBurstInBitGte) {
+    
+    this.egressRateLimitBurstInBitGte = egressRateLimitBurstInBitGte;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitGte
+   * @return egressRateLimitBurstInBitGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitBurstInBitGte() {
+    return egressRateLimitBurstInBitGte;
+  }
+
+
+  public void setEgressRateLimitBurstInBitGte(Double egressRateLimitBurstInBitGte) {
+    this.egressRateLimitBurstInBitGte = egressRateLimitBurstInBitGte;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitIn(List<Double> egressRateLimitBurstInBitIn) {
+    
+    this.egressRateLimitBurstInBitIn = egressRateLimitBurstInBitIn;
+    return this;
+  }
+
+  public VmNicWhereInput addEgressRateLimitBurstInBitInItem(Double egressRateLimitBurstInBitInItem) {
+    if (this.egressRateLimitBurstInBitIn == null) {
+      this.egressRateLimitBurstInBitIn = new ArrayList<Double>();
+    }
+    this.egressRateLimitBurstInBitIn.add(egressRateLimitBurstInBitInItem);
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitIn
+   * @return egressRateLimitBurstInBitIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getEgressRateLimitBurstInBitIn() {
+    return egressRateLimitBurstInBitIn;
+  }
+
+
+  public void setEgressRateLimitBurstInBitIn(List<Double> egressRateLimitBurstInBitIn) {
+    this.egressRateLimitBurstInBitIn = egressRateLimitBurstInBitIn;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitLt(Double egressRateLimitBurstInBitLt) {
+    
+    this.egressRateLimitBurstInBitLt = egressRateLimitBurstInBitLt;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitLt
+   * @return egressRateLimitBurstInBitLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitBurstInBitLt() {
+    return egressRateLimitBurstInBitLt;
+  }
+
+
+  public void setEgressRateLimitBurstInBitLt(Double egressRateLimitBurstInBitLt) {
+    this.egressRateLimitBurstInBitLt = egressRateLimitBurstInBitLt;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitLte(Double egressRateLimitBurstInBitLte) {
+    
+    this.egressRateLimitBurstInBitLte = egressRateLimitBurstInBitLte;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitLte
+   * @return egressRateLimitBurstInBitLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitBurstInBitLte() {
+    return egressRateLimitBurstInBitLte;
+  }
+
+
+  public void setEgressRateLimitBurstInBitLte(Double egressRateLimitBurstInBitLte) {
+    this.egressRateLimitBurstInBitLte = egressRateLimitBurstInBitLte;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitNot(Double egressRateLimitBurstInBitNot) {
+    
+    this.egressRateLimitBurstInBitNot = egressRateLimitBurstInBitNot;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitNot
+   * @return egressRateLimitBurstInBitNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitBurstInBitNot() {
+    return egressRateLimitBurstInBitNot;
+  }
+
+
+  public void setEgressRateLimitBurstInBitNot(Double egressRateLimitBurstInBitNot) {
+    this.egressRateLimitBurstInBitNot = egressRateLimitBurstInBitNot;
+  }
+
+
+  public VmNicWhereInput egressRateLimitBurstInBitNotIn(List<Double> egressRateLimitBurstInBitNotIn) {
+    
+    this.egressRateLimitBurstInBitNotIn = egressRateLimitBurstInBitNotIn;
+    return this;
+  }
+
+  public VmNicWhereInput addEgressRateLimitBurstInBitNotInItem(Double egressRateLimitBurstInBitNotInItem) {
+    if (this.egressRateLimitBurstInBitNotIn == null) {
+      this.egressRateLimitBurstInBitNotIn = new ArrayList<Double>();
+    }
+    this.egressRateLimitBurstInBitNotIn.add(egressRateLimitBurstInBitNotInItem);
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitBurstInBitNotIn
+   * @return egressRateLimitBurstInBitNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getEgressRateLimitBurstInBitNotIn() {
+    return egressRateLimitBurstInBitNotIn;
+  }
+
+
+  public void setEgressRateLimitBurstInBitNotIn(List<Double> egressRateLimitBurstInBitNotIn) {
+    this.egressRateLimitBurstInBitNotIn = egressRateLimitBurstInBitNotIn;
+  }
+
+
+  public VmNicWhereInput egressRateLimitEnabled(Boolean egressRateLimitEnabled) {
+    
+    this.egressRateLimitEnabled = egressRateLimitEnabled;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitEnabled
+   * @return egressRateLimitEnabled
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getEgressRateLimitEnabled() {
+    return egressRateLimitEnabled;
+  }
+
+
+  public void setEgressRateLimitEnabled(Boolean egressRateLimitEnabled) {
+    this.egressRateLimitEnabled = egressRateLimitEnabled;
+  }
+
+
+  public VmNicWhereInput egressRateLimitEnabledNot(Boolean egressRateLimitEnabledNot) {
+    
+    this.egressRateLimitEnabledNot = egressRateLimitEnabledNot;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitEnabledNot
+   * @return egressRateLimitEnabledNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getEgressRateLimitEnabledNot() {
+    return egressRateLimitEnabledNot;
+  }
+
+
+  public void setEgressRateLimitEnabledNot(Boolean egressRateLimitEnabledNot) {
+    this.egressRateLimitEnabledNot = egressRateLimitEnabledNot;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitps(Double egressRateLimitMaxRateInBitps) {
+    
+    this.egressRateLimitMaxRateInBitps = egressRateLimitMaxRateInBitps;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitps
+   * @return egressRateLimitMaxRateInBitps
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitMaxRateInBitps() {
+    return egressRateLimitMaxRateInBitps;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitps(Double egressRateLimitMaxRateInBitps) {
+    this.egressRateLimitMaxRateInBitps = egressRateLimitMaxRateInBitps;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsGt(Double egressRateLimitMaxRateInBitpsGt) {
+    
+    this.egressRateLimitMaxRateInBitpsGt = egressRateLimitMaxRateInBitpsGt;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsGt
+   * @return egressRateLimitMaxRateInBitpsGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitMaxRateInBitpsGt() {
+    return egressRateLimitMaxRateInBitpsGt;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsGt(Double egressRateLimitMaxRateInBitpsGt) {
+    this.egressRateLimitMaxRateInBitpsGt = egressRateLimitMaxRateInBitpsGt;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsGte(Double egressRateLimitMaxRateInBitpsGte) {
+    
+    this.egressRateLimitMaxRateInBitpsGte = egressRateLimitMaxRateInBitpsGte;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsGte
+   * @return egressRateLimitMaxRateInBitpsGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitMaxRateInBitpsGte() {
+    return egressRateLimitMaxRateInBitpsGte;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsGte(Double egressRateLimitMaxRateInBitpsGte) {
+    this.egressRateLimitMaxRateInBitpsGte = egressRateLimitMaxRateInBitpsGte;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsIn(List<Double> egressRateLimitMaxRateInBitpsIn) {
+    
+    this.egressRateLimitMaxRateInBitpsIn = egressRateLimitMaxRateInBitpsIn;
+    return this;
+  }
+
+  public VmNicWhereInput addEgressRateLimitMaxRateInBitpsInItem(Double egressRateLimitMaxRateInBitpsInItem) {
+    if (this.egressRateLimitMaxRateInBitpsIn == null) {
+      this.egressRateLimitMaxRateInBitpsIn = new ArrayList<Double>();
+    }
+    this.egressRateLimitMaxRateInBitpsIn.add(egressRateLimitMaxRateInBitpsInItem);
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsIn
+   * @return egressRateLimitMaxRateInBitpsIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getEgressRateLimitMaxRateInBitpsIn() {
+    return egressRateLimitMaxRateInBitpsIn;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsIn(List<Double> egressRateLimitMaxRateInBitpsIn) {
+    this.egressRateLimitMaxRateInBitpsIn = egressRateLimitMaxRateInBitpsIn;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsLt(Double egressRateLimitMaxRateInBitpsLt) {
+    
+    this.egressRateLimitMaxRateInBitpsLt = egressRateLimitMaxRateInBitpsLt;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsLt
+   * @return egressRateLimitMaxRateInBitpsLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitMaxRateInBitpsLt() {
+    return egressRateLimitMaxRateInBitpsLt;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsLt(Double egressRateLimitMaxRateInBitpsLt) {
+    this.egressRateLimitMaxRateInBitpsLt = egressRateLimitMaxRateInBitpsLt;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsLte(Double egressRateLimitMaxRateInBitpsLte) {
+    
+    this.egressRateLimitMaxRateInBitpsLte = egressRateLimitMaxRateInBitpsLte;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsLte
+   * @return egressRateLimitMaxRateInBitpsLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitMaxRateInBitpsLte() {
+    return egressRateLimitMaxRateInBitpsLte;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsLte(Double egressRateLimitMaxRateInBitpsLte) {
+    this.egressRateLimitMaxRateInBitpsLte = egressRateLimitMaxRateInBitpsLte;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsNot(Double egressRateLimitMaxRateInBitpsNot) {
+    
+    this.egressRateLimitMaxRateInBitpsNot = egressRateLimitMaxRateInBitpsNot;
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsNot
+   * @return egressRateLimitMaxRateInBitpsNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getEgressRateLimitMaxRateInBitpsNot() {
+    return egressRateLimitMaxRateInBitpsNot;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsNot(Double egressRateLimitMaxRateInBitpsNot) {
+    this.egressRateLimitMaxRateInBitpsNot = egressRateLimitMaxRateInBitpsNot;
+  }
+
+
+  public VmNicWhereInput egressRateLimitMaxRateInBitpsNotIn(List<Double> egressRateLimitMaxRateInBitpsNotIn) {
+    
+    this.egressRateLimitMaxRateInBitpsNotIn = egressRateLimitMaxRateInBitpsNotIn;
+    return this;
+  }
+
+  public VmNicWhereInput addEgressRateLimitMaxRateInBitpsNotInItem(Double egressRateLimitMaxRateInBitpsNotInItem) {
+    if (this.egressRateLimitMaxRateInBitpsNotIn == null) {
+      this.egressRateLimitMaxRateInBitpsNotIn = new ArrayList<Double>();
+    }
+    this.egressRateLimitMaxRateInBitpsNotIn.add(egressRateLimitMaxRateInBitpsNotInItem);
+    return this;
+  }
+
+   /**
+   * Get egressRateLimitMaxRateInBitpsNotIn
+   * @return egressRateLimitMaxRateInBitpsNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getEgressRateLimitMaxRateInBitpsNotIn() {
+    return egressRateLimitMaxRateInBitpsNotIn;
+  }
+
+
+  public void setEgressRateLimitMaxRateInBitpsNotIn(List<Double> egressRateLimitMaxRateInBitpsNotIn) {
+    this.egressRateLimitMaxRateInBitpsNotIn = egressRateLimitMaxRateInBitpsNotIn;
   }
 
 
@@ -1256,6 +1846,452 @@ public class VmNicWhereInput {
 
   public void setIdStartsWith(String idStartsWith) {
     this.idStartsWith = idStartsWith;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBit(Double ingressRateLimitBurstInBit) {
+    
+    this.ingressRateLimitBurstInBit = ingressRateLimitBurstInBit;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBit
+   * @return ingressRateLimitBurstInBit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitBurstInBit() {
+    return ingressRateLimitBurstInBit;
+  }
+
+
+  public void setIngressRateLimitBurstInBit(Double ingressRateLimitBurstInBit) {
+    this.ingressRateLimitBurstInBit = ingressRateLimitBurstInBit;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitGt(Double ingressRateLimitBurstInBitGt) {
+    
+    this.ingressRateLimitBurstInBitGt = ingressRateLimitBurstInBitGt;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitGt
+   * @return ingressRateLimitBurstInBitGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitBurstInBitGt() {
+    return ingressRateLimitBurstInBitGt;
+  }
+
+
+  public void setIngressRateLimitBurstInBitGt(Double ingressRateLimitBurstInBitGt) {
+    this.ingressRateLimitBurstInBitGt = ingressRateLimitBurstInBitGt;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitGte(Double ingressRateLimitBurstInBitGte) {
+    
+    this.ingressRateLimitBurstInBitGte = ingressRateLimitBurstInBitGte;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitGte
+   * @return ingressRateLimitBurstInBitGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitBurstInBitGte() {
+    return ingressRateLimitBurstInBitGte;
+  }
+
+
+  public void setIngressRateLimitBurstInBitGte(Double ingressRateLimitBurstInBitGte) {
+    this.ingressRateLimitBurstInBitGte = ingressRateLimitBurstInBitGte;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitIn(List<Double> ingressRateLimitBurstInBitIn) {
+    
+    this.ingressRateLimitBurstInBitIn = ingressRateLimitBurstInBitIn;
+    return this;
+  }
+
+  public VmNicWhereInput addIngressRateLimitBurstInBitInItem(Double ingressRateLimitBurstInBitInItem) {
+    if (this.ingressRateLimitBurstInBitIn == null) {
+      this.ingressRateLimitBurstInBitIn = new ArrayList<Double>();
+    }
+    this.ingressRateLimitBurstInBitIn.add(ingressRateLimitBurstInBitInItem);
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitIn
+   * @return ingressRateLimitBurstInBitIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getIngressRateLimitBurstInBitIn() {
+    return ingressRateLimitBurstInBitIn;
+  }
+
+
+  public void setIngressRateLimitBurstInBitIn(List<Double> ingressRateLimitBurstInBitIn) {
+    this.ingressRateLimitBurstInBitIn = ingressRateLimitBurstInBitIn;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitLt(Double ingressRateLimitBurstInBitLt) {
+    
+    this.ingressRateLimitBurstInBitLt = ingressRateLimitBurstInBitLt;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitLt
+   * @return ingressRateLimitBurstInBitLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitBurstInBitLt() {
+    return ingressRateLimitBurstInBitLt;
+  }
+
+
+  public void setIngressRateLimitBurstInBitLt(Double ingressRateLimitBurstInBitLt) {
+    this.ingressRateLimitBurstInBitLt = ingressRateLimitBurstInBitLt;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitLte(Double ingressRateLimitBurstInBitLte) {
+    
+    this.ingressRateLimitBurstInBitLte = ingressRateLimitBurstInBitLte;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitLte
+   * @return ingressRateLimitBurstInBitLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitBurstInBitLte() {
+    return ingressRateLimitBurstInBitLte;
+  }
+
+
+  public void setIngressRateLimitBurstInBitLte(Double ingressRateLimitBurstInBitLte) {
+    this.ingressRateLimitBurstInBitLte = ingressRateLimitBurstInBitLte;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitNot(Double ingressRateLimitBurstInBitNot) {
+    
+    this.ingressRateLimitBurstInBitNot = ingressRateLimitBurstInBitNot;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitNot
+   * @return ingressRateLimitBurstInBitNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitBurstInBitNot() {
+    return ingressRateLimitBurstInBitNot;
+  }
+
+
+  public void setIngressRateLimitBurstInBitNot(Double ingressRateLimitBurstInBitNot) {
+    this.ingressRateLimitBurstInBitNot = ingressRateLimitBurstInBitNot;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitBurstInBitNotIn(List<Double> ingressRateLimitBurstInBitNotIn) {
+    
+    this.ingressRateLimitBurstInBitNotIn = ingressRateLimitBurstInBitNotIn;
+    return this;
+  }
+
+  public VmNicWhereInput addIngressRateLimitBurstInBitNotInItem(Double ingressRateLimitBurstInBitNotInItem) {
+    if (this.ingressRateLimitBurstInBitNotIn == null) {
+      this.ingressRateLimitBurstInBitNotIn = new ArrayList<Double>();
+    }
+    this.ingressRateLimitBurstInBitNotIn.add(ingressRateLimitBurstInBitNotInItem);
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitBurstInBitNotIn
+   * @return ingressRateLimitBurstInBitNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getIngressRateLimitBurstInBitNotIn() {
+    return ingressRateLimitBurstInBitNotIn;
+  }
+
+
+  public void setIngressRateLimitBurstInBitNotIn(List<Double> ingressRateLimitBurstInBitNotIn) {
+    this.ingressRateLimitBurstInBitNotIn = ingressRateLimitBurstInBitNotIn;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitEnabled(Boolean ingressRateLimitEnabled) {
+    
+    this.ingressRateLimitEnabled = ingressRateLimitEnabled;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitEnabled
+   * @return ingressRateLimitEnabled
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIngressRateLimitEnabled() {
+    return ingressRateLimitEnabled;
+  }
+
+
+  public void setIngressRateLimitEnabled(Boolean ingressRateLimitEnabled) {
+    this.ingressRateLimitEnabled = ingressRateLimitEnabled;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitEnabledNot(Boolean ingressRateLimitEnabledNot) {
+    
+    this.ingressRateLimitEnabledNot = ingressRateLimitEnabledNot;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitEnabledNot
+   * @return ingressRateLimitEnabledNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIngressRateLimitEnabledNot() {
+    return ingressRateLimitEnabledNot;
+  }
+
+
+  public void setIngressRateLimitEnabledNot(Boolean ingressRateLimitEnabledNot) {
+    this.ingressRateLimitEnabledNot = ingressRateLimitEnabledNot;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitps(Double ingressRateLimitMaxRateInBitps) {
+    
+    this.ingressRateLimitMaxRateInBitps = ingressRateLimitMaxRateInBitps;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitps
+   * @return ingressRateLimitMaxRateInBitps
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitMaxRateInBitps() {
+    return ingressRateLimitMaxRateInBitps;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitps(Double ingressRateLimitMaxRateInBitps) {
+    this.ingressRateLimitMaxRateInBitps = ingressRateLimitMaxRateInBitps;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsGt(Double ingressRateLimitMaxRateInBitpsGt) {
+    
+    this.ingressRateLimitMaxRateInBitpsGt = ingressRateLimitMaxRateInBitpsGt;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsGt
+   * @return ingressRateLimitMaxRateInBitpsGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitMaxRateInBitpsGt() {
+    return ingressRateLimitMaxRateInBitpsGt;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsGt(Double ingressRateLimitMaxRateInBitpsGt) {
+    this.ingressRateLimitMaxRateInBitpsGt = ingressRateLimitMaxRateInBitpsGt;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsGte(Double ingressRateLimitMaxRateInBitpsGte) {
+    
+    this.ingressRateLimitMaxRateInBitpsGte = ingressRateLimitMaxRateInBitpsGte;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsGte
+   * @return ingressRateLimitMaxRateInBitpsGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitMaxRateInBitpsGte() {
+    return ingressRateLimitMaxRateInBitpsGte;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsGte(Double ingressRateLimitMaxRateInBitpsGte) {
+    this.ingressRateLimitMaxRateInBitpsGte = ingressRateLimitMaxRateInBitpsGte;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsIn(List<Double> ingressRateLimitMaxRateInBitpsIn) {
+    
+    this.ingressRateLimitMaxRateInBitpsIn = ingressRateLimitMaxRateInBitpsIn;
+    return this;
+  }
+
+  public VmNicWhereInput addIngressRateLimitMaxRateInBitpsInItem(Double ingressRateLimitMaxRateInBitpsInItem) {
+    if (this.ingressRateLimitMaxRateInBitpsIn == null) {
+      this.ingressRateLimitMaxRateInBitpsIn = new ArrayList<Double>();
+    }
+    this.ingressRateLimitMaxRateInBitpsIn.add(ingressRateLimitMaxRateInBitpsInItem);
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsIn
+   * @return ingressRateLimitMaxRateInBitpsIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getIngressRateLimitMaxRateInBitpsIn() {
+    return ingressRateLimitMaxRateInBitpsIn;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsIn(List<Double> ingressRateLimitMaxRateInBitpsIn) {
+    this.ingressRateLimitMaxRateInBitpsIn = ingressRateLimitMaxRateInBitpsIn;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsLt(Double ingressRateLimitMaxRateInBitpsLt) {
+    
+    this.ingressRateLimitMaxRateInBitpsLt = ingressRateLimitMaxRateInBitpsLt;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsLt
+   * @return ingressRateLimitMaxRateInBitpsLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitMaxRateInBitpsLt() {
+    return ingressRateLimitMaxRateInBitpsLt;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsLt(Double ingressRateLimitMaxRateInBitpsLt) {
+    this.ingressRateLimitMaxRateInBitpsLt = ingressRateLimitMaxRateInBitpsLt;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsLte(Double ingressRateLimitMaxRateInBitpsLte) {
+    
+    this.ingressRateLimitMaxRateInBitpsLte = ingressRateLimitMaxRateInBitpsLte;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsLte
+   * @return ingressRateLimitMaxRateInBitpsLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitMaxRateInBitpsLte() {
+    return ingressRateLimitMaxRateInBitpsLte;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsLte(Double ingressRateLimitMaxRateInBitpsLte) {
+    this.ingressRateLimitMaxRateInBitpsLte = ingressRateLimitMaxRateInBitpsLte;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsNot(Double ingressRateLimitMaxRateInBitpsNot) {
+    
+    this.ingressRateLimitMaxRateInBitpsNot = ingressRateLimitMaxRateInBitpsNot;
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsNot
+   * @return ingressRateLimitMaxRateInBitpsNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getIngressRateLimitMaxRateInBitpsNot() {
+    return ingressRateLimitMaxRateInBitpsNot;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsNot(Double ingressRateLimitMaxRateInBitpsNot) {
+    this.ingressRateLimitMaxRateInBitpsNot = ingressRateLimitMaxRateInBitpsNot;
+  }
+
+
+  public VmNicWhereInput ingressRateLimitMaxRateInBitpsNotIn(List<Double> ingressRateLimitMaxRateInBitpsNotIn) {
+    
+    this.ingressRateLimitMaxRateInBitpsNotIn = ingressRateLimitMaxRateInBitpsNotIn;
+    return this;
+  }
+
+  public VmNicWhereInput addIngressRateLimitMaxRateInBitpsNotInItem(Double ingressRateLimitMaxRateInBitpsNotInItem) {
+    if (this.ingressRateLimitMaxRateInBitpsNotIn == null) {
+      this.ingressRateLimitMaxRateInBitpsNotIn = new ArrayList<Double>();
+    }
+    this.ingressRateLimitMaxRateInBitpsNotIn.add(ingressRateLimitMaxRateInBitpsNotInItem);
+    return this;
+  }
+
+   /**
+   * Get ingressRateLimitMaxRateInBitpsNotIn
+   * @return ingressRateLimitMaxRateInBitpsNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getIngressRateLimitMaxRateInBitpsNotIn() {
+    return ingressRateLimitMaxRateInBitpsNotIn;
+  }
+
+
+  public void setIngressRateLimitMaxRateInBitpsNotIn(List<Double> ingressRateLimitMaxRateInBitpsNotIn) {
+    this.ingressRateLimitMaxRateInBitpsNotIn = ingressRateLimitMaxRateInBitpsNotIn;
   }
 
 
@@ -3444,6 +4480,24 @@ public class VmNicWhereInput {
     }
     VmNicWhereInput vmNicWhereInput = (VmNicWhereInput) o;
     return Objects.equals(this.AND, vmNicWhereInput.AND) &&
+        Objects.equals(this.egressRateLimitBurstInBit, vmNicWhereInput.egressRateLimitBurstInBit) &&
+        Objects.equals(this.egressRateLimitBurstInBitGt, vmNicWhereInput.egressRateLimitBurstInBitGt) &&
+        Objects.equals(this.egressRateLimitBurstInBitGte, vmNicWhereInput.egressRateLimitBurstInBitGte) &&
+        Objects.equals(this.egressRateLimitBurstInBitIn, vmNicWhereInput.egressRateLimitBurstInBitIn) &&
+        Objects.equals(this.egressRateLimitBurstInBitLt, vmNicWhereInput.egressRateLimitBurstInBitLt) &&
+        Objects.equals(this.egressRateLimitBurstInBitLte, vmNicWhereInput.egressRateLimitBurstInBitLte) &&
+        Objects.equals(this.egressRateLimitBurstInBitNot, vmNicWhereInput.egressRateLimitBurstInBitNot) &&
+        Objects.equals(this.egressRateLimitBurstInBitNotIn, vmNicWhereInput.egressRateLimitBurstInBitNotIn) &&
+        Objects.equals(this.egressRateLimitEnabled, vmNicWhereInput.egressRateLimitEnabled) &&
+        Objects.equals(this.egressRateLimitEnabledNot, vmNicWhereInput.egressRateLimitEnabledNot) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitps, vmNicWhereInput.egressRateLimitMaxRateInBitps) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsGt, vmNicWhereInput.egressRateLimitMaxRateInBitpsGt) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsGte, vmNicWhereInput.egressRateLimitMaxRateInBitpsGte) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsIn, vmNicWhereInput.egressRateLimitMaxRateInBitpsIn) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsLt, vmNicWhereInput.egressRateLimitMaxRateInBitpsLt) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsLte, vmNicWhereInput.egressRateLimitMaxRateInBitpsLte) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsNot, vmNicWhereInput.egressRateLimitMaxRateInBitpsNot) &&
+        Objects.equals(this.egressRateLimitMaxRateInBitpsNotIn, vmNicWhereInput.egressRateLimitMaxRateInBitpsNotIn) &&
         Objects.equals(this.enabled, vmNicWhereInput.enabled) &&
         Objects.equals(this.enabledNot, vmNicWhereInput.enabledNot) &&
         Objects.equals(this.gateway, vmNicWhereInput.gateway) &&
@@ -3474,6 +4528,24 @@ public class VmNicWhereInput {
         Objects.equals(this.idNotIn, vmNicWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, vmNicWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, vmNicWhereInput.idStartsWith) &&
+        Objects.equals(this.ingressRateLimitBurstInBit, vmNicWhereInput.ingressRateLimitBurstInBit) &&
+        Objects.equals(this.ingressRateLimitBurstInBitGt, vmNicWhereInput.ingressRateLimitBurstInBitGt) &&
+        Objects.equals(this.ingressRateLimitBurstInBitGte, vmNicWhereInput.ingressRateLimitBurstInBitGte) &&
+        Objects.equals(this.ingressRateLimitBurstInBitIn, vmNicWhereInput.ingressRateLimitBurstInBitIn) &&
+        Objects.equals(this.ingressRateLimitBurstInBitLt, vmNicWhereInput.ingressRateLimitBurstInBitLt) &&
+        Objects.equals(this.ingressRateLimitBurstInBitLte, vmNicWhereInput.ingressRateLimitBurstInBitLte) &&
+        Objects.equals(this.ingressRateLimitBurstInBitNot, vmNicWhereInput.ingressRateLimitBurstInBitNot) &&
+        Objects.equals(this.ingressRateLimitBurstInBitNotIn, vmNicWhereInput.ingressRateLimitBurstInBitNotIn) &&
+        Objects.equals(this.ingressRateLimitEnabled, vmNicWhereInput.ingressRateLimitEnabled) &&
+        Objects.equals(this.ingressRateLimitEnabledNot, vmNicWhereInput.ingressRateLimitEnabledNot) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitps, vmNicWhereInput.ingressRateLimitMaxRateInBitps) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsGt, vmNicWhereInput.ingressRateLimitMaxRateInBitpsGt) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsGte, vmNicWhereInput.ingressRateLimitMaxRateInBitpsGte) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsIn, vmNicWhereInput.ingressRateLimitMaxRateInBitpsIn) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsLt, vmNicWhereInput.ingressRateLimitMaxRateInBitpsLt) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsLte, vmNicWhereInput.ingressRateLimitMaxRateInBitpsLte) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsNot, vmNicWhereInput.ingressRateLimitMaxRateInBitpsNot) &&
+        Objects.equals(this.ingressRateLimitMaxRateInBitpsNotIn, vmNicWhereInput.ingressRateLimitMaxRateInBitpsNotIn) &&
         Objects.equals(this.interfaceId, vmNicWhereInput.interfaceId) &&
         Objects.equals(this.interfaceIdContains, vmNicWhereInput.interfaceIdContains) &&
         Objects.equals(this.interfaceIdEndsWith, vmNicWhereInput.interfaceIdEndsWith) &&
@@ -3571,7 +4643,7 @@ public class VmNicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, enabled, enabledNot, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, interfaceId, interfaceIdContains, interfaceIdEndsWith, interfaceIdGt, interfaceIdGte, interfaceIdIn, interfaceIdLt, interfaceIdLte, interfaceIdNot, interfaceIdNotContains, interfaceIdNotEndsWith, interfaceIdNotIn, interfaceIdNotStartsWith, interfaceIdStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, mirror, mirrorNot, model, modelIn, modelNot, modelNotIn, nic, NOT, OR, order, orderGt, orderGte, orderIn, orderLt, orderLte, orderNot, orderNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vlan, vm);
+    return Objects.hash(AND, egressRateLimitBurstInBit, egressRateLimitBurstInBitGt, egressRateLimitBurstInBitGte, egressRateLimitBurstInBitIn, egressRateLimitBurstInBitLt, egressRateLimitBurstInBitLte, egressRateLimitBurstInBitNot, egressRateLimitBurstInBitNotIn, egressRateLimitEnabled, egressRateLimitEnabledNot, egressRateLimitMaxRateInBitps, egressRateLimitMaxRateInBitpsGt, egressRateLimitMaxRateInBitpsGte, egressRateLimitMaxRateInBitpsIn, egressRateLimitMaxRateInBitpsLt, egressRateLimitMaxRateInBitpsLte, egressRateLimitMaxRateInBitpsNot, egressRateLimitMaxRateInBitpsNotIn, enabled, enabledNot, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ingressRateLimitBurstInBit, ingressRateLimitBurstInBitGt, ingressRateLimitBurstInBitGte, ingressRateLimitBurstInBitIn, ingressRateLimitBurstInBitLt, ingressRateLimitBurstInBitLte, ingressRateLimitBurstInBitNot, ingressRateLimitBurstInBitNotIn, ingressRateLimitEnabled, ingressRateLimitEnabledNot, ingressRateLimitMaxRateInBitps, ingressRateLimitMaxRateInBitpsGt, ingressRateLimitMaxRateInBitpsGte, ingressRateLimitMaxRateInBitpsIn, ingressRateLimitMaxRateInBitpsLt, ingressRateLimitMaxRateInBitpsLte, ingressRateLimitMaxRateInBitpsNot, ingressRateLimitMaxRateInBitpsNotIn, interfaceId, interfaceIdContains, interfaceIdEndsWith, interfaceIdGt, interfaceIdGte, interfaceIdIn, interfaceIdLt, interfaceIdLte, interfaceIdNot, interfaceIdNotContains, interfaceIdNotEndsWith, interfaceIdNotIn, interfaceIdNotStartsWith, interfaceIdStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, mirror, mirrorNot, model, modelIn, modelNot, modelNotIn, nic, NOT, OR, order, orderGt, orderGte, orderIn, orderLt, orderLte, orderNot, orderNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vlan, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3586,6 +4658,24 @@ public class VmNicWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmNicWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    egressRateLimitBurstInBit: ").append(toIndentedString(egressRateLimitBurstInBit)).append("\n");
+    sb.append("    egressRateLimitBurstInBitGt: ").append(toIndentedString(egressRateLimitBurstInBitGt)).append("\n");
+    sb.append("    egressRateLimitBurstInBitGte: ").append(toIndentedString(egressRateLimitBurstInBitGte)).append("\n");
+    sb.append("    egressRateLimitBurstInBitIn: ").append(toIndentedString(egressRateLimitBurstInBitIn)).append("\n");
+    sb.append("    egressRateLimitBurstInBitLt: ").append(toIndentedString(egressRateLimitBurstInBitLt)).append("\n");
+    sb.append("    egressRateLimitBurstInBitLte: ").append(toIndentedString(egressRateLimitBurstInBitLte)).append("\n");
+    sb.append("    egressRateLimitBurstInBitNot: ").append(toIndentedString(egressRateLimitBurstInBitNot)).append("\n");
+    sb.append("    egressRateLimitBurstInBitNotIn: ").append(toIndentedString(egressRateLimitBurstInBitNotIn)).append("\n");
+    sb.append("    egressRateLimitEnabled: ").append(toIndentedString(egressRateLimitEnabled)).append("\n");
+    sb.append("    egressRateLimitEnabledNot: ").append(toIndentedString(egressRateLimitEnabledNot)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitps: ").append(toIndentedString(egressRateLimitMaxRateInBitps)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsGt: ").append(toIndentedString(egressRateLimitMaxRateInBitpsGt)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsGte: ").append(toIndentedString(egressRateLimitMaxRateInBitpsGte)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsIn: ").append(toIndentedString(egressRateLimitMaxRateInBitpsIn)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsLt: ").append(toIndentedString(egressRateLimitMaxRateInBitpsLt)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsLte: ").append(toIndentedString(egressRateLimitMaxRateInBitpsLte)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsNot: ").append(toIndentedString(egressRateLimitMaxRateInBitpsNot)).append("\n");
+    sb.append("    egressRateLimitMaxRateInBitpsNotIn: ").append(toIndentedString(egressRateLimitMaxRateInBitpsNotIn)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    enabledNot: ").append(toIndentedString(enabledNot)).append("\n");
     sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
@@ -3616,6 +4706,24 @@ public class VmNicWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+    sb.append("    ingressRateLimitBurstInBit: ").append(toIndentedString(ingressRateLimitBurstInBit)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitGt: ").append(toIndentedString(ingressRateLimitBurstInBitGt)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitGte: ").append(toIndentedString(ingressRateLimitBurstInBitGte)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitIn: ").append(toIndentedString(ingressRateLimitBurstInBitIn)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitLt: ").append(toIndentedString(ingressRateLimitBurstInBitLt)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitLte: ").append(toIndentedString(ingressRateLimitBurstInBitLte)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitNot: ").append(toIndentedString(ingressRateLimitBurstInBitNot)).append("\n");
+    sb.append("    ingressRateLimitBurstInBitNotIn: ").append(toIndentedString(ingressRateLimitBurstInBitNotIn)).append("\n");
+    sb.append("    ingressRateLimitEnabled: ").append(toIndentedString(ingressRateLimitEnabled)).append("\n");
+    sb.append("    ingressRateLimitEnabledNot: ").append(toIndentedString(ingressRateLimitEnabledNot)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitps: ").append(toIndentedString(ingressRateLimitMaxRateInBitps)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsGt: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsGt)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsGte: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsGte)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsIn: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsIn)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsLt: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsLt)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsLte: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsLte)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsNot: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsNot)).append("\n");
+    sb.append("    ingressRateLimitMaxRateInBitpsNotIn: ").append(toIndentedString(ingressRateLimitMaxRateInBitpsNotIn)).append("\n");
     sb.append("    interfaceId: ").append(toIndentedString(interfaceId)).append("\n");
     sb.append("    interfaceIdContains: ").append(toIndentedString(interfaceIdContains)).append("\n");
     sb.append("    interfaceIdEndsWith: ").append(toIndentedString(interfaceIdEndsWith)).append("\n");

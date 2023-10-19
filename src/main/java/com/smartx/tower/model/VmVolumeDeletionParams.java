@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.VmVolumeDeletionParamsEffect;
 import com.smartx.tower.model.VmVolumeWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -17,12 +18,39 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmVolumeDeletionParams {
+  public static final String SERIALIZED_NAME_EFFECT = "effect";
+  @SerializedName(SERIALIZED_NAME_EFFECT)
+  private VmVolumeDeletionParamsEffect effect;
+
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)
   private VmVolumeWhereInput where;
 
   public VmVolumeDeletionParams() { 
   }
+
+  public VmVolumeDeletionParams effect(VmVolumeDeletionParamsEffect effect) {
+    
+    this.effect = effect;
+    return this;
+  }
+
+   /**
+   * Get effect
+   * @return effect
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeDeletionParamsEffect getEffect() {
+    return effect;
+  }
+
+
+  public void setEffect(VmVolumeDeletionParamsEffect effect) {
+    this.effect = effect;
+  }
+
 
   public VmVolumeDeletionParams where(VmVolumeWhereInput where) {
     
@@ -56,18 +84,20 @@ public class VmVolumeDeletionParams {
       return false;
     }
     VmVolumeDeletionParams vmVolumeDeletionParams = (VmVolumeDeletionParams) o;
-    return Objects.equals(this.where, vmVolumeDeletionParams.where);
+    return Objects.equals(this.effect, vmVolumeDeletionParams.effect) &&
+        Objects.equals(this.where, vmVolumeDeletionParams.where);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(where);
+    return Objects.hash(effect, where);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmVolumeDeletionParams {\n");
+    sb.append("    effect: ").append(toIndentedString(effect)).append("\n");
     sb.append("    where: ").append(toIndentedString(where)).append("\n");
     sb.append("}");
     return sb.toString();

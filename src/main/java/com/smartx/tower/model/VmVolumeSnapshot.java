@@ -9,11 +9,15 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
+import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedVmVolume;
+import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import com.smartx.tower.model.VmVolumeSnapshotType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
@@ -33,6 +37,10 @@ public class VmVolumeSnapshot {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+  public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
+  @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
+  private VmVolumeElfStoragePolicyType elfStoragePolicy;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -40,6 +48,10 @@ public class VmVolumeSnapshot {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_LABELS = "labels";
+  @SerializedName(SERIALIZED_NAME_LABELS)
+  private List<NestedLabel> labels = null;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -72,6 +84,14 @@ public class VmVolumeSnapshot {
   public static final String SERIALIZED_NAME_VM_VOLUME = "vm_volume";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME)
   private NestedVmVolume vmVolume;
+
+  public static final String SERIALIZED_NAME_VOLUME_SHARING = "volume_sharing";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SHARING)
+  private Boolean volumeSharing;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE = "volume_size";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE)
+  private Double volumeSize;
 
   public static final String SERIALIZED_NAME_ZBS_SNAPSHOT_UUID = "zbs_snapshot_uuid";
   @SerializedName(SERIALIZED_NAME_ZBS_SNAPSHOT_UUID)
@@ -149,6 +169,29 @@ public class VmVolumeSnapshot {
   }
 
 
+  public VmVolumeSnapshot elfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
+    
+    this.elfStoragePolicy = elfStoragePolicy;
+    return this;
+  }
+
+   /**
+   * Get elfStoragePolicy
+   * @return elfStoragePolicy
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public VmVolumeElfStoragePolicyType getElfStoragePolicy() {
+    return elfStoragePolicy;
+  }
+
+
+  public void setElfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
+    this.elfStoragePolicy = elfStoragePolicy;
+  }
+
+
   public VmVolumeSnapshot entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     
     this.entityAsyncStatus = entityAsyncStatus;
@@ -192,6 +235,37 @@ public class VmVolumeSnapshot {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+  public VmVolumeSnapshot labels(List<NestedLabel> labels) {
+    
+    this.labels = labels;
+    return this;
+  }
+
+  public VmVolumeSnapshot addLabelsItem(NestedLabel labelsItem) {
+    if (this.labels == null) {
+      this.labels = new ArrayList<NestedLabel>();
+    }
+    this.labels.add(labelsItem);
+    return this;
+  }
+
+   /**
+   * Get labels
+   * @return labels
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedLabel> getLabels() {
+    return labels;
+  }
+
+
+  public void setLabels(List<NestedLabel> labels) {
+    this.labels = labels;
   }
 
 
@@ -379,6 +453,52 @@ public class VmVolumeSnapshot {
   }
 
 
+  public VmVolumeSnapshot volumeSharing(Boolean volumeSharing) {
+    
+    this.volumeSharing = volumeSharing;
+    return this;
+  }
+
+   /**
+   * Get volumeSharing
+   * @return volumeSharing
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getVolumeSharing() {
+    return volumeSharing;
+  }
+
+
+  public void setVolumeSharing(Boolean volumeSharing) {
+    this.volumeSharing = volumeSharing;
+  }
+
+
+  public VmVolumeSnapshot volumeSize(Double volumeSize) {
+    
+    this.volumeSize = volumeSize;
+    return this;
+  }
+
+   /**
+   * Get volumeSize
+   * @return volumeSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSize() {
+    return volumeSize;
+  }
+
+
+  public void setVolumeSize(Double volumeSize) {
+    this.volumeSize = volumeSize;
+  }
+
+
   public VmVolumeSnapshot zbsSnapshotUuid(String zbsSnapshotUuid) {
     
     this.zbsSnapshotUuid = zbsSnapshotUuid;
@@ -414,8 +534,10 @@ public class VmVolumeSnapshot {
     return Objects.equals(this.cluster, vmVolumeSnapshot.cluster) &&
         Objects.equals(this.createAt, vmVolumeSnapshot.createAt) &&
         Objects.equals(this.description, vmVolumeSnapshot.description) &&
+        Objects.equals(this.elfStoragePolicy, vmVolumeSnapshot.elfStoragePolicy) &&
         Objects.equals(this.entityAsyncStatus, vmVolumeSnapshot.entityAsyncStatus) &&
         Objects.equals(this.id, vmVolumeSnapshot.id) &&
+        Objects.equals(this.labels, vmVolumeSnapshot.labels) &&
         Objects.equals(this.localCreatedAt, vmVolumeSnapshot.localCreatedAt) &&
         Objects.equals(this.localId, vmVolumeSnapshot.localId) &&
         Objects.equals(this.name, vmVolumeSnapshot.name) &&
@@ -424,6 +546,8 @@ public class VmVolumeSnapshot {
         Objects.equals(this.type, vmVolumeSnapshot.type) &&
         Objects.equals(this.uniqueSize, vmVolumeSnapshot.uniqueSize) &&
         Objects.equals(this.vmVolume, vmVolumeSnapshot.vmVolume) &&
+        Objects.equals(this.volumeSharing, vmVolumeSnapshot.volumeSharing) &&
+        Objects.equals(this.volumeSize, vmVolumeSnapshot.volumeSize) &&
         Objects.equals(this.zbsSnapshotUuid, vmVolumeSnapshot.zbsSnapshotUuid);
   }
 
@@ -433,7 +557,7 @@ public class VmVolumeSnapshot {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, createAt, description, entityAsyncStatus, id, localCreatedAt, localId, name, sharedSize, size, type, uniqueSize, vmVolume, zbsSnapshotUuid);
+    return Objects.hash(cluster, createAt, description, elfStoragePolicy, entityAsyncStatus, id, labels, localCreatedAt, localId, name, sharedSize, size, type, uniqueSize, vmVolume, volumeSharing, volumeSize, zbsSnapshotUuid);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -450,8 +574,10 @@ public class VmVolumeSnapshot {
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    createAt: ").append(toIndentedString(createAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
     sb.append("    localCreatedAt: ").append(toIndentedString(localCreatedAt)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -460,6 +586,8 @@ public class VmVolumeSnapshot {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    vmVolume: ").append(toIndentedString(vmVolume)).append("\n");
+    sb.append("    volumeSharing: ").append(toIndentedString(volumeSharing)).append("\n");
+    sb.append("    volumeSize: ").append(toIndentedString(volumeSize)).append("\n");
     sb.append("    zbsSnapshotUuid: ").append(toIndentedString(zbsSnapshotUuid)).append("\n");
     sb.append("}");
     return sb.toString();
