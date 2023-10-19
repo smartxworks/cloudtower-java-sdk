@@ -16,6 +16,18 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(VmNicOrderByInput.Adapter.class)
 public enum VmNicOrderByInput {
   
+  EGRESS_RATE_LIMIT_BURST_IN_BIT_ASC("egress_rate_limit_burst_in_bit_ASC"),
+  
+  EGRESS_RATE_LIMIT_BURST_IN_BIT_DESC("egress_rate_limit_burst_in_bit_DESC"),
+  
+  EGRESS_RATE_LIMIT_ENABLED_ASC("egress_rate_limit_enabled_ASC"),
+  
+  EGRESS_RATE_LIMIT_ENABLED_DESC("egress_rate_limit_enabled_DESC"),
+  
+  EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_ASC("egress_rate_limit_max_rate_in_bitps_ASC"),
+  
+  EGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_DESC("egress_rate_limit_max_rate_in_bitps_DESC"),
+  
   ENABLED_ASC("enabled_ASC"),
   
   ENABLED_DESC("enabled_DESC"),
@@ -27,6 +39,18 @@ public enum VmNicOrderByInput {
   ID_ASC("id_ASC"),
   
   ID_DESC("id_DESC"),
+  
+  INGRESS_RATE_LIMIT_BURST_IN_BIT_ASC("ingress_rate_limit_burst_in_bit_ASC"),
+  
+  INGRESS_RATE_LIMIT_BURST_IN_BIT_DESC("ingress_rate_limit_burst_in_bit_DESC"),
+  
+  INGRESS_RATE_LIMIT_ENABLED_ASC("ingress_rate_limit_enabled_ASC"),
+  
+  INGRESS_RATE_LIMIT_ENABLED_DESC("ingress_rate_limit_enabled_DESC"),
+  
+  INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_ASC("ingress_rate_limit_max_rate_in_bitps_ASC"),
+  
+  INGRESS_RATE_LIMIT_MAX_RATE_IN_BITPS_DESC("ingress_rate_limit_max_rate_in_bitps_DESC"),
   
   INTERFACE_ID_ASC("interface_id_ASC"),
   

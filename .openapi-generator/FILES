@@ -53,6 +53,7 @@ src/main/java/com/smartx/tower/api/EverouteLicenseApi.java
 src/main/java/com/smartx/tower/api/EveroutePackageApi.java
 src/main/java/com/smartx/tower/api/GlobalAlertRuleApi.java
 src/main/java/com/smartx/tower/api/GlobalSettingsApi.java
+src/main/java/com/smartx/tower/api/GpuDeviceApi.java
 src/main/java/com/smartx/tower/api/GraphApi.java
 src/main/java/com/smartx/tower/api/HostApi.java
 src/main/java/com/smartx/tower/api/IpmiApi.java
@@ -388,6 +389,7 @@ src/main/java/com/smartx/tower/model/EntityFilterUpdationParamsData.java
 src/main/java/com/smartx/tower/model/EntityFilterWhereInput.java
 src/main/java/com/smartx/tower/model/EntityType.java
 src/main/java/com/smartx/tower/model/ErrorBody.java
+src/main/java/com/smartx/tower/model/ErrorCode.java
 src/main/java/com/smartx/tower/model/EverouteCluster.java
 src/main/java/com/smartx/tower/model/EverouteClusterConnection.java
 src/main/java/com/smartx/tower/model/EverouteClusterOrderByInput.java
@@ -472,6 +474,8 @@ src/main/java/com/smartx/tower/model/GetGlobalAlertRulesConnectionRequestBody.ja
 src/main/java/com/smartx/tower/model/GetGlobalAlertRulesRequestBody.java
 src/main/java/com/smartx/tower/model/GetGlobalSettingsesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetGlobalSettingsesRequestBody.java
+src/main/java/com/smartx/tower/model/GetGpuDevicesConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetGpuDevicesRequestBody.java
 src/main/java/com/smartx/tower/model/GetGraphsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetGraphsRequestBody.java
 src/main/java/com/smartx/tower/model/GetHostMetricInput.java
@@ -617,6 +621,18 @@ src/main/java/com/smartx/tower/model/GlobalSettings.java
 src/main/java/com/smartx/tower/model/GlobalSettingsConnection.java
 src/main/java/com/smartx/tower/model/GlobalSettingsOrderByInput.java
 src/main/java/com/smartx/tower/model/GlobalSettingsWhereInput.java
+src/main/java/com/smartx/tower/model/GpuDevice.java
+src/main/java/com/smartx/tower/model/GpuDeviceConnection.java
+src/main/java/com/smartx/tower/model/GpuDeviceDescriptionUpdationParams.java
+src/main/java/com/smartx/tower/model/GpuDeviceDescriptionUpdationParamsData.java
+src/main/java/com/smartx/tower/model/GpuDeviceOrderByInput.java
+src/main/java/com/smartx/tower/model/GpuDeviceSriovSwitchParams.java
+src/main/java/com/smartx/tower/model/GpuDeviceSriovSwitchParamsData.java
+src/main/java/com/smartx/tower/model/GpuDeviceStatus.java
+src/main/java/com/smartx/tower/model/GpuDeviceUsage.java
+src/main/java/com/smartx/tower/model/GpuDeviceUsageUpdationParams.java
+src/main/java/com/smartx/tower/model/GpuDeviceUsageUpdationParamsData.java
+src/main/java/com/smartx/tower/model/GpuDeviceWhereInput.java
 src/main/java/com/smartx/tower/model/Graph.java
 src/main/java/com/smartx/tower/model/GraphConnection.java
 src/main/java/com/smartx/tower/model/GraphCreationParams.java
@@ -645,6 +661,7 @@ src/main/java/com/smartx/tower/model/IPSecurityPolicy.java
 src/main/java/com/smartx/tower/model/ImportVmVolumeParams.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParams.java
 src/main/java/com/smartx/tower/model/InstallVmtoolsParamsData.java
+src/main/java/com/smartx/tower/model/IommuStatus.java
 src/main/java/com/smartx/tower/model/Ipmi.java
 src/main/java/com/smartx/tower/model/IpmiOrderByInput.java
 src/main/java/com/smartx/tower/model/IpmiWhereInput.java
@@ -714,6 +731,7 @@ src/main/java/com/smartx/tower/model/LogServiceConfig.java
 src/main/java/com/smartx/tower/model/LogServiceConfigsInput.java
 src/main/java/com/smartx/tower/model/LoginInput.java
 src/main/java/com/smartx/tower/model/LoginResponse.java
+src/main/java/com/smartx/tower/model/MaintenanceModeEnum.java
 src/main/java/com/smartx/tower/model/ManagementVlanUpdationParams.java
 src/main/java/com/smartx/tower/model/ManagementVlanUpdationParamsData.java
 src/main/java/com/smartx/tower/model/MetaLeader.java
@@ -768,6 +786,7 @@ src/main/java/com/smartx/tower/model/NestedAggregateEverouteLicense.java
 src/main/java/com/smartx/tower/model/NestedAggregateEveroutePackage.java
 src/main/java/com/smartx/tower/model/NestedAggregateGlobalAlertRule.java
 src/main/java/com/smartx/tower/model/NestedAggregateGlobalSettings.java
+src/main/java/com/smartx/tower/model/NestedAggregateGpuDevice.java
 src/main/java/com/smartx/tower/model/NestedAggregateGraph.java
 src/main/java/com/smartx/tower/model/NestedAggregateHost.java
 src/main/java/com/smartx/tower/model/NestedAggregateIscsiConnection.java
@@ -868,6 +887,8 @@ src/main/java/com/smartx/tower/model/NestedFrozenDisks.java
 src/main/java/com/smartx/tower/model/NestedFrozenNic.java
 src/main/java/com/smartx/tower/model/NestedFrozenVlan.java
 src/main/java/com/smartx/tower/model/NestedGlobalAlertRule.java
+src/main/java/com/smartx/tower/model/NestedGpuDevice.java
+src/main/java/com/smartx/tower/model/NestedGpuDriverInfo.java
 src/main/java/com/smartx/tower/model/NestedGraph.java
 src/main/java/com/smartx/tower/model/NestedHost.java
 src/main/java/com/smartx/tower/model/NestedInitiatorChap.java
@@ -879,6 +900,7 @@ src/main/java/com/smartx/tower/model/NestedIsolationPolicy.java
 src/main/java/com/smartx/tower/model/NestedLabel.java
 src/main/java/com/smartx/tower/model/NestedLabelGroup.java
 src/main/java/com/smartx/tower/model/NestedLicense.java
+src/main/java/com/smartx/tower/model/NestedMaintenanceHostState.java
 src/main/java/com/smartx/tower/model/NestedMetroAvailabilityChecklist.java
 src/main/java/com/smartx/tower/model/NestedMetroCheckItem.java
 src/main/java/com/smartx/tower/model/NestedMetroCheckResult.java
@@ -921,6 +943,7 @@ src/main/java/com/smartx/tower/model/NestedUser.java
 src/main/java/com/smartx/tower/model/NestedUserRoleNext.java
 src/main/java/com/smartx/tower/model/NestedVcenterAccount.java
 src/main/java/com/smartx/tower/model/NestedVds.java
+src/main/java/com/smartx/tower/model/NestedVgpuType.java
 src/main/java/com/smartx/tower/model/NestedView.java
 src/main/java/com/smartx/tower/model/NestedVlan.java
 src/main/java/com/smartx/tower/model/NestedVm.java
@@ -933,6 +956,7 @@ src/main/java/com/smartx/tower/model/NestedVmRecycleBin.java
 src/main/java/com/smartx/tower/model/NestedVmSnapshot.java
 src/main/java/com/smartx/tower/model/NestedVmTemplate.java
 src/main/java/com/smartx/tower/model/NestedVmVolume.java
+src/main/java/com/smartx/tower/model/NestedVmVolumeSnapshot.java
 src/main/java/com/smartx/tower/model/NestedVsphereEsxiAccount.java
 src/main/java/com/smartx/tower/model/NestedWitness.java
 src/main/java/com/smartx/tower/model/NestedZone.java
@@ -959,6 +983,7 @@ src/main/java/com/smartx/tower/model/NicDriverState.java
 src/main/java/com/smartx/tower/model/NicOrderByInput.java
 src/main/java/com/smartx/tower/model/NicUpdationParams.java
 src/main/java/com/smartx/tower/model/NicUpdationParamsData.java
+src/main/java/com/smartx/tower/model/NicUserUsage.java
 src/main/java/com/smartx/tower/model/NicWhereInput.java
 src/main/java/com/smartx/tower/model/NodeTopUpdationParam.java
 src/main/java/com/smartx/tower/model/NodeTopo.java
@@ -1239,6 +1264,7 @@ src/main/java/com/smartx/tower/model/VmAddDiskParamsData.java
 src/main/java/com/smartx/tower/model/VmAddDiskParamsDataVmDisks.java
 src/main/java/com/smartx/tower/model/VmAddFolderParams.java
 src/main/java/com/smartx/tower/model/VmAddFolderParamsData.java
+src/main/java/com/smartx/tower/model/VmAddGpuDeviceParams.java
 src/main/java/com/smartx/tower/model/VmAddNicParams.java
 src/main/java/com/smartx/tower/model/VmAddNicParamsData.java
 src/main/java/com/smartx/tower/model/VmCdRomParams.java
@@ -1284,6 +1310,7 @@ src/main/java/com/smartx/tower/model/VmFolderOrderByInput.java
 src/main/java/com/smartx/tower/model/VmFolderUpdationParams.java
 src/main/java/com/smartx/tower/model/VmFolderUpdationParamsData.java
 src/main/java/com/smartx/tower/model/VmFolderWhereInput.java
+src/main/java/com/smartx/tower/model/VmGpuOperationParams.java
 src/main/java/com/smartx/tower/model/VmGuestsOperationSystem.java
 src/main/java/com/smartx/tower/model/VmImportNicParams.java
 src/main/java/com/smartx/tower/model/VmImportParams.java
@@ -1299,6 +1326,8 @@ src/main/java/com/smartx/tower/model/VmNicQosOption.java
 src/main/java/com/smartx/tower/model/VmNicQosTraffic.java
 src/main/java/com/smartx/tower/model/VmNicWhereInput.java
 src/main/java/com/smartx/tower/model/VmOperateParams.java
+src/main/java/com/smartx/tower/model/VmOperatePciNicParams.java
+src/main/java/com/smartx/tower/model/VmOperatePciNicParamsData.java
 src/main/java/com/smartx/tower/model/VmOrderByInput.java
 src/main/java/com/smartx/tower/model/VmPlacementGroup.java
 src/main/java/com/smartx/tower/model/VmPlacementGroupConnection.java
@@ -1313,6 +1342,9 @@ src/main/java/com/smartx/tower/model/VmRemoveCdRomParams.java
 src/main/java/com/smartx/tower/model/VmRemoveCdRomParamsData.java
 src/main/java/com/smartx/tower/model/VmRemoveDiskParams.java
 src/main/java/com/smartx/tower/model/VmRemoveDiskParamsData.java
+src/main/java/com/smartx/tower/model/VmRemoveGpuDeviceParams.java
+src/main/java/com/smartx/tower/model/VmRemoveNicByWhereParams.java
+src/main/java/com/smartx/tower/model/VmRemoveNicByWhereParamsEffect.java
 src/main/java/com/smartx/tower/model/VmRemoveNicParams.java
 src/main/java/com/smartx/tower/model/VmRemoveNicParamsData.java
 src/main/java/com/smartx/tower/model/VmResetGuestOsPasswordParams.java
@@ -1371,6 +1403,7 @@ src/main/java/com/smartx/tower/model/VmVolume.java
 src/main/java/com/smartx/tower/model/VmVolumeConnection.java
 src/main/java/com/smartx/tower/model/VmVolumeCreationParams.java
 src/main/java/com/smartx/tower/model/VmVolumeDeletionParams.java
+src/main/java/com/smartx/tower/model/VmVolumeDeletionParamsEffect.java
 src/main/java/com/smartx/tower/model/VmVolumeElfStoragePolicyType.java
 src/main/java/com/smartx/tower/model/VmVolumeExportFileType.java
 src/main/java/com/smartx/tower/model/VmVolumeOrderByInput.java
@@ -1453,6 +1486,7 @@ src/main/java/com/smartx/tower/model/WithTaskElfImage.java
 src/main/java/com/smartx/tower/model/WithTaskEntityFilter.java
 src/main/java/com/smartx/tower/model/WithTaskGlobalAlertRule.java
 src/main/java/com/smartx/tower/model/WithTaskGlobalSettings.java
+src/main/java/com/smartx/tower/model/WithTaskGpuDevice.java
 src/main/java/com/smartx/tower/model/WithTaskGraph.java
 src/main/java/com/smartx/tower/model/WithTaskHost.java
 src/main/java/com/smartx/tower/model/WithTaskIscsiLun.java

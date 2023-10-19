@@ -9,12 +9,15 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.BPSUnit;
 import com.smartx.tower.model.ByteUnit;
+import com.smartx.tower.model.NicWhereInput;
 import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
 import com.smartx.tower.model.VmFirmware;
+import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,6 +30,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmCreationParams {
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<VmGpuOperationParams> gpuDevices = null;
+
   public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
   @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
   private VmDiskIoRestrictType maxBandwidthPolicy;
@@ -66,6 +73,14 @@ public class VmCreationParams {
   public static final String SERIALIZED_NAME_HA = "ha";
   @SerializedName(SERIALIZED_NAME_HA)
   private Boolean ha;
+
+  public static final String SERIALIZED_NAME_PCI_NICS = "pci_nics";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS)
+  private NicWhereInput pciNics;
+
+  public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
+  @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
+  private VmPlacementGroupWhereInput vmPlacementGroup;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
@@ -117,6 +132,37 @@ public class VmCreationParams {
 
   public VmCreationParams() { 
   }
+
+  public VmCreationParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public VmCreationParams addGpuDevicesItem(VmGpuOperationParams gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<VmGpuOperationParams>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmGpuOperationParams> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    this.gpuDevices = gpuDevices;
+  }
+
 
   public VmCreationParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
     
@@ -345,6 +391,52 @@ public class VmCreationParams {
 
   public void setHa(Boolean ha) {
     this.ha = ha;
+  }
+
+
+  public VmCreationParams pciNics(NicWhereInput pciNics) {
+    
+    this.pciNics = pciNics;
+    return this;
+  }
+
+   /**
+   * Get pciNics
+   * @return pciNics
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicWhereInput getPciNics() {
+    return pciNics;
+  }
+
+
+  public void setPciNics(NicWhereInput pciNics) {
+    this.pciNics = pciNics;
+  }
+
+
+  public VmCreationParams vmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    
+    this.vmPlacementGroup = vmPlacementGroup;
+    return this;
+  }
+
+   /**
+   * Get vmPlacementGroup
+   * @return vmPlacementGroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmPlacementGroupWhereInput getVmPlacementGroup() {
+    return vmPlacementGroup;
+  }
+
+
+  public void setVmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    this.vmPlacementGroup = vmPlacementGroup;
   }
 
 
@@ -638,7 +730,8 @@ public class VmCreationParams {
       return false;
     }
     VmCreationParams vmCreationParams = (VmCreationParams) o;
-    return Objects.equals(this.maxBandwidthPolicy, vmCreationParams.maxBandwidthPolicy) &&
+    return Objects.equals(this.gpuDevices, vmCreationParams.gpuDevices) &&
+        Objects.equals(this.maxBandwidthPolicy, vmCreationParams.maxBandwidthPolicy) &&
         Objects.equals(this.maxBandwidthUnit, vmCreationParams.maxBandwidthUnit) &&
         Objects.equals(this.maxBandwidth, vmCreationParams.maxBandwidth) &&
         Objects.equals(this.maxIopsPolicy, vmCreationParams.maxIopsPolicy) &&
@@ -648,6 +741,8 @@ public class VmCreationParams {
         Objects.equals(this.status, vmCreationParams.status) &&
         Objects.equals(this.firmware, vmCreationParams.firmware) &&
         Objects.equals(this.ha, vmCreationParams.ha) &&
+        Objects.equals(this.pciNics, vmCreationParams.pciNics) &&
+        Objects.equals(this.vmPlacementGroup, vmCreationParams.vmPlacementGroup) &&
         Objects.equals(this.vmNics, vmCreationParams.vmNics) &&
         Objects.equals(this.vmDisks, vmCreationParams.vmDisks) &&
         Objects.equals(this.memoryUnit, vmCreationParams.memoryUnit) &&
@@ -664,13 +759,14 @@ public class VmCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(gpuDevices, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCreationParams {\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
     sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");
     sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
@@ -681,6 +777,8 @@ public class VmCreationParams {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+    sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
+    sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
     sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");

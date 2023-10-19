@@ -15,6 +15,7 @@ import com.smartx.tower.model.NestedContentLibraryVmTemplate;
 import com.smartx.tower.model.NestedDatacenter;
 import com.smartx.tower.model.NestedDisk;
 import com.smartx.tower.model.NestedElfImage;
+import com.smartx.tower.model.NestedGpuDevice;
 import com.smartx.tower.model.NestedHost;
 import com.smartx.tower.model.NestedIscsiLun;
 import com.smartx.tower.model.NestedIscsiLunSnapshot;
@@ -34,6 +35,7 @@ import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.NestedVmSnapshot;
 import com.smartx.tower.model.NestedVmTemplate;
 import com.smartx.tower.model.NestedVmVolume;
+import com.smartx.tower.model.NestedVmVolumeSnapshot;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -113,6 +115,14 @@ public class Label {
   public static final String SERIALIZED_NAME_ELF_IMAGES = "elf_images";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES)
   private List<NestedElfImage> elfImages = null;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM = "gpu_device_num";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM)
+  private Integer gpuDeviceNum;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<NestedGpuDevice> gpuDevices = null;
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
@@ -277,6 +287,14 @@ public class Label {
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM = "vm_volume_num";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM)
   private Integer vmVolumeNum;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM = "vm_volume_snapshot_num";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM)
+  private Integer vmVolumeSnapshotNum;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS = "vm_volume_snapshots";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS)
+  private List<NestedVmVolumeSnapshot> vmVolumeSnapshots = null;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES = "vm_volumes";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES)
@@ -741,6 +759,60 @@ public class Label {
 
   public void setElfImages(List<NestedElfImage> elfImages) {
     this.elfImages = elfImages;
+  }
+
+
+  public Label gpuDeviceNum(Integer gpuDeviceNum) {
+    
+    this.gpuDeviceNum = gpuDeviceNum;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNum
+   * @return gpuDeviceNum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNum() {
+    return gpuDeviceNum;
+  }
+
+
+  public void setGpuDeviceNum(Integer gpuDeviceNum) {
+    this.gpuDeviceNum = gpuDeviceNum;
+  }
+
+
+  public Label gpuDevices(List<NestedGpuDevice> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public Label addGpuDevicesItem(NestedGpuDevice gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<NestedGpuDevice>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedGpuDevice> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<NestedGpuDevice> gpuDevices) {
+    this.gpuDevices = gpuDevices;
   }
 
 
@@ -1823,6 +1895,60 @@ public class Label {
   }
 
 
+  public Label vmVolumeSnapshotNum(Integer vmVolumeSnapshotNum) {
+    
+    this.vmVolumeSnapshotNum = vmVolumeSnapshotNum;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNum
+   * @return vmVolumeSnapshotNum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNum() {
+    return vmVolumeSnapshotNum;
+  }
+
+
+  public void setVmVolumeSnapshotNum(Integer vmVolumeSnapshotNum) {
+    this.vmVolumeSnapshotNum = vmVolumeSnapshotNum;
+  }
+
+
+  public Label vmVolumeSnapshots(List<NestedVmVolumeSnapshot> vmVolumeSnapshots) {
+    
+    this.vmVolumeSnapshots = vmVolumeSnapshots;
+    return this;
+  }
+
+  public Label addVmVolumeSnapshotsItem(NestedVmVolumeSnapshot vmVolumeSnapshotsItem) {
+    if (this.vmVolumeSnapshots == null) {
+      this.vmVolumeSnapshots = new ArrayList<NestedVmVolumeSnapshot>();
+    }
+    this.vmVolumeSnapshots.add(vmVolumeSnapshotsItem);
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshots
+   * @return vmVolumeSnapshots
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedVmVolumeSnapshot> getVmVolumeSnapshots() {
+    return vmVolumeSnapshots;
+  }
+
+
+  public void setVmVolumeSnapshots(List<NestedVmVolumeSnapshot> vmVolumeSnapshots) {
+    this.vmVolumeSnapshots = vmVolumeSnapshots;
+  }
+
+
   public Label vmVolumes(List<NestedVmVolume> vmVolumes) {
     
     this.vmVolumes = vmVolumes;
@@ -1911,6 +2037,8 @@ public class Label {
         Objects.equals(this.disks, label.disks) &&
         Objects.equals(this.elfImageNum, label.elfImageNum) &&
         Objects.equals(this.elfImages, label.elfImages) &&
+        Objects.equals(this.gpuDeviceNum, label.gpuDeviceNum) &&
+        Objects.equals(this.gpuDevices, label.gpuDevices) &&
         Objects.equals(this.hostNum, label.hostNum) &&
         Objects.equals(this.hosts, label.hosts) &&
         Objects.equals(this.id, label.id) &&
@@ -1952,6 +2080,8 @@ public class Label {
         Objects.equals(this.vmTemplates, label.vmTemplates) &&
         Objects.equals(this.vmVlanNum, label.vmVlanNum) &&
         Objects.equals(this.vmVolumeNum, label.vmVolumeNum) &&
+        Objects.equals(this.vmVolumeSnapshotNum, label.vmVolumeSnapshotNum) &&
+        Objects.equals(this.vmVolumeSnapshots, label.vmVolumeSnapshots) &&
         Objects.equals(this.vmVolumes, label.vmVolumes) &&
         Objects.equals(this.vms, label.vms);
   }
@@ -1962,7 +2092,7 @@ public class Label {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clusterNum, clusters, consistencyGroupNum, consistencyGroupSnapshotNum, consistencyGroupSnapshots, consistencyGroups, contentLibraryImageNum, contentLibraryImages, contentLibraryVmTemplateNum, contentLibraryVmTemplates, createdAt, datacenterNum, datacenters, diskNum, disks, elfImageNum, elfImages, hostNum, hosts, id, iscsiLunNum, iscsiLunSnapshotNum, iscsiLunSnapshots, iscsiLuns, iscsiTargetNum, iscsiTargets, isolationPolicies, isolationPolicyNum, key, namespaceGroupNum, namespaceGroups, nfsExportNum, nfsExports, nfsInodeNum, nfsInodes, nicNum, nics, nvmfNamespaceNum, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshots, nvmfNamespaces, nvmfSubsystemNum, nvmfSubsystems, securityPolicies, securityPolicyNum, systemVlanNum, totalNum, value, vdsNum, vdses, vlans, vmNum, vmSnapshotNum, vmSnapshots, vmTemplateNum, vmTemplates, vmVlanNum, vmVolumeNum, vmVolumes, vms);
+    return Objects.hash(clusterNum, clusters, consistencyGroupNum, consistencyGroupSnapshotNum, consistencyGroupSnapshots, consistencyGroups, contentLibraryImageNum, contentLibraryImages, contentLibraryVmTemplateNum, contentLibraryVmTemplates, createdAt, datacenterNum, datacenters, diskNum, disks, elfImageNum, elfImages, gpuDeviceNum, gpuDevices, hostNum, hosts, id, iscsiLunNum, iscsiLunSnapshotNum, iscsiLunSnapshots, iscsiLuns, iscsiTargetNum, iscsiTargets, isolationPolicies, isolationPolicyNum, key, namespaceGroupNum, namespaceGroups, nfsExportNum, nfsExports, nfsInodeNum, nfsInodes, nicNum, nics, nvmfNamespaceNum, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshots, nvmfNamespaces, nvmfSubsystemNum, nvmfSubsystems, securityPolicies, securityPolicyNum, systemVlanNum, totalNum, value, vdsNum, vdses, vlans, vmNum, vmSnapshotNum, vmSnapshots, vmTemplateNum, vmTemplates, vmVlanNum, vmVolumeNum, vmVolumeSnapshotNum, vmVolumeSnapshots, vmVolumes, vms);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1993,6 +2123,8 @@ public class Label {
     sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
     sb.append("    elfImageNum: ").append(toIndentedString(elfImageNum)).append("\n");
     sb.append("    elfImages: ").append(toIndentedString(elfImages)).append("\n");
+    sb.append("    gpuDeviceNum: ").append(toIndentedString(gpuDeviceNum)).append("\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    hostNum: ").append(toIndentedString(hostNum)).append("\n");
     sb.append("    hosts: ").append(toIndentedString(hosts)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -2034,6 +2166,8 @@ public class Label {
     sb.append("    vmTemplates: ").append(toIndentedString(vmTemplates)).append("\n");
     sb.append("    vmVlanNum: ").append(toIndentedString(vmVlanNum)).append("\n");
     sb.append("    vmVolumeNum: ").append(toIndentedString(vmVolumeNum)).append("\n");
+    sb.append("    vmVolumeSnapshotNum: ").append(toIndentedString(vmVolumeSnapshotNum)).append("\n");
+    sb.append("    vmVolumeSnapshots: ").append(toIndentedString(vmVolumeSnapshots)).append("\n");
     sb.append("    vmVolumes: ").append(toIndentedString(vmVolumes)).append("\n");
     sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
     sb.append("}");

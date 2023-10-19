@@ -12,6 +12,7 @@ import com.smartx.tower.model.HostWhereInput;
 import com.smartx.tower.model.LabelWhereInput;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.NicDriverState;
+import com.smartx.tower.model.NicUserUsage;
 import com.smartx.tower.model.VdsWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -916,6 +917,22 @@ public class NicWhereInput {
   public static final String SERIALIZED_NAME_USED_VF_NUM_NOT_IN = "used_vf_num_not_in";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM_NOT_IN)
   private List<Integer> usedVfNumNotIn = null;
+
+  public static final String SERIALIZED_NAME_USER_USAGE = "user_usage";
+  @SerializedName(SERIALIZED_NAME_USER_USAGE)
+  private NicUserUsage userUsage;
+
+  public static final String SERIALIZED_NAME_USER_USAGE_IN = "user_usage_in";
+  @SerializedName(SERIALIZED_NAME_USER_USAGE_IN)
+  private List<NicUserUsage> userUsageIn = null;
+
+  public static final String SERIALIZED_NAME_USER_USAGE_NOT = "user_usage_not";
+  @SerializedName(SERIALIZED_NAME_USER_USAGE_NOT)
+  private NicUserUsage userUsageNot;
+
+  public static final String SERIALIZED_NAME_USER_USAGE_NOT_IN = "user_usage_not_in";
+  @SerializedName(SERIALIZED_NAME_USER_USAGE_NOT_IN)
+  private List<NicUserUsage> userUsageNotIn = null;
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
@@ -6381,6 +6398,114 @@ public class NicWhereInput {
   }
 
 
+  public NicWhereInput userUsage(NicUserUsage userUsage) {
+    
+    this.userUsage = userUsage;
+    return this;
+  }
+
+   /**
+   * Get userUsage
+   * @return userUsage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicUserUsage getUserUsage() {
+    return userUsage;
+  }
+
+
+  public void setUserUsage(NicUserUsage userUsage) {
+    this.userUsage = userUsage;
+  }
+
+
+  public NicWhereInput userUsageIn(List<NicUserUsage> userUsageIn) {
+    
+    this.userUsageIn = userUsageIn;
+    return this;
+  }
+
+  public NicWhereInput addUserUsageInItem(NicUserUsage userUsageInItem) {
+    if (this.userUsageIn == null) {
+      this.userUsageIn = new ArrayList<NicUserUsage>();
+    }
+    this.userUsageIn.add(userUsageInItem);
+    return this;
+  }
+
+   /**
+   * Get userUsageIn
+   * @return userUsageIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NicUserUsage> getUserUsageIn() {
+    return userUsageIn;
+  }
+
+
+  public void setUserUsageIn(List<NicUserUsage> userUsageIn) {
+    this.userUsageIn = userUsageIn;
+  }
+
+
+  public NicWhereInput userUsageNot(NicUserUsage userUsageNot) {
+    
+    this.userUsageNot = userUsageNot;
+    return this;
+  }
+
+   /**
+   * Get userUsageNot
+   * @return userUsageNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicUserUsage getUserUsageNot() {
+    return userUsageNot;
+  }
+
+
+  public void setUserUsageNot(NicUserUsage userUsageNot) {
+    this.userUsageNot = userUsageNot;
+  }
+
+
+  public NicWhereInput userUsageNotIn(List<NicUserUsage> userUsageNotIn) {
+    
+    this.userUsageNotIn = userUsageNotIn;
+    return this;
+  }
+
+  public NicWhereInput addUserUsageNotInItem(NicUserUsage userUsageNotInItem) {
+    if (this.userUsageNotIn == null) {
+      this.userUsageNotIn = new ArrayList<NicUserUsage>();
+    }
+    this.userUsageNotIn.add(userUsageNotInItem);
+    return this;
+  }
+
+   /**
+   * Get userUsageNotIn
+   * @return userUsageNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NicUserUsage> getUserUsageNotIn() {
+    return userUsageNotIn;
+  }
+
+
+  public void setUserUsageNotIn(List<NicUserUsage> userUsageNotIn) {
+    this.userUsageNotIn = userUsageNotIn;
+  }
+
+
   public NicWhereInput vds(VdsWhereInput vds) {
     
     this.vds = vds;
@@ -6636,6 +6761,10 @@ public class NicWhereInput {
         Objects.equals(this.usedVfNumLte, nicWhereInput.usedVfNumLte) &&
         Objects.equals(this.usedVfNumNot, nicWhereInput.usedVfNumNot) &&
         Objects.equals(this.usedVfNumNotIn, nicWhereInput.usedVfNumNotIn) &&
+        Objects.equals(this.userUsage, nicWhereInput.userUsage) &&
+        Objects.equals(this.userUsageIn, nicWhereInput.userUsageIn) &&
+        Objects.equals(this.userUsageNot, nicWhereInput.userUsageNot) &&
+        Objects.equals(this.userUsageNotIn, nicWhereInput.userUsageNotIn) &&
         Objects.equals(this.vds, nicWhereInput.vds);
   }
 
@@ -6645,7 +6774,7 @@ public class NicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, driver, driverContains, driverEndsWith, driverGt, driverGte, driverIn, driverLt, driverLte, driverNot, driverNotContains, driverNotEndsWith, driverNotIn, driverNotStartsWith, driverStartsWith, driverState, driverStateIn, driverStateNot, driverStateNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, host, ibdev, ibdevContains, ibdevEndsWith, ibdevGt, ibdevGte, ibdevIn, ibdevLt, ibdevLte, ibdevNot, ibdevNotContains, ibdevNotEndsWith, ibdevNotIn, ibdevNotStartsWith, ibdevStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, isSriov, isSriovNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, maxVfNum, maxVfNumGt, maxVfNumGte, maxVfNumIn, maxVfNumLt, maxVfNumLte, maxVfNumNot, maxVfNumNotIn, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicUuid, nicUuidContains, nicUuidEndsWith, nicUuidGt, nicUuidGte, nicUuidIn, nicUuidLt, nicUuidLte, nicUuidNot, nicUuidNotContains, nicUuidNotEndsWith, nicUuidNotIn, nicUuidNotStartsWith, nicUuidStartsWith, NOT, OR, physical, physicalNot, rdmaEnabled, rdmaEnabledNot, running, runningNot, speed, speedGt, speedGte, speedIn, speedLt, speedLte, speedNot, speedNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, totalVfNum, totalVfNumGt, totalVfNumGte, totalVfNumIn, totalVfNumLt, totalVfNumLte, totalVfNumNot, totalVfNumNotIn, type, typeIn, typeNot, typeNotIn, up, upNot, usedVfNum, usedVfNumGt, usedVfNumGte, usedVfNumIn, usedVfNumLt, usedVfNumLte, usedVfNumNot, usedVfNumNotIn, vds);
+    return Objects.hash(AND, driver, driverContains, driverEndsWith, driverGt, driverGte, driverIn, driverLt, driverLte, driverNot, driverNotContains, driverNotEndsWith, driverNotIn, driverNotStartsWith, driverStartsWith, driverState, driverStateIn, driverStateNot, driverStateNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, host, ibdev, ibdevContains, ibdevEndsWith, ibdevGt, ibdevGte, ibdevIn, ibdevLt, ibdevLte, ibdevNot, ibdevNotContains, ibdevNotEndsWith, ibdevNotIn, ibdevNotStartsWith, ibdevStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, isSriov, isSriovNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, maxVfNum, maxVfNumGt, maxVfNumGte, maxVfNumIn, maxVfNumLt, maxVfNumLte, maxVfNumNot, maxVfNumNotIn, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicUuid, nicUuidContains, nicUuidEndsWith, nicUuidGt, nicUuidGte, nicUuidIn, nicUuidLt, nicUuidLte, nicUuidNot, nicUuidNotContains, nicUuidNotEndsWith, nicUuidNotIn, nicUuidNotStartsWith, nicUuidStartsWith, NOT, OR, physical, physicalNot, rdmaEnabled, rdmaEnabledNot, running, runningNot, speed, speedGt, speedGte, speedIn, speedLt, speedLte, speedNot, speedNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, totalVfNum, totalVfNumGt, totalVfNumGte, totalVfNumIn, totalVfNumLt, totalVfNumLte, totalVfNumNot, totalVfNumNotIn, type, typeIn, typeNot, typeNotIn, up, upNot, usedVfNum, usedVfNumGt, usedVfNumGte, usedVfNumIn, usedVfNumLt, usedVfNumLte, usedVfNumNot, usedVfNumNotIn, userUsage, userUsageIn, userUsageNot, userUsageNotIn, vds);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -6882,6 +7011,10 @@ public class NicWhereInput {
     sb.append("    usedVfNumLte: ").append(toIndentedString(usedVfNumLte)).append("\n");
     sb.append("    usedVfNumNot: ").append(toIndentedString(usedVfNumNot)).append("\n");
     sb.append("    usedVfNumNotIn: ").append(toIndentedString(usedVfNumNotIn)).append("\n");
+    sb.append("    userUsage: ").append(toIndentedString(userUsage)).append("\n");
+    sb.append("    userUsageIn: ").append(toIndentedString(userUsageIn)).append("\n");
+    sb.append("    userUsageNot: ").append(toIndentedString(userUsageNot)).append("\n");
+    sb.append("    userUsageNotIn: ").append(toIndentedString(userUsageNotIn)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");
     sb.append("}");
     return sb.toString();

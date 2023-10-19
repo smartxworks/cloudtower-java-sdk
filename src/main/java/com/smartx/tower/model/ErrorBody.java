@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.ErrorCode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -17,6 +18,10 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class ErrorBody {
+  public static final String SERIALIZED_NAME_CODE = "code";
+  @SerializedName(SERIALIZED_NAME_CODE)
+  private ErrorCode code;
+
   public static final String SERIALIZED_NAME_PROPS = "props";
   @SerializedName(SERIALIZED_NAME_PROPS)
   private Object props = null;
@@ -43,6 +48,29 @@ public class ErrorBody {
 
   public ErrorBody() { 
   }
+
+  public ErrorBody code(ErrorCode code) {
+    
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ErrorCode getCode() {
+    return code;
+  }
+
+
+  public void setCode(ErrorCode code) {
+    this.code = code;
+  }
+
 
   public ErrorBody props(Object props) {
     
@@ -191,7 +219,8 @@ public class ErrorBody {
       return false;
     }
     ErrorBody errorBody = (ErrorBody) o;
-    return Objects.equals(this.props, errorBody.props) &&
+    return Objects.equals(this.code, errorBody.code) &&
+        Objects.equals(this.props, errorBody.props) &&
         Objects.equals(this.stack, errorBody.stack) &&
         Objects.equals(this.message, errorBody.message) &&
         Objects.equals(this.status, errorBody.status) &&
@@ -205,7 +234,7 @@ public class ErrorBody {
 
   @Override
   public int hashCode() {
-    return Objects.hash(props, stack, message, status, operationName, path);
+    return Objects.hash(code, props, stack, message, status, operationName, path);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -219,6 +248,7 @@ public class ErrorBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorBody {\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    props: ").append(toIndentedString(props)).append("\n");
     sb.append("    stack: ").append(toIndentedString(stack)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");

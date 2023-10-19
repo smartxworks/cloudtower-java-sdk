@@ -20,6 +20,10 @@ public enum HostOrderByInput {
   
   ACCESS_IP_DESC("access_ip_DESC"),
   
+  ALLOCABLE_CPU_CORES_FOR_VM_EXCLUSIVE_ASC("allocable_cpu_cores_for_vm_exclusive_ASC"),
+  
+  ALLOCABLE_CPU_CORES_FOR_VM_EXCLUSIVE_DESC("allocable_cpu_cores_for_vm_exclusive_DESC"),
+  
   ALLOCATABLE_MEMORY_BYTES_ASC("allocatable_memory_bytes_ASC"),
   
   ALLOCATABLE_MEMORY_BYTES_DESC("allocatable_memory_bytes_DESC"),
@@ -68,6 +72,10 @@ public enum HostOrderByInput {
   
   HDD_DISK_COUNT_DESC("hdd_disk_count_DESC"),
   
+  HOST_STATE_ASC("host_state_ASC"),
+  
+  HOST_STATE_DESC("host_state_DESC"),
+  
   HYPERVISOR_IP_ASC("hypervisor_ip_ASC"),
   
   HYPERVISOR_IP_DESC("hypervisor_ip_DESC"),
@@ -75,6 +83,10 @@ public enum HostOrderByInput {
   ID_ASC("id_ASC"),
   
   ID_DESC("id_DESC"),
+  
+  IOMMU_ASC("iommu_ASC"),
+  
+  IOMMU_DESC("iommu_DESC"),
   
   IS_OS_IN_RAID1_ASC("is_os_in_raid1_ASC"),
   

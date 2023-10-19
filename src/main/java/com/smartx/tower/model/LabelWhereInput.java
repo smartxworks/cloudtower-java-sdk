@@ -15,6 +15,7 @@ import com.smartx.tower.model.ContentLibraryVmTemplateWhereInput;
 import com.smartx.tower.model.DatacenterWhereInput;
 import com.smartx.tower.model.DiskWhereInput;
 import com.smartx.tower.model.ElfImageWhereInput;
+import com.smartx.tower.model.GpuDeviceWhereInput;
 import com.smartx.tower.model.HostWhereInput;
 import com.smartx.tower.model.IscsiLunSnapshotWhereInput;
 import com.smartx.tower.model.IscsiLunWhereInput;
@@ -32,6 +33,7 @@ import com.smartx.tower.model.VdsWhereInput;
 import com.smartx.tower.model.VlanWhereInput;
 import com.smartx.tower.model.VmSnapshotWhereInput;
 import com.smartx.tower.model.VmTemplateWhereInput;
+import com.smartx.tower.model.VmVolumeSnapshotWhereInput;
 import com.smartx.tower.model.VmVolumeWhereInput;
 import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -433,6 +435,50 @@ public class LabelWhereInput {
   public static final String SERIALIZED_NAME_ELF_IMAGES_SOME = "elf_images_some";
   @SerializedName(SERIALIZED_NAME_ELF_IMAGES_SOME)
   private ElfImageWhereInput elfImagesSome;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM = "gpu_device_num";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM)
+  private Integer gpuDeviceNum;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_GT = "gpu_device_num_gt";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_GT)
+  private Integer gpuDeviceNumGt;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_GTE = "gpu_device_num_gte";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_GTE)
+  private Integer gpuDeviceNumGte;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_IN = "gpu_device_num_in";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_IN)
+  private List<Integer> gpuDeviceNumIn = null;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_LT = "gpu_device_num_lt";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_LT)
+  private Integer gpuDeviceNumLt;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_LTE = "gpu_device_num_lte";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_LTE)
+  private Integer gpuDeviceNumLte;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_NOT = "gpu_device_num_not";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_NOT)
+  private Integer gpuDeviceNumNot;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICE_NUM_NOT_IN = "gpu_device_num_not_in";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICE_NUM_NOT_IN)
+  private List<Integer> gpuDeviceNumNotIn = null;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES_EVERY = "gpu_devices_every";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES_EVERY)
+  private GpuDeviceWhereInput gpuDevicesEvery;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES_NONE = "gpu_devices_none";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES_NONE)
+  private GpuDeviceWhereInput gpuDevicesNone;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES_SOME = "gpu_devices_some";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES_SOME)
+  private GpuDeviceWhereInput gpuDevicesSome;
 
   public static final String SERIALIZED_NAME_HOST_NUM = "host_num";
   @SerializedName(SERIALIZED_NAME_HOST_NUM)
@@ -1485,6 +1531,50 @@ public class LabelWhereInput {
   public static final String SERIALIZED_NAME_VM_VOLUME_NUM_NOT_IN = "vm_volume_num_not_in";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_NUM_NOT_IN)
   private List<Integer> vmVolumeNumNotIn = null;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM = "vm_volume_snapshot_num";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM)
+  private Integer vmVolumeSnapshotNum;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_GT = "vm_volume_snapshot_num_gt";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_GT)
+  private Integer vmVolumeSnapshotNumGt;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_GTE = "vm_volume_snapshot_num_gte";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_GTE)
+  private Integer vmVolumeSnapshotNumGte;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_IN = "vm_volume_snapshot_num_in";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_IN)
+  private List<Integer> vmVolumeSnapshotNumIn = null;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_LT = "vm_volume_snapshot_num_lt";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_LT)
+  private Integer vmVolumeSnapshotNumLt;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_LTE = "vm_volume_snapshot_num_lte";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_LTE)
+  private Integer vmVolumeSnapshotNumLte;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_NOT = "vm_volume_snapshot_num_not";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_NOT)
+  private Integer vmVolumeSnapshotNumNot;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_NOT_IN = "vm_volume_snapshot_num_not_in";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOT_NUM_NOT_IN)
+  private List<Integer> vmVolumeSnapshotNumNotIn = null;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS_EVERY = "vm_volume_snapshots_every";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS_EVERY)
+  private VmVolumeSnapshotWhereInput vmVolumeSnapshotsEvery;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS_NONE = "vm_volume_snapshots_none";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS_NONE)
+  private VmVolumeSnapshotWhereInput vmVolumeSnapshotsNone;
+
+  public static final String SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS_SOME = "vm_volume_snapshots_some";
+  @SerializedName(SERIALIZED_NAME_VM_VOLUME_SNAPSHOTS_SOME)
+  private VmVolumeSnapshotWhereInput vmVolumeSnapshotsSome;
 
   public static final String SERIALIZED_NAME_VM_VOLUMES_EVERY = "vm_volumes_every";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES_EVERY)
@@ -3893,6 +3983,275 @@ public class LabelWhereInput {
 
   public void setElfImagesSome(ElfImageWhereInput elfImagesSome) {
     this.elfImagesSome = elfImagesSome;
+  }
+
+
+  public LabelWhereInput gpuDeviceNum(Integer gpuDeviceNum) {
+    
+    this.gpuDeviceNum = gpuDeviceNum;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNum
+   * @return gpuDeviceNum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNum() {
+    return gpuDeviceNum;
+  }
+
+
+  public void setGpuDeviceNum(Integer gpuDeviceNum) {
+    this.gpuDeviceNum = gpuDeviceNum;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumGt(Integer gpuDeviceNumGt) {
+    
+    this.gpuDeviceNumGt = gpuDeviceNumGt;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumGt
+   * @return gpuDeviceNumGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNumGt() {
+    return gpuDeviceNumGt;
+  }
+
+
+  public void setGpuDeviceNumGt(Integer gpuDeviceNumGt) {
+    this.gpuDeviceNumGt = gpuDeviceNumGt;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumGte(Integer gpuDeviceNumGte) {
+    
+    this.gpuDeviceNumGte = gpuDeviceNumGte;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumGte
+   * @return gpuDeviceNumGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNumGte() {
+    return gpuDeviceNumGte;
+  }
+
+
+  public void setGpuDeviceNumGte(Integer gpuDeviceNumGte) {
+    this.gpuDeviceNumGte = gpuDeviceNumGte;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumIn(List<Integer> gpuDeviceNumIn) {
+    
+    this.gpuDeviceNumIn = gpuDeviceNumIn;
+    return this;
+  }
+
+  public LabelWhereInput addGpuDeviceNumInItem(Integer gpuDeviceNumInItem) {
+    if (this.gpuDeviceNumIn == null) {
+      this.gpuDeviceNumIn = new ArrayList<Integer>();
+    }
+    this.gpuDeviceNumIn.add(gpuDeviceNumInItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumIn
+   * @return gpuDeviceNumIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getGpuDeviceNumIn() {
+    return gpuDeviceNumIn;
+  }
+
+
+  public void setGpuDeviceNumIn(List<Integer> gpuDeviceNumIn) {
+    this.gpuDeviceNumIn = gpuDeviceNumIn;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumLt(Integer gpuDeviceNumLt) {
+    
+    this.gpuDeviceNumLt = gpuDeviceNumLt;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumLt
+   * @return gpuDeviceNumLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNumLt() {
+    return gpuDeviceNumLt;
+  }
+
+
+  public void setGpuDeviceNumLt(Integer gpuDeviceNumLt) {
+    this.gpuDeviceNumLt = gpuDeviceNumLt;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumLte(Integer gpuDeviceNumLte) {
+    
+    this.gpuDeviceNumLte = gpuDeviceNumLte;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumLte
+   * @return gpuDeviceNumLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNumLte() {
+    return gpuDeviceNumLte;
+  }
+
+
+  public void setGpuDeviceNumLte(Integer gpuDeviceNumLte) {
+    this.gpuDeviceNumLte = gpuDeviceNumLte;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumNot(Integer gpuDeviceNumNot) {
+    
+    this.gpuDeviceNumNot = gpuDeviceNumNot;
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumNot
+   * @return gpuDeviceNumNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getGpuDeviceNumNot() {
+    return gpuDeviceNumNot;
+  }
+
+
+  public void setGpuDeviceNumNot(Integer gpuDeviceNumNot) {
+    this.gpuDeviceNumNot = gpuDeviceNumNot;
+  }
+
+
+  public LabelWhereInput gpuDeviceNumNotIn(List<Integer> gpuDeviceNumNotIn) {
+    
+    this.gpuDeviceNumNotIn = gpuDeviceNumNotIn;
+    return this;
+  }
+
+  public LabelWhereInput addGpuDeviceNumNotInItem(Integer gpuDeviceNumNotInItem) {
+    if (this.gpuDeviceNumNotIn == null) {
+      this.gpuDeviceNumNotIn = new ArrayList<Integer>();
+    }
+    this.gpuDeviceNumNotIn.add(gpuDeviceNumNotInItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDeviceNumNotIn
+   * @return gpuDeviceNumNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getGpuDeviceNumNotIn() {
+    return gpuDeviceNumNotIn;
+  }
+
+
+  public void setGpuDeviceNumNotIn(List<Integer> gpuDeviceNumNotIn) {
+    this.gpuDeviceNumNotIn = gpuDeviceNumNotIn;
+  }
+
+
+  public LabelWhereInput gpuDevicesEvery(GpuDeviceWhereInput gpuDevicesEvery) {
+    
+    this.gpuDevicesEvery = gpuDevicesEvery;
+    return this;
+  }
+
+   /**
+   * Get gpuDevicesEvery
+   * @return gpuDevicesEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevicesEvery() {
+    return gpuDevicesEvery;
+  }
+
+
+  public void setGpuDevicesEvery(GpuDeviceWhereInput gpuDevicesEvery) {
+    this.gpuDevicesEvery = gpuDevicesEvery;
+  }
+
+
+  public LabelWhereInput gpuDevicesNone(GpuDeviceWhereInput gpuDevicesNone) {
+    
+    this.gpuDevicesNone = gpuDevicesNone;
+    return this;
+  }
+
+   /**
+   * Get gpuDevicesNone
+   * @return gpuDevicesNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevicesNone() {
+    return gpuDevicesNone;
+  }
+
+
+  public void setGpuDevicesNone(GpuDeviceWhereInput gpuDevicesNone) {
+    this.gpuDevicesNone = gpuDevicesNone;
+  }
+
+
+  public LabelWhereInput gpuDevicesSome(GpuDeviceWhereInput gpuDevicesSome) {
+    
+    this.gpuDevicesSome = gpuDevicesSome;
+    return this;
+  }
+
+   /**
+   * Get gpuDevicesSome
+   * @return gpuDevicesSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevicesSome() {
+    return gpuDevicesSome;
+  }
+
+
+  public void setGpuDevicesSome(GpuDeviceWhereInput gpuDevicesSome) {
+    this.gpuDevicesSome = gpuDevicesSome;
   }
 
 
@@ -10345,6 +10704,275 @@ public class LabelWhereInput {
   }
 
 
+  public LabelWhereInput vmVolumeSnapshotNum(Integer vmVolumeSnapshotNum) {
+    
+    this.vmVolumeSnapshotNum = vmVolumeSnapshotNum;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNum
+   * @return vmVolumeSnapshotNum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNum() {
+    return vmVolumeSnapshotNum;
+  }
+
+
+  public void setVmVolumeSnapshotNum(Integer vmVolumeSnapshotNum) {
+    this.vmVolumeSnapshotNum = vmVolumeSnapshotNum;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumGt(Integer vmVolumeSnapshotNumGt) {
+    
+    this.vmVolumeSnapshotNumGt = vmVolumeSnapshotNumGt;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumGt
+   * @return vmVolumeSnapshotNumGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNumGt() {
+    return vmVolumeSnapshotNumGt;
+  }
+
+
+  public void setVmVolumeSnapshotNumGt(Integer vmVolumeSnapshotNumGt) {
+    this.vmVolumeSnapshotNumGt = vmVolumeSnapshotNumGt;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumGte(Integer vmVolumeSnapshotNumGte) {
+    
+    this.vmVolumeSnapshotNumGte = vmVolumeSnapshotNumGte;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumGte
+   * @return vmVolumeSnapshotNumGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNumGte() {
+    return vmVolumeSnapshotNumGte;
+  }
+
+
+  public void setVmVolumeSnapshotNumGte(Integer vmVolumeSnapshotNumGte) {
+    this.vmVolumeSnapshotNumGte = vmVolumeSnapshotNumGte;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumIn(List<Integer> vmVolumeSnapshotNumIn) {
+    
+    this.vmVolumeSnapshotNumIn = vmVolumeSnapshotNumIn;
+    return this;
+  }
+
+  public LabelWhereInput addVmVolumeSnapshotNumInItem(Integer vmVolumeSnapshotNumInItem) {
+    if (this.vmVolumeSnapshotNumIn == null) {
+      this.vmVolumeSnapshotNumIn = new ArrayList<Integer>();
+    }
+    this.vmVolumeSnapshotNumIn.add(vmVolumeSnapshotNumInItem);
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumIn
+   * @return vmVolumeSnapshotNumIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getVmVolumeSnapshotNumIn() {
+    return vmVolumeSnapshotNumIn;
+  }
+
+
+  public void setVmVolumeSnapshotNumIn(List<Integer> vmVolumeSnapshotNumIn) {
+    this.vmVolumeSnapshotNumIn = vmVolumeSnapshotNumIn;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumLt(Integer vmVolumeSnapshotNumLt) {
+    
+    this.vmVolumeSnapshotNumLt = vmVolumeSnapshotNumLt;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumLt
+   * @return vmVolumeSnapshotNumLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNumLt() {
+    return vmVolumeSnapshotNumLt;
+  }
+
+
+  public void setVmVolumeSnapshotNumLt(Integer vmVolumeSnapshotNumLt) {
+    this.vmVolumeSnapshotNumLt = vmVolumeSnapshotNumLt;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumLte(Integer vmVolumeSnapshotNumLte) {
+    
+    this.vmVolumeSnapshotNumLte = vmVolumeSnapshotNumLte;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumLte
+   * @return vmVolumeSnapshotNumLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNumLte() {
+    return vmVolumeSnapshotNumLte;
+  }
+
+
+  public void setVmVolumeSnapshotNumLte(Integer vmVolumeSnapshotNumLte) {
+    this.vmVolumeSnapshotNumLte = vmVolumeSnapshotNumLte;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumNot(Integer vmVolumeSnapshotNumNot) {
+    
+    this.vmVolumeSnapshotNumNot = vmVolumeSnapshotNumNot;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumNot
+   * @return vmVolumeSnapshotNumNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getVmVolumeSnapshotNumNot() {
+    return vmVolumeSnapshotNumNot;
+  }
+
+
+  public void setVmVolumeSnapshotNumNot(Integer vmVolumeSnapshotNumNot) {
+    this.vmVolumeSnapshotNumNot = vmVolumeSnapshotNumNot;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotNumNotIn(List<Integer> vmVolumeSnapshotNumNotIn) {
+    
+    this.vmVolumeSnapshotNumNotIn = vmVolumeSnapshotNumNotIn;
+    return this;
+  }
+
+  public LabelWhereInput addVmVolumeSnapshotNumNotInItem(Integer vmVolumeSnapshotNumNotInItem) {
+    if (this.vmVolumeSnapshotNumNotIn == null) {
+      this.vmVolumeSnapshotNumNotIn = new ArrayList<Integer>();
+    }
+    this.vmVolumeSnapshotNumNotIn.add(vmVolumeSnapshotNumNotInItem);
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotNumNotIn
+   * @return vmVolumeSnapshotNumNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getVmVolumeSnapshotNumNotIn() {
+    return vmVolumeSnapshotNumNotIn;
+  }
+
+
+  public void setVmVolumeSnapshotNumNotIn(List<Integer> vmVolumeSnapshotNumNotIn) {
+    this.vmVolumeSnapshotNumNotIn = vmVolumeSnapshotNumNotIn;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotsEvery(VmVolumeSnapshotWhereInput vmVolumeSnapshotsEvery) {
+    
+    this.vmVolumeSnapshotsEvery = vmVolumeSnapshotsEvery;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotsEvery
+   * @return vmVolumeSnapshotsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeSnapshotWhereInput getVmVolumeSnapshotsEvery() {
+    return vmVolumeSnapshotsEvery;
+  }
+
+
+  public void setVmVolumeSnapshotsEvery(VmVolumeSnapshotWhereInput vmVolumeSnapshotsEvery) {
+    this.vmVolumeSnapshotsEvery = vmVolumeSnapshotsEvery;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotsNone(VmVolumeSnapshotWhereInput vmVolumeSnapshotsNone) {
+    
+    this.vmVolumeSnapshotsNone = vmVolumeSnapshotsNone;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotsNone
+   * @return vmVolumeSnapshotsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeSnapshotWhereInput getVmVolumeSnapshotsNone() {
+    return vmVolumeSnapshotsNone;
+  }
+
+
+  public void setVmVolumeSnapshotsNone(VmVolumeSnapshotWhereInput vmVolumeSnapshotsNone) {
+    this.vmVolumeSnapshotsNone = vmVolumeSnapshotsNone;
+  }
+
+
+  public LabelWhereInput vmVolumeSnapshotsSome(VmVolumeSnapshotWhereInput vmVolumeSnapshotsSome) {
+    
+    this.vmVolumeSnapshotsSome = vmVolumeSnapshotsSome;
+    return this;
+  }
+
+   /**
+   * Get vmVolumeSnapshotsSome
+   * @return vmVolumeSnapshotsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeSnapshotWhereInput getVmVolumeSnapshotsSome() {
+    return vmVolumeSnapshotsSome;
+  }
+
+
+  public void setVmVolumeSnapshotsSome(VmVolumeSnapshotWhereInput vmVolumeSnapshotsSome) {
+    this.vmVolumeSnapshotsSome = vmVolumeSnapshotsSome;
+  }
+
+
   public LabelWhereInput vmVolumesEvery(VmVolumeWhereInput vmVolumesEvery) {
     
     this.vmVolumesEvery = vmVolumesEvery;
@@ -10589,6 +11217,17 @@ public class LabelWhereInput {
         Objects.equals(this.elfImagesEvery, labelWhereInput.elfImagesEvery) &&
         Objects.equals(this.elfImagesNone, labelWhereInput.elfImagesNone) &&
         Objects.equals(this.elfImagesSome, labelWhereInput.elfImagesSome) &&
+        Objects.equals(this.gpuDeviceNum, labelWhereInput.gpuDeviceNum) &&
+        Objects.equals(this.gpuDeviceNumGt, labelWhereInput.gpuDeviceNumGt) &&
+        Objects.equals(this.gpuDeviceNumGte, labelWhereInput.gpuDeviceNumGte) &&
+        Objects.equals(this.gpuDeviceNumIn, labelWhereInput.gpuDeviceNumIn) &&
+        Objects.equals(this.gpuDeviceNumLt, labelWhereInput.gpuDeviceNumLt) &&
+        Objects.equals(this.gpuDeviceNumLte, labelWhereInput.gpuDeviceNumLte) &&
+        Objects.equals(this.gpuDeviceNumNot, labelWhereInput.gpuDeviceNumNot) &&
+        Objects.equals(this.gpuDeviceNumNotIn, labelWhereInput.gpuDeviceNumNotIn) &&
+        Objects.equals(this.gpuDevicesEvery, labelWhereInput.gpuDevicesEvery) &&
+        Objects.equals(this.gpuDevicesNone, labelWhereInput.gpuDevicesNone) &&
+        Objects.equals(this.gpuDevicesSome, labelWhereInput.gpuDevicesSome) &&
         Objects.equals(this.hostNum, labelWhereInput.hostNum) &&
         Objects.equals(this.hostNumGt, labelWhereInput.hostNumGt) &&
         Objects.equals(this.hostNumGte, labelWhereInput.hostNumGte) &&
@@ -10852,6 +11491,17 @@ public class LabelWhereInput {
         Objects.equals(this.vmVolumeNumLte, labelWhereInput.vmVolumeNumLte) &&
         Objects.equals(this.vmVolumeNumNot, labelWhereInput.vmVolumeNumNot) &&
         Objects.equals(this.vmVolumeNumNotIn, labelWhereInput.vmVolumeNumNotIn) &&
+        Objects.equals(this.vmVolumeSnapshotNum, labelWhereInput.vmVolumeSnapshotNum) &&
+        Objects.equals(this.vmVolumeSnapshotNumGt, labelWhereInput.vmVolumeSnapshotNumGt) &&
+        Objects.equals(this.vmVolumeSnapshotNumGte, labelWhereInput.vmVolumeSnapshotNumGte) &&
+        Objects.equals(this.vmVolumeSnapshotNumIn, labelWhereInput.vmVolumeSnapshotNumIn) &&
+        Objects.equals(this.vmVolumeSnapshotNumLt, labelWhereInput.vmVolumeSnapshotNumLt) &&
+        Objects.equals(this.vmVolumeSnapshotNumLte, labelWhereInput.vmVolumeSnapshotNumLte) &&
+        Objects.equals(this.vmVolumeSnapshotNumNot, labelWhereInput.vmVolumeSnapshotNumNot) &&
+        Objects.equals(this.vmVolumeSnapshotNumNotIn, labelWhereInput.vmVolumeSnapshotNumNotIn) &&
+        Objects.equals(this.vmVolumeSnapshotsEvery, labelWhereInput.vmVolumeSnapshotsEvery) &&
+        Objects.equals(this.vmVolumeSnapshotsNone, labelWhereInput.vmVolumeSnapshotsNone) &&
+        Objects.equals(this.vmVolumeSnapshotsSome, labelWhereInput.vmVolumeSnapshotsSome) &&
         Objects.equals(this.vmVolumesEvery, labelWhereInput.vmVolumesEvery) &&
         Objects.equals(this.vmVolumesNone, labelWhereInput.vmVolumesNone) &&
         Objects.equals(this.vmVolumesSome, labelWhereInput.vmVolumesSome) &&
@@ -10866,7 +11516,7 @@ public class LabelWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clusterNum, clusterNumGt, clusterNumGte, clusterNumIn, clusterNumLt, clusterNumLte, clusterNumNot, clusterNumNotIn, clustersEvery, clustersNone, clustersSome, consistencyGroupNum, consistencyGroupNumGt, consistencyGroupNumGte, consistencyGroupNumIn, consistencyGroupNumLt, consistencyGroupNumLte, consistencyGroupNumNot, consistencyGroupNumNotIn, consistencyGroupSnapshotNum, consistencyGroupSnapshotNumGt, consistencyGroupSnapshotNumGte, consistencyGroupSnapshotNumIn, consistencyGroupSnapshotNumLt, consistencyGroupSnapshotNumLte, consistencyGroupSnapshotNumNot, consistencyGroupSnapshotNumNotIn, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, contentLibraryImageNum, contentLibraryImageNumGt, contentLibraryImageNumGte, contentLibraryImageNumIn, contentLibraryImageNumLt, contentLibraryImageNumLte, contentLibraryImageNumNot, contentLibraryImageNumNotIn, contentLibraryImagesEvery, contentLibraryImagesNone, contentLibraryImagesSome, contentLibraryVmTemplateNum, contentLibraryVmTemplateNumGt, contentLibraryVmTemplateNumGte, contentLibraryVmTemplateNumIn, contentLibraryVmTemplateNumLt, contentLibraryVmTemplateNumLte, contentLibraryVmTemplateNumNot, contentLibraryVmTemplateNumNotIn, contentLibraryVmTemplatesEvery, contentLibraryVmTemplatesNone, contentLibraryVmTemplatesSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, datacenterNum, datacenterNumGt, datacenterNumGte, datacenterNumIn, datacenterNumLt, datacenterNumLte, datacenterNumNot, datacenterNumNotIn, datacentersEvery, datacentersNone, datacentersSome, diskNum, diskNumGt, diskNumGte, diskNumIn, diskNumLt, diskNumLte, diskNumNot, diskNumNotIn, disksEvery, disksNone, disksSome, elfImageNum, elfImageNumGt, elfImageNumGte, elfImageNumIn, elfImageNumLt, elfImageNumLte, elfImageNumNot, elfImageNumNotIn, elfImagesEvery, elfImagesNone, elfImagesSome, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunNum, iscsiLunNumGt, iscsiLunNumGte, iscsiLunNumIn, iscsiLunNumLt, iscsiLunNumLte, iscsiLunNumNot, iscsiLunNumNotIn, iscsiLunSnapshotNum, iscsiLunSnapshotNumGt, iscsiLunSnapshotNumGte, iscsiLunSnapshotNumIn, iscsiLunSnapshotNumLt, iscsiLunSnapshotNumLte, iscsiLunSnapshotNumNot, iscsiLunSnapshotNumNotIn, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, iscsiTargetNum, iscsiTargetNumGt, iscsiTargetNumGte, iscsiTargetNumIn, iscsiTargetNumLt, iscsiTargetNumLte, iscsiTargetNumNot, iscsiTargetNumNotIn, iscsiTargetsEvery, iscsiTargetsNone, iscsiTargetsSome, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, isolationPolicyNum, isolationPolicyNumGt, isolationPolicyNumGte, isolationPolicyNumIn, isolationPolicyNumLt, isolationPolicyNumLte, isolationPolicyNumNot, isolationPolicyNumNotIn, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, namespaceGroupNum, namespaceGroupNumGt, namespaceGroupNumGte, namespaceGroupNumIn, namespaceGroupNumLt, namespaceGroupNumLte, namespaceGroupNumNot, namespaceGroupNumNotIn, namespaceGroupsEvery, namespaceGroupsNone, namespaceGroupsSome, nfsExportNum, nfsExportNumGt, nfsExportNumGte, nfsExportNumIn, nfsExportNumLt, nfsExportNumLte, nfsExportNumNot, nfsExportNumNotIn, nfsExportsEvery, nfsExportsNone, nfsExportsSome, nfsInodeNum, nfsInodeNumGt, nfsInodeNumGte, nfsInodeNumIn, nfsInodeNumLt, nfsInodeNumLte, nfsInodeNumNot, nfsInodeNumNotIn, nfsInodesEvery, nfsInodesNone, nfsInodesSome, nicNum, nicNumGt, nicNumGte, nicNumIn, nicNumLt, nicNumLte, nicNumNot, nicNumNotIn, nicsEvery, nicsNone, nicsSome, NOT, nvmfNamespaceNum, nvmfNamespaceNumGt, nvmfNamespaceNumGte, nvmfNamespaceNumIn, nvmfNamespaceNumLt, nvmfNamespaceNumLte, nvmfNamespaceNumNot, nvmfNamespaceNumNotIn, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshotNumGt, nvmfNamespaceSnapshotNumGte, nvmfNamespaceSnapshotNumIn, nvmfNamespaceSnapshotNumLt, nvmfNamespaceSnapshotNumLte, nvmfNamespaceSnapshotNumNot, nvmfNamespaceSnapshotNumNotIn, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, nvmfNamespacesEvery, nvmfNamespacesNone, nvmfNamespacesSome, nvmfSubsystemNum, nvmfSubsystemNumGt, nvmfSubsystemNumGte, nvmfSubsystemNumIn, nvmfSubsystemNumLt, nvmfSubsystemNumLte, nvmfSubsystemNumNot, nvmfSubsystemNumNotIn, nvmfSubsystemsEvery, nvmfSubsystemsNone, nvmfSubsystemsSome, OR, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, securityPolicyNum, securityPolicyNumGt, securityPolicyNumGte, securityPolicyNumIn, securityPolicyNumLt, securityPolicyNumLte, securityPolicyNumNot, securityPolicyNumNotIn, systemVlanNum, systemVlanNumGt, systemVlanNumGte, systemVlanNumIn, systemVlanNumLt, systemVlanNumLte, systemVlanNumNot, systemVlanNumNotIn, totalNum, totalNumGt, totalNumGte, totalNumIn, totalNumLt, totalNumLte, totalNumNot, totalNumNotIn, value, valueContains, valueEndsWith, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotContains, valueNotEndsWith, valueNotIn, valueNotStartsWith, valueStartsWith, vdsNum, vdsNumGt, vdsNumGte, vdsNumIn, vdsNumLt, vdsNumLte, vdsNumNot, vdsNumNotIn, vdsesEvery, vdsesNone, vdsesSome, vlansEvery, vlansNone, vlansSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmSnapshotNum, vmSnapshotNumGt, vmSnapshotNumGte, vmSnapshotNumIn, vmSnapshotNumLt, vmSnapshotNumLte, vmSnapshotNumNot, vmSnapshotNumNotIn, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplateNum, vmTemplateNumGt, vmTemplateNumGte, vmTemplateNumIn, vmTemplateNumLt, vmTemplateNumLte, vmTemplateNumNot, vmTemplateNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmVlanNum, vmVlanNumGt, vmVlanNumGte, vmVlanNumIn, vmVlanNumLt, vmVlanNumLte, vmVlanNumNot, vmVlanNumNotIn, vmVolumeNum, vmVolumeNumGt, vmVolumeNumGte, vmVolumeNumIn, vmVolumeNumLt, vmVolumeNumLte, vmVolumeNumNot, vmVolumeNumNotIn, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, clusterNum, clusterNumGt, clusterNumGte, clusterNumIn, clusterNumLt, clusterNumLte, clusterNumNot, clusterNumNotIn, clustersEvery, clustersNone, clustersSome, consistencyGroupNum, consistencyGroupNumGt, consistencyGroupNumGte, consistencyGroupNumIn, consistencyGroupNumLt, consistencyGroupNumLte, consistencyGroupNumNot, consistencyGroupNumNotIn, consistencyGroupSnapshotNum, consistencyGroupSnapshotNumGt, consistencyGroupSnapshotNumGte, consistencyGroupSnapshotNumIn, consistencyGroupSnapshotNumLt, consistencyGroupSnapshotNumLte, consistencyGroupSnapshotNumNot, consistencyGroupSnapshotNumNotIn, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, contentLibraryImageNum, contentLibraryImageNumGt, contentLibraryImageNumGte, contentLibraryImageNumIn, contentLibraryImageNumLt, contentLibraryImageNumLte, contentLibraryImageNumNot, contentLibraryImageNumNotIn, contentLibraryImagesEvery, contentLibraryImagesNone, contentLibraryImagesSome, contentLibraryVmTemplateNum, contentLibraryVmTemplateNumGt, contentLibraryVmTemplateNumGte, contentLibraryVmTemplateNumIn, contentLibraryVmTemplateNumLt, contentLibraryVmTemplateNumLte, contentLibraryVmTemplateNumNot, contentLibraryVmTemplateNumNotIn, contentLibraryVmTemplatesEvery, contentLibraryVmTemplatesNone, contentLibraryVmTemplatesSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, datacenterNum, datacenterNumGt, datacenterNumGte, datacenterNumIn, datacenterNumLt, datacenterNumLte, datacenterNumNot, datacenterNumNotIn, datacentersEvery, datacentersNone, datacentersSome, diskNum, diskNumGt, diskNumGte, diskNumIn, diskNumLt, diskNumLte, diskNumNot, diskNumNotIn, disksEvery, disksNone, disksSome, elfImageNum, elfImageNumGt, elfImageNumGte, elfImageNumIn, elfImageNumLt, elfImageNumLte, elfImageNumNot, elfImageNumNotIn, elfImagesEvery, elfImagesNone, elfImagesSome, gpuDeviceNum, gpuDeviceNumGt, gpuDeviceNumGte, gpuDeviceNumIn, gpuDeviceNumLt, gpuDeviceNumLte, gpuDeviceNumNot, gpuDeviceNumNotIn, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunNum, iscsiLunNumGt, iscsiLunNumGte, iscsiLunNumIn, iscsiLunNumLt, iscsiLunNumLte, iscsiLunNumNot, iscsiLunNumNotIn, iscsiLunSnapshotNum, iscsiLunSnapshotNumGt, iscsiLunSnapshotNumGte, iscsiLunSnapshotNumIn, iscsiLunSnapshotNumLt, iscsiLunSnapshotNumLte, iscsiLunSnapshotNumNot, iscsiLunSnapshotNumNotIn, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, iscsiTargetNum, iscsiTargetNumGt, iscsiTargetNumGte, iscsiTargetNumIn, iscsiTargetNumLt, iscsiTargetNumLte, iscsiTargetNumNot, iscsiTargetNumNotIn, iscsiTargetsEvery, iscsiTargetsNone, iscsiTargetsSome, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, isolationPolicyNum, isolationPolicyNumGt, isolationPolicyNumGte, isolationPolicyNumIn, isolationPolicyNumLt, isolationPolicyNumLte, isolationPolicyNumNot, isolationPolicyNumNotIn, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, namespaceGroupNum, namespaceGroupNumGt, namespaceGroupNumGte, namespaceGroupNumIn, namespaceGroupNumLt, namespaceGroupNumLte, namespaceGroupNumNot, namespaceGroupNumNotIn, namespaceGroupsEvery, namespaceGroupsNone, namespaceGroupsSome, nfsExportNum, nfsExportNumGt, nfsExportNumGte, nfsExportNumIn, nfsExportNumLt, nfsExportNumLte, nfsExportNumNot, nfsExportNumNotIn, nfsExportsEvery, nfsExportsNone, nfsExportsSome, nfsInodeNum, nfsInodeNumGt, nfsInodeNumGte, nfsInodeNumIn, nfsInodeNumLt, nfsInodeNumLte, nfsInodeNumNot, nfsInodeNumNotIn, nfsInodesEvery, nfsInodesNone, nfsInodesSome, nicNum, nicNumGt, nicNumGte, nicNumIn, nicNumLt, nicNumLte, nicNumNot, nicNumNotIn, nicsEvery, nicsNone, nicsSome, NOT, nvmfNamespaceNum, nvmfNamespaceNumGt, nvmfNamespaceNumGte, nvmfNamespaceNumIn, nvmfNamespaceNumLt, nvmfNamespaceNumLte, nvmfNamespaceNumNot, nvmfNamespaceNumNotIn, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshotNumGt, nvmfNamespaceSnapshotNumGte, nvmfNamespaceSnapshotNumIn, nvmfNamespaceSnapshotNumLt, nvmfNamespaceSnapshotNumLte, nvmfNamespaceSnapshotNumNot, nvmfNamespaceSnapshotNumNotIn, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, nvmfNamespacesEvery, nvmfNamespacesNone, nvmfNamespacesSome, nvmfSubsystemNum, nvmfSubsystemNumGt, nvmfSubsystemNumGte, nvmfSubsystemNumIn, nvmfSubsystemNumLt, nvmfSubsystemNumLte, nvmfSubsystemNumNot, nvmfSubsystemNumNotIn, nvmfSubsystemsEvery, nvmfSubsystemsNone, nvmfSubsystemsSome, OR, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, securityPolicyNum, securityPolicyNumGt, securityPolicyNumGte, securityPolicyNumIn, securityPolicyNumLt, securityPolicyNumLte, securityPolicyNumNot, securityPolicyNumNotIn, systemVlanNum, systemVlanNumGt, systemVlanNumGte, systemVlanNumIn, systemVlanNumLt, systemVlanNumLte, systemVlanNumNot, systemVlanNumNotIn, totalNum, totalNumGt, totalNumGte, totalNumIn, totalNumLt, totalNumLte, totalNumNot, totalNumNotIn, value, valueContains, valueEndsWith, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotContains, valueNotEndsWith, valueNotIn, valueNotStartsWith, valueStartsWith, vdsNum, vdsNumGt, vdsNumGte, vdsNumIn, vdsNumLt, vdsNumLte, vdsNumNot, vdsNumNotIn, vdsesEvery, vdsesNone, vdsesSome, vlansEvery, vlansNone, vlansSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmSnapshotNum, vmSnapshotNumGt, vmSnapshotNumGte, vmSnapshotNumIn, vmSnapshotNumLt, vmSnapshotNumLte, vmSnapshotNumNot, vmSnapshotNumNotIn, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplateNum, vmTemplateNumGt, vmTemplateNumGte, vmTemplateNumIn, vmTemplateNumLt, vmTemplateNumLte, vmTemplateNumNot, vmTemplateNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmVlanNum, vmVlanNumGt, vmVlanNumGte, vmVlanNumIn, vmVlanNumLt, vmVlanNumLte, vmVlanNumNot, vmVlanNumNotIn, vmVolumeNum, vmVolumeNumGt, vmVolumeNumGte, vmVolumeNumIn, vmVolumeNumLt, vmVolumeNumLte, vmVolumeNumNot, vmVolumeNumNotIn, vmVolumeSnapshotNum, vmVolumeSnapshotNumGt, vmVolumeSnapshotNumGte, vmVolumeSnapshotNumIn, vmVolumeSnapshotNumLt, vmVolumeSnapshotNumLte, vmVolumeSnapshotNumNot, vmVolumeSnapshotNumNotIn, vmVolumeSnapshotsEvery, vmVolumeSnapshotsNone, vmVolumeSnapshotsSome, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -10977,6 +11627,17 @@ public class LabelWhereInput {
     sb.append("    elfImagesEvery: ").append(toIndentedString(elfImagesEvery)).append("\n");
     sb.append("    elfImagesNone: ").append(toIndentedString(elfImagesNone)).append("\n");
     sb.append("    elfImagesSome: ").append(toIndentedString(elfImagesSome)).append("\n");
+    sb.append("    gpuDeviceNum: ").append(toIndentedString(gpuDeviceNum)).append("\n");
+    sb.append("    gpuDeviceNumGt: ").append(toIndentedString(gpuDeviceNumGt)).append("\n");
+    sb.append("    gpuDeviceNumGte: ").append(toIndentedString(gpuDeviceNumGte)).append("\n");
+    sb.append("    gpuDeviceNumIn: ").append(toIndentedString(gpuDeviceNumIn)).append("\n");
+    sb.append("    gpuDeviceNumLt: ").append(toIndentedString(gpuDeviceNumLt)).append("\n");
+    sb.append("    gpuDeviceNumLte: ").append(toIndentedString(gpuDeviceNumLte)).append("\n");
+    sb.append("    gpuDeviceNumNot: ").append(toIndentedString(gpuDeviceNumNot)).append("\n");
+    sb.append("    gpuDeviceNumNotIn: ").append(toIndentedString(gpuDeviceNumNotIn)).append("\n");
+    sb.append("    gpuDevicesEvery: ").append(toIndentedString(gpuDevicesEvery)).append("\n");
+    sb.append("    gpuDevicesNone: ").append(toIndentedString(gpuDevicesNone)).append("\n");
+    sb.append("    gpuDevicesSome: ").append(toIndentedString(gpuDevicesSome)).append("\n");
     sb.append("    hostNum: ").append(toIndentedString(hostNum)).append("\n");
     sb.append("    hostNumGt: ").append(toIndentedString(hostNumGt)).append("\n");
     sb.append("    hostNumGte: ").append(toIndentedString(hostNumGte)).append("\n");
@@ -11240,6 +11901,17 @@ public class LabelWhereInput {
     sb.append("    vmVolumeNumLte: ").append(toIndentedString(vmVolumeNumLte)).append("\n");
     sb.append("    vmVolumeNumNot: ").append(toIndentedString(vmVolumeNumNot)).append("\n");
     sb.append("    vmVolumeNumNotIn: ").append(toIndentedString(vmVolumeNumNotIn)).append("\n");
+    sb.append("    vmVolumeSnapshotNum: ").append(toIndentedString(vmVolumeSnapshotNum)).append("\n");
+    sb.append("    vmVolumeSnapshotNumGt: ").append(toIndentedString(vmVolumeSnapshotNumGt)).append("\n");
+    sb.append("    vmVolumeSnapshotNumGte: ").append(toIndentedString(vmVolumeSnapshotNumGte)).append("\n");
+    sb.append("    vmVolumeSnapshotNumIn: ").append(toIndentedString(vmVolumeSnapshotNumIn)).append("\n");
+    sb.append("    vmVolumeSnapshotNumLt: ").append(toIndentedString(vmVolumeSnapshotNumLt)).append("\n");
+    sb.append("    vmVolumeSnapshotNumLte: ").append(toIndentedString(vmVolumeSnapshotNumLte)).append("\n");
+    sb.append("    vmVolumeSnapshotNumNot: ").append(toIndentedString(vmVolumeSnapshotNumNot)).append("\n");
+    sb.append("    vmVolumeSnapshotNumNotIn: ").append(toIndentedString(vmVolumeSnapshotNumNotIn)).append("\n");
+    sb.append("    vmVolumeSnapshotsEvery: ").append(toIndentedString(vmVolumeSnapshotsEvery)).append("\n");
+    sb.append("    vmVolumeSnapshotsNone: ").append(toIndentedString(vmVolumeSnapshotsNone)).append("\n");
+    sb.append("    vmVolumeSnapshotsSome: ").append(toIndentedString(vmVolumeSnapshotsSome)).append("\n");
     sb.append("    vmVolumesEvery: ").append(toIndentedString(vmVolumesEvery)).append("\n");
     sb.append("    vmVolumesNone: ").append(toIndentedString(vmVolumesNone)).append("\n");
     sb.append("    vmVolumesSome: ").append(toIndentedString(vmVolumesSome)).append("\n");

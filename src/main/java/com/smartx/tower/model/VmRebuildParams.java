@@ -13,8 +13,10 @@ import com.smartx.tower.model.VmDiskIoPolicy;
 import com.smartx.tower.model.VmDiskIoRestrictType;
 import com.smartx.tower.model.VmDiskParams;
 import com.smartx.tower.model.VmFirmware;
+import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,6 +29,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmRebuildParams {
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<VmGpuOperationParams> gpuDevices = null;
+
   public static final String SERIALIZED_NAME_IS_FULL_COPY = "is_full_copy";
   @SerializedName(SERIALIZED_NAME_IS_FULL_COPY)
   private Boolean isFullCopy;
@@ -74,6 +80,10 @@ public class VmRebuildParams {
   public static final String SERIALIZED_NAME_HA = "ha";
   @SerializedName(SERIALIZED_NAME_HA)
   private Boolean ha;
+
+  public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
+  @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
+  private VmPlacementGroupWhereInput vmPlacementGroup;
 
   public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
   @SerializedName(SERIALIZED_NAME_VM_NICS)
@@ -125,6 +135,37 @@ public class VmRebuildParams {
 
   public VmRebuildParams() { 
   }
+
+  public VmRebuildParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public VmRebuildParams addGpuDevicesItem(VmGpuOperationParams gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<VmGpuOperationParams>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmGpuOperationParams> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<VmGpuOperationParams> gpuDevices) {
+    this.gpuDevices = gpuDevices;
+  }
+
 
   public VmRebuildParams isFullCopy(Boolean isFullCopy) {
     
@@ -399,6 +440,29 @@ public class VmRebuildParams {
 
   public void setHa(Boolean ha) {
     this.ha = ha;
+  }
+
+
+  public VmRebuildParams vmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    
+    this.vmPlacementGroup = vmPlacementGroup;
+    return this;
+  }
+
+   /**
+   * Get vmPlacementGroup
+   * @return vmPlacementGroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmPlacementGroupWhereInput getVmPlacementGroup() {
+    return vmPlacementGroup;
+  }
+
+
+  public void setVmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+    this.vmPlacementGroup = vmPlacementGroup;
   }
 
 
@@ -695,7 +759,8 @@ public class VmRebuildParams {
       return false;
     }
     VmRebuildParams vmRebuildParams = (VmRebuildParams) o;
-    return Objects.equals(this.isFullCopy, vmRebuildParams.isFullCopy) &&
+    return Objects.equals(this.gpuDevices, vmRebuildParams.gpuDevices) &&
+        Objects.equals(this.isFullCopy, vmRebuildParams.isFullCopy) &&
         Objects.equals(this.rebuildFromSnapshotId, vmRebuildParams.rebuildFromSnapshotId) &&
         Objects.equals(this.maxBandwidthPolicy, vmRebuildParams.maxBandwidthPolicy) &&
         Objects.equals(this.maxBandwidthUnit, vmRebuildParams.maxBandwidthUnit) &&
@@ -707,6 +772,7 @@ public class VmRebuildParams {
         Objects.equals(this.status, vmRebuildParams.status) &&
         Objects.equals(this.firmware, vmRebuildParams.firmware) &&
         Objects.equals(this.ha, vmRebuildParams.ha) &&
+        Objects.equals(this.vmPlacementGroup, vmRebuildParams.vmPlacementGroup) &&
         Objects.equals(this.vmNics, vmRebuildParams.vmNics) &&
         Objects.equals(this.vmDisks, vmRebuildParams.vmDisks) &&
         Objects.equals(this.memoryUnit, vmRebuildParams.memoryUnit) &&
@@ -723,13 +789,14 @@ public class VmRebuildParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isFullCopy, rebuildFromSnapshotId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(gpuDevices, isFullCopy, rebuildFromSnapshotId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmRebuildParams {\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
     sb.append("    rebuildFromSnapshotId: ").append(toIndentedString(rebuildFromSnapshotId)).append("\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
@@ -742,6 +809,7 @@ public class VmRebuildParams {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+    sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");
     sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
     sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");

@@ -11,10 +11,13 @@ import com.smartx.tower.model.CpuFanSpeedUnit;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.HostState;
 import com.smartx.tower.model.HostStatus;
+import com.smartx.tower.model.IommuStatus;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedDisk;
+import com.smartx.tower.model.NestedGpuDevice;
 import com.smartx.tower.model.NestedIpmi;
 import com.smartx.tower.model.NestedLabel;
+import com.smartx.tower.model.NestedMaintenanceHostState;
 import com.smartx.tower.model.NestedNic;
 import com.smartx.tower.model.NestedPmemDimm;
 import com.smartx.tower.model.NestedUsbDevice;
@@ -36,6 +39,10 @@ public class Host {
   public static final String SERIALIZED_NAME_ACCESS_IP = "access_ip";
   @SerializedName(SERIALIZED_NAME_ACCESS_IP)
   private String accessIp;
+
+  public static final String SERIALIZED_NAME_ALLOCABLE_CPU_CORES_FOR_VM_EXCLUSIVE = "allocable_cpu_cores_for_vm_exclusive";
+  @SerializedName(SERIALIZED_NAME_ALLOCABLE_CPU_CORES_FOR_VM_EXCLUSIVE)
+  private Integer allocableCpuCoresForVmExclusive;
 
   public static final String SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES = "allocatable_memory_bytes";
   @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES)
@@ -97,6 +104,10 @@ public class Host {
   @SerializedName(SERIALIZED_NAME_FAILURE_DATA_SPACE)
   private Long failureDataSpace;
 
+  public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+  private List<NestedGpuDevice> gpuDevices = null;
+
   public static final String SERIALIZED_NAME_HDD_DATA_CAPACITY = "hdd_data_capacity";
   @SerializedName(SERIALIZED_NAME_HDD_DATA_CAPACITY)
   private Long hddDataCapacity;
@@ -105,6 +116,10 @@ public class Host {
   @SerializedName(SERIALIZED_NAME_HDD_DISK_COUNT)
   private Integer hddDiskCount;
 
+  public static final String SERIALIZED_NAME_HOST_STATE = "host_state";
+  @SerializedName(SERIALIZED_NAME_HOST_STATE)
+  private NestedMaintenanceHostState hostState;
+
   public static final String SERIALIZED_NAME_HYPERVISOR_IP = "hypervisor_ip";
   @SerializedName(SERIALIZED_NAME_HYPERVISOR_IP)
   private String hypervisorIp;
@@ -112,6 +127,10 @@ public class Host {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_IOMMU = "iommu";
+  @SerializedName(SERIALIZED_NAME_IOMMU)
+  private IommuStatus iommu;
 
   public static final String SERIALIZED_NAME_IPMI = "ipmi";
   @SerializedName(SERIALIZED_NAME_IPMI)
@@ -328,6 +347,29 @@ public class Host {
 
   public void setAccessIp(String accessIp) {
     this.accessIp = accessIp;
+  }
+
+
+  public Host allocableCpuCoresForVmExclusive(Integer allocableCpuCoresForVmExclusive) {
+    
+    this.allocableCpuCoresForVmExclusive = allocableCpuCoresForVmExclusive;
+    return this;
+  }
+
+   /**
+   * Get allocableCpuCoresForVmExclusive
+   * @return allocableCpuCoresForVmExclusive
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getAllocableCpuCoresForVmExclusive() {
+    return allocableCpuCoresForVmExclusive;
+  }
+
+
+  public void setAllocableCpuCoresForVmExclusive(Integer allocableCpuCoresForVmExclusive) {
+    this.allocableCpuCoresForVmExclusive = allocableCpuCoresForVmExclusive;
   }
 
 
@@ -699,6 +741,37 @@ public class Host {
   }
 
 
+  public Host gpuDevices(List<NestedGpuDevice> gpuDevices) {
+    
+    this.gpuDevices = gpuDevices;
+    return this;
+  }
+
+  public Host addGpuDevicesItem(NestedGpuDevice gpuDevicesItem) {
+    if (this.gpuDevices == null) {
+      this.gpuDevices = new ArrayList<NestedGpuDevice>();
+    }
+    this.gpuDevices.add(gpuDevicesItem);
+    return this;
+  }
+
+   /**
+   * Get gpuDevices
+   * @return gpuDevices
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedGpuDevice> getGpuDevices() {
+    return gpuDevices;
+  }
+
+
+  public void setGpuDevices(List<NestedGpuDevice> gpuDevices) {
+    this.gpuDevices = gpuDevices;
+  }
+
+
   public Host hddDataCapacity(Long hddDataCapacity) {
     
     this.hddDataCapacity = hddDataCapacity;
@@ -745,6 +818,29 @@ public class Host {
   }
 
 
+  public Host hostState(NestedMaintenanceHostState hostState) {
+    
+    this.hostState = hostState;
+    return this;
+  }
+
+   /**
+   * Get hostState
+   * @return hostState
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedMaintenanceHostState getHostState() {
+    return hostState;
+  }
+
+
+  public void setHostState(NestedMaintenanceHostState hostState) {
+    this.hostState = hostState;
+  }
+
+
   public Host hypervisorIp(String hypervisorIp) {
     
     this.hypervisorIp = hypervisorIp;
@@ -788,6 +884,29 @@ public class Host {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+  public Host iommu(IommuStatus iommu) {
+    
+    this.iommu = iommu;
+    return this;
+  }
+
+   /**
+   * Get iommu
+   * @return iommu
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IommuStatus getIommu() {
+    return iommu;
+  }
+
+
+  public void setIommu(IommuStatus iommu) {
+    this.iommu = iommu;
   }
 
 
@@ -1945,6 +2064,7 @@ public class Host {
     }
     Host host = (Host) o;
     return Objects.equals(this.accessIp, host.accessIp) &&
+        Objects.equals(this.allocableCpuCoresForVmExclusive, host.allocableCpuCoresForVmExclusive) &&
         Objects.equals(this.allocatableMemoryBytes, host.allocatableMemoryBytes) &&
         Objects.equals(this.chunkId, host.chunkId) &&
         Objects.equals(this.cluster, host.cluster) &&
@@ -1960,10 +2080,13 @@ public class Host {
         Objects.equals(this.disks, host.disks) &&
         Objects.equals(this.entityAsyncStatus, host.entityAsyncStatus) &&
         Objects.equals(this.failureDataSpace, host.failureDataSpace) &&
+        Objects.equals(this.gpuDevices, host.gpuDevices) &&
         Objects.equals(this.hddDataCapacity, host.hddDataCapacity) &&
         Objects.equals(this.hddDiskCount, host.hddDiskCount) &&
+        Objects.equals(this.hostState, host.hostState) &&
         Objects.equals(this.hypervisorIp, host.hypervisorIp) &&
         Objects.equals(this.id, host.id) &&
+        Objects.equals(this.iommu, host.iommu) &&
         Objects.equals(this.ipmi, host.ipmi) &&
         Objects.equals(this.isOsInRaid1, host.isOsInRaid1) &&
         Objects.equals(this.labels, host.labels) &&
@@ -2020,7 +2143,7 @@ public class Host {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessIp, allocatableMemoryBytes, chunkId, cluster, compatibleCpuModels, cpuBrand, cpuFanSpeed, cpuFanSpeedUnit, cpuHzPerCore, cpuModel, cpuTemperatureCelsius, cpuVendor, dataIp, disks, entityAsyncStatus, failureDataSpace, hddDataCapacity, hddDiskCount, hypervisorIp, id, ipmi, isOsInRaid1, labels, localId, lsmCapDiskSafeUmount, managementIp, model, name, nestedVirtualization, nicCount, nics, nodeTopoLocalId, osMemoryBytes, osVersion, pmemDimmCapacity, pmemDimmCount, pmemDimms, pmemDiskCount, provisionedCpuCores, provisionedMemoryBytes, runningPauseVmMemoryBytes, runningVmNum, scvmCpu, scvmMemory, scvmName, serial, ssdDataCapacity, ssdDiskCount, state, status, stoppedVmNum, suspendedVmNum, totalCacheCapacity, totalCpuCores, totalCpuHz, totalCpuSockets, totalDataCapacity, totalMemoryBytes, usbDevices, usedCpuHz, usedDataSpace, usedMemoryBytes, vmNum, vmotionIp, vms, vsphereEsxiAccount, withFasterSsdAsCache, zone);
+    return Objects.hash(accessIp, allocableCpuCoresForVmExclusive, allocatableMemoryBytes, chunkId, cluster, compatibleCpuModels, cpuBrand, cpuFanSpeed, cpuFanSpeedUnit, cpuHzPerCore, cpuModel, cpuTemperatureCelsius, cpuVendor, dataIp, disks, entityAsyncStatus, failureDataSpace, gpuDevices, hddDataCapacity, hddDiskCount, hostState, hypervisorIp, id, iommu, ipmi, isOsInRaid1, labels, localId, lsmCapDiskSafeUmount, managementIp, model, name, nestedVirtualization, nicCount, nics, nodeTopoLocalId, osMemoryBytes, osVersion, pmemDimmCapacity, pmemDimmCount, pmemDimms, pmemDiskCount, provisionedCpuCores, provisionedMemoryBytes, runningPauseVmMemoryBytes, runningVmNum, scvmCpu, scvmMemory, scvmName, serial, ssdDataCapacity, ssdDiskCount, state, status, stoppedVmNum, suspendedVmNum, totalCacheCapacity, totalCpuCores, totalCpuHz, totalCpuSockets, totalDataCapacity, totalMemoryBytes, usbDevices, usedCpuHz, usedDataSpace, usedMemoryBytes, vmNum, vmotionIp, vms, vsphereEsxiAccount, withFasterSsdAsCache, zone);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2035,6 +2158,7 @@ public class Host {
     StringBuilder sb = new StringBuilder();
     sb.append("class Host {\n");
     sb.append("    accessIp: ").append(toIndentedString(accessIp)).append("\n");
+    sb.append("    allocableCpuCoresForVmExclusive: ").append(toIndentedString(allocableCpuCoresForVmExclusive)).append("\n");
     sb.append("    allocatableMemoryBytes: ").append(toIndentedString(allocatableMemoryBytes)).append("\n");
     sb.append("    chunkId: ").append(toIndentedString(chunkId)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
@@ -2050,10 +2174,13 @@ public class Host {
     sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
+    sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    hddDataCapacity: ").append(toIndentedString(hddDataCapacity)).append("\n");
     sb.append("    hddDiskCount: ").append(toIndentedString(hddDiskCount)).append("\n");
+    sb.append("    hostState: ").append(toIndentedString(hostState)).append("\n");
     sb.append("    hypervisorIp: ").append(toIndentedString(hypervisorIp)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    iommu: ").append(toIndentedString(iommu)).append("\n");
     sb.append("    ipmi: ").append(toIndentedString(ipmi)).append("\n");
     sb.append("    isOsInRaid1: ").append(toIndentedString(isOsInRaid1)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");

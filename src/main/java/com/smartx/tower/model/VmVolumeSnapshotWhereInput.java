@@ -9,6 +9,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.LabelWhereInput;
+import com.smartx.tower.model.VmVolumeElfStoragePolicyType;
 import com.smartx.tower.model.VmVolumeSnapshotType;
 import com.smartx.tower.model.VmVolumeWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -119,6 +121,22 @@ public class VmVolumeSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
   private String descriptionStartsWith;
 
+  public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
+  @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
+  private VmVolumeElfStoragePolicyType elfStoragePolicy;
+
+  public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_IN = "elf_storage_policy_in";
+  @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_IN)
+  private List<VmVolumeElfStoragePolicyType> elfStoragePolicyIn = null;
+
+  public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_NOT = "elf_storage_policy_not";
+  @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_NOT)
+  private VmVolumeElfStoragePolicyType elfStoragePolicyNot;
+
+  public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_NOT_IN = "elf_storage_policy_not_in";
+  @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_NOT_IN)
+  private List<VmVolumeElfStoragePolicyType> elfStoragePolicyNotIn = null;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -190,6 +208,18 @@ public class VmVolumeSnapshotWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
+
+  public static final String SERIALIZED_NAME_LABELS_EVERY = "labels_every";
+  @SerializedName(SERIALIZED_NAME_LABELS_EVERY)
+  private LabelWhereInput labelsEvery;
+
+  public static final String SERIALIZED_NAME_LABELS_NONE = "labels_none";
+  @SerializedName(SERIALIZED_NAME_LABELS_NONE)
+  private LabelWhereInput labelsNone;
+
+  public static final String SERIALIZED_NAME_LABELS_SOME = "labels_some";
+  @SerializedName(SERIALIZED_NAME_LABELS_SOME)
+  private LabelWhereInput labelsSome;
 
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT = "local_created_at";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT)
@@ -458,6 +488,46 @@ public class VmVolumeSnapshotWhereInput {
   public static final String SERIALIZED_NAME_VM_VOLUME = "vm_volume";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME)
   private VmVolumeWhereInput vmVolume;
+
+  public static final String SERIALIZED_NAME_VOLUME_SHARING = "volume_sharing";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SHARING)
+  private Boolean volumeSharing;
+
+  public static final String SERIALIZED_NAME_VOLUME_SHARING_NOT = "volume_sharing_not";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SHARING_NOT)
+  private Boolean volumeSharingNot;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE = "volume_size";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE)
+  private Double volumeSize;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_GT = "volume_size_gt";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_GT)
+  private Double volumeSizeGt;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_GTE = "volume_size_gte";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_GTE)
+  private Double volumeSizeGte;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_IN = "volume_size_in";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_IN)
+  private List<Double> volumeSizeIn = null;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_LT = "volume_size_lt";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_LT)
+  private Double volumeSizeLt;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_LTE = "volume_size_lte";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_LTE)
+  private Double volumeSizeLte;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_NOT = "volume_size_not";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_NOT)
+  private Double volumeSizeNot;
+
+  public static final String SERIALIZED_NAME_VOLUME_SIZE_NOT_IN = "volume_size_not_in";
+  @SerializedName(SERIALIZED_NAME_VOLUME_SIZE_NOT_IN)
+  private List<Double> volumeSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_ZBS_SNAPSHOT_UUID = "zbs_snapshot_uuid";
   @SerializedName(SERIALIZED_NAME_ZBS_SNAPSHOT_UUID)
@@ -1110,6 +1180,114 @@ public class VmVolumeSnapshotWhereInput {
   }
 
 
+  public VmVolumeSnapshotWhereInput elfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
+    
+    this.elfStoragePolicy = elfStoragePolicy;
+    return this;
+  }
+
+   /**
+   * Get elfStoragePolicy
+   * @return elfStoragePolicy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeElfStoragePolicyType getElfStoragePolicy() {
+    return elfStoragePolicy;
+  }
+
+
+  public void setElfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
+    this.elfStoragePolicy = elfStoragePolicy;
+  }
+
+
+  public VmVolumeSnapshotWhereInput elfStoragePolicyIn(List<VmVolumeElfStoragePolicyType> elfStoragePolicyIn) {
+    
+    this.elfStoragePolicyIn = elfStoragePolicyIn;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addElfStoragePolicyInItem(VmVolumeElfStoragePolicyType elfStoragePolicyInItem) {
+    if (this.elfStoragePolicyIn == null) {
+      this.elfStoragePolicyIn = new ArrayList<VmVolumeElfStoragePolicyType>();
+    }
+    this.elfStoragePolicyIn.add(elfStoragePolicyInItem);
+    return this;
+  }
+
+   /**
+   * Get elfStoragePolicyIn
+   * @return elfStoragePolicyIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeElfStoragePolicyType> getElfStoragePolicyIn() {
+    return elfStoragePolicyIn;
+  }
+
+
+  public void setElfStoragePolicyIn(List<VmVolumeElfStoragePolicyType> elfStoragePolicyIn) {
+    this.elfStoragePolicyIn = elfStoragePolicyIn;
+  }
+
+
+  public VmVolumeSnapshotWhereInput elfStoragePolicyNot(VmVolumeElfStoragePolicyType elfStoragePolicyNot) {
+    
+    this.elfStoragePolicyNot = elfStoragePolicyNot;
+    return this;
+  }
+
+   /**
+   * Get elfStoragePolicyNot
+   * @return elfStoragePolicyNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmVolumeElfStoragePolicyType getElfStoragePolicyNot() {
+    return elfStoragePolicyNot;
+  }
+
+
+  public void setElfStoragePolicyNot(VmVolumeElfStoragePolicyType elfStoragePolicyNot) {
+    this.elfStoragePolicyNot = elfStoragePolicyNot;
+  }
+
+
+  public VmVolumeSnapshotWhereInput elfStoragePolicyNotIn(List<VmVolumeElfStoragePolicyType> elfStoragePolicyNotIn) {
+    
+    this.elfStoragePolicyNotIn = elfStoragePolicyNotIn;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addElfStoragePolicyNotInItem(VmVolumeElfStoragePolicyType elfStoragePolicyNotInItem) {
+    if (this.elfStoragePolicyNotIn == null) {
+      this.elfStoragePolicyNotIn = new ArrayList<VmVolumeElfStoragePolicyType>();
+    }
+    this.elfStoragePolicyNotIn.add(elfStoragePolicyNotInItem);
+    return this;
+  }
+
+   /**
+   * Get elfStoragePolicyNotIn
+   * @return elfStoragePolicyNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeElfStoragePolicyType> getElfStoragePolicyNotIn() {
+    return elfStoragePolicyNotIn;
+  }
+
+
+  public void setElfStoragePolicyNotIn(List<VmVolumeElfStoragePolicyType> elfStoragePolicyNotIn) {
+    this.elfStoragePolicyNotIn = elfStoragePolicyNotIn;
+  }
+
+
   public VmVolumeSnapshotWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     
     this.entityAsyncStatus = entityAsyncStatus;
@@ -1553,6 +1731,75 @@ public class VmVolumeSnapshotWhereInput {
 
   public void setIdStartsWith(String idStartsWith) {
     this.idStartsWith = idStartsWith;
+  }
+
+
+  public VmVolumeSnapshotWhereInput labelsEvery(LabelWhereInput labelsEvery) {
+    
+    this.labelsEvery = labelsEvery;
+    return this;
+  }
+
+   /**
+   * Get labelsEvery
+   * @return labelsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public LabelWhereInput getLabelsEvery() {
+    return labelsEvery;
+  }
+
+
+  public void setLabelsEvery(LabelWhereInput labelsEvery) {
+    this.labelsEvery = labelsEvery;
+  }
+
+
+  public VmVolumeSnapshotWhereInput labelsNone(LabelWhereInput labelsNone) {
+    
+    this.labelsNone = labelsNone;
+    return this;
+  }
+
+   /**
+   * Get labelsNone
+   * @return labelsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public LabelWhereInput getLabelsNone() {
+    return labelsNone;
+  }
+
+
+  public void setLabelsNone(LabelWhereInput labelsNone) {
+    this.labelsNone = labelsNone;
+  }
+
+
+  public VmVolumeSnapshotWhereInput labelsSome(LabelWhereInput labelsSome) {
+    
+    this.labelsSome = labelsSome;
+    return this;
+  }
+
+   /**
+   * Get labelsSome
+   * @return labelsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public LabelWhereInput getLabelsSome() {
+    return labelsSome;
+  }
+
+
+  public void setLabelsSome(LabelWhereInput labelsSome) {
+    this.labelsSome = labelsSome;
   }
 
 
@@ -3225,6 +3472,252 @@ public class VmVolumeSnapshotWhereInput {
   }
 
 
+  public VmVolumeSnapshotWhereInput volumeSharing(Boolean volumeSharing) {
+    
+    this.volumeSharing = volumeSharing;
+    return this;
+  }
+
+   /**
+   * Get volumeSharing
+   * @return volumeSharing
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getVolumeSharing() {
+    return volumeSharing;
+  }
+
+
+  public void setVolumeSharing(Boolean volumeSharing) {
+    this.volumeSharing = volumeSharing;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSharingNot(Boolean volumeSharingNot) {
+    
+    this.volumeSharingNot = volumeSharingNot;
+    return this;
+  }
+
+   /**
+   * Get volumeSharingNot
+   * @return volumeSharingNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getVolumeSharingNot() {
+    return volumeSharingNot;
+  }
+
+
+  public void setVolumeSharingNot(Boolean volumeSharingNot) {
+    this.volumeSharingNot = volumeSharingNot;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSize(Double volumeSize) {
+    
+    this.volumeSize = volumeSize;
+    return this;
+  }
+
+   /**
+   * Get volumeSize
+   * @return volumeSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSize() {
+    return volumeSize;
+  }
+
+
+  public void setVolumeSize(Double volumeSize) {
+    this.volumeSize = volumeSize;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeGt(Double volumeSizeGt) {
+    
+    this.volumeSizeGt = volumeSizeGt;
+    return this;
+  }
+
+   /**
+   * Get volumeSizeGt
+   * @return volumeSizeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSizeGt() {
+    return volumeSizeGt;
+  }
+
+
+  public void setVolumeSizeGt(Double volumeSizeGt) {
+    this.volumeSizeGt = volumeSizeGt;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeGte(Double volumeSizeGte) {
+    
+    this.volumeSizeGte = volumeSizeGte;
+    return this;
+  }
+
+   /**
+   * Get volumeSizeGte
+   * @return volumeSizeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSizeGte() {
+    return volumeSizeGte;
+  }
+
+
+  public void setVolumeSizeGte(Double volumeSizeGte) {
+    this.volumeSizeGte = volumeSizeGte;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeIn(List<Double> volumeSizeIn) {
+    
+    this.volumeSizeIn = volumeSizeIn;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addVolumeSizeInItem(Double volumeSizeInItem) {
+    if (this.volumeSizeIn == null) {
+      this.volumeSizeIn = new ArrayList<Double>();
+    }
+    this.volumeSizeIn.add(volumeSizeInItem);
+    return this;
+  }
+
+   /**
+   * Get volumeSizeIn
+   * @return volumeSizeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getVolumeSizeIn() {
+    return volumeSizeIn;
+  }
+
+
+  public void setVolumeSizeIn(List<Double> volumeSizeIn) {
+    this.volumeSizeIn = volumeSizeIn;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeLt(Double volumeSizeLt) {
+    
+    this.volumeSizeLt = volumeSizeLt;
+    return this;
+  }
+
+   /**
+   * Get volumeSizeLt
+   * @return volumeSizeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSizeLt() {
+    return volumeSizeLt;
+  }
+
+
+  public void setVolumeSizeLt(Double volumeSizeLt) {
+    this.volumeSizeLt = volumeSizeLt;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeLte(Double volumeSizeLte) {
+    
+    this.volumeSizeLte = volumeSizeLte;
+    return this;
+  }
+
+   /**
+   * Get volumeSizeLte
+   * @return volumeSizeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSizeLte() {
+    return volumeSizeLte;
+  }
+
+
+  public void setVolumeSizeLte(Double volumeSizeLte) {
+    this.volumeSizeLte = volumeSizeLte;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeNot(Double volumeSizeNot) {
+    
+    this.volumeSizeNot = volumeSizeNot;
+    return this;
+  }
+
+   /**
+   * Get volumeSizeNot
+   * @return volumeSizeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getVolumeSizeNot() {
+    return volumeSizeNot;
+  }
+
+
+  public void setVolumeSizeNot(Double volumeSizeNot) {
+    this.volumeSizeNot = volumeSizeNot;
+  }
+
+
+  public VmVolumeSnapshotWhereInput volumeSizeNotIn(List<Double> volumeSizeNotIn) {
+    
+    this.volumeSizeNotIn = volumeSizeNotIn;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addVolumeSizeNotInItem(Double volumeSizeNotInItem) {
+    if (this.volumeSizeNotIn == null) {
+      this.volumeSizeNotIn = new ArrayList<Double>();
+    }
+    this.volumeSizeNotIn.add(volumeSizeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get volumeSizeNotIn
+   * @return volumeSizeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getVolumeSizeNotIn() {
+    return volumeSizeNotIn;
+  }
+
+
+  public void setVolumeSizeNotIn(List<Double> volumeSizeNotIn) {
+    this.volumeSizeNotIn = volumeSizeNotIn;
+  }
+
+
   public VmVolumeSnapshotWhereInput zbsSnapshotUuid(String zbsSnapshotUuid) {
     
     this.zbsSnapshotUuid = zbsSnapshotUuid;
@@ -3596,6 +4089,10 @@ public class VmVolumeSnapshotWhereInput {
         Objects.equals(this.descriptionNotIn, vmVolumeSnapshotWhereInput.descriptionNotIn) &&
         Objects.equals(this.descriptionNotStartsWith, vmVolumeSnapshotWhereInput.descriptionNotStartsWith) &&
         Objects.equals(this.descriptionStartsWith, vmVolumeSnapshotWhereInput.descriptionStartsWith) &&
+        Objects.equals(this.elfStoragePolicy, vmVolumeSnapshotWhereInput.elfStoragePolicy) &&
+        Objects.equals(this.elfStoragePolicyIn, vmVolumeSnapshotWhereInput.elfStoragePolicyIn) &&
+        Objects.equals(this.elfStoragePolicyNot, vmVolumeSnapshotWhereInput.elfStoragePolicyNot) &&
+        Objects.equals(this.elfStoragePolicyNotIn, vmVolumeSnapshotWhereInput.elfStoragePolicyNotIn) &&
         Objects.equals(this.entityAsyncStatus, vmVolumeSnapshotWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, vmVolumeSnapshotWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, vmVolumeSnapshotWhereInput.entityAsyncStatusNot) &&
@@ -3614,6 +4111,9 @@ public class VmVolumeSnapshotWhereInput {
         Objects.equals(this.idNotIn, vmVolumeSnapshotWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, vmVolumeSnapshotWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, vmVolumeSnapshotWhereInput.idStartsWith) &&
+        Objects.equals(this.labelsEvery, vmVolumeSnapshotWhereInput.labelsEvery) &&
+        Objects.equals(this.labelsNone, vmVolumeSnapshotWhereInput.labelsNone) &&
+        Objects.equals(this.labelsSome, vmVolumeSnapshotWhereInput.labelsSome) &&
         Objects.equals(this.localCreatedAt, vmVolumeSnapshotWhereInput.localCreatedAt) &&
         Objects.equals(this.localCreatedAtGt, vmVolumeSnapshotWhereInput.localCreatedAtGt) &&
         Objects.equals(this.localCreatedAtGte, vmVolumeSnapshotWhereInput.localCreatedAtGte) &&
@@ -3681,6 +4181,16 @@ public class VmVolumeSnapshotWhereInput {
         Objects.equals(this.uniqueSizeNot, vmVolumeSnapshotWhereInput.uniqueSizeNot) &&
         Objects.equals(this.uniqueSizeNotIn, vmVolumeSnapshotWhereInput.uniqueSizeNotIn) &&
         Objects.equals(this.vmVolume, vmVolumeSnapshotWhereInput.vmVolume) &&
+        Objects.equals(this.volumeSharing, vmVolumeSnapshotWhereInput.volumeSharing) &&
+        Objects.equals(this.volumeSharingNot, vmVolumeSnapshotWhereInput.volumeSharingNot) &&
+        Objects.equals(this.volumeSize, vmVolumeSnapshotWhereInput.volumeSize) &&
+        Objects.equals(this.volumeSizeGt, vmVolumeSnapshotWhereInput.volumeSizeGt) &&
+        Objects.equals(this.volumeSizeGte, vmVolumeSnapshotWhereInput.volumeSizeGte) &&
+        Objects.equals(this.volumeSizeIn, vmVolumeSnapshotWhereInput.volumeSizeIn) &&
+        Objects.equals(this.volumeSizeLt, vmVolumeSnapshotWhereInput.volumeSizeLt) &&
+        Objects.equals(this.volumeSizeLte, vmVolumeSnapshotWhereInput.volumeSizeLte) &&
+        Objects.equals(this.volumeSizeNot, vmVolumeSnapshotWhereInput.volumeSizeNot) &&
+        Objects.equals(this.volumeSizeNotIn, vmVolumeSnapshotWhereInput.volumeSizeNotIn) &&
         Objects.equals(this.zbsSnapshotUuid, vmVolumeSnapshotWhereInput.zbsSnapshotUuid) &&
         Objects.equals(this.zbsSnapshotUuidContains, vmVolumeSnapshotWhereInput.zbsSnapshotUuidContains) &&
         Objects.equals(this.zbsSnapshotUuidEndsWith, vmVolumeSnapshotWhereInput.zbsSnapshotUuidEndsWith) &&
@@ -3703,7 +4213,7 @@ public class VmVolumeSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, createAt, createAtGt, createAtGte, createAtIn, createAtLt, createAtLte, createAtNot, createAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmVolume, zbsSnapshotUuid, zbsSnapshotUuidContains, zbsSnapshotUuidEndsWith, zbsSnapshotUuidGt, zbsSnapshotUuidGte, zbsSnapshotUuidIn, zbsSnapshotUuidLt, zbsSnapshotUuidLte, zbsSnapshotUuidNot, zbsSnapshotUuidNotContains, zbsSnapshotUuidNotEndsWith, zbsSnapshotUuidNotIn, zbsSnapshotUuidNotStartsWith, zbsSnapshotUuidStartsWith);
+    return Objects.hash(AND, cluster, createAt, createAtGt, createAtGte, createAtIn, createAtLt, createAtLte, createAtNot, createAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmVolume, volumeSharing, volumeSharingNot, volumeSize, volumeSizeGt, volumeSizeGte, volumeSizeIn, volumeSizeLt, volumeSizeLte, volumeSizeNot, volumeSizeNotIn, zbsSnapshotUuid, zbsSnapshotUuidContains, zbsSnapshotUuidEndsWith, zbsSnapshotUuidGt, zbsSnapshotUuidGte, zbsSnapshotUuidIn, zbsSnapshotUuidLt, zbsSnapshotUuidLte, zbsSnapshotUuidNot, zbsSnapshotUuidNotContains, zbsSnapshotUuidNotEndsWith, zbsSnapshotUuidNotIn, zbsSnapshotUuidNotStartsWith, zbsSnapshotUuidStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3741,6 +4251,10 @@ public class VmVolumeSnapshotWhereInput {
     sb.append("    descriptionNotIn: ").append(toIndentedString(descriptionNotIn)).append("\n");
     sb.append("    descriptionNotStartsWith: ").append(toIndentedString(descriptionNotStartsWith)).append("\n");
     sb.append("    descriptionStartsWith: ").append(toIndentedString(descriptionStartsWith)).append("\n");
+    sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
+    sb.append("    elfStoragePolicyIn: ").append(toIndentedString(elfStoragePolicyIn)).append("\n");
+    sb.append("    elfStoragePolicyNot: ").append(toIndentedString(elfStoragePolicyNot)).append("\n");
+    sb.append("    elfStoragePolicyNotIn: ").append(toIndentedString(elfStoragePolicyNotIn)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
@@ -3759,6 +4273,9 @@ public class VmVolumeSnapshotWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+    sb.append("    labelsEvery: ").append(toIndentedString(labelsEvery)).append("\n");
+    sb.append("    labelsNone: ").append(toIndentedString(labelsNone)).append("\n");
+    sb.append("    labelsSome: ").append(toIndentedString(labelsSome)).append("\n");
     sb.append("    localCreatedAt: ").append(toIndentedString(localCreatedAt)).append("\n");
     sb.append("    localCreatedAtGt: ").append(toIndentedString(localCreatedAtGt)).append("\n");
     sb.append("    localCreatedAtGte: ").append(toIndentedString(localCreatedAtGte)).append("\n");
@@ -3826,6 +4343,16 @@ public class VmVolumeSnapshotWhereInput {
     sb.append("    uniqueSizeNot: ").append(toIndentedString(uniqueSizeNot)).append("\n");
     sb.append("    uniqueSizeNotIn: ").append(toIndentedString(uniqueSizeNotIn)).append("\n");
     sb.append("    vmVolume: ").append(toIndentedString(vmVolume)).append("\n");
+    sb.append("    volumeSharing: ").append(toIndentedString(volumeSharing)).append("\n");
+    sb.append("    volumeSharingNot: ").append(toIndentedString(volumeSharingNot)).append("\n");
+    sb.append("    volumeSize: ").append(toIndentedString(volumeSize)).append("\n");
+    sb.append("    volumeSizeGt: ").append(toIndentedString(volumeSizeGt)).append("\n");
+    sb.append("    volumeSizeGte: ").append(toIndentedString(volumeSizeGte)).append("\n");
+    sb.append("    volumeSizeIn: ").append(toIndentedString(volumeSizeIn)).append("\n");
+    sb.append("    volumeSizeLt: ").append(toIndentedString(volumeSizeLt)).append("\n");
+    sb.append("    volumeSizeLte: ").append(toIndentedString(volumeSizeLte)).append("\n");
+    sb.append("    volumeSizeNot: ").append(toIndentedString(volumeSizeNot)).append("\n");
+    sb.append("    volumeSizeNotIn: ").append(toIndentedString(volumeSizeNotIn)).append("\n");
     sb.append("    zbsSnapshotUuid: ").append(toIndentedString(zbsSnapshotUuid)).append("\n");
     sb.append("    zbsSnapshotUuidContains: ").append(toIndentedString(zbsSnapshotUuidContains)).append("\n");
     sb.append("    zbsSnapshotUuidEndsWith: ").append(toIndentedString(zbsSnapshotUuidEndsWith)).append("\n");

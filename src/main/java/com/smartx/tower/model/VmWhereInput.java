@@ -9,9 +9,11 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.GpuDeviceWhereInput;
 import com.smartx.tower.model.HostWhereInput;
 import com.smartx.tower.model.IsolationPolicyWhereInput;
 import com.smartx.tower.model.LabelWhereInput;
+import com.smartx.tower.model.NicWhereInput;
 import com.smartx.tower.model.SnapshotPlanWhereInput;
 import com.smartx.tower.model.UsbDeviceWhereInput;
 import com.smartx.tower.model.VmClockOffset;
@@ -352,6 +354,18 @@ public class VmWhereInput {
   public static final String SERIALIZED_NAME_FOLDER = "folder";
   @SerializedName(SERIALIZED_NAME_FOLDER)
   private VmFolderWhereInput folder;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES_EVERY = "gpu_devices_every";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES_EVERY)
+  private GpuDeviceWhereInput gpuDevicesEvery;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES_NONE = "gpu_devices_none";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES_NONE)
+  private GpuDeviceWhereInput gpuDevicesNone;
+
+  public static final String SERIALIZED_NAME_GPU_DEVICES_SOME = "gpu_devices_some";
+  @SerializedName(SERIALIZED_NAME_GPU_DEVICES_SOME)
+  private GpuDeviceWhereInput gpuDevicesSome;
 
   public static final String SERIALIZED_NAME_GUEST_CPU_MODEL = "guest_cpu_model";
   @SerializedName(SERIALIZED_NAME_GUEST_CPU_MODEL)
@@ -1324,6 +1338,18 @@ public class VmWhereInput {
   public static final String SERIALIZED_NAME_OS_STARTS_WITH = "os_starts_with";
   @SerializedName(SERIALIZED_NAME_OS_STARTS_WITH)
   private String osStartsWith;
+
+  public static final String SERIALIZED_NAME_PCI_NICS_EVERY = "pci_nics_every";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS_EVERY)
+  private NicWhereInput pciNicsEvery;
+
+  public static final String SERIALIZED_NAME_PCI_NICS_NONE = "pci_nics_none";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS_NONE)
+  private NicWhereInput pciNicsNone;
+
+  public static final String SERIALIZED_NAME_PCI_NICS_SOME = "pci_nics_some";
+  @SerializedName(SERIALIZED_NAME_PCI_NICS_SOME)
+  private NicWhereInput pciNicsSome;
 
   public static final String SERIALIZED_NAME_PROTECTED = "protected";
   @SerializedName(SERIALIZED_NAME_PROTECTED)
@@ -3583,6 +3609,75 @@ public class VmWhereInput {
 
   public void setFolder(VmFolderWhereInput folder) {
     this.folder = folder;
+  }
+
+
+  public VmWhereInput gpuDevicesEvery(GpuDeviceWhereInput gpuDevicesEvery) {
+    
+    this.gpuDevicesEvery = gpuDevicesEvery;
+    return this;
+  }
+
+   /**
+   * Get gpuDevicesEvery
+   * @return gpuDevicesEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevicesEvery() {
+    return gpuDevicesEvery;
+  }
+
+
+  public void setGpuDevicesEvery(GpuDeviceWhereInput gpuDevicesEvery) {
+    this.gpuDevicesEvery = gpuDevicesEvery;
+  }
+
+
+  public VmWhereInput gpuDevicesNone(GpuDeviceWhereInput gpuDevicesNone) {
+    
+    this.gpuDevicesNone = gpuDevicesNone;
+    return this;
+  }
+
+   /**
+   * Get gpuDevicesNone
+   * @return gpuDevicesNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevicesNone() {
+    return gpuDevicesNone;
+  }
+
+
+  public void setGpuDevicesNone(GpuDeviceWhereInput gpuDevicesNone) {
+    this.gpuDevicesNone = gpuDevicesNone;
+  }
+
+
+  public VmWhereInput gpuDevicesSome(GpuDeviceWhereInput gpuDevicesSome) {
+    
+    this.gpuDevicesSome = gpuDevicesSome;
+    return this;
+  }
+
+   /**
+   * Get gpuDevicesSome
+   * @return gpuDevicesSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GpuDeviceWhereInput getGpuDevicesSome() {
+    return gpuDevicesSome;
+  }
+
+
+  public void setGpuDevicesSome(GpuDeviceWhereInput gpuDevicesSome) {
+    this.gpuDevicesSome = gpuDevicesSome;
   }
 
 
@@ -9559,6 +9654,75 @@ public class VmWhereInput {
   }
 
 
+  public VmWhereInput pciNicsEvery(NicWhereInput pciNicsEvery) {
+    
+    this.pciNicsEvery = pciNicsEvery;
+    return this;
+  }
+
+   /**
+   * Get pciNicsEvery
+   * @return pciNicsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicWhereInput getPciNicsEvery() {
+    return pciNicsEvery;
+  }
+
+
+  public void setPciNicsEvery(NicWhereInput pciNicsEvery) {
+    this.pciNicsEvery = pciNicsEvery;
+  }
+
+
+  public VmWhereInput pciNicsNone(NicWhereInput pciNicsNone) {
+    
+    this.pciNicsNone = pciNicsNone;
+    return this;
+  }
+
+   /**
+   * Get pciNicsNone
+   * @return pciNicsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicWhereInput getPciNicsNone() {
+    return pciNicsNone;
+  }
+
+
+  public void setPciNicsNone(NicWhereInput pciNicsNone) {
+    this.pciNicsNone = pciNicsNone;
+  }
+
+
+  public VmWhereInput pciNicsSome(NicWhereInput pciNicsSome) {
+    
+    this.pciNicsSome = pciNicsSome;
+    return this;
+  }
+
+   /**
+   * Get pciNicsSome
+   * @return pciNicsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicWhereInput getPciNicsSome() {
+    return pciNicsSome;
+  }
+
+
+  public void setPciNicsSome(NicWhereInput pciNicsSome) {
+    this.pciNicsSome = pciNicsSome;
+  }
+
+
   public VmWhereInput _protected(Boolean _protected) {
     
     this._protected = _protected;
@@ -11676,6 +11840,9 @@ public class VmWhereInput {
         Objects.equals(this.firmwareNot, vmWhereInput.firmwareNot) &&
         Objects.equals(this.firmwareNotIn, vmWhereInput.firmwareNotIn) &&
         Objects.equals(this.folder, vmWhereInput.folder) &&
+        Objects.equals(this.gpuDevicesEvery, vmWhereInput.gpuDevicesEvery) &&
+        Objects.equals(this.gpuDevicesNone, vmWhereInput.gpuDevicesNone) &&
+        Objects.equals(this.gpuDevicesSome, vmWhereInput.gpuDevicesSome) &&
         Objects.equals(this.guestCpuModel, vmWhereInput.guestCpuModel) &&
         Objects.equals(this.guestCpuModelContains, vmWhereInput.guestCpuModelContains) &&
         Objects.equals(this.guestCpuModelEndsWith, vmWhereInput.guestCpuModelEndsWith) &&
@@ -11919,6 +12086,9 @@ public class VmWhereInput {
         Objects.equals(this.osNotIn, vmWhereInput.osNotIn) &&
         Objects.equals(this.osNotStartsWith, vmWhereInput.osNotStartsWith) &&
         Objects.equals(this.osStartsWith, vmWhereInput.osStartsWith) &&
+        Objects.equals(this.pciNicsEvery, vmWhereInput.pciNicsEvery) &&
+        Objects.equals(this.pciNicsNone, vmWhereInput.pciNicsNone) &&
+        Objects.equals(this.pciNicsSome, vmWhereInput.pciNicsSome) &&
         Objects.equals(this._protected, vmWhereInput._protected) &&
         Objects.equals(this.protectedNot, vmWhereInput.protectedNot) &&
         Objects.equals(this.provisionedSize, vmWhereInput.provisionedSize) &&
@@ -12009,7 +12179,7 @@ public class VmWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, NOT, OR, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
+    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, NOT, OR, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -12101,6 +12271,9 @@ public class VmWhereInput {
     sb.append("    firmwareNot: ").append(toIndentedString(firmwareNot)).append("\n");
     sb.append("    firmwareNotIn: ").append(toIndentedString(firmwareNotIn)).append("\n");
     sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
+    sb.append("    gpuDevicesEvery: ").append(toIndentedString(gpuDevicesEvery)).append("\n");
+    sb.append("    gpuDevicesNone: ").append(toIndentedString(gpuDevicesNone)).append("\n");
+    sb.append("    gpuDevicesSome: ").append(toIndentedString(gpuDevicesSome)).append("\n");
     sb.append("    guestCpuModel: ").append(toIndentedString(guestCpuModel)).append("\n");
     sb.append("    guestCpuModelContains: ").append(toIndentedString(guestCpuModelContains)).append("\n");
     sb.append("    guestCpuModelEndsWith: ").append(toIndentedString(guestCpuModelEndsWith)).append("\n");
@@ -12344,6 +12517,9 @@ public class VmWhereInput {
     sb.append("    osNotIn: ").append(toIndentedString(osNotIn)).append("\n");
     sb.append("    osNotStartsWith: ").append(toIndentedString(osNotStartsWith)).append("\n");
     sb.append("    osStartsWith: ").append(toIndentedString(osStartsWith)).append("\n");
+    sb.append("    pciNicsEvery: ").append(toIndentedString(pciNicsEvery)).append("\n");
+    sb.append("    pciNicsNone: ").append(toIndentedString(pciNicsNone)).append("\n");
+    sb.append("    pciNicsSome: ").append(toIndentedString(pciNicsSome)).append("\n");
     sb.append("    _protected: ").append(toIndentedString(_protected)).append("\n");
     sb.append("    protectedNot: ").append(toIndentedString(protectedNot)).append("\n");
     sb.append("    provisionedSize: ").append(toIndentedString(provisionedSize)).append("\n");

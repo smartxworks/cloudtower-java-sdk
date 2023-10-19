@@ -13,6 +13,7 @@ import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedVds;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.NicDriverState;
+import com.smartx.tower.model.NicUserUsage;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -128,6 +129,10 @@ public class Nic {
   public static final String SERIALIZED_NAME_USED_VF_NUM = "used_vf_num";
   @SerializedName(SERIALIZED_NAME_USED_VF_NUM)
   private Integer usedVfNum;
+
+  public static final String SERIALIZED_NAME_USER_USAGE = "user_usage";
+  @SerializedName(SERIALIZED_NAME_USER_USAGE)
+  private NicUserUsage userUsage;
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
@@ -742,6 +747,29 @@ public class Nic {
   }
 
 
+  public Nic userUsage(NicUserUsage userUsage) {
+    
+    this.userUsage = userUsage;
+    return this;
+  }
+
+   /**
+   * Get userUsage
+   * @return userUsage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NicUserUsage getUserUsage() {
+    return userUsage;
+  }
+
+
+  public void setUserUsage(NicUserUsage userUsage) {
+    this.userUsage = userUsage;
+  }
+
+
   public Nic vds(NestedVds vds) {
     
     this.vds = vds;
@@ -800,6 +828,7 @@ public class Nic {
         Objects.equals(this.type, nic.type) &&
         Objects.equals(this.up, nic.up) &&
         Objects.equals(this.usedVfNum, nic.usedVfNum) &&
+        Objects.equals(this.userUsage, nic.userUsage) &&
         Objects.equals(this.vds, nic.vds);
   }
 
@@ -809,7 +838,7 @@ public class Nic {
 
   @Override
   public int hashCode() {
-    return Objects.hash(driver, driverState, entityAsyncStatus, gatewayIp, host, ibdev, id, ipAddress, isSriov, labels, localId, macAddress, maxVfNum, model, mtu, name, nicUuid, physical, rdmaEnabled, running, speed, subnetMask, totalVfNum, type, up, usedVfNum, vds);
+    return Objects.hash(driver, driverState, entityAsyncStatus, gatewayIp, host, ibdev, id, ipAddress, isSriov, labels, localId, macAddress, maxVfNum, model, mtu, name, nicUuid, physical, rdmaEnabled, running, speed, subnetMask, totalVfNum, type, up, usedVfNum, userUsage, vds);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -849,6 +878,7 @@ public class Nic {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    up: ").append(toIndentedString(up)).append("\n");
     sb.append("    usedVfNum: ").append(toIndentedString(usedVfNum)).append("\n");
+    sb.append("    userUsage: ").append(toIndentedString(userUsage)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");
     sb.append("}");
     return sb.toString();

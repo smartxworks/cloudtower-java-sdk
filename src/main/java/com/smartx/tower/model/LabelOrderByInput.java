@@ -52,6 +52,10 @@ public enum LabelOrderByInput {
   
   ELF_IMAGE_NUM_DESC("elf_image_num_DESC"),
   
+  GPU_DEVICE_NUM_ASC("gpu_device_num_ASC"),
+  
+  GPU_DEVICE_NUM_DESC("gpu_device_num_DESC"),
+  
   HOST_NUM_ASC("host_num_ASC"),
   
   HOST_NUM_DESC("host_num_DESC"),
@@ -146,7 +150,11 @@ public enum LabelOrderByInput {
   
   VM_VOLUME_NUM_ASC("vm_volume_num_ASC"),
   
-  VM_VOLUME_NUM_DESC("vm_volume_num_DESC");
+  VM_VOLUME_NUM_DESC("vm_volume_num_DESC"),
+  
+  VM_VOLUME_SNAPSHOT_NUM_ASC("vm_volume_snapshot_num_ASC"),
+  
+  VM_VOLUME_SNAPSHOT_NUM_DESC("vm_volume_snapshot_num_DESC");
 
   private String value;
 
