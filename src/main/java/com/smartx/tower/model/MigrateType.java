@@ -20,8 +20,9 @@ public enum MigrateType {
   
   CUTOVER_MIGRATE("CUTOVER_MIGRATE"),
   
-  LIVE_MIGRATE("LIVE_MIGRATE");
-
+  LIVE_MIGRATE("LIVE_MIGRATE"),
+  
+  MIGRATETYPE_UNSUPPORTED_ENUM("MIGRATETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   MigrateType(String value) {
@@ -43,7 +44,7 @@ public enum MigrateType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return MigrateType.MIGRATETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<MigrateType> {

@@ -18,8 +18,9 @@ public enum PolicyMode {
   
   MONITOR("MONITOR"),
   
-  WORK("WORK");
-
+  WORK("WORK"),
+  
+  POLICYMODE_UNSUPPORTED_ENUM("POLICYMODE_UNSUPPORTED_ENUM");
   private String value;
 
   PolicyMode(String value) {
@@ -41,7 +42,7 @@ public enum PolicyMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return PolicyMode.POLICYMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<PolicyMode> {

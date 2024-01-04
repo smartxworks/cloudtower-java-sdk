@@ -27,6 +27,14 @@ public class IsolationPolicyWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<IsolationPolicyWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<IsolationPolicyWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<IsolationPolicyWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
   @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
   private EverouteClusterWhereInput everouteCluster;
@@ -115,14 +123,6 @@ public class IsolationPolicyWhereInput {
   @SerializedName(SERIALIZED_NAME_MODE_NOT_IN)
   private List<IsolationMode> modeNotIn = null;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<IsolationPolicyWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<IsolationPolicyWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
   private VmWhereInput vm;
@@ -158,6 +158,68 @@ public class IsolationPolicyWhereInput {
 
   public void setAND(List<IsolationPolicyWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public IsolationPolicyWhereInput NOT(List<IsolationPolicyWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public IsolationPolicyWhereInput addNOTItem(IsolationPolicyWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<IsolationPolicyWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IsolationPolicyWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<IsolationPolicyWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public IsolationPolicyWhereInput OR(List<IsolationPolicyWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public IsolationPolicyWhereInput addORItem(IsolationPolicyWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<IsolationPolicyWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IsolationPolicyWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<IsolationPolicyWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -699,68 +761,6 @@ public class IsolationPolicyWhereInput {
   }
 
 
-  public IsolationPolicyWhereInput NOT(List<IsolationPolicyWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public IsolationPolicyWhereInput addNOTItem(IsolationPolicyWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<IsolationPolicyWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IsolationPolicyWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<IsolationPolicyWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public IsolationPolicyWhereInput OR(List<IsolationPolicyWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public IsolationPolicyWhereInput addORItem(IsolationPolicyWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<IsolationPolicyWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IsolationPolicyWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<IsolationPolicyWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public IsolationPolicyWhereInput vm(VmWhereInput vm) {
     
     this.vm = vm;
@@ -794,6 +794,8 @@ public class IsolationPolicyWhereInput {
     }
     IsolationPolicyWhereInput isolationPolicyWhereInput = (IsolationPolicyWhereInput) o;
     return Objects.equals(this.AND, isolationPolicyWhereInput.AND) &&
+        Objects.equals(this.NOT, isolationPolicyWhereInput.NOT) &&
+        Objects.equals(this.OR, isolationPolicyWhereInput.OR) &&
         Objects.equals(this.everouteCluster, isolationPolicyWhereInput.everouteCluster) &&
         Objects.equals(this.id, isolationPolicyWhereInput.id) &&
         Objects.equals(this.idContains, isolationPolicyWhereInput.idContains) &&
@@ -816,8 +818,6 @@ public class IsolationPolicyWhereInput {
         Objects.equals(this.modeIn, isolationPolicyWhereInput.modeIn) &&
         Objects.equals(this.modeNot, isolationPolicyWhereInput.modeNot) &&
         Objects.equals(this.modeNotIn, isolationPolicyWhereInput.modeNotIn) &&
-        Objects.equals(this.NOT, isolationPolicyWhereInput.NOT) &&
-        Objects.equals(this.OR, isolationPolicyWhereInput.OR) &&
         Objects.equals(this.vm, isolationPolicyWhereInput.vm);
   }
 
@@ -827,7 +827,7 @@ public class IsolationPolicyWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, mode, modeIn, modeNot, modeNotIn, NOT, OR, vm);
+    return Objects.hash(AND, NOT, OR, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, mode, modeIn, modeNot, modeNotIn, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -842,6 +842,8 @@ public class IsolationPolicyWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class IsolationPolicyWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    everouteCluster: ").append(toIndentedString(everouteCluster)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
@@ -864,8 +866,6 @@ public class IsolationPolicyWhereInput {
     sb.append("    modeIn: ").append(toIndentedString(modeIn)).append("\n");
     sb.append("    modeNot: ").append(toIndentedString(modeNot)).append("\n");
     sb.append("    modeNotIn: ").append(toIndentedString(modeNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
     sb.append("}");
     return sb.toString();

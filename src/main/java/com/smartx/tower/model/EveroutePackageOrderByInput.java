@@ -50,8 +50,9 @@ public enum EveroutePackageOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  EVEROUTEPACKAGEORDERBYINPUT_UNSUPPORTED_ENUM("EVEROUTEPACKAGEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   EveroutePackageOrderByInput(String value) {
@@ -73,7 +74,7 @@ public enum EveroutePackageOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return EveroutePackageOrderByInput.EVEROUTEPACKAGEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<EveroutePackageOrderByInput> {

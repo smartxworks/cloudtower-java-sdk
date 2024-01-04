@@ -26,6 +26,14 @@ public class EntityFilterWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<EntityFilterWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<EntityFilterWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<EntityFilterWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_APPLY_TO_ALL_CLUSTERS = "apply_to_all_clusters";
   @SerializedName(SERIALIZED_NAME_APPLY_TO_ALL_CLUSTERS)
   private Boolean applyToAllClusters;
@@ -234,14 +242,6 @@ public class EntityFilterWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<EntityFilterWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<EntityFilterWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PRESET = "preset";
   @SerializedName(SERIALIZED_NAME_PRESET)
   private String preset;
@@ -329,6 +329,68 @@ public class EntityFilterWhereInput {
 
   public void setAND(List<EntityFilterWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public EntityFilterWhereInput NOT(List<EntityFilterWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public EntityFilterWhereInput addNOTItem(EntityFilterWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<EntityFilterWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityFilterWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<EntityFilterWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public EntityFilterWhereInput OR(List<EntityFilterWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public EntityFilterWhereInput addORItem(EntityFilterWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<EntityFilterWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EntityFilterWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<EntityFilterWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1608,68 +1670,6 @@ public class EntityFilterWhereInput {
   }
 
 
-  public EntityFilterWhereInput NOT(List<EntityFilterWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public EntityFilterWhereInput addNOTItem(EntityFilterWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<EntityFilterWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<EntityFilterWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<EntityFilterWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public EntityFilterWhereInput OR(List<EntityFilterWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public EntityFilterWhereInput addORItem(EntityFilterWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<EntityFilterWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<EntityFilterWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<EntityFilterWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public EntityFilterWhereInput preset(String preset) {
     
     this.preset = preset;
@@ -2018,6 +2018,8 @@ public class EntityFilterWhereInput {
     }
     EntityFilterWhereInput entityFilterWhereInput = (EntityFilterWhereInput) o;
     return Objects.equals(this.AND, entityFilterWhereInput.AND) &&
+        Objects.equals(this.NOT, entityFilterWhereInput.NOT) &&
+        Objects.equals(this.OR, entityFilterWhereInput.OR) &&
         Objects.equals(this.applyToAllClusters, entityFilterWhereInput.applyToAllClusters) &&
         Objects.equals(this.applyToAllClustersNot, entityFilterWhereInput.applyToAllClustersNot) &&
         Objects.equals(this.clustersEvery, entityFilterWhereInput.clustersEvery) &&
@@ -2070,8 +2072,6 @@ public class EntityFilterWhereInput {
         Objects.equals(this.nameNotIn, entityFilterWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, entityFilterWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, entityFilterWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, entityFilterWhereInput.NOT) &&
-        Objects.equals(this.OR, entityFilterWhereInput.OR) &&
         Objects.equals(this.preset, entityFilterWhereInput.preset) &&
         Objects.equals(this.presetContains, entityFilterWhereInput.presetContains) &&
         Objects.equals(this.presetEndsWith, entityFilterWhereInput.presetEndsWith) &&
@@ -2094,7 +2094,7 @@ public class EntityFilterWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, applyToAllClusters, applyToAllClustersNot, clustersEvery, clustersNone, clustersSome, entityType, entityTypeIn, entityTypeNot, entityTypeNotIn, execFailedClusterEvery, execFailedClusterNone, execFailedClusterSome, filterStatus, filterStatusIn, filterStatusNot, filterStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, lastExecutedAt, lastExecutedAtGt, lastExecutedAtGte, lastExecutedAtIn, lastExecutedAtLt, lastExecutedAtLte, lastExecutedAtNot, lastExecutedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, preset, presetContains, presetEndsWith, presetGt, presetGte, presetIn, presetLt, presetLte, presetNot, presetNotContains, presetNotEndsWith, presetNotIn, presetNotStartsWith, presetStartsWith);
+    return Objects.hash(AND, NOT, OR, applyToAllClusters, applyToAllClustersNot, clustersEvery, clustersNone, clustersSome, entityType, entityTypeIn, entityTypeNot, entityTypeNotIn, execFailedClusterEvery, execFailedClusterNone, execFailedClusterSome, filterStatus, filterStatusIn, filterStatusNot, filterStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, lastExecutedAt, lastExecutedAtGt, lastExecutedAtGte, lastExecutedAtIn, lastExecutedAtLt, lastExecutedAtLte, lastExecutedAtNot, lastExecutedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, preset, presetContains, presetEndsWith, presetGt, presetGte, presetIn, presetLt, presetLte, presetNot, presetNotContains, presetNotEndsWith, presetNotIn, presetNotStartsWith, presetStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2109,6 +2109,8 @@ public class EntityFilterWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class EntityFilterWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    applyToAllClusters: ").append(toIndentedString(applyToAllClusters)).append("\n");
     sb.append("    applyToAllClustersNot: ").append(toIndentedString(applyToAllClustersNot)).append("\n");
     sb.append("    clustersEvery: ").append(toIndentedString(clustersEvery)).append("\n");
@@ -2161,8 +2163,6 @@ public class EntityFilterWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    preset: ").append(toIndentedString(preset)).append("\n");
     sb.append("    presetContains: ").append(toIndentedString(presetContains)).append("\n");
     sb.append("    presetEndsWith: ").append(toIndentedString(presetEndsWith)).append("\n");

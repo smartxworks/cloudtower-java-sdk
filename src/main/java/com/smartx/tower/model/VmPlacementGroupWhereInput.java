@@ -28,6 +28,14 @@ public class VmPlacementGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmPlacementGroupWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmPlacementGroupWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmPlacementGroupWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -344,14 +352,6 @@ public class VmPlacementGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmPlacementGroupWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmPlacementGroupWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_VM_HOST_MUST_ENABLED = "vm_host_must_enabled";
   @SerializedName(SERIALIZED_NAME_VM_HOST_MUST_ENABLED)
   private Boolean vmHostMustEnabled;
@@ -475,6 +475,68 @@ public class VmPlacementGroupWhereInput {
 
   public void setAND(List<VmPlacementGroupWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmPlacementGroupWhereInput NOT(List<VmPlacementGroupWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmPlacementGroupWhereInput addNOTItem(VmPlacementGroupWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmPlacementGroupWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmPlacementGroupWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmPlacementGroupWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmPlacementGroupWhereInput OR(List<VmPlacementGroupWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmPlacementGroupWhereInput addORItem(VmPlacementGroupWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmPlacementGroupWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmPlacementGroupWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmPlacementGroupWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2407,68 +2469,6 @@ public class VmPlacementGroupWhereInput {
   }
 
 
-  public VmPlacementGroupWhereInput NOT(List<VmPlacementGroupWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmPlacementGroupWhereInput addNOTItem(VmPlacementGroupWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmPlacementGroupWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmPlacementGroupWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmPlacementGroupWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmPlacementGroupWhereInput OR(List<VmPlacementGroupWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmPlacementGroupWhereInput addORItem(VmPlacementGroupWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmPlacementGroupWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmPlacementGroupWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmPlacementGroupWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmPlacementGroupWhereInput vmHostMustEnabled(Boolean vmHostMustEnabled) {
     
     this.vmHostMustEnabled = vmHostMustEnabled;
@@ -3024,6 +3024,8 @@ public class VmPlacementGroupWhereInput {
     }
     VmPlacementGroupWhereInput vmPlacementGroupWhereInput = (VmPlacementGroupWhereInput) o;
     return Objects.equals(this.AND, vmPlacementGroupWhereInput.AND) &&
+        Objects.equals(this.NOT, vmPlacementGroupWhereInput.NOT) &&
+        Objects.equals(this.OR, vmPlacementGroupWhereInput.OR) &&
         Objects.equals(this.cluster, vmPlacementGroupWhereInput.cluster) &&
         Objects.equals(this.description, vmPlacementGroupWhereInput.description) &&
         Objects.equals(this.descriptionContains, vmPlacementGroupWhereInput.descriptionContains) &&
@@ -3103,8 +3105,6 @@ public class VmPlacementGroupWhereInput {
         Objects.equals(this.nameNotIn, vmPlacementGroupWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vmPlacementGroupWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vmPlacementGroupWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vmPlacementGroupWhereInput.NOT) &&
-        Objects.equals(this.OR, vmPlacementGroupWhereInput.OR) &&
         Objects.equals(this.vmHostMustEnabled, vmPlacementGroupWhereInput.vmHostMustEnabled) &&
         Objects.equals(this.vmHostMustEnabledNot, vmPlacementGroupWhereInput.vmHostMustEnabledNot) &&
         Objects.equals(this.vmHostMustHostUuidsEvery, vmPlacementGroupWhereInput.vmHostMustHostUuidsEvery) &&
@@ -3136,7 +3136,7 @@ public class VmPlacementGroupWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enabled, enabledNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, vmHostMustEnabled, vmHostMustEnabledNot, vmHostMustHostUuidsEvery, vmHostMustHostUuidsNone, vmHostMustHostUuidsSome, vmHostMustPolicy, vmHostMustPolicyNot, vmHostPreferEnabled, vmHostPreferEnabledNot, vmHostPreferHostUuidsEvery, vmHostPreferHostUuidsNone, vmHostPreferHostUuidsSome, vmHostPreferPolicy, vmHostPreferPolicyNot, vmVmPolicy, vmVmPolicyEnabled, vmVmPolicyEnabledNot, vmVmPolicyIn, vmVmPolicyNot, vmVmPolicyNotIn, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enabled, enabledNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, vmHostMustEnabled, vmHostMustEnabledNot, vmHostMustHostUuidsEvery, vmHostMustHostUuidsNone, vmHostMustHostUuidsSome, vmHostMustPolicy, vmHostMustPolicyNot, vmHostPreferEnabled, vmHostPreferEnabledNot, vmHostPreferHostUuidsEvery, vmHostPreferHostUuidsNone, vmHostPreferHostUuidsSome, vmHostPreferPolicy, vmHostPreferPolicyNot, vmVmPolicy, vmVmPolicyEnabled, vmVmPolicyEnabledNot, vmVmPolicyIn, vmVmPolicyNot, vmVmPolicyNotIn, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3151,6 +3151,8 @@ public class VmPlacementGroupWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmPlacementGroupWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
@@ -3230,8 +3232,6 @@ public class VmPlacementGroupWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    vmHostMustEnabled: ").append(toIndentedString(vmHostMustEnabled)).append("\n");
     sb.append("    vmHostMustEnabledNot: ").append(toIndentedString(vmHostMustEnabledNot)).append("\n");
     sb.append("    vmHostMustHostUuidsEvery: ").append(toIndentedString(vmHostMustHostUuidsEvery)).append("\n");

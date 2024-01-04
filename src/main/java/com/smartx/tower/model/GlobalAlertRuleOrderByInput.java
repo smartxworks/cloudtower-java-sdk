@@ -66,8 +66,9 @@ public enum GlobalAlertRuleOrderByInput {
   
   UNIT_ASC("unit_ASC"),
   
-  UNIT_DESC("unit_DESC");
-
+  UNIT_DESC("unit_DESC"),
+  
+  GLOBALALERTRULEORDERBYINPUT_UNSUPPORTED_ENUM("GLOBALALERTRULEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   GlobalAlertRuleOrderByInput(String value) {
@@ -89,7 +90,7 @@ public enum GlobalAlertRuleOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GlobalAlertRuleOrderByInput.GLOBALALERTRULEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GlobalAlertRuleOrderByInput> {

@@ -27,6 +27,14 @@ public class SnapshotGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SnapshotGroupWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SnapshotGroupWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SnapshotGroupWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -335,10 +343,6 @@ public class SnapshotGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SnapshotGroupWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_OBJECT_NUM = "object_num";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM)
   private Integer objectNum;
@@ -370,10 +374,6 @@ public class SnapshotGroupWhereInput {
   public static final String SERIALIZED_NAME_OBJECT_NUM_NOT_IN = "object_num_not_in";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_NOT_IN)
   private List<Integer> objectNumNotIn = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SnapshotGroupWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_SNAPSHOT_PLAN_TASK = "snapshotPlanTask";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN_TASK)
@@ -422,6 +422,68 @@ public class SnapshotGroupWhereInput {
 
   public void setAND(List<SnapshotGroupWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SnapshotGroupWhereInput NOT(List<SnapshotGroupWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SnapshotGroupWhereInput addNOTItem(SnapshotGroupWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SnapshotGroupWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnapshotGroupWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SnapshotGroupWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SnapshotGroupWhereInput OR(List<SnapshotGroupWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SnapshotGroupWhereInput addORItem(SnapshotGroupWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SnapshotGroupWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnapshotGroupWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SnapshotGroupWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2308,37 +2370,6 @@ public class SnapshotGroupWhereInput {
   }
 
 
-  public SnapshotGroupWhereInput NOT(List<SnapshotGroupWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SnapshotGroupWhereInput addNOTItem(SnapshotGroupWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SnapshotGroupWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnapshotGroupWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SnapshotGroupWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public SnapshotGroupWhereInput objectNum(Integer objectNum) {
     
     this.objectNum = objectNum;
@@ -2539,37 +2570,6 @@ public class SnapshotGroupWhereInput {
   }
 
 
-  public SnapshotGroupWhereInput OR(List<SnapshotGroupWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SnapshotGroupWhereInput addORItem(SnapshotGroupWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SnapshotGroupWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnapshotGroupWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SnapshotGroupWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SnapshotGroupWhereInput snapshotPlanTask(SnapshotPlanTaskWhereInput snapshotPlanTask) {
     
     this.snapshotPlanTask = snapshotPlanTask;
@@ -2672,6 +2672,8 @@ public class SnapshotGroupWhereInput {
     }
     SnapshotGroupWhereInput snapshotGroupWhereInput = (SnapshotGroupWhereInput) o;
     return Objects.equals(this.AND, snapshotGroupWhereInput.AND) &&
+        Objects.equals(this.NOT, snapshotGroupWhereInput.NOT) &&
+        Objects.equals(this.OR, snapshotGroupWhereInput.OR) &&
         Objects.equals(this.cluster, snapshotGroupWhereInput.cluster) &&
         Objects.equals(this.deleted, snapshotGroupWhereInput.deleted) &&
         Objects.equals(this.deletedNot, snapshotGroupWhereInput.deletedNot) &&
@@ -2749,7 +2751,6 @@ public class SnapshotGroupWhereInput {
         Objects.equals(this.nameNotIn, snapshotGroupWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, snapshotGroupWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, snapshotGroupWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, snapshotGroupWhereInput.NOT) &&
         Objects.equals(this.objectNum, snapshotGroupWhereInput.objectNum) &&
         Objects.equals(this.objectNumGt, snapshotGroupWhereInput.objectNumGt) &&
         Objects.equals(this.objectNumGte, snapshotGroupWhereInput.objectNumGte) &&
@@ -2758,7 +2759,6 @@ public class SnapshotGroupWhereInput {
         Objects.equals(this.objectNumLte, snapshotGroupWhereInput.objectNumLte) &&
         Objects.equals(this.objectNumNot, snapshotGroupWhereInput.objectNumNot) &&
         Objects.equals(this.objectNumNotIn, snapshotGroupWhereInput.objectNumNotIn) &&
-        Objects.equals(this.OR, snapshotGroupWhereInput.OR) &&
         Objects.equals(this.snapshotPlanTask, snapshotGroupWhereInput.snapshotPlanTask) &&
         Objects.equals(this.vmSnapshotsEvery, snapshotGroupWhereInput.vmSnapshotsEvery) &&
         Objects.equals(this.vmSnapshotsNone, snapshotGroupWhereInput.vmSnapshotsNone) &&
@@ -2771,7 +2771,7 @@ public class SnapshotGroupWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, deleted, deletedNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, estimatedRecyclingTime, estimatedRecyclingTimeGt, estimatedRecyclingTimeGte, estimatedRecyclingTimeIn, estimatedRecyclingTimeLt, estimatedRecyclingTimeLte, estimatedRecyclingTimeNot, estimatedRecyclingTimeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, keep, keepNot, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, objectNum, objectNumGt, objectNumGte, objectNumIn, objectNumLt, objectNumLte, objectNumNot, objectNumNotIn, OR, snapshotPlanTask, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome);
+    return Objects.hash(AND, NOT, OR, cluster, deleted, deletedNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, estimatedRecyclingTime, estimatedRecyclingTimeGt, estimatedRecyclingTimeGte, estimatedRecyclingTimeIn, estimatedRecyclingTimeLt, estimatedRecyclingTimeLte, estimatedRecyclingTimeNot, estimatedRecyclingTimeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, keep, keepNot, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, objectNum, objectNumGt, objectNumGte, objectNumIn, objectNumLt, objectNumLte, objectNumNot, objectNumNotIn, snapshotPlanTask, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2786,6 +2786,8 @@ public class SnapshotGroupWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnapshotGroupWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");
     sb.append("    deletedNot: ").append(toIndentedString(deletedNot)).append("\n");
@@ -2863,7 +2865,6 @@ public class SnapshotGroupWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    objectNum: ").append(toIndentedString(objectNum)).append("\n");
     sb.append("    objectNumGt: ").append(toIndentedString(objectNumGt)).append("\n");
     sb.append("    objectNumGte: ").append(toIndentedString(objectNumGte)).append("\n");
@@ -2872,7 +2873,6 @@ public class SnapshotGroupWhereInput {
     sb.append("    objectNumLte: ").append(toIndentedString(objectNumLte)).append("\n");
     sb.append("    objectNumNot: ").append(toIndentedString(objectNumNot)).append("\n");
     sb.append("    objectNumNotIn: ").append(toIndentedString(objectNumNotIn)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    snapshotPlanTask: ").append(toIndentedString(snapshotPlanTask)).append("\n");
     sb.append("    vmSnapshotsEvery: ").append(toIndentedString(vmSnapshotsEvery)).append("\n");
     sb.append("    vmSnapshotsNone: ").append(toIndentedString(vmSnapshotsNone)).append("\n");

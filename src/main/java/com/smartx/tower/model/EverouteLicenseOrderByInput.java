@@ -50,8 +50,9 @@ public enum EverouteLicenseOrderByInput {
   
   UID_ASC("uid_ASC"),
   
-  UID_DESC("uid_DESC");
-
+  UID_DESC("uid_DESC"),
+  
+  EVEROUTELICENSEORDERBYINPUT_UNSUPPORTED_ENUM("EVEROUTELICENSEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   EverouteLicenseOrderByInput(String value) {
@@ -73,7 +74,7 @@ public enum EverouteLicenseOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return EverouteLicenseOrderByInput.EVEROUTELICENSEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<EverouteLicenseOrderByInput> {

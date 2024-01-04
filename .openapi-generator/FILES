@@ -4,6 +4,7 @@ README.md
 README.md
 api/openapi.yaml
 git_push.sh
+modelEnum.mustache
 pom.xml
 pom.xml
 src/main/java/com/smartx/tower/ApiCallback.java
@@ -1271,6 +1272,8 @@ src/main/java/com/smartx/tower/model/VmCdRomParams.java
 src/main/java/com/smartx/tower/model/VmClockOffset.java
 src/main/java/com/smartx/tower/model/VmCloneParams.java
 src/main/java/com/smartx/tower/model/VmConnection.java
+src/main/java/com/smartx/tower/model/VmCreateVmFromContentLibraryTemplateBatchParams.java
+src/main/java/com/smartx/tower/model/VmCreateVmFromContentLibraryTemplateBatchVmParams.java
 src/main/java/com/smartx/tower/model/VmCreateVmFromContentLibraryTemplateParams.java
 src/main/java/com/smartx/tower/model/VmCreateVmFromTemplateParams.java
 src/main/java/com/smartx/tower/model/VmCreationParams.java
@@ -1522,6 +1525,7 @@ src/main/java/com/smartx/tower/model/WithTaskVds.java
 src/main/java/com/smartx/tower/model/WithTaskView.java
 src/main/java/com/smartx/tower/model/WithTaskVlan.java
 src/main/java/com/smartx/tower/model/WithTaskVm.java
+src/main/java/com/smartx/tower/model/WithTaskVmArray.java
 src/main/java/com/smartx/tower/model/WithTaskVmExportFile.java
 src/main/java/com/smartx/tower/model/WithTaskVmFolder.java
 src/main/java/com/smartx/tower/model/WithTaskVmPlacementGroup.java

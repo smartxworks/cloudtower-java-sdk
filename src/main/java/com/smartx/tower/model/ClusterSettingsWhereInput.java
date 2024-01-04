@@ -25,6 +25,14 @@ public class ClusterSettingsWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ClusterSettingsWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ClusterSettingsWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ClusterSettingsWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -117,14 +125,6 @@ public class ClusterSettingsWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ClusterSettingsWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ClusterSettingsWhereInput> OR = null;
-
   public ClusterSettingsWhereInput() { 
   }
 
@@ -156,6 +156,68 @@ public class ClusterSettingsWhereInput {
 
   public void setAND(List<ClusterSettingsWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ClusterSettingsWhereInput NOT(List<ClusterSettingsWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ClusterSettingsWhereInput addNOTItem(ClusterSettingsWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ClusterSettingsWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterSettingsWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ClusterSettingsWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ClusterSettingsWhereInput OR(List<ClusterSettingsWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ClusterSettingsWhereInput addORItem(ClusterSettingsWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ClusterSettingsWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterSettingsWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ClusterSettingsWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -720,68 +782,6 @@ public class ClusterSettingsWhereInput {
   }
 
 
-  public ClusterSettingsWhereInput NOT(List<ClusterSettingsWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ClusterSettingsWhereInput addNOTItem(ClusterSettingsWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ClusterSettingsWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterSettingsWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ClusterSettingsWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ClusterSettingsWhereInput OR(List<ClusterSettingsWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ClusterSettingsWhereInput addORItem(ClusterSettingsWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ClusterSettingsWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterSettingsWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ClusterSettingsWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -792,6 +792,8 @@ public class ClusterSettingsWhereInput {
     }
     ClusterSettingsWhereInput clusterSettingsWhereInput = (ClusterSettingsWhereInput) o;
     return Objects.equals(this.AND, clusterSettingsWhereInput.AND) &&
+        Objects.equals(this.NOT, clusterSettingsWhereInput.NOT) &&
+        Objects.equals(this.OR, clusterSettingsWhereInput.OR) &&
         Objects.equals(this.cluster, clusterSettingsWhereInput.cluster) &&
         Objects.equals(this.defaultHa, clusterSettingsWhereInput.defaultHa) &&
         Objects.equals(this.defaultHaNot, clusterSettingsWhereInput.defaultHaNot) &&
@@ -814,9 +816,7 @@ public class ClusterSettingsWhereInput {
         Objects.equals(this.idNotEndsWith, clusterSettingsWhereInput.idNotEndsWith) &&
         Objects.equals(this.idNotIn, clusterSettingsWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, clusterSettingsWhereInput.idNotStartsWith) &&
-        Objects.equals(this.idStartsWith, clusterSettingsWhereInput.idStartsWith) &&
-        Objects.equals(this.NOT, clusterSettingsWhereInput.NOT) &&
-        Objects.equals(this.OR, clusterSettingsWhereInput.OR);
+        Objects.equals(this.idStartsWith, clusterSettingsWhereInput.idStartsWith);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -825,7 +825,7 @@ public class ClusterSettingsWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, defaultHa, defaultHaNot, defaultStoragePolicy, defaultStoragePolicyIn, defaultStoragePolicyNot, defaultStoragePolicyNotIn, enabledIscsi, enabledIscsiNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, NOT, OR);
+    return Objects.hash(AND, NOT, OR, cluster, defaultHa, defaultHaNot, defaultStoragePolicy, defaultStoragePolicyIn, defaultStoragePolicyNot, defaultStoragePolicyNotIn, enabledIscsi, enabledIscsiNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -840,6 +840,8 @@ public class ClusterSettingsWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClusterSettingsWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    defaultHa: ").append(toIndentedString(defaultHa)).append("\n");
     sb.append("    defaultHaNot: ").append(toIndentedString(defaultHaNot)).append("\n");
@@ -863,8 +865,6 @@ public class ClusterSettingsWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("}");
     return sb.toString();
   }

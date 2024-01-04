@@ -33,6 +33,14 @@ public class VmSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmSnapshotWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmSnapshotWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmSnapshotWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
   @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)
   private VmClockOffset clockOffset;
@@ -577,14 +585,6 @@ public class VmSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmSnapshotWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmSnapshotWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -696,6 +696,68 @@ public class VmSnapshotWhereInput {
 
   public void setAND(List<VmSnapshotWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmSnapshotWhereInput NOT(List<VmSnapshotWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmSnapshotWhereInput addNOTItem(VmSnapshotWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmSnapshotWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmSnapshotWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmSnapshotWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmSnapshotWhereInput OR(List<VmSnapshotWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmSnapshotWhereInput addORItem(VmSnapshotWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmSnapshotWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmSnapshotWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmSnapshotWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -4083,68 +4145,6 @@ public class VmSnapshotWhereInput {
   }
 
 
-  public VmSnapshotWhereInput NOT(List<VmSnapshotWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmSnapshotWhereInput addNOTItem(VmSnapshotWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmSnapshotWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmSnapshotWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmSnapshotWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmSnapshotWhereInput OR(List<VmSnapshotWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmSnapshotWhereInput addORItem(VmSnapshotWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmSnapshotWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmSnapshotWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmSnapshotWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmSnapshotWhereInput size(Long size) {
     
     this.size = size;
@@ -4647,6 +4647,8 @@ public class VmSnapshotWhereInput {
     }
     VmSnapshotWhereInput vmSnapshotWhereInput = (VmSnapshotWhereInput) o;
     return Objects.equals(this.AND, vmSnapshotWhereInput.AND) &&
+        Objects.equals(this.NOT, vmSnapshotWhereInput.NOT) &&
+        Objects.equals(this.OR, vmSnapshotWhereInput.OR) &&
         Objects.equals(this.clockOffset, vmSnapshotWhereInput.clockOffset) &&
         Objects.equals(this.clockOffsetIn, vmSnapshotWhereInput.clockOffsetIn) &&
         Objects.equals(this.clockOffsetNot, vmSnapshotWhereInput.clockOffsetNot) &&
@@ -4783,8 +4785,6 @@ public class VmSnapshotWhereInput {
         Objects.equals(this.nameNotIn, vmSnapshotWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vmSnapshotWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vmSnapshotWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vmSnapshotWhereInput.NOT) &&
-        Objects.equals(this.OR, vmSnapshotWhereInput.OR) &&
         Objects.equals(this.size, vmSnapshotWhereInput.size) &&
         Objects.equals(this.sizeGt, vmSnapshotWhereInput.sizeGt) &&
         Objects.equals(this.sizeGte, vmSnapshotWhereInput.sizeGte) &&
@@ -4813,7 +4813,7 @@ public class VmSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cluster, consistentType, consistentTypeIn, consistentTypeNot, consistentTypeNotIn, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotGroup, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, vm, winOpt, winOptNot);
+    return Objects.hash(AND, NOT, OR, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cluster, consistentType, consistentTypeIn, consistentTypeNot, consistentTypeNotIn, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotGroup, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, vm, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4828,6 +4828,8 @@ public class VmSnapshotWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmSnapshotWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    clockOffsetIn: ").append(toIndentedString(clockOffsetIn)).append("\n");
     sb.append("    clockOffsetNot: ").append(toIndentedString(clockOffsetNot)).append("\n");
@@ -4964,8 +4966,6 @@ public class VmSnapshotWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    sizeGt: ").append(toIndentedString(sizeGt)).append("\n");
     sb.append("    sizeGte: ").append(toIndentedString(sizeGte)).append("\n");

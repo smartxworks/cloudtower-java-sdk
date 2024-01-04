@@ -18,8 +18,9 @@ public enum VmDiskIoPolicy {
   
   EACH_DISK("RESTRICT_EACH_DISK"),
   
-  WHOLE_VM("RESTRICT_WHOLE_VM");
-
+  WHOLE_VM("RESTRICT_WHOLE_VM"),
+  
+  VMDISKIOPOLICY_UNSUPPORTED_ENUM("VMDISKIOPOLICY_UNSUPPORTED_ENUM");
   private String value;
 
   VmDiskIoPolicy(String value) {
@@ -41,7 +42,7 @@ public enum VmDiskIoPolicy {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmDiskIoPolicy.VMDISKIOPOLICY_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmDiskIoPolicy> {

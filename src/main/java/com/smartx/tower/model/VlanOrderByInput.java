@@ -66,8 +66,9 @@ public enum VlanOrderByInput {
   
   VLAN_ID_ASC("vlan_id_ASC"),
   
-  VLAN_ID_DESC("vlan_id_DESC");
-
+  VLAN_ID_DESC("vlan_id_DESC"),
+  
+  VLANORDERBYINPUT_UNSUPPORTED_ENUM("VLANORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VlanOrderByInput(String value) {
@@ -89,7 +90,7 @@ public enum VlanOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VlanOrderByInput.VLANORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VlanOrderByInput> {

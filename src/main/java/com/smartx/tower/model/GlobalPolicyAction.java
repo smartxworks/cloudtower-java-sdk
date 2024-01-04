@@ -18,8 +18,9 @@ public enum GlobalPolicyAction {
   
   ALLOW("ALLOW"),
   
-  DROP("DROP");
-
+  DROP("DROP"),
+  
+  GLOBALPOLICYACTION_UNSUPPORTED_ENUM("GLOBALPOLICYACTION_UNSUPPORTED_ENUM");
   private String value;
 
   GlobalPolicyAction(String value) {
@@ -41,7 +42,7 @@ public enum GlobalPolicyAction {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GlobalPolicyAction.GLOBALPOLICYACTION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GlobalPolicyAction> {

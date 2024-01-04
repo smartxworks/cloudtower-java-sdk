@@ -16,24 +16,25 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(ApplicationState.Adapter.class)
 public enum ApplicationState {
   
-  DEPLOY_ERROR("DEPLOY_ERROR"),
-  
   DEPLOYED("DEPLOYED"),
   
   DEPLOYING("DEPLOYING"),
+  
+  DEPLOY_ERROR("DEPLOY_ERROR"),
   
   EDITING("EDITING"),
   
   NOT_DEPLOYED("NOT_DEPLOYED"),
   
-  STOP_ERROR("STOP_ERROR"),
-  
   STOPPED("STOPPED"),
   
   STOPPING("STOPPING"),
   
-  UPGRADING("UPGRADING");
-
+  STOP_ERROR("STOP_ERROR"),
+  
+  UPGRADING("UPGRADING"),
+  
+  APPLICATIONSTATE_UNSUPPORTED_ENUM("APPLICATIONSTATE_UNSUPPORTED_ENUM");
   private String value;
 
   ApplicationState(String value) {
@@ -55,7 +56,7 @@ public enum ApplicationState {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ApplicationState.APPLICATIONSTATE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ApplicationState> {

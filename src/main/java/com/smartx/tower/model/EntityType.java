@@ -16,8 +16,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(EntityType.Adapter.class)
 public enum EntityType {
   
-  VM("VM");
-
+  VM("VM"),
+  
+  ENTITYTYPE_UNSUPPORTED_ENUM("ENTITYTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   EntityType(String value) {
@@ -39,7 +40,7 @@ public enum EntityType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return EntityType.ENTITYTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<EntityType> {

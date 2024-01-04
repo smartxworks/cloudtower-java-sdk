@@ -30,6 +30,14 @@ public class ContentLibraryImageWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ContentLibraryImageWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ContentLibraryImageWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ContentLibraryImageWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTERS_EVERY = "clusters_every";
   @SerializedName(SERIALIZED_NAME_CLUSTERS_EVERY)
   private ClusterWhereInput clustersEvery;
@@ -282,14 +290,6 @@ public class ContentLibraryImageWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ContentLibraryImageWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ContentLibraryImageWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
   private String path;
@@ -445,6 +445,68 @@ public class ContentLibraryImageWhereInput {
 
   public void setAND(List<ContentLibraryImageWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ContentLibraryImageWhereInput NOT(List<ContentLibraryImageWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ContentLibraryImageWhereInput addNOTItem(ContentLibraryImageWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ContentLibraryImageWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ContentLibraryImageWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ContentLibraryImageWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ContentLibraryImageWhereInput OR(List<ContentLibraryImageWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ContentLibraryImageWhereInput addORItem(ContentLibraryImageWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ContentLibraryImageWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ContentLibraryImageWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ContentLibraryImageWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1977,68 +2039,6 @@ public class ContentLibraryImageWhereInput {
   }
 
 
-  public ContentLibraryImageWhereInput NOT(List<ContentLibraryImageWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ContentLibraryImageWhereInput addNOTItem(ContentLibraryImageWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ContentLibraryImageWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ContentLibraryImageWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ContentLibraryImageWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ContentLibraryImageWhereInput OR(List<ContentLibraryImageWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ContentLibraryImageWhereInput addORItem(ContentLibraryImageWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ContentLibraryImageWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ContentLibraryImageWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ContentLibraryImageWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ContentLibraryImageWhereInput path(String path) {
     
     this.path = path;
@@ -2794,6 +2794,8 @@ public class ContentLibraryImageWhereInput {
     }
     ContentLibraryImageWhereInput contentLibraryImageWhereInput = (ContentLibraryImageWhereInput) o;
     return Objects.equals(this.AND, contentLibraryImageWhereInput.AND) &&
+        Objects.equals(this.NOT, contentLibraryImageWhereInput.NOT) &&
+        Objects.equals(this.OR, contentLibraryImageWhereInput.OR) &&
         Objects.equals(this.clustersEvery, contentLibraryImageWhereInput.clustersEvery) &&
         Objects.equals(this.clustersNone, contentLibraryImageWhereInput.clustersNone) &&
         Objects.equals(this.clustersSome, contentLibraryImageWhereInput.clustersSome) &&
@@ -2857,8 +2859,6 @@ public class ContentLibraryImageWhereInput {
         Objects.equals(this.nameNotIn, contentLibraryImageWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, contentLibraryImageWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, contentLibraryImageWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, contentLibraryImageWhereInput.NOT) &&
-        Objects.equals(this.OR, contentLibraryImageWhereInput.OR) &&
         Objects.equals(this.path, contentLibraryImageWhereInput.path) &&
         Objects.equals(this.pathContains, contentLibraryImageWhereInput.pathContains) &&
         Objects.equals(this.pathEndsWith, contentLibraryImageWhereInput.pathEndsWith) &&
@@ -2898,7 +2898,7 @@ public class ContentLibraryImageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfImagesEvery, elfImagesNone, elfImagesSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
+    return Objects.hash(AND, NOT, OR, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfImagesEvery, elfImagesNone, elfImagesSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2913,6 +2913,8 @@ public class ContentLibraryImageWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentLibraryImageWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clustersEvery: ").append(toIndentedString(clustersEvery)).append("\n");
     sb.append("    clustersNone: ").append(toIndentedString(clustersNone)).append("\n");
     sb.append("    clustersSome: ").append(toIndentedString(clustersSome)).append("\n");
@@ -2976,8 +2978,6 @@ public class ContentLibraryImageWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    pathContains: ").append(toIndentedString(pathContains)).append("\n");
     sb.append("    pathEndsWith: ").append(toIndentedString(pathEndsWith)).append("\n");

@@ -22,8 +22,9 @@ public enum VmVideoType {
   
   VGA("VGA"),
   
-  VIRTIO("VIRTIO");
-
+  VIRTIO("VIRTIO"),
+  
+  VMVIDEOTYPE_UNSUPPORTED_ENUM("VMVIDEOTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmVideoType(String value) {
@@ -45,7 +46,7 @@ public enum VmVideoType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVideoType.VMVIDEOTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVideoType> {

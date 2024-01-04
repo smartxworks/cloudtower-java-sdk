@@ -54,8 +54,9 @@ public enum VdsOrderByInput {
   
   WORK_MODE_ASC("work_mode_ASC"),
   
-  WORK_MODE_DESC("work_mode_DESC");
-
+  WORK_MODE_DESC("work_mode_DESC"),
+  
+  VDSORDERBYINPUT_UNSUPPORTED_ENUM("VDSORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VdsOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum VdsOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VdsOrderByInput.VDSORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VdsOrderByInput> {

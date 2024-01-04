@@ -29,6 +29,14 @@ public class SnmpTransportWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SnmpTransportWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SnmpTransportWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SnmpTransportWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_AUTH_PASS_PHRASE = "auth_pass_phrase";
   @SerializedName(SERIALIZED_NAME_AUTH_PASS_PHRASE)
   private String authPassPhrase;
@@ -353,14 +361,6 @@ public class SnmpTransportWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SnmpTransportWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SnmpTransportWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private Integer port;
@@ -584,6 +584,68 @@ public class SnmpTransportWhereInput {
 
   public void setAND(List<SnmpTransportWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SnmpTransportWhereInput NOT(List<SnmpTransportWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SnmpTransportWhereInput addNOTItem(SnmpTransportWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SnmpTransportWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnmpTransportWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SnmpTransportWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SnmpTransportWhereInput OR(List<SnmpTransportWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SnmpTransportWhereInput addORItem(SnmpTransportWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SnmpTransportWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnmpTransportWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SnmpTransportWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2562,68 +2624,6 @@ public class SnmpTransportWhereInput {
   }
 
 
-  public SnmpTransportWhereInput NOT(List<SnmpTransportWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SnmpTransportWhereInput addNOTItem(SnmpTransportWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SnmpTransportWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnmpTransportWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SnmpTransportWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SnmpTransportWhereInput OR(List<SnmpTransportWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SnmpTransportWhereInput addORItem(SnmpTransportWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SnmpTransportWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnmpTransportWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SnmpTransportWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SnmpTransportWhereInput port(Integer port) {
     
     this.port = port;
@@ -3834,6 +3834,8 @@ public class SnmpTransportWhereInput {
     }
     SnmpTransportWhereInput snmpTransportWhereInput = (SnmpTransportWhereInput) o;
     return Objects.equals(this.AND, snmpTransportWhereInput.AND) &&
+        Objects.equals(this.NOT, snmpTransportWhereInput.NOT) &&
+        Objects.equals(this.OR, snmpTransportWhereInput.OR) &&
         Objects.equals(this.authPassPhrase, snmpTransportWhereInput.authPassPhrase) &&
         Objects.equals(this.authPassPhraseContains, snmpTransportWhereInput.authPassPhraseContains) &&
         Objects.equals(this.authPassPhraseEndsWith, snmpTransportWhereInput.authPassPhraseEndsWith) &&
@@ -3915,8 +3917,6 @@ public class SnmpTransportWhereInput {
         Objects.equals(this.nameNotIn, snmpTransportWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, snmpTransportWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, snmpTransportWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, snmpTransportWhereInput.NOT) &&
-        Objects.equals(this.OR, snmpTransportWhereInput.OR) &&
         Objects.equals(this.port, snmpTransportWhereInput.port) &&
         Objects.equals(this.portGt, snmpTransportWhereInput.portGt) &&
         Objects.equals(this.portGte, snmpTransportWhereInput.portGte) &&
@@ -3973,7 +3973,7 @@ public class SnmpTransportWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, authPassPhrase, authPassPhraseContains, authPassPhraseEndsWith, authPassPhraseGt, authPassPhraseGte, authPassPhraseIn, authPassPhraseLt, authPassPhraseLte, authPassPhraseNot, authPassPhraseNotContains, authPassPhraseNotEndsWith, authPassPhraseNotIn, authPassPhraseNotStartsWith, authPassPhraseStartsWith, authProtocol, authProtocolIn, authProtocolNot, authProtocolNotIn, cluster, community, communityContains, communityEndsWith, communityGt, communityGte, communityIn, communityLt, communityLte, communityNot, communityNotContains, communityNotEndsWith, communityNotIn, communityNotStartsWith, communityStartsWith, disabled, disabledNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, privacyPassPhrase, privacyPassPhraseContains, privacyPassPhraseEndsWith, privacyPassPhraseGt, privacyPassPhraseGte, privacyPassPhraseIn, privacyPassPhraseLt, privacyPassPhraseLte, privacyPassPhraseNot, privacyPassPhraseNotContains, privacyPassPhraseNotEndsWith, privacyPassPhraseNotIn, privacyPassPhraseNotStartsWith, privacyPassPhraseStartsWith, privacyProtocol, privacyProtocolIn, privacyProtocolNot, privacyProtocolNotIn, protocol, protocolIn, protocolNot, protocolNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith, version, versionIn, versionNot, versionNotIn);
+    return Objects.hash(AND, NOT, OR, authPassPhrase, authPassPhraseContains, authPassPhraseEndsWith, authPassPhraseGt, authPassPhraseGte, authPassPhraseIn, authPassPhraseLt, authPassPhraseLte, authPassPhraseNot, authPassPhraseNotContains, authPassPhraseNotEndsWith, authPassPhraseNotIn, authPassPhraseNotStartsWith, authPassPhraseStartsWith, authProtocol, authProtocolIn, authProtocolNot, authProtocolNotIn, cluster, community, communityContains, communityEndsWith, communityGt, communityGte, communityIn, communityLt, communityLte, communityNot, communityNotContains, communityNotEndsWith, communityNotIn, communityNotStartsWith, communityStartsWith, disabled, disabledNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, privacyPassPhrase, privacyPassPhraseContains, privacyPassPhraseEndsWith, privacyPassPhraseGt, privacyPassPhraseGte, privacyPassPhraseIn, privacyPassPhraseLt, privacyPassPhraseLte, privacyPassPhraseNot, privacyPassPhraseNotContains, privacyPassPhraseNotEndsWith, privacyPassPhraseNotIn, privacyPassPhraseNotStartsWith, privacyPassPhraseStartsWith, privacyProtocol, privacyProtocolIn, privacyProtocolNot, privacyProtocolNotIn, protocol, protocolIn, protocolNot, protocolNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith, version, versionIn, versionNot, versionNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3988,6 +3988,8 @@ public class SnmpTransportWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnmpTransportWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    authPassPhrase: ").append(toIndentedString(authPassPhrase)).append("\n");
     sb.append("    authPassPhraseContains: ").append(toIndentedString(authPassPhraseContains)).append("\n");
     sb.append("    authPassPhraseEndsWith: ").append(toIndentedString(authPassPhraseEndsWith)).append("\n");
@@ -4069,8 +4071,6 @@ public class SnmpTransportWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
     sb.append("    portGt: ").append(toIndentedString(portGt)).append("\n");
     sb.append("    portGte: ").append(toIndentedString(portGte)).append("\n");

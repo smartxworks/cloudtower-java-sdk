@@ -24,6 +24,14 @@ public class WitnessWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<WitnessWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<WitnessWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<WitnessWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -340,14 +348,6 @@ public class WitnessWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<WitnessWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<WitnessWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SYSTEM_DATA_CAPACITY = "system_data_capacity";
   @SerializedName(SERIALIZED_NAME_SYSTEM_DATA_CAPACITY)
   private Long systemDataCapacity;
@@ -539,6 +539,68 @@ public class WitnessWhereInput {
 
   public void setAND(List<WitnessWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public WitnessWhereInput NOT(List<WitnessWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public WitnessWhereInput addNOTItem(WitnessWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<WitnessWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<WitnessWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<WitnessWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public WitnessWhereInput OR(List<WitnessWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public WitnessWhereInput addORItem(WitnessWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<WitnessWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<WitnessWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<WitnessWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2455,68 +2517,6 @@ public class WitnessWhereInput {
   }
 
 
-  public WitnessWhereInput NOT(List<WitnessWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public WitnessWhereInput addNOTItem(WitnessWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<WitnessWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<WitnessWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<WitnessWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public WitnessWhereInput OR(List<WitnessWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public WitnessWhereInput addORItem(WitnessWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<WitnessWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<WitnessWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<WitnessWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public WitnessWhereInput systemDataCapacity(Long systemDataCapacity) {
     
     this.systemDataCapacity = systemDataCapacity;
@@ -3527,6 +3527,8 @@ public class WitnessWhereInput {
     }
     WitnessWhereInput witnessWhereInput = (WitnessWhereInput) o;
     return Objects.equals(this.AND, witnessWhereInput.AND) &&
+        Objects.equals(this.NOT, witnessWhereInput.NOT) &&
+        Objects.equals(this.OR, witnessWhereInput.OR) &&
         Objects.equals(this.cluster, witnessWhereInput.cluster) &&
         Objects.equals(this.cpuHzPerCore, witnessWhereInput.cpuHzPerCore) &&
         Objects.equals(this.cpuHzPerCoreGt, witnessWhereInput.cpuHzPerCoreGt) &&
@@ -3606,8 +3608,6 @@ public class WitnessWhereInput {
         Objects.equals(this.nameNotIn, witnessWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, witnessWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, witnessWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, witnessWhereInput.NOT) &&
-        Objects.equals(this.OR, witnessWhereInput.OR) &&
         Objects.equals(this.systemDataCapacity, witnessWhereInput.systemDataCapacity) &&
         Objects.equals(this.systemDataCapacityGt, witnessWhereInput.systemDataCapacityGt) &&
         Objects.equals(this.systemDataCapacityGte, witnessWhereInput.systemDataCapacityGte) &&
@@ -3656,7 +3656,7 @@ public class WitnessWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, cpuHzPerCore, cpuHzPerCoreGt, cpuHzPerCoreGte, cpuHzPerCoreIn, cpuHzPerCoreLt, cpuHzPerCoreLte, cpuHzPerCoreNot, cpuHzPerCoreNotIn, dataIp, dataIpContains, dataIpEndsWith, dataIpGt, dataIpGte, dataIpIn, dataIpLt, dataIpLte, dataIpNot, dataIpNotContains, dataIpNotEndsWith, dataIpNotIn, dataIpNotStartsWith, dataIpStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, managementIp, managementIpContains, managementIpEndsWith, managementIpGt, managementIpGte, managementIpIn, managementIpLt, managementIpLte, managementIpNot, managementIpNotContains, managementIpNotEndsWith, managementIpNotIn, managementIpNotStartsWith, managementIpStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, systemDataCapacity, systemDataCapacityGt, systemDataCapacityGte, systemDataCapacityIn, systemDataCapacityLt, systemDataCapacityLte, systemDataCapacityNot, systemDataCapacityNotIn, systemUsedDataSpace, systemUsedDataSpaceGt, systemUsedDataSpaceGte, systemUsedDataSpaceIn, systemUsedDataSpaceLt, systemUsedDataSpaceLte, systemUsedDataSpaceNot, systemUsedDataSpaceNotIn, totalCpuCores, totalCpuCoresGt, totalCpuCoresGte, totalCpuCoresIn, totalCpuCoresLt, totalCpuCoresLte, totalCpuCoresNot, totalCpuCoresNotIn, totalCpuHz, totalCpuHzGt, totalCpuHzGte, totalCpuHzIn, totalCpuHzLt, totalCpuHzLte, totalCpuHzNot, totalCpuHzNotIn, totalMemoryBytes, totalMemoryBytesGt, totalMemoryBytesGte, totalMemoryBytesIn, totalMemoryBytesLt, totalMemoryBytesLte, totalMemoryBytesNot, totalMemoryBytesNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, cpuHzPerCore, cpuHzPerCoreGt, cpuHzPerCoreGte, cpuHzPerCoreIn, cpuHzPerCoreLt, cpuHzPerCoreLte, cpuHzPerCoreNot, cpuHzPerCoreNotIn, dataIp, dataIpContains, dataIpEndsWith, dataIpGt, dataIpGte, dataIpIn, dataIpLt, dataIpLte, dataIpNot, dataIpNotContains, dataIpNotEndsWith, dataIpNotIn, dataIpNotStartsWith, dataIpStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, managementIp, managementIpContains, managementIpEndsWith, managementIpGt, managementIpGte, managementIpIn, managementIpLt, managementIpLte, managementIpNot, managementIpNotContains, managementIpNotEndsWith, managementIpNotIn, managementIpNotStartsWith, managementIpStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, systemDataCapacity, systemDataCapacityGt, systemDataCapacityGte, systemDataCapacityIn, systemDataCapacityLt, systemDataCapacityLte, systemDataCapacityNot, systemDataCapacityNotIn, systemUsedDataSpace, systemUsedDataSpaceGt, systemUsedDataSpaceGte, systemUsedDataSpaceIn, systemUsedDataSpaceLt, systemUsedDataSpaceLte, systemUsedDataSpaceNot, systemUsedDataSpaceNotIn, totalCpuCores, totalCpuCoresGt, totalCpuCoresGte, totalCpuCoresIn, totalCpuCoresLt, totalCpuCoresLte, totalCpuCoresNot, totalCpuCoresNotIn, totalCpuHz, totalCpuHzGt, totalCpuHzGte, totalCpuHzIn, totalCpuHzLt, totalCpuHzLte, totalCpuHzNot, totalCpuHzNotIn, totalMemoryBytes, totalMemoryBytesGt, totalMemoryBytesGte, totalMemoryBytesIn, totalMemoryBytesLt, totalMemoryBytesLte, totalMemoryBytesNot, totalMemoryBytesNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3671,6 +3671,8 @@ public class WitnessWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class WitnessWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    cpuHzPerCore: ").append(toIndentedString(cpuHzPerCore)).append("\n");
     sb.append("    cpuHzPerCoreGt: ").append(toIndentedString(cpuHzPerCoreGt)).append("\n");
@@ -3750,8 +3752,6 @@ public class WitnessWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    systemDataCapacity: ").append(toIndentedString(systemDataCapacity)).append("\n");
     sb.append("    systemDataCapacityGt: ").append(toIndentedString(systemDataCapacityGt)).append("\n");
     sb.append("    systemDataCapacityGte: ").append(toIndentedString(systemDataCapacityGte)).append("\n");

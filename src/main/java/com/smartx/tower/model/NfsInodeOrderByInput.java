@@ -58,8 +58,9 @@ public enum NfsInodeOrderByInput {
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
-  UNIQUE_SIZE_DESC("unique_size_DESC");
-
+  UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  NFSINODEORDERBYINPUT_UNSUPPORTED_ENUM("NFSINODEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   NfsInodeOrderByInput(String value) {
@@ -81,7 +82,7 @@ public enum NfsInodeOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NfsInodeOrderByInput.NFSINODEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NfsInodeOrderByInput> {

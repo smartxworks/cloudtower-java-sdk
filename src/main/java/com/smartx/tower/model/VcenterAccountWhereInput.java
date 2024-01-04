@@ -24,6 +24,14 @@ public class VcenterAccountWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VcenterAccountWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VcenterAccountWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VcenterAccountWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -204,14 +212,6 @@ public class VcenterAccountWhereInput {
   @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
   private String localIdStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VcenterAccountWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VcenterAccountWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private Integer port;
@@ -331,6 +331,68 @@ public class VcenterAccountWhereInput {
 
   public void setAND(List<VcenterAccountWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VcenterAccountWhereInput NOT(List<VcenterAccountWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VcenterAccountWhereInput addNOTItem(VcenterAccountWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VcenterAccountWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VcenterAccountWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VcenterAccountWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VcenterAccountWhereInput OR(List<VcenterAccountWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VcenterAccountWhereInput addORItem(VcenterAccountWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VcenterAccountWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VcenterAccountWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VcenterAccountWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1417,68 +1479,6 @@ public class VcenterAccountWhereInput {
   }
 
 
-  public VcenterAccountWhereInput NOT(List<VcenterAccountWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VcenterAccountWhereInput addNOTItem(VcenterAccountWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VcenterAccountWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VcenterAccountWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VcenterAccountWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VcenterAccountWhereInput OR(List<VcenterAccountWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VcenterAccountWhereInput addORItem(VcenterAccountWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VcenterAccountWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VcenterAccountWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VcenterAccountWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VcenterAccountWhereInput port(Integer port) {
     
     this.port = port;
@@ -2027,6 +2027,8 @@ public class VcenterAccountWhereInput {
     }
     VcenterAccountWhereInput vcenterAccountWhereInput = (VcenterAccountWhereInput) o;
     return Objects.equals(this.AND, vcenterAccountWhereInput.AND) &&
+        Objects.equals(this.NOT, vcenterAccountWhereInput.NOT) &&
+        Objects.equals(this.OR, vcenterAccountWhereInput.OR) &&
         Objects.equals(this.cluster, vcenterAccountWhereInput.cluster) &&
         Objects.equals(this.id, vcenterAccountWhereInput.id) &&
         Objects.equals(this.idContains, vcenterAccountWhereInput.idContains) &&
@@ -2072,8 +2074,6 @@ public class VcenterAccountWhereInput {
         Objects.equals(this.localIdNotIn, vcenterAccountWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, vcenterAccountWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, vcenterAccountWhereInput.localIdStartsWith) &&
-        Objects.equals(this.NOT, vcenterAccountWhereInput.NOT) &&
-        Objects.equals(this.OR, vcenterAccountWhereInput.OR) &&
         Objects.equals(this.port, vcenterAccountWhereInput.port) &&
         Objects.equals(this.portGt, vcenterAccountWhereInput.portGt) &&
         Objects.equals(this.portGte, vcenterAccountWhereInput.portGte) &&
@@ -2104,7 +2104,7 @@ public class VcenterAccountWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ip, ipContains, ipEndsWith, ipGt, ipGte, ipIn, ipLt, ipLte, ipNot, ipNotContains, ipNotEndsWith, ipNotIn, ipNotStartsWith, ipStartsWith, isValid, isValidNot, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, NOT, OR, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, NOT, OR, cluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ip, ipContains, ipEndsWith, ipGt, ipGte, ipIn, ipLt, ipLte, ipNot, ipNotContains, ipNotEndsWith, ipNotIn, ipNotStartsWith, ipStartsWith, isValid, isValidNot, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2119,6 +2119,8 @@ public class VcenterAccountWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VcenterAccountWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
@@ -2164,8 +2166,6 @@ public class VcenterAccountWhereInput {
     sb.append("    localIdNotIn: ").append(toIndentedString(localIdNotIn)).append("\n");
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
     sb.append("    portGt: ").append(toIndentedString(portGt)).append("\n");
     sb.append("    portGte: ").append(toIndentedString(portGte)).append("\n");

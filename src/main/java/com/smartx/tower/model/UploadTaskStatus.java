@@ -24,8 +24,9 @@ public enum UploadTaskStatus {
   
   SUCCESSED("SUCCESSED"),
   
-  UPLOADING("UPLOADING");
-
+  UPLOADING("UPLOADING"),
+  
+  UPLOADTASKSTATUS_UNSUPPORTED_ENUM("UPLOADTASKSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   UploadTaskStatus(String value) {
@@ -47,7 +48,7 @@ public enum UploadTaskStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UploadTaskStatus.UPLOADTASKSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UploadTaskStatus> {

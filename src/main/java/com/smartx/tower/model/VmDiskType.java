@@ -18,8 +18,9 @@ public enum VmDiskType {
   
   CD_ROM("CD_ROM"),
   
-  DISK("DISK");
-
+  DISK("DISK"),
+  
+  VMDISKTYPE_UNSUPPORTED_ENUM("VMDISKTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmDiskType(String value) {
@@ -41,7 +42,7 @@ public enum VmDiskType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmDiskType.VMDISKTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmDiskType> {

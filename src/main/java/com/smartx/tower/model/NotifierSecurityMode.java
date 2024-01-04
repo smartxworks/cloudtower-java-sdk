@@ -20,8 +20,9 @@ public enum NotifierSecurityMode {
   
   STARTTLS("STARTTLS"),
   
-  UNSPECIFIED("UNSPECIFIED");
-
+  UNSPECIFIED("UNSPECIFIED"),
+  
+  NOTIFIERSECURITYMODE_UNSUPPORTED_ENUM("NOTIFIERSECURITYMODE_UNSUPPORTED_ENUM");
   private String value;
 
   NotifierSecurityMode(String value) {
@@ -43,7 +44,7 @@ public enum NotifierSecurityMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NotifierSecurityMode.NOTIFIERSECURITYMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NotifierSecurityMode> {

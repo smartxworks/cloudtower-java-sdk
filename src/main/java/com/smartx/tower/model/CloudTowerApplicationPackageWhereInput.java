@@ -25,6 +25,14 @@ public class CloudTowerApplicationPackageWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<CloudTowerApplicationPackageWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<CloudTowerApplicationPackageWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<CloudTowerApplicationPackageWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_APPLICATIONS_EVERY = "applications_every";
   @SerializedName(SERIALIZED_NAME_APPLICATIONS_EVERY)
   private CloudTowerApplicationWhereInput applicationsEvery;
@@ -164,14 +172,6 @@ public class CloudTowerApplicationPackageWhereInput {
   public static final String SERIALIZED_NAME_NAME_STARTS_WITH = "name_starts_with";
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<CloudTowerApplicationPackageWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<CloudTowerApplicationPackageWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_SCOS_VERSION = "scosVersion";
   @SerializedName(SERIALIZED_NAME_SCOS_VERSION)
@@ -316,6 +316,68 @@ public class CloudTowerApplicationPackageWhereInput {
 
   public void setAND(List<CloudTowerApplicationPackageWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public CloudTowerApplicationPackageWhereInput NOT(List<CloudTowerApplicationPackageWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public CloudTowerApplicationPackageWhereInput addNOTItem(CloudTowerApplicationPackageWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<CloudTowerApplicationPackageWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<CloudTowerApplicationPackageWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<CloudTowerApplicationPackageWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public CloudTowerApplicationPackageWhereInput OR(List<CloudTowerApplicationPackageWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public CloudTowerApplicationPackageWhereInput addORItem(CloudTowerApplicationPackageWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<CloudTowerApplicationPackageWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<CloudTowerApplicationPackageWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<CloudTowerApplicationPackageWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1172,68 +1234,6 @@ public class CloudTowerApplicationPackageWhereInput {
   }
 
 
-  public CloudTowerApplicationPackageWhereInput NOT(List<CloudTowerApplicationPackageWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public CloudTowerApplicationPackageWhereInput addNOTItem(CloudTowerApplicationPackageWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<CloudTowerApplicationPackageWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<CloudTowerApplicationPackageWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<CloudTowerApplicationPackageWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public CloudTowerApplicationPackageWhereInput OR(List<CloudTowerApplicationPackageWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public CloudTowerApplicationPackageWhereInput addORItem(CloudTowerApplicationPackageWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<CloudTowerApplicationPackageWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<CloudTowerApplicationPackageWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<CloudTowerApplicationPackageWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public CloudTowerApplicationPackageWhereInput scosVersion(String scosVersion) {
     
     this.scosVersion = scosVersion;
@@ -1920,6 +1920,8 @@ public class CloudTowerApplicationPackageWhereInput {
     }
     CloudTowerApplicationPackageWhereInput cloudTowerApplicationPackageWhereInput = (CloudTowerApplicationPackageWhereInput) o;
     return Objects.equals(this.AND, cloudTowerApplicationPackageWhereInput.AND) &&
+        Objects.equals(this.NOT, cloudTowerApplicationPackageWhereInput.NOT) &&
+        Objects.equals(this.OR, cloudTowerApplicationPackageWhereInput.OR) &&
         Objects.equals(this.applicationsEvery, cloudTowerApplicationPackageWhereInput.applicationsEvery) &&
         Objects.equals(this.applicationsNone, cloudTowerApplicationPackageWhereInput.applicationsNone) &&
         Objects.equals(this.applicationsSome, cloudTowerApplicationPackageWhereInput.applicationsSome) &&
@@ -1955,8 +1957,6 @@ public class CloudTowerApplicationPackageWhereInput {
         Objects.equals(this.nameNotIn, cloudTowerApplicationPackageWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, cloudTowerApplicationPackageWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, cloudTowerApplicationPackageWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, cloudTowerApplicationPackageWhereInput.NOT) &&
-        Objects.equals(this.OR, cloudTowerApplicationPackageWhereInput.OR) &&
         Objects.equals(this.scosVersion, cloudTowerApplicationPackageWhereInput.scosVersion) &&
         Objects.equals(this.scosVersionContains, cloudTowerApplicationPackageWhereInput.scosVersionContains) &&
         Objects.equals(this.scosVersionEndsWith, cloudTowerApplicationPackageWhereInput.scosVersionEndsWith) &&
@@ -1993,7 +1993,7 @@ public class CloudTowerApplicationPackageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, applicationsEvery, applicationsNone, applicationsSome, architecture, architectureIn, architectureNot, architectureNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, scosVersion, scosVersionContains, scosVersionEndsWith, scosVersionGt, scosVersionGte, scosVersionIn, scosVersionLt, scosVersionLte, scosVersionNot, scosVersionNotContains, scosVersionNotEndsWith, scosVersionNotIn, scosVersionNotStartsWith, scosVersionStartsWith, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
+    return Objects.hash(AND, NOT, OR, applicationsEvery, applicationsNone, applicationsSome, architecture, architectureIn, architectureNot, architectureNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, scosVersion, scosVersionContains, scosVersionEndsWith, scosVersionGt, scosVersionGte, scosVersionIn, scosVersionLt, scosVersionLte, scosVersionNot, scosVersionNotContains, scosVersionNotEndsWith, scosVersionNotIn, scosVersionNotStartsWith, scosVersionStartsWith, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2008,6 +2008,8 @@ public class CloudTowerApplicationPackageWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudTowerApplicationPackageWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    applicationsEvery: ").append(toIndentedString(applicationsEvery)).append("\n");
     sb.append("    applicationsNone: ").append(toIndentedString(applicationsNone)).append("\n");
     sb.append("    applicationsSome: ").append(toIndentedString(applicationsSome)).append("\n");
@@ -2043,8 +2045,6 @@ public class CloudTowerApplicationPackageWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    scosVersion: ").append(toIndentedString(scosVersion)).append("\n");
     sb.append("    scosVersionContains: ").append(toIndentedString(scosVersionContains)).append("\n");
     sb.append("    scosVersionEndsWith: ").append(toIndentedString(scosVersionEndsWith)).append("\n");

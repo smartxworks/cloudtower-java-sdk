@@ -27,6 +27,14 @@ public class NfsExportWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<NfsExportWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<NfsExportWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<NfsExportWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -415,14 +423,6 @@ public class NfsExportWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<NfsExportWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<NfsExportWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
   private Integer replicaNum;
@@ -494,6 +494,68 @@ public class NfsExportWhereInput {
 
   public void setAND(List<NfsExportWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public NfsExportWhereInput NOT(List<NfsExportWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public NfsExportWhereInput addNOTItem(NfsExportWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<NfsExportWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NfsExportWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<NfsExportWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public NfsExportWhereInput OR(List<NfsExportWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public NfsExportWhereInput addORItem(NfsExportWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<NfsExportWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NfsExportWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<NfsExportWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2840,68 +2902,6 @@ public class NfsExportWhereInput {
   }
 
 
-  public NfsExportWhereInput NOT(List<NfsExportWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public NfsExportWhereInput addNOTItem(NfsExportWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<NfsExportWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NfsExportWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<NfsExportWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public NfsExportWhereInput OR(List<NfsExportWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public NfsExportWhereInput addORItem(NfsExportWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<NfsExportWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NfsExportWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<NfsExportWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public NfsExportWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
@@ -3158,6 +3158,8 @@ public class NfsExportWhereInput {
     }
     NfsExportWhereInput nfsExportWhereInput = (NfsExportWhereInput) o;
     return Objects.equals(this.AND, nfsExportWhereInput.AND) &&
+        Objects.equals(this.NOT, nfsExportWhereInput.NOT) &&
+        Objects.equals(this.OR, nfsExportWhereInput.OR) &&
         Objects.equals(this.cluster, nfsExportWhereInput.cluster) &&
         Objects.equals(this.description, nfsExportWhereInput.description) &&
         Objects.equals(this.descriptionContains, nfsExportWhereInput.descriptionContains) &&
@@ -3255,8 +3257,6 @@ public class NfsExportWhereInput {
         Objects.equals(this.nameNotIn, nfsExportWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, nfsExportWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, nfsExportWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, nfsExportWhereInput.NOT) &&
-        Objects.equals(this.OR, nfsExportWhereInput.OR) &&
         Objects.equals(this.replicaNum, nfsExportWhereInput.replicaNum) &&
         Objects.equals(this.replicaNumGt, nfsExportWhereInput.replicaNumGt) &&
         Objects.equals(this.replicaNumGte, nfsExportWhereInput.replicaNumGte) &&
@@ -3275,7 +3275,7 @@ public class NfsExportWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, exportInodeId, exportInodeIdContains, exportInodeIdEndsWith, exportInodeIdGt, exportInodeIdGte, exportInodeIdIn, exportInodeIdLt, exportInodeIdLte, exportInodeIdNot, exportInodeIdNotContains, exportInodeIdNotEndsWith, exportInodeIdNotIn, exportInodeIdNotStartsWith, exportInodeIdStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inodesEvery, inodesNone, inodesSome, internal, internalNot, ipWhitelist, ipWhitelistContains, ipWhitelistEndsWith, ipWhitelistGt, ipWhitelistGte, ipWhitelistIn, ipWhitelistLt, ipWhitelistLte, ipWhitelistNot, ipWhitelistNotContains, ipWhitelistNotEndsWith, ipWhitelistNotIn, ipWhitelistNotStartsWith, ipWhitelistStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, thinProvision, thinProvisionNot);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, exportInodeId, exportInodeIdContains, exportInodeIdEndsWith, exportInodeIdGt, exportInodeIdGte, exportInodeIdIn, exportInodeIdLt, exportInodeIdLte, exportInodeIdNot, exportInodeIdNotContains, exportInodeIdNotEndsWith, exportInodeIdNotIn, exportInodeIdNotStartsWith, exportInodeIdStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inodesEvery, inodesNone, inodesSome, internal, internalNot, ipWhitelist, ipWhitelistContains, ipWhitelistEndsWith, ipWhitelistGt, ipWhitelistGte, ipWhitelistIn, ipWhitelistLt, ipWhitelistLte, ipWhitelistNot, ipWhitelistNotContains, ipWhitelistNotEndsWith, ipWhitelistNotIn, ipWhitelistNotStartsWith, ipWhitelistStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, thinProvision, thinProvisionNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3290,6 +3290,8 @@ public class NfsExportWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class NfsExportWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
@@ -3387,8 +3389,6 @@ public class NfsExportWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    replicaNumGt: ").append(toIndentedString(replicaNumGt)).append("\n");
     sb.append("    replicaNumGte: ").append(toIndentedString(replicaNumGte)).append("\n");

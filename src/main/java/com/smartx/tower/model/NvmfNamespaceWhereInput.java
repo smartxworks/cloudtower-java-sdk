@@ -28,6 +28,14 @@ public class NvmfNamespaceWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<NvmfNamespaceWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<NvmfNamespaceWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<NvmfNamespaceWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
   private Long assignedSize;
@@ -944,10 +952,6 @@ public class NvmfNamespaceWhereInput {
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID_NOT_IN)
   private List<Integer> namespaceIdNotIn = null;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<NvmfNamespaceWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NQN_WHITELIST = "nqn_whitelist";
   @SerializedName(SERIALIZED_NAME_NQN_WHITELIST)
   private String nqnWhitelist;
@@ -1007,10 +1011,6 @@ public class NvmfNamespaceWhereInput {
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
   private NvmfSubsystemWhereInput nvmfSubsystem;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<NvmfNamespaceWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
@@ -1299,6 +1299,68 @@ public class NvmfNamespaceWhereInput {
 
   public void setAND(List<NvmfNamespaceWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public NvmfNamespaceWhereInput NOT(List<NvmfNamespaceWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public NvmfNamespaceWhereInput addNOTItem(NvmfNamespaceWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<NvmfNamespaceWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NvmfNamespaceWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<NvmfNamespaceWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public NvmfNamespaceWhereInput OR(List<NvmfNamespaceWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public NvmfNamespaceWhereInput addORItem(NvmfNamespaceWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<NvmfNamespaceWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NvmfNamespaceWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<NvmfNamespaceWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -6985,37 +7047,6 @@ public class NvmfNamespaceWhereInput {
   }
 
 
-  public NvmfNamespaceWhereInput NOT(List<NvmfNamespaceWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public NvmfNamespaceWhereInput addNOTItem(NvmfNamespaceWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<NvmfNamespaceWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NvmfNamespaceWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<NvmfNamespaceWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public NvmfNamespaceWhereInput nqnWhitelist(String nqnWhitelist) {
     
     this.nqnWhitelist = nqnWhitelist;
@@ -7374,37 +7405,6 @@ public class NvmfNamespaceWhereInput {
 
   public void setNvmfSubsystem(NvmfSubsystemWhereInput nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
-  }
-
-
-  public NvmfNamespaceWhereInput OR(List<NvmfNamespaceWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public NvmfNamespaceWhereInput addORItem(NvmfNamespaceWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<NvmfNamespaceWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NvmfNamespaceWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<NvmfNamespaceWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -9002,6 +9002,8 @@ public class NvmfNamespaceWhereInput {
     }
     NvmfNamespaceWhereInput nvmfNamespaceWhereInput = (NvmfNamespaceWhereInput) o;
     return Objects.equals(this.AND, nvmfNamespaceWhereInput.AND) &&
+        Objects.equals(this.NOT, nvmfNamespaceWhereInput.NOT) &&
+        Objects.equals(this.OR, nvmfNamespaceWhereInput.OR) &&
         Objects.equals(this.assignedSize, nvmfNamespaceWhereInput.assignedSize) &&
         Objects.equals(this.assignedSizeGt, nvmfNamespaceWhereInput.assignedSizeGt) &&
         Objects.equals(this.assignedSizeGte, nvmfNamespaceWhereInput.assignedSizeGte) &&
@@ -9231,7 +9233,6 @@ public class NvmfNamespaceWhereInput {
         Objects.equals(this.namespaceIdLte, nvmfNamespaceWhereInput.namespaceIdLte) &&
         Objects.equals(this.namespaceIdNot, nvmfNamespaceWhereInput.namespaceIdNot) &&
         Objects.equals(this.namespaceIdNotIn, nvmfNamespaceWhereInput.namespaceIdNotIn) &&
-        Objects.equals(this.NOT, nvmfNamespaceWhereInput.NOT) &&
         Objects.equals(this.nqnWhitelist, nvmfNamespaceWhereInput.nqnWhitelist) &&
         Objects.equals(this.nqnWhitelistContains, nvmfNamespaceWhereInput.nqnWhitelistContains) &&
         Objects.equals(this.nqnWhitelistEndsWith, nvmfNamespaceWhereInput.nqnWhitelistEndsWith) &&
@@ -9247,7 +9248,6 @@ public class NvmfNamespaceWhereInput {
         Objects.equals(this.nqnWhitelistNotStartsWith, nvmfNamespaceWhereInput.nqnWhitelistNotStartsWith) &&
         Objects.equals(this.nqnWhitelistStartsWith, nvmfNamespaceWhereInput.nqnWhitelistStartsWith) &&
         Objects.equals(this.nvmfSubsystem, nvmfNamespaceWhereInput.nvmfSubsystem) &&
-        Objects.equals(this.OR, nvmfNamespaceWhereInput.OR) &&
         Objects.equals(this.replicaNum, nvmfNamespaceWhereInput.replicaNum) &&
         Objects.equals(this.replicaNumGt, nvmfNamespaceWhereInput.replicaNumGt) &&
         Objects.equals(this.replicaNumGte, nvmfNamespaceWhereInput.replicaNumGte) &&
@@ -9320,7 +9320,7 @@ public class NvmfNamespaceWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, bps, bpsGt, bpsGte, bpsIn, bpsLt, bpsLte, bpsMax, bpsMaxGt, bpsMaxGte, bpsMaxIn, bpsMaxLength, bpsMaxLengthGt, bpsMaxLengthGte, bpsMaxLengthIn, bpsMaxLengthLt, bpsMaxLengthLte, bpsMaxLengthNot, bpsMaxLengthNotIn, bpsMaxLt, bpsMaxLte, bpsMaxNot, bpsMaxNotIn, bpsNot, bpsNotIn, bpsRd, bpsRdGt, bpsRdGte, bpsRdIn, bpsRdLt, bpsRdLte, bpsRdMax, bpsRdMaxGt, bpsRdMaxGte, bpsRdMaxIn, bpsRdMaxLength, bpsRdMaxLengthGt, bpsRdMaxLengthGte, bpsRdMaxLengthIn, bpsRdMaxLengthLt, bpsRdMaxLengthLte, bpsRdMaxLengthNot, bpsRdMaxLengthNotIn, bpsRdMaxLt, bpsRdMaxLte, bpsRdMaxNot, bpsRdMaxNotIn, bpsRdNot, bpsRdNotIn, bpsWr, bpsWrGt, bpsWrGte, bpsWrIn, bpsWrLt, bpsWrLte, bpsWrMax, bpsWrMaxGt, bpsWrMaxGte, bpsWrMaxIn, bpsWrMaxLength, bpsWrMaxLengthGt, bpsWrMaxLengthGte, bpsWrMaxLengthIn, bpsWrMaxLengthLt, bpsWrMaxLengthLte, bpsWrMaxLengthNot, bpsWrMaxLengthNotIn, bpsWrMaxLt, bpsWrMaxLte, bpsWrMaxNot, bpsWrMaxNotIn, bpsWrNot, bpsWrNotIn, consistencyGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioSize, ioSizeGt, ioSizeGte, ioSizeIn, ioSizeLt, ioSizeLte, ioSizeNot, ioSizeNotIn, iops, iopsGt, iopsGte, iopsIn, iopsLt, iopsLte, iopsMax, iopsMaxGt, iopsMaxGte, iopsMaxIn, iopsMaxLength, iopsMaxLengthGt, iopsMaxLengthGte, iopsMaxLengthIn, iopsMaxLengthLt, iopsMaxLengthLte, iopsMaxLengthNot, iopsMaxLengthNotIn, iopsMaxLt, iopsMaxLte, iopsMaxNot, iopsMaxNotIn, iopsNot, iopsNotIn, iopsRd, iopsRdGt, iopsRdGte, iopsRdIn, iopsRdLt, iopsRdLte, iopsRdMax, iopsRdMaxGt, iopsRdMaxGte, iopsRdMaxIn, iopsRdMaxLength, iopsRdMaxLengthGt, iopsRdMaxLengthGte, iopsRdMaxLengthIn, iopsRdMaxLengthLt, iopsRdMaxLengthLte, iopsRdMaxLengthNot, iopsRdMaxLengthNotIn, iopsRdMaxLt, iopsRdMaxLte, iopsRdMaxNot, iopsRdMaxNotIn, iopsRdNot, iopsRdNotIn, iopsWr, iopsWrGt, iopsWrGte, iopsWrIn, iopsWrLt, iopsWrLte, iopsWrMax, iopsWrMaxGt, iopsWrMaxGte, iopsWrMaxIn, iopsWrMaxLength, iopsWrMaxLengthGt, iopsWrMaxLengthGte, iopsWrMaxLengthIn, iopsWrMaxLengthLt, iopsWrMaxLengthLte, iopsWrMaxLengthNot, iopsWrMaxLengthNotIn, iopsWrMaxLt, iopsWrMaxLte, iopsWrMaxNot, iopsWrMaxNotIn, iopsWrNot, iopsWrNotIn, isShared, isSharedNot, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, namespaceGroup, namespaceId, namespaceIdGt, namespaceIdGte, namespaceIdIn, namespaceIdLt, namespaceIdLte, namespaceIdNot, namespaceIdNotIn, NOT, nqnWhitelist, nqnWhitelistContains, nqnWhitelistEndsWith, nqnWhitelistGt, nqnWhitelistGte, nqnWhitelistIn, nqnWhitelistLt, nqnWhitelistLte, nqnWhitelistNot, nqnWhitelistNotContains, nqnWhitelistNotEndsWith, nqnWhitelistNotIn, nqnWhitelistNotStartsWith, nqnWhitelistStartsWith, nvmfSubsystem, OR, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, stripeNum, stripeNumGt, stripeNumGte, stripeNumIn, stripeNumLt, stripeNumLte, stripeNumNot, stripeNumNotIn, stripeSize, stripeSizeGt, stripeSizeGte, stripeSizeIn, stripeSizeLt, stripeSizeLte, stripeSizeNot, stripeSizeNotIn, thinProvision, thinProvisionNot, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, zbsVolumeId, zbsVolumeIdContains, zbsVolumeIdEndsWith, zbsVolumeIdGt, zbsVolumeIdGte, zbsVolumeIdIn, zbsVolumeIdLt, zbsVolumeIdLte, zbsVolumeIdNot, zbsVolumeIdNotContains, zbsVolumeIdNotEndsWith, zbsVolumeIdNotIn, zbsVolumeIdNotStartsWith, zbsVolumeIdStartsWith);
+    return Objects.hash(AND, NOT, OR, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, bps, bpsGt, bpsGte, bpsIn, bpsLt, bpsLte, bpsMax, bpsMaxGt, bpsMaxGte, bpsMaxIn, bpsMaxLength, bpsMaxLengthGt, bpsMaxLengthGte, bpsMaxLengthIn, bpsMaxLengthLt, bpsMaxLengthLte, bpsMaxLengthNot, bpsMaxLengthNotIn, bpsMaxLt, bpsMaxLte, bpsMaxNot, bpsMaxNotIn, bpsNot, bpsNotIn, bpsRd, bpsRdGt, bpsRdGte, bpsRdIn, bpsRdLt, bpsRdLte, bpsRdMax, bpsRdMaxGt, bpsRdMaxGte, bpsRdMaxIn, bpsRdMaxLength, bpsRdMaxLengthGt, bpsRdMaxLengthGte, bpsRdMaxLengthIn, bpsRdMaxLengthLt, bpsRdMaxLengthLte, bpsRdMaxLengthNot, bpsRdMaxLengthNotIn, bpsRdMaxLt, bpsRdMaxLte, bpsRdMaxNot, bpsRdMaxNotIn, bpsRdNot, bpsRdNotIn, bpsWr, bpsWrGt, bpsWrGte, bpsWrIn, bpsWrLt, bpsWrLte, bpsWrMax, bpsWrMaxGt, bpsWrMaxGte, bpsWrMaxIn, bpsWrMaxLength, bpsWrMaxLengthGt, bpsWrMaxLengthGte, bpsWrMaxLengthIn, bpsWrMaxLengthLt, bpsWrMaxLengthLte, bpsWrMaxLengthNot, bpsWrMaxLengthNotIn, bpsWrMaxLt, bpsWrMaxLte, bpsWrMaxNot, bpsWrMaxNotIn, bpsWrNot, bpsWrNotIn, consistencyGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioSize, ioSizeGt, ioSizeGte, ioSizeIn, ioSizeLt, ioSizeLte, ioSizeNot, ioSizeNotIn, iops, iopsGt, iopsGte, iopsIn, iopsLt, iopsLte, iopsMax, iopsMaxGt, iopsMaxGte, iopsMaxIn, iopsMaxLength, iopsMaxLengthGt, iopsMaxLengthGte, iopsMaxLengthIn, iopsMaxLengthLt, iopsMaxLengthLte, iopsMaxLengthNot, iopsMaxLengthNotIn, iopsMaxLt, iopsMaxLte, iopsMaxNot, iopsMaxNotIn, iopsNot, iopsNotIn, iopsRd, iopsRdGt, iopsRdGte, iopsRdIn, iopsRdLt, iopsRdLte, iopsRdMax, iopsRdMaxGt, iopsRdMaxGte, iopsRdMaxIn, iopsRdMaxLength, iopsRdMaxLengthGt, iopsRdMaxLengthGte, iopsRdMaxLengthIn, iopsRdMaxLengthLt, iopsRdMaxLengthLte, iopsRdMaxLengthNot, iopsRdMaxLengthNotIn, iopsRdMaxLt, iopsRdMaxLte, iopsRdMaxNot, iopsRdMaxNotIn, iopsRdNot, iopsRdNotIn, iopsWr, iopsWrGt, iopsWrGte, iopsWrIn, iopsWrLt, iopsWrLte, iopsWrMax, iopsWrMaxGt, iopsWrMaxGte, iopsWrMaxIn, iopsWrMaxLength, iopsWrMaxLengthGt, iopsWrMaxLengthGte, iopsWrMaxLengthIn, iopsWrMaxLengthLt, iopsWrMaxLengthLte, iopsWrMaxLengthNot, iopsWrMaxLengthNotIn, iopsWrMaxLt, iopsWrMaxLte, iopsWrMaxNot, iopsWrMaxNotIn, iopsWrNot, iopsWrNotIn, isShared, isSharedNot, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, namespaceGroup, namespaceId, namespaceIdGt, namespaceIdGte, namespaceIdIn, namespaceIdLt, namespaceIdLte, namespaceIdNot, namespaceIdNotIn, nqnWhitelist, nqnWhitelistContains, nqnWhitelistEndsWith, nqnWhitelistGt, nqnWhitelistGte, nqnWhitelistIn, nqnWhitelistLt, nqnWhitelistLte, nqnWhitelistNot, nqnWhitelistNotContains, nqnWhitelistNotEndsWith, nqnWhitelistNotIn, nqnWhitelistNotStartsWith, nqnWhitelistStartsWith, nvmfSubsystem, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, stripeNum, stripeNumGt, stripeNumGte, stripeNumIn, stripeNumLt, stripeNumLte, stripeNumNot, stripeNumNotIn, stripeSize, stripeSizeGt, stripeSizeGte, stripeSizeIn, stripeSizeLt, stripeSizeLte, stripeSizeNot, stripeSizeNotIn, thinProvision, thinProvisionNot, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, zbsVolumeId, zbsVolumeIdContains, zbsVolumeIdEndsWith, zbsVolumeIdGt, zbsVolumeIdGte, zbsVolumeIdIn, zbsVolumeIdLt, zbsVolumeIdLte, zbsVolumeIdNot, zbsVolumeIdNotContains, zbsVolumeIdNotEndsWith, zbsVolumeIdNotIn, zbsVolumeIdNotStartsWith, zbsVolumeIdStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -9335,6 +9335,8 @@ public class NvmfNamespaceWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class NvmfNamespaceWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    assignedSizeGt: ").append(toIndentedString(assignedSizeGt)).append("\n");
     sb.append("    assignedSizeGte: ").append(toIndentedString(assignedSizeGte)).append("\n");
@@ -9564,7 +9566,6 @@ public class NvmfNamespaceWhereInput {
     sb.append("    namespaceIdLte: ").append(toIndentedString(namespaceIdLte)).append("\n");
     sb.append("    namespaceIdNot: ").append(toIndentedString(namespaceIdNot)).append("\n");
     sb.append("    namespaceIdNotIn: ").append(toIndentedString(namespaceIdNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    nqnWhitelist: ").append(toIndentedString(nqnWhitelist)).append("\n");
     sb.append("    nqnWhitelistContains: ").append(toIndentedString(nqnWhitelistContains)).append("\n");
     sb.append("    nqnWhitelistEndsWith: ").append(toIndentedString(nqnWhitelistEndsWith)).append("\n");
@@ -9580,7 +9581,6 @@ public class NvmfNamespaceWhereInput {
     sb.append("    nqnWhitelistNotStartsWith: ").append(toIndentedString(nqnWhitelistNotStartsWith)).append("\n");
     sb.append("    nqnWhitelistStartsWith: ").append(toIndentedString(nqnWhitelistStartsWith)).append("\n");
     sb.append("    nvmfSubsystem: ").append(toIndentedString(nvmfSubsystem)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    replicaNumGt: ").append(toIndentedString(replicaNumGt)).append("\n");
     sb.append("    replicaNumGte: ").append(toIndentedString(replicaNumGte)).append("\n");

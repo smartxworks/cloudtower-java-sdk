@@ -22,8 +22,9 @@ public enum NetworkPolicyRuleType {
   
   SECURITY_GROUP("SECURITY_GROUP"),
   
-  SELECTOR("SELECTOR");
-
+  SELECTOR("SELECTOR"),
+  
+  NETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM("NETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   NetworkPolicyRuleType(String value) {
@@ -45,7 +46,7 @@ public enum NetworkPolicyRuleType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NetworkPolicyRuleType.NETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NetworkPolicyRuleType> {

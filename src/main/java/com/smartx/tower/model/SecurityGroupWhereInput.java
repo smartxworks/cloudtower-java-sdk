@@ -27,6 +27,14 @@ public class SecurityGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SecurityGroupWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SecurityGroupWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SecurityGroupWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
@@ -211,14 +219,6 @@ public class SecurityGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SecurityGroupWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SecurityGroupWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SECURITY_POLICIES_EVERY = "security_policies_every";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES_EVERY)
   private SecurityPolicyWhereInput securityPoliciesEvery;
@@ -274,6 +274,68 @@ public class SecurityGroupWhereInput {
 
   public void setAND(List<SecurityGroupWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SecurityGroupWhereInput NOT(List<SecurityGroupWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SecurityGroupWhereInput addNOTItem(SecurityGroupWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SecurityGroupWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SecurityGroupWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SecurityGroupWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SecurityGroupWhereInput OR(List<SecurityGroupWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SecurityGroupWhereInput addORItem(SecurityGroupWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SecurityGroupWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SecurityGroupWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SecurityGroupWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1383,68 +1445,6 @@ public class SecurityGroupWhereInput {
   }
 
 
-  public SecurityGroupWhereInput NOT(List<SecurityGroupWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SecurityGroupWhereInput addNOTItem(SecurityGroupWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SecurityGroupWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SecurityGroupWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SecurityGroupWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SecurityGroupWhereInput OR(List<SecurityGroupWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SecurityGroupWhereInput addORItem(SecurityGroupWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SecurityGroupWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SecurityGroupWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SecurityGroupWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SecurityGroupWhereInput securityPoliciesEvery(SecurityPolicyWhereInput securityPoliciesEvery) {
     
     this.securityPoliciesEvery = securityPoliciesEvery;
@@ -1593,6 +1593,8 @@ public class SecurityGroupWhereInput {
     }
     SecurityGroupWhereInput securityGroupWhereInput = (SecurityGroupWhereInput) o;
     return Objects.equals(this.AND, securityGroupWhereInput.AND) &&
+        Objects.equals(this.NOT, securityGroupWhereInput.NOT) &&
+        Objects.equals(this.OR, securityGroupWhereInput.OR) &&
         Objects.equals(this.description, securityGroupWhereInput.description) &&
         Objects.equals(this.descriptionContains, securityGroupWhereInput.descriptionContains) &&
         Objects.equals(this.descriptionEndsWith, securityGroupWhereInput.descriptionEndsWith) &&
@@ -1639,8 +1641,6 @@ public class SecurityGroupWhereInput {
         Objects.equals(this.nameNotIn, securityGroupWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, securityGroupWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, securityGroupWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, securityGroupWhereInput.NOT) &&
-        Objects.equals(this.OR, securityGroupWhereInput.OR) &&
         Objects.equals(this.securityPoliciesEvery, securityGroupWhereInput.securityPoliciesEvery) &&
         Objects.equals(this.securityPoliciesNone, securityGroupWhereInput.securityPoliciesNone) &&
         Objects.equals(this.securityPoliciesSome, securityGroupWhereInput.securityPoliciesSome) &&
@@ -1655,7 +1655,7 @@ public class SecurityGroupWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1670,6 +1670,8 @@ public class SecurityGroupWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SecurityGroupWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
     sb.append("    descriptionEndsWith: ").append(toIndentedString(descriptionEndsWith)).append("\n");
@@ -1716,8 +1718,6 @@ public class SecurityGroupWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    securityPoliciesEvery: ").append(toIndentedString(securityPoliciesEvery)).append("\n");
     sb.append("    securityPoliciesNone: ").append(toIndentedString(securityPoliciesNone)).append("\n");
     sb.append("    securityPoliciesSome: ").append(toIndentedString(securityPoliciesSome)).append("\n");

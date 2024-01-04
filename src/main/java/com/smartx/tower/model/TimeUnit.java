@@ -20,8 +20,9 @@ public enum TimeUnit {
   
   HOUR("HOUR"),
   
-  MONTH("MONTH");
-
+  MONTH("MONTH"),
+  
+  TIMEUNIT_UNSUPPORTED_ENUM("TIMEUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   TimeUnit(String value) {
@@ -43,7 +44,7 @@ public enum TimeUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return TimeUnit.TIMEUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<TimeUnit> {

@@ -26,6 +26,14 @@ public class UserRoleNextWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<UserRoleNextWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<UserRoleNextWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<UserRoleNextWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -138,14 +146,6 @@ public class UserRoleNextWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<UserRoleNextWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<UserRoleNextWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PLATFORM = "platform";
   @SerializedName(SERIALIZED_NAME_PLATFORM)
   private UserRolePlatform platform;
@@ -221,6 +221,68 @@ public class UserRoleNextWhereInput {
 
   public void setAND(List<UserRoleNextWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public UserRoleNextWhereInput NOT(List<UserRoleNextWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public UserRoleNextWhereInput addNOTItem(UserRoleNextWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<UserRoleNextWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserRoleNextWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<UserRoleNextWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public UserRoleNextWhereInput OR(List<UserRoleNextWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public UserRoleNextWhereInput addORItem(UserRoleNextWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<UserRoleNextWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserRoleNextWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<UserRoleNextWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -900,68 +962,6 @@ public class UserRoleNextWhereInput {
   }
 
 
-  public UserRoleNextWhereInput NOT(List<UserRoleNextWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public UserRoleNextWhereInput addNOTItem(UserRoleNextWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<UserRoleNextWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UserRoleNextWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<UserRoleNextWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public UserRoleNextWhereInput OR(List<UserRoleNextWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public UserRoleNextWhereInput addORItem(UserRoleNextWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<UserRoleNextWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UserRoleNextWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<UserRoleNextWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public UserRoleNextWhereInput platform(UserRolePlatform platform) {
     
     this.platform = platform;
@@ -1257,6 +1257,8 @@ public class UserRoleNextWhereInput {
     }
     UserRoleNextWhereInput userRoleNextWhereInput = (UserRoleNextWhereInput) o;
     return Objects.equals(this.AND, userRoleNextWhereInput.AND) &&
+        Objects.equals(this.NOT, userRoleNextWhereInput.NOT) &&
+        Objects.equals(this.OR, userRoleNextWhereInput.OR) &&
         Objects.equals(this.id, userRoleNextWhereInput.id) &&
         Objects.equals(this.idContains, userRoleNextWhereInput.idContains) &&
         Objects.equals(this.idEndsWith, userRoleNextWhereInput.idEndsWith) &&
@@ -1285,8 +1287,6 @@ public class UserRoleNextWhereInput {
         Objects.equals(this.nameNotIn, userRoleNextWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, userRoleNextWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, userRoleNextWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, userRoleNextWhereInput.NOT) &&
-        Objects.equals(this.OR, userRoleNextWhereInput.OR) &&
         Objects.equals(this.platform, userRoleNextWhereInput.platform) &&
         Objects.equals(this.platformIn, userRoleNextWhereInput.platformIn) &&
         Objects.equals(this.platformNot, userRoleNextWhereInput.platformNot) &&
@@ -1306,7 +1306,7 @@ public class UserRoleNextWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, platform, platformIn, platformNot, platformNotIn, preset, presetIn, presetNot, presetNotIn, usersEvery, usersNone, usersSome);
+    return Objects.hash(AND, NOT, OR, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, platform, platformIn, platformNot, platformNotIn, preset, presetIn, presetNot, presetNotIn, usersEvery, usersNone, usersSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1321,6 +1321,8 @@ public class UserRoleNextWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserRoleNextWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
     sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");
@@ -1349,8 +1351,6 @@ public class UserRoleNextWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
     sb.append("    platformIn: ").append(toIndentedString(platformIn)).append("\n");
     sb.append("    platformNot: ").append(toIndentedString(platformNot)).append("\n");

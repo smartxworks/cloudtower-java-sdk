@@ -25,6 +25,14 @@ public class EverouteLicenseWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<EverouteLicenseWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<EverouteLicenseWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<EverouteLicenseWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
   private String code;
@@ -200,14 +208,6 @@ public class EverouteLicenseWhereInput {
   public static final String SERIALIZED_NAME_MAX_SOCKET_NUM_NOT_IN = "max_socket_num_not_in";
   @SerializedName(SERIALIZED_NAME_MAX_SOCKET_NUM_NOT_IN)
   private List<Integer> maxSocketNumNotIn = null;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<EverouteLicenseWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<EverouteLicenseWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_SERIAL = "serial";
   @SerializedName(SERIALIZED_NAME_SERIAL)
@@ -416,6 +416,68 @@ public class EverouteLicenseWhereInput {
 
   public void setAND(List<EverouteLicenseWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public EverouteLicenseWhereInput NOT(List<EverouteLicenseWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public EverouteLicenseWhereInput addNOTItem(EverouteLicenseWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<EverouteLicenseWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EverouteLicenseWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<EverouteLicenseWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public EverouteLicenseWhereInput OR(List<EverouteLicenseWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public EverouteLicenseWhereInput addORItem(EverouteLicenseWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<EverouteLicenseWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EverouteLicenseWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<EverouteLicenseWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1492,68 +1554,6 @@ public class EverouteLicenseWhereInput {
 
   public void setMaxSocketNumNotIn(List<Integer> maxSocketNumNotIn) {
     this.maxSocketNumNotIn = maxSocketNumNotIn;
-  }
-
-
-  public EverouteLicenseWhereInput NOT(List<EverouteLicenseWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public EverouteLicenseWhereInput addNOTItem(EverouteLicenseWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<EverouteLicenseWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<EverouteLicenseWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<EverouteLicenseWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public EverouteLicenseWhereInput OR(List<EverouteLicenseWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public EverouteLicenseWhereInput addORItem(EverouteLicenseWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<EverouteLicenseWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<EverouteLicenseWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<EverouteLicenseWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -2659,6 +2659,8 @@ public class EverouteLicenseWhereInput {
     }
     EverouteLicenseWhereInput everouteLicenseWhereInput = (EverouteLicenseWhereInput) o;
     return Objects.equals(this.AND, everouteLicenseWhereInput.AND) &&
+        Objects.equals(this.NOT, everouteLicenseWhereInput.NOT) &&
+        Objects.equals(this.OR, everouteLicenseWhereInput.OR) &&
         Objects.equals(this.code, everouteLicenseWhereInput.code) &&
         Objects.equals(this.codeContains, everouteLicenseWhereInput.codeContains) &&
         Objects.equals(this.codeEndsWith, everouteLicenseWhereInput.codeEndsWith) &&
@@ -2703,8 +2705,6 @@ public class EverouteLicenseWhereInput {
         Objects.equals(this.maxSocketNumLte, everouteLicenseWhereInput.maxSocketNumLte) &&
         Objects.equals(this.maxSocketNumNot, everouteLicenseWhereInput.maxSocketNumNot) &&
         Objects.equals(this.maxSocketNumNotIn, everouteLicenseWhereInput.maxSocketNumNotIn) &&
-        Objects.equals(this.NOT, everouteLicenseWhereInput.NOT) &&
-        Objects.equals(this.OR, everouteLicenseWhereInput.OR) &&
         Objects.equals(this.serial, everouteLicenseWhereInput.serial) &&
         Objects.equals(this.serialContains, everouteLicenseWhereInput.serialContains) &&
         Objects.equals(this.serialEndsWith, everouteLicenseWhereInput.serialEndsWith) &&
@@ -2757,7 +2757,7 @@ public class EverouteLicenseWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, code, codeContains, codeEndsWith, codeGt, codeGte, codeIn, codeLt, codeLte, codeNot, codeNotContains, codeNotEndsWith, codeNotIn, codeNotStartsWith, codeStartsWith, expireDate, expireDateGt, expireDateGte, expireDateIn, expireDateLt, expireDateLte, expireDateNot, expireDateNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, maxSocketNum, maxSocketNumGt, maxSocketNumGte, maxSocketNumIn, maxSocketNumLt, maxSocketNumLte, maxSocketNumNot, maxSocketNumNotIn, NOT, OR, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, signDate, signDateGt, signDateGte, signDateIn, signDateLt, signDateLte, signDateNot, signDateNotIn, softwareEdition, softwareEditionIn, softwareEditionNot, softwareEditionNotIn, type, typeIn, typeNot, typeNotIn, uid, uidContains, uidEndsWith, uidGt, uidGte, uidIn, uidLt, uidLte, uidNot, uidNotContains, uidNotEndsWith, uidNotIn, uidNotStartsWith, uidStartsWith);
+    return Objects.hash(AND, NOT, OR, code, codeContains, codeEndsWith, codeGt, codeGte, codeIn, codeLt, codeLte, codeNot, codeNotContains, codeNotEndsWith, codeNotIn, codeNotStartsWith, codeStartsWith, expireDate, expireDateGt, expireDateGte, expireDateIn, expireDateLt, expireDateLte, expireDateNot, expireDateNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, maxSocketNum, maxSocketNumGt, maxSocketNumGte, maxSocketNumIn, maxSocketNumLt, maxSocketNumLte, maxSocketNumNot, maxSocketNumNotIn, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, signDate, signDateGt, signDateGte, signDateIn, signDateLt, signDateLte, signDateNot, signDateNotIn, softwareEdition, softwareEditionIn, softwareEditionNot, softwareEditionNotIn, type, typeIn, typeNot, typeNotIn, uid, uidContains, uidEndsWith, uidGt, uidGte, uidIn, uidLt, uidLte, uidNot, uidNotContains, uidNotEndsWith, uidNotIn, uidNotStartsWith, uidStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2772,6 +2772,8 @@ public class EverouteLicenseWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class EverouteLicenseWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    codeContains: ").append(toIndentedString(codeContains)).append("\n");
     sb.append("    codeEndsWith: ").append(toIndentedString(codeEndsWith)).append("\n");
@@ -2816,8 +2818,6 @@ public class EverouteLicenseWhereInput {
     sb.append("    maxSocketNumLte: ").append(toIndentedString(maxSocketNumLte)).append("\n");
     sb.append("    maxSocketNumNot: ").append(toIndentedString(maxSocketNumNot)).append("\n");
     sb.append("    maxSocketNumNotIn: ").append(toIndentedString(maxSocketNumNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    serial: ").append(toIndentedString(serial)).append("\n");
     sb.append("    serialContains: ").append(toIndentedString(serialContains)).append("\n");
     sb.append("    serialEndsWith: ").append(toIndentedString(serialEndsWith)).append("\n");

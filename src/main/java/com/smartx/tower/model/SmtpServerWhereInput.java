@@ -24,6 +24,14 @@ public class SmtpServerWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SmtpServerWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SmtpServerWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SmtpServerWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
@@ -256,14 +264,6 @@ public class SmtpServerWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SmtpServerWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SmtpServerWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
@@ -455,6 +455,68 @@ public class SmtpServerWhereInput {
 
   public void setAND(List<SmtpServerWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SmtpServerWhereInput NOT(List<SmtpServerWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SmtpServerWhereInput addNOTItem(SmtpServerWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SmtpServerWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SmtpServerWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SmtpServerWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SmtpServerWhereInput OR(List<SmtpServerWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SmtpServerWhereInput addORItem(SmtpServerWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SmtpServerWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SmtpServerWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SmtpServerWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1856,68 +1918,6 @@ public class SmtpServerWhereInput {
   }
 
 
-  public SmtpServerWhereInput NOT(List<SmtpServerWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SmtpServerWhereInput addNOTItem(SmtpServerWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SmtpServerWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SmtpServerWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SmtpServerWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SmtpServerWhereInput OR(List<SmtpServerWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SmtpServerWhereInput addORItem(SmtpServerWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SmtpServerWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SmtpServerWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SmtpServerWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SmtpServerWhereInput password(String password) {
     
     this.password = password;
@@ -2912,6 +2912,8 @@ public class SmtpServerWhereInput {
     }
     SmtpServerWhereInput smtpServerWhereInput = (SmtpServerWhereInput) o;
     return Objects.equals(this.AND, smtpServerWhereInput.AND) &&
+        Objects.equals(this.NOT, smtpServerWhereInput.NOT) &&
+        Objects.equals(this.OR, smtpServerWhereInput.OR) &&
         Objects.equals(this.description, smtpServerWhereInput.description) &&
         Objects.equals(this.descriptionContains, smtpServerWhereInput.descriptionContains) &&
         Objects.equals(this.descriptionEndsWith, smtpServerWhereInput.descriptionEndsWith) &&
@@ -2970,8 +2972,6 @@ public class SmtpServerWhereInput {
         Objects.equals(this.nameNotIn, smtpServerWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, smtpServerWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, smtpServerWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, smtpServerWhereInput.NOT) &&
-        Objects.equals(this.OR, smtpServerWhereInput.OR) &&
         Objects.equals(this.password, smtpServerWhereInput.password) &&
         Objects.equals(this.passwordContains, smtpServerWhereInput.passwordContains) &&
         Objects.equals(this.passwordEndsWith, smtpServerWhereInput.passwordEndsWith) &&
@@ -3020,7 +3020,7 @@ public class SmtpServerWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, host, hostContains, hostEndsWith, hostGt, hostGte, hostIn, hostLt, hostLte, hostNot, hostNotContains, hostNotEndsWith, hostNotIn, hostNotStartsWith, hostStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isRecordPassword, isRecordPasswordNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, password, passwordContains, passwordEndsWith, passwordGt, passwordGte, passwordIn, passwordLt, passwordLte, passwordNot, passwordNotContains, passwordNotEndsWith, passwordNotIn, passwordNotStartsWith, passwordStartsWith, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, secureMode, secureModeIn, secureModeNot, secureModeNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, host, hostContains, hostEndsWith, hostGt, hostGte, hostIn, hostLt, hostLte, hostNot, hostNotContains, hostNotEndsWith, hostNotIn, hostNotStartsWith, hostStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isRecordPassword, isRecordPasswordNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, password, passwordContains, passwordEndsWith, passwordGt, passwordGte, passwordIn, passwordLt, passwordLte, passwordNot, passwordNotContains, passwordNotEndsWith, passwordNotIn, passwordNotStartsWith, passwordStartsWith, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, secureMode, secureModeIn, secureModeNot, secureModeNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3035,6 +3035,8 @@ public class SmtpServerWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmtpServerWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
     sb.append("    descriptionEndsWith: ").append(toIndentedString(descriptionEndsWith)).append("\n");
@@ -3093,8 +3095,6 @@ public class SmtpServerWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    passwordContains: ").append(toIndentedString(passwordContains)).append("\n");
     sb.append("    passwordEndsWith: ").append(toIndentedString(passwordEndsWith)).append("\n");

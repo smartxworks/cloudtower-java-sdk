@@ -20,8 +20,9 @@ public enum PasswordComplexity {
   
   LOW("LOW"),
   
-  MIDDLE("MIDDLE");
-
+  MIDDLE("MIDDLE"),
+  
+  PASSWORDCOMPLEXITY_UNSUPPORTED_ENUM("PASSWORDCOMPLEXITY_UNSUPPORTED_ENUM");
   private String value;
 
   PasswordComplexity(String value) {
@@ -43,7 +44,7 @@ public enum PasswordComplexity {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return PasswordComplexity.PASSWORDCOMPLEXITY_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<PasswordComplexity> {

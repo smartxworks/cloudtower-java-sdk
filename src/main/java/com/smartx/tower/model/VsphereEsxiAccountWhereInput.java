@@ -24,6 +24,14 @@ public class VsphereEsxiAccountWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VsphereEsxiAccountWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VsphereEsxiAccountWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VsphereEsxiAccountWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
   private HostWhereInput host;
@@ -204,14 +212,6 @@ public class VsphereEsxiAccountWhereInput {
   @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
   private String localIdStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VsphereEsxiAccountWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VsphereEsxiAccountWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private Integer port;
@@ -331,6 +331,68 @@ public class VsphereEsxiAccountWhereInput {
 
   public void setAND(List<VsphereEsxiAccountWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VsphereEsxiAccountWhereInput NOT(List<VsphereEsxiAccountWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VsphereEsxiAccountWhereInput addNOTItem(VsphereEsxiAccountWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VsphereEsxiAccountWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VsphereEsxiAccountWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VsphereEsxiAccountWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VsphereEsxiAccountWhereInput OR(List<VsphereEsxiAccountWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VsphereEsxiAccountWhereInput addORItem(VsphereEsxiAccountWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VsphereEsxiAccountWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VsphereEsxiAccountWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VsphereEsxiAccountWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1417,68 +1479,6 @@ public class VsphereEsxiAccountWhereInput {
   }
 
 
-  public VsphereEsxiAccountWhereInput NOT(List<VsphereEsxiAccountWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VsphereEsxiAccountWhereInput addNOTItem(VsphereEsxiAccountWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VsphereEsxiAccountWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VsphereEsxiAccountWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VsphereEsxiAccountWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VsphereEsxiAccountWhereInput OR(List<VsphereEsxiAccountWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VsphereEsxiAccountWhereInput addORItem(VsphereEsxiAccountWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VsphereEsxiAccountWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VsphereEsxiAccountWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VsphereEsxiAccountWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VsphereEsxiAccountWhereInput port(Integer port) {
     
     this.port = port;
@@ -2027,6 +2027,8 @@ public class VsphereEsxiAccountWhereInput {
     }
     VsphereEsxiAccountWhereInput vsphereEsxiAccountWhereInput = (VsphereEsxiAccountWhereInput) o;
     return Objects.equals(this.AND, vsphereEsxiAccountWhereInput.AND) &&
+        Objects.equals(this.NOT, vsphereEsxiAccountWhereInput.NOT) &&
+        Objects.equals(this.OR, vsphereEsxiAccountWhereInput.OR) &&
         Objects.equals(this.host, vsphereEsxiAccountWhereInput.host) &&
         Objects.equals(this.id, vsphereEsxiAccountWhereInput.id) &&
         Objects.equals(this.idContains, vsphereEsxiAccountWhereInput.idContains) &&
@@ -2072,8 +2074,6 @@ public class VsphereEsxiAccountWhereInput {
         Objects.equals(this.localIdNotIn, vsphereEsxiAccountWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, vsphereEsxiAccountWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, vsphereEsxiAccountWhereInput.localIdStartsWith) &&
-        Objects.equals(this.NOT, vsphereEsxiAccountWhereInput.NOT) &&
-        Objects.equals(this.OR, vsphereEsxiAccountWhereInput.OR) &&
         Objects.equals(this.port, vsphereEsxiAccountWhereInput.port) &&
         Objects.equals(this.portGt, vsphereEsxiAccountWhereInput.portGt) &&
         Objects.equals(this.portGte, vsphereEsxiAccountWhereInput.portGte) &&
@@ -2104,7 +2104,7 @@ public class VsphereEsxiAccountWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ip, ipContains, ipEndsWith, ipGt, ipGte, ipIn, ipLt, ipLte, ipNot, ipNotContains, ipNotEndsWith, ipNotIn, ipNotStartsWith, ipStartsWith, isValid, isValidNot, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, NOT, OR, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, NOT, OR, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ip, ipContains, ipEndsWith, ipGt, ipGte, ipIn, ipLt, ipLte, ipNot, ipNotContains, ipNotEndsWith, ipNotIn, ipNotStartsWith, ipStartsWith, isValid, isValidNot, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2119,6 +2119,8 @@ public class VsphereEsxiAccountWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VsphereEsxiAccountWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
@@ -2164,8 +2166,6 @@ public class VsphereEsxiAccountWhereInput {
     sb.append("    localIdNotIn: ").append(toIndentedString(localIdNotIn)).append("\n");
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
     sb.append("    portGt: ").append(toIndentedString(portGt)).append("\n");
     sb.append("    portGte: ").append(toIndentedString(portGte)).append("\n");

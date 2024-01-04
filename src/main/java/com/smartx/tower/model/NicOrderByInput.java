@@ -40,6 +40,10 @@ public enum NicOrderByInput {
   
   ID_DESC("id_DESC"),
   
+  IOMMU_STATUS_ASC("iommu_status_ASC"),
+  
+  IOMMU_STATUS_DESC("iommu_status_DESC"),
+  
   IP_ADDRESS_ASC("ip_address_ASC"),
   
   IP_ADDRESS_DESC("ip_address_DESC"),
@@ -114,8 +118,9 @@ public enum NicOrderByInput {
   
   USER_USAGE_ASC("user_usage_ASC"),
   
-  USER_USAGE_DESC("user_usage_DESC");
-
+  USER_USAGE_DESC("user_usage_DESC"),
+  
+  NICORDERBYINPUT_UNSUPPORTED_ENUM("NICORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   NicOrderByInput(String value) {
@@ -137,7 +142,7 @@ public enum NicOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NicOrderByInput.NICORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NicOrderByInput> {

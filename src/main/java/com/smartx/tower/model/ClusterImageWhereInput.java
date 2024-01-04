@@ -25,6 +25,14 @@ public class ClusterImageWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ClusterImageWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ClusterImageWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ClusterImageWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -301,14 +309,6 @@ public class ClusterImageWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ClusterImageWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ClusterImageWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -556,6 +556,68 @@ public class ClusterImageWhereInput {
 
   public void setAND(List<ClusterImageWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ClusterImageWhereInput NOT(List<ClusterImageWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ClusterImageWhereInput addNOTItem(ClusterImageWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ClusterImageWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterImageWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ClusterImageWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ClusterImageWhereInput OR(List<ClusterImageWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ClusterImageWhereInput addORItem(ClusterImageWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ClusterImageWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterImageWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ClusterImageWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2242,68 +2304,6 @@ public class ClusterImageWhereInput {
   }
 
 
-  public ClusterImageWhereInput NOT(List<ClusterImageWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ClusterImageWhereInput addNOTItem(ClusterImageWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ClusterImageWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterImageWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ClusterImageWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ClusterImageWhereInput OR(List<ClusterImageWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ClusterImageWhereInput addORItem(ClusterImageWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ClusterImageWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterImageWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ClusterImageWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ClusterImageWhereInput size(Long size) {
     
     this.size = size;
@@ -3620,6 +3620,8 @@ public class ClusterImageWhereInput {
     }
     ClusterImageWhereInput clusterImageWhereInput = (ClusterImageWhereInput) o;
     return Objects.equals(this.AND, clusterImageWhereInput.AND) &&
+        Objects.equals(this.NOT, clusterImageWhereInput.NOT) &&
+        Objects.equals(this.OR, clusterImageWhereInput.OR) &&
         Objects.equals(this.cluster, clusterImageWhereInput.cluster) &&
         Objects.equals(this.entityAsyncStatus, clusterImageWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, clusterImageWhereInput.entityAsyncStatusIn) &&
@@ -3689,8 +3691,6 @@ public class ClusterImageWhereInput {
         Objects.equals(this.nameNotIn, clusterImageWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, clusterImageWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, clusterImageWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, clusterImageWhereInput.NOT) &&
-        Objects.equals(this.OR, clusterImageWhereInput.OR) &&
         Objects.equals(this.size, clusterImageWhereInput.size) &&
         Objects.equals(this.sizeGt, clusterImageWhereInput.sizeGt) &&
         Objects.equals(this.sizeGte, clusterImageWhereInput.sizeGte) &&
@@ -3753,7 +3753,7 @@ public class ClusterImageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, metaName, metaNameContains, metaNameEndsWith, metaNameGt, metaNameGte, metaNameIn, metaNameLt, metaNameLte, metaNameNot, metaNameNotContains, metaNameNotEndsWith, metaNameNotIn, metaNameNotStartsWith, metaNameStartsWith, metaSize, metaSizeGt, metaSizeGte, metaSizeIn, metaSizeLt, metaSizeLte, metaSizeNot, metaSizeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, upgradeToolVersion, upgradeToolVersionContains, upgradeToolVersionEndsWith, upgradeToolVersionGt, upgradeToolVersionGte, upgradeToolVersionIn, upgradeToolVersionLt, upgradeToolVersionLte, upgradeToolVersionNot, upgradeToolVersionNotContains, upgradeToolVersionNotEndsWith, upgradeToolVersionNotIn, upgradeToolVersionNotStartsWith, upgradeToolVersionStartsWith, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionSemanticGt, versionSemanticGte, versionSemanticLt, versionSemanticLte, versionStartsWith, zbsVersion, zbsVersionContains, zbsVersionEndsWith, zbsVersionGt, zbsVersionGte, zbsVersionIn, zbsVersionLt, zbsVersionLte, zbsVersionNot, zbsVersionNotContains, zbsVersionNotEndsWith, zbsVersionNotIn, zbsVersionNotStartsWith, zbsVersionStartsWith);
+    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, metaName, metaNameContains, metaNameEndsWith, metaNameGt, metaNameGte, metaNameIn, metaNameLt, metaNameLte, metaNameNot, metaNameNotContains, metaNameNotEndsWith, metaNameNotIn, metaNameNotStartsWith, metaNameStartsWith, metaSize, metaSizeGt, metaSizeGte, metaSizeIn, metaSizeLt, metaSizeLte, metaSizeNot, metaSizeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, upgradeToolVersion, upgradeToolVersionContains, upgradeToolVersionEndsWith, upgradeToolVersionGt, upgradeToolVersionGte, upgradeToolVersionIn, upgradeToolVersionLt, upgradeToolVersionLte, upgradeToolVersionNot, upgradeToolVersionNotContains, upgradeToolVersionNotEndsWith, upgradeToolVersionNotIn, upgradeToolVersionNotStartsWith, upgradeToolVersionStartsWith, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionSemanticGt, versionSemanticGte, versionSemanticLt, versionSemanticLte, versionStartsWith, zbsVersion, zbsVersionContains, zbsVersionEndsWith, zbsVersionGt, zbsVersionGte, zbsVersionIn, zbsVersionLt, zbsVersionLte, zbsVersionNot, zbsVersionNotContains, zbsVersionNotEndsWith, zbsVersionNotIn, zbsVersionNotStartsWith, zbsVersionStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3768,6 +3768,8 @@ public class ClusterImageWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClusterImageWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
@@ -3837,8 +3839,6 @@ public class ClusterImageWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    sizeGt: ").append(toIndentedString(sizeGt)).append("\n");
     sb.append("    sizeGte: ").append(toIndentedString(sizeGte)).append("\n");

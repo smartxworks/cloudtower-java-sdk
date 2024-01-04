@@ -26,6 +26,14 @@ public class NfsInodeWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<NfsInodeWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<NfsInodeWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<NfsInodeWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
   private Long assignedSize;
@@ -298,14 +306,6 @@ public class NfsInodeWhereInput {
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
   private NfsExportWhereInput nfsExport;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<NfsInodeWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<NfsInodeWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
   @SerializedName(SERIALIZED_NAME_PARENT_ID)
   private String parentId;
@@ -489,6 +489,68 @@ public class NfsInodeWhereInput {
 
   public void setAND(List<NfsInodeWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public NfsInodeWhereInput NOT(List<NfsInodeWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public NfsInodeWhereInput addNOTItem(NfsInodeWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<NfsInodeWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NfsInodeWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<NfsInodeWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public NfsInodeWhereInput OR(List<NfsInodeWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public NfsInodeWhereInput addORItem(NfsInodeWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<NfsInodeWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NfsInodeWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<NfsInodeWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2152,68 +2214,6 @@ public class NfsInodeWhereInput {
   }
 
 
-  public NfsInodeWhereInput NOT(List<NfsInodeWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public NfsInodeWhereInput addNOTItem(NfsInodeWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<NfsInodeWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NfsInodeWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<NfsInodeWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public NfsInodeWhereInput OR(List<NfsInodeWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public NfsInodeWhereInput addORItem(NfsInodeWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<NfsInodeWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NfsInodeWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<NfsInodeWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public NfsInodeWhereInput parentId(String parentId) {
     
     this.parentId = parentId;
@@ -3162,6 +3162,8 @@ public class NfsInodeWhereInput {
     }
     NfsInodeWhereInput nfsInodeWhereInput = (NfsInodeWhereInput) o;
     return Objects.equals(this.AND, nfsInodeWhereInput.AND) &&
+        Objects.equals(this.NOT, nfsInodeWhereInput.NOT) &&
+        Objects.equals(this.OR, nfsInodeWhereInput.OR) &&
         Objects.equals(this.assignedSize, nfsInodeWhereInput.assignedSize) &&
         Objects.equals(this.assignedSizeGt, nfsInodeWhereInput.assignedSizeGt) &&
         Objects.equals(this.assignedSizeGte, nfsInodeWhereInput.assignedSizeGte) &&
@@ -3230,8 +3232,6 @@ public class NfsInodeWhereInput {
         Objects.equals(this.nameNotStartsWith, nfsInodeWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, nfsInodeWhereInput.nameStartsWith) &&
         Objects.equals(this.nfsExport, nfsInodeWhereInput.nfsExport) &&
-        Objects.equals(this.NOT, nfsInodeWhereInput.NOT) &&
-        Objects.equals(this.OR, nfsInodeWhereInput.OR) &&
         Objects.equals(this.parentId, nfsInodeWhereInput.parentId) &&
         Objects.equals(this.parentIdContains, nfsInodeWhereInput.parentIdContains) &&
         Objects.equals(this.parentIdEndsWith, nfsInodeWhereInput.parentIdEndsWith) &&
@@ -3278,7 +3278,7 @@ public class NfsInodeWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, _file, fileNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, NOT, OR, parentId, parentIdContains, parentIdEndsWith, parentIdGt, parentIdGte, parentIdIn, parentIdLt, parentIdLte, parentIdNot, parentIdNotContains, parentIdNotEndsWith, parentIdNotIn, parentIdNotStartsWith, parentIdStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, NOT, OR, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, _file, fileNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, parentId, parentIdContains, parentIdEndsWith, parentIdGt, parentIdGte, parentIdIn, parentIdLt, parentIdLte, parentIdNot, parentIdNotContains, parentIdNotEndsWith, parentIdNotIn, parentIdNotStartsWith, parentIdStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3293,6 +3293,8 @@ public class NfsInodeWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class NfsInodeWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    assignedSizeGt: ").append(toIndentedString(assignedSizeGt)).append("\n");
     sb.append("    assignedSizeGte: ").append(toIndentedString(assignedSizeGte)).append("\n");
@@ -3361,8 +3363,6 @@ public class NfsInodeWhereInput {
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
     sb.append("    nfsExport: ").append(toIndentedString(nfsExport)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
     sb.append("    parentIdContains: ").append(toIndentedString(parentIdContains)).append("\n");
     sb.append("    parentIdEndsWith: ").append(toIndentedString(parentIdEndsWith)).append("\n");

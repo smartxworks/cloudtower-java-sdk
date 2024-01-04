@@ -20,8 +20,9 @@ public enum HostState {
   
   IN_USE("IN_USE"),
   
-  REMOVING("REMOVING");
-
+  REMOVING("REMOVING"),
+  
+  HOSTSTATE_UNSUPPORTED_ENUM("HOSTSTATE_UNSUPPORTED_ENUM");
   private String value;
 
   HostState(String value) {
@@ -43,7 +44,7 @@ public enum HostState {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return HostState.HOSTSTATE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<HostState> {

@@ -1,5 +1,19 @@
 # RELEASE NOTE
 
+## release 日期 2024-10-10
+
+v2.13.1 release (tower version 3.4.4)
+
+### update
+
+- enum 兼容性处理:
+  为所有的 enum 都添加了一个 `${ENUM_NAME}_UNSUPPORTED_ENUM` 项，用于兼容未来新增的枚举值，当未来新增的枚举值不在当前版本的枚举值中时，会返回该项，而不是报错
+- [VmApi]: [createVmFromContentLibraryTemplateBatch] 批量从内容库模板创建虚拟机 API
+
+### bugfix
+
+- pick 2.14.0 ~ 2.17.0 的已有 api 的 bugfix，详见 master 分支的 [release_note](https://github.com/smartxworks/cloudtower-java-sdk/blob/master/RELEASE%20NOTE.md)
+
 ## release 日期 2023-11-07
 
 v2.13.0 release (tower version 3.4.0)

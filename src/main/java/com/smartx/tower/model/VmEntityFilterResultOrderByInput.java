@@ -18,8 +18,9 @@ public enum VmEntityFilterResultOrderByInput {
   
   ASC("id_ASC"),
   
-  DESC("id_DESC");
-
+  DESC("id_DESC"),
+  
+  VMENTITYFILTERRESULTORDERBYINPUT_UNSUPPORTED_ENUM("VMENTITYFILTERRESULTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmEntityFilterResultOrderByInput(String value) {
@@ -41,7 +42,7 @@ public enum VmEntityFilterResultOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmEntityFilterResultOrderByInput.VMENTITYFILTERRESULTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmEntityFilterResultOrderByInput> {

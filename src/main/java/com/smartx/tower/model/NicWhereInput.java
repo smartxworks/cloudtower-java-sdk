@@ -9,11 +9,13 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.HostWhereInput;
+import com.smartx.tower.model.IommuStatus;
 import com.smartx.tower.model.LabelWhereInput;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.NicDriverState;
 import com.smartx.tower.model.NicUserUsage;
 import com.smartx.tower.model.VdsWhereInput;
+import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -29,6 +31,14 @@ public class NicWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<NicWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<NicWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<NicWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_DRIVER = "driver";
   @SerializedName(SERIALIZED_NAME_DRIVER)
@@ -289,6 +299,22 @@ public class NicWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
+
+  public static final String SERIALIZED_NAME_IOMMU_STATUS = "iommu_status";
+  @SerializedName(SERIALIZED_NAME_IOMMU_STATUS)
+  private IommuStatus iommuStatus;
+
+  public static final String SERIALIZED_NAME_IOMMU_STATUS_IN = "iommu_status_in";
+  @SerializedName(SERIALIZED_NAME_IOMMU_STATUS_IN)
+  private List<IommuStatus> iommuStatusIn = null;
+
+  public static final String SERIALIZED_NAME_IOMMU_STATUS_NOT = "iommu_status_not";
+  @SerializedName(SERIALIZED_NAME_IOMMU_STATUS_NOT)
+  private IommuStatus iommuStatusNot;
+
+  public static final String SERIALIZED_NAME_IOMMU_STATUS_NOT_IN = "iommu_status_not_in";
+  @SerializedName(SERIALIZED_NAME_IOMMU_STATUS_NOT_IN)
+  private List<IommuStatus> iommuStatusNotIn = null;
 
   public static final String SERIALIZED_NAME_IP_ADDRESS = "ip_address";
   @SerializedName(SERIALIZED_NAME_IP_ADDRESS)
@@ -710,14 +736,6 @@ public class NicWhereInput {
   @SerializedName(SERIALIZED_NAME_NIC_UUID_STARTS_WITH)
   private String nicUuidStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<NicWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<NicWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PHYSICAL = "physical";
   @SerializedName(SERIALIZED_NAME_PHYSICAL)
   private Boolean physical;
@@ -938,6 +956,18 @@ public class NicWhereInput {
   @SerializedName(SERIALIZED_NAME_VDS)
   private VdsWhereInput vds;
 
+  public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
+  @SerializedName(SERIALIZED_NAME_VMS_EVERY)
+  private VmWhereInput vmsEvery;
+
+  public static final String SERIALIZED_NAME_VMS_NONE = "vms_none";
+  @SerializedName(SERIALIZED_NAME_VMS_NONE)
+  private VmWhereInput vmsNone;
+
+  public static final String SERIALIZED_NAME_VMS_SOME = "vms_some";
+  @SerializedName(SERIALIZED_NAME_VMS_SOME)
+  private VmWhereInput vmsSome;
+
   public NicWhereInput() { 
   }
 
@@ -969,6 +999,68 @@ public class NicWhereInput {
 
   public void setAND(List<NicWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public NicWhereInput NOT(List<NicWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public NicWhereInput addNOTItem(NicWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<NicWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NicWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<NicWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public NicWhereInput OR(List<NicWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public NicWhereInput addORItem(NicWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<NicWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NicWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<NicWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2560,6 +2652,114 @@ public class NicWhereInput {
 
   public void setIdStartsWith(String idStartsWith) {
     this.idStartsWith = idStartsWith;
+  }
+
+
+  public NicWhereInput iommuStatus(IommuStatus iommuStatus) {
+    
+    this.iommuStatus = iommuStatus;
+    return this;
+  }
+
+   /**
+   * Get iommuStatus
+   * @return iommuStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IommuStatus getIommuStatus() {
+    return iommuStatus;
+  }
+
+
+  public void setIommuStatus(IommuStatus iommuStatus) {
+    this.iommuStatus = iommuStatus;
+  }
+
+
+  public NicWhereInput iommuStatusIn(List<IommuStatus> iommuStatusIn) {
+    
+    this.iommuStatusIn = iommuStatusIn;
+    return this;
+  }
+
+  public NicWhereInput addIommuStatusInItem(IommuStatus iommuStatusInItem) {
+    if (this.iommuStatusIn == null) {
+      this.iommuStatusIn = new ArrayList<IommuStatus>();
+    }
+    this.iommuStatusIn.add(iommuStatusInItem);
+    return this;
+  }
+
+   /**
+   * Get iommuStatusIn
+   * @return iommuStatusIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IommuStatus> getIommuStatusIn() {
+    return iommuStatusIn;
+  }
+
+
+  public void setIommuStatusIn(List<IommuStatus> iommuStatusIn) {
+    this.iommuStatusIn = iommuStatusIn;
+  }
+
+
+  public NicWhereInput iommuStatusNot(IommuStatus iommuStatusNot) {
+    
+    this.iommuStatusNot = iommuStatusNot;
+    return this;
+  }
+
+   /**
+   * Get iommuStatusNot
+   * @return iommuStatusNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IommuStatus getIommuStatusNot() {
+    return iommuStatusNot;
+  }
+
+
+  public void setIommuStatusNot(IommuStatus iommuStatusNot) {
+    this.iommuStatusNot = iommuStatusNot;
+  }
+
+
+  public NicWhereInput iommuStatusNotIn(List<IommuStatus> iommuStatusNotIn) {
+    
+    this.iommuStatusNotIn = iommuStatusNotIn;
+    return this;
+  }
+
+  public NicWhereInput addIommuStatusNotInItem(IommuStatus iommuStatusNotInItem) {
+    if (this.iommuStatusNotIn == null) {
+      this.iommuStatusNotIn = new ArrayList<IommuStatus>();
+    }
+    this.iommuStatusNotIn.add(iommuStatusNotInItem);
+    return this;
+  }
+
+   /**
+   * Get iommuStatusNotIn
+   * @return iommuStatusNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IommuStatus> getIommuStatusNotIn() {
+    return iommuStatusNotIn;
+  }
+
+
+  public void setIommuStatusNotIn(List<IommuStatus> iommuStatusNotIn) {
+    this.iommuStatusNotIn = iommuStatusNotIn;
   }
 
 
@@ -5106,68 +5306,6 @@ public class NicWhereInput {
   }
 
 
-  public NicWhereInput NOT(List<NicWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public NicWhereInput addNOTItem(NicWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<NicWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NicWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<NicWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public NicWhereInput OR(List<NicWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public NicWhereInput addORItem(NicWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<NicWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NicWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<NicWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public NicWhereInput physical(Boolean physical) {
     
     this.physical = physical;
@@ -6529,6 +6667,75 @@ public class NicWhereInput {
   }
 
 
+  public NicWhereInput vmsEvery(VmWhereInput vmsEvery) {
+    
+    this.vmsEvery = vmsEvery;
+    return this;
+  }
+
+   /**
+   * Get vmsEvery
+   * @return vmsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsEvery() {
+    return vmsEvery;
+  }
+
+
+  public void setVmsEvery(VmWhereInput vmsEvery) {
+    this.vmsEvery = vmsEvery;
+  }
+
+
+  public NicWhereInput vmsNone(VmWhereInput vmsNone) {
+    
+    this.vmsNone = vmsNone;
+    return this;
+  }
+
+   /**
+   * Get vmsNone
+   * @return vmsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsNone() {
+    return vmsNone;
+  }
+
+
+  public void setVmsNone(VmWhereInput vmsNone) {
+    this.vmsNone = vmsNone;
+  }
+
+
+  public NicWhereInput vmsSome(VmWhereInput vmsSome) {
+    
+    this.vmsSome = vmsSome;
+    return this;
+  }
+
+   /**
+   * Get vmsSome
+   * @return vmsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsSome() {
+    return vmsSome;
+  }
+
+
+  public void setVmsSome(VmWhereInput vmsSome) {
+    this.vmsSome = vmsSome;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -6539,6 +6746,8 @@ public class NicWhereInput {
     }
     NicWhereInput nicWhereInput = (NicWhereInput) o;
     return Objects.equals(this.AND, nicWhereInput.AND) &&
+        Objects.equals(this.NOT, nicWhereInput.NOT) &&
+        Objects.equals(this.OR, nicWhereInput.OR) &&
         Objects.equals(this.driver, nicWhereInput.driver) &&
         Objects.equals(this.driverContains, nicWhereInput.driverContains) &&
         Objects.equals(this.driverEndsWith, nicWhereInput.driverEndsWith) &&
@@ -6604,6 +6813,10 @@ public class NicWhereInput {
         Objects.equals(this.idNotIn, nicWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, nicWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, nicWhereInput.idStartsWith) &&
+        Objects.equals(this.iommuStatus, nicWhereInput.iommuStatus) &&
+        Objects.equals(this.iommuStatusIn, nicWhereInput.iommuStatusIn) &&
+        Objects.equals(this.iommuStatusNot, nicWhereInput.iommuStatusNot) &&
+        Objects.equals(this.iommuStatusNotIn, nicWhereInput.iommuStatusNotIn) &&
         Objects.equals(this.ipAddress, nicWhereInput.ipAddress) &&
         Objects.equals(this.ipAddressContains, nicWhereInput.ipAddressContains) &&
         Objects.equals(this.ipAddressEndsWith, nicWhereInput.ipAddressEndsWith) &&
@@ -6709,8 +6922,6 @@ public class NicWhereInput {
         Objects.equals(this.nicUuidNotIn, nicWhereInput.nicUuidNotIn) &&
         Objects.equals(this.nicUuidNotStartsWith, nicWhereInput.nicUuidNotStartsWith) &&
         Objects.equals(this.nicUuidStartsWith, nicWhereInput.nicUuidStartsWith) &&
-        Objects.equals(this.NOT, nicWhereInput.NOT) &&
-        Objects.equals(this.OR, nicWhereInput.OR) &&
         Objects.equals(this.physical, nicWhereInput.physical) &&
         Objects.equals(this.physicalNot, nicWhereInput.physicalNot) &&
         Objects.equals(this.rdmaEnabled, nicWhereInput.rdmaEnabled) &&
@@ -6765,7 +6976,10 @@ public class NicWhereInput {
         Objects.equals(this.userUsageIn, nicWhereInput.userUsageIn) &&
         Objects.equals(this.userUsageNot, nicWhereInput.userUsageNot) &&
         Objects.equals(this.userUsageNotIn, nicWhereInput.userUsageNotIn) &&
-        Objects.equals(this.vds, nicWhereInput.vds);
+        Objects.equals(this.vds, nicWhereInput.vds) &&
+        Objects.equals(this.vmsEvery, nicWhereInput.vmsEvery) &&
+        Objects.equals(this.vmsNone, nicWhereInput.vmsNone) &&
+        Objects.equals(this.vmsSome, nicWhereInput.vmsSome);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -6774,7 +6988,7 @@ public class NicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, driver, driverContains, driverEndsWith, driverGt, driverGte, driverIn, driverLt, driverLte, driverNot, driverNotContains, driverNotEndsWith, driverNotIn, driverNotStartsWith, driverStartsWith, driverState, driverStateIn, driverStateNot, driverStateNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, host, ibdev, ibdevContains, ibdevEndsWith, ibdevGt, ibdevGte, ibdevIn, ibdevLt, ibdevLte, ibdevNot, ibdevNotContains, ibdevNotEndsWith, ibdevNotIn, ibdevNotStartsWith, ibdevStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, isSriov, isSriovNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, maxVfNum, maxVfNumGt, maxVfNumGte, maxVfNumIn, maxVfNumLt, maxVfNumLte, maxVfNumNot, maxVfNumNotIn, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicUuid, nicUuidContains, nicUuidEndsWith, nicUuidGt, nicUuidGte, nicUuidIn, nicUuidLt, nicUuidLte, nicUuidNot, nicUuidNotContains, nicUuidNotEndsWith, nicUuidNotIn, nicUuidNotStartsWith, nicUuidStartsWith, NOT, OR, physical, physicalNot, rdmaEnabled, rdmaEnabledNot, running, runningNot, speed, speedGt, speedGte, speedIn, speedLt, speedLte, speedNot, speedNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, totalVfNum, totalVfNumGt, totalVfNumGte, totalVfNumIn, totalVfNumLt, totalVfNumLte, totalVfNumNot, totalVfNumNotIn, type, typeIn, typeNot, typeNotIn, up, upNot, usedVfNum, usedVfNumGt, usedVfNumGte, usedVfNumIn, usedVfNumLt, usedVfNumLte, usedVfNumNot, usedVfNumNotIn, userUsage, userUsageIn, userUsageNot, userUsageNotIn, vds);
+    return Objects.hash(AND, NOT, OR, driver, driverContains, driverEndsWith, driverGt, driverGte, driverIn, driverLt, driverLte, driverNot, driverNotContains, driverNotEndsWith, driverNotIn, driverNotStartsWith, driverStartsWith, driverState, driverStateIn, driverStateNot, driverStateNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, host, ibdev, ibdevContains, ibdevEndsWith, ibdevGt, ibdevGte, ibdevIn, ibdevLt, ibdevLte, ibdevNot, ibdevNotContains, ibdevNotEndsWith, ibdevNotIn, ibdevNotStartsWith, ibdevStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iommuStatus, iommuStatusIn, iommuStatusNot, iommuStatusNotIn, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, isSriov, isSriovNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, maxVfNum, maxVfNumGt, maxVfNumGte, maxVfNumIn, maxVfNumLt, maxVfNumLte, maxVfNumNot, maxVfNumNotIn, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicUuid, nicUuidContains, nicUuidEndsWith, nicUuidGt, nicUuidGte, nicUuidIn, nicUuidLt, nicUuidLte, nicUuidNot, nicUuidNotContains, nicUuidNotEndsWith, nicUuidNotIn, nicUuidNotStartsWith, nicUuidStartsWith, physical, physicalNot, rdmaEnabled, rdmaEnabledNot, running, runningNot, speed, speedGt, speedGte, speedIn, speedLt, speedLte, speedNot, speedNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, totalVfNum, totalVfNumGt, totalVfNumGte, totalVfNumIn, totalVfNumLt, totalVfNumLte, totalVfNumNot, totalVfNumNotIn, type, typeIn, typeNot, typeNotIn, up, upNot, usedVfNum, usedVfNumGt, usedVfNumGte, usedVfNumIn, usedVfNumLt, usedVfNumLte, usedVfNumNot, usedVfNumNotIn, userUsage, userUsageIn, userUsageNot, userUsageNotIn, vds, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -6789,6 +7003,8 @@ public class NicWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class NicWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    driver: ").append(toIndentedString(driver)).append("\n");
     sb.append("    driverContains: ").append(toIndentedString(driverContains)).append("\n");
     sb.append("    driverEndsWith: ").append(toIndentedString(driverEndsWith)).append("\n");
@@ -6854,6 +7070,10 @@ public class NicWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+    sb.append("    iommuStatus: ").append(toIndentedString(iommuStatus)).append("\n");
+    sb.append("    iommuStatusIn: ").append(toIndentedString(iommuStatusIn)).append("\n");
+    sb.append("    iommuStatusNot: ").append(toIndentedString(iommuStatusNot)).append("\n");
+    sb.append("    iommuStatusNotIn: ").append(toIndentedString(iommuStatusNotIn)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("    ipAddressContains: ").append(toIndentedString(ipAddressContains)).append("\n");
     sb.append("    ipAddressEndsWith: ").append(toIndentedString(ipAddressEndsWith)).append("\n");
@@ -6959,8 +7179,6 @@ public class NicWhereInput {
     sb.append("    nicUuidNotIn: ").append(toIndentedString(nicUuidNotIn)).append("\n");
     sb.append("    nicUuidNotStartsWith: ").append(toIndentedString(nicUuidNotStartsWith)).append("\n");
     sb.append("    nicUuidStartsWith: ").append(toIndentedString(nicUuidStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    physical: ").append(toIndentedString(physical)).append("\n");
     sb.append("    physicalNot: ").append(toIndentedString(physicalNot)).append("\n");
     sb.append("    rdmaEnabled: ").append(toIndentedString(rdmaEnabled)).append("\n");
@@ -7016,6 +7234,9 @@ public class NicWhereInput {
     sb.append("    userUsageNot: ").append(toIndentedString(userUsageNot)).append("\n");
     sb.append("    userUsageNotIn: ").append(toIndentedString(userUsageNotIn)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");
+    sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
+    sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
+    sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");
     sb.append("}");
     return sb.toString();
   }

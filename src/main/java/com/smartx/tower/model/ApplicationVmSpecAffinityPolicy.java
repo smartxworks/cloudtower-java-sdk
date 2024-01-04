@@ -18,8 +18,9 @@ public enum ApplicationVmSpecAffinityPolicy {
   
   MUST("MUST"),
   
-  PREFER("PREFER");
-
+  PREFER("PREFER"),
+  
+  APPLICATIONVMSPECAFFINITYPOLICY_UNSUPPORTED_ENUM("APPLICATIONVMSPECAFFINITYPOLICY_UNSUPPORTED_ENUM");
   private String value;
 
   ApplicationVmSpecAffinityPolicy(String value) {
@@ -41,7 +42,7 @@ public enum ApplicationVmSpecAffinityPolicy {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ApplicationVmSpecAffinityPolicy.APPLICATIONVMSPECAFFINITYPOLICY_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ApplicationVmSpecAffinityPolicy> {

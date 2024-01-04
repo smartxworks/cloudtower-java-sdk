@@ -30,8 +30,9 @@ public enum VmFolderOrderByInput {
   
   VM_NUM_ASC("vm_num_ASC"),
   
-  VM_NUM_DESC("vm_num_DESC");
-
+  VM_NUM_DESC("vm_num_DESC"),
+  
+  VMFOLDERORDERBYINPUT_UNSUPPORTED_ENUM("VMFOLDERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmFolderOrderByInput(String value) {
@@ -53,7 +54,7 @@ public enum VmFolderOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmFolderOrderByInput.VMFOLDERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmFolderOrderByInput> {

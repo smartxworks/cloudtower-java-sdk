@@ -23,6 +23,18 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class IscsiLunWhereInput {
+  public static final String SERIALIZED_NAME_A_N_D = "AND";
+  @SerializedName(SERIALIZED_NAME_A_N_D)
+  private List<IscsiLunWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<IscsiLunWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<IscsiLunWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ALLOWED_INITIATORS = "allowed_initiators";
   @SerializedName(SERIALIZED_NAME_ALLOWED_INITIATORS)
   private String allowedInitiators;
@@ -78,10 +90,6 @@ public class IscsiLunWhereInput {
   public static final String SERIALIZED_NAME_ALLOWED_INITIATORS_STARTS_WITH = "allowed_initiators_starts_with";
   @SerializedName(SERIALIZED_NAME_ALLOWED_INITIATORS_STARTS_WITH)
   private String allowedInitiatorsStartsWith;
-
-  public static final String SERIALIZED_NAME_A_N_D = "AND";
-  @SerializedName(SERIALIZED_NAME_A_N_D)
-  private List<IscsiLunWhereInput> AND = null;
 
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
@@ -991,14 +999,6 @@ public class IscsiLunWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<IscsiLunWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<IscsiLunWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
   private Integer replicaNum;
@@ -1257,6 +1257,99 @@ public class IscsiLunWhereInput {
 
   public IscsiLunWhereInput() { 
   }
+
+  public IscsiLunWhereInput AND(List<IscsiLunWhereInput> AND) {
+    
+    this.AND = AND;
+    return this;
+  }
+
+  public IscsiLunWhereInput addANDItem(IscsiLunWhereInput ANDItem) {
+    if (this.AND == null) {
+      this.AND = new ArrayList<IscsiLunWhereInput>();
+    }
+    this.AND.add(ANDItem);
+    return this;
+  }
+
+   /**
+   * Get AND
+   * @return AND
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiLunWhereInput> getAND() {
+    return AND;
+  }
+
+
+  public void setAND(List<IscsiLunWhereInput> AND) {
+    this.AND = AND;
+  }
+
+
+  public IscsiLunWhereInput NOT(List<IscsiLunWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public IscsiLunWhereInput addNOTItem(IscsiLunWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<IscsiLunWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiLunWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<IscsiLunWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public IscsiLunWhereInput OR(List<IscsiLunWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public IscsiLunWhereInput addORItem(IscsiLunWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<IscsiLunWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiLunWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<IscsiLunWhereInput> OR) {
+    this.OR = OR;
+  }
+
 
   public IscsiLunWhereInput allowedInitiators(String allowedInitiators) {
     
@@ -1593,37 +1686,6 @@ public class IscsiLunWhereInput {
 
   public void setAllowedInitiatorsStartsWith(String allowedInitiatorsStartsWith) {
     this.allowedInitiatorsStartsWith = allowedInitiatorsStartsWith;
-  }
-
-
-  public IscsiLunWhereInput AND(List<IscsiLunWhereInput> AND) {
-    
-    this.AND = AND;
-    return this;
-  }
-
-  public IscsiLunWhereInput addANDItem(IscsiLunWhereInput ANDItem) {
-    if (this.AND == null) {
-      this.AND = new ArrayList<IscsiLunWhereInput>();
-    }
-    this.AND.add(ANDItem);
-    return this;
-  }
-
-   /**
-   * Get AND
-   * @return AND
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiLunWhereInput> getAND() {
-    return AND;
-  }
-
-
-  public void setAND(List<IscsiLunWhereInput> AND) {
-    this.AND = AND;
   }
 
 
@@ -7264,68 +7326,6 @@ public class IscsiLunWhereInput {
   }
 
 
-  public IscsiLunWhereInput NOT(List<IscsiLunWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public IscsiLunWhereInput addNOTItem(IscsiLunWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<IscsiLunWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiLunWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<IscsiLunWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public IscsiLunWhereInput OR(List<IscsiLunWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public IscsiLunWhereInput addORItem(IscsiLunWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<IscsiLunWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiLunWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<IscsiLunWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public IscsiLunWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
@@ -8919,7 +8919,10 @@ public class IscsiLunWhereInput {
       return false;
     }
     IscsiLunWhereInput iscsiLunWhereInput = (IscsiLunWhereInput) o;
-    return Objects.equals(this.allowedInitiators, iscsiLunWhereInput.allowedInitiators) &&
+    return Objects.equals(this.AND, iscsiLunWhereInput.AND) &&
+        Objects.equals(this.NOT, iscsiLunWhereInput.NOT) &&
+        Objects.equals(this.OR, iscsiLunWhereInput.OR) &&
+        Objects.equals(this.allowedInitiators, iscsiLunWhereInput.allowedInitiators) &&
         Objects.equals(this.allowedInitiatorsContains, iscsiLunWhereInput.allowedInitiatorsContains) &&
         Objects.equals(this.allowedInitiatorsEndsWith, iscsiLunWhereInput.allowedInitiatorsEndsWith) &&
         Objects.equals(this.allowedInitiatorsGt, iscsiLunWhereInput.allowedInitiatorsGt) &&
@@ -8933,7 +8936,6 @@ public class IscsiLunWhereInput {
         Objects.equals(this.allowedInitiatorsNotIn, iscsiLunWhereInput.allowedInitiatorsNotIn) &&
         Objects.equals(this.allowedInitiatorsNotStartsWith, iscsiLunWhereInput.allowedInitiatorsNotStartsWith) &&
         Objects.equals(this.allowedInitiatorsStartsWith, iscsiLunWhereInput.allowedInitiatorsStartsWith) &&
-        Objects.equals(this.AND, iscsiLunWhereInput.AND) &&
         Objects.equals(this.assignedSize, iscsiLunWhereInput.assignedSize) &&
         Objects.equals(this.assignedSizeGt, iscsiLunWhereInput.assignedSizeGt) &&
         Objects.equals(this.assignedSizeGte, iscsiLunWhereInput.assignedSizeGte) &&
@@ -9161,8 +9163,6 @@ public class IscsiLunWhereInput {
         Objects.equals(this.nameNotIn, iscsiLunWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, iscsiLunWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, iscsiLunWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, iscsiLunWhereInput.NOT) &&
-        Objects.equals(this.OR, iscsiLunWhereInput.OR) &&
         Objects.equals(this.replicaNum, iscsiLunWhereInput.replicaNum) &&
         Objects.equals(this.replicaNumGt, iscsiLunWhereInput.replicaNumGt) &&
         Objects.equals(this.replicaNumGte, iscsiLunWhereInput.replicaNumGte) &&
@@ -9235,7 +9235,7 @@ public class IscsiLunWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedInitiators, allowedInitiatorsContains, allowedInitiatorsEndsWith, allowedInitiatorsGt, allowedInitiatorsGte, allowedInitiatorsIn, allowedInitiatorsLt, allowedInitiatorsLte, allowedInitiatorsNot, allowedInitiatorsNotContains, allowedInitiatorsNotEndsWith, allowedInitiatorsNotIn, allowedInitiatorsNotStartsWith, allowedInitiatorsStartsWith, AND, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, bps, bpsGt, bpsGte, bpsIn, bpsLt, bpsLte, bpsMax, bpsMaxGt, bpsMaxGte, bpsMaxIn, bpsMaxLength, bpsMaxLengthGt, bpsMaxLengthGte, bpsMaxLengthIn, bpsMaxLengthLt, bpsMaxLengthLte, bpsMaxLengthNot, bpsMaxLengthNotIn, bpsMaxLt, bpsMaxLte, bpsMaxNot, bpsMaxNotIn, bpsNot, bpsNotIn, bpsRd, bpsRdGt, bpsRdGte, bpsRdIn, bpsRdLt, bpsRdLte, bpsRdMax, bpsRdMaxGt, bpsRdMaxGte, bpsRdMaxIn, bpsRdMaxLength, bpsRdMaxLengthGt, bpsRdMaxLengthGte, bpsRdMaxLengthIn, bpsRdMaxLengthLt, bpsRdMaxLengthLte, bpsRdMaxLengthNot, bpsRdMaxLengthNotIn, bpsRdMaxLt, bpsRdMaxLte, bpsRdMaxNot, bpsRdMaxNotIn, bpsRdNot, bpsRdNotIn, bpsWr, bpsWrGt, bpsWrGte, bpsWrIn, bpsWrLt, bpsWrLte, bpsWrMax, bpsWrMaxGt, bpsWrMaxGte, bpsWrMaxIn, bpsWrMaxLength, bpsWrMaxLengthGt, bpsWrMaxLengthGte, bpsWrMaxLengthIn, bpsWrMaxLengthLt, bpsWrMaxLengthLte, bpsWrMaxLengthNot, bpsWrMaxLengthNotIn, bpsWrMaxLt, bpsWrMaxLte, bpsWrMaxNot, bpsWrMaxNotIn, bpsWrNot, bpsWrNotIn, consistencyGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioSize, ioSizeGt, ioSizeGte, ioSizeIn, ioSizeLt, ioSizeLte, ioSizeNot, ioSizeNotIn, iops, iopsGt, iopsGte, iopsIn, iopsLt, iopsLte, iopsMax, iopsMaxGt, iopsMaxGte, iopsMaxIn, iopsMaxLength, iopsMaxLengthGt, iopsMaxLengthGte, iopsMaxLengthIn, iopsMaxLengthLt, iopsMaxLengthLte, iopsMaxLengthNot, iopsMaxLengthNotIn, iopsMaxLt, iopsMaxLte, iopsMaxNot, iopsMaxNotIn, iopsNot, iopsNotIn, iopsRd, iopsRdGt, iopsRdGte, iopsRdIn, iopsRdLt, iopsRdLte, iopsRdMax, iopsRdMaxGt, iopsRdMaxGte, iopsRdMaxIn, iopsRdMaxLength, iopsRdMaxLengthGt, iopsRdMaxLengthGte, iopsRdMaxLengthIn, iopsRdMaxLengthLt, iopsRdMaxLengthLte, iopsRdMaxLengthNot, iopsRdMaxLengthNotIn, iopsRdMaxLt, iopsRdMaxLte, iopsRdMaxNot, iopsRdMaxNotIn, iopsRdNot, iopsRdNotIn, iopsWr, iopsWrGt, iopsWrGte, iopsWrIn, iopsWrLt, iopsWrLte, iopsWrMax, iopsWrMaxGt, iopsWrMaxGte, iopsWrMaxIn, iopsWrMaxLength, iopsWrMaxLengthGt, iopsWrMaxLengthGte, iopsWrMaxLengthIn, iopsWrMaxLengthLt, iopsWrMaxLengthLte, iopsWrMaxLengthNot, iopsWrMaxLengthNotIn, iopsWrMaxLt, iopsWrMaxLte, iopsWrMaxNot, iopsWrMaxNotIn, iopsWrNot, iopsWrNotIn, iscsiTarget, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lunId, lunIdGt, lunIdGte, lunIdIn, lunIdLt, lunIdLte, lunIdNot, lunIdNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, stripeNum, stripeNumGt, stripeNumGte, stripeNumIn, stripeNumLt, stripeNumLte, stripeNumNot, stripeNumNotIn, stripeSize, stripeSizeGt, stripeSizeGte, stripeSizeIn, stripeSizeLt, stripeSizeLte, stripeSizeNot, stripeSizeNotIn, thinProvision, thinProvisionNot, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, zbsVolumeId, zbsVolumeIdContains, zbsVolumeIdEndsWith, zbsVolumeIdGt, zbsVolumeIdGte, zbsVolumeIdIn, zbsVolumeIdLt, zbsVolumeIdLte, zbsVolumeIdNot, zbsVolumeIdNotContains, zbsVolumeIdNotEndsWith, zbsVolumeIdNotIn, zbsVolumeIdNotStartsWith, zbsVolumeIdStartsWith);
+    return Objects.hash(AND, NOT, OR, allowedInitiators, allowedInitiatorsContains, allowedInitiatorsEndsWith, allowedInitiatorsGt, allowedInitiatorsGte, allowedInitiatorsIn, allowedInitiatorsLt, allowedInitiatorsLte, allowedInitiatorsNot, allowedInitiatorsNotContains, allowedInitiatorsNotEndsWith, allowedInitiatorsNotIn, allowedInitiatorsNotStartsWith, allowedInitiatorsStartsWith, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, bps, bpsGt, bpsGte, bpsIn, bpsLt, bpsLte, bpsMax, bpsMaxGt, bpsMaxGte, bpsMaxIn, bpsMaxLength, bpsMaxLengthGt, bpsMaxLengthGte, bpsMaxLengthIn, bpsMaxLengthLt, bpsMaxLengthLte, bpsMaxLengthNot, bpsMaxLengthNotIn, bpsMaxLt, bpsMaxLte, bpsMaxNot, bpsMaxNotIn, bpsNot, bpsNotIn, bpsRd, bpsRdGt, bpsRdGte, bpsRdIn, bpsRdLt, bpsRdLte, bpsRdMax, bpsRdMaxGt, bpsRdMaxGte, bpsRdMaxIn, bpsRdMaxLength, bpsRdMaxLengthGt, bpsRdMaxLengthGte, bpsRdMaxLengthIn, bpsRdMaxLengthLt, bpsRdMaxLengthLte, bpsRdMaxLengthNot, bpsRdMaxLengthNotIn, bpsRdMaxLt, bpsRdMaxLte, bpsRdMaxNot, bpsRdMaxNotIn, bpsRdNot, bpsRdNotIn, bpsWr, bpsWrGt, bpsWrGte, bpsWrIn, bpsWrLt, bpsWrLte, bpsWrMax, bpsWrMaxGt, bpsWrMaxGte, bpsWrMaxIn, bpsWrMaxLength, bpsWrMaxLengthGt, bpsWrMaxLengthGte, bpsWrMaxLengthIn, bpsWrMaxLengthLt, bpsWrMaxLengthLte, bpsWrMaxLengthNot, bpsWrMaxLengthNotIn, bpsWrMaxLt, bpsWrMaxLte, bpsWrMaxNot, bpsWrMaxNotIn, bpsWrNot, bpsWrNotIn, consistencyGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioSize, ioSizeGt, ioSizeGte, ioSizeIn, ioSizeLt, ioSizeLte, ioSizeNot, ioSizeNotIn, iops, iopsGt, iopsGte, iopsIn, iopsLt, iopsLte, iopsMax, iopsMaxGt, iopsMaxGte, iopsMaxIn, iopsMaxLength, iopsMaxLengthGt, iopsMaxLengthGte, iopsMaxLengthIn, iopsMaxLengthLt, iopsMaxLengthLte, iopsMaxLengthNot, iopsMaxLengthNotIn, iopsMaxLt, iopsMaxLte, iopsMaxNot, iopsMaxNotIn, iopsNot, iopsNotIn, iopsRd, iopsRdGt, iopsRdGte, iopsRdIn, iopsRdLt, iopsRdLte, iopsRdMax, iopsRdMaxGt, iopsRdMaxGte, iopsRdMaxIn, iopsRdMaxLength, iopsRdMaxLengthGt, iopsRdMaxLengthGte, iopsRdMaxLengthIn, iopsRdMaxLengthLt, iopsRdMaxLengthLte, iopsRdMaxLengthNot, iopsRdMaxLengthNotIn, iopsRdMaxLt, iopsRdMaxLte, iopsRdMaxNot, iopsRdMaxNotIn, iopsRdNot, iopsRdNotIn, iopsWr, iopsWrGt, iopsWrGte, iopsWrIn, iopsWrLt, iopsWrLte, iopsWrMax, iopsWrMaxGt, iopsWrMaxGte, iopsWrMaxIn, iopsWrMaxLength, iopsWrMaxLengthGt, iopsWrMaxLengthGte, iopsWrMaxLengthIn, iopsWrMaxLengthLt, iopsWrMaxLengthLte, iopsWrMaxLengthNot, iopsWrMaxLengthNotIn, iopsWrMaxLt, iopsWrMaxLte, iopsWrMaxNot, iopsWrMaxNotIn, iopsWrNot, iopsWrNotIn, iscsiTarget, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lunId, lunIdGt, lunIdGte, lunIdIn, lunIdLt, lunIdLte, lunIdNot, lunIdNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, stripeNum, stripeNumGt, stripeNumGte, stripeNumIn, stripeNumLt, stripeNumLte, stripeNumNot, stripeNumNotIn, stripeSize, stripeSizeGt, stripeSizeGte, stripeSizeIn, stripeSizeLt, stripeSizeLte, stripeSizeNot, stripeSizeNotIn, thinProvision, thinProvisionNot, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, zbsVolumeId, zbsVolumeIdContains, zbsVolumeIdEndsWith, zbsVolumeIdGt, zbsVolumeIdGte, zbsVolumeIdIn, zbsVolumeIdLt, zbsVolumeIdLte, zbsVolumeIdNot, zbsVolumeIdNotContains, zbsVolumeIdNotEndsWith, zbsVolumeIdNotIn, zbsVolumeIdNotStartsWith, zbsVolumeIdStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -9249,6 +9249,9 @@ public class IscsiLunWhereInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiLunWhereInput {\n");
+    sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    allowedInitiators: ").append(toIndentedString(allowedInitiators)).append("\n");
     sb.append("    allowedInitiatorsContains: ").append(toIndentedString(allowedInitiatorsContains)).append("\n");
     sb.append("    allowedInitiatorsEndsWith: ").append(toIndentedString(allowedInitiatorsEndsWith)).append("\n");
@@ -9263,7 +9266,6 @@ public class IscsiLunWhereInput {
     sb.append("    allowedInitiatorsNotIn: ").append(toIndentedString(allowedInitiatorsNotIn)).append("\n");
     sb.append("    allowedInitiatorsNotStartsWith: ").append(toIndentedString(allowedInitiatorsNotStartsWith)).append("\n");
     sb.append("    allowedInitiatorsStartsWith: ").append(toIndentedString(allowedInitiatorsStartsWith)).append("\n");
-    sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
     sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
     sb.append("    assignedSizeGt: ").append(toIndentedString(assignedSizeGt)).append("\n");
     sb.append("    assignedSizeGte: ").append(toIndentedString(assignedSizeGte)).append("\n");
@@ -9491,8 +9493,6 @@ public class IscsiLunWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    replicaNumGt: ").append(toIndentedString(replicaNumGt)).append("\n");
     sb.append("    replicaNumGte: ").append(toIndentedString(replicaNumGte)).append("\n");

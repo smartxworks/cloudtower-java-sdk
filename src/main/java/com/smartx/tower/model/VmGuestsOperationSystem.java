@@ -20,8 +20,9 @@ public enum VmGuestsOperationSystem {
   
   UNKNOWN("UNKNOWN"),
   
-  WINDOWS("WINDOWS");
-
+  WINDOWS("WINDOWS"),
+  
+  VMGUESTSOPERATIONSYSTEM_UNSUPPORTED_ENUM("VMGUESTSOPERATIONSYSTEM_UNSUPPORTED_ENUM");
   private String value;
 
   VmGuestsOperationSystem(String value) {
@@ -43,7 +44,7 @@ public enum VmGuestsOperationSystem {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmGuestsOperationSystem.VMGUESTSOPERATIONSYSTEM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmGuestsOperationSystem> {

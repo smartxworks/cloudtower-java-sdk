@@ -24,6 +24,14 @@ public class OrganizationWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<OrganizationWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<OrganizationWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<OrganizationWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_DATACENTERS_EVERY = "datacenters_every";
   @SerializedName(SERIALIZED_NAME_DATACENTERS_EVERY)
   private DatacenterWhereInput datacentersEvery;
@@ -148,14 +156,6 @@ public class OrganizationWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<OrganizationWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<OrganizationWhereInput> OR = null;
-
   public OrganizationWhereInput() { 
   }
 
@@ -187,6 +187,68 @@ public class OrganizationWhereInput {
 
   public void setAND(List<OrganizationWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public OrganizationWhereInput NOT(List<OrganizationWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public OrganizationWhereInput addNOTItem(OrganizationWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<OrganizationWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<OrganizationWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<OrganizationWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public OrganizationWhereInput OR(List<OrganizationWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public OrganizationWhereInput addORItem(OrganizationWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<OrganizationWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<OrganizationWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<OrganizationWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -935,68 +997,6 @@ public class OrganizationWhereInput {
   }
 
 
-  public OrganizationWhereInput NOT(List<OrganizationWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public OrganizationWhereInput addNOTItem(OrganizationWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<OrganizationWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<OrganizationWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<OrganizationWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public OrganizationWhereInput OR(List<OrganizationWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public OrganizationWhereInput addORItem(OrganizationWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<OrganizationWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<OrganizationWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<OrganizationWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1007,6 +1007,8 @@ public class OrganizationWhereInput {
     }
     OrganizationWhereInput organizationWhereInput = (OrganizationWhereInput) o;
     return Objects.equals(this.AND, organizationWhereInput.AND) &&
+        Objects.equals(this.NOT, organizationWhereInput.NOT) &&
+        Objects.equals(this.OR, organizationWhereInput.OR) &&
         Objects.equals(this.datacentersEvery, organizationWhereInput.datacentersEvery) &&
         Objects.equals(this.datacentersNone, organizationWhereInput.datacentersNone) &&
         Objects.equals(this.datacentersSome, organizationWhereInput.datacentersSome) &&
@@ -1037,9 +1039,7 @@ public class OrganizationWhereInput {
         Objects.equals(this.nameNotEndsWith, organizationWhereInput.nameNotEndsWith) &&
         Objects.equals(this.nameNotIn, organizationWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, organizationWhereInput.nameNotStartsWith) &&
-        Objects.equals(this.nameStartsWith, organizationWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, organizationWhereInput.NOT) &&
-        Objects.equals(this.OR, organizationWhereInput.OR);
+        Objects.equals(this.nameStartsWith, organizationWhereInput.nameStartsWith);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1048,7 +1048,7 @@ public class OrganizationWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, datacentersEvery, datacentersNone, datacentersSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR);
+    return Objects.hash(AND, NOT, OR, datacentersEvery, datacentersNone, datacentersSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1063,6 +1063,8 @@ public class OrganizationWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class OrganizationWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    datacentersEvery: ").append(toIndentedString(datacentersEvery)).append("\n");
     sb.append("    datacentersNone: ").append(toIndentedString(datacentersNone)).append("\n");
     sb.append("    datacentersSome: ").append(toIndentedString(datacentersSome)).append("\n");
@@ -1094,8 +1096,6 @@ public class OrganizationWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("}");
     return sb.toString();
   }

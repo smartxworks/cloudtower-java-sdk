@@ -26,8 +26,9 @@ public enum VmVolumeElfStoragePolicyType {
   
   _3_THICK_PROVISION("REPLICA_3_THICK_PROVISION"),
   
-  _3_THIN_PROVISION("REPLICA_3_THIN_PROVISION");
-
+  _3_THIN_PROVISION("REPLICA_3_THIN_PROVISION"),
+  
+  VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM("VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmVolumeElfStoragePolicyType(String value) {
@@ -49,7 +50,7 @@ public enum VmVolumeElfStoragePolicyType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVolumeElfStoragePolicyType.VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVolumeElfStoragePolicyType> {

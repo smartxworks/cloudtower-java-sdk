@@ -28,6 +28,14 @@ public class VmExportFileWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmExportFileWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmExportFileWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmExportFileWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE = "content_library_vm_template";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE)
   private ContentLibraryVmTemplateWhereInput contentLibraryVmTemplate;
@@ -200,14 +208,6 @@ public class VmExportFileWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmExportFileWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmExportFileWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_STORAGE_CLUSTER_ID = "storage_cluster_id";
   @SerializedName(SERIALIZED_NAME_STORAGE_CLUSTER_ID)
   private String storageClusterId;
@@ -319,6 +319,68 @@ public class VmExportFileWhereInput {
 
   public void setAND(List<VmExportFileWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmExportFileWhereInput NOT(List<VmExportFileWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmExportFileWhereInput addNOTItem(VmExportFileWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmExportFileWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmExportFileWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmExportFileWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmExportFileWhereInput OR(List<VmExportFileWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmExportFileWhereInput addORItem(VmExportFileWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmExportFileWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmExportFileWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmExportFileWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1375,68 +1437,6 @@ public class VmExportFileWhereInput {
   }
 
 
-  public VmExportFileWhereInput NOT(List<VmExportFileWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmExportFileWhereInput addNOTItem(VmExportFileWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmExportFileWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmExportFileWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmExportFileWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmExportFileWhereInput OR(List<VmExportFileWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmExportFileWhereInput addORItem(VmExportFileWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmExportFileWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmExportFileWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmExportFileWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmExportFileWhereInput storageClusterId(String storageClusterId) {
     
     this.storageClusterId = storageClusterId;
@@ -1939,6 +1939,8 @@ public class VmExportFileWhereInput {
     }
     VmExportFileWhereInput vmExportFileWhereInput = (VmExportFileWhereInput) o;
     return Objects.equals(this.AND, vmExportFileWhereInput.AND) &&
+        Objects.equals(this.NOT, vmExportFileWhereInput.NOT) &&
+        Objects.equals(this.OR, vmExportFileWhereInput.OR) &&
         Objects.equals(this.contentLibraryVmTemplate, vmExportFileWhereInput.contentLibraryVmTemplate) &&
         Objects.equals(this.createdAt, vmExportFileWhereInput.createdAt) &&
         Objects.equals(this.createdAtGt, vmExportFileWhereInput.createdAtGt) &&
@@ -1982,8 +1984,6 @@ public class VmExportFileWhereInput {
         Objects.equals(this.idNotIn, vmExportFileWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, vmExportFileWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, vmExportFileWhereInput.idStartsWith) &&
-        Objects.equals(this.NOT, vmExportFileWhereInput.NOT) &&
-        Objects.equals(this.OR, vmExportFileWhereInput.OR) &&
         Objects.equals(this.storageClusterId, vmExportFileWhereInput.storageClusterId) &&
         Objects.equals(this.storageClusterIdContains, vmExportFileWhereInput.storageClusterIdContains) &&
         Objects.equals(this.storageClusterIdEndsWith, vmExportFileWhereInput.storageClusterIdEndsWith) &&
@@ -2012,7 +2012,7 @@ public class VmExportFileWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, contentLibraryVmTemplate, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, damaged, damagedNot, dataPortId, dataPortIdContains, dataPortIdEndsWith, dataPortIdGt, dataPortIdGte, dataPortIdIn, dataPortIdLt, dataPortIdLte, dataPortIdNot, dataPortIdNotContains, dataPortIdNotEndsWith, dataPortIdNotIn, dataPortIdNotStartsWith, dataPortIdStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, NOT, OR, storageClusterId, storageClusterIdContains, storageClusterIdEndsWith, storageClusterIdGt, storageClusterIdGte, storageClusterIdIn, storageClusterIdLt, storageClusterIdLte, storageClusterIdNot, storageClusterIdNotContains, storageClusterIdNotEndsWith, storageClusterIdNotIn, storageClusterIdNotStartsWith, storageClusterIdStartsWith, type, typeIn, typeNot, typeNotIn, vm, vmVolume);
+    return Objects.hash(AND, NOT, OR, contentLibraryVmTemplate, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, damaged, damagedNot, dataPortId, dataPortIdContains, dataPortIdEndsWith, dataPortIdGt, dataPortIdGte, dataPortIdIn, dataPortIdLt, dataPortIdLte, dataPortIdNot, dataPortIdNotContains, dataPortIdNotEndsWith, dataPortIdNotIn, dataPortIdNotStartsWith, dataPortIdStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, storageClusterId, storageClusterIdContains, storageClusterIdEndsWith, storageClusterIdGt, storageClusterIdGte, storageClusterIdIn, storageClusterIdLt, storageClusterIdLte, storageClusterIdNot, storageClusterIdNotContains, storageClusterIdNotEndsWith, storageClusterIdNotIn, storageClusterIdNotStartsWith, storageClusterIdStartsWith, type, typeIn, typeNot, typeNotIn, vm, vmVolume);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2027,6 +2027,8 @@ public class VmExportFileWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmExportFileWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    contentLibraryVmTemplate: ").append(toIndentedString(contentLibraryVmTemplate)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
@@ -2070,8 +2072,6 @@ public class VmExportFileWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    storageClusterId: ").append(toIndentedString(storageClusterId)).append("\n");
     sb.append("    storageClusterIdContains: ").append(toIndentedString(storageClusterIdContains)).append("\n");
     sb.append("    storageClusterIdEndsWith: ").append(toIndentedString(storageClusterIdEndsWith)).append("\n");

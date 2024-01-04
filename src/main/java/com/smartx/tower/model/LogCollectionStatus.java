@@ -22,8 +22,9 @@ public enum LogCollectionStatus {
   
   STOPPING("STOPPING"),
   
-  SUCCESSED("SUCCESSED");
-
+  SUCCESSED("SUCCESSED"),
+  
+  LOGCOLLECTIONSTATUS_UNSUPPORTED_ENUM("LOGCOLLECTIONSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   LogCollectionStatus(String value) {
@@ -45,7 +46,7 @@ public enum LogCollectionStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return LogCollectionStatus.LOGCOLLECTIONSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<LogCollectionStatus> {

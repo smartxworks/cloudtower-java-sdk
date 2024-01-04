@@ -20,8 +20,9 @@ public enum LicenseType {
   
   SUBSCRIPTION("SUBSCRIPTION"),
   
-  TRIAL("TRIAL");
-
+  TRIAL("TRIAL"),
+  
+  LICENSETYPE_UNSUPPORTED_ENUM("LICENSETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   LicenseType(String value) {
@@ -43,7 +44,7 @@ public enum LicenseType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return LicenseType.LICENSETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<LicenseType> {

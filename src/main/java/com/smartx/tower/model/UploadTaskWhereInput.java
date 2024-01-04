@@ -25,6 +25,14 @@ public class UploadTaskWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<UploadTaskWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<UploadTaskWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<UploadTaskWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CHUNK_SIZE = "chunk_size";
   @SerializedName(SERIALIZED_NAME_CHUNK_SIZE)
   private Long chunkSize;
@@ -176,14 +184,6 @@ public class UploadTaskWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<UploadTaskWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<UploadTaskWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resource_type";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
@@ -344,6 +344,68 @@ public class UploadTaskWhereInput {
 
   public void setAND(List<UploadTaskWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public UploadTaskWhereInput NOT(List<UploadTaskWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public UploadTaskWhereInput addNOTItem(UploadTaskWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<UploadTaskWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UploadTaskWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<UploadTaskWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public UploadTaskWhereInput OR(List<UploadTaskWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public UploadTaskWhereInput addORItem(UploadTaskWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<UploadTaskWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UploadTaskWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<UploadTaskWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1285,68 +1347,6 @@ public class UploadTaskWhereInput {
   }
 
 
-  public UploadTaskWhereInput NOT(List<UploadTaskWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public UploadTaskWhereInput addNOTItem(UploadTaskWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<UploadTaskWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UploadTaskWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<UploadTaskWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public UploadTaskWhereInput OR(List<UploadTaskWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public UploadTaskWhereInput addORItem(UploadTaskWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<UploadTaskWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UploadTaskWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<UploadTaskWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public UploadTaskWhereInput resourceType(UploadResourceType resourceType) {
     
     this.resourceType = resourceType;
@@ -2173,6 +2173,8 @@ public class UploadTaskWhereInput {
     }
     UploadTaskWhereInput uploadTaskWhereInput = (UploadTaskWhereInput) o;
     return Objects.equals(this.AND, uploadTaskWhereInput.AND) &&
+        Objects.equals(this.NOT, uploadTaskWhereInput.NOT) &&
+        Objects.equals(this.OR, uploadTaskWhereInput.OR) &&
         Objects.equals(this.chunkSize, uploadTaskWhereInput.chunkSize) &&
         Objects.equals(this.chunkSizeGt, uploadTaskWhereInput.chunkSizeGt) &&
         Objects.equals(this.chunkSizeGte, uploadTaskWhereInput.chunkSizeGte) &&
@@ -2211,8 +2213,6 @@ public class UploadTaskWhereInput {
         Objects.equals(this.idNotIn, uploadTaskWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, uploadTaskWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, uploadTaskWhereInput.idStartsWith) &&
-        Objects.equals(this.NOT, uploadTaskWhereInput.NOT) &&
-        Objects.equals(this.OR, uploadTaskWhereInput.OR) &&
         Objects.equals(this.resourceType, uploadTaskWhereInput.resourceType) &&
         Objects.equals(this.resourceTypeIn, uploadTaskWhereInput.resourceTypeIn) &&
         Objects.equals(this.resourceTypeNot, uploadTaskWhereInput.resourceTypeNot) &&
@@ -2253,7 +2253,7 @@ public class UploadTaskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, chunkSize, chunkSizeGt, chunkSizeGte, chunkSizeIn, chunkSizeLt, chunkSizeLte, chunkSizeNot, chunkSizeNotIn, currentChunk, currentChunkGt, currentChunkGte, currentChunkIn, currentChunkLt, currentChunkLte, currentChunkNot, currentChunkNotIn, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, NOT, OR, resourceType, resourceTypeIn, resourceTypeNot, resourceTypeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, updatedAt, updatedAtGt, updatedAtGte, updatedAtIn, updatedAtLt, updatedAtLte, updatedAtNot, updatedAtNotIn);
+    return Objects.hash(AND, NOT, OR, chunkSize, chunkSizeGt, chunkSizeGte, chunkSizeIn, chunkSizeLt, chunkSizeLte, chunkSizeNot, chunkSizeNotIn, currentChunk, currentChunkGt, currentChunkGte, currentChunkIn, currentChunkLt, currentChunkLte, currentChunkNot, currentChunkNotIn, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, resourceType, resourceTypeIn, resourceTypeNot, resourceTypeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, updatedAt, updatedAtGt, updatedAtGte, updatedAtIn, updatedAtLt, updatedAtLte, updatedAtNot, updatedAtNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2268,6 +2268,8 @@ public class UploadTaskWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class UploadTaskWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    chunkSize: ").append(toIndentedString(chunkSize)).append("\n");
     sb.append("    chunkSizeGt: ").append(toIndentedString(chunkSizeGt)).append("\n");
     sb.append("    chunkSizeGte: ").append(toIndentedString(chunkSizeGte)).append("\n");
@@ -2306,8 +2308,6 @@ public class UploadTaskWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
     sb.append("    resourceTypeIn: ").append(toIndentedString(resourceTypeIn)).append("\n");
     sb.append("    resourceTypeNot: ").append(toIndentedString(resourceTypeNot)).append("\n");

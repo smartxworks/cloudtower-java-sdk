@@ -27,6 +27,14 @@ public class VmNicWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmNicWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmNicWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmNicWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT = "egress_rate_limit_burst_in_bit";
   @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT)
   private Double egressRateLimitBurstInBit;
@@ -543,14 +551,6 @@ public class VmNicWhereInput {
   @SerializedName(SERIALIZED_NAME_NIC)
   private NicWhereInput nic;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmNicWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmNicWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
   private Integer order;
@@ -678,6 +678,68 @@ public class VmNicWhereInput {
 
   public void setAND(List<VmNicWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmNicWhereInput NOT(List<VmNicWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmNicWhereInput addNOTItem(VmNicWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmNicWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmNicWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmNicWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmNicWhereInput OR(List<VmNicWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmNicWhereInput addORItem(VmNicWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmNicWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmNicWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmNicWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3824,68 +3886,6 @@ public class VmNicWhereInput {
   }
 
 
-  public VmNicWhereInput NOT(List<VmNicWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmNicWhereInput addNOTItem(VmNicWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmNicWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmNicWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmNicWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmNicWhereInput OR(List<VmNicWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmNicWhereInput addORItem(VmNicWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmNicWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmNicWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmNicWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmNicWhereInput order(Integer order) {
     
     this.order = order;
@@ -4480,6 +4480,8 @@ public class VmNicWhereInput {
     }
     VmNicWhereInput vmNicWhereInput = (VmNicWhereInput) o;
     return Objects.equals(this.AND, vmNicWhereInput.AND) &&
+        Objects.equals(this.NOT, vmNicWhereInput.NOT) &&
+        Objects.equals(this.OR, vmNicWhereInput.OR) &&
         Objects.equals(this.egressRateLimitBurstInBit, vmNicWhereInput.egressRateLimitBurstInBit) &&
         Objects.equals(this.egressRateLimitBurstInBitGt, vmNicWhereInput.egressRateLimitBurstInBitGt) &&
         Objects.equals(this.egressRateLimitBurstInBitGte, vmNicWhereInput.egressRateLimitBurstInBitGte) &&
@@ -4609,8 +4611,6 @@ public class VmNicWhereInput {
         Objects.equals(this.modelNot, vmNicWhereInput.modelNot) &&
         Objects.equals(this.modelNotIn, vmNicWhereInput.modelNotIn) &&
         Objects.equals(this.nic, vmNicWhereInput.nic) &&
-        Objects.equals(this.NOT, vmNicWhereInput.NOT) &&
-        Objects.equals(this.OR, vmNicWhereInput.OR) &&
         Objects.equals(this.order, vmNicWhereInput.order) &&
         Objects.equals(this.orderGt, vmNicWhereInput.orderGt) &&
         Objects.equals(this.orderGte, vmNicWhereInput.orderGte) &&
@@ -4643,7 +4643,7 @@ public class VmNicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, egressRateLimitBurstInBit, egressRateLimitBurstInBitGt, egressRateLimitBurstInBitGte, egressRateLimitBurstInBitIn, egressRateLimitBurstInBitLt, egressRateLimitBurstInBitLte, egressRateLimitBurstInBitNot, egressRateLimitBurstInBitNotIn, egressRateLimitEnabled, egressRateLimitEnabledNot, egressRateLimitMaxRateInBitps, egressRateLimitMaxRateInBitpsGt, egressRateLimitMaxRateInBitpsGte, egressRateLimitMaxRateInBitpsIn, egressRateLimitMaxRateInBitpsLt, egressRateLimitMaxRateInBitpsLte, egressRateLimitMaxRateInBitpsNot, egressRateLimitMaxRateInBitpsNotIn, enabled, enabledNot, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ingressRateLimitBurstInBit, ingressRateLimitBurstInBitGt, ingressRateLimitBurstInBitGte, ingressRateLimitBurstInBitIn, ingressRateLimitBurstInBitLt, ingressRateLimitBurstInBitLte, ingressRateLimitBurstInBitNot, ingressRateLimitBurstInBitNotIn, ingressRateLimitEnabled, ingressRateLimitEnabledNot, ingressRateLimitMaxRateInBitps, ingressRateLimitMaxRateInBitpsGt, ingressRateLimitMaxRateInBitpsGte, ingressRateLimitMaxRateInBitpsIn, ingressRateLimitMaxRateInBitpsLt, ingressRateLimitMaxRateInBitpsLte, ingressRateLimitMaxRateInBitpsNot, ingressRateLimitMaxRateInBitpsNotIn, interfaceId, interfaceIdContains, interfaceIdEndsWith, interfaceIdGt, interfaceIdGte, interfaceIdIn, interfaceIdLt, interfaceIdLte, interfaceIdNot, interfaceIdNotContains, interfaceIdNotEndsWith, interfaceIdNotIn, interfaceIdNotStartsWith, interfaceIdStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, mirror, mirrorNot, model, modelIn, modelNot, modelNotIn, nic, NOT, OR, order, orderGt, orderGte, orderIn, orderLt, orderLte, orderNot, orderNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vlan, vm);
+    return Objects.hash(AND, NOT, OR, egressRateLimitBurstInBit, egressRateLimitBurstInBitGt, egressRateLimitBurstInBitGte, egressRateLimitBurstInBitIn, egressRateLimitBurstInBitLt, egressRateLimitBurstInBitLte, egressRateLimitBurstInBitNot, egressRateLimitBurstInBitNotIn, egressRateLimitEnabled, egressRateLimitEnabledNot, egressRateLimitMaxRateInBitps, egressRateLimitMaxRateInBitpsGt, egressRateLimitMaxRateInBitpsGte, egressRateLimitMaxRateInBitpsIn, egressRateLimitMaxRateInBitpsLt, egressRateLimitMaxRateInBitpsLte, egressRateLimitMaxRateInBitpsNot, egressRateLimitMaxRateInBitpsNotIn, enabled, enabledNot, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ingressRateLimitBurstInBit, ingressRateLimitBurstInBitGt, ingressRateLimitBurstInBitGte, ingressRateLimitBurstInBitIn, ingressRateLimitBurstInBitLt, ingressRateLimitBurstInBitLte, ingressRateLimitBurstInBitNot, ingressRateLimitBurstInBitNotIn, ingressRateLimitEnabled, ingressRateLimitEnabledNot, ingressRateLimitMaxRateInBitps, ingressRateLimitMaxRateInBitpsGt, ingressRateLimitMaxRateInBitpsGte, ingressRateLimitMaxRateInBitpsIn, ingressRateLimitMaxRateInBitpsLt, ingressRateLimitMaxRateInBitpsLte, ingressRateLimitMaxRateInBitpsNot, ingressRateLimitMaxRateInBitpsNotIn, interfaceId, interfaceIdContains, interfaceIdEndsWith, interfaceIdGt, interfaceIdGte, interfaceIdIn, interfaceIdLt, interfaceIdLte, interfaceIdNot, interfaceIdNotContains, interfaceIdNotEndsWith, interfaceIdNotIn, interfaceIdNotStartsWith, interfaceIdStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, mirror, mirrorNot, model, modelIn, modelNot, modelNotIn, nic, order, orderGt, orderGte, orderIn, orderLt, orderLte, orderNot, orderNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vlan, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4658,6 +4658,8 @@ public class VmNicWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmNicWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    egressRateLimitBurstInBit: ").append(toIndentedString(egressRateLimitBurstInBit)).append("\n");
     sb.append("    egressRateLimitBurstInBitGt: ").append(toIndentedString(egressRateLimitBurstInBitGt)).append("\n");
     sb.append("    egressRateLimitBurstInBitGte: ").append(toIndentedString(egressRateLimitBurstInBitGte)).append("\n");
@@ -4787,8 +4789,6 @@ public class VmNicWhereInput {
     sb.append("    modelNot: ").append(toIndentedString(modelNot)).append("\n");
     sb.append("    modelNotIn: ").append(toIndentedString(modelNotIn)).append("\n");
     sb.append("    nic: ").append(toIndentedString(nic)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    orderGt: ").append(toIndentedString(orderGt)).append("\n");
     sb.append("    orderGte: ").append(toIndentedString(orderGte)).append("\n");

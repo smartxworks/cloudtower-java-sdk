@@ -22,8 +22,9 @@ public enum FilterRuleOpEnum {
   
   LT("LT"),
   
-  LTE("LTE");
-
+  LTE("LTE"),
+  
+  FILTERRULEOPENUM_UNSUPPORTED_ENUM("FILTERRULEOPENUM_UNSUPPORTED_ENUM");
   private String value;
 
   FilterRuleOpEnum(String value) {
@@ -45,7 +46,7 @@ public enum FilterRuleOpEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return FilterRuleOpEnum.FILTERRULEOPENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<FilterRuleOpEnum> {
