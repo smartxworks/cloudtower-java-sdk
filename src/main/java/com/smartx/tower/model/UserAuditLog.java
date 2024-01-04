@@ -24,6 +24,10 @@ public class UserAuditLog {
   @SerializedName(SERIALIZED_NAME_ACTION)
   private String action;
 
+  public static final String SERIALIZED_NAME_AUTH_TYPE = "auth_type";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE)
+  private String authType;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private NestedCluster cluster;
@@ -68,6 +72,10 @@ public class UserAuditLog {
   @SerializedName(SERIALIZED_NAME_USER)
   private NestedUser user;
 
+  public static final String SERIALIZED_NAME_USERNAME = "username";
+  @SerializedName(SERIALIZED_NAME_USERNAME)
+  private String username;
+
   public UserAuditLog() { 
   }
 
@@ -91,6 +99,29 @@ public class UserAuditLog {
 
   public void setAction(String action) {
     this.action = action;
+  }
+
+
+  public UserAuditLog authType(String authType) {
+    
+    this.authType = authType;
+    return this;
+  }
+
+   /**
+   * Get authType
+   * @return authType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthType() {
+    return authType;
+  }
+
+
+  public void setAuthType(String authType) {
+    this.authType = authType;
   }
 
 
@@ -347,6 +378,29 @@ public class UserAuditLog {
   }
 
 
+  public UserAuditLog username(String username) {
+    
+    this.username = username;
+    return this;
+  }
+
+   /**
+   * Get username
+   * @return username
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsername() {
+    return username;
+  }
+
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -357,6 +411,7 @@ public class UserAuditLog {
     }
     UserAuditLog userAuditLog = (UserAuditLog) o;
     return Objects.equals(this.action, userAuditLog.action) &&
+        Objects.equals(this.authType, userAuditLog.authType) &&
         Objects.equals(this.cluster, userAuditLog.cluster) &&
         Objects.equals(this.createdAt, userAuditLog.createdAt) &&
         Objects.equals(this.finishedAt, userAuditLog.finishedAt) &&
@@ -367,7 +422,8 @@ public class UserAuditLog {
         Objects.equals(this.resourceType, userAuditLog.resourceType) &&
         Objects.equals(this.startedAt, userAuditLog.startedAt) &&
         Objects.equals(this.status, userAuditLog.status) &&
-        Objects.equals(this.user, userAuditLog.user);
+        Objects.equals(this.user, userAuditLog.user) &&
+        Objects.equals(this.username, userAuditLog.username);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -376,7 +432,7 @@ public class UserAuditLog {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, cluster, createdAt, finishedAt, id, ipAddress, message, resourceId, resourceType, startedAt, status, user);
+    return Objects.hash(action, authType, cluster, createdAt, finishedAt, id, ipAddress, message, resourceId, resourceType, startedAt, status, user, username);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -391,6 +447,7 @@ public class UserAuditLog {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserAuditLog {\n");
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    authType: ").append(toIndentedString(authType)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    finishedAt: ").append(toIndentedString(finishedAt)).append("\n");
@@ -402,6 +459,7 @@ public class UserAuditLog {
     sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
+    sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("}");
     return sb.toString();
   }

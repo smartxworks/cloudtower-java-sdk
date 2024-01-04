@@ -32,6 +32,14 @@ public class DiskWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<DiskWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<DiskWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<DiskWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -392,10 +400,6 @@ public class DiskWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<DiskWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NUMA_NODE = "numa_node";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE)
   private Integer numaNode;
@@ -435,10 +439,6 @@ public class DiskWhereInput {
   public static final String SERIALIZED_NAME_OFFLINE_NOT = "offline_not";
   @SerializedName(SERIALIZED_NAME_OFFLINE_NOT)
   private Boolean offlineNot;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<DiskWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
@@ -811,6 +811,68 @@ public class DiskWhereInput {
 
   public void setAND(List<DiskWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public DiskWhereInput NOT(List<DiskWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public DiskWhereInput addNOTItem(DiskWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<DiskWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<DiskWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<DiskWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public DiskWhereInput OR(List<DiskWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public DiskWhereInput addORItem(DiskWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<DiskWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<DiskWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<DiskWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3012,37 +3074,6 @@ public class DiskWhereInput {
   }
 
 
-  public DiskWhereInput NOT(List<DiskWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public DiskWhereInput addNOTItem(DiskWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<DiskWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<DiskWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<DiskWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public DiskWhereInput numaNode(Integer numaNode) {
     
     this.numaNode = numaNode;
@@ -3286,37 +3317,6 @@ public class DiskWhereInput {
 
   public void setOfflineNot(Boolean offlineNot) {
     this.offlineNot = offlineNot;
-  }
-
-
-  public DiskWhereInput OR(List<DiskWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public DiskWhereInput addORItem(DiskWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<DiskWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<DiskWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<DiskWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -5445,6 +5445,8 @@ public class DiskWhereInput {
     }
     DiskWhereInput diskWhereInput = (DiskWhereInput) o;
     return Objects.equals(this.AND, diskWhereInput.AND) &&
+        Objects.equals(this.NOT, diskWhereInput.NOT) &&
+        Objects.equals(this.OR, diskWhereInput.OR) &&
         Objects.equals(this.entityAsyncStatus, diskWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, diskWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, diskWhereInput.entityAsyncStatusNot) &&
@@ -5535,7 +5537,6 @@ public class DiskWhereInput {
         Objects.equals(this.nameNotIn, diskWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, diskWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, diskWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, diskWhereInput.NOT) &&
         Objects.equals(this.numaNode, diskWhereInput.numaNode) &&
         Objects.equals(this.numaNodeGt, diskWhereInput.numaNodeGt) &&
         Objects.equals(this.numaNodeGte, diskWhereInput.numaNodeGte) &&
@@ -5546,7 +5547,6 @@ public class DiskWhereInput {
         Objects.equals(this.numaNodeNotIn, diskWhereInput.numaNodeNotIn) &&
         Objects.equals(this.offline, diskWhereInput.offline) &&
         Objects.equals(this.offlineNot, diskWhereInput.offlineNot) &&
-        Objects.equals(this.OR, diskWhereInput.OR) &&
         Objects.equals(this.path, diskWhereInput.path) &&
         Objects.equals(this.pathContains, diskWhereInput.pathContains) &&
         Objects.equals(this.pathEndsWith, diskWhereInput.pathEndsWith) &&
@@ -5640,7 +5640,7 @@ public class DiskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareContains, firmwareEndsWith, firmwareGt, firmwareGte, firmwareIn, firmwareLt, firmwareLte, firmwareNot, firmwareNotContains, firmwareNotEndsWith, firmwareNotIn, firmwareNotStartsWith, firmwareStartsWith, function, functionIn, functionNot, functionNotIn, healthStatus, healthStatusIn, healthStatusNot, healthStatusNotIn, healthy, healthyNot, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mounted, mountedNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, numaNode, numaNodeGt, numaNodeGte, numaNodeIn, numaNodeLt, numaNodeLte, numaNodeNot, numaNodeNotIn, offline, offlineNot, OR, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, persistentMemoryType, persistentMemoryTypeContains, persistentMemoryTypeEndsWith, persistentMemoryTypeGt, persistentMemoryTypeGte, persistentMemoryTypeIn, persistentMemoryTypeLt, persistentMemoryTypeLte, persistentMemoryTypeNot, persistentMemoryTypeNotContains, persistentMemoryTypeNotEndsWith, persistentMemoryTypeNotIn, persistentMemoryTypeNotStartsWith, persistentMemoryTypeStartsWith, physicalSlotOnBrick, physicalSlotOnBrickGt, physicalSlotOnBrickGte, physicalSlotOnBrickIn, physicalSlotOnBrickLt, physicalSlotOnBrickLte, physicalSlotOnBrickNot, physicalSlotOnBrickNotIn, pmemDimmsEvery, pmemDimmsNone, pmemDimmsSome, recommendedUsage, recommendedUsageIn, recommendedUsageNot, recommendedUsageNotIn, remainingLifePercent, remainingLifePercentGt, remainingLifePercentGte, remainingLifePercentIn, remainingLifePercentLt, remainingLifePercentLte, remainingLifePercentNot, remainingLifePercentNotIn, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, usage, usageIn, usageNot, usageNotIn, usageStatus, usageStatusIn, usageStatusNot, usageStatusNotIn);
+    return Objects.hash(AND, NOT, OR, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareContains, firmwareEndsWith, firmwareGt, firmwareGte, firmwareIn, firmwareLt, firmwareLte, firmwareNot, firmwareNotContains, firmwareNotEndsWith, firmwareNotIn, firmwareNotStartsWith, firmwareStartsWith, function, functionIn, functionNot, functionNotIn, healthStatus, healthStatusIn, healthStatusNot, healthStatusNotIn, healthy, healthyNot, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, mounted, mountedNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, numaNode, numaNodeGt, numaNodeGte, numaNodeIn, numaNodeLt, numaNodeLte, numaNodeNot, numaNodeNotIn, offline, offlineNot, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, persistentMemoryType, persistentMemoryTypeContains, persistentMemoryTypeEndsWith, persistentMemoryTypeGt, persistentMemoryTypeGte, persistentMemoryTypeIn, persistentMemoryTypeLt, persistentMemoryTypeLte, persistentMemoryTypeNot, persistentMemoryTypeNotContains, persistentMemoryTypeNotEndsWith, persistentMemoryTypeNotIn, persistentMemoryTypeNotStartsWith, persistentMemoryTypeStartsWith, physicalSlotOnBrick, physicalSlotOnBrickGt, physicalSlotOnBrickGte, physicalSlotOnBrickIn, physicalSlotOnBrickLt, physicalSlotOnBrickLte, physicalSlotOnBrickNot, physicalSlotOnBrickNotIn, pmemDimmsEvery, pmemDimmsNone, pmemDimmsSome, recommendedUsage, recommendedUsageIn, recommendedUsageNot, recommendedUsageNotIn, remainingLifePercent, remainingLifePercentGt, remainingLifePercentGte, remainingLifePercentIn, remainingLifePercentLt, remainingLifePercentLte, remainingLifePercentNot, remainingLifePercentNotIn, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, usage, usageIn, usageNot, usageNotIn, usageStatus, usageStatusIn, usageStatusNot, usageStatusNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5655,6 +5655,8 @@ public class DiskWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiskWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
@@ -5745,7 +5747,6 @@ public class DiskWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    numaNode: ").append(toIndentedString(numaNode)).append("\n");
     sb.append("    numaNodeGt: ").append(toIndentedString(numaNodeGt)).append("\n");
     sb.append("    numaNodeGte: ").append(toIndentedString(numaNodeGte)).append("\n");
@@ -5756,7 +5757,6 @@ public class DiskWhereInput {
     sb.append("    numaNodeNotIn: ").append(toIndentedString(numaNodeNotIn)).append("\n");
     sb.append("    offline: ").append(toIndentedString(offline)).append("\n");
     sb.append("    offlineNot: ").append(toIndentedString(offlineNot)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    pathContains: ").append(toIndentedString(pathContains)).append("\n");
     sb.append("    pathEndsWith: ").append(toIndentedString(pathEndsWith)).append("\n");

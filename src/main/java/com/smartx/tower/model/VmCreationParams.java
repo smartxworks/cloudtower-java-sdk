@@ -17,6 +17,7 @@ import com.smartx.tower.model.VmFirmware;
 import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmOwnerParams;
 import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
@@ -30,6 +31,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmCreationParams {
+  public static final String SERIALIZED_NAME_OWNER = "owner";
+  @SerializedName(SERIALIZED_NAME_OWNER)
+  private VmOwnerParams owner;
+
   public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
   @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
   private List<VmGpuOperationParams> gpuDevices = null;
@@ -132,6 +137,29 @@ public class VmCreationParams {
 
   public VmCreationParams() { 
   }
+
+  public VmCreationParams owner(VmOwnerParams owner) {
+    
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * Get owner
+   * @return owner
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmOwnerParams getOwner() {
+    return owner;
+  }
+
+
+  public void setOwner(VmOwnerParams owner) {
+    this.owner = owner;
+  }
+
 
   public VmCreationParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
     
@@ -730,7 +758,8 @@ public class VmCreationParams {
       return false;
     }
     VmCreationParams vmCreationParams = (VmCreationParams) o;
-    return Objects.equals(this.gpuDevices, vmCreationParams.gpuDevices) &&
+    return Objects.equals(this.owner, vmCreationParams.owner) &&
+        Objects.equals(this.gpuDevices, vmCreationParams.gpuDevices) &&
         Objects.equals(this.maxBandwidthPolicy, vmCreationParams.maxBandwidthPolicy) &&
         Objects.equals(this.maxBandwidthUnit, vmCreationParams.maxBandwidthUnit) &&
         Objects.equals(this.maxBandwidth, vmCreationParams.maxBandwidth) &&
@@ -759,13 +788,14 @@ public class VmCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(gpuDevices, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(owner, gpuDevices, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCreationParams {\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
     sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");

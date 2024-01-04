@@ -39,6 +39,14 @@ public class GraphWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<GraphWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<GraphWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<GraphWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -351,14 +359,6 @@ public class GraphWhereInput {
   @SerializedName(SERIALIZED_NAME_NICS_SOME)
   private NicWhereInput nicsSome;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<GraphWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<GraphWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resource_type";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
   private String resourceType;
@@ -559,18 +559,6 @@ public class GraphWhereInput {
   @SerializedName(SERIALIZED_NAME_VM_NICS_SOME)
   private VmNicWhereInput vmNicsSome;
 
-  public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
-  @SerializedName(SERIALIZED_NAME_VMS_EVERY)
-  private VmWhereInput vmsEvery;
-
-  public static final String SERIALIZED_NAME_VMS_NONE = "vms_none";
-  @SerializedName(SERIALIZED_NAME_VMS_NONE)
-  private VmWhereInput vmsNone;
-
-  public static final String SERIALIZED_NAME_VMS_SOME = "vms_some";
-  @SerializedName(SERIALIZED_NAME_VMS_SOME)
-  private VmWhereInput vmsSome;
-
   public static final String SERIALIZED_NAME_VM_VOLUMES_EVERY = "vmVolumes_every";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES_EVERY)
   private VmVolumeWhereInput vmVolumesEvery;
@@ -582,6 +570,18 @@ public class GraphWhereInput {
   public static final String SERIALIZED_NAME_VM_VOLUMES_SOME = "vmVolumes_some";
   @SerializedName(SERIALIZED_NAME_VM_VOLUMES_SOME)
   private VmVolumeWhereInput vmVolumesSome;
+
+  public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
+  @SerializedName(SERIALIZED_NAME_VMS_EVERY)
+  private VmWhereInput vmsEvery;
+
+  public static final String SERIALIZED_NAME_VMS_NONE = "vms_none";
+  @SerializedName(SERIALIZED_NAME_VMS_NONE)
+  private VmWhereInput vmsNone;
+
+  public static final String SERIALIZED_NAME_VMS_SOME = "vms_some";
+  @SerializedName(SERIALIZED_NAME_VMS_SOME)
+  private VmWhereInput vmsSome;
 
   public static final String SERIALIZED_NAME_WITNESSES_EVERY = "witnesses_every";
   @SerializedName(SERIALIZED_NAME_WITNESSES_EVERY)
@@ -638,6 +638,68 @@ public class GraphWhereInput {
 
   public void setAND(List<GraphWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public GraphWhereInput NOT(List<GraphWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public GraphWhereInput addNOTItem(GraphWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<GraphWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<GraphWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<GraphWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public GraphWhereInput OR(List<GraphWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public GraphWhereInput addORItem(GraphWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<GraphWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<GraphWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<GraphWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2547,68 +2609,6 @@ public class GraphWhereInput {
   }
 
 
-  public GraphWhereInput NOT(List<GraphWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public GraphWhereInput addNOTItem(GraphWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<GraphWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<GraphWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<GraphWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public GraphWhereInput OR(List<GraphWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public GraphWhereInput addORItem(GraphWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<GraphWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<GraphWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<GraphWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public GraphWhereInput resourceType(String resourceType) {
     
     this.resourceType = resourceType;
@@ -3823,75 +3823,6 @@ public class GraphWhereInput {
   }
 
 
-  public GraphWhereInput vmsEvery(VmWhereInput vmsEvery) {
-    
-    this.vmsEvery = vmsEvery;
-    return this;
-  }
-
-   /**
-   * Get vmsEvery
-   * @return vmsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmWhereInput getVmsEvery() {
-    return vmsEvery;
-  }
-
-
-  public void setVmsEvery(VmWhereInput vmsEvery) {
-    this.vmsEvery = vmsEvery;
-  }
-
-
-  public GraphWhereInput vmsNone(VmWhereInput vmsNone) {
-    
-    this.vmsNone = vmsNone;
-    return this;
-  }
-
-   /**
-   * Get vmsNone
-   * @return vmsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmWhereInput getVmsNone() {
-    return vmsNone;
-  }
-
-
-  public void setVmsNone(VmWhereInput vmsNone) {
-    this.vmsNone = vmsNone;
-  }
-
-
-  public GraphWhereInput vmsSome(VmWhereInput vmsSome) {
-    
-    this.vmsSome = vmsSome;
-    return this;
-  }
-
-   /**
-   * Get vmsSome
-   * @return vmsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmWhereInput getVmsSome() {
-    return vmsSome;
-  }
-
-
-  public void setVmsSome(VmWhereInput vmsSome) {
-    this.vmsSome = vmsSome;
-  }
-
-
   public GraphWhereInput vmVolumesEvery(VmVolumeWhereInput vmVolumesEvery) {
     
     this.vmVolumesEvery = vmVolumesEvery;
@@ -3958,6 +3889,75 @@ public class GraphWhereInput {
 
   public void setVmVolumesSome(VmVolumeWhereInput vmVolumesSome) {
     this.vmVolumesSome = vmVolumesSome;
+  }
+
+
+  public GraphWhereInput vmsEvery(VmWhereInput vmsEvery) {
+    
+    this.vmsEvery = vmsEvery;
+    return this;
+  }
+
+   /**
+   * Get vmsEvery
+   * @return vmsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsEvery() {
+    return vmsEvery;
+  }
+
+
+  public void setVmsEvery(VmWhereInput vmsEvery) {
+    this.vmsEvery = vmsEvery;
+  }
+
+
+  public GraphWhereInput vmsNone(VmWhereInput vmsNone) {
+    
+    this.vmsNone = vmsNone;
+    return this;
+  }
+
+   /**
+   * Get vmsNone
+   * @return vmsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsNone() {
+    return vmsNone;
+  }
+
+
+  public void setVmsNone(VmWhereInput vmsNone) {
+    this.vmsNone = vmsNone;
+  }
+
+
+  public GraphWhereInput vmsSome(VmWhereInput vmsSome) {
+    
+    this.vmsSome = vmsSome;
+    return this;
+  }
+
+   /**
+   * Get vmsSome
+   * @return vmsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsSome() {
+    return vmsSome;
+  }
+
+
+  public void setVmsSome(VmWhereInput vmsSome) {
+    this.vmsSome = vmsSome;
   }
 
 
@@ -4109,6 +4109,8 @@ public class GraphWhereInput {
     }
     GraphWhereInput graphWhereInput = (GraphWhereInput) o;
     return Objects.equals(this.AND, graphWhereInput.AND) &&
+        Objects.equals(this.NOT, graphWhereInput.NOT) &&
+        Objects.equals(this.OR, graphWhereInput.OR) &&
         Objects.equals(this.cluster, graphWhereInput.cluster) &&
         Objects.equals(this.disksEvery, graphWhereInput.disksEvery) &&
         Objects.equals(this.disksNone, graphWhereInput.disksNone) &&
@@ -4187,8 +4189,6 @@ public class GraphWhereInput {
         Objects.equals(this.nicsEvery, graphWhereInput.nicsEvery) &&
         Objects.equals(this.nicsNone, graphWhereInput.nicsNone) &&
         Objects.equals(this.nicsSome, graphWhereInput.nicsSome) &&
-        Objects.equals(this.NOT, graphWhereInput.NOT) &&
-        Objects.equals(this.OR, graphWhereInput.OR) &&
         Objects.equals(this.resourceType, graphWhereInput.resourceType) &&
         Objects.equals(this.resourceTypeContains, graphWhereInput.resourceTypeContains) &&
         Objects.equals(this.resourceTypeEndsWith, graphWhereInput.resourceTypeEndsWith) &&
@@ -4239,12 +4239,12 @@ public class GraphWhereInput {
         Objects.equals(this.vmNicsEvery, graphWhereInput.vmNicsEvery) &&
         Objects.equals(this.vmNicsNone, graphWhereInput.vmNicsNone) &&
         Objects.equals(this.vmNicsSome, graphWhereInput.vmNicsSome) &&
-        Objects.equals(this.vmsEvery, graphWhereInput.vmsEvery) &&
-        Objects.equals(this.vmsNone, graphWhereInput.vmsNone) &&
-        Objects.equals(this.vmsSome, graphWhereInput.vmsSome) &&
         Objects.equals(this.vmVolumesEvery, graphWhereInput.vmVolumesEvery) &&
         Objects.equals(this.vmVolumesNone, graphWhereInput.vmVolumesNone) &&
         Objects.equals(this.vmVolumesSome, graphWhereInput.vmVolumesSome) &&
+        Objects.equals(this.vmsEvery, graphWhereInput.vmsEvery) &&
+        Objects.equals(this.vmsNone, graphWhereInput.vmsNone) &&
+        Objects.equals(this.vmsSome, graphWhereInput.vmsSome) &&
         Objects.equals(this.witnessesEvery, graphWhereInput.witnessesEvery) &&
         Objects.equals(this.witnessesNone, graphWhereInput.witnessesNone) &&
         Objects.equals(this.witnessesSome, graphWhereInput.witnessesSome) &&
@@ -4259,7 +4259,7 @@ public class GraphWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, disksEvery, disksNone, disksSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lunsEvery, lunsNone, lunsSome, metricCount, metricCountGt, metricCountGte, metricCountIn, metricCountLt, metricCountLte, metricCountNot, metricCountNotIn, metricName, metricNameContains, metricNameEndsWith, metricNameGt, metricNameGte, metricNameIn, metricNameLt, metricNameLte, metricNameNot, metricNameNotContains, metricNameNotEndsWith, metricNameNotIn, metricNameNotStartsWith, metricNameStartsWith, metricType, metricTypeIn, metricTypeNot, metricTypeNotIn, namespacesEvery, namespacesNone, namespacesSome, network, networkIn, networkNot, networkNotIn, nicsEvery, nicsNone, nicsSome, NOT, OR, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, service, serviceContains, serviceEndsWith, serviceGt, serviceGte, serviceIn, serviceLt, serviceLte, serviceNot, serviceNotContains, serviceNotEndsWith, serviceNotIn, serviceNotStartsWith, serviceStartsWith, title, titleContains, titleEndsWith, titleGt, titleGte, titleIn, titleLt, titleLte, titleNot, titleNotContains, titleNotEndsWith, titleNotIn, titleNotStartsWith, titleStartsWith, type, typeIn, typeNot, typeNotIn, view, vmNicsEvery, vmNicsNone, vmNicsSome, vmsEvery, vmsNone, vmsSome, vmVolumesEvery, vmVolumesNone, vmVolumesSome, witnessesEvery, witnessesNone, witnessesSome, zonesEvery, zonesNone, zonesSome);
+    return Objects.hash(AND, NOT, OR, cluster, disksEvery, disksNone, disksSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lunsEvery, lunsNone, lunsSome, metricCount, metricCountGt, metricCountGte, metricCountIn, metricCountLt, metricCountLte, metricCountNot, metricCountNotIn, metricName, metricNameContains, metricNameEndsWith, metricNameGt, metricNameGte, metricNameIn, metricNameLt, metricNameLte, metricNameNot, metricNameNotContains, metricNameNotEndsWith, metricNameNotIn, metricNameNotStartsWith, metricNameStartsWith, metricType, metricTypeIn, metricTypeNot, metricTypeNotIn, namespacesEvery, namespacesNone, namespacesSome, network, networkIn, networkNot, networkNotIn, nicsEvery, nicsNone, nicsSome, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, service, serviceContains, serviceEndsWith, serviceGt, serviceGte, serviceIn, serviceLt, serviceLte, serviceNot, serviceNotContains, serviceNotEndsWith, serviceNotIn, serviceNotStartsWith, serviceStartsWith, title, titleContains, titleEndsWith, titleGt, titleGte, titleIn, titleLt, titleLte, titleNot, titleNotContains, titleNotEndsWith, titleNotIn, titleNotStartsWith, titleStartsWith, type, typeIn, typeNot, typeNotIn, view, vmNicsEvery, vmNicsNone, vmNicsSome, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome, witnessesEvery, witnessesNone, witnessesSome, zonesEvery, zonesNone, zonesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4274,6 +4274,8 @@ public class GraphWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    disksEvery: ").append(toIndentedString(disksEvery)).append("\n");
     sb.append("    disksNone: ").append(toIndentedString(disksNone)).append("\n");
@@ -4352,8 +4354,6 @@ public class GraphWhereInput {
     sb.append("    nicsEvery: ").append(toIndentedString(nicsEvery)).append("\n");
     sb.append("    nicsNone: ").append(toIndentedString(nicsNone)).append("\n");
     sb.append("    nicsSome: ").append(toIndentedString(nicsSome)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
     sb.append("    resourceTypeContains: ").append(toIndentedString(resourceTypeContains)).append("\n");
     sb.append("    resourceTypeEndsWith: ").append(toIndentedString(resourceTypeEndsWith)).append("\n");
@@ -4404,12 +4404,12 @@ public class GraphWhereInput {
     sb.append("    vmNicsEvery: ").append(toIndentedString(vmNicsEvery)).append("\n");
     sb.append("    vmNicsNone: ").append(toIndentedString(vmNicsNone)).append("\n");
     sb.append("    vmNicsSome: ").append(toIndentedString(vmNicsSome)).append("\n");
-    sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
-    sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
-    sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");
     sb.append("    vmVolumesEvery: ").append(toIndentedString(vmVolumesEvery)).append("\n");
     sb.append("    vmVolumesNone: ").append(toIndentedString(vmVolumesNone)).append("\n");
     sb.append("    vmVolumesSome: ").append(toIndentedString(vmVolumesSome)).append("\n");
+    sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
+    sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
+    sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");
     sb.append("    witnessesEvery: ").append(toIndentedString(witnessesEvery)).append("\n");
     sb.append("    witnessesNone: ").append(toIndentedString(witnessesNone)).append("\n");
     sb.append("    witnessesSome: ").append(toIndentedString(witnessesSome)).append("\n");

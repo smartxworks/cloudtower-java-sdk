@@ -52,6 +52,14 @@ public class LabelWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<LabelWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<LabelWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<LabelWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER_NUM = "cluster_num";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM)
   private Integer clusterNum;
@@ -988,10 +996,6 @@ public class LabelWhereInput {
   @SerializedName(SERIALIZED_NAME_NICS_SOME)
   private NicWhereInput nicsSome;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<LabelWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_NUM = "nvmf_namespace_num";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_NUM)
   private Integer nvmfNamespaceNum;
@@ -1123,10 +1127,6 @@ public class LabelWhereInput {
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEMS_SOME = "nvmf_subsystems_some";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEMS_SOME)
   private NvmfSubsystemWhereInput nvmfSubsystemsSome;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<LabelWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_SECURITY_POLICIES_EVERY = "security_policies_every";
   @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES_EVERY)
@@ -1631,6 +1631,68 @@ public class LabelWhereInput {
 
   public void setAND(List<LabelWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public LabelWhereInput NOT(List<LabelWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public LabelWhereInput addNOTItem(LabelWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<LabelWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<LabelWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<LabelWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public LabelWhereInput OR(List<LabelWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public LabelWhereInput addORItem(LabelWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<LabelWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<LabelWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<LabelWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -7352,37 +7414,6 @@ public class LabelWhereInput {
   }
 
 
-  public LabelWhereInput NOT(List<LabelWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public LabelWhereInput addNOTItem(LabelWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<LabelWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<LabelWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<LabelWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public LabelWhereInput nvmfNamespaceNum(Integer nvmfNamespaceNum) {
     
     this.nvmfNamespaceNum = nvmfNamespaceNum;
@@ -8187,37 +8218,6 @@ public class LabelWhereInput {
 
   public void setNvmfSubsystemsSome(NvmfSubsystemWhereInput nvmfSubsystemsSome) {
     this.nvmfSubsystemsSome = nvmfSubsystemsSome;
-  }
-
-
-  public LabelWhereInput OR(List<LabelWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public LabelWhereInput addORItem(LabelWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<LabelWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<LabelWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<LabelWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -11121,6 +11121,8 @@ public class LabelWhereInput {
     }
     LabelWhereInput labelWhereInput = (LabelWhereInput) o;
     return Objects.equals(this.AND, labelWhereInput.AND) &&
+        Objects.equals(this.NOT, labelWhereInput.NOT) &&
+        Objects.equals(this.OR, labelWhereInput.OR) &&
         Objects.equals(this.clusterNum, labelWhereInput.clusterNum) &&
         Objects.equals(this.clusterNumGt, labelWhereInput.clusterNumGt) &&
         Objects.equals(this.clusterNumGte, labelWhereInput.clusterNumGte) &&
@@ -11355,7 +11357,6 @@ public class LabelWhereInput {
         Objects.equals(this.nicsEvery, labelWhereInput.nicsEvery) &&
         Objects.equals(this.nicsNone, labelWhereInput.nicsNone) &&
         Objects.equals(this.nicsSome, labelWhereInput.nicsSome) &&
-        Objects.equals(this.NOT, labelWhereInput.NOT) &&
         Objects.equals(this.nvmfNamespaceNum, labelWhereInput.nvmfNamespaceNum) &&
         Objects.equals(this.nvmfNamespaceNumGt, labelWhereInput.nvmfNamespaceNumGt) &&
         Objects.equals(this.nvmfNamespaceNumGte, labelWhereInput.nvmfNamespaceNumGte) &&
@@ -11389,7 +11390,6 @@ public class LabelWhereInput {
         Objects.equals(this.nvmfSubsystemsEvery, labelWhereInput.nvmfSubsystemsEvery) &&
         Objects.equals(this.nvmfSubsystemsNone, labelWhereInput.nvmfSubsystemsNone) &&
         Objects.equals(this.nvmfSubsystemsSome, labelWhereInput.nvmfSubsystemsSome) &&
-        Objects.equals(this.OR, labelWhereInput.OR) &&
         Objects.equals(this.securityPoliciesEvery, labelWhereInput.securityPoliciesEvery) &&
         Objects.equals(this.securityPoliciesNone, labelWhereInput.securityPoliciesNone) &&
         Objects.equals(this.securityPoliciesSome, labelWhereInput.securityPoliciesSome) &&
@@ -11516,7 +11516,7 @@ public class LabelWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clusterNum, clusterNumGt, clusterNumGte, clusterNumIn, clusterNumLt, clusterNumLte, clusterNumNot, clusterNumNotIn, clustersEvery, clustersNone, clustersSome, consistencyGroupNum, consistencyGroupNumGt, consistencyGroupNumGte, consistencyGroupNumIn, consistencyGroupNumLt, consistencyGroupNumLte, consistencyGroupNumNot, consistencyGroupNumNotIn, consistencyGroupSnapshotNum, consistencyGroupSnapshotNumGt, consistencyGroupSnapshotNumGte, consistencyGroupSnapshotNumIn, consistencyGroupSnapshotNumLt, consistencyGroupSnapshotNumLte, consistencyGroupSnapshotNumNot, consistencyGroupSnapshotNumNotIn, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, contentLibraryImageNum, contentLibraryImageNumGt, contentLibraryImageNumGte, contentLibraryImageNumIn, contentLibraryImageNumLt, contentLibraryImageNumLte, contentLibraryImageNumNot, contentLibraryImageNumNotIn, contentLibraryImagesEvery, contentLibraryImagesNone, contentLibraryImagesSome, contentLibraryVmTemplateNum, contentLibraryVmTemplateNumGt, contentLibraryVmTemplateNumGte, contentLibraryVmTemplateNumIn, contentLibraryVmTemplateNumLt, contentLibraryVmTemplateNumLte, contentLibraryVmTemplateNumNot, contentLibraryVmTemplateNumNotIn, contentLibraryVmTemplatesEvery, contentLibraryVmTemplatesNone, contentLibraryVmTemplatesSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, datacenterNum, datacenterNumGt, datacenterNumGte, datacenterNumIn, datacenterNumLt, datacenterNumLte, datacenterNumNot, datacenterNumNotIn, datacentersEvery, datacentersNone, datacentersSome, diskNum, diskNumGt, diskNumGte, diskNumIn, diskNumLt, diskNumLte, diskNumNot, diskNumNotIn, disksEvery, disksNone, disksSome, elfImageNum, elfImageNumGt, elfImageNumGte, elfImageNumIn, elfImageNumLt, elfImageNumLte, elfImageNumNot, elfImageNumNotIn, elfImagesEvery, elfImagesNone, elfImagesSome, gpuDeviceNum, gpuDeviceNumGt, gpuDeviceNumGte, gpuDeviceNumIn, gpuDeviceNumLt, gpuDeviceNumLte, gpuDeviceNumNot, gpuDeviceNumNotIn, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunNum, iscsiLunNumGt, iscsiLunNumGte, iscsiLunNumIn, iscsiLunNumLt, iscsiLunNumLte, iscsiLunNumNot, iscsiLunNumNotIn, iscsiLunSnapshotNum, iscsiLunSnapshotNumGt, iscsiLunSnapshotNumGte, iscsiLunSnapshotNumIn, iscsiLunSnapshotNumLt, iscsiLunSnapshotNumLte, iscsiLunSnapshotNumNot, iscsiLunSnapshotNumNotIn, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, iscsiTargetNum, iscsiTargetNumGt, iscsiTargetNumGte, iscsiTargetNumIn, iscsiTargetNumLt, iscsiTargetNumLte, iscsiTargetNumNot, iscsiTargetNumNotIn, iscsiTargetsEvery, iscsiTargetsNone, iscsiTargetsSome, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, isolationPolicyNum, isolationPolicyNumGt, isolationPolicyNumGte, isolationPolicyNumIn, isolationPolicyNumLt, isolationPolicyNumLte, isolationPolicyNumNot, isolationPolicyNumNotIn, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, namespaceGroupNum, namespaceGroupNumGt, namespaceGroupNumGte, namespaceGroupNumIn, namespaceGroupNumLt, namespaceGroupNumLte, namespaceGroupNumNot, namespaceGroupNumNotIn, namespaceGroupsEvery, namespaceGroupsNone, namespaceGroupsSome, nfsExportNum, nfsExportNumGt, nfsExportNumGte, nfsExportNumIn, nfsExportNumLt, nfsExportNumLte, nfsExportNumNot, nfsExportNumNotIn, nfsExportsEvery, nfsExportsNone, nfsExportsSome, nfsInodeNum, nfsInodeNumGt, nfsInodeNumGte, nfsInodeNumIn, nfsInodeNumLt, nfsInodeNumLte, nfsInodeNumNot, nfsInodeNumNotIn, nfsInodesEvery, nfsInodesNone, nfsInodesSome, nicNum, nicNumGt, nicNumGte, nicNumIn, nicNumLt, nicNumLte, nicNumNot, nicNumNotIn, nicsEvery, nicsNone, nicsSome, NOT, nvmfNamespaceNum, nvmfNamespaceNumGt, nvmfNamespaceNumGte, nvmfNamespaceNumIn, nvmfNamespaceNumLt, nvmfNamespaceNumLte, nvmfNamespaceNumNot, nvmfNamespaceNumNotIn, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshotNumGt, nvmfNamespaceSnapshotNumGte, nvmfNamespaceSnapshotNumIn, nvmfNamespaceSnapshotNumLt, nvmfNamespaceSnapshotNumLte, nvmfNamespaceSnapshotNumNot, nvmfNamespaceSnapshotNumNotIn, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, nvmfNamespacesEvery, nvmfNamespacesNone, nvmfNamespacesSome, nvmfSubsystemNum, nvmfSubsystemNumGt, nvmfSubsystemNumGte, nvmfSubsystemNumIn, nvmfSubsystemNumLt, nvmfSubsystemNumLte, nvmfSubsystemNumNot, nvmfSubsystemNumNotIn, nvmfSubsystemsEvery, nvmfSubsystemsNone, nvmfSubsystemsSome, OR, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, securityPolicyNum, securityPolicyNumGt, securityPolicyNumGte, securityPolicyNumIn, securityPolicyNumLt, securityPolicyNumLte, securityPolicyNumNot, securityPolicyNumNotIn, systemVlanNum, systemVlanNumGt, systemVlanNumGte, systemVlanNumIn, systemVlanNumLt, systemVlanNumLte, systemVlanNumNot, systemVlanNumNotIn, totalNum, totalNumGt, totalNumGte, totalNumIn, totalNumLt, totalNumLte, totalNumNot, totalNumNotIn, value, valueContains, valueEndsWith, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotContains, valueNotEndsWith, valueNotIn, valueNotStartsWith, valueStartsWith, vdsNum, vdsNumGt, vdsNumGte, vdsNumIn, vdsNumLt, vdsNumLte, vdsNumNot, vdsNumNotIn, vdsesEvery, vdsesNone, vdsesSome, vlansEvery, vlansNone, vlansSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmSnapshotNum, vmSnapshotNumGt, vmSnapshotNumGte, vmSnapshotNumIn, vmSnapshotNumLt, vmSnapshotNumLte, vmSnapshotNumNot, vmSnapshotNumNotIn, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplateNum, vmTemplateNumGt, vmTemplateNumGte, vmTemplateNumIn, vmTemplateNumLt, vmTemplateNumLte, vmTemplateNumNot, vmTemplateNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmVlanNum, vmVlanNumGt, vmVlanNumGte, vmVlanNumIn, vmVlanNumLt, vmVlanNumLte, vmVlanNumNot, vmVlanNumNotIn, vmVolumeNum, vmVolumeNumGt, vmVolumeNumGte, vmVolumeNumIn, vmVolumeNumLt, vmVolumeNumLte, vmVolumeNumNot, vmVolumeNumNotIn, vmVolumeSnapshotNum, vmVolumeSnapshotNumGt, vmVolumeSnapshotNumGte, vmVolumeSnapshotNumIn, vmVolumeSnapshotNumLt, vmVolumeSnapshotNumLte, vmVolumeSnapshotNumNot, vmVolumeSnapshotNumNotIn, vmVolumeSnapshotsEvery, vmVolumeSnapshotsNone, vmVolumeSnapshotsSome, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, clusterNum, clusterNumGt, clusterNumGte, clusterNumIn, clusterNumLt, clusterNumLte, clusterNumNot, clusterNumNotIn, clustersEvery, clustersNone, clustersSome, consistencyGroupNum, consistencyGroupNumGt, consistencyGroupNumGte, consistencyGroupNumIn, consistencyGroupNumLt, consistencyGroupNumLte, consistencyGroupNumNot, consistencyGroupNumNotIn, consistencyGroupSnapshotNum, consistencyGroupSnapshotNumGt, consistencyGroupSnapshotNumGte, consistencyGroupSnapshotNumIn, consistencyGroupSnapshotNumLt, consistencyGroupSnapshotNumLte, consistencyGroupSnapshotNumNot, consistencyGroupSnapshotNumNotIn, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, contentLibraryImageNum, contentLibraryImageNumGt, contentLibraryImageNumGte, contentLibraryImageNumIn, contentLibraryImageNumLt, contentLibraryImageNumLte, contentLibraryImageNumNot, contentLibraryImageNumNotIn, contentLibraryImagesEvery, contentLibraryImagesNone, contentLibraryImagesSome, contentLibraryVmTemplateNum, contentLibraryVmTemplateNumGt, contentLibraryVmTemplateNumGte, contentLibraryVmTemplateNumIn, contentLibraryVmTemplateNumLt, contentLibraryVmTemplateNumLte, contentLibraryVmTemplateNumNot, contentLibraryVmTemplateNumNotIn, contentLibraryVmTemplatesEvery, contentLibraryVmTemplatesNone, contentLibraryVmTemplatesSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, datacenterNum, datacenterNumGt, datacenterNumGte, datacenterNumIn, datacenterNumLt, datacenterNumLte, datacenterNumNot, datacenterNumNotIn, datacentersEvery, datacentersNone, datacentersSome, diskNum, diskNumGt, diskNumGte, diskNumIn, diskNumLt, diskNumLte, diskNumNot, diskNumNotIn, disksEvery, disksNone, disksSome, elfImageNum, elfImageNumGt, elfImageNumGte, elfImageNumIn, elfImageNumLt, elfImageNumLte, elfImageNumNot, elfImageNumNotIn, elfImagesEvery, elfImagesNone, elfImagesSome, gpuDeviceNum, gpuDeviceNumGt, gpuDeviceNumGte, gpuDeviceNumIn, gpuDeviceNumLt, gpuDeviceNumLte, gpuDeviceNumNot, gpuDeviceNumNotIn, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunNum, iscsiLunNumGt, iscsiLunNumGte, iscsiLunNumIn, iscsiLunNumLt, iscsiLunNumLte, iscsiLunNumNot, iscsiLunNumNotIn, iscsiLunSnapshotNum, iscsiLunSnapshotNumGt, iscsiLunSnapshotNumGte, iscsiLunSnapshotNumIn, iscsiLunSnapshotNumLt, iscsiLunSnapshotNumLte, iscsiLunSnapshotNumNot, iscsiLunSnapshotNumNotIn, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, iscsiTargetNum, iscsiTargetNumGt, iscsiTargetNumGte, iscsiTargetNumIn, iscsiTargetNumLt, iscsiTargetNumLte, iscsiTargetNumNot, iscsiTargetNumNotIn, iscsiTargetsEvery, iscsiTargetsNone, iscsiTargetsSome, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, isolationPolicyNum, isolationPolicyNumGt, isolationPolicyNumGte, isolationPolicyNumIn, isolationPolicyNumLt, isolationPolicyNumLte, isolationPolicyNumNot, isolationPolicyNumNotIn, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, namespaceGroupNum, namespaceGroupNumGt, namespaceGroupNumGte, namespaceGroupNumIn, namespaceGroupNumLt, namespaceGroupNumLte, namespaceGroupNumNot, namespaceGroupNumNotIn, namespaceGroupsEvery, namespaceGroupsNone, namespaceGroupsSome, nfsExportNum, nfsExportNumGt, nfsExportNumGte, nfsExportNumIn, nfsExportNumLt, nfsExportNumLte, nfsExportNumNot, nfsExportNumNotIn, nfsExportsEvery, nfsExportsNone, nfsExportsSome, nfsInodeNum, nfsInodeNumGt, nfsInodeNumGte, nfsInodeNumIn, nfsInodeNumLt, nfsInodeNumLte, nfsInodeNumNot, nfsInodeNumNotIn, nfsInodesEvery, nfsInodesNone, nfsInodesSome, nicNum, nicNumGt, nicNumGte, nicNumIn, nicNumLt, nicNumLte, nicNumNot, nicNumNotIn, nicsEvery, nicsNone, nicsSome, nvmfNamespaceNum, nvmfNamespaceNumGt, nvmfNamespaceNumGte, nvmfNamespaceNumIn, nvmfNamespaceNumLt, nvmfNamespaceNumLte, nvmfNamespaceNumNot, nvmfNamespaceNumNotIn, nvmfNamespaceSnapshotNum, nvmfNamespaceSnapshotNumGt, nvmfNamespaceSnapshotNumGte, nvmfNamespaceSnapshotNumIn, nvmfNamespaceSnapshotNumLt, nvmfNamespaceSnapshotNumLte, nvmfNamespaceSnapshotNumNot, nvmfNamespaceSnapshotNumNotIn, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, nvmfNamespacesEvery, nvmfNamespacesNone, nvmfNamespacesSome, nvmfSubsystemNum, nvmfSubsystemNumGt, nvmfSubsystemNumGte, nvmfSubsystemNumIn, nvmfSubsystemNumLt, nvmfSubsystemNumLte, nvmfSubsystemNumNot, nvmfSubsystemNumNotIn, nvmfSubsystemsEvery, nvmfSubsystemsNone, nvmfSubsystemsSome, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, securityPolicyNum, securityPolicyNumGt, securityPolicyNumGte, securityPolicyNumIn, securityPolicyNumLt, securityPolicyNumLte, securityPolicyNumNot, securityPolicyNumNotIn, systemVlanNum, systemVlanNumGt, systemVlanNumGte, systemVlanNumIn, systemVlanNumLt, systemVlanNumLte, systemVlanNumNot, systemVlanNumNotIn, totalNum, totalNumGt, totalNumGte, totalNumIn, totalNumLt, totalNumLte, totalNumNot, totalNumNotIn, value, valueContains, valueEndsWith, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotContains, valueNotEndsWith, valueNotIn, valueNotStartsWith, valueStartsWith, vdsNum, vdsNumGt, vdsNumGte, vdsNumIn, vdsNumLt, vdsNumLte, vdsNumNot, vdsNumNotIn, vdsesEvery, vdsesNone, vdsesSome, vlansEvery, vlansNone, vlansSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmSnapshotNum, vmSnapshotNumGt, vmSnapshotNumGte, vmSnapshotNumIn, vmSnapshotNumLt, vmSnapshotNumLte, vmSnapshotNumNot, vmSnapshotNumNotIn, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplateNum, vmTemplateNumGt, vmTemplateNumGte, vmTemplateNumIn, vmTemplateNumLt, vmTemplateNumLte, vmTemplateNumNot, vmTemplateNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmVlanNum, vmVlanNumGt, vmVlanNumGte, vmVlanNumIn, vmVlanNumLt, vmVlanNumLte, vmVlanNumNot, vmVlanNumNotIn, vmVolumeNum, vmVolumeNumGt, vmVolumeNumGte, vmVolumeNumIn, vmVolumeNumLt, vmVolumeNumLte, vmVolumeNumNot, vmVolumeNumNotIn, vmVolumeSnapshotNum, vmVolumeSnapshotNumGt, vmVolumeSnapshotNumGte, vmVolumeSnapshotNumIn, vmVolumeSnapshotNumLt, vmVolumeSnapshotNumLte, vmVolumeSnapshotNumNot, vmVolumeSnapshotNumNotIn, vmVolumeSnapshotsEvery, vmVolumeSnapshotsNone, vmVolumeSnapshotsSome, vmVolumesEvery, vmVolumesNone, vmVolumesSome, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -11531,6 +11531,8 @@ public class LabelWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clusterNum: ").append(toIndentedString(clusterNum)).append("\n");
     sb.append("    clusterNumGt: ").append(toIndentedString(clusterNumGt)).append("\n");
     sb.append("    clusterNumGte: ").append(toIndentedString(clusterNumGte)).append("\n");
@@ -11765,7 +11767,6 @@ public class LabelWhereInput {
     sb.append("    nicsEvery: ").append(toIndentedString(nicsEvery)).append("\n");
     sb.append("    nicsNone: ").append(toIndentedString(nicsNone)).append("\n");
     sb.append("    nicsSome: ").append(toIndentedString(nicsSome)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    nvmfNamespaceNum: ").append(toIndentedString(nvmfNamespaceNum)).append("\n");
     sb.append("    nvmfNamespaceNumGt: ").append(toIndentedString(nvmfNamespaceNumGt)).append("\n");
     sb.append("    nvmfNamespaceNumGte: ").append(toIndentedString(nvmfNamespaceNumGte)).append("\n");
@@ -11799,7 +11800,6 @@ public class LabelWhereInput {
     sb.append("    nvmfSubsystemsEvery: ").append(toIndentedString(nvmfSubsystemsEvery)).append("\n");
     sb.append("    nvmfSubsystemsNone: ").append(toIndentedString(nvmfSubsystemsNone)).append("\n");
     sb.append("    nvmfSubsystemsSome: ").append(toIndentedString(nvmfSubsystemsSome)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    securityPoliciesEvery: ").append(toIndentedString(securityPoliciesEvery)).append("\n");
     sb.append("    securityPoliciesNone: ").append(toIndentedString(securityPoliciesNone)).append("\n");
     sb.append("    securityPoliciesSome: ").append(toIndentedString(securityPoliciesSome)).append("\n");

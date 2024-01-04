@@ -8,9 +8,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.IommuStatus;
 import com.smartx.tower.model.NestedHost;
 import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedVds;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.NetworkType;
 import com.smartx.tower.model.NicDriverState;
 import com.smartx.tower.model.NicUserUsage;
@@ -53,6 +55,10 @@ public class Nic {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_IOMMU_STATUS = "iommu_status";
+  @SerializedName(SERIALIZED_NAME_IOMMU_STATUS)
+  private IommuStatus iommuStatus;
 
   public static final String SERIALIZED_NAME_IP_ADDRESS = "ip_address";
   @SerializedName(SERIALIZED_NAME_IP_ADDRESS)
@@ -137,6 +143,10 @@ public class Nic {
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
   private NestedVds vds;
+
+  public static final String SERIALIZED_NAME_VMS = "vms";
+  @SerializedName(SERIALIZED_NAME_VMS)
+  private List<NestedVm> vms = null;
 
   public Nic() { 
   }
@@ -299,6 +309,29 @@ public class Nic {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+  public Nic iommuStatus(IommuStatus iommuStatus) {
+    
+    this.iommuStatus = iommuStatus;
+    return this;
+  }
+
+   /**
+   * Get iommuStatus
+   * @return iommuStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IommuStatus getIommuStatus() {
+    return iommuStatus;
+  }
+
+
+  public void setIommuStatus(IommuStatus iommuStatus) {
+    this.iommuStatus = iommuStatus;
   }
 
 
@@ -793,6 +826,37 @@ public class Nic {
   }
 
 
+  public Nic vms(List<NestedVm> vms) {
+    
+    this.vms = vms;
+    return this;
+  }
+
+  public Nic addVmsItem(NestedVm vmsItem) {
+    if (this.vms == null) {
+      this.vms = new ArrayList<NestedVm>();
+    }
+    this.vms.add(vmsItem);
+    return this;
+  }
+
+   /**
+   * Get vms
+   * @return vms
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedVm> getVms() {
+    return vms;
+  }
+
+
+  public void setVms(List<NestedVm> vms) {
+    this.vms = vms;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -809,6 +873,7 @@ public class Nic {
         Objects.equals(this.host, nic.host) &&
         Objects.equals(this.ibdev, nic.ibdev) &&
         Objects.equals(this.id, nic.id) &&
+        Objects.equals(this.iommuStatus, nic.iommuStatus) &&
         Objects.equals(this.ipAddress, nic.ipAddress) &&
         Objects.equals(this.isSriov, nic.isSriov) &&
         Objects.equals(this.labels, nic.labels) &&
@@ -829,7 +894,8 @@ public class Nic {
         Objects.equals(this.up, nic.up) &&
         Objects.equals(this.usedVfNum, nic.usedVfNum) &&
         Objects.equals(this.userUsage, nic.userUsage) &&
-        Objects.equals(this.vds, nic.vds);
+        Objects.equals(this.vds, nic.vds) &&
+        Objects.equals(this.vms, nic.vms);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -838,7 +904,7 @@ public class Nic {
 
   @Override
   public int hashCode() {
-    return Objects.hash(driver, driverState, entityAsyncStatus, gatewayIp, host, ibdev, id, ipAddress, isSriov, labels, localId, macAddress, maxVfNum, model, mtu, name, nicUuid, physical, rdmaEnabled, running, speed, subnetMask, totalVfNum, type, up, usedVfNum, userUsage, vds);
+    return Objects.hash(driver, driverState, entityAsyncStatus, gatewayIp, host, ibdev, id, iommuStatus, ipAddress, isSriov, labels, localId, macAddress, maxVfNum, model, mtu, name, nicUuid, physical, rdmaEnabled, running, speed, subnetMask, totalVfNum, type, up, usedVfNum, userUsage, vds, vms);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -859,6 +925,7 @@ public class Nic {
     sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("    ibdev: ").append(toIndentedString(ibdev)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    iommuStatus: ").append(toIndentedString(iommuStatus)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("    isSriov: ").append(toIndentedString(isSriov)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
@@ -880,6 +947,7 @@ public class Nic {
     sb.append("    usedVfNum: ").append(toIndentedString(usedVfNum)).append("\n");
     sb.append("    userUsage: ").append(toIndentedString(userUsage)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");
+    sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
     sb.append("}");
     return sb.toString();
   }

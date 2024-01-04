@@ -23,6 +23,14 @@ public class GlobalSettingsWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<GlobalSettingsWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<GlobalSettingsWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<GlobalSettingsWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -79,14 +87,6 @@ public class GlobalSettingsWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<GlobalSettingsWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<GlobalSettingsWhereInput> OR = null;
-
   public GlobalSettingsWhereInput() { 
   }
 
@@ -118,6 +118,68 @@ public class GlobalSettingsWhereInput {
 
   public void setAND(List<GlobalSettingsWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public GlobalSettingsWhereInput NOT(List<GlobalSettingsWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public GlobalSettingsWhereInput addNOTItem(GlobalSettingsWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<GlobalSettingsWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<GlobalSettingsWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<GlobalSettingsWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public GlobalSettingsWhereInput OR(List<GlobalSettingsWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public GlobalSettingsWhereInput addORItem(GlobalSettingsWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<GlobalSettingsWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<GlobalSettingsWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<GlobalSettingsWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -459,68 +521,6 @@ public class GlobalSettingsWhereInput {
   }
 
 
-  public GlobalSettingsWhereInput NOT(List<GlobalSettingsWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public GlobalSettingsWhereInput addNOTItem(GlobalSettingsWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<GlobalSettingsWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<GlobalSettingsWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<GlobalSettingsWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public GlobalSettingsWhereInput OR(List<GlobalSettingsWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public GlobalSettingsWhereInput addORItem(GlobalSettingsWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<GlobalSettingsWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<GlobalSettingsWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<GlobalSettingsWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -531,6 +531,8 @@ public class GlobalSettingsWhereInput {
     }
     GlobalSettingsWhereInput globalSettingsWhereInput = (GlobalSettingsWhereInput) o;
     return Objects.equals(this.AND, globalSettingsWhereInput.AND) &&
+        Objects.equals(this.NOT, globalSettingsWhereInput.NOT) &&
+        Objects.equals(this.OR, globalSettingsWhereInput.OR) &&
         Objects.equals(this.id, globalSettingsWhereInput.id) &&
         Objects.equals(this.idContains, globalSettingsWhereInput.idContains) &&
         Objects.equals(this.idEndsWith, globalSettingsWhereInput.idEndsWith) &&
@@ -544,9 +546,7 @@ public class GlobalSettingsWhereInput {
         Objects.equals(this.idNotEndsWith, globalSettingsWhereInput.idNotEndsWith) &&
         Objects.equals(this.idNotIn, globalSettingsWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, globalSettingsWhereInput.idNotStartsWith) &&
-        Objects.equals(this.idStartsWith, globalSettingsWhereInput.idStartsWith) &&
-        Objects.equals(this.NOT, globalSettingsWhereInput.NOT) &&
-        Objects.equals(this.OR, globalSettingsWhereInput.OR);
+        Objects.equals(this.idStartsWith, globalSettingsWhereInput.idStartsWith);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -555,7 +555,7 @@ public class GlobalSettingsWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, NOT, OR);
+    return Objects.hash(AND, NOT, OR, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -570,6 +570,8 @@ public class GlobalSettingsWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class GlobalSettingsWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
     sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");
@@ -584,8 +586,6 @@ public class GlobalSettingsWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -30,6 +30,14 @@ public class VdsWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VdsWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VdsWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VdsWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_BOND_MODE = "bond_mode";
   @SerializedName(SERIALIZED_NAME_BOND_MODE)
   private String bondMode;
@@ -310,14 +318,6 @@ public class VdsWhereInput {
   @SerializedName(SERIALIZED_NAME_NICS_SOME)
   private NicWhereInput nicsSome;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VdsWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VdsWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_OVSBR_NAME = "ovsbr_name";
   @SerializedName(SERIALIZED_NAME_OVSBR_NAME)
   private String ovsbrName;
@@ -521,6 +521,68 @@ public class VdsWhereInput {
 
   public void setAND(List<VdsWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VdsWhereInput NOT(List<VdsWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VdsWhereInput addNOTItem(VdsWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VdsWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VdsWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VdsWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VdsWhereInput OR(List<VdsWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VdsWhereInput addORItem(VdsWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VdsWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VdsWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VdsWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2214,68 +2276,6 @@ public class VdsWhereInput {
   }
 
 
-  public VdsWhereInput NOT(List<VdsWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VdsWhereInput addNOTItem(VdsWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VdsWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VdsWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VdsWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VdsWhereInput OR(List<VdsWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VdsWhereInput addORItem(VdsWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VdsWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VdsWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VdsWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VdsWhereInput ovsbrName(String ovsbrName) {
     
     this.ovsbrName = ovsbrName;
@@ -3339,6 +3339,8 @@ public class VdsWhereInput {
     }
     VdsWhereInput vdsWhereInput = (VdsWhereInput) o;
     return Objects.equals(this.AND, vdsWhereInput.AND) &&
+        Objects.equals(this.NOT, vdsWhereInput.NOT) &&
+        Objects.equals(this.OR, vdsWhereInput.OR) &&
         Objects.equals(this.bondMode, vdsWhereInput.bondMode) &&
         Objects.equals(this.bondModeContains, vdsWhereInput.bondModeContains) &&
         Objects.equals(this.bondModeEndsWith, vdsWhereInput.bondModeEndsWith) &&
@@ -3409,8 +3411,6 @@ public class VdsWhereInput {
         Objects.equals(this.nicsEvery, vdsWhereInput.nicsEvery) &&
         Objects.equals(this.nicsNone, vdsWhereInput.nicsNone) &&
         Objects.equals(this.nicsSome, vdsWhereInput.nicsSome) &&
-        Objects.equals(this.NOT, vdsWhereInput.NOT) &&
-        Objects.equals(this.OR, vdsWhereInput.OR) &&
         Objects.equals(this.ovsbrName, vdsWhereInput.ovsbrName) &&
         Objects.equals(this.ovsbrNameContains, vdsWhereInput.ovsbrNameContains) &&
         Objects.equals(this.ovsbrNameEndsWith, vdsWhereInput.ovsbrNameEndsWith) &&
@@ -3462,7 +3462,7 @@ public class VdsWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, bondMode, bondModeContains, bondModeEndsWith, bondModeGt, bondModeGte, bondModeIn, bondModeLt, bondModeLte, bondModeNot, bondModeNotContains, bondModeNotEndsWith, bondModeNotIn, bondModeNotStartsWith, bondModeStartsWith, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicsEvery, nicsNone, nicsSome, NOT, OR, ovsbrName, ovsbrNameContains, ovsbrNameEndsWith, ovsbrNameGt, ovsbrNameGte, ovsbrNameIn, ovsbrNameLt, ovsbrNameLte, ovsbrNameNot, ovsbrNameNotContains, ovsbrNameNotEndsWith, ovsbrNameNotIn, ovsbrNameNotStartsWith, ovsbrNameStartsWith, type, typeIn, typeNot, typeNotIn, vlansEvery, vlansNone, vlansNum, vlansNumGt, vlansNumGte, vlansNumIn, vlansNumLt, vlansNumLte, vlansNumNot, vlansNumNotIn, vlansSome, workMode, workModeContains, workModeEndsWith, workModeGt, workModeGte, workModeIn, workModeLt, workModeLte, workModeNot, workModeNotContains, workModeNotEndsWith, workModeNotIn, workModeNotStartsWith, workModeStartsWith);
+    return Objects.hash(AND, NOT, OR, bondMode, bondModeContains, bondModeEndsWith, bondModeGt, bondModeGte, bondModeIn, bondModeLt, bondModeLte, bondModeNot, bondModeNotContains, bondModeNotEndsWith, bondModeNotIn, bondModeNotStartsWith, bondModeStartsWith, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nicsEvery, nicsNone, nicsSome, ovsbrName, ovsbrNameContains, ovsbrNameEndsWith, ovsbrNameGt, ovsbrNameGte, ovsbrNameIn, ovsbrNameLt, ovsbrNameLte, ovsbrNameNot, ovsbrNameNotContains, ovsbrNameNotEndsWith, ovsbrNameNotIn, ovsbrNameNotStartsWith, ovsbrNameStartsWith, type, typeIn, typeNot, typeNotIn, vlansEvery, vlansNone, vlansNum, vlansNumGt, vlansNumGte, vlansNumIn, vlansNumLt, vlansNumLte, vlansNumNot, vlansNumNotIn, vlansSome, workMode, workModeContains, workModeEndsWith, workModeGt, workModeGte, workModeIn, workModeLt, workModeLte, workModeNot, workModeNotContains, workModeNotEndsWith, workModeNotIn, workModeNotStartsWith, workModeStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3477,6 +3477,8 @@ public class VdsWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VdsWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    bondMode: ").append(toIndentedString(bondMode)).append("\n");
     sb.append("    bondModeContains: ").append(toIndentedString(bondModeContains)).append("\n");
     sb.append("    bondModeEndsWith: ").append(toIndentedString(bondModeEndsWith)).append("\n");
@@ -3547,8 +3549,6 @@ public class VdsWhereInput {
     sb.append("    nicsEvery: ").append(toIndentedString(nicsEvery)).append("\n");
     sb.append("    nicsNone: ").append(toIndentedString(nicsNone)).append("\n");
     sb.append("    nicsSome: ").append(toIndentedString(nicsSome)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    ovsbrName: ").append(toIndentedString(ovsbrName)).append("\n");
     sb.append("    ovsbrNameContains: ").append(toIndentedString(ovsbrNameContains)).append("\n");
     sb.append("    ovsbrNameEndsWith: ").append(toIndentedString(ovsbrNameEndsWith)).append("\n");

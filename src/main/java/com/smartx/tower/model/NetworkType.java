@@ -24,6 +24,8 @@ public enum NetworkType {
   
   STORAGE("STORAGE"),
   
+  STORAGE_ACCESS("STORAGE_ACCESS"),
+  
   VM("VM");
 
   private String value;

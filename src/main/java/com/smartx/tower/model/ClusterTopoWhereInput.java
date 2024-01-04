@@ -27,6 +27,14 @@ public class ClusterTopoWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ClusterTopoWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ClusterTopoWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ClusterTopoWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_BRICK_TOPOES_EVERY = "brick_topoes_every";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPOES_EVERY)
   private BrickTopoWhereInput brickTopoesEvery;
@@ -223,14 +231,6 @@ public class ClusterTopoWhereInput {
   @SerializedName(SERIALIZED_NAME_NODE_TOPOES_SOME)
   private NodeTopoWhereInput nodeTopoesSome;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ClusterTopoWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ClusterTopoWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_ZONE_TOPOES_EVERY = "zone_topoes_every";
   @SerializedName(SERIALIZED_NAME_ZONE_TOPOES_EVERY)
   private ZoneTopoWhereInput zoneTopoesEvery;
@@ -274,6 +274,68 @@ public class ClusterTopoWhereInput {
 
   public void setAND(List<ClusterTopoWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ClusterTopoWhereInput NOT(List<ClusterTopoWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ClusterTopoWhereInput addNOTItem(ClusterTopoWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ClusterTopoWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterTopoWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ClusterTopoWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ClusterTopoWhereInput OR(List<ClusterTopoWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ClusterTopoWhereInput addORItem(ClusterTopoWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ClusterTopoWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterTopoWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ClusterTopoWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1452,68 +1514,6 @@ public class ClusterTopoWhereInput {
   }
 
 
-  public ClusterTopoWhereInput NOT(List<ClusterTopoWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ClusterTopoWhereInput addNOTItem(ClusterTopoWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ClusterTopoWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterTopoWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ClusterTopoWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ClusterTopoWhereInput OR(List<ClusterTopoWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ClusterTopoWhereInput addORItem(ClusterTopoWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ClusterTopoWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterTopoWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ClusterTopoWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ClusterTopoWhereInput zoneTopoesEvery(ZoneTopoWhereInput zoneTopoesEvery) {
     
     this.zoneTopoesEvery = zoneTopoesEvery;
@@ -1593,6 +1593,8 @@ public class ClusterTopoWhereInput {
     }
     ClusterTopoWhereInput clusterTopoWhereInput = (ClusterTopoWhereInput) o;
     return Objects.equals(this.AND, clusterTopoWhereInput.AND) &&
+        Objects.equals(this.NOT, clusterTopoWhereInput.NOT) &&
+        Objects.equals(this.OR, clusterTopoWhereInput.OR) &&
         Objects.equals(this.brickTopoesEvery, clusterTopoWhereInput.brickTopoesEvery) &&
         Objects.equals(this.brickTopoesNone, clusterTopoWhereInput.brickTopoesNone) &&
         Objects.equals(this.brickTopoesSome, clusterTopoWhereInput.brickTopoesSome) &&
@@ -1642,8 +1644,6 @@ public class ClusterTopoWhereInput {
         Objects.equals(this.nodeTopoesEvery, clusterTopoWhereInput.nodeTopoesEvery) &&
         Objects.equals(this.nodeTopoesNone, clusterTopoWhereInput.nodeTopoesNone) &&
         Objects.equals(this.nodeTopoesSome, clusterTopoWhereInput.nodeTopoesSome) &&
-        Objects.equals(this.NOT, clusterTopoWhereInput.NOT) &&
-        Objects.equals(this.OR, clusterTopoWhereInput.OR) &&
         Objects.equals(this.zoneTopoesEvery, clusterTopoWhereInput.zoneTopoesEvery) &&
         Objects.equals(this.zoneTopoesNone, clusterTopoWhereInput.zoneTopoesNone) &&
         Objects.equals(this.zoneTopoesSome, clusterTopoWhereInput.zoneTopoesSome);
@@ -1655,7 +1655,7 @@ public class ClusterTopoWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, brickTopoesEvery, brickTopoesNone, brickTopoesSome, cluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nodeTopoesEvery, nodeTopoesNone, nodeTopoesSome, NOT, OR, zoneTopoesEvery, zoneTopoesNone, zoneTopoesSome);
+    return Objects.hash(AND, NOT, OR, brickTopoesEvery, brickTopoesNone, brickTopoesSome, cluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nodeTopoesEvery, nodeTopoesNone, nodeTopoesSome, zoneTopoesEvery, zoneTopoesNone, zoneTopoesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1670,6 +1670,8 @@ public class ClusterTopoWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClusterTopoWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    brickTopoesEvery: ").append(toIndentedString(brickTopoesEvery)).append("\n");
     sb.append("    brickTopoesNone: ").append(toIndentedString(brickTopoesNone)).append("\n");
     sb.append("    brickTopoesSome: ").append(toIndentedString(brickTopoesSome)).append("\n");
@@ -1719,8 +1721,6 @@ public class ClusterTopoWhereInput {
     sb.append("    nodeTopoesEvery: ").append(toIndentedString(nodeTopoesEvery)).append("\n");
     sb.append("    nodeTopoesNone: ").append(toIndentedString(nodeTopoesNone)).append("\n");
     sb.append("    nodeTopoesSome: ").append(toIndentedString(nodeTopoesSome)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    zoneTopoesEvery: ").append(toIndentedString(zoneTopoesEvery)).append("\n");
     sb.append("    zoneTopoesNone: ").append(toIndentedString(zoneTopoesNone)).append("\n");
     sb.append("    zoneTopoesSome: ").append(toIndentedString(zoneTopoesSome)).append("\n");

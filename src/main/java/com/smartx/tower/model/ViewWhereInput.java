@@ -27,6 +27,14 @@ public class ViewWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ViewWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ViewWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ViewWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -227,14 +235,6 @@ public class ViewWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ViewWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ViewWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_TIME_SPAN = "time_span";
   @SerializedName(SERIALIZED_NAME_TIME_SPAN)
   private Integer timeSpan;
@@ -314,6 +314,68 @@ public class ViewWhereInput {
 
   public void setAND(List<ViewWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ViewWhereInput NOT(List<ViewWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ViewWhereInput addNOTItem(ViewWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ViewWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ViewWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ViewWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ViewWhereInput OR(List<ViewWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ViewWhereInput addORItem(ViewWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ViewWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ViewWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ViewWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1531,68 +1593,6 @@ public class ViewWhereInput {
   }
 
 
-  public ViewWhereInput NOT(List<ViewWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ViewWhereInput addNOTItem(ViewWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ViewWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ViewWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ViewWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ViewWhereInput OR(List<ViewWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ViewWhereInput addORItem(ViewWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ViewWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ViewWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ViewWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ViewWhereInput timeSpan(Integer timeSpan) {
     
     this.timeSpan = timeSpan;
@@ -1911,6 +1911,8 @@ public class ViewWhereInput {
     }
     ViewWhereInput viewWhereInput = (ViewWhereInput) o;
     return Objects.equals(this.AND, viewWhereInput.AND) &&
+        Objects.equals(this.NOT, viewWhereInput.NOT) &&
+        Objects.equals(this.OR, viewWhereInput.OR) &&
         Objects.equals(this.cluster, viewWhereInput.cluster) &&
         Objects.equals(this.entityAsyncStatus, viewWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, viewWhereInput.entityAsyncStatusIn) &&
@@ -1961,8 +1963,6 @@ public class ViewWhereInput {
         Objects.equals(this.nameNotIn, viewWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, viewWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, viewWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, viewWhereInput.NOT) &&
-        Objects.equals(this.OR, viewWhereInput.OR) &&
         Objects.equals(this.timeSpan, viewWhereInput.timeSpan) &&
         Objects.equals(this.timeSpanGt, viewWhereInput.timeSpanGt) &&
         Objects.equals(this.timeSpanGte, viewWhereInput.timeSpanGte) &&
@@ -1983,7 +1983,7 @@ public class ViewWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, graphsEvery, graphsNone, graphsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, timeSpan, timeSpanGt, timeSpanGte, timeSpanIn, timeSpanLt, timeSpanLte, timeSpanNot, timeSpanNotIn, timeUnit, timeUnitIn, timeUnitNot, timeUnitNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, graphsEvery, graphsNone, graphsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, timeSpan, timeSpanGt, timeSpanGte, timeSpanIn, timeSpanLt, timeSpanLte, timeSpanNot, timeSpanNotIn, timeUnit, timeUnitIn, timeUnitNot, timeUnitNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1998,6 +1998,8 @@ public class ViewWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
@@ -2048,8 +2050,6 @@ public class ViewWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    timeSpan: ").append(toIndentedString(timeSpan)).append("\n");
     sb.append("    timeSpanGt: ").append(toIndentedString(timeSpanGt)).append("\n");
     sb.append("    timeSpanGte: ").append(toIndentedString(timeSpanGte)).append("\n");

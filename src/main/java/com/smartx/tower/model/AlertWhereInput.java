@@ -24,13 +24,21 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class AlertWhereInput {
-  public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
-  @SerializedName(SERIALIZED_NAME_ALERT_RULE)
-  private AlertRuleWhereInput alertRule;
-
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<AlertWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<AlertWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<AlertWhereInput> OR = null;
+
+  public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
+  @SerializedName(SERIALIZED_NAME_ALERT_RULE)
+  private AlertRuleWhereInput alertRule;
 
   public static final String SERIALIZED_NAME_CAUSE = "cause";
   @SerializedName(SERIALIZED_NAME_CAUSE)
@@ -564,14 +572,6 @@ public class AlertWhereInput {
   @SerializedName(SERIALIZED_NAME_MESSAGE_STARTS_WITH)
   private String messageStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<AlertWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<AlertWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
   private String severity;
@@ -763,29 +763,6 @@ public class AlertWhereInput {
   public AlertWhereInput() { 
   }
 
-  public AlertWhereInput alertRule(AlertRuleWhereInput alertRule) {
-    
-    this.alertRule = alertRule;
-    return this;
-  }
-
-   /**
-   * Get alertRule
-   * @return alertRule
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public AlertRuleWhereInput getAlertRule() {
-    return alertRule;
-  }
-
-
-  public void setAlertRule(AlertRuleWhereInput alertRule) {
-    this.alertRule = alertRule;
-  }
-
-
   public AlertWhereInput AND(List<AlertWhereInput> AND) {
     
     this.AND = AND;
@@ -814,6 +791,91 @@ public class AlertWhereInput {
 
   public void setAND(List<AlertWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public AlertWhereInput NOT(List<AlertWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public AlertWhereInput addNOTItem(AlertWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<AlertWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<AlertWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<AlertWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public AlertWhereInput OR(List<AlertWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public AlertWhereInput addORItem(AlertWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<AlertWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<AlertWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<AlertWhereInput> OR) {
+    this.OR = OR;
+  }
+
+
+  public AlertWhereInput alertRule(AlertRuleWhereInput alertRule) {
+    
+    this.alertRule = alertRule;
+    return this;
+  }
+
+   /**
+   * Get alertRule
+   * @return alertRule
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public AlertRuleWhereInput getAlertRule() {
+    return alertRule;
+  }
+
+
+  public void setAlertRule(AlertRuleWhereInput alertRule) {
+    this.alertRule = alertRule;
   }
 
 
@@ -4036,68 +4098,6 @@ public class AlertWhereInput {
   }
 
 
-  public AlertWhereInput NOT(List<AlertWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public AlertWhereInput addNOTItem(AlertWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<AlertWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<AlertWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<AlertWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public AlertWhereInput OR(List<AlertWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public AlertWhereInput addORItem(AlertWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<AlertWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<AlertWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<AlertWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public AlertWhereInput severity(String severity) {
     
     this.severity = severity;
@@ -5252,8 +5252,10 @@ public class AlertWhereInput {
       return false;
     }
     AlertWhereInput alertWhereInput = (AlertWhereInput) o;
-    return Objects.equals(this.alertRule, alertWhereInput.alertRule) &&
-        Objects.equals(this.AND, alertWhereInput.AND) &&
+    return Objects.equals(this.AND, alertWhereInput.AND) &&
+        Objects.equals(this.NOT, alertWhereInput.NOT) &&
+        Objects.equals(this.OR, alertWhereInput.OR) &&
+        Objects.equals(this.alertRule, alertWhereInput.alertRule) &&
         Objects.equals(this.cause, alertWhereInput.cause) &&
         Objects.equals(this.causeContains, alertWhereInput.causeContains) &&
         Objects.equals(this.causeEndsWith, alertWhereInput.causeEndsWith) &&
@@ -5387,8 +5389,6 @@ public class AlertWhereInput {
         Objects.equals(this.messageNotIn, alertWhereInput.messageNotIn) &&
         Objects.equals(this.messageNotStartsWith, alertWhereInput.messageNotStartsWith) &&
         Objects.equals(this.messageStartsWith, alertWhereInput.messageStartsWith) &&
-        Objects.equals(this.NOT, alertWhereInput.NOT) &&
-        Objects.equals(this.OR, alertWhereInput.OR) &&
         Objects.equals(this.severity, alertWhereInput.severity) &&
         Objects.equals(this.severityContains, alertWhereInput.severityContains) &&
         Objects.equals(this.severityEndsWith, alertWhereInput.severityEndsWith) &&
@@ -5444,7 +5444,7 @@ public class AlertWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(alertRule, AND, cause, causeContains, causeEndsWith, causeGt, causeGte, causeIn, causeLt, causeLte, causeNot, causeNotContains, causeNotEndsWith, causeNotIn, causeNotStartsWith, causeStartsWith, cluster, createTime, createTimeGt, createTimeGte, createTimeIn, createTimeLt, createTimeLte, createTimeNot, createTimeNotIn, disk, ended, endedNot, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, impact, impactContains, impactEndsWith, impactGt, impactGte, impactIn, impactLt, impactLte, impactNot, impactNotContains, impactNotEndsWith, impactNotIn, impactNotStartsWith, impactStartsWith, localCreateTime, localCreateTimeGt, localCreateTimeGte, localCreateTimeIn, localCreateTimeLt, localCreateTimeLte, localCreateTimeNot, localCreateTimeNotIn, localEndTime, localEndTimeContains, localEndTimeEndsWith, localEndTimeGt, localEndTimeGte, localEndTimeIn, localEndTimeLt, localEndTimeLte, localEndTimeNot, localEndTimeNotContains, localEndTimeNotEndsWith, localEndTimeNotIn, localEndTimeNotStartsWith, localEndTimeStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localStartTime, localStartTimeContains, localStartTimeEndsWith, localStartTimeGt, localStartTimeGte, localStartTimeIn, localStartTimeLt, localStartTimeLte, localStartTimeNot, localStartTimeNotContains, localStartTimeNotEndsWith, localStartTimeNotIn, localStartTimeNotStartsWith, localStartTimeStartsWith, localUpdateTime, localUpdateTimeContains, localUpdateTimeEndsWith, localUpdateTimeGt, localUpdateTimeGte, localUpdateTimeIn, localUpdateTimeLt, localUpdateTimeLte, localUpdateTimeNot, localUpdateTimeNotContains, localUpdateTimeNotEndsWith, localUpdateTimeNotIn, localUpdateTimeNotStartsWith, localUpdateTimeStartsWith, message, messageContains, messageEndsWith, messageGt, messageGte, messageIn, messageLt, messageLte, messageNot, messageNotContains, messageNotEndsWith, messageNotIn, messageNotStartsWith, messageStartsWith, NOT, OR, severity, severityContains, severityEndsWith, severityGt, severityGte, severityIn, severityLt, severityLte, severityNot, severityNotContains, severityNotEndsWith, severityNotIn, severityNotStartsWith, severityStartsWith, solution, solutionContains, solutionEndsWith, solutionGt, solutionGte, solutionIn, solutionLt, solutionLte, solutionNot, solutionNotContains, solutionNotEndsWith, solutionNotIn, solutionNotStartsWith, solutionStartsWith, threshold, thresholdGt, thresholdGte, thresholdIn, thresholdLt, thresholdLte, thresholdNot, thresholdNotIn, value, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotIn, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, alertRule, cause, causeContains, causeEndsWith, causeGt, causeGte, causeIn, causeLt, causeLte, causeNot, causeNotContains, causeNotEndsWith, causeNotIn, causeNotStartsWith, causeStartsWith, cluster, createTime, createTimeGt, createTimeGte, createTimeIn, createTimeLt, createTimeLte, createTimeNot, createTimeNotIn, disk, ended, endedNot, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, impact, impactContains, impactEndsWith, impactGt, impactGte, impactIn, impactLt, impactLte, impactNot, impactNotContains, impactNotEndsWith, impactNotIn, impactNotStartsWith, impactStartsWith, localCreateTime, localCreateTimeGt, localCreateTimeGte, localCreateTimeIn, localCreateTimeLt, localCreateTimeLte, localCreateTimeNot, localCreateTimeNotIn, localEndTime, localEndTimeContains, localEndTimeEndsWith, localEndTimeGt, localEndTimeGte, localEndTimeIn, localEndTimeLt, localEndTimeLte, localEndTimeNot, localEndTimeNotContains, localEndTimeNotEndsWith, localEndTimeNotIn, localEndTimeNotStartsWith, localEndTimeStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localStartTime, localStartTimeContains, localStartTimeEndsWith, localStartTimeGt, localStartTimeGte, localStartTimeIn, localStartTimeLt, localStartTimeLte, localStartTimeNot, localStartTimeNotContains, localStartTimeNotEndsWith, localStartTimeNotIn, localStartTimeNotStartsWith, localStartTimeStartsWith, localUpdateTime, localUpdateTimeContains, localUpdateTimeEndsWith, localUpdateTimeGt, localUpdateTimeGte, localUpdateTimeIn, localUpdateTimeLt, localUpdateTimeLte, localUpdateTimeNot, localUpdateTimeNotContains, localUpdateTimeNotEndsWith, localUpdateTimeNotIn, localUpdateTimeNotStartsWith, localUpdateTimeStartsWith, message, messageContains, messageEndsWith, messageGt, messageGte, messageIn, messageLt, messageLte, messageNot, messageNotContains, messageNotEndsWith, messageNotIn, messageNotStartsWith, messageStartsWith, severity, severityContains, severityEndsWith, severityGt, severityGte, severityIn, severityLt, severityLte, severityNot, severityNotContains, severityNotEndsWith, severityNotIn, severityNotStartsWith, severityStartsWith, solution, solutionContains, solutionEndsWith, solutionGt, solutionGte, solutionIn, solutionLt, solutionLte, solutionNot, solutionNotContains, solutionNotEndsWith, solutionNotIn, solutionNotStartsWith, solutionStartsWith, threshold, thresholdGt, thresholdGte, thresholdIn, thresholdLt, thresholdLte, thresholdNot, thresholdNotIn, value, valueGt, valueGte, valueIn, valueLt, valueLte, valueNot, valueNotIn, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5458,8 +5458,10 @@ public class AlertWhereInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AlertWhereInput {\n");
-    sb.append("    alertRule: ").append(toIndentedString(alertRule)).append("\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+    sb.append("    alertRule: ").append(toIndentedString(alertRule)).append("\n");
     sb.append("    cause: ").append(toIndentedString(cause)).append("\n");
     sb.append("    causeContains: ").append(toIndentedString(causeContains)).append("\n");
     sb.append("    causeEndsWith: ").append(toIndentedString(causeEndsWith)).append("\n");
@@ -5593,8 +5595,6 @@ public class AlertWhereInput {
     sb.append("    messageNotIn: ").append(toIndentedString(messageNotIn)).append("\n");
     sb.append("    messageNotStartsWith: ").append(toIndentedString(messageNotStartsWith)).append("\n");
     sb.append("    messageStartsWith: ").append(toIndentedString(messageStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    severity: ").append(toIndentedString(severity)).append("\n");
     sb.append("    severityContains: ").append(toIndentedString(severityContains)).append("\n");
     sb.append("    severityEndsWith: ").append(toIndentedString(severityEndsWith)).append("\n");

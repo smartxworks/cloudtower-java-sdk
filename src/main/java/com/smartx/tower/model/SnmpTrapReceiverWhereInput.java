@@ -30,6 +30,14 @@ public class SnmpTrapReceiverWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SnmpTrapReceiverWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SnmpTrapReceiverWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SnmpTrapReceiverWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_AUTH_PASS_PHRASE = "auth_pass_phrase";
   @SerializedName(SERIALIZED_NAME_AUTH_PASS_PHRASE)
   private String authPassPhrase;
@@ -490,14 +498,6 @@ public class SnmpTrapReceiverWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SnmpTrapReceiverWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SnmpTrapReceiverWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private Integer port;
@@ -721,6 +721,68 @@ public class SnmpTrapReceiverWhereInput {
 
   public void setAND(List<SnmpTrapReceiverWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SnmpTrapReceiverWhereInput NOT(List<SnmpTrapReceiverWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SnmpTrapReceiverWhereInput addNOTItem(SnmpTrapReceiverWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SnmpTrapReceiverWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnmpTrapReceiverWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SnmpTrapReceiverWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SnmpTrapReceiverWhereInput OR(List<SnmpTrapReceiverWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SnmpTrapReceiverWhereInput addORItem(SnmpTrapReceiverWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SnmpTrapReceiverWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnmpTrapReceiverWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SnmpTrapReceiverWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3529,68 +3591,6 @@ public class SnmpTrapReceiverWhereInput {
   }
 
 
-  public SnmpTrapReceiverWhereInput NOT(List<SnmpTrapReceiverWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SnmpTrapReceiverWhereInput addNOTItem(SnmpTrapReceiverWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SnmpTrapReceiverWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnmpTrapReceiverWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SnmpTrapReceiverWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SnmpTrapReceiverWhereInput OR(List<SnmpTrapReceiverWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SnmpTrapReceiverWhereInput addORItem(SnmpTrapReceiverWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SnmpTrapReceiverWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnmpTrapReceiverWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SnmpTrapReceiverWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SnmpTrapReceiverWhereInput port(Integer port) {
     
     this.port = port;
@@ -4801,6 +4801,8 @@ public class SnmpTrapReceiverWhereInput {
     }
     SnmpTrapReceiverWhereInput snmpTrapReceiverWhereInput = (SnmpTrapReceiverWhereInput) o;
     return Objects.equals(this.AND, snmpTrapReceiverWhereInput.AND) &&
+        Objects.equals(this.NOT, snmpTrapReceiverWhereInput.NOT) &&
+        Objects.equals(this.OR, snmpTrapReceiverWhereInput.OR) &&
         Objects.equals(this.authPassPhrase, snmpTrapReceiverWhereInput.authPassPhrase) &&
         Objects.equals(this.authPassPhraseContains, snmpTrapReceiverWhereInput.authPassPhraseContains) &&
         Objects.equals(this.authPassPhraseEndsWith, snmpTrapReceiverWhereInput.authPassPhraseEndsWith) &&
@@ -4916,8 +4918,6 @@ public class SnmpTrapReceiverWhereInput {
         Objects.equals(this.nameNotIn, snmpTrapReceiverWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, snmpTrapReceiverWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, snmpTrapReceiverWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, snmpTrapReceiverWhereInput.NOT) &&
-        Objects.equals(this.OR, snmpTrapReceiverWhereInput.OR) &&
         Objects.equals(this.port, snmpTrapReceiverWhereInput.port) &&
         Objects.equals(this.portGt, snmpTrapReceiverWhereInput.portGt) &&
         Objects.equals(this.portGte, snmpTrapReceiverWhereInput.portGte) &&
@@ -4974,7 +4974,7 @@ public class SnmpTrapReceiverWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, authPassPhrase, authPassPhraseContains, authPassPhraseEndsWith, authPassPhraseGt, authPassPhraseGte, authPassPhraseIn, authPassPhraseLt, authPassPhraseLte, authPassPhraseNot, authPassPhraseNotContains, authPassPhraseNotEndsWith, authPassPhraseNotIn, authPassPhraseNotStartsWith, authPassPhraseStartsWith, authProtocol, authProtocolIn, authProtocolNot, authProtocolNotIn, cluster, community, communityContains, communityEndsWith, communityGt, communityGte, communityIn, communityLt, communityLte, communityNot, communityNotContains, communityNotEndsWith, communityNotIn, communityNotStartsWith, communityStartsWith, disabled, disabledNot, engineId, engineIdContains, engineIdEndsWith, engineIdGt, engineIdGte, engineIdIn, engineIdLt, engineIdLte, engineIdNot, engineIdNotContains, engineIdNotEndsWith, engineIdNotIn, engineIdNotStartsWith, engineIdStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, hostContains, hostEndsWith, hostGt, hostGte, hostIn, hostLt, hostLte, hostNot, hostNotContains, hostNotEndsWith, hostNotIn, hostNotStartsWith, hostStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inform, informNot, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, privacyPassPhrase, privacyPassPhraseContains, privacyPassPhraseEndsWith, privacyPassPhraseGt, privacyPassPhraseGte, privacyPassPhraseIn, privacyPassPhraseLt, privacyPassPhraseLte, privacyPassPhraseNot, privacyPassPhraseNotContains, privacyPassPhraseNotEndsWith, privacyPassPhraseNotIn, privacyPassPhraseNotStartsWith, privacyPassPhraseStartsWith, privacyProtocol, privacyProtocolIn, privacyProtocolNot, privacyProtocolNotIn, protocol, protocolIn, protocolNot, protocolNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith, version, versionIn, versionNot, versionNotIn);
+    return Objects.hash(AND, NOT, OR, authPassPhrase, authPassPhraseContains, authPassPhraseEndsWith, authPassPhraseGt, authPassPhraseGte, authPassPhraseIn, authPassPhraseLt, authPassPhraseLte, authPassPhraseNot, authPassPhraseNotContains, authPassPhraseNotEndsWith, authPassPhraseNotIn, authPassPhraseNotStartsWith, authPassPhraseStartsWith, authProtocol, authProtocolIn, authProtocolNot, authProtocolNotIn, cluster, community, communityContains, communityEndsWith, communityGt, communityGte, communityIn, communityLt, communityLte, communityNot, communityNotContains, communityNotEndsWith, communityNotIn, communityNotStartsWith, communityStartsWith, disabled, disabledNot, engineId, engineIdContains, engineIdEndsWith, engineIdGt, engineIdGte, engineIdIn, engineIdLt, engineIdLte, engineIdNot, engineIdNotContains, engineIdNotEndsWith, engineIdNotIn, engineIdNotStartsWith, engineIdStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, hostContains, hostEndsWith, hostGt, hostGte, hostIn, hostLt, hostLte, hostNot, hostNotContains, hostNotEndsWith, hostNotIn, hostNotStartsWith, hostStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inform, informNot, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, port, portGt, portGte, portIn, portLt, portLte, portNot, portNotIn, privacyPassPhrase, privacyPassPhraseContains, privacyPassPhraseEndsWith, privacyPassPhraseGt, privacyPassPhraseGte, privacyPassPhraseIn, privacyPassPhraseLt, privacyPassPhraseLte, privacyPassPhraseNot, privacyPassPhraseNotContains, privacyPassPhraseNotEndsWith, privacyPassPhraseNotIn, privacyPassPhraseNotStartsWith, privacyPassPhraseStartsWith, privacyProtocol, privacyProtocolIn, privacyProtocolNot, privacyProtocolNotIn, protocol, protocolIn, protocolNot, protocolNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith, version, versionIn, versionNot, versionNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4989,6 +4989,8 @@ public class SnmpTrapReceiverWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnmpTrapReceiverWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    authPassPhrase: ").append(toIndentedString(authPassPhrase)).append("\n");
     sb.append("    authPassPhraseContains: ").append(toIndentedString(authPassPhraseContains)).append("\n");
     sb.append("    authPassPhraseEndsWith: ").append(toIndentedString(authPassPhraseEndsWith)).append("\n");
@@ -5104,8 +5106,6 @@ public class SnmpTrapReceiverWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
     sb.append("    portGt: ").append(toIndentedString(portGt)).append("\n");
     sb.append("    portGte: ").append(toIndentedString(portGte)).append("\n");

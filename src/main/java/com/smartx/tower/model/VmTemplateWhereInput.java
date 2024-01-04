@@ -31,6 +31,14 @@ public class VmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmTemplateWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmTemplateWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmTemplateWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
   @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)
   private VmClockOffset clockOffset;
@@ -571,14 +579,6 @@ public class VmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmTemplateWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmTemplateWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -738,6 +738,68 @@ public class VmTemplateWhereInput {
 
   public void setAND(List<VmTemplateWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmTemplateWhereInput NOT(List<VmTemplateWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmTemplateWhereInput addNOTItem(VmTemplateWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmTemplateWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmTemplateWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmTemplateWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmTemplateWhereInput OR(List<VmTemplateWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmTemplateWhereInput addORItem(VmTemplateWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmTemplateWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmTemplateWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmTemplateWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -4086,68 +4148,6 @@ public class VmTemplateWhereInput {
   }
 
 
-  public VmTemplateWhereInput NOT(List<VmTemplateWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmTemplateWhereInput addNOTItem(VmTemplateWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmTemplateWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmTemplateWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmTemplateWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmTemplateWhereInput OR(List<VmTemplateWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmTemplateWhereInput addORItem(VmTemplateWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmTemplateWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmTemplateWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmTemplateWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmTemplateWhereInput size(Long size) {
     
     this.size = size;
@@ -4942,6 +4942,8 @@ public class VmTemplateWhereInput {
     }
     VmTemplateWhereInput vmTemplateWhereInput = (VmTemplateWhereInput) o;
     return Objects.equals(this.AND, vmTemplateWhereInput.AND) &&
+        Objects.equals(this.NOT, vmTemplateWhereInput.NOT) &&
+        Objects.equals(this.OR, vmTemplateWhereInput.OR) &&
         Objects.equals(this.clockOffset, vmTemplateWhereInput.clockOffset) &&
         Objects.equals(this.clockOffsetIn, vmTemplateWhereInput.clockOffsetIn) &&
         Objects.equals(this.clockOffsetNot, vmTemplateWhereInput.clockOffsetNot) &&
@@ -5077,8 +5079,6 @@ public class VmTemplateWhereInput {
         Objects.equals(this.nameNotIn, vmTemplateWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vmTemplateWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vmTemplateWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vmTemplateWhereInput.NOT) &&
-        Objects.equals(this.OR, vmTemplateWhereInput.OR) &&
         Objects.equals(this.size, vmTemplateWhereInput.size) &&
         Objects.equals(this.sizeGt, vmTemplateWhereInput.sizeGt) &&
         Objects.equals(this.sizeGte, vmTemplateWhereInput.sizeGte) &&
@@ -5119,7 +5119,7 @@ public class VmTemplateWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, contentLibraryVmTemplate, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeContains, videoTypeEndsWith, videoTypeGt, videoTypeGte, videoTypeIn, videoTypeLt, videoTypeLte, videoTypeNot, videoTypeNotContains, videoTypeNotEndsWith, videoTypeNotIn, videoTypeNotStartsWith, videoTypeStartsWith, winOpt, winOptNot);
+    return Objects.hash(AND, NOT, OR, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, contentLibraryVmTemplate, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeContains, videoTypeEndsWith, videoTypeGt, videoTypeGte, videoTypeIn, videoTypeLt, videoTypeLte, videoTypeNot, videoTypeNotContains, videoTypeNotEndsWith, videoTypeNotIn, videoTypeNotStartsWith, videoTypeStartsWith, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5134,6 +5134,8 @@ public class VmTemplateWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmTemplateWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    clockOffsetIn: ").append(toIndentedString(clockOffsetIn)).append("\n");
     sb.append("    clockOffsetNot: ").append(toIndentedString(clockOffsetNot)).append("\n");
@@ -5269,8 +5271,6 @@ public class VmTemplateWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    sizeGt: ").append(toIndentedString(sizeGt)).append("\n");
     sb.append("    sizeGte: ").append(toIndentedString(sizeGte)).append("\n");

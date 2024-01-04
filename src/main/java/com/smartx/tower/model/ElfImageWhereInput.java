@@ -30,6 +30,14 @@ public class ElfImageWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ElfImageWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ElfImageWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ElfImageWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -322,14 +330,6 @@ public class ElfImageWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ElfImageWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ElfImageWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
   private String path;
@@ -485,6 +485,68 @@ public class ElfImageWhereInput {
 
   public void setAND(List<ElfImageWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ElfImageWhereInput NOT(List<ElfImageWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ElfImageWhereInput addNOTItem(ElfImageWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ElfImageWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ElfImageWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ElfImageWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ElfImageWhereInput OR(List<ElfImageWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ElfImageWhereInput addORItem(ElfImageWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ElfImageWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ElfImageWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ElfImageWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2263,68 +2325,6 @@ public class ElfImageWhereInput {
   }
 
 
-  public ElfImageWhereInput NOT(List<ElfImageWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ElfImageWhereInput addNOTItem(ElfImageWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ElfImageWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ElfImageWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ElfImageWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ElfImageWhereInput OR(List<ElfImageWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ElfImageWhereInput addORItem(ElfImageWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ElfImageWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ElfImageWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ElfImageWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ElfImageWhereInput path(String path) {
     
     this.path = path;
@@ -3080,6 +3080,8 @@ public class ElfImageWhereInput {
     }
     ElfImageWhereInput elfImageWhereInput = (ElfImageWhereInput) o;
     return Objects.equals(this.AND, elfImageWhereInput.AND) &&
+        Objects.equals(this.NOT, elfImageWhereInput.NOT) &&
+        Objects.equals(this.OR, elfImageWhereInput.OR) &&
         Objects.equals(this.cluster, elfImageWhereInput.cluster) &&
         Objects.equals(this.contentLibraryImage, elfImageWhereInput.contentLibraryImage) &&
         Objects.equals(this.description, elfImageWhereInput.description) &&
@@ -3153,8 +3155,6 @@ public class ElfImageWhereInput {
         Objects.equals(this.nameNotIn, elfImageWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, elfImageWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, elfImageWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, elfImageWhereInput.NOT) &&
-        Objects.equals(this.OR, elfImageWhereInput.OR) &&
         Objects.equals(this.path, elfImageWhereInput.path) &&
         Objects.equals(this.pathContains, elfImageWhereInput.pathContains) &&
         Objects.equals(this.pathEndsWith, elfImageWhereInput.pathEndsWith) &&
@@ -3194,7 +3194,7 @@ public class ElfImageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, contentLibraryImage, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
+    return Objects.hash(AND, NOT, OR, cluster, contentLibraryImage, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3209,6 +3209,8 @@ public class ElfImageWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ElfImageWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    contentLibraryImage: ").append(toIndentedString(contentLibraryImage)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
@@ -3282,8 +3284,6 @@ public class ElfImageWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    pathContains: ").append(toIndentedString(pathContains)).append("\n");
     sb.append("    pathEndsWith: ").append(toIndentedString(pathEndsWith)).append("\n");

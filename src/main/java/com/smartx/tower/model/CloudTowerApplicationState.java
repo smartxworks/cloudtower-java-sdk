@@ -18,9 +18,9 @@ public enum CloudTowerApplicationState {
   
   ERROR("ERROR"),
   
-  INSTALL_FAILED("INSTALL_FAILED"),
-  
   INSTALLING("INSTALLING"),
+  
+  INSTALL_FAILED("INSTALL_FAILED"),
   
   RUNNING("RUNNING"),
   

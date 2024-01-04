@@ -17,6 +17,7 @@ import com.smartx.tower.model.VmFirmware;
 import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
+import com.smartx.tower.model.VmOwnerParams;
 import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
@@ -30,6 +31,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmCloneParams {
+  public static final String SERIALIZED_NAME_OWNER = "owner";
+  @SerializedName(SERIALIZED_NAME_OWNER)
+  private VmOwnerParams owner;
+
   public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
   @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
   private List<VmGpuOperationParams> gpuDevices = null;
@@ -140,6 +145,29 @@ public class VmCloneParams {
 
   public VmCloneParams() { 
   }
+
+  public VmCloneParams owner(VmOwnerParams owner) {
+    
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * Get owner
+   * @return owner
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmOwnerParams getOwner() {
+    return owner;
+  }
+
+
+  public void setOwner(VmOwnerParams owner) {
+    this.owner = owner;
+  }
+
 
   public VmCloneParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
     
@@ -787,7 +815,8 @@ public class VmCloneParams {
       return false;
     }
     VmCloneParams vmCloneParams = (VmCloneParams) o;
-    return Objects.equals(this.gpuDevices, vmCloneParams.gpuDevices) &&
+    return Objects.equals(this.owner, vmCloneParams.owner) &&
+        Objects.equals(this.gpuDevices, vmCloneParams.gpuDevices) &&
         Objects.equals(this.isFullCopy, vmCloneParams.isFullCopy) &&
         Objects.equals(this.srcVmId, vmCloneParams.srcVmId) &&
         Objects.equals(this.maxBandwidthPolicy, vmCloneParams.maxBandwidthPolicy) &&
@@ -818,13 +847,14 @@ public class VmCloneParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(gpuDevices, isFullCopy, srcVmId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(owner, gpuDevices, isFullCopy, srcVmId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, vmDisks, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCloneParams {\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
     sb.append("    srcVmId: ").append(toIndentedString(srcVmId)).append("\n");

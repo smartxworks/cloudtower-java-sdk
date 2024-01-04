@@ -25,6 +25,14 @@ public class ReportTaskWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ReportTaskWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ReportTaskWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ReportTaskWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
@@ -177,14 +185,6 @@ public class ReportTaskWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ReportTaskWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ReportTaskWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PLAN_ID = "plan_id";
   @SerializedName(SERIALIZED_NAME_PLAN_ID)
   private String planId;
@@ -292,6 +292,68 @@ public class ReportTaskWhereInput {
 
   public void setAND(List<ReportTaskWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ReportTaskWhereInput NOT(List<ReportTaskWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ReportTaskWhereInput addNOTItem(ReportTaskWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ReportTaskWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ReportTaskWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ReportTaskWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ReportTaskWhereInput OR(List<ReportTaskWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ReportTaskWhereInput addORItem(ReportTaskWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ReportTaskWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ReportTaskWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ReportTaskWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1217,68 +1279,6 @@ public class ReportTaskWhereInput {
   }
 
 
-  public ReportTaskWhereInput NOT(List<ReportTaskWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ReportTaskWhereInput addNOTItem(ReportTaskWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ReportTaskWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ReportTaskWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ReportTaskWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ReportTaskWhereInput OR(List<ReportTaskWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ReportTaskWhereInput addORItem(ReportTaskWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ReportTaskWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ReportTaskWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ReportTaskWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ReportTaskWhereInput planId(String planId) {
     
     this.planId = planId;
@@ -1758,6 +1758,8 @@ public class ReportTaskWhereInput {
     }
     ReportTaskWhereInput reportTaskWhereInput = (ReportTaskWhereInput) o;
     return Objects.equals(this.AND, reportTaskWhereInput.AND) &&
+        Objects.equals(this.NOT, reportTaskWhereInput.NOT) &&
+        Objects.equals(this.OR, reportTaskWhereInput.OR) &&
         Objects.equals(this.createdAt, reportTaskWhereInput.createdAt) &&
         Objects.equals(this.createdAtGt, reportTaskWhereInput.createdAtGt) &&
         Objects.equals(this.createdAtGte, reportTaskWhereInput.createdAtGte) &&
@@ -1796,8 +1798,6 @@ public class ReportTaskWhereInput {
         Objects.equals(this.nameNotIn, reportTaskWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, reportTaskWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, reportTaskWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, reportTaskWhereInput.NOT) &&
-        Objects.equals(this.OR, reportTaskWhereInput.OR) &&
         Objects.equals(this.planId, reportTaskWhereInput.planId) &&
         Objects.equals(this.planIdContains, reportTaskWhereInput.planIdContains) &&
         Objects.equals(this.planIdEndsWith, reportTaskWhereInput.planIdEndsWith) &&
@@ -1825,7 +1825,7 @@ public class ReportTaskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, planId, planIdContains, planIdEndsWith, planIdGt, planIdGte, planIdIn, planIdLt, planIdLte, planIdNot, planIdNotContains, planIdNotEndsWith, planIdNotIn, planIdNotStartsWith, planIdStartsWith, status, statusIn, statusNot, statusNotIn, template);
+    return Objects.hash(AND, NOT, OR, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, planId, planIdContains, planIdEndsWith, planIdGt, planIdGte, planIdIn, planIdLt, planIdLte, planIdNot, planIdNotContains, planIdNotEndsWith, planIdNotIn, planIdNotStartsWith, planIdStartsWith, status, statusIn, statusNot, statusNotIn, template);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1840,6 +1840,8 @@ public class ReportTaskWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportTaskWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
     sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");
@@ -1878,8 +1880,6 @@ public class ReportTaskWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
     sb.append("    planIdContains: ").append(toIndentedString(planIdContains)).append("\n");
     sb.append("    planIdEndsWith: ").append(toIndentedString(planIdEndsWith)).append("\n");

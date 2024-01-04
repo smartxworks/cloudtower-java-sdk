@@ -46,6 +46,14 @@ public class ClusterWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ClusterWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ClusterWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ClusterWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_APPLICATION_HIGHEST_VERSION = "application_highest_version";
   @SerializedName(SERIALIZED_NAME_APPLICATION_HIGHEST_VERSION)
   private String applicationHighestVersion;
@@ -1230,10 +1238,6 @@ public class ClusterWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ClusterWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NTP_MODE = "ntp_mode";
   @SerializedName(SERIALIZED_NAME_NTP_MODE)
   private NtpMode ntpMode;
@@ -1273,10 +1277,6 @@ public class ClusterWhereInput {
   public static final String SERIALIZED_NAME_NVMF_ENABLED_NOT = "nvmf_enabled_not";
   @SerializedName(SERIALIZED_NAME_NVMF_ENABLED_NOT)
   private Boolean nvmfEnabledNot;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ClusterWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_PMEM_ENABLED = "pmem_enabled";
   @SerializedName(SERIALIZED_NAME_PMEM_ENABLED)
@@ -2261,6 +2261,68 @@ public class ClusterWhereInput {
 
   public void setAND(List<ClusterWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ClusterWhereInput NOT(List<ClusterWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ClusterWhereInput addNOTItem(ClusterWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ClusterWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ClusterWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ClusterWhereInput OR(List<ClusterWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ClusterWhereInput addORItem(ClusterWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ClusterWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ClusterWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -9536,37 +9598,6 @@ public class ClusterWhereInput {
   }
 
 
-  public ClusterWhereInput NOT(List<ClusterWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ClusterWhereInput addNOTItem(ClusterWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ClusterWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ClusterWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public ClusterWhereInput ntpMode(NtpMode ntpMode) {
     
     this.ntpMode = ntpMode;
@@ -9810,37 +9841,6 @@ public class ClusterWhereInput {
 
   public void setNvmfEnabledNot(Boolean nvmfEnabledNot) {
     this.nvmfEnabledNot = nvmfEnabledNot;
-  }
-
-
-  public ClusterWhereInput OR(List<ClusterWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ClusterWhereInput addORItem(ClusterWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ClusterWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ClusterWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -15744,6 +15744,8 @@ public class ClusterWhereInput {
     }
     ClusterWhereInput clusterWhereInput = (ClusterWhereInput) o;
     return Objects.equals(this.AND, clusterWhereInput.AND) &&
+        Objects.equals(this.NOT, clusterWhereInput.NOT) &&
+        Objects.equals(this.OR, clusterWhereInput.OR) &&
         Objects.equals(this.applicationHighestVersion, clusterWhereInput.applicationHighestVersion) &&
         Objects.equals(this.applicationHighestVersionContains, clusterWhereInput.applicationHighestVersionContains) &&
         Objects.equals(this.applicationHighestVersionEndsWith, clusterWhereInput.applicationHighestVersionEndsWith) &&
@@ -16040,7 +16042,6 @@ public class ClusterWhereInput {
         Objects.equals(this.nameNotIn, clusterWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, clusterWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, clusterWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, clusterWhereInput.NOT) &&
         Objects.equals(this.ntpMode, clusterWhereInput.ntpMode) &&
         Objects.equals(this.ntpModeIn, clusterWhereInput.ntpModeIn) &&
         Objects.equals(this.ntpModeNot, clusterWhereInput.ntpModeNot) &&
@@ -16051,7 +16052,6 @@ public class ClusterWhereInput {
         Objects.equals(this.nvmeOverTcpEnabledNot, clusterWhereInput.nvmeOverTcpEnabledNot) &&
         Objects.equals(this.nvmfEnabled, clusterWhereInput.nvmfEnabled) &&
         Objects.equals(this.nvmfEnabledNot, clusterWhereInput.nvmfEnabledNot) &&
-        Objects.equals(this.OR, clusterWhereInput.OR) &&
         Objects.equals(this.pmemEnabled, clusterWhereInput.pmemEnabled) &&
         Objects.equals(this.pmemEnabledNot, clusterWhereInput.pmemEnabledNot) &&
         Objects.equals(this.provisionedCpuCores, clusterWhereInput.provisionedCpuCores) &&
@@ -16298,7 +16298,7 @@ public class ClusterWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, applicationHighestVersion, applicationHighestVersionContains, applicationHighestVersionEndsWith, applicationHighestVersionGt, applicationHighestVersionGte, applicationHighestVersionIn, applicationHighestVersionLt, applicationHighestVersionLte, applicationHighestVersionNot, applicationHighestVersionNotContains, applicationHighestVersionNotEndsWith, applicationHighestVersionNotIn, applicationHighestVersionNotStartsWith, applicationHighestVersionStartsWith, applicationsEvery, applicationsNone, applicationsSome, architecture, architectureIn, architectureNot, architectureNotIn, autoConverge, autoConvergeNot, connectState, connectStateIn, connectStateNot, connectStateNotIn, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, currentCpuModel, currentCpuModelContains, currentCpuModelEndsWith, currentCpuModelGt, currentCpuModelGte, currentCpuModelIn, currentCpuModelLt, currentCpuModelLte, currentCpuModelNot, currentCpuModelNotContains, currentCpuModelNotEndsWith, currentCpuModelNotIn, currentCpuModelNotStartsWith, currentCpuModelStartsWith, datacentersEvery, datacentersNone, datacentersSome, disconnectedDate, disconnectedDateGt, disconnectedDateGte, disconnectedDateIn, disconnectedDateLt, disconnectedDateLte, disconnectedDateNot, disconnectedDateNotIn, disconnectedReason, disconnectedReasonIn, disconnectedReasonNot, disconnectedReasonNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, everouteCluster, failureDataSpace, failureDataSpaceGt, failureDataSpaceGte, failureDataSpaceIn, failureDataSpaceLt, failureDataSpaceLte, failureDataSpaceNot, failureDataSpaceNotIn, hasMetrox, hasMetroxNot, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, hypervisor, hypervisorIn, hypervisorNot, hypervisorNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ip, ipContains, ipEndsWith, ipGt, ipGte, ipIn, ipLt, ipLte, ipNot, ipNotContains, ipNotEndsWith, ipNotIn, ipNotStartsWith, ipStartsWith, isAllFlash, isAllFlashNot, iscsiVip, iscsiVipContains, iscsiVipEndsWith, iscsiVipGt, iscsiVipGte, iscsiVipIn, iscsiVipLt, iscsiVipLte, iscsiVipNot, iscsiVipNotContains, iscsiVipNotEndsWith, iscsiVipNotIn, iscsiVipNotStartsWith, iscsiVipStartsWith, labelsEvery, labelsNone, labelsSome, licenseExpireDate, licenseExpireDateGt, licenseExpireDateGte, licenseExpireDateIn, licenseExpireDateLt, licenseExpireDateLte, licenseExpireDateNot, licenseExpireDateNotIn, licenseSerial, licenseSerialContains, licenseSerialEndsWith, licenseSerialGt, licenseSerialGte, licenseSerialIn, licenseSerialLt, licenseSerialLte, licenseSerialNot, licenseSerialNotContains, licenseSerialNotEndsWith, licenseSerialNotIn, licenseSerialNotStartsWith, licenseSerialStartsWith, licenseSignDate, licenseSignDateGt, licenseSignDateGte, licenseSignDateIn, licenseSignDateLt, licenseSignDateLte, licenseSignDateNot, licenseSignDateNotIn, licenseType, licenseTypeIn, licenseTypeNot, licenseTypeNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maintenanceEndDate, maintenanceEndDateGt, maintenanceEndDateGte, maintenanceEndDateIn, maintenanceEndDateLt, maintenanceEndDateLte, maintenanceEndDateNot, maintenanceEndDateNotIn, maintenanceStartDate, maintenanceStartDateGt, maintenanceStartDateGte, maintenanceStartDateIn, maintenanceStartDateLt, maintenanceStartDateLte, maintenanceStartDateNot, maintenanceStartDateNotIn, managementVip, managementVipContains, managementVipEndsWith, managementVipGt, managementVipGte, managementVipIn, managementVipLt, managementVipLte, managementVipNot, managementVipNotContains, managementVipNotEndsWith, managementVipNotIn, managementVipNotStartsWith, managementVipStartsWith, maxChunkNum, maxChunkNumGt, maxChunkNumGte, maxChunkNumIn, maxChunkNumLt, maxChunkNumLte, maxChunkNumNot, maxChunkNumNotIn, maxPhysicalDataCapacity, maxPhysicalDataCapacityGt, maxPhysicalDataCapacityGte, maxPhysicalDataCapacityIn, maxPhysicalDataCapacityLt, maxPhysicalDataCapacityLte, maxPhysicalDataCapacityNot, maxPhysicalDataCapacityNotIn, maxPhysicalDataCapacityPerNode, maxPhysicalDataCapacityPerNodeGt, maxPhysicalDataCapacityPerNodeGte, maxPhysicalDataCapacityPerNodeIn, maxPhysicalDataCapacityPerNodeLt, maxPhysicalDataCapacityPerNodeLte, maxPhysicalDataCapacityPerNodeNot, maxPhysicalDataCapacityPerNodeNotIn, mgtGateway, mgtGatewayContains, mgtGatewayEndsWith, mgtGatewayGt, mgtGatewayGte, mgtGatewayIn, mgtGatewayLt, mgtGatewayLte, mgtGatewayNot, mgtGatewayNotContains, mgtGatewayNotEndsWith, mgtGatewayNotIn, mgtGatewayNotStartsWith, mgtGatewayStartsWith, mgtNetmask, mgtNetmaskContains, mgtNetmaskEndsWith, mgtNetmaskGt, mgtNetmaskGte, mgtNetmaskIn, mgtNetmaskLt, mgtNetmaskLte, mgtNetmaskNot, mgtNetmaskNotContains, mgtNetmaskNotEndsWith, mgtNetmaskNotIn, mgtNetmaskNotStartsWith, mgtNetmaskStartsWith, migrationDataSize, migrationDataSizeGt, migrationDataSizeGte, migrationDataSizeIn, migrationDataSizeLt, migrationDataSizeLte, migrationDataSizeNot, migrationDataSizeNotIn, migrationSpeed, migrationSpeedGt, migrationSpeedGte, migrationSpeedIn, migrationSpeedLt, migrationSpeedLte, migrationSpeedNot, migrationSpeedNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, ntpMode, ntpModeIn, ntpModeNot, ntpModeNotIn, nvmeOverRdmaEnabled, nvmeOverRdmaEnabledNot, nvmeOverTcpEnabled, nvmeOverTcpEnabledNot, nvmfEnabled, nvmfEnabledNot, OR, pmemEnabled, pmemEnabledNot, provisionedCpuCores, provisionedCpuCoresForActiveVm, provisionedCpuCoresForActiveVmGt, provisionedCpuCoresForActiveVmGte, provisionedCpuCoresForActiveVmIn, provisionedCpuCoresForActiveVmLt, provisionedCpuCoresForActiveVmLte, provisionedCpuCoresForActiveVmNot, provisionedCpuCoresForActiveVmNotIn, provisionedCpuCoresGt, provisionedCpuCoresGte, provisionedCpuCoresIn, provisionedCpuCoresLt, provisionedCpuCoresLte, provisionedCpuCoresNot, provisionedCpuCoresNotIn, provisionedForActiveVmRatio, provisionedForActiveVmRatioGt, provisionedForActiveVmRatioGte, provisionedForActiveVmRatioIn, provisionedForActiveVmRatioLt, provisionedForActiveVmRatioLte, provisionedForActiveVmRatioNot, provisionedForActiveVmRatioNotIn, provisionedMemoryBytes, provisionedMemoryBytesGt, provisionedMemoryBytesGte, provisionedMemoryBytesIn, provisionedMemoryBytesLt, provisionedMemoryBytesLte, provisionedMemoryBytesNot, provisionedMemoryBytesNotIn, provisionedRatio, provisionedRatioGt, provisionedRatioGte, provisionedRatioIn, provisionedRatioLt, provisionedRatioLte, provisionedRatioNot, provisionedRatioNotIn, rdmaEnabled, rdmaEnabledNot, recoverDataSize, recoverDataSizeGt, recoverDataSizeGte, recoverDataSizeIn, recoverDataSizeLt, recoverDataSizeLte, recoverDataSizeNot, recoverDataSizeNotIn, recoverSpeed, recoverSpeedGt, recoverSpeedGte, recoverSpeedIn, recoverSpeedLt, recoverSpeedLte, recoverSpeedNot, recoverSpeedNotIn, reservedCpuCoresForSystemService, reservedCpuCoresForSystemServiceGt, reservedCpuCoresForSystemServiceGte, reservedCpuCoresForSystemServiceIn, reservedCpuCoresForSystemServiceLt, reservedCpuCoresForSystemServiceLte, reservedCpuCoresForSystemServiceNot, reservedCpuCoresForSystemServiceNotIn, runningVmNum, runningVmNumGt, runningVmNumGte, runningVmNumIn, runningVmNumLt, runningVmNumLte, runningVmNumNot, runningVmNumNotIn, settings, softwareEdition, softwareEditionIn, softwareEditionNot, softwareEditionNotIn, stoppedVmNum, stoppedVmNumGt, stoppedVmNumGte, stoppedVmNumIn, stoppedVmNumLt, stoppedVmNumLte, stoppedVmNumNot, stoppedVmNumNotIn, stretch, stretchNot, suspendedVmNum, suspendedVmNumGt, suspendedVmNumGte, suspendedVmNumIn, suspendedVmNumLt, suspendedVmNumLte, suspendedVmNumNot, suspendedVmNumNotIn, totalCacheCapacity, totalCacheCapacityGt, totalCacheCapacityGte, totalCacheCapacityIn, totalCacheCapacityLt, totalCacheCapacityLte, totalCacheCapacityNot, totalCacheCapacityNotIn, totalCpuCores, totalCpuCoresGt, totalCpuCoresGte, totalCpuCoresIn, totalCpuCoresLt, totalCpuCoresLte, totalCpuCoresNot, totalCpuCoresNotIn, totalCpuHz, totalCpuHzGt, totalCpuHzGte, totalCpuHzIn, totalCpuHzLt, totalCpuHzLte, totalCpuHzNot, totalCpuHzNotIn, totalCpuSockets, totalCpuSocketsGt, totalCpuSocketsGte, totalCpuSocketsIn, totalCpuSocketsLt, totalCpuSocketsLte, totalCpuSocketsNot, totalCpuSocketsNotIn, totalDataCapacity, totalDataCapacityGt, totalDataCapacityGte, totalDataCapacityIn, totalDataCapacityLt, totalDataCapacityLte, totalDataCapacityNot, totalDataCapacityNotIn, totalMemoryBytes, totalMemoryBytesGt, totalMemoryBytesGte, totalMemoryBytesIn, totalMemoryBytesLt, totalMemoryBytesLte, totalMemoryBytesNot, totalMemoryBytesNotIn, type, typeIn, typeNot, typeNotIn, upgradeToolVersion, upgradeToolVersionContains, upgradeToolVersionEndsWith, upgradeToolVersionGt, upgradeToolVersionGte, upgradeToolVersionIn, upgradeToolVersionLt, upgradeToolVersionLte, upgradeToolVersionNot, upgradeToolVersionNotContains, upgradeToolVersionNotEndsWith, upgradeToolVersionNotIn, upgradeToolVersionNotStartsWith, upgradeToolVersionStartsWith, usedCpuHz, usedCpuHzGt, usedCpuHzGte, usedCpuHzIn, usedCpuHzLt, usedCpuHzLte, usedCpuHzNot, usedCpuHzNotIn, usedDataSpace, usedDataSpaceGt, usedDataSpaceGte, usedDataSpaceIn, usedDataSpaceLt, usedDataSpaceLte, usedDataSpaceNot, usedDataSpaceNotIn, usedMemoryBytes, usedMemoryBytesGt, usedMemoryBytesGte, usedMemoryBytesIn, usedMemoryBytesLt, usedMemoryBytesLte, usedMemoryBytesNot, usedMemoryBytesNotIn, validDataSpace, validDataSpaceGt, validDataSpaceGte, validDataSpaceIn, validDataSpaceLt, validDataSpaceLte, validDataSpaceNot, validDataSpaceNotIn, vcenterAccount, vdsesEvery, vdsesNone, vdsesSome, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith, vhostEnabled, vhostEnabledNot, vmFoldersEvery, vmFoldersNone, vmFoldersSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmsEvery, vmsNone, vmsSome, witness, zonesEvery, zonesNone, zonesSome);
+    return Objects.hash(AND, NOT, OR, applicationHighestVersion, applicationHighestVersionContains, applicationHighestVersionEndsWith, applicationHighestVersionGt, applicationHighestVersionGte, applicationHighestVersionIn, applicationHighestVersionLt, applicationHighestVersionLte, applicationHighestVersionNot, applicationHighestVersionNotContains, applicationHighestVersionNotEndsWith, applicationHighestVersionNotIn, applicationHighestVersionNotStartsWith, applicationHighestVersionStartsWith, applicationsEvery, applicationsNone, applicationsSome, architecture, architectureIn, architectureNot, architectureNotIn, autoConverge, autoConvergeNot, connectState, connectStateIn, connectStateNot, connectStateNotIn, consistencyGroupsEvery, consistencyGroupsNone, consistencyGroupsSome, currentCpuModel, currentCpuModelContains, currentCpuModelEndsWith, currentCpuModelGt, currentCpuModelGte, currentCpuModelIn, currentCpuModelLt, currentCpuModelLte, currentCpuModelNot, currentCpuModelNotContains, currentCpuModelNotEndsWith, currentCpuModelNotIn, currentCpuModelNotStartsWith, currentCpuModelStartsWith, datacentersEvery, datacentersNone, datacentersSome, disconnectedDate, disconnectedDateGt, disconnectedDateGte, disconnectedDateIn, disconnectedDateLt, disconnectedDateLte, disconnectedDateNot, disconnectedDateNotIn, disconnectedReason, disconnectedReasonIn, disconnectedReasonNot, disconnectedReasonNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, everouteCluster, failureDataSpace, failureDataSpaceGt, failureDataSpaceGte, failureDataSpaceIn, failureDataSpaceLt, failureDataSpaceLte, failureDataSpaceNot, failureDataSpaceNotIn, hasMetrox, hasMetroxNot, hostNum, hostNumGt, hostNumGte, hostNumIn, hostNumLt, hostNumLte, hostNumNot, hostNumNotIn, hostsEvery, hostsNone, hostsSome, hypervisor, hypervisorIn, hypervisorNot, hypervisorNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ip, ipContains, ipEndsWith, ipGt, ipGte, ipIn, ipLt, ipLte, ipNot, ipNotContains, ipNotEndsWith, ipNotIn, ipNotStartsWith, ipStartsWith, isAllFlash, isAllFlashNot, iscsiVip, iscsiVipContains, iscsiVipEndsWith, iscsiVipGt, iscsiVipGte, iscsiVipIn, iscsiVipLt, iscsiVipLte, iscsiVipNot, iscsiVipNotContains, iscsiVipNotEndsWith, iscsiVipNotIn, iscsiVipNotStartsWith, iscsiVipStartsWith, labelsEvery, labelsNone, labelsSome, licenseExpireDate, licenseExpireDateGt, licenseExpireDateGte, licenseExpireDateIn, licenseExpireDateLt, licenseExpireDateLte, licenseExpireDateNot, licenseExpireDateNotIn, licenseSerial, licenseSerialContains, licenseSerialEndsWith, licenseSerialGt, licenseSerialGte, licenseSerialIn, licenseSerialLt, licenseSerialLte, licenseSerialNot, licenseSerialNotContains, licenseSerialNotEndsWith, licenseSerialNotIn, licenseSerialNotStartsWith, licenseSerialStartsWith, licenseSignDate, licenseSignDateGt, licenseSignDateGte, licenseSignDateIn, licenseSignDateLt, licenseSignDateLte, licenseSignDateNot, licenseSignDateNotIn, licenseType, licenseTypeIn, licenseTypeNot, licenseTypeNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, maintenanceEndDate, maintenanceEndDateGt, maintenanceEndDateGte, maintenanceEndDateIn, maintenanceEndDateLt, maintenanceEndDateLte, maintenanceEndDateNot, maintenanceEndDateNotIn, maintenanceStartDate, maintenanceStartDateGt, maintenanceStartDateGte, maintenanceStartDateIn, maintenanceStartDateLt, maintenanceStartDateLte, maintenanceStartDateNot, maintenanceStartDateNotIn, managementVip, managementVipContains, managementVipEndsWith, managementVipGt, managementVipGte, managementVipIn, managementVipLt, managementVipLte, managementVipNot, managementVipNotContains, managementVipNotEndsWith, managementVipNotIn, managementVipNotStartsWith, managementVipStartsWith, maxChunkNum, maxChunkNumGt, maxChunkNumGte, maxChunkNumIn, maxChunkNumLt, maxChunkNumLte, maxChunkNumNot, maxChunkNumNotIn, maxPhysicalDataCapacity, maxPhysicalDataCapacityGt, maxPhysicalDataCapacityGte, maxPhysicalDataCapacityIn, maxPhysicalDataCapacityLt, maxPhysicalDataCapacityLte, maxPhysicalDataCapacityNot, maxPhysicalDataCapacityNotIn, maxPhysicalDataCapacityPerNode, maxPhysicalDataCapacityPerNodeGt, maxPhysicalDataCapacityPerNodeGte, maxPhysicalDataCapacityPerNodeIn, maxPhysicalDataCapacityPerNodeLt, maxPhysicalDataCapacityPerNodeLte, maxPhysicalDataCapacityPerNodeNot, maxPhysicalDataCapacityPerNodeNotIn, mgtGateway, mgtGatewayContains, mgtGatewayEndsWith, mgtGatewayGt, mgtGatewayGte, mgtGatewayIn, mgtGatewayLt, mgtGatewayLte, mgtGatewayNot, mgtGatewayNotContains, mgtGatewayNotEndsWith, mgtGatewayNotIn, mgtGatewayNotStartsWith, mgtGatewayStartsWith, mgtNetmask, mgtNetmaskContains, mgtNetmaskEndsWith, mgtNetmaskGt, mgtNetmaskGte, mgtNetmaskIn, mgtNetmaskLt, mgtNetmaskLte, mgtNetmaskNot, mgtNetmaskNotContains, mgtNetmaskNotEndsWith, mgtNetmaskNotIn, mgtNetmaskNotStartsWith, mgtNetmaskStartsWith, migrationDataSize, migrationDataSizeGt, migrationDataSizeGte, migrationDataSizeIn, migrationDataSizeLt, migrationDataSizeLte, migrationDataSizeNot, migrationDataSizeNotIn, migrationSpeed, migrationSpeedGt, migrationSpeedGte, migrationSpeedIn, migrationSpeedLt, migrationSpeedLte, migrationSpeedNot, migrationSpeedNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, ntpMode, ntpModeIn, ntpModeNot, ntpModeNotIn, nvmeOverRdmaEnabled, nvmeOverRdmaEnabledNot, nvmeOverTcpEnabled, nvmeOverTcpEnabledNot, nvmfEnabled, nvmfEnabledNot, pmemEnabled, pmemEnabledNot, provisionedCpuCores, provisionedCpuCoresForActiveVm, provisionedCpuCoresForActiveVmGt, provisionedCpuCoresForActiveVmGte, provisionedCpuCoresForActiveVmIn, provisionedCpuCoresForActiveVmLt, provisionedCpuCoresForActiveVmLte, provisionedCpuCoresForActiveVmNot, provisionedCpuCoresForActiveVmNotIn, provisionedCpuCoresGt, provisionedCpuCoresGte, provisionedCpuCoresIn, provisionedCpuCoresLt, provisionedCpuCoresLte, provisionedCpuCoresNot, provisionedCpuCoresNotIn, provisionedForActiveVmRatio, provisionedForActiveVmRatioGt, provisionedForActiveVmRatioGte, provisionedForActiveVmRatioIn, provisionedForActiveVmRatioLt, provisionedForActiveVmRatioLte, provisionedForActiveVmRatioNot, provisionedForActiveVmRatioNotIn, provisionedMemoryBytes, provisionedMemoryBytesGt, provisionedMemoryBytesGte, provisionedMemoryBytesIn, provisionedMemoryBytesLt, provisionedMemoryBytesLte, provisionedMemoryBytesNot, provisionedMemoryBytesNotIn, provisionedRatio, provisionedRatioGt, provisionedRatioGte, provisionedRatioIn, provisionedRatioLt, provisionedRatioLte, provisionedRatioNot, provisionedRatioNotIn, rdmaEnabled, rdmaEnabledNot, recoverDataSize, recoverDataSizeGt, recoverDataSizeGte, recoverDataSizeIn, recoverDataSizeLt, recoverDataSizeLte, recoverDataSizeNot, recoverDataSizeNotIn, recoverSpeed, recoverSpeedGt, recoverSpeedGte, recoverSpeedIn, recoverSpeedLt, recoverSpeedLte, recoverSpeedNot, recoverSpeedNotIn, reservedCpuCoresForSystemService, reservedCpuCoresForSystemServiceGt, reservedCpuCoresForSystemServiceGte, reservedCpuCoresForSystemServiceIn, reservedCpuCoresForSystemServiceLt, reservedCpuCoresForSystemServiceLte, reservedCpuCoresForSystemServiceNot, reservedCpuCoresForSystemServiceNotIn, runningVmNum, runningVmNumGt, runningVmNumGte, runningVmNumIn, runningVmNumLt, runningVmNumLte, runningVmNumNot, runningVmNumNotIn, settings, softwareEdition, softwareEditionIn, softwareEditionNot, softwareEditionNotIn, stoppedVmNum, stoppedVmNumGt, stoppedVmNumGte, stoppedVmNumIn, stoppedVmNumLt, stoppedVmNumLte, stoppedVmNumNot, stoppedVmNumNotIn, stretch, stretchNot, suspendedVmNum, suspendedVmNumGt, suspendedVmNumGte, suspendedVmNumIn, suspendedVmNumLt, suspendedVmNumLte, suspendedVmNumNot, suspendedVmNumNotIn, totalCacheCapacity, totalCacheCapacityGt, totalCacheCapacityGte, totalCacheCapacityIn, totalCacheCapacityLt, totalCacheCapacityLte, totalCacheCapacityNot, totalCacheCapacityNotIn, totalCpuCores, totalCpuCoresGt, totalCpuCoresGte, totalCpuCoresIn, totalCpuCoresLt, totalCpuCoresLte, totalCpuCoresNot, totalCpuCoresNotIn, totalCpuHz, totalCpuHzGt, totalCpuHzGte, totalCpuHzIn, totalCpuHzLt, totalCpuHzLte, totalCpuHzNot, totalCpuHzNotIn, totalCpuSockets, totalCpuSocketsGt, totalCpuSocketsGte, totalCpuSocketsIn, totalCpuSocketsLt, totalCpuSocketsLte, totalCpuSocketsNot, totalCpuSocketsNotIn, totalDataCapacity, totalDataCapacityGt, totalDataCapacityGte, totalDataCapacityIn, totalDataCapacityLt, totalDataCapacityLte, totalDataCapacityNot, totalDataCapacityNotIn, totalMemoryBytes, totalMemoryBytesGt, totalMemoryBytesGte, totalMemoryBytesIn, totalMemoryBytesLt, totalMemoryBytesLte, totalMemoryBytesNot, totalMemoryBytesNotIn, type, typeIn, typeNot, typeNotIn, upgradeToolVersion, upgradeToolVersionContains, upgradeToolVersionEndsWith, upgradeToolVersionGt, upgradeToolVersionGte, upgradeToolVersionIn, upgradeToolVersionLt, upgradeToolVersionLte, upgradeToolVersionNot, upgradeToolVersionNotContains, upgradeToolVersionNotEndsWith, upgradeToolVersionNotIn, upgradeToolVersionNotStartsWith, upgradeToolVersionStartsWith, usedCpuHz, usedCpuHzGt, usedCpuHzGte, usedCpuHzIn, usedCpuHzLt, usedCpuHzLte, usedCpuHzNot, usedCpuHzNotIn, usedDataSpace, usedDataSpaceGt, usedDataSpaceGte, usedDataSpaceIn, usedDataSpaceLt, usedDataSpaceLte, usedDataSpaceNot, usedDataSpaceNotIn, usedMemoryBytes, usedMemoryBytesGt, usedMemoryBytesGte, usedMemoryBytesIn, usedMemoryBytesLt, usedMemoryBytesLte, usedMemoryBytesNot, usedMemoryBytesNotIn, validDataSpace, validDataSpaceGt, validDataSpaceGte, validDataSpaceIn, validDataSpaceLt, validDataSpaceLte, validDataSpaceNot, validDataSpaceNotIn, vcenterAccount, vdsesEvery, vdsesNone, vdsesSome, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith, vhostEnabled, vhostEnabledNot, vmFoldersEvery, vmFoldersNone, vmFoldersSome, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, vmsEvery, vmsNone, vmsSome, witness, zonesEvery, zonesNone, zonesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -16313,6 +16313,8 @@ public class ClusterWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClusterWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    applicationHighestVersion: ").append(toIndentedString(applicationHighestVersion)).append("\n");
     sb.append("    applicationHighestVersionContains: ").append(toIndentedString(applicationHighestVersionContains)).append("\n");
     sb.append("    applicationHighestVersionEndsWith: ").append(toIndentedString(applicationHighestVersionEndsWith)).append("\n");
@@ -16609,7 +16611,6 @@ public class ClusterWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    ntpMode: ").append(toIndentedString(ntpMode)).append("\n");
     sb.append("    ntpModeIn: ").append(toIndentedString(ntpModeIn)).append("\n");
     sb.append("    ntpModeNot: ").append(toIndentedString(ntpModeNot)).append("\n");
@@ -16620,7 +16621,6 @@ public class ClusterWhereInput {
     sb.append("    nvmeOverTcpEnabledNot: ").append(toIndentedString(nvmeOverTcpEnabledNot)).append("\n");
     sb.append("    nvmfEnabled: ").append(toIndentedString(nvmfEnabled)).append("\n");
     sb.append("    nvmfEnabledNot: ").append(toIndentedString(nvmfEnabledNot)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    pmemEnabled: ").append(toIndentedString(pmemEnabled)).append("\n");
     sb.append("    pmemEnabledNot: ").append(toIndentedString(pmemEnabledNot)).append("\n");
     sb.append("    provisionedCpuCores: ").append(toIndentedString(provisionedCpuCores)).append("\n");

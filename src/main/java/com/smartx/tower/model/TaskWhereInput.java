@@ -27,6 +27,14 @@ public class TaskWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<TaskWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<TaskWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<TaskWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -382,14 +390,6 @@ public class TaskWhereInput {
   public static final String SERIALIZED_NAME_LOCAL_CREATED_AT_NOT_IN = "local_created_at_not_in";
   @SerializedName(SERIALIZED_NAME_LOCAL_CREATED_AT_NOT_IN)
   private List<String> localCreatedAtNotIn = null;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<TaskWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<TaskWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_PROGRESS = "progress";
   @SerializedName(SERIALIZED_NAME_PROGRESS)
@@ -842,6 +842,68 @@ public class TaskWhereInput {
 
   public void setAND(List<TaskWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public TaskWhereInput NOT(List<TaskWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public TaskWhereInput addNOTItem(TaskWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<TaskWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<TaskWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<TaskWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public TaskWhereInput OR(List<TaskWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public TaskWhereInput addORItem(TaskWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<TaskWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<TaskWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<TaskWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3001,68 +3063,6 @@ public class TaskWhereInput {
 
   public void setLocalCreatedAtNotIn(List<String> localCreatedAtNotIn) {
     this.localCreatedAtNotIn = localCreatedAtNotIn;
-  }
-
-
-  public TaskWhereInput NOT(List<TaskWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public TaskWhereInput addNOTItem(TaskWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<TaskWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<TaskWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<TaskWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public TaskWhereInput OR(List<TaskWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public TaskWhereInput addORItem(TaskWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<TaskWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<TaskWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<TaskWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -5651,6 +5651,8 @@ public class TaskWhereInput {
     }
     TaskWhereInput taskWhereInput = (TaskWhereInput) o;
     return Objects.equals(this.AND, taskWhereInput.AND) &&
+        Objects.equals(this.NOT, taskWhereInput.NOT) &&
+        Objects.equals(this.OR, taskWhereInput.OR) &&
         Objects.equals(this.cluster, taskWhereInput.cluster) &&
         Objects.equals(this.description, taskWhereInput.description) &&
         Objects.equals(this.descriptionContains, taskWhereInput.descriptionContains) &&
@@ -5740,8 +5742,6 @@ public class TaskWhereInput {
         Objects.equals(this.localCreatedAtLte, taskWhereInput.localCreatedAtLte) &&
         Objects.equals(this.localCreatedAtNot, taskWhereInput.localCreatedAtNot) &&
         Objects.equals(this.localCreatedAtNotIn, taskWhereInput.localCreatedAtNotIn) &&
-        Objects.equals(this.NOT, taskWhereInput.NOT) &&
-        Objects.equals(this.OR, taskWhereInput.OR) &&
         Objects.equals(this.progress, taskWhereInput.progress) &&
         Objects.equals(this.progressGt, taskWhereInput.progressGt) &&
         Objects.equals(this.progressGte, taskWhereInput.progressGte) &&
@@ -5855,7 +5855,7 @@ public class TaskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, errorCode, errorCodeContains, errorCodeEndsWith, errorCodeGt, errorCodeGte, errorCodeIn, errorCodeLt, errorCodeLte, errorCodeNot, errorCodeNotContains, errorCodeNotEndsWith, errorCodeNotIn, errorCodeNotStartsWith, errorCodeStartsWith, errorMessage, errorMessageContains, errorMessageEndsWith, errorMessageGt, errorMessageGte, errorMessageIn, errorMessageLt, errorMessageLte, errorMessageNot, errorMessageNotContains, errorMessageNotEndsWith, errorMessageNotIn, errorMessageNotStartsWith, errorMessageStartsWith, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, NOT, OR, progress, progressGt, progressGte, progressIn, progressLt, progressLte, progressNot, progressNotIn, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, resourceMutation, resourceMutationContains, resourceMutationEndsWith, resourceMutationGt, resourceMutationGte, resourceMutationIn, resourceMutationLt, resourceMutationLte, resourceMutationNot, resourceMutationNotContains, resourceMutationNotEndsWith, resourceMutationNotIn, resourceMutationNotStartsWith, resourceMutationStartsWith, resourceRollbackError, resourceRollbackErrorContains, resourceRollbackErrorEndsWith, resourceRollbackErrorGt, resourceRollbackErrorGte, resourceRollbackErrorIn, resourceRollbackErrorLt, resourceRollbackErrorLte, resourceRollbackErrorNot, resourceRollbackErrorNotContains, resourceRollbackErrorNotEndsWith, resourceRollbackErrorNotIn, resourceRollbackErrorNotStartsWith, resourceRollbackErrorStartsWith, resourceRollbackRetryCount, resourceRollbackRetryCountGt, resourceRollbackRetryCountGte, resourceRollbackRetryCountIn, resourceRollbackRetryCountLt, resourceRollbackRetryCountLte, resourceRollbackRetryCountNot, resourceRollbackRetryCountNotIn, resourceRollbacked, resourceRollbackedNot, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, snapshot, snapshotContains, snapshotEndsWith, snapshotGt, snapshotGte, snapshotIn, snapshotLt, snapshotLte, snapshotNot, snapshotNotContains, snapshotNotEndsWith, snapshotNotIn, snapshotNotStartsWith, snapshotStartsWith, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, type, typeIn, typeNot, typeNotIn, user);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, errorCode, errorCodeContains, errorCodeEndsWith, errorCodeGt, errorCodeGte, errorCodeIn, errorCodeLt, errorCodeLte, errorCodeNot, errorCodeNotContains, errorCodeNotEndsWith, errorCodeNotIn, errorCodeNotStartsWith, errorCodeStartsWith, errorMessage, errorMessageContains, errorMessageEndsWith, errorMessageGt, errorMessageGte, errorMessageIn, errorMessageLt, errorMessageLte, errorMessageNot, errorMessageNotContains, errorMessageNotEndsWith, errorMessageNotIn, errorMessageNotStartsWith, errorMessageStartsWith, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, key, keyContains, keyEndsWith, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotContains, keyNotEndsWith, keyNotIn, keyNotStartsWith, keyStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, progress, progressGt, progressGte, progressIn, progressLt, progressLte, progressNot, progressNotIn, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, resourceMutation, resourceMutationContains, resourceMutationEndsWith, resourceMutationGt, resourceMutationGte, resourceMutationIn, resourceMutationLt, resourceMutationLte, resourceMutationNot, resourceMutationNotContains, resourceMutationNotEndsWith, resourceMutationNotIn, resourceMutationNotStartsWith, resourceMutationStartsWith, resourceRollbackError, resourceRollbackErrorContains, resourceRollbackErrorEndsWith, resourceRollbackErrorGt, resourceRollbackErrorGte, resourceRollbackErrorIn, resourceRollbackErrorLt, resourceRollbackErrorLte, resourceRollbackErrorNot, resourceRollbackErrorNotContains, resourceRollbackErrorNotEndsWith, resourceRollbackErrorNotIn, resourceRollbackErrorNotStartsWith, resourceRollbackErrorStartsWith, resourceRollbackRetryCount, resourceRollbackRetryCountGt, resourceRollbackRetryCountGte, resourceRollbackRetryCountIn, resourceRollbackRetryCountLt, resourceRollbackRetryCountLte, resourceRollbackRetryCountNot, resourceRollbackRetryCountNotIn, resourceRollbacked, resourceRollbackedNot, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, snapshot, snapshotContains, snapshotEndsWith, snapshotGt, snapshotGte, snapshotIn, snapshotLt, snapshotLte, snapshotNot, snapshotNotContains, snapshotNotEndsWith, snapshotNotIn, snapshotNotStartsWith, snapshotStartsWith, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, type, typeIn, typeNot, typeNotIn, user);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5870,6 +5870,8 @@ public class TaskWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
@@ -5959,8 +5961,6 @@ public class TaskWhereInput {
     sb.append("    localCreatedAtLte: ").append(toIndentedString(localCreatedAtLte)).append("\n");
     sb.append("    localCreatedAtNot: ").append(toIndentedString(localCreatedAtNot)).append("\n");
     sb.append("    localCreatedAtNotIn: ").append(toIndentedString(localCreatedAtNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    progress: ").append(toIndentedString(progress)).append("\n");
     sb.append("    progressGt: ").append(toIndentedString(progressGt)).append("\n");
     sb.append("    progressGte: ").append(toIndentedString(progressGte)).append("\n");

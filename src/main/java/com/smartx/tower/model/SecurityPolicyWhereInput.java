@@ -25,6 +25,14 @@ public class SecurityPolicyWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SecurityPolicyWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SecurityPolicyWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SecurityPolicyWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
@@ -197,14 +205,6 @@ public class SecurityPolicyWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SecurityPolicyWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SecurityPolicyWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_POLICY_MODE = "policy_mode";
   @SerializedName(SERIALIZED_NAME_POLICY_MODE)
   private PolicyMode policyMode;
@@ -252,6 +252,68 @@ public class SecurityPolicyWhereInput {
 
   public void setAND(List<SecurityPolicyWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SecurityPolicyWhereInput NOT(List<SecurityPolicyWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SecurityPolicyWhereInput addNOTItem(SecurityPolicyWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SecurityPolicyWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SecurityPolicyWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SecurityPolicyWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SecurityPolicyWhereInput OR(List<SecurityPolicyWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SecurityPolicyWhereInput addORItem(SecurityPolicyWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SecurityPolicyWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SecurityPolicyWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SecurityPolicyWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1292,68 +1354,6 @@ public class SecurityPolicyWhereInput {
   }
 
 
-  public SecurityPolicyWhereInput NOT(List<SecurityPolicyWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SecurityPolicyWhereInput addNOTItem(SecurityPolicyWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SecurityPolicyWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SecurityPolicyWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SecurityPolicyWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SecurityPolicyWhereInput OR(List<SecurityPolicyWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SecurityPolicyWhereInput addORItem(SecurityPolicyWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SecurityPolicyWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SecurityPolicyWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SecurityPolicyWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SecurityPolicyWhereInput policyMode(PolicyMode policyMode) {
     
     this.policyMode = policyMode;
@@ -1472,6 +1472,8 @@ public class SecurityPolicyWhereInput {
     }
     SecurityPolicyWhereInput securityPolicyWhereInput = (SecurityPolicyWhereInput) o;
     return Objects.equals(this.AND, securityPolicyWhereInput.AND) &&
+        Objects.equals(this.NOT, securityPolicyWhereInput.NOT) &&
+        Objects.equals(this.OR, securityPolicyWhereInput.OR) &&
         Objects.equals(this.description, securityPolicyWhereInput.description) &&
         Objects.equals(this.descriptionContains, securityPolicyWhereInput.descriptionContains) &&
         Objects.equals(this.descriptionEndsWith, securityPolicyWhereInput.descriptionEndsWith) &&
@@ -1515,8 +1517,6 @@ public class SecurityPolicyWhereInput {
         Objects.equals(this.nameNotIn, securityPolicyWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, securityPolicyWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, securityPolicyWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, securityPolicyWhereInput.NOT) &&
-        Objects.equals(this.OR, securityPolicyWhereInput.OR) &&
         Objects.equals(this.policyMode, securityPolicyWhereInput.policyMode) &&
         Objects.equals(this.policyModeIn, securityPolicyWhereInput.policyModeIn) &&
         Objects.equals(this.policyModeNot, securityPolicyWhereInput.policyModeNot) &&
@@ -1529,7 +1529,7 @@ public class SecurityPolicyWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, policyMode, policyModeIn, policyModeNot, policyModeNotIn);
+    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, policyMode, policyModeIn, policyModeNot, policyModeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1544,6 +1544,8 @@ public class SecurityPolicyWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SecurityPolicyWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
     sb.append("    descriptionEndsWith: ").append(toIndentedString(descriptionEndsWith)).append("\n");
@@ -1587,8 +1589,6 @@ public class SecurityPolicyWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    policyMode: ").append(toIndentedString(policyMode)).append("\n");
     sb.append("    policyModeIn: ").append(toIndentedString(policyModeIn)).append("\n");
     sb.append("    policyModeNot: ").append(toIndentedString(policyModeNot)).append("\n");

@@ -18,9 +18,9 @@ public enum NicDriverState {
   
   NEED_REBOOT("NEED_REBOOT"),
   
-  NO_DRIVER("NO_DRIVER"),
-  
   NOT_READY("NOT_READY"),
+  
+  NO_DRIVER("NO_DRIVER"),
   
   READY("READY");
 

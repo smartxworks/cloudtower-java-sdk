@@ -25,6 +25,14 @@ public class VmFolderWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmFolderWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmFolderWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmFolderWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -197,14 +205,6 @@ public class VmFolderWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmFolderWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmFolderWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
   @SerializedName(SERIALIZED_NAME_VM_NUM)
   private Integer vmNum;
@@ -280,6 +280,68 @@ public class VmFolderWhereInput {
 
   public void setAND(List<VmFolderWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmFolderWhereInput NOT(List<VmFolderWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmFolderWhereInput addNOTItem(VmFolderWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmFolderWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmFolderWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmFolderWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmFolderWhereInput OR(List<VmFolderWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmFolderWhereInput addORItem(VmFolderWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmFolderWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmFolderWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmFolderWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1320,68 +1382,6 @@ public class VmFolderWhereInput {
   }
 
 
-  public VmFolderWhereInput NOT(List<VmFolderWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmFolderWhereInput addNOTItem(VmFolderWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmFolderWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmFolderWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmFolderWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmFolderWhereInput OR(List<VmFolderWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmFolderWhereInput addORItem(VmFolderWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmFolderWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmFolderWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmFolderWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmFolderWhereInput vmNum(Integer vmNum) {
     
     this.vmNum = vmNum;
@@ -1661,6 +1661,8 @@ public class VmFolderWhereInput {
     }
     VmFolderWhereInput vmFolderWhereInput = (VmFolderWhereInput) o;
     return Objects.equals(this.AND, vmFolderWhereInput.AND) &&
+        Objects.equals(this.NOT, vmFolderWhereInput.NOT) &&
+        Objects.equals(this.OR, vmFolderWhereInput.OR) &&
         Objects.equals(this.cluster, vmFolderWhereInput.cluster) &&
         Objects.equals(this.id, vmFolderWhereInput.id) &&
         Objects.equals(this.idContains, vmFolderWhereInput.idContains) &&
@@ -1704,8 +1706,6 @@ public class VmFolderWhereInput {
         Objects.equals(this.nameNotIn, vmFolderWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vmFolderWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vmFolderWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vmFolderWhereInput.NOT) &&
-        Objects.equals(this.OR, vmFolderWhereInput.OR) &&
         Objects.equals(this.vmNum, vmFolderWhereInput.vmNum) &&
         Objects.equals(this.vmNumGt, vmFolderWhereInput.vmNumGt) &&
         Objects.equals(this.vmNumGte, vmFolderWhereInput.vmNumGte) &&
@@ -1725,7 +1725,7 @@ public class VmFolderWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, cluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, vmNum, vmNumGt, vmNumGte, vmNumIn, vmNumLt, vmNumLte, vmNumNot, vmNumNotIn, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1740,6 +1740,8 @@ public class VmFolderWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmFolderWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
@@ -1783,8 +1785,6 @@ public class VmFolderWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    vmNum: ").append(toIndentedString(vmNum)).append("\n");
     sb.append("    vmNumGt: ").append(toIndentedString(vmNumGt)).append("\n");
     sb.append("    vmNumGte: ").append(toIndentedString(vmNumGte)).append("\n");

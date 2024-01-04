@@ -28,6 +28,14 @@ public class AlertNotifierWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<AlertNotifierWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<AlertNotifierWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<AlertNotifierWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTERS_EVERY = "clusters_every";
   @SerializedName(SERIALIZED_NAME_CLUSTERS_EVERY)
   private ClusterWhereInput clustersEvery;
@@ -248,14 +256,6 @@ public class AlertNotifierWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<AlertNotifierWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<AlertNotifierWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SECURITY_MODE = "security_mode";
   @SerializedName(SERIALIZED_NAME_SECURITY_MODE)
   private NotifierSecurityMode securityMode;
@@ -451,6 +451,68 @@ public class AlertNotifierWhereInput {
 
   public void setAND(List<AlertNotifierWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public AlertNotifierWhereInput NOT(List<AlertNotifierWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public AlertNotifierWhereInput addNOTItem(AlertNotifierWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<AlertNotifierWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<AlertNotifierWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<AlertNotifierWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public AlertNotifierWhereInput OR(List<AlertNotifierWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public AlertNotifierWhereInput addORItem(AlertNotifierWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<AlertNotifierWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<AlertNotifierWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<AlertNotifierWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1799,68 +1861,6 @@ public class AlertNotifierWhereInput {
   }
 
 
-  public AlertNotifierWhereInput NOT(List<AlertNotifierWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public AlertNotifierWhereInput addNOTItem(AlertNotifierWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<AlertNotifierWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<AlertNotifierWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<AlertNotifierWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public AlertNotifierWhereInput OR(List<AlertNotifierWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public AlertNotifierWhereInput addORItem(AlertNotifierWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<AlertNotifierWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<AlertNotifierWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<AlertNotifierWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public AlertNotifierWhereInput securityMode(NotifierSecurityMode securityMode) {
     
     this.securityMode = securityMode;
@@ -2878,6 +2878,8 @@ public class AlertNotifierWhereInput {
     }
     AlertNotifierWhereInput alertNotifierWhereInput = (AlertNotifierWhereInput) o;
     return Objects.equals(this.AND, alertNotifierWhereInput.AND) &&
+        Objects.equals(this.NOT, alertNotifierWhereInput.NOT) &&
+        Objects.equals(this.OR, alertNotifierWhereInput.OR) &&
         Objects.equals(this.clustersEvery, alertNotifierWhereInput.clustersEvery) &&
         Objects.equals(this.clustersNone, alertNotifierWhereInput.clustersNone) &&
         Objects.equals(this.clustersSome, alertNotifierWhereInput.clustersSome) &&
@@ -2933,8 +2935,6 @@ public class AlertNotifierWhereInput {
         Objects.equals(this.nameNotIn, alertNotifierWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, alertNotifierWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, alertNotifierWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, alertNotifierWhereInput.NOT) &&
-        Objects.equals(this.OR, alertNotifierWhereInput.OR) &&
         Objects.equals(this.securityMode, alertNotifierWhereInput.securityMode) &&
         Objects.equals(this.securityModeIn, alertNotifierWhereInput.securityModeIn) &&
         Objects.equals(this.securityModeNot, alertNotifierWhereInput.securityModeNot) &&
@@ -2984,7 +2984,7 @@ public class AlertNotifierWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clustersEvery, clustersNone, clustersSome, disabled, disabledNot, emailFrom, emailFromContains, emailFromEndsWith, emailFromGt, emailFromGte, emailFromIn, emailFromLt, emailFromLte, emailFromNot, emailFromNotContains, emailFromNotEndsWith, emailFromNotIn, emailFromNotStartsWith, emailFromStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, securityMode, securityModeIn, securityModeNot, securityModeNotIn, smtpServerConfig, smtpServerHost, smtpServerHostContains, smtpServerHostEndsWith, smtpServerHostGt, smtpServerHostGte, smtpServerHostIn, smtpServerHostLt, smtpServerHostLte, smtpServerHostNot, smtpServerHostNotContains, smtpServerHostNotEndsWith, smtpServerHostNotIn, smtpServerHostNotStartsWith, smtpServerHostStartsWith, smtpServerPort, smtpServerPortGt, smtpServerPortGte, smtpServerPortIn, smtpServerPortLt, smtpServerPortLte, smtpServerPortNot, smtpServerPortNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, NOT, OR, clustersEvery, clustersNone, clustersSome, disabled, disabledNot, emailFrom, emailFromContains, emailFromEndsWith, emailFromGt, emailFromGte, emailFromIn, emailFromLt, emailFromLte, emailFromNot, emailFromNotContains, emailFromNotEndsWith, emailFromNotIn, emailFromNotStartsWith, emailFromStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, languageCode, languageCodeIn, languageCodeNot, languageCodeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, securityMode, securityModeIn, securityModeNot, securityModeNotIn, smtpServerConfig, smtpServerHost, smtpServerHostContains, smtpServerHostEndsWith, smtpServerHostGt, smtpServerHostGte, smtpServerHostIn, smtpServerHostLt, smtpServerHostLte, smtpServerHostNot, smtpServerHostNotContains, smtpServerHostNotEndsWith, smtpServerHostNotIn, smtpServerHostNotStartsWith, smtpServerHostStartsWith, smtpServerPort, smtpServerPortGt, smtpServerPortGte, smtpServerPortIn, smtpServerPortLt, smtpServerPortLte, smtpServerPortNot, smtpServerPortNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2999,6 +2999,8 @@ public class AlertNotifierWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class AlertNotifierWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clustersEvery: ").append(toIndentedString(clustersEvery)).append("\n");
     sb.append("    clustersNone: ").append(toIndentedString(clustersNone)).append("\n");
     sb.append("    clustersSome: ").append(toIndentedString(clustersSome)).append("\n");
@@ -3054,8 +3056,6 @@ public class AlertNotifierWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    securityMode: ").append(toIndentedString(securityMode)).append("\n");
     sb.append("    securityModeIn: ").append(toIndentedString(securityModeIn)).append("\n");
     sb.append("    securityModeNot: ").append(toIndentedString(securityModeNot)).append("\n");

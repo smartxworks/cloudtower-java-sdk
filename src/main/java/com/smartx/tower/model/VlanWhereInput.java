@@ -29,6 +29,14 @@ public class VlanWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VlanWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VlanWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VlanWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -353,14 +361,6 @@ public class VlanWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VlanWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VlanWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH = "qos_max_bandwidth";
   @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH)
   private Double qosMaxBandwidth;
@@ -608,6 +608,68 @@ public class VlanWhereInput {
 
   public void setAND(List<VlanWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VlanWhereInput NOT(List<VlanWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VlanWhereInput addNOTItem(VlanWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VlanWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VlanWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VlanWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VlanWhereInput OR(List<VlanWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VlanWhereInput addORItem(VlanWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VlanWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VlanWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VlanWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2586,68 +2648,6 @@ public class VlanWhereInput {
   }
 
 
-  public VlanWhereInput NOT(List<VlanWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VlanWhereInput addNOTItem(VlanWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VlanWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VlanWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VlanWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VlanWhereInput OR(List<VlanWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VlanWhereInput addORItem(VlanWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VlanWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VlanWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VlanWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VlanWhereInput qosMaxBandwidth(Double qosMaxBandwidth) {
     
     this.qosMaxBandwidth = qosMaxBandwidth;
@@ -3996,6 +3996,8 @@ public class VlanWhereInput {
     }
     VlanWhereInput vlanWhereInput = (VlanWhereInput) o;
     return Objects.equals(this.AND, vlanWhereInput.AND) &&
+        Objects.equals(this.NOT, vlanWhereInput.NOT) &&
+        Objects.equals(this.OR, vlanWhereInput.OR) &&
         Objects.equals(this.entityAsyncStatus, vlanWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, vlanWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, vlanWhereInput.entityAsyncStatusNot) &&
@@ -4077,8 +4079,6 @@ public class VlanWhereInput {
         Objects.equals(this.nameNotIn, vlanWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vlanWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vlanWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vlanWhereInput.NOT) &&
-        Objects.equals(this.OR, vlanWhereInput.OR) &&
         Objects.equals(this.qosMaxBandwidth, vlanWhereInput.qosMaxBandwidth) &&
         Objects.equals(this.qosMaxBandwidthGt, vlanWhereInput.qosMaxBandwidthGt) &&
         Objects.equals(this.qosMaxBandwidthGte, vlanWhereInput.qosMaxBandwidthGte) &&
@@ -4141,7 +4141,7 @@ public class VlanWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, gatewaySubnetmask, gatewaySubnetmaskContains, gatewaySubnetmaskEndsWith, gatewaySubnetmaskGt, gatewaySubnetmaskGte, gatewaySubnetmaskIn, gatewaySubnetmaskLt, gatewaySubnetmaskLte, gatewaySubnetmaskNot, gatewaySubnetmaskNotContains, gatewaySubnetmaskNotEndsWith, gatewaySubnetmaskNotIn, gatewaySubnetmaskNotStartsWith, gatewaySubnetmaskStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, modeType, modeTypeIn, modeTypeNot, modeTypeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, qosMaxBandwidth, qosMaxBandwidthGt, qosMaxBandwidthGte, qosMaxBandwidthIn, qosMaxBandwidthLt, qosMaxBandwidthLte, qosMaxBandwidthNot, qosMaxBandwidthNotIn, qosMinBandwidth, qosMinBandwidthGt, qosMinBandwidthGte, qosMinBandwidthIn, qosMinBandwidthLt, qosMinBandwidthLte, qosMinBandwidthNot, qosMinBandwidthNotIn, qosPriority, qosPriorityGt, qosPriorityGte, qosPriorityIn, qosPriorityLt, qosPriorityLte, qosPriorityNot, qosPriorityNotIn, subnetmask, subnetmaskContains, subnetmaskEndsWith, subnetmaskGt, subnetmaskGte, subnetmaskIn, subnetmaskLt, subnetmaskLte, subnetmaskNot, subnetmaskNotContains, subnetmaskNotEndsWith, subnetmaskNotIn, subnetmaskNotStartsWith, subnetmaskStartsWith, type, typeIn, typeNot, typeNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn, vmNicsEvery, vmNicsNone, vmNicsSome);
+    return Objects.hash(AND, NOT, OR, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gatewayIp, gatewayIpContains, gatewayIpEndsWith, gatewayIpGt, gatewayIpGte, gatewayIpIn, gatewayIpLt, gatewayIpLte, gatewayIpNot, gatewayIpNotContains, gatewayIpNotEndsWith, gatewayIpNotIn, gatewayIpNotStartsWith, gatewayIpStartsWith, gatewaySubnetmask, gatewaySubnetmaskContains, gatewaySubnetmaskEndsWith, gatewaySubnetmaskGt, gatewaySubnetmaskGte, gatewaySubnetmaskIn, gatewaySubnetmaskLt, gatewaySubnetmaskLte, gatewaySubnetmaskNot, gatewaySubnetmaskNotContains, gatewaySubnetmaskNotEndsWith, gatewaySubnetmaskNotIn, gatewaySubnetmaskNotStartsWith, gatewaySubnetmaskStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, modeType, modeTypeIn, modeTypeNot, modeTypeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, qosMaxBandwidth, qosMaxBandwidthGt, qosMaxBandwidthGte, qosMaxBandwidthIn, qosMaxBandwidthLt, qosMaxBandwidthLte, qosMaxBandwidthNot, qosMaxBandwidthNotIn, qosMinBandwidth, qosMinBandwidthGt, qosMinBandwidthGte, qosMinBandwidthIn, qosMinBandwidthLt, qosMinBandwidthLte, qosMinBandwidthNot, qosMinBandwidthNotIn, qosPriority, qosPriorityGt, qosPriorityGte, qosPriorityIn, qosPriorityLt, qosPriorityLte, qosPriorityNot, qosPriorityNotIn, subnetmask, subnetmaskContains, subnetmaskEndsWith, subnetmaskGt, subnetmaskGte, subnetmaskIn, subnetmaskLt, subnetmaskLte, subnetmaskNot, subnetmaskNotContains, subnetmaskNotEndsWith, subnetmaskNotIn, subnetmaskNotStartsWith, subnetmaskStartsWith, type, typeIn, typeNot, typeNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn, vmNicsEvery, vmNicsNone, vmNicsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4156,6 +4156,8 @@ public class VlanWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VlanWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
@@ -4237,8 +4239,6 @@ public class VlanWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    qosMaxBandwidth: ").append(toIndentedString(qosMaxBandwidth)).append("\n");
     sb.append("    qosMaxBandwidthGt: ").append(toIndentedString(qosMaxBandwidthGt)).append("\n");
     sb.append("    qosMaxBandwidthGte: ").append(toIndentedString(qosMaxBandwidthGte)).append("\n");

@@ -28,6 +28,14 @@ public class ContentLibraryVmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ContentLibraryVmTemplateWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ContentLibraryVmTemplateWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ContentLibraryVmTemplateWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ARCHITECTURE = "architecture";
   @SerializedName(SERIALIZED_NAME_ARCHITECTURE)
   private Architecture architecture;
@@ -324,14 +332,6 @@ public class ContentLibraryVmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ContentLibraryVmTemplateWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ContentLibraryVmTemplateWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_OS = "os";
   @SerializedName(SERIALIZED_NAME_OS)
   private String os;
@@ -495,6 +495,68 @@ public class ContentLibraryVmTemplateWhereInput {
 
   public void setAND(List<ContentLibraryVmTemplateWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput NOT(List<ContentLibraryVmTemplateWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addNOTItem(ContentLibraryVmTemplateWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ContentLibraryVmTemplateWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ContentLibraryVmTemplateWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ContentLibraryVmTemplateWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput OR(List<ContentLibraryVmTemplateWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addORItem(ContentLibraryVmTemplateWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ContentLibraryVmTemplateWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ContentLibraryVmTemplateWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ContentLibraryVmTemplateWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2312,68 +2374,6 @@ public class ContentLibraryVmTemplateWhereInput {
   }
 
 
-  public ContentLibraryVmTemplateWhereInput NOT(List<ContentLibraryVmTemplateWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ContentLibraryVmTemplateWhereInput addNOTItem(ContentLibraryVmTemplateWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ContentLibraryVmTemplateWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ContentLibraryVmTemplateWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ContentLibraryVmTemplateWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ContentLibraryVmTemplateWhereInput OR(List<ContentLibraryVmTemplateWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ContentLibraryVmTemplateWhereInput addORItem(ContentLibraryVmTemplateWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ContentLibraryVmTemplateWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ContentLibraryVmTemplateWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ContentLibraryVmTemplateWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ContentLibraryVmTemplateWhereInput os(String os) {
     
     this.os = os;
@@ -3191,6 +3191,8 @@ public class ContentLibraryVmTemplateWhereInput {
     }
     ContentLibraryVmTemplateWhereInput contentLibraryVmTemplateWhereInput = (ContentLibraryVmTemplateWhereInput) o;
     return Objects.equals(this.AND, contentLibraryVmTemplateWhereInput.AND) &&
+        Objects.equals(this.NOT, contentLibraryVmTemplateWhereInput.NOT) &&
+        Objects.equals(this.OR, contentLibraryVmTemplateWhereInput.OR) &&
         Objects.equals(this.architecture, contentLibraryVmTemplateWhereInput.architecture) &&
         Objects.equals(this.architectureIn, contentLibraryVmTemplateWhereInput.architectureIn) &&
         Objects.equals(this.architectureNot, contentLibraryVmTemplateWhereInput.architectureNot) &&
@@ -3265,8 +3267,6 @@ public class ContentLibraryVmTemplateWhereInput {
         Objects.equals(this.nameNotIn, contentLibraryVmTemplateWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, contentLibraryVmTemplateWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, contentLibraryVmTemplateWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, contentLibraryVmTemplateWhereInput.NOT) &&
-        Objects.equals(this.OR, contentLibraryVmTemplateWhereInput.OR) &&
         Objects.equals(this.os, contentLibraryVmTemplateWhereInput.os) &&
         Objects.equals(this.osContains, contentLibraryVmTemplateWhereInput.osContains) &&
         Objects.equals(this.osEndsWith, contentLibraryVmTemplateWhereInput.osEndsWith) &&
@@ -3308,7 +3308,7 @@ public class ContentLibraryVmTemplateWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, architecture, architectureIn, architectureNot, architectureNotIn, cloudInitSupported, cloudInitSupportedNot, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
+    return Objects.hash(AND, NOT, OR, architecture, architectureIn, architectureNot, architectureNotIn, cloudInitSupported, cloudInitSupportedNot, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3323,6 +3323,8 @@ public class ContentLibraryVmTemplateWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentLibraryVmTemplateWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    architecture: ").append(toIndentedString(architecture)).append("\n");
     sb.append("    architectureIn: ").append(toIndentedString(architectureIn)).append("\n");
     sb.append("    architectureNot: ").append(toIndentedString(architectureNot)).append("\n");
@@ -3397,8 +3399,6 @@ public class ContentLibraryVmTemplateWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    os: ").append(toIndentedString(os)).append("\n");
     sb.append("    osContains: ").append(toIndentedString(osContains)).append("\n");
     sb.append("    osEndsWith: ").append(toIndentedString(osEndsWith)).append("\n");

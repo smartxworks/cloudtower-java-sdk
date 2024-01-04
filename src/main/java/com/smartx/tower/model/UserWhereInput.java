@@ -26,6 +26,14 @@ public class UserWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<UserWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<UserWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<UserWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_AUTH_CONFIG_ID = "auth_config_id";
   @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID)
   private String authConfigId;
@@ -426,14 +434,6 @@ public class UserWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<UserWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<UserWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PASSWORD_EXPIRED = "password_expired";
   @SerializedName(SERIALIZED_NAME_PASSWORD_EXPIRED)
   private Boolean passwordExpired;
@@ -605,6 +605,68 @@ public class UserWhereInput {
 
   public void setAND(List<UserWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public UserWhereInput NOT(List<UserWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public UserWhereInput addNOTItem(UserWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<UserWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<UserWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public UserWhereInput OR(List<UserWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public UserWhereInput addORItem(UserWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<UserWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<UserWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3020,68 +3082,6 @@ public class UserWhereInput {
   }
 
 
-  public UserWhereInput NOT(List<UserWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public UserWhereInput addNOTItem(UserWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<UserWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UserWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<UserWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public UserWhereInput OR(List<UserWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public UserWhereInput addORItem(UserWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<UserWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UserWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<UserWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public UserWhereInput passwordExpired(Boolean passwordExpired) {
     
     this.passwordExpired = passwordExpired;
@@ -3961,6 +3961,8 @@ public class UserWhereInput {
     }
     UserWhereInput userWhereInput = (UserWhereInput) o;
     return Objects.equals(this.AND, userWhereInput.AND) &&
+        Objects.equals(this.NOT, userWhereInput.NOT) &&
+        Objects.equals(this.OR, userWhereInput.OR) &&
         Objects.equals(this.authConfigId, userWhereInput.authConfigId) &&
         Objects.equals(this.authConfigIdContains, userWhereInput.authConfigIdContains) &&
         Objects.equals(this.authConfigIdEndsWith, userWhereInput.authConfigIdEndsWith) &&
@@ -4061,8 +4063,6 @@ public class UserWhereInput {
         Objects.equals(this.nameNotIn, userWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, userWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, userWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, userWhereInput.NOT) &&
-        Objects.equals(this.OR, userWhereInput.OR) &&
         Objects.equals(this.passwordExpired, userWhereInput.passwordExpired) &&
         Objects.equals(this.passwordExpiredNot, userWhereInput.passwordExpiredNot) &&
         Objects.equals(this.passwordUpdatedAt, userWhereInput.passwordUpdatedAt) &&
@@ -4106,7 +4106,7 @@ public class UserWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, authConfigId, authConfigIdContains, authConfigIdEndsWith, authConfigIdGt, authConfigIdGte, authConfigIdIn, authConfigIdLt, authConfigIdLte, authConfigIdNot, authConfigIdNotContains, authConfigIdNotEndsWith, authConfigIdNotIn, authConfigIdNotStartsWith, authConfigIdStartsWith, displayUsername, displayUsernameContains, displayUsernameEndsWith, displayUsernameGt, displayUsernameGte, displayUsernameIn, displayUsernameLt, displayUsernameLte, displayUsernameNot, displayUsernameNotContains, displayUsernameNotEndsWith, displayUsernameNotIn, displayUsernameNotStartsWith, displayUsernameStartsWith, emailAddress, emailAddressContains, emailAddressEndsWith, emailAddressGt, emailAddressGte, emailAddressIn, emailAddressLt, emailAddressLte, emailAddressNot, emailAddressNotContains, emailAddressNotEndsWith, emailAddressNotIn, emailAddressNotStartsWith, emailAddressStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ldapDn, ldapDnContains, ldapDnEndsWith, ldapDnGt, ldapDnGte, ldapDnIn, ldapDnLt, ldapDnLte, ldapDnNot, ldapDnNotContains, ldapDnNotEndsWith, ldapDnNotIn, ldapDnNotStartsWith, ldapDnStartsWith, mobilePhone, mobilePhoneContains, mobilePhoneEndsWith, mobilePhoneGt, mobilePhoneGte, mobilePhoneIn, mobilePhoneLt, mobilePhoneLte, mobilePhoneNot, mobilePhoneNotContains, mobilePhoneNotEndsWith, mobilePhoneNotIn, mobilePhoneNotStartsWith, mobilePhoneStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, passwordExpired, passwordExpiredNot, passwordUpdatedAt, passwordUpdatedAtGt, passwordUpdatedAtGte, passwordUpdatedAtIn, passwordUpdatedAtLt, passwordUpdatedAtLte, passwordUpdatedAtNot, passwordUpdatedAtNotIn, role, roleIn, roleNot, roleNotIn, rolesEvery, rolesNone, rolesSome, source, sourceIn, sourceNot, sourceNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
+    return Objects.hash(AND, NOT, OR, authConfigId, authConfigIdContains, authConfigIdEndsWith, authConfigIdGt, authConfigIdGte, authConfigIdIn, authConfigIdLt, authConfigIdLte, authConfigIdNot, authConfigIdNotContains, authConfigIdNotEndsWith, authConfigIdNotIn, authConfigIdNotStartsWith, authConfigIdStartsWith, displayUsername, displayUsernameContains, displayUsernameEndsWith, displayUsernameGt, displayUsernameGte, displayUsernameIn, displayUsernameLt, displayUsernameLte, displayUsernameNot, displayUsernameNotContains, displayUsernameNotEndsWith, displayUsernameNotIn, displayUsernameNotStartsWith, displayUsernameStartsWith, emailAddress, emailAddressContains, emailAddressEndsWith, emailAddressGt, emailAddressGte, emailAddressIn, emailAddressLt, emailAddressLte, emailAddressNot, emailAddressNotContains, emailAddressNotEndsWith, emailAddressNotIn, emailAddressNotStartsWith, emailAddressStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ldapDn, ldapDnContains, ldapDnEndsWith, ldapDnGt, ldapDnGte, ldapDnIn, ldapDnLt, ldapDnLte, ldapDnNot, ldapDnNotContains, ldapDnNotEndsWith, ldapDnNotIn, ldapDnNotStartsWith, ldapDnStartsWith, mobilePhone, mobilePhoneContains, mobilePhoneEndsWith, mobilePhoneGt, mobilePhoneGte, mobilePhoneIn, mobilePhoneLt, mobilePhoneLte, mobilePhoneNot, mobilePhoneNotContains, mobilePhoneNotEndsWith, mobilePhoneNotIn, mobilePhoneNotStartsWith, mobilePhoneStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, passwordExpired, passwordExpiredNot, passwordUpdatedAt, passwordUpdatedAtGt, passwordUpdatedAtGte, passwordUpdatedAtIn, passwordUpdatedAtLt, passwordUpdatedAtLte, passwordUpdatedAtNot, passwordUpdatedAtNotIn, role, roleIn, roleNot, roleNotIn, rolesEvery, rolesNone, rolesSome, source, sourceIn, sourceNot, sourceNotIn, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4121,6 +4121,8 @@ public class UserWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    authConfigId: ").append(toIndentedString(authConfigId)).append("\n");
     sb.append("    authConfigIdContains: ").append(toIndentedString(authConfigIdContains)).append("\n");
     sb.append("    authConfigIdEndsWith: ").append(toIndentedString(authConfigIdEndsWith)).append("\n");
@@ -4221,8 +4223,6 @@ public class UserWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    passwordExpired: ").append(toIndentedString(passwordExpired)).append("\n");
     sb.append("    passwordExpiredNot: ").append(toIndentedString(passwordExpiredNot)).append("\n");
     sb.append("    passwordUpdatedAt: ").append(toIndentedString(passwordUpdatedAt)).append("\n");

@@ -30,6 +30,14 @@ public class VmDiskWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmDiskWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmDiskWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmDiskWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)
   private Integer boot;
@@ -442,14 +450,6 @@ public class VmDiskWhereInput {
   @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY_NOT_IN)
   private List<VmDiskIoRestrictType> maxIopsPolicyNotIn = null;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmDiskWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmDiskWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SERIAL = "serial";
   @SerializedName(SERIALIZED_NAME_SERIAL)
   private String serial;
@@ -733,6 +733,68 @@ public class VmDiskWhereInput {
 
   public void setAND(List<VmDiskWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmDiskWhereInput NOT(List<VmDiskWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmDiskWhereInput addNOTItem(VmDiskWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmDiskWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmDiskWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmDiskWhereInput OR(List<VmDiskWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmDiskWhereInput addORItem(VmDiskWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmDiskWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmDiskWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3281,68 +3343,6 @@ public class VmDiskWhereInput {
   }
 
 
-  public VmDiskWhereInput NOT(List<VmDiskWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmDiskWhereInput addNOTItem(VmDiskWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmDiskWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmDiskWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmDiskWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmDiskWhereInput OR(List<VmDiskWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmDiskWhereInput addORItem(VmDiskWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmDiskWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmDiskWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmDiskWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmDiskWhereInput serial(String serial) {
     
     this.serial = serial;
@@ -4882,6 +4882,8 @@ public class VmDiskWhereInput {
     }
     VmDiskWhereInput vmDiskWhereInput = (VmDiskWhereInput) o;
     return Objects.equals(this.AND, vmDiskWhereInput.AND) &&
+        Objects.equals(this.NOT, vmDiskWhereInput.NOT) &&
+        Objects.equals(this.OR, vmDiskWhereInput.OR) &&
         Objects.equals(this.boot, vmDiskWhereInput.boot) &&
         Objects.equals(this.bootGt, vmDiskWhereInput.bootGt) &&
         Objects.equals(this.bootGte, vmDiskWhereInput.bootGte) &&
@@ -4985,8 +4987,6 @@ public class VmDiskWhereInput {
         Objects.equals(this.maxIopsPolicyIn, vmDiskWhereInput.maxIopsPolicyIn) &&
         Objects.equals(this.maxIopsPolicyNot, vmDiskWhereInput.maxIopsPolicyNot) &&
         Objects.equals(this.maxIopsPolicyNotIn, vmDiskWhereInput.maxIopsPolicyNotIn) &&
-        Objects.equals(this.NOT, vmDiskWhereInput.NOT) &&
-        Objects.equals(this.OR, vmDiskWhereInput.OR) &&
         Objects.equals(this.serial, vmDiskWhereInput.serial) &&
         Objects.equals(this.serialContains, vmDiskWhereInput.serialContains) &&
         Objects.equals(this.serialEndsWith, vmDiskWhereInput.serialEndsWith) &&
@@ -5058,7 +5058,7 @@ public class VmDiskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, boot, bootGt, bootGte, bootIn, bootLt, bootLte, bootNot, bootNotIn, bus, busIn, busNot, busNotIn, cloudInitImageName, cloudInitImageNameContains, cloudInitImageNameEndsWith, cloudInitImageNameGt, cloudInitImageNameGte, cloudInitImageNameIn, cloudInitImageNameLt, cloudInitImageNameLte, cloudInitImageNameNot, cloudInitImageNameNotContains, cloudInitImageNameNotEndsWith, cloudInitImageNameNotIn, cloudInitImageNameNotStartsWith, cloudInitImageNameStartsWith, cloudInitImagePath, cloudInitImagePathContains, cloudInitImagePathEndsWith, cloudInitImagePathGt, cloudInitImagePathGte, cloudInitImagePathIn, cloudInitImagePathLt, cloudInitImagePathLte, cloudInitImagePathNot, cloudInitImagePathNotContains, cloudInitImagePathNotEndsWith, cloudInitImagePathNotIn, cloudInitImagePathNotStartsWith, cloudInitImagePathStartsWith, device, deviceContains, deviceEndsWith, deviceGt, deviceGte, deviceIn, deviceLt, deviceLte, deviceNot, deviceNotContains, deviceNotEndsWith, deviceNotIn, deviceNotStartsWith, deviceStartsWith, disabled, disabledNot, elfImage, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, key, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, NOT, OR, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, svtImage, type, typeIn, typeNot, typeNotIn, unsafeImagePath, unsafeImagePathContains, unsafeImagePathEndsWith, unsafeImagePathGt, unsafeImagePathGte, unsafeImagePathIn, unsafeImagePathLt, unsafeImagePathLte, unsafeImagePathNot, unsafeImagePathNotContains, unsafeImagePathNotEndsWith, unsafeImagePathNotIn, unsafeImagePathNotStartsWith, unsafeImagePathStartsWith, unsafeImageUuid, unsafeImageUuidContains, unsafeImageUuidEndsWith, unsafeImageUuidGt, unsafeImageUuidGte, unsafeImageUuidIn, unsafeImageUuidLt, unsafeImageUuidLte, unsafeImageUuidNot, unsafeImageUuidNotContains, unsafeImageUuidNotEndsWith, unsafeImageUuidNotIn, unsafeImageUuidNotStartsWith, unsafeImageUuidStartsWith, unsafeProvision, unsafeProvisionContains, unsafeProvisionEndsWith, unsafeProvisionGt, unsafeProvisionGte, unsafeProvisionIn, unsafeProvisionLt, unsafeProvisionLte, unsafeProvisionNot, unsafeProvisionNotContains, unsafeProvisionNotEndsWith, unsafeProvisionNotIn, unsafeProvisionNotStartsWith, unsafeProvisionStartsWith, vm, vmVolume);
+    return Objects.hash(AND, NOT, OR, boot, bootGt, bootGte, bootIn, bootLt, bootLte, bootNot, bootNotIn, bus, busIn, busNot, busNotIn, cloudInitImageName, cloudInitImageNameContains, cloudInitImageNameEndsWith, cloudInitImageNameGt, cloudInitImageNameGte, cloudInitImageNameIn, cloudInitImageNameLt, cloudInitImageNameLte, cloudInitImageNameNot, cloudInitImageNameNotContains, cloudInitImageNameNotEndsWith, cloudInitImageNameNotIn, cloudInitImageNameNotStartsWith, cloudInitImageNameStartsWith, cloudInitImagePath, cloudInitImagePathContains, cloudInitImagePathEndsWith, cloudInitImagePathGt, cloudInitImagePathGte, cloudInitImagePathIn, cloudInitImagePathLt, cloudInitImagePathLte, cloudInitImagePathNot, cloudInitImagePathNotContains, cloudInitImagePathNotEndsWith, cloudInitImagePathNotIn, cloudInitImagePathNotStartsWith, cloudInitImagePathStartsWith, device, deviceContains, deviceEndsWith, deviceGt, deviceGte, deviceIn, deviceLt, deviceLte, deviceNot, deviceNotContains, deviceNotEndsWith, deviceNotIn, deviceNotStartsWith, deviceStartsWith, disabled, disabledNot, elfImage, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, key, keyGt, keyGte, keyIn, keyLt, keyLte, keyNot, keyNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, serial, serialContains, serialEndsWith, serialGt, serialGte, serialIn, serialLt, serialLte, serialNot, serialNotContains, serialNotEndsWith, serialNotIn, serialNotStartsWith, serialStartsWith, svtImage, type, typeIn, typeNot, typeNotIn, unsafeImagePath, unsafeImagePathContains, unsafeImagePathEndsWith, unsafeImagePathGt, unsafeImagePathGte, unsafeImagePathIn, unsafeImagePathLt, unsafeImagePathLte, unsafeImagePathNot, unsafeImagePathNotContains, unsafeImagePathNotEndsWith, unsafeImagePathNotIn, unsafeImagePathNotStartsWith, unsafeImagePathStartsWith, unsafeImageUuid, unsafeImageUuidContains, unsafeImageUuidEndsWith, unsafeImageUuidGt, unsafeImageUuidGte, unsafeImageUuidIn, unsafeImageUuidLt, unsafeImageUuidLte, unsafeImageUuidNot, unsafeImageUuidNotContains, unsafeImageUuidNotEndsWith, unsafeImageUuidNotIn, unsafeImageUuidNotStartsWith, unsafeImageUuidStartsWith, unsafeProvision, unsafeProvisionContains, unsafeProvisionEndsWith, unsafeProvisionGt, unsafeProvisionGte, unsafeProvisionIn, unsafeProvisionLt, unsafeProvisionLte, unsafeProvisionNot, unsafeProvisionNotContains, unsafeProvisionNotEndsWith, unsafeProvisionNotIn, unsafeProvisionNotStartsWith, unsafeProvisionStartsWith, vm, vmVolume);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5073,6 +5073,8 @@ public class VmDiskWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmDiskWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    boot: ").append(toIndentedString(boot)).append("\n");
     sb.append("    bootGt: ").append(toIndentedString(bootGt)).append("\n");
     sb.append("    bootGte: ").append(toIndentedString(bootGte)).append("\n");
@@ -5176,8 +5178,6 @@ public class VmDiskWhereInput {
     sb.append("    maxIopsPolicyIn: ").append(toIndentedString(maxIopsPolicyIn)).append("\n");
     sb.append("    maxIopsPolicyNot: ").append(toIndentedString(maxIopsPolicyNot)).append("\n");
     sb.append("    maxIopsPolicyNotIn: ").append(toIndentedString(maxIopsPolicyNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    serial: ").append(toIndentedString(serial)).append("\n");
     sb.append("    serialContains: ").append(toIndentedString(serialContains)).append("\n");
     sb.append("    serialEndsWith: ").append(toIndentedString(serialEndsWith)).append("\n");

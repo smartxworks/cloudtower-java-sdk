@@ -29,6 +29,14 @@ public class IscsiConnectionWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<IscsiConnectionWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<IscsiConnectionWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<IscsiConnectionWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLIENT_PORT = "client_port";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT)
   private Integer clientPort;
@@ -185,17 +193,9 @@ public class IscsiConnectionWhereInput {
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET)
   private IscsiTargetWhereInput iscsiTarget;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<IscsiConnectionWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
   private NvmfSubsystemWhereInput nvmfSubsystem;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<IscsiConnectionWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_TR_TYPE = "tr_type";
   @SerializedName(SERIALIZED_NAME_TR_TYPE)
@@ -260,6 +260,68 @@ public class IscsiConnectionWhereInput {
 
   public void setAND(List<IscsiConnectionWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public IscsiConnectionWhereInput NOT(List<IscsiConnectionWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public IscsiConnectionWhereInput addNOTItem(IscsiConnectionWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<IscsiConnectionWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiConnectionWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<IscsiConnectionWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public IscsiConnectionWhereInput OR(List<IscsiConnectionWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public IscsiConnectionWhereInput addORItem(IscsiConnectionWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<IscsiConnectionWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiConnectionWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<IscsiConnectionWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1208,37 +1270,6 @@ public class IscsiConnectionWhereInput {
   }
 
 
-  public IscsiConnectionWhereInput NOT(List<IscsiConnectionWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public IscsiConnectionWhereInput addNOTItem(IscsiConnectionWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<IscsiConnectionWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiConnectionWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<IscsiConnectionWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public IscsiConnectionWhereInput nvmfSubsystem(NvmfSubsystemWhereInput nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
@@ -1259,37 +1290,6 @@ public class IscsiConnectionWhereInput {
 
   public void setNvmfSubsystem(NvmfSubsystemWhereInput nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
-  }
-
-
-  public IscsiConnectionWhereInput OR(List<IscsiConnectionWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public IscsiConnectionWhereInput addORItem(IscsiConnectionWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<IscsiConnectionWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiConnectionWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<IscsiConnectionWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -1519,6 +1519,8 @@ public class IscsiConnectionWhereInput {
     }
     IscsiConnectionWhereInput iscsiConnectionWhereInput = (IscsiConnectionWhereInput) o;
     return Objects.equals(this.AND, iscsiConnectionWhereInput.AND) &&
+        Objects.equals(this.NOT, iscsiConnectionWhereInput.NOT) &&
+        Objects.equals(this.OR, iscsiConnectionWhereInput.OR) &&
         Objects.equals(this.clientPort, iscsiConnectionWhereInput.clientPort) &&
         Objects.equals(this.clientPortGt, iscsiConnectionWhereInput.clientPortGt) &&
         Objects.equals(this.clientPortGte, iscsiConnectionWhereInput.clientPortGte) &&
@@ -1558,9 +1560,7 @@ public class IscsiConnectionWhereInput {
         Objects.equals(this.initiatorIpNotStartsWith, iscsiConnectionWhereInput.initiatorIpNotStartsWith) &&
         Objects.equals(this.initiatorIpStartsWith, iscsiConnectionWhereInput.initiatorIpStartsWith) &&
         Objects.equals(this.iscsiTarget, iscsiConnectionWhereInput.iscsiTarget) &&
-        Objects.equals(this.NOT, iscsiConnectionWhereInput.NOT) &&
         Objects.equals(this.nvmfSubsystem, iscsiConnectionWhereInput.nvmfSubsystem) &&
-        Objects.equals(this.OR, iscsiConnectionWhereInput.OR) &&
         Objects.equals(this.trType, iscsiConnectionWhereInput.trType) &&
         Objects.equals(this.trTypeIn, iscsiConnectionWhereInput.trTypeIn) &&
         Objects.equals(this.trTypeNot, iscsiConnectionWhereInput.trTypeNot) &&
@@ -1577,7 +1577,7 @@ public class IscsiConnectionWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clientPort, clientPortGt, clientPortGte, clientPortIn, clientPortLt, clientPortLte, clientPortNot, clientPortNotIn, cluster, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, initiatorIp, initiatorIpContains, initiatorIpEndsWith, initiatorIpGt, initiatorIpGte, initiatorIpIn, initiatorIpLt, initiatorIpLte, initiatorIpNot, initiatorIpNotContains, initiatorIpNotEndsWith, initiatorIpNotIn, initiatorIpNotStartsWith, initiatorIpStartsWith, iscsiTarget, NOT, nvmfSubsystem, OR, trType, trTypeIn, trTypeNot, trTypeNotIn, type, typeIn, typeNot, typeNotIn);
+    return Objects.hash(AND, NOT, OR, clientPort, clientPortGt, clientPortGte, clientPortIn, clientPortLt, clientPortLte, clientPortNot, clientPortNotIn, cluster, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, initiatorIp, initiatorIpContains, initiatorIpEndsWith, initiatorIpGt, initiatorIpGte, initiatorIpIn, initiatorIpLt, initiatorIpLte, initiatorIpNot, initiatorIpNotContains, initiatorIpNotEndsWith, initiatorIpNotIn, initiatorIpNotStartsWith, initiatorIpStartsWith, iscsiTarget, nvmfSubsystem, trType, trTypeIn, trTypeNot, trTypeNotIn, type, typeIn, typeNot, typeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1592,6 +1592,8 @@ public class IscsiConnectionWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiConnectionWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clientPort: ").append(toIndentedString(clientPort)).append("\n");
     sb.append("    clientPortGt: ").append(toIndentedString(clientPortGt)).append("\n");
     sb.append("    clientPortGte: ").append(toIndentedString(clientPortGte)).append("\n");
@@ -1631,9 +1633,7 @@ public class IscsiConnectionWhereInput {
     sb.append("    initiatorIpNotStartsWith: ").append(toIndentedString(initiatorIpNotStartsWith)).append("\n");
     sb.append("    initiatorIpStartsWith: ").append(toIndentedString(initiatorIpStartsWith)).append("\n");
     sb.append("    iscsiTarget: ").append(toIndentedString(iscsiTarget)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    nvmfSubsystem: ").append(toIndentedString(nvmfSubsystem)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    trType: ").append(toIndentedString(trType)).append("\n");
     sb.append("    trTypeIn: ").append(toIndentedString(trTypeIn)).append("\n");
     sb.append("    trTypeNot: ").append(toIndentedString(trTypeNot)).append("\n");

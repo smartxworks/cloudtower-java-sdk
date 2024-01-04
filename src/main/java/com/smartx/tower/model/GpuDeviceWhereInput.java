@@ -29,6 +29,14 @@ public class GpuDeviceWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<GpuDeviceWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<GpuDeviceWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<GpuDeviceWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ASSIGNED_VGPUS_NUM = "assigned_vgpus_num";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_VGPUS_NUM)
   private Integer assignedVgpusNum;
@@ -573,14 +581,6 @@ public class GpuDeviceWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<GpuDeviceWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<GpuDeviceWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   private GpuDeviceStatus status;
@@ -800,6 +800,68 @@ public class GpuDeviceWhereInput {
 
   public void setAND(List<GpuDeviceWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public GpuDeviceWhereInput NOT(List<GpuDeviceWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public GpuDeviceWhereInput addNOTItem(GpuDeviceWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<GpuDeviceWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<GpuDeviceWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<GpuDeviceWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public GpuDeviceWhereInput OR(List<GpuDeviceWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public GpuDeviceWhereInput addORItem(GpuDeviceWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<GpuDeviceWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<GpuDeviceWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<GpuDeviceWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -4107,68 +4169,6 @@ public class GpuDeviceWhereInput {
   }
 
 
-  public GpuDeviceWhereInput NOT(List<GpuDeviceWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public GpuDeviceWhereInput addNOTItem(GpuDeviceWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<GpuDeviceWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<GpuDeviceWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<GpuDeviceWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public GpuDeviceWhereInput OR(List<GpuDeviceWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public GpuDeviceWhereInput addORItem(GpuDeviceWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<GpuDeviceWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<GpuDeviceWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<GpuDeviceWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public GpuDeviceWhereInput status(GpuDeviceStatus status) {
     
     this.status = status;
@@ -5340,6 +5340,8 @@ public class GpuDeviceWhereInput {
     }
     GpuDeviceWhereInput gpuDeviceWhereInput = (GpuDeviceWhereInput) o;
     return Objects.equals(this.AND, gpuDeviceWhereInput.AND) &&
+        Objects.equals(this.NOT, gpuDeviceWhereInput.NOT) &&
+        Objects.equals(this.OR, gpuDeviceWhereInput.OR) &&
         Objects.equals(this.assignedVgpusNum, gpuDeviceWhereInput.assignedVgpusNum) &&
         Objects.equals(this.assignedVgpusNumGt, gpuDeviceWhereInput.assignedVgpusNumGt) &&
         Objects.equals(this.assignedVgpusNumGte, gpuDeviceWhereInput.assignedVgpusNumGte) &&
@@ -5476,8 +5478,6 @@ public class GpuDeviceWhereInput {
         Objects.equals(this.nameNotIn, gpuDeviceWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, gpuDeviceWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, gpuDeviceWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, gpuDeviceWhereInput.NOT) &&
-        Objects.equals(this.OR, gpuDeviceWhereInput.OR) &&
         Objects.equals(this.status, gpuDeviceWhereInput.status) &&
         Objects.equals(this.statusIn, gpuDeviceWhereInput.statusIn) &&
         Objects.equals(this.statusNot, gpuDeviceWhereInput.statusNot) &&
@@ -5533,7 +5533,7 @@ public class GpuDeviceWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, assignedVgpusNum, assignedVgpusNumGt, assignedVgpusNumGte, assignedVgpusNumIn, assignedVgpusNumLt, assignedVgpusNumLte, assignedVgpusNumNot, assignedVgpusNumNotIn, availableVgpusNum, availableVgpusNumGt, availableVgpusNumGte, availableVgpusNumIn, availableVgpusNumLt, availableVgpusNumLte, availableVgpusNumNot, availableVgpusNumNotIn, brand, brandContains, brandEndsWith, brandGt, brandGte, brandIn, brandLt, brandLte, brandNot, brandNotContains, brandNotEndsWith, brandNotIn, brandNotStartsWith, brandStartsWith, busLocation, busLocationContains, busLocationEndsWith, busLocationGt, busLocationGte, busLocationIn, busLocationLt, busLocationLte, busLocationNot, busLocationNotContains, busLocationNotEndsWith, busLocationNotIn, busLocationNotStartsWith, busLocationStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isNvidiaToolsReady, isNvidiaToolsReadyNot, isNvidiaVfsEnabled, isNvidiaVfsEnabledNot, isNvidiaVfsSupported, isNvidiaVfsSupportedNot, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, status, statusIn, statusNot, statusNotIn, userUsage, userUsageIn, userUsageNot, userUsageNotIn, userVgpuTypeId, userVgpuTypeIdContains, userVgpuTypeIdEndsWith, userVgpuTypeIdGt, userVgpuTypeIdGte, userVgpuTypeIdIn, userVgpuTypeIdLt, userVgpuTypeIdLte, userVgpuTypeIdNot, userVgpuTypeIdNotContains, userVgpuTypeIdNotEndsWith, userVgpuTypeIdNotIn, userVgpuTypeIdNotStartsWith, userVgpuTypeIdStartsWith, userVgpuTypeName, userVgpuTypeNameContains, userVgpuTypeNameEndsWith, userVgpuTypeNameGt, userVgpuTypeNameGte, userVgpuTypeNameIn, userVgpuTypeNameLt, userVgpuTypeNameLte, userVgpuTypeNameNot, userVgpuTypeNameNotContains, userVgpuTypeNameNotEndsWith, userVgpuTypeNameNotIn, userVgpuTypeNameNotStartsWith, userVgpuTypeNameStartsWith, vgpuInstanceNum, vgpuInstanceNumGt, vgpuInstanceNumGte, vgpuInstanceNumIn, vgpuInstanceNumLt, vgpuInstanceNumLte, vgpuInstanceNumNot, vgpuInstanceNumNotIn, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, assignedVgpusNum, assignedVgpusNumGt, assignedVgpusNumGte, assignedVgpusNumIn, assignedVgpusNumLt, assignedVgpusNumLte, assignedVgpusNumNot, assignedVgpusNumNotIn, availableVgpusNum, availableVgpusNumGt, availableVgpusNumGte, availableVgpusNumIn, availableVgpusNumLt, availableVgpusNumLte, availableVgpusNumNot, availableVgpusNumNotIn, brand, brandContains, brandEndsWith, brandGt, brandGte, brandIn, brandLt, brandLte, brandNot, brandNotContains, brandNotEndsWith, brandNotIn, brandNotStartsWith, brandStartsWith, busLocation, busLocationContains, busLocationEndsWith, busLocationGt, busLocationGte, busLocationIn, busLocationLt, busLocationLte, busLocationNot, busLocationNotContains, busLocationNotEndsWith, busLocationNotIn, busLocationNotStartsWith, busLocationStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isNvidiaToolsReady, isNvidiaToolsReadyNot, isNvidiaVfsEnabled, isNvidiaVfsEnabledNot, isNvidiaVfsSupported, isNvidiaVfsSupportedNot, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, model, modelContains, modelEndsWith, modelGt, modelGte, modelIn, modelLt, modelLte, modelNot, modelNotContains, modelNotEndsWith, modelNotIn, modelNotStartsWith, modelStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, status, statusIn, statusNot, statusNotIn, userUsage, userUsageIn, userUsageNot, userUsageNotIn, userVgpuTypeId, userVgpuTypeIdContains, userVgpuTypeIdEndsWith, userVgpuTypeIdGt, userVgpuTypeIdGte, userVgpuTypeIdIn, userVgpuTypeIdLt, userVgpuTypeIdLte, userVgpuTypeIdNot, userVgpuTypeIdNotContains, userVgpuTypeIdNotEndsWith, userVgpuTypeIdNotIn, userVgpuTypeIdNotStartsWith, userVgpuTypeIdStartsWith, userVgpuTypeName, userVgpuTypeNameContains, userVgpuTypeNameEndsWith, userVgpuTypeNameGt, userVgpuTypeNameGte, userVgpuTypeNameIn, userVgpuTypeNameLt, userVgpuTypeNameLte, userVgpuTypeNameNot, userVgpuTypeNameNotContains, userVgpuTypeNameNotEndsWith, userVgpuTypeNameNotIn, userVgpuTypeNameNotStartsWith, userVgpuTypeNameStartsWith, vgpuInstanceNum, vgpuInstanceNumGt, vgpuInstanceNumGte, vgpuInstanceNumIn, vgpuInstanceNumLt, vgpuInstanceNumLte, vgpuInstanceNumNot, vgpuInstanceNumNotIn, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5548,6 +5548,8 @@ public class GpuDeviceWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class GpuDeviceWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    assignedVgpusNum: ").append(toIndentedString(assignedVgpusNum)).append("\n");
     sb.append("    assignedVgpusNumGt: ").append(toIndentedString(assignedVgpusNumGt)).append("\n");
     sb.append("    assignedVgpusNumGte: ").append(toIndentedString(assignedVgpusNumGte)).append("\n");
@@ -5684,8 +5686,6 @@ public class GpuDeviceWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusIn: ").append(toIndentedString(statusIn)).append("\n");
     sb.append("    statusNot: ").append(toIndentedString(statusNot)).append("\n");

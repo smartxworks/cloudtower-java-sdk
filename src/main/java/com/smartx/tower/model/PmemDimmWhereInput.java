@@ -26,6 +26,14 @@ public class PmemDimmWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<PmemDimmWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<PmemDimmWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<PmemDimmWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CAPACITY = "capacity";
   @SerializedName(SERIALIZED_NAME_CAPACITY)
   private Long capacity;
@@ -306,10 +314,6 @@ public class PmemDimmWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<PmemDimmWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NUMA_NODE = "numa_node";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE)
   private Integer numaNode;
@@ -341,10 +345,6 @@ public class PmemDimmWhereInput {
   public static final String SERIALIZED_NAME_NUMA_NODE_NOT_IN = "numa_node_not_in";
   @SerializedName(SERIALIZED_NAME_NUMA_NODE_NOT_IN)
   private List<Integer> numaNodeNotIn = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<PmemDimmWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_PART_NUMBER = "part_number";
   @SerializedName(SERIALIZED_NAME_PART_NUMBER)
@@ -521,6 +521,68 @@ public class PmemDimmWhereInput {
 
   public void setAND(List<PmemDimmWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public PmemDimmWhereInput NOT(List<PmemDimmWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public PmemDimmWhereInput addNOTItem(PmemDimmWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<PmemDimmWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<PmemDimmWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<PmemDimmWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public PmemDimmWhereInput OR(List<PmemDimmWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public PmemDimmWhereInput addORItem(PmemDimmWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<PmemDimmWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<PmemDimmWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<PmemDimmWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2230,37 +2292,6 @@ public class PmemDimmWhereInput {
   }
 
 
-  public PmemDimmWhereInput NOT(List<PmemDimmWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public PmemDimmWhereInput addNOTItem(PmemDimmWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<PmemDimmWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<PmemDimmWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<PmemDimmWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public PmemDimmWhereInput numaNode(Integer numaNode) {
     
     this.numaNode = numaNode;
@@ -2458,37 +2489,6 @@ public class PmemDimmWhereInput {
 
   public void setNumaNodeNotIn(List<Integer> numaNodeNotIn) {
     this.numaNodeNotIn = numaNodeNotIn;
-  }
-
-
-  public PmemDimmWhereInput OR(List<PmemDimmWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public PmemDimmWhereInput addORItem(PmemDimmWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<PmemDimmWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<PmemDimmWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<PmemDimmWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -3378,6 +3378,8 @@ public class PmemDimmWhereInput {
     }
     PmemDimmWhereInput pmemDimmWhereInput = (PmemDimmWhereInput) o;
     return Objects.equals(this.AND, pmemDimmWhereInput.AND) &&
+        Objects.equals(this.NOT, pmemDimmWhereInput.NOT) &&
+        Objects.equals(this.OR, pmemDimmWhereInput.OR) &&
         Objects.equals(this.capacity, pmemDimmWhereInput.capacity) &&
         Objects.equals(this.capacityGt, pmemDimmWhereInput.capacityGt) &&
         Objects.equals(this.capacityGte, pmemDimmWhereInput.capacityGte) &&
@@ -3448,7 +3450,6 @@ public class PmemDimmWhereInput {
         Objects.equals(this.nameNotIn, pmemDimmWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, pmemDimmWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, pmemDimmWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, pmemDimmWhereInput.NOT) &&
         Objects.equals(this.numaNode, pmemDimmWhereInput.numaNode) &&
         Objects.equals(this.numaNodeGt, pmemDimmWhereInput.numaNodeGt) &&
         Objects.equals(this.numaNodeGte, pmemDimmWhereInput.numaNodeGte) &&
@@ -3457,7 +3458,6 @@ public class PmemDimmWhereInput {
         Objects.equals(this.numaNodeLte, pmemDimmWhereInput.numaNodeLte) &&
         Objects.equals(this.numaNodeNot, pmemDimmWhereInput.numaNodeNot) &&
         Objects.equals(this.numaNodeNotIn, pmemDimmWhereInput.numaNodeNotIn) &&
-        Objects.equals(this.OR, pmemDimmWhereInput.OR) &&
         Objects.equals(this.partNumber, pmemDimmWhereInput.partNumber) &&
         Objects.equals(this.partNumberContains, pmemDimmWhereInput.partNumberContains) &&
         Objects.equals(this.partNumberEndsWith, pmemDimmWhereInput.partNumberEndsWith) &&
@@ -3502,7 +3502,7 @@ public class PmemDimmWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, capacity, capacityGt, capacityGte, capacityIn, capacityLt, capacityLte, capacityNot, capacityNotIn, deviceLocator, deviceLocatorContains, deviceLocatorEndsWith, deviceLocatorGt, deviceLocatorGte, deviceLocatorIn, deviceLocatorLt, deviceLocatorLte, deviceLocatorNot, deviceLocatorNotContains, deviceLocatorNotEndsWith, deviceLocatorNotIn, deviceLocatorNotStartsWith, deviceLocatorStartsWith, disk, healthStatus, healthStatusIn, healthStatusNot, healthStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, numaNode, numaNodeGt, numaNodeGte, numaNodeIn, numaNodeLt, numaNodeLte, numaNodeNot, numaNodeNotIn, OR, partNumber, partNumberContains, partNumberEndsWith, partNumberGt, partNumberGte, partNumberIn, partNumberLt, partNumberLte, partNumberNot, partNumberNotContains, partNumberNotEndsWith, partNumberNotIn, partNumberNotStartsWith, partNumberStartsWith, remainingLifePercent, remainingLifePercentGt, remainingLifePercentGte, remainingLifePercentIn, remainingLifePercentLt, remainingLifePercentLte, remainingLifePercentNot, remainingLifePercentNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
+    return Objects.hash(AND, NOT, OR, capacity, capacityGt, capacityGte, capacityIn, capacityLt, capacityLte, capacityNot, capacityNotIn, deviceLocator, deviceLocatorContains, deviceLocatorEndsWith, deviceLocatorGt, deviceLocatorGte, deviceLocatorIn, deviceLocatorLt, deviceLocatorLte, deviceLocatorNot, deviceLocatorNotContains, deviceLocatorNotEndsWith, deviceLocatorNotIn, deviceLocatorNotStartsWith, deviceLocatorStartsWith, disk, healthStatus, healthStatusIn, healthStatusNot, healthStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, numaNode, numaNodeGt, numaNodeGte, numaNodeIn, numaNodeLt, numaNodeLte, numaNodeNot, numaNodeNotIn, partNumber, partNumberContains, partNumberEndsWith, partNumberGt, partNumberGte, partNumberIn, partNumberLt, partNumberLte, partNumberNot, partNumberNotContains, partNumberNotEndsWith, partNumberNotIn, partNumberNotStartsWith, partNumberStartsWith, remainingLifePercent, remainingLifePercentGt, remainingLifePercentGte, remainingLifePercentIn, remainingLifePercentLt, remainingLifePercentLte, remainingLifePercentNot, remainingLifePercentNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3517,6 +3517,8 @@ public class PmemDimmWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class PmemDimmWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    capacity: ").append(toIndentedString(capacity)).append("\n");
     sb.append("    capacityGt: ").append(toIndentedString(capacityGt)).append("\n");
     sb.append("    capacityGte: ").append(toIndentedString(capacityGte)).append("\n");
@@ -3587,7 +3589,6 @@ public class PmemDimmWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    numaNode: ").append(toIndentedString(numaNode)).append("\n");
     sb.append("    numaNodeGt: ").append(toIndentedString(numaNodeGt)).append("\n");
     sb.append("    numaNodeGte: ").append(toIndentedString(numaNodeGte)).append("\n");
@@ -3596,7 +3597,6 @@ public class PmemDimmWhereInput {
     sb.append("    numaNodeLte: ").append(toIndentedString(numaNodeLte)).append("\n");
     sb.append("    numaNodeNot: ").append(toIndentedString(numaNodeNot)).append("\n");
     sb.append("    numaNodeNotIn: ").append(toIndentedString(numaNodeNotIn)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    partNumber: ").append(toIndentedString(partNumber)).append("\n");
     sb.append("    partNumberContains: ").append(toIndentedString(partNumberContains)).append("\n");
     sb.append("    partNumberEndsWith: ").append(toIndentedString(partNumberEndsWith)).append("\n");

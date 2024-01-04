@@ -24,7 +24,9 @@ public enum TaskType {
   
   REPLICATION("REPLICATION"),
   
-  RESOLVER("RESOLVER");
+  RESOLVER("RESOLVER"),
+  
+  SFS("SFS");
 
   private String value;
 

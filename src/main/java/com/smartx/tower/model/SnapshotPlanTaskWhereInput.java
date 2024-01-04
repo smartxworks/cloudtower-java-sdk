@@ -29,6 +29,14 @@ public class SnapshotPlanTaskWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SnapshotPlanTaskWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SnapshotPlanTaskWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SnapshotPlanTaskWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -201,14 +209,6 @@ public class SnapshotPlanTaskWhereInput {
   @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
   private String localIdStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SnapshotPlanTaskWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SnapshotPlanTaskWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshotGroup";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
   private SnapshotGroupWhereInput snapshotGroup;
@@ -312,6 +312,68 @@ public class SnapshotPlanTaskWhereInput {
 
   public void setAND(List<SnapshotPlanTaskWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SnapshotPlanTaskWhereInput NOT(List<SnapshotPlanTaskWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SnapshotPlanTaskWhereInput addNOTItem(SnapshotPlanTaskWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SnapshotPlanTaskWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnapshotPlanTaskWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SnapshotPlanTaskWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SnapshotPlanTaskWhereInput OR(List<SnapshotPlanTaskWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SnapshotPlanTaskWhereInput addORItem(SnapshotPlanTaskWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SnapshotPlanTaskWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnapshotPlanTaskWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SnapshotPlanTaskWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1368,68 +1430,6 @@ public class SnapshotPlanTaskWhereInput {
   }
 
 
-  public SnapshotPlanTaskWhereInput NOT(List<SnapshotPlanTaskWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SnapshotPlanTaskWhereInput addNOTItem(SnapshotPlanTaskWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SnapshotPlanTaskWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnapshotPlanTaskWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SnapshotPlanTaskWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SnapshotPlanTaskWhereInput OR(List<SnapshotPlanTaskWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SnapshotPlanTaskWhereInput addORItem(SnapshotPlanTaskWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SnapshotPlanTaskWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnapshotPlanTaskWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SnapshotPlanTaskWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SnapshotPlanTaskWhereInput snapshotGroup(SnapshotGroupWhereInput snapshotGroup) {
     
     this.snapshotGroup = snapshotGroup;
@@ -1902,6 +1902,8 @@ public class SnapshotPlanTaskWhereInput {
     }
     SnapshotPlanTaskWhereInput snapshotPlanTaskWhereInput = (SnapshotPlanTaskWhereInput) o;
     return Objects.equals(this.AND, snapshotPlanTaskWhereInput.AND) &&
+        Objects.equals(this.NOT, snapshotPlanTaskWhereInput.NOT) &&
+        Objects.equals(this.OR, snapshotPlanTaskWhereInput.OR) &&
         Objects.equals(this.cluster, snapshotPlanTaskWhereInput.cluster) &&
         Objects.equals(this.endTime, snapshotPlanTaskWhereInput.endTime) &&
         Objects.equals(this.endTimeGt, snapshotPlanTaskWhereInput.endTimeGt) &&
@@ -1945,8 +1947,6 @@ public class SnapshotPlanTaskWhereInput {
         Objects.equals(this.localIdNotIn, snapshotPlanTaskWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, snapshotPlanTaskWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, snapshotPlanTaskWhereInput.localIdStartsWith) &&
-        Objects.equals(this.NOT, snapshotPlanTaskWhereInput.NOT) &&
-        Objects.equals(this.OR, snapshotPlanTaskWhereInput.OR) &&
         Objects.equals(this.snapshotGroup, snapshotPlanTaskWhereInput.snapshotGroup) &&
         Objects.equals(this.snapshotPlan, snapshotPlanTaskWhereInput.snapshotPlan) &&
         Objects.equals(this.startTime, snapshotPlanTaskWhereInput.startTime) &&
@@ -1973,7 +1973,7 @@ public class SnapshotPlanTaskWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, endTime, endTimeGt, endTimeGte, endTimeIn, endTimeLt, endTimeLte, endTimeNot, endTimeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, NOT, OR, snapshotGroup, snapshotPlan, startTime, startTimeGt, startTimeGte, startTimeIn, startTimeLt, startTimeLte, startTimeNot, startTimeNotIn, status, statusIn, statusNot, statusNotIn, type, typeIn, typeNot, typeNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, endTime, endTimeGt, endTimeGte, endTimeIn, endTimeLt, endTimeLte, endTimeNot, endTimeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, snapshotGroup, snapshotPlan, startTime, startTimeGt, startTimeGte, startTimeIn, startTimeLt, startTimeLte, startTimeNot, startTimeNotIn, status, statusIn, statusNot, statusNotIn, type, typeIn, typeNot, typeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1988,6 +1988,8 @@ public class SnapshotPlanTaskWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnapshotPlanTaskWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
     sb.append("    endTimeGt: ").append(toIndentedString(endTimeGt)).append("\n");
@@ -2031,8 +2033,6 @@ public class SnapshotPlanTaskWhereInput {
     sb.append("    localIdNotIn: ").append(toIndentedString(localIdNotIn)).append("\n");
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    snapshotGroup: ").append(toIndentedString(snapshotGroup)).append("\n");
     sb.append("    snapshotPlan: ").append(toIndentedString(snapshotPlan)).append("\n");
     sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");

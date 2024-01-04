@@ -27,6 +27,14 @@ public class ApplicationWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ApplicationWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ApplicationWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ApplicationWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -286,14 +294,6 @@ public class ApplicationWhereInput {
   public static final String SERIALIZED_NAME_MEMORY_NOT_IN = "memory_not_in";
   @SerializedName(SERIALIZED_NAME_MEMORY_NOT_IN)
   private List<Long> memoryNotIn = null;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ApplicationWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ApplicationWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
@@ -570,6 +570,68 @@ public class ApplicationWhereInput {
 
   public void setAND(List<ApplicationWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ApplicationWhereInput NOT(List<ApplicationWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ApplicationWhereInput addNOTItem(ApplicationWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ApplicationWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ApplicationWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ApplicationWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ApplicationWhereInput OR(List<ApplicationWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ApplicationWhereInput addORItem(ApplicationWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ApplicationWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ApplicationWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ApplicationWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2148,68 +2210,6 @@ public class ApplicationWhereInput {
   }
 
 
-  public ApplicationWhereInput NOT(List<ApplicationWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ApplicationWhereInput addNOTItem(ApplicationWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ApplicationWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ApplicationWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ApplicationWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ApplicationWhereInput OR(List<ApplicationWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ApplicationWhereInput addORItem(ApplicationWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ApplicationWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ApplicationWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ApplicationWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ApplicationWhereInput state(ApplicationState state) {
     
     this.state = state;
@@ -3735,6 +3735,8 @@ public class ApplicationWhereInput {
     }
     ApplicationWhereInput applicationWhereInput = (ApplicationWhereInput) o;
     return Objects.equals(this.AND, applicationWhereInput.AND) &&
+        Objects.equals(this.NOT, applicationWhereInput.NOT) &&
+        Objects.equals(this.OR, applicationWhereInput.OR) &&
         Objects.equals(this.cluster, applicationWhereInput.cluster) &&
         Objects.equals(this.errorMessage, applicationWhereInput.errorMessage) &&
         Objects.equals(this.errorMessageContains, applicationWhereInput.errorMessageContains) &&
@@ -3800,8 +3802,6 @@ public class ApplicationWhereInput {
         Objects.equals(this.memoryLte, applicationWhereInput.memoryLte) &&
         Objects.equals(this.memoryNot, applicationWhereInput.memoryNot) &&
         Objects.equals(this.memoryNotIn, applicationWhereInput.memoryNotIn) &&
-        Objects.equals(this.NOT, applicationWhereInput.NOT) &&
-        Objects.equals(this.OR, applicationWhereInput.OR) &&
         Objects.equals(this.state, applicationWhereInput.state) &&
         Objects.equals(this.stateIn, applicationWhereInput.stateIn) &&
         Objects.equals(this.stateNot, applicationWhereInput.stateNot) &&
@@ -3871,7 +3871,7 @@ public class ApplicationWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, errorMessage, errorMessageContains, errorMessageEndsWith, errorMessageGt, errorMessageGte, errorMessageIn, errorMessageLt, errorMessageLte, errorMessageNot, errorMessageNotContains, errorMessageNotEndsWith, errorMessageNotIn, errorMessageNotStartsWith, errorMessageStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, imageName, imageNameContains, imageNameEndsWith, imageNameGt, imageNameGte, imageNameIn, imageNameLt, imageNameLte, imageNameNot, imageNameNotContains, imageNameNotEndsWith, imageNameNotIn, imageNameNotStartsWith, imageNameStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, NOT, OR, state, stateIn, stateNot, stateNotIn, storageIp, storageIpContains, storageIpEndsWith, storageIpGt, storageIpGte, storageIpIn, storageIpLt, storageIpLte, storageIpNot, storageIpNotContains, storageIpNotEndsWith, storageIpNotIn, storageIpNotStartsWith, storageIpStartsWith, type, typeIn, typeNot, typeNotIn, updateTime, updateTimeGt, updateTimeGte, updateTimeIn, updateTimeLt, updateTimeLte, updateTimeNot, updateTimeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith, vm, volumeSize, volumeSizeGt, volumeSizeGte, volumeSizeIn, volumeSizeLt, volumeSizeLte, volumeSizeNot, volumeSizeNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, errorMessage, errorMessageContains, errorMessageEndsWith, errorMessageGt, errorMessageGte, errorMessageIn, errorMessageLt, errorMessageLte, errorMessageNot, errorMessageNotContains, errorMessageNotEndsWith, errorMessageNotIn, errorMessageNotStartsWith, errorMessageStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, imageName, imageNameContains, imageNameEndsWith, imageNameGt, imageNameGte, imageNameIn, imageNameLt, imageNameLte, imageNameNot, imageNameNotContains, imageNameNotEndsWith, imageNameNotIn, imageNameNotStartsWith, imageNameStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, state, stateIn, stateNot, stateNotIn, storageIp, storageIpContains, storageIpEndsWith, storageIpGt, storageIpGte, storageIpIn, storageIpLt, storageIpLte, storageIpNot, storageIpNotContains, storageIpNotEndsWith, storageIpNotIn, storageIpNotStartsWith, storageIpStartsWith, type, typeIn, typeNot, typeNotIn, updateTime, updateTimeGt, updateTimeGte, updateTimeIn, updateTimeLt, updateTimeLte, updateTimeNot, updateTimeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith, vm, volumeSize, volumeSizeGt, volumeSizeGte, volumeSizeIn, volumeSizeLt, volumeSizeLte, volumeSizeNot, volumeSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3886,6 +3886,8 @@ public class ApplicationWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
     sb.append("    errorMessageContains: ").append(toIndentedString(errorMessageContains)).append("\n");
@@ -3951,8 +3953,6 @@ public class ApplicationWhereInput {
     sb.append("    memoryLte: ").append(toIndentedString(memoryLte)).append("\n");
     sb.append("    memoryNot: ").append(toIndentedString(memoryNot)).append("\n");
     sb.append("    memoryNotIn: ").append(toIndentedString(memoryNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    stateIn: ").append(toIndentedString(stateIn)).append("\n");
     sb.append("    stateNot: ").append(toIndentedString(stateNot)).append("\n");

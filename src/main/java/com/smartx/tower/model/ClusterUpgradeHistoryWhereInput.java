@@ -24,6 +24,14 @@ public class ClusterUpgradeHistoryWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ClusterUpgradeHistoryWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ClusterUpgradeHistoryWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ClusterUpgradeHistoryWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -171,14 +179,6 @@ public class ClusterUpgradeHistoryWhereInput {
   public static final String SERIALIZED_NAME_LOCAL_ID_STARTS_WITH = "local_id_starts_with";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
   private String localIdStartsWith;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ClusterUpgradeHistoryWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ClusterUpgradeHistoryWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
@@ -379,6 +379,68 @@ public class ClusterUpgradeHistoryWhereInput {
 
   public void setAND(List<ClusterUpgradeHistoryWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ClusterUpgradeHistoryWhereInput NOT(List<ClusterUpgradeHistoryWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ClusterUpgradeHistoryWhereInput addNOTItem(ClusterUpgradeHistoryWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ClusterUpgradeHistoryWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterUpgradeHistoryWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ClusterUpgradeHistoryWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ClusterUpgradeHistoryWhereInput OR(List<ClusterUpgradeHistoryWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ClusterUpgradeHistoryWhereInput addORItem(ClusterUpgradeHistoryWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ClusterUpgradeHistoryWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ClusterUpgradeHistoryWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ClusterUpgradeHistoryWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1278,68 +1340,6 @@ public class ClusterUpgradeHistoryWhereInput {
 
   public void setLocalIdStartsWith(String localIdStartsWith) {
     this.localIdStartsWith = localIdStartsWith;
-  }
-
-
-  public ClusterUpgradeHistoryWhereInput NOT(List<ClusterUpgradeHistoryWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ClusterUpgradeHistoryWhereInput addNOTItem(ClusterUpgradeHistoryWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ClusterUpgradeHistoryWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterUpgradeHistoryWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ClusterUpgradeHistoryWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ClusterUpgradeHistoryWhereInput OR(List<ClusterUpgradeHistoryWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ClusterUpgradeHistoryWhereInput addORItem(ClusterUpgradeHistoryWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ClusterUpgradeHistoryWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ClusterUpgradeHistoryWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ClusterUpgradeHistoryWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -2367,6 +2367,8 @@ public class ClusterUpgradeHistoryWhereInput {
     }
     ClusterUpgradeHistoryWhereInput clusterUpgradeHistoryWhereInput = (ClusterUpgradeHistoryWhereInput) o;
     return Objects.equals(this.AND, clusterUpgradeHistoryWhereInput.AND) &&
+        Objects.equals(this.NOT, clusterUpgradeHistoryWhereInput.NOT) &&
+        Objects.equals(this.OR, clusterUpgradeHistoryWhereInput.OR) &&
         Objects.equals(this.cluster, clusterUpgradeHistoryWhereInput.cluster) &&
         Objects.equals(this.date, clusterUpgradeHistoryWhereInput.date) &&
         Objects.equals(this.dateGt, clusterUpgradeHistoryWhereInput.dateGt) &&
@@ -2404,8 +2406,6 @@ public class ClusterUpgradeHistoryWhereInput {
         Objects.equals(this.localIdNotIn, clusterUpgradeHistoryWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, clusterUpgradeHistoryWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, clusterUpgradeHistoryWhereInput.localIdStartsWith) &&
-        Objects.equals(this.NOT, clusterUpgradeHistoryWhereInput.NOT) &&
-        Objects.equals(this.OR, clusterUpgradeHistoryWhereInput.OR) &&
         Objects.equals(this.result, clusterUpgradeHistoryWhereInput.result) &&
         Objects.equals(this.resultContains, clusterUpgradeHistoryWhereInput.resultContains) &&
         Objects.equals(this.resultEndsWith, clusterUpgradeHistoryWhereInput.resultEndsWith) &&
@@ -2456,7 +2456,7 @@ public class ClusterUpgradeHistoryWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, date, dateGt, dateGte, dateIn, dateLt, dateLte, dateNot, dateNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, NOT, OR, result, resultContains, resultEndsWith, resultGt, resultGte, resultIn, resultLt, resultLte, resultNot, resultNotContains, resultNotEndsWith, resultNotIn, resultNotStartsWith, resultStartsWith, taskUuid, taskUuidContains, taskUuidEndsWith, taskUuidGt, taskUuidGte, taskUuidIn, taskUuidLt, taskUuidLte, taskUuidNot, taskUuidNotContains, taskUuidNotEndsWith, taskUuidNotIn, taskUuidNotStartsWith, taskUuidStartsWith, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
+    return Objects.hash(AND, NOT, OR, cluster, date, dateGt, dateGte, dateIn, dateLt, dateLte, dateNot, dateNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, result, resultContains, resultEndsWith, resultGt, resultGte, resultIn, resultLt, resultLte, resultNot, resultNotContains, resultNotEndsWith, resultNotIn, resultNotStartsWith, resultStartsWith, taskUuid, taskUuidContains, taskUuidEndsWith, taskUuidGt, taskUuidGte, taskUuidIn, taskUuidLt, taskUuidLte, taskUuidNot, taskUuidNotContains, taskUuidNotEndsWith, taskUuidNotIn, taskUuidNotStartsWith, taskUuidStartsWith, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2471,6 +2471,8 @@ public class ClusterUpgradeHistoryWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClusterUpgradeHistoryWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    dateGt: ").append(toIndentedString(dateGt)).append("\n");
@@ -2508,8 +2510,6 @@ public class ClusterUpgradeHistoryWhereInput {
     sb.append("    localIdNotIn: ").append(toIndentedString(localIdNotIn)).append("\n");
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("    resultContains: ").append(toIndentedString(resultContains)).append("\n");
     sb.append("    resultEndsWith: ").append(toIndentedString(resultEndsWith)).append("\n");
