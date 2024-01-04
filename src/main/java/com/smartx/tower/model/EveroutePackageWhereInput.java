@@ -25,6 +25,14 @@ public class EveroutePackageWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<EveroutePackageWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<EveroutePackageWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<EveroutePackageWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ARCH = "arch";
   @SerializedName(SERIALIZED_NAME_ARCH)
   private Architecture arch;
@@ -257,14 +265,6 @@ public class EveroutePackageWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<EveroutePackageWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<EveroutePackageWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -384,6 +384,68 @@ public class EveroutePackageWhereInput {
 
   public void setAND(List<EveroutePackageWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public EveroutePackageWhereInput NOT(List<EveroutePackageWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public EveroutePackageWhereInput addNOTItem(EveroutePackageWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<EveroutePackageWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EveroutePackageWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<EveroutePackageWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public EveroutePackageWhereInput OR(List<EveroutePackageWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public EveroutePackageWhereInput addORItem(EveroutePackageWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<EveroutePackageWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<EveroutePackageWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<EveroutePackageWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1817,68 +1879,6 @@ public class EveroutePackageWhereInput {
   }
 
 
-  public EveroutePackageWhereInput NOT(List<EveroutePackageWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public EveroutePackageWhereInput addNOTItem(EveroutePackageWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<EveroutePackageWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<EveroutePackageWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<EveroutePackageWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public EveroutePackageWhereInput OR(List<EveroutePackageWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public EveroutePackageWhereInput addORItem(EveroutePackageWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<EveroutePackageWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<EveroutePackageWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<EveroutePackageWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public EveroutePackageWhereInput size(Long size) {
     
     this.size = size;
@@ -2427,6 +2427,8 @@ public class EveroutePackageWhereInput {
     }
     EveroutePackageWhereInput everoutePackageWhereInput = (EveroutePackageWhereInput) o;
     return Objects.equals(this.AND, everoutePackageWhereInput.AND) &&
+        Objects.equals(this.NOT, everoutePackageWhereInput.NOT) &&
+        Objects.equals(this.OR, everoutePackageWhereInput.OR) &&
         Objects.equals(this.arch, everoutePackageWhereInput.arch) &&
         Objects.equals(this.archIn, everoutePackageWhereInput.archIn) &&
         Objects.equals(this.archNot, everoutePackageWhereInput.archNot) &&
@@ -2485,8 +2487,6 @@ public class EveroutePackageWhereInput {
         Objects.equals(this.nameNotIn, everoutePackageWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, everoutePackageWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, everoutePackageWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, everoutePackageWhereInput.NOT) &&
-        Objects.equals(this.OR, everoutePackageWhereInput.OR) &&
         Objects.equals(this.size, everoutePackageWhereInput.size) &&
         Objects.equals(this.sizeGt, everoutePackageWhereInput.sizeGt) &&
         Objects.equals(this.sizeGte, everoutePackageWhereInput.sizeGte) &&
@@ -2517,7 +2517,7 @@ public class EveroutePackageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, arch, archIn, archNot, archNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
+    return Objects.hash(AND, NOT, OR, arch, archIn, archNot, archNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2532,6 +2532,8 @@ public class EveroutePackageWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class EveroutePackageWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    arch: ").append(toIndentedString(arch)).append("\n");
     sb.append("    archIn: ").append(toIndentedString(archIn)).append("\n");
     sb.append("    archNot: ").append(toIndentedString(archNot)).append("\n");
@@ -2590,8 +2592,6 @@ public class EveroutePackageWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    sizeGt: ").append(toIndentedString(sizeGt)).append("\n");
     sb.append("    sizeGte: ").append(toIndentedString(sizeGte)).append("\n");

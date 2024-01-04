@@ -29,6 +29,14 @@ public class ConsistencyGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ConsistencyGroupWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ConsistencyGroupWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ConsistencyGroupWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -353,14 +361,6 @@ public class ConsistencyGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_NAMESPACES_SOME)
   private NvmfNamespaceWhereInput namespacesSome;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ConsistencyGroupWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ConsistencyGroupWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -424,6 +424,68 @@ public class ConsistencyGroupWhereInput {
 
   public void setAND(List<ConsistencyGroupWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ConsistencyGroupWhereInput NOT(List<ConsistencyGroupWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ConsistencyGroupWhereInput addNOTItem(ConsistencyGroupWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ConsistencyGroupWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ConsistencyGroupWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ConsistencyGroupWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ConsistencyGroupWhereInput OR(List<ConsistencyGroupWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ConsistencyGroupWhereInput addORItem(ConsistencyGroupWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ConsistencyGroupWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ConsistencyGroupWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ConsistencyGroupWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2386,68 +2448,6 @@ public class ConsistencyGroupWhereInput {
   }
 
 
-  public ConsistencyGroupWhereInput NOT(List<ConsistencyGroupWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ConsistencyGroupWhereInput addNOTItem(ConsistencyGroupWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ConsistencyGroupWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ConsistencyGroupWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ConsistencyGroupWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ConsistencyGroupWhereInput OR(List<ConsistencyGroupWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ConsistencyGroupWhereInput addORItem(ConsistencyGroupWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ConsistencyGroupWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ConsistencyGroupWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ConsistencyGroupWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ConsistencyGroupWhereInput uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -2658,6 +2658,8 @@ public class ConsistencyGroupWhereInput {
     }
     ConsistencyGroupWhereInput consistencyGroupWhereInput = (ConsistencyGroupWhereInput) o;
     return Objects.equals(this.AND, consistencyGroupWhereInput.AND) &&
+        Objects.equals(this.NOT, consistencyGroupWhereInput.NOT) &&
+        Objects.equals(this.OR, consistencyGroupWhereInput.OR) &&
         Objects.equals(this.cluster, consistencyGroupWhereInput.cluster) &&
         Objects.equals(this.consistencyGroupSnapshotsEvery, consistencyGroupWhereInput.consistencyGroupSnapshotsEvery) &&
         Objects.equals(this.consistencyGroupSnapshotsNone, consistencyGroupWhereInput.consistencyGroupSnapshotsNone) &&
@@ -2739,8 +2741,6 @@ public class ConsistencyGroupWhereInput {
         Objects.equals(this.namespacesEvery, consistencyGroupWhereInput.namespacesEvery) &&
         Objects.equals(this.namespacesNone, consistencyGroupWhereInput.namespacesNone) &&
         Objects.equals(this.namespacesSome, consistencyGroupWhereInput.namespacesSome) &&
-        Objects.equals(this.NOT, consistencyGroupWhereInput.NOT) &&
-        Objects.equals(this.OR, consistencyGroupWhereInput.OR) &&
         Objects.equals(this.uniqueSize, consistencyGroupWhereInput.uniqueSize) &&
         Objects.equals(this.uniqueSizeGt, consistencyGroupWhereInput.uniqueSizeGt) &&
         Objects.equals(this.uniqueSizeGte, consistencyGroupWhereInput.uniqueSizeGte) &&
@@ -2757,7 +2757,7 @@ public class ConsistencyGroupWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, namespacesEvery, namespacesNone, namespacesSome, NOT, OR, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, consistencyGroupSnapshotsEvery, consistencyGroupSnapshotsNone, consistencyGroupSnapshotsSome, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, namespacesEvery, namespacesNone, namespacesSome, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2772,6 +2772,8 @@ public class ConsistencyGroupWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsistencyGroupWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    consistencyGroupSnapshotsEvery: ").append(toIndentedString(consistencyGroupSnapshotsEvery)).append("\n");
     sb.append("    consistencyGroupSnapshotsNone: ").append(toIndentedString(consistencyGroupSnapshotsNone)).append("\n");
@@ -2853,8 +2855,6 @@ public class ConsistencyGroupWhereInput {
     sb.append("    namespacesEvery: ").append(toIndentedString(namespacesEvery)).append("\n");
     sb.append("    namespacesNone: ").append(toIndentedString(namespacesNone)).append("\n");
     sb.append("    namespacesSome: ").append(toIndentedString(namespacesSome)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
     sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");

@@ -17,6 +17,7 @@ import java.io.IOException;
 import com.smartx.tower.model.AbortMigrateVmAcrossClusterParams;
 import com.smartx.tower.model.ConvertVmTemplateToVmParams;
 import com.smartx.tower.model.ErrorBody;
+import com.smartx.tower.model.GetVmVncInfoParams;
 import com.smartx.tower.model.GetVmsConnectionRequestBody;
 import com.smartx.tower.model.GetVmsRequestBody;
 import com.smartx.tower.model.InstallVmtoolsParams;
@@ -37,6 +38,7 @@ import com.smartx.tower.model.VmDeleteParams;
 import com.smartx.tower.model.VmEjectCdRomParams;
 import com.smartx.tower.model.VmExpandVmDiskParams;
 import com.smartx.tower.model.VmExportParams;
+import com.smartx.tower.model.VmGpuInfo;
 import com.smartx.tower.model.VmImportParams;
 import com.smartx.tower.model.VmMigrateAcrossClusterParams;
 import com.smartx.tower.model.VmMigrateParams;
@@ -62,6 +64,7 @@ import com.smartx.tower.model.VmUpdateNicParams;
 import com.smartx.tower.model.VmUpdateNicQosOptionsParams;
 import com.smartx.tower.model.VmUpdateOwnerParams;
 import com.smartx.tower.model.VmUpdateParams;
+import com.smartx.tower.model.VmVncInfo;
 import com.smartx.tower.model.WithTaskDeleteVm;
 import com.smartx.tower.model.WithTaskVm;
 import com.smartx.tower.model.WithTaskVmExportFile;
@@ -2481,6 +2484,284 @@ public class VmApi {
 
         okhttp3.Call localVarCall = forceRestartVmValidateBeforeCall(vmOperateParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getVmGpuDeviceInfo
+     * @param getVmsRequestBody  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getVmGpuDeviceInfoCall(GetVmsRequestBody getVmsRequestBody, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = getVmsRequestBody;
+
+        // create path and map variables
+        String localVarPath = "/get-vm-gpu-device-info";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getVmGpuDeviceInfoValidateBeforeCall(GetVmsRequestBody getVmsRequestBody, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'getVmsRequestBody' is set
+        if (getVmsRequestBody == null) {
+            throw new ApiException("Missing the required parameter 'getVmsRequestBody' when calling getVmGpuDeviceInfo(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getVmGpuDeviceInfoCall(getVmsRequestBody, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param getVmsRequestBody  (required)
+     * @return List&lt;VmGpuInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public List<VmGpuInfo> getVmGpuDeviceInfo(GetVmsRequestBody getVmsRequestBody) throws ApiException {
+        ApiResponse<List<VmGpuInfo>> localVarResp = getVmGpuDeviceInfoWithHttpInfo(getVmsRequestBody);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param getVmsRequestBody  (required)
+     * @return ApiResponse&lt;List&lt;VmGpuInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<VmGpuInfo>> getVmGpuDeviceInfoWithHttpInfo(GetVmsRequestBody getVmsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall = getVmGpuDeviceInfoValidateBeforeCall(getVmsRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<VmGpuInfo>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param getVmsRequestBody  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getVmGpuDeviceInfoAsync(GetVmsRequestBody getVmsRequestBody, final ApiCallback<List<VmGpuInfo>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getVmGpuDeviceInfoValidateBeforeCall(getVmsRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<VmGpuInfo>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getVmVncInfo
+     * @param getVmVncInfoParams  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getVmVncInfoCall(GetVmVncInfoParams getVmVncInfoParams, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = getVmVncInfoParams;
+
+        // create path and map variables
+        String localVarPath = "/get-vm-vnc-info";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getVmVncInfoValidateBeforeCall(GetVmVncInfoParams getVmVncInfoParams, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'getVmVncInfoParams' is set
+        if (getVmVncInfoParams == null) {
+            throw new ApiException("Missing the required parameter 'getVmVncInfoParams' when calling getVmVncInfo(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getVmVncInfoCall(getVmVncInfoParams, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param getVmVncInfoParams  (required)
+     * @return VmVncInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public VmVncInfo getVmVncInfo(GetVmVncInfoParams getVmVncInfoParams) throws ApiException {
+        ApiResponse<VmVncInfo> localVarResp = getVmVncInfoWithHttpInfo(getVmVncInfoParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param getVmVncInfoParams  (required)
+     * @return ApiResponse&lt;VmVncInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public ApiResponse<VmVncInfo> getVmVncInfoWithHttpInfo(GetVmVncInfoParams getVmVncInfoParams) throws ApiException {
+        okhttp3.Call localVarCall = getVmVncInfoValidateBeforeCall(getVmVncInfoParams, null);
+        Type localVarReturnType = new TypeToken<VmVncInfo>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param getVmVncInfoParams  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getVmVncInfoAsync(GetVmVncInfoParams getVmVncInfoParams, final ApiCallback<VmVncInfo> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getVmVncInfoValidateBeforeCall(getVmVncInfoParams, _callback);
+        Type localVarReturnType = new TypeToken<VmVncInfo>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

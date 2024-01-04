@@ -47,6 +47,14 @@ public class VmWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
   @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)
   private VmClockOffset clockOffset;
@@ -307,18 +315,6 @@ public class VmWhereInput {
   @SerializedName(SERIALIZED_NAME_DNS_SERVERS_STARTS_WITH)
   private String dnsServersStartsWith;
 
-  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS_EVERY = "entity_filter_results_every";
-  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS_EVERY)
-  private VmEntityFilterResultWhereInput entityFilterResultsEvery;
-
-  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS_NONE = "entity_filter_results_none";
-  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS_NONE)
-  private VmEntityFilterResultWhereInput entityFilterResultsNone;
-
-  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS_SOME = "entity_filter_results_some";
-  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS_SOME)
-  private VmEntityFilterResultWhereInput entityFilterResultsSome;
-
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -334,6 +330,18 @@ public class VmWhereInput {
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
   private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
+
+  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS_EVERY = "entity_filter_results_every";
+  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS_EVERY)
+  private VmEntityFilterResultWhereInput entityFilterResultsEvery;
+
+  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS_NONE = "entity_filter_results_none";
+  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS_NONE)
+  private VmEntityFilterResultWhereInput entityFilterResultsNone;
+
+  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS_SOME = "entity_filter_results_some";
+  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS_SOME)
+  private VmEntityFilterResultWhereInput entityFilterResultsSome;
 
   public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
   @SerializedName(SERIALIZED_NAME_FIRMWARE)
@@ -1219,14 +1227,6 @@ public class VmWhereInput {
   @SerializedName(SERIALIZED_NAME_NODE_IP_STARTS_WITH)
   private String nodeIpStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_ORIGINAL_NAME = "original_name";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_NAME)
   private String originalName;
@@ -1710,6 +1710,68 @@ public class VmWhereInput {
 
   public void setAND(List<VmWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmWhereInput NOT(List<VmWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmWhereInput addNOTItem(VmWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmWhereInput OR(List<VmWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmWhereInput addORItem(VmWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -3304,75 +3366,6 @@ public class VmWhereInput {
   }
 
 
-  public VmWhereInput entityFilterResultsEvery(VmEntityFilterResultWhereInput entityFilterResultsEvery) {
-    
-    this.entityFilterResultsEvery = entityFilterResultsEvery;
-    return this;
-  }
-
-   /**
-   * Get entityFilterResultsEvery
-   * @return entityFilterResultsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmEntityFilterResultWhereInput getEntityFilterResultsEvery() {
-    return entityFilterResultsEvery;
-  }
-
-
-  public void setEntityFilterResultsEvery(VmEntityFilterResultWhereInput entityFilterResultsEvery) {
-    this.entityFilterResultsEvery = entityFilterResultsEvery;
-  }
-
-
-  public VmWhereInput entityFilterResultsNone(VmEntityFilterResultWhereInput entityFilterResultsNone) {
-    
-    this.entityFilterResultsNone = entityFilterResultsNone;
-    return this;
-  }
-
-   /**
-   * Get entityFilterResultsNone
-   * @return entityFilterResultsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmEntityFilterResultWhereInput getEntityFilterResultsNone() {
-    return entityFilterResultsNone;
-  }
-
-
-  public void setEntityFilterResultsNone(VmEntityFilterResultWhereInput entityFilterResultsNone) {
-    this.entityFilterResultsNone = entityFilterResultsNone;
-  }
-
-
-  public VmWhereInput entityFilterResultsSome(VmEntityFilterResultWhereInput entityFilterResultsSome) {
-    
-    this.entityFilterResultsSome = entityFilterResultsSome;
-    return this;
-  }
-
-   /**
-   * Get entityFilterResultsSome
-   * @return entityFilterResultsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmEntityFilterResultWhereInput getEntityFilterResultsSome() {
-    return entityFilterResultsSome;
-  }
-
-
-  public void setEntityFilterResultsSome(VmEntityFilterResultWhereInput entityFilterResultsSome) {
-    this.entityFilterResultsSome = entityFilterResultsSome;
-  }
-
-
   public VmWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     
     this.entityAsyncStatus = entityAsyncStatus;
@@ -3478,6 +3471,75 @@ public class VmWhereInput {
 
   public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
     this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+  }
+
+
+  public VmWhereInput entityFilterResultsEvery(VmEntityFilterResultWhereInput entityFilterResultsEvery) {
+    
+    this.entityFilterResultsEvery = entityFilterResultsEvery;
+    return this;
+  }
+
+   /**
+   * Get entityFilterResultsEvery
+   * @return entityFilterResultsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmEntityFilterResultWhereInput getEntityFilterResultsEvery() {
+    return entityFilterResultsEvery;
+  }
+
+
+  public void setEntityFilterResultsEvery(VmEntityFilterResultWhereInput entityFilterResultsEvery) {
+    this.entityFilterResultsEvery = entityFilterResultsEvery;
+  }
+
+
+  public VmWhereInput entityFilterResultsNone(VmEntityFilterResultWhereInput entityFilterResultsNone) {
+    
+    this.entityFilterResultsNone = entityFilterResultsNone;
+    return this;
+  }
+
+   /**
+   * Get entityFilterResultsNone
+   * @return entityFilterResultsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmEntityFilterResultWhereInput getEntityFilterResultsNone() {
+    return entityFilterResultsNone;
+  }
+
+
+  public void setEntityFilterResultsNone(VmEntityFilterResultWhereInput entityFilterResultsNone) {
+    this.entityFilterResultsNone = entityFilterResultsNone;
+  }
+
+
+  public VmWhereInput entityFilterResultsSome(VmEntityFilterResultWhereInput entityFilterResultsSome) {
+    
+    this.entityFilterResultsSome = entityFilterResultsSome;
+    return this;
+  }
+
+   /**
+   * Get entityFilterResultsSome
+   * @return entityFilterResultsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmEntityFilterResultWhereInput getEntityFilterResultsSome() {
+    return entityFilterResultsSome;
+  }
+
+
+  public void setEntityFilterResultsSome(VmEntityFilterResultWhereInput entityFilterResultsSome) {
+    this.entityFilterResultsSome = entityFilterResultsSome;
   }
 
 
@@ -8916,68 +8978,6 @@ public class VmWhereInput {
   }
 
 
-  public VmWhereInput NOT(List<VmWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmWhereInput addNOTItem(VmWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmWhereInput OR(List<VmWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmWhereInput addORItem(VmWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmWhereInput originalName(String originalName) {
     
     this.originalName = originalName;
@@ -11763,6 +11763,8 @@ public class VmWhereInput {
     }
     VmWhereInput vmWhereInput = (VmWhereInput) o;
     return Objects.equals(this.AND, vmWhereInput.AND) &&
+        Objects.equals(this.NOT, vmWhereInput.NOT) &&
+        Objects.equals(this.OR, vmWhereInput.OR) &&
         Objects.equals(this.clockOffset, vmWhereInput.clockOffset) &&
         Objects.equals(this.clockOffsetIn, vmWhereInput.clockOffsetIn) &&
         Objects.equals(this.clockOffsetNot, vmWhereInput.clockOffsetNot) &&
@@ -11828,13 +11830,13 @@ public class VmWhereInput {
         Objects.equals(this.dnsServersNotIn, vmWhereInput.dnsServersNotIn) &&
         Objects.equals(this.dnsServersNotStartsWith, vmWhereInput.dnsServersNotStartsWith) &&
         Objects.equals(this.dnsServersStartsWith, vmWhereInput.dnsServersStartsWith) &&
-        Objects.equals(this.entityFilterResultsEvery, vmWhereInput.entityFilterResultsEvery) &&
-        Objects.equals(this.entityFilterResultsNone, vmWhereInput.entityFilterResultsNone) &&
-        Objects.equals(this.entityFilterResultsSome, vmWhereInput.entityFilterResultsSome) &&
         Objects.equals(this.entityAsyncStatus, vmWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, vmWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, vmWhereInput.entityAsyncStatusNot) &&
         Objects.equals(this.entityAsyncStatusNotIn, vmWhereInput.entityAsyncStatusNotIn) &&
+        Objects.equals(this.entityFilterResultsEvery, vmWhereInput.entityFilterResultsEvery) &&
+        Objects.equals(this.entityFilterResultsNone, vmWhereInput.entityFilterResultsNone) &&
+        Objects.equals(this.entityFilterResultsSome, vmWhereInput.entityFilterResultsSome) &&
         Objects.equals(this.firmware, vmWhereInput.firmware) &&
         Objects.equals(this.firmwareIn, vmWhereInput.firmwareIn) &&
         Objects.equals(this.firmwareNot, vmWhereInput.firmwareNot) &&
@@ -12056,8 +12058,6 @@ public class VmWhereInput {
         Objects.equals(this.nodeIpNotIn, vmWhereInput.nodeIpNotIn) &&
         Objects.equals(this.nodeIpNotStartsWith, vmWhereInput.nodeIpNotStartsWith) &&
         Objects.equals(this.nodeIpStartsWith, vmWhereInput.nodeIpStartsWith) &&
-        Objects.equals(this.NOT, vmWhereInput.NOT) &&
-        Objects.equals(this.OR, vmWhereInput.OR) &&
         Objects.equals(this.originalName, vmWhereInput.originalName) &&
         Objects.equals(this.originalNameContains, vmWhereInput.originalNameContains) &&
         Objects.equals(this.originalNameEndsWith, vmWhereInput.originalNameEndsWith) &&
@@ -12179,7 +12179,7 @@ public class VmWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, NOT, OR, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
+    return Objects.hash(AND, NOT, OR, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -12194,6 +12194,8 @@ public class VmWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    clockOffsetIn: ").append(toIndentedString(clockOffsetIn)).append("\n");
     sb.append("    clockOffsetNot: ").append(toIndentedString(clockOffsetNot)).append("\n");
@@ -12259,13 +12261,13 @@ public class VmWhereInput {
     sb.append("    dnsServersNotIn: ").append(toIndentedString(dnsServersNotIn)).append("\n");
     sb.append("    dnsServersNotStartsWith: ").append(toIndentedString(dnsServersNotStartsWith)).append("\n");
     sb.append("    dnsServersStartsWith: ").append(toIndentedString(dnsServersStartsWith)).append("\n");
-    sb.append("    entityFilterResultsEvery: ").append(toIndentedString(entityFilterResultsEvery)).append("\n");
-    sb.append("    entityFilterResultsNone: ").append(toIndentedString(entityFilterResultsNone)).append("\n");
-    sb.append("    entityFilterResultsSome: ").append(toIndentedString(entityFilterResultsSome)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
     sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
+    sb.append("    entityFilterResultsEvery: ").append(toIndentedString(entityFilterResultsEvery)).append("\n");
+    sb.append("    entityFilterResultsNone: ").append(toIndentedString(entityFilterResultsNone)).append("\n");
+    sb.append("    entityFilterResultsSome: ").append(toIndentedString(entityFilterResultsSome)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    firmwareIn: ").append(toIndentedString(firmwareIn)).append("\n");
     sb.append("    firmwareNot: ").append(toIndentedString(firmwareNot)).append("\n");
@@ -12487,8 +12489,6 @@ public class VmWhereInput {
     sb.append("    nodeIpNotIn: ").append(toIndentedString(nodeIpNotIn)).append("\n");
     sb.append("    nodeIpNotStartsWith: ").append(toIndentedString(nodeIpNotStartsWith)).append("\n");
     sb.append("    nodeIpStartsWith: ").append(toIndentedString(nodeIpStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    originalName: ").append(toIndentedString(originalName)).append("\n");
     sb.append("    originalNameContains: ").append(toIndentedString(originalNameContains)).append("\n");
     sb.append("    originalNameEndsWith: ").append(toIndentedString(originalNameEndsWith)).append("\n");

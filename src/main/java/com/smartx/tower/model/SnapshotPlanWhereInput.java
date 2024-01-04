@@ -30,6 +30,14 @@ public class SnapshotPlanWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SnapshotPlanWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SnapshotPlanWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SnapshotPlanWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM = "auto_delete_num";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM)
   private Integer autoDeleteNum;
@@ -622,10 +630,6 @@ public class SnapshotPlanWhereInput {
   @SerializedName(SERIALIZED_NAME_NEXT_EXECUTE_TIME_NOT_IN)
   private List<String> nextExecuteTimeNotIn = null;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SnapshotPlanWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_OBJECT_NUM = "object_num";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM)
   private Integer objectNum;
@@ -657,10 +661,6 @@ public class SnapshotPlanWhereInput {
   public static final String SERIALIZED_NAME_OBJECT_NUM_NOT_IN = "object_num_not_in";
   @SerializedName(SERIALIZED_NAME_OBJECT_NUM_NOT_IN)
   private List<Integer> objectNumNotIn = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SnapshotPlanWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE_BYTES = "physical_size_bytes";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE_BYTES)
@@ -849,6 +849,68 @@ public class SnapshotPlanWhereInput {
 
   public void setAND(List<SnapshotPlanWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SnapshotPlanWhereInput NOT(List<SnapshotPlanWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SnapshotPlanWhereInput addNOTItem(SnapshotPlanWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SnapshotPlanWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnapshotPlanWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SnapshotPlanWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SnapshotPlanWhereInput OR(List<SnapshotPlanWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SnapshotPlanWhereInput addORItem(SnapshotPlanWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SnapshotPlanWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SnapshotPlanWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SnapshotPlanWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -4512,37 +4574,6 @@ public class SnapshotPlanWhereInput {
   }
 
 
-  public SnapshotPlanWhereInput NOT(List<SnapshotPlanWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SnapshotPlanWhereInput addNOTItem(SnapshotPlanWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SnapshotPlanWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnapshotPlanWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SnapshotPlanWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public SnapshotPlanWhereInput objectNum(Integer objectNum) {
     
     this.objectNum = objectNum;
@@ -4740,37 +4771,6 @@ public class SnapshotPlanWhereInput {
 
   public void setObjectNumNotIn(List<Integer> objectNumNotIn) {
     this.objectNumNotIn = objectNumNotIn;
-  }
-
-
-  public SnapshotPlanWhereInput OR(List<SnapshotPlanWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SnapshotPlanWhereInput addORItem(SnapshotPlanWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SnapshotPlanWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SnapshotPlanWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SnapshotPlanWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -5761,6 +5761,8 @@ public class SnapshotPlanWhereInput {
     }
     SnapshotPlanWhereInput snapshotPlanWhereInput = (SnapshotPlanWhereInput) o;
     return Objects.equals(this.AND, snapshotPlanWhereInput.AND) &&
+        Objects.equals(this.NOT, snapshotPlanWhereInput.NOT) &&
+        Objects.equals(this.OR, snapshotPlanWhereInput.OR) &&
         Objects.equals(this.autoDeleteNum, snapshotPlanWhereInput.autoDeleteNum) &&
         Objects.equals(this.autoDeleteNumGt, snapshotPlanWhereInput.autoDeleteNumGt) &&
         Objects.equals(this.autoDeleteNumGte, snapshotPlanWhereInput.autoDeleteNumGte) &&
@@ -5909,7 +5911,6 @@ public class SnapshotPlanWhereInput {
         Objects.equals(this.nextExecuteTimeLte, snapshotPlanWhereInput.nextExecuteTimeLte) &&
         Objects.equals(this.nextExecuteTimeNot, snapshotPlanWhereInput.nextExecuteTimeNot) &&
         Objects.equals(this.nextExecuteTimeNotIn, snapshotPlanWhereInput.nextExecuteTimeNotIn) &&
-        Objects.equals(this.NOT, snapshotPlanWhereInput.NOT) &&
         Objects.equals(this.objectNum, snapshotPlanWhereInput.objectNum) &&
         Objects.equals(this.objectNumGt, snapshotPlanWhereInput.objectNumGt) &&
         Objects.equals(this.objectNumGte, snapshotPlanWhereInput.objectNumGte) &&
@@ -5918,7 +5919,6 @@ public class SnapshotPlanWhereInput {
         Objects.equals(this.objectNumLte, snapshotPlanWhereInput.objectNumLte) &&
         Objects.equals(this.objectNumNot, snapshotPlanWhereInput.objectNumNot) &&
         Objects.equals(this.objectNumNotIn, snapshotPlanWhereInput.objectNumNotIn) &&
-        Objects.equals(this.OR, snapshotPlanWhereInput.OR) &&
         Objects.equals(this.physicalSizeBytes, snapshotPlanWhereInput.physicalSizeBytes) &&
         Objects.equals(this.physicalSizeBytesGt, snapshotPlanWhereInput.physicalSizeBytesGt) &&
         Objects.equals(this.physicalSizeBytesGte, snapshotPlanWhereInput.physicalSizeBytesGte) &&
@@ -5966,7 +5966,7 @@ public class SnapshotPlanWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, autoDeleteNum, autoDeleteNumGt, autoDeleteNumGte, autoDeleteNumIn, autoDeleteNumLt, autoDeleteNumLte, autoDeleteNumNot, autoDeleteNumNotIn, autoExecuteNum, autoExecuteNumGt, autoExecuteNumGte, autoExecuteNumIn, autoExecuteNumLt, autoExecuteNumLte, autoExecuteNumNot, autoExecuteNumNotIn, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, endTime, endTimeGt, endTimeGte, endTimeIn, endTimeLt, endTimeLte, endTimeNot, endTimeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, executePlanType, executePlanTypeIn, executePlanTypeNot, executePlanTypeNotIn, executionTasksEvery, executionTasksNone, executionTasksSome, healthy, healthyNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, lastExecuteEndTime, lastExecuteEndTimeGt, lastExecuteEndTimeGte, lastExecuteEndTimeIn, lastExecuteEndTimeLt, lastExecuteEndTimeLte, lastExecuteEndTimeNot, lastExecuteEndTimeNotIn, lastExecuteStatus, lastExecuteStatusIn, lastExecuteStatusNot, lastExecuteStatusNotIn, lastExecuteTime, lastExecuteTimeGt, lastExecuteTimeGte, lastExecuteTimeIn, lastExecuteTimeLt, lastExecuteTimeLte, lastExecuteTimeNot, lastExecuteTimeNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, manualDeleteNum, manualDeleteNumGt, manualDeleteNumGte, manualDeleteNumIn, manualDeleteNumLt, manualDeleteNumLte, manualDeleteNumNot, manualDeleteNumNotIn, manualExecuteNum, manualExecuteNumGt, manualExecuteNumGte, manualExecuteNumIn, manualExecuteNumLt, manualExecuteNumLte, manualExecuteNumNot, manualExecuteNumNotIn, mirror, mirrorNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nextExecuteTime, nextExecuteTimeGt, nextExecuteTimeGte, nextExecuteTimeIn, nextExecuteTimeLt, nextExecuteTimeLte, nextExecuteTimeNot, nextExecuteTimeNotIn, NOT, objectNum, objectNumGt, objectNumGte, objectNumIn, objectNumLt, objectNumLte, objectNumNot, objectNumNotIn, OR, physicalSizeBytes, physicalSizeBytesGt, physicalSizeBytesGte, physicalSizeBytesIn, physicalSizeBytesLt, physicalSizeBytesLte, physicalSizeBytesNot, physicalSizeBytesNotIn, remainSnapshotNum, remainSnapshotNumGt, remainSnapshotNumGte, remainSnapshotNumIn, remainSnapshotNumLt, remainSnapshotNumLte, remainSnapshotNumNot, remainSnapshotNumNotIn, snapshotGroupNum, snapshotGroupNumGt, snapshotGroupNumGte, snapshotGroupNumIn, snapshotGroupNumLt, snapshotGroupNumLte, snapshotGroupNumNot, snapshotGroupNumNotIn, startTime, startTimeGt, startTimeGte, startTimeIn, startTimeLt, startTimeLte, startTimeNot, startTimeNotIn, status, statusIn, statusNot, statusNotIn, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, autoDeleteNum, autoDeleteNumGt, autoDeleteNumGte, autoDeleteNumIn, autoDeleteNumLt, autoDeleteNumLte, autoDeleteNumNot, autoDeleteNumNotIn, autoExecuteNum, autoExecuteNumGt, autoExecuteNumGte, autoExecuteNumIn, autoExecuteNumLt, autoExecuteNumLte, autoExecuteNumNot, autoExecuteNumNotIn, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, endTime, endTimeGt, endTimeGte, endTimeIn, endTimeLt, endTimeLte, endTimeNot, endTimeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, executePlanType, executePlanTypeIn, executePlanTypeNot, executePlanTypeNotIn, executionTasksEvery, executionTasksNone, executionTasksSome, healthy, healthyNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, lastExecuteEndTime, lastExecuteEndTimeGt, lastExecuteEndTimeGte, lastExecuteEndTimeIn, lastExecuteEndTimeLt, lastExecuteEndTimeLte, lastExecuteEndTimeNot, lastExecuteEndTimeNotIn, lastExecuteStatus, lastExecuteStatusIn, lastExecuteStatusNot, lastExecuteStatusNotIn, lastExecuteTime, lastExecuteTimeGt, lastExecuteTimeGte, lastExecuteTimeIn, lastExecuteTimeLt, lastExecuteTimeLte, lastExecuteTimeNot, lastExecuteTimeNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, manualDeleteNum, manualDeleteNumGt, manualDeleteNumGte, manualDeleteNumIn, manualDeleteNumLt, manualDeleteNumLte, manualDeleteNumNot, manualDeleteNumNotIn, manualExecuteNum, manualExecuteNumGt, manualExecuteNumGte, manualExecuteNumIn, manualExecuteNumLt, manualExecuteNumLte, manualExecuteNumNot, manualExecuteNumNotIn, mirror, mirrorNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nextExecuteTime, nextExecuteTimeGt, nextExecuteTimeGte, nextExecuteTimeIn, nextExecuteTimeLt, nextExecuteTimeLte, nextExecuteTimeNot, nextExecuteTimeNotIn, objectNum, objectNumGt, objectNumGte, objectNumIn, objectNumLt, objectNumLte, objectNumNot, objectNumNotIn, physicalSizeBytes, physicalSizeBytesGt, physicalSizeBytesGte, physicalSizeBytesIn, physicalSizeBytesLt, physicalSizeBytesLte, physicalSizeBytesNot, physicalSizeBytesNotIn, remainSnapshotNum, remainSnapshotNumGt, remainSnapshotNumGte, remainSnapshotNumIn, remainSnapshotNumLt, remainSnapshotNumLte, remainSnapshotNumNot, remainSnapshotNumNotIn, snapshotGroupNum, snapshotGroupNumGt, snapshotGroupNumGte, snapshotGroupNumIn, snapshotGroupNumLt, snapshotGroupNumLte, snapshotGroupNumNot, snapshotGroupNumNotIn, startTime, startTimeGt, startTimeGte, startTimeIn, startTimeLt, startTimeLte, startTimeNot, startTimeNotIn, status, statusIn, statusNot, statusNotIn, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -5981,6 +5981,8 @@ public class SnapshotPlanWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnapshotPlanWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    autoDeleteNum: ").append(toIndentedString(autoDeleteNum)).append("\n");
     sb.append("    autoDeleteNumGt: ").append(toIndentedString(autoDeleteNumGt)).append("\n");
     sb.append("    autoDeleteNumGte: ").append(toIndentedString(autoDeleteNumGte)).append("\n");
@@ -6129,7 +6131,6 @@ public class SnapshotPlanWhereInput {
     sb.append("    nextExecuteTimeLte: ").append(toIndentedString(nextExecuteTimeLte)).append("\n");
     sb.append("    nextExecuteTimeNot: ").append(toIndentedString(nextExecuteTimeNot)).append("\n");
     sb.append("    nextExecuteTimeNotIn: ").append(toIndentedString(nextExecuteTimeNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    objectNum: ").append(toIndentedString(objectNum)).append("\n");
     sb.append("    objectNumGt: ").append(toIndentedString(objectNumGt)).append("\n");
     sb.append("    objectNumGte: ").append(toIndentedString(objectNumGte)).append("\n");
@@ -6138,7 +6139,6 @@ public class SnapshotPlanWhereInput {
     sb.append("    objectNumLte: ").append(toIndentedString(objectNumLte)).append("\n");
     sb.append("    objectNumNot: ").append(toIndentedString(objectNumNot)).append("\n");
     sb.append("    objectNumNotIn: ").append(toIndentedString(objectNumNotIn)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    physicalSizeBytes: ").append(toIndentedString(physicalSizeBytes)).append("\n");
     sb.append("    physicalSizeBytesGt: ").append(toIndentedString(physicalSizeBytesGt)).append("\n");
     sb.append("    physicalSizeBytesGte: ").append(toIndentedString(physicalSizeBytesGte)).append("\n");

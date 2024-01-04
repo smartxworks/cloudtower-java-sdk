@@ -26,6 +26,14 @@ public class SvtImageWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<SvtImageWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SvtImageWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SvtImageWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -246,14 +254,6 @@ public class SvtImageWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SvtImageWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SvtImageWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
   private String path;
@@ -417,6 +417,68 @@ public class SvtImageWhereInput {
 
   public void setAND(List<SvtImageWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public SvtImageWhereInput NOT(List<SvtImageWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SvtImageWhereInput addNOTItem(SvtImageWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SvtImageWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SvtImageWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SvtImageWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SvtImageWhereInput OR(List<SvtImageWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SvtImageWhereInput addORItem(SvtImageWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SvtImageWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SvtImageWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SvtImageWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1765,68 +1827,6 @@ public class SvtImageWhereInput {
   }
 
 
-  public SvtImageWhereInput NOT(List<SvtImageWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SvtImageWhereInput addNOTItem(SvtImageWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SvtImageWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SvtImageWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SvtImageWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SvtImageWhereInput OR(List<SvtImageWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SvtImageWhereInput addORItem(SvtImageWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SvtImageWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SvtImageWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SvtImageWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SvtImageWhereInput path(String path) {
     
     this.path = path;
@@ -2644,6 +2644,8 @@ public class SvtImageWhereInput {
     }
     SvtImageWhereInput svtImageWhereInput = (SvtImageWhereInput) o;
     return Objects.equals(this.AND, svtImageWhereInput.AND) &&
+        Objects.equals(this.NOT, svtImageWhereInput.NOT) &&
+        Objects.equals(this.OR, svtImageWhereInput.OR) &&
         Objects.equals(this.cluster, svtImageWhereInput.cluster) &&
         Objects.equals(this.entityAsyncStatus, svtImageWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, svtImageWhereInput.entityAsyncStatusIn) &&
@@ -2699,8 +2701,6 @@ public class SvtImageWhereInput {
         Objects.equals(this.nameNotIn, svtImageWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, svtImageWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, svtImageWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, svtImageWhereInput.NOT) &&
-        Objects.equals(this.OR, svtImageWhereInput.OR) &&
         Objects.equals(this.path, svtImageWhereInput.path) &&
         Objects.equals(this.pathContains, svtImageWhereInput.pathContains) &&
         Objects.equals(this.pathEndsWith, svtImageWhereInput.pathEndsWith) &&
@@ -2742,7 +2742,7 @@ public class SvtImageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, version, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
+    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, version, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2757,6 +2757,8 @@ public class SvtImageWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class SvtImageWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
@@ -2812,8 +2814,6 @@ public class SvtImageWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    pathContains: ").append(toIndentedString(pathContains)).append("\n");
     sb.append("    pathEndsWith: ").append(toIndentedString(pathEndsWith)).append("\n");

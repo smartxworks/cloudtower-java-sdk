@@ -40,6 +40,10 @@ public enum NicOrderByInput {
   
   ID_DESC("id_DESC"),
   
+  IOMMU_STATUS_ASC("iommu_status_ASC"),
+  
+  IOMMU_STATUS_DESC("iommu_status_DESC"),
+  
   IP_ADDRESS_ASC("ip_address_ASC"),
   
   IP_ADDRESS_DESC("ip_address_DESC"),

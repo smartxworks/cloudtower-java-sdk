@@ -21,6 +21,18 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class SystemAuditLogWhereInput {
+  public static final String SERIALIZED_NAME_A_N_D = "AND";
+  @SerializedName(SERIALIZED_NAME_A_N_D)
+  private List<SystemAuditLogWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<SystemAuditLogWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<SystemAuditLogWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
   private String action;
@@ -76,10 +88,6 @@ public class SystemAuditLogWhereInput {
   public static final String SERIALIZED_NAME_ACTION_STARTS_WITH = "action_starts_with";
   @SerializedName(SERIALIZED_NAME_ACTION_STARTS_WITH)
   private String actionStartsWith;
-
-  public static final String SERIALIZED_NAME_A_N_D = "AND";
-  @SerializedName(SERIALIZED_NAME_A_N_D)
-  private List<SystemAuditLogWhereInput> AND = null;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -317,14 +325,6 @@ public class SystemAuditLogWhereInput {
   @SerializedName(SERIALIZED_NAME_MESSAGE_STARTS_WITH)
   private String messageStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<SystemAuditLogWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<SystemAuditLogWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resource_id";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
   private String resourceId;
@@ -399,6 +399,99 @@ public class SystemAuditLogWhereInput {
 
   public SystemAuditLogWhereInput() { 
   }
+
+  public SystemAuditLogWhereInput AND(List<SystemAuditLogWhereInput> AND) {
+    
+    this.AND = AND;
+    return this;
+  }
+
+  public SystemAuditLogWhereInput addANDItem(SystemAuditLogWhereInput ANDItem) {
+    if (this.AND == null) {
+      this.AND = new ArrayList<SystemAuditLogWhereInput>();
+    }
+    this.AND.add(ANDItem);
+    return this;
+  }
+
+   /**
+   * Get AND
+   * @return AND
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SystemAuditLogWhereInput> getAND() {
+    return AND;
+  }
+
+
+  public void setAND(List<SystemAuditLogWhereInput> AND) {
+    this.AND = AND;
+  }
+
+
+  public SystemAuditLogWhereInput NOT(List<SystemAuditLogWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public SystemAuditLogWhereInput addNOTItem(SystemAuditLogWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<SystemAuditLogWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SystemAuditLogWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<SystemAuditLogWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public SystemAuditLogWhereInput OR(List<SystemAuditLogWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public SystemAuditLogWhereInput addORItem(SystemAuditLogWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<SystemAuditLogWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<SystemAuditLogWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<SystemAuditLogWhereInput> OR) {
+    this.OR = OR;
+  }
+
 
   public SystemAuditLogWhereInput action(String action) {
     
@@ -735,37 +828,6 @@ public class SystemAuditLogWhereInput {
 
   public void setActionStartsWith(String actionStartsWith) {
     this.actionStartsWith = actionStartsWith;
-  }
-
-
-  public SystemAuditLogWhereInput AND(List<SystemAuditLogWhereInput> AND) {
-    
-    this.AND = AND;
-    return this;
-  }
-
-  public SystemAuditLogWhereInput addANDItem(SystemAuditLogWhereInput ANDItem) {
-    if (this.AND == null) {
-      this.AND = new ArrayList<SystemAuditLogWhereInput>();
-    }
-    this.AND.add(ANDItem);
-    return this;
-  }
-
-   /**
-   * Get AND
-   * @return AND
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SystemAuditLogWhereInput> getAND() {
-    return AND;
-  }
-
-
-  public void setAND(List<SystemAuditLogWhereInput> AND) {
-    this.AND = AND;
   }
 
 
@@ -2206,68 +2268,6 @@ public class SystemAuditLogWhereInput {
   }
 
 
-  public SystemAuditLogWhereInput NOT(List<SystemAuditLogWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public SystemAuditLogWhereInput addNOTItem(SystemAuditLogWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<SystemAuditLogWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SystemAuditLogWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<SystemAuditLogWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public SystemAuditLogWhereInput OR(List<SystemAuditLogWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public SystemAuditLogWhereInput addORItem(SystemAuditLogWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<SystemAuditLogWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<SystemAuditLogWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<SystemAuditLogWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public SystemAuditLogWhereInput resourceId(String resourceId) {
     
     this.resourceId = resourceId;
@@ -2723,7 +2723,10 @@ public class SystemAuditLogWhereInput {
       return false;
     }
     SystemAuditLogWhereInput systemAuditLogWhereInput = (SystemAuditLogWhereInput) o;
-    return Objects.equals(this.action, systemAuditLogWhereInput.action) &&
+    return Objects.equals(this.AND, systemAuditLogWhereInput.AND) &&
+        Objects.equals(this.NOT, systemAuditLogWhereInput.NOT) &&
+        Objects.equals(this.OR, systemAuditLogWhereInput.OR) &&
+        Objects.equals(this.action, systemAuditLogWhereInput.action) &&
         Objects.equals(this.actionContains, systemAuditLogWhereInput.actionContains) &&
         Objects.equals(this.actionEndsWith, systemAuditLogWhereInput.actionEndsWith) &&
         Objects.equals(this.actionGt, systemAuditLogWhereInput.actionGt) &&
@@ -2737,7 +2740,6 @@ public class SystemAuditLogWhereInput {
         Objects.equals(this.actionNotIn, systemAuditLogWhereInput.actionNotIn) &&
         Objects.equals(this.actionNotStartsWith, systemAuditLogWhereInput.actionNotStartsWith) &&
         Objects.equals(this.actionStartsWith, systemAuditLogWhereInput.actionStartsWith) &&
-        Objects.equals(this.AND, systemAuditLogWhereInput.AND) &&
         Objects.equals(this.cluster, systemAuditLogWhereInput.cluster) &&
         Objects.equals(this.finishedAt, systemAuditLogWhereInput.finishedAt) &&
         Objects.equals(this.finishedAtGt, systemAuditLogWhereInput.finishedAtGt) &&
@@ -2797,8 +2799,6 @@ public class SystemAuditLogWhereInput {
         Objects.equals(this.messageNotIn, systemAuditLogWhereInput.messageNotIn) &&
         Objects.equals(this.messageNotStartsWith, systemAuditLogWhereInput.messageNotStartsWith) &&
         Objects.equals(this.messageStartsWith, systemAuditLogWhereInput.messageStartsWith) &&
-        Objects.equals(this.NOT, systemAuditLogWhereInput.NOT) &&
-        Objects.equals(this.OR, systemAuditLogWhereInput.OR) &&
         Objects.equals(this.resourceId, systemAuditLogWhereInput.resourceId) &&
         Objects.equals(this.resourceIdContains, systemAuditLogWhereInput.resourceIdContains) &&
         Objects.equals(this.resourceIdEndsWith, systemAuditLogWhereInput.resourceIdEndsWith) &&
@@ -2825,7 +2825,7 @@ public class SystemAuditLogWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, actionContains, actionEndsWith, actionGt, actionGte, actionIn, actionLt, actionLte, actionNot, actionNotContains, actionNotEndsWith, actionNotIn, actionNotStartsWith, actionStartsWith, AND, cluster, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, message, messageContains, messageEndsWith, messageGt, messageGte, messageIn, messageLt, messageLte, messageNot, messageNotContains, messageNotEndsWith, messageNotIn, messageNotStartsWith, messageStartsWith, NOT, OR, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, status, statusIn, statusNot, statusNotIn);
+    return Objects.hash(AND, NOT, OR, action, actionContains, actionEndsWith, actionGt, actionGte, actionIn, actionLt, actionLte, actionNot, actionNotContains, actionNotEndsWith, actionNotIn, actionNotStartsWith, actionStartsWith, cluster, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, message, messageContains, messageEndsWith, messageGt, messageGte, messageIn, messageLt, messageLte, messageNot, messageNotContains, messageNotEndsWith, messageNotIn, messageNotStartsWith, messageStartsWith, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, status, statusIn, statusNot, statusNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2839,6 +2839,9 @@ public class SystemAuditLogWhereInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SystemAuditLogWhereInput {\n");
+    sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    actionContains: ").append(toIndentedString(actionContains)).append("\n");
     sb.append("    actionEndsWith: ").append(toIndentedString(actionEndsWith)).append("\n");
@@ -2853,7 +2856,6 @@ public class SystemAuditLogWhereInput {
     sb.append("    actionNotIn: ").append(toIndentedString(actionNotIn)).append("\n");
     sb.append("    actionNotStartsWith: ").append(toIndentedString(actionNotStartsWith)).append("\n");
     sb.append("    actionStartsWith: ").append(toIndentedString(actionStartsWith)).append("\n");
-    sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    finishedAt: ").append(toIndentedString(finishedAt)).append("\n");
     sb.append("    finishedAtGt: ").append(toIndentedString(finishedAtGt)).append("\n");
@@ -2913,8 +2915,6 @@ public class SystemAuditLogWhereInput {
     sb.append("    messageNotIn: ").append(toIndentedString(messageNotIn)).append("\n");
     sb.append("    messageNotStartsWith: ").append(toIndentedString(messageNotStartsWith)).append("\n");
     sb.append("    messageStartsWith: ").append(toIndentedString(messageStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
     sb.append("    resourceIdContains: ").append(toIndentedString(resourceIdContains)).append("\n");
     sb.append("    resourceIdEndsWith: ").append(toIndentedString(resourceIdEndsWith)).append("\n");

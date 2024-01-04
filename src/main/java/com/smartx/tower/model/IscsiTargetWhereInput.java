@@ -27,6 +27,14 @@ public class IscsiTargetWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<IscsiTargetWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<IscsiTargetWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<IscsiTargetWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)
   private Long bps;
@@ -1207,14 +1215,6 @@ public class IscsiTargetWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<IscsiTargetWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<IscsiTargetWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
   private Integer replicaNum;
@@ -1350,6 +1350,68 @@ public class IscsiTargetWhereInput {
 
   public void setAND(List<IscsiTargetWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public IscsiTargetWhereInput NOT(List<IscsiTargetWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public IscsiTargetWhereInput addNOTItem(IscsiTargetWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<IscsiTargetWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiTargetWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<IscsiTargetWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public IscsiTargetWhereInput OR(List<IscsiTargetWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public IscsiTargetWhereInput addORItem(IscsiTargetWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<IscsiTargetWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiTargetWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<IscsiTargetWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -8602,68 +8664,6 @@ public class IscsiTargetWhereInput {
   }
 
 
-  public IscsiTargetWhereInput NOT(List<IscsiTargetWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public IscsiTargetWhereInput addNOTItem(IscsiTargetWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<IscsiTargetWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiTargetWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<IscsiTargetWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public IscsiTargetWhereInput OR(List<IscsiTargetWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public IscsiTargetWhereInput addORItem(IscsiTargetWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<IscsiTargetWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiTargetWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<IscsiTargetWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public IscsiTargetWhereInput replicaNum(Integer replicaNum) {
     
     this.replicaNum = replicaNum;
@@ -9320,6 +9320,8 @@ public class IscsiTargetWhereInput {
     }
     IscsiTargetWhereInput iscsiTargetWhereInput = (IscsiTargetWhereInput) o;
     return Objects.equals(this.AND, iscsiTargetWhereInput.AND) &&
+        Objects.equals(this.NOT, iscsiTargetWhereInput.NOT) &&
+        Objects.equals(this.OR, iscsiTargetWhereInput.OR) &&
         Objects.equals(this.bps, iscsiTargetWhereInput.bps) &&
         Objects.equals(this.bpsGt, iscsiTargetWhereInput.bpsGt) &&
         Objects.equals(this.bpsGte, iscsiTargetWhereInput.bpsGte) &&
@@ -9615,8 +9617,6 @@ public class IscsiTargetWhereInput {
         Objects.equals(this.nameNotIn, iscsiTargetWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, iscsiTargetWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, iscsiTargetWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, iscsiTargetWhereInput.NOT) &&
-        Objects.equals(this.OR, iscsiTargetWhereInput.OR) &&
         Objects.equals(this.replicaNum, iscsiTargetWhereInput.replicaNum) &&
         Objects.equals(this.replicaNumGt, iscsiTargetWhereInput.replicaNumGt) &&
         Objects.equals(this.replicaNumGte, iscsiTargetWhereInput.replicaNumGte) &&
@@ -9651,7 +9651,7 @@ public class IscsiTargetWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, bps, bpsGt, bpsGte, bpsIn, bpsLt, bpsLte, bpsMax, bpsMaxGt, bpsMaxGte, bpsMaxIn, bpsMaxLength, bpsMaxLengthGt, bpsMaxLengthGte, bpsMaxLengthIn, bpsMaxLengthLt, bpsMaxLengthLte, bpsMaxLengthNot, bpsMaxLengthNotIn, bpsMaxLt, bpsMaxLte, bpsMaxNot, bpsMaxNotIn, bpsNot, bpsNotIn, bpsRd, bpsRdGt, bpsRdGte, bpsRdIn, bpsRdLt, bpsRdLte, bpsRdMax, bpsRdMaxGt, bpsRdMaxGte, bpsRdMaxIn, bpsRdMaxLength, bpsRdMaxLengthGt, bpsRdMaxLengthGte, bpsRdMaxLengthIn, bpsRdMaxLengthLt, bpsRdMaxLengthLte, bpsRdMaxLengthNot, bpsRdMaxLengthNotIn, bpsRdMaxLt, bpsRdMaxLte, bpsRdMaxNot, bpsRdMaxNotIn, bpsRdNot, bpsRdNotIn, bpsWr, bpsWrGt, bpsWrGte, bpsWrIn, bpsWrLt, bpsWrLte, bpsWrMax, bpsWrMaxGt, bpsWrMaxGte, bpsWrMaxIn, bpsWrMaxLength, bpsWrMaxLengthGt, bpsWrMaxLengthGte, bpsWrMaxLengthIn, bpsWrMaxLengthLt, bpsWrMaxLengthLte, bpsWrMaxLengthNot, bpsWrMaxLengthNotIn, bpsWrMaxLt, bpsWrMaxLte, bpsWrMaxNot, bpsWrMaxNotIn, bpsWrNot, bpsWrNotIn, chapEnabled, chapEnabledNot, chapName, chapNameContains, chapNameEndsWith, chapNameGt, chapNameGte, chapNameIn, chapNameLt, chapNameLte, chapNameNot, chapNameNotContains, chapNameNotEndsWith, chapNameNotIn, chapNameNotStartsWith, chapNameStartsWith, chapSecret, chapSecretContains, chapSecretEndsWith, chapSecretGt, chapSecretGte, chapSecretIn, chapSecretLt, chapSecretLte, chapSecretNot, chapSecretNotContains, chapSecretNotEndsWith, chapSecretNotIn, chapSecretNotStartsWith, chapSecretStartsWith, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, externalUse, externalUseNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ioSize, ioSizeGt, ioSizeGte, ioSizeIn, ioSizeLt, ioSizeLte, ioSizeNot, ioSizeNotIn, iops, iopsGt, iopsGte, iopsIn, iopsLt, iopsLte, iopsMax, iopsMaxGt, iopsMaxGte, iopsMaxIn, iopsMaxLength, iopsMaxLengthGt, iopsMaxLengthGte, iopsMaxLengthIn, iopsMaxLengthLt, iopsMaxLengthLte, iopsMaxLengthNot, iopsMaxLengthNotIn, iopsMaxLt, iopsMaxLte, iopsMaxNot, iopsMaxNotIn, iopsNot, iopsNotIn, iopsRd, iopsRdGt, iopsRdGte, iopsRdIn, iopsRdLt, iopsRdLte, iopsRdMax, iopsRdMaxGt, iopsRdMaxGte, iopsRdMaxIn, iopsRdMaxLength, iopsRdMaxLengthGt, iopsRdMaxLengthGte, iopsRdMaxLengthIn, iopsRdMaxLengthLt, iopsRdMaxLengthLte, iopsRdMaxLengthNot, iopsRdMaxLengthNotIn, iopsRdMaxLt, iopsRdMaxLte, iopsRdMaxNot, iopsRdMaxNotIn, iopsRdNot, iopsRdNotIn, iopsWr, iopsWrGt, iopsWrGte, iopsWrIn, iopsWrLt, iopsWrLte, iopsWrMax, iopsWrMaxGt, iopsWrMaxGte, iopsWrMaxIn, iopsWrMaxLength, iopsWrMaxLengthGt, iopsWrMaxLengthGte, iopsWrMaxLengthIn, iopsWrMaxLengthLt, iopsWrMaxLengthLte, iopsWrMaxLengthNot, iopsWrMaxLengthNotIn, iopsWrMaxLt, iopsWrMaxLte, iopsWrMaxNot, iopsWrMaxNotIn, iopsWrNot, iopsWrNotIn, ipWhitelist, ipWhitelistContains, ipWhitelistEndsWith, ipWhitelistGt, ipWhitelistGte, ipWhitelistIn, ipWhitelistLt, ipWhitelistLte, ipWhitelistNot, ipWhitelistNotContains, ipWhitelistNotEndsWith, ipWhitelistNotIn, ipWhitelistNotStartsWith, ipWhitelistStartsWith, iqnName, iqnNameContains, iqnNameEndsWith, iqnNameGt, iqnNameGte, iqnNameIn, iqnNameLt, iqnNameLte, iqnNameNot, iqnNameNotContains, iqnNameNotEndsWith, iqnNameNotIn, iqnNameNotStartsWith, iqnNameStartsWith, iqnWhitelist, iqnWhitelistContains, iqnWhitelistEndsWith, iqnWhitelistGt, iqnWhitelistGte, iqnWhitelistIn, iqnWhitelistLt, iqnWhitelistLte, iqnWhitelistNot, iqnWhitelistNotContains, iqnWhitelistNotEndsWith, iqnWhitelistNotIn, iqnWhitelistNotStartsWith, iqnWhitelistStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lunsEvery, lunsNone, lunsSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, stripeNum, stripeNumGt, stripeNumGte, stripeNumIn, stripeNumLt, stripeNumLte, stripeNumNot, stripeNumNotIn, stripeSize, stripeSizeGt, stripeSizeGte, stripeSizeIn, stripeSizeLt, stripeSizeLte, stripeSizeNot, stripeSizeNotIn, thinProvision, thinProvisionNot);
+    return Objects.hash(AND, NOT, OR, bps, bpsGt, bpsGte, bpsIn, bpsLt, bpsLte, bpsMax, bpsMaxGt, bpsMaxGte, bpsMaxIn, bpsMaxLength, bpsMaxLengthGt, bpsMaxLengthGte, bpsMaxLengthIn, bpsMaxLengthLt, bpsMaxLengthLte, bpsMaxLengthNot, bpsMaxLengthNotIn, bpsMaxLt, bpsMaxLte, bpsMaxNot, bpsMaxNotIn, bpsNot, bpsNotIn, bpsRd, bpsRdGt, bpsRdGte, bpsRdIn, bpsRdLt, bpsRdLte, bpsRdMax, bpsRdMaxGt, bpsRdMaxGte, bpsRdMaxIn, bpsRdMaxLength, bpsRdMaxLengthGt, bpsRdMaxLengthGte, bpsRdMaxLengthIn, bpsRdMaxLengthLt, bpsRdMaxLengthLte, bpsRdMaxLengthNot, bpsRdMaxLengthNotIn, bpsRdMaxLt, bpsRdMaxLte, bpsRdMaxNot, bpsRdMaxNotIn, bpsRdNot, bpsRdNotIn, bpsWr, bpsWrGt, bpsWrGte, bpsWrIn, bpsWrLt, bpsWrLte, bpsWrMax, bpsWrMaxGt, bpsWrMaxGte, bpsWrMaxIn, bpsWrMaxLength, bpsWrMaxLengthGt, bpsWrMaxLengthGte, bpsWrMaxLengthIn, bpsWrMaxLengthLt, bpsWrMaxLengthLte, bpsWrMaxLengthNot, bpsWrMaxLengthNotIn, bpsWrMaxLt, bpsWrMaxLte, bpsWrMaxNot, bpsWrMaxNotIn, bpsWrNot, bpsWrNotIn, chapEnabled, chapEnabledNot, chapName, chapNameContains, chapNameEndsWith, chapNameGt, chapNameGte, chapNameIn, chapNameLt, chapNameLte, chapNameNot, chapNameNotContains, chapNameNotEndsWith, chapNameNotIn, chapNameNotStartsWith, chapNameStartsWith, chapSecret, chapSecretContains, chapSecretEndsWith, chapSecretGt, chapSecretGte, chapSecretIn, chapSecretLt, chapSecretLte, chapSecretNot, chapSecretNotContains, chapSecretNotEndsWith, chapSecretNotIn, chapSecretNotStartsWith, chapSecretStartsWith, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, externalUse, externalUseNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ioSize, ioSizeGt, ioSizeGte, ioSizeIn, ioSizeLt, ioSizeLte, ioSizeNot, ioSizeNotIn, iops, iopsGt, iopsGte, iopsIn, iopsLt, iopsLte, iopsMax, iopsMaxGt, iopsMaxGte, iopsMaxIn, iopsMaxLength, iopsMaxLengthGt, iopsMaxLengthGte, iopsMaxLengthIn, iopsMaxLengthLt, iopsMaxLengthLte, iopsMaxLengthNot, iopsMaxLengthNotIn, iopsMaxLt, iopsMaxLte, iopsMaxNot, iopsMaxNotIn, iopsNot, iopsNotIn, iopsRd, iopsRdGt, iopsRdGte, iopsRdIn, iopsRdLt, iopsRdLte, iopsRdMax, iopsRdMaxGt, iopsRdMaxGte, iopsRdMaxIn, iopsRdMaxLength, iopsRdMaxLengthGt, iopsRdMaxLengthGte, iopsRdMaxLengthIn, iopsRdMaxLengthLt, iopsRdMaxLengthLte, iopsRdMaxLengthNot, iopsRdMaxLengthNotIn, iopsRdMaxLt, iopsRdMaxLte, iopsRdMaxNot, iopsRdMaxNotIn, iopsRdNot, iopsRdNotIn, iopsWr, iopsWrGt, iopsWrGte, iopsWrIn, iopsWrLt, iopsWrLte, iopsWrMax, iopsWrMaxGt, iopsWrMaxGte, iopsWrMaxIn, iopsWrMaxLength, iopsWrMaxLengthGt, iopsWrMaxLengthGte, iopsWrMaxLengthIn, iopsWrMaxLengthLt, iopsWrMaxLengthLte, iopsWrMaxLengthNot, iopsWrMaxLengthNotIn, iopsWrMaxLt, iopsWrMaxLte, iopsWrMaxNot, iopsWrMaxNotIn, iopsWrNot, iopsWrNotIn, ipWhitelist, ipWhitelistContains, ipWhitelistEndsWith, ipWhitelistGt, ipWhitelistGte, ipWhitelistIn, ipWhitelistLt, ipWhitelistLte, ipWhitelistNot, ipWhitelistNotContains, ipWhitelistNotEndsWith, ipWhitelistNotIn, ipWhitelistNotStartsWith, ipWhitelistStartsWith, iqnName, iqnNameContains, iqnNameEndsWith, iqnNameGt, iqnNameGte, iqnNameIn, iqnNameLt, iqnNameLte, iqnNameNot, iqnNameNotContains, iqnNameNotEndsWith, iqnNameNotIn, iqnNameNotStartsWith, iqnNameStartsWith, iqnWhitelist, iqnWhitelistContains, iqnWhitelistEndsWith, iqnWhitelistGt, iqnWhitelistGte, iqnWhitelistIn, iqnWhitelistLt, iqnWhitelistLte, iqnWhitelistNot, iqnWhitelistNotContains, iqnWhitelistNotEndsWith, iqnWhitelistNotIn, iqnWhitelistNotStartsWith, iqnWhitelistStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lunsEvery, lunsNone, lunsSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, stripeNum, stripeNumGt, stripeNumGte, stripeNumIn, stripeNumLt, stripeNumLte, stripeNumNot, stripeNumNotIn, stripeSize, stripeSizeGt, stripeSizeGte, stripeSizeIn, stripeSizeLt, stripeSizeLte, stripeSizeNot, stripeSizeNotIn, thinProvision, thinProvisionNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -9666,6 +9666,8 @@ public class IscsiTargetWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiTargetWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    bps: ").append(toIndentedString(bps)).append("\n");
     sb.append("    bpsGt: ").append(toIndentedString(bpsGt)).append("\n");
     sb.append("    bpsGte: ").append(toIndentedString(bpsGte)).append("\n");
@@ -9961,8 +9963,6 @@ public class IscsiTargetWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    replicaNumGt: ").append(toIndentedString(replicaNumGt)).append("\n");
     sb.append("    replicaNumGte: ").append(toIndentedString(replicaNumGte)).append("\n");

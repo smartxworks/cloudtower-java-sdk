@@ -27,6 +27,14 @@ public class UsbDeviceWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<UsbDeviceWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<UsbDeviceWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<UsbDeviceWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_BINDED = "binded";
   @SerializedName(SERIALIZED_NAME_BINDED)
   private Boolean binded;
@@ -367,14 +375,6 @@ public class UsbDeviceWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<UsbDeviceWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<UsbDeviceWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Long size;
@@ -522,6 +522,68 @@ public class UsbDeviceWhereInput {
 
   public void setAND(List<UsbDeviceWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public UsbDeviceWhereInput NOT(List<UsbDeviceWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public UsbDeviceWhereInput addNOTItem(UsbDeviceWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<UsbDeviceWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UsbDeviceWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<UsbDeviceWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public UsbDeviceWhereInput OR(List<UsbDeviceWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public UsbDeviceWhereInput addORItem(UsbDeviceWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<UsbDeviceWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UsbDeviceWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<UsbDeviceWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2592,68 +2654,6 @@ public class UsbDeviceWhereInput {
   }
 
 
-  public UsbDeviceWhereInput NOT(List<UsbDeviceWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public UsbDeviceWhereInput addNOTItem(UsbDeviceWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<UsbDeviceWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UsbDeviceWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<UsbDeviceWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public UsbDeviceWhereInput OR(List<UsbDeviceWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public UsbDeviceWhereInput addORItem(UsbDeviceWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<UsbDeviceWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UsbDeviceWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<UsbDeviceWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public UsbDeviceWhereInput size(Long size) {
     
     this.size = size;
@@ -3379,6 +3379,8 @@ public class UsbDeviceWhereInput {
     }
     UsbDeviceWhereInput usbDeviceWhereInput = (UsbDeviceWhereInput) o;
     return Objects.equals(this.AND, usbDeviceWhereInput.AND) &&
+        Objects.equals(this.NOT, usbDeviceWhereInput.NOT) &&
+        Objects.equals(this.OR, usbDeviceWhereInput.OR) &&
         Objects.equals(this.binded, usbDeviceWhereInput.binded) &&
         Objects.equals(this.bindedNot, usbDeviceWhereInput.bindedNot) &&
         Objects.equals(this.description, usbDeviceWhereInput.description) &&
@@ -3464,8 +3466,6 @@ public class UsbDeviceWhereInput {
         Objects.equals(this.nameNotIn, usbDeviceWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, usbDeviceWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, usbDeviceWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, usbDeviceWhereInput.NOT) &&
-        Objects.equals(this.OR, usbDeviceWhereInput.OR) &&
         Objects.equals(this.size, usbDeviceWhereInput.size) &&
         Objects.equals(this.sizeGt, usbDeviceWhereInput.sizeGt) &&
         Objects.equals(this.sizeGte, usbDeviceWhereInput.sizeGte) &&
@@ -3503,7 +3503,7 @@ public class UsbDeviceWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, binded, bindedNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, manufacturer, manufacturerContains, manufacturerEndsWith, manufacturerGt, manufacturerGte, manufacturerIn, manufacturerLt, manufacturerLte, manufacturerNot, manufacturerNotContains, manufacturerNotEndsWith, manufacturerNotIn, manufacturerNotStartsWith, manufacturerStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, status, statusIn, statusNot, statusNotIn, usbType, usbTypeContains, usbTypeEndsWith, usbTypeGt, usbTypeGte, usbTypeIn, usbTypeLt, usbTypeLte, usbTypeNot, usbTypeNotContains, usbTypeNotEndsWith, usbTypeNotIn, usbTypeNotStartsWith, usbTypeStartsWith, vmsEvery, vmsNone, vmsSome);
+    return Objects.hash(AND, NOT, OR, binded, bindedNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, host, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, manufacturer, manufacturerContains, manufacturerEndsWith, manufacturerGt, manufacturerGte, manufacturerIn, manufacturerLt, manufacturerLte, manufacturerNot, manufacturerNotContains, manufacturerNotEndsWith, manufacturerNotIn, manufacturerNotStartsWith, manufacturerStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, status, statusIn, statusNot, statusNotIn, usbType, usbTypeContains, usbTypeEndsWith, usbTypeGt, usbTypeGte, usbTypeIn, usbTypeLt, usbTypeLte, usbTypeNot, usbTypeNotContains, usbTypeNotEndsWith, usbTypeNotIn, usbTypeNotStartsWith, usbTypeStartsWith, vmsEvery, vmsNone, vmsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3518,6 +3518,8 @@ public class UsbDeviceWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsbDeviceWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    binded: ").append(toIndentedString(binded)).append("\n");
     sb.append("    bindedNot: ").append(toIndentedString(bindedNot)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
@@ -3603,8 +3605,6 @@ public class UsbDeviceWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    sizeGt: ").append(toIndentedString(sizeGt)).append("\n");
     sb.append("    sizeGte: ").append(toIndentedString(sizeGte)).append("\n");

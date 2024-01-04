@@ -80,13 +80,13 @@ public class Vm {
   @SerializedName(SERIALIZED_NAME_DNS_SERVERS)
   private String dnsServers;
 
-  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS = "entity_filter_results";
-  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS)
-  private List<NestedVmEntityFilterResult> entityFilterResults = null;
-
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS = "entity_filter_results";
+  @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS)
+  private List<NestedVmEntityFilterResult> entityFilterResults = null;
 
   public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
   @SerializedName(SERIALIZED_NAME_FIRMWARE)
@@ -506,6 +506,29 @@ public class Vm {
   }
 
 
+  public Vm entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    
+    this.entityAsyncStatus = entityAsyncStatus;
+    return this;
+  }
+
+   /**
+   * Get entityAsyncStatus
+   * @return entityAsyncStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EntityAsyncStatus getEntityAsyncStatus() {
+    return entityAsyncStatus;
+  }
+
+
+  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+    this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
   public Vm entityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
     
     this.entityFilterResults = entityFilterResults;
@@ -534,29 +557,6 @@ public class Vm {
 
   public void setEntityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
     this.entityFilterResults = entityFilterResults;
-  }
-
-
-  public Vm entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
-    
-    this.entityAsyncStatus = entityAsyncStatus;
-    return this;
-  }
-
-   /**
-   * Get entityAsyncStatus
-   * @return entityAsyncStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public EntityAsyncStatus getEntityAsyncStatus() {
-    return entityAsyncStatus;
-  }
-
-
-  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
-    this.entityAsyncStatus = entityAsyncStatus;
   }
 
 
@@ -1843,8 +1843,8 @@ public class Vm {
         Objects.equals(this.deletedAt, vm.deletedAt) &&
         Objects.equals(this.description, vm.description) &&
         Objects.equals(this.dnsServers, vm.dnsServers) &&
-        Objects.equals(this.entityFilterResults, vm.entityFilterResults) &&
         Objects.equals(this.entityAsyncStatus, vm.entityAsyncStatus) &&
+        Objects.equals(this.entityFilterResults, vm.entityFilterResults) &&
         Objects.equals(this.firmware, vm.firmware) &&
         Objects.equals(this.folder, vm.folder) &&
         Objects.equals(this.gpuDevices, vm.gpuDevices) &&
@@ -1905,7 +1905,7 @@ public class Vm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityFilterResults, entityAsyncStatus, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
+    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1928,8 +1928,8 @@ public class Vm {
     sb.append("    deletedAt: ").append(toIndentedString(deletedAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    dnsServers: ").append(toIndentedString(dnsServers)).append("\n");
-    sb.append("    entityFilterResults: ").append(toIndentedString(entityFilterResults)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    entityFilterResults: ").append(toIndentedString(entityFilterResults)).append("\n");
     sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
     sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
     sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");

@@ -28,6 +28,14 @@ public class ElfDataStoreWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ElfDataStoreWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ElfDataStoreWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ElfDataStoreWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -336,17 +344,9 @@ public class ElfDataStoreWhereInput {
   @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
   private NfsExportWhereInput nfsExport;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ElfDataStoreWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
   private NvmfSubsystemWhereInput nvmfSubsystem;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ElfDataStoreWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
@@ -435,6 +435,68 @@ public class ElfDataStoreWhereInput {
 
   public void setAND(List<ElfDataStoreWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ElfDataStoreWhereInput NOT(List<ElfDataStoreWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ElfDataStoreWhereInput addNOTItem(ElfDataStoreWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ElfDataStoreWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ElfDataStoreWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ElfDataStoreWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ElfDataStoreWhereInput OR(List<ElfDataStoreWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ElfDataStoreWhereInput addORItem(ElfDataStoreWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ElfDataStoreWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ElfDataStoreWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ElfDataStoreWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2289,37 +2351,6 @@ public class ElfDataStoreWhereInput {
   }
 
 
-  public ElfDataStoreWhereInput NOT(List<ElfDataStoreWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ElfDataStoreWhereInput addNOTItem(ElfDataStoreWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ElfDataStoreWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ElfDataStoreWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ElfDataStoreWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public ElfDataStoreWhereInput nvmfSubsystem(NvmfSubsystemWhereInput nvmfSubsystem) {
     
     this.nvmfSubsystem = nvmfSubsystem;
@@ -2340,37 +2371,6 @@ public class ElfDataStoreWhereInput {
 
   public void setNvmfSubsystem(NvmfSubsystemWhereInput nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
-  }
-
-
-  public ElfDataStoreWhereInput OR(List<ElfDataStoreWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ElfDataStoreWhereInput addORItem(ElfDataStoreWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ElfDataStoreWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ElfDataStoreWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ElfDataStoreWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -2738,6 +2738,8 @@ public class ElfDataStoreWhereInput {
     }
     ElfDataStoreWhereInput elfDataStoreWhereInput = (ElfDataStoreWhereInput) o;
     return Objects.equals(this.AND, elfDataStoreWhereInput.AND) &&
+        Objects.equals(this.NOT, elfDataStoreWhereInput.NOT) &&
+        Objects.equals(this.OR, elfDataStoreWhereInput.OR) &&
         Objects.equals(this.cluster, elfDataStoreWhereInput.cluster) &&
         Objects.equals(this.description, elfDataStoreWhereInput.description) &&
         Objects.equals(this.descriptionContains, elfDataStoreWhereInput.descriptionContains) &&
@@ -2815,9 +2817,7 @@ public class ElfDataStoreWhereInput {
         Objects.equals(this.nameNotStartsWith, elfDataStoreWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, elfDataStoreWhereInput.nameStartsWith) &&
         Objects.equals(this.nfsExport, elfDataStoreWhereInput.nfsExport) &&
-        Objects.equals(this.NOT, elfDataStoreWhereInput.NOT) &&
         Objects.equals(this.nvmfSubsystem, elfDataStoreWhereInput.nvmfSubsystem) &&
-        Objects.equals(this.OR, elfDataStoreWhereInput.OR) &&
         Objects.equals(this.replicaNum, elfDataStoreWhereInput.replicaNum) &&
         Objects.equals(this.replicaNumGt, elfDataStoreWhereInput.replicaNumGt) &&
         Objects.equals(this.replicaNumGte, elfDataStoreWhereInput.replicaNumGte) &&
@@ -2840,7 +2840,7 @@ public class ElfDataStoreWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, externalUse, externalUseNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ipWhitelist, ipWhitelistContains, ipWhitelistEndsWith, ipWhitelistGt, ipWhitelistGte, ipWhitelistIn, ipWhitelistLt, ipWhitelistLte, ipWhitelistNot, ipWhitelistNotContains, ipWhitelistNotEndsWith, ipWhitelistNotIn, ipWhitelistNotStartsWith, ipWhitelistStartsWith, iscsiTarget, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, NOT, nvmfSubsystem, OR, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, thinProvision, thinProvisionNot, type, typeIn, typeNot, typeNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, externalUse, externalUseNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internal, internalNot, ipWhitelist, ipWhitelistContains, ipWhitelistEndsWith, ipWhitelistGt, ipWhitelistGte, ipWhitelistIn, ipWhitelistLt, ipWhitelistLte, ipWhitelistNot, ipWhitelistNotContains, ipWhitelistNotEndsWith, ipWhitelistNotIn, ipWhitelistNotStartsWith, ipWhitelistStartsWith, iscsiTarget, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, nvmfSubsystem, replicaNum, replicaNumGt, replicaNumGte, replicaNumIn, replicaNumLt, replicaNumLte, replicaNumNot, replicaNumNotIn, thinProvision, thinProvisionNot, type, typeIn, typeNot, typeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2855,6 +2855,8 @@ public class ElfDataStoreWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ElfDataStoreWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
@@ -2932,9 +2934,7 @@ public class ElfDataStoreWhereInput {
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
     sb.append("    nfsExport: ").append(toIndentedString(nfsExport)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    nvmfSubsystem: ").append(toIndentedString(nvmfSubsystem)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
     sb.append("    replicaNumGt: ").append(toIndentedString(replicaNumGt)).append("\n");
     sb.append("    replicaNumGte: ").append(toIndentedString(replicaNumGte)).append("\n");

@@ -24,6 +24,14 @@ public class ReportTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ReportTemplateWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ReportTemplateWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ReportTemplateWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
@@ -224,14 +232,6 @@ public class ReportTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ReportTemplateWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ReportTemplateWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PRESET = "preset";
   @SerializedName(SERIALIZED_NAME_PRESET)
   private String preset;
@@ -363,6 +363,68 @@ public class ReportTemplateWhereInput {
 
   public void setAND(List<ReportTemplateWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ReportTemplateWhereInput NOT(List<ReportTemplateWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ReportTemplateWhereInput addNOTItem(ReportTemplateWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ReportTemplateWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ReportTemplateWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ReportTemplateWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ReportTemplateWhereInput OR(List<ReportTemplateWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ReportTemplateWhereInput addORItem(ReportTemplateWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ReportTemplateWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ReportTemplateWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ReportTemplateWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1580,68 +1642,6 @@ public class ReportTemplateWhereInput {
   }
 
 
-  public ReportTemplateWhereInput NOT(List<ReportTemplateWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ReportTemplateWhereInput addNOTItem(ReportTemplateWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ReportTemplateWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ReportTemplateWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ReportTemplateWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public ReportTemplateWhereInput OR(List<ReportTemplateWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ReportTemplateWhereInput addORItem(ReportTemplateWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ReportTemplateWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ReportTemplateWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ReportTemplateWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public ReportTemplateWhereInput preset(String preset) {
     
     this.preset = preset;
@@ -2259,6 +2259,8 @@ public class ReportTemplateWhereInput {
     }
     ReportTemplateWhereInput reportTemplateWhereInput = (ReportTemplateWhereInput) o;
     return Objects.equals(this.AND, reportTemplateWhereInput.AND) &&
+        Objects.equals(this.NOT, reportTemplateWhereInput.NOT) &&
+        Objects.equals(this.OR, reportTemplateWhereInput.OR) &&
         Objects.equals(this.createdAt, reportTemplateWhereInput.createdAt) &&
         Objects.equals(this.createdAtGt, reportTemplateWhereInput.createdAtGt) &&
         Objects.equals(this.createdAtGte, reportTemplateWhereInput.createdAtGte) &&
@@ -2309,8 +2311,6 @@ public class ReportTemplateWhereInput {
         Objects.equals(this.nameNotIn, reportTemplateWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, reportTemplateWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, reportTemplateWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, reportTemplateWhereInput.NOT) &&
-        Objects.equals(this.OR, reportTemplateWhereInput.OR) &&
         Objects.equals(this.preset, reportTemplateWhereInput.preset) &&
         Objects.equals(this.presetContains, reportTemplateWhereInput.presetContains) &&
         Objects.equals(this.presetEndsWith, reportTemplateWhereInput.presetEndsWith) &&
@@ -2344,7 +2344,7 @@ public class ReportTemplateWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, preset, presetContains, presetEndsWith, presetGt, presetGte, presetIn, presetLt, presetLte, presetNot, presetNotContains, presetNotEndsWith, presetNotIn, presetNotStartsWith, presetStartsWith, taskNum, taskNumGt, taskNumGte, taskNumIn, taskNumLt, taskNumLte, taskNumNot, taskNumNotIn, tasksEvery, tasksNone, tasksSome);
+    return Objects.hash(AND, NOT, OR, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, preset, presetContains, presetEndsWith, presetGt, presetGte, presetIn, presetLt, presetLte, presetNot, presetNotContains, presetNotEndsWith, presetNotIn, presetNotStartsWith, presetStartsWith, taskNum, taskNumGt, taskNumGte, taskNumIn, taskNumLt, taskNumLte, taskNumNot, taskNumNotIn, tasksEvery, tasksNone, tasksSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2359,6 +2359,8 @@ public class ReportTemplateWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportTemplateWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
     sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");
@@ -2409,8 +2411,6 @@ public class ReportTemplateWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    preset: ").append(toIndentedString(preset)).append("\n");
     sb.append("    presetContains: ").append(toIndentedString(presetContains)).append("\n");
     sb.append("    presetEndsWith: ").append(toIndentedString(presetEndsWith)).append("\n");

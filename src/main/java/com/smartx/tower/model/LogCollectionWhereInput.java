@@ -27,6 +27,14 @@ public class LogCollectionWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<LogCollectionWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<LogCollectionWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<LogCollectionWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -218,14 +226,6 @@ public class LogCollectionWhereInput {
   public static final String SERIALIZED_NAME_LOG_STARTED_AT_NOT_IN = "log_started_at_not_in";
   @SerializedName(SERIALIZED_NAME_LOG_STARTED_AT_NOT_IN)
   private List<String> logStartedAtNotIn = null;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<LogCollectionWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<LogCollectionWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
@@ -486,6 +486,68 @@ public class LogCollectionWhereInput {
 
   public void setAND(List<LogCollectionWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public LogCollectionWhereInput NOT(List<LogCollectionWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public LogCollectionWhereInput addNOTItem(LogCollectionWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<LogCollectionWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<LogCollectionWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<LogCollectionWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public LogCollectionWhereInput OR(List<LogCollectionWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public LogCollectionWhereInput addORItem(LogCollectionWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<LogCollectionWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<LogCollectionWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<LogCollectionWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1654,68 +1716,6 @@ public class LogCollectionWhereInput {
 
   public void setLogStartedAtNotIn(List<String> logStartedAtNotIn) {
     this.logStartedAtNotIn = logStartedAtNotIn;
-  }
-
-
-  public LogCollectionWhereInput NOT(List<LogCollectionWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public LogCollectionWhereInput addNOTItem(LogCollectionWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<LogCollectionWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<LogCollectionWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<LogCollectionWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public LogCollectionWhereInput OR(List<LogCollectionWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public LogCollectionWhereInput addORItem(LogCollectionWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<LogCollectionWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<LogCollectionWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<LogCollectionWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -3136,6 +3136,8 @@ public class LogCollectionWhereInput {
     }
     LogCollectionWhereInput logCollectionWhereInput = (LogCollectionWhereInput) o;
     return Objects.equals(this.AND, logCollectionWhereInput.AND) &&
+        Objects.equals(this.NOT, logCollectionWhereInput.NOT) &&
+        Objects.equals(this.OR, logCollectionWhereInput.OR) &&
         Objects.equals(this.cluster, logCollectionWhereInput.cluster) &&
         Objects.equals(this.hostsEvery, logCollectionWhereInput.hostsEvery) &&
         Objects.equals(this.hostsNone, logCollectionWhereInput.hostsNone) &&
@@ -3184,8 +3186,6 @@ public class LogCollectionWhereInput {
         Objects.equals(this.logStartedAtLte, logCollectionWhereInput.logStartedAtLte) &&
         Objects.equals(this.logStartedAtNot, logCollectionWhereInput.logStartedAtNot) &&
         Objects.equals(this.logStartedAtNotIn, logCollectionWhereInput.logStartedAtNotIn) &&
-        Objects.equals(this.NOT, logCollectionWhereInput.NOT) &&
-        Objects.equals(this.OR, logCollectionWhereInput.OR) &&
         Objects.equals(this.owner, logCollectionWhereInput.owner) &&
         Objects.equals(this.ownerContains, logCollectionWhereInput.ownerContains) &&
         Objects.equals(this.ownerEndsWith, logCollectionWhereInput.ownerEndsWith) &&
@@ -3251,7 +3251,7 @@ public class LogCollectionWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logEndedAt, logEndedAtGt, logEndedAtGte, logEndedAtIn, logEndedAtLt, logEndedAtLte, logEndedAtNot, logEndedAtNotIn, logStartedAt, logStartedAtGt, logStartedAtGte, logStartedAtIn, logStartedAtLt, logStartedAtLte, logStartedAtNot, logStartedAtNotIn, NOT, OR, owner, ownerContains, ownerEndsWith, ownerGt, ownerGte, ownerIn, ownerLt, ownerLte, ownerNot, ownerNotContains, ownerNotEndsWith, ownerNotIn, ownerNotStartsWith, ownerStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, progress, progressGt, progressGte, progressIn, progressLt, progressLte, progressNot, progressNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, witness);
+    return Objects.hash(AND, NOT, OR, cluster, hostsEvery, hostsNone, hostsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logEndedAt, logEndedAtGt, logEndedAtGte, logEndedAtIn, logEndedAtLt, logEndedAtLte, logEndedAtNot, logEndedAtNotIn, logStartedAt, logStartedAtGt, logStartedAtGte, logStartedAtIn, logStartedAtLt, logStartedAtLte, logStartedAtNot, logStartedAtNotIn, owner, ownerContains, ownerEndsWith, ownerGt, ownerGte, ownerIn, ownerLt, ownerLte, ownerNot, ownerNotContains, ownerNotEndsWith, ownerNotIn, ownerNotStartsWith, ownerStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, progress, progressGt, progressGte, progressIn, progressLt, progressLte, progressNot, progressNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, witness);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3266,6 +3266,8 @@ public class LogCollectionWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class LogCollectionWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    hostsEvery: ").append(toIndentedString(hostsEvery)).append("\n");
     sb.append("    hostsNone: ").append(toIndentedString(hostsNone)).append("\n");
@@ -3314,8 +3316,6 @@ public class LogCollectionWhereInput {
     sb.append("    logStartedAtLte: ").append(toIndentedString(logStartedAtLte)).append("\n");
     sb.append("    logStartedAtNot: ").append(toIndentedString(logStartedAtNot)).append("\n");
     sb.append("    logStartedAtNotIn: ").append(toIndentedString(logStartedAtNotIn)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    ownerContains: ").append(toIndentedString(ownerContains)).append("\n");
     sb.append("    ownerEndsWith: ").append(toIndentedString(ownerEndsWith)).append("\n");

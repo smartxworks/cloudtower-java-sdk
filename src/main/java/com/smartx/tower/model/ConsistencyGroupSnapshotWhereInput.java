@@ -28,6 +28,26 @@ public class ConsistencyGroupSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<ConsistencyGroupSnapshotWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_EVERY = "Iscsi_lun_snapshots_every";
+  @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_EVERY)
+  private IscsiLunSnapshotWhereInput iscsiLunSnapshotsEvery;
+
+  public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_NONE = "Iscsi_lun_snapshots_none";
+  @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_NONE)
+  private IscsiLunSnapshotWhereInput iscsiLunSnapshotsNone;
+
+  public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_SOME = "Iscsi_lun_snapshots_some";
+  @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_SOME)
+  private IscsiLunSnapshotWhereInput iscsiLunSnapshotsSome;
+
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<ConsistencyGroupSnapshotWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<ConsistencyGroupSnapshotWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP = "consistency_group";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP)
   private ConsistencyGroupWhereInput consistencyGroup;
@@ -103,18 +123,6 @@ public class ConsistencyGroupSnapshotWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
-
-  public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_EVERY = "Iscsi_lun_snapshots_every";
-  @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_EVERY)
-  private IscsiLunSnapshotWhereInput iscsiLunSnapshotsEvery;
-
-  public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_NONE = "Iscsi_lun_snapshots_none";
-  @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_NONE)
-  private IscsiLunSnapshotWhereInput iscsiLunSnapshotsNone;
-
-  public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_SOME = "Iscsi_lun_snapshots_some";
-  @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS_SOME)
-  private IscsiLunSnapshotWhereInput iscsiLunSnapshotsSome;
 
   public static final String SERIALIZED_NAME_LABELS_EVERY = "labels_every";
   @SerializedName(SERIALIZED_NAME_LABELS_EVERY)
@@ -272,10 +280,6 @@ public class ConsistencyGroupSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<ConsistencyGroupSnapshotWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS_EVERY = "nvmf_namespace_snapshots_every";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS_EVERY)
   private NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshotsEvery;
@@ -287,10 +291,6 @@ public class ConsistencyGroupSnapshotWhereInput {
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS_SOME = "nvmf_namespace_snapshots_some";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS_SOME)
   private NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshotsSome;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<ConsistencyGroupSnapshotWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
@@ -355,6 +355,137 @@ public class ConsistencyGroupSnapshotWhereInput {
 
   public void setAND(List<ConsistencyGroupSnapshotWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public ConsistencyGroupSnapshotWhereInput iscsiLunSnapshotsEvery(IscsiLunSnapshotWhereInput iscsiLunSnapshotsEvery) {
+    
+    this.iscsiLunSnapshotsEvery = iscsiLunSnapshotsEvery;
+    return this;
+  }
+
+   /**
+   * Get iscsiLunSnapshotsEvery
+   * @return iscsiLunSnapshotsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IscsiLunSnapshotWhereInput getIscsiLunSnapshotsEvery() {
+    return iscsiLunSnapshotsEvery;
+  }
+
+
+  public void setIscsiLunSnapshotsEvery(IscsiLunSnapshotWhereInput iscsiLunSnapshotsEvery) {
+    this.iscsiLunSnapshotsEvery = iscsiLunSnapshotsEvery;
+  }
+
+
+  public ConsistencyGroupSnapshotWhereInput iscsiLunSnapshotsNone(IscsiLunSnapshotWhereInput iscsiLunSnapshotsNone) {
+    
+    this.iscsiLunSnapshotsNone = iscsiLunSnapshotsNone;
+    return this;
+  }
+
+   /**
+   * Get iscsiLunSnapshotsNone
+   * @return iscsiLunSnapshotsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IscsiLunSnapshotWhereInput getIscsiLunSnapshotsNone() {
+    return iscsiLunSnapshotsNone;
+  }
+
+
+  public void setIscsiLunSnapshotsNone(IscsiLunSnapshotWhereInput iscsiLunSnapshotsNone) {
+    this.iscsiLunSnapshotsNone = iscsiLunSnapshotsNone;
+  }
+
+
+  public ConsistencyGroupSnapshotWhereInput iscsiLunSnapshotsSome(IscsiLunSnapshotWhereInput iscsiLunSnapshotsSome) {
+    
+    this.iscsiLunSnapshotsSome = iscsiLunSnapshotsSome;
+    return this;
+  }
+
+   /**
+   * Get iscsiLunSnapshotsSome
+   * @return iscsiLunSnapshotsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public IscsiLunSnapshotWhereInput getIscsiLunSnapshotsSome() {
+    return iscsiLunSnapshotsSome;
+  }
+
+
+  public void setIscsiLunSnapshotsSome(IscsiLunSnapshotWhereInput iscsiLunSnapshotsSome) {
+    this.iscsiLunSnapshotsSome = iscsiLunSnapshotsSome;
+  }
+
+
+  public ConsistencyGroupSnapshotWhereInput NOT(List<ConsistencyGroupSnapshotWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public ConsistencyGroupSnapshotWhereInput addNOTItem(ConsistencyGroupSnapshotWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<ConsistencyGroupSnapshotWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ConsistencyGroupSnapshotWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<ConsistencyGroupSnapshotWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public ConsistencyGroupSnapshotWhereInput OR(List<ConsistencyGroupSnapshotWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public ConsistencyGroupSnapshotWhereInput addORItem(ConsistencyGroupSnapshotWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<ConsistencyGroupSnapshotWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<ConsistencyGroupSnapshotWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<ConsistencyGroupSnapshotWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -824,75 +955,6 @@ public class ConsistencyGroupSnapshotWhereInput {
 
   public void setIdStartsWith(String idStartsWith) {
     this.idStartsWith = idStartsWith;
-  }
-
-
-  public ConsistencyGroupSnapshotWhereInput iscsiLunSnapshotsEvery(IscsiLunSnapshotWhereInput iscsiLunSnapshotsEvery) {
-    
-    this.iscsiLunSnapshotsEvery = iscsiLunSnapshotsEvery;
-    return this;
-  }
-
-   /**
-   * Get iscsiLunSnapshotsEvery
-   * @return iscsiLunSnapshotsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunSnapshotWhereInput getIscsiLunSnapshotsEvery() {
-    return iscsiLunSnapshotsEvery;
-  }
-
-
-  public void setIscsiLunSnapshotsEvery(IscsiLunSnapshotWhereInput iscsiLunSnapshotsEvery) {
-    this.iscsiLunSnapshotsEvery = iscsiLunSnapshotsEvery;
-  }
-
-
-  public ConsistencyGroupSnapshotWhereInput iscsiLunSnapshotsNone(IscsiLunSnapshotWhereInput iscsiLunSnapshotsNone) {
-    
-    this.iscsiLunSnapshotsNone = iscsiLunSnapshotsNone;
-    return this;
-  }
-
-   /**
-   * Get iscsiLunSnapshotsNone
-   * @return iscsiLunSnapshotsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunSnapshotWhereInput getIscsiLunSnapshotsNone() {
-    return iscsiLunSnapshotsNone;
-  }
-
-
-  public void setIscsiLunSnapshotsNone(IscsiLunSnapshotWhereInput iscsiLunSnapshotsNone) {
-    this.iscsiLunSnapshotsNone = iscsiLunSnapshotsNone;
-  }
-
-
-  public ConsistencyGroupSnapshotWhereInput iscsiLunSnapshotsSome(IscsiLunSnapshotWhereInput iscsiLunSnapshotsSome) {
-    
-    this.iscsiLunSnapshotsSome = iscsiLunSnapshotsSome;
-    return this;
-  }
-
-   /**
-   * Get iscsiLunSnapshotsSome
-   * @return iscsiLunSnapshotsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunSnapshotWhereInput getIscsiLunSnapshotsSome() {
-    return iscsiLunSnapshotsSome;
-  }
-
-
-  public void setIscsiLunSnapshotsSome(IscsiLunSnapshotWhereInput iscsiLunSnapshotsSome) {
-    this.iscsiLunSnapshotsSome = iscsiLunSnapshotsSome;
   }
 
 
@@ -1841,37 +1903,6 @@ public class ConsistencyGroupSnapshotWhereInput {
   }
 
 
-  public ConsistencyGroupSnapshotWhereInput NOT(List<ConsistencyGroupSnapshotWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public ConsistencyGroupSnapshotWhereInput addNOTItem(ConsistencyGroupSnapshotWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<ConsistencyGroupSnapshotWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ConsistencyGroupSnapshotWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<ConsistencyGroupSnapshotWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public ConsistencyGroupSnapshotWhereInput nvmfNamespaceSnapshotsEvery(NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshotsEvery) {
     
     this.nvmfNamespaceSnapshotsEvery = nvmfNamespaceSnapshotsEvery;
@@ -1938,37 +1969,6 @@ public class ConsistencyGroupSnapshotWhereInput {
 
   public void setNvmfNamespaceSnapshotsSome(NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshotsSome) {
     this.nvmfNamespaceSnapshotsSome = nvmfNamespaceSnapshotsSome;
-  }
-
-
-  public ConsistencyGroupSnapshotWhereInput OR(List<ConsistencyGroupSnapshotWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public ConsistencyGroupSnapshotWhereInput addORItem(ConsistencyGroupSnapshotWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<ConsistencyGroupSnapshotWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<ConsistencyGroupSnapshotWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<ConsistencyGroupSnapshotWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -2182,6 +2182,11 @@ public class ConsistencyGroupSnapshotWhereInput {
     }
     ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshotWhereInput = (ConsistencyGroupSnapshotWhereInput) o;
     return Objects.equals(this.AND, consistencyGroupSnapshotWhereInput.AND) &&
+        Objects.equals(this.iscsiLunSnapshotsEvery, consistencyGroupSnapshotWhereInput.iscsiLunSnapshotsEvery) &&
+        Objects.equals(this.iscsiLunSnapshotsNone, consistencyGroupSnapshotWhereInput.iscsiLunSnapshotsNone) &&
+        Objects.equals(this.iscsiLunSnapshotsSome, consistencyGroupSnapshotWhereInput.iscsiLunSnapshotsSome) &&
+        Objects.equals(this.NOT, consistencyGroupSnapshotWhereInput.NOT) &&
+        Objects.equals(this.OR, consistencyGroupSnapshotWhereInput.OR) &&
         Objects.equals(this.consistencyGroup, consistencyGroupSnapshotWhereInput.consistencyGroup) &&
         Objects.equals(this.entityAsyncStatus, consistencyGroupSnapshotWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, consistencyGroupSnapshotWhereInput.entityAsyncStatusIn) &&
@@ -2201,9 +2206,6 @@ public class ConsistencyGroupSnapshotWhereInput {
         Objects.equals(this.idNotIn, consistencyGroupSnapshotWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, consistencyGroupSnapshotWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, consistencyGroupSnapshotWhereInput.idStartsWith) &&
-        Objects.equals(this.iscsiLunSnapshotsEvery, consistencyGroupSnapshotWhereInput.iscsiLunSnapshotsEvery) &&
-        Objects.equals(this.iscsiLunSnapshotsNone, consistencyGroupSnapshotWhereInput.iscsiLunSnapshotsNone) &&
-        Objects.equals(this.iscsiLunSnapshotsSome, consistencyGroupSnapshotWhereInput.iscsiLunSnapshotsSome) &&
         Objects.equals(this.labelsEvery, consistencyGroupSnapshotWhereInput.labelsEvery) &&
         Objects.equals(this.labelsNone, consistencyGroupSnapshotWhereInput.labelsNone) &&
         Objects.equals(this.labelsSome, consistencyGroupSnapshotWhereInput.labelsSome) &&
@@ -2243,11 +2245,9 @@ public class ConsistencyGroupSnapshotWhereInput {
         Objects.equals(this.nameNotIn, consistencyGroupSnapshotWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, consistencyGroupSnapshotWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, consistencyGroupSnapshotWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, consistencyGroupSnapshotWhereInput.NOT) &&
         Objects.equals(this.nvmfNamespaceSnapshotsEvery, consistencyGroupSnapshotWhereInput.nvmfNamespaceSnapshotsEvery) &&
         Objects.equals(this.nvmfNamespaceSnapshotsNone, consistencyGroupSnapshotWhereInput.nvmfNamespaceSnapshotsNone) &&
         Objects.equals(this.nvmfNamespaceSnapshotsSome, consistencyGroupSnapshotWhereInput.nvmfNamespaceSnapshotsSome) &&
-        Objects.equals(this.OR, consistencyGroupSnapshotWhereInput.OR) &&
         Objects.equals(this.uniqueSize, consistencyGroupSnapshotWhereInput.uniqueSize) &&
         Objects.equals(this.uniqueSizeGt, consistencyGroupSnapshotWhereInput.uniqueSizeGt) &&
         Objects.equals(this.uniqueSizeGte, consistencyGroupSnapshotWhereInput.uniqueSizeGte) &&
@@ -2264,7 +2264,7 @@ public class ConsistencyGroupSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, consistencyGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, OR, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, iscsiLunSnapshotsEvery, iscsiLunSnapshotsNone, iscsiLunSnapshotsSome, NOT, OR, consistencyGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nvmfNamespaceSnapshotsEvery, nvmfNamespaceSnapshotsNone, nvmfNamespaceSnapshotsSome, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2279,6 +2279,11 @@ public class ConsistencyGroupSnapshotWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsistencyGroupSnapshotWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    iscsiLunSnapshotsEvery: ").append(toIndentedString(iscsiLunSnapshotsEvery)).append("\n");
+    sb.append("    iscsiLunSnapshotsNone: ").append(toIndentedString(iscsiLunSnapshotsNone)).append("\n");
+    sb.append("    iscsiLunSnapshotsSome: ").append(toIndentedString(iscsiLunSnapshotsSome)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    consistencyGroup: ").append(toIndentedString(consistencyGroup)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
@@ -2298,9 +2303,6 @@ public class ConsistencyGroupSnapshotWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    iscsiLunSnapshotsEvery: ").append(toIndentedString(iscsiLunSnapshotsEvery)).append("\n");
-    sb.append("    iscsiLunSnapshotsNone: ").append(toIndentedString(iscsiLunSnapshotsNone)).append("\n");
-    sb.append("    iscsiLunSnapshotsSome: ").append(toIndentedString(iscsiLunSnapshotsSome)).append("\n");
     sb.append("    labelsEvery: ").append(toIndentedString(labelsEvery)).append("\n");
     sb.append("    labelsNone: ").append(toIndentedString(labelsNone)).append("\n");
     sb.append("    labelsSome: ").append(toIndentedString(labelsSome)).append("\n");
@@ -2340,11 +2342,9 @@ public class ConsistencyGroupSnapshotWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    nvmfNamespaceSnapshotsEvery: ").append(toIndentedString(nvmfNamespaceSnapshotsEvery)).append("\n");
     sb.append("    nvmfNamespaceSnapshotsNone: ").append(toIndentedString(nvmfNamespaceSnapshotsNone)).append("\n");
     sb.append("    nvmfNamespaceSnapshotsSome: ").append(toIndentedString(nvmfNamespaceSnapshotsSome)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
     sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");

@@ -30,6 +30,14 @@ public class VmVolumeWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmVolumeWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmVolumeWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmVolumeWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -410,14 +418,6 @@ public class VmVolumeWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmVolumeWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmVolumeWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
   private String path;
@@ -605,6 +605,68 @@ public class VmVolumeWhereInput {
 
   public void setAND(List<VmVolumeWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmVolumeWhereInput NOT(List<VmVolumeWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmVolumeWhereInput addNOTItem(VmVolumeWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmVolumeWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmVolumeWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmVolumeWhereInput OR(List<VmVolumeWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmVolumeWhereInput addORItem(VmVolumeWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmVolumeWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmVolumeWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2937,68 +2999,6 @@ public class VmVolumeWhereInput {
   }
 
 
-  public VmVolumeWhereInput NOT(List<VmVolumeWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmVolumeWhereInput addNOTItem(VmVolumeWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmVolumeWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmVolumeWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmVolumeWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmVolumeWhereInput OR(List<VmVolumeWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmVolumeWhereInput addORItem(VmVolumeWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmVolumeWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmVolumeWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmVolumeWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmVolumeWhereInput path(String path) {
     
     this.path = path;
@@ -3970,6 +3970,8 @@ public class VmVolumeWhereInput {
     }
     VmVolumeWhereInput vmVolumeWhereInput = (VmVolumeWhereInput) o;
     return Objects.equals(this.AND, vmVolumeWhereInput.AND) &&
+        Objects.equals(this.NOT, vmVolumeWhereInput.NOT) &&
+        Objects.equals(this.OR, vmVolumeWhereInput.OR) &&
         Objects.equals(this.cluster, vmVolumeWhereInput.cluster) &&
         Objects.equals(this.description, vmVolumeWhereInput.description) &&
         Objects.equals(this.descriptionContains, vmVolumeWhereInput.descriptionContains) &&
@@ -4065,8 +4067,6 @@ public class VmVolumeWhereInput {
         Objects.equals(this.nameNotIn, vmVolumeWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vmVolumeWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vmVolumeWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vmVolumeWhereInput.NOT) &&
-        Objects.equals(this.OR, vmVolumeWhereInput.OR) &&
         Objects.equals(this.path, vmVolumeWhereInput.path) &&
         Objects.equals(this.pathContains, vmVolumeWhereInput.pathContains) &&
         Objects.equals(this.pathEndsWith, vmVolumeWhereInput.pathEndsWith) &&
@@ -4114,7 +4114,7 @@ public class VmVolumeWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lun, mounting, mountingNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, sharing, sharingNot, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lun, mounting, mountingNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, sharing, sharingNot, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4129,6 +4129,8 @@ public class VmVolumeWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmVolumeWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
@@ -4224,8 +4226,6 @@ public class VmVolumeWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    pathContains: ").append(toIndentedString(pathContains)).append("\n");
     sb.append("    pathEndsWith: ").append(toIndentedString(pathEndsWith)).append("\n");

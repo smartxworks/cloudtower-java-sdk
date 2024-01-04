@@ -27,6 +27,14 @@ public class CloudTowerApplicationWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<CloudTowerApplicationWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<CloudTowerApplicationWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<CloudTowerApplicationWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -154,14 +162,6 @@ public class CloudTowerApplicationWhereInput {
   public static final String SERIALIZED_NAME_NAME_STARTS_WITH = "name_starts_with";
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
-
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<CloudTowerApplicationWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<CloudTowerApplicationWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_PACKAGE = "package";
   @SerializedName(SERIALIZED_NAME_PACKAGE)
@@ -418,6 +418,68 @@ public class CloudTowerApplicationWhereInput {
 
   public void setAND(List<CloudTowerApplicationWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public CloudTowerApplicationWhereInput NOT(List<CloudTowerApplicationWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public CloudTowerApplicationWhereInput addNOTItem(CloudTowerApplicationWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<CloudTowerApplicationWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<CloudTowerApplicationWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<CloudTowerApplicationWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public CloudTowerApplicationWhereInput OR(List<CloudTowerApplicationWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public CloudTowerApplicationWhereInput addORItem(CloudTowerApplicationWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<CloudTowerApplicationWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<CloudTowerApplicationWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<CloudTowerApplicationWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1202,68 +1264,6 @@ public class CloudTowerApplicationWhereInput {
 
   public void setNameStartsWith(String nameStartsWith) {
     this.nameStartsWith = nameStartsWith;
-  }
-
-
-  public CloudTowerApplicationWhereInput NOT(List<CloudTowerApplicationWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public CloudTowerApplicationWhereInput addNOTItem(CloudTowerApplicationWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<CloudTowerApplicationWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<CloudTowerApplicationWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<CloudTowerApplicationWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public CloudTowerApplicationWhereInput OR(List<CloudTowerApplicationWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public CloudTowerApplicationWhereInput addORItem(CloudTowerApplicationWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<CloudTowerApplicationWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<CloudTowerApplicationWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<CloudTowerApplicationWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -2645,6 +2645,8 @@ public class CloudTowerApplicationWhereInput {
     }
     CloudTowerApplicationWhereInput cloudTowerApplicationWhereInput = (CloudTowerApplicationWhereInput) o;
     return Objects.equals(this.AND, cloudTowerApplicationWhereInput.AND) &&
+        Objects.equals(this.NOT, cloudTowerApplicationWhereInput.NOT) &&
+        Objects.equals(this.OR, cloudTowerApplicationWhereInput.OR) &&
         Objects.equals(this.entityAsyncStatus, cloudTowerApplicationWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, cloudTowerApplicationWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, cloudTowerApplicationWhereInput.entityAsyncStatusNot) &&
@@ -2677,8 +2679,6 @@ public class CloudTowerApplicationWhereInput {
         Objects.equals(this.nameNotIn, cloudTowerApplicationWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, cloudTowerApplicationWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, cloudTowerApplicationWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, cloudTowerApplicationWhereInput.NOT) &&
-        Objects.equals(this.OR, cloudTowerApplicationWhereInput.OR) &&
         Objects.equals(this._package, cloudTowerApplicationWhereInput._package) &&
         Objects.equals(this.placementSituation, cloudTowerApplicationWhereInput.placementSituation) &&
         Objects.equals(this.placementSituationContains, cloudTowerApplicationWhereInput.placementSituationContains) &&
@@ -2743,7 +2743,7 @@ public class CloudTowerApplicationWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, _package, placementSituation, placementSituationContains, placementSituationEndsWith, placementSituationGt, placementSituationGte, placementSituationIn, placementSituationLt, placementSituationLte, placementSituationNot, placementSituationNotContains, placementSituationNotEndsWith, placementSituationNotIn, placementSituationNotStartsWith, placementSituationStartsWith, placementVerb, placementVerbContains, placementVerbEndsWith, placementVerbGt, placementVerbGte, placementVerbIn, placementVerbLt, placementVerbLte, placementVerbNot, placementVerbNotContains, placementVerbNotEndsWith, placementVerbNotIn, placementVerbNotStartsWith, placementVerbStartsWith, resourceVersion, resourceVersionGt, resourceVersionGte, resourceVersionIn, resourceVersionLt, resourceVersionLte, resourceVersionNot, resourceVersionNotIn, state, stateIn, stateNot, stateNotIn, targetPackage, targetPackageContains, targetPackageEndsWith, targetPackageGt, targetPackageGte, targetPackageIn, targetPackageLt, targetPackageLte, targetPackageNot, targetPackageNotContains, targetPackageNotEndsWith, targetPackageNotIn, targetPackageNotStartsWith, targetPackageStartsWith, user);
+    return Objects.hash(AND, NOT, OR, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, _package, placementSituation, placementSituationContains, placementSituationEndsWith, placementSituationGt, placementSituationGte, placementSituationIn, placementSituationLt, placementSituationLte, placementSituationNot, placementSituationNotContains, placementSituationNotEndsWith, placementSituationNotIn, placementSituationNotStartsWith, placementSituationStartsWith, placementVerb, placementVerbContains, placementVerbEndsWith, placementVerbGt, placementVerbGte, placementVerbIn, placementVerbLt, placementVerbLte, placementVerbNot, placementVerbNotContains, placementVerbNotEndsWith, placementVerbNotIn, placementVerbNotStartsWith, placementVerbStartsWith, resourceVersion, resourceVersionGt, resourceVersionGte, resourceVersionIn, resourceVersionLt, resourceVersionLte, resourceVersionNot, resourceVersionNotIn, state, stateIn, stateNot, stateNotIn, targetPackage, targetPackageContains, targetPackageEndsWith, targetPackageGt, targetPackageGte, targetPackageIn, targetPackageLt, targetPackageLte, targetPackageNot, targetPackageNotContains, targetPackageNotEndsWith, targetPackageNotIn, targetPackageNotStartsWith, targetPackageStartsWith, user);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2758,6 +2758,8 @@ public class CloudTowerApplicationWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudTowerApplicationWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
@@ -2790,8 +2792,6 @@ public class CloudTowerApplicationWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    _package: ").append(toIndentedString(_package)).append("\n");
     sb.append("    placementSituation: ").append(toIndentedString(placementSituation)).append("\n");
     sb.append("    placementSituationContains: ").append(toIndentedString(placementSituationContains)).append("\n");

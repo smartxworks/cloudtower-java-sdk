@@ -28,6 +28,14 @@ public class NvmfNamespaceSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<NvmfNamespaceSnapshotWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<NvmfNamespaceSnapshotWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<NvmfNamespaceSnapshotWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT = "consistency_group_snapshot";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
   private ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshot;
@@ -260,10 +268,6 @@ public class NvmfNamespaceSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<NvmfNamespaceSnapshotWhereInput> NOT = null;
-
   public static final String SERIALIZED_NAME_NVMF_NAMESPACE = "nvmf_namespace";
   @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE)
   private NvmfNamespaceWhereInput nvmfNamespace;
@@ -271,10 +275,6 @@ public class NvmfNamespaceSnapshotWhereInput {
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM = "nvmf_subsystem";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
   private NvmfSubsystemWhereInput nvmfSubsystem;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<NvmfNamespaceSnapshotWhereInput> OR = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
@@ -339,6 +339,68 @@ public class NvmfNamespaceSnapshotWhereInput {
 
   public void setAND(List<NvmfNamespaceSnapshotWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public NvmfNamespaceSnapshotWhereInput NOT(List<NvmfNamespaceSnapshotWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public NvmfNamespaceSnapshotWhereInput addNOTItem(NvmfNamespaceSnapshotWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<NvmfNamespaceSnapshotWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NvmfNamespaceSnapshotWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<NvmfNamespaceSnapshotWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public NvmfNamespaceSnapshotWhereInput OR(List<NvmfNamespaceSnapshotWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public NvmfNamespaceSnapshotWhereInput addORItem(NvmfNamespaceSnapshotWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<NvmfNamespaceSnapshotWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NvmfNamespaceSnapshotWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<NvmfNamespaceSnapshotWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1756,37 +1818,6 @@ public class NvmfNamespaceSnapshotWhereInput {
   }
 
 
-  public NvmfNamespaceSnapshotWhereInput NOT(List<NvmfNamespaceSnapshotWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public NvmfNamespaceSnapshotWhereInput addNOTItem(NvmfNamespaceSnapshotWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<NvmfNamespaceSnapshotWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NvmfNamespaceSnapshotWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<NvmfNamespaceSnapshotWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
   public NvmfNamespaceSnapshotWhereInput nvmfNamespace(NvmfNamespaceWhereInput nvmfNamespace) {
     
     this.nvmfNamespace = nvmfNamespace;
@@ -1830,37 +1861,6 @@ public class NvmfNamespaceSnapshotWhereInput {
 
   public void setNvmfSubsystem(NvmfSubsystemWhereInput nvmfSubsystem) {
     this.nvmfSubsystem = nvmfSubsystem;
-  }
-
-
-  public NvmfNamespaceSnapshotWhereInput OR(List<NvmfNamespaceSnapshotWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public NvmfNamespaceSnapshotWhereInput addORItem(NvmfNamespaceSnapshotWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<NvmfNamespaceSnapshotWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NvmfNamespaceSnapshotWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<NvmfNamespaceSnapshotWhereInput> OR) {
-    this.OR = OR;
   }
 
 
@@ -2074,6 +2074,8 @@ public class NvmfNamespaceSnapshotWhereInput {
     }
     NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshotWhereInput = (NvmfNamespaceSnapshotWhereInput) o;
     return Objects.equals(this.AND, nvmfNamespaceSnapshotWhereInput.AND) &&
+        Objects.equals(this.NOT, nvmfNamespaceSnapshotWhereInput.NOT) &&
+        Objects.equals(this.OR, nvmfNamespaceSnapshotWhereInput.OR) &&
         Objects.equals(this.consistencyGroupSnapshot, nvmfNamespaceSnapshotWhereInput.consistencyGroupSnapshot) &&
         Objects.equals(this.entityAsyncStatus, nvmfNamespaceSnapshotWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, nvmfNamespaceSnapshotWhereInput.entityAsyncStatusIn) &&
@@ -2132,10 +2134,8 @@ public class NvmfNamespaceSnapshotWhereInput {
         Objects.equals(this.nameNotIn, nvmfNamespaceSnapshotWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, nvmfNamespaceSnapshotWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, nvmfNamespaceSnapshotWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, nvmfNamespaceSnapshotWhereInput.NOT) &&
         Objects.equals(this.nvmfNamespace, nvmfNamespaceSnapshotWhereInput.nvmfNamespace) &&
         Objects.equals(this.nvmfSubsystem, nvmfNamespaceSnapshotWhereInput.nvmfSubsystem) &&
-        Objects.equals(this.OR, nvmfNamespaceSnapshotWhereInput.OR) &&
         Objects.equals(this.uniqueSize, nvmfNamespaceSnapshotWhereInput.uniqueSize) &&
         Objects.equals(this.uniqueSizeGt, nvmfNamespaceSnapshotWhereInput.uniqueSizeGt) &&
         Objects.equals(this.uniqueSizeGte, nvmfNamespaceSnapshotWhereInput.uniqueSizeGte) &&
@@ -2152,7 +2152,7 @@ public class NvmfNamespaceSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, consistencyGroupSnapshot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, nvmfNamespace, nvmfSubsystem, OR, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, NOT, OR, consistencyGroupSnapshot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nvmfNamespace, nvmfSubsystem, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2167,6 +2167,8 @@ public class NvmfNamespaceSnapshotWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class NvmfNamespaceSnapshotWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    consistencyGroupSnapshot: ").append(toIndentedString(consistencyGroupSnapshot)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
@@ -2225,10 +2227,8 @@ public class NvmfNamespaceSnapshotWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    nvmfNamespace: ").append(toIndentedString(nvmfNamespace)).append("\n");
     sb.append("    nvmfSubsystem: ").append(toIndentedString(nvmfSubsystem)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
     sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");

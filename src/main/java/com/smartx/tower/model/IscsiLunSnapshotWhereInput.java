@@ -28,6 +28,14 @@ public class IscsiLunSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<IscsiLunSnapshotWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<IscsiLunSnapshotWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<IscsiLunSnapshotWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT = "consistency_group_snapshot";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
   private ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshot;
@@ -268,14 +276,6 @@ public class IscsiLunSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<IscsiLunSnapshotWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<IscsiLunSnapshotWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -339,6 +339,68 @@ public class IscsiLunSnapshotWhereInput {
 
   public void setAND(List<IscsiLunSnapshotWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public IscsiLunSnapshotWhereInput NOT(List<IscsiLunSnapshotWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public IscsiLunSnapshotWhereInput addNOTItem(IscsiLunSnapshotWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<IscsiLunSnapshotWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiLunSnapshotWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<IscsiLunSnapshotWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public IscsiLunSnapshotWhereInput OR(List<IscsiLunSnapshotWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public IscsiLunSnapshotWhereInput addORItem(IscsiLunSnapshotWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<IscsiLunSnapshotWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<IscsiLunSnapshotWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<IscsiLunSnapshotWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -1802,68 +1864,6 @@ public class IscsiLunSnapshotWhereInput {
   }
 
 
-  public IscsiLunSnapshotWhereInput NOT(List<IscsiLunSnapshotWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public IscsiLunSnapshotWhereInput addNOTItem(IscsiLunSnapshotWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<IscsiLunSnapshotWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiLunSnapshotWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<IscsiLunSnapshotWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public IscsiLunSnapshotWhereInput OR(List<IscsiLunSnapshotWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public IscsiLunSnapshotWhereInput addORItem(IscsiLunSnapshotWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<IscsiLunSnapshotWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<IscsiLunSnapshotWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<IscsiLunSnapshotWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public IscsiLunSnapshotWhereInput uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -2074,6 +2074,8 @@ public class IscsiLunSnapshotWhereInput {
     }
     IscsiLunSnapshotWhereInput iscsiLunSnapshotWhereInput = (IscsiLunSnapshotWhereInput) o;
     return Objects.equals(this.AND, iscsiLunSnapshotWhereInput.AND) &&
+        Objects.equals(this.NOT, iscsiLunSnapshotWhereInput.NOT) &&
+        Objects.equals(this.OR, iscsiLunSnapshotWhereInput.OR) &&
         Objects.equals(this.consistencyGroupSnapshot, iscsiLunSnapshotWhereInput.consistencyGroupSnapshot) &&
         Objects.equals(this.entityAsyncStatus, iscsiLunSnapshotWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, iscsiLunSnapshotWhereInput.entityAsyncStatusIn) &&
@@ -2134,8 +2136,6 @@ public class IscsiLunSnapshotWhereInput {
         Objects.equals(this.nameNotIn, iscsiLunSnapshotWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, iscsiLunSnapshotWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, iscsiLunSnapshotWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, iscsiLunSnapshotWhereInput.NOT) &&
-        Objects.equals(this.OR, iscsiLunSnapshotWhereInput.OR) &&
         Objects.equals(this.uniqueSize, iscsiLunSnapshotWhereInput.uniqueSize) &&
         Objects.equals(this.uniqueSizeGt, iscsiLunSnapshotWhereInput.uniqueSizeGt) &&
         Objects.equals(this.uniqueSizeGte, iscsiLunSnapshotWhereInput.uniqueSizeGte) &&
@@ -2152,7 +2152,7 @@ public class IscsiLunSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, consistencyGroupSnapshot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLun, iscsiTarget, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, NOT, OR, consistencyGroupSnapshot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLun, iscsiTarget, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2167,6 +2167,8 @@ public class IscsiLunSnapshotWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class IscsiLunSnapshotWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    consistencyGroupSnapshot: ").append(toIndentedString(consistencyGroupSnapshot)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
@@ -2227,8 +2229,6 @@ public class IscsiLunSnapshotWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
     sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");

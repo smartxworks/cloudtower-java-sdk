@@ -16,21 +16,21 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(ApplicationState.Adapter.class)
 public enum ApplicationState {
   
-  DEPLOY_ERROR("DEPLOY_ERROR"),
-  
   DEPLOYED("DEPLOYED"),
   
   DEPLOYING("DEPLOYING"),
+  
+  DEPLOY_ERROR("DEPLOY_ERROR"),
   
   EDITING("EDITING"),
   
   NOT_DEPLOYED("NOT_DEPLOYED"),
   
-  STOP_ERROR("STOP_ERROR"),
-  
   STOPPED("STOPPED"),
   
   STOPPING("STOPPING"),
+  
+  STOP_ERROR("STOP_ERROR"),
   
   UPGRADING("UPGRADING");
 

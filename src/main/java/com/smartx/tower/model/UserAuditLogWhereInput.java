@@ -22,6 +22,18 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class UserAuditLogWhereInput {
+  public static final String SERIALIZED_NAME_A_N_D = "AND";
+  @SerializedName(SERIALIZED_NAME_A_N_D)
+  private List<UserAuditLogWhereInput> AND = null;
+
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<UserAuditLogWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<UserAuditLogWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
   private String action;
@@ -78,9 +90,61 @@ public class UserAuditLogWhereInput {
   @SerializedName(SERIALIZED_NAME_ACTION_STARTS_WITH)
   private String actionStartsWith;
 
-  public static final String SERIALIZED_NAME_A_N_D = "AND";
-  @SerializedName(SERIALIZED_NAME_A_N_D)
-  private List<UserAuditLogWhereInput> AND = null;
+  public static final String SERIALIZED_NAME_AUTH_TYPE = "auth_type";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE)
+  private String authType;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_CONTAINS = "auth_type_contains";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_CONTAINS)
+  private String authTypeContains;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_ENDS_WITH = "auth_type_ends_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_ENDS_WITH)
+  private String authTypeEndsWith;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_GT = "auth_type_gt";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_GT)
+  private String authTypeGt;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_GTE = "auth_type_gte";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_GTE)
+  private String authTypeGte;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_IN = "auth_type_in";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_IN)
+  private List<String> authTypeIn = null;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_LT = "auth_type_lt";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_LT)
+  private String authTypeLt;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_LTE = "auth_type_lte";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_LTE)
+  private String authTypeLte;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_NOT = "auth_type_not";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_NOT)
+  private String authTypeNot;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_NOT_CONTAINS = "auth_type_not_contains";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_NOT_CONTAINS)
+  private String authTypeNotContains;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_NOT_ENDS_WITH = "auth_type_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_NOT_ENDS_WITH)
+  private String authTypeNotEndsWith;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_NOT_IN = "auth_type_not_in";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_NOT_IN)
+  private List<String> authTypeNotIn = null;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_NOT_STARTS_WITH = "auth_type_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_NOT_STARTS_WITH)
+  private String authTypeNotStartsWith;
+
+  public static final String SERIALIZED_NAME_AUTH_TYPE_STARTS_WITH = "auth_type_starts_with";
+  @SerializedName(SERIALIZED_NAME_AUTH_TYPE_STARTS_WITH)
+  private String authTypeStartsWith;
 
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -318,14 +382,6 @@ public class UserAuditLogWhereInput {
   @SerializedName(SERIALIZED_NAME_MESSAGE_STARTS_WITH)
   private String messageStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<UserAuditLogWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<UserAuditLogWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resource_id";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
   private String resourceId;
@@ -490,8 +546,157 @@ public class UserAuditLogWhereInput {
   @SerializedName(SERIALIZED_NAME_USER)
   private UserWhereInput user;
 
+  public static final String SERIALIZED_NAME_USERNAME = "username";
+  @SerializedName(SERIALIZED_NAME_USERNAME)
+  private String username;
+
+  public static final String SERIALIZED_NAME_USERNAME_CONTAINS = "username_contains";
+  @SerializedName(SERIALIZED_NAME_USERNAME_CONTAINS)
+  private String usernameContains;
+
+  public static final String SERIALIZED_NAME_USERNAME_ENDS_WITH = "username_ends_with";
+  @SerializedName(SERIALIZED_NAME_USERNAME_ENDS_WITH)
+  private String usernameEndsWith;
+
+  public static final String SERIALIZED_NAME_USERNAME_GT = "username_gt";
+  @SerializedName(SERIALIZED_NAME_USERNAME_GT)
+  private String usernameGt;
+
+  public static final String SERIALIZED_NAME_USERNAME_GTE = "username_gte";
+  @SerializedName(SERIALIZED_NAME_USERNAME_GTE)
+  private String usernameGte;
+
+  public static final String SERIALIZED_NAME_USERNAME_IN = "username_in";
+  @SerializedName(SERIALIZED_NAME_USERNAME_IN)
+  private List<String> usernameIn = null;
+
+  public static final String SERIALIZED_NAME_USERNAME_LT = "username_lt";
+  @SerializedName(SERIALIZED_NAME_USERNAME_LT)
+  private String usernameLt;
+
+  public static final String SERIALIZED_NAME_USERNAME_LTE = "username_lte";
+  @SerializedName(SERIALIZED_NAME_USERNAME_LTE)
+  private String usernameLte;
+
+  public static final String SERIALIZED_NAME_USERNAME_NOT = "username_not";
+  @SerializedName(SERIALIZED_NAME_USERNAME_NOT)
+  private String usernameNot;
+
+  public static final String SERIALIZED_NAME_USERNAME_NOT_CONTAINS = "username_not_contains";
+  @SerializedName(SERIALIZED_NAME_USERNAME_NOT_CONTAINS)
+  private String usernameNotContains;
+
+  public static final String SERIALIZED_NAME_USERNAME_NOT_ENDS_WITH = "username_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_USERNAME_NOT_ENDS_WITH)
+  private String usernameNotEndsWith;
+
+  public static final String SERIALIZED_NAME_USERNAME_NOT_IN = "username_not_in";
+  @SerializedName(SERIALIZED_NAME_USERNAME_NOT_IN)
+  private List<String> usernameNotIn = null;
+
+  public static final String SERIALIZED_NAME_USERNAME_NOT_STARTS_WITH = "username_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_USERNAME_NOT_STARTS_WITH)
+  private String usernameNotStartsWith;
+
+  public static final String SERIALIZED_NAME_USERNAME_STARTS_WITH = "username_starts_with";
+  @SerializedName(SERIALIZED_NAME_USERNAME_STARTS_WITH)
+  private String usernameStartsWith;
+
   public UserAuditLogWhereInput() { 
   }
+
+  public UserAuditLogWhereInput AND(List<UserAuditLogWhereInput> AND) {
+    
+    this.AND = AND;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addANDItem(UserAuditLogWhereInput ANDItem) {
+    if (this.AND == null) {
+      this.AND = new ArrayList<UserAuditLogWhereInput>();
+    }
+    this.AND.add(ANDItem);
+    return this;
+  }
+
+   /**
+   * Get AND
+   * @return AND
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserAuditLogWhereInput> getAND() {
+    return AND;
+  }
+
+
+  public void setAND(List<UserAuditLogWhereInput> AND) {
+    this.AND = AND;
+  }
+
+
+  public UserAuditLogWhereInput NOT(List<UserAuditLogWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addNOTItem(UserAuditLogWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<UserAuditLogWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserAuditLogWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<UserAuditLogWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public UserAuditLogWhereInput OR(List<UserAuditLogWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addORItem(UserAuditLogWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<UserAuditLogWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<UserAuditLogWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<UserAuditLogWhereInput> OR) {
+    this.OR = OR;
+  }
+
 
   public UserAuditLogWhereInput action(String action) {
     
@@ -831,34 +1036,341 @@ public class UserAuditLogWhereInput {
   }
 
 
-  public UserAuditLogWhereInput AND(List<UserAuditLogWhereInput> AND) {
+  public UserAuditLogWhereInput authType(String authType) {
     
-    this.AND = AND;
-    return this;
-  }
-
-  public UserAuditLogWhereInput addANDItem(UserAuditLogWhereInput ANDItem) {
-    if (this.AND == null) {
-      this.AND = new ArrayList<UserAuditLogWhereInput>();
-    }
-    this.AND.add(ANDItem);
+    this.authType = authType;
     return this;
   }
 
    /**
-   * Get AND
-   * @return AND
+   * Get authType
+   * @return authType
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<UserAuditLogWhereInput> getAND() {
-    return AND;
+  public String getAuthType() {
+    return authType;
   }
 
 
-  public void setAND(List<UserAuditLogWhereInput> AND) {
-    this.AND = AND;
+  public void setAuthType(String authType) {
+    this.authType = authType;
+  }
+
+
+  public UserAuditLogWhereInput authTypeContains(String authTypeContains) {
+    
+    this.authTypeContains = authTypeContains;
+    return this;
+  }
+
+   /**
+   * Get authTypeContains
+   * @return authTypeContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeContains() {
+    return authTypeContains;
+  }
+
+
+  public void setAuthTypeContains(String authTypeContains) {
+    this.authTypeContains = authTypeContains;
+  }
+
+
+  public UserAuditLogWhereInput authTypeEndsWith(String authTypeEndsWith) {
+    
+    this.authTypeEndsWith = authTypeEndsWith;
+    return this;
+  }
+
+   /**
+   * Get authTypeEndsWith
+   * @return authTypeEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeEndsWith() {
+    return authTypeEndsWith;
+  }
+
+
+  public void setAuthTypeEndsWith(String authTypeEndsWith) {
+    this.authTypeEndsWith = authTypeEndsWith;
+  }
+
+
+  public UserAuditLogWhereInput authTypeGt(String authTypeGt) {
+    
+    this.authTypeGt = authTypeGt;
+    return this;
+  }
+
+   /**
+   * Get authTypeGt
+   * @return authTypeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeGt() {
+    return authTypeGt;
+  }
+
+
+  public void setAuthTypeGt(String authTypeGt) {
+    this.authTypeGt = authTypeGt;
+  }
+
+
+  public UserAuditLogWhereInput authTypeGte(String authTypeGte) {
+    
+    this.authTypeGte = authTypeGte;
+    return this;
+  }
+
+   /**
+   * Get authTypeGte
+   * @return authTypeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeGte() {
+    return authTypeGte;
+  }
+
+
+  public void setAuthTypeGte(String authTypeGte) {
+    this.authTypeGte = authTypeGte;
+  }
+
+
+  public UserAuditLogWhereInput authTypeIn(List<String> authTypeIn) {
+    
+    this.authTypeIn = authTypeIn;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addAuthTypeInItem(String authTypeInItem) {
+    if (this.authTypeIn == null) {
+      this.authTypeIn = new ArrayList<String>();
+    }
+    this.authTypeIn.add(authTypeInItem);
+    return this;
+  }
+
+   /**
+   * Get authTypeIn
+   * @return authTypeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getAuthTypeIn() {
+    return authTypeIn;
+  }
+
+
+  public void setAuthTypeIn(List<String> authTypeIn) {
+    this.authTypeIn = authTypeIn;
+  }
+
+
+  public UserAuditLogWhereInput authTypeLt(String authTypeLt) {
+    
+    this.authTypeLt = authTypeLt;
+    return this;
+  }
+
+   /**
+   * Get authTypeLt
+   * @return authTypeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeLt() {
+    return authTypeLt;
+  }
+
+
+  public void setAuthTypeLt(String authTypeLt) {
+    this.authTypeLt = authTypeLt;
+  }
+
+
+  public UserAuditLogWhereInput authTypeLte(String authTypeLte) {
+    
+    this.authTypeLte = authTypeLte;
+    return this;
+  }
+
+   /**
+   * Get authTypeLte
+   * @return authTypeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeLte() {
+    return authTypeLte;
+  }
+
+
+  public void setAuthTypeLte(String authTypeLte) {
+    this.authTypeLte = authTypeLte;
+  }
+
+
+  public UserAuditLogWhereInput authTypeNot(String authTypeNot) {
+    
+    this.authTypeNot = authTypeNot;
+    return this;
+  }
+
+   /**
+   * Get authTypeNot
+   * @return authTypeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeNot() {
+    return authTypeNot;
+  }
+
+
+  public void setAuthTypeNot(String authTypeNot) {
+    this.authTypeNot = authTypeNot;
+  }
+
+
+  public UserAuditLogWhereInput authTypeNotContains(String authTypeNotContains) {
+    
+    this.authTypeNotContains = authTypeNotContains;
+    return this;
+  }
+
+   /**
+   * Get authTypeNotContains
+   * @return authTypeNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeNotContains() {
+    return authTypeNotContains;
+  }
+
+
+  public void setAuthTypeNotContains(String authTypeNotContains) {
+    this.authTypeNotContains = authTypeNotContains;
+  }
+
+
+  public UserAuditLogWhereInput authTypeNotEndsWith(String authTypeNotEndsWith) {
+    
+    this.authTypeNotEndsWith = authTypeNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get authTypeNotEndsWith
+   * @return authTypeNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeNotEndsWith() {
+    return authTypeNotEndsWith;
+  }
+
+
+  public void setAuthTypeNotEndsWith(String authTypeNotEndsWith) {
+    this.authTypeNotEndsWith = authTypeNotEndsWith;
+  }
+
+
+  public UserAuditLogWhereInput authTypeNotIn(List<String> authTypeNotIn) {
+    
+    this.authTypeNotIn = authTypeNotIn;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addAuthTypeNotInItem(String authTypeNotInItem) {
+    if (this.authTypeNotIn == null) {
+      this.authTypeNotIn = new ArrayList<String>();
+    }
+    this.authTypeNotIn.add(authTypeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get authTypeNotIn
+   * @return authTypeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getAuthTypeNotIn() {
+    return authTypeNotIn;
+  }
+
+
+  public void setAuthTypeNotIn(List<String> authTypeNotIn) {
+    this.authTypeNotIn = authTypeNotIn;
+  }
+
+
+  public UserAuditLogWhereInput authTypeNotStartsWith(String authTypeNotStartsWith) {
+    
+    this.authTypeNotStartsWith = authTypeNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get authTypeNotStartsWith
+   * @return authTypeNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeNotStartsWith() {
+    return authTypeNotStartsWith;
+  }
+
+
+  public void setAuthTypeNotStartsWith(String authTypeNotStartsWith) {
+    this.authTypeNotStartsWith = authTypeNotStartsWith;
+  }
+
+
+  public UserAuditLogWhereInput authTypeStartsWith(String authTypeStartsWith) {
+    
+    this.authTypeStartsWith = authTypeStartsWith;
+    return this;
+  }
+
+   /**
+   * Get authTypeStartsWith
+   * @return authTypeStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getAuthTypeStartsWith() {
+    return authTypeStartsWith;
+  }
+
+
+  public void setAuthTypeStartsWith(String authTypeStartsWith) {
+    this.authTypeStartsWith = authTypeStartsWith;
   }
 
 
@@ -2299,68 +2811,6 @@ public class UserAuditLogWhereInput {
   }
 
 
-  public UserAuditLogWhereInput NOT(List<UserAuditLogWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public UserAuditLogWhereInput addNOTItem(UserAuditLogWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<UserAuditLogWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UserAuditLogWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<UserAuditLogWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public UserAuditLogWhereInput OR(List<UserAuditLogWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public UserAuditLogWhereInput addORItem(UserAuditLogWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<UserAuditLogWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<UserAuditLogWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<UserAuditLogWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public UserAuditLogWhereInput resourceId(String resourceId) {
     
     this.resourceId = resourceId;
@@ -3368,6 +3818,344 @@ public class UserAuditLogWhereInput {
   }
 
 
+  public UserAuditLogWhereInput username(String username) {
+    
+    this.username = username;
+    return this;
+  }
+
+   /**
+   * Get username
+   * @return username
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsername() {
+    return username;
+  }
+
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+
+  public UserAuditLogWhereInput usernameContains(String usernameContains) {
+    
+    this.usernameContains = usernameContains;
+    return this;
+  }
+
+   /**
+   * Get usernameContains
+   * @return usernameContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameContains() {
+    return usernameContains;
+  }
+
+
+  public void setUsernameContains(String usernameContains) {
+    this.usernameContains = usernameContains;
+  }
+
+
+  public UserAuditLogWhereInput usernameEndsWith(String usernameEndsWith) {
+    
+    this.usernameEndsWith = usernameEndsWith;
+    return this;
+  }
+
+   /**
+   * Get usernameEndsWith
+   * @return usernameEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameEndsWith() {
+    return usernameEndsWith;
+  }
+
+
+  public void setUsernameEndsWith(String usernameEndsWith) {
+    this.usernameEndsWith = usernameEndsWith;
+  }
+
+
+  public UserAuditLogWhereInput usernameGt(String usernameGt) {
+    
+    this.usernameGt = usernameGt;
+    return this;
+  }
+
+   /**
+   * Get usernameGt
+   * @return usernameGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameGt() {
+    return usernameGt;
+  }
+
+
+  public void setUsernameGt(String usernameGt) {
+    this.usernameGt = usernameGt;
+  }
+
+
+  public UserAuditLogWhereInput usernameGte(String usernameGte) {
+    
+    this.usernameGte = usernameGte;
+    return this;
+  }
+
+   /**
+   * Get usernameGte
+   * @return usernameGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameGte() {
+    return usernameGte;
+  }
+
+
+  public void setUsernameGte(String usernameGte) {
+    this.usernameGte = usernameGte;
+  }
+
+
+  public UserAuditLogWhereInput usernameIn(List<String> usernameIn) {
+    
+    this.usernameIn = usernameIn;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addUsernameInItem(String usernameInItem) {
+    if (this.usernameIn == null) {
+      this.usernameIn = new ArrayList<String>();
+    }
+    this.usernameIn.add(usernameInItem);
+    return this;
+  }
+
+   /**
+   * Get usernameIn
+   * @return usernameIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getUsernameIn() {
+    return usernameIn;
+  }
+
+
+  public void setUsernameIn(List<String> usernameIn) {
+    this.usernameIn = usernameIn;
+  }
+
+
+  public UserAuditLogWhereInput usernameLt(String usernameLt) {
+    
+    this.usernameLt = usernameLt;
+    return this;
+  }
+
+   /**
+   * Get usernameLt
+   * @return usernameLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameLt() {
+    return usernameLt;
+  }
+
+
+  public void setUsernameLt(String usernameLt) {
+    this.usernameLt = usernameLt;
+  }
+
+
+  public UserAuditLogWhereInput usernameLte(String usernameLte) {
+    
+    this.usernameLte = usernameLte;
+    return this;
+  }
+
+   /**
+   * Get usernameLte
+   * @return usernameLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameLte() {
+    return usernameLte;
+  }
+
+
+  public void setUsernameLte(String usernameLte) {
+    this.usernameLte = usernameLte;
+  }
+
+
+  public UserAuditLogWhereInput usernameNot(String usernameNot) {
+    
+    this.usernameNot = usernameNot;
+    return this;
+  }
+
+   /**
+   * Get usernameNot
+   * @return usernameNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameNot() {
+    return usernameNot;
+  }
+
+
+  public void setUsernameNot(String usernameNot) {
+    this.usernameNot = usernameNot;
+  }
+
+
+  public UserAuditLogWhereInput usernameNotContains(String usernameNotContains) {
+    
+    this.usernameNotContains = usernameNotContains;
+    return this;
+  }
+
+   /**
+   * Get usernameNotContains
+   * @return usernameNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameNotContains() {
+    return usernameNotContains;
+  }
+
+
+  public void setUsernameNotContains(String usernameNotContains) {
+    this.usernameNotContains = usernameNotContains;
+  }
+
+
+  public UserAuditLogWhereInput usernameNotEndsWith(String usernameNotEndsWith) {
+    
+    this.usernameNotEndsWith = usernameNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get usernameNotEndsWith
+   * @return usernameNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameNotEndsWith() {
+    return usernameNotEndsWith;
+  }
+
+
+  public void setUsernameNotEndsWith(String usernameNotEndsWith) {
+    this.usernameNotEndsWith = usernameNotEndsWith;
+  }
+
+
+  public UserAuditLogWhereInput usernameNotIn(List<String> usernameNotIn) {
+    
+    this.usernameNotIn = usernameNotIn;
+    return this;
+  }
+
+  public UserAuditLogWhereInput addUsernameNotInItem(String usernameNotInItem) {
+    if (this.usernameNotIn == null) {
+      this.usernameNotIn = new ArrayList<String>();
+    }
+    this.usernameNotIn.add(usernameNotInItem);
+    return this;
+  }
+
+   /**
+   * Get usernameNotIn
+   * @return usernameNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getUsernameNotIn() {
+    return usernameNotIn;
+  }
+
+
+  public void setUsernameNotIn(List<String> usernameNotIn) {
+    this.usernameNotIn = usernameNotIn;
+  }
+
+
+  public UserAuditLogWhereInput usernameNotStartsWith(String usernameNotStartsWith) {
+    
+    this.usernameNotStartsWith = usernameNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get usernameNotStartsWith
+   * @return usernameNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameNotStartsWith() {
+    return usernameNotStartsWith;
+  }
+
+
+  public void setUsernameNotStartsWith(String usernameNotStartsWith) {
+    this.usernameNotStartsWith = usernameNotStartsWith;
+  }
+
+
+  public UserAuditLogWhereInput usernameStartsWith(String usernameStartsWith) {
+    
+    this.usernameStartsWith = usernameStartsWith;
+    return this;
+  }
+
+   /**
+   * Get usernameStartsWith
+   * @return usernameStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getUsernameStartsWith() {
+    return usernameStartsWith;
+  }
+
+
+  public void setUsernameStartsWith(String usernameStartsWith) {
+    this.usernameStartsWith = usernameStartsWith;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -3377,7 +4165,10 @@ public class UserAuditLogWhereInput {
       return false;
     }
     UserAuditLogWhereInput userAuditLogWhereInput = (UserAuditLogWhereInput) o;
-    return Objects.equals(this.action, userAuditLogWhereInput.action) &&
+    return Objects.equals(this.AND, userAuditLogWhereInput.AND) &&
+        Objects.equals(this.NOT, userAuditLogWhereInput.NOT) &&
+        Objects.equals(this.OR, userAuditLogWhereInput.OR) &&
+        Objects.equals(this.action, userAuditLogWhereInput.action) &&
         Objects.equals(this.actionContains, userAuditLogWhereInput.actionContains) &&
         Objects.equals(this.actionEndsWith, userAuditLogWhereInput.actionEndsWith) &&
         Objects.equals(this.actionGt, userAuditLogWhereInput.actionGt) &&
@@ -3391,7 +4182,20 @@ public class UserAuditLogWhereInput {
         Objects.equals(this.actionNotIn, userAuditLogWhereInput.actionNotIn) &&
         Objects.equals(this.actionNotStartsWith, userAuditLogWhereInput.actionNotStartsWith) &&
         Objects.equals(this.actionStartsWith, userAuditLogWhereInput.actionStartsWith) &&
-        Objects.equals(this.AND, userAuditLogWhereInput.AND) &&
+        Objects.equals(this.authType, userAuditLogWhereInput.authType) &&
+        Objects.equals(this.authTypeContains, userAuditLogWhereInput.authTypeContains) &&
+        Objects.equals(this.authTypeEndsWith, userAuditLogWhereInput.authTypeEndsWith) &&
+        Objects.equals(this.authTypeGt, userAuditLogWhereInput.authTypeGt) &&
+        Objects.equals(this.authTypeGte, userAuditLogWhereInput.authTypeGte) &&
+        Objects.equals(this.authTypeIn, userAuditLogWhereInput.authTypeIn) &&
+        Objects.equals(this.authTypeLt, userAuditLogWhereInput.authTypeLt) &&
+        Objects.equals(this.authTypeLte, userAuditLogWhereInput.authTypeLte) &&
+        Objects.equals(this.authTypeNot, userAuditLogWhereInput.authTypeNot) &&
+        Objects.equals(this.authTypeNotContains, userAuditLogWhereInput.authTypeNotContains) &&
+        Objects.equals(this.authTypeNotEndsWith, userAuditLogWhereInput.authTypeNotEndsWith) &&
+        Objects.equals(this.authTypeNotIn, userAuditLogWhereInput.authTypeNotIn) &&
+        Objects.equals(this.authTypeNotStartsWith, userAuditLogWhereInput.authTypeNotStartsWith) &&
+        Objects.equals(this.authTypeStartsWith, userAuditLogWhereInput.authTypeStartsWith) &&
         Objects.equals(this.cluster, userAuditLogWhereInput.cluster) &&
         Objects.equals(this.createdAt, userAuditLogWhereInput.createdAt) &&
         Objects.equals(this.createdAtGt, userAuditLogWhereInput.createdAtGt) &&
@@ -3451,8 +4255,6 @@ public class UserAuditLogWhereInput {
         Objects.equals(this.messageNotIn, userAuditLogWhereInput.messageNotIn) &&
         Objects.equals(this.messageNotStartsWith, userAuditLogWhereInput.messageNotStartsWith) &&
         Objects.equals(this.messageStartsWith, userAuditLogWhereInput.messageStartsWith) &&
-        Objects.equals(this.NOT, userAuditLogWhereInput.NOT) &&
-        Objects.equals(this.OR, userAuditLogWhereInput.OR) &&
         Objects.equals(this.resourceId, userAuditLogWhereInput.resourceId) &&
         Objects.equals(this.resourceIdContains, userAuditLogWhereInput.resourceIdContains) &&
         Objects.equals(this.resourceIdEndsWith, userAuditLogWhereInput.resourceIdEndsWith) &&
@@ -3493,7 +4295,21 @@ public class UserAuditLogWhereInput {
         Objects.equals(this.statusIn, userAuditLogWhereInput.statusIn) &&
         Objects.equals(this.statusNot, userAuditLogWhereInput.statusNot) &&
         Objects.equals(this.statusNotIn, userAuditLogWhereInput.statusNotIn) &&
-        Objects.equals(this.user, userAuditLogWhereInput.user);
+        Objects.equals(this.user, userAuditLogWhereInput.user) &&
+        Objects.equals(this.username, userAuditLogWhereInput.username) &&
+        Objects.equals(this.usernameContains, userAuditLogWhereInput.usernameContains) &&
+        Objects.equals(this.usernameEndsWith, userAuditLogWhereInput.usernameEndsWith) &&
+        Objects.equals(this.usernameGt, userAuditLogWhereInput.usernameGt) &&
+        Objects.equals(this.usernameGte, userAuditLogWhereInput.usernameGte) &&
+        Objects.equals(this.usernameIn, userAuditLogWhereInput.usernameIn) &&
+        Objects.equals(this.usernameLt, userAuditLogWhereInput.usernameLt) &&
+        Objects.equals(this.usernameLte, userAuditLogWhereInput.usernameLte) &&
+        Objects.equals(this.usernameNot, userAuditLogWhereInput.usernameNot) &&
+        Objects.equals(this.usernameNotContains, userAuditLogWhereInput.usernameNotContains) &&
+        Objects.equals(this.usernameNotEndsWith, userAuditLogWhereInput.usernameNotEndsWith) &&
+        Objects.equals(this.usernameNotIn, userAuditLogWhereInput.usernameNotIn) &&
+        Objects.equals(this.usernameNotStartsWith, userAuditLogWhereInput.usernameNotStartsWith) &&
+        Objects.equals(this.usernameStartsWith, userAuditLogWhereInput.usernameStartsWith);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3502,7 +4318,7 @@ public class UserAuditLogWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, actionContains, actionEndsWith, actionGt, actionGte, actionIn, actionLt, actionLte, actionNot, actionNotContains, actionNotEndsWith, actionNotIn, actionNotStartsWith, actionStartsWith, AND, cluster, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, message, messageContains, messageEndsWith, messageGt, messageGte, messageIn, messageLt, messageLte, messageNot, messageNotContains, messageNotEndsWith, messageNotIn, messageNotStartsWith, messageStartsWith, NOT, OR, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, user);
+    return Objects.hash(AND, NOT, OR, action, actionContains, actionEndsWith, actionGt, actionGte, actionIn, actionLt, actionLte, actionNot, actionNotContains, actionNotEndsWith, actionNotIn, actionNotStartsWith, actionStartsWith, authType, authTypeContains, authTypeEndsWith, authTypeGt, authTypeGte, authTypeIn, authTypeLt, authTypeLte, authTypeNot, authTypeNotContains, authTypeNotEndsWith, authTypeNotIn, authTypeNotStartsWith, authTypeStartsWith, cluster, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, finishedAt, finishedAtGt, finishedAtGte, finishedAtIn, finishedAtLt, finishedAtLte, finishedAtNot, finishedAtNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, message, messageContains, messageEndsWith, messageGt, messageGte, messageIn, messageLt, messageLte, messageNot, messageNotContains, messageNotEndsWith, messageNotIn, messageNotStartsWith, messageStartsWith, resourceId, resourceIdContains, resourceIdEndsWith, resourceIdGt, resourceIdGte, resourceIdIn, resourceIdLt, resourceIdLte, resourceIdNot, resourceIdNotContains, resourceIdNotEndsWith, resourceIdNotIn, resourceIdNotStartsWith, resourceIdStartsWith, resourceType, resourceTypeContains, resourceTypeEndsWith, resourceTypeGt, resourceTypeGte, resourceTypeIn, resourceTypeLt, resourceTypeLte, resourceTypeNot, resourceTypeNotContains, resourceTypeNotEndsWith, resourceTypeNotIn, resourceTypeNotStartsWith, resourceTypeStartsWith, startedAt, startedAtGt, startedAtGte, startedAtIn, startedAtLt, startedAtLte, startedAtNot, startedAtNotIn, status, statusIn, statusNot, statusNotIn, user, username, usernameContains, usernameEndsWith, usernameGt, usernameGte, usernameIn, usernameLt, usernameLte, usernameNot, usernameNotContains, usernameNotEndsWith, usernameNotIn, usernameNotStartsWith, usernameStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3516,6 +4332,9 @@ public class UserAuditLogWhereInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserAuditLogWhereInput {\n");
+    sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    actionContains: ").append(toIndentedString(actionContains)).append("\n");
     sb.append("    actionEndsWith: ").append(toIndentedString(actionEndsWith)).append("\n");
@@ -3530,7 +4349,20 @@ public class UserAuditLogWhereInput {
     sb.append("    actionNotIn: ").append(toIndentedString(actionNotIn)).append("\n");
     sb.append("    actionNotStartsWith: ").append(toIndentedString(actionNotStartsWith)).append("\n");
     sb.append("    actionStartsWith: ").append(toIndentedString(actionStartsWith)).append("\n");
-    sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    authType: ").append(toIndentedString(authType)).append("\n");
+    sb.append("    authTypeContains: ").append(toIndentedString(authTypeContains)).append("\n");
+    sb.append("    authTypeEndsWith: ").append(toIndentedString(authTypeEndsWith)).append("\n");
+    sb.append("    authTypeGt: ").append(toIndentedString(authTypeGt)).append("\n");
+    sb.append("    authTypeGte: ").append(toIndentedString(authTypeGte)).append("\n");
+    sb.append("    authTypeIn: ").append(toIndentedString(authTypeIn)).append("\n");
+    sb.append("    authTypeLt: ").append(toIndentedString(authTypeLt)).append("\n");
+    sb.append("    authTypeLte: ").append(toIndentedString(authTypeLte)).append("\n");
+    sb.append("    authTypeNot: ").append(toIndentedString(authTypeNot)).append("\n");
+    sb.append("    authTypeNotContains: ").append(toIndentedString(authTypeNotContains)).append("\n");
+    sb.append("    authTypeNotEndsWith: ").append(toIndentedString(authTypeNotEndsWith)).append("\n");
+    sb.append("    authTypeNotIn: ").append(toIndentedString(authTypeNotIn)).append("\n");
+    sb.append("    authTypeNotStartsWith: ").append(toIndentedString(authTypeNotStartsWith)).append("\n");
+    sb.append("    authTypeStartsWith: ").append(toIndentedString(authTypeStartsWith)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
@@ -3590,8 +4422,6 @@ public class UserAuditLogWhereInput {
     sb.append("    messageNotIn: ").append(toIndentedString(messageNotIn)).append("\n");
     sb.append("    messageNotStartsWith: ").append(toIndentedString(messageNotStartsWith)).append("\n");
     sb.append("    messageStartsWith: ").append(toIndentedString(messageStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
     sb.append("    resourceIdContains: ").append(toIndentedString(resourceIdContains)).append("\n");
     sb.append("    resourceIdEndsWith: ").append(toIndentedString(resourceIdEndsWith)).append("\n");
@@ -3633,6 +4463,20 @@ public class UserAuditLogWhereInput {
     sb.append("    statusNot: ").append(toIndentedString(statusNot)).append("\n");
     sb.append("    statusNotIn: ").append(toIndentedString(statusNotIn)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
+    sb.append("    username: ").append(toIndentedString(username)).append("\n");
+    sb.append("    usernameContains: ").append(toIndentedString(usernameContains)).append("\n");
+    sb.append("    usernameEndsWith: ").append(toIndentedString(usernameEndsWith)).append("\n");
+    sb.append("    usernameGt: ").append(toIndentedString(usernameGt)).append("\n");
+    sb.append("    usernameGte: ").append(toIndentedString(usernameGte)).append("\n");
+    sb.append("    usernameIn: ").append(toIndentedString(usernameIn)).append("\n");
+    sb.append("    usernameLt: ").append(toIndentedString(usernameLt)).append("\n");
+    sb.append("    usernameLte: ").append(toIndentedString(usernameLte)).append("\n");
+    sb.append("    usernameNot: ").append(toIndentedString(usernameNot)).append("\n");
+    sb.append("    usernameNotContains: ").append(toIndentedString(usernameNotContains)).append("\n");
+    sb.append("    usernameNotEndsWith: ").append(toIndentedString(usernameNotEndsWith)).append("\n");
+    sb.append("    usernameNotIn: ").append(toIndentedString(usernameNotIn)).append("\n");
+    sb.append("    usernameNotStartsWith: ").append(toIndentedString(usernameNotStartsWith)).append("\n");
+    sb.append("    usernameStartsWith: ").append(toIndentedString(usernameStartsWith)).append("\n");
     sb.append("}");
     return sb.toString();
   }

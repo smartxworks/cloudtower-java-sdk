@@ -20,6 +20,10 @@ public enum UserAuditLogOrderByInput {
   
   ACTION_DESC("action_DESC"),
   
+  AUTH_TYPE_ASC("auth_type_ASC"),
+  
+  AUTH_TYPE_DESC("auth_type_DESC"),
+  
   CREATEDAT_ASC("createdAt_ASC"),
   
   CREATEDAT_DESC("createdAt_DESC"),
@@ -54,7 +58,11 @@ public enum UserAuditLogOrderByInput {
   
   STATUS_ASC("status_ASC"),
   
-  STATUS_DESC("status_DESC");
+  STATUS_DESC("status_DESC"),
+  
+  USERNAME_ASC("username_ASC"),
+  
+  USERNAME_DESC("username_DESC");
 
   private String value;
 

@@ -29,6 +29,14 @@ public class VmVolumeSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_A_N_D)
   private List<VmVolumeSnapshotWhereInput> AND = null;
 
+  public static final String SERIALIZED_NAME_N_O_T = "NOT";
+  @SerializedName(SERIALIZED_NAME_N_O_T)
+  private List<VmVolumeSnapshotWhereInput> NOT = null;
+
+  public static final String SERIALIZED_NAME_O_R = "OR";
+  @SerializedName(SERIALIZED_NAME_O_R)
+  private List<VmVolumeSnapshotWhereInput> OR = null;
+
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)
   private ClusterWhereInput cluster;
@@ -365,14 +373,6 @@ public class VmVolumeSnapshotWhereInput {
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
 
-  public static final String SERIALIZED_NAME_N_O_T = "NOT";
-  @SerializedName(SERIALIZED_NAME_N_O_T)
-  private List<VmVolumeSnapshotWhereInput> NOT = null;
-
-  public static final String SERIALIZED_NAME_O_R = "OR";
-  @SerializedName(SERIALIZED_NAME_O_R)
-  private List<VmVolumeSnapshotWhereInput> OR = null;
-
   public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
   @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
   private Double sharedSize;
@@ -616,6 +616,68 @@ public class VmVolumeSnapshotWhereInput {
 
   public void setAND(List<VmVolumeSnapshotWhereInput> AND) {
     this.AND = AND;
+  }
+
+
+  public VmVolumeSnapshotWhereInput NOT(List<VmVolumeSnapshotWhereInput> NOT) {
+    
+    this.NOT = NOT;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addNOTItem(VmVolumeSnapshotWhereInput NOTItem) {
+    if (this.NOT == null) {
+      this.NOT = new ArrayList<VmVolumeSnapshotWhereInput>();
+    }
+    this.NOT.add(NOTItem);
+    return this;
+  }
+
+   /**
+   * Get NOT
+   * @return NOT
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeSnapshotWhereInput> getNOT() {
+    return NOT;
+  }
+
+
+  public void setNOT(List<VmVolumeSnapshotWhereInput> NOT) {
+    this.NOT = NOT;
+  }
+
+
+  public VmVolumeSnapshotWhereInput OR(List<VmVolumeSnapshotWhereInput> OR) {
+    
+    this.OR = OR;
+    return this;
+  }
+
+  public VmVolumeSnapshotWhereInput addORItem(VmVolumeSnapshotWhereInput ORItem) {
+    if (this.OR == null) {
+      this.OR = new ArrayList<VmVolumeSnapshotWhereInput>();
+    }
+    this.OR.add(ORItem);
+    return this;
+  }
+
+   /**
+   * Get OR
+   * @return OR
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmVolumeSnapshotWhereInput> getOR() {
+    return OR;
+  }
+
+
+  public void setOR(List<VmVolumeSnapshotWhereInput> OR) {
+    this.OR = OR;
   }
 
 
@@ -2679,68 +2741,6 @@ public class VmVolumeSnapshotWhereInput {
   }
 
 
-  public VmVolumeSnapshotWhereInput NOT(List<VmVolumeSnapshotWhereInput> NOT) {
-    
-    this.NOT = NOT;
-    return this;
-  }
-
-  public VmVolumeSnapshotWhereInput addNOTItem(VmVolumeSnapshotWhereInput NOTItem) {
-    if (this.NOT == null) {
-      this.NOT = new ArrayList<VmVolumeSnapshotWhereInput>();
-    }
-    this.NOT.add(NOTItem);
-    return this;
-  }
-
-   /**
-   * Get NOT
-   * @return NOT
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmVolumeSnapshotWhereInput> getNOT() {
-    return NOT;
-  }
-
-
-  public void setNOT(List<VmVolumeSnapshotWhereInput> NOT) {
-    this.NOT = NOT;
-  }
-
-
-  public VmVolumeSnapshotWhereInput OR(List<VmVolumeSnapshotWhereInput> OR) {
-    
-    this.OR = OR;
-    return this;
-  }
-
-  public VmVolumeSnapshotWhereInput addORItem(VmVolumeSnapshotWhereInput ORItem) {
-    if (this.OR == null) {
-      this.OR = new ArrayList<VmVolumeSnapshotWhereInput>();
-    }
-    this.OR.add(ORItem);
-    return this;
-  }
-
-   /**
-   * Get OR
-   * @return OR
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmVolumeSnapshotWhereInput> getOR() {
-    return OR;
-  }
-
-
-  public void setOR(List<VmVolumeSnapshotWhereInput> OR) {
-    this.OR = OR;
-  }
-
-
   public VmVolumeSnapshotWhereInput sharedSize(Double sharedSize) {
     
     this.sharedSize = sharedSize;
@@ -4066,6 +4066,8 @@ public class VmVolumeSnapshotWhereInput {
     }
     VmVolumeSnapshotWhereInput vmVolumeSnapshotWhereInput = (VmVolumeSnapshotWhereInput) o;
     return Objects.equals(this.AND, vmVolumeSnapshotWhereInput.AND) &&
+        Objects.equals(this.NOT, vmVolumeSnapshotWhereInput.NOT) &&
+        Objects.equals(this.OR, vmVolumeSnapshotWhereInput.OR) &&
         Objects.equals(this.cluster, vmVolumeSnapshotWhereInput.cluster) &&
         Objects.equals(this.createAt, vmVolumeSnapshotWhereInput.createAt) &&
         Objects.equals(this.createAtGt, vmVolumeSnapshotWhereInput.createAtGt) &&
@@ -4150,8 +4152,6 @@ public class VmVolumeSnapshotWhereInput {
         Objects.equals(this.nameNotIn, vmVolumeSnapshotWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, vmVolumeSnapshotWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, vmVolumeSnapshotWhereInput.nameStartsWith) &&
-        Objects.equals(this.NOT, vmVolumeSnapshotWhereInput.NOT) &&
-        Objects.equals(this.OR, vmVolumeSnapshotWhereInput.OR) &&
         Objects.equals(this.sharedSize, vmVolumeSnapshotWhereInput.sharedSize) &&
         Objects.equals(this.sharedSizeGt, vmVolumeSnapshotWhereInput.sharedSizeGt) &&
         Objects.equals(this.sharedSizeGte, vmVolumeSnapshotWhereInput.sharedSizeGte) &&
@@ -4213,7 +4213,7 @@ public class VmVolumeSnapshotWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, cluster, createAt, createAtGt, createAtGte, createAtIn, createAtLt, createAtLte, createAtNot, createAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, NOT, OR, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmVolume, volumeSharing, volumeSharingNot, volumeSize, volumeSizeGt, volumeSizeGte, volumeSizeIn, volumeSizeLt, volumeSizeLte, volumeSizeNot, volumeSizeNotIn, zbsSnapshotUuid, zbsSnapshotUuidContains, zbsSnapshotUuidEndsWith, zbsSnapshotUuidGt, zbsSnapshotUuidGte, zbsSnapshotUuidIn, zbsSnapshotUuidLt, zbsSnapshotUuidLte, zbsSnapshotUuidNot, zbsSnapshotUuidNotContains, zbsSnapshotUuidNotEndsWith, zbsSnapshotUuidNotIn, zbsSnapshotUuidNotStartsWith, zbsSnapshotUuidStartsWith);
+    return Objects.hash(AND, NOT, OR, cluster, createAt, createAtGt, createAtGte, createAtIn, createAtLt, createAtLte, createAtNot, createAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmVolume, volumeSharing, volumeSharingNot, volumeSize, volumeSizeGt, volumeSizeGte, volumeSizeIn, volumeSizeLt, volumeSizeLte, volumeSizeNot, volumeSizeNotIn, zbsSnapshotUuid, zbsSnapshotUuidContains, zbsSnapshotUuidEndsWith, zbsSnapshotUuidGt, zbsSnapshotUuidGte, zbsSnapshotUuidIn, zbsSnapshotUuidLt, zbsSnapshotUuidLte, zbsSnapshotUuidNot, zbsSnapshotUuidNotContains, zbsSnapshotUuidNotEndsWith, zbsSnapshotUuidNotIn, zbsSnapshotUuidNotStartsWith, zbsSnapshotUuidStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4228,6 +4228,8 @@ public class VmVolumeSnapshotWhereInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmVolumeSnapshotWhereInput {\n");
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
+    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
+    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
     sb.append("    createAt: ").append(toIndentedString(createAt)).append("\n");
     sb.append("    createAtGt: ").append(toIndentedString(createAtGt)).append("\n");
@@ -4312,8 +4314,6 @@ public class VmVolumeSnapshotWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
-    sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
     sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
     sb.append("    sharedSizeGt: ").append(toIndentedString(sharedSizeGt)).append("\n");
     sb.append("    sharedSizeGte: ").append(toIndentedString(sharedSizeGte)).append("\n");
