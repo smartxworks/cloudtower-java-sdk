@@ -167,6 +167,10 @@ public class IscsiLun {
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
   private Boolean thinProvision;
 
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+  private Long uniqueLogicalSize;
+
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -1014,6 +1018,29 @@ public class IscsiLun {
   }
 
 
+  public IscsiLun uniqueLogicalSize(Long uniqueLogicalSize) {
+    
+    this.uniqueLogicalSize = uniqueLogicalSize;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSize
+   * @return uniqueLogicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSize() {
+    return uniqueLogicalSize;
+  }
+
+
+  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+    this.uniqueLogicalSize = uniqueLogicalSize;
+  }
+
+
   public IscsiLun uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -1105,6 +1132,7 @@ public class IscsiLun {
         Objects.equals(this.stripeNum, iscsiLun.stripeNum) &&
         Objects.equals(this.stripeSize, iscsiLun.stripeSize) &&
         Objects.equals(this.thinProvision, iscsiLun.thinProvision) &&
+        Objects.equals(this.uniqueLogicalSize, iscsiLun.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, iscsiLun.uniqueSize) &&
         Objects.equals(this.zbsVolumeId, iscsiLun.zbsVolumeId);
   }
@@ -1115,7 +1143,7 @@ public class IscsiLun {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedInitiators, assignedSize, bps, bpsMax, bpsMaxLength, bpsRd, bpsRdMax, bpsRdMaxLength, bpsWr, bpsWrMax, bpsWrMaxLength, consistencyGroup, entityAsyncStatus, id, ioSize, iops, iopsMax, iopsMaxLength, iopsRd, iopsRdMax, iopsRdMaxLength, iopsWr, iopsWrMax, iopsWrMaxLength, iscsiTarget, labels, localCreatedAt, localId, lunId, name, replicaNum, sharedSize, snapshotNum, stripeNum, stripeSize, thinProvision, uniqueSize, zbsVolumeId);
+    return Objects.hash(allowedInitiators, assignedSize, bps, bpsMax, bpsMaxLength, bpsRd, bpsRdMax, bpsRdMaxLength, bpsWr, bpsWrMax, bpsWrMaxLength, consistencyGroup, entityAsyncStatus, id, ioSize, iops, iopsMax, iopsMaxLength, iopsRd, iopsRdMax, iopsRdMaxLength, iopsWr, iopsWrMax, iopsWrMaxLength, iscsiTarget, labels, localCreatedAt, localId, lunId, name, replicaNum, sharedSize, snapshotNum, stripeNum, stripeSize, thinProvision, uniqueLogicalSize, uniqueSize, zbsVolumeId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1165,6 +1193,7 @@ public class IscsiLun {
     sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
     sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
     sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
+    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    zbsVolumeId: ").append(toIndentedString(zbsVolumeId)).append("\n");
     sb.append("}");

@@ -14,6 +14,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.smartx.tower.model.CommonHeader;
 import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetIscsiLunSnapshotsConnectionRequestBody;
 import com.smartx.tower.model.GetIscsiLunSnapshotsRequestBody;
@@ -76,10 +77,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createIscsiLunSnapshotCall(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
@@ -151,10 +152,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskIscsiLunSnapshot> createIscsiLunSnapshot(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams) throws ApiException {
@@ -171,10 +172,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskIscsiLunSnapshot>> createIscsiLunSnapshotWithHttpInfo(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams) throws ApiException {
@@ -193,10 +194,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createIscsiLunSnapshotAsync(List<IscsiLunSnapshotCreationParams> iscsiLunSnapshotCreationParams, final ApiCallback<List<WithTaskIscsiLunSnapshot>> _callback) throws ApiException {
@@ -215,10 +216,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteIscsiLunSnapshotCall(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -290,10 +291,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteIscsiLunSnapshot> deleteIscsiLunSnapshot(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams) throws ApiException {
@@ -310,10 +311,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteIscsiLunSnapshot>> deleteIscsiLunSnapshotWithHttpInfo(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams) throws ApiException {
@@ -332,10 +333,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteIscsiLunSnapshotAsync(IscsiLunSnapshotDeletionParams iscsiLunSnapshotDeletionParams, final ApiCallback<List<WithTaskDeleteIscsiLunSnapshot>> _callback) throws ApiException {
@@ -354,10 +355,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunSnapshotsCall(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
@@ -429,10 +430,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<IscsiLunSnapshot> getIscsiLunSnapshots(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody) throws ApiException {
@@ -449,10 +450,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<IscsiLunSnapshot>> getIscsiLunSnapshotsWithHttpInfo(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody) throws ApiException {
@@ -471,10 +472,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunSnapshotsAsync(GetIscsiLunSnapshotsRequestBody getIscsiLunSnapshotsRequestBody, final ApiCallback<List<IscsiLunSnapshot>> _callback) throws ApiException {
@@ -493,10 +494,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunSnapshotsConnectionCall(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -568,10 +569,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public IscsiLunSnapshotConnection getIscsiLunSnapshotsConnection(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody) throws ApiException {
@@ -588,10 +589,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<IscsiLunSnapshotConnection> getIscsiLunSnapshotsConnectionWithHttpInfo(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody) throws ApiException {
@@ -610,10 +611,10 @@ public class IscsiLunSnapshotApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getIscsiLunSnapshotsConnectionAsync(GetIscsiLunSnapshotsConnectionRequestBody getIscsiLunSnapshotsConnectionRequestBody, final ApiCallback<IscsiLunSnapshotConnection> _callback) throws ApiException {

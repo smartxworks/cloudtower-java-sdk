@@ -70,6 +70,10 @@ public class NfsInode {
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
   private Integer snapshotNum;
 
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+  private Long uniqueLogicalSize;
+
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -361,6 +365,29 @@ public class NfsInode {
   }
 
 
+  public NfsInode uniqueLogicalSize(Long uniqueLogicalSize) {
+    
+    this.uniqueLogicalSize = uniqueLogicalSize;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSize
+   * @return uniqueLogicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSize() {
+    return uniqueLogicalSize;
+  }
+
+
+  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+    this.uniqueLogicalSize = uniqueLogicalSize;
+  }
+
+
   public NfsInode uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -405,6 +432,7 @@ public class NfsInode {
         Objects.equals(this.parentId, nfsInode.parentId) &&
         Objects.equals(this.sharedSize, nfsInode.sharedSize) &&
         Objects.equals(this.snapshotNum, nfsInode.snapshotNum) &&
+        Objects.equals(this.uniqueLogicalSize, nfsInode.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, nfsInode.uniqueSize);
   }
 
@@ -414,7 +442,7 @@ public class NfsInode {
 
   @Override
   public int hashCode() {
-    return Objects.hash(assignedSize, entityAsyncStatus, _file, id, labels, localId, localUpdatedAt, name, nfsExport, parentId, sharedSize, snapshotNum, uniqueSize);
+    return Objects.hash(assignedSize, entityAsyncStatus, _file, id, labels, localId, localUpdatedAt, name, nfsExport, parentId, sharedSize, snapshotNum, uniqueLogicalSize, uniqueSize);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -440,6 +468,7 @@ public class NfsInode {
     sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
     sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
     sb.append("    snapshotNum: ").append(toIndentedString(snapshotNum)).append("\n");
+    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("}");
     return sb.toString();

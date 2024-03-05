@@ -94,6 +94,10 @@ public class VmVolume {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private VmVolumeType type;
 
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+  private Long uniqueLogicalSize;
+
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -504,6 +508,29 @@ public class VmVolume {
   }
 
 
+  public VmVolume uniqueLogicalSize(Long uniqueLogicalSize) {
+    
+    this.uniqueLogicalSize = uniqueLogicalSize;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSize
+   * @return uniqueLogicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSize() {
+    return uniqueLogicalSize;
+  }
+
+
+  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+    this.uniqueLogicalSize = uniqueLogicalSize;
+  }
+
+
   public VmVolume uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -584,6 +611,7 @@ public class VmVolume {
         Objects.equals(this.sharing, vmVolume.sharing) &&
         Objects.equals(this.size, vmVolume.size) &&
         Objects.equals(this.type, vmVolume.type) &&
+        Objects.equals(this.uniqueLogicalSize, vmVolume.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, vmVolume.uniqueSize) &&
         Objects.equals(this.vmDisks, vmVolume.vmDisks);
   }
@@ -594,7 +622,7 @@ public class VmVolume {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, description, elfStoragePolicy, entityAsyncStatus, guestSizeUsage, guestUsedSize, id, labels, localCreatedAt, localId, lun, mounting, name, path, sharing, size, type, uniqueSize, vmDisks);
+    return Objects.hash(cluster, description, elfStoragePolicy, entityAsyncStatus, guestSizeUsage, guestUsedSize, id, labels, localCreatedAt, localId, lun, mounting, name, path, sharing, size, type, uniqueLogicalSize, uniqueSize, vmDisks);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -625,6 +653,7 @@ public class VmVolume {
     sb.append("    sharing: ").append(toIndentedString(sharing)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
     sb.append("}");

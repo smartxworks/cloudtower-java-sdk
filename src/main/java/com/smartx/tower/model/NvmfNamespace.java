@@ -176,6 +176,10 @@ public class NvmfNamespace {
   @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
   private Boolean thinProvision;
 
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+  private Long uniqueLogicalSize;
+
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -1069,6 +1073,29 @@ public class NvmfNamespace {
   }
 
 
+  public NvmfNamespace uniqueLogicalSize(Long uniqueLogicalSize) {
+    
+    this.uniqueLogicalSize = uniqueLogicalSize;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSize
+   * @return uniqueLogicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSize() {
+    return uniqueLogicalSize;
+  }
+
+
+  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+    this.uniqueLogicalSize = uniqueLogicalSize;
+  }
+
+
   public NvmfNamespace uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -1162,6 +1189,7 @@ public class NvmfNamespace {
         Objects.equals(this.stripeNum, nvmfNamespace.stripeNum) &&
         Objects.equals(this.stripeSize, nvmfNamespace.stripeSize) &&
         Objects.equals(this.thinProvision, nvmfNamespace.thinProvision) &&
+        Objects.equals(this.uniqueLogicalSize, nvmfNamespace.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, nvmfNamespace.uniqueSize) &&
         Objects.equals(this.zbsVolumeId, nvmfNamespace.zbsVolumeId);
   }
@@ -1172,7 +1200,7 @@ public class NvmfNamespace {
 
   @Override
   public int hashCode() {
-    return Objects.hash(assignedSize, bps, bpsMax, bpsMaxLength, bpsRd, bpsRdMax, bpsRdMaxLength, bpsWr, bpsWrMax, bpsWrMaxLength, consistencyGroup, entityAsyncStatus, id, ioSize, iops, iopsMax, iopsMaxLength, iopsRd, iopsRdMax, iopsRdMaxLength, iopsWr, iopsWrMax, iopsWrMaxLength, isShared, labels, localCreatedAt, localId, name, namespaceGroup, namespaceId, nqnWhitelist, nvmfSubsystem, replicaNum, sharedSize, snapshotNum, stripeNum, stripeSize, thinProvision, uniqueSize, zbsVolumeId);
+    return Objects.hash(assignedSize, bps, bpsMax, bpsMaxLength, bpsRd, bpsRdMax, bpsRdMaxLength, bpsWr, bpsWrMax, bpsWrMaxLength, consistencyGroup, entityAsyncStatus, id, ioSize, iops, iopsMax, iopsMaxLength, iopsRd, iopsRdMax, iopsRdMaxLength, iopsWr, iopsWrMax, iopsWrMaxLength, isShared, labels, localCreatedAt, localId, name, namespaceGroup, namespaceId, nqnWhitelist, nvmfSubsystem, replicaNum, sharedSize, snapshotNum, stripeNum, stripeSize, thinProvision, uniqueLogicalSize, uniqueSize, zbsVolumeId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1224,6 +1252,7 @@ public class NvmfNamespace {
     sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
     sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
     sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
+    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    zbsVolumeId: ").append(toIndentedString(zbsVolumeId)).append("\n");
     sb.append("}");

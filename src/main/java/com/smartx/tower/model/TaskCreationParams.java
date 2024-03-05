@@ -7,6 +7,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.PickFooBar;
+import com.smartx.tower.model.PickFooExcludeKeyofFooBaz;
 import com.smartx.tower.model.TaskDescription;
 import com.smartx.tower.model.TaskStepCreationParams;
 import com.smartx.tower.model.TaskType;
@@ -47,11 +49,11 @@ public class TaskCreationParams {
 
   public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
   @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
-  private String clusterId;
+  private PickFooExcludeKeyofFooBaz clusterId;
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
   @SerializedName(SERIALIZED_NAME_USER_ID)
-  private String userId;
+  private PickFooBar userId;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -59,11 +61,11 @@ public class TaskCreationParams {
 
   public static final String SERIALIZED_NAME_RESOURCE_MUTATION = "resource_mutation";
   @SerializedName(SERIALIZED_NAME_RESOURCE_MUTATION)
-  private String resourceMutation;
+  private PickFooExcludeKeyofFooBaz resourceMutation;
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resource_type";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
-  private String resourceType;
+  private PickFooBar resourceType;
 
   public TaskCreationParams() { 
   }
@@ -214,7 +216,7 @@ public class TaskCreationParams {
   }
 
 
-  public TaskCreationParams clusterId(String clusterId) {
+  public TaskCreationParams clusterId(PickFooExcludeKeyofFooBaz clusterId) {
     
     this.clusterId = clusterId;
     return this;
@@ -227,17 +229,17 @@ public class TaskCreationParams {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getClusterId() {
+  public PickFooExcludeKeyofFooBaz getClusterId() {
     return clusterId;
   }
 
 
-  public void setClusterId(String clusterId) {
+  public void setClusterId(PickFooExcludeKeyofFooBaz clusterId) {
     this.clusterId = clusterId;
   }
 
 
-  public TaskCreationParams userId(String userId) {
+  public TaskCreationParams userId(PickFooBar userId) {
     
     this.userId = userId;
     return this;
@@ -250,12 +252,12 @@ public class TaskCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getUserId() {
+  public PickFooBar getUserId() {
     return userId;
   }
 
 
-  public void setUserId(String userId) {
+  public void setUserId(PickFooBar userId) {
     this.userId = userId;
   }
 
@@ -283,7 +285,7 @@ public class TaskCreationParams {
   }
 
 
-  public TaskCreationParams resourceMutation(String resourceMutation) {
+  public TaskCreationParams resourceMutation(PickFooExcludeKeyofFooBaz resourceMutation) {
     
     this.resourceMutation = resourceMutation;
     return this;
@@ -296,17 +298,17 @@ public class TaskCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getResourceMutation() {
+  public PickFooExcludeKeyofFooBaz getResourceMutation() {
     return resourceMutation;
   }
 
 
-  public void setResourceMutation(String resourceMutation) {
+  public void setResourceMutation(PickFooExcludeKeyofFooBaz resourceMutation) {
     this.resourceMutation = resourceMutation;
   }
 
 
-  public TaskCreationParams resourceType(String resourceType) {
+  public TaskCreationParams resourceType(PickFooBar resourceType) {
     
     this.resourceType = resourceType;
     return this;
@@ -319,12 +321,12 @@ public class TaskCreationParams {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getResourceType() {
+  public PickFooBar getResourceType() {
     return resourceType;
   }
 
 
-  public void setResourceType(String resourceType) {
+  public void setResourceType(PickFooBar resourceType) {
     this.resourceType = resourceType;
   }
 

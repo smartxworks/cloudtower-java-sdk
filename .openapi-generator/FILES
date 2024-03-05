@@ -236,6 +236,7 @@ src/main/java/com/smartx/tower/model/ClusterVirtualizationUpdationParamsData.jav
 src/main/java/com/smartx/tower/model/ClusterWhereInput.java
 src/main/java/com/smartx/tower/model/ClusterWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/ColumnConfig.java
+src/main/java/com/smartx/tower/model/CommonHeader.java
 src/main/java/com/smartx/tower/model/ConnectState.java
 src/main/java/com/smartx/tower/model/ConsistencyGroup.java
 src/main/java/com/smartx/tower/model/ConsistencyGroupConnection.java
@@ -255,6 +256,7 @@ src/main/java/com/smartx/tower/model/ConsistencyGroupUpdationParams.java
 src/main/java/com/smartx/tower/model/ConsistencyGroupUpdationParamsData.java
 src/main/java/com/smartx/tower/model/ConsistencyGroupWhereInput.java
 src/main/java/com/smartx/tower/model/ConsistentType.java
+src/main/java/com/smartx/tower/model/ContentLanguage.java
 src/main/java/com/smartx/tower/model/ContentLibraryImage.java
 src/main/java/com/smartx/tower/model/ContentLibraryImageConnection.java
 src/main/java/com/smartx/tower/model/ContentLibraryImageDeletionParams.java
@@ -1059,6 +1061,8 @@ src/main/java/com/smartx/tower/model/OvfNic.java
 src/main/java/com/smartx/tower/model/ParsedOVF.java
 src/main/java/com/smartx/tower/model/PartitionUsage.java
 src/main/java/com/smartx/tower/model/PasswordComplexity.java
+src/main/java/com/smartx/tower/model/PickFooBar.java
+src/main/java/com/smartx/tower/model/PickFooExcludeKeyofFooBaz.java
 src/main/java/com/smartx/tower/model/PmemDimm.java
 src/main/java/com/smartx/tower/model/PmemDimmConnection.java
 src/main/java/com/smartx/tower/model/PmemDimmOrderByInput.java

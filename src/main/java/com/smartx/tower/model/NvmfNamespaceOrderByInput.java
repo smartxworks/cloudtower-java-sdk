@@ -152,6 +152,10 @@ public enum NvmfNamespaceOrderByInput {
   
   THIN_PROVISION_DESC("thin_provision_DESC"),
   
+  UNIQUE_LOGICAL_SIZE_ASC("unique_logical_size_ASC"),
+  
+  UNIQUE_LOGICAL_SIZE_DESC("unique_logical_size_DESC"),
+  
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
   UNIQUE_SIZE_DESC("unique_size_DESC"),

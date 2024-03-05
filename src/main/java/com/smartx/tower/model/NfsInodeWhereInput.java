@@ -426,6 +426,38 @@ public class NfsInodeWhereInput {
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN)
   private List<Integer> snapshotNumNotIn = null;
 
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+  private Long uniqueLogicalSize;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GT = "unique_logical_size_gt";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GT)
+  private Long uniqueLogicalSizeGt;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GTE = "unique_logical_size_gte";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GTE)
+  private Long uniqueLogicalSizeGte;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_IN = "unique_logical_size_in";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_IN)
+  private List<Long> uniqueLogicalSizeIn = null;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LT = "unique_logical_size_lt";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LT)
+  private Long uniqueLogicalSizeLt;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LTE = "unique_logical_size_lte";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LTE)
+  private Long uniqueLogicalSizeLte;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT = "unique_logical_size_not";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT)
+  private Long uniqueLogicalSizeNot;
+
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT_IN = "unique_logical_size_not_in";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT_IN)
+  private List<Long> uniqueLogicalSizeNotIn = null;
+
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -2952,6 +2984,206 @@ public class NfsInodeWhereInput {
   }
 
 
+  public NfsInodeWhereInput uniqueLogicalSize(Long uniqueLogicalSize) {
+    
+    this.uniqueLogicalSize = uniqueLogicalSize;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSize
+   * @return uniqueLogicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSize() {
+    return uniqueLogicalSize;
+  }
+
+
+  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+    this.uniqueLogicalSize = uniqueLogicalSize;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeGt(Long uniqueLogicalSizeGt) {
+    
+    this.uniqueLogicalSizeGt = uniqueLogicalSizeGt;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeGt
+   * @return uniqueLogicalSizeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSizeGt() {
+    return uniqueLogicalSizeGt;
+  }
+
+
+  public void setUniqueLogicalSizeGt(Long uniqueLogicalSizeGt) {
+    this.uniqueLogicalSizeGt = uniqueLogicalSizeGt;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeGte(Long uniqueLogicalSizeGte) {
+    
+    this.uniqueLogicalSizeGte = uniqueLogicalSizeGte;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeGte
+   * @return uniqueLogicalSizeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSizeGte() {
+    return uniqueLogicalSizeGte;
+  }
+
+
+  public void setUniqueLogicalSizeGte(Long uniqueLogicalSizeGte) {
+    this.uniqueLogicalSizeGte = uniqueLogicalSizeGte;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeIn(List<Long> uniqueLogicalSizeIn) {
+    
+    this.uniqueLogicalSizeIn = uniqueLogicalSizeIn;
+    return this;
+  }
+
+  public NfsInodeWhereInput addUniqueLogicalSizeInItem(Long uniqueLogicalSizeInItem) {
+    if (this.uniqueLogicalSizeIn == null) {
+      this.uniqueLogicalSizeIn = new ArrayList<Long>();
+    }
+    this.uniqueLogicalSizeIn.add(uniqueLogicalSizeInItem);
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeIn
+   * @return uniqueLogicalSizeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getUniqueLogicalSizeIn() {
+    return uniqueLogicalSizeIn;
+  }
+
+
+  public void setUniqueLogicalSizeIn(List<Long> uniqueLogicalSizeIn) {
+    this.uniqueLogicalSizeIn = uniqueLogicalSizeIn;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeLt(Long uniqueLogicalSizeLt) {
+    
+    this.uniqueLogicalSizeLt = uniqueLogicalSizeLt;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeLt
+   * @return uniqueLogicalSizeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSizeLt() {
+    return uniqueLogicalSizeLt;
+  }
+
+
+  public void setUniqueLogicalSizeLt(Long uniqueLogicalSizeLt) {
+    this.uniqueLogicalSizeLt = uniqueLogicalSizeLt;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeLte(Long uniqueLogicalSizeLte) {
+    
+    this.uniqueLogicalSizeLte = uniqueLogicalSizeLte;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeLte
+   * @return uniqueLogicalSizeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSizeLte() {
+    return uniqueLogicalSizeLte;
+  }
+
+
+  public void setUniqueLogicalSizeLte(Long uniqueLogicalSizeLte) {
+    this.uniqueLogicalSizeLte = uniqueLogicalSizeLte;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeNot(Long uniqueLogicalSizeNot) {
+    
+    this.uniqueLogicalSizeNot = uniqueLogicalSizeNot;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeNot
+   * @return uniqueLogicalSizeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSizeNot() {
+    return uniqueLogicalSizeNot;
+  }
+
+
+  public void setUniqueLogicalSizeNot(Long uniqueLogicalSizeNot) {
+    this.uniqueLogicalSizeNot = uniqueLogicalSizeNot;
+  }
+
+
+  public NfsInodeWhereInput uniqueLogicalSizeNotIn(List<Long> uniqueLogicalSizeNotIn) {
+    
+    this.uniqueLogicalSizeNotIn = uniqueLogicalSizeNotIn;
+    return this;
+  }
+
+  public NfsInodeWhereInput addUniqueLogicalSizeNotInItem(Long uniqueLogicalSizeNotInItem) {
+    if (this.uniqueLogicalSizeNotIn == null) {
+      this.uniqueLogicalSizeNotIn = new ArrayList<Long>();
+    }
+    this.uniqueLogicalSizeNotIn.add(uniqueLogicalSizeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSizeNotIn
+   * @return uniqueLogicalSizeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getUniqueLogicalSizeNotIn() {
+    return uniqueLogicalSizeNotIn;
+  }
+
+
+  public void setUniqueLogicalSizeNotIn(List<Long> uniqueLogicalSizeNotIn) {
+    this.uniqueLogicalSizeNotIn = uniqueLogicalSizeNotIn;
+  }
+
+
   public NfsInodeWhereInput uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -3262,6 +3494,14 @@ public class NfsInodeWhereInput {
         Objects.equals(this.snapshotNumLte, nfsInodeWhereInput.snapshotNumLte) &&
         Objects.equals(this.snapshotNumNot, nfsInodeWhereInput.snapshotNumNot) &&
         Objects.equals(this.snapshotNumNotIn, nfsInodeWhereInput.snapshotNumNotIn) &&
+        Objects.equals(this.uniqueLogicalSize, nfsInodeWhereInput.uniqueLogicalSize) &&
+        Objects.equals(this.uniqueLogicalSizeGt, nfsInodeWhereInput.uniqueLogicalSizeGt) &&
+        Objects.equals(this.uniqueLogicalSizeGte, nfsInodeWhereInput.uniqueLogicalSizeGte) &&
+        Objects.equals(this.uniqueLogicalSizeIn, nfsInodeWhereInput.uniqueLogicalSizeIn) &&
+        Objects.equals(this.uniqueLogicalSizeLt, nfsInodeWhereInput.uniqueLogicalSizeLt) &&
+        Objects.equals(this.uniqueLogicalSizeLte, nfsInodeWhereInput.uniqueLogicalSizeLte) &&
+        Objects.equals(this.uniqueLogicalSizeNot, nfsInodeWhereInput.uniqueLogicalSizeNot) &&
+        Objects.equals(this.uniqueLogicalSizeNotIn, nfsInodeWhereInput.uniqueLogicalSizeNotIn) &&
         Objects.equals(this.uniqueSize, nfsInodeWhereInput.uniqueSize) &&
         Objects.equals(this.uniqueSizeGt, nfsInodeWhereInput.uniqueSizeGt) &&
         Objects.equals(this.uniqueSizeGte, nfsInodeWhereInput.uniqueSizeGte) &&
@@ -3278,7 +3518,7 @@ public class NfsInodeWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, _file, fileNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, parentId, parentIdContains, parentIdEndsWith, parentIdGt, parentIdGte, parentIdIn, parentIdLt, parentIdLte, parentIdNot, parentIdNotContains, parentIdNotEndsWith, parentIdNotIn, parentIdNotStartsWith, parentIdStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
+    return Objects.hash(AND, NOT, OR, assignedSize, assignedSizeGt, assignedSizeGte, assignedSizeIn, assignedSizeLt, assignedSizeLte, assignedSizeNot, assignedSizeNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, _file, fileNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, localUpdatedAt, localUpdatedAtGt, localUpdatedAtGte, localUpdatedAtIn, localUpdatedAtLt, localUpdatedAtLte, localUpdatedAtNot, localUpdatedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nfsExport, parentId, parentIdContains, parentIdEndsWith, parentIdGt, parentIdGte, parentIdIn, parentIdLt, parentIdLte, parentIdNot, parentIdNotContains, parentIdNotEndsWith, parentIdNotIn, parentIdNotStartsWith, parentIdStartsWith, sharedSize, sharedSizeGt, sharedSizeGte, sharedSizeIn, sharedSizeLt, sharedSizeLte, sharedSizeNot, sharedSizeNotIn, snapshotNum, snapshotNumGt, snapshotNumGte, snapshotNumIn, snapshotNumLt, snapshotNumLte, snapshotNumNot, snapshotNumNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3393,6 +3633,14 @@ public class NfsInodeWhereInput {
     sb.append("    snapshotNumLte: ").append(toIndentedString(snapshotNumLte)).append("\n");
     sb.append("    snapshotNumNot: ").append(toIndentedString(snapshotNumNot)).append("\n");
     sb.append("    snapshotNumNotIn: ").append(toIndentedString(snapshotNumNotIn)).append("\n");
+    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
+    sb.append("    uniqueLogicalSizeGt: ").append(toIndentedString(uniqueLogicalSizeGt)).append("\n");
+    sb.append("    uniqueLogicalSizeGte: ").append(toIndentedString(uniqueLogicalSizeGte)).append("\n");
+    sb.append("    uniqueLogicalSizeIn: ").append(toIndentedString(uniqueLogicalSizeIn)).append("\n");
+    sb.append("    uniqueLogicalSizeLt: ").append(toIndentedString(uniqueLogicalSizeLt)).append("\n");
+    sb.append("    uniqueLogicalSizeLte: ").append(toIndentedString(uniqueLogicalSizeLte)).append("\n");
+    sb.append("    uniqueLogicalSizeNot: ").append(toIndentedString(uniqueLogicalSizeNot)).append("\n");
+    sb.append("    uniqueLogicalSizeNotIn: ").append(toIndentedString(uniqueLogicalSizeNotIn)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
     sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");
