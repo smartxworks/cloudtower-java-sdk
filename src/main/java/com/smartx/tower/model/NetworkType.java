@@ -26,7 +26,11 @@ public enum NetworkType {
   
   STORAGE_ACCESS("STORAGE_ACCESS"),
   
-  VM("VM");
+  VM("VM"),
+  
+  VPC_SYS("VPC_SYS"),
+  
+  VPC_VM("VPC_VM");
 
   private String value;
 
