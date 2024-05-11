@@ -82,7 +82,11 @@ public enum VmNicOrderByInput {
   
   SUBNET_MASK_ASC("subnet_mask_ASC"),
   
-  SUBNET_MASK_DESC("subnet_mask_DESC");
+  SUBNET_MASK_DESC("subnet_mask_DESC"),
+  
+  TYPE_ASC("type_ASC"),
+  
+  TYPE_DESC("type_DESC");
 
   private String value;
 

@@ -252,6 +252,10 @@ public class Vm {
   @SerializedName(SERIALIZED_NAME_STATUS)
   private VmStatus status;
 
+  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
+  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+  private Long uniqueLogicalSize;
+
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -1540,6 +1544,29 @@ public class Vm {
   }
 
 
+  public Vm uniqueLogicalSize(Long uniqueLogicalSize) {
+    
+    this.uniqueLogicalSize = uniqueLogicalSize;
+    return this;
+  }
+
+   /**
+   * Get uniqueLogicalSize
+   * @return uniqueLogicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUniqueLogicalSize() {
+    return uniqueLogicalSize;
+  }
+
+
+  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+    this.uniqueLogicalSize = uniqueLogicalSize;
+  }
+
+
   public Vm uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -1886,6 +1913,7 @@ public class Vm {
         Objects.equals(this.snapshotPlan, vm.snapshotPlan) &&
         Objects.equals(this.snapshots, vm.snapshots) &&
         Objects.equals(this.status, vm.status) &&
+        Objects.equals(this.uniqueLogicalSize, vm.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, vm.uniqueSize) &&
         Objects.equals(this.usbDevices, vm.usbDevices) &&
         Objects.equals(this.vcpu, vm.vcpu) &&
@@ -1905,7 +1933,7 @@ public class Vm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
+    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueLogicalSize, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1971,6 +1999,7 @@ public class Vm {
     sb.append("    snapshotPlan: ").append(toIndentedString(snapshotPlan)).append("\n");
     sb.append("    snapshots: ").append(toIndentedString(snapshots)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    usbDevices: ").append(toIndentedString(usbDevices)).append("\n");
     sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
