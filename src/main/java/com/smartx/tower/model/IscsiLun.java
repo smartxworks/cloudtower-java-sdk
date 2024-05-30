@@ -169,7 +169,7 @@ public class IscsiLun {
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
-  private Long uniqueLogicalSize;
+  private Double uniqueLogicalSize;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
@@ -1018,7 +1018,7 @@ public class IscsiLun {
   }
 
 
-  public IscsiLun uniqueLogicalSize(Long uniqueLogicalSize) {
+  public IscsiLun uniqueLogicalSize(Double uniqueLogicalSize) {
     
     this.uniqueLogicalSize = uniqueLogicalSize;
     return this;
@@ -1031,12 +1031,12 @@ public class IscsiLun {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSize() {
+  public Double getUniqueLogicalSize() {
     return uniqueLogicalSize;
   }
 
 
-  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+  public void setUniqueLogicalSize(Double uniqueLogicalSize) {
     this.uniqueLogicalSize = uniqueLogicalSize;
   }
 
