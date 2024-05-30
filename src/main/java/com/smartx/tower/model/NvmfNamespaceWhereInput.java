@@ -1182,35 +1182,35 @@ public class NvmfNamespaceWhereInput {
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
-  private Long uniqueLogicalSize;
+  private Double uniqueLogicalSize;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GT = "unique_logical_size_gt";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GT)
-  private Long uniqueLogicalSizeGt;
+  private Double uniqueLogicalSizeGt;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GTE = "unique_logical_size_gte";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GTE)
-  private Long uniqueLogicalSizeGte;
+  private Double uniqueLogicalSizeGte;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_IN = "unique_logical_size_in";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_IN)
-  private List<Long> uniqueLogicalSizeIn = null;
+  private List<Double> uniqueLogicalSizeIn = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LT = "unique_logical_size_lt";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LT)
-  private Long uniqueLogicalSizeLt;
+  private Double uniqueLogicalSizeLt;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LTE = "unique_logical_size_lte";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LTE)
-  private Long uniqueLogicalSizeLte;
+  private Double uniqueLogicalSizeLte;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT = "unique_logical_size_not";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT)
-  private Long uniqueLogicalSizeNot;
+  private Double uniqueLogicalSizeNot;
 
   public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT_IN = "unique_logical_size_not_in";
   @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT_IN)
-  private List<Long> uniqueLogicalSizeNotIn = null;
+  private List<Double> uniqueLogicalSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
@@ -8486,7 +8486,7 @@ public class NvmfNamespaceWhereInput {
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSize(Long uniqueLogicalSize) {
+  public NvmfNamespaceWhereInput uniqueLogicalSize(Double uniqueLogicalSize) {
     
     this.uniqueLogicalSize = uniqueLogicalSize;
     return this;
@@ -8499,17 +8499,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSize() {
+  public Double getUniqueLogicalSize() {
     return uniqueLogicalSize;
   }
 
 
-  public void setUniqueLogicalSize(Long uniqueLogicalSize) {
+  public void setUniqueLogicalSize(Double uniqueLogicalSize) {
     this.uniqueLogicalSize = uniqueLogicalSize;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeGt(Long uniqueLogicalSizeGt) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeGt(Double uniqueLogicalSizeGt) {
     
     this.uniqueLogicalSizeGt = uniqueLogicalSizeGt;
     return this;
@@ -8522,17 +8522,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSizeGt() {
+  public Double getUniqueLogicalSizeGt() {
     return uniqueLogicalSizeGt;
   }
 
 
-  public void setUniqueLogicalSizeGt(Long uniqueLogicalSizeGt) {
+  public void setUniqueLogicalSizeGt(Double uniqueLogicalSizeGt) {
     this.uniqueLogicalSizeGt = uniqueLogicalSizeGt;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeGte(Long uniqueLogicalSizeGte) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeGte(Double uniqueLogicalSizeGte) {
     
     this.uniqueLogicalSizeGte = uniqueLogicalSizeGte;
     return this;
@@ -8545,25 +8545,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSizeGte() {
+  public Double getUniqueLogicalSizeGte() {
     return uniqueLogicalSizeGte;
   }
 
 
-  public void setUniqueLogicalSizeGte(Long uniqueLogicalSizeGte) {
+  public void setUniqueLogicalSizeGte(Double uniqueLogicalSizeGte) {
     this.uniqueLogicalSizeGte = uniqueLogicalSizeGte;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeIn(List<Long> uniqueLogicalSizeIn) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeIn(List<Double> uniqueLogicalSizeIn) {
     
     this.uniqueLogicalSizeIn = uniqueLogicalSizeIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addUniqueLogicalSizeInItem(Long uniqueLogicalSizeInItem) {
+  public NvmfNamespaceWhereInput addUniqueLogicalSizeInItem(Double uniqueLogicalSizeInItem) {
     if (this.uniqueLogicalSizeIn == null) {
-      this.uniqueLogicalSizeIn = new ArrayList<Long>();
+      this.uniqueLogicalSizeIn = new ArrayList<Double>();
     }
     this.uniqueLogicalSizeIn.add(uniqueLogicalSizeInItem);
     return this;
@@ -8576,17 +8576,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUniqueLogicalSizeIn() {
+  public List<Double> getUniqueLogicalSizeIn() {
     return uniqueLogicalSizeIn;
   }
 
 
-  public void setUniqueLogicalSizeIn(List<Long> uniqueLogicalSizeIn) {
+  public void setUniqueLogicalSizeIn(List<Double> uniqueLogicalSizeIn) {
     this.uniqueLogicalSizeIn = uniqueLogicalSizeIn;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeLt(Long uniqueLogicalSizeLt) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeLt(Double uniqueLogicalSizeLt) {
     
     this.uniqueLogicalSizeLt = uniqueLogicalSizeLt;
     return this;
@@ -8599,17 +8599,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSizeLt() {
+  public Double getUniqueLogicalSizeLt() {
     return uniqueLogicalSizeLt;
   }
 
 
-  public void setUniqueLogicalSizeLt(Long uniqueLogicalSizeLt) {
+  public void setUniqueLogicalSizeLt(Double uniqueLogicalSizeLt) {
     this.uniqueLogicalSizeLt = uniqueLogicalSizeLt;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeLte(Long uniqueLogicalSizeLte) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeLte(Double uniqueLogicalSizeLte) {
     
     this.uniqueLogicalSizeLte = uniqueLogicalSizeLte;
     return this;
@@ -8622,17 +8622,17 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSizeLte() {
+  public Double getUniqueLogicalSizeLte() {
     return uniqueLogicalSizeLte;
   }
 
 
-  public void setUniqueLogicalSizeLte(Long uniqueLogicalSizeLte) {
+  public void setUniqueLogicalSizeLte(Double uniqueLogicalSizeLte) {
     this.uniqueLogicalSizeLte = uniqueLogicalSizeLte;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeNot(Long uniqueLogicalSizeNot) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeNot(Double uniqueLogicalSizeNot) {
     
     this.uniqueLogicalSizeNot = uniqueLogicalSizeNot;
     return this;
@@ -8645,25 +8645,25 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getUniqueLogicalSizeNot() {
+  public Double getUniqueLogicalSizeNot() {
     return uniqueLogicalSizeNot;
   }
 
 
-  public void setUniqueLogicalSizeNot(Long uniqueLogicalSizeNot) {
+  public void setUniqueLogicalSizeNot(Double uniqueLogicalSizeNot) {
     this.uniqueLogicalSizeNot = uniqueLogicalSizeNot;
   }
 
 
-  public NvmfNamespaceWhereInput uniqueLogicalSizeNotIn(List<Long> uniqueLogicalSizeNotIn) {
+  public NvmfNamespaceWhereInput uniqueLogicalSizeNotIn(List<Double> uniqueLogicalSizeNotIn) {
     
     this.uniqueLogicalSizeNotIn = uniqueLogicalSizeNotIn;
     return this;
   }
 
-  public NvmfNamespaceWhereInput addUniqueLogicalSizeNotInItem(Long uniqueLogicalSizeNotInItem) {
+  public NvmfNamespaceWhereInput addUniqueLogicalSizeNotInItem(Double uniqueLogicalSizeNotInItem) {
     if (this.uniqueLogicalSizeNotIn == null) {
-      this.uniqueLogicalSizeNotIn = new ArrayList<Long>();
+      this.uniqueLogicalSizeNotIn = new ArrayList<Double>();
     }
     this.uniqueLogicalSizeNotIn.add(uniqueLogicalSizeNotInItem);
     return this;
@@ -8676,12 +8676,12 @@ public class NvmfNamespaceWhereInput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getUniqueLogicalSizeNotIn() {
+  public List<Double> getUniqueLogicalSizeNotIn() {
     return uniqueLogicalSizeNotIn;
   }
 
 
-  public void setUniqueLogicalSizeNotIn(List<Long> uniqueLogicalSizeNotIn) {
+  public void setUniqueLogicalSizeNotIn(List<Double> uniqueLogicalSizeNotIn) {
     this.uniqueLogicalSizeNotIn = uniqueLogicalSizeNotIn;
   }
 
