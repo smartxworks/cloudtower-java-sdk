@@ -22,8 +22,9 @@ public enum MaintenanceModeEnum {
   
   MAINTENANCE_MODE("MAINTENANCE_MODE"),
   
-  REMOVING("REMOVING");
-
+  REMOVING("REMOVING"),
+  
+  MAINTENANCEMODEENUM_UNSUPPORTED_ENUM("MAINTENANCEMODEENUM_UNSUPPORTED_ENUM");
   private String value;
 
   MaintenanceModeEnum(String value) {
@@ -45,7 +46,7 @@ public enum MaintenanceModeEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return MaintenanceModeEnum.MAINTENANCEMODEENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<MaintenanceModeEnum> {

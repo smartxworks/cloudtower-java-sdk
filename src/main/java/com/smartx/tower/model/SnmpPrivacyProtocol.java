@@ -18,8 +18,9 @@ public enum SnmpPrivacyProtocol {
   
   AES("AES"),
   
-  DES("DES");
-
+  DES("DES"),
+  
+  SNMPPRIVACYPROTOCOL_UNSUPPORTED_ENUM("SNMPPRIVACYPROTOCOL_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpPrivacyProtocol(String value) {
@@ -41,7 +42,7 @@ public enum SnmpPrivacyProtocol {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpPrivacyProtocol.SNMPPRIVACYPROTOCOL_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpPrivacyProtocol> {

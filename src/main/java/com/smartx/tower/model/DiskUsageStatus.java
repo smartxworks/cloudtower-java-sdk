@@ -26,8 +26,9 @@ public enum DiskUsageStatus {
   
   UNMOUNTED("UNMOUNTED"),
   
-  UNMOUNTING("UNMOUNTING");
-
+  UNMOUNTING("UNMOUNTING"),
+  
+  DISKUSAGESTATUS_UNSUPPORTED_ENUM("DISKUSAGESTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   DiskUsageStatus(String value) {
@@ -49,7 +50,7 @@ public enum DiskUsageStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DiskUsageStatus.DISKUSAGESTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DiskUsageStatus> {

@@ -110,8 +110,9 @@ public enum DiskOrderByInput {
   
   USAGE_STATUS_ASC("usage_status_ASC"),
   
-  USAGE_STATUS_DESC("usage_status_DESC");
-
+  USAGE_STATUS_DESC("usage_status_DESC"),
+  
+  DISKORDERBYINPUT_UNSUPPORTED_ENUM("DISKORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   DiskOrderByInput(String value) {
@@ -133,7 +134,7 @@ public enum DiskOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DiskOrderByInput.DISKORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DiskOrderByInput> {

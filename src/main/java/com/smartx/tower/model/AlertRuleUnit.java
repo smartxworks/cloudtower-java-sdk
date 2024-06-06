@@ -34,8 +34,9 @@ public enum AlertRuleUnit {
   
   SECOND("SECOND"),
   
-  UNIT_UNSPECIFIED("UNIT_UNSPECIFIED");
-
+  UNIT_UNSPECIFIED("UNIT_UNSPECIFIED"),
+  
+  ALERTRULEUNIT_UNSUPPORTED_ENUM("ALERTRULEUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   AlertRuleUnit(String value) {
@@ -57,7 +58,7 @@ public enum AlertRuleUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return AlertRuleUnit.ALERTRULEUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<AlertRuleUnit> {

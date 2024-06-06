@@ -18,8 +18,9 @@ public enum SnmpAuthProtocol {
   
   MD5("MD5"),
   
-  SHA("SHA");
-
+  SHA("SHA"),
+  
+  SNMPAUTHPROTOCOL_UNSUPPORTED_ENUM("SNMPAUTHPROTOCOL_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpAuthProtocol(String value) {
@@ -41,7 +42,7 @@ public enum SnmpAuthProtocol {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpAuthProtocol.SNMPAUTHPROTOCOL_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpAuthProtocol> {

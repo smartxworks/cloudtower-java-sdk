@@ -46,8 +46,9 @@ public enum EntityFilterOrderByInput {
   
   RULES_ASC("rules_ASC"),
   
-  RULES_DESC("rules_DESC");
-
+  RULES_DESC("rules_DESC"),
+  
+  ENTITYFILTERORDERBYINPUT_UNSUPPORTED_ENUM("ENTITYFILTERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   EntityFilterOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum EntityFilterOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return EntityFilterOrderByInput.ENTITYFILTERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<EntityFilterOrderByInput> {

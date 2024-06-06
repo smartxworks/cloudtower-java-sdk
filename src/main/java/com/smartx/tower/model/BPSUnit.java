@@ -24,8 +24,9 @@ public enum BPSUnit {
   
   GBPS("GBps"),
   
-  TBPS("TBps");
-
+  TBPS("TBps"),
+  
+  BPSUNIT_UNSUPPORTED_ENUM("BPSUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   BPSUnit(String value) {
@@ -47,7 +48,7 @@ public enum BPSUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return BPSUnit.BPSUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<BPSUnit> {

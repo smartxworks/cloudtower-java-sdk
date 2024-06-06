@@ -26,8 +26,9 @@ public enum TaskType {
   
   RESOLVER("RESOLVER"),
   
-  SFS("SFS");
-
+  SFS("SFS"),
+  
+  TASKTYPE_UNSUPPORTED_ENUM("TASKTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   TaskType(String value) {
@@ -49,7 +50,7 @@ public enum TaskType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return TaskType.TASKTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<TaskType> {

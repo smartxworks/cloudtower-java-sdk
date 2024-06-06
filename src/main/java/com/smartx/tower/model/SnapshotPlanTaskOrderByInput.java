@@ -46,8 +46,9 @@ public enum SnapshotPlanTaskOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  SNAPSHOTPLANTASKORDERBYINPUT_UNSUPPORTED_ENUM("SNAPSHOTPLANTASKORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotPlanTaskOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum SnapshotPlanTaskOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotPlanTaskOrderByInput.SNAPSHOTPLANTASKORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotPlanTaskOrderByInput> {

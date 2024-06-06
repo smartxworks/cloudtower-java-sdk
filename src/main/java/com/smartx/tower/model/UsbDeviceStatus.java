@@ -18,8 +18,9 @@ public enum UsbDeviceStatus {
   
   EJECTED("EJECTED"),
   
-  NORMAL("NORMAL");
-
+  NORMAL("NORMAL"),
+  
+  USBDEVICESTATUS_UNSUPPORTED_ENUM("USBDEVICESTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   UsbDeviceStatus(String value) {
@@ -41,7 +42,7 @@ public enum UsbDeviceStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UsbDeviceStatus.USBDEVICESTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UsbDeviceStatus> {

@@ -26,8 +26,9 @@ public enum BitUnit {
   
   TB("Tb"),
   
-  PB("Pb");
-
+  PB("Pb"),
+  
+  BITUNIT_UNSUPPORTED_ENUM("BITUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   BitUnit(String value) {
@@ -49,7 +50,7 @@ public enum BitUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return BitUnit.BITUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<BitUnit> {

@@ -20,8 +20,9 @@ public enum SnapshotPlanStatus {
   
   STOPPED("STOPPED"),
   
-  SUSPENDED("SUSPENDED");
-
+  SUSPENDED("SUSPENDED"),
+  
+  SNAPSHOTPLANSTATUS_UNSUPPORTED_ENUM("SNAPSHOTPLANSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotPlanStatus(String value) {
@@ -43,7 +44,7 @@ public enum SnapshotPlanStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotPlanStatus.SNAPSHOTPLANSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotPlanStatus> {

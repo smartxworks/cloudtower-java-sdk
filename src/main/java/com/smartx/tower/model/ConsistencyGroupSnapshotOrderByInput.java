@@ -38,8 +38,9 @@ public enum ConsistencyGroupSnapshotOrderByInput {
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
-  UNIQUE_SIZE_DESC("unique_size_DESC");
-
+  UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  CONSISTENCYGROUPSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM("CONSISTENCYGROUPSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ConsistencyGroupSnapshotOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum ConsistencyGroupSnapshotOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ConsistencyGroupSnapshotOrderByInput.CONSISTENCYGROUPSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ConsistencyGroupSnapshotOrderByInput> {

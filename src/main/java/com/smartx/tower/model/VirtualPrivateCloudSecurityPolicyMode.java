@@ -18,8 +18,9 @@ public enum VirtualPrivateCloudSecurityPolicyMode {
   
   MONITOR("MONITOR"),
   
-  WORK("WORK");
-
+  WORK("WORK"),
+  
+  VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM("VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM");
   private String value;
 
   VirtualPrivateCloudSecurityPolicyMode(String value) {
@@ -41,7 +42,7 @@ public enum VirtualPrivateCloudSecurityPolicyMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VirtualPrivateCloudSecurityPolicyMode.VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VirtualPrivateCloudSecurityPolicyMode> {

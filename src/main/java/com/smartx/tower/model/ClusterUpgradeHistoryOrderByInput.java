@@ -42,8 +42,9 @@ public enum ClusterUpgradeHistoryOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  CLUSTERUPGRADEHISTORYORDERBYINPUT_UNSUPPORTED_ENUM("CLUSTERUPGRADEHISTORYORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterUpgradeHistoryOrderByInput(String value) {
@@ -65,7 +66,7 @@ public enum ClusterUpgradeHistoryOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterUpgradeHistoryOrderByInput.CLUSTERUPGRADEHISTORYORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterUpgradeHistoryOrderByInput> {

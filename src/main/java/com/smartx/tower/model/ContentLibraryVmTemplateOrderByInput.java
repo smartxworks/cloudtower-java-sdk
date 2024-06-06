@@ -58,8 +58,9 @@ public enum ContentLibraryVmTemplateOrderByInput {
   
   VCPU_ASC("vcpu_ASC"),
   
-  VCPU_DESC("vcpu_DESC");
-
+  VCPU_DESC("vcpu_DESC"),
+  
+  CONTENTLIBRARYVMTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM("CONTENTLIBRARYVMTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ContentLibraryVmTemplateOrderByInput(String value) {
@@ -81,7 +82,7 @@ public enum ContentLibraryVmTemplateOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ContentLibraryVmTemplateOrderByInput.CONTENTLIBRARYVMTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ContentLibraryVmTemplateOrderByInput> {

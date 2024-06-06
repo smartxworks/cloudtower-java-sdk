@@ -22,8 +22,9 @@ public enum VirtualPrivateCloudRouteNextHopType {
   
   UNKNOWN("UNKNOWN"),
   
-  VPC_PEERING("VPC_PEERING");
-
+  VPC_PEERING("VPC_PEERING"),
+  
+  VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM("VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VirtualPrivateCloudRouteNextHopType(String value) {
@@ -45,7 +46,7 @@ public enum VirtualPrivateCloudRouteNextHopType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VirtualPrivateCloudRouteNextHopType.VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VirtualPrivateCloudRouteNextHopType> {

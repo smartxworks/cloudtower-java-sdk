@@ -106,8 +106,9 @@ public enum VmSnapshotOrderByInput {
   
   WIN_OPT_ASC("win_opt_ASC"),
   
-  WIN_OPT_DESC("win_opt_DESC");
-
+  WIN_OPT_DESC("win_opt_DESC"),
+  
+  VMSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM("VMSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmSnapshotOrderByInput(String value) {
@@ -129,7 +130,7 @@ public enum VmSnapshotOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmSnapshotOrderByInput.VMSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmSnapshotOrderByInput> {

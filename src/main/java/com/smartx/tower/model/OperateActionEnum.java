@@ -18,8 +18,9 @@ public enum OperateActionEnum {
   
   POWEROFF("poweroff"),
   
-  REBOOT("reboot");
-
+  REBOOT("reboot"),
+  
+  OPERATEACTIONENUM_UNSUPPORTED_ENUM("OPERATEACTIONENUM_UNSUPPORTED_ENUM");
   private String value;
 
   OperateActionEnum(String value) {
@@ -41,7 +42,7 @@ public enum OperateActionEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return OperateActionEnum.OPERATEACTIONENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<OperateActionEnum> {

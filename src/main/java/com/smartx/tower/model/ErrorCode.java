@@ -16,8 +16,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(ErrorCode.Adapter.class)
 public enum ErrorCode {
   
-  RESOURCELOCKED("ResourceLocked");
-
+  RESOURCELOCKED("ResourceLocked"),
+  
+  ERRORCODE_UNSUPPORTED_ENUM("ERRORCODE_UNSUPPORTED_ENUM");
   private String value;
 
   ErrorCode(String value) {
@@ -39,7 +40,7 @@ public enum ErrorCode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ErrorCode.ERRORCODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ErrorCode> {

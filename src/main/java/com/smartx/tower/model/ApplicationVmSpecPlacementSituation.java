@@ -18,8 +18,9 @@ public enum ApplicationVmSpecPlacementSituation {
   
   DIFFERENT("DIFFERENT"),
   
-  SAME("SAME");
-
+  SAME("SAME"),
+  
+  APPLICATIONVMSPECPLACEMENTSITUATION_UNSUPPORTED_ENUM("APPLICATIONVMSPECPLACEMENTSITUATION_UNSUPPORTED_ENUM");
   private String value;
 
   ApplicationVmSpecPlacementSituation(String value) {
@@ -41,7 +42,7 @@ public enum ApplicationVmSpecPlacementSituation {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ApplicationVmSpecPlacementSituation.APPLICATIONVMSPECPLACEMENTSITUATION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ApplicationVmSpecPlacementSituation> {

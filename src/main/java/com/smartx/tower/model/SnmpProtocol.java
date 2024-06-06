@@ -18,8 +18,9 @@ public enum SnmpProtocol {
   
   TCP("TCP"),
   
-  UDP("UDP");
-
+  UDP("UDP"),
+  
+  SNMPPROTOCOL_UNSUPPORTED_ENUM("SNMPPROTOCOL_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpProtocol(String value) {
@@ -41,7 +42,7 @@ public enum SnmpProtocol {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpProtocol.SNMPPROTOCOL_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpProtocol> {

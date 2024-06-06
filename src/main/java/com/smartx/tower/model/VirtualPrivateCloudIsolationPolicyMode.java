@@ -18,8 +18,9 @@ public enum VirtualPrivateCloudIsolationPolicyMode {
   
   ALL("ALL"),
   
-  PARTIAL("PARTIAL");
-
+  PARTIAL("PARTIAL"),
+  
+  VIRTUALPRIVATECLOUDISOLATIONPOLICYMODE_UNSUPPORTED_ENUM("VIRTUALPRIVATECLOUDISOLATIONPOLICYMODE_UNSUPPORTED_ENUM");
   private String value;
 
   VirtualPrivateCloudIsolationPolicyMode(String value) {
@@ -41,7 +42,7 @@ public enum VirtualPrivateCloudIsolationPolicyMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VirtualPrivateCloudIsolationPolicyMode.VIRTUALPRIVATECLOUDISOLATIONPOLICYMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VirtualPrivateCloudIsolationPolicyMode> {

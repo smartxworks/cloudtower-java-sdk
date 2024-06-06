@@ -18,8 +18,9 @@ public enum VmNicType {
   
   VLAN("VLAN"),
   
-  VPC("VPC");
-
+  VPC("VPC"),
+  
+  VMNICTYPE_UNSUPPORTED_ENUM("VMNICTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmNicType(String value) {
@@ -41,7 +42,7 @@ public enum VmNicType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmNicType.VMNICTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmNicType> {

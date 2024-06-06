@@ -34,8 +34,9 @@ public enum ClusterSettingsOrderByInput {
   
   VM_RECYCLE_BIN_ASC("vm_recycle_bin_ASC"),
   
-  VM_RECYCLE_BIN_DESC("vm_recycle_bin_DESC");
-
+  VM_RECYCLE_BIN_DESC("vm_recycle_bin_DESC"),
+  
+  CLUSTERSETTINGSORDERBYINPUT_UNSUPPORTED_ENUM("CLUSTERSETTINGSORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterSettingsOrderByInput(String value) {
@@ -57,7 +58,7 @@ public enum ClusterSettingsOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterSettingsOrderByInput.CLUSTERSETTINGSORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterSettingsOrderByInput> {

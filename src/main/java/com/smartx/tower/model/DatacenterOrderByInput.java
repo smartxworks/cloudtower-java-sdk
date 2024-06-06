@@ -62,8 +62,9 @@ public enum DatacenterOrderByInput {
   
   VM_NUM_ASC("vm_num_ASC"),
   
-  VM_NUM_DESC("vm_num_DESC");
-
+  VM_NUM_DESC("vm_num_DESC"),
+  
+  DATACENTERORDERBYINPUT_UNSUPPORTED_ENUM("DATACENTERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   DatacenterOrderByInput(String value) {
@@ -85,7 +86,7 @@ public enum DatacenterOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DatacenterOrderByInput.DATACENTERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DatacenterOrderByInput> {

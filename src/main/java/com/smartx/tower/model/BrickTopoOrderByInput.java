@@ -62,8 +62,9 @@ public enum BrickTopoOrderByInput {
   
   TAG_POSITION_IN_BRICK_ASC("tag_position_in_brick_ASC"),
   
-  TAG_POSITION_IN_BRICK_DESC("tag_position_in_brick_DESC");
-
+  TAG_POSITION_IN_BRICK_DESC("tag_position_in_brick_DESC"),
+  
+  BRICKTOPOORDERBYINPUT_UNSUPPORTED_ENUM("BRICKTOPOORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   BrickTopoOrderByInput(String value) {
@@ -85,7 +86,7 @@ public enum BrickTopoOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return BrickTopoOrderByInput.BRICKTOPOORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<BrickTopoOrderByInput> {

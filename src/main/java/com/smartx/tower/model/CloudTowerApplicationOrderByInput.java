@@ -54,8 +54,9 @@ public enum CloudTowerApplicationOrderByInput {
   
   VMSPEC_ASC("vmSpec_ASC"),
   
-  VMSPEC_DESC("vmSpec_DESC");
-
+  VMSPEC_DESC("vmSpec_DESC"),
+  
+  CLOUDTOWERAPPLICATIONORDERBYINPUT_UNSUPPORTED_ENUM("CLOUDTOWERAPPLICATIONORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   CloudTowerApplicationOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum CloudTowerApplicationOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return CloudTowerApplicationOrderByInput.CLOUDTOWERAPPLICATIONORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<CloudTowerApplicationOrderByInput> {

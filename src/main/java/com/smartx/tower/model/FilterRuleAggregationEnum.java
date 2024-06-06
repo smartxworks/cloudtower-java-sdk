@@ -24,8 +24,9 @@ public enum FilterRuleAggregationEnum {
   
   QUANTILE("QUANTILE"),
   
-  SUM("SUM");
-
+  SUM("SUM"),
+  
+  FILTERRULEAGGREGATIONENUM_UNSUPPORTED_ENUM("FILTERRULEAGGREGATIONENUM_UNSUPPORTED_ENUM");
   private String value;
 
   FilterRuleAggregationEnum(String value) {
@@ -47,7 +48,7 @@ public enum FilterRuleAggregationEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return FilterRuleAggregationEnum.FILTERRULEAGGREGATIONENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<FilterRuleAggregationEnum> {

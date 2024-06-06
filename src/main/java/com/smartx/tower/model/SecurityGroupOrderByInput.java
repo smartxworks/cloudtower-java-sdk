@@ -30,8 +30,9 @@ public enum SecurityGroupOrderByInput {
   
   NAME_ASC("name_ASC"),
   
-  NAME_DESC("name_DESC");
-
+  NAME_DESC("name_DESC"),
+  
+  SECURITYGROUPORDERBYINPUT_UNSUPPORTED_ENUM("SECURITYGROUPORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SecurityGroupOrderByInput(String value) {
@@ -53,7 +54,7 @@ public enum SecurityGroupOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SecurityGroupOrderByInput.SECURITYGROUPORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SecurityGroupOrderByInput> {

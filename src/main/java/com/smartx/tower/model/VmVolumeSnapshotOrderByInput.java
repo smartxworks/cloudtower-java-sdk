@@ -74,8 +74,9 @@ public enum VmVolumeSnapshotOrderByInput {
   
   ZBS_SNAPSHOT_UUID_ASC("zbs_snapshot_uuid_ASC"),
   
-  ZBS_SNAPSHOT_UUID_DESC("zbs_snapshot_uuid_DESC");
-
+  ZBS_SNAPSHOT_UUID_DESC("zbs_snapshot_uuid_DESC"),
+  
+  VMVOLUMESNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM("VMVOLUMESNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmVolumeSnapshotOrderByInput(String value) {
@@ -97,7 +98,7 @@ public enum VmVolumeSnapshotOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVolumeSnapshotOrderByInput.VMVOLUMESNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVolumeSnapshotOrderByInput> {

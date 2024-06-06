@@ -18,8 +18,9 @@ public enum NotifierLanguageCode {
   
   EN_US("EN_US"),
   
-  ZH_CN("ZH_CN");
-
+  ZH_CN("ZH_CN"),
+  
+  NOTIFIERLANGUAGECODE_UNSUPPORTED_ENUM("NOTIFIERLANGUAGECODE_UNSUPPORTED_ENUM");
   private String value;
 
   NotifierLanguageCode(String value) {
@@ -41,7 +42,7 @@ public enum NotifierLanguageCode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NotifierLanguageCode.NOTIFIERLANGUAGECODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NotifierLanguageCode> {

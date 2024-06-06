@@ -26,8 +26,9 @@ public enum UserRolePreset {
   
   USER_ADMIN("USER_ADMIN"),
   
-  VM_USER("VM_USER");
-
+  VM_USER("VM_USER"),
+  
+  USERROLEPRESET_UNSUPPORTED_ENUM("USERROLEPRESET_UNSUPPORTED_ENUM");
   private String value;
 
   UserRolePreset(String value) {
@@ -49,7 +50,7 @@ public enum UserRolePreset {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserRolePreset.USERROLEPRESET_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserRolePreset> {

@@ -38,8 +38,9 @@ public enum UploadResourceType {
   
   VM_VOLUME_QCOW2("VM_VOLUME_QCOW2"),
   
-  VM_VOLUME_RAW("VM_VOLUME_RAW");
-
+  VM_VOLUME_RAW("VM_VOLUME_RAW"),
+  
+  UPLOADRESOURCETYPE_UNSUPPORTED_ENUM("UPLOADRESOURCETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   UploadResourceType(String value) {
@@ -61,7 +62,7 @@ public enum UploadResourceType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UploadResourceType.UPLOADRESOURCETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UploadResourceType> {

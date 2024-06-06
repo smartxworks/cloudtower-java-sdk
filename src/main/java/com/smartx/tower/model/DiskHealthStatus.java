@@ -24,8 +24,9 @@ public enum DiskHealthStatus {
   
   SUBHEALTHY("SUBHEALTHY"),
   
-  UNHEALTHY("UNHEALTHY");
-
+  UNHEALTHY("UNHEALTHY"),
+  
+  DISKHEALTHSTATUS_UNSUPPORTED_ENUM("DISKHEALTHSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   DiskHealthStatus(String value) {
@@ -47,7 +48,7 @@ public enum DiskHealthStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DiskHealthStatus.DISKHEALTHSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DiskHealthStatus> {

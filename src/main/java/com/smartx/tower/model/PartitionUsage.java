@@ -34,8 +34,9 @@ public enum PartitionUsage {
   
   UNPARTED("UNPARTED"),
   
-  ZOOKEEPER("ZOOKEEPER");
-
+  ZOOKEEPER("ZOOKEEPER"),
+  
+  PARTITIONUSAGE_UNSUPPORTED_ENUM("PARTITIONUSAGE_UNSUPPORTED_ENUM");
   private String value;
 
   PartitionUsage(String value) {
@@ -57,7 +58,7 @@ public enum PartitionUsage {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return PartitionUsage.PARTITIONUSAGE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<PartitionUsage> {

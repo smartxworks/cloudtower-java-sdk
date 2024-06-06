@@ -22,8 +22,9 @@ public enum MetroCheckStatusEnum {
   
   INFO("INFO"),
   
-  NOTICE("NOTICE");
-
+  NOTICE("NOTICE"),
+  
+  METROCHECKSTATUSENUM_UNSUPPORTED_ENUM("METROCHECKSTATUSENUM_UNSUPPORTED_ENUM");
   private String value;
 
   MetroCheckStatusEnum(String value) {
@@ -45,7 +46,7 @@ public enum MetroCheckStatusEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return MetroCheckStatusEnum.METROCHECKSTATUSENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<MetroCheckStatusEnum> {

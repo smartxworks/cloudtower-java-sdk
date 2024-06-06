@@ -54,8 +54,9 @@ public enum PmemDimmOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  PMEMDIMMORDERBYINPUT_UNSUPPORTED_ENUM("PMEMDIMMORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   PmemDimmOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum PmemDimmOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return PmemDimmOrderByInput.PMEMDIMMORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<PmemDimmOrderByInput> {

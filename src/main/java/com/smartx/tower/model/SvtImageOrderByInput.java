@@ -46,8 +46,9 @@ public enum SvtImageOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  SVTIMAGEORDERBYINPUT_UNSUPPORTED_ENUM("SVTIMAGEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SvtImageOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum SvtImageOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SvtImageOrderByInput.SVTIMAGEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SvtImageOrderByInput> {

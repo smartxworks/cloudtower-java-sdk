@@ -24,8 +24,9 @@ public enum NetworkPolicyRulePortProtocol {
   
   TCP("TCP"),
   
-  UDP("UDP");
-
+  UDP("UDP"),
+  
+  NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM("NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM");
   private String value;
 
   NetworkPolicyRulePortProtocol(String value) {
@@ -47,7 +48,7 @@ public enum NetworkPolicyRulePortProtocol {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NetworkPolicyRulePortProtocol.NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NetworkPolicyRulePortProtocol> {

@@ -24,8 +24,9 @@ public enum SnapshotPlanExecuteType {
   
   MONTH("MONTH"),
   
-  WEEK("WEEK");
-
+  WEEK("WEEK"),
+  
+  SNAPSHOTPLANEXECUTETYPE_UNSUPPORTED_ENUM("SNAPSHOTPLANEXECUTETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotPlanExecuteType(String value) {
@@ -47,7 +48,7 @@ public enum SnapshotPlanExecuteType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotPlanExecuteType.SNAPSHOTPLANEXECUTETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotPlanExecuteType> {

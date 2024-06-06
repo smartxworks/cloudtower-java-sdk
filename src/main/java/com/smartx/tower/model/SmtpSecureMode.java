@@ -20,8 +20,9 @@ public enum SmtpSecureMode {
   
   STARTTLS("STARTTLS"),
   
-  UNSPECIFIED("UNSPECIFIED");
-
+  UNSPECIFIED("UNSPECIFIED"),
+  
+  SMTPSECUREMODE_UNSUPPORTED_ENUM("SMTPSECUREMODE_UNSUPPORTED_ENUM");
   private String value;
 
   SmtpSecureMode(String value) {
@@ -43,7 +44,7 @@ public enum SmtpSecureMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SmtpSecureMode.SMTPSECUREMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SmtpSecureMode> {

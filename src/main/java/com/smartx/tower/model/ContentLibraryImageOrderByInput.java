@@ -42,8 +42,9 @@ public enum ContentLibraryImageOrderByInput {
   
   SIZE_ASC("size_ASC"),
   
-  SIZE_DESC("size_DESC");
-
+  SIZE_DESC("size_DESC"),
+  
+  CONTENTLIBRARYIMAGEORDERBYINPUT_UNSUPPORTED_ENUM("CONTENTLIBRARYIMAGEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ContentLibraryImageOrderByInput(String value) {
@@ -65,7 +66,7 @@ public enum ContentLibraryImageOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ContentLibraryImageOrderByInput.CONTENTLIBRARYIMAGEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ContentLibraryImageOrderByInput> {

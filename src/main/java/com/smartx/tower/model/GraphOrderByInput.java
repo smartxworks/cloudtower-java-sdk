@@ -62,8 +62,9 @@ public enum GraphOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  GRAPHORDERBYINPUT_UNSUPPORTED_ENUM("GRAPHORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   GraphOrderByInput(String value) {
@@ -85,7 +86,7 @@ public enum GraphOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GraphOrderByInput.GRAPHORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GraphOrderByInput> {

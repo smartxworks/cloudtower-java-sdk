@@ -86,8 +86,9 @@ public enum VmNicOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  VMNICORDERBYINPUT_UNSUPPORTED_ENUM("VMNICORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmNicOrderByInput(String value) {
@@ -109,7 +110,7 @@ public enum VmNicOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmNicOrderByInput.VMNICORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmNicOrderByInput> {

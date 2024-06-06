@@ -58,8 +58,9 @@ public enum LogCollectionOrderByInput {
   
   STATUS_ASC("status_ASC"),
   
-  STATUS_DESC("status_DESC");
-
+  STATUS_DESC("status_DESC"),
+  
+  LOGCOLLECTIONORDERBYINPUT_UNSUPPORTED_ENUM("LOGCOLLECTIONORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   LogCollectionOrderByInput(String value) {
@@ -81,7 +82,7 @@ public enum LogCollectionOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return LogCollectionOrderByInput.LOGCOLLECTIONORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<LogCollectionOrderByInput> {

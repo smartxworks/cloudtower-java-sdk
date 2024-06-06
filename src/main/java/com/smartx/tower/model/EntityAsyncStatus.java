@@ -20,8 +20,9 @@ public enum EntityAsyncStatus {
   
   DELETING("DELETING"),
   
-  UPDATING("UPDATING");
-
+  UPDATING("UPDATING"),
+  
+  ENTITYASYNCSTATUS_UNSUPPORTED_ENUM("ENTITYASYNCSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   EntityAsyncStatus(String value) {
@@ -43,7 +44,7 @@ public enum EntityAsyncStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return EntityAsyncStatus.ENTITYASYNCSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<EntityAsyncStatus> {

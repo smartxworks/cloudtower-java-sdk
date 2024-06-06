@@ -20,8 +20,9 @@ public enum NicUserUsage {
   
   PASS_THROUGH("PASS_THROUGH"),
   
-  SRIOV("SRIOV");
-
+  SRIOV("SRIOV"),
+  
+  NICUSERUSAGE_UNSUPPORTED_ENUM("NICUSERUSAGE_UNSUPPORTED_ENUM");
   private String value;
 
   NicUserUsage(String value) {
@@ -43,7 +44,7 @@ public enum NicUserUsage {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NicUserUsage.NICUSERUSAGE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NicUserUsage> {

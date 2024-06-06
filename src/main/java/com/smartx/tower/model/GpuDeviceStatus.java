@@ -20,8 +20,9 @@ public enum GpuDeviceStatus {
   
   NOT_READY("NOT_READY"),
   
-  READY("READY");
-
+  READY("READY"),
+  
+  GPUDEVICESTATUS_UNSUPPORTED_ENUM("GPUDEVICESTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   GpuDeviceStatus(String value) {
@@ -43,7 +44,7 @@ public enum GpuDeviceStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GpuDeviceStatus.GPUDEVICESTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GpuDeviceStatus> {

@@ -18,8 +18,9 @@ public enum CloudInitNetworkTypeEnum {
   
   IPV4("IPV4"),
   
-  IPV4_DHCP("IPV4_DHCP");
-
+  IPV4_DHCP("IPV4_DHCP"),
+  
+  CLOUDINITNETWORKTYPEENUM_UNSUPPORTED_ENUM("CLOUDINITNETWORKTYPEENUM_UNSUPPORTED_ENUM");
   private String value;
 
   CloudInitNetworkTypeEnum(String value) {
@@ -41,7 +42,7 @@ public enum CloudInitNetworkTypeEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return CloudInitNetworkTypeEnum.CLOUDINITNETWORKTYPEENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<CloudInitNetworkTypeEnum> {

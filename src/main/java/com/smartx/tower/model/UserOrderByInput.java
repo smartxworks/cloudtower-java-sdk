@@ -70,8 +70,9 @@ public enum UserOrderByInput {
   
   USERNAME_ASC("username_ASC"),
   
-  USERNAME_DESC("username_DESC");
-
+  USERNAME_DESC("username_DESC"),
+  
+  USERORDERBYINPUT_UNSUPPORTED_ENUM("USERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   UserOrderByInput(String value) {
@@ -93,7 +94,7 @@ public enum UserOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserOrderByInput.USERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserOrderByInput> {

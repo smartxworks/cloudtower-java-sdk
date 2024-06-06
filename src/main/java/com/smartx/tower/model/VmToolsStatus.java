@@ -22,8 +22,9 @@ public enum VmToolsStatus {
   
   RESTRICTION("RESTRICTION"),
   
-  RUNNING("RUNNING");
-
+  RUNNING("RUNNING"),
+  
+  VMTOOLSSTATUS_UNSUPPORTED_ENUM("VMTOOLSSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   VmToolsStatus(String value) {
@@ -45,7 +46,7 @@ public enum VmToolsStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmToolsStatus.VMTOOLSSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmToolsStatus> {

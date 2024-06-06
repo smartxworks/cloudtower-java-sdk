@@ -24,8 +24,9 @@ public enum FilterStatus {
   
   PARTIAL_SUCCESSED("PARTIAL_SUCCESSED"),
   
-  SUCCESSED("SUCCESSED");
-
+  SUCCESSED("SUCCESSED"),
+  
+  FILTERSTATUS_UNSUPPORTED_ENUM("FILTERSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   FilterStatus(String value) {
@@ -47,7 +48,7 @@ public enum FilterStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return FilterStatus.FILTERSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<FilterStatus> {

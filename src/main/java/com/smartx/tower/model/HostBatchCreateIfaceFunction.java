@@ -24,8 +24,9 @@ public enum HostBatchCreateIfaceFunction {
   
   STORAGE("STORAGE"),
   
-  VMWARE_ACCESS("VMWARE_ACCESS");
-
+  VMWARE_ACCESS("VMWARE_ACCESS"),
+  
+  HOSTBATCHCREATEIFACEFUNCTION_UNSUPPORTED_ENUM("HOSTBATCHCREATEIFACEFUNCTION_UNSUPPORTED_ENUM");
   private String value;
 
   HostBatchCreateIfaceFunction(String value) {
@@ -47,7 +48,7 @@ public enum HostBatchCreateIfaceFunction {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return HostBatchCreateIfaceFunction.HOSTBATCHCREATEIFACEFUNCTION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<HostBatchCreateIfaceFunction> {

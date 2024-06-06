@@ -22,8 +22,9 @@ public enum StepUnit {
   
   COUNT("COUNT"),
   
-  PERCENT("PERCENT");
-
+  PERCENT("PERCENT"),
+  
+  STEPUNIT_UNSUPPORTED_ENUM("STEPUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   StepUnit(String value) {
@@ -45,7 +46,7 @@ public enum StepUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return StepUnit.STEPUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<StepUnit> {

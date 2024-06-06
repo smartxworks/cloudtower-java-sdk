@@ -70,8 +70,9 @@ public enum VmPlacementGroupOrderByInput {
   
   VM_VM_POLICY_ENABLED_ASC("vm_vm_policy_enabled_ASC"),
   
-  VM_VM_POLICY_ENABLED_DESC("vm_vm_policy_enabled_DESC");
-
+  VM_VM_POLICY_ENABLED_DESC("vm_vm_policy_enabled_DESC"),
+  
+  VMPLACEMENTGROUPORDERBYINPUT_UNSUPPORTED_ENUM("VMPLACEMENTGROUPORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmPlacementGroupOrderByInput(String value) {
@@ -93,7 +94,7 @@ public enum VmPlacementGroupOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmPlacementGroupOrderByInput.VMPLACEMENTGROUPORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmPlacementGroupOrderByInput> {

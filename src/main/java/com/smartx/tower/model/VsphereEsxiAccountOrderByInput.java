@@ -38,8 +38,9 @@ public enum VsphereEsxiAccountOrderByInput {
   
   USERNAME_ASC("username_ASC"),
   
-  USERNAME_DESC("username_DESC");
-
+  USERNAME_DESC("username_DESC"),
+  
+  VSPHEREESXIACCOUNTORDERBYINPUT_UNSUPPORTED_ENUM("VSPHEREESXIACCOUNTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VsphereEsxiAccountOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum VsphereEsxiAccountOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VsphereEsxiAccountOrderByInput.VSPHEREESXIACCOUNTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VsphereEsxiAccountOrderByInput> {

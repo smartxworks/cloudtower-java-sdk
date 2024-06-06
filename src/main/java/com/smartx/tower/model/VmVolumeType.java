@@ -18,8 +18,9 @@ public enum VmVolumeType {
   
   VOLUME("KVM_VOLUME"),
   
-  VOLUME_ISCSI("KVM_VOLUME_ISCSI");
-
+  VOLUME_ISCSI("KVM_VOLUME_ISCSI"),
+  
+  VMVOLUMETYPE_UNSUPPORTED_ENUM("VMVOLUMETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmVolumeType(String value) {
@@ -41,7 +42,7 @@ public enum VmVolumeType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVolumeType.VMVOLUMETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVolumeType> {

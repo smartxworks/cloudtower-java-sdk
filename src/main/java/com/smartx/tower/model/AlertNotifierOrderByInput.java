@@ -54,8 +54,9 @@ public enum AlertNotifierOrderByInput {
   
   USERNAME_ASC("username_ASC"),
   
-  USERNAME_DESC("username_DESC");
-
+  USERNAME_DESC("username_DESC"),
+  
+  ALERTNOTIFIERORDERBYINPUT_UNSUPPORTED_ENUM("ALERTNOTIFIERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   AlertNotifierOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum AlertNotifierOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return AlertNotifierOrderByInput.ALERTNOTIFIERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<AlertNotifierOrderByInput> {

@@ -34,8 +34,9 @@ public enum MetricUnit {
   
   TEMPERATURE("TEMPERATURE"),
   
-  TIME("TIME");
-
+  TIME("TIME"),
+  
+  METRICUNIT_UNSUPPORTED_ENUM("METRICUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   MetricUnit(String value) {
@@ -57,7 +58,7 @@ public enum MetricUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return MetricUnit.METRICUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<MetricUnit> {

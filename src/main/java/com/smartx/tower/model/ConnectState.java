@@ -22,8 +22,9 @@ public enum ConnectState {
   
   INITIALIZING("INITIALIZING"),
   
-  REMOVING("REMOVING");
-
+  REMOVING("REMOVING"),
+  
+  CONNECTSTATE_UNSUPPORTED_ENUM("CONNECTSTATE_UNSUPPORTED_ENUM");
   private String value;
 
   ConnectState(String value) {
@@ -45,7 +46,7 @@ public enum ConnectState {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ConnectState.CONNECTSTATE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ConnectState> {

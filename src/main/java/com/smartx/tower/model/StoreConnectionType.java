@@ -18,8 +18,9 @@ public enum StoreConnectionType {
   
   ISCSI("ISCSI"),
   
-  NVME("NVMe");
-
+  NVME("NVMe"),
+  
+  STORECONNECTIONTYPE_UNSUPPORTED_ENUM("STORECONNECTIONTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   StoreConnectionType(String value) {
@@ -41,7 +42,7 @@ public enum StoreConnectionType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return StoreConnectionType.STORECONNECTIONTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<StoreConnectionType> {

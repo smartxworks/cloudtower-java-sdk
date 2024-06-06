@@ -54,8 +54,9 @@ public enum ElfDataStoreOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  ELFDATASTOREORDERBYINPUT_UNSUPPORTED_ENUM("ELFDATASTOREORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ElfDataStoreOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum ElfDataStoreOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ElfDataStoreOrderByInput.ELFDATASTOREORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ElfDataStoreOrderByInput> {

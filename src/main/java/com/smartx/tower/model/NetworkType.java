@@ -30,8 +30,9 @@ public enum NetworkType {
   
   VPC_SYS("VPC_SYS"),
   
-  VPC_VM("VPC_VM");
-
+  VPC_VM("VPC_VM"),
+  
+  NETWORKTYPE_UNSUPPORTED_ENUM("NETWORKTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   NetworkType(String value) {
@@ -53,7 +54,7 @@ public enum NetworkType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NetworkType.NETWORKTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NetworkType> {

@@ -18,8 +18,9 @@ public enum SnmpVersion {
   
   V2C("V2C"),
   
-  V3("V3");
-
+  V3("V3"),
+  
+  SNMPVERSION_UNSUPPORTED_ENUM("SNMPVERSION_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpVersion(String value) {
@@ -41,7 +42,7 @@ public enum SnmpVersion {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpVersion.SNMPVERSION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpVersion> {

@@ -22,8 +22,9 @@ public enum OrganizationOrderByInput {
   
   NAME_ASC("name_ASC"),
   
-  NAME_DESC("name_DESC");
-
+  NAME_DESC("name_DESC"),
+  
+  ORGANIZATIONORDERBYINPUT_UNSUPPORTED_ENUM("ORGANIZATIONORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   OrganizationOrderByInput(String value) {
@@ -45,7 +46,7 @@ public enum OrganizationOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return OrganizationOrderByInput.ORGANIZATIONORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<OrganizationOrderByInput> {

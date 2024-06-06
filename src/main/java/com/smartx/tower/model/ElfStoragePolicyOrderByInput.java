@@ -50,8 +50,9 @@ public enum ElfStoragePolicyOrderByInput {
   
   THIN_PROVISION_ASC("thin_provision_ASC"),
   
-  THIN_PROVISION_DESC("thin_provision_DESC");
-
+  THIN_PROVISION_DESC("thin_provision_DESC"),
+  
+  ELFSTORAGEPOLICYORDERBYINPUT_UNSUPPORTED_ENUM("ELFSTORAGEPOLICYORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ElfStoragePolicyOrderByInput(String value) {
@@ -73,7 +74,7 @@ public enum ElfStoragePolicyOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ElfStoragePolicyOrderByInput.ELFSTORAGEPOLICYORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ElfStoragePolicyOrderByInput> {

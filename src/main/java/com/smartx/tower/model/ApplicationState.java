@@ -32,8 +32,9 @@ public enum ApplicationState {
   
   STOP_ERROR("STOP_ERROR"),
   
-  UPGRADING("UPGRADING");
-
+  UPGRADING("UPGRADING"),
+  
+  APPLICATIONSTATE_UNSUPPORTED_ENUM("APPLICATIONSTATE_UNSUPPORTED_ENUM");
   private String value;
 
   ApplicationState(String value) {
@@ -55,7 +56,7 @@ public enum ApplicationState {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ApplicationState.APPLICATIONSTATE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ApplicationState> {

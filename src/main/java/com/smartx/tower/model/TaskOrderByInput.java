@@ -98,8 +98,9 @@ public enum TaskOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  TASKORDERBYINPUT_UNSUPPORTED_ENUM("TASKORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   TaskOrderByInput(String value) {
@@ -121,7 +122,7 @@ public enum TaskOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return TaskOrderByInput.TASKORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<TaskOrderByInput> {

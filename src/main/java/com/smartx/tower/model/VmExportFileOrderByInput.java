@@ -46,8 +46,9 @@ public enum VmExportFileOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  VMEXPORTFILEORDERBYINPUT_UNSUPPORTED_ENUM("VMEXPORTFILEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmExportFileOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum VmExportFileOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmExportFileOrderByInput.VMEXPORTFILEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmExportFileOrderByInput> {

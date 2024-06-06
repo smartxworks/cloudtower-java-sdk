@@ -18,8 +18,9 @@ public enum Architecture {
   
   AARCH64("AARCH64"),
   
-  X86_64("X86_64");
-
+  X86_64("X86_64"),
+  
+  ARCHITECTURE_UNSUPPORTED_ENUM("ARCHITECTURE_UNSUPPORTED_ENUM");
   private String value;
 
   Architecture(String value) {
@@ -41,7 +42,7 @@ public enum Architecture {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return Architecture.ARCHITECTURE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<Architecture> {

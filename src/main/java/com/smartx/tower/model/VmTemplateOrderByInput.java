@@ -110,8 +110,9 @@ public enum VmTemplateOrderByInput {
   
   WIN_OPT_ASC("win_opt_ASC"),
   
-  WIN_OPT_DESC("win_opt_DESC");
-
+  WIN_OPT_DESC("win_opt_DESC"),
+  
+  VMTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM("VMTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmTemplateOrderByInput(String value) {
@@ -133,7 +134,7 @@ public enum VmTemplateOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmTemplateOrderByInput.VMTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmTemplateOrderByInput> {

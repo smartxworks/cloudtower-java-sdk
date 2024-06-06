@@ -26,8 +26,9 @@ public enum ClusterTopoOrderByInput {
   
   NAME_ASC("name_ASC"),
   
-  NAME_DESC("name_DESC");
-
+  NAME_DESC("name_DESC"),
+  
+  CLUSTERTOPOORDERBYINPUT_UNSUPPORTED_ENUM("CLUSTERTOPOORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterTopoOrderByInput(String value) {
@@ -49,7 +50,7 @@ public enum ClusterTopoOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterTopoOrderByInput.CLUSTERTOPOORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterTopoOrderByInput> {

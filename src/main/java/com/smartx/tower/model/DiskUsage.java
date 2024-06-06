@@ -24,8 +24,9 @@ public enum DiskUsage {
   
   DATA("DATA"),
   
-  DATA_AND_META("DATA_AND_META");
-
+  DATA_AND_META("DATA_AND_META"),
+  
+  DISKUSAGE_UNSUPPORTED_ENUM("DISKUSAGE_UNSUPPORTED_ENUM");
   private String value;
 
   DiskUsage(String value) {
@@ -47,7 +48,7 @@ public enum DiskUsage {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DiskUsage.DISKUSAGE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DiskUsage> {

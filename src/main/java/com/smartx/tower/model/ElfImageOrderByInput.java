@@ -46,8 +46,9 @@ public enum ElfImageOrderByInput {
   
   SIZE_ASC("size_ASC"),
   
-  SIZE_DESC("size_DESC");
-
+  SIZE_DESC("size_DESC"),
+  
+  ELFIMAGEORDERBYINPUT_UNSUPPORTED_ENUM("ELFIMAGEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ElfImageOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum ElfImageOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ElfImageOrderByInput.ELFIMAGEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ElfImageOrderByInput> {

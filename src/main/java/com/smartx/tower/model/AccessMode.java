@@ -20,8 +20,9 @@ public enum AccessMode {
   
   DENY("DENY"),
   
-  NONE("NONE");
-
+  NONE("NONE"),
+  
+  ACCESSMODE_UNSUPPORTED_ENUM("ACCESSMODE_UNSUPPORTED_ENUM");
   private String value;
 
   AccessMode(String value) {
@@ -43,7 +44,7 @@ public enum AccessMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return AccessMode.ACCESSMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<AccessMode> {

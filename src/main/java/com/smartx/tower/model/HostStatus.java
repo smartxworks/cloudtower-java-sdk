@@ -26,8 +26,9 @@ public enum HostStatus {
   
   INITIALIZING("INITIALIZING"),
   
-  SESSION_EXPIRED("SESSION_EXPIRED");
-
+  SESSION_EXPIRED("SESSION_EXPIRED"),
+  
+  HOSTSTATUS_UNSUPPORTED_ENUM("HOSTSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   HostStatus(String value) {
@@ -49,7 +50,7 @@ public enum HostStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return HostStatus.HOSTSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<HostStatus> {

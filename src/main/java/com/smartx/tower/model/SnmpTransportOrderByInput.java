@@ -70,8 +70,9 @@ public enum SnmpTransportOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  SNMPTRANSPORTORDERBYINPUT_UNSUPPORTED_ENUM("SNMPTRANSPORTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpTransportOrderByInput(String value) {
@@ -93,7 +94,7 @@ public enum SnmpTransportOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpTransportOrderByInput.SNMPTRANSPORTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpTransportOrderByInput> {

@@ -62,8 +62,9 @@ public enum UserAuditLogOrderByInput {
   
   USERNAME_ASC("username_ASC"),
   
-  USERNAME_DESC("username_DESC");
-
+  USERNAME_DESC("username_DESC"),
+  
+  USERAUDITLOGORDERBYINPUT_UNSUPPORTED_ENUM("USERAUDITLOGORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   UserAuditLogOrderByInput(String value) {
@@ -85,7 +86,7 @@ public enum UserAuditLogOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserAuditLogOrderByInput.USERAUDITLOGORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserAuditLogOrderByInput> {

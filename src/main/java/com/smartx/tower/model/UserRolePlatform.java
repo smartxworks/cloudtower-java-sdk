@@ -18,8 +18,9 @@ public enum UserRolePlatform {
   
   MANAGEMENT("MANAGEMENT"),
   
-  SELF_SERVICE("SELF_SERVICE");
-
+  SELF_SERVICE("SELF_SERVICE"),
+  
+  USERROLEPLATFORM_UNSUPPORTED_ENUM("USERROLEPLATFORM_UNSUPPORTED_ENUM");
   private String value;
 
   UserRolePlatform(String value) {
@@ -41,7 +42,7 @@ public enum UserRolePlatform {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserRolePlatform.USERROLEPLATFORM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserRolePlatform> {

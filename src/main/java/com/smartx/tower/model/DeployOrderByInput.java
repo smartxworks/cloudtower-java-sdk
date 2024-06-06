@@ -22,8 +22,9 @@ public enum DeployOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  DEPLOYORDERBYINPUT_UNSUPPORTED_ENUM("DEPLOYORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   DeployOrderByInput(String value) {
@@ -45,7 +46,7 @@ public enum DeployOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DeployOrderByInput.DEPLOYORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DeployOrderByInput> {

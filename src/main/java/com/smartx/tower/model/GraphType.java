@@ -18,8 +18,9 @@ public enum GraphType {
   
   AREA("AREA"),
   
-  STACK("STACK");
-
+  STACK("STACK"),
+  
+  GRAPHTYPE_UNSUPPORTED_ENUM("GRAPHTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   GraphType(String value) {
@@ -41,7 +42,7 @@ public enum GraphType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GraphType.GRAPHTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GraphType> {

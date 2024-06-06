@@ -18,8 +18,9 @@ public enum VmClockOffset {
   
   LOCALTIME("LOCALTIME"),
   
-  UTC("UTC");
-
+  UTC("UTC"),
+  
+  VMCLOCKOFFSET_UNSUPPORTED_ENUM("VMCLOCKOFFSET_UNSUPPORTED_ENUM");
   private String value;
 
   VmClockOffset(String value) {
@@ -41,7 +42,7 @@ public enum VmClockOffset {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmClockOffset.VMCLOCKOFFSET_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmClockOffset> {

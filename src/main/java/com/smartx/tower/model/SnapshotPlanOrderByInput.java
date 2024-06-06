@@ -114,8 +114,9 @@ public enum SnapshotPlanOrderByInput {
   
   STATUS_ASC("status_ASC"),
   
-  STATUS_DESC("status_DESC");
-
+  STATUS_DESC("status_DESC"),
+  
+  SNAPSHOTPLANORDERBYINPUT_UNSUPPORTED_ENUM("SNAPSHOTPLANORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotPlanOrderByInput(String value) {
@@ -137,7 +138,7 @@ public enum SnapshotPlanOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotPlanOrderByInput.SNAPSHOTPLANORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotPlanOrderByInput> {

@@ -154,8 +154,9 @@ public enum LabelOrderByInput {
   
   VM_VOLUME_SNAPSHOT_NUM_ASC("vm_volume_snapshot_num_ASC"),
   
-  VM_VOLUME_SNAPSHOT_NUM_DESC("vm_volume_snapshot_num_DESC");
-
+  VM_VOLUME_SNAPSHOT_NUM_DESC("vm_volume_snapshot_num_DESC"),
+  
+  LABELORDERBYINPUT_UNSUPPORTED_ENUM("LABELORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   LabelOrderByInput(String value) {
@@ -177,7 +178,7 @@ public enum LabelOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return LabelOrderByInput.LABELORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<LabelOrderByInput> {

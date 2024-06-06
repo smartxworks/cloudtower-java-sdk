@@ -18,8 +18,9 @@ public enum UserAuditLogStatus {
   
   FAILED("FAILED"),
   
-  SUCCESSED("SUCCESSED");
-
+  SUCCESSED("SUCCESSED"),
+  
+  USERAUDITLOGSTATUS_UNSUPPORTED_ENUM("USERAUDITLOGSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   UserAuditLogStatus(String value) {
@@ -41,7 +42,7 @@ public enum UserAuditLogStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserAuditLogStatus.USERAUDITLOGSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserAuditLogStatus> {

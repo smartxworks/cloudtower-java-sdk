@@ -282,8 +282,9 @@ public enum ClusterOrderByInput {
   
   VM_NUM_ASC("vm_num_ASC"),
   
-  VM_NUM_DESC("vm_num_DESC");
-
+  VM_NUM_DESC("vm_num_DESC"),
+  
+  CLUSTERORDERBYINPUT_UNSUPPORTED_ENUM("CLUSTERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterOrderByInput(String value) {
@@ -305,7 +306,7 @@ public enum ClusterOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterOrderByInput.CLUSTERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterOrderByInput> {

@@ -46,8 +46,9 @@ public enum ReportTemplateOrderByInput {
   
   TASK_NUM_ASC("task_num_ASC"),
   
-  TASK_NUM_DESC("task_num_DESC");
-
+  TASK_NUM_DESC("task_num_DESC"),
+  
+  REPORTTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM("REPORTTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ReportTemplateOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum ReportTemplateOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ReportTemplateOrderByInput.REPORTTEMPLATEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ReportTemplateOrderByInput> {

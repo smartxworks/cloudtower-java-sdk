@@ -18,8 +18,9 @@ public enum ConsistentType {
   
   CRASH_CONSISTENT("CRASH_CONSISTENT"),
   
-  FILE_SYSTEM_CONSISTENT("FILE_SYSTEM_CONSISTENT");
-
+  FILE_SYSTEM_CONSISTENT("FILE_SYSTEM_CONSISTENT"),
+  
+  CONSISTENTTYPE_UNSUPPORTED_ENUM("CONSISTENTTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   ConsistentType(String value) {
@@ -41,7 +42,7 @@ public enum ConsistentType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ConsistentType.CONSISTENTTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ConsistentType> {

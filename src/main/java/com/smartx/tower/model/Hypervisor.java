@@ -22,8 +22,9 @@ public enum Hypervisor {
   
   VMWARE("VMWARE"),
   
-  XENSERVER("XENSERVER");
-
+  XENSERVER("XENSERVER"),
+  
+  HYPERVISOR_UNSUPPORTED_ENUM("HYPERVISOR_UNSUPPORTED_ENUM");
   private String value;
 
   Hypervisor(String value) {
@@ -45,7 +46,7 @@ public enum Hypervisor {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return Hypervisor.HYPERVISOR_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<Hypervisor> {

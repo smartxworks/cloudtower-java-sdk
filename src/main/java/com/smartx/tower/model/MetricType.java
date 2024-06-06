@@ -20,8 +20,9 @@ public enum MetricType {
   
   NORMAL("NORMAL"),
   
-  TOPK("TOPK");
-
+  TOPK("TOPK"),
+  
+  METRICTYPE_UNSUPPORTED_ENUM("METRICTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   MetricType(String value) {
@@ -43,7 +44,7 @@ public enum MetricType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return MetricType.METRICTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<MetricType> {

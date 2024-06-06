@@ -20,8 +20,9 @@ public enum PowerPosition {
   
   MIDDLE("MIDDLE"),
   
-  RIGHT("RIGHT");
-
+  RIGHT("RIGHT"),
+  
+  POWERPOSITION_UNSUPPORTED_ENUM("POWERPOSITION_UNSUPPORTED_ENUM");
   private String value;
 
   PowerPosition(String value) {
@@ -43,7 +44,7 @@ public enum PowerPosition {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return PowerPosition.POWERPOSITION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<PowerPosition> {
