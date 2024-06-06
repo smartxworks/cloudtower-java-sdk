@@ -30,8 +30,9 @@ public enum RackTopoOrderByInput {
   
   NAME_ASC("name_ASC"),
   
-  NAME_DESC("name_DESC");
-
+  NAME_DESC("name_DESC"),
+  
+  RACKTOPOORDERBYINPUT_UNSUPPORTED_ENUM("RACKTOPOORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   RackTopoOrderByInput(String value) {
@@ -53,7 +54,7 @@ public enum RackTopoOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return RackTopoOrderByInput.RACKTOPOORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<RackTopoOrderByInput> {

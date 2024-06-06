@@ -16,8 +16,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(MfaType.Adapter.class)
 public enum MfaType {
   
-  MAIL("Mail");
-
+  MAIL("Mail"),
+  
+  MFATYPE_UNSUPPORTED_ENUM("MFATYPE_UNSUPPORTED_ENUM");
   private String value;
 
   MfaType(String value) {
@@ -39,7 +40,7 @@ public enum MfaType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return MfaType.MFATYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<MfaType> {

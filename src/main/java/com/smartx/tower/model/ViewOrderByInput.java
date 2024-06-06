@@ -38,8 +38,9 @@ public enum ViewOrderByInput {
   
   TIME_UNIT_ASC("time_unit_ASC"),
   
-  TIME_UNIT_DESC("time_unit_DESC");
-
+  TIME_UNIT_DESC("time_unit_DESC"),
+  
+  VIEWORDERBYINPUT_UNSUPPORTED_ENUM("VIEWORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ViewOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum ViewOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ViewOrderByInput.VIEWORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ViewOrderByInput> {

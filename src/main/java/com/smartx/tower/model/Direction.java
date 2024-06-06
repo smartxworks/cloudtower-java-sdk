@@ -18,8 +18,9 @@ public enum Direction {
   
   HORIZONTAL("HORIZONTAL"),
   
-  VERTICAL("VERTICAL");
-
+  VERTICAL("VERTICAL"),
+  
+  DIRECTION_UNSUPPORTED_ENUM("DIRECTION_UNSUPPORTED_ENUM");
   private String value;
 
   Direction(String value) {
@@ -41,7 +42,7 @@ public enum Direction {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return Direction.DIRECTION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<Direction> {

@@ -42,8 +42,9 @@ public enum CloudTowerApplicationPackageOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  CLOUDTOWERAPPLICATIONPACKAGEORDERBYINPUT_UNSUPPORTED_ENUM("CLOUDTOWERAPPLICATIONPACKAGEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   CloudTowerApplicationPackageOrderByInput(String value) {
@@ -65,7 +66,7 @@ public enum CloudTowerApplicationPackageOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return CloudTowerApplicationPackageOrderByInput.CLOUDTOWERAPPLICATIONPACKAGEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<CloudTowerApplicationPackageOrderByInput> {

@@ -322,8 +322,9 @@ public enum ROLEACTION {
   
   MANAGE_SFS_SNAPSHOT("MANAGE_SFS_SNAPSHOT"),
   
-  MANAGE_CLOUDTOWER_SNMP_TRANSPORT("MANAGE_CLOUDTOWER_SNMP_TRANSPORT");
-
+  MANAGE_CLOUDTOWER_SNMP_TRANSPORT("MANAGE_CLOUDTOWER_SNMP_TRANSPORT"),
+  
+  ROLEACTION_UNSUPPORTED_ENUM("ROLEACTION_UNSUPPORTED_ENUM");
   private String value;
 
   ROLEACTION(String value) {
@@ -345,7 +346,7 @@ public enum ROLEACTION {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ROLEACTION.ROLEACTION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ROLEACTION> {

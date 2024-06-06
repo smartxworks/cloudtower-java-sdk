@@ -20,8 +20,9 @@ public enum Bus {
   
   SCSI("SCSI"),
   
-  VIRTIO("VIRTIO");
-
+  VIRTIO("VIRTIO"),
+  
+  BUS_UNSUPPORTED_ENUM("BUS_UNSUPPORTED_ENUM");
   private String value;
 
   Bus(String value) {
@@ -43,7 +44,7 @@ public enum Bus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return Bus.BUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<Bus> {

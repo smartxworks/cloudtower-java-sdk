@@ -44,10 +44,6 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class Vm {
-  public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
-  @SerializedName(SERIALIZED_NAME_BIOS_UUID)
-  private String biosUuid;
-
   public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
   @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)
   private VmClockOffset clockOffset;
@@ -306,29 +302,6 @@ public class Vm {
 
   public Vm() { 
   }
-
-  public Vm biosUuid(String biosUuid) {
-    
-    this.biosUuid = biosUuid;
-    return this;
-  }
-
-   /**
-   * Get biosUuid
-   * @return biosUuid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getBiosUuid() {
-    return biosUuid;
-  }
-
-
-  public void setBiosUuid(String biosUuid) {
-    this.biosUuid = biosUuid;
-  }
-
 
   public Vm clockOffset(VmClockOffset clockOffset) {
     
@@ -1888,8 +1861,7 @@ public class Vm {
       return false;
     }
     Vm vm = (Vm) o;
-    return Objects.equals(this.biosUuid, vm.biosUuid) &&
-        Objects.equals(this.clockOffset, vm.clockOffset) &&
+    return Objects.equals(this.clockOffset, vm.clockOffset) &&
         Objects.equals(this.cloudInitSupported, vm.cloudInitSupported) &&
         Objects.equals(this.cluster, vm.cluster) &&
         Objects.equals(this.cpu, vm.cpu) &&
@@ -1961,7 +1933,7 @@ public class Vm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(biosUuid, clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueLogicalSize, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
+    return Objects.hash(clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueLogicalSize, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1975,7 +1947,6 @@ public class Vm {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Vm {\n");
-    sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    cloudInitSupported: ").append(toIndentedString(cloudInitSupported)).append("\n");
     sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");

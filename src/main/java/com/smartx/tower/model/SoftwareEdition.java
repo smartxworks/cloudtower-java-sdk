@@ -28,8 +28,9 @@ public enum SoftwareEdition {
   
   STANDARD("STANDARD"),
   
-  TRIAL("TRIAL");
-
+  TRIAL("TRIAL"),
+  
+  SOFTWAREEDITION_UNSUPPORTED_ENUM("SOFTWAREEDITION_UNSUPPORTED_ENUM");
   private String value;
 
   SoftwareEdition(String value) {
@@ -51,7 +52,7 @@ public enum SoftwareEdition {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SoftwareEdition.SOFTWAREEDITION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SoftwareEdition> {

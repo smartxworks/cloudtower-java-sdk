@@ -24,8 +24,9 @@ public enum ClusterConnectorErrorCode {
   
   UNAUTHORIZED("LOAD_CLUSTER_UNAUTHORIZED"),
   
-  UNHEALTHY("LOAD_CLUSTER_UNHEALTHY");
-
+  UNHEALTHY("LOAD_CLUSTER_UNHEALTHY"),
+  
+  CLUSTERCONNECTORERRORCODE_UNSUPPORTED_ENUM("CLUSTERCONNECTORERRORCODE_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterConnectorErrorCode(String value) {
@@ -47,7 +48,7 @@ public enum ClusterConnectorErrorCode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterConnectorErrorCode.CLUSTERCONNECTORERRORCODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterConnectorErrorCode> {

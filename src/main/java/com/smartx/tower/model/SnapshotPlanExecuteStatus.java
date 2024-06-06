@@ -24,8 +24,9 @@ public enum SnapshotPlanExecuteStatus {
   
   SUCCEED("SUCCEED"),
   
-  UNSPECIFIED("UNSPECIFIED");
-
+  UNSPECIFIED("UNSPECIFIED"),
+  
+  SNAPSHOTPLANEXECUTESTATUS_UNSUPPORTED_ENUM("SNAPSHOTPLANEXECUTESTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotPlanExecuteStatus(String value) {
@@ -47,7 +48,7 @@ public enum SnapshotPlanExecuteStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotPlanExecuteStatus.SNAPSHOTPLANEXECUTESTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotPlanExecuteStatus> {

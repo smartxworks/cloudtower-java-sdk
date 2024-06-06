@@ -78,8 +78,9 @@ public enum VmVolumeOrderByInput {
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
-  UNIQUE_SIZE_DESC("unique_size_DESC");
-
+  UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  VMVOLUMEORDERBYINPUT_UNSUPPORTED_ENUM("VMVOLUMEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmVolumeOrderByInput(String value) {
@@ -101,7 +102,7 @@ public enum VmVolumeOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVolumeOrderByInput.VMVOLUMEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVolumeOrderByInput> {

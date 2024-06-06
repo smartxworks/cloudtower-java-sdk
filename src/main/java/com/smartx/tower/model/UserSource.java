@@ -20,8 +20,9 @@ public enum UserSource {
   
   LDAP("LDAP"),
   
-  LOCAL("LOCAL");
-
+  LOCAL("LOCAL"),
+  
+  USERSOURCE_UNSUPPORTED_ENUM("USERSOURCE_UNSUPPORTED_ENUM");
   private String value;
 
   UserSource(String value) {
@@ -43,7 +44,7 @@ public enum UserSource {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserSource.USERSOURCE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserSource> {

@@ -158,8 +158,9 @@ public enum IscsiLunOrderByInput {
   
   ZBS_VOLUME_ID_ASC("zbs_volume_id_ASC"),
   
-  ZBS_VOLUME_ID_DESC("zbs_volume_id_DESC");
-
+  ZBS_VOLUME_ID_DESC("zbs_volume_id_DESC"),
+  
+  ISCSILUNORDERBYINPUT_UNSUPPORTED_ENUM("ISCSILUNORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   IscsiLunOrderByInput(String value) {
@@ -181,7 +182,7 @@ public enum IscsiLunOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IscsiLunOrderByInput.ISCSILUNORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IscsiLunOrderByInput> {

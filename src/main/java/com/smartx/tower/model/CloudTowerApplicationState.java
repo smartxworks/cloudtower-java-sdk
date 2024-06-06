@@ -34,8 +34,9 @@ public enum CloudTowerApplicationState {
   
   UPGRADE_FAILED("UPGRADE_FAILED"),
   
-  UPGRADING("UPGRADING");
-
+  UPGRADING("UPGRADING"),
+  
+  CLOUDTOWERAPPLICATIONSTATE_UNSUPPORTED_ENUM("CLOUDTOWERAPPLICATIONSTATE_UNSUPPORTED_ENUM");
   private String value;
 
   CloudTowerApplicationState(String value) {
@@ -57,7 +58,7 @@ public enum CloudTowerApplicationState {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return CloudTowerApplicationState.CLOUDTOWERAPPLICATIONSTATE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<CloudTowerApplicationState> {

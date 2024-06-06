@@ -18,8 +18,9 @@ public enum GpuDeviceUsage {
   
   PASS_THROUGH("PASS_THROUGH"),
   
-  VGPU("VGPU");
-
+  VGPU("VGPU"),
+  
+  GPUDEVICEUSAGE_UNSUPPORTED_ENUM("GPUDEVICEUSAGE_UNSUPPORTED_ENUM");
   private String value;
 
   GpuDeviceUsage(String value) {
@@ -41,7 +42,7 @@ public enum GpuDeviceUsage {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GpuDeviceUsage.GPUDEVICEUSAGE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GpuDeviceUsage> {

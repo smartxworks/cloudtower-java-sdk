@@ -210,8 +210,9 @@ public enum VmOrderByInput {
   
   WIN_OPT_ASC("win_opt_ASC"),
   
-  WIN_OPT_DESC("win_opt_DESC");
-
+  WIN_OPT_DESC("win_opt_DESC"),
+  
+  VMORDERBYINPUT_UNSUPPORTED_ENUM("VMORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmOrderByInput(String value) {
@@ -233,7 +234,7 @@ public enum VmOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmOrderByInput.VMORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmOrderByInput> {

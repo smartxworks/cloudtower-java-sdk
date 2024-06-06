@@ -58,8 +58,9 @@ public enum UsbDeviceOrderByInput {
   
   USB_TYPE_ASC("usb_type_ASC"),
   
-  USB_TYPE_DESC("usb_type_DESC");
-
+  USB_TYPE_DESC("usb_type_DESC"),
+  
+  USBDEVICEORDERBYINPUT_UNSUPPORTED_ENUM("USBDEVICEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   UsbDeviceOrderByInput(String value) {
@@ -81,7 +82,7 @@ public enum UsbDeviceOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UsbDeviceOrderByInput.USBDEVICEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UsbDeviceOrderByInput> {

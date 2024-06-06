@@ -34,8 +34,9 @@ public enum IpmiOrderByInput {
   
   VALID_ASC("valid_ASC"),
   
-  VALID_DESC("valid_DESC");
-
+  VALID_DESC("valid_DESC"),
+  
+  IPMIORDERBYINPUT_UNSUPPORTED_ENUM("IPMIORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   IpmiOrderByInput(String value) {
@@ -57,7 +58,7 @@ public enum IpmiOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IpmiOrderByInput.IPMIORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IpmiOrderByInput> {

@@ -22,8 +22,9 @@ public enum ClusterType {
   
   SMTX_OS("SMTX_OS"),
   
-  SMTX_ZBS("SMTX_ZBS");
-
+  SMTX_ZBS("SMTX_ZBS"),
+  
+  CLUSTERTYPE_UNSUPPORTED_ENUM("CLUSTERTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterType(String value) {
@@ -45,7 +46,7 @@ public enum ClusterType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterType.CLUSTERTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterType> {

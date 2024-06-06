@@ -18,8 +18,9 @@ public enum VmVolumeSnapshotType {
   
   ISCSI_SNAPSHOT("KVM_VOLUME_ISCSI_SNAPSHOT"),
   
-  SNAPSHOT("KVM_VOLUME_SNAPSHOT");
-
+  SNAPSHOT("KVM_VOLUME_SNAPSHOT"),
+  
+  VMVOLUMESNAPSHOTTYPE_UNSUPPORTED_ENUM("VMVOLUMESNAPSHOTTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmVolumeSnapshotType(String value) {
@@ -41,7 +42,7 @@ public enum VmVolumeSnapshotType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVolumeSnapshotType.VMVOLUMESNAPSHOTTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVolumeSnapshotType> {

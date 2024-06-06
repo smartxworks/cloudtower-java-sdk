@@ -22,8 +22,9 @@ public enum NicDriverState {
   
   NO_DRIVER("NO_DRIVER"),
   
-  READY("READY");
-
+  READY("READY"),
+  
+  NICDRIVERSTATE_UNSUPPORTED_ENUM("NICDRIVERSTATE_UNSUPPORTED_ENUM");
   private String value;
 
   NicDriverState(String value) {
@@ -45,7 +46,7 @@ public enum NicDriverState {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NicDriverState.NICDRIVERSTATE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NicDriverState> {

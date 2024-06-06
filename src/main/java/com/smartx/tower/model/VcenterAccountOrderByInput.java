@@ -38,8 +38,9 @@ public enum VcenterAccountOrderByInput {
   
   USERNAME_ASC("username_ASC"),
   
-  USERNAME_DESC("username_DESC");
-
+  USERNAME_DESC("username_DESC"),
+  
+  VCENTERACCOUNTORDERBYINPUT_UNSUPPORTED_ENUM("VCENTERACCOUNTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VcenterAccountOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum VcenterAccountOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VcenterAccountOrderByInput.VCENTERACCOUNTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VcenterAccountOrderByInput> {

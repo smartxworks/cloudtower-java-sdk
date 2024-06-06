@@ -18,8 +18,9 @@ public enum VmFirmware {
   
   BIOS("BIOS"),
   
-  UEFI("UEFI");
-
+  UEFI("UEFI"),
+  
+  VMFIRMWARE_UNSUPPORTED_ENUM("VMFIRMWARE_UNSUPPORTED_ENUM");
   private String value;
 
   VmFirmware(String value) {
@@ -41,7 +42,7 @@ public enum VmFirmware {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmFirmware.VMFIRMWARE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmFirmware> {

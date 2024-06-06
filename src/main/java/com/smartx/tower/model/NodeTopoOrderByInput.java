@@ -30,8 +30,9 @@ public enum NodeTopoOrderByInput {
   
   POSITION_ASC("position_ASC"),
   
-  POSITION_DESC("position_DESC");
-
+  POSITION_DESC("position_DESC"),
+  
+  NODETOPOORDERBYINPUT_UNSUPPORTED_ENUM("NODETOPOORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   NodeTopoOrderByInput(String value) {
@@ -53,7 +54,7 @@ public enum NodeTopoOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NodeTopoOrderByInput.NODETOPOORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NodeTopoOrderByInput> {

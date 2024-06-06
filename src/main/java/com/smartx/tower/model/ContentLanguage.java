@@ -18,8 +18,9 @@ public enum ContentLanguage {
   
   ZH_CN("zh-CN"),
   
-  EN_US("en-US");
-
+  EN_US("en-US"),
+  
+  CONTENTLANGUAGE_UNSUPPORTED_ENUM("CONTENTLANGUAGE_UNSUPPORTED_ENUM");
   private String value;
 
   ContentLanguage(String value) {
@@ -41,7 +42,7 @@ public enum ContentLanguage {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ContentLanguage.CONTENTLANGUAGE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ContentLanguage> {

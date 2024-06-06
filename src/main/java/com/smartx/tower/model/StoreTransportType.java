@@ -18,8 +18,9 @@ public enum StoreTransportType {
   
   RDMA("RDMA"),
   
-  TCP("TCP");
-
+  TCP("TCP"),
+  
+  STORETRANSPORTTYPE_UNSUPPORTED_ENUM("STORETRANSPORTTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   StoreTransportType(String value) {
@@ -41,7 +42,7 @@ public enum StoreTransportType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return StoreTransportType.STORETRANSPORTTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<StoreTransportType> {

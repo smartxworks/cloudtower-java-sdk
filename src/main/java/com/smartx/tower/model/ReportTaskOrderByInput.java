@@ -38,8 +38,9 @@ public enum ReportTaskOrderByInput {
   
   STATUS_ASC("status_ASC"),
   
-  STATUS_DESC("status_DESC");
-
+  STATUS_DESC("status_DESC"),
+  
+  REPORTTASKORDERBYINPUT_UNSUPPORTED_ENUM("REPORTTASKORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ReportTaskOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum ReportTaskOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ReportTaskOrderByInput.REPORTTASKORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ReportTaskOrderByInput> {
