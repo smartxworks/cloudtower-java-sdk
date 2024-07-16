@@ -2,7 +2,7 @@
 
 ## release 日期 2024-07-16
 
-v2.16.0 release (tower version 4.0.0)
+v2.16.0 release (tower version 4.2.0)
 
 ### update
 
