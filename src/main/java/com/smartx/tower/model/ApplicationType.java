@@ -16,8 +16,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(ApplicationType.Adapter.class)
 public enum ApplicationType {
   
-  MONITOR("MONITOR");
-
+  MONITOR("MONITOR"),
+  
+  APPLICATIONTYPE_UNSUPPORTED_ENUM("APPLICATIONTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   ApplicationType(String value) {
@@ -39,7 +40,7 @@ public enum ApplicationType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ApplicationType.APPLICATIONTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ApplicationType> {

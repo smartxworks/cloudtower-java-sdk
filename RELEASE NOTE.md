@@ -1,5 +1,18 @@
 # RELEASE NOTE
 
+## release 日期 2024-07-16
+
+v2.16.0 release (tower version 4.0.0)
+
+### update
+
+- [HostApi]:
+  - [createHost]: 新增 `vdses` 字段适配网络融合，新增 `zbsSpec` 字段适配 zbs 560 以上版本集群的添加
+- [VmApi]:
+  - [getVms]: 新增 `bios_uuid` 字段
+- enum 兼容性处理:
+  为所有的 enum 都添加了一个 `${ENUM_NAME}_UNSUPPORTED_ENUM` 项，用于兼容未来新增的枚举值，当未来新增的枚举值不在当前版本的枚举值中时，会返回该项，而不是报错
+
 ## release 日期 2024-05-30
 
 v2.15.1 release (tower version 4.1.0)

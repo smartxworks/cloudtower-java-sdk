@@ -30,8 +30,9 @@ public enum UserRoleNextOrderByInput {
   
   PRESET_ASC("preset_ASC"),
   
-  PRESET_DESC("preset_DESC");
-
+  PRESET_DESC("preset_DESC"),
+  
+  USERROLENEXTORDERBYINPUT_UNSUPPORTED_ENUM("USERROLENEXTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   UserRoleNextOrderByInput(String value) {
@@ -53,7 +54,7 @@ public enum UserRoleNextOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserRoleNextOrderByInput.USERROLENEXTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserRoleNextOrderByInput> {

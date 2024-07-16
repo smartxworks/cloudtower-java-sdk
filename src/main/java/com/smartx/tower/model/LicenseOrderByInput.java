@@ -54,8 +54,9 @@ public enum LicenseOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  LICENSEORDERBYINPUT_UNSUPPORTED_ENUM("LICENSEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   LicenseOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum LicenseOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return LicenseOrderByInput.LICENSEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<LicenseOrderByInput> {

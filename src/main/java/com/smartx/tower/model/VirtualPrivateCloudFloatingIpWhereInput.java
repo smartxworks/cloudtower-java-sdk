@@ -9,7 +9,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.VirtualPrivateCloudExternalSubnetWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudNicWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -226,10 +225,6 @@ public class VirtualPrivateCloudFloatingIpWhereInput {
   public static final String SERIALIZED_NAME_VPC = "vpc";
   @SerializedName(SERIALIZED_NAME_VPC)
   private VirtualPrivateCloudWhereInput vpc;
-
-  public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
-  @SerializedName(SERIALIZED_NAME_VPC_NIC)
-  private VirtualPrivateCloudNicWhereInput vpcNic;
 
   public VirtualPrivateCloudFloatingIpWhereInput() { 
   }
@@ -1495,29 +1490,6 @@ public class VirtualPrivateCloudFloatingIpWhereInput {
   }
 
 
-  public VirtualPrivateCloudFloatingIpWhereInput vpcNic(VirtualPrivateCloudNicWhereInput vpcNic) {
-    
-    this.vpcNic = vpcNic;
-    return this;
-  }
-
-   /**
-   * Get vpcNic
-   * @return vpcNic
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudNicWhereInput getVpcNic() {
-    return vpcNic;
-  }
-
-
-  public void setVpcNic(VirtualPrivateCloudNicWhereInput vpcNic) {
-    this.vpcNic = vpcNic;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1577,8 +1549,7 @@ public class VirtualPrivateCloudFloatingIpWhereInput {
         Objects.equals(this.localIdNotIn, virtualPrivateCloudFloatingIpWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, virtualPrivateCloudFloatingIpWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, virtualPrivateCloudFloatingIpWhereInput.localIdStartsWith) &&
-        Objects.equals(this.vpc, virtualPrivateCloudFloatingIpWhereInput.vpc) &&
-        Objects.equals(this.vpcNic, virtualPrivateCloudFloatingIpWhereInput.vpcNic);
+        Objects.equals(this.vpc, virtualPrivateCloudFloatingIpWhereInput.vpc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1587,7 +1558,7 @@ public class VirtualPrivateCloudFloatingIpWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, externalIp, externalIpContains, externalIpEndsWith, externalIpGt, externalIpGte, externalIpIn, externalIpLt, externalIpLte, externalIpNot, externalIpNotContains, externalIpNotEndsWith, externalIpNotIn, externalIpNotStartsWith, externalIpStartsWith, externalSubnet, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, vpc, vpcNic);
+    return Objects.hash(AND, NOT, OR, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, externalIp, externalIpContains, externalIpEndsWith, externalIpGt, externalIpGte, externalIpIn, externalIpLt, externalIpLte, externalIpNot, externalIpNotContains, externalIpNotEndsWith, externalIpNotIn, externalIpNotStartsWith, externalIpStartsWith, externalSubnet, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1652,7 +1623,6 @@ public class VirtualPrivateCloudFloatingIpWhereInput {
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
     sb.append("    vpc: ").append(toIndentedString(vpc)).append("\n");
-    sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

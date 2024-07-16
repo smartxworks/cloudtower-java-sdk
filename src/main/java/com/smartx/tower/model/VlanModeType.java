@@ -22,8 +22,9 @@ public enum VlanModeType {
   
   VLAN_TRUNK("VLAN_TRUNK"),
   
-  VXLAN("VXLAN");
-
+  VXLAN("VXLAN"),
+  
+  VLANMODETYPE_UNSUPPORTED_ENUM("VLANMODETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VlanModeType(String value) {
@@ -45,7 +46,7 @@ public enum VlanModeType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VlanModeType.VLANMODETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VlanModeType> {

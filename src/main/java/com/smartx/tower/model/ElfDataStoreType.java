@@ -20,8 +20,9 @@ public enum ElfDataStoreType {
   
   NFS("NFS"),
   
-  NVME("NVMe");
-
+  NVME("NVMe"),
+  
+  ELFDATASTORETYPE_UNSUPPORTED_ENUM("ELFDATASTORETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   ElfDataStoreType(String value) {
@@ -43,7 +44,7 @@ public enum ElfDataStoreType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ElfDataStoreType.ELFDATASTORETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ElfDataStoreType> {

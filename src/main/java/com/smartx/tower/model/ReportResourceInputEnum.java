@@ -42,8 +42,9 @@ public enum ReportResourceInputEnum {
   
   VM("VM"),
   
-  VM_TEMPLATE("VM_TEMPLATE");
-
+  VM_TEMPLATE("VM_TEMPLATE"),
+  
+  REPORTRESOURCEINPUTENUM_UNSUPPORTED_ENUM("REPORTRESOURCEINPUTENUM_UNSUPPORTED_ENUM");
   private String value;
 
   ReportResourceInputEnum(String value) {
@@ -65,7 +66,7 @@ public enum ReportResourceInputEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ReportResourceInputEnum.REPORTRESOURCEINPUTENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ReportResourceInputEnum> {

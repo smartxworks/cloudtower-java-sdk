@@ -34,8 +34,9 @@ public enum IscsiConnectionOrderByInput {
   
   TYPE_ASC("type_ASC"),
   
-  TYPE_DESC("type_DESC");
-
+  TYPE_DESC("type_DESC"),
+  
+  ISCSICONNECTIONORDERBYINPUT_UNSUPPORTED_ENUM("ISCSICONNECTIONORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   IscsiConnectionOrderByInput(String value) {
@@ -57,7 +58,7 @@ public enum IscsiConnectionOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IscsiConnectionOrderByInput.ISCSICONNECTIONORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IscsiConnectionOrderByInput> {

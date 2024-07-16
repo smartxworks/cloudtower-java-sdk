@@ -152,9 +152,17 @@ public class VirtualPrivateCloudNicWhereInput {
   @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
   private String localIdStartsWith;
 
-  public static final String SERIALIZED_NAME_SNAPSHOT = "snapshot";
-  @SerializedName(SERIALIZED_NAME_SNAPSHOT)
-  private VirtualPrivateCloudNicSnapshotWhereInput snapshot;
+  public static final String SERIALIZED_NAME_SNAPSHOTS_EVERY = "snapshots_every";
+  @SerializedName(SERIALIZED_NAME_SNAPSHOTS_EVERY)
+  private VirtualPrivateCloudNicSnapshotWhereInput snapshotsEvery;
+
+  public static final String SERIALIZED_NAME_SNAPSHOTS_NONE = "snapshots_none";
+  @SerializedName(SERIALIZED_NAME_SNAPSHOTS_NONE)
+  private VirtualPrivateCloudNicSnapshotWhereInput snapshotsNone;
+
+  public static final String SERIALIZED_NAME_SNAPSHOTS_SOME = "snapshots_some";
+  @SerializedName(SERIALIZED_NAME_SNAPSHOTS_SOME)
+  private VirtualPrivateCloudNicSnapshotWhereInput snapshotsSome;
 
   public static final String SERIALIZED_NAME_VM_NIC = "vm_nic";
   @SerializedName(SERIALIZED_NAME_VM_NIC)
@@ -963,26 +971,72 @@ public class VirtualPrivateCloudNicWhereInput {
   }
 
 
-  public VirtualPrivateCloudNicWhereInput snapshot(VirtualPrivateCloudNicSnapshotWhereInput snapshot) {
+  public VirtualPrivateCloudNicWhereInput snapshotsEvery(VirtualPrivateCloudNicSnapshotWhereInput snapshotsEvery) {
     
-    this.snapshot = snapshot;
+    this.snapshotsEvery = snapshotsEvery;
     return this;
   }
 
    /**
-   * Get snapshot
-   * @return snapshot
+   * Get snapshotsEvery
+   * @return snapshotsEvery
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public VirtualPrivateCloudNicSnapshotWhereInput getSnapshot() {
-    return snapshot;
+  public VirtualPrivateCloudNicSnapshotWhereInput getSnapshotsEvery() {
+    return snapshotsEvery;
   }
 
 
-  public void setSnapshot(VirtualPrivateCloudNicSnapshotWhereInput snapshot) {
-    this.snapshot = snapshot;
+  public void setSnapshotsEvery(VirtualPrivateCloudNicSnapshotWhereInput snapshotsEvery) {
+    this.snapshotsEvery = snapshotsEvery;
+  }
+
+
+  public VirtualPrivateCloudNicWhereInput snapshotsNone(VirtualPrivateCloudNicSnapshotWhereInput snapshotsNone) {
+    
+    this.snapshotsNone = snapshotsNone;
+    return this;
+  }
+
+   /**
+   * Get snapshotsNone
+   * @return snapshotsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudNicSnapshotWhereInput getSnapshotsNone() {
+    return snapshotsNone;
+  }
+
+
+  public void setSnapshotsNone(VirtualPrivateCloudNicSnapshotWhereInput snapshotsNone) {
+    this.snapshotsNone = snapshotsNone;
+  }
+
+
+  public VirtualPrivateCloudNicWhereInput snapshotsSome(VirtualPrivateCloudNicSnapshotWhereInput snapshotsSome) {
+    
+    this.snapshotsSome = snapshotsSome;
+    return this;
+  }
+
+   /**
+   * Get snapshotsSome
+   * @return snapshotsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudNicSnapshotWhereInput getSnapshotsSome() {
+    return snapshotsSome;
+  }
+
+
+  public void setSnapshotsSome(VirtualPrivateCloudNicSnapshotWhereInput snapshotsSome) {
+    this.snapshotsSome = snapshotsSome;
   }
 
 
@@ -1096,7 +1150,9 @@ public class VirtualPrivateCloudNicWhereInput {
         Objects.equals(this.localIdNotIn, virtualPrivateCloudNicWhereInput.localIdNotIn) &&
         Objects.equals(this.localIdNotStartsWith, virtualPrivateCloudNicWhereInput.localIdNotStartsWith) &&
         Objects.equals(this.localIdStartsWith, virtualPrivateCloudNicWhereInput.localIdStartsWith) &&
-        Objects.equals(this.snapshot, virtualPrivateCloudNicWhereInput.snapshot) &&
+        Objects.equals(this.snapshotsEvery, virtualPrivateCloudNicWhereInput.snapshotsEvery) &&
+        Objects.equals(this.snapshotsNone, virtualPrivateCloudNicWhereInput.snapshotsNone) &&
+        Objects.equals(this.snapshotsSome, virtualPrivateCloudNicWhereInput.snapshotsSome) &&
         Objects.equals(this.vmNic, virtualPrivateCloudNicWhereInput.vmNic) &&
         Objects.equals(this.vpc, virtualPrivateCloudNicWhereInput.vpc) &&
         Objects.equals(this.vpcSubnet, virtualPrivateCloudNicWhereInput.vpcSubnet);
@@ -1108,7 +1164,7 @@ public class VirtualPrivateCloudNicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, floatingIp, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, snapshot, vmNic, vpc, vpcSubnet);
+    return Objects.hash(AND, NOT, OR, floatingIp, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, snapshotsEvery, snapshotsNone, snapshotsSome, vmNic, vpc, vpcSubnet);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1154,7 +1210,9 @@ public class VirtualPrivateCloudNicWhereInput {
     sb.append("    localIdNotIn: ").append(toIndentedString(localIdNotIn)).append("\n");
     sb.append("    localIdNotStartsWith: ").append(toIndentedString(localIdNotStartsWith)).append("\n");
     sb.append("    localIdStartsWith: ").append(toIndentedString(localIdStartsWith)).append("\n");
-    sb.append("    snapshot: ").append(toIndentedString(snapshot)).append("\n");
+    sb.append("    snapshotsEvery: ").append(toIndentedString(snapshotsEvery)).append("\n");
+    sb.append("    snapshotsNone: ").append(toIndentedString(snapshotsNone)).append("\n");
+    sb.append("    snapshotsSome: ").append(toIndentedString(snapshotsSome)).append("\n");
     sb.append("    vmNic: ").append(toIndentedString(vmNic)).append("\n");
     sb.append("    vpc: ").append(toIndentedString(vpc)).append("\n");
     sb.append("    vpcSubnet: ").append(toIndentedString(vpcSubnet)).append("\n");

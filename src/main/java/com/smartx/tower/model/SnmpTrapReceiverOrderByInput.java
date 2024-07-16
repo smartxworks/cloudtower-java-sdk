@@ -86,8 +86,9 @@ public enum SnmpTrapReceiverOrderByInput {
   
   VERSION_ASC("version_ASC"),
   
-  VERSION_DESC("version_DESC");
-
+  VERSION_DESC("version_DESC"),
+  
+  SNMPTRAPRECEIVERORDERBYINPUT_UNSUPPORTED_ENUM("SNMPTRAPRECEIVERORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpTrapReceiverOrderByInput(String value) {
@@ -109,7 +110,7 @@ public enum SnmpTrapReceiverOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpTrapReceiverOrderByInput.SNMPTRAPRECEIVERORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpTrapReceiverOrderByInput> {

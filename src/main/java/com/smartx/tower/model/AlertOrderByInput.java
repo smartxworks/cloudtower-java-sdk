@@ -78,8 +78,9 @@ public enum AlertOrderByInput {
   
   VALUE_ASC("value_ASC"),
   
-  VALUE_DESC("value_DESC");
-
+  VALUE_DESC("value_DESC"),
+  
+  ALERTORDERBYINPUT_UNSUPPORTED_ENUM("ALERTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   AlertOrderByInput(String value) {
@@ -101,7 +102,7 @@ public enum AlertOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return AlertOrderByInput.ALERTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<AlertOrderByInput> {

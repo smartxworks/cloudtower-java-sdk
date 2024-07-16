@@ -12,7 +12,6 @@ import com.smartx.tower.model.VirtualPrivateCloudIsolationPolicyWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudRouteTableWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudSecurityGroupWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudSecurityPolicyWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudServiceWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudSubnetWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -401,10 +400,6 @@ public class VirtualPrivateCloudWhereInput {
   public static final String SERIALIZED_NAME_SUBNETS_SOME = "subnets_some";
   @SerializedName(SERIALIZED_NAME_SUBNETS_SOME)
   private VirtualPrivateCloudSubnetWhereInput subnetsSome;
-
-  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
-  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
-  private VirtualPrivateCloudServiceWhereInput vpcService;
 
   public VirtualPrivateCloudWhereInput() { 
   }
@@ -2707,29 +2702,6 @@ public class VirtualPrivateCloudWhereInput {
   }
 
 
-  public VirtualPrivateCloudWhereInput vpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
-    
-    this.vpcService = vpcService;
-    return this;
-  }
-
-   /**
-   * Get vpcService
-   * @return vpcService
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudServiceWhereInput getVpcService() {
-    return vpcService;
-  }
-
-
-  public void setVpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
-    this.vpcService = vpcService;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -2832,8 +2804,7 @@ public class VirtualPrivateCloudWhereInput {
         Objects.equals(this.securityPoliciesSome, virtualPrivateCloudWhereInput.securityPoliciesSome) &&
         Objects.equals(this.subnetsEvery, virtualPrivateCloudWhereInput.subnetsEvery) &&
         Objects.equals(this.subnetsNone, virtualPrivateCloudWhereInput.subnetsNone) &&
-        Objects.equals(this.subnetsSome, virtualPrivateCloudWhereInput.subnetsSome) &&
-        Objects.equals(this.vpcService, virtualPrivateCloudWhereInput.vpcService);
+        Objects.equals(this.subnetsSome, virtualPrivateCloudWhereInput.subnetsSome);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -2842,7 +2813,7 @@ public class VirtualPrivateCloudWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, associateExternalSubnetNum, associateExternalSubnetNumGt, associateExternalSubnetNumGte, associateExternalSubnetNumIn, associateExternalSubnetNumLt, associateExternalSubnetNumLte, associateExternalSubnetNumNot, associateExternalSubnetNumNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, routeTablesEvery, routeTablesNone, routeTablesSome, securityGroupsEvery, securityGroupsNone, securityGroupsSome, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, subnetsEvery, subnetsNone, subnetsSome, vpcService);
+    return Objects.hash(AND, NOT, OR, associateExternalSubnetNum, associateExternalSubnetNumGt, associateExternalSubnetNumGte, associateExternalSubnetNumIn, associateExternalSubnetNumLt, associateExternalSubnetNumLte, associateExternalSubnetNumNot, associateExternalSubnetNumNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, routeTablesEvery, routeTablesNone, routeTablesSome, securityGroupsEvery, securityGroupsNone, securityGroupsSome, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, subnetsEvery, subnetsNone, subnetsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2950,7 +2921,6 @@ public class VirtualPrivateCloudWhereInput {
     sb.append("    subnetsEvery: ").append(toIndentedString(subnetsEvery)).append("\n");
     sb.append("    subnetsNone: ").append(toIndentedString(subnetsNone)).append("\n");
     sb.append("    subnetsSome: ").append(toIndentedString(subnetsSome)).append("\n");
-    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -98,8 +98,9 @@ public enum GpuDeviceOrderByInput {
   
   VGPU_INSTANCE_NUM_ASC("vgpu_instance_num_ASC"),
   
-  VGPU_INSTANCE_NUM_DESC("vgpu_instance_num_DESC");
-
+  VGPU_INSTANCE_NUM_DESC("vgpu_instance_num_DESC"),
+  
+  GPUDEVICEORDERBYINPUT_UNSUPPORTED_ENUM("GPUDEVICEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   GpuDeviceOrderByInput(String value) {
@@ -121,7 +122,7 @@ public enum GpuDeviceOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GpuDeviceOrderByInput.GPUDEVICEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GpuDeviceOrderByInput> {

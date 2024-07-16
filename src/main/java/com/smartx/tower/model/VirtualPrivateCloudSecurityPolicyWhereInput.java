@@ -8,8 +8,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.LabelWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudSecurityGroupWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudSecurityPolicyMode;
 import com.smartx.tower.model.VirtualPrivateCloudWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -164,18 +162,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
-  public static final String SERIALIZED_NAME_LABELS_EVERY = "labels_every";
-  @SerializedName(SERIALIZED_NAME_LABELS_EVERY)
-  private LabelWhereInput labelsEvery;
-
-  public static final String SERIALIZED_NAME_LABELS_NONE = "labels_none";
-  @SerializedName(SERIALIZED_NAME_LABELS_NONE)
-  private LabelWhereInput labelsNone;
-
-  public static final String SERIALIZED_NAME_LABELS_SOME = "labels_some";
-  @SerializedName(SERIALIZED_NAME_LABELS_SOME)
-  private LabelWhereInput labelsSome;
-
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
   private String localId;
@@ -303,18 +289,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
   public static final String SERIALIZED_NAME_POLICY_MODE_NOT_IN = "policy_mode_not_in";
   @SerializedName(SERIALIZED_NAME_POLICY_MODE_NOT_IN)
   private List<VirtualPrivateCloudSecurityPolicyMode> policyModeNotIn = null;
-
-  public static final String SERIALIZED_NAME_SECURITY_GROUPS_EVERY = "security_groups_every";
-  @SerializedName(SERIALIZED_NAME_SECURITY_GROUPS_EVERY)
-  private VirtualPrivateCloudSecurityGroupWhereInput securityGroupsEvery;
-
-  public static final String SERIALIZED_NAME_SECURITY_GROUPS_NONE = "security_groups_none";
-  @SerializedName(SERIALIZED_NAME_SECURITY_GROUPS_NONE)
-  private VirtualPrivateCloudSecurityGroupWhereInput securityGroupsNone;
-
-  public static final String SERIALIZED_NAME_SECURITY_GROUPS_SOME = "security_groups_some";
-  @SerializedName(SERIALIZED_NAME_SECURITY_GROUPS_SOME)
-  private VirtualPrivateCloudSecurityGroupWhereInput securityGroupsSome;
 
   public static final String SERIALIZED_NAME_VPC = "vpc";
   @SerializedName(SERIALIZED_NAME_VPC)
@@ -1200,75 +1174,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
   }
 
 
-  public VirtualPrivateCloudSecurityPolicyWhereInput labelsEvery(LabelWhereInput labelsEvery) {
-    
-    this.labelsEvery = labelsEvery;
-    return this;
-  }
-
-   /**
-   * Get labelsEvery
-   * @return labelsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public LabelWhereInput getLabelsEvery() {
-    return labelsEvery;
-  }
-
-
-  public void setLabelsEvery(LabelWhereInput labelsEvery) {
-    this.labelsEvery = labelsEvery;
-  }
-
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput labelsNone(LabelWhereInput labelsNone) {
-    
-    this.labelsNone = labelsNone;
-    return this;
-  }
-
-   /**
-   * Get labelsNone
-   * @return labelsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public LabelWhereInput getLabelsNone() {
-    return labelsNone;
-  }
-
-
-  public void setLabelsNone(LabelWhereInput labelsNone) {
-    this.labelsNone = labelsNone;
-  }
-
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput labelsSome(LabelWhereInput labelsSome) {
-    
-    this.labelsSome = labelsSome;
-    return this;
-  }
-
-   /**
-   * Get labelsSome
-   * @return labelsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public LabelWhereInput getLabelsSome() {
-    return labelsSome;
-  }
-
-
-  public void setLabelsSome(LabelWhereInput labelsSome) {
-    this.labelsSome = labelsSome;
-  }
-
-
   public VirtualPrivateCloudSecurityPolicyWhereInput localId(String localId) {
     
     this.localId = localId;
@@ -2053,75 +1958,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
   }
 
 
-  public VirtualPrivateCloudSecurityPolicyWhereInput securityGroupsEvery(VirtualPrivateCloudSecurityGroupWhereInput securityGroupsEvery) {
-    
-    this.securityGroupsEvery = securityGroupsEvery;
-    return this;
-  }
-
-   /**
-   * Get securityGroupsEvery
-   * @return securityGroupsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudSecurityGroupWhereInput getSecurityGroupsEvery() {
-    return securityGroupsEvery;
-  }
-
-
-  public void setSecurityGroupsEvery(VirtualPrivateCloudSecurityGroupWhereInput securityGroupsEvery) {
-    this.securityGroupsEvery = securityGroupsEvery;
-  }
-
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput securityGroupsNone(VirtualPrivateCloudSecurityGroupWhereInput securityGroupsNone) {
-    
-    this.securityGroupsNone = securityGroupsNone;
-    return this;
-  }
-
-   /**
-   * Get securityGroupsNone
-   * @return securityGroupsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudSecurityGroupWhereInput getSecurityGroupsNone() {
-    return securityGroupsNone;
-  }
-
-
-  public void setSecurityGroupsNone(VirtualPrivateCloudSecurityGroupWhereInput securityGroupsNone) {
-    this.securityGroupsNone = securityGroupsNone;
-  }
-
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput securityGroupsSome(VirtualPrivateCloudSecurityGroupWhereInput securityGroupsSome) {
-    
-    this.securityGroupsSome = securityGroupsSome;
-    return this;
-  }
-
-   /**
-   * Get securityGroupsSome
-   * @return securityGroupsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudSecurityGroupWhereInput getSecurityGroupsSome() {
-    return securityGroupsSome;
-  }
-
-
-  public void setSecurityGroupsSome(VirtualPrivateCloudSecurityGroupWhereInput securityGroupsSome) {
-    this.securityGroupsSome = securityGroupsSome;
-  }
-
-
   public VirtualPrivateCloudSecurityPolicyWhereInput vpc(VirtualPrivateCloudWhereInput vpc) {
     
     this.vpc = vpc;
@@ -2189,9 +2025,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
         Objects.equals(this.idNotIn, virtualPrivateCloudSecurityPolicyWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, virtualPrivateCloudSecurityPolicyWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, virtualPrivateCloudSecurityPolicyWhereInput.idStartsWith) &&
-        Objects.equals(this.labelsEvery, virtualPrivateCloudSecurityPolicyWhereInput.labelsEvery) &&
-        Objects.equals(this.labelsNone, virtualPrivateCloudSecurityPolicyWhereInput.labelsNone) &&
-        Objects.equals(this.labelsSome, virtualPrivateCloudSecurityPolicyWhereInput.labelsSome) &&
         Objects.equals(this.localId, virtualPrivateCloudSecurityPolicyWhereInput.localId) &&
         Objects.equals(this.localIdContains, virtualPrivateCloudSecurityPolicyWhereInput.localIdContains) &&
         Objects.equals(this.localIdEndsWith, virtualPrivateCloudSecurityPolicyWhereInput.localIdEndsWith) &&
@@ -2224,9 +2057,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
         Objects.equals(this.policyModeIn, virtualPrivateCloudSecurityPolicyWhereInput.policyModeIn) &&
         Objects.equals(this.policyModeNot, virtualPrivateCloudSecurityPolicyWhereInput.policyModeNot) &&
         Objects.equals(this.policyModeNotIn, virtualPrivateCloudSecurityPolicyWhereInput.policyModeNotIn) &&
-        Objects.equals(this.securityGroupsEvery, virtualPrivateCloudSecurityPolicyWhereInput.securityGroupsEvery) &&
-        Objects.equals(this.securityGroupsNone, virtualPrivateCloudSecurityPolicyWhereInput.securityGroupsNone) &&
-        Objects.equals(this.securityGroupsSome, virtualPrivateCloudSecurityPolicyWhereInput.securityGroupsSome) &&
         Objects.equals(this.vpc, virtualPrivateCloudSecurityPolicyWhereInput.vpc);
   }
 
@@ -2236,7 +2066,7 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, policyMode, policyModeIn, policyModeNot, policyModeNotIn, securityGroupsEvery, securityGroupsNone, securityGroupsSome, vpc);
+    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, policyMode, policyModeIn, policyModeNot, policyModeNotIn, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2285,9 +2115,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    labelsEvery: ").append(toIndentedString(labelsEvery)).append("\n");
-    sb.append("    labelsNone: ").append(toIndentedString(labelsNone)).append("\n");
-    sb.append("    labelsSome: ").append(toIndentedString(labelsSome)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
     sb.append("    localIdContains: ").append(toIndentedString(localIdContains)).append("\n");
     sb.append("    localIdEndsWith: ").append(toIndentedString(localIdEndsWith)).append("\n");
@@ -2320,9 +2147,6 @@ public class VirtualPrivateCloudSecurityPolicyWhereInput {
     sb.append("    policyModeIn: ").append(toIndentedString(policyModeIn)).append("\n");
     sb.append("    policyModeNot: ").append(toIndentedString(policyModeNot)).append("\n");
     sb.append("    policyModeNotIn: ").append(toIndentedString(policyModeNotIn)).append("\n");
-    sb.append("    securityGroupsEvery: ").append(toIndentedString(securityGroupsEvery)).append("\n");
-    sb.append("    securityGroupsNone: ").append(toIndentedString(securityGroupsNone)).append("\n");
-    sb.append("    securityGroupsSome: ").append(toIndentedString(securityGroupsSome)).append("\n");
     sb.append("    vpc: ").append(toIndentedString(vpc)).append("\n");
     sb.append("}");
     return sb.toString();

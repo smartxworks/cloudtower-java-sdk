@@ -54,8 +54,9 @@ public enum UploadTaskOrderByInput {
   
   UPDATEDAT_ASC("updatedAt_ASC"),
   
-  UPDATEDAT_DESC("updatedAt_DESC");
-
+  UPDATEDAT_DESC("updatedAt_DESC"),
+  
+  UPLOADTASKORDERBYINPUT_UNSUPPORTED_ENUM("UPLOADTASKORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   UploadTaskOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum UploadTaskOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UploadTaskOrderByInput.UPLOADTASKORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UploadTaskOrderByInput> {

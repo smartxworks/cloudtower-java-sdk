@@ -24,8 +24,9 @@ public enum FilterRuleMetricEnum {
   
   POWERON_DAYS("VM_POWERON_DAYS"),
   
-  READWRITE_IO("VM_READWRITE_IO");
-
+  READWRITE_IO("VM_READWRITE_IO"),
+  
+  FILTERRULEMETRICENUM_UNSUPPORTED_ENUM("FILTERRULEMETRICENUM_UNSUPPORTED_ENUM");
   private String value;
 
   FilterRuleMetricEnum(String value) {
@@ -47,7 +48,7 @@ public enum FilterRuleMetricEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return FilterRuleMetricEnum.FILTERRULEMETRICENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<FilterRuleMetricEnum> {

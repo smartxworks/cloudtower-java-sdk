@@ -30,8 +30,9 @@ public enum IsolationPolicyOrderByInput {
   
   MODE_ASC("mode_ASC"),
   
-  MODE_DESC("mode_DESC");
-
+  MODE_DESC("mode_DESC"),
+  
+  ISOLATIONPOLICYORDERBYINPUT_UNSUPPORTED_ENUM("ISOLATIONPOLICYORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   IsolationPolicyOrderByInput(String value) {
@@ -53,7 +54,7 @@ public enum IsolationPolicyOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IsolationPolicyOrderByInput.ISOLATIONPOLICYORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IsolationPolicyOrderByInput> {

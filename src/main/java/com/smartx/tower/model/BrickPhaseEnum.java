@@ -18,8 +18,9 @@ public enum BrickPhaseEnum {
   
   BACKWARD("BACKWARD"),
   
-  FORWARD("FORWARD");
-
+  FORWARD("FORWARD"),
+  
+  BRICKPHASEENUM_UNSUPPORTED_ENUM("BRICKPHASEENUM_UNSUPPORTED_ENUM");
   private String value;
 
   BrickPhaseEnum(String value) {
@@ -41,7 +42,7 @@ public enum BrickPhaseEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return BrickPhaseEnum.BRICKPHASEENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<BrickPhaseEnum> {

@@ -11,7 +11,6 @@ import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.VirtualPrivateCloudFloatingIpWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudNatGatewayWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudRouterGatewayWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudServiceWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudWhereInput;
 import com.smartx.tower.model.VlanWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -165,14 +164,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
   private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
-
-  public static final String SERIALIZED_NAME_EXCLUSIVE = "exclusive";
-  @SerializedName(SERIALIZED_NAME_EXCLUSIVE)
-  private Boolean exclusive;
-
-  public static final String SERIALIZED_NAME_EXCLUSIVE_NOT = "exclusive_not";
-  @SerializedName(SERIALIZED_NAME_EXCLUSIVE_NOT)
-  private Boolean exclusiveNot;
 
   public static final String SERIALIZED_NAME_FLOATING_IP_CIDR = "floating_ip_cidr";
   @SerializedName(SERIALIZED_NAME_FLOATING_IP_CIDR)
@@ -353,62 +344,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR = "load_balancer_gateway_cidr";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR)
-  private String loadBalancerGatewayCidr;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_CONTAINS = "load_balancer_gateway_cidr_contains";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_CONTAINS)
-  private String loadBalancerGatewayCidrContains;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_ENDS_WITH = "load_balancer_gateway_cidr_ends_with";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_ENDS_WITH)
-  private String loadBalancerGatewayCidrEndsWith;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_GT = "load_balancer_gateway_cidr_gt";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_GT)
-  private String loadBalancerGatewayCidrGt;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_GTE = "load_balancer_gateway_cidr_gte";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_GTE)
-  private String loadBalancerGatewayCidrGte;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_IN = "load_balancer_gateway_cidr_in";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_IN)
-  private List<String> loadBalancerGatewayCidrIn = null;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_LT = "load_balancer_gateway_cidr_lt";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_LT)
-  private String loadBalancerGatewayCidrLt;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_LTE = "load_balancer_gateway_cidr_lte";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_LTE)
-  private String loadBalancerGatewayCidrLte;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT = "load_balancer_gateway_cidr_not";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT)
-  private String loadBalancerGatewayCidrNot;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_CONTAINS = "load_balancer_gateway_cidr_not_contains";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_CONTAINS)
-  private String loadBalancerGatewayCidrNotContains;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_ENDS_WITH = "load_balancer_gateway_cidr_not_ends_with";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_ENDS_WITH)
-  private String loadBalancerGatewayCidrNotEndsWith;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_IN = "load_balancer_gateway_cidr_not_in";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_IN)
-  private List<String> loadBalancerGatewayCidrNotIn = null;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_STARTS_WITH = "load_balancer_gateway_cidr_not_starts_with";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_NOT_STARTS_WITH)
-  private String loadBalancerGatewayCidrNotStartsWith;
-
-  public static final String SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_STARTS_WITH = "load_balancer_gateway_cidr_starts_with";
-  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_GATEWAY_CIDR_STARTS_WITH)
-  private String loadBalancerGatewayCidrStartsWith;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -665,10 +600,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   public static final String SERIALIZED_NAME_VPC = "vpc";
   @SerializedName(SERIALIZED_NAME_VPC)
   private VirtualPrivateCloudWhereInput vpc;
-
-  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
-  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
-  private VirtualPrivateCloudServiceWhereInput vpcService;
 
   public VirtualPrivateCloudExternalSubnetWhereInput() { 
   }
@@ -1547,52 +1478,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
 
   public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
     this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput exclusive(Boolean exclusive) {
-    
-    this.exclusive = exclusive;
-    return this;
-  }
-
-   /**
-   * Get exclusive
-   * @return exclusive
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Boolean getExclusive() {
-    return exclusive;
-  }
-
-
-  public void setExclusive(Boolean exclusive) {
-    this.exclusive = exclusive;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput exclusiveNot(Boolean exclusiveNot) {
-    
-    this.exclusiveNot = exclusiveNot;
-    return this;
-  }
-
-   /**
-   * Get exclusiveNot
-   * @return exclusiveNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Boolean getExclusiveNot() {
-    return exclusiveNot;
-  }
-
-
-  public void setExclusiveNot(Boolean exclusiveNot) {
-    this.exclusiveNot = exclusiveNot;
   }
 
 
@@ -2676,344 +2561,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
 
   public void setIdStartsWith(String idStartsWith) {
     this.idStartsWith = idStartsWith;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidr(String loadBalancerGatewayCidr) {
-    
-    this.loadBalancerGatewayCidr = loadBalancerGatewayCidr;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidr
-   * @return loadBalancerGatewayCidr
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidr() {
-    return loadBalancerGatewayCidr;
-  }
-
-
-  public void setLoadBalancerGatewayCidr(String loadBalancerGatewayCidr) {
-    this.loadBalancerGatewayCidr = loadBalancerGatewayCidr;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrContains(String loadBalancerGatewayCidrContains) {
-    
-    this.loadBalancerGatewayCidrContains = loadBalancerGatewayCidrContains;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrContains
-   * @return loadBalancerGatewayCidrContains
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrContains() {
-    return loadBalancerGatewayCidrContains;
-  }
-
-
-  public void setLoadBalancerGatewayCidrContains(String loadBalancerGatewayCidrContains) {
-    this.loadBalancerGatewayCidrContains = loadBalancerGatewayCidrContains;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrEndsWith(String loadBalancerGatewayCidrEndsWith) {
-    
-    this.loadBalancerGatewayCidrEndsWith = loadBalancerGatewayCidrEndsWith;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrEndsWith
-   * @return loadBalancerGatewayCidrEndsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrEndsWith() {
-    return loadBalancerGatewayCidrEndsWith;
-  }
-
-
-  public void setLoadBalancerGatewayCidrEndsWith(String loadBalancerGatewayCidrEndsWith) {
-    this.loadBalancerGatewayCidrEndsWith = loadBalancerGatewayCidrEndsWith;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrGt(String loadBalancerGatewayCidrGt) {
-    
-    this.loadBalancerGatewayCidrGt = loadBalancerGatewayCidrGt;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrGt
-   * @return loadBalancerGatewayCidrGt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrGt() {
-    return loadBalancerGatewayCidrGt;
-  }
-
-
-  public void setLoadBalancerGatewayCidrGt(String loadBalancerGatewayCidrGt) {
-    this.loadBalancerGatewayCidrGt = loadBalancerGatewayCidrGt;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrGte(String loadBalancerGatewayCidrGte) {
-    
-    this.loadBalancerGatewayCidrGte = loadBalancerGatewayCidrGte;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrGte
-   * @return loadBalancerGatewayCidrGte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrGte() {
-    return loadBalancerGatewayCidrGte;
-  }
-
-
-  public void setLoadBalancerGatewayCidrGte(String loadBalancerGatewayCidrGte) {
-    this.loadBalancerGatewayCidrGte = loadBalancerGatewayCidrGte;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrIn(List<String> loadBalancerGatewayCidrIn) {
-    
-    this.loadBalancerGatewayCidrIn = loadBalancerGatewayCidrIn;
-    return this;
-  }
-
-  public VirtualPrivateCloudExternalSubnetWhereInput addLoadBalancerGatewayCidrInItem(String loadBalancerGatewayCidrInItem) {
-    if (this.loadBalancerGatewayCidrIn == null) {
-      this.loadBalancerGatewayCidrIn = new ArrayList<String>();
-    }
-    this.loadBalancerGatewayCidrIn.add(loadBalancerGatewayCidrInItem);
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrIn
-   * @return loadBalancerGatewayCidrIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<String> getLoadBalancerGatewayCidrIn() {
-    return loadBalancerGatewayCidrIn;
-  }
-
-
-  public void setLoadBalancerGatewayCidrIn(List<String> loadBalancerGatewayCidrIn) {
-    this.loadBalancerGatewayCidrIn = loadBalancerGatewayCidrIn;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrLt(String loadBalancerGatewayCidrLt) {
-    
-    this.loadBalancerGatewayCidrLt = loadBalancerGatewayCidrLt;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrLt
-   * @return loadBalancerGatewayCidrLt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrLt() {
-    return loadBalancerGatewayCidrLt;
-  }
-
-
-  public void setLoadBalancerGatewayCidrLt(String loadBalancerGatewayCidrLt) {
-    this.loadBalancerGatewayCidrLt = loadBalancerGatewayCidrLt;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrLte(String loadBalancerGatewayCidrLte) {
-    
-    this.loadBalancerGatewayCidrLte = loadBalancerGatewayCidrLte;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrLte
-   * @return loadBalancerGatewayCidrLte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrLte() {
-    return loadBalancerGatewayCidrLte;
-  }
-
-
-  public void setLoadBalancerGatewayCidrLte(String loadBalancerGatewayCidrLte) {
-    this.loadBalancerGatewayCidrLte = loadBalancerGatewayCidrLte;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrNot(String loadBalancerGatewayCidrNot) {
-    
-    this.loadBalancerGatewayCidrNot = loadBalancerGatewayCidrNot;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrNot
-   * @return loadBalancerGatewayCidrNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrNot() {
-    return loadBalancerGatewayCidrNot;
-  }
-
-
-  public void setLoadBalancerGatewayCidrNot(String loadBalancerGatewayCidrNot) {
-    this.loadBalancerGatewayCidrNot = loadBalancerGatewayCidrNot;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrNotContains(String loadBalancerGatewayCidrNotContains) {
-    
-    this.loadBalancerGatewayCidrNotContains = loadBalancerGatewayCidrNotContains;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrNotContains
-   * @return loadBalancerGatewayCidrNotContains
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrNotContains() {
-    return loadBalancerGatewayCidrNotContains;
-  }
-
-
-  public void setLoadBalancerGatewayCidrNotContains(String loadBalancerGatewayCidrNotContains) {
-    this.loadBalancerGatewayCidrNotContains = loadBalancerGatewayCidrNotContains;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrNotEndsWith(String loadBalancerGatewayCidrNotEndsWith) {
-    
-    this.loadBalancerGatewayCidrNotEndsWith = loadBalancerGatewayCidrNotEndsWith;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrNotEndsWith
-   * @return loadBalancerGatewayCidrNotEndsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrNotEndsWith() {
-    return loadBalancerGatewayCidrNotEndsWith;
-  }
-
-
-  public void setLoadBalancerGatewayCidrNotEndsWith(String loadBalancerGatewayCidrNotEndsWith) {
-    this.loadBalancerGatewayCidrNotEndsWith = loadBalancerGatewayCidrNotEndsWith;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrNotIn(List<String> loadBalancerGatewayCidrNotIn) {
-    
-    this.loadBalancerGatewayCidrNotIn = loadBalancerGatewayCidrNotIn;
-    return this;
-  }
-
-  public VirtualPrivateCloudExternalSubnetWhereInput addLoadBalancerGatewayCidrNotInItem(String loadBalancerGatewayCidrNotInItem) {
-    if (this.loadBalancerGatewayCidrNotIn == null) {
-      this.loadBalancerGatewayCidrNotIn = new ArrayList<String>();
-    }
-    this.loadBalancerGatewayCidrNotIn.add(loadBalancerGatewayCidrNotInItem);
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrNotIn
-   * @return loadBalancerGatewayCidrNotIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<String> getLoadBalancerGatewayCidrNotIn() {
-    return loadBalancerGatewayCidrNotIn;
-  }
-
-
-  public void setLoadBalancerGatewayCidrNotIn(List<String> loadBalancerGatewayCidrNotIn) {
-    this.loadBalancerGatewayCidrNotIn = loadBalancerGatewayCidrNotIn;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrNotStartsWith(String loadBalancerGatewayCidrNotStartsWith) {
-    
-    this.loadBalancerGatewayCidrNotStartsWith = loadBalancerGatewayCidrNotStartsWith;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrNotStartsWith
-   * @return loadBalancerGatewayCidrNotStartsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrNotStartsWith() {
-    return loadBalancerGatewayCidrNotStartsWith;
-  }
-
-
-  public void setLoadBalancerGatewayCidrNotStartsWith(String loadBalancerGatewayCidrNotStartsWith) {
-    this.loadBalancerGatewayCidrNotStartsWith = loadBalancerGatewayCidrNotStartsWith;
-  }
-
-
-  public VirtualPrivateCloudExternalSubnetWhereInput loadBalancerGatewayCidrStartsWith(String loadBalancerGatewayCidrStartsWith) {
-    
-    this.loadBalancerGatewayCidrStartsWith = loadBalancerGatewayCidrStartsWith;
-    return this;
-  }
-
-   /**
-   * Get loadBalancerGatewayCidrStartsWith
-   * @return loadBalancerGatewayCidrStartsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLoadBalancerGatewayCidrStartsWith() {
-    return loadBalancerGatewayCidrStartsWith;
-  }
-
-
-  public void setLoadBalancerGatewayCidrStartsWith(String loadBalancerGatewayCidrStartsWith) {
-    this.loadBalancerGatewayCidrStartsWith = loadBalancerGatewayCidrStartsWith;
   }
 
 
@@ -4553,29 +4100,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   }
 
 
-  public VirtualPrivateCloudExternalSubnetWhereInput vpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
-    
-    this.vpcService = vpcService;
-    return this;
-  }
-
-   /**
-   * Get vpcService
-   * @return vpcService
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudServiceWhereInput getVpcService() {
-    return vpcService;
-  }
-
-
-  public void setVpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
-    this.vpcService = vpcService;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -4620,8 +4144,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
         Objects.equals(this.entityAsyncStatusIn, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatusNot) &&
         Objects.equals(this.entityAsyncStatusNotIn, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatusNotIn) &&
-        Objects.equals(this.exclusive, virtualPrivateCloudExternalSubnetWhereInput.exclusive) &&
-        Objects.equals(this.exclusiveNot, virtualPrivateCloudExternalSubnetWhereInput.exclusiveNot) &&
         Objects.equals(this.floatingIpCidr, virtualPrivateCloudExternalSubnetWhereInput.floatingIpCidr) &&
         Objects.equals(this.floatingIpCidrContains, virtualPrivateCloudExternalSubnetWhereInput.floatingIpCidrContains) &&
         Objects.equals(this.floatingIpCidrEndsWith, virtualPrivateCloudExternalSubnetWhereInput.floatingIpCidrEndsWith) &&
@@ -4667,20 +4189,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
         Objects.equals(this.idNotIn, virtualPrivateCloudExternalSubnetWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, virtualPrivateCloudExternalSubnetWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, virtualPrivateCloudExternalSubnetWhereInput.idStartsWith) &&
-        Objects.equals(this.loadBalancerGatewayCidr, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidr) &&
-        Objects.equals(this.loadBalancerGatewayCidrContains, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrContains) &&
-        Objects.equals(this.loadBalancerGatewayCidrEndsWith, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrEndsWith) &&
-        Objects.equals(this.loadBalancerGatewayCidrGt, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrGt) &&
-        Objects.equals(this.loadBalancerGatewayCidrGte, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrGte) &&
-        Objects.equals(this.loadBalancerGatewayCidrIn, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrIn) &&
-        Objects.equals(this.loadBalancerGatewayCidrLt, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrLt) &&
-        Objects.equals(this.loadBalancerGatewayCidrLte, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrLte) &&
-        Objects.equals(this.loadBalancerGatewayCidrNot, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrNot) &&
-        Objects.equals(this.loadBalancerGatewayCidrNotContains, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrNotContains) &&
-        Objects.equals(this.loadBalancerGatewayCidrNotEndsWith, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrNotEndsWith) &&
-        Objects.equals(this.loadBalancerGatewayCidrNotIn, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrNotIn) &&
-        Objects.equals(this.loadBalancerGatewayCidrNotStartsWith, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrNotStartsWith) &&
-        Objects.equals(this.loadBalancerGatewayCidrStartsWith, virtualPrivateCloudExternalSubnetWhereInput.loadBalancerGatewayCidrStartsWith) &&
         Objects.equals(this.localId, virtualPrivateCloudExternalSubnetWhereInput.localId) &&
         Objects.equals(this.localIdContains, virtualPrivateCloudExternalSubnetWhereInput.localIdContains) &&
         Objects.equals(this.localIdEndsWith, virtualPrivateCloudExternalSubnetWhereInput.localIdEndsWith) &&
@@ -4744,8 +4252,7 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
         Objects.equals(this.routerGatewaysNone, virtualPrivateCloudExternalSubnetWhereInput.routerGatewaysNone) &&
         Objects.equals(this.routerGatewaysSome, virtualPrivateCloudExternalSubnetWhereInput.routerGatewaysSome) &&
         Objects.equals(this.vlan, virtualPrivateCloudExternalSubnetWhereInput.vlan) &&
-        Objects.equals(this.vpc, virtualPrivateCloudExternalSubnetWhereInput.vpc) &&
-        Objects.equals(this.vpcService, virtualPrivateCloudExternalSubnetWhereInput.vpcService);
+        Objects.equals(this.vpc, virtualPrivateCloudExternalSubnetWhereInput.vpc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -4754,7 +4261,7 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cidr, cidrContains, cidrEndsWith, cidrGt, cidrGte, cidrIn, cidrLt, cidrLte, cidrNot, cidrNotContains, cidrNotEndsWith, cidrNotIn, cidrNotStartsWith, cidrStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, exclusive, exclusiveNot, floatingIpCidr, floatingIpCidrContains, floatingIpCidrEndsWith, floatingIpCidrGt, floatingIpCidrGte, floatingIpCidrIn, floatingIpCidrLt, floatingIpCidrLte, floatingIpCidrNot, floatingIpCidrNotContains, floatingIpCidrNotEndsWith, floatingIpCidrNotIn, floatingIpCidrNotStartsWith, floatingIpCidrStartsWith, floatingIpsEvery, floatingIpsNone, floatingIpsSome, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, loadBalancerGatewayCidr, loadBalancerGatewayCidrContains, loadBalancerGatewayCidrEndsWith, loadBalancerGatewayCidrGt, loadBalancerGatewayCidrGte, loadBalancerGatewayCidrIn, loadBalancerGatewayCidrLt, loadBalancerGatewayCidrLte, loadBalancerGatewayCidrNot, loadBalancerGatewayCidrNotContains, loadBalancerGatewayCidrNotEndsWith, loadBalancerGatewayCidrNotIn, loadBalancerGatewayCidrNotStartsWith, loadBalancerGatewayCidrStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, natGatewayCidr, natGatewayCidrContains, natGatewayCidrEndsWith, natGatewayCidrGt, natGatewayCidrGte, natGatewayCidrIn, natGatewayCidrLt, natGatewayCidrLte, natGatewayCidrNot, natGatewayCidrNotContains, natGatewayCidrNotEndsWith, natGatewayCidrNotIn, natGatewayCidrNotStartsWith, natGatewayCidrStartsWith, natGatewaysEvery, natGatewaysNone, natGatewaysSome, routerGatewayCidr, routerGatewayCidrContains, routerGatewayCidrEndsWith, routerGatewayCidrGt, routerGatewayCidrGte, routerGatewayCidrIn, routerGatewayCidrLt, routerGatewayCidrLte, routerGatewayCidrNot, routerGatewayCidrNotContains, routerGatewayCidrNotEndsWith, routerGatewayCidrNotIn, routerGatewayCidrNotStartsWith, routerGatewayCidrStartsWith, routerGatewaysEvery, routerGatewaysNone, routerGatewaysSome, vlan, vpc, vpcService);
+    return Objects.hash(AND, NOT, OR, cidr, cidrContains, cidrEndsWith, cidrGt, cidrGte, cidrIn, cidrLt, cidrLte, cidrNot, cidrNotContains, cidrNotEndsWith, cidrNotIn, cidrNotStartsWith, cidrStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, floatingIpCidr, floatingIpCidrContains, floatingIpCidrEndsWith, floatingIpCidrGt, floatingIpCidrGte, floatingIpCidrIn, floatingIpCidrLt, floatingIpCidrLte, floatingIpCidrNot, floatingIpCidrNotContains, floatingIpCidrNotEndsWith, floatingIpCidrNotIn, floatingIpCidrNotStartsWith, floatingIpCidrStartsWith, floatingIpsEvery, floatingIpsNone, floatingIpsSome, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, natGatewayCidr, natGatewayCidrContains, natGatewayCidrEndsWith, natGatewayCidrGt, natGatewayCidrGte, natGatewayCidrIn, natGatewayCidrLt, natGatewayCidrLte, natGatewayCidrNot, natGatewayCidrNotContains, natGatewayCidrNotEndsWith, natGatewayCidrNotIn, natGatewayCidrNotStartsWith, natGatewayCidrStartsWith, natGatewaysEvery, natGatewaysNone, natGatewaysSome, routerGatewayCidr, routerGatewayCidrContains, routerGatewayCidrEndsWith, routerGatewayCidrGt, routerGatewayCidrGte, routerGatewayCidrIn, routerGatewayCidrLt, routerGatewayCidrLte, routerGatewayCidrNot, routerGatewayCidrNotContains, routerGatewayCidrNotEndsWith, routerGatewayCidrNotIn, routerGatewayCidrNotStartsWith, routerGatewayCidrStartsWith, routerGatewaysEvery, routerGatewaysNone, routerGatewaysSome, vlan, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4803,8 +4310,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
     sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
-    sb.append("    exclusive: ").append(toIndentedString(exclusive)).append("\n");
-    sb.append("    exclusiveNot: ").append(toIndentedString(exclusiveNot)).append("\n");
     sb.append("    floatingIpCidr: ").append(toIndentedString(floatingIpCidr)).append("\n");
     sb.append("    floatingIpCidrContains: ").append(toIndentedString(floatingIpCidrContains)).append("\n");
     sb.append("    floatingIpCidrEndsWith: ").append(toIndentedString(floatingIpCidrEndsWith)).append("\n");
@@ -4850,20 +4355,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    loadBalancerGatewayCidr: ").append(toIndentedString(loadBalancerGatewayCidr)).append("\n");
-    sb.append("    loadBalancerGatewayCidrContains: ").append(toIndentedString(loadBalancerGatewayCidrContains)).append("\n");
-    sb.append("    loadBalancerGatewayCidrEndsWith: ").append(toIndentedString(loadBalancerGatewayCidrEndsWith)).append("\n");
-    sb.append("    loadBalancerGatewayCidrGt: ").append(toIndentedString(loadBalancerGatewayCidrGt)).append("\n");
-    sb.append("    loadBalancerGatewayCidrGte: ").append(toIndentedString(loadBalancerGatewayCidrGte)).append("\n");
-    sb.append("    loadBalancerGatewayCidrIn: ").append(toIndentedString(loadBalancerGatewayCidrIn)).append("\n");
-    sb.append("    loadBalancerGatewayCidrLt: ").append(toIndentedString(loadBalancerGatewayCidrLt)).append("\n");
-    sb.append("    loadBalancerGatewayCidrLte: ").append(toIndentedString(loadBalancerGatewayCidrLte)).append("\n");
-    sb.append("    loadBalancerGatewayCidrNot: ").append(toIndentedString(loadBalancerGatewayCidrNot)).append("\n");
-    sb.append("    loadBalancerGatewayCidrNotContains: ").append(toIndentedString(loadBalancerGatewayCidrNotContains)).append("\n");
-    sb.append("    loadBalancerGatewayCidrNotEndsWith: ").append(toIndentedString(loadBalancerGatewayCidrNotEndsWith)).append("\n");
-    sb.append("    loadBalancerGatewayCidrNotIn: ").append(toIndentedString(loadBalancerGatewayCidrNotIn)).append("\n");
-    sb.append("    loadBalancerGatewayCidrNotStartsWith: ").append(toIndentedString(loadBalancerGatewayCidrNotStartsWith)).append("\n");
-    sb.append("    loadBalancerGatewayCidrStartsWith: ").append(toIndentedString(loadBalancerGatewayCidrStartsWith)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
     sb.append("    localIdContains: ").append(toIndentedString(localIdContains)).append("\n");
     sb.append("    localIdEndsWith: ").append(toIndentedString(localIdEndsWith)).append("\n");
@@ -4928,7 +4419,6 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
     sb.append("    routerGatewaysSome: ").append(toIndentedString(routerGatewaysSome)).append("\n");
     sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
     sb.append("    vpc: ").append(toIndentedString(vpc)).append("\n");
-    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

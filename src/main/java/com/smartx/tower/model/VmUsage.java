@@ -36,8 +36,9 @@ public enum VmUsage {
   
   SHARE_REGISTRY("SHARE_REGISTRY"),
   
-  SKS_MANAGEMENT("SKS_MANAGEMENT");
-
+  SKS_MANAGEMENT("SKS_MANAGEMENT"),
+  
+  VMUSAGE_UNSUPPORTED_ENUM("VMUSAGE_UNSUPPORTED_ENUM");
   private String value;
 
   VmUsage(String value) {
@@ -59,7 +60,7 @@ public enum VmUsage {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmUsage.VMUSAGE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmUsage> {

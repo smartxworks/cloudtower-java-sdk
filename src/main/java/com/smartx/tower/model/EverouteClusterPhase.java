@@ -28,8 +28,9 @@ public enum EverouteClusterPhase {
   
   UPDATING("Updating"),
   
-  UPGRADING("Upgrading");
-
+  UPGRADING("Upgrading"),
+  
+  EVEROUTECLUSTERPHASE_UNSUPPORTED_ENUM("EVEROUTECLUSTERPHASE_UNSUPPORTED_ENUM");
   private String value;
 
   EverouteClusterPhase(String value) {
@@ -51,7 +52,7 @@ public enum EverouteClusterPhase {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return EverouteClusterPhase.EVEROUTECLUSTERPHASE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<EverouteClusterPhase> {

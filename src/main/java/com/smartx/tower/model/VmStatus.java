@@ -24,8 +24,9 @@ public enum VmStatus {
   
   SUSPENDED("SUSPENDED"),
   
-  UNKNOWN("UNKNOWN");
-
+  UNKNOWN("UNKNOWN"),
+  
+  VMSTATUS_UNSUPPORTED_ENUM("VMSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   VmStatus(String value) {
@@ -47,7 +48,7 @@ public enum VmStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmStatus.VMSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmStatus> {

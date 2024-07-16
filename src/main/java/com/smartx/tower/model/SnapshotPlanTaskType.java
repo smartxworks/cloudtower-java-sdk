@@ -20,8 +20,9 @@ public enum SnapshotPlanTaskType {
   
   PROTECT("TASK_TYPE_PROTECT"),
   
-  ROLLBACK("TASK_TYPE_ROLLBACK");
-
+  ROLLBACK("TASK_TYPE_ROLLBACK"),
+  
+  SNAPSHOTPLANTASKTYPE_UNSUPPORTED_ENUM("SNAPSHOTPLANTASKTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotPlanTaskType(String value) {
@@ -43,7 +44,7 @@ public enum SnapshotPlanTaskType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotPlanTaskType.SNAPSHOTPLANTASKTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotPlanTaskType> {

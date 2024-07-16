@@ -82,8 +82,9 @@ public enum VmDiskOrderByInput {
   
   UNSAFE_PROVISION_ASC("unsafe_provision_ASC"),
   
-  UNSAFE_PROVISION_DESC("unsafe_provision_DESC");
-
+  UNSAFE_PROVISION_DESC("unsafe_provision_DESC"),
+  
+  VMDISKORDERBYINPUT_UNSUPPORTED_ENUM("VMDISKORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   VmDiskOrderByInput(String value) {
@@ -105,7 +106,7 @@ public enum VmDiskOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmDiskOrderByInput.VMDISKORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmDiskOrderByInput> {

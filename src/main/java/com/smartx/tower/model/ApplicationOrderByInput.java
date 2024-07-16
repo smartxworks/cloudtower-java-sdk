@@ -62,8 +62,9 @@ public enum ApplicationOrderByInput {
   
   VOLUME_SIZE_ASC("volume_size_ASC"),
   
-  VOLUME_SIZE_DESC("volume_size_DESC");
-
+  VOLUME_SIZE_DESC("volume_size_DESC"),
+  
+  APPLICATIONORDERBYINPUT_UNSUPPORTED_ENUM("APPLICATIONORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ApplicationOrderByInput(String value) {
@@ -85,7 +86,7 @@ public enum ApplicationOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ApplicationOrderByInput.APPLICATIONORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ApplicationOrderByInput> {

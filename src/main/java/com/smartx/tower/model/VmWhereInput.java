@@ -55,6 +55,62 @@ public class VmWhereInput {
   @SerializedName(SERIALIZED_NAME_O_R)
   private List<VmWhereInput> OR = null;
 
+  public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID)
+  private String biosUuid;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_CONTAINS = "bios_uuid_contains";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_CONTAINS)
+  private String biosUuidContains;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_ENDS_WITH = "bios_uuid_ends_with";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_ENDS_WITH)
+  private String biosUuidEndsWith;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_GT = "bios_uuid_gt";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_GT)
+  private String biosUuidGt;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_GTE = "bios_uuid_gte";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_GTE)
+  private String biosUuidGte;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_IN = "bios_uuid_in";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_IN)
+  private List<String> biosUuidIn = null;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_LT = "bios_uuid_lt";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_LT)
+  private String biosUuidLt;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_LTE = "bios_uuid_lte";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_LTE)
+  private String biosUuidLte;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_NOT = "bios_uuid_not";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_NOT)
+  private String biosUuidNot;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_NOT_CONTAINS = "bios_uuid_not_contains";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_NOT_CONTAINS)
+  private String biosUuidNotContains;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_NOT_ENDS_WITH = "bios_uuid_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_NOT_ENDS_WITH)
+  private String biosUuidNotEndsWith;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_NOT_IN = "bios_uuid_not_in";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_NOT_IN)
+  private List<String> biosUuidNotIn = null;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_NOT_STARTS_WITH = "bios_uuid_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_NOT_STARTS_WITH)
+  private String biosUuidNotStartsWith;
+
+  public static final String SERIALIZED_NAME_BIOS_UUID_STARTS_WITH = "bios_uuid_starts_with";
+  @SerializedName(SERIALIZED_NAME_BIOS_UUID_STARTS_WITH)
+  private String biosUuidStartsWith;
+
   public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
   @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)
   private VmClockOffset clockOffset;
@@ -1804,6 +1860,344 @@ public class VmWhereInput {
 
   public void setOR(List<VmWhereInput> OR) {
     this.OR = OR;
+  }
+
+
+  public VmWhereInput biosUuid(String biosUuid) {
+    
+    this.biosUuid = biosUuid;
+    return this;
+  }
+
+   /**
+   * Get biosUuid
+   * @return biosUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuid() {
+    return biosUuid;
+  }
+
+
+  public void setBiosUuid(String biosUuid) {
+    this.biosUuid = biosUuid;
+  }
+
+
+  public VmWhereInput biosUuidContains(String biosUuidContains) {
+    
+    this.biosUuidContains = biosUuidContains;
+    return this;
+  }
+
+   /**
+   * Get biosUuidContains
+   * @return biosUuidContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidContains() {
+    return biosUuidContains;
+  }
+
+
+  public void setBiosUuidContains(String biosUuidContains) {
+    this.biosUuidContains = biosUuidContains;
+  }
+
+
+  public VmWhereInput biosUuidEndsWith(String biosUuidEndsWith) {
+    
+    this.biosUuidEndsWith = biosUuidEndsWith;
+    return this;
+  }
+
+   /**
+   * Get biosUuidEndsWith
+   * @return biosUuidEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidEndsWith() {
+    return biosUuidEndsWith;
+  }
+
+
+  public void setBiosUuidEndsWith(String biosUuidEndsWith) {
+    this.biosUuidEndsWith = biosUuidEndsWith;
+  }
+
+
+  public VmWhereInput biosUuidGt(String biosUuidGt) {
+    
+    this.biosUuidGt = biosUuidGt;
+    return this;
+  }
+
+   /**
+   * Get biosUuidGt
+   * @return biosUuidGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidGt() {
+    return biosUuidGt;
+  }
+
+
+  public void setBiosUuidGt(String biosUuidGt) {
+    this.biosUuidGt = biosUuidGt;
+  }
+
+
+  public VmWhereInput biosUuidGte(String biosUuidGte) {
+    
+    this.biosUuidGte = biosUuidGte;
+    return this;
+  }
+
+   /**
+   * Get biosUuidGte
+   * @return biosUuidGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidGte() {
+    return biosUuidGte;
+  }
+
+
+  public void setBiosUuidGte(String biosUuidGte) {
+    this.biosUuidGte = biosUuidGte;
+  }
+
+
+  public VmWhereInput biosUuidIn(List<String> biosUuidIn) {
+    
+    this.biosUuidIn = biosUuidIn;
+    return this;
+  }
+
+  public VmWhereInput addBiosUuidInItem(String biosUuidInItem) {
+    if (this.biosUuidIn == null) {
+      this.biosUuidIn = new ArrayList<String>();
+    }
+    this.biosUuidIn.add(biosUuidInItem);
+    return this;
+  }
+
+   /**
+   * Get biosUuidIn
+   * @return biosUuidIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getBiosUuidIn() {
+    return biosUuidIn;
+  }
+
+
+  public void setBiosUuidIn(List<String> biosUuidIn) {
+    this.biosUuidIn = biosUuidIn;
+  }
+
+
+  public VmWhereInput biosUuidLt(String biosUuidLt) {
+    
+    this.biosUuidLt = biosUuidLt;
+    return this;
+  }
+
+   /**
+   * Get biosUuidLt
+   * @return biosUuidLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidLt() {
+    return biosUuidLt;
+  }
+
+
+  public void setBiosUuidLt(String biosUuidLt) {
+    this.biosUuidLt = biosUuidLt;
+  }
+
+
+  public VmWhereInput biosUuidLte(String biosUuidLte) {
+    
+    this.biosUuidLte = biosUuidLte;
+    return this;
+  }
+
+   /**
+   * Get biosUuidLte
+   * @return biosUuidLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidLte() {
+    return biosUuidLte;
+  }
+
+
+  public void setBiosUuidLte(String biosUuidLte) {
+    this.biosUuidLte = biosUuidLte;
+  }
+
+
+  public VmWhereInput biosUuidNot(String biosUuidNot) {
+    
+    this.biosUuidNot = biosUuidNot;
+    return this;
+  }
+
+   /**
+   * Get biosUuidNot
+   * @return biosUuidNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidNot() {
+    return biosUuidNot;
+  }
+
+
+  public void setBiosUuidNot(String biosUuidNot) {
+    this.biosUuidNot = biosUuidNot;
+  }
+
+
+  public VmWhereInput biosUuidNotContains(String biosUuidNotContains) {
+    
+    this.biosUuidNotContains = biosUuidNotContains;
+    return this;
+  }
+
+   /**
+   * Get biosUuidNotContains
+   * @return biosUuidNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidNotContains() {
+    return biosUuidNotContains;
+  }
+
+
+  public void setBiosUuidNotContains(String biosUuidNotContains) {
+    this.biosUuidNotContains = biosUuidNotContains;
+  }
+
+
+  public VmWhereInput biosUuidNotEndsWith(String biosUuidNotEndsWith) {
+    
+    this.biosUuidNotEndsWith = biosUuidNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get biosUuidNotEndsWith
+   * @return biosUuidNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidNotEndsWith() {
+    return biosUuidNotEndsWith;
+  }
+
+
+  public void setBiosUuidNotEndsWith(String biosUuidNotEndsWith) {
+    this.biosUuidNotEndsWith = biosUuidNotEndsWith;
+  }
+
+
+  public VmWhereInput biosUuidNotIn(List<String> biosUuidNotIn) {
+    
+    this.biosUuidNotIn = biosUuidNotIn;
+    return this;
+  }
+
+  public VmWhereInput addBiosUuidNotInItem(String biosUuidNotInItem) {
+    if (this.biosUuidNotIn == null) {
+      this.biosUuidNotIn = new ArrayList<String>();
+    }
+    this.biosUuidNotIn.add(biosUuidNotInItem);
+    return this;
+  }
+
+   /**
+   * Get biosUuidNotIn
+   * @return biosUuidNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getBiosUuidNotIn() {
+    return biosUuidNotIn;
+  }
+
+
+  public void setBiosUuidNotIn(List<String> biosUuidNotIn) {
+    this.biosUuidNotIn = biosUuidNotIn;
+  }
+
+
+  public VmWhereInput biosUuidNotStartsWith(String biosUuidNotStartsWith) {
+    
+    this.biosUuidNotStartsWith = biosUuidNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get biosUuidNotStartsWith
+   * @return biosUuidNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidNotStartsWith() {
+    return biosUuidNotStartsWith;
+  }
+
+
+  public void setBiosUuidNotStartsWith(String biosUuidNotStartsWith) {
+    this.biosUuidNotStartsWith = biosUuidNotStartsWith;
+  }
+
+
+  public VmWhereInput biosUuidStartsWith(String biosUuidStartsWith) {
+    
+    this.biosUuidStartsWith = biosUuidStartsWith;
+    return this;
+  }
+
+   /**
+   * Get biosUuidStartsWith
+   * @return biosUuidStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getBiosUuidStartsWith() {
+    return biosUuidStartsWith;
+  }
+
+
+  public void setBiosUuidStartsWith(String biosUuidStartsWith) {
+    this.biosUuidStartsWith = biosUuidStartsWith;
   }
 
 
@@ -11997,6 +12391,20 @@ public class VmWhereInput {
     return Objects.equals(this.AND, vmWhereInput.AND) &&
         Objects.equals(this.NOT, vmWhereInput.NOT) &&
         Objects.equals(this.OR, vmWhereInput.OR) &&
+        Objects.equals(this.biosUuid, vmWhereInput.biosUuid) &&
+        Objects.equals(this.biosUuidContains, vmWhereInput.biosUuidContains) &&
+        Objects.equals(this.biosUuidEndsWith, vmWhereInput.biosUuidEndsWith) &&
+        Objects.equals(this.biosUuidGt, vmWhereInput.biosUuidGt) &&
+        Objects.equals(this.biosUuidGte, vmWhereInput.biosUuidGte) &&
+        Objects.equals(this.biosUuidIn, vmWhereInput.biosUuidIn) &&
+        Objects.equals(this.biosUuidLt, vmWhereInput.biosUuidLt) &&
+        Objects.equals(this.biosUuidLte, vmWhereInput.biosUuidLte) &&
+        Objects.equals(this.biosUuidNot, vmWhereInput.biosUuidNot) &&
+        Objects.equals(this.biosUuidNotContains, vmWhereInput.biosUuidNotContains) &&
+        Objects.equals(this.biosUuidNotEndsWith, vmWhereInput.biosUuidNotEndsWith) &&
+        Objects.equals(this.biosUuidNotIn, vmWhereInput.biosUuidNotIn) &&
+        Objects.equals(this.biosUuidNotStartsWith, vmWhereInput.biosUuidNotStartsWith) &&
+        Objects.equals(this.biosUuidStartsWith, vmWhereInput.biosUuidStartsWith) &&
         Objects.equals(this.clockOffset, vmWhereInput.clockOffset) &&
         Objects.equals(this.clockOffsetIn, vmWhereInput.clockOffsetIn) &&
         Objects.equals(this.clockOffsetNot, vmWhereInput.clockOffsetNot) &&
@@ -12419,7 +12827,7 @@ public class VmWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
+    return Objects.hash(AND, NOT, OR, biosUuid, biosUuidContains, biosUuidEndsWith, biosUuidGt, biosUuidGte, biosUuidIn, biosUuidLt, biosUuidLte, biosUuidNot, biosUuidNotContains, biosUuidNotEndsWith, biosUuidNotIn, biosUuidNotStartsWith, biosUuidStartsWith, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -12436,6 +12844,20 @@ public class VmWhereInput {
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
     sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+    sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
+    sb.append("    biosUuidContains: ").append(toIndentedString(biosUuidContains)).append("\n");
+    sb.append("    biosUuidEndsWith: ").append(toIndentedString(biosUuidEndsWith)).append("\n");
+    sb.append("    biosUuidGt: ").append(toIndentedString(biosUuidGt)).append("\n");
+    sb.append("    biosUuidGte: ").append(toIndentedString(biosUuidGte)).append("\n");
+    sb.append("    biosUuidIn: ").append(toIndentedString(biosUuidIn)).append("\n");
+    sb.append("    biosUuidLt: ").append(toIndentedString(biosUuidLt)).append("\n");
+    sb.append("    biosUuidLte: ").append(toIndentedString(biosUuidLte)).append("\n");
+    sb.append("    biosUuidNot: ").append(toIndentedString(biosUuidNot)).append("\n");
+    sb.append("    biosUuidNotContains: ").append(toIndentedString(biosUuidNotContains)).append("\n");
+    sb.append("    biosUuidNotEndsWith: ").append(toIndentedString(biosUuidNotEndsWith)).append("\n");
+    sb.append("    biosUuidNotIn: ").append(toIndentedString(biosUuidNotIn)).append("\n");
+    sb.append("    biosUuidNotStartsWith: ").append(toIndentedString(biosUuidNotStartsWith)).append("\n");
+    sb.append("    biosUuidStartsWith: ").append(toIndentedString(biosUuidStartsWith)).append("\n");
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    clockOffsetIn: ").append(toIndentedString(clockOffsetIn)).append("\n");
     sb.append("    clockOffsetNot: ").append(toIndentedString(clockOffsetNot)).append("\n");
