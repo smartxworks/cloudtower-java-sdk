@@ -20,8 +20,9 @@ public enum VmNicModel {
   
   SRIOV("SRIOV"),
   
-  VIRTIO("VIRTIO");
-
+  VIRTIO("VIRTIO"),
+  
+  VMNICMODEL_UNSUPPORTED_ENUM("VMNICMODEL_UNSUPPORTED_ENUM");
   private String value;
 
   VmNicModel(String value) {
@@ -43,7 +44,7 @@ public enum VmNicModel {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmNicModel.VMNICMODEL_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmNicModel> {

@@ -52,8 +52,9 @@ public enum AlertRuleObject {
   
   WITNESS_NETWORK("WITNESS_NETWORK"),
   
-  ZBS_ZONE("ZBS_ZONE");
-
+  ZBS_ZONE("ZBS_ZONE"),
+  
+  ALERTRULEOBJECT_UNSUPPORTED_ENUM("ALERTRULEOBJECT_UNSUPPORTED_ENUM");
   private String value;
 
   AlertRuleObject(String value) {
@@ -75,7 +76,7 @@ public enum AlertRuleObject {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return AlertRuleObject.ALERTRULEOBJECT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<AlertRuleObject> {

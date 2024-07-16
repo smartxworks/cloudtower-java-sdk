@@ -42,8 +42,9 @@ public enum ConsistencyGroupOrderByInput {
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
-  UNIQUE_SIZE_DESC("unique_size_DESC");
-
+  UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  CONSISTENCYGROUPORDERBYINPUT_UNSUPPORTED_ENUM("CONSISTENCYGROUPORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ConsistencyGroupOrderByInput(String value) {
@@ -65,7 +66,7 @@ public enum ConsistencyGroupOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ConsistencyGroupOrderByInput.CONSISTENCYGROUPORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ConsistencyGroupOrderByInput> {

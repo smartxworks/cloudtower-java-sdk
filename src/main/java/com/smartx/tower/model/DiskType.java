@@ -20,8 +20,9 @@ public enum DiskType {
   
   PMEM("PMem"),
   
-  SSD("SSD");
-
+  SSD("SSD"),
+  
+  DISKTYPE_UNSUPPORTED_ENUM("DISKTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   DiskType(String value) {
@@ -43,7 +44,7 @@ public enum DiskType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DiskType.DISKTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DiskType> {

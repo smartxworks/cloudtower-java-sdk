@@ -54,8 +54,9 @@ public enum ClusterImageOrderByInput {
   
   ZBS_VERSION_ASC("zbs_version_ASC"),
   
-  ZBS_VERSION_DESC("zbs_version_DESC");
-
+  ZBS_VERSION_DESC("zbs_version_DESC"),
+  
+  CLUSTERIMAGEORDERBYINPUT_UNSUPPORTED_ENUM("CLUSTERIMAGEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ClusterImageOrderByInput(String value) {
@@ -77,7 +78,7 @@ public enum ClusterImageOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ClusterImageOrderByInput.CLUSTERIMAGEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ClusterImageOrderByInput> {

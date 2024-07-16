@@ -8,8 +8,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.VirtualPrivateCloudLayer2GatewayWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudNicWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudRouteTableWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -148,14 +146,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
   private String descriptionStartsWith;
 
-  public static final String SERIALIZED_NAME_ENABLE_BROADCAST = "enable_broadcast";
-  @SerializedName(SERIALIZED_NAME_ENABLE_BROADCAST)
-  private Boolean enableBroadcast;
-
-  public static final String SERIALIZED_NAME_ENABLE_BROADCAST_NOT = "enable_broadcast_not";
-  @SerializedName(SERIALIZED_NAME_ENABLE_BROADCAST_NOT)
-  private Boolean enableBroadcastNot;
-
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -203,62 +193,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
   public static final String SERIALIZED_NAME_GATEWAY_LTE = "gateway_lte";
   @SerializedName(SERIALIZED_NAME_GATEWAY_LTE)
   private String gatewayLte;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC = "gateway_mac";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC)
-  private String gatewayMac;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_CONTAINS = "gateway_mac_contains";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_CONTAINS)
-  private String gatewayMacContains;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_ENDS_WITH = "gateway_mac_ends_with";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_ENDS_WITH)
-  private String gatewayMacEndsWith;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_GT = "gateway_mac_gt";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_GT)
-  private String gatewayMacGt;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_GTE = "gateway_mac_gte";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_GTE)
-  private String gatewayMacGte;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_IN = "gateway_mac_in";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_IN)
-  private List<String> gatewayMacIn = null;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_LT = "gateway_mac_lt";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_LT)
-  private String gatewayMacLt;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_LTE = "gateway_mac_lte";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_LTE)
-  private String gatewayMacLte;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_NOT = "gateway_mac_not";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_NOT)
-  private String gatewayMacNot;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_NOT_CONTAINS = "gateway_mac_not_contains";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_NOT_CONTAINS)
-  private String gatewayMacNotContains;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_NOT_ENDS_WITH = "gateway_mac_not_ends_with";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_NOT_ENDS_WITH)
-  private String gatewayMacNotEndsWith;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_NOT_IN = "gateway_mac_not_in";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_NOT_IN)
-  private List<String> gatewayMacNotIn = null;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_NOT_STARTS_WITH = "gateway_mac_not_starts_with";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_NOT_STARTS_WITH)
-  private String gatewayMacNotStartsWith;
-
-  public static final String SERIALIZED_NAME_GATEWAY_MAC_STARTS_WITH = "gateway_mac_starts_with";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_MAC_STARTS_WITH)
-  private String gatewayMacStartsWith;
 
   public static final String SERIALIZED_NAME_GATEWAY_NOT = "gateway_not";
   @SerializedName(SERIALIZED_NAME_GATEWAY_NOT)
@@ -339,10 +273,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
-
-  public static final String SERIALIZED_NAME_LAYER2_GATEWAY = "layer2_gateway";
-  @SerializedName(SERIALIZED_NAME_LAYER2_GATEWAY)
-  private VirtualPrivateCloudLayer2GatewayWhereInput layer2Gateway;
 
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -527,18 +457,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
   public static final String SERIALIZED_NAME_VPC = "vpc";
   @SerializedName(SERIALIZED_NAME_VPC)
   private VirtualPrivateCloudWhereInput vpc;
-
-  public static final String SERIALIZED_NAME_VPC_NICS_EVERY = "vpc_nics_every";
-  @SerializedName(SERIALIZED_NAME_VPC_NICS_EVERY)
-  private VirtualPrivateCloudNicWhereInput vpcNicsEvery;
-
-  public static final String SERIALIZED_NAME_VPC_NICS_NONE = "vpc_nics_none";
-  @SerializedName(SERIALIZED_NAME_VPC_NICS_NONE)
-  private VirtualPrivateCloudNicWhereInput vpcNicsNone;
-
-  public static final String SERIALIZED_NAME_VPC_NICS_SOME = "vpc_nics_some";
-  @SerializedName(SERIALIZED_NAME_VPC_NICS_SOME)
-  private VirtualPrivateCloudNicWhereInput vpcNicsSome;
 
   public VirtualPrivateCloudSubnetWhereInput() { 
   }
@@ -1312,52 +1230,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
   }
 
 
-  public VirtualPrivateCloudSubnetWhereInput enableBroadcast(Boolean enableBroadcast) {
-    
-    this.enableBroadcast = enableBroadcast;
-    return this;
-  }
-
-   /**
-   * Get enableBroadcast
-   * @return enableBroadcast
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Boolean getEnableBroadcast() {
-    return enableBroadcast;
-  }
-
-
-  public void setEnableBroadcast(Boolean enableBroadcast) {
-    this.enableBroadcast = enableBroadcast;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput enableBroadcastNot(Boolean enableBroadcastNot) {
-    
-    this.enableBroadcastNot = enableBroadcastNot;
-    return this;
-  }
-
-   /**
-   * Get enableBroadcastNot
-   * @return enableBroadcastNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Boolean getEnableBroadcastNot() {
-    return enableBroadcastNot;
-  }
-
-
-  public void setEnableBroadcastNot(Boolean enableBroadcastNot) {
-    this.enableBroadcastNot = enableBroadcastNot;
-  }
-
-
   public VirtualPrivateCloudSubnetWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     
     this.entityAsyncStatus = entityAsyncStatus;
@@ -1655,344 +1527,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
 
   public void setGatewayLte(String gatewayLte) {
     this.gatewayLte = gatewayLte;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMac(String gatewayMac) {
-    
-    this.gatewayMac = gatewayMac;
-    return this;
-  }
-
-   /**
-   * Get gatewayMac
-   * @return gatewayMac
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMac() {
-    return gatewayMac;
-  }
-
-
-  public void setGatewayMac(String gatewayMac) {
-    this.gatewayMac = gatewayMac;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacContains(String gatewayMacContains) {
-    
-    this.gatewayMacContains = gatewayMacContains;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacContains
-   * @return gatewayMacContains
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacContains() {
-    return gatewayMacContains;
-  }
-
-
-  public void setGatewayMacContains(String gatewayMacContains) {
-    this.gatewayMacContains = gatewayMacContains;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacEndsWith(String gatewayMacEndsWith) {
-    
-    this.gatewayMacEndsWith = gatewayMacEndsWith;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacEndsWith
-   * @return gatewayMacEndsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacEndsWith() {
-    return gatewayMacEndsWith;
-  }
-
-
-  public void setGatewayMacEndsWith(String gatewayMacEndsWith) {
-    this.gatewayMacEndsWith = gatewayMacEndsWith;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacGt(String gatewayMacGt) {
-    
-    this.gatewayMacGt = gatewayMacGt;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacGt
-   * @return gatewayMacGt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacGt() {
-    return gatewayMacGt;
-  }
-
-
-  public void setGatewayMacGt(String gatewayMacGt) {
-    this.gatewayMacGt = gatewayMacGt;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacGte(String gatewayMacGte) {
-    
-    this.gatewayMacGte = gatewayMacGte;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacGte
-   * @return gatewayMacGte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacGte() {
-    return gatewayMacGte;
-  }
-
-
-  public void setGatewayMacGte(String gatewayMacGte) {
-    this.gatewayMacGte = gatewayMacGte;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacIn(List<String> gatewayMacIn) {
-    
-    this.gatewayMacIn = gatewayMacIn;
-    return this;
-  }
-
-  public VirtualPrivateCloudSubnetWhereInput addGatewayMacInItem(String gatewayMacInItem) {
-    if (this.gatewayMacIn == null) {
-      this.gatewayMacIn = new ArrayList<String>();
-    }
-    this.gatewayMacIn.add(gatewayMacInItem);
-    return this;
-  }
-
-   /**
-   * Get gatewayMacIn
-   * @return gatewayMacIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<String> getGatewayMacIn() {
-    return gatewayMacIn;
-  }
-
-
-  public void setGatewayMacIn(List<String> gatewayMacIn) {
-    this.gatewayMacIn = gatewayMacIn;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacLt(String gatewayMacLt) {
-    
-    this.gatewayMacLt = gatewayMacLt;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacLt
-   * @return gatewayMacLt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacLt() {
-    return gatewayMacLt;
-  }
-
-
-  public void setGatewayMacLt(String gatewayMacLt) {
-    this.gatewayMacLt = gatewayMacLt;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacLte(String gatewayMacLte) {
-    
-    this.gatewayMacLte = gatewayMacLte;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacLte
-   * @return gatewayMacLte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacLte() {
-    return gatewayMacLte;
-  }
-
-
-  public void setGatewayMacLte(String gatewayMacLte) {
-    this.gatewayMacLte = gatewayMacLte;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacNot(String gatewayMacNot) {
-    
-    this.gatewayMacNot = gatewayMacNot;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacNot
-   * @return gatewayMacNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacNot() {
-    return gatewayMacNot;
-  }
-
-
-  public void setGatewayMacNot(String gatewayMacNot) {
-    this.gatewayMacNot = gatewayMacNot;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacNotContains(String gatewayMacNotContains) {
-    
-    this.gatewayMacNotContains = gatewayMacNotContains;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacNotContains
-   * @return gatewayMacNotContains
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacNotContains() {
-    return gatewayMacNotContains;
-  }
-
-
-  public void setGatewayMacNotContains(String gatewayMacNotContains) {
-    this.gatewayMacNotContains = gatewayMacNotContains;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacNotEndsWith(String gatewayMacNotEndsWith) {
-    
-    this.gatewayMacNotEndsWith = gatewayMacNotEndsWith;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacNotEndsWith
-   * @return gatewayMacNotEndsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacNotEndsWith() {
-    return gatewayMacNotEndsWith;
-  }
-
-
-  public void setGatewayMacNotEndsWith(String gatewayMacNotEndsWith) {
-    this.gatewayMacNotEndsWith = gatewayMacNotEndsWith;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacNotIn(List<String> gatewayMacNotIn) {
-    
-    this.gatewayMacNotIn = gatewayMacNotIn;
-    return this;
-  }
-
-  public VirtualPrivateCloudSubnetWhereInput addGatewayMacNotInItem(String gatewayMacNotInItem) {
-    if (this.gatewayMacNotIn == null) {
-      this.gatewayMacNotIn = new ArrayList<String>();
-    }
-    this.gatewayMacNotIn.add(gatewayMacNotInItem);
-    return this;
-  }
-
-   /**
-   * Get gatewayMacNotIn
-   * @return gatewayMacNotIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<String> getGatewayMacNotIn() {
-    return gatewayMacNotIn;
-  }
-
-
-  public void setGatewayMacNotIn(List<String> gatewayMacNotIn) {
-    this.gatewayMacNotIn = gatewayMacNotIn;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacNotStartsWith(String gatewayMacNotStartsWith) {
-    
-    this.gatewayMacNotStartsWith = gatewayMacNotStartsWith;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacNotStartsWith
-   * @return gatewayMacNotStartsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacNotStartsWith() {
-    return gatewayMacNotStartsWith;
-  }
-
-
-  public void setGatewayMacNotStartsWith(String gatewayMacNotStartsWith) {
-    this.gatewayMacNotStartsWith = gatewayMacNotStartsWith;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput gatewayMacStartsWith(String gatewayMacStartsWith) {
-    
-    this.gatewayMacStartsWith = gatewayMacStartsWith;
-    return this;
-  }
-
-   /**
-   * Get gatewayMacStartsWith
-   * @return gatewayMacStartsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getGatewayMacStartsWith() {
-    return gatewayMacStartsWith;
-  }
-
-
-  public void setGatewayMacStartsWith(String gatewayMacStartsWith) {
-    this.gatewayMacStartsWith = gatewayMacStartsWith;
   }
 
 
@@ -2477,29 +2011,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
 
   public void setIdStartsWith(String idStartsWith) {
     this.idStartsWith = idStartsWith;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput layer2Gateway(VirtualPrivateCloudLayer2GatewayWhereInput layer2Gateway) {
-    
-    this.layer2Gateway = layer2Gateway;
-    return this;
-  }
-
-   /**
-   * Get layer2Gateway
-   * @return layer2Gateway
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudLayer2GatewayWhereInput getLayer2Gateway() {
-    return layer2Gateway;
-  }
-
-
-  public void setLayer2Gateway(VirtualPrivateCloudLayer2GatewayWhereInput layer2Gateway) {
-    this.layer2Gateway = layer2Gateway;
   }
 
 
@@ -3625,75 +3136,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
   }
 
 
-  public VirtualPrivateCloudSubnetWhereInput vpcNicsEvery(VirtualPrivateCloudNicWhereInput vpcNicsEvery) {
-    
-    this.vpcNicsEvery = vpcNicsEvery;
-    return this;
-  }
-
-   /**
-   * Get vpcNicsEvery
-   * @return vpcNicsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudNicWhereInput getVpcNicsEvery() {
-    return vpcNicsEvery;
-  }
-
-
-  public void setVpcNicsEvery(VirtualPrivateCloudNicWhereInput vpcNicsEvery) {
-    this.vpcNicsEvery = vpcNicsEvery;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput vpcNicsNone(VirtualPrivateCloudNicWhereInput vpcNicsNone) {
-    
-    this.vpcNicsNone = vpcNicsNone;
-    return this;
-  }
-
-   /**
-   * Get vpcNicsNone
-   * @return vpcNicsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudNicWhereInput getVpcNicsNone() {
-    return vpcNicsNone;
-  }
-
-
-  public void setVpcNicsNone(VirtualPrivateCloudNicWhereInput vpcNicsNone) {
-    this.vpcNicsNone = vpcNicsNone;
-  }
-
-
-  public VirtualPrivateCloudSubnetWhereInput vpcNicsSome(VirtualPrivateCloudNicWhereInput vpcNicsSome) {
-    
-    this.vpcNicsSome = vpcNicsSome;
-    return this;
-  }
-
-   /**
-   * Get vpcNicsSome
-   * @return vpcNicsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudNicWhereInput getVpcNicsSome() {
-    return vpcNicsSome;
-  }
-
-
-  public void setVpcNicsSome(VirtualPrivateCloudNicWhereInput vpcNicsSome) {
-    this.vpcNicsSome = vpcNicsSome;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -3734,8 +3176,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
         Objects.equals(this.descriptionNotIn, virtualPrivateCloudSubnetWhereInput.descriptionNotIn) &&
         Objects.equals(this.descriptionNotStartsWith, virtualPrivateCloudSubnetWhereInput.descriptionNotStartsWith) &&
         Objects.equals(this.descriptionStartsWith, virtualPrivateCloudSubnetWhereInput.descriptionStartsWith) &&
-        Objects.equals(this.enableBroadcast, virtualPrivateCloudSubnetWhereInput.enableBroadcast) &&
-        Objects.equals(this.enableBroadcastNot, virtualPrivateCloudSubnetWhereInput.enableBroadcastNot) &&
         Objects.equals(this.entityAsyncStatus, virtualPrivateCloudSubnetWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, virtualPrivateCloudSubnetWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, virtualPrivateCloudSubnetWhereInput.entityAsyncStatusNot) &&
@@ -3748,20 +3188,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
         Objects.equals(this.gatewayIn, virtualPrivateCloudSubnetWhereInput.gatewayIn) &&
         Objects.equals(this.gatewayLt, virtualPrivateCloudSubnetWhereInput.gatewayLt) &&
         Objects.equals(this.gatewayLte, virtualPrivateCloudSubnetWhereInput.gatewayLte) &&
-        Objects.equals(this.gatewayMac, virtualPrivateCloudSubnetWhereInput.gatewayMac) &&
-        Objects.equals(this.gatewayMacContains, virtualPrivateCloudSubnetWhereInput.gatewayMacContains) &&
-        Objects.equals(this.gatewayMacEndsWith, virtualPrivateCloudSubnetWhereInput.gatewayMacEndsWith) &&
-        Objects.equals(this.gatewayMacGt, virtualPrivateCloudSubnetWhereInput.gatewayMacGt) &&
-        Objects.equals(this.gatewayMacGte, virtualPrivateCloudSubnetWhereInput.gatewayMacGte) &&
-        Objects.equals(this.gatewayMacIn, virtualPrivateCloudSubnetWhereInput.gatewayMacIn) &&
-        Objects.equals(this.gatewayMacLt, virtualPrivateCloudSubnetWhereInput.gatewayMacLt) &&
-        Objects.equals(this.gatewayMacLte, virtualPrivateCloudSubnetWhereInput.gatewayMacLte) &&
-        Objects.equals(this.gatewayMacNot, virtualPrivateCloudSubnetWhereInput.gatewayMacNot) &&
-        Objects.equals(this.gatewayMacNotContains, virtualPrivateCloudSubnetWhereInput.gatewayMacNotContains) &&
-        Objects.equals(this.gatewayMacNotEndsWith, virtualPrivateCloudSubnetWhereInput.gatewayMacNotEndsWith) &&
-        Objects.equals(this.gatewayMacNotIn, virtualPrivateCloudSubnetWhereInput.gatewayMacNotIn) &&
-        Objects.equals(this.gatewayMacNotStartsWith, virtualPrivateCloudSubnetWhereInput.gatewayMacNotStartsWith) &&
-        Objects.equals(this.gatewayMacStartsWith, virtualPrivateCloudSubnetWhereInput.gatewayMacStartsWith) &&
         Objects.equals(this.gatewayNot, virtualPrivateCloudSubnetWhereInput.gatewayNot) &&
         Objects.equals(this.gatewayNotContains, virtualPrivateCloudSubnetWhereInput.gatewayNotContains) &&
         Objects.equals(this.gatewayNotEndsWith, virtualPrivateCloudSubnetWhereInput.gatewayNotEndsWith) &&
@@ -3782,7 +3208,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
         Objects.equals(this.idNotIn, virtualPrivateCloudSubnetWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, virtualPrivateCloudSubnetWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, virtualPrivateCloudSubnetWhereInput.idStartsWith) &&
-        Objects.equals(this.layer2Gateway, virtualPrivateCloudSubnetWhereInput.layer2Gateway) &&
         Objects.equals(this.localId, virtualPrivateCloudSubnetWhereInput.localId) &&
         Objects.equals(this.localIdContains, virtualPrivateCloudSubnetWhereInput.localIdContains) &&
         Objects.equals(this.localIdEndsWith, virtualPrivateCloudSubnetWhereInput.localIdEndsWith) &&
@@ -3828,10 +3253,7 @@ public class VirtualPrivateCloudSubnetWhereInput {
         Objects.equals(this.unusedIpCountLte, virtualPrivateCloudSubnetWhereInput.unusedIpCountLte) &&
         Objects.equals(this.unusedIpCountNot, virtualPrivateCloudSubnetWhereInput.unusedIpCountNot) &&
         Objects.equals(this.unusedIpCountNotIn, virtualPrivateCloudSubnetWhereInput.unusedIpCountNotIn) &&
-        Objects.equals(this.vpc, virtualPrivateCloudSubnetWhereInput.vpc) &&
-        Objects.equals(this.vpcNicsEvery, virtualPrivateCloudSubnetWhereInput.vpcNicsEvery) &&
-        Objects.equals(this.vpcNicsNone, virtualPrivateCloudSubnetWhereInput.vpcNicsNone) &&
-        Objects.equals(this.vpcNicsSome, virtualPrivateCloudSubnetWhereInput.vpcNicsSome);
+        Objects.equals(this.vpc, virtualPrivateCloudSubnetWhereInput.vpc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3840,7 +3262,7 @@ public class VirtualPrivateCloudSubnetWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cidr, cidrContains, cidrEndsWith, cidrGt, cidrGte, cidrIn, cidrLt, cidrLte, cidrNot, cidrNotContains, cidrNotEndsWith, cidrNotIn, cidrNotStartsWith, cidrStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enableBroadcast, enableBroadcastNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayMac, gatewayMacContains, gatewayMacEndsWith, gatewayMacGt, gatewayMacGte, gatewayMacIn, gatewayMacLt, gatewayMacLte, gatewayMacNot, gatewayMacNotContains, gatewayMacNotEndsWith, gatewayMacNotIn, gatewayMacNotStartsWith, gatewayMacStartsWith, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, layer2Gateway, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, routeTable, totalIpCount, totalIpCountGt, totalIpCountGte, totalIpCountIn, totalIpCountLt, totalIpCountLte, totalIpCountNot, totalIpCountNotIn, unusedIpCount, unusedIpCountGt, unusedIpCountGte, unusedIpCountIn, unusedIpCountLt, unusedIpCountLte, unusedIpCountNot, unusedIpCountNotIn, vpc, vpcNicsEvery, vpcNicsNone, vpcNicsSome);
+    return Objects.hash(AND, NOT, OR, cidr, cidrContains, cidrEndsWith, cidrGt, cidrGte, cidrIn, cidrLt, cidrLte, cidrNot, cidrNotContains, cidrNotEndsWith, cidrNotIn, cidrNotStartsWith, cidrStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, routeTable, totalIpCount, totalIpCountGt, totalIpCountGte, totalIpCountIn, totalIpCountLt, totalIpCountLte, totalIpCountNot, totalIpCountNotIn, unusedIpCount, unusedIpCountGt, unusedIpCountGte, unusedIpCountIn, unusedIpCountLt, unusedIpCountLte, unusedIpCountNot, unusedIpCountNotIn, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3885,8 +3307,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
     sb.append("    descriptionNotIn: ").append(toIndentedString(descriptionNotIn)).append("\n");
     sb.append("    descriptionNotStartsWith: ").append(toIndentedString(descriptionNotStartsWith)).append("\n");
     sb.append("    descriptionStartsWith: ").append(toIndentedString(descriptionStartsWith)).append("\n");
-    sb.append("    enableBroadcast: ").append(toIndentedString(enableBroadcast)).append("\n");
-    sb.append("    enableBroadcastNot: ").append(toIndentedString(enableBroadcastNot)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
@@ -3899,20 +3319,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
     sb.append("    gatewayIn: ").append(toIndentedString(gatewayIn)).append("\n");
     sb.append("    gatewayLt: ").append(toIndentedString(gatewayLt)).append("\n");
     sb.append("    gatewayLte: ").append(toIndentedString(gatewayLte)).append("\n");
-    sb.append("    gatewayMac: ").append(toIndentedString(gatewayMac)).append("\n");
-    sb.append("    gatewayMacContains: ").append(toIndentedString(gatewayMacContains)).append("\n");
-    sb.append("    gatewayMacEndsWith: ").append(toIndentedString(gatewayMacEndsWith)).append("\n");
-    sb.append("    gatewayMacGt: ").append(toIndentedString(gatewayMacGt)).append("\n");
-    sb.append("    gatewayMacGte: ").append(toIndentedString(gatewayMacGte)).append("\n");
-    sb.append("    gatewayMacIn: ").append(toIndentedString(gatewayMacIn)).append("\n");
-    sb.append("    gatewayMacLt: ").append(toIndentedString(gatewayMacLt)).append("\n");
-    sb.append("    gatewayMacLte: ").append(toIndentedString(gatewayMacLte)).append("\n");
-    sb.append("    gatewayMacNot: ").append(toIndentedString(gatewayMacNot)).append("\n");
-    sb.append("    gatewayMacNotContains: ").append(toIndentedString(gatewayMacNotContains)).append("\n");
-    sb.append("    gatewayMacNotEndsWith: ").append(toIndentedString(gatewayMacNotEndsWith)).append("\n");
-    sb.append("    gatewayMacNotIn: ").append(toIndentedString(gatewayMacNotIn)).append("\n");
-    sb.append("    gatewayMacNotStartsWith: ").append(toIndentedString(gatewayMacNotStartsWith)).append("\n");
-    sb.append("    gatewayMacStartsWith: ").append(toIndentedString(gatewayMacStartsWith)).append("\n");
     sb.append("    gatewayNot: ").append(toIndentedString(gatewayNot)).append("\n");
     sb.append("    gatewayNotContains: ").append(toIndentedString(gatewayNotContains)).append("\n");
     sb.append("    gatewayNotEndsWith: ").append(toIndentedString(gatewayNotEndsWith)).append("\n");
@@ -3933,7 +3339,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    layer2Gateway: ").append(toIndentedString(layer2Gateway)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
     sb.append("    localIdContains: ").append(toIndentedString(localIdContains)).append("\n");
     sb.append("    localIdEndsWith: ").append(toIndentedString(localIdEndsWith)).append("\n");
@@ -3980,9 +3385,6 @@ public class VirtualPrivateCloudSubnetWhereInput {
     sb.append("    unusedIpCountNot: ").append(toIndentedString(unusedIpCountNot)).append("\n");
     sb.append("    unusedIpCountNotIn: ").append(toIndentedString(unusedIpCountNotIn)).append("\n");
     sb.append("    vpc: ").append(toIndentedString(vpc)).append("\n");
-    sb.append("    vpcNicsEvery: ").append(toIndentedString(vpcNicsEvery)).append("\n");
-    sb.append("    vpcNicsNone: ").append(toIndentedString(vpcNicsNone)).append("\n");
-    sb.append("    vpcNicsSome: ").append(toIndentedString(vpcNicsSome)).append("\n");
     sb.append("}");
     return sb.toString();
   }

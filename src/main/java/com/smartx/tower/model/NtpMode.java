@@ -18,8 +18,9 @@ public enum NtpMode {
   
   EXTERNAL("EXTERNAL"),
   
-  INTERNAL("INTERNAL");
-
+  INTERNAL("INTERNAL"),
+  
+  NTPMODE_UNSUPPORTED_ENUM("NTPMODE_UNSUPPORTED_ENUM");
   private String value;
 
   NtpMode(String value) {
@@ -41,7 +42,7 @@ public enum NtpMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NtpMode.NTPMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NtpMode> {

@@ -20,8 +20,9 @@ public enum IommuStatus {
   
   ENABLE("ENABLE"),
   
-  NEED_REBOOT("NEED_REBOOT");
-
+  NEED_REBOOT("NEED_REBOOT"),
+  
+  IOMMUSTATUS_UNSUPPORTED_ENUM("IOMMUSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   IommuStatus(String value) {
@@ -43,7 +44,7 @@ public enum IommuStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IommuStatus.IOMMUSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IommuStatus> {

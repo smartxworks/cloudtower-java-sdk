@@ -246,8 +246,9 @@ public enum HostOrderByInput {
   
   WITH_FASTER_SSD_AS_CACHE_ASC("with_faster_ssd_as_cache_ASC"),
   
-  WITH_FASTER_SSD_AS_CACHE_DESC("with_faster_ssd_as_cache_DESC");
-
+  WITH_FASTER_SSD_AS_CACHE_DESC("with_faster_ssd_as_cache_DESC"),
+  
+  HOSTORDERBYINPUT_UNSUPPORTED_ENUM("HOSTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   HostOrderByInput(String value) {
@@ -269,7 +270,7 @@ public enum HostOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return HostOrderByInput.HOSTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<HostOrderByInput> {

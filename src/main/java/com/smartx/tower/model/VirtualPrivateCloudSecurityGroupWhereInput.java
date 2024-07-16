@@ -8,8 +8,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.VirtualPrivateCloudIsolationPolicyWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudSecurityPolicyWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudWhereInput;
 import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -172,18 +170,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
-  public static final String SERIALIZED_NAME_ISOLATION_POLICIES_EVERY = "isolation_policies_every";
-  @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY)
-  private VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesEvery;
-
-  public static final String SERIALIZED_NAME_ISOLATION_POLICIES_NONE = "isolation_policies_none";
-  @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES_NONE)
-  private VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesNone;
-
-  public static final String SERIALIZED_NAME_ISOLATION_POLICIES_SOME = "isolation_policies_some";
-  @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES_SOME)
-  private VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesSome;
-
   public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
   @SerializedName(SERIALIZED_NAME_LOCAL_ID)
   private String localId;
@@ -295,18 +281,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
   public static final String SERIALIZED_NAME_NAME_STARTS_WITH = "name_starts_with";
   @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
   private String nameStartsWith;
-
-  public static final String SERIALIZED_NAME_SECURITY_POLICIES_EVERY = "security_policies_every";
-  @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES_EVERY)
-  private VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesEvery;
-
-  public static final String SERIALIZED_NAME_SECURITY_POLICIES_NONE = "security_policies_none";
-  @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES_NONE)
-  private VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesNone;
-
-  public static final String SERIALIZED_NAME_SECURITY_POLICIES_SOME = "security_policies_some";
-  @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES_SOME)
-  private VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesSome;
 
   public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
   @SerializedName(SERIALIZED_NAME_VMS_EVERY)
@@ -1250,75 +1224,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
   }
 
 
-  public VirtualPrivateCloudSecurityGroupWhereInput isolationPoliciesEvery(VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesEvery) {
-    
-    this.isolationPoliciesEvery = isolationPoliciesEvery;
-    return this;
-  }
-
-   /**
-   * Get isolationPoliciesEvery
-   * @return isolationPoliciesEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudIsolationPolicyWhereInput getIsolationPoliciesEvery() {
-    return isolationPoliciesEvery;
-  }
-
-
-  public void setIsolationPoliciesEvery(VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesEvery) {
-    this.isolationPoliciesEvery = isolationPoliciesEvery;
-  }
-
-
-  public VirtualPrivateCloudSecurityGroupWhereInput isolationPoliciesNone(VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesNone) {
-    
-    this.isolationPoliciesNone = isolationPoliciesNone;
-    return this;
-  }
-
-   /**
-   * Get isolationPoliciesNone
-   * @return isolationPoliciesNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudIsolationPolicyWhereInput getIsolationPoliciesNone() {
-    return isolationPoliciesNone;
-  }
-
-
-  public void setIsolationPoliciesNone(VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesNone) {
-    this.isolationPoliciesNone = isolationPoliciesNone;
-  }
-
-
-  public VirtualPrivateCloudSecurityGroupWhereInput isolationPoliciesSome(VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesSome) {
-    
-    this.isolationPoliciesSome = isolationPoliciesSome;
-    return this;
-  }
-
-   /**
-   * Get isolationPoliciesSome
-   * @return isolationPoliciesSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudIsolationPolicyWhereInput getIsolationPoliciesSome() {
-    return isolationPoliciesSome;
-  }
-
-
-  public void setIsolationPoliciesSome(VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesSome) {
-    this.isolationPoliciesSome = isolationPoliciesSome;
-  }
-
-
   public VirtualPrivateCloudSecurityGroupWhereInput localId(String localId) {
     
     this.localId = localId;
@@ -1995,75 +1900,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
   }
 
 
-  public VirtualPrivateCloudSecurityGroupWhereInput securityPoliciesEvery(VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesEvery) {
-    
-    this.securityPoliciesEvery = securityPoliciesEvery;
-    return this;
-  }
-
-   /**
-   * Get securityPoliciesEvery
-   * @return securityPoliciesEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput getSecurityPoliciesEvery() {
-    return securityPoliciesEvery;
-  }
-
-
-  public void setSecurityPoliciesEvery(VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesEvery) {
-    this.securityPoliciesEvery = securityPoliciesEvery;
-  }
-
-
-  public VirtualPrivateCloudSecurityGroupWhereInput securityPoliciesNone(VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesNone) {
-    
-    this.securityPoliciesNone = securityPoliciesNone;
-    return this;
-  }
-
-   /**
-   * Get securityPoliciesNone
-   * @return securityPoliciesNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput getSecurityPoliciesNone() {
-    return securityPoliciesNone;
-  }
-
-
-  public void setSecurityPoliciesNone(VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesNone) {
-    this.securityPoliciesNone = securityPoliciesNone;
-  }
-
-
-  public VirtualPrivateCloudSecurityGroupWhereInput securityPoliciesSome(VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesSome) {
-    
-    this.securityPoliciesSome = securityPoliciesSome;
-    return this;
-  }
-
-   /**
-   * Get securityPoliciesSome
-   * @return securityPoliciesSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudSecurityPolicyWhereInput getSecurityPoliciesSome() {
-    return securityPoliciesSome;
-  }
-
-
-  public void setSecurityPoliciesSome(VirtualPrivateCloudSecurityPolicyWhereInput securityPoliciesSome) {
-    this.securityPoliciesSome = securityPoliciesSome;
-  }
-
-
   public VirtualPrivateCloudSecurityGroupWhereInput vmsEvery(VmWhereInput vmsEvery) {
     
     this.vmsEvery = vmsEvery;
@@ -2202,9 +2038,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
         Objects.equals(this.idNotIn, virtualPrivateCloudSecurityGroupWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, virtualPrivateCloudSecurityGroupWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, virtualPrivateCloudSecurityGroupWhereInput.idStartsWith) &&
-        Objects.equals(this.isolationPoliciesEvery, virtualPrivateCloudSecurityGroupWhereInput.isolationPoliciesEvery) &&
-        Objects.equals(this.isolationPoliciesNone, virtualPrivateCloudSecurityGroupWhereInput.isolationPoliciesNone) &&
-        Objects.equals(this.isolationPoliciesSome, virtualPrivateCloudSecurityGroupWhereInput.isolationPoliciesSome) &&
         Objects.equals(this.localId, virtualPrivateCloudSecurityGroupWhereInput.localId) &&
         Objects.equals(this.localIdContains, virtualPrivateCloudSecurityGroupWhereInput.localIdContains) &&
         Objects.equals(this.localIdEndsWith, virtualPrivateCloudSecurityGroupWhereInput.localIdEndsWith) &&
@@ -2233,9 +2066,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
         Objects.equals(this.nameNotIn, virtualPrivateCloudSecurityGroupWhereInput.nameNotIn) &&
         Objects.equals(this.nameNotStartsWith, virtualPrivateCloudSecurityGroupWhereInput.nameNotStartsWith) &&
         Objects.equals(this.nameStartsWith, virtualPrivateCloudSecurityGroupWhereInput.nameStartsWith) &&
-        Objects.equals(this.securityPoliciesEvery, virtualPrivateCloudSecurityGroupWhereInput.securityPoliciesEvery) &&
-        Objects.equals(this.securityPoliciesNone, virtualPrivateCloudSecurityGroupWhereInput.securityPoliciesNone) &&
-        Objects.equals(this.securityPoliciesSome, virtualPrivateCloudSecurityGroupWhereInput.securityPoliciesSome) &&
         Objects.equals(this.vmsEvery, virtualPrivateCloudSecurityGroupWhereInput.vmsEvery) &&
         Objects.equals(this.vmsNone, virtualPrivateCloudSecurityGroupWhereInput.vmsNone) &&
         Objects.equals(this.vmsSome, virtualPrivateCloudSecurityGroupWhereInput.vmsSome) &&
@@ -2248,7 +2078,7 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, defaultForVpc, defaultForVpcNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isolationPoliciesEvery, isolationPoliciesNone, isolationPoliciesSome, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, securityPoliciesEvery, securityPoliciesNone, securityPoliciesSome, vmsEvery, vmsNone, vmsSome, vpc);
+    return Objects.hash(AND, NOT, OR, defaultForVpc, defaultForVpcNot, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, vmsEvery, vmsNone, vmsSome, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2299,9 +2129,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    isolationPoliciesEvery: ").append(toIndentedString(isolationPoliciesEvery)).append("\n");
-    sb.append("    isolationPoliciesNone: ").append(toIndentedString(isolationPoliciesNone)).append("\n");
-    sb.append("    isolationPoliciesSome: ").append(toIndentedString(isolationPoliciesSome)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
     sb.append("    localIdContains: ").append(toIndentedString(localIdContains)).append("\n");
     sb.append("    localIdEndsWith: ").append(toIndentedString(localIdEndsWith)).append("\n");
@@ -2330,9 +2157,6 @@ public class VirtualPrivateCloudSecurityGroupWhereInput {
     sb.append("    nameNotIn: ").append(toIndentedString(nameNotIn)).append("\n");
     sb.append("    nameNotStartsWith: ").append(toIndentedString(nameNotStartsWith)).append("\n");
     sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
-    sb.append("    securityPoliciesEvery: ").append(toIndentedString(securityPoliciesEvery)).append("\n");
-    sb.append("    securityPoliciesNone: ").append(toIndentedString(securityPoliciesNone)).append("\n");
-    sb.append("    securityPoliciesSome: ").append(toIndentedString(securityPoliciesSome)).append("\n");
     sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
     sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
     sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");

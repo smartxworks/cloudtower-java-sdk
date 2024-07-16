@@ -38,8 +38,9 @@ public enum NvmfNamespaceSnapshotOrderByInput {
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
-  UNIQUE_SIZE_DESC("unique_size_DESC");
-
+  UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  NVMFNAMESPACESNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM("NVMFNAMESPACESNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   NvmfNamespaceSnapshotOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum NvmfNamespaceSnapshotOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NvmfNamespaceSnapshotOrderByInput.NVMFNAMESPACESNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NvmfNamespaceSnapshotOrderByInput> {

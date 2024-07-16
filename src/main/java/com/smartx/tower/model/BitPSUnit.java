@@ -24,8 +24,9 @@ public enum BitPSUnit {
   
   GBPS("Gbps"),
   
-  TBPS("Tbps");
-
+  TBPS("Tbps"),
+  
+  BITPSUNIT_UNSUPPORTED_ENUM("BITPSUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   BitPSUnit(String value) {
@@ -47,7 +48,7 @@ public enum BitPSUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return BitPSUnit.BITPSUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<BitPSUnit> {

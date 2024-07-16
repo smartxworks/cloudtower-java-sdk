@@ -24,8 +24,9 @@ public enum TaskStatus {
   
   PENDING("PENDING"),
   
-  SUCCESSED("SUCCESSED");
-
+  SUCCESSED("SUCCESSED"),
+  
+  TASKSTATUS_UNSUPPORTED_ENUM("TASKSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   TaskStatus(String value) {
@@ -47,7 +48,7 @@ public enum TaskStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return TaskStatus.TASKSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<TaskStatus> {

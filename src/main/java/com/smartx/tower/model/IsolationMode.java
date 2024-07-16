@@ -18,8 +18,9 @@ public enum IsolationMode {
   
   ALL("ALL"),
   
-  PARTIAL("PARTIAL");
-
+  PARTIAL("PARTIAL"),
+  
+  ISOLATIONMODE_UNSUPPORTED_ENUM("ISOLATIONMODE_UNSUPPORTED_ENUM");
   private String value;
 
   IsolationMode(String value) {
@@ -41,7 +42,7 @@ public enum IsolationMode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IsolationMode.ISOLATIONMODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IsolationMode> {

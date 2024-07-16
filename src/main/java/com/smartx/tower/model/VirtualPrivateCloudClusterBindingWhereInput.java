@@ -9,9 +9,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.EverouteClusterPhase;
 import com.smartx.tower.model.VdsWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudServiceWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -112,77 +110,37 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
-  public static final String SERIALIZED_NAME_PHASE = "phase";
-  @SerializedName(SERIALIZED_NAME_PHASE)
-  private EverouteClusterPhase phase;
+  public static final String SERIALIZED_NAME_MTU = "mtu";
+  @SerializedName(SERIALIZED_NAME_MTU)
+  private Integer mtu;
 
-  public static final String SERIALIZED_NAME_PHASE_IN = "phase_in";
-  @SerializedName(SERIALIZED_NAME_PHASE_IN)
-  private List<EverouteClusterPhase> phaseIn = null;
+  public static final String SERIALIZED_NAME_MTU_GT = "mtu_gt";
+  @SerializedName(SERIALIZED_NAME_MTU_GT)
+  private Integer mtuGt;
 
-  public static final String SERIALIZED_NAME_PHASE_NOT = "phase_not";
-  @SerializedName(SERIALIZED_NAME_PHASE_NOT)
-  private EverouteClusterPhase phaseNot;
+  public static final String SERIALIZED_NAME_MTU_GTE = "mtu_gte";
+  @SerializedName(SERIALIZED_NAME_MTU_GTE)
+  private Integer mtuGte;
 
-  public static final String SERIALIZED_NAME_PHASE_NOT_IN = "phase_not_in";
-  @SerializedName(SERIALIZED_NAME_PHASE_NOT_IN)
-  private List<EverouteClusterPhase> phaseNotIn = null;
+  public static final String SERIALIZED_NAME_MTU_IN = "mtu_in";
+  @SerializedName(SERIALIZED_NAME_MTU_IN)
+  private List<Integer> mtuIn = null;
 
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID = "tep_ip_pool_id";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID)
-  private String tepIpPoolId;
+  public static final String SERIALIZED_NAME_MTU_LT = "mtu_lt";
+  @SerializedName(SERIALIZED_NAME_MTU_LT)
+  private Integer mtuLt;
 
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_CONTAINS = "tep_ip_pool_id_contains";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_CONTAINS)
-  private String tepIpPoolIdContains;
+  public static final String SERIALIZED_NAME_MTU_LTE = "mtu_lte";
+  @SerializedName(SERIALIZED_NAME_MTU_LTE)
+  private Integer mtuLte;
 
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_ENDS_WITH = "tep_ip_pool_id_ends_with";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_ENDS_WITH)
-  private String tepIpPoolIdEndsWith;
+  public static final String SERIALIZED_NAME_MTU_NOT = "mtu_not";
+  @SerializedName(SERIALIZED_NAME_MTU_NOT)
+  private Integer mtuNot;
 
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_GT = "tep_ip_pool_id_gt";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_GT)
-  private String tepIpPoolIdGt;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_GTE = "tep_ip_pool_id_gte";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_GTE)
-  private String tepIpPoolIdGte;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_IN = "tep_ip_pool_id_in";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_IN)
-  private List<String> tepIpPoolIdIn = null;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_LT = "tep_ip_pool_id_lt";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_LT)
-  private String tepIpPoolIdLt;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_LTE = "tep_ip_pool_id_lte";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_LTE)
-  private String tepIpPoolIdLte;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_NOT = "tep_ip_pool_id_not";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_NOT)
-  private String tepIpPoolIdNot;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_CONTAINS = "tep_ip_pool_id_not_contains";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_CONTAINS)
-  private String tepIpPoolIdNotContains;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_ENDS_WITH = "tep_ip_pool_id_not_ends_with";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_ENDS_WITH)
-  private String tepIpPoolIdNotEndsWith;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_IN = "tep_ip_pool_id_not_in";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_IN)
-  private List<String> tepIpPoolIdNotIn = null;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_STARTS_WITH = "tep_ip_pool_id_not_starts_with";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_NOT_STARTS_WITH)
-  private String tepIpPoolIdNotStartsWith;
-
-  public static final String SERIALIZED_NAME_TEP_IP_POOL_ID_STARTS_WITH = "tep_ip_pool_id_starts_with";
-  @SerializedName(SERIALIZED_NAME_TEP_IP_POOL_ID_STARTS_WITH)
-  private String tepIpPoolIdStartsWith;
+  public static final String SERIALIZED_NAME_MTU_NOT_IN = "mtu_not_in";
+  @SerializedName(SERIALIZED_NAME_MTU_NOT_IN)
+  private List<Integer> mtuNotIn = null;
 
   public static final String SERIALIZED_NAME_VDS = "vds";
   @SerializedName(SERIALIZED_NAME_VDS)
@@ -219,10 +177,6 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
   public static final String SERIALIZED_NAME_VLAN_ID_NOT_IN = "vlan_id_not_in";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_NOT_IN)
   private List<Integer> vlanIdNotIn = null;
-
-  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
-  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
-  private VirtualPrivateCloudServiceWhereInput vpcService;
 
   public VirtualPrivateCloudClusterBindingWhereInput() { 
   }
@@ -789,449 +743,203 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
   }
 
 
-  public VirtualPrivateCloudClusterBindingWhereInput phase(EverouteClusterPhase phase) {
+  public VirtualPrivateCloudClusterBindingWhereInput mtu(Integer mtu) {
     
-    this.phase = phase;
+    this.mtu = mtu;
     return this;
   }
 
    /**
-   * Get phase
-   * @return phase
+   * Get mtu
+   * @return mtu
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public EverouteClusterPhase getPhase() {
-    return phase;
+  public Integer getMtu() {
+    return mtu;
   }
 
 
-  public void setPhase(EverouteClusterPhase phase) {
-    this.phase = phase;
+  public void setMtu(Integer mtu) {
+    this.mtu = mtu;
   }
 
 
-  public VirtualPrivateCloudClusterBindingWhereInput phaseIn(List<EverouteClusterPhase> phaseIn) {
+  public VirtualPrivateCloudClusterBindingWhereInput mtuGt(Integer mtuGt) {
     
-    this.phaseIn = phaseIn;
+    this.mtuGt = mtuGt;
     return this;
   }
 
-  public VirtualPrivateCloudClusterBindingWhereInput addPhaseInItem(EverouteClusterPhase phaseInItem) {
-    if (this.phaseIn == null) {
-      this.phaseIn = new ArrayList<EverouteClusterPhase>();
+   /**
+   * Get mtuGt
+   * @return mtuGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMtuGt() {
+    return mtuGt;
+  }
+
+
+  public void setMtuGt(Integer mtuGt) {
+    this.mtuGt = mtuGt;
+  }
+
+
+  public VirtualPrivateCloudClusterBindingWhereInput mtuGte(Integer mtuGte) {
+    
+    this.mtuGte = mtuGte;
+    return this;
+  }
+
+   /**
+   * Get mtuGte
+   * @return mtuGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMtuGte() {
+    return mtuGte;
+  }
+
+
+  public void setMtuGte(Integer mtuGte) {
+    this.mtuGte = mtuGte;
+  }
+
+
+  public VirtualPrivateCloudClusterBindingWhereInput mtuIn(List<Integer> mtuIn) {
+    
+    this.mtuIn = mtuIn;
+    return this;
+  }
+
+  public VirtualPrivateCloudClusterBindingWhereInput addMtuInItem(Integer mtuInItem) {
+    if (this.mtuIn == null) {
+      this.mtuIn = new ArrayList<Integer>();
     }
-    this.phaseIn.add(phaseInItem);
+    this.mtuIn.add(mtuInItem);
     return this;
   }
 
    /**
-   * Get phaseIn
-   * @return phaseIn
+   * Get mtuIn
+   * @return mtuIn
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<EverouteClusterPhase> getPhaseIn() {
-    return phaseIn;
+  public List<Integer> getMtuIn() {
+    return mtuIn;
   }
 
 
-  public void setPhaseIn(List<EverouteClusterPhase> phaseIn) {
-    this.phaseIn = phaseIn;
+  public void setMtuIn(List<Integer> mtuIn) {
+    this.mtuIn = mtuIn;
   }
 
 
-  public VirtualPrivateCloudClusterBindingWhereInput phaseNot(EverouteClusterPhase phaseNot) {
+  public VirtualPrivateCloudClusterBindingWhereInput mtuLt(Integer mtuLt) {
     
-    this.phaseNot = phaseNot;
+    this.mtuLt = mtuLt;
     return this;
   }
 
    /**
-   * Get phaseNot
-   * @return phaseNot
+   * Get mtuLt
+   * @return mtuLt
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public EverouteClusterPhase getPhaseNot() {
-    return phaseNot;
+  public Integer getMtuLt() {
+    return mtuLt;
   }
 
 
-  public void setPhaseNot(EverouteClusterPhase phaseNot) {
-    this.phaseNot = phaseNot;
+  public void setMtuLt(Integer mtuLt) {
+    this.mtuLt = mtuLt;
   }
 
 
-  public VirtualPrivateCloudClusterBindingWhereInput phaseNotIn(List<EverouteClusterPhase> phaseNotIn) {
+  public VirtualPrivateCloudClusterBindingWhereInput mtuLte(Integer mtuLte) {
     
-    this.phaseNotIn = phaseNotIn;
+    this.mtuLte = mtuLte;
     return this;
   }
 
-  public VirtualPrivateCloudClusterBindingWhereInput addPhaseNotInItem(EverouteClusterPhase phaseNotInItem) {
-    if (this.phaseNotIn == null) {
-      this.phaseNotIn = new ArrayList<EverouteClusterPhase>();
+   /**
+   * Get mtuLte
+   * @return mtuLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMtuLte() {
+    return mtuLte;
+  }
+
+
+  public void setMtuLte(Integer mtuLte) {
+    this.mtuLte = mtuLte;
+  }
+
+
+  public VirtualPrivateCloudClusterBindingWhereInput mtuNot(Integer mtuNot) {
+    
+    this.mtuNot = mtuNot;
+    return this;
+  }
+
+   /**
+   * Get mtuNot
+   * @return mtuNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMtuNot() {
+    return mtuNot;
+  }
+
+
+  public void setMtuNot(Integer mtuNot) {
+    this.mtuNot = mtuNot;
+  }
+
+
+  public VirtualPrivateCloudClusterBindingWhereInput mtuNotIn(List<Integer> mtuNotIn) {
+    
+    this.mtuNotIn = mtuNotIn;
+    return this;
+  }
+
+  public VirtualPrivateCloudClusterBindingWhereInput addMtuNotInItem(Integer mtuNotInItem) {
+    if (this.mtuNotIn == null) {
+      this.mtuNotIn = new ArrayList<Integer>();
     }
-    this.phaseNotIn.add(phaseNotInItem);
+    this.mtuNotIn.add(mtuNotInItem);
     return this;
   }
 
    /**
-   * Get phaseNotIn
-   * @return phaseNotIn
+   * Get mtuNotIn
+   * @return mtuNotIn
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<EverouteClusterPhase> getPhaseNotIn() {
-    return phaseNotIn;
+  public List<Integer> getMtuNotIn() {
+    return mtuNotIn;
   }
 
 
-  public void setPhaseNotIn(List<EverouteClusterPhase> phaseNotIn) {
-    this.phaseNotIn = phaseNotIn;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolId(String tepIpPoolId) {
-    
-    this.tepIpPoolId = tepIpPoolId;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolId
-   * @return tepIpPoolId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolId() {
-    return tepIpPoolId;
-  }
-
-
-  public void setTepIpPoolId(String tepIpPoolId) {
-    this.tepIpPoolId = tepIpPoolId;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdContains(String tepIpPoolIdContains) {
-    
-    this.tepIpPoolIdContains = tepIpPoolIdContains;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdContains
-   * @return tepIpPoolIdContains
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdContains() {
-    return tepIpPoolIdContains;
-  }
-
-
-  public void setTepIpPoolIdContains(String tepIpPoolIdContains) {
-    this.tepIpPoolIdContains = tepIpPoolIdContains;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdEndsWith(String tepIpPoolIdEndsWith) {
-    
-    this.tepIpPoolIdEndsWith = tepIpPoolIdEndsWith;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdEndsWith
-   * @return tepIpPoolIdEndsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdEndsWith() {
-    return tepIpPoolIdEndsWith;
-  }
-
-
-  public void setTepIpPoolIdEndsWith(String tepIpPoolIdEndsWith) {
-    this.tepIpPoolIdEndsWith = tepIpPoolIdEndsWith;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdGt(String tepIpPoolIdGt) {
-    
-    this.tepIpPoolIdGt = tepIpPoolIdGt;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdGt
-   * @return tepIpPoolIdGt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdGt() {
-    return tepIpPoolIdGt;
-  }
-
-
-  public void setTepIpPoolIdGt(String tepIpPoolIdGt) {
-    this.tepIpPoolIdGt = tepIpPoolIdGt;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdGte(String tepIpPoolIdGte) {
-    
-    this.tepIpPoolIdGte = tepIpPoolIdGte;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdGte
-   * @return tepIpPoolIdGte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdGte() {
-    return tepIpPoolIdGte;
-  }
-
-
-  public void setTepIpPoolIdGte(String tepIpPoolIdGte) {
-    this.tepIpPoolIdGte = tepIpPoolIdGte;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdIn(List<String> tepIpPoolIdIn) {
-    
-    this.tepIpPoolIdIn = tepIpPoolIdIn;
-    return this;
-  }
-
-  public VirtualPrivateCloudClusterBindingWhereInput addTepIpPoolIdInItem(String tepIpPoolIdInItem) {
-    if (this.tepIpPoolIdIn == null) {
-      this.tepIpPoolIdIn = new ArrayList<String>();
-    }
-    this.tepIpPoolIdIn.add(tepIpPoolIdInItem);
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdIn
-   * @return tepIpPoolIdIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<String> getTepIpPoolIdIn() {
-    return tepIpPoolIdIn;
-  }
-
-
-  public void setTepIpPoolIdIn(List<String> tepIpPoolIdIn) {
-    this.tepIpPoolIdIn = tepIpPoolIdIn;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdLt(String tepIpPoolIdLt) {
-    
-    this.tepIpPoolIdLt = tepIpPoolIdLt;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdLt
-   * @return tepIpPoolIdLt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdLt() {
-    return tepIpPoolIdLt;
-  }
-
-
-  public void setTepIpPoolIdLt(String tepIpPoolIdLt) {
-    this.tepIpPoolIdLt = tepIpPoolIdLt;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdLte(String tepIpPoolIdLte) {
-    
-    this.tepIpPoolIdLte = tepIpPoolIdLte;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdLte
-   * @return tepIpPoolIdLte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdLte() {
-    return tepIpPoolIdLte;
-  }
-
-
-  public void setTepIpPoolIdLte(String tepIpPoolIdLte) {
-    this.tepIpPoolIdLte = tepIpPoolIdLte;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdNot(String tepIpPoolIdNot) {
-    
-    this.tepIpPoolIdNot = tepIpPoolIdNot;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdNot
-   * @return tepIpPoolIdNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdNot() {
-    return tepIpPoolIdNot;
-  }
-
-
-  public void setTepIpPoolIdNot(String tepIpPoolIdNot) {
-    this.tepIpPoolIdNot = tepIpPoolIdNot;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdNotContains(String tepIpPoolIdNotContains) {
-    
-    this.tepIpPoolIdNotContains = tepIpPoolIdNotContains;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdNotContains
-   * @return tepIpPoolIdNotContains
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdNotContains() {
-    return tepIpPoolIdNotContains;
-  }
-
-
-  public void setTepIpPoolIdNotContains(String tepIpPoolIdNotContains) {
-    this.tepIpPoolIdNotContains = tepIpPoolIdNotContains;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdNotEndsWith(String tepIpPoolIdNotEndsWith) {
-    
-    this.tepIpPoolIdNotEndsWith = tepIpPoolIdNotEndsWith;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdNotEndsWith
-   * @return tepIpPoolIdNotEndsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdNotEndsWith() {
-    return tepIpPoolIdNotEndsWith;
-  }
-
-
-  public void setTepIpPoolIdNotEndsWith(String tepIpPoolIdNotEndsWith) {
-    this.tepIpPoolIdNotEndsWith = tepIpPoolIdNotEndsWith;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdNotIn(List<String> tepIpPoolIdNotIn) {
-    
-    this.tepIpPoolIdNotIn = tepIpPoolIdNotIn;
-    return this;
-  }
-
-  public VirtualPrivateCloudClusterBindingWhereInput addTepIpPoolIdNotInItem(String tepIpPoolIdNotInItem) {
-    if (this.tepIpPoolIdNotIn == null) {
-      this.tepIpPoolIdNotIn = new ArrayList<String>();
-    }
-    this.tepIpPoolIdNotIn.add(tepIpPoolIdNotInItem);
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdNotIn
-   * @return tepIpPoolIdNotIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<String> getTepIpPoolIdNotIn() {
-    return tepIpPoolIdNotIn;
-  }
-
-
-  public void setTepIpPoolIdNotIn(List<String> tepIpPoolIdNotIn) {
-    this.tepIpPoolIdNotIn = tepIpPoolIdNotIn;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdNotStartsWith(String tepIpPoolIdNotStartsWith) {
-    
-    this.tepIpPoolIdNotStartsWith = tepIpPoolIdNotStartsWith;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdNotStartsWith
-   * @return tepIpPoolIdNotStartsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdNotStartsWith() {
-    return tepIpPoolIdNotStartsWith;
-  }
-
-
-  public void setTepIpPoolIdNotStartsWith(String tepIpPoolIdNotStartsWith) {
-    this.tepIpPoolIdNotStartsWith = tepIpPoolIdNotStartsWith;
-  }
-
-
-  public VirtualPrivateCloudClusterBindingWhereInput tepIpPoolIdStartsWith(String tepIpPoolIdStartsWith) {
-    
-    this.tepIpPoolIdStartsWith = tepIpPoolIdStartsWith;
-    return this;
-  }
-
-   /**
-   * Get tepIpPoolIdStartsWith
-   * @return tepIpPoolIdStartsWith
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getTepIpPoolIdStartsWith() {
-    return tepIpPoolIdStartsWith;
-  }
-
-
-  public void setTepIpPoolIdStartsWith(String tepIpPoolIdStartsWith) {
-    this.tepIpPoolIdStartsWith = tepIpPoolIdStartsWith;
+  public void setMtuNotIn(List<Integer> mtuNotIn) {
+    this.mtuNotIn = mtuNotIn;
   }
 
 
@@ -1458,29 +1166,6 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
   }
 
 
-  public VirtualPrivateCloudClusterBindingWhereInput vpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
-    
-    this.vpcService = vpcService;
-    return this;
-  }
-
-   /**
-   * Get vpcService
-   * @return vpcService
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudServiceWhereInput getVpcService() {
-    return vpcService;
-  }
-
-
-  public void setVpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
-    this.vpcService = vpcService;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1512,24 +1197,14 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
         Objects.equals(this.idNotIn, virtualPrivateCloudClusterBindingWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, virtualPrivateCloudClusterBindingWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, virtualPrivateCloudClusterBindingWhereInput.idStartsWith) &&
-        Objects.equals(this.phase, virtualPrivateCloudClusterBindingWhereInput.phase) &&
-        Objects.equals(this.phaseIn, virtualPrivateCloudClusterBindingWhereInput.phaseIn) &&
-        Objects.equals(this.phaseNot, virtualPrivateCloudClusterBindingWhereInput.phaseNot) &&
-        Objects.equals(this.phaseNotIn, virtualPrivateCloudClusterBindingWhereInput.phaseNotIn) &&
-        Objects.equals(this.tepIpPoolId, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolId) &&
-        Objects.equals(this.tepIpPoolIdContains, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdContains) &&
-        Objects.equals(this.tepIpPoolIdEndsWith, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdEndsWith) &&
-        Objects.equals(this.tepIpPoolIdGt, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdGt) &&
-        Objects.equals(this.tepIpPoolIdGte, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdGte) &&
-        Objects.equals(this.tepIpPoolIdIn, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdIn) &&
-        Objects.equals(this.tepIpPoolIdLt, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdLt) &&
-        Objects.equals(this.tepIpPoolIdLte, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdLte) &&
-        Objects.equals(this.tepIpPoolIdNot, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdNot) &&
-        Objects.equals(this.tepIpPoolIdNotContains, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdNotContains) &&
-        Objects.equals(this.tepIpPoolIdNotEndsWith, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdNotEndsWith) &&
-        Objects.equals(this.tepIpPoolIdNotIn, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdNotIn) &&
-        Objects.equals(this.tepIpPoolIdNotStartsWith, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdNotStartsWith) &&
-        Objects.equals(this.tepIpPoolIdStartsWith, virtualPrivateCloudClusterBindingWhereInput.tepIpPoolIdStartsWith) &&
+        Objects.equals(this.mtu, virtualPrivateCloudClusterBindingWhereInput.mtu) &&
+        Objects.equals(this.mtuGt, virtualPrivateCloudClusterBindingWhereInput.mtuGt) &&
+        Objects.equals(this.mtuGte, virtualPrivateCloudClusterBindingWhereInput.mtuGte) &&
+        Objects.equals(this.mtuIn, virtualPrivateCloudClusterBindingWhereInput.mtuIn) &&
+        Objects.equals(this.mtuLt, virtualPrivateCloudClusterBindingWhereInput.mtuLt) &&
+        Objects.equals(this.mtuLte, virtualPrivateCloudClusterBindingWhereInput.mtuLte) &&
+        Objects.equals(this.mtuNot, virtualPrivateCloudClusterBindingWhereInput.mtuNot) &&
+        Objects.equals(this.mtuNotIn, virtualPrivateCloudClusterBindingWhereInput.mtuNotIn) &&
         Objects.equals(this.vds, virtualPrivateCloudClusterBindingWhereInput.vds) &&
         Objects.equals(this.vlanId, virtualPrivateCloudClusterBindingWhereInput.vlanId) &&
         Objects.equals(this.vlanIdGt, virtualPrivateCloudClusterBindingWhereInput.vlanIdGt) &&
@@ -1538,8 +1213,7 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
         Objects.equals(this.vlanIdLt, virtualPrivateCloudClusterBindingWhereInput.vlanIdLt) &&
         Objects.equals(this.vlanIdLte, virtualPrivateCloudClusterBindingWhereInput.vlanIdLte) &&
         Objects.equals(this.vlanIdNot, virtualPrivateCloudClusterBindingWhereInput.vlanIdNot) &&
-        Objects.equals(this.vlanIdNotIn, virtualPrivateCloudClusterBindingWhereInput.vlanIdNotIn) &&
-        Objects.equals(this.vpcService, virtualPrivateCloudClusterBindingWhereInput.vpcService);
+        Objects.equals(this.vlanIdNotIn, virtualPrivateCloudClusterBindingWhereInput.vlanIdNotIn);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1548,7 +1222,7 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, phase, phaseIn, phaseNot, phaseNotIn, tepIpPoolId, tepIpPoolIdContains, tepIpPoolIdEndsWith, tepIpPoolIdGt, tepIpPoolIdGte, tepIpPoolIdIn, tepIpPoolIdLt, tepIpPoolIdLte, tepIpPoolIdNot, tepIpPoolIdNotContains, tepIpPoolIdNotEndsWith, tepIpPoolIdNotIn, tepIpPoolIdNotStartsWith, tepIpPoolIdStartsWith, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn, vpcService);
+    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1584,24 +1258,14 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
-    sb.append("    phaseIn: ").append(toIndentedString(phaseIn)).append("\n");
-    sb.append("    phaseNot: ").append(toIndentedString(phaseNot)).append("\n");
-    sb.append("    phaseNotIn: ").append(toIndentedString(phaseNotIn)).append("\n");
-    sb.append("    tepIpPoolId: ").append(toIndentedString(tepIpPoolId)).append("\n");
-    sb.append("    tepIpPoolIdContains: ").append(toIndentedString(tepIpPoolIdContains)).append("\n");
-    sb.append("    tepIpPoolIdEndsWith: ").append(toIndentedString(tepIpPoolIdEndsWith)).append("\n");
-    sb.append("    tepIpPoolIdGt: ").append(toIndentedString(tepIpPoolIdGt)).append("\n");
-    sb.append("    tepIpPoolIdGte: ").append(toIndentedString(tepIpPoolIdGte)).append("\n");
-    sb.append("    tepIpPoolIdIn: ").append(toIndentedString(tepIpPoolIdIn)).append("\n");
-    sb.append("    tepIpPoolIdLt: ").append(toIndentedString(tepIpPoolIdLt)).append("\n");
-    sb.append("    tepIpPoolIdLte: ").append(toIndentedString(tepIpPoolIdLte)).append("\n");
-    sb.append("    tepIpPoolIdNot: ").append(toIndentedString(tepIpPoolIdNot)).append("\n");
-    sb.append("    tepIpPoolIdNotContains: ").append(toIndentedString(tepIpPoolIdNotContains)).append("\n");
-    sb.append("    tepIpPoolIdNotEndsWith: ").append(toIndentedString(tepIpPoolIdNotEndsWith)).append("\n");
-    sb.append("    tepIpPoolIdNotIn: ").append(toIndentedString(tepIpPoolIdNotIn)).append("\n");
-    sb.append("    tepIpPoolIdNotStartsWith: ").append(toIndentedString(tepIpPoolIdNotStartsWith)).append("\n");
-    sb.append("    tepIpPoolIdStartsWith: ").append(toIndentedString(tepIpPoolIdStartsWith)).append("\n");
+    sb.append("    mtu: ").append(toIndentedString(mtu)).append("\n");
+    sb.append("    mtuGt: ").append(toIndentedString(mtuGt)).append("\n");
+    sb.append("    mtuGte: ").append(toIndentedString(mtuGte)).append("\n");
+    sb.append("    mtuIn: ").append(toIndentedString(mtuIn)).append("\n");
+    sb.append("    mtuLt: ").append(toIndentedString(mtuLt)).append("\n");
+    sb.append("    mtuLte: ").append(toIndentedString(mtuLte)).append("\n");
+    sb.append("    mtuNot: ").append(toIndentedString(mtuNot)).append("\n");
+    sb.append("    mtuNotIn: ").append(toIndentedString(mtuNotIn)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");
     sb.append("    vlanId: ").append(toIndentedString(vlanId)).append("\n");
     sb.append("    vlanIdGt: ").append(toIndentedString(vlanIdGt)).append("\n");
@@ -1611,7 +1275,6 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
     sb.append("    vlanIdLte: ").append(toIndentedString(vlanIdLte)).append("\n");
     sb.append("    vlanIdNot: ").append(toIndentedString(vlanIdNot)).append("\n");
     sb.append("    vlanIdNotIn: ").append(toIndentedString(vlanIdNotIn)).append("\n");
-    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

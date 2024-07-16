@@ -22,8 +22,9 @@ public enum ZoneTopoOrderByInput {
   
   LOCAL_ID_ASC("local_id_ASC"),
   
-  LOCAL_ID_DESC("local_id_DESC");
-
+  LOCAL_ID_DESC("local_id_DESC"),
+  
+  ZONETOPOORDERBYINPUT_UNSUPPORTED_ENUM("ZONETOPOORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   ZoneTopoOrderByInput(String value) {
@@ -45,7 +46,7 @@ public enum ZoneTopoOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ZoneTopoOrderByInput.ZONETOPOORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ZoneTopoOrderByInput> {

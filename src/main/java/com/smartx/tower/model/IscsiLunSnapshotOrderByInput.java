@@ -38,8 +38,9 @@ public enum IscsiLunSnapshotOrderByInput {
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   
-  UNIQUE_SIZE_DESC("unique_size_DESC");
-
+  UNIQUE_SIZE_DESC("unique_size_DESC"),
+  
+  ISCSILUNSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM("ISCSILUNSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   IscsiLunSnapshotOrderByInput(String value) {
@@ -61,7 +62,7 @@ public enum IscsiLunSnapshotOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return IscsiLunSnapshotOrderByInput.ISCSILUNSNAPSHOTORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<IscsiLunSnapshotOrderByInput> {

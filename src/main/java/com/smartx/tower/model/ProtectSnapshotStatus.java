@@ -22,8 +22,9 @@ public enum ProtectSnapshotStatus {
   
   DELETED("PROTECT_SNAPSHOT_STATUS_DELETED"),
   
-  FAILED("PROTECT_SNAPSHOT_STATUS_FAILED");
-
+  FAILED("PROTECT_SNAPSHOT_STATUS_FAILED"),
+  
+  PROTECTSNAPSHOTSTATUS_UNSUPPORTED_ENUM("PROTECTSNAPSHOTSTATUS_UNSUPPORTED_ENUM");
   private String value;
 
   ProtectSnapshotStatus(String value) {
@@ -45,7 +46,7 @@ public enum ProtectSnapshotStatus {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return ProtectSnapshotStatus.PROTECTSNAPSHOTSTATUS_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<ProtectSnapshotStatus> {

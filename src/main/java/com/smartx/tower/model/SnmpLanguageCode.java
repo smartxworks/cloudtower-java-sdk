@@ -18,8 +18,9 @@ public enum SnmpLanguageCode {
   
   EN_US("EN_US"),
   
-  ZH_CN("ZH_CN");
-
+  ZH_CN("ZH_CN"),
+  
+  SNMPLANGUAGECODE_UNSUPPORTED_ENUM("SNMPLANGUAGECODE_UNSUPPORTED_ENUM");
   private String value;
 
   SnmpLanguageCode(String value) {
@@ -41,7 +42,7 @@ public enum SnmpLanguageCode {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnmpLanguageCode.SNMPLANGUAGECODE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnmpLanguageCode> {

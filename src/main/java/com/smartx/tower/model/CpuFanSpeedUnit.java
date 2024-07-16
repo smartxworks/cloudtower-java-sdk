@@ -18,8 +18,9 @@ public enum CpuFanSpeedUnit {
   
   PERCENT("PERCENT"),
   
-  RPM("RPM");
-
+  RPM("RPM"),
+  
+  CPUFANSPEEDUNIT_UNSUPPORTED_ENUM("CPUFANSPEEDUNIT_UNSUPPORTED_ENUM");
   private String value;
 
   CpuFanSpeedUnit(String value) {
@@ -41,7 +42,7 @@ public enum CpuFanSpeedUnit {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return CpuFanSpeedUnit.CPUFANSPEEDUNIT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<CpuFanSpeedUnit> {

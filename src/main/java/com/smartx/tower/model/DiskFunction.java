@@ -20,8 +20,9 @@ public enum DiskFunction {
   
   DATA("DATA"),
   
-  SMTX_SYSTEM("SMTX_SYSTEM");
-
+  SMTX_SYSTEM("SMTX_SYSTEM"),
+  
+  DISKFUNCTION_UNSUPPORTED_ENUM("DISKFUNCTION_UNSUPPORTED_ENUM");
   private String value;
 
   DiskFunction(String value) {
@@ -43,7 +44,7 @@ public enum DiskFunction {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return DiskFunction.DISKFUNCTION_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<DiskFunction> {

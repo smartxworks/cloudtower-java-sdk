@@ -26,8 +26,9 @@ public enum GlobalSettingsOrderByInput {
   
   VM_RECYCLE_BIN_ASC("vm_recycle_bin_ASC"),
   
-  VM_RECYCLE_BIN_DESC("vm_recycle_bin_DESC");
-
+  VM_RECYCLE_BIN_DESC("vm_recycle_bin_DESC"),
+  
+  GLOBALSETTINGSORDERBYINPUT_UNSUPPORTED_ENUM("GLOBALSETTINGSORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   GlobalSettingsOrderByInput(String value) {
@@ -49,7 +50,7 @@ public enum GlobalSettingsOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return GlobalSettingsOrderByInput.GLOBALSETTINGSORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<GlobalSettingsOrderByInput> {

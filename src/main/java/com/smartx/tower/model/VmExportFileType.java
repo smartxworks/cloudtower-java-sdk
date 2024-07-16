@@ -20,8 +20,9 @@ public enum VmExportFileType {
   
   QCOW2("QCOW2"),
   
-  RAW("RAW");
-
+  RAW("RAW"),
+  
+  VMEXPORTFILETYPE_UNSUPPORTED_ENUM("VMEXPORTFILETYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmExportFileType(String value) {
@@ -43,7 +44,7 @@ public enum VmExportFileType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmExportFileType.VMEXPORTFILETYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmExportFileType> {

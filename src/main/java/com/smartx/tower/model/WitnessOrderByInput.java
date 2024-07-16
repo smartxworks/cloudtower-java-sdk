@@ -58,8 +58,9 @@ public enum WitnessOrderByInput {
   
   TOTAL_MEMORY_BYTES_ASC("total_memory_bytes_ASC"),
   
-  TOTAL_MEMORY_BYTES_DESC("total_memory_bytes_DESC");
-
+  TOTAL_MEMORY_BYTES_DESC("total_memory_bytes_DESC"),
+  
+  WITNESSORDERBYINPUT_UNSUPPORTED_ENUM("WITNESSORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   WitnessOrderByInput(String value) {
@@ -81,7 +82,7 @@ public enum WitnessOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return WitnessOrderByInput.WITNESSORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<WitnessOrderByInput> {

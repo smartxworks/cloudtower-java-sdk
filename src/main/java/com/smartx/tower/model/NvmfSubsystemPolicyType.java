@@ -18,8 +18,9 @@ public enum NvmfSubsystemPolicyType {
   
   BALANCE("BALANCE"),
   
-  INHERIT("INHERIT");
-
+  INHERIT("INHERIT"),
+  
+  NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM("NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   NvmfSubsystemPolicyType(String value) {
@@ -41,7 +42,7 @@ public enum NvmfSubsystemPolicyType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NvmfSubsystemPolicyType.NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NvmfSubsystemPolicyType> {

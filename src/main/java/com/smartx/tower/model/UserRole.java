@@ -20,8 +20,9 @@ public enum UserRole {
   
   READ_ONLY("READ_ONLY"),
   
-  ROOT("ROOT");
-
+  ROOT("ROOT"),
+  
+  USERROLE_UNSUPPORTED_ENUM("USERROLE_UNSUPPORTED_ENUM");
   private String value;
 
   UserRole(String value) {
@@ -43,7 +44,7 @@ public enum UserRole {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return UserRole.USERROLE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<UserRole> {

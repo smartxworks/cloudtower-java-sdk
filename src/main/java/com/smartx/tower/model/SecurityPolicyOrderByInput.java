@@ -42,8 +42,9 @@ public enum SecurityPolicyOrderByInput {
   
   POLICY_MODE_ASC("policy_mode_ASC"),
   
-  POLICY_MODE_DESC("policy_mode_DESC");
-
+  POLICY_MODE_DESC("policy_mode_DESC"),
+  
+  SECURITYPOLICYORDERBYINPUT_UNSUPPORTED_ENUM("SECURITYPOLICYORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SecurityPolicyOrderByInput(String value) {
@@ -65,7 +66,7 @@ public enum SecurityPolicyOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SecurityPolicyOrderByInput.SECURITYPOLICYORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SecurityPolicyOrderByInput> {

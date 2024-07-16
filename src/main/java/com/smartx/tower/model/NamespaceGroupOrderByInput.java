@@ -34,8 +34,9 @@ public enum NamespaceGroupOrderByInput {
   
   NAME_ASC("name_ASC"),
   
-  NAME_DESC("name_DESC");
-
+  NAME_DESC("name_DESC"),
+  
+  NAMESPACEGROUPORDERBYINPUT_UNSUPPORTED_ENUM("NAMESPACEGROUPORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   NamespaceGroupOrderByInput(String value) {
@@ -57,7 +58,7 @@ public enum NamespaceGroupOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NamespaceGroupOrderByInput.NAMESPACEGROUPORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<NamespaceGroupOrderByInput> {

@@ -46,8 +46,9 @@ public enum SystemAuditLogOrderByInput {
   
   STATUS_ASC("status_ASC"),
   
-  STATUS_DESC("status_DESC");
-
+  STATUS_DESC("status_DESC"),
+  
+  SYSTEMAUDITLOGORDERBYINPUT_UNSUPPORTED_ENUM("SYSTEMAUDITLOGORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SystemAuditLogOrderByInput(String value) {
@@ -69,7 +70,7 @@ public enum SystemAuditLogOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SystemAuditLogOrderByInput.SYSTEMAUDITLOGORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SystemAuditLogOrderByInput> {

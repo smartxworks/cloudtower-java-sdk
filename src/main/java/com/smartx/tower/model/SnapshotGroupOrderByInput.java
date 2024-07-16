@@ -62,8 +62,9 @@ public enum SnapshotGroupOrderByInput {
   
   VM_INFO_ASC("vm_info_ASC"),
   
-  VM_INFO_DESC("vm_info_DESC");
-
+  VM_INFO_DESC("vm_info_DESC"),
+  
+  SNAPSHOTGROUPORDERBYINPUT_UNSUPPORTED_ENUM("SNAPSHOTGROUPORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   SnapshotGroupOrderByInput(String value) {
@@ -85,7 +86,7 @@ public enum SnapshotGroupOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SnapshotGroupOrderByInput.SNAPSHOTGROUPORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SnapshotGroupOrderByInput> {

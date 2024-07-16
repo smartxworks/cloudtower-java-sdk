@@ -18,8 +18,9 @@ public enum VmDiskIoRestrictType {
   
   DYNAMIC("DYNAMIC"),
   
-  FORCED("FORCED");
-
+  FORCED("FORCED"),
+  
+  VMDISKIORESTRICTTYPE_UNSUPPORTED_ENUM("VMDISKIORESTRICTTYPE_UNSUPPORTED_ENUM");
   private String value;
 
   VmDiskIoRestrictType(String value) {
@@ -41,7 +42,7 @@ public enum VmDiskIoRestrictType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmDiskIoRestrictType.VMDISKIORESTRICTTYPE_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmDiskIoRestrictType> {

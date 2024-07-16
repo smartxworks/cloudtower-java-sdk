@@ -34,8 +34,9 @@ public enum AlertRuleOrderByInput {
   
   THRESHOLDS_ASC("thresholds_ASC"),
   
-  THRESHOLDS_DESC("thresholds_DESC");
-
+  THRESHOLDS_DESC("thresholds_DESC"),
+  
+  ALERTRULEORDERBYINPUT_UNSUPPORTED_ENUM("ALERTRULEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
   AlertRuleOrderByInput(String value) {
@@ -57,7 +58,7 @@ public enum AlertRuleOrderByInput {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return AlertRuleOrderByInput.ALERTRULEORDERBYINPUT_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<AlertRuleOrderByInput> {

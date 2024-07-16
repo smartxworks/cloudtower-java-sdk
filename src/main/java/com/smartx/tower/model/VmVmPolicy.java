@@ -22,8 +22,9 @@ public enum VmVmPolicy {
   
   PREFER_DIFFERENT("PREFER_DIFFERENT"),
   
-  PREFER_SAME("PREFER_SAME");
-
+  PREFER_SAME("PREFER_SAME"),
+  
+  VMVMPOLICY_UNSUPPORTED_ENUM("VMVMPOLICY_UNSUPPORTED_ENUM");
   private String value;
 
   VmVmPolicy(String value) {
@@ -45,7 +46,7 @@ public enum VmVmPolicy {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return VmVmPolicy.VMVMPOLICY_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<VmVmPolicy> {

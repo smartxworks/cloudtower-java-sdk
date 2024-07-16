@@ -22,8 +22,9 @@ public enum SeverityEnum {
   
   NOTICE("NOTICE"),
   
-  SEVERITY_UNSPECIFIED("SEVERITY_UNSPECIFIED");
-
+  SEVERITY_UNSPECIFIED("SEVERITY_UNSPECIFIED"),
+  
+  SEVERITYENUM_UNSUPPORTED_ENUM("SEVERITYENUM_UNSUPPORTED_ENUM");
   private String value;
 
   SeverityEnum(String value) {
@@ -45,7 +46,7 @@ public enum SeverityEnum {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return SeverityEnum.SEVERITYENUM_UNSUPPORTED_ENUM;
   }
 
   public static class Adapter extends TypeAdapter<SeverityEnum> {
