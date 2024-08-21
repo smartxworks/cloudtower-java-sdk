@@ -98,9 +98,20 @@ src/main/java/com/smartx/tower/api/UsbDeviceApi.java
 src/main/java/com/smartx/tower/api/UserApi.java
 src/main/java/com/smartx/tower/api/UserAuditLogApi.java
 src/main/java/com/smartx/tower/api/UserRoleNextApi.java
+src/main/java/com/smartx/tower/api/V2EverouteLicenseApi.java
 src/main/java/com/smartx/tower/api/VcenterAccountApi.java
 src/main/java/com/smartx/tower/api/VdsApi.java
 src/main/java/com/smartx/tower/api/ViewApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudClusterBindingApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudExternalSubnetApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudFloatingIpApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudNatGatewayApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudRouteTableApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudRouterGatewayApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudSecurityGroupApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudSecurityPolicyApi.java
+src/main/java/com/smartx/tower/api/VirtualPrivateCloudSubnetApi.java
 src/main/java/com/smartx/tower/api/VlanApi.java
 src/main/java/com/smartx/tower/api/VmApi.java
 src/main/java/com/smartx/tower/api/VmDiskApi.java
@@ -1004,6 +1015,7 @@ src/main/java/com/smartx/tower/model/NestedSvtImage.java
 src/main/java/com/smartx/tower/model/NestedTagPosition.java
 src/main/java/com/smartx/tower/model/NestedTask.java
 src/main/java/com/smartx/tower/model/NestedTemplateNic.java
+src/main/java/com/smartx/tower/model/NestedTemplateVpcNic.java
 src/main/java/com/smartx/tower/model/NestedThresholds.java
 src/main/java/com/smartx/tower/model/NestedUsbDevice.java
 src/main/java/com/smartx/tower/model/NestedUser.java
@@ -1278,6 +1290,7 @@ src/main/java/com/smartx/tower/model/UpdateVcenterAccountParams.java
 src/main/java/com/smartx/tower/model/UpdateVcenterAccountParamsData.java
 src/main/java/com/smartx/tower/model/UpdateVmVolumeParams.java
 src/main/java/com/smartx/tower/model/UpdateVmVolumeParamsData.java
+src/main/java/com/smartx/tower/model/UpdateVpcNicPayloads.java
 src/main/java/com/smartx/tower/model/UpdateVsphereEsxiAccountParams.java
 src/main/java/com/smartx/tower/model/UpdateVsphereEsxiAccountParamsData.java
 src/main/java/com/smartx/tower/model/UpgradeCloudTowerApplicationParams.java
@@ -1585,6 +1598,8 @@ src/main/java/com/smartx/tower/model/VmUpdateOwnerParams.java
 src/main/java/com/smartx/tower/model/VmUpdateOwnerParamsData.java
 src/main/java/com/smartx/tower/model/VmUpdateParams.java
 src/main/java/com/smartx/tower/model/VmUpdateParamsData.java
+src/main/java/com/smartx/tower/model/VmUpdateVpcNicParams.java
+src/main/java/com/smartx/tower/model/VmUpdateVpcNicParamsData.java
 src/main/java/com/smartx/tower/model/VmUsage.java
 src/main/java/com/smartx/tower/model/VmVideoType.java
 src/main/java/com/smartx/tower/model/VmVlanCreationParams.java
@@ -1616,6 +1631,7 @@ src/main/java/com/smartx/tower/model/VmWhereInput.java
 src/main/java/com/smartx/tower/model/VmWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/VmdkCdromModify.java
 src/main/java/com/smartx/tower/model/VmdkDiskModify.java
+src/main/java/com/smartx/tower/model/VpcNicParams.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccount.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccountConnection.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccountOrderByInput.java

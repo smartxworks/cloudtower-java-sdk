@@ -8,7 +8,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.NestedFrozenVlan;
+import com.smartx.tower.model.NestedTemplateVpcNic;
 import com.smartx.tower.model.VmNicModel;
+import com.smartx.tower.model.VmNicType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -43,9 +45,17 @@ public class NestedTemplateNic {
   @SerializedName(SERIALIZED_NAME_MODEL)
   private VmNicModel model;
 
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private VmNicType type;
+
   public static final String SERIALIZED_NAME_VLAN = "vlan";
   @SerializedName(SERIALIZED_NAME_VLAN)
   private NestedFrozenVlan vlan;
+
+  public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
+  @SerializedName(SERIALIZED_NAME_VPC_NIC)
+  private NestedTemplateVpcNic vpcNic;
 
   public NestedTemplateNic() { 
   }
@@ -188,6 +198,29 @@ public class NestedTemplateNic {
   }
 
 
+  public NestedTemplateNic type(VmNicType type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmNicType getType() {
+    return type;
+  }
+
+
+  public void setType(VmNicType type) {
+    this.type = type;
+  }
+
+
   public NestedTemplateNic vlan(NestedFrozenVlan vlan) {
     
     this.vlan = vlan;
@@ -211,6 +244,29 @@ public class NestedTemplateNic {
   }
 
 
+  public NestedTemplateNic vpcNic(NestedTemplateVpcNic vpcNic) {
+    
+    this.vpcNic = vpcNic;
+    return this;
+  }
+
+   /**
+   * Get vpcNic
+   * @return vpcNic
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedTemplateVpcNic getVpcNic() {
+    return vpcNic;
+  }
+
+
+  public void setVpcNic(NestedTemplateVpcNic vpcNic) {
+    this.vpcNic = vpcNic;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -226,7 +282,9 @@ public class NestedTemplateNic {
         Objects.equals(this.macAddress, nestedTemplateNic.macAddress) &&
         Objects.equals(this.mirror, nestedTemplateNic.mirror) &&
         Objects.equals(this.model, nestedTemplateNic.model) &&
-        Objects.equals(this.vlan, nestedTemplateNic.vlan);
+        Objects.equals(this.type, nestedTemplateNic.type) &&
+        Objects.equals(this.vlan, nestedTemplateNic.vlan) &&
+        Objects.equals(this.vpcNic, nestedTemplateNic.vpcNic);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -235,7 +293,7 @@ public class NestedTemplateNic {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enabled, index, ipAddress, macAddress, mirror, model, vlan);
+    return Objects.hash(enabled, index, ipAddress, macAddress, mirror, model, type, vlan, vpcNic);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -255,7 +313,9 @@ public class NestedTemplateNic {
     sb.append("    macAddress: ").append(toIndentedString(macAddress)).append("\n");
     sb.append("    mirror: ").append(toIndentedString(mirror)).append("\n");
     sb.append("    model: ").append(toIndentedString(model)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
+    sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

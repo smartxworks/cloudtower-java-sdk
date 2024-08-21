@@ -10,6 +10,7 @@ import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedElfImage;
+import com.smartx.tower.model.NestedIscsiLun;
 import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedVmDisk;
 import com.smartx.tower.model.NestedVmSnapshot;
@@ -53,6 +54,10 @@ public class ContentLibraryImage {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_ISCSI_LUNS = "iscsi_luns";
+  @SerializedName(SERIALIZED_NAME_ISCSI_LUNS)
+  private List<NestedIscsiLun> iscsiLuns = null;
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
@@ -267,6 +272,37 @@ public class ContentLibraryImage {
   }
 
 
+  public ContentLibraryImage iscsiLuns(List<NestedIscsiLun> iscsiLuns) {
+    
+    this.iscsiLuns = iscsiLuns;
+    return this;
+  }
+
+  public ContentLibraryImage addIscsiLunsItem(NestedIscsiLun iscsiLunsItem) {
+    if (this.iscsiLuns == null) {
+      this.iscsiLuns = new ArrayList<NestedIscsiLun>();
+    }
+    this.iscsiLuns.add(iscsiLunsItem);
+    return this;
+  }
+
+   /**
+   * Get iscsiLuns
+   * @return iscsiLuns
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedIscsiLun> getIscsiLuns() {
+    return iscsiLuns;
+  }
+
+
+  public void setIscsiLuns(List<NestedIscsiLun> iscsiLuns) {
+    this.iscsiLuns = iscsiLuns;
+  }
+
+
   public ContentLibraryImage labels(List<NestedLabel> labels) {
     
     this.labels = labels;
@@ -476,6 +512,7 @@ public class ContentLibraryImage {
         Objects.equals(this.elfImages, contentLibraryImage.elfImages) &&
         Objects.equals(this.entityAsyncStatus, contentLibraryImage.entityAsyncStatus) &&
         Objects.equals(this.id, contentLibraryImage.id) &&
+        Objects.equals(this.iscsiLuns, contentLibraryImage.iscsiLuns) &&
         Objects.equals(this.labels, contentLibraryImage.labels) &&
         Objects.equals(this.name, contentLibraryImage.name) &&
         Objects.equals(this.path, contentLibraryImage.path) &&
@@ -491,7 +528,7 @@ public class ContentLibraryImage {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clusters, createdAt, description, elfImageUuids, elfImages, entityAsyncStatus, id, labels, name, path, size, vmDisks, vmSnapshots, vmTemplates);
+    return Objects.hash(clusters, createdAt, description, elfImageUuids, elfImages, entityAsyncStatus, id, iscsiLuns, labels, name, path, size, vmDisks, vmSnapshots, vmTemplates);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -512,6 +549,7 @@ public class ContentLibraryImage {
     sb.append("    elfImages: ").append(toIndentedString(elfImages)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    iscsiLuns: ").append(toIndentedString(iscsiLuns)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
