@@ -9,6 +9,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.VmNicModel;
 import com.smartx.tower.model.VmNicQosOption;
+import com.smartx.tower.model.VmNicType;
+import com.smartx.tower.model.VpcNicParams;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -18,6 +20,14 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmNicParams {
+  public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
+  @SerializedName(SERIALIZED_NAME_VPC_NIC)
+  private VpcNicParams vpcNic;
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private VmNicType type;
+
   public static final String SERIALIZED_NAME_QOS = "qos";
   @SerializedName(SERIALIZED_NAME_QOS)
   private VmNicQosOption qos;
@@ -64,6 +74,52 @@ public class VmNicParams {
 
   public VmNicParams() { 
   }
+
+  public VmNicParams vpcNic(VpcNicParams vpcNic) {
+    
+    this.vpcNic = vpcNic;
+    return this;
+  }
+
+   /**
+   * Get vpcNic
+   * @return vpcNic
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VpcNicParams getVpcNic() {
+    return vpcNic;
+  }
+
+
+  public void setVpcNic(VpcNicParams vpcNic) {
+    this.vpcNic = vpcNic;
+  }
+
+
+  public VmNicParams type(VmNicType type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmNicType getType() {
+    return type;
+  }
+
+
+  public void setType(VmNicType type) {
+    this.type = type;
+  }
+
 
   public VmNicParams qos(VmNicQosOption qos) {
     
@@ -190,8 +246,8 @@ public class VmNicParams {
    * Get connectVlanId
    * @return connectVlanId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getConnectVlanId() {
     return connectVlanId;
@@ -327,7 +383,9 @@ public class VmNicParams {
       return false;
     }
     VmNicParams vmNicParams = (VmNicParams) o;
-    return Objects.equals(this.qos, vmNicParams.qos) &&
+    return Objects.equals(this.vpcNic, vmNicParams.vpcNic) &&
+        Objects.equals(this.type, vmNicParams.type) &&
+        Objects.equals(this.qos, vmNicParams.qos) &&
         Objects.equals(this.subnetMask, vmNicParams.subnetMask) &&
         Objects.equals(this.gateway, vmNicParams.gateway) &&
         Objects.equals(this.ipAddress, vmNicParams.ipAddress) &&
@@ -342,13 +400,15 @@ public class VmNicParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(qos, subnetMask, gateway, ipAddress, nicId, connectVlanId, mirror, model, enabled, macAddress, localId);
+    return Objects.hash(vpcNic, type, qos, subnetMask, gateway, ipAddress, nicId, connectVlanId, mirror, model, enabled, macAddress, localId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmNicParams {\n");
+    sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    qos: ").append(toIndentedString(qos)).append("\n");
     sb.append("    subnetMask: ").append(toIndentedString(subnetMask)).append("\n");
     sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
