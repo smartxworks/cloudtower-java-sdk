@@ -13,7 +13,9 @@ import java.io.IOException;
 
 /**
  * InstallVmtoolsParamsData
+ * @deprecated
  */
+@Deprecated
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class InstallVmtoolsParamsData {
   public static final String SERIALIZED_NAME_SVT_IMAGE_ID = "svt_image_id";

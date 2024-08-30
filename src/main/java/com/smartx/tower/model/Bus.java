@@ -20,6 +20,8 @@ public enum Bus {
   
   SCSI("SCSI"),
   
+  USB("USB"),
+  
   VIRTIO("VIRTIO"),
   
   BUS_UNSUPPORTED_ENUM("BUS_UNSUPPORTED_ENUM");
