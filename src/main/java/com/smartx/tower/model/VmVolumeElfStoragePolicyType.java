@@ -16,6 +16,8 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(VmVolumeElfStoragePolicyType.Adapter.class)
 public enum VmVolumeElfStoragePolicyType {
   
+  EC("EC"),
+  
   ELF_CP_REPLICA_2_THICK_PROVISION("ELF_CP_REPLICA_2_THICK_PROVISION"),
   
   ELF_CP_REPLICA_2_THIN_PROVISION("ELF_CP_REPLICA_2_THIN_PROVISION"),
