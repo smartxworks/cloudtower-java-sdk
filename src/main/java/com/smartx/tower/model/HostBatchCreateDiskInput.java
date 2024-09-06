@@ -23,6 +23,10 @@ public class HostBatchCreateDiskInput {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private DiskType type;
 
+  public static final String SERIALIZED_NAME_SIZE = "size";
+  @SerializedName(SERIALIZED_NAME_SIZE)
+  private Double size;
+
   public static final String SERIALIZED_NAME_FUNCTION = "function";
   @SerializedName(SERIALIZED_NAME_FUNCTION)
   private DiskFunction function;
@@ -54,6 +58,29 @@ public class HostBatchCreateDiskInput {
 
   public void setType(DiskType type) {
     this.type = type;
+  }
+
+
+  public HostBatchCreateDiskInput size(Double size) {
+    
+    this.size = size;
+    return this;
+  }
+
+   /**
+   * Get size
+   * @return size
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getSize() {
+    return size;
+  }
+
+
+  public void setSize(Double size) {
+    this.size = size;
   }
 
 
@@ -113,6 +140,7 @@ public class HostBatchCreateDiskInput {
     }
     HostBatchCreateDiskInput hostBatchCreateDiskInput = (HostBatchCreateDiskInput) o;
     return Objects.equals(this.type, hostBatchCreateDiskInput.type) &&
+        Objects.equals(this.size, hostBatchCreateDiskInput.size) &&
         Objects.equals(this.function, hostBatchCreateDiskInput.function) &&
         Objects.equals(this.drive, hostBatchCreateDiskInput.drive);
   }
@@ -123,7 +151,7 @@ public class HostBatchCreateDiskInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, function, drive);
+    return Objects.hash(type, size, function, drive);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -138,6 +166,7 @@ public class HostBatchCreateDiskInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class HostBatchCreateDiskInput {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    function: ").append(toIndentedString(function)).append("\n");
     sb.append("    drive: ").append(toIndentedString(drive)).append("\n");
     sb.append("}");

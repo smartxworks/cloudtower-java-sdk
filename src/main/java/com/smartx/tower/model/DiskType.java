@@ -18,7 +18,11 @@ public enum DiskType {
   
   HDD("HDD"),
   
+  NVME_SSD("NVMe_SSD"),
+  
   PMEM("PMem"),
+  
+  SATA_OR_SAS_SSD("SATA_OR_SAS_SSD"),
   
   SSD("SSD"),
   

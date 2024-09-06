@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.HostAuthInfo;
 import com.smartx.tower.model.HostCreationParamsData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -19,6 +20,10 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class HostCreationParams {
+  public static final String SERIALIZED_NAME_AUTH_INFO = "auth_info";
+  @SerializedName(SERIALIZED_NAME_AUTH_INFO)
+  private HostAuthInfo authInfo;
+
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   private List<HostCreationParamsData> data = new ArrayList<HostCreationParamsData>();
@@ -29,6 +34,29 @@ public class HostCreationParams {
 
   public HostCreationParams() { 
   }
+
+  public HostCreationParams authInfo(HostAuthInfo authInfo) {
+    
+    this.authInfo = authInfo;
+    return this;
+  }
+
+   /**
+   * Get authInfo
+   * @return authInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public HostAuthInfo getAuthInfo() {
+    return authInfo;
+  }
+
+
+  public void setAuthInfo(HostAuthInfo authInfo) {
+    this.authInfo = authInfo;
+  }
+
 
   public HostCreationParams data(List<HostCreationParamsData> data) {
     
@@ -90,19 +118,21 @@ public class HostCreationParams {
       return false;
     }
     HostCreationParams hostCreationParams = (HostCreationParams) o;
-    return Objects.equals(this.data, hostCreationParams.data) &&
+    return Objects.equals(this.authInfo, hostCreationParams.authInfo) &&
+        Objects.equals(this.data, hostCreationParams.data) &&
         Objects.equals(this.clusterId, hostCreationParams.clusterId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, clusterId);
+    return Objects.hash(authInfo, data, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class HostCreationParams {\n");
+    sb.append("    authInfo: ").append(toIndentedString(authInfo)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
     sb.append("}");

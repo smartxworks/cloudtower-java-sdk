@@ -15,15 +15,17 @@ import com.google.gson.stream.JsonWriter;
  */
 @JsonAdapter(VmVolumeElfStoragePolicyType.Adapter.class)
 public enum VmVolumeElfStoragePolicyType {
-  
+
+  EC("EC"),
+
   ELF_CP_REPLICA_2_THICK_PROVISION("ELF_CP_REPLICA_2_THICK_PROVISION"),
-  
+
   ELF_CP_REPLICA_2_THIN_PROVISION("ELF_CP_REPLICA_2_THIN_PROVISION"),
-  
+
   ELF_CP_REPLICA_3_THICK_PROVISION("ELF_CP_REPLICA_3_THICK_PROVISION"),
-  
+
   ELF_CP_REPLICA_3_THIN_PROVISION("ELF_CP_REPLICA_3_THIN_PROVISION"),
-  
+
   _1_THICK_PROVISION("REPLICA_1_THICK_PROVISION"),
 
   _1_THIN_PROVISION("REPLICA_1_THIN_PROVISION"),
@@ -35,8 +37,9 @@ public enum VmVolumeElfStoragePolicyType {
   _3_THICK_PROVISION("REPLICA_3_THICK_PROVISION"),
 
   _3_THIN_PROVISION("REPLICA_3_THIN_PROVISION"),
-  
+
   VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM("VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM");
+
   private String value;
 
   VmVolumeElfStoragePolicyType(String value) {
@@ -74,4 +77,3 @@ public enum VmVolumeElfStoragePolicyType {
     }
   }
 }
-
