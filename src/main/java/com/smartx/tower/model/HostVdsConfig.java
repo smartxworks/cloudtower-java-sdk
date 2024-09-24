@@ -17,6 +17,7 @@ import java.util.List;
  * HostVdsConfig
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class HostVdsConfig {
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)

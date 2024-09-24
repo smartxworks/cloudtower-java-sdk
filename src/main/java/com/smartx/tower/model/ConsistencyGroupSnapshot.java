@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * ConsistencyGroupSnapshot
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ConsistencyGroupSnapshot {
   public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS = "Iscsi_lun_snapshots";
   @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS)

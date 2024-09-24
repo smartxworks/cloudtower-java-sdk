@@ -16,6 +16,7 @@ import java.io.IOException;
  * VmImportNicParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmImportNicParams {
   public static final String SERIALIZED_NAME_SUBNET_MASK = "subnet_mask";
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)

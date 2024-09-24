@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudSecurityPolicyWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudSecurityPolicyWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

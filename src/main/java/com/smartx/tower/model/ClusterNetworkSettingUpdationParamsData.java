@@ -19,6 +19,7 @@ import java.util.List;
  * ClusterNetworkSettingUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ClusterNetworkSettingUpdationParamsData {
   public static final String SERIALIZED_NAME_MGT_IP_MAPPER = "mgt_ip_mapper";
   @SerializedName(SERIALIZED_NAME_MGT_IP_MAPPER)

@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * ContentLibraryVmTemplate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryVmTemplate {
   public static final String SERIALIZED_NAME_ARCHITECTURE = "architecture";
   @SerializedName(SERIALIZED_NAME_ARCHITECTURE)

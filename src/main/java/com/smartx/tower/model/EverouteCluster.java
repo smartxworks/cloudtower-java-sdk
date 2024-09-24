@@ -15,7 +15,9 @@ import com.smartx.tower.model.NestedEverouteClusterStatus;
 import com.smartx.tower.model.NestedEverouteClusterWhitelist;
 import com.smartx.tower.model.NestedEverouteControllerInstance;
 import com.smartx.tower.model.NestedEverouteControllerTemplate;
+import com.smartx.tower.model.NestedLoadBalancerService;
 import com.smartx.tower.model.NestedVds;
+import com.smartx.tower.model.NestedVirtualPrivateCloudService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,6 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * EverouteCluster
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class EverouteCluster {
   public static final String SERIALIZED_NAME_AGENT_ELF_CLUSTERS = "agent_elf_clusters";
   @SerializedName(SERIALIZED_NAME_AGENT_ELF_CLUSTERS)
@@ -64,6 +67,10 @@ public class EverouteCluster {
   @SerializedName(SERIALIZED_NAME_INSTALLED)
   private Boolean installed;
 
+  public static final String SERIALIZED_NAME_LOAD_BALANCER_SERVICE = "load_balancer_service";
+  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_SERVICE)
+  private NestedLoadBalancerService loadBalancerService;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -79,6 +86,10 @@ public class EverouteCluster {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
   private String version;
+
+  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+  private NestedVirtualPrivateCloudService vpcService;
 
   public EverouteCluster() { 
   }
@@ -311,6 +322,29 @@ public class EverouteCluster {
   }
 
 
+  public EverouteCluster loadBalancerService(NestedLoadBalancerService loadBalancerService) {
+    
+    this.loadBalancerService = loadBalancerService;
+    return this;
+  }
+
+   /**
+   * Get loadBalancerService
+   * @return loadBalancerService
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedLoadBalancerService getLoadBalancerService() {
+    return loadBalancerService;
+  }
+
+
+  public void setLoadBalancerService(NestedLoadBalancerService loadBalancerService) {
+    this.loadBalancerService = loadBalancerService;
+  }
+
+
   public EverouteCluster name(String name) {
     
     this.name = name;
@@ -403,6 +437,29 @@ public class EverouteCluster {
   }
 
 
+  public EverouteCluster vpcService(NestedVirtualPrivateCloudService vpcService) {
+    
+    this.vpcService = vpcService;
+    return this;
+  }
+
+   /**
+   * Get vpcService
+   * @return vpcService
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedVirtualPrivateCloudService getVpcService() {
+    return vpcService;
+  }
+
+
+  public void setVpcService(NestedVirtualPrivateCloudService vpcService) {
+    this.vpcService = vpcService;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -421,10 +478,12 @@ public class EverouteCluster {
         Objects.equals(this.globalWhitelist, everouteCluster.globalWhitelist) &&
         Objects.equals(this.id, everouteCluster.id) &&
         Objects.equals(this.installed, everouteCluster.installed) &&
+        Objects.equals(this.loadBalancerService, everouteCluster.loadBalancerService) &&
         Objects.equals(this.name, everouteCluster.name) &&
         Objects.equals(this.phase, everouteCluster.phase) &&
         Objects.equals(this.status, everouteCluster.status) &&
-        Objects.equals(this.version, everouteCluster.version);
+        Objects.equals(this.version, everouteCluster.version) &&
+        Objects.equals(this.vpcService, everouteCluster.vpcService);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -433,7 +492,7 @@ public class EverouteCluster {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agentElfClusters, agentElfVdses, controllerInstances, controllerTemplate, entityAsyncStatus, globalDefaultAction, globalWhitelist, id, installed, name, phase, status, version);
+    return Objects.hash(agentElfClusters, agentElfVdses, controllerInstances, controllerTemplate, entityAsyncStatus, globalDefaultAction, globalWhitelist, id, installed, loadBalancerService, name, phase, status, version, vpcService);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -456,10 +515,12 @@ public class EverouteCluster {
     sb.append("    globalWhitelist: ").append(toIndentedString(globalWhitelist)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    installed: ").append(toIndentedString(installed)).append("\n");
+    sb.append("    loadBalancerService: ").append(toIndentedString(loadBalancerService)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

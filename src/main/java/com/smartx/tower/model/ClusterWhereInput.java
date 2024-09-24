@@ -41,6 +41,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * ClusterWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ClusterWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * NestedMaintenanceHostState
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedMaintenanceHostState {
   public static final String SERIALIZED_NAME_ENTER_MAINTENANCE_TIME = "enter_maintenance_time";
   @SerializedName(SERIALIZED_NAME_ENTER_MAINTENANCE_TIME)

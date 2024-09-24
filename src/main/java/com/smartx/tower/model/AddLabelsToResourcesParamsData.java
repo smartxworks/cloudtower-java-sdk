@@ -44,6 +44,7 @@ import java.io.IOException;
  * AddLabelsToResourcesParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class AddLabelsToResourcesParamsData {
   public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
   @SerializedName(SERIALIZED_NAME_GPU_DEVICES)

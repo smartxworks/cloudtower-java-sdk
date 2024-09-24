@@ -16,6 +16,7 @@ import java.io.IOException;
  * UpdateCloudTowerApplicationVmSpecParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpdateCloudTowerApplicationVmSpecParamsData {
   public static final String SERIALIZED_NAME_VM_SPEC = "vmSpec";
   @SerializedName(SERIALIZED_NAME_VM_SPEC)

@@ -17,6 +17,7 @@ import java.io.IOException;
  * VmOperatePciNicParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmOperatePciNicParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

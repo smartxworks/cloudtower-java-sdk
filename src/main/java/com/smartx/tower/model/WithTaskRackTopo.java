@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * WithTaskRackTopo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class WithTaskRackTopo {
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)

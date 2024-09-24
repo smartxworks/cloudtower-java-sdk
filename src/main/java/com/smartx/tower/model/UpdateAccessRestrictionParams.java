@@ -18,6 +18,7 @@ import java.util.List;
  * UpdateAccessRestrictionParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpdateAccessRestrictionParams {
   public static final String SERIALIZED_NAME_ACCESS_LIST = "access_list";
   @SerializedName(SERIALIZED_NAME_ACCESS_LIST)

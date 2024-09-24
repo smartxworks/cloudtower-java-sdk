@@ -25,6 +25,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * SnapshotPlan
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnapshotPlan {
   public static final String SERIALIZED_NAME_AUTO_DELETE_NUM = "auto_delete_num";
   @SerializedName(SERIALIZED_NAME_AUTO_DELETE_NUM)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedAggregateUploadTask
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedAggregateUploadTask {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)

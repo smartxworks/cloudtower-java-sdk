@@ -9,6 +9,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.NestedLabel;
 import com.smartx.tower.model.NestedNetworkPolicyRulePort;
+import com.smartx.tower.model.NestedSecurityGroup;
 import com.smartx.tower.model.NetworkPolicyRuleType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -21,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedNetworkPolicyRule
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedNetworkPolicyRule {
   public static final String SERIALIZED_NAME_IP_BLOCK = "ip_block";
   @SerializedName(SERIALIZED_NAME_IP_BLOCK)
@@ -29,6 +31,14 @@ public class NestedNetworkPolicyRule {
   public static final String SERIALIZED_NAME_PORTS = "ports";
   @SerializedName(SERIALIZED_NAME_PORTS)
   private List<NestedNetworkPolicyRulePort> ports = null;
+
+  public static final String SERIALIZED_NAME_SECURITY_GROUP = "security_group";
+  @SerializedName(SERIALIZED_NAME_SECURITY_GROUP)
+  private NestedSecurityGroup securityGroup;
+
+  public static final String SERIALIZED_NAME_SECURITY_GROUP_ID = "security_group_id";
+  @SerializedName(SERIALIZED_NAME_SECURITY_GROUP_ID)
+  private String securityGroupId;
 
   public static final String SERIALIZED_NAME_SELECTOR = "selector";
   @SerializedName(SERIALIZED_NAME_SELECTOR)
@@ -96,6 +106,52 @@ public class NestedNetworkPolicyRule {
 
   public void setPorts(List<NestedNetworkPolicyRulePort> ports) {
     this.ports = ports;
+  }
+
+
+  public NestedNetworkPolicyRule securityGroup(NestedSecurityGroup securityGroup) {
+    
+    this.securityGroup = securityGroup;
+    return this;
+  }
+
+   /**
+   * Get securityGroup
+   * @return securityGroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedSecurityGroup getSecurityGroup() {
+    return securityGroup;
+  }
+
+
+  public void setSecurityGroup(NestedSecurityGroup securityGroup) {
+    this.securityGroup = securityGroup;
+  }
+
+
+  public NestedNetworkPolicyRule securityGroupId(String securityGroupId) {
+    
+    this.securityGroupId = securityGroupId;
+    return this;
+  }
+
+   /**
+   * Get securityGroupId
+   * @return securityGroupId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getSecurityGroupId() {
+    return securityGroupId;
+  }
+
+
+  public void setSecurityGroupId(String securityGroupId) {
+    this.securityGroupId = securityGroupId;
   }
 
 
@@ -195,6 +251,8 @@ public class NestedNetworkPolicyRule {
     NestedNetworkPolicyRule nestedNetworkPolicyRule = (NestedNetworkPolicyRule) o;
     return Objects.equals(this.ipBlock, nestedNetworkPolicyRule.ipBlock) &&
         Objects.equals(this.ports, nestedNetworkPolicyRule.ports) &&
+        Objects.equals(this.securityGroup, nestedNetworkPolicyRule.securityGroup) &&
+        Objects.equals(this.securityGroupId, nestedNetworkPolicyRule.securityGroupId) &&
         Objects.equals(this.selector, nestedNetworkPolicyRule.selector) &&
         Objects.equals(this.selectorIds, nestedNetworkPolicyRule.selectorIds) &&
         Objects.equals(this.type, nestedNetworkPolicyRule.type);
@@ -206,7 +264,7 @@ public class NestedNetworkPolicyRule {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ipBlock, ports, selector, selectorIds, type);
+    return Objects.hash(ipBlock, ports, securityGroup, securityGroupId, selector, selectorIds, type);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -222,6 +280,8 @@ public class NestedNetworkPolicyRule {
     sb.append("class NestedNetworkPolicyRule {\n");
     sb.append("    ipBlock: ").append(toIndentedString(ipBlock)).append("\n");
     sb.append("    ports: ").append(toIndentedString(ports)).append("\n");
+    sb.append("    securityGroup: ").append(toIndentedString(securityGroup)).append("\n");
+    sb.append("    securityGroupId: ").append(toIndentedString(securityGroupId)).append("\n");
     sb.append("    selector: ").append(toIndentedString(selector)).append("\n");
     sb.append("    selectorIds: ").append(toIndentedString(selectorIds)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

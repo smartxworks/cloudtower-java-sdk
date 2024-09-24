@@ -16,6 +16,7 @@ import java.io.IOException;
  * V2EverouteLicenseConnection
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class V2EverouteLicenseConnection {
   public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
   @SerializedName(SERIALIZED_NAME_AGGREGATE)

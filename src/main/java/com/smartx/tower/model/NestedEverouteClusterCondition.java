@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedEverouteClusterCondition
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedEverouteClusterCondition {
   public static final String SERIALIZED_NAME_LAST_PROBE_TIME = "lastProbeTime";
   @SerializedName(SERIALIZED_NAME_LAST_PROBE_TIME)

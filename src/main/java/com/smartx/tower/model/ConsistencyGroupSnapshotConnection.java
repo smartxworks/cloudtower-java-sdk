@@ -16,6 +16,7 @@ import java.io.IOException;
  * ConsistencyGroupSnapshotConnection
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ConsistencyGroupSnapshotConnection {
   public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
   @SerializedName(SERIALIZED_NAME_AGGREGATE)

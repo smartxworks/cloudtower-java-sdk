@@ -15,6 +15,7 @@ import java.io.IOException;
  * GpuDeviceSriovSwitchParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GpuDeviceSriovSwitchParamsData {
   public static final String SERIALIZED_NAME_ENABLE = "enable";
   @SerializedName(SERIALIZED_NAME_ENABLE)

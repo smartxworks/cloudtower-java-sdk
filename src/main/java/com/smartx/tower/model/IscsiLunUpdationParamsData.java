@@ -19,6 +19,7 @@ import java.io.IOException;
  * IscsiLunUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLunUpdationParamsData {
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE_UNIT = "assigned_size_unit";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE_UNIT)

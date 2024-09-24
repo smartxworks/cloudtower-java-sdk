@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedAggregateNvmfNamespaceSnapshot
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedAggregateNvmfNamespaceSnapshot {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)

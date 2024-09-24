@@ -20,6 +20,7 @@ import java.util.List;
  * MigrateVmConfig
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MigrateVmConfig {
   public static final String SERIALIZED_NAME_REMOVE_UNMOVABLE_DEVICES = "remove_unmovable_devices";
   @SerializedName(SERIALIZED_NAME_REMOVE_UNMOVABLE_DEVICES)

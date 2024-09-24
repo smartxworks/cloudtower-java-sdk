@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedEverouteClusterWhitelist
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedEverouteClusterWhitelist {
   public static final String SERIALIZED_NAME_EGRESS = "egress";
   @SerializedName(SERIALIZED_NAME_EGRESS)

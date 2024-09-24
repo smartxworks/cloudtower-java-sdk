@@ -16,6 +16,7 @@ import java.io.IOException;
  * UpdatePassrodSecurityParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpdatePassrodSecurityParams {
   public static final String SERIALIZED_NAME_PASSWORD_EXPIRE_DAYS = "password_expire_days";
   @SerializedName(SERIALIZED_NAME_PASSWORD_EXPIRE_DAYS)

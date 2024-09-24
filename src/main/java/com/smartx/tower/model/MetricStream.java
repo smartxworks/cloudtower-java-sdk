@@ -20,6 +20,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * MetricStream
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MetricStream {
   public static final String SERIALIZED_NAME_POINTS = "points";
   @SerializedName(SERIALIZED_NAME_POINTS)

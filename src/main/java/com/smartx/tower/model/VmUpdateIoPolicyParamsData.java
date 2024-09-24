@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmUpdateIoPolicyParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateIoPolicyParamsData {
   public static final String SERIALIZED_NAME_EACH_DISK = "each_disk";
   @SerializedName(SERIALIZED_NAME_EACH_DISK)

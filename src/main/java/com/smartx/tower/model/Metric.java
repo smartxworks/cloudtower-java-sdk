@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Metric
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Metric {
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)

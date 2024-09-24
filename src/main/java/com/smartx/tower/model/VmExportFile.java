@@ -24,6 +24,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmExportFile
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmExportFile {
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE = "content_library_vm_template";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_VM_TEMPLATE)

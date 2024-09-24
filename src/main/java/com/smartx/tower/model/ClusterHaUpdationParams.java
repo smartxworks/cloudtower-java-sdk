@@ -16,6 +16,7 @@ import java.io.IOException;
  * ClusterHaUpdationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ClusterHaUpdationParams {
   public static final String SERIALIZED_NAME_HA = "ha";
   @SerializedName(SERIALIZED_NAME_HA)

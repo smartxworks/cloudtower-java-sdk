@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Position
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Position {
   public static final String SERIALIZED_NAME_ROW = "row";
   @SerializedName(SERIALIZED_NAME_ROW)

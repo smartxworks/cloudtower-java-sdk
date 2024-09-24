@@ -29,6 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmTemplate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmTemplate {
   public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
   @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)

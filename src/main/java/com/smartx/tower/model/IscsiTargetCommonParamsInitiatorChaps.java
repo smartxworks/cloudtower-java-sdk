@@ -15,6 +15,7 @@ import java.io.IOException;
  * IscsiTargetCommonParamsInitiatorChaps
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiTargetCommonParamsInitiatorChaps {
   public static final String SERIALIZED_NAME_CHAP_SECRET = "chap_secret";
   @SerializedName(SERIALIZED_NAME_CHAP_SECRET)

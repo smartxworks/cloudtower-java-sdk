@@ -15,6 +15,7 @@ import java.io.IOException;
  * OrganizationCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class OrganizationCreationParams {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

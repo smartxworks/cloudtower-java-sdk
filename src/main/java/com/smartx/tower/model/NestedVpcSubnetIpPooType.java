@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedVpcSubnetIpPooType
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVpcSubnetIpPooType {
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)

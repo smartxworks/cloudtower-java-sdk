@@ -16,6 +16,7 @@ import java.io.IOException;
  * DeployCloudTowerApplicationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DeployCloudTowerApplicationParams {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

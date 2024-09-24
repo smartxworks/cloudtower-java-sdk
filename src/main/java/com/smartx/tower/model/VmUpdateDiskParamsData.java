@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmUpdateDiskParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateDiskParamsData {
   public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_ID = "content_library_image_id";
   @SerializedName(SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_ID)

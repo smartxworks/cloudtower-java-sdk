@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NodeTopo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NodeTopo {
   public static final String SERIALIZED_NAME_BRICK_TOPO = "brick_topo";
   @SerializedName(SERIALIZED_NAME_BRICK_TOPO)

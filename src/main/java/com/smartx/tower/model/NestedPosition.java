@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedPosition
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedPosition {
   public static final String SERIALIZED_NAME_COLUMN = "column";
   @SerializedName(SERIALIZED_NAME_COLUMN)

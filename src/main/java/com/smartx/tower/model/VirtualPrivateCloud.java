@@ -24,6 +24,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloud
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloud {
   public static final String SERIALIZED_NAME_ASSOCIATE_EXTERNAL_SUBNET_NUM = "associate_external_subnet_num";
   @SerializedName(SERIALIZED_NAME_ASSOCIATE_EXTERNAL_SUBNET_NUM)

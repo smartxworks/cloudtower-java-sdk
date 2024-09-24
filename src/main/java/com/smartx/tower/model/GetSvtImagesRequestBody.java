@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GetSvtImagesRequestBody
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetSvtImagesRequestBody {
   public static final String SERIALIZED_NAME_AFTER = "after";
   @SerializedName(SERIALIZED_NAME_AFTER)

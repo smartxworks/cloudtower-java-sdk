@@ -31,6 +31,7 @@ import java.util.List;
  * VmCreateVmFromContentLibraryTemplateParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmCreateVmFromContentLibraryTemplateParams {
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)

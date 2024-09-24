@@ -17,6 +17,7 @@ import java.util.List;
  * VmRemoveDiskParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRemoveDiskParamsData {
   public static final String SERIALIZED_NAME_DISK_IDS = "disk_ids";
   @SerializedName(SERIALIZED_NAME_DISK_IDS)

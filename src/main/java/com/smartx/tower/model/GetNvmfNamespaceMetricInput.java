@@ -19,6 +19,7 @@ import java.util.List;
  * GetNvmfNamespaceMetricInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetNvmfNamespaceMetricInput {
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)

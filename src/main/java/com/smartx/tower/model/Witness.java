@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Witness
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Witness {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)

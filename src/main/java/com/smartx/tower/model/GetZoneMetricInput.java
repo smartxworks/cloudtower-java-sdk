@@ -18,6 +18,7 @@ import java.util.List;
  * GetZoneMetricInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetZoneMetricInput {
   public static final String SERIALIZED_NAME_RANGE = "range";
   @SerializedName(SERIALIZED_NAME_RANGE)

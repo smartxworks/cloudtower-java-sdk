@@ -15,6 +15,7 @@ import java.io.IOException;
  * NvmfNamespaceSnapshotCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NvmfNamespaceSnapshotCreationParams {
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEM_ID = "nvmf_subsystem_id";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM_ID)

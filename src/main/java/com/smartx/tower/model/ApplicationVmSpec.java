@@ -23,6 +23,7 @@ import java.util.List;
  * ApplicationVmSpec
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ApplicationVmSpec {
   public static final String SERIALIZED_NAME_VM_USAGE = "vmUsage";
   @SerializedName(SERIALIZED_NAME_VM_USAGE)

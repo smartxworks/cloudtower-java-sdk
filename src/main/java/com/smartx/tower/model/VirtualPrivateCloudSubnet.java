@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudSubnet
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudSubnet {
   public static final String SERIALIZED_NAME_CIDR = "cidr";
   @SerializedName(SERIALIZED_NAME_CIDR)

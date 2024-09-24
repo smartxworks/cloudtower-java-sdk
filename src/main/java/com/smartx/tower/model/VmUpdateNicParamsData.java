@@ -17,6 +17,7 @@ import java.io.IOException;
  * VmUpdateNicParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateNicParamsData {
   public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
   @SerializedName(SERIALIZED_NAME_VPC_NIC)

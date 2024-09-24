@@ -19,6 +19,7 @@ import java.util.List;
  * GetHostNetworkMetricInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetHostNetworkMetricInput {
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)

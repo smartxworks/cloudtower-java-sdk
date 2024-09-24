@@ -15,6 +15,7 @@ import java.io.IOException;
  * UpgradeCloudTowerApplicationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpgradeCloudTowerApplicationParamsData {
   public static final String SERIALIZED_NAME_TARGET_PACKAGE = "targetPackage";
   @SerializedName(SERIALIZED_NAME_TARGET_PACKAGE)

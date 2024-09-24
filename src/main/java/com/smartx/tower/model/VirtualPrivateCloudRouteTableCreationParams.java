@@ -18,6 +18,7 @@ import java.util.List;
  * VirtualPrivateCloudRouteTableCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudRouteTableCreationParams {
   public static final String SERIALIZED_NAME_ROUTES = "routes";
   @SerializedName(SERIALIZED_NAME_ROUTES)

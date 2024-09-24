@@ -15,6 +15,7 @@ import java.io.IOException;
  * ConsistencyGroupSnapshotCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ConsistencyGroupSnapshotCreationParams {
   public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_ID = "consistency_group_id";
   @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_ID)

@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UserUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UserUpdationParamsData {
   public static final String SERIALIZED_NAME_INTERNAL = "internal";
   @SerializedName(SERIALIZED_NAME_INTERNAL)

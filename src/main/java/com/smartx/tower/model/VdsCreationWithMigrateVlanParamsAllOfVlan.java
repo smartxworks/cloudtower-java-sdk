@@ -18,6 +18,7 @@ import java.util.List;
  * VdsCreationWithMigrateVlanParamsAllOfVlan
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VdsCreationWithMigrateVlanParamsAllOfVlan {
   public static final String SERIALIZED_NAME_EXTRA_IP = "extra_ip";
   @SerializedName(SERIALIZED_NAME_EXTRA_IP)

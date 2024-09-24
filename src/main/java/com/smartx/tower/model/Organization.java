@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Organization
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Organization {
   public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
   @SerializedName(SERIALIZED_NAME_DATACENTERS)

@@ -20,6 +20,7 @@ import java.util.List;
  * ApplicationVmSpecDefinition
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ApplicationVmSpecDefinition {
   public static final String SERIALIZED_NAME_VM_AFFINITY = "vmAffinity";
   @SerializedName(SERIALIZED_NAME_VM_AFFINITY)

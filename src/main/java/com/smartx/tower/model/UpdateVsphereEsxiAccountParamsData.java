@@ -15,6 +15,7 @@ import java.io.IOException;
  * UpdateVsphereEsxiAccountParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpdateVsphereEsxiAccountParamsData {
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)

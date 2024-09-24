@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UserRoleNext
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UserRoleNext {
   public static final String SERIALIZED_NAME_ACTIONS = "actions";
   @SerializedName(SERIALIZED_NAME_ACTIONS)

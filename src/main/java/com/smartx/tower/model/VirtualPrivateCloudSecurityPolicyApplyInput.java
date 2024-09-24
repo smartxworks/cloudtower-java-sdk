@@ -15,6 +15,7 @@ import java.io.IOException;
  * VirtualPrivateCloudSecurityPolicyApplyInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudSecurityPolicyApplyInput {
   public static final String SERIALIZED_NAME_SECURITY_GROUP_ID = "security_group_id";
   @SerializedName(SERIALIZED_NAME_SECURITY_GROUP_ID)

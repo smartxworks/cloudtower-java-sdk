@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmVolumeSnapshotCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmVolumeSnapshotCreationParams {
   public static final String SERIALIZED_NAME_VOLUME_ID = "volume_id";
   @SerializedName(SERIALIZED_NAME_VOLUME_ID)

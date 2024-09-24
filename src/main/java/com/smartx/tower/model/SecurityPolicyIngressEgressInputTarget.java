@@ -20,6 +20,7 @@ import java.util.List;
  * SecurityPolicyIngressEgressInputTarget
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityPolicyIngressEgressInputTarget {
   public static final String SERIALIZED_NAME_SECURITY_GROUPS = "security_groups";
   @SerializedName(SERIALIZED_NAME_SECURITY_GROUPS)

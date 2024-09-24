@@ -25,6 +25,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmVolumeWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmVolumeWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

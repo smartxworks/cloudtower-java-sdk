@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Datacenter
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Datacenter {
   public static final String SERIALIZED_NAME_CLUSTER_NUM = "cluster_num";
   @SerializedName(SERIALIZED_NAME_CLUSTER_NUM)

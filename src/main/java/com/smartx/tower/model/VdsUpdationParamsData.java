@@ -17,6 +17,7 @@ import java.util.List;
  * VdsUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VdsUpdationParamsData {
   public static final String SERIALIZED_NAME_NIC_IDS = "nicIds";
   @SerializedName(SERIALIZED_NAME_NIC_IDS)

@@ -49,6 +49,7 @@ import java.io.IOException;
  * TableReporterParamsFilter
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class TableReporterParamsFilter {
   public static final String SERIALIZED_NAME_NVMF_SUBSYSTEMS = "nvmfSubsystems";
   @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEMS)

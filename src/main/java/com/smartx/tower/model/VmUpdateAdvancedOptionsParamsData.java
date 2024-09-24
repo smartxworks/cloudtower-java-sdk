@@ -17,6 +17,7 @@ import java.io.IOException;
  * VmUpdateAdvancedOptionsParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateAdvancedOptionsParamsData {
   public static final String SERIALIZED_NAME_VIDEO_TYPE = "video_type";
   @SerializedName(SERIALIZED_NAME_VIDEO_TYPE)

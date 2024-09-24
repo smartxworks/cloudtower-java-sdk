@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmVolumeRollbackParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmVolumeRollbackParams {
   public static final String SERIALIZED_NAME_VOLUME_SNAPSHOT_ID = "volume_snapshot_id";
   @SerializedName(SERIALIZED_NAME_VOLUME_SNAPSHOT_ID)

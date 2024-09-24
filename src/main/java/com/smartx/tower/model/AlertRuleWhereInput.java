@@ -20,6 +20,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * AlertRuleWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class AlertRuleWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

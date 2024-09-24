@@ -15,6 +15,7 @@ import java.io.IOException;
  * VirtualPrivateCloudDnatRuleParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudDnatRuleParams {
   public static final String SERIALIZED_NAME_TARGET_PORT = "target_port";
   @SerializedName(SERIALIZED_NAME_TARGET_PORT)

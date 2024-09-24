@@ -16,6 +16,7 @@ import java.io.IOException;
  * NestedSnapshotGroupVmDiskInfo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedSnapshotGroupVmDiskInfo {
   public static final String SERIALIZED_NAME_DISK_ID = "disk_id";
   @SerializedName(SERIALIZED_NAME_DISK_ID)

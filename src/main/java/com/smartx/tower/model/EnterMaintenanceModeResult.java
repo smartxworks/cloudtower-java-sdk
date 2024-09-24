@@ -18,6 +18,7 @@ import java.util.List;
  * EnterMaintenanceModeResult
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class EnterMaintenanceModeResult {
   public static final String SERIALIZED_NAME_SHUTDOWN_VMS = "shutdownVms";
   @SerializedName(SERIALIZED_NAME_SHUTDOWN_VMS)

@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UpdateVpcNicPayloads
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpdateVpcNicPayloads {
   public static final String SERIALIZED_NAME_FLOATING_IP_ID = "floating_ip_id";
   @SerializedName(SERIALIZED_NAME_FLOATING_IP_ID)

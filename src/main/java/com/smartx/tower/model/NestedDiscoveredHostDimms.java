@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedDiscoveredHostDimms
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedDiscoveredHostDimms {
   public static final String SERIALIZED_NAME_DIMM_ID = "dimm_id";
   @SerializedName(SERIALIZED_NAME_DIMM_ID)

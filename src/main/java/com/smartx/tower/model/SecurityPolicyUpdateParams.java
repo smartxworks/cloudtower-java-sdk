@@ -20,6 +20,7 @@ import java.util.List;
  * SecurityPolicyUpdateParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityPolicyUpdateParams {
   public static final String SERIALIZED_NAME_INGRESS = "ingress";
   @SerializedName(SERIALIZED_NAME_INGRESS)

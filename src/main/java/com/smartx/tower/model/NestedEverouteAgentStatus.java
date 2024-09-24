@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedEverouteAgentStatus
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedEverouteAgentStatus {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)

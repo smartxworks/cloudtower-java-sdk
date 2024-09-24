@@ -15,6 +15,7 @@ import java.io.IOException;
  * OvfNic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class OvfNic {
   public static final String SERIALIZED_NAME_MAC = "mac";
   @SerializedName(SERIALIZED_NAME_MAC)

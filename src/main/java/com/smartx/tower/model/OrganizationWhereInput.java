@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * OrganizationWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class OrganizationWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

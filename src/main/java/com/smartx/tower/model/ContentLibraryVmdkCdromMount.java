@@ -15,6 +15,7 @@ import java.io.IOException;
  * ContentLibraryVmdkCdromMount
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryVmdkCdromMount {
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)

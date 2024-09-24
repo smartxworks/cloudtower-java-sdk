@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GetVmsRequestBody
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetVmsRequestBody {
   public static final String SERIALIZED_NAME_AFTER = "after";
   @SerializedName(SERIALIZED_NAME_AFTER)

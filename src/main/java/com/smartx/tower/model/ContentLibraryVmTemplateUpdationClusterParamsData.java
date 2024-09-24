@@ -16,6 +16,7 @@ import java.io.IOException;
  * ContentLibraryVmTemplateUpdationClusterParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryVmTemplateUpdationClusterParamsData {
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)

@@ -27,6 +27,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Nic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Nic {
   public static final String SERIALIZED_NAME_DRIVER = "driver";
   @SerializedName(SERIALIZED_NAME_DRIVER)

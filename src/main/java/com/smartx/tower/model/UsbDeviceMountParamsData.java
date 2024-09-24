@@ -16,6 +16,7 @@ import java.io.IOException;
  * UsbDeviceMountParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UsbDeviceMountParamsData {
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)

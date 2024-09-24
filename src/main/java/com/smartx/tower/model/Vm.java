@@ -43,6 +43,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Vm
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Vm {
   public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
   @SerializedName(SERIALIZED_NAME_BIOS_UUID)

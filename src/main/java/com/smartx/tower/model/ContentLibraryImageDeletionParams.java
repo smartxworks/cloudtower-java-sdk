@@ -16,6 +16,7 @@ import java.io.IOException;
  * ContentLibraryImageDeletionParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryImageDeletionParams {
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)

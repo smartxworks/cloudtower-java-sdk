@@ -16,6 +16,7 @@ import java.io.IOException;
  * NestedMetroAvailabilityChecklist
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedMetroAvailabilityChecklist {
   public static final String SERIALIZED_NAME_PRIMARY_ZONE = "primaryZone";
   @SerializedName(SERIALIZED_NAME_PRIMARY_ZONE)

@@ -20,6 +20,8 @@ public enum PartitionUsage {
   
   CACHE("CACHE"),
   
+  EFI_SYSTEM("EFI_SYSTEM"),
+  
   JOURNAL("JOURNAL"),
   
   METAD("METAD"),

@@ -20,6 +20,7 @@ import java.util.List;
  * ContentLibraryVmTemplateOvfDiskOperate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryVmTemplateOvfDiskOperate {
   public static final String SERIALIZED_NAME_MOUNT_NEW_CD_ROMS = "mount_new_cd_roms";
   @SerializedName(SERIALIZED_NAME_MOUNT_NEW_CD_ROMS)

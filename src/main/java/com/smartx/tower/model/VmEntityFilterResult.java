@@ -19,6 +19,7 @@ import java.util.List;
  * VmEntityFilterResult
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmEntityFilterResult {
   public static final String SERIALIZED_NAME_ENTITY_FILTER = "entityFilter";
   @SerializedName(SERIALIZED_NAME_ENTITY_FILTER)

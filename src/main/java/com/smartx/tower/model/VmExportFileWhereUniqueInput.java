@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmExportFileWhereUniqueInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmExportFileWhereUniqueInput {
   public static final String SERIALIZED_NAME_DATA_PORT_ID = "data_port_id";
   @SerializedName(SERIALIZED_NAME_DATA_PORT_ID)

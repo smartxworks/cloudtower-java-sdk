@@ -15,6 +15,7 @@ import java.io.IOException;
  * ClusterUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ClusterUpdationParamsData {
   public static final String SERIALIZED_NAME_SECONDARY_ZONE_ID = "secondary_zone_id";
   @SerializedName(SERIALIZED_NAME_SECONDARY_ZONE_ID)

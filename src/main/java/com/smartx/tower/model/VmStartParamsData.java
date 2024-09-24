@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmStartParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmStartParamsData {
   public static final String SERIALIZED_NAME_HOST_ID = "host_id";
   @SerializedName(SERIALIZED_NAME_HOST_ID)

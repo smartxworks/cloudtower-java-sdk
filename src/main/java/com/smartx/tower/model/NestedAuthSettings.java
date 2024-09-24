@@ -20,6 +20,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedAuthSettings
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedAuthSettings {
   public static final String SERIALIZED_NAME_ACCESS_LIST = "access_list";
   @SerializedName(SERIALIZED_NAME_ACCESS_LIST)

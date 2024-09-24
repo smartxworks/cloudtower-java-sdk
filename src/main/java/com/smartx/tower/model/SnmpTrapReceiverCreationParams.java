@@ -20,6 +20,7 @@ import java.io.IOException;
  * SnmpTrapReceiverCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnmpTrapReceiverCreationParams {
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)

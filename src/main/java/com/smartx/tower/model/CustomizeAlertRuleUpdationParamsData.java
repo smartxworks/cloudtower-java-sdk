@@ -19,6 +19,7 @@ import java.util.List;
  * CustomizeAlertRuleUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class CustomizeAlertRuleUpdationParamsData {
   public static final String SERIALIZED_NAME_THRESHOLDS = "thresholds";
   @SerializedName(SERIALIZED_NAME_THRESHOLDS)

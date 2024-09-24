@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.NetworkPolicyRuleAlgProtocol;
 import com.smartx.tower.model.NetworkPolicyRulePortProtocol;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -17,7 +18,12 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedNetworkPolicyRulePort
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedNetworkPolicyRulePort {
+  public static final String SERIALIZED_NAME_ALG_PROTOCOL = "alg_protocol";
+  @SerializedName(SERIALIZED_NAME_ALG_PROTOCOL)
+  private NetworkPolicyRuleAlgProtocol algProtocol;
+
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private String port;
@@ -28,6 +34,29 @@ public class NestedNetworkPolicyRulePort {
 
   public NestedNetworkPolicyRulePort() { 
   }
+
+  public NestedNetworkPolicyRulePort algProtocol(NetworkPolicyRuleAlgProtocol algProtocol) {
+    
+    this.algProtocol = algProtocol;
+    return this;
+  }
+
+   /**
+   * Get algProtocol
+   * @return algProtocol
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NetworkPolicyRuleAlgProtocol getAlgProtocol() {
+    return algProtocol;
+  }
+
+
+  public void setAlgProtocol(NetworkPolicyRuleAlgProtocol algProtocol) {
+    this.algProtocol = algProtocol;
+  }
+
 
   public NestedNetworkPolicyRulePort port(String port) {
     
@@ -84,7 +113,8 @@ public class NestedNetworkPolicyRulePort {
       return false;
     }
     NestedNetworkPolicyRulePort nestedNetworkPolicyRulePort = (NestedNetworkPolicyRulePort) o;
-    return Objects.equals(this.port, nestedNetworkPolicyRulePort.port) &&
+    return Objects.equals(this.algProtocol, nestedNetworkPolicyRulePort.algProtocol) &&
+        Objects.equals(this.port, nestedNetworkPolicyRulePort.port) &&
         Objects.equals(this.protocol, nestedNetworkPolicyRulePort.protocol);
   }
 
@@ -94,7 +124,7 @@ public class NestedNetworkPolicyRulePort {
 
   @Override
   public int hashCode() {
-    return Objects.hash(port, protocol);
+    return Objects.hash(algProtocol, port, protocol);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -108,6 +138,7 @@ public class NestedNetworkPolicyRulePort {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NestedNetworkPolicyRulePort {\n");
+    sb.append("    algProtocol: ").append(toIndentedString(algProtocol)).append("\n");
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("}");

@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NvmfNamespace
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NvmfNamespace {
   public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)

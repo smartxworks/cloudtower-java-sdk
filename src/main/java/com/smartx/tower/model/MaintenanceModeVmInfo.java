@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * MaintenanceModeVmInfo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MaintenanceModeVmInfo {
   public static final String SERIALIZED_NAME_VM_UUID = "vm_uuid";
   @SerializedName(SERIALIZED_NAME_VM_UUID)

@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * EveroutePackage
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class EveroutePackage {
   public static final String SERIALIZED_NAME_ARCH = "arch";
   @SerializedName(SERIALIZED_NAME_ARCH)

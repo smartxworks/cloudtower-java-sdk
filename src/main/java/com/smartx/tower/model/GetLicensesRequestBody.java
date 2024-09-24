@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GetLicensesRequestBody
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetLicensesRequestBody {
   public static final String SERIALIZED_NAME_AFTER = "after";
   @SerializedName(SERIALIZED_NAME_AFTER)

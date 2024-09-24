@@ -20,6 +20,7 @@ import java.util.List;
  * EntityFilterUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class EntityFilterUpdationParamsData {
   public static final String SERIALIZED_NAME_EXCLUDE_VMS = "exclude_vms";
   @SerializedName(SERIALIZED_NAME_EXCLUDE_VMS)

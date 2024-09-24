@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * EntityFilterWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class EntityFilterWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

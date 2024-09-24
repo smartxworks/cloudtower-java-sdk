@@ -24,6 +24,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Vlan
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Vlan {
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -60,6 +61,10 @@ public class Vlan {
   public static final String SERIALIZED_NAME_NETWORK_IDS = "network_ids";
   @SerializedName(SERIALIZED_NAME_NETWORK_IDS)
   private List<String> networkIds = new ArrayList<String>();
+
+  public static final String SERIALIZED_NAME_QOS_BURST = "qos_burst";
+  @SerializedName(SERIALIZED_NAME_QOS_BURST)
+  private Double qosBurst;
 
   public static final String SERIALIZED_NAME_QOS_MAX_BANDWIDTH = "qos_max_bandwidth";
   @SerializedName(SERIALIZED_NAME_QOS_MAX_BANDWIDTH)
@@ -316,6 +321,29 @@ public class Vlan {
   }
 
 
+  public Vlan qosBurst(Double qosBurst) {
+    
+    this.qosBurst = qosBurst;
+    return this;
+  }
+
+   /**
+   * Get qosBurst
+   * @return qosBurst
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getQosBurst() {
+    return qosBurst;
+  }
+
+
+  public void setQosBurst(Double qosBurst) {
+    this.qosBurst = qosBurst;
+  }
+
+
   public Vlan qosMaxBandwidth(Double qosMaxBandwidth) {
     
     this.qosMaxBandwidth = qosMaxBandwidth;
@@ -526,6 +554,7 @@ public class Vlan {
         Objects.equals(this.modeType, vlan.modeType) &&
         Objects.equals(this.name, vlan.name) &&
         Objects.equals(this.networkIds, vlan.networkIds) &&
+        Objects.equals(this.qosBurst, vlan.qosBurst) &&
         Objects.equals(this.qosMaxBandwidth, vlan.qosMaxBandwidth) &&
         Objects.equals(this.qosMinBandwidth, vlan.qosMinBandwidth) &&
         Objects.equals(this.qosPriority, vlan.qosPriority) &&
@@ -542,7 +571,7 @@ public class Vlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entityAsyncStatus, gatewayIp, gatewaySubnetmask, id, labels, localId, modeType, name, networkIds, qosMaxBandwidth, qosMinBandwidth, qosPriority, subnetmask, type, vds, vlanId, vmNics);
+    return Objects.hash(entityAsyncStatus, gatewayIp, gatewaySubnetmask, id, labels, localId, modeType, name, networkIds, qosBurst, qosMaxBandwidth, qosMinBandwidth, qosPriority, subnetmask, type, vds, vlanId, vmNics);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -565,6 +594,7 @@ public class Vlan {
     sb.append("    modeType: ").append(toIndentedString(modeType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    networkIds: ").append(toIndentedString(networkIds)).append("\n");
+    sb.append("    qosBurst: ").append(toIndentedString(qosBurst)).append("\n");
     sb.append("    qosMaxBandwidth: ").append(toIndentedString(qosMaxBandwidth)).append("\n");
     sb.append("    qosMinBandwidth: ").append(toIndentedString(qosMinBandwidth)).append("\n");
     sb.append("    qosPriority: ").append(toIndentedString(qosPriority)).append("\n");

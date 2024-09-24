@@ -16,6 +16,7 @@ import java.io.IOException;
  * VdsCreationWithMigrateVlanParamsAllOf
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VdsCreationWithMigrateVlanParamsAllOf {
   public static final String SERIALIZED_NAME_VLAN = "vlan";
   @SerializedName(SERIALIZED_NAME_VLAN)

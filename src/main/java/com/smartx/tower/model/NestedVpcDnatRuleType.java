@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedVpcDnatRuleType
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVpcDnatRuleType {
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)

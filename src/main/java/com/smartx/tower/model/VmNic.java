@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmNic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmNic {
   public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT = "egress_rate_limit_burst_in_bit";
   @SerializedName(SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT)

@@ -17,6 +17,7 @@ import java.io.IOException;
  * ApplicationVmSpecPlacement
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ApplicationVmSpecPlacement {
   public static final String SERIALIZED_NAME_VERB = "verb";
   @SerializedName(SERIALIZED_NAME_VERB)

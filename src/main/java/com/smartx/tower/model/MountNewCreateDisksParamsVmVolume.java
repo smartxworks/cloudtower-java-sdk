@@ -17,6 +17,7 @@ import java.io.IOException;
  * MountNewCreateDisksParamsVmVolume
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MountNewCreateDisksParamsVmVolume {
   public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
   @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)

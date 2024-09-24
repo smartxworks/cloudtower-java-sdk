@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GetEntityFiltersConnectionRequestBody
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetEntityFiltersConnectionRequestBody {
   public static final String SERIALIZED_NAME_AFTER = "after";
   @SerializedName(SERIALIZED_NAME_AFTER)

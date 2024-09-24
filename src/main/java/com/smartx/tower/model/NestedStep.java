@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedStep
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedStep {
   public static final String SERIALIZED_NAME_CURRENT = "current";
   @SerializedName(SERIALIZED_NAME_CURRENT)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedInitiatorChap
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedInitiatorChap {
   public static final String SERIALIZED_NAME_CHAP_NAME = "chap_name";
   @SerializedName(SERIALIZED_NAME_CHAP_NAME)

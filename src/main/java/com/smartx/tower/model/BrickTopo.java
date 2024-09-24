@@ -28,6 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * BrickTopo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class BrickTopo {
   public static final String SERIALIZED_NAME_CAPACITY = "capacity";
   @SerializedName(SERIALIZED_NAME_CAPACITY)

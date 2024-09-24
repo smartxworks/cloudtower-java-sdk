@@ -20,6 +20,7 @@ import java.util.List;
  * OvfDiskOperate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class OvfDiskOperate {
   public static final String SERIALIZED_NAME_NEW_DISKS = "new_disks";
   @SerializedName(SERIALIZED_NAME_NEW_DISKS)

@@ -19,6 +19,7 @@ import java.util.List;
  * NestedSnapshotGroupVmInfo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedSnapshotGroupVmInfo {
   public static final String SERIALIZED_NAME_DISKS = "disks";
   @SerializedName(SERIALIZED_NAME_DISKS)

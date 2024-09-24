@@ -15,6 +15,7 @@ import java.io.IOException;
  * UpdateSessionTimeoutParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UpdateSessionTimeoutParams {
   public static final String SERIALIZED_NAME_SESSION_MAX_AGE = "session_max_age";
   @SerializedName(SERIALIZED_NAME_SESSION_MAX_AGE)

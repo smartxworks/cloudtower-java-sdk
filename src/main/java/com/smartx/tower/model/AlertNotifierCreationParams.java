@@ -19,6 +19,7 @@ import java.util.List;
  * AlertNotifierCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class AlertNotifierCreationParams {
   /**
    * Gets or Sets noticeSeverities

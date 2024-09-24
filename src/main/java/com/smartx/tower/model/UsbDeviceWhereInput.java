@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UsbDeviceWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UsbDeviceWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

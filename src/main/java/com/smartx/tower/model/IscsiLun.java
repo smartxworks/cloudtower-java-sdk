@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * IscsiLun
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLun {
   public static final String SERIALIZED_NAME_ALLOWED_INITIATORS = "allowed_initiators";
   @SerializedName(SERIALIZED_NAME_ALLOWED_INITIATORS)

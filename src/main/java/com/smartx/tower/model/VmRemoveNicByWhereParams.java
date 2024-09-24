@@ -17,6 +17,7 @@ import java.io.IOException;
  * VmRemoveNicByWhereParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRemoveNicByWhereParams {
   public static final String SERIALIZED_NAME_EFFECT = "effect";
   @SerializedName(SERIALIZED_NAME_EFFECT)

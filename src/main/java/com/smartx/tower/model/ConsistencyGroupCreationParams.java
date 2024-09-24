@@ -17,6 +17,7 @@ import java.util.List;
  * ConsistencyGroupCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ConsistencyGroupCreationParams {
   public static final String SERIALIZED_NAME_NAMESPACES_IDS = "namespaces_ids";
   @SerializedName(SERIALIZED_NAME_NAMESPACES_IDS)

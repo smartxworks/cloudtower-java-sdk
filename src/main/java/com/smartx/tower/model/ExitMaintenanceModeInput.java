@@ -17,6 +17,7 @@ import java.util.List;
  * ExitMaintenanceModeInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ExitMaintenanceModeInput {
   public static final String SERIALIZED_NAME_POWERON_VMS = "poweron_vms";
   @SerializedName(SERIALIZED_NAME_POWERON_VMS)

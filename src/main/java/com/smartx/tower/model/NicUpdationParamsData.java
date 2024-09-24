@@ -16,6 +16,7 @@ import java.io.IOException;
  * NicUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NicUpdationParamsData {
   public static final String SERIALIZED_NAME_NIC_USER_USAGE = "nic_user_usage";
   @SerializedName(SERIALIZED_NAME_NIC_USER_USAGE)

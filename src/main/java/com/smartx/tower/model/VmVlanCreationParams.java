@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmVlanCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmVlanCreationParams {
   public static final String SERIALIZED_NAME_QOS_BURST_UNIT = "qos_burst_unit";
   @SerializedName(SERIALIZED_NAME_QOS_BURST_UNIT)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * MetaLeader
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MetaLeader {
   public static final String SERIALIZED_NAME_META_LEADER = "meta_leader";
   @SerializedName(SERIALIZED_NAME_META_LEADER)

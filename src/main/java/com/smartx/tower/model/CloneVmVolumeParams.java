@@ -17,6 +17,7 @@ import java.io.IOException;
  * CloneVmVolumeParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class CloneVmVolumeParams {
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)

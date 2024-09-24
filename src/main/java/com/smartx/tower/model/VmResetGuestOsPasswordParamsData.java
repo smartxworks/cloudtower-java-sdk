@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmResetGuestOsPasswordParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmResetGuestOsPasswordParamsData {
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)

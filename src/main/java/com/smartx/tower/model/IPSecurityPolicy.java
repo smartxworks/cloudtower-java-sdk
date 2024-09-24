@@ -17,6 +17,7 @@ import java.util.List;
  * IPSecurityPolicy
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IPSecurityPolicy {
   public static final String SERIALIZED_NAME_EXCEPT_IP_BLOCK = "except_ip_block";
   @SerializedName(SERIALIZED_NAME_EXCEPT_IP_BLOCK)

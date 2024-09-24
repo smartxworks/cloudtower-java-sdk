@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UploadTask
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UploadTask {
   public static final String SERIALIZED_NAME_ARGS = "args";
   @SerializedName(SERIALIZED_NAME_ARGS)

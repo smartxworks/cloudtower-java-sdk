@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * DataPoint
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DataPoint {
   public static final String SERIALIZED_NAME_V = "v";
   @SerializedName(SERIALIZED_NAME_V)
@@ -23,7 +24,7 @@ public class DataPoint {
 
   public static final String SERIALIZED_NAME_T = "t";
   @SerializedName(SERIALIZED_NAME_T)
-  private Long t;
+  private Double t;
 
   /**
    * Gets or Sets typename
@@ -100,7 +101,7 @@ public class DataPoint {
   }
 
 
-  public DataPoint t(Long t) {
+  public DataPoint t(Double t) {
     
     this.t = t;
     return this;
@@ -113,12 +114,12 @@ public class DataPoint {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Long getT() {
+  public Double getT() {
     return t;
   }
 
 
-  public void setT(Long t) {
+  public void setT(Double t) {
     this.t = t;
   }
 

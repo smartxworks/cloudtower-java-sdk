@@ -15,6 +15,7 @@ import java.io.IOException;
  * VirtualPrivateCloudUpdateDataParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudUpdateDataParams {
   public static final String SERIALIZED_NAME_MTU = "mtu";
   @SerializedName(SERIALIZED_NAME_MTU)

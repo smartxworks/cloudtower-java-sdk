@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * License
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class License {
   public static final String SERIALIZED_NAME_EXPIRE_DATE = "expire_date";
   @SerializedName(SERIALIZED_NAME_EXPIRE_DATE)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * IscsiLunSnapshotCreationEffect
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLunSnapshotCreationEffect {
   public static final String SERIALIZED_NAME_SYNC = "sync";
   @SerializedName(SERIALIZED_NAME_SYNC)

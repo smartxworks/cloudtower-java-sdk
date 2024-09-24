@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmRollbackParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRollbackParamsData {
   public static final String SERIALIZED_NAME_SNAPSHOT_ID = "snapshot_id";
   @SerializedName(SERIALIZED_NAME_SNAPSHOT_ID)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * DeleteSnmpTransport
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DeleteSnmpTransport {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

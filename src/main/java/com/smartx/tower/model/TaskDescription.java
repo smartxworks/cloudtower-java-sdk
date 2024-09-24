@@ -15,6 +15,7 @@ import java.io.IOException;
  * TaskDescription
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class TaskDescription {
   public static final String SERIALIZED_NAME_EN_U_S = "en-US";
   @SerializedName(SERIALIZED_NAME_EN_U_S)

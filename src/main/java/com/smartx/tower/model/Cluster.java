@@ -42,6 +42,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Cluster
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Cluster {
   public static final String SERIALIZED_NAME_APPLICATION_HIGHEST_VERSION = "application_highest_version";
   @SerializedName(SERIALIZED_NAME_APPLICATION_HIGHEST_VERSION)

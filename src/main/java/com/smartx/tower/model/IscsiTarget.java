@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * IscsiTarget
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiTarget {
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)

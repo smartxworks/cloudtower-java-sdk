@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * V2EverouteLicenseWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class V2EverouteLicenseWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

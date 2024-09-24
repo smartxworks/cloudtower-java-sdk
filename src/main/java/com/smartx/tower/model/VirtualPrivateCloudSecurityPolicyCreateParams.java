@@ -20,6 +20,7 @@ import java.util.List;
  * VirtualPrivateCloudSecurityPolicyCreateParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudSecurityPolicyCreateParams {
   public static final String SERIALIZED_NAME_EGRESS = "egress";
   @SerializedName(SERIALIZED_NAME_EGRESS)

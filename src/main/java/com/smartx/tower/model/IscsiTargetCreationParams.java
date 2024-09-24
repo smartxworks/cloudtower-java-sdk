@@ -22,6 +22,7 @@ import java.util.List;
  * IscsiTargetCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiTargetCreationParams {
   public static final String SERIALIZED_NAME_STRIPE_SIZE_UNIT = "stripe_size_unit";
   @SerializedName(SERIALIZED_NAME_STRIPE_SIZE_UNIT)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * NestedVirtualPrivateCloudIsolationPolicy
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVirtualPrivateCloudIsolationPolicy {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

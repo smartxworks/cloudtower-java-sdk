@@ -18,6 +18,7 @@ import java.util.List;
  * VmAddCdRomParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmAddCdRomParamsData {
   public static final String SERIALIZED_NAME_VM_CD_ROMS = "vm_cd_roms";
   @SerializedName(SERIALIZED_NAME_VM_CD_ROMS)

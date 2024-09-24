@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UsbDevice
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UsbDevice {
   public static final String SERIALIZED_NAME_BINDED = "binded";
   @SerializedName(SERIALIZED_NAME_BINDED)

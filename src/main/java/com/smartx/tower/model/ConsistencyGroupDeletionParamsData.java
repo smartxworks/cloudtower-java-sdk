@@ -15,6 +15,7 @@ import java.io.IOException;
  * ConsistencyGroupDeletionParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ConsistencyGroupDeletionParamsData {
   public static final String SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT = "remain_volume_snapshot";
   @SerializedName(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT)

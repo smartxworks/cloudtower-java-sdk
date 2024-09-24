@@ -16,6 +16,7 @@ import java.io.IOException;
  * IscsiTargetDeletionParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiTargetDeletionParams {
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)

@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedVirtualPrivateCloudNetworkPolicyRulePort
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVirtualPrivateCloudNetworkPolicyRulePort {
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)

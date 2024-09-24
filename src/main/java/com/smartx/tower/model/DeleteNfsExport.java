@@ -15,6 +15,7 @@ import java.io.IOException;
  * DeleteNfsExport
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DeleteNfsExport {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

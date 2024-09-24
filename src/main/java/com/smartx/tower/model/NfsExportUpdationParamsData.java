@@ -15,6 +15,7 @@ import java.io.IOException;
  * NfsExportUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NfsExportUpdationParamsData {
   public static final String SERIALIZED_NAME_IP_WHITELIST = "ip_whitelist";
   @SerializedName(SERIALIZED_NAME_IP_WHITELIST)

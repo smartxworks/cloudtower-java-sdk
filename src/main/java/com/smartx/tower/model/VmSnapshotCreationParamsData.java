@@ -16,6 +16,7 @@ import java.io.IOException;
  * VmSnapshotCreationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmSnapshotCreationParamsData {
   public static final String SERIALIZED_NAME_CONSISTENT_TYPE = "consistent_type";
   @SerializedName(SERIALIZED_NAME_CONSISTENT_TYPE)

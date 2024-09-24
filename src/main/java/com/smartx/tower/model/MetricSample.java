@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * MetricSample
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MetricSample {
   public static final String SERIALIZED_NAME_POINT = "point";
   @SerializedName(SERIALIZED_NAME_POINT)

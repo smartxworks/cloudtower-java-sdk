@@ -16,6 +16,7 @@ import java.io.IOException;
  * StopVmInCutoverMigrationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class StopVmInCutoverMigrationParams {
   public static final String SERIALIZED_NAME_FORCE = "force";
   @SerializedName(SERIALIZED_NAME_FORCE)

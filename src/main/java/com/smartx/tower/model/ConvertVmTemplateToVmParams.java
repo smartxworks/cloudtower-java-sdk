@@ -15,6 +15,7 @@ import java.io.IOException;
  * ConvertVmTemplateToVmParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ConvertVmTemplateToVmParams {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

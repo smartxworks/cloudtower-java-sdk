@@ -17,6 +17,7 @@ import java.util.List;
  * LogServiceConfig
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class LogServiceConfig {
   public static final String SERIALIZED_NAME_GROUP_NAME = "group_name";
   @SerializedName(SERIALIZED_NAME_GROUP_NAME)

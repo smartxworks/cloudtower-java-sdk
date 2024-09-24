@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * MetricLabel
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MetricLabel {
   public static final String SERIALIZED_NAME_TO_HOSTNAME = "to_hostname";
   @SerializedName(SERIALIZED_NAME_TO_HOSTNAME)

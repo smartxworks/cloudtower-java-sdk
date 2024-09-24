@@ -44,6 +44,10 @@ public enum VlanOrderByInput {
   
   NAME_DESC("name_DESC"),
   
+  QOS_BURST_ASC("qos_burst_ASC"),
+  
+  QOS_BURST_DESC("qos_burst_DESC"),
+  
   QOS_MAX_BANDWIDTH_ASC("qos_max_bandwidth_ASC"),
   
   QOS_MAX_BANDWIDTH_DESC("qos_max_bandwidth_DESC"),

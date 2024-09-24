@@ -15,6 +15,7 @@ import java.io.IOException;
  * TriggerDiskBlinkParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class TriggerDiskBlinkParams {
   /**
    * Gets or Sets ledStatus

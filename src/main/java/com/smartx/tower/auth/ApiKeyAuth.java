@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.List;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

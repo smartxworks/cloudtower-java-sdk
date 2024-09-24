@@ -16,6 +16,7 @@ import java.io.IOException;
  * GpuDeviceUsageUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GpuDeviceUsageUpdationParamsData {
   public static final String SERIALIZED_NAME_VGPU_SPEC = "vgpu_spec";
   @SerializedName(SERIALIZED_NAME_VGPU_SPEC)

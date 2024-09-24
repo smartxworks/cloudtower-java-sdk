@@ -16,6 +16,7 @@ import java.io.IOException;
  * SecurityPolicyApplyToInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityPolicyApplyToInput {
   public static final String SERIALIZED_NAME_COMMUNICABLE = "communicable";
   @SerializedName(SERIALIZED_NAME_COMMUNICABLE)

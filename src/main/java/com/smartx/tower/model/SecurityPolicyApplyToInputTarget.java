@@ -19,6 +19,7 @@ import java.util.List;
  * SecurityPolicyApplyToInputTarget
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityPolicyApplyToInputTarget {
   public static final String SERIALIZED_NAME_SECURITY_GROUPS = "security_groups";
   @SerializedName(SERIALIZED_NAME_SECURITY_GROUPS)

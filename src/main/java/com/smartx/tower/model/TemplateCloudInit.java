@@ -18,6 +18,7 @@ import java.util.List;
  * TemplateCloudInit
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class TemplateCloudInit {
   public static final String SERIALIZED_NAME_USER_DATA = "user_data";
   @SerializedName(SERIALIZED_NAME_USER_DATA)

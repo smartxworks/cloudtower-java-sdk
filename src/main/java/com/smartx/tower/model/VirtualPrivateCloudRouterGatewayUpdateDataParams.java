@@ -18,6 +18,7 @@ import java.util.List;
  * VirtualPrivateCloudRouterGatewayUpdateDataParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudRouterGatewayUpdateDataParams {
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)

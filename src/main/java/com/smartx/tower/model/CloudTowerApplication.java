@@ -20,6 +20,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * CloudTowerApplication
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class CloudTowerApplication {
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)

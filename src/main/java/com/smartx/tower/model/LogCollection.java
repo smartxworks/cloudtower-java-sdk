@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * LogCollection
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class LogCollection {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)

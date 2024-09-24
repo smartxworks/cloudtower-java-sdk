@@ -24,6 +24,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NvmfSubsystem
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NvmfSubsystem {
   public static final String SERIALIZED_NAME_BPS = "bps";
   @SerializedName(SERIALIZED_NAME_BPS)

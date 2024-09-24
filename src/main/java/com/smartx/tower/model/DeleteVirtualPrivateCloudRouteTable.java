@@ -15,6 +15,7 @@ import java.io.IOException;
  * DeleteVirtualPrivateCloudRouteTable
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DeleteVirtualPrivateCloudRouteTable {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

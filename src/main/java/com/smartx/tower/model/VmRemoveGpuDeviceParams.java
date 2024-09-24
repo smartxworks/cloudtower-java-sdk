@@ -19,6 +19,7 @@ import java.util.List;
  * VmRemoveGpuDeviceParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRemoveGpuDeviceParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * HostUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class HostUpdationParamsData {
   public static final String SERIALIZED_NAME_IPMI = "ipmi";
   @SerializedName(SERIALIZED_NAME_IPMI)

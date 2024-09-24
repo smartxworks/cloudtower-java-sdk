@@ -18,6 +18,7 @@ import java.io.IOException;
  * VmPlacementGroupCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmPlacementGroupCreationParams {
   public static final String SERIALIZED_NAME_VM_VM_POLICY = "vm_vm_policy";
   @SerializedName(SERIALIZED_NAME_VM_VM_POLICY)

@@ -1,6 +1,7 @@
 package com.smartx.tower;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

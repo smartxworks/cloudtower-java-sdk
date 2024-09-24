@@ -17,6 +17,7 @@ import java.io.IOException;
  * VmExpandVmDiskParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmExpandVmDiskParams {
   public static final String SERIALIZED_NAME_SIZE_UNIT = "size_unit";
   @SerializedName(SERIALIZED_NAME_SIZE_UNIT)

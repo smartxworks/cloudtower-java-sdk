@@ -17,6 +17,7 @@ import java.util.List;
  * LabelGroup
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class LabelGroup {
   public static final String SERIALIZED_NAME_LABEL_IDS = "label_ids";
   @SerializedName(SERIALIZED_NAME_LABEL_IDS)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * ViewUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ViewUpdationParamsData {
   public static final String SERIALIZED_NAME_TIME_UNIT = "time_unit";
   @SerializedName(SERIALIZED_NAME_TIME_UNIT)

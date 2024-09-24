@@ -19,6 +19,7 @@ import java.util.List;
  * ReportTemplateCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ReportTemplateCreationParams {
   public static final String SERIALIZED_NAME_RESOURCE_META = "resource_meta";
   @SerializedName(SERIALIZED_NAME_RESOURCE_META)

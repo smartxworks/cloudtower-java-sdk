@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudSecurityPolicy
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudSecurityPolicy {
   public static final String SERIALIZED_NAME_APPLY_TO = "apply_to";
   @SerializedName(SERIALIZED_NAME_APPLY_TO)

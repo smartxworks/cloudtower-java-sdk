@@ -16,6 +16,7 @@ import java.io.IOException;
  * VmExportFileFile
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmExportFileFile {
   public static final String SERIALIZED_NAME_MD5 = "md5";
   @SerializedName(SERIALIZED_NAME_MD5)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * UserCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UserCreationParams {
   public static final String SERIALIZED_NAME_AUTH_CONFIG_ID = "auth_config_id";
   @SerializedName(SERIALIZED_NAME_AUTH_CONFIG_ID)

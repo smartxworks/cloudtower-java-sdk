@@ -16,6 +16,7 @@ import java.io.IOException;
  * IscsiLunCommonParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLunCommonParams {
   public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
   @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)

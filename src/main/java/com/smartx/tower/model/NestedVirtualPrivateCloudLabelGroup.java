@@ -18,6 +18,7 @@ import java.util.List;
  * NestedVirtualPrivateCloudLabelGroup
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVirtualPrivateCloudLabelGroup {
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)

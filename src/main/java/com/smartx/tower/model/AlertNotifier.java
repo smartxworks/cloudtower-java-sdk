@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * AlertNotifier
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class AlertNotifier {
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)

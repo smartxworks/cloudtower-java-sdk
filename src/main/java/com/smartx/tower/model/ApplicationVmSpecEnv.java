@@ -15,6 +15,7 @@ import java.io.IOException;
  * ApplicationVmSpecEnv
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ApplicationVmSpecEnv {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)

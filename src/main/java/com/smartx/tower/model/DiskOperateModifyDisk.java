@@ -16,6 +16,7 @@ import java.io.IOException;
  * DiskOperateModifyDisk
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DiskOperateModifyDisk {
   public static final String SERIALIZED_NAME_VM_VOLUME_ID = "vm_volume_id";
   @SerializedName(SERIALIZED_NAME_VM_VOLUME_ID)

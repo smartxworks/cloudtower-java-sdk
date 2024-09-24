@@ -16,6 +16,7 @@ import java.io.IOException;
  * NestedVirtualPrivateCloudRoute
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVirtualPrivateCloudRoute {
   public static final String SERIALIZED_NAME_DESTINATION = "destination";
   @SerializedName(SERIALIZED_NAME_DESTINATION)

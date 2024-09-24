@@ -16,6 +16,7 @@ import java.io.IOException;
  * VmUpdateNicQosOptionsParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateNicQosOptionsParamsData {
   public static final String SERIALIZED_NAME_QOS = "qos";
   @SerializedName(SERIALIZED_NAME_QOS)

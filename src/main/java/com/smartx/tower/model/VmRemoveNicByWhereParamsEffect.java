@@ -17,6 +17,7 @@ import java.util.List;
  * VmRemoveNicByWhereParamsEffect
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRemoveNicByWhereParamsEffect {
   public static final String SERIALIZED_NAME_VM_IDS = "vm_ids";
   @SerializedName(SERIALIZED_NAME_VM_IDS)

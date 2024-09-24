@@ -16,6 +16,7 @@ import java.io.IOException;
  * DeleteCloudTowerApplicationPackageParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class DeleteCloudTowerApplicationPackageParams {
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)

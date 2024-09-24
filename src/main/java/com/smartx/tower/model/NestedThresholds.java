@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedThresholds
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedThresholds {
   public static final String SERIALIZED_NAME_QUANTILE = "quantile";
   @SerializedName(SERIALIZED_NAME_QUANTILE)

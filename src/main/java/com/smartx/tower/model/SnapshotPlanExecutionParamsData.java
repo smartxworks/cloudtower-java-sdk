@@ -15,6 +15,7 @@ import java.io.IOException;
  * SnapshotPlanExecutionParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnapshotPlanExecutionParamsData {
   public static final String SERIALIZED_NAME_TASK_NAME = "task_name";
   @SerializedName(SERIALIZED_NAME_TASK_NAME)

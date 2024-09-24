@@ -18,6 +18,7 @@ import java.util.List;
  * SnapshotGroupCloneParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnapshotGroupCloneParams {
   public static final String SERIALIZED_NAME_CLONE = "clone";
   @SerializedName(SERIALIZED_NAME_CLONE)

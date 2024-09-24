@@ -20,6 +20,7 @@ import java.util.List;
  * GraphCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GraphCreationParams {
   public static final String SERIALIZED_NAME_INSTANCE_IDS = "instance_ids";
   @SerializedName(SERIALIZED_NAME_INSTANCE_IDS)

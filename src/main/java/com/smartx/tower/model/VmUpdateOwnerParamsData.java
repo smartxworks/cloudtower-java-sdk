@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmUpdateOwnerParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateOwnerParamsData {
   /**
    * Gets or Sets searchFor

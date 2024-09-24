@@ -19,6 +19,7 @@ import java.util.List;
  * VmAddDiskParamsDataVmDisks
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmAddDiskParamsDataVmDisks {
   public static final String SERIALIZED_NAME_MOUNT_DISKS = "mount_disks";
   @SerializedName(SERIALIZED_NAME_MOUNT_DISKS)

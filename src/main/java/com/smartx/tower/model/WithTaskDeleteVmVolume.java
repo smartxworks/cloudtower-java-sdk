@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * WithTaskDeleteVmVolume
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class WithTaskDeleteVmVolume {
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)

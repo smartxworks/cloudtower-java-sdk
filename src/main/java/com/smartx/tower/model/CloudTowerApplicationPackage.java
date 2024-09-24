@@ -20,6 +20,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * CloudTowerApplicationPackage
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class CloudTowerApplicationPackage {
   public static final String SERIALIZED_NAME_APPLICATIONS = "applications";
   @SerializedName(SERIALIZED_NAME_APPLICATIONS)

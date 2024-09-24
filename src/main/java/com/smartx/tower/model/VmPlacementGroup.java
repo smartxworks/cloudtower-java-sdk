@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmPlacementGroup
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmPlacementGroup {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)

@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * ZoneTopo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ZoneTopo {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)

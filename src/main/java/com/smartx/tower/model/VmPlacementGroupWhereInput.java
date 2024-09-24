@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmPlacementGroupWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmPlacementGroupWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

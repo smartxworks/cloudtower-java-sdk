@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudNatGatewayWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudNatGatewayWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

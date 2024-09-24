@@ -15,6 +15,7 @@ import java.io.IOException;
  * OvfCpu
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class OvfCpu {
   public static final String SERIALIZED_NAME_SOCKETS = "sockets";
   @SerializedName(SERIALIZED_NAME_SOCKETS)

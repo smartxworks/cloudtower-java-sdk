@@ -26,6 +26,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * ContentLibraryImage
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryImage {
   public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
   @SerializedName(SERIALIZED_NAME_CLUSTERS)

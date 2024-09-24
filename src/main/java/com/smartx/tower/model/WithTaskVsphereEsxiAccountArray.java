@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * WithTaskVsphereEsxiAccountArray
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class WithTaskVsphereEsxiAccountArray {
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)

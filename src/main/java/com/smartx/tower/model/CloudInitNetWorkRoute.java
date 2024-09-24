@@ -15,6 +15,7 @@ import java.io.IOException;
  * CloudInitNetWorkRoute
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class CloudInitNetWorkRoute {
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)

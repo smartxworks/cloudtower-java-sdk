@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NodeTopoWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NodeTopoWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

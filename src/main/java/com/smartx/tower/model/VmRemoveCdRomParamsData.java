@@ -17,6 +17,7 @@ import java.util.List;
  * VmRemoveCdRomParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRemoveCdRomParamsData {
   public static final String SERIALIZED_NAME_CD_ROM_IDS = "cd_rom_ids";
   @SerializedName(SERIALIZED_NAME_CD_ROM_IDS)

@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedVpcRouterGatewayRuleType
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVpcRouterGatewayRuleType {
   public static final String SERIALIZED_NAME_DST = "dst";
   @SerializedName(SERIALIZED_NAME_DST)

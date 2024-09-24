@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmTemplateUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmTemplateUpdationParamsData {
   public static final String SERIALIZED_NAME_CLOUD_INIT_SUPPORTED = "cloud_init_supported";
   @SerializedName(SERIALIZED_NAME_CLOUD_INIT_SUPPORTED)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * SnapshotGroupRollbackParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnapshotGroupRollbackParams {
   public static final String SERIALIZED_NAME_WHERE = "where";
   @SerializedName(SERIALIZED_NAME_WHERE)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * ApplicationVmSpecStorage
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ApplicationVmSpecStorage {
   public static final String SERIALIZED_NAME_SIZE_UNIT = "size_unit";
   @SerializedName(SERIALIZED_NAME_SIZE_UNIT)

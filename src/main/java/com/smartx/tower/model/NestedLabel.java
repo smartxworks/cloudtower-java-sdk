@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedLabel
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedLabel {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

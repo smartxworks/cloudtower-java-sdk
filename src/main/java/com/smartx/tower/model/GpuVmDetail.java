@@ -43,6 +43,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GpuVmDetail
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GpuVmDetail {
   public static final String SERIALIZED_NAME_VGPU_INSTANCE_ON_VM_NUM = "vgpu_instance_on_vm_num";
   @SerializedName(SERIALIZED_NAME_VGPU_INSTANCE_ON_VM_NUM)

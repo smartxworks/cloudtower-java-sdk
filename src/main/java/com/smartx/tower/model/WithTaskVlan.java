@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * WithTaskVlan
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class WithTaskVlan {
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)

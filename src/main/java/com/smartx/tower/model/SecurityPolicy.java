@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * SecurityPolicy
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityPolicy {
   public static final String SERIALIZED_NAME_APPLY_TO = "apply_to";
   @SerializedName(SERIALIZED_NAME_APPLY_TO)

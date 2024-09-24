@@ -17,6 +17,7 @@ import java.io.IOException;
  * InstallVmtoolsParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class InstallVmtoolsParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -38,9 +39,11 @@ public class InstallVmtoolsParams {
    /**
    * Get data
    * @return data
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @Deprecated
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public InstallVmtoolsParamsData getData() {
     return data;

@@ -35,6 +35,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Host
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Host {
   public static final String SERIALIZED_NAME_ACCESS_IP = "access_ip";
   @SerializedName(SERIALIZED_NAME_ACCESS_IP)

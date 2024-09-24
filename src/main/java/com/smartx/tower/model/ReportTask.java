@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * ReportTask
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ReportTask {
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)

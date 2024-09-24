@@ -15,6 +15,7 @@ import java.io.IOException;
  * VlanMapping
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VlanMapping {
   public static final String SERIALIZED_NAME_SRC_VLAN_LOCAL_ID = "src_vlan_local_id";
   @SerializedName(SERIALIZED_NAME_SRC_VLAN_LOCAL_ID)

@@ -26,6 +26,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GpuVmInfo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GpuVmInfo {
   public static final String SERIALIZED_NAME_VMS = "vms";
   @SerializedName(SERIALIZED_NAME_VMS)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * VirtualPrivateCloudFloatingIpCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudFloatingIpCreationParams {
   public static final String SERIALIZED_NAME_EXTERNAL_IP = "external_ip";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_IP)

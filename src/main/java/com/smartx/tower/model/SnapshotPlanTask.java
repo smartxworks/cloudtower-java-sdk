@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * SnapshotPlanTask
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnapshotPlanTask {
   public static final String SERIALIZED_NAME_CLUSTER = "cluster";
   @SerializedName(SERIALIZED_NAME_CLUSTER)

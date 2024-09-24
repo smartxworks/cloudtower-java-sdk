@@ -17,6 +17,7 @@ import java.io.IOException;
  * VmUpdateNicBasicInfoParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmUpdateNicBasicInfoParams {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

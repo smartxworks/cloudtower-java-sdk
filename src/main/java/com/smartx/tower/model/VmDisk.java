@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmDisk
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmDisk {
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)

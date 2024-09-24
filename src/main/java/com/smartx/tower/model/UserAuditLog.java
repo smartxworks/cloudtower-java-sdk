@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * UserAuditLog
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class UserAuditLog {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)

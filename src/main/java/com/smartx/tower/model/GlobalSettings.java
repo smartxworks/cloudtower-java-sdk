@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GlobalSettings
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GlobalSettings {
   public static final String SERIALIZED_NAME_AUTH = "auth";
   @SerializedName(SERIALIZED_NAME_AUTH)

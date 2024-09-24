@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * BrickTopoUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class BrickTopoUpdationParamsData {
   public static final String SERIALIZED_NAME_TAG_POSITION_IN_BRICK = "tag_position_in_brick";
   @SerializedName(SERIALIZED_NAME_TAG_POSITION_IN_BRICK)

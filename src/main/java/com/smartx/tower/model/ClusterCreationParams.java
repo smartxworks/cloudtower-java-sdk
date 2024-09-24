@@ -15,6 +15,7 @@ import java.io.IOException;
  * ClusterCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ClusterCreationParams {
   public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenter_id";
   @SerializedName(SERIALIZED_NAME_DATACENTER_ID)

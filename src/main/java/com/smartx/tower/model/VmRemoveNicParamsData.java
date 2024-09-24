@@ -17,6 +17,7 @@ import java.util.List;
  * VmRemoveNicParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmRemoveNicParamsData {
   public static final String SERIALIZED_NAME_NIC_INDEX = "nic_index";
   @SerializedName(SERIALIZED_NAME_NIC_INDEX)

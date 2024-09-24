@@ -15,6 +15,7 @@ import java.io.IOException;
  * HostBatchCreateIpmiInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class HostBatchCreateIpmiInput {
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)

@@ -16,6 +16,7 @@ import java.io.IOException;
  * NodeTopoUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NodeTopoUpdationParamsData {
   public static final String SERIALIZED_NAME_CLUSTER_TOPO_ID = "cluster_topo_id";
   @SerializedName(SERIALIZED_NAME_CLUSTER_TOPO_ID)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmAddFolderParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmAddFolderParamsData {
   public static final String SERIALIZED_NAME_FOLDER_ID = "folder_id";
   @SerializedName(SERIALIZED_NAME_FOLDER_ID)

@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudNatGateway
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudNatGateway {
   public static final String SERIALIZED_NAME_DNAT_RULES = "dnat_rules";
   @SerializedName(SERIALIZED_NAME_DNAT_RULES)

@@ -25,6 +25,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Vds
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Vds {
   public static final String SERIALIZED_NAME_BOND_MODE = "bond_mode";
   @SerializedName(SERIALIZED_NAME_BOND_MODE)

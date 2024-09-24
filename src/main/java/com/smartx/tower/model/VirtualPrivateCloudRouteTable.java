@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudRouteTable
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudRouteTable {
   public static final String SERIALIZED_NAME_DEFAULT_FOR_VPC = "default_for_vpc";
   @SerializedName(SERIALIZED_NAME_DEFAULT_FOR_VPC)

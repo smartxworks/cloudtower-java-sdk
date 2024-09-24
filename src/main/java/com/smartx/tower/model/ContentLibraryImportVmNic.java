@@ -16,6 +16,7 @@ import java.io.IOException;
  * ContentLibraryImportVmNic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ContentLibraryImportVmNic {
   public static final String SERIALIZED_NAME_MIRROR = "mirror";
   @SerializedName(SERIALIZED_NAME_MIRROR)

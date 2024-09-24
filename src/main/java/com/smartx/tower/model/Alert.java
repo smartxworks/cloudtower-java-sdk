@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Alert
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class Alert {
   public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
   @SerializedName(SERIALIZED_NAME_ALERT_RULE)

@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedAggregateContentLibraryVmTemplate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedAggregateContentLibraryVmTemplate {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)

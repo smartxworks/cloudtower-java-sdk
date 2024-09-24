@@ -17,6 +17,7 @@ import java.util.List;
  * VpcNicParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VpcNicParams {
   public static final String SERIALIZED_NAME_IP_ADDRESSES = "ip_addresses";
   @SerializedName(SERIALIZED_NAME_IP_ADDRESSES)

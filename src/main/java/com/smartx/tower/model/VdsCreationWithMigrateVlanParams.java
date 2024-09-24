@@ -20,6 +20,7 @@ import java.util.List;
  * VdsCreationWithMigrateVlanParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VdsCreationWithMigrateVlanParams {
   public static final String SERIALIZED_NAME_NIC_IDS = "nic_ids";
   @SerializedName(SERIALIZED_NAME_NIC_IDS)

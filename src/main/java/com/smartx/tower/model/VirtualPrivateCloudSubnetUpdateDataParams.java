@@ -18,6 +18,7 @@ import java.util.List;
  * VirtualPrivateCloudSubnetUpdateDataParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudSubnetUpdateDataParams {
   public static final String SERIALIZED_NAME_ROUTE_TABLE_ID = "route_table_id";
   @SerializedName(SERIALIZED_NAME_ROUTE_TABLE_ID)

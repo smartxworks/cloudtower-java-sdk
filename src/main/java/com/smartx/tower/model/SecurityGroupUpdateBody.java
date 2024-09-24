@@ -17,6 +17,7 @@ import java.io.IOException;
  * SecurityGroupUpdateBody
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityGroupUpdateBody {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

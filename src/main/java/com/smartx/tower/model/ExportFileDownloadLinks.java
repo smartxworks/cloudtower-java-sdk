@@ -15,6 +15,7 @@ import java.io.IOException;
  * ExportFileDownloadLinks
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ExportFileDownloadLinks {
   public static final String SERIALIZED_NAME_LINK = "link";
   @SerializedName(SERIALIZED_NAME_LINK)

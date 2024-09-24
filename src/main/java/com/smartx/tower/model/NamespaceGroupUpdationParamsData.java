@@ -15,6 +15,7 @@ import java.io.IOException;
  * NamespaceGroupUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NamespaceGroupUpdationParamsData {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

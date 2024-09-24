@@ -16,6 +16,7 @@ import java.io.IOException;
  * VmExportParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmExportParamsData {
   public static final String SERIALIZED_NAME_KEEP_MAC = "keep_mac";
   @SerializedName(SERIALIZED_NAME_KEEP_MAC)

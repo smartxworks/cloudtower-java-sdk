@@ -16,6 +16,7 @@ import java.io.IOException;
  * VsphereEsxiAccount
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VsphereEsxiAccount {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)

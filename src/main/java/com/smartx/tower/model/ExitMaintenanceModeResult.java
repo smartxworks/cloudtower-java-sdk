@@ -18,6 +18,7 @@ import java.util.List;
  * ExitMaintenanceModeResult
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ExitMaintenanceModeResult {
   public static final String SERIALIZED_NAME_OFFLINE_MIGRATE_VMS = "offlineMigrateVms";
   @SerializedName(SERIALIZED_NAME_OFFLINE_MIGRATE_VMS)

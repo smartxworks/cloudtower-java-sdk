@@ -15,6 +15,7 @@ import java.io.IOException;
  * VdsCreationWithMigrateVlanParamsAllOfVlanExtraIp
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VdsCreationWithMigrateVlanParamsAllOfVlanExtraIp {
   public static final String SERIALIZED_NAME_MANAGEMENT_IP = "management_ip";
   @SerializedName(SERIALIZED_NAME_MANAGEMENT_IP)

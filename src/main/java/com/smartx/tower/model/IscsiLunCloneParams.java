@@ -15,6 +15,7 @@ import java.io.IOException;
  * IscsiLunCloneParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLunCloneParams {
   public static final String SERIALIZED_NAME_ISCSI_TARGET_ID = "iscsi_target_id";
   @SerializedName(SERIALIZED_NAME_ISCSI_TARGET_ID)

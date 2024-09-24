@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * MaintenanceModeVerify
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class MaintenanceModeVerify {
   public static final String SERIALIZED_NAME_REASON = "reason";
   @SerializedName(SERIALIZED_NAME_REASON)

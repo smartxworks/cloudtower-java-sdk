@@ -16,6 +16,7 @@ import java.io.IOException;
  * GetLogServiceConfigsRequestBody
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GetLogServiceConfigsRequestBody {
   public static final String SERIALIZED_NAME_INPUT = "input";
   @SerializedName(SERIALIZED_NAME_INPUT)

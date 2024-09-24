@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedEverouteClusterVMMetrics
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedEverouteClusterVMMetrics {
   public static final String SERIALIZED_NAME_CPU_USAGE = "cpuUsage";
   @SerializedName(SERIALIZED_NAME_CPU_USAGE)

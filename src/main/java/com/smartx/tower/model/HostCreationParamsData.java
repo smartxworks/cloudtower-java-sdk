@@ -22,6 +22,7 @@ import java.util.List;
  * HostCreationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class HostCreationParamsData {
   public static final String SERIALIZED_NAME_VDSES = "vdses";
   @SerializedName(SERIALIZED_NAME_VDSES)

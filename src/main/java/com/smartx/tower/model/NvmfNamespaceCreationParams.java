@@ -19,6 +19,7 @@ import java.io.IOException;
  * NvmfNamespaceCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NvmfNamespaceCreationParams {
   public static final String SERIALIZED_NAME_NAMESPACE_ID = "namespace_id";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ID)

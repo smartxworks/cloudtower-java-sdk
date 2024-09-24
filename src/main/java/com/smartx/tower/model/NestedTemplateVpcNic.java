@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedTemplateVpcNic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedTemplateVpcNic {
   public static final String SERIALIZED_NAME_VPC_LOCAL_ID = "vpc_local_id";
   @SerializedName(SERIALIZED_NAME_VPC_LOCAL_ID)

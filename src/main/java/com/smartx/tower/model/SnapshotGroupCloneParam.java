@@ -15,6 +15,7 @@ import java.io.IOException;
  * SnapshotGroupCloneParam
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnapshotGroupCloneParam {
   public static final String SERIALIZED_NAME_FROM_SOURCE_VM_ID = "from_source_vm_id";
   @SerializedName(SERIALIZED_NAME_FROM_SOURCE_VM_ID)

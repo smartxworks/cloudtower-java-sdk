@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * SnmpTrapReceiver
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnmpTrapReceiver {
   public static final String SERIALIZED_NAME_AUTH_PASS_PHRASE = "auth_pass_phrase";
   @SerializedName(SERIALIZED_NAME_AUTH_PASS_PHRASE)

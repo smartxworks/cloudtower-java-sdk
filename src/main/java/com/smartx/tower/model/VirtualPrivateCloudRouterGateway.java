@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudRouterGateway
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudRouterGateway {
   public static final String SERIALIZED_NAME_ASSOCIATED_SUBNETS = "associated_subnets";
   @SerializedName(SERIALIZED_NAME_ASSOCIATED_SUBNETS)

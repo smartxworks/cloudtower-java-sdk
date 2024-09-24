@@ -15,6 +15,7 @@ import java.io.IOException;
  * VmVolumeDeletionParamsEffect
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmVolumeDeletionParamsEffect {
   public static final String SERIALIZED_NAME_INCLUDE_SNAPSHOTS = "include_snapshots";
   @SerializedName(SERIALIZED_NAME_INCLUDE_SNAPSHOTS)

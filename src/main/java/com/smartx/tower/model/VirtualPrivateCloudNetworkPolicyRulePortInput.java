@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VirtualPrivateCloudNetworkPolicyRulePortInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudNetworkPolicyRulePortInput {
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)

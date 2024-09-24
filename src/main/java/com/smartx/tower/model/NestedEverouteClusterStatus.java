@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedEverouteClusterStatus
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedEverouteClusterStatus {
   public static final String SERIALIZED_NAME_AGENTS = "agents";
   @SerializedName(SERIALIZED_NAME_AGENTS)

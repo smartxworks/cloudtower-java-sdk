@@ -15,6 +15,7 @@ import java.io.IOException;
  * CommonHeader
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class CommonHeader {
   public static final String SERIALIZED_NAME_X_TOWER_REQUEST_ID = "x-tower-request-id";
   @SerializedName(SERIALIZED_NAME_X_TOWER_REQUEST_ID)

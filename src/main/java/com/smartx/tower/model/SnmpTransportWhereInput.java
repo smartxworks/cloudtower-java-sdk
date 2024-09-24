@@ -24,6 +24,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * SnmpTransportWhereInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SnmpTransportWhereInput {
   public static final String SERIALIZED_NAME_A_N_D = "AND";
   @SerializedName(SERIALIZED_NAME_A_N_D)

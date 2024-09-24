@@ -17,6 +17,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedPartition
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedPartition {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

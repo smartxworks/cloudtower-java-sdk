@@ -18,6 +18,7 @@ import java.util.List;
  * ManagementVlanUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ManagementVlanUpdationParamsData {
   public static final String SERIALIZED_NAME_EXTRA_IP = "extra_ip";
   @SerializedName(SERIALIZED_NAME_EXTRA_IP)

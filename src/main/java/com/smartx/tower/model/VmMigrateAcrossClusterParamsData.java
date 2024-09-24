@@ -16,6 +16,7 @@ import java.io.IOException;
  * VmMigrateAcrossClusterParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmMigrateAcrossClusterParamsData {
   public static final String SERIALIZED_NAME_VM_CONFIG = "vm_config";
   @SerializedName(SERIALIZED_NAME_VM_CONFIG)

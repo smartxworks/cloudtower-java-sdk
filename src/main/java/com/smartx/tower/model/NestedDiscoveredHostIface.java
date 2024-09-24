@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedDiscoveredHostIface
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedDiscoveredHostIface {
   public static final String SERIALIZED_NAME_IPV4 = "ipv4";
   @SerializedName(SERIALIZED_NAME_IPV4)

@@ -18,6 +18,7 @@ import java.util.List;
  * HostBatchCreateIfaceInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class HostBatchCreateIfaceInput {
   public static final String SERIALIZED_NAME_NETMASK = "netmask";
   @SerializedName(SERIALIZED_NAME_NETMASK)

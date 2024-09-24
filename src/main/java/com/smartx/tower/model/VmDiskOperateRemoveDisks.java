@@ -17,6 +17,7 @@ import java.util.List;
  * VmDiskOperateRemoveDisks
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmDiskOperateRemoveDisks {
   public static final String SERIALIZED_NAME_DISK_INDEX = "disk_index";
   @SerializedName(SERIALIZED_NAME_DISK_INDEX)

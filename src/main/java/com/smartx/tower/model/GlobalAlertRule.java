@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GlobalAlertRule
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GlobalAlertRule {
   public static final String SERIALIZED_NAME_ALERT_RULES = "alert_rules";
   @SerializedName(SERIALIZED_NAME_ALERT_RULES)

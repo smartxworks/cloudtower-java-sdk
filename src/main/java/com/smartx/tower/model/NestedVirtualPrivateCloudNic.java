@@ -21,6 +21,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedVirtualPrivateCloudNic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedVirtualPrivateCloudNic {
   public static final String SERIALIZED_NAME_FLOATING_IP = "floating_ip";
   @SerializedName(SERIALIZED_NAME_FLOATING_IP)

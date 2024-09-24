@@ -26,6 +26,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * GpuDevice
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GpuDevice {
   public static final String SERIALIZED_NAME_ASSIGNED_VGPUS_NUM = "assigned_vgpus_num";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_VGPUS_NUM)

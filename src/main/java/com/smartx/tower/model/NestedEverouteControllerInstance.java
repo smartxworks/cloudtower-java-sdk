@@ -15,6 +15,7 @@ import java.io.IOException;
  * NestedEverouteControllerInstance
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedEverouteControllerInstance {
   public static final String SERIALIZED_NAME_IP_ADDR = "ipAddr";
   @SerializedName(SERIALIZED_NAME_IP_ADDR)

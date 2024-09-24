@@ -15,6 +15,7 @@ import java.io.IOException;
  * ClusterVirtualizationUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ClusterVirtualizationUpdationParamsData {
   public static final String SERIALIZED_NAME_AUTO_CONVERGE = "auto_converge";
   @SerializedName(SERIALIZED_NAME_AUTO_CONVERGE)

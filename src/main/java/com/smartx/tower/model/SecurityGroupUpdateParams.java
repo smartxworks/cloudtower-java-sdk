@@ -19,6 +19,7 @@ import java.util.List;
  * SecurityGroupUpdateParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class SecurityGroupUpdateParams {
   public static final String SERIALIZED_NAME_LABEL_GROUPS = "label_groups";
   @SerializedName(SERIALIZED_NAME_LABEL_GROUPS)

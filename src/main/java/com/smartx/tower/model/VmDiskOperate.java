@@ -20,6 +20,7 @@ import java.util.List;
  * VmDiskOperate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmDiskOperate {
   public static final String SERIALIZED_NAME_REMOVE_DISKS = "remove_disks";
   @SerializedName(SERIALIZED_NAME_REMOVE_DISKS)

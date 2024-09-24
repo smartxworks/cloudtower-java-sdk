@@ -17,6 +17,7 @@ import java.io.IOException;
  * NvmfSubsystemCreationParamsAllOf
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NvmfSubsystemCreationParamsAllOf {
   public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
   @SerializedName(SERIALIZED_NAME_REPLICA_NUM)

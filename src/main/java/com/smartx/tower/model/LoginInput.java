@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * LoginInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class LoginInput {
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)

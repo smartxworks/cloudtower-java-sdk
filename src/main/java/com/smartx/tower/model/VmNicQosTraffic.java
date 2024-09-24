@@ -18,6 +18,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VmNicQosTraffic
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmNicQosTraffic {
   public static final String SERIALIZED_NAME_RATE_LIMIT_UNIT = "rate_limit_unit";
   @SerializedName(SERIALIZED_NAME_RATE_LIMIT_UNIT)

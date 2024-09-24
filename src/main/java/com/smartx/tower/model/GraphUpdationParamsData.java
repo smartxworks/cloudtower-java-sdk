@@ -28,6 +28,7 @@ import java.util.List;
  * GraphUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class GraphUpdationParamsData {
   public static final String SERIALIZED_NAME_INSTANCE_IDS = "instance_ids";
   @SerializedName(SERIALIZED_NAME_INSTANCE_IDS)

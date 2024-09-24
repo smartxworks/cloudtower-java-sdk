@@ -22,6 +22,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * IscsiConnection
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiConnection {
   public static final String SERIALIZED_NAME_CLIENT_PORT = "client_port";
   @SerializedName(SERIALIZED_NAME_CLIENT_PORT)

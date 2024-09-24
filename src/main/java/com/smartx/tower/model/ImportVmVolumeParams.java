@@ -16,6 +16,7 @@ import java.io.IOException;
  * ImportVmVolumeParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ImportVmVolumeParams {
   public static final String SERIALIZED_NAME_UPLOAD_TASK_ID = "upload_task_id";
   @SerializedName(SERIALIZED_NAME_UPLOAD_TASK_ID)

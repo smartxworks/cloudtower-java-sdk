@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedDiskFailureInformation
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedDiskFailureInformation {
   public static final String SERIALIZED_NAME_CHUNK_CHECKSUM_ERROR = "chunk_checksum_error";
   @SerializedName(SERIALIZED_NAME_CHUNK_CHECKSUM_ERROR)

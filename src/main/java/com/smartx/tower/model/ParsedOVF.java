@@ -21,6 +21,7 @@ import java.util.List;
  * ParsedOVF
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class ParsedOVF {
   public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
   @SerializedName(SERIALIZED_NAME_FIRMWARE)

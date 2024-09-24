@@ -20,6 +20,7 @@ import java.util.List;
  * VmDiskParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VmDiskParams {
   public static final String SERIALIZED_NAME_MOUNT_CD_ROMS = "mount_cd_roms";
   @SerializedName(SERIALIZED_NAME_MOUNT_CD_ROMS)

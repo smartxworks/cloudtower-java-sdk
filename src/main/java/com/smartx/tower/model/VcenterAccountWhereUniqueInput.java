@@ -16,6 +16,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * VcenterAccountWhereUniqueInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VcenterAccountWhereUniqueInput {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

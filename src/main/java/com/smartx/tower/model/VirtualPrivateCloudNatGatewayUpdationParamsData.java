@@ -18,6 +18,7 @@ import java.util.List;
  * VirtualPrivateCloudNatGatewayUpdationParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class VirtualPrivateCloudNatGatewayUpdationParamsData {
   public static final String SERIALIZED_NAME_EXTERNAL_IP = "external_ip";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_IP)

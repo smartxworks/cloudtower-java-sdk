@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedFrozenDisks
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedFrozenDisks {
   public static final String SERIALIZED_NAME_BOOT = "boot";
   @SerializedName(SERIALIZED_NAME_BOOT)

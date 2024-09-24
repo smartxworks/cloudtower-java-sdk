@@ -15,6 +15,7 @@ import java.io.IOException;
  * IscsiLunDeletionParamsData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLunDeletionParamsData {
   public static final String SERIALIZED_NAME_REMOVE_SNAPSHOT = "remove_snapshot";
   @SerializedName(SERIALIZED_NAME_REMOVE_SNAPSHOT)

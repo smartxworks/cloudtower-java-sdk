@@ -19,6 +19,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * NestedPasswordRecoverQa
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NestedPasswordRecoverQa {
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)

@@ -19,6 +19,7 @@ import java.io.IOException;
  * IscsiLunCreationParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IscsiLunCreationParams {
   public static final String SERIALIZED_NAME_LUN_ID = "lun_id";
   @SerializedName(SERIALIZED_NAME_LUN_ID)

@@ -20,6 +20,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * V2EverouteLicense
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class V2EverouteLicense {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)

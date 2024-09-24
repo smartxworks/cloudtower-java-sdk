@@ -15,6 +15,7 @@ import java.io.IOException;
  * NvmfNamespaceCloneParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class NvmfNamespaceCloneParams {
   public static final String SERIALIZED_NAME_NAMESPACE_GROUP_ID = "namespace_group_id";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUP_ID)

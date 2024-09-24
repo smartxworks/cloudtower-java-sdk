@@ -23,6 +23,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * IsolationPolicy
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+
 public class IsolationPolicy {
   public static final String SERIALIZED_NAME_EGRESS = "egress";
   @SerializedName(SERIALIZED_NAME_EGRESS)
