@@ -78,10 +78,6 @@ public class DiscoveredHost {
   @SerializedName(SERIALIZED_NAME_VERSION)
   private String version;
 
-  public static final String SERIALIZED_NAME_ZBS_SPEC = "zbs_spec";
-  @SerializedName(SERIALIZED_NAME_ZBS_SPEC)
-  private String zbsSpec;
-
   public DiscoveredHost() { 
   }
 
@@ -425,29 +421,6 @@ public class DiscoveredHost {
   }
 
 
-  public DiscoveredHost zbsSpec(String zbsSpec) {
-    
-    this.zbsSpec = zbsSpec;
-    return this;
-  }
-
-   /**
-   * Get zbsSpec
-   * @return zbsSpec
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getZbsSpec() {
-    return zbsSpec;
-  }
-
-
-  public void setZbsSpec(String zbsSpec) {
-    this.zbsSpec = zbsSpec;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -470,8 +443,7 @@ public class DiscoveredHost {
         Objects.equals(this.product, discoveredHost.product) &&
         Objects.equals(this.serial, discoveredHost.serial) &&
         Objects.equals(this.sockets, discoveredHost.sockets) &&
-        Objects.equals(this.version, discoveredHost.version) &&
-        Objects.equals(this.zbsSpec, discoveredHost.zbsSpec);
+        Objects.equals(this.version, discoveredHost.version);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -480,7 +452,7 @@ public class DiscoveredHost {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allFlash, deployed, dimms, disks, hostIp, hostUuid, hostname, ifaces, ipmiIp, isOsInRaid1, product, serial, sockets, version, zbsSpec);
+    return Objects.hash(allFlash, deployed, dimms, disks, hostIp, hostUuid, hostname, ifaces, ipmiIp, isOsInRaid1, product, serial, sockets, version);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -508,7 +480,6 @@ public class DiscoveredHost {
     sb.append("    serial: ").append(toIndentedString(serial)).append("\n");
     sb.append("    sockets: ").append(toIndentedString(sockets)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    zbsSpec: ").append(toIndentedString(zbsSpec)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -8,10 +8,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.NicWhereInput;
-import com.smartx.tower.model.VirtualPrivateCloudNicWhereInput;
 import com.smartx.tower.model.VlanWhereInput;
 import com.smartx.tower.model.VmNicModel;
-import com.smartx.tower.model.VmNicType;
 import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -641,22 +639,6 @@ public class VmNicWhereInput {
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK_STARTS_WITH)
   private String subnetMaskStartsWith;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private VmNicType type;
-
-  public static final String SERIALIZED_NAME_TYPE_IN = "type_in";
-  @SerializedName(SERIALIZED_NAME_TYPE_IN)
-  private List<VmNicType> typeIn = null;
-
-  public static final String SERIALIZED_NAME_TYPE_NOT = "type_not";
-  @SerializedName(SERIALIZED_NAME_TYPE_NOT)
-  private VmNicType typeNot;
-
-  public static final String SERIALIZED_NAME_TYPE_NOT_IN = "type_not_in";
-  @SerializedName(SERIALIZED_NAME_TYPE_NOT_IN)
-  private List<VmNicType> typeNotIn = null;
-
   public static final String SERIALIZED_NAME_VLAN = "vlan";
   @SerializedName(SERIALIZED_NAME_VLAN)
   private VlanWhereInput vlan;
@@ -664,10 +646,6 @@ public class VmNicWhereInput {
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
   private VmWhereInput vm;
-
-  public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
-  @SerializedName(SERIALIZED_NAME_VPC_NIC)
-  private VirtualPrivateCloudNicWhereInput vpcNic;
 
   public VmNicWhereInput() { 
   }
@@ -4446,114 +4424,6 @@ public class VmNicWhereInput {
   }
 
 
-  public VmNicWhereInput type(VmNicType type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmNicType getType() {
-    return type;
-  }
-
-
-  public void setType(VmNicType type) {
-    this.type = type;
-  }
-
-
-  public VmNicWhereInput typeIn(List<VmNicType> typeIn) {
-    
-    this.typeIn = typeIn;
-    return this;
-  }
-
-  public VmNicWhereInput addTypeInItem(VmNicType typeInItem) {
-    if (this.typeIn == null) {
-      this.typeIn = new ArrayList<VmNicType>();
-    }
-    this.typeIn.add(typeInItem);
-    return this;
-  }
-
-   /**
-   * Get typeIn
-   * @return typeIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmNicType> getTypeIn() {
-    return typeIn;
-  }
-
-
-  public void setTypeIn(List<VmNicType> typeIn) {
-    this.typeIn = typeIn;
-  }
-
-
-  public VmNicWhereInput typeNot(VmNicType typeNot) {
-    
-    this.typeNot = typeNot;
-    return this;
-  }
-
-   /**
-   * Get typeNot
-   * @return typeNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmNicType getTypeNot() {
-    return typeNot;
-  }
-
-
-  public void setTypeNot(VmNicType typeNot) {
-    this.typeNot = typeNot;
-  }
-
-
-  public VmNicWhereInput typeNotIn(List<VmNicType> typeNotIn) {
-    
-    this.typeNotIn = typeNotIn;
-    return this;
-  }
-
-  public VmNicWhereInput addTypeNotInItem(VmNicType typeNotInItem) {
-    if (this.typeNotIn == null) {
-      this.typeNotIn = new ArrayList<VmNicType>();
-    }
-    this.typeNotIn.add(typeNotInItem);
-    return this;
-  }
-
-   /**
-   * Get typeNotIn
-   * @return typeNotIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmNicType> getTypeNotIn() {
-    return typeNotIn;
-  }
-
-
-  public void setTypeNotIn(List<VmNicType> typeNotIn) {
-    this.typeNotIn = typeNotIn;
-  }
-
-
   public VmNicWhereInput vlan(VlanWhereInput vlan) {
     
     this.vlan = vlan;
@@ -4597,29 +4467,6 @@ public class VmNicWhereInput {
 
   public void setVm(VmWhereInput vm) {
     this.vm = vm;
-  }
-
-
-  public VmNicWhereInput vpcNic(VirtualPrivateCloudNicWhereInput vpcNic) {
-    
-    this.vpcNic = vpcNic;
-    return this;
-  }
-
-   /**
-   * Get vpcNic
-   * @return vpcNic
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VirtualPrivateCloudNicWhereInput getVpcNic() {
-    return vpcNic;
-  }
-
-
-  public void setVpcNic(VirtualPrivateCloudNicWhereInput vpcNic) {
-    this.vpcNic = vpcNic;
   }
 
 
@@ -4786,13 +4633,8 @@ public class VmNicWhereInput {
         Objects.equals(this.subnetMaskNotIn, vmNicWhereInput.subnetMaskNotIn) &&
         Objects.equals(this.subnetMaskNotStartsWith, vmNicWhereInput.subnetMaskNotStartsWith) &&
         Objects.equals(this.subnetMaskStartsWith, vmNicWhereInput.subnetMaskStartsWith) &&
-        Objects.equals(this.type, vmNicWhereInput.type) &&
-        Objects.equals(this.typeIn, vmNicWhereInput.typeIn) &&
-        Objects.equals(this.typeNot, vmNicWhereInput.typeNot) &&
-        Objects.equals(this.typeNotIn, vmNicWhereInput.typeNotIn) &&
         Objects.equals(this.vlan, vmNicWhereInput.vlan) &&
-        Objects.equals(this.vm, vmNicWhereInput.vm) &&
-        Objects.equals(this.vpcNic, vmNicWhereInput.vpcNic);
+        Objects.equals(this.vm, vmNicWhereInput.vm);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -4801,7 +4643,7 @@ public class VmNicWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, egressRateLimitBurstInBit, egressRateLimitBurstInBitGt, egressRateLimitBurstInBitGte, egressRateLimitBurstInBitIn, egressRateLimitBurstInBitLt, egressRateLimitBurstInBitLte, egressRateLimitBurstInBitNot, egressRateLimitBurstInBitNotIn, egressRateLimitEnabled, egressRateLimitEnabledNot, egressRateLimitMaxRateInBitps, egressRateLimitMaxRateInBitpsGt, egressRateLimitMaxRateInBitpsGte, egressRateLimitMaxRateInBitpsIn, egressRateLimitMaxRateInBitpsLt, egressRateLimitMaxRateInBitpsLte, egressRateLimitMaxRateInBitpsNot, egressRateLimitMaxRateInBitpsNotIn, enabled, enabledNot, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ingressRateLimitBurstInBit, ingressRateLimitBurstInBitGt, ingressRateLimitBurstInBitGte, ingressRateLimitBurstInBitIn, ingressRateLimitBurstInBitLt, ingressRateLimitBurstInBitLte, ingressRateLimitBurstInBitNot, ingressRateLimitBurstInBitNotIn, ingressRateLimitEnabled, ingressRateLimitEnabledNot, ingressRateLimitMaxRateInBitps, ingressRateLimitMaxRateInBitpsGt, ingressRateLimitMaxRateInBitpsGte, ingressRateLimitMaxRateInBitpsIn, ingressRateLimitMaxRateInBitpsLt, ingressRateLimitMaxRateInBitpsLte, ingressRateLimitMaxRateInBitpsNot, ingressRateLimitMaxRateInBitpsNotIn, interfaceId, interfaceIdContains, interfaceIdEndsWith, interfaceIdGt, interfaceIdGte, interfaceIdIn, interfaceIdLt, interfaceIdLte, interfaceIdNot, interfaceIdNotContains, interfaceIdNotEndsWith, interfaceIdNotIn, interfaceIdNotStartsWith, interfaceIdStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, mirror, mirrorNot, model, modelIn, modelNot, modelNotIn, nic, order, orderGt, orderGte, orderIn, orderLt, orderLte, orderNot, orderNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, type, typeIn, typeNot, typeNotIn, vlan, vm, vpcNic);
+    return Objects.hash(AND, NOT, OR, egressRateLimitBurstInBit, egressRateLimitBurstInBitGt, egressRateLimitBurstInBitGte, egressRateLimitBurstInBitIn, egressRateLimitBurstInBitLt, egressRateLimitBurstInBitLte, egressRateLimitBurstInBitNot, egressRateLimitBurstInBitNotIn, egressRateLimitEnabled, egressRateLimitEnabledNot, egressRateLimitMaxRateInBitps, egressRateLimitMaxRateInBitpsGt, egressRateLimitMaxRateInBitpsGte, egressRateLimitMaxRateInBitpsIn, egressRateLimitMaxRateInBitpsLt, egressRateLimitMaxRateInBitpsLte, egressRateLimitMaxRateInBitpsNot, egressRateLimitMaxRateInBitpsNotIn, enabled, enabledNot, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ingressRateLimitBurstInBit, ingressRateLimitBurstInBitGt, ingressRateLimitBurstInBitGte, ingressRateLimitBurstInBitIn, ingressRateLimitBurstInBitLt, ingressRateLimitBurstInBitLte, ingressRateLimitBurstInBitNot, ingressRateLimitBurstInBitNotIn, ingressRateLimitEnabled, ingressRateLimitEnabledNot, ingressRateLimitMaxRateInBitps, ingressRateLimitMaxRateInBitpsGt, ingressRateLimitMaxRateInBitpsGte, ingressRateLimitMaxRateInBitpsIn, ingressRateLimitMaxRateInBitpsLt, ingressRateLimitMaxRateInBitpsLte, ingressRateLimitMaxRateInBitpsNot, ingressRateLimitMaxRateInBitpsNotIn, interfaceId, interfaceIdContains, interfaceIdEndsWith, interfaceIdGt, interfaceIdGte, interfaceIdIn, interfaceIdLt, interfaceIdLte, interfaceIdNot, interfaceIdNotContains, interfaceIdNotEndsWith, interfaceIdNotIn, interfaceIdNotStartsWith, interfaceIdStartsWith, ipAddress, ipAddressContains, ipAddressEndsWith, ipAddressGt, ipAddressGte, ipAddressIn, ipAddressLt, ipAddressLte, ipAddressNot, ipAddressNotContains, ipAddressNotEndsWith, ipAddressNotIn, ipAddressNotStartsWith, ipAddressStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, macAddress, macAddressContains, macAddressEndsWith, macAddressGt, macAddressGte, macAddressIn, macAddressLt, macAddressLte, macAddressNot, macAddressNotContains, macAddressNotEndsWith, macAddressNotIn, macAddressNotStartsWith, macAddressStartsWith, mirror, mirrorNot, model, modelIn, modelNot, modelNotIn, nic, order, orderGt, orderGte, orderIn, orderLt, orderLte, orderNot, orderNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vlan, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4969,13 +4811,8 @@ public class VmNicWhereInput {
     sb.append("    subnetMaskNotIn: ").append(toIndentedString(subnetMaskNotIn)).append("\n");
     sb.append("    subnetMaskNotStartsWith: ").append(toIndentedString(subnetMaskNotStartsWith)).append("\n");
     sb.append("    subnetMaskStartsWith: ").append(toIndentedString(subnetMaskStartsWith)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    typeIn: ").append(toIndentedString(typeIn)).append("\n");
-    sb.append("    typeNot: ").append(toIndentedString(typeNot)).append("\n");
-    sb.append("    typeNotIn: ").append(toIndentedString(typeNotIn)).append("\n");
     sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
     sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
-    sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -8,11 +8,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.NestedNic;
-import com.smartx.tower.model.NestedVirtualPrivateCloudNic;
 import com.smartx.tower.model.NestedVlan;
 import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.VmNicModel;
-import com.smartx.tower.model.VmNicType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -95,10 +93,6 @@ public class VmNic {
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)
   private String subnetMask;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private VmNicType type;
-
   public static final String SERIALIZED_NAME_VLAN = "vlan";
   @SerializedName(SERIALIZED_NAME_VLAN)
   private NestedVlan vlan;
@@ -106,10 +100,6 @@ public class VmNic {
   public static final String SERIALIZED_NAME_VM = "vm";
   @SerializedName(SERIALIZED_NAME_VM)
   private NestedVm vm;
-
-  public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
-  @SerializedName(SERIALIZED_NAME_VPC_NIC)
-  private NestedVirtualPrivateCloudNic vpcNic;
 
   public VmNic() { 
   }
@@ -528,29 +518,6 @@ public class VmNic {
   }
 
 
-  public VmNic type(VmNicType type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmNicType getType() {
-    return type;
-  }
-
-
-  public void setType(VmNicType type) {
-    this.type = type;
-  }
-
-
   public VmNic vlan(NestedVlan vlan) {
     
     this.vlan = vlan;
@@ -597,29 +564,6 @@ public class VmNic {
   }
 
 
-  public VmNic vpcNic(NestedVirtualPrivateCloudNic vpcNic) {
-    
-    this.vpcNic = vpcNic;
-    return this;
-  }
-
-   /**
-   * Get vpcNic
-   * @return vpcNic
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NestedVirtualPrivateCloudNic getVpcNic() {
-    return vpcNic;
-  }
-
-
-  public void setVpcNic(NestedVirtualPrivateCloudNic vpcNic) {
-    this.vpcNic = vpcNic;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -647,10 +591,8 @@ public class VmNic {
         Objects.equals(this.nic, vmNic.nic) &&
         Objects.equals(this.order, vmNic.order) &&
         Objects.equals(this.subnetMask, vmNic.subnetMask) &&
-        Objects.equals(this.type, vmNic.type) &&
         Objects.equals(this.vlan, vmNic.vlan) &&
-        Objects.equals(this.vm, vmNic.vm) &&
-        Objects.equals(this.vpcNic, vmNic.vpcNic);
+        Objects.equals(this.vm, vmNic.vm);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -659,7 +601,7 @@ public class VmNic {
 
   @Override
   public int hashCode() {
-    return Objects.hash(egressRateLimitBurstInBit, egressRateLimitEnabled, egressRateLimitMaxRateInBitps, enabled, gateway, id, ingressRateLimitBurstInBit, ingressRateLimitEnabled, ingressRateLimitMaxRateInBitps, interfaceId, ipAddress, localId, macAddress, mirror, model, nic, order, subnetMask, type, vlan, vm, vpcNic);
+    return Objects.hash(egressRateLimitBurstInBit, egressRateLimitEnabled, egressRateLimitMaxRateInBitps, enabled, gateway, id, ingressRateLimitBurstInBit, ingressRateLimitEnabled, ingressRateLimitMaxRateInBitps, interfaceId, ipAddress, localId, macAddress, mirror, model, nic, order, subnetMask, vlan, vm);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -691,10 +633,8 @@ public class VmNic {
     sb.append("    nic: ").append(toIndentedString(nic)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    subnetMask: ").append(toIndentedString(subnetMask)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
     sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
-    sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

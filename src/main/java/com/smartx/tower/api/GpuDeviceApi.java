@@ -14,7 +14,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.smartx.tower.model.CommonHeader;
 import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetGpuDevicesConnectionRequestBody;
 import com.smartx.tower.model.GetGpuDevicesRequestBody;
@@ -23,7 +22,6 @@ import com.smartx.tower.model.GpuDeviceConnection;
 import com.smartx.tower.model.GpuDeviceDescriptionUpdationParams;
 import com.smartx.tower.model.GpuDeviceSriovSwitchParams;
 import com.smartx.tower.model.GpuDeviceUsageUpdationParams;
-import com.smartx.tower.model.GpuVmInfo;
 import com.smartx.tower.model.WithTaskGpuDevice;
 
 import java.lang.reflect.Type;
@@ -69,149 +67,6 @@ public class GpuDeviceApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
-    /**
-     * Build call for getDetailVmInfoByGpuDevices
-     * @param getGpuDevicesRequestBody  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getDetailVmInfoByGpuDevicesCall(GetGpuDevicesRequestBody getGpuDevicesRequestBody, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = getGpuDevicesRequestBody;
-
-        // create path and map variables
-        String localVarPath = "/get-detail-vm-info-by-gpu-devices";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDetailVmInfoByGpuDevicesValidateBeforeCall(GetGpuDevicesRequestBody getGpuDevicesRequestBody, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'getGpuDevicesRequestBody' is set
-        if (getGpuDevicesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getGpuDevicesRequestBody' when calling getDetailVmInfoByGpuDevices(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = getDetailVmInfoByGpuDevicesCall(getGpuDevicesRequestBody, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param getGpuDevicesRequestBody  (required)
-     * @return List&lt;GpuVmInfo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
-     */
-    public List<GpuVmInfo> getDetailVmInfoByGpuDevices(GetGpuDevicesRequestBody getGpuDevicesRequestBody) throws ApiException {
-        ApiResponse<List<GpuVmInfo>> localVarResp = getDetailVmInfoByGpuDevicesWithHttpInfo(getGpuDevicesRequestBody);
-        return localVarResp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param getGpuDevicesRequestBody  (required)
-     * @return ApiResponse&lt;List&lt;GpuVmInfo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
-     */
-    public ApiResponse<List<GpuVmInfo>> getDetailVmInfoByGpuDevicesWithHttpInfo(GetGpuDevicesRequestBody getGpuDevicesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getDetailVmInfoByGpuDevicesValidateBeforeCall(getGpuDevicesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<GpuVmInfo>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param getGpuDevicesRequestBody  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getDetailVmInfoByGpuDevicesAsync(GetGpuDevicesRequestBody getGpuDevicesRequestBody, final ApiCallback<List<GpuVmInfo>> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getDetailVmInfoByGpuDevicesValidateBeforeCall(getGpuDevicesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<GpuVmInfo>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
     /**
      * Build call for getGpuDevices
      * @param getGpuDevicesRequestBody  (required)
@@ -499,11 +354,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call switchGpuDeviceSriovCall(GpuDeviceSriovSwitchParams gpuDeviceSriovSwitchParams, final ApiCallback _callback) throws ApiException {
@@ -575,11 +430,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskGpuDevice> switchGpuDeviceSriov(GpuDeviceSriovSwitchParams gpuDeviceSriovSwitchParams) throws ApiException {
@@ -596,11 +451,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskGpuDevice>> switchGpuDeviceSriovWithHttpInfo(GpuDeviceSriovSwitchParams gpuDeviceSriovSwitchParams) throws ApiException {
@@ -619,11 +474,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call switchGpuDeviceSriovAsync(GpuDeviceSriovSwitchParams gpuDeviceSriovSwitchParams, final ApiCallback<List<WithTaskGpuDevice>> _callback) throws ApiException {
@@ -642,11 +497,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateGpuDeviceDescriptionCall(GpuDeviceDescriptionUpdationParams gpuDeviceDescriptionUpdationParams, final ApiCallback _callback) throws ApiException {
@@ -718,11 +573,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskGpuDevice> updateGpuDeviceDescription(GpuDeviceDescriptionUpdationParams gpuDeviceDescriptionUpdationParams) throws ApiException {
@@ -739,11 +594,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskGpuDevice>> updateGpuDeviceDescriptionWithHttpInfo(GpuDeviceDescriptionUpdationParams gpuDeviceDescriptionUpdationParams) throws ApiException {
@@ -762,11 +617,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateGpuDeviceDescriptionAsync(GpuDeviceDescriptionUpdationParams gpuDeviceDescriptionUpdationParams, final ApiCallback<List<WithTaskGpuDevice>> _callback) throws ApiException {
@@ -785,11 +640,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateGpuDeviceUsageCall(GpuDeviceUsageUpdationParams gpuDeviceUsageUpdationParams, final ApiCallback _callback) throws ApiException {
@@ -861,11 +716,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskGpuDevice> updateGpuDeviceUsage(GpuDeviceUsageUpdationParams gpuDeviceUsageUpdationParams) throws ApiException {
@@ -882,11 +737,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskGpuDevice>> updateGpuDeviceUsageWithHttpInfo(GpuDeviceUsageUpdationParams gpuDeviceUsageUpdationParams) throws ApiException {
@@ -905,11 +760,11 @@ public class GpuDeviceApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateGpuDeviceUsageAsync(GpuDeviceUsageUpdationParams gpuDeviceUsageUpdationParams, final ApiCallback<List<WithTaskGpuDevice>> _callback) throws ApiException {

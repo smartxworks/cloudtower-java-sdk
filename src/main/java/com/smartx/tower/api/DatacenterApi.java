@@ -15,7 +15,6 @@ import java.io.IOException;
 
 
 import com.smartx.tower.model.AddClustersToDatacenterParams;
-import com.smartx.tower.model.CommonHeader;
 import com.smartx.tower.model.Datacenter;
 import com.smartx.tower.model.DatacenterConnection;
 import com.smartx.tower.model.DatacenterCreationParams;
@@ -80,10 +79,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call addClustersToDatacenterCall(List<AddClustersToDatacenterParams> addClustersToDatacenterParams, final ApiCallback _callback) throws ApiException {
@@ -155,10 +154,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDatacenter> addClustersToDatacenter(List<AddClustersToDatacenterParams> addClustersToDatacenterParams) throws ApiException {
@@ -175,10 +174,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDatacenter>> addClustersToDatacenterWithHttpInfo(List<AddClustersToDatacenterParams> addClustersToDatacenterParams) throws ApiException {
@@ -197,10 +196,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call addClustersToDatacenterAsync(List<AddClustersToDatacenterParams> addClustersToDatacenterParams, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
@@ -219,10 +218,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createDatacenterCall(List<DatacenterCreationParams> datacenterCreationParams, final ApiCallback _callback) throws ApiException {
@@ -294,10 +293,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDatacenter> createDatacenter(List<DatacenterCreationParams> datacenterCreationParams) throws ApiException {
@@ -314,10 +313,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDatacenter>> createDatacenterWithHttpInfo(List<DatacenterCreationParams> datacenterCreationParams) throws ApiException {
@@ -336,10 +335,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call createDatacenterAsync(List<DatacenterCreationParams> datacenterCreationParams, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
@@ -358,10 +357,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteDatacenterCall(DatacenterDeletionParams datacenterDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -433,10 +432,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteDatacenter> deleteDatacenter(DatacenterDeletionParams datacenterDeletionParams) throws ApiException {
@@ -453,10 +452,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteDatacenter>> deleteDatacenterWithHttpInfo(DatacenterDeletionParams datacenterDeletionParams) throws ApiException {
@@ -475,10 +474,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteDatacenterAsync(DatacenterDeletionParams datacenterDeletionParams, final ApiCallback<List<WithTaskDeleteDatacenter>> _callback) throws ApiException {
@@ -775,10 +774,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call removeClustersFromDatacenterCall(List<RemoveClustersFromDatacenterParams> removeClustersFromDatacenterParams, final ApiCallback _callback) throws ApiException {
@@ -850,10 +849,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDatacenter> removeClustersFromDatacenter(List<RemoveClustersFromDatacenterParams> removeClustersFromDatacenterParams) throws ApiException {
@@ -870,10 +869,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDatacenter>> removeClustersFromDatacenterWithHttpInfo(List<RemoveClustersFromDatacenterParams> removeClustersFromDatacenterParams) throws ApiException {
@@ -892,10 +891,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call removeClustersFromDatacenterAsync(List<RemoveClustersFromDatacenterParams> removeClustersFromDatacenterParams, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {
@@ -914,10 +913,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateDatacenterCall(DatacenterUpdationParams datacenterUpdationParams, final ApiCallback _callback) throws ApiException {
@@ -989,10 +988,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDatacenter> updateDatacenter(DatacenterUpdationParams datacenterUpdationParams) throws ApiException {
@@ -1009,10 +1008,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDatacenter>> updateDatacenterWithHttpInfo(DatacenterUpdationParams datacenterUpdationParams) throws ApiException {
@@ -1031,10 +1030,10 @@ public class DatacenterApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateDatacenterAsync(DatacenterUpdationParams datacenterUpdationParams, final ApiCallback<List<WithTaskDatacenter>> _callback) throws ApiException {

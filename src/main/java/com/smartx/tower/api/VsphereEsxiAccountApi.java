@@ -14,7 +14,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.smartx.tower.model.CommonHeader;
 import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetVsphereEsxiAccountsConnectionRequestBody;
 import com.smartx.tower.model.GetVsphereEsxiAccountsRequestBody;
@@ -353,11 +352,11 @@ public class VsphereEsxiAccountApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateVsphereEsxiAccountCall(UpdateVsphereEsxiAccountParams updateVsphereEsxiAccountParams, final ApiCallback _callback) throws ApiException {
@@ -429,11 +428,11 @@ public class VsphereEsxiAccountApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskVsphereEsxiAccountArray> updateVsphereEsxiAccount(UpdateVsphereEsxiAccountParams updateVsphereEsxiAccountParams) throws ApiException {
@@ -450,11 +449,11 @@ public class VsphereEsxiAccountApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskVsphereEsxiAccountArray>> updateVsphereEsxiAccountWithHttpInfo(UpdateVsphereEsxiAccountParams updateVsphereEsxiAccountParams) throws ApiException {
@@ -473,11 +472,11 @@ public class VsphereEsxiAccountApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
         <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call updateVsphereEsxiAccountAsync(UpdateVsphereEsxiAccountParams updateVsphereEsxiAccountParams, final ApiCallback<List<WithTaskVsphereEsxiAccountArray>> _callback) throws ApiException {

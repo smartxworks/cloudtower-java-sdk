@@ -14,7 +14,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.smartx.tower.model.CommonHeader;
 import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetSnapshotGroupsConnectionRequestBody;
 import com.smartx.tower.model.GetSnapshotGroupsRequestBody;
@@ -79,10 +78,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneSnapshotGroupCall(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, final ApiCallback _callback) throws ApiException {
@@ -154,10 +153,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskSnapshotGroup> cloneSnapshotGroup(List<SnapshotGroupCloneParams> snapshotGroupCloneParams) throws ApiException {
@@ -174,10 +173,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskSnapshotGroup>> cloneSnapshotGroupWithHttpInfo(List<SnapshotGroupCloneParams> snapshotGroupCloneParams) throws ApiException {
@@ -196,10 +195,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call cloneSnapshotGroupAsync(List<SnapshotGroupCloneParams> snapshotGroupCloneParams, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
@@ -218,10 +217,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteSnapshotGroupCall(SnapshotGroupDeletionParams snapshotGroupDeletionParams, final ApiCallback _callback) throws ApiException {
@@ -293,10 +292,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskDeleteSnapshotGroup> deleteSnapshotGroup(SnapshotGroupDeletionParams snapshotGroupDeletionParams) throws ApiException {
@@ -313,10 +312,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskDeleteSnapshotGroup>> deleteSnapshotGroupWithHttpInfo(SnapshotGroupDeletionParams snapshotGroupDeletionParams) throws ApiException {
@@ -335,10 +334,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call deleteSnapshotGroupAsync(SnapshotGroupDeletionParams snapshotGroupDeletionParams, final ApiCallback<List<WithTaskDeleteSnapshotGroup>> _callback) throws ApiException {
@@ -635,10 +634,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call keepSnapshotGroupCall(SnapshotGroupKeepParams snapshotGroupKeepParams, final ApiCallback _callback) throws ApiException {
@@ -710,10 +709,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskSnapshotGroup> keepSnapshotGroup(SnapshotGroupKeepParams snapshotGroupKeepParams) throws ApiException {
@@ -730,10 +729,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskSnapshotGroup>> keepSnapshotGroupWithHttpInfo(SnapshotGroupKeepParams snapshotGroupKeepParams) throws ApiException {
@@ -752,10 +751,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call keepSnapshotGroupAsync(SnapshotGroupKeepParams snapshotGroupKeepParams, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {
@@ -774,10 +773,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rollbackSnapshotGroupCall(SnapshotGroupRollbackParams snapshotGroupRollbackParams, final ApiCallback _callback) throws ApiException {
@@ -849,10 +848,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public List<WithTaskSnapshotGroup> rollbackSnapshotGroup(SnapshotGroupRollbackParams snapshotGroupRollbackParams) throws ApiException {
@@ -869,10 +868,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<WithTaskSnapshotGroup>> rollbackSnapshotGroupWithHttpInfo(SnapshotGroupRollbackParams snapshotGroupRollbackParams) throws ApiException {
@@ -891,10 +890,10 @@ public class SnapshotGroupApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call rollbackSnapshotGroupAsync(SnapshotGroupRollbackParams snapshotGroupRollbackParams, final ApiCallback<List<WithTaskSnapshotGroup>> _callback) throws ApiException {

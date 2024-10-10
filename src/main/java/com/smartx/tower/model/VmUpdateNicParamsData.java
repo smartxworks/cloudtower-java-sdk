@@ -7,7 +7,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.UpdateVpcNicPayloads;
 import com.smartx.tower.model.VmNicModel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -18,10 +17,6 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmUpdateNicParamsData {
-  public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
-  @SerializedName(SERIALIZED_NAME_VPC_NIC)
-  private UpdateVpcNicPayloads vpcNic;
-
   public static final String SERIALIZED_NAME_SUBNET_MASK = "subnet_mask";
   @SerializedName(SERIALIZED_NAME_SUBNET_MASK)
   private String subnetMask;
@@ -64,29 +59,6 @@ public class VmUpdateNicParamsData {
 
   public VmUpdateNicParamsData() { 
   }
-
-  public VmUpdateNicParamsData vpcNic(UpdateVpcNicPayloads vpcNic) {
-    
-    this.vpcNic = vpcNic;
-    return this;
-  }
-
-   /**
-   * Get vpcNic
-   * @return vpcNic
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public UpdateVpcNicPayloads getVpcNic() {
-    return vpcNic;
-  }
-
-
-  public void setVpcNic(UpdateVpcNicPayloads vpcNic) {
-    this.vpcNic = vpcNic;
-  }
-
 
   public VmUpdateNicParamsData subnetMask(String subnetMask) {
     
@@ -327,8 +299,7 @@ public class VmUpdateNicParamsData {
       return false;
     }
     VmUpdateNicParamsData vmUpdateNicParamsData = (VmUpdateNicParamsData) o;
-    return Objects.equals(this.vpcNic, vmUpdateNicParamsData.vpcNic) &&
-        Objects.equals(this.subnetMask, vmUpdateNicParamsData.subnetMask) &&
+    return Objects.equals(this.subnetMask, vmUpdateNicParamsData.subnetMask) &&
         Objects.equals(this.gateway, vmUpdateNicParamsData.gateway) &&
         Objects.equals(this.ipAddress, vmUpdateNicParamsData.ipAddress) &&
         Objects.equals(this.nicId, vmUpdateNicParamsData.nicId) &&
@@ -342,14 +313,13 @@ public class VmUpdateNicParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(vpcNic, subnetMask, gateway, ipAddress, nicId, connectVlanId, mirror, model, enabled, macAddress, nicIndex);
+    return Objects.hash(subnetMask, gateway, ipAddress, nicId, connectVlanId, mirror, model, enabled, macAddress, nicIndex);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmUpdateNicParamsData {\n");
-    sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
     sb.append("    subnetMask: ").append(toIndentedString(subnetMask)).append("\n");
     sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");

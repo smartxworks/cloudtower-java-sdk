@@ -530,38 +530,6 @@ public class VmVolumeWhereInput {
   @SerializedName(SERIALIZED_NAME_TYPE_NOT_IN)
   private List<VmVolumeType> typeNotIn = null;
 
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
-  private Double uniqueLogicalSize;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GT = "unique_logical_size_gt";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GT)
-  private Double uniqueLogicalSizeGt;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GTE = "unique_logical_size_gte";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_GTE)
-  private Double uniqueLogicalSizeGte;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_IN = "unique_logical_size_in";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_IN)
-  private List<Double> uniqueLogicalSizeIn = null;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LT = "unique_logical_size_lt";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LT)
-  private Double uniqueLogicalSizeLt;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LTE = "unique_logical_size_lte";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_LTE)
-  private Double uniqueLogicalSizeLte;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT = "unique_logical_size_not";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT)
-  private Double uniqueLogicalSizeNot;
-
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT_IN = "unique_logical_size_not_in";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE_NOT_IN)
-  private List<Double> uniqueLogicalSizeNotIn = null;
-
   public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
@@ -3723,206 +3691,6 @@ public class VmVolumeWhereInput {
   }
 
 
-  public VmVolumeWhereInput uniqueLogicalSize(Double uniqueLogicalSize) {
-    
-    this.uniqueLogicalSize = uniqueLogicalSize;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSize
-   * @return uniqueLogicalSize
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSize() {
-    return uniqueLogicalSize;
-  }
-
-
-  public void setUniqueLogicalSize(Double uniqueLogicalSize) {
-    this.uniqueLogicalSize = uniqueLogicalSize;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeGt(Double uniqueLogicalSizeGt) {
-    
-    this.uniqueLogicalSizeGt = uniqueLogicalSizeGt;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeGt
-   * @return uniqueLogicalSizeGt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSizeGt() {
-    return uniqueLogicalSizeGt;
-  }
-
-
-  public void setUniqueLogicalSizeGt(Double uniqueLogicalSizeGt) {
-    this.uniqueLogicalSizeGt = uniqueLogicalSizeGt;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeGte(Double uniqueLogicalSizeGte) {
-    
-    this.uniqueLogicalSizeGte = uniqueLogicalSizeGte;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeGte
-   * @return uniqueLogicalSizeGte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSizeGte() {
-    return uniqueLogicalSizeGte;
-  }
-
-
-  public void setUniqueLogicalSizeGte(Double uniqueLogicalSizeGte) {
-    this.uniqueLogicalSizeGte = uniqueLogicalSizeGte;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeIn(List<Double> uniqueLogicalSizeIn) {
-    
-    this.uniqueLogicalSizeIn = uniqueLogicalSizeIn;
-    return this;
-  }
-
-  public VmVolumeWhereInput addUniqueLogicalSizeInItem(Double uniqueLogicalSizeInItem) {
-    if (this.uniqueLogicalSizeIn == null) {
-      this.uniqueLogicalSizeIn = new ArrayList<Double>();
-    }
-    this.uniqueLogicalSizeIn.add(uniqueLogicalSizeInItem);
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeIn
-   * @return uniqueLogicalSizeIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<Double> getUniqueLogicalSizeIn() {
-    return uniqueLogicalSizeIn;
-  }
-
-
-  public void setUniqueLogicalSizeIn(List<Double> uniqueLogicalSizeIn) {
-    this.uniqueLogicalSizeIn = uniqueLogicalSizeIn;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeLt(Double uniqueLogicalSizeLt) {
-    
-    this.uniqueLogicalSizeLt = uniqueLogicalSizeLt;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeLt
-   * @return uniqueLogicalSizeLt
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSizeLt() {
-    return uniqueLogicalSizeLt;
-  }
-
-
-  public void setUniqueLogicalSizeLt(Double uniqueLogicalSizeLt) {
-    this.uniqueLogicalSizeLt = uniqueLogicalSizeLt;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeLte(Double uniqueLogicalSizeLte) {
-    
-    this.uniqueLogicalSizeLte = uniqueLogicalSizeLte;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeLte
-   * @return uniqueLogicalSizeLte
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSizeLte() {
-    return uniqueLogicalSizeLte;
-  }
-
-
-  public void setUniqueLogicalSizeLte(Double uniqueLogicalSizeLte) {
-    this.uniqueLogicalSizeLte = uniqueLogicalSizeLte;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeNot(Double uniqueLogicalSizeNot) {
-    
-    this.uniqueLogicalSizeNot = uniqueLogicalSizeNot;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeNot
-   * @return uniqueLogicalSizeNot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSizeNot() {
-    return uniqueLogicalSizeNot;
-  }
-
-
-  public void setUniqueLogicalSizeNot(Double uniqueLogicalSizeNot) {
-    this.uniqueLogicalSizeNot = uniqueLogicalSizeNot;
-  }
-
-
-  public VmVolumeWhereInput uniqueLogicalSizeNotIn(List<Double> uniqueLogicalSizeNotIn) {
-    
-    this.uniqueLogicalSizeNotIn = uniqueLogicalSizeNotIn;
-    return this;
-  }
-
-  public VmVolumeWhereInput addUniqueLogicalSizeNotInItem(Double uniqueLogicalSizeNotInItem) {
-    if (this.uniqueLogicalSizeNotIn == null) {
-      this.uniqueLogicalSizeNotIn = new ArrayList<Double>();
-    }
-    this.uniqueLogicalSizeNotIn.add(uniqueLogicalSizeNotInItem);
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSizeNotIn
-   * @return uniqueLogicalSizeNotIn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<Double> getUniqueLogicalSizeNotIn() {
-    return uniqueLogicalSizeNotIn;
-  }
-
-
-  public void setUniqueLogicalSizeNotIn(List<Double> uniqueLogicalSizeNotIn) {
-    this.uniqueLogicalSizeNotIn = uniqueLogicalSizeNotIn;
-  }
-
-
   public VmVolumeWhereInput uniqueSize(Long uniqueSize) {
     
     this.uniqueSize = uniqueSize;
@@ -4327,14 +4095,6 @@ public class VmVolumeWhereInput {
         Objects.equals(this.typeIn, vmVolumeWhereInput.typeIn) &&
         Objects.equals(this.typeNot, vmVolumeWhereInput.typeNot) &&
         Objects.equals(this.typeNotIn, vmVolumeWhereInput.typeNotIn) &&
-        Objects.equals(this.uniqueLogicalSize, vmVolumeWhereInput.uniqueLogicalSize) &&
-        Objects.equals(this.uniqueLogicalSizeGt, vmVolumeWhereInput.uniqueLogicalSizeGt) &&
-        Objects.equals(this.uniqueLogicalSizeGte, vmVolumeWhereInput.uniqueLogicalSizeGte) &&
-        Objects.equals(this.uniqueLogicalSizeIn, vmVolumeWhereInput.uniqueLogicalSizeIn) &&
-        Objects.equals(this.uniqueLogicalSizeLt, vmVolumeWhereInput.uniqueLogicalSizeLt) &&
-        Objects.equals(this.uniqueLogicalSizeLte, vmVolumeWhereInput.uniqueLogicalSizeLte) &&
-        Objects.equals(this.uniqueLogicalSizeNot, vmVolumeWhereInput.uniqueLogicalSizeNot) &&
-        Objects.equals(this.uniqueLogicalSizeNotIn, vmVolumeWhereInput.uniqueLogicalSizeNotIn) &&
         Objects.equals(this.uniqueSize, vmVolumeWhereInput.uniqueSize) &&
         Objects.equals(this.uniqueSizeGt, vmVolumeWhereInput.uniqueSizeGt) &&
         Objects.equals(this.uniqueSizeGte, vmVolumeWhereInput.uniqueSizeGte) &&
@@ -4354,7 +4114,7 @@ public class VmVolumeWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lun, mounting, mountingNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, sharing, sharingNot, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lun, mounting, mountingNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, sharing, sharingNot, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4494,14 +4254,6 @@ public class VmVolumeWhereInput {
     sb.append("    typeIn: ").append(toIndentedString(typeIn)).append("\n");
     sb.append("    typeNot: ").append(toIndentedString(typeNot)).append("\n");
     sb.append("    typeNotIn: ").append(toIndentedString(typeNotIn)).append("\n");
-    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
-    sb.append("    uniqueLogicalSizeGt: ").append(toIndentedString(uniqueLogicalSizeGt)).append("\n");
-    sb.append("    uniqueLogicalSizeGte: ").append(toIndentedString(uniqueLogicalSizeGte)).append("\n");
-    sb.append("    uniqueLogicalSizeIn: ").append(toIndentedString(uniqueLogicalSizeIn)).append("\n");
-    sb.append("    uniqueLogicalSizeLt: ").append(toIndentedString(uniqueLogicalSizeLt)).append("\n");
-    sb.append("    uniqueLogicalSizeLte: ").append(toIndentedString(uniqueLogicalSizeLte)).append("\n");
-    sb.append("    uniqueLogicalSizeNot: ").append(toIndentedString(uniqueLogicalSizeNot)).append("\n");
-    sb.append("    uniqueLogicalSizeNotIn: ").append(toIndentedString(uniqueLogicalSizeNotIn)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
     sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");

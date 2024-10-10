@@ -10,7 +10,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * NestedLabel
@@ -20,14 +19,6 @@ public class NestedLabel {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
-
-  public static final String SERIALIZED_NAME_KEY = "key";
-  @SerializedName(SERIALIZED_NAME_KEY)
-  private String key;
-
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
 
   public NestedLabel() { 
   }
@@ -55,52 +46,6 @@ public class NestedLabel {
   }
 
 
-  public NestedLabel key(String key) {
-    
-    this.key = key;
-    return this;
-  }
-
-   /**
-   * Get key
-   * @return key
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getKey() {
-    return key;
-  }
-
-
-  public void setKey(String key) {
-    this.key = key;
-  }
-
-
-  public NestedLabel value(String value) {
-    
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * Get value
-   * @return value
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getValue() {
-    return value;
-  }
-
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -110,25 +55,12 @@ public class NestedLabel {
       return false;
     }
     NestedLabel nestedLabel = (NestedLabel) o;
-    return Objects.equals(this.id, nestedLabel.id) &&
-        Objects.equals(this.key, nestedLabel.key) &&
-        Objects.equals(this.value, nestedLabel.value);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+    return Objects.equals(this.id, nestedLabel.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, key, value);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(id);
   }
 
   @Override
@@ -136,8 +68,6 @@ public class NestedLabel {
     StringBuilder sb = new StringBuilder();
     sb.append("class NestedLabel {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    key: ").append(toIndentedString(key)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

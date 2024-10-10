@@ -10,7 +10,6 @@ import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.ElfImageWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.IscsiLunWhereInput;
 import com.smartx.tower.model.LabelWhereInput;
 import com.smartx.tower.model.VmDiskWhereInput;
 import com.smartx.tower.model.VmSnapshotWhereInput;
@@ -222,18 +221,6 @@ public class ContentLibraryImageWhereInput {
   public static final String SERIALIZED_NAME_ID_STARTS_WITH = "id_starts_with";
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
-
-  public static final String SERIALIZED_NAME_ISCSI_LUNS_EVERY = "iscsi_luns_every";
-  @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_EVERY)
-  private IscsiLunWhereInput iscsiLunsEvery;
-
-  public static final String SERIALIZED_NAME_ISCSI_LUNS_NONE = "iscsi_luns_none";
-  @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NONE)
-  private IscsiLunWhereInput iscsiLunsNone;
-
-  public static final String SERIALIZED_NAME_ISCSI_LUNS_SOME = "iscsi_luns_some";
-  @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_SOME)
-  private IscsiLunWhereInput iscsiLunsSome;
 
   public static final String SERIALIZED_NAME_LABELS_EVERY = "labels_every";
   @SerializedName(SERIALIZED_NAME_LABELS_EVERY)
@@ -1645,75 +1632,6 @@ public class ContentLibraryImageWhereInput {
   }
 
 
-  public ContentLibraryImageWhereInput iscsiLunsEvery(IscsiLunWhereInput iscsiLunsEvery) {
-    
-    this.iscsiLunsEvery = iscsiLunsEvery;
-    return this;
-  }
-
-   /**
-   * Get iscsiLunsEvery
-   * @return iscsiLunsEvery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunWhereInput getIscsiLunsEvery() {
-    return iscsiLunsEvery;
-  }
-
-
-  public void setIscsiLunsEvery(IscsiLunWhereInput iscsiLunsEvery) {
-    this.iscsiLunsEvery = iscsiLunsEvery;
-  }
-
-
-  public ContentLibraryImageWhereInput iscsiLunsNone(IscsiLunWhereInput iscsiLunsNone) {
-    
-    this.iscsiLunsNone = iscsiLunsNone;
-    return this;
-  }
-
-   /**
-   * Get iscsiLunsNone
-   * @return iscsiLunsNone
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunWhereInput getIscsiLunsNone() {
-    return iscsiLunsNone;
-  }
-
-
-  public void setIscsiLunsNone(IscsiLunWhereInput iscsiLunsNone) {
-    this.iscsiLunsNone = iscsiLunsNone;
-  }
-
-
-  public ContentLibraryImageWhereInput iscsiLunsSome(IscsiLunWhereInput iscsiLunsSome) {
-    
-    this.iscsiLunsSome = iscsiLunsSome;
-    return this;
-  }
-
-   /**
-   * Get iscsiLunsSome
-   * @return iscsiLunsSome
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunWhereInput getIscsiLunsSome() {
-    return iscsiLunsSome;
-  }
-
-
-  public void setIscsiLunsSome(IscsiLunWhereInput iscsiLunsSome) {
-    this.iscsiLunsSome = iscsiLunsSome;
-  }
-
-
   public ContentLibraryImageWhereInput labelsEvery(LabelWhereInput labelsEvery) {
     
     this.labelsEvery = labelsEvery;
@@ -2924,9 +2842,6 @@ public class ContentLibraryImageWhereInput {
         Objects.equals(this.idNotIn, contentLibraryImageWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, contentLibraryImageWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, contentLibraryImageWhereInput.idStartsWith) &&
-        Objects.equals(this.iscsiLunsEvery, contentLibraryImageWhereInput.iscsiLunsEvery) &&
-        Objects.equals(this.iscsiLunsNone, contentLibraryImageWhereInput.iscsiLunsNone) &&
-        Objects.equals(this.iscsiLunsSome, contentLibraryImageWhereInput.iscsiLunsSome) &&
         Objects.equals(this.labelsEvery, contentLibraryImageWhereInput.labelsEvery) &&
         Objects.equals(this.labelsNone, contentLibraryImageWhereInput.labelsNone) &&
         Objects.equals(this.labelsSome, contentLibraryImageWhereInput.labelsSome) &&
@@ -2983,7 +2898,7 @@ public class ContentLibraryImageWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfImagesEvery, elfImagesNone, elfImagesSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, iscsiLunsEvery, iscsiLunsNone, iscsiLunsSome, labelsEvery, labelsNone, labelsSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
+    return Objects.hash(AND, NOT, OR, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfImagesEvery, elfImagesNone, elfImagesSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmSnapshotsEvery, vmSnapshotsNone, vmSnapshotsSome, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3046,9 +2961,6 @@ public class ContentLibraryImageWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
-    sb.append("    iscsiLunsEvery: ").append(toIndentedString(iscsiLunsEvery)).append("\n");
-    sb.append("    iscsiLunsNone: ").append(toIndentedString(iscsiLunsNone)).append("\n");
-    sb.append("    iscsiLunsSome: ").append(toIndentedString(iscsiLunsSome)).append("\n");
     sb.append("    labelsEvery: ").append(toIndentedString(labelsEvery)).append("\n");
     sb.append("    labelsNone: ").append(toIndentedString(labelsNone)).append("\n");
     sb.append("    labelsSome: ").append(toIndentedString(labelsSome)).append("\n");

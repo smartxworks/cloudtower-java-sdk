@@ -18,7 +18,6 @@ import com.smartx.tower.model.VmFirmware;
 import com.smartx.tower.model.VmGpuOperationParams;
 import com.smartx.tower.model.VmGuestsOperationSystem;
 import com.smartx.tower.model.VmNicParams;
-import com.smartx.tower.model.VmOwnerParams;
 import com.smartx.tower.model.VmPlacementGroupWhereInput;
 import com.smartx.tower.model.VmStatus;
 import io.swagger.annotations.ApiModel;
@@ -32,10 +31,6 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmCreateVmFromContentLibraryTemplateParams {
-  public static final String SERIALIZED_NAME_OWNER = "owner";
-  @SerializedName(SERIALIZED_NAME_OWNER)
-  private VmOwnerParams owner;
-
   public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
   @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
   private List<VmGpuOperationParams> gpuDevices = null;
@@ -150,29 +145,6 @@ public class VmCreateVmFromContentLibraryTemplateParams {
 
   public VmCreateVmFromContentLibraryTemplateParams() { 
   }
-
-  public VmCreateVmFromContentLibraryTemplateParams owner(VmOwnerParams owner) {
-    
-    this.owner = owner;
-    return this;
-  }
-
-   /**
-   * Get owner
-   * @return owner
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmOwnerParams getOwner() {
-    return owner;
-  }
-
-
-  public void setOwner(VmOwnerParams owner) {
-    this.owner = owner;
-  }
-
 
   public VmCreateVmFromContentLibraryTemplateParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
     
@@ -843,8 +815,7 @@ public class VmCreateVmFromContentLibraryTemplateParams {
       return false;
     }
     VmCreateVmFromContentLibraryTemplateParams vmCreateVmFromContentLibraryTemplateParams = (VmCreateVmFromContentLibraryTemplateParams) o;
-    return Objects.equals(this.owner, vmCreateVmFromContentLibraryTemplateParams.owner) &&
-        Objects.equals(this.gpuDevices, vmCreateVmFromContentLibraryTemplateParams.gpuDevices) &&
+    return Objects.equals(this.gpuDevices, vmCreateVmFromContentLibraryTemplateParams.gpuDevices) &&
         Objects.equals(this.cloudInit, vmCreateVmFromContentLibraryTemplateParams.cloudInit) &&
         Objects.equals(this.isFullCopy, vmCreateVmFromContentLibraryTemplateParams.isFullCopy) &&
         Objects.equals(this.templateId, vmCreateVmFromContentLibraryTemplateParams.templateId) &&
@@ -876,14 +847,13 @@ public class VmCreateVmFromContentLibraryTemplateParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(owner, gpuDevices, cloudInit, isFullCopy, templateId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, diskOperate, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
+    return Objects.hash(gpuDevices, cloudInit, isFullCopy, templateId, maxBandwidthPolicy, maxBandwidthUnit, maxBandwidth, maxIopsPolicy, maxIops, ioPolicy, vcpu, status, firmware, ha, pciNics, vmPlacementGroup, vmNics, diskOperate, memoryUnit, memory, cpuCores, cpuSockets, guestOsType, folderId, description, name, hostId, clusterId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmCreateVmFromContentLibraryTemplateParams {\n");
-    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
     sb.append("    cloudInit: ").append(toIndentedString(cloudInit)).append("\n");
     sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");

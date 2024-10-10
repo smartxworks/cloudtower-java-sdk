@@ -18,8 +18,6 @@ public enum ClusterType {
   
   BLUESHARK("BLUESHARK"),
   
-  SMTX_ELF("SMTX_ELF"),
-  
   SMTX_OS("SMTX_OS"),
   
   SMTX_ZBS("SMTX_ZBS"),
