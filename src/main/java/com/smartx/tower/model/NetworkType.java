@@ -24,13 +24,7 @@ public enum NetworkType {
   
   STORAGE("STORAGE"),
   
-  STORAGE_ACCESS("STORAGE_ACCESS"),
-  
   VM("VM"),
-  
-  VPC_SYS("VPC_SYS"),
-  
-  VPC_VM("VPC_VM"),
   
   NETWORKTYPE_UNSUPPORTED_ENUM("NETWORKTYPE_UNSUPPORTED_ENUM");
   private String value;

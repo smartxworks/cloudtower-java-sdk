@@ -26,8 +26,6 @@ public enum TaskType {
   
   RESOLVER("RESOLVER"),
   
-  SFS("SFS"),
-  
   TASKTYPE_UNSUPPORTED_ENUM("TASKTYPE_UNSUPPORTED_ENUM");
   private String value;
 

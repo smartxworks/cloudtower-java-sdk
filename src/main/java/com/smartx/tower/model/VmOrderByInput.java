@@ -16,10 +16,6 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(VmOrderByInput.Adapter.class)
 public enum VmOrderByInput {
   
-  BIOS_UUID_ASC("bios_uuid_ASC"),
-  
-  BIOS_UUID_DESC("bios_uuid_DESC"),
-  
   CLOCK_OFFSET_ASC("clock_offset_ASC"),
   
   CLOCK_OFFSET_DESC("clock_offset_DESC"),
@@ -183,10 +179,6 @@ public enum VmOrderByInput {
   STATUS_ASC("status_ASC"),
   
   STATUS_DESC("status_DESC"),
-  
-  UNIQUE_LOGICAL_SIZE_ASC("unique_logical_size_ASC"),
-  
-  UNIQUE_LOGICAL_SIZE_DESC("unique_logical_size_DESC"),
   
   UNIQUE_SIZE_ASC("unique_size_ASC"),
   

@@ -10,8 +10,6 @@ import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.HostBatchCreateDiskInput;
 import com.smartx.tower.model.HostBatchCreateIfaceInput;
 import com.smartx.tower.model.HostBatchCreateIpmiInput;
-import com.smartx.tower.model.HostVdsConfig;
-import com.smartx.tower.model.ZbsSpec;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -23,14 +21,6 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class HostCreationParamsData {
-  public static final String SERIALIZED_NAME_VDSES = "vdses";
-  @SerializedName(SERIALIZED_NAME_VDSES)
-  private List<HostVdsConfig> vdses = null;
-
-  public static final String SERIALIZED_NAME_ZBS_SPEC = "zbs_spec";
-  @SerializedName(SERIALIZED_NAME_ZBS_SPEC)
-  private ZbsSpec zbsSpec;
-
   public static final String SERIALIZED_NAME_IFACES = "ifaces";
   @SerializedName(SERIALIZED_NAME_IFACES)
   private List<HostBatchCreateIfaceInput> ifaces = new ArrayList<HostBatchCreateIfaceInput>();
@@ -69,60 +59,6 @@ public class HostCreationParamsData {
 
   public HostCreationParamsData() { 
   }
-
-  public HostCreationParamsData vdses(List<HostVdsConfig> vdses) {
-    
-    this.vdses = vdses;
-    return this;
-  }
-
-  public HostCreationParamsData addVdsesItem(HostVdsConfig vdsesItem) {
-    if (this.vdses == null) {
-      this.vdses = new ArrayList<HostVdsConfig>();
-    }
-    this.vdses.add(vdsesItem);
-    return this;
-  }
-
-   /**
-   * Get vdses
-   * @return vdses
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<HostVdsConfig> getVdses() {
-    return vdses;
-  }
-
-
-  public void setVdses(List<HostVdsConfig> vdses) {
-    this.vdses = vdses;
-  }
-
-
-  public HostCreationParamsData zbsSpec(ZbsSpec zbsSpec) {
-    
-    this.zbsSpec = zbsSpec;
-    return this;
-  }
-
-   /**
-   * Get zbsSpec
-   * @return zbsSpec
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ZbsSpec getZbsSpec() {
-    return zbsSpec;
-  }
-
-
-  public void setZbsSpec(ZbsSpec zbsSpec) {
-    this.zbsSpec = zbsSpec;
-  }
-
 
   public HostCreationParamsData ifaces(List<HostBatchCreateIfaceInput> ifaces) {
     
@@ -350,9 +286,7 @@ public class HostCreationParamsData {
       return false;
     }
     HostCreationParamsData hostCreationParamsData = (HostCreationParamsData) o;
-    return Objects.equals(this.vdses, hostCreationParamsData.vdses) &&
-        Objects.equals(this.zbsSpec, hostCreationParamsData.zbsSpec) &&
-        Objects.equals(this.ifaces, hostCreationParamsData.ifaces) &&
+    return Objects.equals(this.ifaces, hostCreationParamsData.ifaces) &&
         Objects.equals(this.disks, hostCreationParamsData.disks) &&
         Objects.equals(this.platformPassword, hostCreationParamsData.platformPassword) &&
         Objects.equals(this.platformUsername, hostCreationParamsData.platformUsername) &&
@@ -365,15 +299,13 @@ public class HostCreationParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(vdses, zbsSpec, ifaces, disks, platformPassword, platformUsername, platformIp, ipmi, hostname, hostUuid, hostIp);
+    return Objects.hash(ifaces, disks, platformPassword, platformUsername, platformIp, ipmi, hostname, hostUuid, hostIp);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class HostCreationParamsData {\n");
-    sb.append("    vdses: ").append(toIndentedString(vdses)).append("\n");
-    sb.append("    zbsSpec: ").append(toIndentedString(zbsSpec)).append("\n");
     sb.append("    ifaces: ").append(toIndentedString(ifaces)).append("\n");
     sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
     sb.append("    platformPassword: ").append(toIndentedString(platformPassword)).append("\n");

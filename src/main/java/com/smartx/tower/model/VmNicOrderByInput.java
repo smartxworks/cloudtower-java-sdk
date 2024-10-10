@@ -84,10 +84,6 @@ public enum VmNicOrderByInput {
   
   SUBNET_MASK_DESC("subnet_mask_DESC"),
   
-  TYPE_ASC("type_ASC"),
-  
-  TYPE_DESC("type_DESC"),
-  
   VMNICORDERBYINPUT_UNSUPPORTED_ENUM("VMNICORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 
