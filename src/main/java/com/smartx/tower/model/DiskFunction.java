@@ -16,11 +16,15 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(DiskFunction.Adapter.class)
 public enum DiskFunction {
   
+  BOOT("BOOT"),
+  
   CACHE("CACHE"),
   
   DATA("DATA"),
   
   SMTX_SYSTEM("SMTX_SYSTEM"),
+  
+  UNMOUNT("UNMOUNT"),
   
   DISKFUNCTION_UNSUPPORTED_ENUM("DISKFUNCTION_UNSUPPORTED_ENUM");
   private String value;

@@ -38,9 +38,11 @@ public class InstallVmtoolsParams {
    /**
    * Get data
    * @return data
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @Deprecated
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public InstallVmtoolsParamsData getData() {
     return data;

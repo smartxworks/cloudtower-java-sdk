@@ -16,6 +16,10 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(CloudTowerApplicationState.Adapter.class)
 public enum CloudTowerApplicationState {
   
+  CONFIGURE_FAILED("CONFIGURE_FAILED"),
+  
+  CONFIGURING("CONFIGURING"),
+  
   ERROR("ERROR"),
   
   INSTALLING("INSTALLING"),

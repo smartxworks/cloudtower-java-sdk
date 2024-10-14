@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.NetworkPolicyRuleAlgProtocol;
 import com.smartx.tower.model.NetworkPolicyRulePortProtocol;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -17,6 +18,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class NetworkPolicyRulePortInput {
+  public static final String SERIALIZED_NAME_ALG_PROTOCOL = "alg_protocol";
+  @SerializedName(SERIALIZED_NAME_ALG_PROTOCOL)
+  private NetworkPolicyRuleAlgProtocol algProtocol;
+
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private NetworkPolicyRulePortProtocol protocol;
@@ -27,6 +32,29 @@ public class NetworkPolicyRulePortInput {
 
   public NetworkPolicyRulePortInput() { 
   }
+
+  public NetworkPolicyRulePortInput algProtocol(NetworkPolicyRuleAlgProtocol algProtocol) {
+    
+    this.algProtocol = algProtocol;
+    return this;
+  }
+
+   /**
+   * Get algProtocol
+   * @return algProtocol
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NetworkPolicyRuleAlgProtocol getAlgProtocol() {
+    return algProtocol;
+  }
+
+
+  public void setAlgProtocol(NetworkPolicyRuleAlgProtocol algProtocol) {
+    this.algProtocol = algProtocol;
+  }
+
 
   public NetworkPolicyRulePortInput protocol(NetworkPolicyRulePortProtocol protocol) {
     
@@ -83,19 +111,21 @@ public class NetworkPolicyRulePortInput {
       return false;
     }
     NetworkPolicyRulePortInput networkPolicyRulePortInput = (NetworkPolicyRulePortInput) o;
-    return Objects.equals(this.protocol, networkPolicyRulePortInput.protocol) &&
+    return Objects.equals(this.algProtocol, networkPolicyRulePortInput.algProtocol) &&
+        Objects.equals(this.protocol, networkPolicyRulePortInput.protocol) &&
         Objects.equals(this.port, networkPolicyRulePortInput.port);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(protocol, port);
+    return Objects.hash(algProtocol, protocol, port);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkPolicyRulePortInput {\n");
+    sb.append("    algProtocol: ").append(toIndentedString(algProtocol)).append("\n");
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
     sb.append("}");
