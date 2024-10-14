@@ -11,7 +11,9 @@ import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.EverouteClusterPhase;
 import com.smartx.tower.model.GlobalPolicyAction;
+import com.smartx.tower.model.LoadBalancerServiceWhereInput;
 import com.smartx.tower.model.VdsWhereInput;
+import com.smartx.tower.model.VirtualPrivateCloudServiceWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -156,6 +158,10 @@ public class EverouteClusterWhereInput {
   @SerializedName(SERIALIZED_NAME_INSTALLED_NOT)
   private Boolean installedNot;
 
+  public static final String SERIALIZED_NAME_LOAD_BALANCER_SERVICE = "load_balancer_service";
+  @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_SERVICE)
+  private LoadBalancerServiceWhereInput loadBalancerService;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -283,6 +289,10 @@ public class EverouteClusterWhereInput {
   public static final String SERIALIZED_NAME_VERSION_STARTS_WITH = "version_starts_with";
   @SerializedName(SERIALIZED_NAME_VERSION_STARTS_WITH)
   private String versionStartsWith;
+
+  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+  private VirtualPrivateCloudServiceWhereInput vpcService;
 
   public EverouteClusterWhereInput() { 
   }
@@ -1118,6 +1128,29 @@ public class EverouteClusterWhereInput {
   }
 
 
+  public EverouteClusterWhereInput loadBalancerService(LoadBalancerServiceWhereInput loadBalancerService) {
+    
+    this.loadBalancerService = loadBalancerService;
+    return this;
+  }
+
+   /**
+   * Get loadBalancerService
+   * @return loadBalancerService
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public LoadBalancerServiceWhereInput getLoadBalancerService() {
+    return loadBalancerService;
+  }
+
+
+  public void setLoadBalancerService(LoadBalancerServiceWhereInput loadBalancerService) {
+    this.loadBalancerService = loadBalancerService;
+  }
+
+
   public EverouteClusterWhereInput name(String name) {
     
     this.name = name;
@@ -1902,6 +1935,29 @@ public class EverouteClusterWhereInput {
   }
 
 
+  public EverouteClusterWhereInput vpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
+    
+    this.vpcService = vpcService;
+    return this;
+  }
+
+   /**
+   * Get vpcService
+   * @return vpcService
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudServiceWhereInput getVpcService() {
+    return vpcService;
+  }
+
+
+  public void setVpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
+    this.vpcService = vpcService;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1944,6 +2000,7 @@ public class EverouteClusterWhereInput {
         Objects.equals(this.idStartsWith, everouteClusterWhereInput.idStartsWith) &&
         Objects.equals(this.installed, everouteClusterWhereInput.installed) &&
         Objects.equals(this.installedNot, everouteClusterWhereInput.installedNot) &&
+        Objects.equals(this.loadBalancerService, everouteClusterWhereInput.loadBalancerService) &&
         Objects.equals(this.name, everouteClusterWhereInput.name) &&
         Objects.equals(this.nameContains, everouteClusterWhereInput.nameContains) &&
         Objects.equals(this.nameEndsWith, everouteClusterWhereInput.nameEndsWith) &&
@@ -1975,7 +2032,8 @@ public class EverouteClusterWhereInput {
         Objects.equals(this.versionNotEndsWith, everouteClusterWhereInput.versionNotEndsWith) &&
         Objects.equals(this.versionNotIn, everouteClusterWhereInput.versionNotIn) &&
         Objects.equals(this.versionNotStartsWith, everouteClusterWhereInput.versionNotStartsWith) &&
-        Objects.equals(this.versionStartsWith, everouteClusterWhereInput.versionStartsWith);
+        Objects.equals(this.versionStartsWith, everouteClusterWhereInput.versionStartsWith) &&
+        Objects.equals(this.vpcService, everouteClusterWhereInput.vpcService);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1984,7 +2042,7 @@ public class EverouteClusterWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, agentElfClustersEvery, agentElfClustersNone, agentElfClustersSome, agentElfVdsesEvery, agentElfVdsesNone, agentElfVdsesSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, globalDefaultAction, globalDefaultActionIn, globalDefaultActionNot, globalDefaultActionNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, installed, installedNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, phase, phaseIn, phaseNot, phaseNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith);
+    return Objects.hash(AND, NOT, OR, agentElfClustersEvery, agentElfClustersNone, agentElfClustersSome, agentElfVdsesEvery, agentElfVdsesNone, agentElfVdsesSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, globalDefaultAction, globalDefaultActionIn, globalDefaultActionNot, globalDefaultActionNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, installed, installedNot, loadBalancerService, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, phase, phaseIn, phaseNot, phaseNotIn, version, versionContains, versionEndsWith, versionGt, versionGte, versionIn, versionLt, versionLte, versionNot, versionNotContains, versionNotEndsWith, versionNotIn, versionNotStartsWith, versionStartsWith, vpcService);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2031,6 +2089,7 @@ public class EverouteClusterWhereInput {
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
     sb.append("    installed: ").append(toIndentedString(installed)).append("\n");
     sb.append("    installedNot: ").append(toIndentedString(installedNot)).append("\n");
+    sb.append("    loadBalancerService: ").append(toIndentedString(loadBalancerService)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameContains: ").append(toIndentedString(nameContains)).append("\n");
     sb.append("    nameEndsWith: ").append(toIndentedString(nameEndsWith)).append("\n");
@@ -2063,6 +2122,7 @@ public class EverouteClusterWhereInput {
     sb.append("    versionNotIn: ").append(toIndentedString(versionNotIn)).append("\n");
     sb.append("    versionNotStartsWith: ").append(toIndentedString(versionNotStartsWith)).append("\n");
     sb.append("    versionStartsWith: ").append(toIndentedString(versionStartsWith)).append("\n");
+    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

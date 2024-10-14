@@ -559,9 +559,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryImagesCall(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, final ApiCallback _callback) throws ApiException {
@@ -634,9 +634,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<ContentLibraryImage> getContentLibraryImages(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody) throws ApiException {
@@ -654,9 +654,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<ContentLibraryImage>> getContentLibraryImagesWithHttpInfo(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody) throws ApiException {
@@ -676,9 +676,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryImagesAsync(GetContentLibraryImagesRequestBody getContentLibraryImagesRequestBody, final ApiCallback<List<ContentLibraryImage>> _callback) throws ApiException {
@@ -698,9 +698,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryImagesConnectionCall(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -773,9 +773,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ContentLibraryImageConnection getContentLibraryImagesConnection(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody) throws ApiException {
@@ -793,9 +793,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<ContentLibraryImageConnection> getContentLibraryImagesConnectionWithHttpInfo(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody) throws ApiException {
@@ -815,9 +815,9 @@ public class ContentLibraryImageApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getContentLibraryImagesConnectionAsync(GetContentLibraryImagesConnectionRequestBody getContentLibraryImagesConnectionRequestBody, final ApiCallback<ContentLibraryImageConnection> _callback) throws ApiException {

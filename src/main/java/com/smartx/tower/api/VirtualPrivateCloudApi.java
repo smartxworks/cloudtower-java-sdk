@@ -357,9 +357,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVirtualPrivateCloudsCall(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody, final ApiCallback _callback) throws ApiException {
@@ -432,9 +432,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<VirtualPrivateCloud> getVirtualPrivateClouds(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody) throws ApiException {
@@ -452,9 +452,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<VirtualPrivateCloud>> getVirtualPrivateCloudsWithHttpInfo(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody) throws ApiException {
@@ -474,9 +474,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVirtualPrivateCloudsAsync(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody, final ApiCallback<List<VirtualPrivateCloud>> _callback) throws ApiException {
@@ -496,9 +496,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVirtualPrivateCloudsConnectionCall(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -571,9 +571,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public VirtualPrivateCloudConnection getVirtualPrivateCloudsConnection(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody) throws ApiException {
@@ -591,9 +591,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<VirtualPrivateCloudConnection> getVirtualPrivateCloudsConnectionWithHttpInfo(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody) throws ApiException {
@@ -613,9 +613,9 @@ public class VirtualPrivateCloudApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVirtualPrivateCloudsConnectionAsync(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody, final ApiCallback<VirtualPrivateCloudConnection> _callback) throws ApiException {

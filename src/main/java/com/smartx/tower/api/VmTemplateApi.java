@@ -496,9 +496,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmTemplatesCall(GetVmTemplatesRequestBody getVmTemplatesRequestBody, final ApiCallback _callback) throws ApiException {
@@ -571,9 +571,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<VmTemplate> getVmTemplates(GetVmTemplatesRequestBody getVmTemplatesRequestBody) throws ApiException {
@@ -591,9 +591,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<VmTemplate>> getVmTemplatesWithHttpInfo(GetVmTemplatesRequestBody getVmTemplatesRequestBody) throws ApiException {
@@ -613,9 +613,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmTemplatesAsync(GetVmTemplatesRequestBody getVmTemplatesRequestBody, final ApiCallback<List<VmTemplate>> _callback) throws ApiException {
@@ -635,9 +635,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmTemplatesConnectionCall(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -710,9 +710,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public VmTemplateConnection getVmTemplatesConnection(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody) throws ApiException {
@@ -730,9 +730,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<VmTemplateConnection> getVmTemplatesConnectionWithHttpInfo(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody) throws ApiException {
@@ -752,9 +752,9 @@ public class VmTemplateApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getVmTemplatesConnectionAsync(GetVmTemplatesConnectionRequestBody getVmTemplatesConnectionRequestBody, final ApiCallback<VmTemplateConnection> _callback) throws ApiException {

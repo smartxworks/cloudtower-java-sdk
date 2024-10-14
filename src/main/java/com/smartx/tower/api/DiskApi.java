@@ -77,9 +77,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getDisksCall(GetDisksRequestBody getDisksRequestBody, final ApiCallback _callback) throws ApiException {
@@ -152,9 +152,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public List<Disk> getDisks(GetDisksRequestBody getDisksRequestBody) throws ApiException {
@@ -172,9 +172,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<List<Disk>> getDisksWithHttpInfo(GetDisksRequestBody getDisksRequestBody) throws ApiException {
@@ -194,9 +194,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getDisksAsync(GetDisksRequestBody getDisksRequestBody, final ApiCallback<List<Disk>> _callback) throws ApiException {
@@ -216,9 +216,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getDisksConnectionCall(GetDisksConnectionRequestBody getDisksConnectionRequestBody, final ApiCallback _callback) throws ApiException {
@@ -291,9 +291,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public DiskConnection getDisksConnection(GetDisksConnectionRequestBody getDisksConnectionRequestBody) throws ApiException {
@@ -311,9 +311,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public ApiResponse<DiskConnection> getDisksConnectionWithHttpInfo(GetDisksConnectionRequestBody getDisksConnectionRequestBody) throws ApiException {
@@ -333,9 +333,9 @@ public class DiskApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * x-tower-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      </table>
      */
     public okhttp3.Call getDisksConnectionAsync(GetDisksConnectionRequestBody getDisksConnectionRequestBody, final ApiCallback<DiskConnection> _callback) throws ApiException {
