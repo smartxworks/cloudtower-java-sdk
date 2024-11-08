@@ -15,6 +15,7 @@ import com.smartx.tower.model.BackupServiceWhereInput;
 import com.smartx.tower.model.BackupStoreRepositoryWhereInput;
 import com.smartx.tower.model.ConsistentType;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -806,6 +807,18 @@ public class BackupPlanWhereInput {
   public static final String SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT_NOT_IN = "valid_size_of_backup_object_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT_NOT_IN)
   private List<Long> validSizeOfBackupObjectNotIn = null;
+
+  public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
+  @SerializedName(SERIALIZED_NAME_VMS_EVERY)
+  private VmWhereInput vmsEvery;
+
+  public static final String SERIALIZED_NAME_VMS_NONE = "vms_none";
+  @SerializedName(SERIALIZED_NAME_VMS_NONE)
+  private VmWhereInput vmsNone;
+
+  public static final String SERIALIZED_NAME_VMS_SOME = "vms_some";
+  @SerializedName(SERIALIZED_NAME_VMS_SOME)
+  private VmWhereInput vmsSome;
 
   public static final String SERIALIZED_NAME_WINDOW_END = "window_end";
   @SerializedName(SERIALIZED_NAME_WINDOW_END)
@@ -5831,6 +5844,75 @@ public class BackupPlanWhereInput {
   }
 
 
+  public BackupPlanWhereInput vmsEvery(VmWhereInput vmsEvery) {
+    
+    this.vmsEvery = vmsEvery;
+    return this;
+  }
+
+   /**
+   * Get vmsEvery
+   * @return vmsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsEvery() {
+    return vmsEvery;
+  }
+
+
+  public void setVmsEvery(VmWhereInput vmsEvery) {
+    this.vmsEvery = vmsEvery;
+  }
+
+
+  public BackupPlanWhereInput vmsNone(VmWhereInput vmsNone) {
+    
+    this.vmsNone = vmsNone;
+    return this;
+  }
+
+   /**
+   * Get vmsNone
+   * @return vmsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsNone() {
+    return vmsNone;
+  }
+
+
+  public void setVmsNone(VmWhereInput vmsNone) {
+    this.vmsNone = vmsNone;
+  }
+
+
+  public BackupPlanWhereInput vmsSome(VmWhereInput vmsSome) {
+    
+    this.vmsSome = vmsSome;
+    return this;
+  }
+
+   /**
+   * Get vmsSome
+   * @return vmsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsSome() {
+    return vmsSome;
+  }
+
+
+  public void setVmsSome(VmWhereInput vmsSome) {
+    this.vmsSome = vmsSome;
+  }
+
+
   public BackupPlanWhereInput windowEnd(String windowEnd) {
     
     this.windowEnd = windowEnd;
@@ -6711,6 +6793,9 @@ public class BackupPlanWhereInput {
         Objects.equals(this.validSizeOfBackupObjectLte, backupPlanWhereInput.validSizeOfBackupObjectLte) &&
         Objects.equals(this.validSizeOfBackupObjectNot, backupPlanWhereInput.validSizeOfBackupObjectNot) &&
         Objects.equals(this.validSizeOfBackupObjectNotIn, backupPlanWhereInput.validSizeOfBackupObjectNotIn) &&
+        Objects.equals(this.vmsEvery, backupPlanWhereInput.vmsEvery) &&
+        Objects.equals(this.vmsNone, backupPlanWhereInput.vmsNone) &&
+        Objects.equals(this.vmsSome, backupPlanWhereInput.vmsSome) &&
         Objects.equals(this.windowEnd, backupPlanWhereInput.windowEnd) &&
         Objects.equals(this.windowEndContains, backupPlanWhereInput.windowEndContains) &&
         Objects.equals(this.windowEndEndsWith, backupPlanWhereInput.windowEndEndsWith) &&
@@ -6747,7 +6832,7 @@ public class BackupPlanWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, backupService, backupStoreRepository, compression, compressionNot, compressionRatio, compressionRatioGt, compressionRatioGte, compressionRatioIn, compressionRatioLt, compressionRatioLte, compressionRatioNot, compressionRatioNotIn, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enableWindow, enableWindowNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, fullInterval, fullIntervalGt, fullIntervalGte, fullIntervalIn, fullIntervalLt, fullIntervalLte, fullIntervalNot, fullIntervalNotIn, fullPeriod, fullPeriodIn, fullPeriodNot, fullPeriodNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, incrementalInterval, incrementalIntervalGt, incrementalIntervalGte, incrementalIntervalIn, incrementalIntervalLt, incrementalIntervalLte, incrementalIntervalNot, incrementalIntervalNotIn, incrementalPeriod, incrementalPeriodIn, incrementalPeriodNot, incrementalPeriodNotIn, keepPolicy, keepPolicyIn, keepPolicyNot, keepPolicyNotIn, keepPolicyValue, keepPolicyValueGt, keepPolicyValueGte, keepPolicyValueIn, keepPolicyValueLt, keepPolicyValueLte, keepPolicyValueNot, keepPolicyValueNotIn, lastExecuteStatus, lastExecuteStatusIn, lastExecuteStatusNot, lastExecuteStatusNotIn, lastExecuteSuccessJobCount, lastExecuteSuccessJobCountGt, lastExecuteSuccessJobCountGte, lastExecuteSuccessJobCountIn, lastExecuteSuccessJobCountLt, lastExecuteSuccessJobCountLte, lastExecuteSuccessJobCountNot, lastExecuteSuccessJobCountNotIn, lastExecuteTotalJobCount, lastExecuteTotalJobCountGt, lastExecuteTotalJobCountGte, lastExecuteTotalJobCountIn, lastExecuteTotalJobCountLt, lastExecuteTotalJobCountLte, lastExecuteTotalJobCountNot, lastExecuteTotalJobCountNotIn, lastExecutedAt, lastExecutedAtGt, lastExecutedAtGte, lastExecutedAtIn, lastExecutedAtLt, lastExecutedAtLte, lastExecutedAtNot, lastExecutedAtNotIn, lastManualExecuteStatus, lastManualExecuteStatusIn, lastManualExecuteStatusNot, lastManualExecuteStatusNotIn, lastManualExecuteSuccessJobCount, lastManualExecuteSuccessJobCountGt, lastManualExecuteSuccessJobCountGte, lastManualExecuteSuccessJobCountIn, lastManualExecuteSuccessJobCountLt, lastManualExecuteSuccessJobCountLte, lastManualExecuteSuccessJobCountNot, lastManualExecuteSuccessJobCountNotIn, lastManualExecuteTotalJobCount, lastManualExecuteTotalJobCountGt, lastManualExecuteTotalJobCountGte, lastManualExecuteTotalJobCountIn, lastManualExecuteTotalJobCountLt, lastManualExecuteTotalJobCountLte, lastManualExecuteTotalJobCountNot, lastManualExecuteTotalJobCountNotIn, lastManualExecutedAt, lastManualExecutedAtGt, lastManualExecutedAtGte, lastManualExecutedAtIn, lastManualExecutedAtLt, lastManualExecutedAtLte, lastManualExecutedAtNot, lastManualExecutedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nextExecuteTime, nextExecuteTimeGt, nextExecuteTimeGte, nextExecuteTimeIn, nextExecuteTimeLt, nextExecuteTimeLte, nextExecuteTimeNot, nextExecuteTimeNotIn, physicalSize, physicalSizeGt, physicalSizeGte, physicalSizeIn, physicalSizeLt, physicalSizeLte, physicalSizeNot, physicalSizeNotIn, snapshotConsistentType, snapshotConsistentTypeIn, snapshotConsistentTypeNot, snapshotConsistentTypeNotIn, status, statusIn, statusNot, statusNotIn, validSizeOfBackupObject, validSizeOfBackupObjectGt, validSizeOfBackupObjectGte, validSizeOfBackupObjectIn, validSizeOfBackupObjectLt, validSizeOfBackupObjectLte, validSizeOfBackupObjectNot, validSizeOfBackupObjectNotIn, windowEnd, windowEndContains, windowEndEndsWith, windowEndGt, windowEndGte, windowEndIn, windowEndLt, windowEndLte, windowEndNot, windowEndNotContains, windowEndNotEndsWith, windowEndNotIn, windowEndNotStartsWith, windowEndStartsWith, windowStart, windowStartContains, windowStartEndsWith, windowStartGt, windowStartGte, windowStartIn, windowStartLt, windowStartLte, windowStartNot, windowStartNotContains, windowStartNotEndsWith, windowStartNotIn, windowStartNotStartsWith, windowStartStartsWith);
+    return Objects.hash(AND, NOT, OR, backupService, backupStoreRepository, compression, compressionNot, compressionRatio, compressionRatioGt, compressionRatioGte, compressionRatioIn, compressionRatioLt, compressionRatioLte, compressionRatioNot, compressionRatioNotIn, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enableWindow, enableWindowNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, fullInterval, fullIntervalGt, fullIntervalGte, fullIntervalIn, fullIntervalLt, fullIntervalLte, fullIntervalNot, fullIntervalNotIn, fullPeriod, fullPeriodIn, fullPeriodNot, fullPeriodNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, incrementalInterval, incrementalIntervalGt, incrementalIntervalGte, incrementalIntervalIn, incrementalIntervalLt, incrementalIntervalLte, incrementalIntervalNot, incrementalIntervalNotIn, incrementalPeriod, incrementalPeriodIn, incrementalPeriodNot, incrementalPeriodNotIn, keepPolicy, keepPolicyIn, keepPolicyNot, keepPolicyNotIn, keepPolicyValue, keepPolicyValueGt, keepPolicyValueGte, keepPolicyValueIn, keepPolicyValueLt, keepPolicyValueLte, keepPolicyValueNot, keepPolicyValueNotIn, lastExecuteStatus, lastExecuteStatusIn, lastExecuteStatusNot, lastExecuteStatusNotIn, lastExecuteSuccessJobCount, lastExecuteSuccessJobCountGt, lastExecuteSuccessJobCountGte, lastExecuteSuccessJobCountIn, lastExecuteSuccessJobCountLt, lastExecuteSuccessJobCountLte, lastExecuteSuccessJobCountNot, lastExecuteSuccessJobCountNotIn, lastExecuteTotalJobCount, lastExecuteTotalJobCountGt, lastExecuteTotalJobCountGte, lastExecuteTotalJobCountIn, lastExecuteTotalJobCountLt, lastExecuteTotalJobCountLte, lastExecuteTotalJobCountNot, lastExecuteTotalJobCountNotIn, lastExecutedAt, lastExecutedAtGt, lastExecutedAtGte, lastExecutedAtIn, lastExecutedAtLt, lastExecutedAtLte, lastExecutedAtNot, lastExecutedAtNotIn, lastManualExecuteStatus, lastManualExecuteStatusIn, lastManualExecuteStatusNot, lastManualExecuteStatusNotIn, lastManualExecuteSuccessJobCount, lastManualExecuteSuccessJobCountGt, lastManualExecuteSuccessJobCountGte, lastManualExecuteSuccessJobCountIn, lastManualExecuteSuccessJobCountLt, lastManualExecuteSuccessJobCountLte, lastManualExecuteSuccessJobCountNot, lastManualExecuteSuccessJobCountNotIn, lastManualExecuteTotalJobCount, lastManualExecuteTotalJobCountGt, lastManualExecuteTotalJobCountGte, lastManualExecuteTotalJobCountIn, lastManualExecuteTotalJobCountLt, lastManualExecuteTotalJobCountLte, lastManualExecuteTotalJobCountNot, lastManualExecuteTotalJobCountNotIn, lastManualExecutedAt, lastManualExecutedAtGt, lastManualExecutedAtGte, lastManualExecutedAtIn, lastManualExecutedAtLt, lastManualExecutedAtLte, lastManualExecutedAtNot, lastManualExecutedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nextExecuteTime, nextExecuteTimeGt, nextExecuteTimeGte, nextExecuteTimeIn, nextExecuteTimeLt, nextExecuteTimeLte, nextExecuteTimeNot, nextExecuteTimeNotIn, physicalSize, physicalSizeGt, physicalSizeGte, physicalSizeIn, physicalSizeLt, physicalSizeLte, physicalSizeNot, physicalSizeNotIn, snapshotConsistentType, snapshotConsistentTypeIn, snapshotConsistentTypeNot, snapshotConsistentTypeNotIn, status, statusIn, statusNot, statusNotIn, validSizeOfBackupObject, validSizeOfBackupObjectGt, validSizeOfBackupObjectGte, validSizeOfBackupObjectIn, validSizeOfBackupObjectLt, validSizeOfBackupObjectLte, validSizeOfBackupObjectNot, validSizeOfBackupObjectNotIn, vmsEvery, vmsNone, vmsSome, windowEnd, windowEndContains, windowEndEndsWith, windowEndGt, windowEndGte, windowEndIn, windowEndLt, windowEndLte, windowEndNot, windowEndNotContains, windowEndNotEndsWith, windowEndNotIn, windowEndNotStartsWith, windowEndStartsWith, windowStart, windowStartContains, windowStartEndsWith, windowStartGt, windowStartGte, windowStartIn, windowStartLt, windowStartLte, windowStartNot, windowStartNotContains, windowStartNotEndsWith, windowStartNotIn, windowStartNotStartsWith, windowStartStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -6956,6 +7041,9 @@ public class BackupPlanWhereInput {
     sb.append("    validSizeOfBackupObjectLte: ").append(toIndentedString(validSizeOfBackupObjectLte)).append("\n");
     sb.append("    validSizeOfBackupObjectNot: ").append(toIndentedString(validSizeOfBackupObjectNot)).append("\n");
     sb.append("    validSizeOfBackupObjectNotIn: ").append(toIndentedString(validSizeOfBackupObjectNotIn)).append("\n");
+    sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
+    sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
+    sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");
     sb.append("    windowEnd: ").append(toIndentedString(windowEnd)).append("\n");
     sb.append("    windowEndContains: ").append(toIndentedString(windowEndContains)).append("\n");
     sb.append("    windowEndEndsWith: ").append(toIndentedString(windowEndEndsWith)).append("\n");

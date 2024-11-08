@@ -16,6 +16,7 @@ import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedBackupPlanTimePoint;
 import com.smartx.tower.model.NestedBackupService;
 import com.smartx.tower.model.NestedBackupStoreRepository;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.WeekdayTypeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -156,6 +157,10 @@ public class BackupPlan {
   public static final String SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT = "valid_size_of_backup_object";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT)
   private Long validSizeOfBackupObject;
+
+  public static final String SERIALIZED_NAME_VMS = "vms";
+  @SerializedName(SERIALIZED_NAME_VMS)
+  private List<NestedVm> vms = null;
 
   public static final String SERIALIZED_NAME_WINDOW_END = "window_end";
   @SerializedName(SERIALIZED_NAME_WINDOW_END)
@@ -917,6 +922,37 @@ public class BackupPlan {
   }
 
 
+  public BackupPlan vms(List<NestedVm> vms) {
+    
+    this.vms = vms;
+    return this;
+  }
+
+  public BackupPlan addVmsItem(NestedVm vmsItem) {
+    if (this.vms == null) {
+      this.vms = new ArrayList<NestedVm>();
+    }
+    this.vms.add(vmsItem);
+    return this;
+  }
+
+   /**
+   * Get vms
+   * @return vms
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedVm> getVms() {
+    return vms;
+  }
+
+
+  public void setVms(List<NestedVm> vms) {
+    this.vms = vms;
+  }
+
+
   public BackupPlan windowEnd(String windowEnd) {
     
     this.windowEnd = windowEnd;
@@ -1004,6 +1040,7 @@ public class BackupPlan {
         Objects.equals(this.snapshotConsistentType, backupPlan.snapshotConsistentType) &&
         Objects.equals(this.status, backupPlan.status) &&
         Objects.equals(this.validSizeOfBackupObject, backupPlan.validSizeOfBackupObject) &&
+        Objects.equals(this.vms, backupPlan.vms) &&
         Objects.equals(this.windowEnd, backupPlan.windowEnd) &&
         Objects.equals(this.windowStart, backupPlan.windowStart);
   }
@@ -1014,7 +1051,7 @@ public class BackupPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(backupService, backupStoreRepository, compression, compressionRatio, createdAt, description, enableWindow, entityAsyncStatus, fullInterval, fullPeriod, fullTimePoint, id, incrementalInterval, incrementalPeriod, incrementalTimePoints, incrementalWeekdays, keepPolicy, keepPolicyValue, lastExecuteStatus, lastExecuteSuccessJobCount, lastExecuteTotalJobCount, lastExecutedAt, lastManualExecuteStatus, lastManualExecuteSuccessJobCount, lastManualExecuteTotalJobCount, lastManualExecutedAt, name, nextExecuteTime, physicalSize, snapshotConsistentType, status, validSizeOfBackupObject, windowEnd, windowStart);
+    return Objects.hash(backupService, backupStoreRepository, compression, compressionRatio, createdAt, description, enableWindow, entityAsyncStatus, fullInterval, fullPeriod, fullTimePoint, id, incrementalInterval, incrementalPeriod, incrementalTimePoints, incrementalWeekdays, keepPolicy, keepPolicyValue, lastExecuteStatus, lastExecuteSuccessJobCount, lastExecuteTotalJobCount, lastExecutedAt, lastManualExecuteStatus, lastManualExecuteSuccessJobCount, lastManualExecuteTotalJobCount, lastManualExecutedAt, name, nextExecuteTime, physicalSize, snapshotConsistentType, status, validSizeOfBackupObject, vms, windowEnd, windowStart);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1060,6 +1097,7 @@ public class BackupPlan {
     sb.append("    snapshotConsistentType: ").append(toIndentedString(snapshotConsistentType)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    validSizeOfBackupObject: ").append(toIndentedString(validSizeOfBackupObject)).append("\n");
+    sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
     sb.append("    windowEnd: ").append(toIndentedString(windowEnd)).append("\n");
     sb.append("    windowStart: ").append(toIndentedString(windowStart)).append("\n");
     sb.append("}");
