@@ -7,14 +7,20 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BackupPlanDelayOption;
+import com.smartx.tower.model.BackupPlanDeleteStrategy;
 import com.smartx.tower.model.BackupPlanExecutionStatus;
+import com.smartx.tower.model.BackupPlanExecutionWhereInput;
 import com.smartx.tower.model.BackupPlanKeepPolicy;
 import com.smartx.tower.model.BackupPlanPeriod;
+import com.smartx.tower.model.BackupPlanPhase;
 import com.smartx.tower.model.BackupPlanStatus;
+import com.smartx.tower.model.BackupRestorePointWhereInput;
 import com.smartx.tower.model.BackupServiceWhereInput;
 import com.smartx.tower.model.BackupStoreRepositoryWhereInput;
 import com.smartx.tower.model.ConsistentType;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -39,6 +45,78 @@ public class BackupPlanWhereInput {
   @SerializedName(SERIALIZED_NAME_O_R)
   private List<BackupPlanWhereInput> OR = null;
 
+  public static final String SERIALIZED_NAME_BACKUP_DELAY_OPTION = "backup_delay_option";
+  @SerializedName(SERIALIZED_NAME_BACKUP_DELAY_OPTION)
+  private BackupPlanDelayOption backupDelayOption;
+
+  public static final String SERIALIZED_NAME_BACKUP_DELAY_OPTION_IN = "backup_delay_option_in";
+  @SerializedName(SERIALIZED_NAME_BACKUP_DELAY_OPTION_IN)
+  private List<BackupPlanDelayOption> backupDelayOptionIn = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_DELAY_OPTION_NOT = "backup_delay_option_not";
+  @SerializedName(SERIALIZED_NAME_BACKUP_DELAY_OPTION_NOT)
+  private BackupPlanDelayOption backupDelayOptionNot;
+
+  public static final String SERIALIZED_NAME_BACKUP_DELAY_OPTION_NOT_IN = "backup_delay_option_not_in";
+  @SerializedName(SERIALIZED_NAME_BACKUP_DELAY_OPTION_NOT_IN)
+  private List<BackupPlanDelayOption> backupDelayOptionNotIn = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS_EVERY = "backup_plan_executions_every";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS_EVERY)
+  private BackupPlanExecutionWhereInput backupPlanExecutionsEvery;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS_NONE = "backup_plan_executions_none";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS_NONE)
+  private BackupPlanExecutionWhereInput backupPlanExecutionsNone;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS_SOME = "backup_plan_executions_some";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS_SOME)
+  private BackupPlanExecutionWhereInput backupPlanExecutionsSome;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT = "backup_restore_point_count";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT)
+  private Integer backupRestorePointCount;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_GT = "backup_restore_point_count_gt";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_GT)
+  private Integer backupRestorePointCountGt;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_GTE = "backup_restore_point_count_gte";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_GTE)
+  private Integer backupRestorePointCountGte;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_IN = "backup_restore_point_count_in";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_IN)
+  private List<Integer> backupRestorePointCountIn = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_LT = "backup_restore_point_count_lt";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_LT)
+  private Integer backupRestorePointCountLt;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_LTE = "backup_restore_point_count_lte";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_LTE)
+  private Integer backupRestorePointCountLte;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_NOT = "backup_restore_point_count_not";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_NOT)
+  private Integer backupRestorePointCountNot;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_NOT_IN = "backup_restore_point_count_not_in";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT_NOT_IN)
+  private List<Integer> backupRestorePointCountNotIn = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINTS_EVERY = "backup_restore_points_every";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINTS_EVERY)
+  private BackupRestorePointWhereInput backupRestorePointsEvery;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINTS_NONE = "backup_restore_points_none";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINTS_NONE)
+  private BackupRestorePointWhereInput backupRestorePointsNone;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINTS_SOME = "backup_restore_points_some";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINTS_SOME)
+  private BackupRestorePointWhereInput backupRestorePointsSome;
+
   public static final String SERIALIZED_NAME_BACKUP_SERVICE = "backup_service";
   @SerializedName(SERIALIZED_NAME_BACKUP_SERVICE)
   private BackupServiceWhereInput backupService;
@@ -46,6 +124,38 @@ public class BackupPlanWhereInput {
   public static final String SERIALIZED_NAME_BACKUP_STORE_REPOSITORY = "backup_store_repository";
   @SerializedName(SERIALIZED_NAME_BACKUP_STORE_REPOSITORY)
   private BackupStoreRepositoryWhereInput backupStoreRepository;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE = "backup_total_size";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE)
+  private Long backupTotalSize;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GT = "backup_total_size_gt";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GT)
+  private Long backupTotalSizeGt;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GTE = "backup_total_size_gte";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_GTE)
+  private Long backupTotalSizeGte;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_IN = "backup_total_size_in";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_IN)
+  private List<Long> backupTotalSizeIn = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LT = "backup_total_size_lt";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LT)
+  private Long backupTotalSizeLt;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LTE = "backup_total_size_lte";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_LTE)
+  private Long backupTotalSizeLte;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT = "backup_total_size_not";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT)
+  private Long backupTotalSizeNot;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT_IN = "backup_total_size_not_in";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE_NOT_IN)
+  private List<Long> backupTotalSizeNotIn = null;
 
   public static final String SERIALIZED_NAME_COMPRESSION = "compression";
   @SerializedName(SERIALIZED_NAME_COMPRESSION)
@@ -118,6 +228,22 @@ public class BackupPlanWhereInput {
   public static final String SERIALIZED_NAME_CREATED_AT_NOT_IN = "createdAt_not_in";
   @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT_IN)
   private List<String> createdAtNotIn = null;
+
+  public static final String SERIALIZED_NAME_DELETE_STRATEGY = "delete_strategy";
+  @SerializedName(SERIALIZED_NAME_DELETE_STRATEGY)
+  private BackupPlanDeleteStrategy deleteStrategy;
+
+  public static final String SERIALIZED_NAME_DELETE_STRATEGY_IN = "delete_strategy_in";
+  @SerializedName(SERIALIZED_NAME_DELETE_STRATEGY_IN)
+  private List<BackupPlanDeleteStrategy> deleteStrategyIn = null;
+
+  public static final String SERIALIZED_NAME_DELETE_STRATEGY_NOT = "delete_strategy_not";
+  @SerializedName(SERIALIZED_NAME_DELETE_STRATEGY_NOT)
+  private BackupPlanDeleteStrategy deleteStrategyNot;
+
+  public static final String SERIALIZED_NAME_DELETE_STRATEGY_NOT_IN = "delete_strategy_not_in";
+  @SerializedName(SERIALIZED_NAME_DELETE_STRATEGY_NOT_IN)
+  private List<BackupPlanDeleteStrategy> deleteStrategyNotIn = null;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -407,6 +533,62 @@ public class BackupPlanWhereInput {
   @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_IN)
   private List<BackupPlanExecutionStatus> lastExecuteStatusIn = null;
 
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE = "last_execute_status_message";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE)
+  private String lastExecuteStatusMessage;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_CONTAINS = "last_execute_status_message_contains";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_CONTAINS)
+  private String lastExecuteStatusMessageContains;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_ENDS_WITH = "last_execute_status_message_ends_with";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_ENDS_WITH)
+  private String lastExecuteStatusMessageEndsWith;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_GT = "last_execute_status_message_gt";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_GT)
+  private String lastExecuteStatusMessageGt;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_GTE = "last_execute_status_message_gte";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_GTE)
+  private String lastExecuteStatusMessageGte;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_IN = "last_execute_status_message_in";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_IN)
+  private List<String> lastExecuteStatusMessageIn = null;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_LT = "last_execute_status_message_lt";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_LT)
+  private String lastExecuteStatusMessageLt;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_LTE = "last_execute_status_message_lte";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_LTE)
+  private String lastExecuteStatusMessageLte;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT = "last_execute_status_message_not";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT)
+  private String lastExecuteStatusMessageNot;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_CONTAINS = "last_execute_status_message_not_contains";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_CONTAINS)
+  private String lastExecuteStatusMessageNotContains;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_ENDS_WITH = "last_execute_status_message_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_ENDS_WITH)
+  private String lastExecuteStatusMessageNotEndsWith;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_IN = "last_execute_status_message_not_in";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_IN)
+  private List<String> lastExecuteStatusMessageNotIn = null;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_STARTS_WITH = "last_execute_status_message_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_NOT_STARTS_WITH)
+  private String lastExecuteStatusMessageNotStartsWith;
+
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_STARTS_WITH = "last_execute_status_message_starts_with";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE_STARTS_WITH)
+  private String lastExecuteStatusMessageStartsWith;
+
   public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_NOT = "last_execute_status_not";
   @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_NOT)
   private BackupPlanExecutionStatus lastExecuteStatusNot;
@@ -519,6 +701,62 @@ public class BackupPlanWhereInput {
   @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_IN)
   private List<BackupPlanExecutionStatus> lastManualExecuteStatusIn = null;
 
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE = "last_manual_execute_status_message";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE)
+  private String lastManualExecuteStatusMessage;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_CONTAINS = "last_manual_execute_status_message_contains";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_CONTAINS)
+  private String lastManualExecuteStatusMessageContains;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_ENDS_WITH = "last_manual_execute_status_message_ends_with";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_ENDS_WITH)
+  private String lastManualExecuteStatusMessageEndsWith;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_GT = "last_manual_execute_status_message_gt";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_GT)
+  private String lastManualExecuteStatusMessageGt;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_GTE = "last_manual_execute_status_message_gte";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_GTE)
+  private String lastManualExecuteStatusMessageGte;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_IN = "last_manual_execute_status_message_in";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_IN)
+  private List<String> lastManualExecuteStatusMessageIn = null;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_LT = "last_manual_execute_status_message_lt";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_LT)
+  private String lastManualExecuteStatusMessageLt;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_LTE = "last_manual_execute_status_message_lte";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_LTE)
+  private String lastManualExecuteStatusMessageLte;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT = "last_manual_execute_status_message_not";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT)
+  private String lastManualExecuteStatusMessageNot;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_CONTAINS = "last_manual_execute_status_message_not_contains";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_CONTAINS)
+  private String lastManualExecuteStatusMessageNotContains;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_ENDS_WITH = "last_manual_execute_status_message_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_ENDS_WITH)
+  private String lastManualExecuteStatusMessageNotEndsWith;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_IN = "last_manual_execute_status_message_not_in";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_IN)
+  private List<String> lastManualExecuteStatusMessageNotIn = null;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_STARTS_WITH = "last_manual_execute_status_message_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_NOT_STARTS_WITH)
+  private String lastManualExecuteStatusMessageNotStartsWith;
+
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_STARTS_WITH = "last_manual_execute_status_message_starts_with";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE_STARTS_WITH)
+  private String lastManualExecuteStatusMessageStartsWith;
+
   public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_NOT = "last_manual_execute_status_not";
   @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_NOT)
   private BackupPlanExecutionStatus lastManualExecuteStatusNot;
@@ -623,6 +861,38 @@ public class BackupPlanWhereInput {
   @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTED_AT_NOT_IN)
   private List<String> lastManualExecutedAtNotIn = null;
 
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE = "logical_size";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE)
+  private Long logicalSize;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_GT = "logical_size_gt";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_GT)
+  private Long logicalSizeGt;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_GTE = "logical_size_gte";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_GTE)
+  private Long logicalSizeGte;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_IN = "logical_size_in";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_IN)
+  private List<Long> logicalSizeIn = null;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_LT = "logical_size_lt";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_LT)
+  private Long logicalSizeLt;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_LTE = "logical_size_lte";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_LTE)
+  private Long logicalSizeLte;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_NOT = "logical_size_not";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_NOT)
+  private Long logicalSizeNot;
+
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE_NOT_IN = "logical_size_not_in";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE_NOT_IN)
+  private List<Long> logicalSizeNotIn = null;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -710,6 +980,22 @@ public class BackupPlanWhereInput {
   public static final String SERIALIZED_NAME_NEXT_EXECUTE_TIME_NOT_IN = "next_execute_time_not_in";
   @SerializedName(SERIALIZED_NAME_NEXT_EXECUTE_TIME_NOT_IN)
   private List<String> nextExecuteTimeNotIn = null;
+
+  public static final String SERIALIZED_NAME_PHASE = "phase";
+  @SerializedName(SERIALIZED_NAME_PHASE)
+  private BackupPlanPhase phase;
+
+  public static final String SERIALIZED_NAME_PHASE_IN = "phase_in";
+  @SerializedName(SERIALIZED_NAME_PHASE_IN)
+  private List<BackupPlanPhase> phaseIn = null;
+
+  public static final String SERIALIZED_NAME_PHASE_NOT = "phase_not";
+  @SerializedName(SERIALIZED_NAME_PHASE_NOT)
+  private BackupPlanPhase phaseNot;
+
+  public static final String SERIALIZED_NAME_PHASE_NOT_IN = "phase_not_in";
+  @SerializedName(SERIALIZED_NAME_PHASE_NOT_IN)
+  private List<BackupPlanPhase> phaseNotIn = null;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE = "physical_size";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE)
@@ -806,6 +1092,50 @@ public class BackupPlanWhereInput {
   public static final String SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT_NOT_IN = "valid_size_of_backup_object_not_in";
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT_NOT_IN)
   private List<Long> validSizeOfBackupObjectNotIn = null;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT = "valid_size_of_restore_point";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT)
+  private Long validSizeOfRestorePoint;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_GT = "valid_size_of_restore_point_gt";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_GT)
+  private Long validSizeOfRestorePointGt;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_GTE = "valid_size_of_restore_point_gte";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_GTE)
+  private Long validSizeOfRestorePointGte;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_IN = "valid_size_of_restore_point_in";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_IN)
+  private List<Long> validSizeOfRestorePointIn = null;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_LT = "valid_size_of_restore_point_lt";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_LT)
+  private Long validSizeOfRestorePointLt;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_LTE = "valid_size_of_restore_point_lte";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_LTE)
+  private Long validSizeOfRestorePointLte;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_NOT = "valid_size_of_restore_point_not";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_NOT)
+  private Long validSizeOfRestorePointNot;
+
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_NOT_IN = "valid_size_of_restore_point_not_in";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT_NOT_IN)
+  private List<Long> validSizeOfRestorePointNotIn = null;
+
+  public static final String SERIALIZED_NAME_VMS_EVERY = "vms_every";
+  @SerializedName(SERIALIZED_NAME_VMS_EVERY)
+  private VmWhereInput vmsEvery;
+
+  public static final String SERIALIZED_NAME_VMS_NONE = "vms_none";
+  @SerializedName(SERIALIZED_NAME_VMS_NONE)
+  private VmWhereInput vmsNone;
+
+  public static final String SERIALIZED_NAME_VMS_SOME = "vms_some";
+  @SerializedName(SERIALIZED_NAME_VMS_SOME)
+  private VmWhereInput vmsSome;
 
   public static final String SERIALIZED_NAME_WINDOW_END = "window_end";
   @SerializedName(SERIALIZED_NAME_WINDOW_END)
@@ -1015,6 +1345,452 @@ public class BackupPlanWhereInput {
   }
 
 
+  public BackupPlanWhereInput backupDelayOption(BackupPlanDelayOption backupDelayOption) {
+    
+    this.backupDelayOption = backupDelayOption;
+    return this;
+  }
+
+   /**
+   * Get backupDelayOption
+   * @return backupDelayOption
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanDelayOption getBackupDelayOption() {
+    return backupDelayOption;
+  }
+
+
+  public void setBackupDelayOption(BackupPlanDelayOption backupDelayOption) {
+    this.backupDelayOption = backupDelayOption;
+  }
+
+
+  public BackupPlanWhereInput backupDelayOptionIn(List<BackupPlanDelayOption> backupDelayOptionIn) {
+    
+    this.backupDelayOptionIn = backupDelayOptionIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addBackupDelayOptionInItem(BackupPlanDelayOption backupDelayOptionInItem) {
+    if (this.backupDelayOptionIn == null) {
+      this.backupDelayOptionIn = new ArrayList<BackupPlanDelayOption>();
+    }
+    this.backupDelayOptionIn.add(backupDelayOptionInItem);
+    return this;
+  }
+
+   /**
+   * Get backupDelayOptionIn
+   * @return backupDelayOptionIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<BackupPlanDelayOption> getBackupDelayOptionIn() {
+    return backupDelayOptionIn;
+  }
+
+
+  public void setBackupDelayOptionIn(List<BackupPlanDelayOption> backupDelayOptionIn) {
+    this.backupDelayOptionIn = backupDelayOptionIn;
+  }
+
+
+  public BackupPlanWhereInput backupDelayOptionNot(BackupPlanDelayOption backupDelayOptionNot) {
+    
+    this.backupDelayOptionNot = backupDelayOptionNot;
+    return this;
+  }
+
+   /**
+   * Get backupDelayOptionNot
+   * @return backupDelayOptionNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanDelayOption getBackupDelayOptionNot() {
+    return backupDelayOptionNot;
+  }
+
+
+  public void setBackupDelayOptionNot(BackupPlanDelayOption backupDelayOptionNot) {
+    this.backupDelayOptionNot = backupDelayOptionNot;
+  }
+
+
+  public BackupPlanWhereInput backupDelayOptionNotIn(List<BackupPlanDelayOption> backupDelayOptionNotIn) {
+    
+    this.backupDelayOptionNotIn = backupDelayOptionNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addBackupDelayOptionNotInItem(BackupPlanDelayOption backupDelayOptionNotInItem) {
+    if (this.backupDelayOptionNotIn == null) {
+      this.backupDelayOptionNotIn = new ArrayList<BackupPlanDelayOption>();
+    }
+    this.backupDelayOptionNotIn.add(backupDelayOptionNotInItem);
+    return this;
+  }
+
+   /**
+   * Get backupDelayOptionNotIn
+   * @return backupDelayOptionNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<BackupPlanDelayOption> getBackupDelayOptionNotIn() {
+    return backupDelayOptionNotIn;
+  }
+
+
+  public void setBackupDelayOptionNotIn(List<BackupPlanDelayOption> backupDelayOptionNotIn) {
+    this.backupDelayOptionNotIn = backupDelayOptionNotIn;
+  }
+
+
+  public BackupPlanWhereInput backupPlanExecutionsEvery(BackupPlanExecutionWhereInput backupPlanExecutionsEvery) {
+    
+    this.backupPlanExecutionsEvery = backupPlanExecutionsEvery;
+    return this;
+  }
+
+   /**
+   * Get backupPlanExecutionsEvery
+   * @return backupPlanExecutionsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanExecutionWhereInput getBackupPlanExecutionsEvery() {
+    return backupPlanExecutionsEvery;
+  }
+
+
+  public void setBackupPlanExecutionsEvery(BackupPlanExecutionWhereInput backupPlanExecutionsEvery) {
+    this.backupPlanExecutionsEvery = backupPlanExecutionsEvery;
+  }
+
+
+  public BackupPlanWhereInput backupPlanExecutionsNone(BackupPlanExecutionWhereInput backupPlanExecutionsNone) {
+    
+    this.backupPlanExecutionsNone = backupPlanExecutionsNone;
+    return this;
+  }
+
+   /**
+   * Get backupPlanExecutionsNone
+   * @return backupPlanExecutionsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanExecutionWhereInput getBackupPlanExecutionsNone() {
+    return backupPlanExecutionsNone;
+  }
+
+
+  public void setBackupPlanExecutionsNone(BackupPlanExecutionWhereInput backupPlanExecutionsNone) {
+    this.backupPlanExecutionsNone = backupPlanExecutionsNone;
+  }
+
+
+  public BackupPlanWhereInput backupPlanExecutionsSome(BackupPlanExecutionWhereInput backupPlanExecutionsSome) {
+    
+    this.backupPlanExecutionsSome = backupPlanExecutionsSome;
+    return this;
+  }
+
+   /**
+   * Get backupPlanExecutionsSome
+   * @return backupPlanExecutionsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanExecutionWhereInput getBackupPlanExecutionsSome() {
+    return backupPlanExecutionsSome;
+  }
+
+
+  public void setBackupPlanExecutionsSome(BackupPlanExecutionWhereInput backupPlanExecutionsSome) {
+    this.backupPlanExecutionsSome = backupPlanExecutionsSome;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCount(Integer backupRestorePointCount) {
+    
+    this.backupRestorePointCount = backupRestorePointCount;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCount
+   * @return backupRestorePointCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCount() {
+    return backupRestorePointCount;
+  }
+
+
+  public void setBackupRestorePointCount(Integer backupRestorePointCount) {
+    this.backupRestorePointCount = backupRestorePointCount;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountGt(Integer backupRestorePointCountGt) {
+    
+    this.backupRestorePointCountGt = backupRestorePointCountGt;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountGt
+   * @return backupRestorePointCountGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCountGt() {
+    return backupRestorePointCountGt;
+  }
+
+
+  public void setBackupRestorePointCountGt(Integer backupRestorePointCountGt) {
+    this.backupRestorePointCountGt = backupRestorePointCountGt;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountGte(Integer backupRestorePointCountGte) {
+    
+    this.backupRestorePointCountGte = backupRestorePointCountGte;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountGte
+   * @return backupRestorePointCountGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCountGte() {
+    return backupRestorePointCountGte;
+  }
+
+
+  public void setBackupRestorePointCountGte(Integer backupRestorePointCountGte) {
+    this.backupRestorePointCountGte = backupRestorePointCountGte;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountIn(List<Integer> backupRestorePointCountIn) {
+    
+    this.backupRestorePointCountIn = backupRestorePointCountIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addBackupRestorePointCountInItem(Integer backupRestorePointCountInItem) {
+    if (this.backupRestorePointCountIn == null) {
+      this.backupRestorePointCountIn = new ArrayList<Integer>();
+    }
+    this.backupRestorePointCountIn.add(backupRestorePointCountInItem);
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountIn
+   * @return backupRestorePointCountIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getBackupRestorePointCountIn() {
+    return backupRestorePointCountIn;
+  }
+
+
+  public void setBackupRestorePointCountIn(List<Integer> backupRestorePointCountIn) {
+    this.backupRestorePointCountIn = backupRestorePointCountIn;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountLt(Integer backupRestorePointCountLt) {
+    
+    this.backupRestorePointCountLt = backupRestorePointCountLt;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountLt
+   * @return backupRestorePointCountLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCountLt() {
+    return backupRestorePointCountLt;
+  }
+
+
+  public void setBackupRestorePointCountLt(Integer backupRestorePointCountLt) {
+    this.backupRestorePointCountLt = backupRestorePointCountLt;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountLte(Integer backupRestorePointCountLte) {
+    
+    this.backupRestorePointCountLte = backupRestorePointCountLte;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountLte
+   * @return backupRestorePointCountLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCountLte() {
+    return backupRestorePointCountLte;
+  }
+
+
+  public void setBackupRestorePointCountLte(Integer backupRestorePointCountLte) {
+    this.backupRestorePointCountLte = backupRestorePointCountLte;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountNot(Integer backupRestorePointCountNot) {
+    
+    this.backupRestorePointCountNot = backupRestorePointCountNot;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountNot
+   * @return backupRestorePointCountNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCountNot() {
+    return backupRestorePointCountNot;
+  }
+
+
+  public void setBackupRestorePointCountNot(Integer backupRestorePointCountNot) {
+    this.backupRestorePointCountNot = backupRestorePointCountNot;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointCountNotIn(List<Integer> backupRestorePointCountNotIn) {
+    
+    this.backupRestorePointCountNotIn = backupRestorePointCountNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addBackupRestorePointCountNotInItem(Integer backupRestorePointCountNotInItem) {
+    if (this.backupRestorePointCountNotIn == null) {
+      this.backupRestorePointCountNotIn = new ArrayList<Integer>();
+    }
+    this.backupRestorePointCountNotIn.add(backupRestorePointCountNotInItem);
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCountNotIn
+   * @return backupRestorePointCountNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getBackupRestorePointCountNotIn() {
+    return backupRestorePointCountNotIn;
+  }
+
+
+  public void setBackupRestorePointCountNotIn(List<Integer> backupRestorePointCountNotIn) {
+    this.backupRestorePointCountNotIn = backupRestorePointCountNotIn;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointsEvery(BackupRestorePointWhereInput backupRestorePointsEvery) {
+    
+    this.backupRestorePointsEvery = backupRestorePointsEvery;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointsEvery
+   * @return backupRestorePointsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupRestorePointWhereInput getBackupRestorePointsEvery() {
+    return backupRestorePointsEvery;
+  }
+
+
+  public void setBackupRestorePointsEvery(BackupRestorePointWhereInput backupRestorePointsEvery) {
+    this.backupRestorePointsEvery = backupRestorePointsEvery;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointsNone(BackupRestorePointWhereInput backupRestorePointsNone) {
+    
+    this.backupRestorePointsNone = backupRestorePointsNone;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointsNone
+   * @return backupRestorePointsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupRestorePointWhereInput getBackupRestorePointsNone() {
+    return backupRestorePointsNone;
+  }
+
+
+  public void setBackupRestorePointsNone(BackupRestorePointWhereInput backupRestorePointsNone) {
+    this.backupRestorePointsNone = backupRestorePointsNone;
+  }
+
+
+  public BackupPlanWhereInput backupRestorePointsSome(BackupRestorePointWhereInput backupRestorePointsSome) {
+    
+    this.backupRestorePointsSome = backupRestorePointsSome;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointsSome
+   * @return backupRestorePointsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupRestorePointWhereInput getBackupRestorePointsSome() {
+    return backupRestorePointsSome;
+  }
+
+
+  public void setBackupRestorePointsSome(BackupRestorePointWhereInput backupRestorePointsSome) {
+    this.backupRestorePointsSome = backupRestorePointsSome;
+  }
+
+
   public BackupPlanWhereInput backupService(BackupServiceWhereInput backupService) {
     
     this.backupService = backupService;
@@ -1058,6 +1834,206 @@ public class BackupPlanWhereInput {
 
   public void setBackupStoreRepository(BackupStoreRepositoryWhereInput backupStoreRepository) {
     this.backupStoreRepository = backupStoreRepository;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSize(Long backupTotalSize) {
+    
+    this.backupTotalSize = backupTotalSize;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSize
+   * @return backupTotalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSize() {
+    return backupTotalSize;
+  }
+
+
+  public void setBackupTotalSize(Long backupTotalSize) {
+    this.backupTotalSize = backupTotalSize;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeGt(Long backupTotalSizeGt) {
+    
+    this.backupTotalSizeGt = backupTotalSizeGt;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeGt
+   * @return backupTotalSizeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSizeGt() {
+    return backupTotalSizeGt;
+  }
+
+
+  public void setBackupTotalSizeGt(Long backupTotalSizeGt) {
+    this.backupTotalSizeGt = backupTotalSizeGt;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeGte(Long backupTotalSizeGte) {
+    
+    this.backupTotalSizeGte = backupTotalSizeGte;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeGte
+   * @return backupTotalSizeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSizeGte() {
+    return backupTotalSizeGte;
+  }
+
+
+  public void setBackupTotalSizeGte(Long backupTotalSizeGte) {
+    this.backupTotalSizeGte = backupTotalSizeGte;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeIn(List<Long> backupTotalSizeIn) {
+    
+    this.backupTotalSizeIn = backupTotalSizeIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addBackupTotalSizeInItem(Long backupTotalSizeInItem) {
+    if (this.backupTotalSizeIn == null) {
+      this.backupTotalSizeIn = new ArrayList<Long>();
+    }
+    this.backupTotalSizeIn.add(backupTotalSizeInItem);
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeIn
+   * @return backupTotalSizeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getBackupTotalSizeIn() {
+    return backupTotalSizeIn;
+  }
+
+
+  public void setBackupTotalSizeIn(List<Long> backupTotalSizeIn) {
+    this.backupTotalSizeIn = backupTotalSizeIn;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeLt(Long backupTotalSizeLt) {
+    
+    this.backupTotalSizeLt = backupTotalSizeLt;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeLt
+   * @return backupTotalSizeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSizeLt() {
+    return backupTotalSizeLt;
+  }
+
+
+  public void setBackupTotalSizeLt(Long backupTotalSizeLt) {
+    this.backupTotalSizeLt = backupTotalSizeLt;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeLte(Long backupTotalSizeLte) {
+    
+    this.backupTotalSizeLte = backupTotalSizeLte;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeLte
+   * @return backupTotalSizeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSizeLte() {
+    return backupTotalSizeLte;
+  }
+
+
+  public void setBackupTotalSizeLte(Long backupTotalSizeLte) {
+    this.backupTotalSizeLte = backupTotalSizeLte;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeNot(Long backupTotalSizeNot) {
+    
+    this.backupTotalSizeNot = backupTotalSizeNot;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeNot
+   * @return backupTotalSizeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSizeNot() {
+    return backupTotalSizeNot;
+  }
+
+
+  public void setBackupTotalSizeNot(Long backupTotalSizeNot) {
+    this.backupTotalSizeNot = backupTotalSizeNot;
+  }
+
+
+  public BackupPlanWhereInput backupTotalSizeNotIn(List<Long> backupTotalSizeNotIn) {
+    
+    this.backupTotalSizeNotIn = backupTotalSizeNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addBackupTotalSizeNotInItem(Long backupTotalSizeNotInItem) {
+    if (this.backupTotalSizeNotIn == null) {
+      this.backupTotalSizeNotIn = new ArrayList<Long>();
+    }
+    this.backupTotalSizeNotIn.add(backupTotalSizeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get backupTotalSizeNotIn
+   * @return backupTotalSizeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getBackupTotalSizeNotIn() {
+    return backupTotalSizeNotIn;
+  }
+
+
+  public void setBackupTotalSizeNotIn(List<Long> backupTotalSizeNotIn) {
+    this.backupTotalSizeNotIn = backupTotalSizeNotIn;
   }
 
 
@@ -1504,6 +2480,114 @@ public class BackupPlanWhereInput {
 
   public void setCreatedAtNotIn(List<String> createdAtNotIn) {
     this.createdAtNotIn = createdAtNotIn;
+  }
+
+
+  public BackupPlanWhereInput deleteStrategy(BackupPlanDeleteStrategy deleteStrategy) {
+    
+    this.deleteStrategy = deleteStrategy;
+    return this;
+  }
+
+   /**
+   * Get deleteStrategy
+   * @return deleteStrategy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanDeleteStrategy getDeleteStrategy() {
+    return deleteStrategy;
+  }
+
+
+  public void setDeleteStrategy(BackupPlanDeleteStrategy deleteStrategy) {
+    this.deleteStrategy = deleteStrategy;
+  }
+
+
+  public BackupPlanWhereInput deleteStrategyIn(List<BackupPlanDeleteStrategy> deleteStrategyIn) {
+    
+    this.deleteStrategyIn = deleteStrategyIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addDeleteStrategyInItem(BackupPlanDeleteStrategy deleteStrategyInItem) {
+    if (this.deleteStrategyIn == null) {
+      this.deleteStrategyIn = new ArrayList<BackupPlanDeleteStrategy>();
+    }
+    this.deleteStrategyIn.add(deleteStrategyInItem);
+    return this;
+  }
+
+   /**
+   * Get deleteStrategyIn
+   * @return deleteStrategyIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<BackupPlanDeleteStrategy> getDeleteStrategyIn() {
+    return deleteStrategyIn;
+  }
+
+
+  public void setDeleteStrategyIn(List<BackupPlanDeleteStrategy> deleteStrategyIn) {
+    this.deleteStrategyIn = deleteStrategyIn;
+  }
+
+
+  public BackupPlanWhereInput deleteStrategyNot(BackupPlanDeleteStrategy deleteStrategyNot) {
+    
+    this.deleteStrategyNot = deleteStrategyNot;
+    return this;
+  }
+
+   /**
+   * Get deleteStrategyNot
+   * @return deleteStrategyNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanDeleteStrategy getDeleteStrategyNot() {
+    return deleteStrategyNot;
+  }
+
+
+  public void setDeleteStrategyNot(BackupPlanDeleteStrategy deleteStrategyNot) {
+    this.deleteStrategyNot = deleteStrategyNot;
+  }
+
+
+  public BackupPlanWhereInput deleteStrategyNotIn(List<BackupPlanDeleteStrategy> deleteStrategyNotIn) {
+    
+    this.deleteStrategyNotIn = deleteStrategyNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addDeleteStrategyNotInItem(BackupPlanDeleteStrategy deleteStrategyNotInItem) {
+    if (this.deleteStrategyNotIn == null) {
+      this.deleteStrategyNotIn = new ArrayList<BackupPlanDeleteStrategy>();
+    }
+    this.deleteStrategyNotIn.add(deleteStrategyNotInItem);
+    return this;
+  }
+
+   /**
+   * Get deleteStrategyNotIn
+   * @return deleteStrategyNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<BackupPlanDeleteStrategy> getDeleteStrategyNotIn() {
+    return deleteStrategyNotIn;
+  }
+
+
+  public void setDeleteStrategyNotIn(List<BackupPlanDeleteStrategy> deleteStrategyNotIn) {
+    this.deleteStrategyNotIn = deleteStrategyNotIn;
   }
 
 
@@ -3315,6 +4399,344 @@ public class BackupPlanWhereInput {
   }
 
 
+  public BackupPlanWhereInput lastExecuteStatusMessage(String lastExecuteStatusMessage) {
+    
+    this.lastExecuteStatusMessage = lastExecuteStatusMessage;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessage
+   * @return lastExecuteStatusMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessage() {
+    return lastExecuteStatusMessage;
+  }
+
+
+  public void setLastExecuteStatusMessage(String lastExecuteStatusMessage) {
+    this.lastExecuteStatusMessage = lastExecuteStatusMessage;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageContains(String lastExecuteStatusMessageContains) {
+    
+    this.lastExecuteStatusMessageContains = lastExecuteStatusMessageContains;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageContains
+   * @return lastExecuteStatusMessageContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageContains() {
+    return lastExecuteStatusMessageContains;
+  }
+
+
+  public void setLastExecuteStatusMessageContains(String lastExecuteStatusMessageContains) {
+    this.lastExecuteStatusMessageContains = lastExecuteStatusMessageContains;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageEndsWith(String lastExecuteStatusMessageEndsWith) {
+    
+    this.lastExecuteStatusMessageEndsWith = lastExecuteStatusMessageEndsWith;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageEndsWith
+   * @return lastExecuteStatusMessageEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageEndsWith() {
+    return lastExecuteStatusMessageEndsWith;
+  }
+
+
+  public void setLastExecuteStatusMessageEndsWith(String lastExecuteStatusMessageEndsWith) {
+    this.lastExecuteStatusMessageEndsWith = lastExecuteStatusMessageEndsWith;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageGt(String lastExecuteStatusMessageGt) {
+    
+    this.lastExecuteStatusMessageGt = lastExecuteStatusMessageGt;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageGt
+   * @return lastExecuteStatusMessageGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageGt() {
+    return lastExecuteStatusMessageGt;
+  }
+
+
+  public void setLastExecuteStatusMessageGt(String lastExecuteStatusMessageGt) {
+    this.lastExecuteStatusMessageGt = lastExecuteStatusMessageGt;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageGte(String lastExecuteStatusMessageGte) {
+    
+    this.lastExecuteStatusMessageGte = lastExecuteStatusMessageGte;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageGte
+   * @return lastExecuteStatusMessageGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageGte() {
+    return lastExecuteStatusMessageGte;
+  }
+
+
+  public void setLastExecuteStatusMessageGte(String lastExecuteStatusMessageGte) {
+    this.lastExecuteStatusMessageGte = lastExecuteStatusMessageGte;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageIn(List<String> lastExecuteStatusMessageIn) {
+    
+    this.lastExecuteStatusMessageIn = lastExecuteStatusMessageIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addLastExecuteStatusMessageInItem(String lastExecuteStatusMessageInItem) {
+    if (this.lastExecuteStatusMessageIn == null) {
+      this.lastExecuteStatusMessageIn = new ArrayList<String>();
+    }
+    this.lastExecuteStatusMessageIn.add(lastExecuteStatusMessageInItem);
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageIn
+   * @return lastExecuteStatusMessageIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getLastExecuteStatusMessageIn() {
+    return lastExecuteStatusMessageIn;
+  }
+
+
+  public void setLastExecuteStatusMessageIn(List<String> lastExecuteStatusMessageIn) {
+    this.lastExecuteStatusMessageIn = lastExecuteStatusMessageIn;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageLt(String lastExecuteStatusMessageLt) {
+    
+    this.lastExecuteStatusMessageLt = lastExecuteStatusMessageLt;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageLt
+   * @return lastExecuteStatusMessageLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageLt() {
+    return lastExecuteStatusMessageLt;
+  }
+
+
+  public void setLastExecuteStatusMessageLt(String lastExecuteStatusMessageLt) {
+    this.lastExecuteStatusMessageLt = lastExecuteStatusMessageLt;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageLte(String lastExecuteStatusMessageLte) {
+    
+    this.lastExecuteStatusMessageLte = lastExecuteStatusMessageLte;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageLte
+   * @return lastExecuteStatusMessageLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageLte() {
+    return lastExecuteStatusMessageLte;
+  }
+
+
+  public void setLastExecuteStatusMessageLte(String lastExecuteStatusMessageLte) {
+    this.lastExecuteStatusMessageLte = lastExecuteStatusMessageLte;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageNot(String lastExecuteStatusMessageNot) {
+    
+    this.lastExecuteStatusMessageNot = lastExecuteStatusMessageNot;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageNot
+   * @return lastExecuteStatusMessageNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageNot() {
+    return lastExecuteStatusMessageNot;
+  }
+
+
+  public void setLastExecuteStatusMessageNot(String lastExecuteStatusMessageNot) {
+    this.lastExecuteStatusMessageNot = lastExecuteStatusMessageNot;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageNotContains(String lastExecuteStatusMessageNotContains) {
+    
+    this.lastExecuteStatusMessageNotContains = lastExecuteStatusMessageNotContains;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageNotContains
+   * @return lastExecuteStatusMessageNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageNotContains() {
+    return lastExecuteStatusMessageNotContains;
+  }
+
+
+  public void setLastExecuteStatusMessageNotContains(String lastExecuteStatusMessageNotContains) {
+    this.lastExecuteStatusMessageNotContains = lastExecuteStatusMessageNotContains;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageNotEndsWith(String lastExecuteStatusMessageNotEndsWith) {
+    
+    this.lastExecuteStatusMessageNotEndsWith = lastExecuteStatusMessageNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageNotEndsWith
+   * @return lastExecuteStatusMessageNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageNotEndsWith() {
+    return lastExecuteStatusMessageNotEndsWith;
+  }
+
+
+  public void setLastExecuteStatusMessageNotEndsWith(String lastExecuteStatusMessageNotEndsWith) {
+    this.lastExecuteStatusMessageNotEndsWith = lastExecuteStatusMessageNotEndsWith;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageNotIn(List<String> lastExecuteStatusMessageNotIn) {
+    
+    this.lastExecuteStatusMessageNotIn = lastExecuteStatusMessageNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addLastExecuteStatusMessageNotInItem(String lastExecuteStatusMessageNotInItem) {
+    if (this.lastExecuteStatusMessageNotIn == null) {
+      this.lastExecuteStatusMessageNotIn = new ArrayList<String>();
+    }
+    this.lastExecuteStatusMessageNotIn.add(lastExecuteStatusMessageNotInItem);
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageNotIn
+   * @return lastExecuteStatusMessageNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getLastExecuteStatusMessageNotIn() {
+    return lastExecuteStatusMessageNotIn;
+  }
+
+
+  public void setLastExecuteStatusMessageNotIn(List<String> lastExecuteStatusMessageNotIn) {
+    this.lastExecuteStatusMessageNotIn = lastExecuteStatusMessageNotIn;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageNotStartsWith(String lastExecuteStatusMessageNotStartsWith) {
+    
+    this.lastExecuteStatusMessageNotStartsWith = lastExecuteStatusMessageNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageNotStartsWith
+   * @return lastExecuteStatusMessageNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageNotStartsWith() {
+    return lastExecuteStatusMessageNotStartsWith;
+  }
+
+
+  public void setLastExecuteStatusMessageNotStartsWith(String lastExecuteStatusMessageNotStartsWith) {
+    this.lastExecuteStatusMessageNotStartsWith = lastExecuteStatusMessageNotStartsWith;
+  }
+
+
+  public BackupPlanWhereInput lastExecuteStatusMessageStartsWith(String lastExecuteStatusMessageStartsWith) {
+    
+    this.lastExecuteStatusMessageStartsWith = lastExecuteStatusMessageStartsWith;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessageStartsWith
+   * @return lastExecuteStatusMessageStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessageStartsWith() {
+    return lastExecuteStatusMessageStartsWith;
+  }
+
+
+  public void setLastExecuteStatusMessageStartsWith(String lastExecuteStatusMessageStartsWith) {
+    this.lastExecuteStatusMessageStartsWith = lastExecuteStatusMessageStartsWith;
+  }
+
+
   public BackupPlanWhereInput lastExecuteStatusNot(BackupPlanExecutionStatus lastExecuteStatusNot) {
     
     this.lastExecuteStatusNot = lastExecuteStatusNot;
@@ -4023,6 +5445,344 @@ public class BackupPlanWhereInput {
   }
 
 
+  public BackupPlanWhereInput lastManualExecuteStatusMessage(String lastManualExecuteStatusMessage) {
+    
+    this.lastManualExecuteStatusMessage = lastManualExecuteStatusMessage;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessage
+   * @return lastManualExecuteStatusMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessage() {
+    return lastManualExecuteStatusMessage;
+  }
+
+
+  public void setLastManualExecuteStatusMessage(String lastManualExecuteStatusMessage) {
+    this.lastManualExecuteStatusMessage = lastManualExecuteStatusMessage;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageContains(String lastManualExecuteStatusMessageContains) {
+    
+    this.lastManualExecuteStatusMessageContains = lastManualExecuteStatusMessageContains;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageContains
+   * @return lastManualExecuteStatusMessageContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageContains() {
+    return lastManualExecuteStatusMessageContains;
+  }
+
+
+  public void setLastManualExecuteStatusMessageContains(String lastManualExecuteStatusMessageContains) {
+    this.lastManualExecuteStatusMessageContains = lastManualExecuteStatusMessageContains;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageEndsWith(String lastManualExecuteStatusMessageEndsWith) {
+    
+    this.lastManualExecuteStatusMessageEndsWith = lastManualExecuteStatusMessageEndsWith;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageEndsWith
+   * @return lastManualExecuteStatusMessageEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageEndsWith() {
+    return lastManualExecuteStatusMessageEndsWith;
+  }
+
+
+  public void setLastManualExecuteStatusMessageEndsWith(String lastManualExecuteStatusMessageEndsWith) {
+    this.lastManualExecuteStatusMessageEndsWith = lastManualExecuteStatusMessageEndsWith;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageGt(String lastManualExecuteStatusMessageGt) {
+    
+    this.lastManualExecuteStatusMessageGt = lastManualExecuteStatusMessageGt;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageGt
+   * @return lastManualExecuteStatusMessageGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageGt() {
+    return lastManualExecuteStatusMessageGt;
+  }
+
+
+  public void setLastManualExecuteStatusMessageGt(String lastManualExecuteStatusMessageGt) {
+    this.lastManualExecuteStatusMessageGt = lastManualExecuteStatusMessageGt;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageGte(String lastManualExecuteStatusMessageGte) {
+    
+    this.lastManualExecuteStatusMessageGte = lastManualExecuteStatusMessageGte;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageGte
+   * @return lastManualExecuteStatusMessageGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageGte() {
+    return lastManualExecuteStatusMessageGte;
+  }
+
+
+  public void setLastManualExecuteStatusMessageGte(String lastManualExecuteStatusMessageGte) {
+    this.lastManualExecuteStatusMessageGte = lastManualExecuteStatusMessageGte;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageIn(List<String> lastManualExecuteStatusMessageIn) {
+    
+    this.lastManualExecuteStatusMessageIn = lastManualExecuteStatusMessageIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addLastManualExecuteStatusMessageInItem(String lastManualExecuteStatusMessageInItem) {
+    if (this.lastManualExecuteStatusMessageIn == null) {
+      this.lastManualExecuteStatusMessageIn = new ArrayList<String>();
+    }
+    this.lastManualExecuteStatusMessageIn.add(lastManualExecuteStatusMessageInItem);
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageIn
+   * @return lastManualExecuteStatusMessageIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getLastManualExecuteStatusMessageIn() {
+    return lastManualExecuteStatusMessageIn;
+  }
+
+
+  public void setLastManualExecuteStatusMessageIn(List<String> lastManualExecuteStatusMessageIn) {
+    this.lastManualExecuteStatusMessageIn = lastManualExecuteStatusMessageIn;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageLt(String lastManualExecuteStatusMessageLt) {
+    
+    this.lastManualExecuteStatusMessageLt = lastManualExecuteStatusMessageLt;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageLt
+   * @return lastManualExecuteStatusMessageLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageLt() {
+    return lastManualExecuteStatusMessageLt;
+  }
+
+
+  public void setLastManualExecuteStatusMessageLt(String lastManualExecuteStatusMessageLt) {
+    this.lastManualExecuteStatusMessageLt = lastManualExecuteStatusMessageLt;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageLte(String lastManualExecuteStatusMessageLte) {
+    
+    this.lastManualExecuteStatusMessageLte = lastManualExecuteStatusMessageLte;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageLte
+   * @return lastManualExecuteStatusMessageLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageLte() {
+    return lastManualExecuteStatusMessageLte;
+  }
+
+
+  public void setLastManualExecuteStatusMessageLte(String lastManualExecuteStatusMessageLte) {
+    this.lastManualExecuteStatusMessageLte = lastManualExecuteStatusMessageLte;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageNot(String lastManualExecuteStatusMessageNot) {
+    
+    this.lastManualExecuteStatusMessageNot = lastManualExecuteStatusMessageNot;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageNot
+   * @return lastManualExecuteStatusMessageNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageNot() {
+    return lastManualExecuteStatusMessageNot;
+  }
+
+
+  public void setLastManualExecuteStatusMessageNot(String lastManualExecuteStatusMessageNot) {
+    this.lastManualExecuteStatusMessageNot = lastManualExecuteStatusMessageNot;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageNotContains(String lastManualExecuteStatusMessageNotContains) {
+    
+    this.lastManualExecuteStatusMessageNotContains = lastManualExecuteStatusMessageNotContains;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageNotContains
+   * @return lastManualExecuteStatusMessageNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageNotContains() {
+    return lastManualExecuteStatusMessageNotContains;
+  }
+
+
+  public void setLastManualExecuteStatusMessageNotContains(String lastManualExecuteStatusMessageNotContains) {
+    this.lastManualExecuteStatusMessageNotContains = lastManualExecuteStatusMessageNotContains;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageNotEndsWith(String lastManualExecuteStatusMessageNotEndsWith) {
+    
+    this.lastManualExecuteStatusMessageNotEndsWith = lastManualExecuteStatusMessageNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageNotEndsWith
+   * @return lastManualExecuteStatusMessageNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageNotEndsWith() {
+    return lastManualExecuteStatusMessageNotEndsWith;
+  }
+
+
+  public void setLastManualExecuteStatusMessageNotEndsWith(String lastManualExecuteStatusMessageNotEndsWith) {
+    this.lastManualExecuteStatusMessageNotEndsWith = lastManualExecuteStatusMessageNotEndsWith;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageNotIn(List<String> lastManualExecuteStatusMessageNotIn) {
+    
+    this.lastManualExecuteStatusMessageNotIn = lastManualExecuteStatusMessageNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addLastManualExecuteStatusMessageNotInItem(String lastManualExecuteStatusMessageNotInItem) {
+    if (this.lastManualExecuteStatusMessageNotIn == null) {
+      this.lastManualExecuteStatusMessageNotIn = new ArrayList<String>();
+    }
+    this.lastManualExecuteStatusMessageNotIn.add(lastManualExecuteStatusMessageNotInItem);
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageNotIn
+   * @return lastManualExecuteStatusMessageNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getLastManualExecuteStatusMessageNotIn() {
+    return lastManualExecuteStatusMessageNotIn;
+  }
+
+
+  public void setLastManualExecuteStatusMessageNotIn(List<String> lastManualExecuteStatusMessageNotIn) {
+    this.lastManualExecuteStatusMessageNotIn = lastManualExecuteStatusMessageNotIn;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageNotStartsWith(String lastManualExecuteStatusMessageNotStartsWith) {
+    
+    this.lastManualExecuteStatusMessageNotStartsWith = lastManualExecuteStatusMessageNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageNotStartsWith
+   * @return lastManualExecuteStatusMessageNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageNotStartsWith() {
+    return lastManualExecuteStatusMessageNotStartsWith;
+  }
+
+
+  public void setLastManualExecuteStatusMessageNotStartsWith(String lastManualExecuteStatusMessageNotStartsWith) {
+    this.lastManualExecuteStatusMessageNotStartsWith = lastManualExecuteStatusMessageNotStartsWith;
+  }
+
+
+  public BackupPlanWhereInput lastManualExecuteStatusMessageStartsWith(String lastManualExecuteStatusMessageStartsWith) {
+    
+    this.lastManualExecuteStatusMessageStartsWith = lastManualExecuteStatusMessageStartsWith;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessageStartsWith
+   * @return lastManualExecuteStatusMessageStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessageStartsWith() {
+    return lastManualExecuteStatusMessageStartsWith;
+  }
+
+
+  public void setLastManualExecuteStatusMessageStartsWith(String lastManualExecuteStatusMessageStartsWith) {
+    this.lastManualExecuteStatusMessageStartsWith = lastManualExecuteStatusMessageStartsWith;
+  }
+
+
   public BackupPlanWhereInput lastManualExecuteStatusNot(BackupPlanExecutionStatus lastManualExecuteStatusNot) {
     
     this.lastManualExecuteStatusNot = lastManualExecuteStatusNot;
@@ -4677,6 +6437,206 @@ public class BackupPlanWhereInput {
   }
 
 
+  public BackupPlanWhereInput logicalSize(Long logicalSize) {
+    
+    this.logicalSize = logicalSize;
+    return this;
+  }
+
+   /**
+   * Get logicalSize
+   * @return logicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSize() {
+    return logicalSize;
+  }
+
+
+  public void setLogicalSize(Long logicalSize) {
+    this.logicalSize = logicalSize;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeGt(Long logicalSizeGt) {
+    
+    this.logicalSizeGt = logicalSizeGt;
+    return this;
+  }
+
+   /**
+   * Get logicalSizeGt
+   * @return logicalSizeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSizeGt() {
+    return logicalSizeGt;
+  }
+
+
+  public void setLogicalSizeGt(Long logicalSizeGt) {
+    this.logicalSizeGt = logicalSizeGt;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeGte(Long logicalSizeGte) {
+    
+    this.logicalSizeGte = logicalSizeGte;
+    return this;
+  }
+
+   /**
+   * Get logicalSizeGte
+   * @return logicalSizeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSizeGte() {
+    return logicalSizeGte;
+  }
+
+
+  public void setLogicalSizeGte(Long logicalSizeGte) {
+    this.logicalSizeGte = logicalSizeGte;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeIn(List<Long> logicalSizeIn) {
+    
+    this.logicalSizeIn = logicalSizeIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addLogicalSizeInItem(Long logicalSizeInItem) {
+    if (this.logicalSizeIn == null) {
+      this.logicalSizeIn = new ArrayList<Long>();
+    }
+    this.logicalSizeIn.add(logicalSizeInItem);
+    return this;
+  }
+
+   /**
+   * Get logicalSizeIn
+   * @return logicalSizeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getLogicalSizeIn() {
+    return logicalSizeIn;
+  }
+
+
+  public void setLogicalSizeIn(List<Long> logicalSizeIn) {
+    this.logicalSizeIn = logicalSizeIn;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeLt(Long logicalSizeLt) {
+    
+    this.logicalSizeLt = logicalSizeLt;
+    return this;
+  }
+
+   /**
+   * Get logicalSizeLt
+   * @return logicalSizeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSizeLt() {
+    return logicalSizeLt;
+  }
+
+
+  public void setLogicalSizeLt(Long logicalSizeLt) {
+    this.logicalSizeLt = logicalSizeLt;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeLte(Long logicalSizeLte) {
+    
+    this.logicalSizeLte = logicalSizeLte;
+    return this;
+  }
+
+   /**
+   * Get logicalSizeLte
+   * @return logicalSizeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSizeLte() {
+    return logicalSizeLte;
+  }
+
+
+  public void setLogicalSizeLte(Long logicalSizeLte) {
+    this.logicalSizeLte = logicalSizeLte;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeNot(Long logicalSizeNot) {
+    
+    this.logicalSizeNot = logicalSizeNot;
+    return this;
+  }
+
+   /**
+   * Get logicalSizeNot
+   * @return logicalSizeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSizeNot() {
+    return logicalSizeNot;
+  }
+
+
+  public void setLogicalSizeNot(Long logicalSizeNot) {
+    this.logicalSizeNot = logicalSizeNot;
+  }
+
+
+  public BackupPlanWhereInput logicalSizeNotIn(List<Long> logicalSizeNotIn) {
+    
+    this.logicalSizeNotIn = logicalSizeNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addLogicalSizeNotInItem(Long logicalSizeNotInItem) {
+    if (this.logicalSizeNotIn == null) {
+      this.logicalSizeNotIn = new ArrayList<Long>();
+    }
+    this.logicalSizeNotIn.add(logicalSizeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get logicalSizeNotIn
+   * @return logicalSizeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getLogicalSizeNotIn() {
+    return logicalSizeNotIn;
+  }
+
+
+  public void setLogicalSizeNotIn(List<Long> logicalSizeNotIn) {
+    this.logicalSizeNotIn = logicalSizeNotIn;
+  }
+
+
   public BackupPlanWhereInput name(String name) {
     
     this.name = name;
@@ -5212,6 +7172,114 @@ public class BackupPlanWhereInput {
 
   public void setNextExecuteTimeNotIn(List<String> nextExecuteTimeNotIn) {
     this.nextExecuteTimeNotIn = nextExecuteTimeNotIn;
+  }
+
+
+  public BackupPlanWhereInput phase(BackupPlanPhase phase) {
+    
+    this.phase = phase;
+    return this;
+  }
+
+   /**
+   * Get phase
+   * @return phase
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanPhase getPhase() {
+    return phase;
+  }
+
+
+  public void setPhase(BackupPlanPhase phase) {
+    this.phase = phase;
+  }
+
+
+  public BackupPlanWhereInput phaseIn(List<BackupPlanPhase> phaseIn) {
+    
+    this.phaseIn = phaseIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addPhaseInItem(BackupPlanPhase phaseInItem) {
+    if (this.phaseIn == null) {
+      this.phaseIn = new ArrayList<BackupPlanPhase>();
+    }
+    this.phaseIn.add(phaseInItem);
+    return this;
+  }
+
+   /**
+   * Get phaseIn
+   * @return phaseIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<BackupPlanPhase> getPhaseIn() {
+    return phaseIn;
+  }
+
+
+  public void setPhaseIn(List<BackupPlanPhase> phaseIn) {
+    this.phaseIn = phaseIn;
+  }
+
+
+  public BackupPlanWhereInput phaseNot(BackupPlanPhase phaseNot) {
+    
+    this.phaseNot = phaseNot;
+    return this;
+  }
+
+   /**
+   * Get phaseNot
+   * @return phaseNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanPhase getPhaseNot() {
+    return phaseNot;
+  }
+
+
+  public void setPhaseNot(BackupPlanPhase phaseNot) {
+    this.phaseNot = phaseNot;
+  }
+
+
+  public BackupPlanWhereInput phaseNotIn(List<BackupPlanPhase> phaseNotIn) {
+    
+    this.phaseNotIn = phaseNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addPhaseNotInItem(BackupPlanPhase phaseNotInItem) {
+    if (this.phaseNotIn == null) {
+      this.phaseNotIn = new ArrayList<BackupPlanPhase>();
+    }
+    this.phaseNotIn.add(phaseNotInItem);
+    return this;
+  }
+
+   /**
+   * Get phaseNotIn
+   * @return phaseNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<BackupPlanPhase> getPhaseNotIn() {
+    return phaseNotIn;
+  }
+
+
+  public void setPhaseNotIn(List<BackupPlanPhase> phaseNotIn) {
+    this.phaseNotIn = phaseNotIn;
   }
 
 
@@ -5828,6 +7896,275 @@ public class BackupPlanWhereInput {
 
   public void setValidSizeOfBackupObjectNotIn(List<Long> validSizeOfBackupObjectNotIn) {
     this.validSizeOfBackupObjectNotIn = validSizeOfBackupObjectNotIn;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePoint(Long validSizeOfRestorePoint) {
+    
+    this.validSizeOfRestorePoint = validSizeOfRestorePoint;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePoint
+   * @return validSizeOfRestorePoint
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePoint() {
+    return validSizeOfRestorePoint;
+  }
+
+
+  public void setValidSizeOfRestorePoint(Long validSizeOfRestorePoint) {
+    this.validSizeOfRestorePoint = validSizeOfRestorePoint;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointGt(Long validSizeOfRestorePointGt) {
+    
+    this.validSizeOfRestorePointGt = validSizeOfRestorePointGt;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointGt
+   * @return validSizeOfRestorePointGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePointGt() {
+    return validSizeOfRestorePointGt;
+  }
+
+
+  public void setValidSizeOfRestorePointGt(Long validSizeOfRestorePointGt) {
+    this.validSizeOfRestorePointGt = validSizeOfRestorePointGt;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointGte(Long validSizeOfRestorePointGte) {
+    
+    this.validSizeOfRestorePointGte = validSizeOfRestorePointGte;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointGte
+   * @return validSizeOfRestorePointGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePointGte() {
+    return validSizeOfRestorePointGte;
+  }
+
+
+  public void setValidSizeOfRestorePointGte(Long validSizeOfRestorePointGte) {
+    this.validSizeOfRestorePointGte = validSizeOfRestorePointGte;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointIn(List<Long> validSizeOfRestorePointIn) {
+    
+    this.validSizeOfRestorePointIn = validSizeOfRestorePointIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addValidSizeOfRestorePointInItem(Long validSizeOfRestorePointInItem) {
+    if (this.validSizeOfRestorePointIn == null) {
+      this.validSizeOfRestorePointIn = new ArrayList<Long>();
+    }
+    this.validSizeOfRestorePointIn.add(validSizeOfRestorePointInItem);
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointIn
+   * @return validSizeOfRestorePointIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getValidSizeOfRestorePointIn() {
+    return validSizeOfRestorePointIn;
+  }
+
+
+  public void setValidSizeOfRestorePointIn(List<Long> validSizeOfRestorePointIn) {
+    this.validSizeOfRestorePointIn = validSizeOfRestorePointIn;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointLt(Long validSizeOfRestorePointLt) {
+    
+    this.validSizeOfRestorePointLt = validSizeOfRestorePointLt;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointLt
+   * @return validSizeOfRestorePointLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePointLt() {
+    return validSizeOfRestorePointLt;
+  }
+
+
+  public void setValidSizeOfRestorePointLt(Long validSizeOfRestorePointLt) {
+    this.validSizeOfRestorePointLt = validSizeOfRestorePointLt;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointLte(Long validSizeOfRestorePointLte) {
+    
+    this.validSizeOfRestorePointLte = validSizeOfRestorePointLte;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointLte
+   * @return validSizeOfRestorePointLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePointLte() {
+    return validSizeOfRestorePointLte;
+  }
+
+
+  public void setValidSizeOfRestorePointLte(Long validSizeOfRestorePointLte) {
+    this.validSizeOfRestorePointLte = validSizeOfRestorePointLte;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointNot(Long validSizeOfRestorePointNot) {
+    
+    this.validSizeOfRestorePointNot = validSizeOfRestorePointNot;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointNot
+   * @return validSizeOfRestorePointNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePointNot() {
+    return validSizeOfRestorePointNot;
+  }
+
+
+  public void setValidSizeOfRestorePointNot(Long validSizeOfRestorePointNot) {
+    this.validSizeOfRestorePointNot = validSizeOfRestorePointNot;
+  }
+
+
+  public BackupPlanWhereInput validSizeOfRestorePointNotIn(List<Long> validSizeOfRestorePointNotIn) {
+    
+    this.validSizeOfRestorePointNotIn = validSizeOfRestorePointNotIn;
+    return this;
+  }
+
+  public BackupPlanWhereInput addValidSizeOfRestorePointNotInItem(Long validSizeOfRestorePointNotInItem) {
+    if (this.validSizeOfRestorePointNotIn == null) {
+      this.validSizeOfRestorePointNotIn = new ArrayList<Long>();
+    }
+    this.validSizeOfRestorePointNotIn.add(validSizeOfRestorePointNotInItem);
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePointNotIn
+   * @return validSizeOfRestorePointNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getValidSizeOfRestorePointNotIn() {
+    return validSizeOfRestorePointNotIn;
+  }
+
+
+  public void setValidSizeOfRestorePointNotIn(List<Long> validSizeOfRestorePointNotIn) {
+    this.validSizeOfRestorePointNotIn = validSizeOfRestorePointNotIn;
+  }
+
+
+  public BackupPlanWhereInput vmsEvery(VmWhereInput vmsEvery) {
+    
+    this.vmsEvery = vmsEvery;
+    return this;
+  }
+
+   /**
+   * Get vmsEvery
+   * @return vmsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsEvery() {
+    return vmsEvery;
+  }
+
+
+  public void setVmsEvery(VmWhereInput vmsEvery) {
+    this.vmsEvery = vmsEvery;
+  }
+
+
+  public BackupPlanWhereInput vmsNone(VmWhereInput vmsNone) {
+    
+    this.vmsNone = vmsNone;
+    return this;
+  }
+
+   /**
+   * Get vmsNone
+   * @return vmsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsNone() {
+    return vmsNone;
+  }
+
+
+  public void setVmsNone(VmWhereInput vmsNone) {
+    this.vmsNone = vmsNone;
+  }
+
+
+  public BackupPlanWhereInput vmsSome(VmWhereInput vmsSome) {
+    
+    this.vmsSome = vmsSome;
+    return this;
+  }
+
+   /**
+   * Get vmsSome
+   * @return vmsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmWhereInput getVmsSome() {
+    return vmsSome;
+  }
+
+
+  public void setVmsSome(VmWhereInput vmsSome) {
+    this.vmsSome = vmsSome;
   }
 
 
@@ -6519,8 +8856,34 @@ public class BackupPlanWhereInput {
     return Objects.equals(this.AND, backupPlanWhereInput.AND) &&
         Objects.equals(this.NOT, backupPlanWhereInput.NOT) &&
         Objects.equals(this.OR, backupPlanWhereInput.OR) &&
+        Objects.equals(this.backupDelayOption, backupPlanWhereInput.backupDelayOption) &&
+        Objects.equals(this.backupDelayOptionIn, backupPlanWhereInput.backupDelayOptionIn) &&
+        Objects.equals(this.backupDelayOptionNot, backupPlanWhereInput.backupDelayOptionNot) &&
+        Objects.equals(this.backupDelayOptionNotIn, backupPlanWhereInput.backupDelayOptionNotIn) &&
+        Objects.equals(this.backupPlanExecutionsEvery, backupPlanWhereInput.backupPlanExecutionsEvery) &&
+        Objects.equals(this.backupPlanExecutionsNone, backupPlanWhereInput.backupPlanExecutionsNone) &&
+        Objects.equals(this.backupPlanExecutionsSome, backupPlanWhereInput.backupPlanExecutionsSome) &&
+        Objects.equals(this.backupRestorePointCount, backupPlanWhereInput.backupRestorePointCount) &&
+        Objects.equals(this.backupRestorePointCountGt, backupPlanWhereInput.backupRestorePointCountGt) &&
+        Objects.equals(this.backupRestorePointCountGte, backupPlanWhereInput.backupRestorePointCountGte) &&
+        Objects.equals(this.backupRestorePointCountIn, backupPlanWhereInput.backupRestorePointCountIn) &&
+        Objects.equals(this.backupRestorePointCountLt, backupPlanWhereInput.backupRestorePointCountLt) &&
+        Objects.equals(this.backupRestorePointCountLte, backupPlanWhereInput.backupRestorePointCountLte) &&
+        Objects.equals(this.backupRestorePointCountNot, backupPlanWhereInput.backupRestorePointCountNot) &&
+        Objects.equals(this.backupRestorePointCountNotIn, backupPlanWhereInput.backupRestorePointCountNotIn) &&
+        Objects.equals(this.backupRestorePointsEvery, backupPlanWhereInput.backupRestorePointsEvery) &&
+        Objects.equals(this.backupRestorePointsNone, backupPlanWhereInput.backupRestorePointsNone) &&
+        Objects.equals(this.backupRestorePointsSome, backupPlanWhereInput.backupRestorePointsSome) &&
         Objects.equals(this.backupService, backupPlanWhereInput.backupService) &&
         Objects.equals(this.backupStoreRepository, backupPlanWhereInput.backupStoreRepository) &&
+        Objects.equals(this.backupTotalSize, backupPlanWhereInput.backupTotalSize) &&
+        Objects.equals(this.backupTotalSizeGt, backupPlanWhereInput.backupTotalSizeGt) &&
+        Objects.equals(this.backupTotalSizeGte, backupPlanWhereInput.backupTotalSizeGte) &&
+        Objects.equals(this.backupTotalSizeIn, backupPlanWhereInput.backupTotalSizeIn) &&
+        Objects.equals(this.backupTotalSizeLt, backupPlanWhereInput.backupTotalSizeLt) &&
+        Objects.equals(this.backupTotalSizeLte, backupPlanWhereInput.backupTotalSizeLte) &&
+        Objects.equals(this.backupTotalSizeNot, backupPlanWhereInput.backupTotalSizeNot) &&
+        Objects.equals(this.backupTotalSizeNotIn, backupPlanWhereInput.backupTotalSizeNotIn) &&
         Objects.equals(this.compression, backupPlanWhereInput.compression) &&
         Objects.equals(this.compressionNot, backupPlanWhereInput.compressionNot) &&
         Objects.equals(this.compressionRatio, backupPlanWhereInput.compressionRatio) &&
@@ -6539,6 +8902,10 @@ public class BackupPlanWhereInput {
         Objects.equals(this.createdAtLte, backupPlanWhereInput.createdAtLte) &&
         Objects.equals(this.createdAtNot, backupPlanWhereInput.createdAtNot) &&
         Objects.equals(this.createdAtNotIn, backupPlanWhereInput.createdAtNotIn) &&
+        Objects.equals(this.deleteStrategy, backupPlanWhereInput.deleteStrategy) &&
+        Objects.equals(this.deleteStrategyIn, backupPlanWhereInput.deleteStrategyIn) &&
+        Objects.equals(this.deleteStrategyNot, backupPlanWhereInput.deleteStrategyNot) &&
+        Objects.equals(this.deleteStrategyNotIn, backupPlanWhereInput.deleteStrategyNotIn) &&
         Objects.equals(this.description, backupPlanWhereInput.description) &&
         Objects.equals(this.descriptionContains, backupPlanWhereInput.descriptionContains) &&
         Objects.equals(this.descriptionEndsWith, backupPlanWhereInput.descriptionEndsWith) &&
@@ -6611,6 +8978,20 @@ public class BackupPlanWhereInput {
         Objects.equals(this.keepPolicyValueNotIn, backupPlanWhereInput.keepPolicyValueNotIn) &&
         Objects.equals(this.lastExecuteStatus, backupPlanWhereInput.lastExecuteStatus) &&
         Objects.equals(this.lastExecuteStatusIn, backupPlanWhereInput.lastExecuteStatusIn) &&
+        Objects.equals(this.lastExecuteStatusMessage, backupPlanWhereInput.lastExecuteStatusMessage) &&
+        Objects.equals(this.lastExecuteStatusMessageContains, backupPlanWhereInput.lastExecuteStatusMessageContains) &&
+        Objects.equals(this.lastExecuteStatusMessageEndsWith, backupPlanWhereInput.lastExecuteStatusMessageEndsWith) &&
+        Objects.equals(this.lastExecuteStatusMessageGt, backupPlanWhereInput.lastExecuteStatusMessageGt) &&
+        Objects.equals(this.lastExecuteStatusMessageGte, backupPlanWhereInput.lastExecuteStatusMessageGte) &&
+        Objects.equals(this.lastExecuteStatusMessageIn, backupPlanWhereInput.lastExecuteStatusMessageIn) &&
+        Objects.equals(this.lastExecuteStatusMessageLt, backupPlanWhereInput.lastExecuteStatusMessageLt) &&
+        Objects.equals(this.lastExecuteStatusMessageLte, backupPlanWhereInput.lastExecuteStatusMessageLte) &&
+        Objects.equals(this.lastExecuteStatusMessageNot, backupPlanWhereInput.lastExecuteStatusMessageNot) &&
+        Objects.equals(this.lastExecuteStatusMessageNotContains, backupPlanWhereInput.lastExecuteStatusMessageNotContains) &&
+        Objects.equals(this.lastExecuteStatusMessageNotEndsWith, backupPlanWhereInput.lastExecuteStatusMessageNotEndsWith) &&
+        Objects.equals(this.lastExecuteStatusMessageNotIn, backupPlanWhereInput.lastExecuteStatusMessageNotIn) &&
+        Objects.equals(this.lastExecuteStatusMessageNotStartsWith, backupPlanWhereInput.lastExecuteStatusMessageNotStartsWith) &&
+        Objects.equals(this.lastExecuteStatusMessageStartsWith, backupPlanWhereInput.lastExecuteStatusMessageStartsWith) &&
         Objects.equals(this.lastExecuteStatusNot, backupPlanWhereInput.lastExecuteStatusNot) &&
         Objects.equals(this.lastExecuteStatusNotIn, backupPlanWhereInput.lastExecuteStatusNotIn) &&
         Objects.equals(this.lastExecuteSuccessJobCount, backupPlanWhereInput.lastExecuteSuccessJobCount) &&
@@ -6639,6 +9020,20 @@ public class BackupPlanWhereInput {
         Objects.equals(this.lastExecutedAtNotIn, backupPlanWhereInput.lastExecutedAtNotIn) &&
         Objects.equals(this.lastManualExecuteStatus, backupPlanWhereInput.lastManualExecuteStatus) &&
         Objects.equals(this.lastManualExecuteStatusIn, backupPlanWhereInput.lastManualExecuteStatusIn) &&
+        Objects.equals(this.lastManualExecuteStatusMessage, backupPlanWhereInput.lastManualExecuteStatusMessage) &&
+        Objects.equals(this.lastManualExecuteStatusMessageContains, backupPlanWhereInput.lastManualExecuteStatusMessageContains) &&
+        Objects.equals(this.lastManualExecuteStatusMessageEndsWith, backupPlanWhereInput.lastManualExecuteStatusMessageEndsWith) &&
+        Objects.equals(this.lastManualExecuteStatusMessageGt, backupPlanWhereInput.lastManualExecuteStatusMessageGt) &&
+        Objects.equals(this.lastManualExecuteStatusMessageGte, backupPlanWhereInput.lastManualExecuteStatusMessageGte) &&
+        Objects.equals(this.lastManualExecuteStatusMessageIn, backupPlanWhereInput.lastManualExecuteStatusMessageIn) &&
+        Objects.equals(this.lastManualExecuteStatusMessageLt, backupPlanWhereInput.lastManualExecuteStatusMessageLt) &&
+        Objects.equals(this.lastManualExecuteStatusMessageLte, backupPlanWhereInput.lastManualExecuteStatusMessageLte) &&
+        Objects.equals(this.lastManualExecuteStatusMessageNot, backupPlanWhereInput.lastManualExecuteStatusMessageNot) &&
+        Objects.equals(this.lastManualExecuteStatusMessageNotContains, backupPlanWhereInput.lastManualExecuteStatusMessageNotContains) &&
+        Objects.equals(this.lastManualExecuteStatusMessageNotEndsWith, backupPlanWhereInput.lastManualExecuteStatusMessageNotEndsWith) &&
+        Objects.equals(this.lastManualExecuteStatusMessageNotIn, backupPlanWhereInput.lastManualExecuteStatusMessageNotIn) &&
+        Objects.equals(this.lastManualExecuteStatusMessageNotStartsWith, backupPlanWhereInput.lastManualExecuteStatusMessageNotStartsWith) &&
+        Objects.equals(this.lastManualExecuteStatusMessageStartsWith, backupPlanWhereInput.lastManualExecuteStatusMessageStartsWith) &&
         Objects.equals(this.lastManualExecuteStatusNot, backupPlanWhereInput.lastManualExecuteStatusNot) &&
         Objects.equals(this.lastManualExecuteStatusNotIn, backupPlanWhereInput.lastManualExecuteStatusNotIn) &&
         Objects.equals(this.lastManualExecuteSuccessJobCount, backupPlanWhereInput.lastManualExecuteSuccessJobCount) &&
@@ -6665,6 +9060,14 @@ public class BackupPlanWhereInput {
         Objects.equals(this.lastManualExecutedAtLte, backupPlanWhereInput.lastManualExecutedAtLte) &&
         Objects.equals(this.lastManualExecutedAtNot, backupPlanWhereInput.lastManualExecutedAtNot) &&
         Objects.equals(this.lastManualExecutedAtNotIn, backupPlanWhereInput.lastManualExecutedAtNotIn) &&
+        Objects.equals(this.logicalSize, backupPlanWhereInput.logicalSize) &&
+        Objects.equals(this.logicalSizeGt, backupPlanWhereInput.logicalSizeGt) &&
+        Objects.equals(this.logicalSizeGte, backupPlanWhereInput.logicalSizeGte) &&
+        Objects.equals(this.logicalSizeIn, backupPlanWhereInput.logicalSizeIn) &&
+        Objects.equals(this.logicalSizeLt, backupPlanWhereInput.logicalSizeLt) &&
+        Objects.equals(this.logicalSizeLte, backupPlanWhereInput.logicalSizeLte) &&
+        Objects.equals(this.logicalSizeNot, backupPlanWhereInput.logicalSizeNot) &&
+        Objects.equals(this.logicalSizeNotIn, backupPlanWhereInput.logicalSizeNotIn) &&
         Objects.equals(this.name, backupPlanWhereInput.name) &&
         Objects.equals(this.nameContains, backupPlanWhereInput.nameContains) &&
         Objects.equals(this.nameEndsWith, backupPlanWhereInput.nameEndsWith) &&
@@ -6687,6 +9090,10 @@ public class BackupPlanWhereInput {
         Objects.equals(this.nextExecuteTimeLte, backupPlanWhereInput.nextExecuteTimeLte) &&
         Objects.equals(this.nextExecuteTimeNot, backupPlanWhereInput.nextExecuteTimeNot) &&
         Objects.equals(this.nextExecuteTimeNotIn, backupPlanWhereInput.nextExecuteTimeNotIn) &&
+        Objects.equals(this.phase, backupPlanWhereInput.phase) &&
+        Objects.equals(this.phaseIn, backupPlanWhereInput.phaseIn) &&
+        Objects.equals(this.phaseNot, backupPlanWhereInput.phaseNot) &&
+        Objects.equals(this.phaseNotIn, backupPlanWhereInput.phaseNotIn) &&
         Objects.equals(this.physicalSize, backupPlanWhereInput.physicalSize) &&
         Objects.equals(this.physicalSizeGt, backupPlanWhereInput.physicalSizeGt) &&
         Objects.equals(this.physicalSizeGte, backupPlanWhereInput.physicalSizeGte) &&
@@ -6711,6 +9118,17 @@ public class BackupPlanWhereInput {
         Objects.equals(this.validSizeOfBackupObjectLte, backupPlanWhereInput.validSizeOfBackupObjectLte) &&
         Objects.equals(this.validSizeOfBackupObjectNot, backupPlanWhereInput.validSizeOfBackupObjectNot) &&
         Objects.equals(this.validSizeOfBackupObjectNotIn, backupPlanWhereInput.validSizeOfBackupObjectNotIn) &&
+        Objects.equals(this.validSizeOfRestorePoint, backupPlanWhereInput.validSizeOfRestorePoint) &&
+        Objects.equals(this.validSizeOfRestorePointGt, backupPlanWhereInput.validSizeOfRestorePointGt) &&
+        Objects.equals(this.validSizeOfRestorePointGte, backupPlanWhereInput.validSizeOfRestorePointGte) &&
+        Objects.equals(this.validSizeOfRestorePointIn, backupPlanWhereInput.validSizeOfRestorePointIn) &&
+        Objects.equals(this.validSizeOfRestorePointLt, backupPlanWhereInput.validSizeOfRestorePointLt) &&
+        Objects.equals(this.validSizeOfRestorePointLte, backupPlanWhereInput.validSizeOfRestorePointLte) &&
+        Objects.equals(this.validSizeOfRestorePointNot, backupPlanWhereInput.validSizeOfRestorePointNot) &&
+        Objects.equals(this.validSizeOfRestorePointNotIn, backupPlanWhereInput.validSizeOfRestorePointNotIn) &&
+        Objects.equals(this.vmsEvery, backupPlanWhereInput.vmsEvery) &&
+        Objects.equals(this.vmsNone, backupPlanWhereInput.vmsNone) &&
+        Objects.equals(this.vmsSome, backupPlanWhereInput.vmsSome) &&
         Objects.equals(this.windowEnd, backupPlanWhereInput.windowEnd) &&
         Objects.equals(this.windowEndContains, backupPlanWhereInput.windowEndContains) &&
         Objects.equals(this.windowEndEndsWith, backupPlanWhereInput.windowEndEndsWith) &&
@@ -6747,7 +9165,7 @@ public class BackupPlanWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, backupService, backupStoreRepository, compression, compressionNot, compressionRatio, compressionRatioGt, compressionRatioGte, compressionRatioIn, compressionRatioLt, compressionRatioLte, compressionRatioNot, compressionRatioNotIn, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enableWindow, enableWindowNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, fullInterval, fullIntervalGt, fullIntervalGte, fullIntervalIn, fullIntervalLt, fullIntervalLte, fullIntervalNot, fullIntervalNotIn, fullPeriod, fullPeriodIn, fullPeriodNot, fullPeriodNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, incrementalInterval, incrementalIntervalGt, incrementalIntervalGte, incrementalIntervalIn, incrementalIntervalLt, incrementalIntervalLte, incrementalIntervalNot, incrementalIntervalNotIn, incrementalPeriod, incrementalPeriodIn, incrementalPeriodNot, incrementalPeriodNotIn, keepPolicy, keepPolicyIn, keepPolicyNot, keepPolicyNotIn, keepPolicyValue, keepPolicyValueGt, keepPolicyValueGte, keepPolicyValueIn, keepPolicyValueLt, keepPolicyValueLte, keepPolicyValueNot, keepPolicyValueNotIn, lastExecuteStatus, lastExecuteStatusIn, lastExecuteStatusNot, lastExecuteStatusNotIn, lastExecuteSuccessJobCount, lastExecuteSuccessJobCountGt, lastExecuteSuccessJobCountGte, lastExecuteSuccessJobCountIn, lastExecuteSuccessJobCountLt, lastExecuteSuccessJobCountLte, lastExecuteSuccessJobCountNot, lastExecuteSuccessJobCountNotIn, lastExecuteTotalJobCount, lastExecuteTotalJobCountGt, lastExecuteTotalJobCountGte, lastExecuteTotalJobCountIn, lastExecuteTotalJobCountLt, lastExecuteTotalJobCountLte, lastExecuteTotalJobCountNot, lastExecuteTotalJobCountNotIn, lastExecutedAt, lastExecutedAtGt, lastExecutedAtGte, lastExecutedAtIn, lastExecutedAtLt, lastExecutedAtLte, lastExecutedAtNot, lastExecutedAtNotIn, lastManualExecuteStatus, lastManualExecuteStatusIn, lastManualExecuteStatusNot, lastManualExecuteStatusNotIn, lastManualExecuteSuccessJobCount, lastManualExecuteSuccessJobCountGt, lastManualExecuteSuccessJobCountGte, lastManualExecuteSuccessJobCountIn, lastManualExecuteSuccessJobCountLt, lastManualExecuteSuccessJobCountLte, lastManualExecuteSuccessJobCountNot, lastManualExecuteSuccessJobCountNotIn, lastManualExecuteTotalJobCount, lastManualExecuteTotalJobCountGt, lastManualExecuteTotalJobCountGte, lastManualExecuteTotalJobCountIn, lastManualExecuteTotalJobCountLt, lastManualExecuteTotalJobCountLte, lastManualExecuteTotalJobCountNot, lastManualExecuteTotalJobCountNotIn, lastManualExecutedAt, lastManualExecutedAtGt, lastManualExecutedAtGte, lastManualExecutedAtIn, lastManualExecutedAtLt, lastManualExecutedAtLte, lastManualExecutedAtNot, lastManualExecutedAtNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nextExecuteTime, nextExecuteTimeGt, nextExecuteTimeGte, nextExecuteTimeIn, nextExecuteTimeLt, nextExecuteTimeLte, nextExecuteTimeNot, nextExecuteTimeNotIn, physicalSize, physicalSizeGt, physicalSizeGte, physicalSizeIn, physicalSizeLt, physicalSizeLte, physicalSizeNot, physicalSizeNotIn, snapshotConsistentType, snapshotConsistentTypeIn, snapshotConsistentTypeNot, snapshotConsistentTypeNotIn, status, statusIn, statusNot, statusNotIn, validSizeOfBackupObject, validSizeOfBackupObjectGt, validSizeOfBackupObjectGte, validSizeOfBackupObjectIn, validSizeOfBackupObjectLt, validSizeOfBackupObjectLte, validSizeOfBackupObjectNot, validSizeOfBackupObjectNotIn, windowEnd, windowEndContains, windowEndEndsWith, windowEndGt, windowEndGte, windowEndIn, windowEndLt, windowEndLte, windowEndNot, windowEndNotContains, windowEndNotEndsWith, windowEndNotIn, windowEndNotStartsWith, windowEndStartsWith, windowStart, windowStartContains, windowStartEndsWith, windowStartGt, windowStartGte, windowStartIn, windowStartLt, windowStartLte, windowStartNot, windowStartNotContains, windowStartNotEndsWith, windowStartNotIn, windowStartNotStartsWith, windowStartStartsWith);
+    return Objects.hash(AND, NOT, OR, backupDelayOption, backupDelayOptionIn, backupDelayOptionNot, backupDelayOptionNotIn, backupPlanExecutionsEvery, backupPlanExecutionsNone, backupPlanExecutionsSome, backupRestorePointCount, backupRestorePointCountGt, backupRestorePointCountGte, backupRestorePointCountIn, backupRestorePointCountLt, backupRestorePointCountLte, backupRestorePointCountNot, backupRestorePointCountNotIn, backupRestorePointsEvery, backupRestorePointsNone, backupRestorePointsSome, backupService, backupStoreRepository, backupTotalSize, backupTotalSizeGt, backupTotalSizeGte, backupTotalSizeIn, backupTotalSizeLt, backupTotalSizeLte, backupTotalSizeNot, backupTotalSizeNotIn, compression, compressionNot, compressionRatio, compressionRatioGt, compressionRatioGte, compressionRatioIn, compressionRatioLt, compressionRatioLte, compressionRatioNot, compressionRatioNotIn, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, deleteStrategy, deleteStrategyIn, deleteStrategyNot, deleteStrategyNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, enableWindow, enableWindowNot, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, fullInterval, fullIntervalGt, fullIntervalGte, fullIntervalIn, fullIntervalLt, fullIntervalLte, fullIntervalNot, fullIntervalNotIn, fullPeriod, fullPeriodIn, fullPeriodNot, fullPeriodNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, incrementalInterval, incrementalIntervalGt, incrementalIntervalGte, incrementalIntervalIn, incrementalIntervalLt, incrementalIntervalLte, incrementalIntervalNot, incrementalIntervalNotIn, incrementalPeriod, incrementalPeriodIn, incrementalPeriodNot, incrementalPeriodNotIn, keepPolicy, keepPolicyIn, keepPolicyNot, keepPolicyNotIn, keepPolicyValue, keepPolicyValueGt, keepPolicyValueGte, keepPolicyValueIn, keepPolicyValueLt, keepPolicyValueLte, keepPolicyValueNot, keepPolicyValueNotIn, lastExecuteStatus, lastExecuteStatusIn, lastExecuteStatusMessage, lastExecuteStatusMessageContains, lastExecuteStatusMessageEndsWith, lastExecuteStatusMessageGt, lastExecuteStatusMessageGte, lastExecuteStatusMessageIn, lastExecuteStatusMessageLt, lastExecuteStatusMessageLte, lastExecuteStatusMessageNot, lastExecuteStatusMessageNotContains, lastExecuteStatusMessageNotEndsWith, lastExecuteStatusMessageNotIn, lastExecuteStatusMessageNotStartsWith, lastExecuteStatusMessageStartsWith, lastExecuteStatusNot, lastExecuteStatusNotIn, lastExecuteSuccessJobCount, lastExecuteSuccessJobCountGt, lastExecuteSuccessJobCountGte, lastExecuteSuccessJobCountIn, lastExecuteSuccessJobCountLt, lastExecuteSuccessJobCountLte, lastExecuteSuccessJobCountNot, lastExecuteSuccessJobCountNotIn, lastExecuteTotalJobCount, lastExecuteTotalJobCountGt, lastExecuteTotalJobCountGte, lastExecuteTotalJobCountIn, lastExecuteTotalJobCountLt, lastExecuteTotalJobCountLte, lastExecuteTotalJobCountNot, lastExecuteTotalJobCountNotIn, lastExecutedAt, lastExecutedAtGt, lastExecutedAtGte, lastExecutedAtIn, lastExecutedAtLt, lastExecutedAtLte, lastExecutedAtNot, lastExecutedAtNotIn, lastManualExecuteStatus, lastManualExecuteStatusIn, lastManualExecuteStatusMessage, lastManualExecuteStatusMessageContains, lastManualExecuteStatusMessageEndsWith, lastManualExecuteStatusMessageGt, lastManualExecuteStatusMessageGte, lastManualExecuteStatusMessageIn, lastManualExecuteStatusMessageLt, lastManualExecuteStatusMessageLte, lastManualExecuteStatusMessageNot, lastManualExecuteStatusMessageNotContains, lastManualExecuteStatusMessageNotEndsWith, lastManualExecuteStatusMessageNotIn, lastManualExecuteStatusMessageNotStartsWith, lastManualExecuteStatusMessageStartsWith, lastManualExecuteStatusNot, lastManualExecuteStatusNotIn, lastManualExecuteSuccessJobCount, lastManualExecuteSuccessJobCountGt, lastManualExecuteSuccessJobCountGte, lastManualExecuteSuccessJobCountIn, lastManualExecuteSuccessJobCountLt, lastManualExecuteSuccessJobCountLte, lastManualExecuteSuccessJobCountNot, lastManualExecuteSuccessJobCountNotIn, lastManualExecuteTotalJobCount, lastManualExecuteTotalJobCountGt, lastManualExecuteTotalJobCountGte, lastManualExecuteTotalJobCountIn, lastManualExecuteTotalJobCountLt, lastManualExecuteTotalJobCountLte, lastManualExecuteTotalJobCountNot, lastManualExecuteTotalJobCountNotIn, lastManualExecutedAt, lastManualExecutedAtGt, lastManualExecutedAtGte, lastManualExecutedAtIn, lastManualExecutedAtLt, lastManualExecutedAtLte, lastManualExecutedAtNot, lastManualExecutedAtNotIn, logicalSize, logicalSizeGt, logicalSizeGte, logicalSizeIn, logicalSizeLt, logicalSizeLte, logicalSizeNot, logicalSizeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nextExecuteTime, nextExecuteTimeGt, nextExecuteTimeGte, nextExecuteTimeIn, nextExecuteTimeLt, nextExecuteTimeLte, nextExecuteTimeNot, nextExecuteTimeNotIn, phase, phaseIn, phaseNot, phaseNotIn, physicalSize, physicalSizeGt, physicalSizeGte, physicalSizeIn, physicalSizeLt, physicalSizeLte, physicalSizeNot, physicalSizeNotIn, snapshotConsistentType, snapshotConsistentTypeIn, snapshotConsistentTypeNot, snapshotConsistentTypeNotIn, status, statusIn, statusNot, statusNotIn, validSizeOfBackupObject, validSizeOfBackupObjectGt, validSizeOfBackupObjectGte, validSizeOfBackupObjectIn, validSizeOfBackupObjectLt, validSizeOfBackupObjectLte, validSizeOfBackupObjectNot, validSizeOfBackupObjectNotIn, validSizeOfRestorePoint, validSizeOfRestorePointGt, validSizeOfRestorePointGte, validSizeOfRestorePointIn, validSizeOfRestorePointLt, validSizeOfRestorePointLte, validSizeOfRestorePointNot, validSizeOfRestorePointNotIn, vmsEvery, vmsNone, vmsSome, windowEnd, windowEndContains, windowEndEndsWith, windowEndGt, windowEndGte, windowEndIn, windowEndLt, windowEndLte, windowEndNot, windowEndNotContains, windowEndNotEndsWith, windowEndNotIn, windowEndNotStartsWith, windowEndStartsWith, windowStart, windowStartContains, windowStartEndsWith, windowStartGt, windowStartGte, windowStartIn, windowStartLt, windowStartLte, windowStartNot, windowStartNotContains, windowStartNotEndsWith, windowStartNotIn, windowStartNotStartsWith, windowStartStartsWith);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -6764,8 +9182,34 @@ public class BackupPlanWhereInput {
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
     sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+    sb.append("    backupDelayOption: ").append(toIndentedString(backupDelayOption)).append("\n");
+    sb.append("    backupDelayOptionIn: ").append(toIndentedString(backupDelayOptionIn)).append("\n");
+    sb.append("    backupDelayOptionNot: ").append(toIndentedString(backupDelayOptionNot)).append("\n");
+    sb.append("    backupDelayOptionNotIn: ").append(toIndentedString(backupDelayOptionNotIn)).append("\n");
+    sb.append("    backupPlanExecutionsEvery: ").append(toIndentedString(backupPlanExecutionsEvery)).append("\n");
+    sb.append("    backupPlanExecutionsNone: ").append(toIndentedString(backupPlanExecutionsNone)).append("\n");
+    sb.append("    backupPlanExecutionsSome: ").append(toIndentedString(backupPlanExecutionsSome)).append("\n");
+    sb.append("    backupRestorePointCount: ").append(toIndentedString(backupRestorePointCount)).append("\n");
+    sb.append("    backupRestorePointCountGt: ").append(toIndentedString(backupRestorePointCountGt)).append("\n");
+    sb.append("    backupRestorePointCountGte: ").append(toIndentedString(backupRestorePointCountGte)).append("\n");
+    sb.append("    backupRestorePointCountIn: ").append(toIndentedString(backupRestorePointCountIn)).append("\n");
+    sb.append("    backupRestorePointCountLt: ").append(toIndentedString(backupRestorePointCountLt)).append("\n");
+    sb.append("    backupRestorePointCountLte: ").append(toIndentedString(backupRestorePointCountLte)).append("\n");
+    sb.append("    backupRestorePointCountNot: ").append(toIndentedString(backupRestorePointCountNot)).append("\n");
+    sb.append("    backupRestorePointCountNotIn: ").append(toIndentedString(backupRestorePointCountNotIn)).append("\n");
+    sb.append("    backupRestorePointsEvery: ").append(toIndentedString(backupRestorePointsEvery)).append("\n");
+    sb.append("    backupRestorePointsNone: ").append(toIndentedString(backupRestorePointsNone)).append("\n");
+    sb.append("    backupRestorePointsSome: ").append(toIndentedString(backupRestorePointsSome)).append("\n");
     sb.append("    backupService: ").append(toIndentedString(backupService)).append("\n");
     sb.append("    backupStoreRepository: ").append(toIndentedString(backupStoreRepository)).append("\n");
+    sb.append("    backupTotalSize: ").append(toIndentedString(backupTotalSize)).append("\n");
+    sb.append("    backupTotalSizeGt: ").append(toIndentedString(backupTotalSizeGt)).append("\n");
+    sb.append("    backupTotalSizeGte: ").append(toIndentedString(backupTotalSizeGte)).append("\n");
+    sb.append("    backupTotalSizeIn: ").append(toIndentedString(backupTotalSizeIn)).append("\n");
+    sb.append("    backupTotalSizeLt: ").append(toIndentedString(backupTotalSizeLt)).append("\n");
+    sb.append("    backupTotalSizeLte: ").append(toIndentedString(backupTotalSizeLte)).append("\n");
+    sb.append("    backupTotalSizeNot: ").append(toIndentedString(backupTotalSizeNot)).append("\n");
+    sb.append("    backupTotalSizeNotIn: ").append(toIndentedString(backupTotalSizeNotIn)).append("\n");
     sb.append("    compression: ").append(toIndentedString(compression)).append("\n");
     sb.append("    compressionNot: ").append(toIndentedString(compressionNot)).append("\n");
     sb.append("    compressionRatio: ").append(toIndentedString(compressionRatio)).append("\n");
@@ -6784,6 +9228,10 @@ public class BackupPlanWhereInput {
     sb.append("    createdAtLte: ").append(toIndentedString(createdAtLte)).append("\n");
     sb.append("    createdAtNot: ").append(toIndentedString(createdAtNot)).append("\n");
     sb.append("    createdAtNotIn: ").append(toIndentedString(createdAtNotIn)).append("\n");
+    sb.append("    deleteStrategy: ").append(toIndentedString(deleteStrategy)).append("\n");
+    sb.append("    deleteStrategyIn: ").append(toIndentedString(deleteStrategyIn)).append("\n");
+    sb.append("    deleteStrategyNot: ").append(toIndentedString(deleteStrategyNot)).append("\n");
+    sb.append("    deleteStrategyNotIn: ").append(toIndentedString(deleteStrategyNotIn)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptionContains: ").append(toIndentedString(descriptionContains)).append("\n");
     sb.append("    descriptionEndsWith: ").append(toIndentedString(descriptionEndsWith)).append("\n");
@@ -6856,6 +9304,20 @@ public class BackupPlanWhereInput {
     sb.append("    keepPolicyValueNotIn: ").append(toIndentedString(keepPolicyValueNotIn)).append("\n");
     sb.append("    lastExecuteStatus: ").append(toIndentedString(lastExecuteStatus)).append("\n");
     sb.append("    lastExecuteStatusIn: ").append(toIndentedString(lastExecuteStatusIn)).append("\n");
+    sb.append("    lastExecuteStatusMessage: ").append(toIndentedString(lastExecuteStatusMessage)).append("\n");
+    sb.append("    lastExecuteStatusMessageContains: ").append(toIndentedString(lastExecuteStatusMessageContains)).append("\n");
+    sb.append("    lastExecuteStatusMessageEndsWith: ").append(toIndentedString(lastExecuteStatusMessageEndsWith)).append("\n");
+    sb.append("    lastExecuteStatusMessageGt: ").append(toIndentedString(lastExecuteStatusMessageGt)).append("\n");
+    sb.append("    lastExecuteStatusMessageGte: ").append(toIndentedString(lastExecuteStatusMessageGte)).append("\n");
+    sb.append("    lastExecuteStatusMessageIn: ").append(toIndentedString(lastExecuteStatusMessageIn)).append("\n");
+    sb.append("    lastExecuteStatusMessageLt: ").append(toIndentedString(lastExecuteStatusMessageLt)).append("\n");
+    sb.append("    lastExecuteStatusMessageLte: ").append(toIndentedString(lastExecuteStatusMessageLte)).append("\n");
+    sb.append("    lastExecuteStatusMessageNot: ").append(toIndentedString(lastExecuteStatusMessageNot)).append("\n");
+    sb.append("    lastExecuteStatusMessageNotContains: ").append(toIndentedString(lastExecuteStatusMessageNotContains)).append("\n");
+    sb.append("    lastExecuteStatusMessageNotEndsWith: ").append(toIndentedString(lastExecuteStatusMessageNotEndsWith)).append("\n");
+    sb.append("    lastExecuteStatusMessageNotIn: ").append(toIndentedString(lastExecuteStatusMessageNotIn)).append("\n");
+    sb.append("    lastExecuteStatusMessageNotStartsWith: ").append(toIndentedString(lastExecuteStatusMessageNotStartsWith)).append("\n");
+    sb.append("    lastExecuteStatusMessageStartsWith: ").append(toIndentedString(lastExecuteStatusMessageStartsWith)).append("\n");
     sb.append("    lastExecuteStatusNot: ").append(toIndentedString(lastExecuteStatusNot)).append("\n");
     sb.append("    lastExecuteStatusNotIn: ").append(toIndentedString(lastExecuteStatusNotIn)).append("\n");
     sb.append("    lastExecuteSuccessJobCount: ").append(toIndentedString(lastExecuteSuccessJobCount)).append("\n");
@@ -6884,6 +9346,20 @@ public class BackupPlanWhereInput {
     sb.append("    lastExecutedAtNotIn: ").append(toIndentedString(lastExecutedAtNotIn)).append("\n");
     sb.append("    lastManualExecuteStatus: ").append(toIndentedString(lastManualExecuteStatus)).append("\n");
     sb.append("    lastManualExecuteStatusIn: ").append(toIndentedString(lastManualExecuteStatusIn)).append("\n");
+    sb.append("    lastManualExecuteStatusMessage: ").append(toIndentedString(lastManualExecuteStatusMessage)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageContains: ").append(toIndentedString(lastManualExecuteStatusMessageContains)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageEndsWith: ").append(toIndentedString(lastManualExecuteStatusMessageEndsWith)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageGt: ").append(toIndentedString(lastManualExecuteStatusMessageGt)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageGte: ").append(toIndentedString(lastManualExecuteStatusMessageGte)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageIn: ").append(toIndentedString(lastManualExecuteStatusMessageIn)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageLt: ").append(toIndentedString(lastManualExecuteStatusMessageLt)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageLte: ").append(toIndentedString(lastManualExecuteStatusMessageLte)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageNot: ").append(toIndentedString(lastManualExecuteStatusMessageNot)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageNotContains: ").append(toIndentedString(lastManualExecuteStatusMessageNotContains)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageNotEndsWith: ").append(toIndentedString(lastManualExecuteStatusMessageNotEndsWith)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageNotIn: ").append(toIndentedString(lastManualExecuteStatusMessageNotIn)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageNotStartsWith: ").append(toIndentedString(lastManualExecuteStatusMessageNotStartsWith)).append("\n");
+    sb.append("    lastManualExecuteStatusMessageStartsWith: ").append(toIndentedString(lastManualExecuteStatusMessageStartsWith)).append("\n");
     sb.append("    lastManualExecuteStatusNot: ").append(toIndentedString(lastManualExecuteStatusNot)).append("\n");
     sb.append("    lastManualExecuteStatusNotIn: ").append(toIndentedString(lastManualExecuteStatusNotIn)).append("\n");
     sb.append("    lastManualExecuteSuccessJobCount: ").append(toIndentedString(lastManualExecuteSuccessJobCount)).append("\n");
@@ -6910,6 +9386,14 @@ public class BackupPlanWhereInput {
     sb.append("    lastManualExecutedAtLte: ").append(toIndentedString(lastManualExecutedAtLte)).append("\n");
     sb.append("    lastManualExecutedAtNot: ").append(toIndentedString(lastManualExecutedAtNot)).append("\n");
     sb.append("    lastManualExecutedAtNotIn: ").append(toIndentedString(lastManualExecutedAtNotIn)).append("\n");
+    sb.append("    logicalSize: ").append(toIndentedString(logicalSize)).append("\n");
+    sb.append("    logicalSizeGt: ").append(toIndentedString(logicalSizeGt)).append("\n");
+    sb.append("    logicalSizeGte: ").append(toIndentedString(logicalSizeGte)).append("\n");
+    sb.append("    logicalSizeIn: ").append(toIndentedString(logicalSizeIn)).append("\n");
+    sb.append("    logicalSizeLt: ").append(toIndentedString(logicalSizeLt)).append("\n");
+    sb.append("    logicalSizeLte: ").append(toIndentedString(logicalSizeLte)).append("\n");
+    sb.append("    logicalSizeNot: ").append(toIndentedString(logicalSizeNot)).append("\n");
+    sb.append("    logicalSizeNotIn: ").append(toIndentedString(logicalSizeNotIn)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameContains: ").append(toIndentedString(nameContains)).append("\n");
     sb.append("    nameEndsWith: ").append(toIndentedString(nameEndsWith)).append("\n");
@@ -6932,6 +9416,10 @@ public class BackupPlanWhereInput {
     sb.append("    nextExecuteTimeLte: ").append(toIndentedString(nextExecuteTimeLte)).append("\n");
     sb.append("    nextExecuteTimeNot: ").append(toIndentedString(nextExecuteTimeNot)).append("\n");
     sb.append("    nextExecuteTimeNotIn: ").append(toIndentedString(nextExecuteTimeNotIn)).append("\n");
+    sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
+    sb.append("    phaseIn: ").append(toIndentedString(phaseIn)).append("\n");
+    sb.append("    phaseNot: ").append(toIndentedString(phaseNot)).append("\n");
+    sb.append("    phaseNotIn: ").append(toIndentedString(phaseNotIn)).append("\n");
     sb.append("    physicalSize: ").append(toIndentedString(physicalSize)).append("\n");
     sb.append("    physicalSizeGt: ").append(toIndentedString(physicalSizeGt)).append("\n");
     sb.append("    physicalSizeGte: ").append(toIndentedString(physicalSizeGte)).append("\n");
@@ -6956,6 +9444,17 @@ public class BackupPlanWhereInput {
     sb.append("    validSizeOfBackupObjectLte: ").append(toIndentedString(validSizeOfBackupObjectLte)).append("\n");
     sb.append("    validSizeOfBackupObjectNot: ").append(toIndentedString(validSizeOfBackupObjectNot)).append("\n");
     sb.append("    validSizeOfBackupObjectNotIn: ").append(toIndentedString(validSizeOfBackupObjectNotIn)).append("\n");
+    sb.append("    validSizeOfRestorePoint: ").append(toIndentedString(validSizeOfRestorePoint)).append("\n");
+    sb.append("    validSizeOfRestorePointGt: ").append(toIndentedString(validSizeOfRestorePointGt)).append("\n");
+    sb.append("    validSizeOfRestorePointGte: ").append(toIndentedString(validSizeOfRestorePointGte)).append("\n");
+    sb.append("    validSizeOfRestorePointIn: ").append(toIndentedString(validSizeOfRestorePointIn)).append("\n");
+    sb.append("    validSizeOfRestorePointLt: ").append(toIndentedString(validSizeOfRestorePointLt)).append("\n");
+    sb.append("    validSizeOfRestorePointLte: ").append(toIndentedString(validSizeOfRestorePointLte)).append("\n");
+    sb.append("    validSizeOfRestorePointNot: ").append(toIndentedString(validSizeOfRestorePointNot)).append("\n");
+    sb.append("    validSizeOfRestorePointNotIn: ").append(toIndentedString(validSizeOfRestorePointNotIn)).append("\n");
+    sb.append("    vmsEvery: ").append(toIndentedString(vmsEvery)).append("\n");
+    sb.append("    vmsNone: ").append(toIndentedString(vmsNone)).append("\n");
+    sb.append("    vmsSome: ").append(toIndentedString(vmsSome)).append("\n");
     sb.append("    windowEnd: ").append(toIndentedString(windowEnd)).append("\n");
     sb.append("    windowEndContains: ").append(toIndentedString(windowEndContains)).append("\n");
     sb.append("    windowEndEndsWith: ").append(toIndentedString(windowEndEndsWith)).append("\n");
