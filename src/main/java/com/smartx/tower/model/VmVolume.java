@@ -102,6 +102,14 @@ public class VmVolume {
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
   private Long uniqueSize;
 
+  public static final String SERIALIZED_NAME_USED_SIZE = "used_size";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE)
+  private Long usedSize;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE = "used_size_usage";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE)
+  private Double usedSizeUsage;
+
   public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
   @SerializedName(SERIALIZED_NAME_VM_DISKS)
   private List<NestedVmDisk> vmDisks = null;
@@ -554,6 +562,52 @@ public class VmVolume {
   }
 
 
+  public VmVolume usedSize(Long usedSize) {
+    
+    this.usedSize = usedSize;
+    return this;
+  }
+
+   /**
+   * Get usedSize
+   * @return usedSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSize() {
+    return usedSize;
+  }
+
+
+  public void setUsedSize(Long usedSize) {
+    this.usedSize = usedSize;
+  }
+
+
+  public VmVolume usedSizeUsage(Double usedSizeUsage) {
+    
+    this.usedSizeUsage = usedSizeUsage;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsage
+   * @return usedSizeUsage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsage() {
+    return usedSizeUsage;
+  }
+
+
+  public void setUsedSizeUsage(Double usedSizeUsage) {
+    this.usedSizeUsage = usedSizeUsage;
+  }
+
+
   public VmVolume vmDisks(List<NestedVmDisk> vmDisks) {
     
     this.vmDisks = vmDisks;
@@ -613,6 +667,8 @@ public class VmVolume {
         Objects.equals(this.type, vmVolume.type) &&
         Objects.equals(this.uniqueLogicalSize, vmVolume.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, vmVolume.uniqueSize) &&
+        Objects.equals(this.usedSize, vmVolume.usedSize) &&
+        Objects.equals(this.usedSizeUsage, vmVolume.usedSizeUsage) &&
         Objects.equals(this.vmDisks, vmVolume.vmDisks);
   }
 
@@ -622,7 +678,7 @@ public class VmVolume {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, description, elfStoragePolicy, entityAsyncStatus, guestSizeUsage, guestUsedSize, id, labels, localCreatedAt, localId, lun, mounting, name, path, sharing, size, type, uniqueLogicalSize, uniqueSize, vmDisks);
+    return Objects.hash(cluster, description, elfStoragePolicy, entityAsyncStatus, guestSizeUsage, guestUsedSize, id, labels, localCreatedAt, localId, lun, mounting, name, path, sharing, size, type, uniqueLogicalSize, uniqueSize, usedSize, usedSizeUsage, vmDisks);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -655,6 +711,8 @@ public class VmVolume {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
+    sb.append("    usedSize: ").append(toIndentedString(usedSize)).append("\n");
+    sb.append("    usedSizeUsage: ").append(toIndentedString(usedSizeUsage)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
     sb.append("}");
     return sb.toString();

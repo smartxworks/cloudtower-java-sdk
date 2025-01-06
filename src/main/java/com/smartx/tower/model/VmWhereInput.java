@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BackupPlanWhereInput;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.GpuDeviceWhereInput;
@@ -54,6 +55,18 @@ public class VmWhereInput {
   public static final String SERIALIZED_NAME_O_R = "OR";
   @SerializedName(SERIALIZED_NAME_O_R)
   private List<VmWhereInput> OR = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLANS_EVERY = "backup_plans_every";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLANS_EVERY)
+  private BackupPlanWhereInput backupPlansEvery;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLANS_NONE = "backup_plans_none";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLANS_NONE)
+  private BackupPlanWhereInput backupPlansNone;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLANS_SOME = "backup_plans_some";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLANS_SOME)
+  private BackupPlanWhereInput backupPlansSome;
 
   public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
   @SerializedName(SERIALIZED_NAME_BIOS_UUID)
@@ -1587,6 +1600,70 @@ public class VmWhereInput {
   @SerializedName(SERIALIZED_NAME_USB_DEVICES_SOME)
   private UsbDeviceWhereInput usbDevicesSome;
 
+  public static final String SERIALIZED_NAME_USED_SIZE = "used_size";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE)
+  private Long usedSize;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_GT = "used_size_gt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_GT)
+  private Long usedSizeGt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_GTE = "used_size_gte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_GTE)
+  private Long usedSizeGte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_IN = "used_size_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_IN)
+  private List<Long> usedSizeIn = null;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_LT = "used_size_lt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_LT)
+  private Long usedSizeLt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_LTE = "used_size_lte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_LTE)
+  private Long usedSizeLte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_NOT = "used_size_not";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_NOT)
+  private Long usedSizeNot;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_NOT_IN = "used_size_not_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_NOT_IN)
+  private List<Long> usedSizeNotIn = null;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE = "used_size_usage";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE)
+  private Double usedSizeUsage;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_GT = "used_size_usage_gt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_GT)
+  private Double usedSizeUsageGt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_GTE = "used_size_usage_gte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_GTE)
+  private Double usedSizeUsageGte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_IN = "used_size_usage_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_IN)
+  private List<Double> usedSizeUsageIn = null;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_LT = "used_size_usage_lt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_LT)
+  private Double usedSizeUsageLt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_LTE = "used_size_usage_lte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_LTE)
+  private Double usedSizeUsageLte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_NOT = "used_size_usage_not";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_NOT)
+  private Double usedSizeUsageNot;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_NOT_IN = "used_size_usage_not_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_NOT_IN)
+  private List<Double> usedSizeUsageNotIn = null;
+
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
   private Integer vcpu;
@@ -1860,6 +1937,75 @@ public class VmWhereInput {
 
   public void setOR(List<VmWhereInput> OR) {
     this.OR = OR;
+  }
+
+
+  public VmWhereInput backupPlansEvery(BackupPlanWhereInput backupPlansEvery) {
+    
+    this.backupPlansEvery = backupPlansEvery;
+    return this;
+  }
+
+   /**
+   * Get backupPlansEvery
+   * @return backupPlansEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanWhereInput getBackupPlansEvery() {
+    return backupPlansEvery;
+  }
+
+
+  public void setBackupPlansEvery(BackupPlanWhereInput backupPlansEvery) {
+    this.backupPlansEvery = backupPlansEvery;
+  }
+
+
+  public VmWhereInput backupPlansNone(BackupPlanWhereInput backupPlansNone) {
+    
+    this.backupPlansNone = backupPlansNone;
+    return this;
+  }
+
+   /**
+   * Get backupPlansNone
+   * @return backupPlansNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanWhereInput getBackupPlansNone() {
+    return backupPlansNone;
+  }
+
+
+  public void setBackupPlansNone(BackupPlanWhereInput backupPlansNone) {
+    this.backupPlansNone = backupPlansNone;
+  }
+
+
+  public VmWhereInput backupPlansSome(BackupPlanWhereInput backupPlansSome) {
+    
+    this.backupPlansSome = backupPlansSome;
+    return this;
+  }
+
+   /**
+   * Get backupPlansSome
+   * @return backupPlansSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanWhereInput getBackupPlansSome() {
+    return backupPlansSome;
+  }
+
+
+  public void setBackupPlansSome(BackupPlanWhereInput backupPlansSome) {
+    this.backupPlansSome = backupPlansSome;
   }
 
 
@@ -11264,6 +11410,406 @@ public class VmWhereInput {
   }
 
 
+  public VmWhereInput usedSize(Long usedSize) {
+    
+    this.usedSize = usedSize;
+    return this;
+  }
+
+   /**
+   * Get usedSize
+   * @return usedSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSize() {
+    return usedSize;
+  }
+
+
+  public void setUsedSize(Long usedSize) {
+    this.usedSize = usedSize;
+  }
+
+
+  public VmWhereInput usedSizeGt(Long usedSizeGt) {
+    
+    this.usedSizeGt = usedSizeGt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeGt
+   * @return usedSizeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeGt() {
+    return usedSizeGt;
+  }
+
+
+  public void setUsedSizeGt(Long usedSizeGt) {
+    this.usedSizeGt = usedSizeGt;
+  }
+
+
+  public VmWhereInput usedSizeGte(Long usedSizeGte) {
+    
+    this.usedSizeGte = usedSizeGte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeGte
+   * @return usedSizeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeGte() {
+    return usedSizeGte;
+  }
+
+
+  public void setUsedSizeGte(Long usedSizeGte) {
+    this.usedSizeGte = usedSizeGte;
+  }
+
+
+  public VmWhereInput usedSizeIn(List<Long> usedSizeIn) {
+    
+    this.usedSizeIn = usedSizeIn;
+    return this;
+  }
+
+  public VmWhereInput addUsedSizeInItem(Long usedSizeInItem) {
+    if (this.usedSizeIn == null) {
+      this.usedSizeIn = new ArrayList<Long>();
+    }
+    this.usedSizeIn.add(usedSizeInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeIn
+   * @return usedSizeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getUsedSizeIn() {
+    return usedSizeIn;
+  }
+
+
+  public void setUsedSizeIn(List<Long> usedSizeIn) {
+    this.usedSizeIn = usedSizeIn;
+  }
+
+
+  public VmWhereInput usedSizeLt(Long usedSizeLt) {
+    
+    this.usedSizeLt = usedSizeLt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeLt
+   * @return usedSizeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeLt() {
+    return usedSizeLt;
+  }
+
+
+  public void setUsedSizeLt(Long usedSizeLt) {
+    this.usedSizeLt = usedSizeLt;
+  }
+
+
+  public VmWhereInput usedSizeLte(Long usedSizeLte) {
+    
+    this.usedSizeLte = usedSizeLte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeLte
+   * @return usedSizeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeLte() {
+    return usedSizeLte;
+  }
+
+
+  public void setUsedSizeLte(Long usedSizeLte) {
+    this.usedSizeLte = usedSizeLte;
+  }
+
+
+  public VmWhereInput usedSizeNot(Long usedSizeNot) {
+    
+    this.usedSizeNot = usedSizeNot;
+    return this;
+  }
+
+   /**
+   * Get usedSizeNot
+   * @return usedSizeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeNot() {
+    return usedSizeNot;
+  }
+
+
+  public void setUsedSizeNot(Long usedSizeNot) {
+    this.usedSizeNot = usedSizeNot;
+  }
+
+
+  public VmWhereInput usedSizeNotIn(List<Long> usedSizeNotIn) {
+    
+    this.usedSizeNotIn = usedSizeNotIn;
+    return this;
+  }
+
+  public VmWhereInput addUsedSizeNotInItem(Long usedSizeNotInItem) {
+    if (this.usedSizeNotIn == null) {
+      this.usedSizeNotIn = new ArrayList<Long>();
+    }
+    this.usedSizeNotIn.add(usedSizeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeNotIn
+   * @return usedSizeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getUsedSizeNotIn() {
+    return usedSizeNotIn;
+  }
+
+
+  public void setUsedSizeNotIn(List<Long> usedSizeNotIn) {
+    this.usedSizeNotIn = usedSizeNotIn;
+  }
+
+
+  public VmWhereInput usedSizeUsage(Double usedSizeUsage) {
+    
+    this.usedSizeUsage = usedSizeUsage;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsage
+   * @return usedSizeUsage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsage() {
+    return usedSizeUsage;
+  }
+
+
+  public void setUsedSizeUsage(Double usedSizeUsage) {
+    this.usedSizeUsage = usedSizeUsage;
+  }
+
+
+  public VmWhereInput usedSizeUsageGt(Double usedSizeUsageGt) {
+    
+    this.usedSizeUsageGt = usedSizeUsageGt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageGt
+   * @return usedSizeUsageGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageGt() {
+    return usedSizeUsageGt;
+  }
+
+
+  public void setUsedSizeUsageGt(Double usedSizeUsageGt) {
+    this.usedSizeUsageGt = usedSizeUsageGt;
+  }
+
+
+  public VmWhereInput usedSizeUsageGte(Double usedSizeUsageGte) {
+    
+    this.usedSizeUsageGte = usedSizeUsageGte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageGte
+   * @return usedSizeUsageGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageGte() {
+    return usedSizeUsageGte;
+  }
+
+
+  public void setUsedSizeUsageGte(Double usedSizeUsageGte) {
+    this.usedSizeUsageGte = usedSizeUsageGte;
+  }
+
+
+  public VmWhereInput usedSizeUsageIn(List<Double> usedSizeUsageIn) {
+    
+    this.usedSizeUsageIn = usedSizeUsageIn;
+    return this;
+  }
+
+  public VmWhereInput addUsedSizeUsageInItem(Double usedSizeUsageInItem) {
+    if (this.usedSizeUsageIn == null) {
+      this.usedSizeUsageIn = new ArrayList<Double>();
+    }
+    this.usedSizeUsageIn.add(usedSizeUsageInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageIn
+   * @return usedSizeUsageIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getUsedSizeUsageIn() {
+    return usedSizeUsageIn;
+  }
+
+
+  public void setUsedSizeUsageIn(List<Double> usedSizeUsageIn) {
+    this.usedSizeUsageIn = usedSizeUsageIn;
+  }
+
+
+  public VmWhereInput usedSizeUsageLt(Double usedSizeUsageLt) {
+    
+    this.usedSizeUsageLt = usedSizeUsageLt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageLt
+   * @return usedSizeUsageLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageLt() {
+    return usedSizeUsageLt;
+  }
+
+
+  public void setUsedSizeUsageLt(Double usedSizeUsageLt) {
+    this.usedSizeUsageLt = usedSizeUsageLt;
+  }
+
+
+  public VmWhereInput usedSizeUsageLte(Double usedSizeUsageLte) {
+    
+    this.usedSizeUsageLte = usedSizeUsageLte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageLte
+   * @return usedSizeUsageLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageLte() {
+    return usedSizeUsageLte;
+  }
+
+
+  public void setUsedSizeUsageLte(Double usedSizeUsageLte) {
+    this.usedSizeUsageLte = usedSizeUsageLte;
+  }
+
+
+  public VmWhereInput usedSizeUsageNot(Double usedSizeUsageNot) {
+    
+    this.usedSizeUsageNot = usedSizeUsageNot;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageNot
+   * @return usedSizeUsageNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageNot() {
+    return usedSizeUsageNot;
+  }
+
+
+  public void setUsedSizeUsageNot(Double usedSizeUsageNot) {
+    this.usedSizeUsageNot = usedSizeUsageNot;
+  }
+
+
+  public VmWhereInput usedSizeUsageNotIn(List<Double> usedSizeUsageNotIn) {
+    
+    this.usedSizeUsageNotIn = usedSizeUsageNotIn;
+    return this;
+  }
+
+  public VmWhereInput addUsedSizeUsageNotInItem(Double usedSizeUsageNotInItem) {
+    if (this.usedSizeUsageNotIn == null) {
+      this.usedSizeUsageNotIn = new ArrayList<Double>();
+    }
+    this.usedSizeUsageNotIn.add(usedSizeUsageNotInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageNotIn
+   * @return usedSizeUsageNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getUsedSizeUsageNotIn() {
+    return usedSizeUsageNotIn;
+  }
+
+
+  public void setUsedSizeUsageNotIn(List<Double> usedSizeUsageNotIn) {
+    this.usedSizeUsageNotIn = usedSizeUsageNotIn;
+  }
+
+
   public VmWhereInput vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
@@ -12391,6 +12937,9 @@ public class VmWhereInput {
     return Objects.equals(this.AND, vmWhereInput.AND) &&
         Objects.equals(this.NOT, vmWhereInput.NOT) &&
         Objects.equals(this.OR, vmWhereInput.OR) &&
+        Objects.equals(this.backupPlansEvery, vmWhereInput.backupPlansEvery) &&
+        Objects.equals(this.backupPlansNone, vmWhereInput.backupPlansNone) &&
+        Objects.equals(this.backupPlansSome, vmWhereInput.backupPlansSome) &&
         Objects.equals(this.biosUuid, vmWhereInput.biosUuid) &&
         Objects.equals(this.biosUuidContains, vmWhereInput.biosUuidContains) &&
         Objects.equals(this.biosUuidEndsWith, vmWhereInput.biosUuidEndsWith) &&
@@ -12774,6 +13323,22 @@ public class VmWhereInput {
         Objects.equals(this.usbDevicesEvery, vmWhereInput.usbDevicesEvery) &&
         Objects.equals(this.usbDevicesNone, vmWhereInput.usbDevicesNone) &&
         Objects.equals(this.usbDevicesSome, vmWhereInput.usbDevicesSome) &&
+        Objects.equals(this.usedSize, vmWhereInput.usedSize) &&
+        Objects.equals(this.usedSizeGt, vmWhereInput.usedSizeGt) &&
+        Objects.equals(this.usedSizeGte, vmWhereInput.usedSizeGte) &&
+        Objects.equals(this.usedSizeIn, vmWhereInput.usedSizeIn) &&
+        Objects.equals(this.usedSizeLt, vmWhereInput.usedSizeLt) &&
+        Objects.equals(this.usedSizeLte, vmWhereInput.usedSizeLte) &&
+        Objects.equals(this.usedSizeNot, vmWhereInput.usedSizeNot) &&
+        Objects.equals(this.usedSizeNotIn, vmWhereInput.usedSizeNotIn) &&
+        Objects.equals(this.usedSizeUsage, vmWhereInput.usedSizeUsage) &&
+        Objects.equals(this.usedSizeUsageGt, vmWhereInput.usedSizeUsageGt) &&
+        Objects.equals(this.usedSizeUsageGte, vmWhereInput.usedSizeUsageGte) &&
+        Objects.equals(this.usedSizeUsageIn, vmWhereInput.usedSizeUsageIn) &&
+        Objects.equals(this.usedSizeUsageLt, vmWhereInput.usedSizeUsageLt) &&
+        Objects.equals(this.usedSizeUsageLte, vmWhereInput.usedSizeUsageLte) &&
+        Objects.equals(this.usedSizeUsageNot, vmWhereInput.usedSizeUsageNot) &&
+        Objects.equals(this.usedSizeUsageNotIn, vmWhereInput.usedSizeUsageNotIn) &&
         Objects.equals(this.vcpu, vmWhereInput.vcpu) &&
         Objects.equals(this.vcpuGt, vmWhereInput.vcpuGt) &&
         Objects.equals(this.vcpuGte, vmWhereInput.vcpuGte) &&
@@ -12827,7 +13392,7 @@ public class VmWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, biosUuid, biosUuidContains, biosUuidEndsWith, biosUuidGt, biosUuidGte, biosUuidIn, biosUuidLt, biosUuidLte, biosUuidNot, biosUuidNotContains, biosUuidNotEndsWith, biosUuidNotIn, biosUuidNotStartsWith, biosUuidStartsWith, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
+    return Objects.hash(AND, NOT, OR, backupPlansEvery, backupPlansNone, backupPlansSome, biosUuid, biosUuidContains, biosUuidEndsWith, biosUuidGt, biosUuidGte, biosUuidIn, biosUuidLt, biosUuidLte, biosUuidNot, biosUuidNotContains, biosUuidNotEndsWith, biosUuidNotIn, biosUuidNotStartsWith, biosUuidStartsWith, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, cluster, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, cpuUsage, cpuUsageGt, cpuUsageGte, cpuUsageIn, cpuUsageLt, cpuUsageLte, cpuUsageNot, cpuUsageNotIn, deletedAt, deletedAtGt, deletedAtGte, deletedAtIn, deletedAtLt, deletedAtLte, deletedAtNot, deletedAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, dnsServers, dnsServersContains, dnsServersEndsWith, dnsServersGt, dnsServersGte, dnsServersIn, dnsServersLt, dnsServersLte, dnsServersNot, dnsServersNotContains, dnsServersNotEndsWith, dnsServersNotIn, dnsServersNotStartsWith, dnsServersStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, entityFilterResultsEvery, entityFilterResultsNone, entityFilterResultsSome, firmware, firmwareIn, firmwareNot, firmwareNotIn, folder, gpuDevicesEvery, gpuDevicesNone, gpuDevicesSome, guestCpuModel, guestCpuModelContains, guestCpuModelEndsWith, guestCpuModelGt, guestCpuModelGte, guestCpuModelIn, guestCpuModelLt, guestCpuModelLte, guestCpuModelNot, guestCpuModelNotContains, guestCpuModelNotEndsWith, guestCpuModelNotIn, guestCpuModelNotStartsWith, guestCpuModelStartsWith, guestOsType, guestOsTypeIn, guestOsTypeNot, guestOsTypeNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, ha, haNot, host, hostname, hostnameContains, hostnameEndsWith, hostnameGt, hostnameGte, hostnameIn, hostnameLt, hostnameLte, hostnameNot, hostnameNotContains, hostnameNotEndsWith, hostnameNotIn, hostnameNotStartsWith, hostnameStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, inRecycleBin, inRecycleBinNot, internal, internalNot, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, ips, ipsContains, ipsEndsWith, ipsGt, ipsGte, ipsIn, ipsLt, ipsLte, ipsNot, ipsNotContains, ipsNotEndsWith, ipsNotIn, ipsNotStartsWith, ipsStartsWith, isolationPolicy, kernelInfo, kernelInfoContains, kernelInfoEndsWith, kernelInfoGt, kernelInfoGte, kernelInfoIn, kernelInfoLt, kernelInfoLte, kernelInfoNot, kernelInfoNotContains, kernelInfoNotEndsWith, kernelInfoNotIn, kernelInfoNotStartsWith, kernelInfoStartsWith, labelsEvery, labelsNone, labelsSome, lastShutdownTime, lastShutdownTimeGt, lastShutdownTimeGte, lastShutdownTimeIn, lastShutdownTimeLt, lastShutdownTimeLte, lastShutdownTimeNot, lastShutdownTimeNotIn, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, logicalSizeBytes, logicalSizeBytesGt, logicalSizeBytesGte, logicalSizeBytesIn, logicalSizeBytesLt, logicalSizeBytesLte, logicalSizeBytesNot, logicalSizeBytesNotIn, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, memoryUsage, memoryUsageGt, memoryUsageGte, memoryUsageIn, memoryUsageLt, memoryUsageLte, memoryUsageNot, memoryUsageNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, nestedVirtualization, nestedVirtualizationNot, nodeIp, nodeIpContains, nodeIpEndsWith, nodeIpGt, nodeIpGte, nodeIpIn, nodeIpLt, nodeIpLte, nodeIpNot, nodeIpNotContains, nodeIpNotEndsWith, nodeIpNotIn, nodeIpNotStartsWith, nodeIpStartsWith, originalName, originalNameContains, originalNameEndsWith, originalNameGt, originalNameGte, originalNameIn, originalNameLt, originalNameLte, originalNameNot, originalNameNotContains, originalNameNotEndsWith, originalNameNotIn, originalNameNotStartsWith, originalNameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, pciNicsEvery, pciNicsNone, pciNicsSome, _protected, protectedNot, provisionedSize, provisionedSizeGt, provisionedSizeGte, provisionedSizeIn, provisionedSizeLt, provisionedSizeLte, provisionedSizeNot, provisionedSizeNotIn, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, snapshotPlan, snapshotsEvery, snapshotsNone, snapshotsSome, status, statusIn, statusNot, statusNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usbDevicesEvery, usbDevicesNone, usbDevicesSome, usedSize, usedSizeGt, usedSizeGte, usedSizeIn, usedSizeLt, usedSizeLte, usedSizeNot, usedSizeNotIn, usedSizeUsage, usedSizeUsageGt, usedSizeUsageGte, usedSizeUsageIn, usedSizeUsageLt, usedSizeUsageLte, usedSizeUsageNot, usedSizeUsageNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeIn, videoTypeNot, videoTypeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome, vmNicsEvery, vmNicsNone, vmNicsSome, vmPlacementGroupEvery, vmPlacementGroupNone, vmPlacementGroupSome, vmToolsStatus, vmToolsStatusIn, vmToolsStatusNot, vmToolsStatusNotIn, vmToolsVersion, vmToolsVersionContains, vmToolsVersionEndsWith, vmToolsVersionGt, vmToolsVersionGte, vmToolsVersionIn, vmToolsVersionLt, vmToolsVersionLte, vmToolsVersionNot, vmToolsVersionNotContains, vmToolsVersionNotEndsWith, vmToolsVersionNotIn, vmToolsVersionNotStartsWith, vmToolsVersionStartsWith, vmUsage, vmUsageIn, vmUsageNot, vmUsageNotIn, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -12844,6 +13409,9 @@ public class VmWhereInput {
     sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
     sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
     sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+    sb.append("    backupPlansEvery: ").append(toIndentedString(backupPlansEvery)).append("\n");
+    sb.append("    backupPlansNone: ").append(toIndentedString(backupPlansNone)).append("\n");
+    sb.append("    backupPlansSome: ").append(toIndentedString(backupPlansSome)).append("\n");
     sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
     sb.append("    biosUuidContains: ").append(toIndentedString(biosUuidContains)).append("\n");
     sb.append("    biosUuidEndsWith: ").append(toIndentedString(biosUuidEndsWith)).append("\n");
@@ -13227,6 +13795,22 @@ public class VmWhereInput {
     sb.append("    usbDevicesEvery: ").append(toIndentedString(usbDevicesEvery)).append("\n");
     sb.append("    usbDevicesNone: ").append(toIndentedString(usbDevicesNone)).append("\n");
     sb.append("    usbDevicesSome: ").append(toIndentedString(usbDevicesSome)).append("\n");
+    sb.append("    usedSize: ").append(toIndentedString(usedSize)).append("\n");
+    sb.append("    usedSizeGt: ").append(toIndentedString(usedSizeGt)).append("\n");
+    sb.append("    usedSizeGte: ").append(toIndentedString(usedSizeGte)).append("\n");
+    sb.append("    usedSizeIn: ").append(toIndentedString(usedSizeIn)).append("\n");
+    sb.append("    usedSizeLt: ").append(toIndentedString(usedSizeLt)).append("\n");
+    sb.append("    usedSizeLte: ").append(toIndentedString(usedSizeLte)).append("\n");
+    sb.append("    usedSizeNot: ").append(toIndentedString(usedSizeNot)).append("\n");
+    sb.append("    usedSizeNotIn: ").append(toIndentedString(usedSizeNotIn)).append("\n");
+    sb.append("    usedSizeUsage: ").append(toIndentedString(usedSizeUsage)).append("\n");
+    sb.append("    usedSizeUsageGt: ").append(toIndentedString(usedSizeUsageGt)).append("\n");
+    sb.append("    usedSizeUsageGte: ").append(toIndentedString(usedSizeUsageGte)).append("\n");
+    sb.append("    usedSizeUsageIn: ").append(toIndentedString(usedSizeUsageIn)).append("\n");
+    sb.append("    usedSizeUsageLt: ").append(toIndentedString(usedSizeUsageLt)).append("\n");
+    sb.append("    usedSizeUsageLte: ").append(toIndentedString(usedSizeUsageLte)).append("\n");
+    sb.append("    usedSizeUsageNot: ").append(toIndentedString(usedSizeUsageNot)).append("\n");
+    sb.append("    usedSizeUsageNotIn: ").append(toIndentedString(usedSizeUsageNotIn)).append("\n");
     sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
     sb.append("    vcpuGt: ").append(toIndentedString(vcpuGt)).append("\n");
     sb.append("    vcpuGte: ").append(toIndentedString(vcpuGte)).append("\n");

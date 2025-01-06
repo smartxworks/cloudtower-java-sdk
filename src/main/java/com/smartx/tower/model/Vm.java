@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedBackupPlan;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedCpu;
 import com.smartx.tower.model.NestedGpuDevice;
@@ -44,6 +45,10 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class Vm {
+  public static final String SERIALIZED_NAME_BACKUP_PLANS = "backup_plans";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLANS)
+  private List<NestedBackupPlan> backupPlans = null;
+
   public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
   @SerializedName(SERIALIZED_NAME_BIOS_UUID)
   private String biosUuid;
@@ -268,6 +273,14 @@ public class Vm {
   @SerializedName(SERIALIZED_NAME_USB_DEVICES)
   private List<NestedUsbDevice> usbDevices = null;
 
+  public static final String SERIALIZED_NAME_USED_SIZE = "used_size";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE)
+  private Long usedSize;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE = "used_size_usage";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE)
+  private Double usedSizeUsage;
+
   public static final String SERIALIZED_NAME_VCPU = "vcpu";
   @SerializedName(SERIALIZED_NAME_VCPU)
   private Integer vcpu;
@@ -306,6 +319,37 @@ public class Vm {
 
   public Vm() { 
   }
+
+  public Vm backupPlans(List<NestedBackupPlan> backupPlans) {
+    
+    this.backupPlans = backupPlans;
+    return this;
+  }
+
+  public Vm addBackupPlansItem(NestedBackupPlan backupPlansItem) {
+    if (this.backupPlans == null) {
+      this.backupPlans = new ArrayList<NestedBackupPlan>();
+    }
+    this.backupPlans.add(backupPlansItem);
+    return this;
+  }
+
+   /**
+   * Get backupPlans
+   * @return backupPlans
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedBackupPlan> getBackupPlans() {
+    return backupPlans;
+  }
+
+
+  public void setBackupPlans(List<NestedBackupPlan> backupPlans) {
+    this.backupPlans = backupPlans;
+  }
+
 
   public Vm biosUuid(String biosUuid) {
     
@@ -1648,6 +1692,52 @@ public class Vm {
   }
 
 
+  public Vm usedSize(Long usedSize) {
+    
+    this.usedSize = usedSize;
+    return this;
+  }
+
+   /**
+   * Get usedSize
+   * @return usedSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSize() {
+    return usedSize;
+  }
+
+
+  public void setUsedSize(Long usedSize) {
+    this.usedSize = usedSize;
+  }
+
+
+  public Vm usedSizeUsage(Double usedSizeUsage) {
+    
+    this.usedSizeUsage = usedSizeUsage;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsage
+   * @return usedSizeUsage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsage() {
+    return usedSizeUsage;
+  }
+
+
+  public void setUsedSizeUsage(Double usedSizeUsage) {
+    this.usedSizeUsage = usedSizeUsage;
+  }
+
+
   public Vm vcpu(Integer vcpu) {
     
     this.vcpu = vcpu;
@@ -1888,7 +1978,8 @@ public class Vm {
       return false;
     }
     Vm vm = (Vm) o;
-    return Objects.equals(this.biosUuid, vm.biosUuid) &&
+    return Objects.equals(this.backupPlans, vm.backupPlans) &&
+        Objects.equals(this.biosUuid, vm.biosUuid) &&
         Objects.equals(this.clockOffset, vm.clockOffset) &&
         Objects.equals(this.cloudInitSupported, vm.cloudInitSupported) &&
         Objects.equals(this.cluster, vm.cluster) &&
@@ -1944,6 +2035,8 @@ public class Vm {
         Objects.equals(this.uniqueLogicalSize, vm.uniqueLogicalSize) &&
         Objects.equals(this.uniqueSize, vm.uniqueSize) &&
         Objects.equals(this.usbDevices, vm.usbDevices) &&
+        Objects.equals(this.usedSize, vm.usedSize) &&
+        Objects.equals(this.usedSizeUsage, vm.usedSizeUsage) &&
         Objects.equals(this.vcpu, vm.vcpu) &&
         Objects.equals(this.videoType, vm.videoType) &&
         Objects.equals(this.vmDisks, vm.vmDisks) &&
@@ -1961,7 +2054,7 @@ public class Vm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(biosUuid, clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueLogicalSize, uniqueSize, usbDevices, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
+    return Objects.hash(backupPlans, biosUuid, clockOffset, cloudInitSupported, cluster, cpu, cpuModel, cpuUsage, deletedAt, description, dnsServers, entityAsyncStatus, entityFilterResults, firmware, folder, gpuDevices, guestCpuModel, guestOsType, guestSizeUsage, guestUsedSize, ha, host, hostname, id, inRecycleBin, internal, ioPolicy, ips, isolationPolicy, kernelInfo, labels, lastShutdownTime, localCreatedAt, localId, logicalSizeBytes, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, memory, memoryUsage, name, nestedVirtualization, nodeIp, originalName, os, outUninstallUsb, pciNics, _protected, provisionedSize, size, snapshotPlan, snapshots, status, uniqueLogicalSize, uniqueSize, usbDevices, usedSize, usedSizeUsage, vcpu, videoType, vmDisks, vmNics, vmPlacementGroup, vmToolsStatus, vmToolsVersion, vmUsage, winOpt);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1975,6 +2068,7 @@ public class Vm {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Vm {\n");
+    sb.append("    backupPlans: ").append(toIndentedString(backupPlans)).append("\n");
     sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
     sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
     sb.append("    cloudInitSupported: ").append(toIndentedString(cloudInitSupported)).append("\n");
@@ -2031,6 +2125,8 @@ public class Vm {
     sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
     sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
     sb.append("    usbDevices: ").append(toIndentedString(usbDevices)).append("\n");
+    sb.append("    usedSize: ").append(toIndentedString(usedSize)).append("\n");
+    sb.append("    usedSizeUsage: ").append(toIndentedString(usedSizeUsage)).append("\n");
     sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
     sb.append("    videoType: ").append(toIndentedString(videoType)).append("\n");
     sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
