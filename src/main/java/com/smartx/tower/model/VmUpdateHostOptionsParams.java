@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.ConditionalNullable;
 import com.smartx.tower.model.VmUpdateHostOptionsParamsData;
 import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -17,7 +18,7 @@ import java.io.IOException;
  * VmUpdateHostOptionsParams
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmUpdateHostOptionsParams {
+public class VmUpdateHostOptionsParams extends ConditionalNullable.ConditionalNullablePojo {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   private VmUpdateHostOptionsParamsData data;
@@ -26,19 +27,20 @@ public class VmUpdateHostOptionsParams {
   @SerializedName(SERIALIZED_NAME_WHERE)
   private VmWhereInput where;
 
-  public VmUpdateHostOptionsParams() { 
+  public VmUpdateHostOptionsParams() {
   }
 
   public VmUpdateHostOptionsParams data(VmUpdateHostOptionsParamsData data) {
-    
+
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Get data
+   * 
    * @return data
-  **/
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -46,22 +48,21 @@ public class VmUpdateHostOptionsParams {
     return data;
   }
 
-
   public void setData(VmUpdateHostOptionsParamsData data) {
     this.data = data;
   }
 
-
   public VmUpdateHostOptionsParams where(VmWhereInput where) {
-    
+
     this.where = where;
     return this;
   }
 
-   /**
+  /**
    * Get where
+   * 
    * @return where
-  **/
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -69,11 +70,9 @@ public class VmUpdateHostOptionsParams {
     return where;
   }
 
-
   public void setWhere(VmWhereInput where) {
     this.where = where;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -113,6 +112,4 @@ public class VmUpdateHostOptionsParams {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-
