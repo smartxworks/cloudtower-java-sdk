@@ -1,23 +1,35 @@
 package com.smartx.tower.model;
 
 import java.util.Objects;
+import java.util.Set;
 import java.util.Arrays;
+import java.util.HashSet;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.ConditionalNullable.*;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * VmUpdateHostOptionsParamsData
  */
+// @JsonAdapter(VmUpdateHostOptionsParamsData.Serializer.class)
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmUpdateHostOptionsParamsData {
+public class VmUpdateHostOptionsParamsData extends ConditionalNullablePojo {
   public static final String SERIALIZED_NAME_NTP_SERVERS = "ntp_servers";
   @SerializedName(SERIALIZED_NAME_NTP_SERVERS)
   private List<String> ntpServers = null;
@@ -30,12 +42,22 @@ public class VmUpdateHostOptionsParamsData {
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
   private String hostname;
 
-  public VmUpdateHostOptionsParamsData() { 
+  public VmUpdateHostOptionsParamsData() {
   }
 
   public VmUpdateHostOptionsParamsData ntpServers(List<String> ntpServers) {
-    
+
     this.ntpServers = ntpServers;
+    return this;
+  }
+
+  public VmUpdateHostOptionsParamsData presentNtpServers() {
+    _isPresent_.add(SERIALIZED_NAME_NTP_SERVERS);
+    return this;
+  }
+
+  public VmUpdateHostOptionsParamsData absentNtpServers() {
+    _isPresent_.remove(SERIALIZED_NAME_NTP_SERVERS);
     return this;
   }
 
@@ -47,10 +69,11 @@ public class VmUpdateHostOptionsParamsData {
     return this;
   }
 
-   /**
+  /**
    * Get ntpServers
+   * 
    * @return ntpServers
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -58,15 +81,31 @@ public class VmUpdateHostOptionsParamsData {
     return ntpServers;
   }
 
+  public void setPresentNtpServers(boolean present) {
+    if (present) {
+      _isPresent_.add(SERIALIZED_NAME_NTP_SERVERS);
+    } else {
+      _isPresent_.remove(SERIALIZED_NAME_NTP_SERVERS);
+    }
+  }
 
   public void setNtpServers(List<String> ntpServers) {
     this.ntpServers = ntpServers;
   }
 
-
   public VmUpdateHostOptionsParamsData dnsServers(List<String> dnsServers) {
-    
+
     this.dnsServers = dnsServers;
+    return this;
+  }
+
+  public VmUpdateHostOptionsParamsData presentDnsServers() {
+    _isPresent_.add(SERIALIZED_NAME_DNS_SERVERS);
+    return this;
+  }
+
+  public VmUpdateHostOptionsParamsData absentDnsServers() {
+    _isPresent_.remove(SERIALIZED_NAME_DNS_SERVERS);
     return this;
   }
 
@@ -78,10 +117,11 @@ public class VmUpdateHostOptionsParamsData {
     return this;
   }
 
-   /**
+  /**
    * Get dnsServers
+   * 
    * @return dnsServers
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -89,22 +129,39 @@ public class VmUpdateHostOptionsParamsData {
     return dnsServers;
   }
 
-
   public void setDnsServers(List<String> dnsServers) {
     this.dnsServers = dnsServers;
   }
 
+  public void setPresentDnsServers(boolean present) {
+    if (present) {
+      _isPresent_.add(SERIALIZED_NAME_DNS_SERVERS);
+    } else {
+      _isPresent_.remove(SERIALIZED_NAME_DNS_SERVERS);
+    }
+  }
 
   public VmUpdateHostOptionsParamsData hostname(String hostname) {
-    
+
     this.hostname = hostname;
     return this;
   }
 
-   /**
+  public VmUpdateHostOptionsParamsData presentHostname() {
+    _isPresent_.add(SERIALIZED_NAME_HOSTNAME);
+    return this;
+  }
+
+  public VmUpdateHostOptionsParamsData absentHostname() {
+    _isPresent_.remove(SERIALIZED_NAME_HOSTNAME);
+    return this;
+  }
+
+  /**
    * Get hostname
+   * 
    * @return hostname
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -112,11 +169,17 @@ public class VmUpdateHostOptionsParamsData {
     return hostname;
   }
 
-
   public void setHostname(String hostname) {
     this.hostname = hostname;
   }
 
+  public void setPresentHostname(boolean present) {
+    if (present) {
+      _isPresent_.add(SERIALIZED_NAME_HOSTNAME);
+    } else {
+      _isPresent_.remove(SERIALIZED_NAME_HOSTNAME);
+    }
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -158,6 +221,4 @@ public class VmUpdateHostOptionsParamsData {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-
