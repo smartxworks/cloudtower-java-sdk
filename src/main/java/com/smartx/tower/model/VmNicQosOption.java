@@ -1,117 +1,147 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VmNicQosTraffic;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VmNicQosOption
- */
+/** VmNicQosOption */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmNicQosOption {
-  public static final String SERIALIZED_NAME_EGRESS = "egress";
-  @SerializedName(SERIALIZED_NAME_EGRESS)
-  private VmNicQosTraffic egress;
+public class VmNicQosOption extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_EGRESS = "egress";
 
-  public static final String SERIALIZED_NAME_INGRESS = "ingress";
-  @SerializedName(SERIALIZED_NAME_INGRESS)
-  private VmNicQosTraffic ingress;
+    @SerializedName(SERIALIZED_NAME_EGRESS)
+    private VmNicQosTraffic egress;
 
-  public VmNicQosOption() { 
-  }
+    public static final String SERIALIZED_NAME_INGRESS = "ingress";
 
-  public VmNicQosOption egress(VmNicQosTraffic egress) {
-    
-    this.egress = egress;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_INGRESS)
+    private VmNicQosTraffic ingress;
 
-   /**
-   * Get egress
-   * @return egress
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public VmNicQosOption() {}
 
-  public VmNicQosTraffic getEgress() {
-    return egress;
-  }
+    public VmNicQosOption egress(VmNicQosTraffic egress) {
 
-
-  public void setEgress(VmNicQosTraffic egress) {
-    this.egress = egress;
-  }
-
-
-  public VmNicQosOption ingress(VmNicQosTraffic ingress) {
-    
-    this.ingress = ingress;
-    return this;
-  }
-
-   /**
-   * Get ingress
-   * @return ingress
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public VmNicQosTraffic getIngress() {
-    return ingress;
-  }
-
-
-  public void setIngress(VmNicQosTraffic ingress) {
-    this.ingress = ingress;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.egress = egress;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get egress
+     *
+     * @return egress
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmNicQosTraffic getEgress() {
+        return egress;
     }
-    VmNicQosOption vmNicQosOption = (VmNicQosOption) o;
-    return Objects.equals(this.egress, vmNicQosOption.egress) &&
-        Objects.equals(this.ingress, vmNicQosOption.ingress);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(egress, ingress);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmNicQosOption {\n");
-    sb.append("    egress: ").append(toIndentedString(egress)).append("\n");
-    sb.append("    ingress: ").append(toIndentedString(ingress)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setEgress(VmNicQosTraffic egress) {
+        this.egress = egress;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VmNicQosOption egress_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EGRESS);
+        return this;
+    }
+
+    public VmNicQosOption egress_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EGRESS);
+        return this;
+    }
+
+    public void setEgress_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EGRESS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EGRESS);
+        }
+    }
+
+    public boolean getEgress_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EGRESS);
+    }
+
+    public VmNicQosOption ingress(VmNicQosTraffic ingress) {
+
+        this.ingress = ingress;
+        return this;
+    }
+
+    /**
+     * Get ingress
+     *
+     * @return ingress
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmNicQosTraffic getIngress() {
+        return ingress;
+    }
+
+    public void setIngress(VmNicQosTraffic ingress) {
+        this.ingress = ingress;
+    }
+
+    public VmNicQosOption ingress_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INGRESS);
+        return this;
+    }
+
+    public VmNicQosOption ingress_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INGRESS);
+        return this;
+    }
+
+    public void setIngress_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INGRESS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INGRESS);
+        }
+    }
+
+    public boolean getIngress_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INGRESS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmNicQosOption vmNicQosOption = (VmNicQosOption) o;
+        return Objects.equals(this.egress, vmNicQosOption.egress)
+                && Objects.equals(this.ingress, vmNicQosOption.ingress);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(egress, ingress);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmNicQosOption {\n");
+        sb.append("    egress: ").append(toIndentedString(egress)).append("\n");
+        sb.append("    ingress: ").append(toIndentedString(ingress)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

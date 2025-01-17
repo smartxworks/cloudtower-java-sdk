@@ -1,95 +1,105 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VmCdRomParams;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-/**
- * VmAddCdRomParamsData
- */
+/** VmAddCdRomParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmAddCdRomParamsData {
-  public static final String SERIALIZED_NAME_VM_CD_ROMS = "vm_cd_roms";
-  @SerializedName(SERIALIZED_NAME_VM_CD_ROMS)
-  private List<VmCdRomParams> vmCdRoms = new ArrayList<VmCdRomParams>();
+public class VmAddCdRomParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_VM_CD_ROMS = "vm_cd_roms";
 
-  public VmAddCdRomParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_VM_CD_ROMS)
+    private List<VmCdRomParams> vmCdRoms = new ArrayList<VmCdRomParams>();
 
-  public VmAddCdRomParamsData vmCdRoms(List<VmCdRomParams> vmCdRoms) {
-    
-    this.vmCdRoms = vmCdRoms;
-    return this;
-  }
+    public VmAddCdRomParamsData() {}
 
-  public VmAddCdRomParamsData addVmCdRomsItem(VmCdRomParams vmCdRomsItem) {
-    this.vmCdRoms.add(vmCdRomsItem);
-    return this;
-  }
+    public VmAddCdRomParamsData vmCdRoms(List<VmCdRomParams> vmCdRoms) {
 
-   /**
-   * Get vmCdRoms
-   * @return vmCdRoms
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<VmCdRomParams> getVmCdRoms() {
-    return vmCdRoms;
-  }
-
-
-  public void setVmCdRoms(List<VmCdRomParams> vmCdRoms) {
-    this.vmCdRoms = vmCdRoms;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.vmCdRoms = vmCdRoms;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public VmAddCdRomParamsData addVmCdRomsItem(VmCdRomParams vmCdRomsItem) {
+        this.vmCdRoms.add(vmCdRomsItem);
+        return this;
     }
-    VmAddCdRomParamsData vmAddCdRomParamsData = (VmAddCdRomParamsData) o;
-    return Objects.equals(this.vmCdRoms, vmAddCdRomParamsData.vmCdRoms);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(vmCdRoms);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmAddCdRomParamsData {\n");
-    sb.append("    vmCdRoms: ").append(toIndentedString(vmCdRoms)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get vmCdRoms
+     *
+     * @return vmCdRoms
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<VmCdRomParams> getVmCdRoms() {
+        return vmCdRoms;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setVmCdRoms(List<VmCdRomParams> vmCdRoms) {
+        this.vmCdRoms = vmCdRoms;
+    }
+
+    public VmAddCdRomParamsData vmCdRoms_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_CD_ROMS);
+        return this;
+    }
+
+    public VmAddCdRomParamsData vmCdRoms_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_CD_ROMS);
+        return this;
+    }
+
+    public void setVmCdRoms_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_CD_ROMS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_CD_ROMS);
+        }
+    }
+
+    public boolean getVmCdRoms_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_CD_ROMS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmAddCdRomParamsData vmAddCdRomParamsData = (VmAddCdRomParamsData) o;
+        return Objects.equals(this.vmCdRoms, vmAddCdRomParamsData.vmCdRoms);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vmCdRoms);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmAddCdRomParamsData {\n");
+        sb.append("    vmCdRoms: ").append(toIndentedString(vmCdRoms)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

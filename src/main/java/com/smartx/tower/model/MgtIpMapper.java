@@ -1,116 +1,147 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * MgtIpMapper
- */
+/** MgtIpMapper */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class MgtIpMapper {
-  public static final String SERIALIZED_NAME_IP = "ip";
-  @SerializedName(SERIALIZED_NAME_IP)
-  private String ip;
+public class MgtIpMapper extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_IP = "ip";
 
-  public static final String SERIALIZED_NAME_HOST_ID = "host_id";
-  @SerializedName(SERIALIZED_NAME_HOST_ID)
-  private String hostId;
+    @SerializedName(SERIALIZED_NAME_IP)
+    private String ip;
 
-  public MgtIpMapper() { 
-  }
+    public static final String SERIALIZED_NAME_HOST_ID = "host_id";
 
-  public MgtIpMapper ip(String ip) {
-    
-    this.ip = ip;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_HOST_ID)
+    private String hostId;
 
-   /**
-   * Get ip
-   * @return ip
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public MgtIpMapper() {}
 
-  public String getIp() {
-    return ip;
-  }
+    public MgtIpMapper ip(String ip) {
 
-
-  public void setIp(String ip) {
-    this.ip = ip;
-  }
-
-
-  public MgtIpMapper hostId(String hostId) {
-    
-    this.hostId = hostId;
-    return this;
-  }
-
-   /**
-   * Get hostId
-   * @return hostId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getHostId() {
-    return hostId;
-  }
-
-
-  public void setHostId(String hostId) {
-    this.hostId = hostId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.ip = ip;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get ip
+     *
+     * @return ip
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getIp() {
+        return ip;
     }
-    MgtIpMapper mgtIpMapper = (MgtIpMapper) o;
-    return Objects.equals(this.ip, mgtIpMapper.ip) &&
-        Objects.equals(this.hostId, mgtIpMapper.hostId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(ip, hostId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class MgtIpMapper {\n");
-    sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
-    sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setIp(String ip) {
+        this.ip = ip;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public MgtIpMapper ip_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IP);
+        return this;
+    }
+
+    public MgtIpMapper ip_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IP);
+        return this;
+    }
+
+    public void setIp_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IP);
+        }
+    }
+
+    public boolean getIp_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IP);
+    }
+
+    public MgtIpMapper hostId(String hostId) {
+
+        this.hostId = hostId;
+        return this;
+    }
+
+    /**
+     * Get hostId
+     *
+     * @return hostId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getHostId() {
+        return hostId;
+    }
+
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
+    }
+
+    public MgtIpMapper hostId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public MgtIpMapper hostId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public void setHostId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        }
+    }
+
+    public boolean getHostId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HOST_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MgtIpMapper mgtIpMapper = (MgtIpMapper) o;
+        return Objects.equals(this.ip, mgtIpMapper.ip)
+                && Objects.equals(this.hostId, mgtIpMapper.hostId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ip, hostId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class MgtIpMapper {\n");
+        sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+        sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

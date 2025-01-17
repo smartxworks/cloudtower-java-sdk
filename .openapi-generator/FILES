@@ -12,9 +12,11 @@ src/main/java/com/smartx/tower/ApiClient.java
 src/main/java/com/smartx/tower/ApiException.java
 src/main/java/com/smartx/tower/ApiResponse.java
 src/main/java/com/smartx/tower/ClientUtil.java
+src/main/java/com/smartx/tower/ConditionalNullable.java
 src/main/java/com/smartx/tower/Configuration.java
 src/main/java/com/smartx/tower/GzipRequestInterceptor.java
 src/main/java/com/smartx/tower/IsoUtil.java
+src/main/java/com/smartx/tower/JSON.java
 src/main/java/com/smartx/tower/JSON.java
 src/main/java/com/smartx/tower/Pair.java
 src/main/java/com/smartx/tower/ProgressRequestBody.java

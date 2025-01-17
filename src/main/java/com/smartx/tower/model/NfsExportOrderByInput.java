@@ -1,97 +1,91 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets NfsExportOrderByInput
- */
+/** Gets or Sets NfsExportOrderByInput */
 @JsonAdapter(NfsExportOrderByInput.Adapter.class)
 public enum NfsExportOrderByInput {
-  
-  DESCRIPTION_ASC("description_ASC"),
-  
-  DESCRIPTION_DESC("description_DESC"),
-  
-  ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
-  
-  ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
-  
-  EXPORT_INODE_ID_ASC("export_inode_id_ASC"),
-  
-  EXPORT_INODE_ID_DESC("export_inode_id_DESC"),
-  
-  ID_ASC("id_ASC"),
-  
-  ID_DESC("id_DESC"),
-  
-  INTERNAL_ASC("internal_ASC"),
-  
-  INTERNAL_DESC("internal_DESC"),
-  
-  IP_WHITELIST_ASC("ip_whitelist_ASC"),
-  
-  IP_WHITELIST_DESC("ip_whitelist_DESC"),
-  
-  LOCAL_ID_ASC("local_id_ASC"),
-  
-  LOCAL_ID_DESC("local_id_DESC"),
-  
-  NAME_ASC("name_ASC"),
-  
-  NAME_DESC("name_DESC"),
-  
-  REPLICA_NUM_ASC("replica_num_ASC"),
-  
-  REPLICA_NUM_DESC("replica_num_DESC"),
-  
-  THIN_PROVISION_ASC("thin_provision_ASC"),
-  
-  THIN_PROVISION_DESC("thin_provision_DESC"),
-  
-  NFSEXPORTORDERBYINPUT_UNSUPPORTED_ENUM("NFSEXPORTORDERBYINPUT_UNSUPPORTED_ENUM");
-  private String value;
+    DESCRIPTION_ASC("description_ASC"),
 
-  NfsExportOrderByInput(String value) {
-    this.value = value;
-  }
+    DESCRIPTION_DESC("description_DESC"),
 
-  public String getValue() {
-    return value;
-  }
+    ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
 
-  public static NfsExportOrderByInput fromValue(String value) {
-    for (NfsExportOrderByInput b : NfsExportOrderByInput.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    EXPORT_INODE_ID_ASC("export_inode_id_ASC"),
+
+    EXPORT_INODE_ID_DESC("export_inode_id_DESC"),
+
+    ID_ASC("id_ASC"),
+
+    ID_DESC("id_DESC"),
+
+    INTERNAL_ASC("internal_ASC"),
+
+    INTERNAL_DESC("internal_DESC"),
+
+    IP_WHITELIST_ASC("ip_whitelist_ASC"),
+
+    IP_WHITELIST_DESC("ip_whitelist_DESC"),
+
+    LOCAL_ID_ASC("local_id_ASC"),
+
+    LOCAL_ID_DESC("local_id_DESC"),
+
+    NAME_ASC("name_ASC"),
+
+    NAME_DESC("name_DESC"),
+
+    REPLICA_NUM_ASC("replica_num_ASC"),
+
+    REPLICA_NUM_DESC("replica_num_DESC"),
+
+    THIN_PROVISION_ASC("thin_provision_ASC"),
+
+    THIN_PROVISION_DESC("thin_provision_DESC"),
+
+    NFSEXPORTORDERBYINPUT_UNSUPPORTED_ENUM("NFSEXPORTORDERBYINPUT_UNSUPPORTED_ENUM");
+    private String value;
+
+    NfsExportOrderByInput(String value) {
+        this.value = value;
     }
-    return NfsExportOrderByInput.NFSEXPORTORDERBYINPUT_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<NfsExportOrderByInput> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final NfsExportOrderByInput enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public NfsExportOrderByInput read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return NfsExportOrderByInput.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static NfsExportOrderByInput fromValue(String value) {
+        for (NfsExportOrderByInput b : NfsExportOrderByInput.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return NfsExportOrderByInput.NFSEXPORTORDERBYINPUT_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<NfsExportOrderByInput> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final NfsExportOrderByInput enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public NfsExportOrderByInput read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return NfsExportOrderByInput.fromValue(value);
+        }
+    }
 }
-

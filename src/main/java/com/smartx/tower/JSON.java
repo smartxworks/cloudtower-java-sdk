@@ -1,22 +1,17 @@
 package com.smartx.tower;
 
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.google.gson.JsonElement;
-import io.gsonfire.GsonFireBuilder;
-import io.gsonfire.TypeSelector;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-
+import com.smartx.tower.ConditionalNullable.ConditionalNullablePojoAdapterFactory;
 import com.smartx.tower.model.*;
-import okio.ByteString;
-
+import io.gsonfire.GsonFireBuilder;
 import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Type;
@@ -24,9 +19,11 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
 import java.util.Date;
-import java.util.Locale;
 import java.util.Map;
-import java.util.HashMap;
+import okio.ByteString;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
 
 public class JSON {
     private Gson gson;
@@ -36,46 +33,54 @@ public class JSON {
     private OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
     private LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
     private ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+    private ConditionalNullablePojoAdapterFactory conditionalNullablePojoAdapterFactory =
+            new ConditionalNullablePojoAdapterFactory();
 
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
-        GsonFireBuilder fireBuilder = new GsonFireBuilder()
-        ;
+        GsonFireBuilder fireBuilder = new GsonFireBuilder();
         GsonBuilder builder = fireBuilder.createGsonBuilder();
         return builder;
     }
 
-    private static String getDiscriminatorValue(JsonElement readElement, String discriminatorField) {
+    private static String getDiscriminatorValue(
+            JsonElement readElement, String discriminatorField) {
         JsonElement element = readElement.getAsJsonObject().get(discriminatorField);
         if (null == element) {
-            throw new IllegalArgumentException("missing discriminator field: <" + discriminatorField + ">");
+            throw new IllegalArgumentException(
+                    "missing discriminator field: <" + discriminatorField + ">");
         }
         return element.getAsString();
     }
 
     /**
-     * Returns the Java class that implements the OpenAPI schema for the specified discriminator value.
+     * Returns the Java class that implements the OpenAPI schema for the specified discriminator
+     * value.
      *
      * @param classByDiscriminatorValue The map of discriminator values to Java classes.
      * @param discriminatorValue The value of the OpenAPI discriminator in the input data.
      * @return The Java class that implements the OpenAPI schema
      */
-    private static Class getClassByDiscriminator(Map classByDiscriminatorValue, String discriminatorValue) {
+    private static Class getClassByDiscriminator(
+            Map classByDiscriminatorValue, String discriminatorValue) {
         Class clazz = (Class) classByDiscriminatorValue.get(discriminatorValue);
         if (null == clazz) {
-            throw new IllegalArgumentException("cannot determine model class of name: <" + discriminatorValue + ">");
+            throw new IllegalArgumentException(
+                    "cannot determine model class of name: <" + discriminatorValue + ">");
         }
         return clazz;
     }
 
     public JSON() {
-        gson = createGson()
-            .registerTypeAdapter(Date.class, dateTypeAdapter)
-            .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-            .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-            .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-            .registerTypeAdapter(byte[].class, byteArrayAdapter)
-            .create();
+        gson =
+                createGson()
+                        .registerTypeAdapter(Date.class, dateTypeAdapter)
+                        .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
+                        .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
+                        .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
+                        .registerTypeAdapter(byte[].class, byteArrayAdapter)
+                        .registerTypeAdapterFactory(conditionalNullablePojoAdapterFactory)
+                        .create();
     }
 
     /**
@@ -103,7 +108,8 @@ public class JSON {
      *
      * @param lenientOnJson Set it to true to ignore some syntax errors
      * @return JSON
-     * @see <a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
+     * @see <a
+     *     href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
      */
     public JSON setLenientOnJson(boolean lenientOnJson) {
         isLenientOnJson = lenientOnJson;
@@ -123,8 +129,8 @@ public class JSON {
     /**
      * Deserialize the given JSON string to Java object.
      *
-     * @param <T>        Type
-     * @param body       The JSON string
+     * @param <T> Type
+     * @param body The JSON string
      * @param returnType The type to deserialize into
      * @return The deserialized Java object
      */
@@ -133,7 +139,8 @@ public class JSON {
         try {
             if (isLenientOnJson) {
                 JsonReader jsonReader = new JsonReader(new StringReader(body));
-                // see https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
+                // see
+                // https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
                 jsonReader.setLenient(true);
                 return gson.fromJson(jsonReader, returnType);
             } else {
@@ -150,9 +157,7 @@ public class JSON {
         }
     }
 
-    /**
-     * Gson TypeAdapter for Byte Array type
-     */
+    /** Gson TypeAdapter for Byte Array type */
     public class ByteArrayAdapter extends TypeAdapter<byte[]> {
 
         @Override
@@ -178,9 +183,7 @@ public class JSON {
         }
     }
 
-    /**
-     * Gson TypeAdapter for JSR310 OffsetDateTime type
-     */
+    /** Gson TypeAdapter for JSR310 OffsetDateTime type */
     public static class OffsetDateTimeTypeAdapter extends TypeAdapter<OffsetDateTime> {
 
         private DateTimeFormatter formatter;
@@ -215,16 +218,14 @@ public class JSON {
                 default:
                     String date = in.nextString();
                     if (date.endsWith("+0000")) {
-                        date = date.substring(0, date.length()-5) + "Z";
+                        date = date.substring(0, date.length() - 5) + "Z";
                     }
                     return OffsetDateTime.parse(date, formatter);
             }
         }
     }
 
-    /**
-     * Gson TypeAdapter for JSR310 LocalDate type
-     */
+    /** Gson TypeAdapter for JSR310 LocalDate type */
     public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
 
         private DateTimeFormatter formatter;
@@ -274,9 +275,8 @@ public class JSON {
     }
 
     /**
-     * Gson TypeAdapter for java.sql.Date type
-     * If the dateFormat is null, a simple "yyyy-MM-dd" format will be used
-     * (more efficient than SimpleDateFormat).
+     * Gson TypeAdapter for java.sql.Date type If the dateFormat is null, a simple "yyyy-MM-dd"
+     * format will be used (more efficient than SimpleDateFormat).
      */
     public static class SqlDateTypeAdapter extends TypeAdapter<java.sql.Date> {
 
@@ -319,7 +319,8 @@ public class JSON {
                         if (dateFormat != null) {
                             return new java.sql.Date(dateFormat.parse(date).getTime());
                         }
-                        return new java.sql.Date(ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
+                        return new java.sql.Date(
+                                ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
                     } catch (ParseException e) {
                         throw new JsonParseException(e);
                     }
@@ -328,8 +329,8 @@ public class JSON {
     }
 
     /**
-     * Gson TypeAdapter for java.util.Date type
-     * If the dateFormat is null, ISO8601Utils will be used.
+     * Gson TypeAdapter for java.util.Date type If the dateFormat is null, ISO8601Utils will be
+     * used.
      */
     public static class DateTypeAdapter extends TypeAdapter<Date> {
 
@@ -393,5 +394,4 @@ public class JSON {
         sqlDateTypeAdapter.setFormat(dateFormat);
         return this;
     }
-
 }

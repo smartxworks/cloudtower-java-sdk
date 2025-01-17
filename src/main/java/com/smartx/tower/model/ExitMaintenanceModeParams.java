@@ -1,118 +1,148 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.ExitMaintenanceModeInput;
-import com.smartx.tower.model.VmStartParamsData;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * ExitMaintenanceModeParams
- */
+/** ExitMaintenanceModeParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class ExitMaintenanceModeParams {
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private ExitMaintenanceModeInput data;
+public class ExitMaintenanceModeParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_DATA = "data";
 
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private VmStartParamsData where;
+    @SerializedName(SERIALIZED_NAME_DATA)
+    private ExitMaintenanceModeInput data;
 
-  public ExitMaintenanceModeParams() { 
-  }
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
-  public ExitMaintenanceModeParams data(ExitMaintenanceModeInput data) {
-    
-    this.data = data;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private VmStartParamsData where;
 
-   /**
-   * Get data
-   * @return data
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public ExitMaintenanceModeParams() {}
 
-  public ExitMaintenanceModeInput getData() {
-    return data;
-  }
+    public ExitMaintenanceModeParams data(ExitMaintenanceModeInput data) {
 
-
-  public void setData(ExitMaintenanceModeInput data) {
-    this.data = data;
-  }
-
-
-  public ExitMaintenanceModeParams where(VmStartParamsData where) {
-    
-    this.where = where;
-    return this;
-  }
-
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public VmStartParamsData getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(VmStartParamsData where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.data = data;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get data
+     *
+     * @return data
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public ExitMaintenanceModeInput getData() {
+        return data;
     }
-    ExitMaintenanceModeParams exitMaintenanceModeParams = (ExitMaintenanceModeParams) o;
-    return Objects.equals(this.data, exitMaintenanceModeParams.data) &&
-        Objects.equals(this.where, exitMaintenanceModeParams.where);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(data, where);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ExitMaintenanceModeParams {\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setData(ExitMaintenanceModeInput data) {
+        this.data = data;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ExitMaintenanceModeParams data_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA);
+        return this;
+    }
+
+    public ExitMaintenanceModeParams data_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA);
+        return this;
+    }
+
+    public void setData_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA);
+        }
+    }
+
+    public boolean getData_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA);
+    }
+
+    public ExitMaintenanceModeParams where(VmStartParamsData where) {
+
+        this.where = where;
+        return this;
+    }
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public VmStartParamsData getWhere() {
+        return where;
+    }
+
+    public void setWhere(VmStartParamsData where) {
+        this.where = where;
+    }
+
+    public ExitMaintenanceModeParams where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public ExitMaintenanceModeParams where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ExitMaintenanceModeParams exitMaintenanceModeParams = (ExitMaintenanceModeParams) o;
+        return Objects.equals(this.data, exitMaintenanceModeParams.data)
+                && Objects.equals(this.where, exitMaintenanceModeParams.where);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(data, where);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ExitMaintenanceModeParams {\n");
+        sb.append("    data: ").append(toIndentedString(data)).append("\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

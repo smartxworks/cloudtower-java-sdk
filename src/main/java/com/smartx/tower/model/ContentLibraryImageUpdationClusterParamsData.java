@@ -1,88 +1,99 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.ClusterWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * ContentLibraryImageUpdationClusterParamsData
- */
+/** ContentLibraryImageUpdationClusterParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class ContentLibraryImageUpdationClusterParamsData {
-  public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
-  @SerializedName(SERIALIZED_NAME_CLUSTERS)
-  private ClusterWhereInput clusters;
+public class ContentLibraryImageUpdationClusterParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
 
-  public ContentLibraryImageUpdationClusterParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_CLUSTERS)
+    private ClusterWhereInput clusters;
 
-  public ContentLibraryImageUpdationClusterParamsData clusters(ClusterWhereInput clusters) {
-    
-    this.clusters = clusters;
-    return this;
-  }
+    public ContentLibraryImageUpdationClusterParamsData() {}
 
-   /**
-   * Get clusters
-   * @return clusters
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public ContentLibraryImageUpdationClusterParamsData clusters(ClusterWhereInput clusters) {
 
-  public ClusterWhereInput getClusters() {
-    return clusters;
-  }
-
-
-  public void setClusters(ClusterWhereInput clusters) {
-    this.clusters = clusters;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.clusters = clusters;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get clusters
+     *
+     * @return clusters
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public ClusterWhereInput getClusters() {
+        return clusters;
     }
-    ContentLibraryImageUpdationClusterParamsData contentLibraryImageUpdationClusterParamsData = (ContentLibraryImageUpdationClusterParamsData) o;
-    return Objects.equals(this.clusters, contentLibraryImageUpdationClusterParamsData.clusters);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(clusters);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ContentLibraryImageUpdationClusterParamsData {\n");
-    sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setClusters(ClusterWhereInput clusters) {
+        this.clusters = clusters;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ContentLibraryImageUpdationClusterParamsData clusters_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CLUSTERS);
+        return this;
+    }
+
+    public ContentLibraryImageUpdationClusterParamsData clusters_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CLUSTERS);
+        return this;
+    }
+
+    public void setClusters_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CLUSTERS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CLUSTERS);
+        }
+    }
+
+    public boolean getClusters_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CLUSTERS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ContentLibraryImageUpdationClusterParamsData contentLibraryImageUpdationClusterParamsData =
+                (ContentLibraryImageUpdationClusterParamsData) o;
+        return Objects.equals(this.clusters, contentLibraryImageUpdationClusterParamsData.clusters);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(clusters);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ContentLibraryImageUpdationClusterParamsData {\n");
+        sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

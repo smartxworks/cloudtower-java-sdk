@@ -1,87 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VmStartParamsData
- */
+/** VmStartParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmStartParamsData {
-  public static final String SERIALIZED_NAME_HOST_ID = "host_id";
-  @SerializedName(SERIALIZED_NAME_HOST_ID)
-  private String hostId;
+public class VmStartParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_HOST_ID = "host_id";
 
-  public VmStartParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_HOST_ID)
+    private String hostId;
 
-  public VmStartParamsData hostId(String hostId) {
-    
-    this.hostId = hostId;
-    return this;
-  }
+    public VmStartParamsData() {}
 
-   /**
-   * Get hostId
-   * @return hostId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VmStartParamsData hostId(String hostId) {
 
-  public String getHostId() {
-    return hostId;
-  }
-
-
-  public void setHostId(String hostId) {
-    this.hostId = hostId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.hostId = hostId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get hostId
+     *
+     * @return hostId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getHostId() {
+        return hostId;
     }
-    VmStartParamsData vmStartParamsData = (VmStartParamsData) o;
-    return Objects.equals(this.hostId, vmStartParamsData.hostId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(hostId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmStartParamsData {\n");
-    sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VmStartParamsData hostId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public VmStartParamsData hostId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public void setHostId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        }
+    }
+
+    public boolean getHostId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HOST_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmStartParamsData vmStartParamsData = (VmStartParamsData) o;
+        return Objects.equals(this.hostId, vmStartParamsData.hostId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(hostId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmStartParamsData {\n");
+        sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

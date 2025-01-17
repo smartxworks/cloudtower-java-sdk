@@ -1,88 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NestedAggregateVcenterAccount;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VcenterAccountConnection
- */
+/** VcenterAccountConnection */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VcenterAccountConnection {
-  public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
-  @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private NestedAggregateVcenterAccount aggregate;
+public class VcenterAccountConnection
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
 
-  public VcenterAccountConnection() { 
-  }
+    @SerializedName(SERIALIZED_NAME_AGGREGATE)
+    private NestedAggregateVcenterAccount aggregate;
 
-  public VcenterAccountConnection aggregate(NestedAggregateVcenterAccount aggregate) {
-    
-    this.aggregate = aggregate;
-    return this;
-  }
+    public VcenterAccountConnection() {}
 
-   /**
-   * Get aggregate
-   * @return aggregate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VcenterAccountConnection aggregate(NestedAggregateVcenterAccount aggregate) {
 
-  public NestedAggregateVcenterAccount getAggregate() {
-    return aggregate;
-  }
-
-
-  public void setAggregate(NestedAggregateVcenterAccount aggregate) {
-    this.aggregate = aggregate;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.aggregate = aggregate;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get aggregate
+     *
+     * @return aggregate
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedAggregateVcenterAccount getAggregate() {
+        return aggregate;
     }
-    VcenterAccountConnection vcenterAccountConnection = (VcenterAccountConnection) o;
-    return Objects.equals(this.aggregate, vcenterAccountConnection.aggregate);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(aggregate);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VcenterAccountConnection {\n");
-    sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setAggregate(NestedAggregateVcenterAccount aggregate) {
+        this.aggregate = aggregate;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VcenterAccountConnection aggregate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public VcenterAccountConnection aggregate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public void setAggregate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        }
+    }
+
+    public boolean getAggregate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_AGGREGATE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VcenterAccountConnection vcenterAccountConnection = (VcenterAccountConnection) o;
+        return Objects.equals(this.aggregate, vcenterAccountConnection.aggregate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(aggregate);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VcenterAccountConnection {\n");
+        sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

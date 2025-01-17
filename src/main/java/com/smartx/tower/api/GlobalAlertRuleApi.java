@@ -1,29 +1,20 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
 import com.smartx.tower.model.CustomizeAlertRuleUpdationParams;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetGlobalAlertRulesConnectionRequestBody;
 import com.smartx.tower.model.GetGlobalAlertRulesRequestBody;
 import com.smartx.tower.model.GlobalAlertRule;
 import com.smartx.tower.model.GlobalAlertRuleConnection;
 import com.smartx.tower.model.GlobalAlertRuleUpdationParams;
 import com.smartx.tower.model.WithTaskGlobalAlertRule;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,29 +60,33 @@ public class GlobalAlertRuleApi {
 
     /**
      * Build call for getGlobalAlertRules
-     * @param getGlobalAlertRulesRequestBody  (required)
+     *
+     * @param getGlobalAlertRulesRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getGlobalAlertRulesCall(GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGlobalAlertRulesCall(
+            GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -108,129 +103,152 @@ public class GlobalAlertRuleApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGlobalAlertRulesValidateBeforeCall(GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getGlobalAlertRulesValidateBeforeCall(
+            GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getGlobalAlertRulesRequestBody' is set
         if (getGlobalAlertRulesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getGlobalAlertRulesRequestBody' when calling getGlobalAlertRules(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getGlobalAlertRulesRequestBody' when calling"
+                            + " getGlobalAlertRules(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getGlobalAlertRulesCall(getGlobalAlertRulesRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getGlobalAlertRulesCall(getGlobalAlertRulesRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getGlobalAlertRulesRequestBody  (required)
+     * @param getGlobalAlertRulesRequestBody (required)
      * @return List&lt;GlobalAlertRule&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<GlobalAlertRule> getGlobalAlertRules(GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody) throws ApiException {
-        ApiResponse<List<GlobalAlertRule>> localVarResp = getGlobalAlertRulesWithHttpInfo(getGlobalAlertRulesRequestBody);
+    public List<GlobalAlertRule> getGlobalAlertRules(
+            GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody) throws ApiException {
+        ApiResponse<List<GlobalAlertRule>> localVarResp =
+                getGlobalAlertRulesWithHttpInfo(getGlobalAlertRulesRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getGlobalAlertRulesRequestBody  (required)
+     * @param getGlobalAlertRulesRequestBody (required)
      * @return ApiResponse&lt;List&lt;GlobalAlertRule&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<GlobalAlertRule>> getGlobalAlertRulesWithHttpInfo(GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getGlobalAlertRulesValidateBeforeCall(getGlobalAlertRulesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<GlobalAlertRule>>(){}.getType();
+    public ApiResponse<List<GlobalAlertRule>> getGlobalAlertRulesWithHttpInfo(
+            GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getGlobalAlertRulesValidateBeforeCall(getGlobalAlertRulesRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<GlobalAlertRule>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getGlobalAlertRulesRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getGlobalAlertRulesRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getGlobalAlertRulesAsync(GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody, final ApiCallback<List<GlobalAlertRule>> _callback) throws ApiException {
+    public okhttp3.Call getGlobalAlertRulesAsync(
+            GetGlobalAlertRulesRequestBody getGlobalAlertRulesRequestBody,
+            final ApiCallback<List<GlobalAlertRule>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getGlobalAlertRulesValidateBeforeCall(getGlobalAlertRulesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<GlobalAlertRule>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getGlobalAlertRulesValidateBeforeCall(getGlobalAlertRulesRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<GlobalAlertRule>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getGlobalAlertRulesConnection
-     * @param getGlobalAlertRulesConnectionRequestBody  (required)
+     *
+     * @param getGlobalAlertRulesConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getGlobalAlertRulesConnectionCall(GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGlobalAlertRulesConnectionCall(
+            GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -247,129 +265,157 @@ public class GlobalAlertRuleApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGlobalAlertRulesConnectionValidateBeforeCall(GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getGlobalAlertRulesConnectionValidateBeforeCall(
+            GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getGlobalAlertRulesConnectionRequestBody' is set
         if (getGlobalAlertRulesConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getGlobalAlertRulesConnectionRequestBody' when calling getGlobalAlertRulesConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getGlobalAlertRulesConnectionRequestBody'"
+                            + " when calling getGlobalAlertRulesConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getGlobalAlertRulesConnectionCall(getGlobalAlertRulesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getGlobalAlertRulesConnectionCall(
+                        getGlobalAlertRulesConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getGlobalAlertRulesConnectionRequestBody  (required)
+     * @param getGlobalAlertRulesConnectionRequestBody (required)
      * @return GlobalAlertRuleConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public GlobalAlertRuleConnection getGlobalAlertRulesConnection(GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody) throws ApiException {
-        ApiResponse<GlobalAlertRuleConnection> localVarResp = getGlobalAlertRulesConnectionWithHttpInfo(getGlobalAlertRulesConnectionRequestBody);
+    public GlobalAlertRuleConnection getGlobalAlertRulesConnection(
+            GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<GlobalAlertRuleConnection> localVarResp =
+                getGlobalAlertRulesConnectionWithHttpInfo(getGlobalAlertRulesConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getGlobalAlertRulesConnectionRequestBody  (required)
+     * @param getGlobalAlertRulesConnectionRequestBody (required)
      * @return ApiResponse&lt;GlobalAlertRuleConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<GlobalAlertRuleConnection> getGlobalAlertRulesConnectionWithHttpInfo(GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getGlobalAlertRulesConnectionValidateBeforeCall(getGlobalAlertRulesConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<GlobalAlertRuleConnection>(){}.getType();
+    public ApiResponse<GlobalAlertRuleConnection> getGlobalAlertRulesConnectionWithHttpInfo(
+            GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getGlobalAlertRulesConnectionValidateBeforeCall(
+                        getGlobalAlertRulesConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<GlobalAlertRuleConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getGlobalAlertRulesConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getGlobalAlertRulesConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getGlobalAlertRulesConnectionAsync(GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody, final ApiCallback<GlobalAlertRuleConnection> _callback) throws ApiException {
+    public okhttp3.Call getGlobalAlertRulesConnectionAsync(
+            GetGlobalAlertRulesConnectionRequestBody getGlobalAlertRulesConnectionRequestBody,
+            final ApiCallback<GlobalAlertRuleConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getGlobalAlertRulesConnectionValidateBeforeCall(getGlobalAlertRulesConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<GlobalAlertRuleConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getGlobalAlertRulesConnectionValidateBeforeCall(
+                        getGlobalAlertRulesConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<GlobalAlertRuleConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateCustomizeAlertRule
-     * @param customizeAlertRuleUpdationParams  (required)
+     *
+     * @param customizeAlertRuleUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateCustomizeAlertRuleCall(CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateCustomizeAlertRuleCall(
+            CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -386,129 +432,153 @@ public class GlobalAlertRuleApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateCustomizeAlertRuleValidateBeforeCall(CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateCustomizeAlertRuleValidateBeforeCall(
+            CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'customizeAlertRuleUpdationParams' is set
         if (customizeAlertRuleUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'customizeAlertRuleUpdationParams' when calling updateCustomizeAlertRule(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'customizeAlertRuleUpdationParams' when"
+                            + " calling updateCustomizeAlertRule(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateCustomizeAlertRuleCall(customizeAlertRuleUpdationParams, _callback);
+        okhttp3.Call localVarCall =
+                updateCustomizeAlertRuleCall(customizeAlertRuleUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param customizeAlertRuleUpdationParams  (required)
+     * @param customizeAlertRuleUpdationParams (required)
      * @return List&lt;WithTaskGlobalAlertRule&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskGlobalAlertRule> updateCustomizeAlertRule(CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskGlobalAlertRule>> localVarResp = updateCustomizeAlertRuleWithHttpInfo(customizeAlertRuleUpdationParams);
+    public List<WithTaskGlobalAlertRule> updateCustomizeAlertRule(
+            CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskGlobalAlertRule>> localVarResp =
+                updateCustomizeAlertRuleWithHttpInfo(customizeAlertRuleUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param customizeAlertRuleUpdationParams  (required)
+     * @param customizeAlertRuleUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskGlobalAlertRule&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskGlobalAlertRule>> updateCustomizeAlertRuleWithHttpInfo(CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateCustomizeAlertRuleValidateBeforeCall(customizeAlertRuleUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>(){}.getType();
+    public ApiResponse<List<WithTaskGlobalAlertRule>> updateCustomizeAlertRuleWithHttpInfo(
+            CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateCustomizeAlertRuleValidateBeforeCall(customizeAlertRuleUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param customizeAlertRuleUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param customizeAlertRuleUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateCustomizeAlertRuleAsync(CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams, final ApiCallback<List<WithTaskGlobalAlertRule>> _callback) throws ApiException {
+    public okhttp3.Call updateCustomizeAlertRuleAsync(
+            CustomizeAlertRuleUpdationParams customizeAlertRuleUpdationParams,
+            final ApiCallback<List<WithTaskGlobalAlertRule>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateCustomizeAlertRuleValidateBeforeCall(customizeAlertRuleUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateCustomizeAlertRuleValidateBeforeCall(
+                        customizeAlertRuleUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateGlobalAlertRule
-     * @param globalAlertRuleUpdationParams  (required)
+     *
+     * @param globalAlertRuleUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateGlobalAlertRuleCall(GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateGlobalAlertRuleCall(
+            GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -525,101 +595,120 @@ public class GlobalAlertRuleApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateGlobalAlertRuleValidateBeforeCall(GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateGlobalAlertRuleValidateBeforeCall(
+            GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'globalAlertRuleUpdationParams' is set
         if (globalAlertRuleUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'globalAlertRuleUpdationParams' when calling updateGlobalAlertRule(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'globalAlertRuleUpdationParams' when calling"
+                            + " updateGlobalAlertRule(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateGlobalAlertRuleCall(globalAlertRuleUpdationParams, _callback);
+        okhttp3.Call localVarCall =
+                updateGlobalAlertRuleCall(globalAlertRuleUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param globalAlertRuleUpdationParams  (required)
+     * @param globalAlertRuleUpdationParams (required)
      * @return List&lt;WithTaskGlobalAlertRule&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskGlobalAlertRule> updateGlobalAlertRule(GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskGlobalAlertRule>> localVarResp = updateGlobalAlertRuleWithHttpInfo(globalAlertRuleUpdationParams);
+    public List<WithTaskGlobalAlertRule> updateGlobalAlertRule(
+            GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskGlobalAlertRule>> localVarResp =
+                updateGlobalAlertRuleWithHttpInfo(globalAlertRuleUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param globalAlertRuleUpdationParams  (required)
+     * @param globalAlertRuleUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskGlobalAlertRule&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskGlobalAlertRule>> updateGlobalAlertRuleWithHttpInfo(GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateGlobalAlertRuleValidateBeforeCall(globalAlertRuleUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>(){}.getType();
+    public ApiResponse<List<WithTaskGlobalAlertRule>> updateGlobalAlertRuleWithHttpInfo(
+            GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateGlobalAlertRuleValidateBeforeCall(globalAlertRuleUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param globalAlertRuleUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param globalAlertRuleUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateGlobalAlertRuleAsync(GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams, final ApiCallback<List<WithTaskGlobalAlertRule>> _callback) throws ApiException {
+    public okhttp3.Call updateGlobalAlertRuleAsync(
+            GlobalAlertRuleUpdationParams globalAlertRuleUpdationParams,
+            final ApiCallback<List<WithTaskGlobalAlertRule>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateGlobalAlertRuleValidateBeforeCall(globalAlertRuleUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateGlobalAlertRuleValidateBeforeCall(globalAlertRuleUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskGlobalAlertRule>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
