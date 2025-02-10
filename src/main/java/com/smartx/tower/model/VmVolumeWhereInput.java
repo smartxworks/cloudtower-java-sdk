@@ -594,6 +594,70 @@ public class VmVolumeWhereInput {
   @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE_NOT_IN)
   private List<Long> uniqueSizeNotIn = null;
 
+  public static final String SERIALIZED_NAME_USED_SIZE = "used_size";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE)
+  private Long usedSize;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_GT = "used_size_gt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_GT)
+  private Long usedSizeGt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_GTE = "used_size_gte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_GTE)
+  private Long usedSizeGte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_IN = "used_size_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_IN)
+  private List<Long> usedSizeIn = null;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_LT = "used_size_lt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_LT)
+  private Long usedSizeLt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_LTE = "used_size_lte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_LTE)
+  private Long usedSizeLte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_NOT = "used_size_not";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_NOT)
+  private Long usedSizeNot;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_NOT_IN = "used_size_not_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_NOT_IN)
+  private List<Long> usedSizeNotIn = null;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE = "used_size_usage";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE)
+  private Double usedSizeUsage;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_GT = "used_size_usage_gt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_GT)
+  private Double usedSizeUsageGt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_GTE = "used_size_usage_gte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_GTE)
+  private Double usedSizeUsageGte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_IN = "used_size_usage_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_IN)
+  private List<Double> usedSizeUsageIn = null;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_LT = "used_size_usage_lt";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_LT)
+  private Double usedSizeUsageLt;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_LTE = "used_size_usage_lte";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_LTE)
+  private Double usedSizeUsageLte;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_NOT = "used_size_usage_not";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_NOT)
+  private Double usedSizeUsageNot;
+
+  public static final String SERIALIZED_NAME_USED_SIZE_USAGE_NOT_IN = "used_size_usage_not_in";
+  @SerializedName(SERIALIZED_NAME_USED_SIZE_USAGE_NOT_IN)
+  private List<Double> usedSizeUsageNotIn = null;
+
   public static final String SERIALIZED_NAME_VM_DISKS_EVERY = "vm_disks_every";
   @SerializedName(SERIALIZED_NAME_VM_DISKS_EVERY)
   private VmDiskWhereInput vmDisksEvery;
@@ -4123,6 +4187,406 @@ public class VmVolumeWhereInput {
   }
 
 
+  public VmVolumeWhereInput usedSize(Long usedSize) {
+    
+    this.usedSize = usedSize;
+    return this;
+  }
+
+   /**
+   * Get usedSize
+   * @return usedSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSize() {
+    return usedSize;
+  }
+
+
+  public void setUsedSize(Long usedSize) {
+    this.usedSize = usedSize;
+  }
+
+
+  public VmVolumeWhereInput usedSizeGt(Long usedSizeGt) {
+    
+    this.usedSizeGt = usedSizeGt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeGt
+   * @return usedSizeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeGt() {
+    return usedSizeGt;
+  }
+
+
+  public void setUsedSizeGt(Long usedSizeGt) {
+    this.usedSizeGt = usedSizeGt;
+  }
+
+
+  public VmVolumeWhereInput usedSizeGte(Long usedSizeGte) {
+    
+    this.usedSizeGte = usedSizeGte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeGte
+   * @return usedSizeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeGte() {
+    return usedSizeGte;
+  }
+
+
+  public void setUsedSizeGte(Long usedSizeGte) {
+    this.usedSizeGte = usedSizeGte;
+  }
+
+
+  public VmVolumeWhereInput usedSizeIn(List<Long> usedSizeIn) {
+    
+    this.usedSizeIn = usedSizeIn;
+    return this;
+  }
+
+  public VmVolumeWhereInput addUsedSizeInItem(Long usedSizeInItem) {
+    if (this.usedSizeIn == null) {
+      this.usedSizeIn = new ArrayList<Long>();
+    }
+    this.usedSizeIn.add(usedSizeInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeIn
+   * @return usedSizeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getUsedSizeIn() {
+    return usedSizeIn;
+  }
+
+
+  public void setUsedSizeIn(List<Long> usedSizeIn) {
+    this.usedSizeIn = usedSizeIn;
+  }
+
+
+  public VmVolumeWhereInput usedSizeLt(Long usedSizeLt) {
+    
+    this.usedSizeLt = usedSizeLt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeLt
+   * @return usedSizeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeLt() {
+    return usedSizeLt;
+  }
+
+
+  public void setUsedSizeLt(Long usedSizeLt) {
+    this.usedSizeLt = usedSizeLt;
+  }
+
+
+  public VmVolumeWhereInput usedSizeLte(Long usedSizeLte) {
+    
+    this.usedSizeLte = usedSizeLte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeLte
+   * @return usedSizeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeLte() {
+    return usedSizeLte;
+  }
+
+
+  public void setUsedSizeLte(Long usedSizeLte) {
+    this.usedSizeLte = usedSizeLte;
+  }
+
+
+  public VmVolumeWhereInput usedSizeNot(Long usedSizeNot) {
+    
+    this.usedSizeNot = usedSizeNot;
+    return this;
+  }
+
+   /**
+   * Get usedSizeNot
+   * @return usedSizeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getUsedSizeNot() {
+    return usedSizeNot;
+  }
+
+
+  public void setUsedSizeNot(Long usedSizeNot) {
+    this.usedSizeNot = usedSizeNot;
+  }
+
+
+  public VmVolumeWhereInput usedSizeNotIn(List<Long> usedSizeNotIn) {
+    
+    this.usedSizeNotIn = usedSizeNotIn;
+    return this;
+  }
+
+  public VmVolumeWhereInput addUsedSizeNotInItem(Long usedSizeNotInItem) {
+    if (this.usedSizeNotIn == null) {
+      this.usedSizeNotIn = new ArrayList<Long>();
+    }
+    this.usedSizeNotIn.add(usedSizeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeNotIn
+   * @return usedSizeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getUsedSizeNotIn() {
+    return usedSizeNotIn;
+  }
+
+
+  public void setUsedSizeNotIn(List<Long> usedSizeNotIn) {
+    this.usedSizeNotIn = usedSizeNotIn;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsage(Double usedSizeUsage) {
+    
+    this.usedSizeUsage = usedSizeUsage;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsage
+   * @return usedSizeUsage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsage() {
+    return usedSizeUsage;
+  }
+
+
+  public void setUsedSizeUsage(Double usedSizeUsage) {
+    this.usedSizeUsage = usedSizeUsage;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageGt(Double usedSizeUsageGt) {
+    
+    this.usedSizeUsageGt = usedSizeUsageGt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageGt
+   * @return usedSizeUsageGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageGt() {
+    return usedSizeUsageGt;
+  }
+
+
+  public void setUsedSizeUsageGt(Double usedSizeUsageGt) {
+    this.usedSizeUsageGt = usedSizeUsageGt;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageGte(Double usedSizeUsageGte) {
+    
+    this.usedSizeUsageGte = usedSizeUsageGte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageGte
+   * @return usedSizeUsageGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageGte() {
+    return usedSizeUsageGte;
+  }
+
+
+  public void setUsedSizeUsageGte(Double usedSizeUsageGte) {
+    this.usedSizeUsageGte = usedSizeUsageGte;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageIn(List<Double> usedSizeUsageIn) {
+    
+    this.usedSizeUsageIn = usedSizeUsageIn;
+    return this;
+  }
+
+  public VmVolumeWhereInput addUsedSizeUsageInItem(Double usedSizeUsageInItem) {
+    if (this.usedSizeUsageIn == null) {
+      this.usedSizeUsageIn = new ArrayList<Double>();
+    }
+    this.usedSizeUsageIn.add(usedSizeUsageInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageIn
+   * @return usedSizeUsageIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getUsedSizeUsageIn() {
+    return usedSizeUsageIn;
+  }
+
+
+  public void setUsedSizeUsageIn(List<Double> usedSizeUsageIn) {
+    this.usedSizeUsageIn = usedSizeUsageIn;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageLt(Double usedSizeUsageLt) {
+    
+    this.usedSizeUsageLt = usedSizeUsageLt;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageLt
+   * @return usedSizeUsageLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageLt() {
+    return usedSizeUsageLt;
+  }
+
+
+  public void setUsedSizeUsageLt(Double usedSizeUsageLt) {
+    this.usedSizeUsageLt = usedSizeUsageLt;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageLte(Double usedSizeUsageLte) {
+    
+    this.usedSizeUsageLte = usedSizeUsageLte;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageLte
+   * @return usedSizeUsageLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageLte() {
+    return usedSizeUsageLte;
+  }
+
+
+  public void setUsedSizeUsageLte(Double usedSizeUsageLte) {
+    this.usedSizeUsageLte = usedSizeUsageLte;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageNot(Double usedSizeUsageNot) {
+    
+    this.usedSizeUsageNot = usedSizeUsageNot;
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageNot
+   * @return usedSizeUsageNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Double getUsedSizeUsageNot() {
+    return usedSizeUsageNot;
+  }
+
+
+  public void setUsedSizeUsageNot(Double usedSizeUsageNot) {
+    this.usedSizeUsageNot = usedSizeUsageNot;
+  }
+
+
+  public VmVolumeWhereInput usedSizeUsageNotIn(List<Double> usedSizeUsageNotIn) {
+    
+    this.usedSizeUsageNotIn = usedSizeUsageNotIn;
+    return this;
+  }
+
+  public VmVolumeWhereInput addUsedSizeUsageNotInItem(Double usedSizeUsageNotInItem) {
+    if (this.usedSizeUsageNotIn == null) {
+      this.usedSizeUsageNotIn = new ArrayList<Double>();
+    }
+    this.usedSizeUsageNotIn.add(usedSizeUsageNotInItem);
+    return this;
+  }
+
+   /**
+   * Get usedSizeUsageNotIn
+   * @return usedSizeUsageNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Double> getUsedSizeUsageNotIn() {
+    return usedSizeUsageNotIn;
+  }
+
+
+  public void setUsedSizeUsageNotIn(List<Double> usedSizeUsageNotIn) {
+    this.usedSizeUsageNotIn = usedSizeUsageNotIn;
+  }
+
+
   public VmVolumeWhereInput vmDisksEvery(VmDiskWhereInput vmDisksEvery) {
     
     this.vmDisksEvery = vmDisksEvery;
@@ -4343,6 +4807,22 @@ public class VmVolumeWhereInput {
         Objects.equals(this.uniqueSizeLte, vmVolumeWhereInput.uniqueSizeLte) &&
         Objects.equals(this.uniqueSizeNot, vmVolumeWhereInput.uniqueSizeNot) &&
         Objects.equals(this.uniqueSizeNotIn, vmVolumeWhereInput.uniqueSizeNotIn) &&
+        Objects.equals(this.usedSize, vmVolumeWhereInput.usedSize) &&
+        Objects.equals(this.usedSizeGt, vmVolumeWhereInput.usedSizeGt) &&
+        Objects.equals(this.usedSizeGte, vmVolumeWhereInput.usedSizeGte) &&
+        Objects.equals(this.usedSizeIn, vmVolumeWhereInput.usedSizeIn) &&
+        Objects.equals(this.usedSizeLt, vmVolumeWhereInput.usedSizeLt) &&
+        Objects.equals(this.usedSizeLte, vmVolumeWhereInput.usedSizeLte) &&
+        Objects.equals(this.usedSizeNot, vmVolumeWhereInput.usedSizeNot) &&
+        Objects.equals(this.usedSizeNotIn, vmVolumeWhereInput.usedSizeNotIn) &&
+        Objects.equals(this.usedSizeUsage, vmVolumeWhereInput.usedSizeUsage) &&
+        Objects.equals(this.usedSizeUsageGt, vmVolumeWhereInput.usedSizeUsageGt) &&
+        Objects.equals(this.usedSizeUsageGte, vmVolumeWhereInput.usedSizeUsageGte) &&
+        Objects.equals(this.usedSizeUsageIn, vmVolumeWhereInput.usedSizeUsageIn) &&
+        Objects.equals(this.usedSizeUsageLt, vmVolumeWhereInput.usedSizeUsageLt) &&
+        Objects.equals(this.usedSizeUsageLte, vmVolumeWhereInput.usedSizeUsageLte) &&
+        Objects.equals(this.usedSizeUsageNot, vmVolumeWhereInput.usedSizeUsageNot) &&
+        Objects.equals(this.usedSizeUsageNotIn, vmVolumeWhereInput.usedSizeUsageNotIn) &&
         Objects.equals(this.vmDisksEvery, vmVolumeWhereInput.vmDisksEvery) &&
         Objects.equals(this.vmDisksNone, vmVolumeWhereInput.vmDisksNone) &&
         Objects.equals(this.vmDisksSome, vmVolumeWhereInput.vmDisksSome);
@@ -4354,7 +4834,7 @@ public class VmVolumeWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lun, mounting, mountingNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, sharing, sharingNot, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
+    return Objects.hash(AND, NOT, OR, cluster, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, elfStoragePolicy, elfStoragePolicyIn, elfStoragePolicyNot, elfStoragePolicyNotIn, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, guestSizeUsage, guestSizeUsageGt, guestSizeUsageGte, guestSizeUsageIn, guestSizeUsageLt, guestSizeUsageLte, guestSizeUsageNot, guestSizeUsageNotIn, guestUsedSize, guestUsedSizeGt, guestUsedSizeGte, guestUsedSizeIn, guestUsedSizeLt, guestUsedSizeLte, guestUsedSizeNot, guestUsedSizeNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, localCreatedAt, localCreatedAtGt, localCreatedAtGte, localCreatedAtIn, localCreatedAtLt, localCreatedAtLte, localCreatedAtNot, localCreatedAtNotIn, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, lun, mounting, mountingNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, path, pathContains, pathEndsWith, pathGt, pathGte, pathIn, pathLt, pathLte, pathNot, pathNotContains, pathNotEndsWith, pathNotIn, pathNotStartsWith, pathStartsWith, sharing, sharingNot, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, type, typeIn, typeNot, typeNotIn, uniqueLogicalSize, uniqueLogicalSizeGt, uniqueLogicalSizeGte, uniqueLogicalSizeIn, uniqueLogicalSizeLt, uniqueLogicalSizeLte, uniqueLogicalSizeNot, uniqueLogicalSizeNotIn, uniqueSize, uniqueSizeGt, uniqueSizeGte, uniqueSizeIn, uniqueSizeLt, uniqueSizeLte, uniqueSizeNot, uniqueSizeNotIn, usedSize, usedSizeGt, usedSizeGte, usedSizeIn, usedSizeLt, usedSizeLte, usedSizeNot, usedSizeNotIn, usedSizeUsage, usedSizeUsageGt, usedSizeUsageGte, usedSizeUsageIn, usedSizeUsageLt, usedSizeUsageLte, usedSizeUsageNot, usedSizeUsageNotIn, vmDisksEvery, vmDisksNone, vmDisksSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4510,6 +4990,22 @@ public class VmVolumeWhereInput {
     sb.append("    uniqueSizeLte: ").append(toIndentedString(uniqueSizeLte)).append("\n");
     sb.append("    uniqueSizeNot: ").append(toIndentedString(uniqueSizeNot)).append("\n");
     sb.append("    uniqueSizeNotIn: ").append(toIndentedString(uniqueSizeNotIn)).append("\n");
+    sb.append("    usedSize: ").append(toIndentedString(usedSize)).append("\n");
+    sb.append("    usedSizeGt: ").append(toIndentedString(usedSizeGt)).append("\n");
+    sb.append("    usedSizeGte: ").append(toIndentedString(usedSizeGte)).append("\n");
+    sb.append("    usedSizeIn: ").append(toIndentedString(usedSizeIn)).append("\n");
+    sb.append("    usedSizeLt: ").append(toIndentedString(usedSizeLt)).append("\n");
+    sb.append("    usedSizeLte: ").append(toIndentedString(usedSizeLte)).append("\n");
+    sb.append("    usedSizeNot: ").append(toIndentedString(usedSizeNot)).append("\n");
+    sb.append("    usedSizeNotIn: ").append(toIndentedString(usedSizeNotIn)).append("\n");
+    sb.append("    usedSizeUsage: ").append(toIndentedString(usedSizeUsage)).append("\n");
+    sb.append("    usedSizeUsageGt: ").append(toIndentedString(usedSizeUsageGt)).append("\n");
+    sb.append("    usedSizeUsageGte: ").append(toIndentedString(usedSizeUsageGte)).append("\n");
+    sb.append("    usedSizeUsageIn: ").append(toIndentedString(usedSizeUsageIn)).append("\n");
+    sb.append("    usedSizeUsageLt: ").append(toIndentedString(usedSizeUsageLt)).append("\n");
+    sb.append("    usedSizeUsageLte: ").append(toIndentedString(usedSizeUsageLte)).append("\n");
+    sb.append("    usedSizeUsageNot: ").append(toIndentedString(usedSizeUsageNot)).append("\n");
+    sb.append("    usedSizeUsageNotIn: ").append(toIndentedString(usedSizeUsageNotIn)).append("\n");
     sb.append("    vmDisksEvery: ").append(toIndentedString(vmDisksEvery)).append("\n");
     sb.append("    vmDisksNone: ").append(toIndentedString(vmDisksNone)).append("\n");
     sb.append("    vmDisksSome: ").append(toIndentedString(vmDisksSome)).append("\n");

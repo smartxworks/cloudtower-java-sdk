@@ -85,6 +85,7 @@ src/main/java/com/smartx/tower/api/NvmfSubsystemApi.java
 src/main/java/com/smartx/tower/api/ObservabilityApi.java
 src/main/java/com/smartx/tower/api/OrganizationApi.java
 src/main/java/com/smartx/tower/api/OvfApi.java
+src/main/java/com/smartx/tower/api/PciDeviceApi.java
 src/main/java/com/smartx/tower/api/PmemDimmApi.java
 src/main/java/com/smartx/tower/api/RackTopoApi.java
 src/main/java/com/smartx/tower/api/ReportTaskApi.java
@@ -648,6 +649,7 @@ src/main/java/com/smartx/tower/model/GetNvmfSubsystemsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetNvmfSubsystemsRequestBody.java
 src/main/java/com/smartx/tower/model/GetOrganizationsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetOrganizationsRequestBody.java
+src/main/java/com/smartx/tower/model/GetPciDevicesRequestBody.java
 src/main/java/com/smartx/tower/model/GetPmemDimmsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetPmemDimmsRequestBody.java
 src/main/java/com/smartx/tower/model/GetRackTopoesConnectionRequestBody.java
@@ -1250,6 +1252,14 @@ src/main/java/com/smartx/tower/model/OvfNic.java
 src/main/java/com/smartx/tower/model/ParsedOVF.java
 src/main/java/com/smartx/tower/model/PartitionUsage.java
 src/main/java/com/smartx/tower/model/PasswordComplexity.java
+src/main/java/com/smartx/tower/model/PciDevice.java
+src/main/java/com/smartx/tower/model/PciDeviceMdevState.java
+src/main/java/com/smartx/tower/model/PciDeviceOrderByInput.java
+src/main/java/com/smartx/tower/model/PciDevicePartitionState.java
+src/main/java/com/smartx/tower/model/PciDeviceSriovState.java
+src/main/java/com/smartx/tower/model/PciDeviceType.java
+src/main/java/com/smartx/tower/model/PciDeviceUsage.java
+src/main/java/com/smartx/tower/model/PciDeviceWhereInput.java
 src/main/java/com/smartx/tower/model/PmemDimm.java
 src/main/java/com/smartx/tower/model/PmemDimmConnection.java
 src/main/java/com/smartx/tower/model/PmemDimmOrderByInput.java
@@ -1485,9 +1495,11 @@ src/main/java/com/smartx/tower/model/VirtualPrivateCloudConnection.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudCreationParams.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudDeletionParams.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudDnatRuleParams.java
+src/main/java/com/smartx/tower/model/VirtualPrivateCloudEdgeGatewayGroupWhereInput.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudEdgeGatewayWhereInput.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudExternalSubnet.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudExternalSubnetConnection.java
+src/main/java/com/smartx/tower/model/VirtualPrivateCloudExternalSubnetGroupWhereInput.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudExternalSubnetOrderByInput.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudExternalSubnetWhereInput.java
 src/main/java/com/smartx/tower/model/VirtualPrivateCloudFloatingIp.java

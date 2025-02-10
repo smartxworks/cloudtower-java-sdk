@@ -11,6 +11,7 @@ import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.EverouteClusterPhase;
 import com.smartx.tower.model.VdsWhereInput;
+import com.smartx.tower.model.VirtualPrivateCloudEdgeGatewayGroupWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudServiceWhereInput;
 import com.smartx.tower.model.VmWhereInput;
 import io.swagger.annotations.ApiModel;
@@ -72,6 +73,38 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
   public static final String SERIALIZED_NAME_CPU_NUMBER_NOT_IN = "cpu_number_not_in";
   @SerializedName(SERIALIZED_NAME_CPU_NUMBER_NOT_IN)
   private List<Integer> cpuNumberNotIn = null;
+
+  public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  private String createdAt;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_GT = "createdAt_gt";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_GT)
+  private String createdAtGt;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_GTE = "createdAt_gte";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_GTE)
+  private String createdAtGte;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_IN = "createdAt_in";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_IN)
+  private List<String> createdAtIn = null;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_LT = "createdAt_lt";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_LT)
+  private String createdAtLt;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_LTE = "createdAt_lte";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_LTE)
+  private String createdAtLte;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_NOT = "createdAt_not";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT)
+  private String createdAtNot;
+
+  public static final String SERIALIZED_NAME_CREATED_AT_NOT_IN = "createdAt_not_in";
+  @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT_IN)
+  private List<String> createdAtNotIn = null;
 
   public static final String SERIALIZED_NAME_DATA_VOLUME_SIZE = "data_volume_size";
   @SerializedName(SERIALIZED_NAME_DATA_VOLUME_SIZE)
@@ -160,6 +193,10 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
   public static final String SERIALIZED_NAME_DESCRIPTION_STARTS_WITH = "description_starts_with";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
   private String descriptionStartsWith;
+
+  public static final String SERIALIZED_NAME_EDGE_GATEWAY_GROUP = "edge_gateway_group";
+  @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY_GROUP)
+  private VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroup;
 
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -796,6 +833,206 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
   }
 
 
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAt(String createdAt) {
+    
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCreatedAt() {
+    return createdAt;
+  }
+
+
+  public void setCreatedAt(String createdAt) {
+    this.createdAt = createdAt;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtGt(String createdAtGt) {
+    
+    this.createdAtGt = createdAtGt;
+    return this;
+  }
+
+   /**
+   * Get createdAtGt
+   * @return createdAtGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCreatedAtGt() {
+    return createdAtGt;
+  }
+
+
+  public void setCreatedAtGt(String createdAtGt) {
+    this.createdAtGt = createdAtGt;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtGte(String createdAtGte) {
+    
+    this.createdAtGte = createdAtGte;
+    return this;
+  }
+
+   /**
+   * Get createdAtGte
+   * @return createdAtGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCreatedAtGte() {
+    return createdAtGte;
+  }
+
+
+  public void setCreatedAtGte(String createdAtGte) {
+    this.createdAtGte = createdAtGte;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtIn(List<String> createdAtIn) {
+    
+    this.createdAtIn = createdAtIn;
+    return this;
+  }
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput addCreatedAtInItem(String createdAtInItem) {
+    if (this.createdAtIn == null) {
+      this.createdAtIn = new ArrayList<String>();
+    }
+    this.createdAtIn.add(createdAtInItem);
+    return this;
+  }
+
+   /**
+   * Get createdAtIn
+   * @return createdAtIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getCreatedAtIn() {
+    return createdAtIn;
+  }
+
+
+  public void setCreatedAtIn(List<String> createdAtIn) {
+    this.createdAtIn = createdAtIn;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtLt(String createdAtLt) {
+    
+    this.createdAtLt = createdAtLt;
+    return this;
+  }
+
+   /**
+   * Get createdAtLt
+   * @return createdAtLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCreatedAtLt() {
+    return createdAtLt;
+  }
+
+
+  public void setCreatedAtLt(String createdAtLt) {
+    this.createdAtLt = createdAtLt;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtLte(String createdAtLte) {
+    
+    this.createdAtLte = createdAtLte;
+    return this;
+  }
+
+   /**
+   * Get createdAtLte
+   * @return createdAtLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCreatedAtLte() {
+    return createdAtLte;
+  }
+
+
+  public void setCreatedAtLte(String createdAtLte) {
+    this.createdAtLte = createdAtLte;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtNot(String createdAtNot) {
+    
+    this.createdAtNot = createdAtNot;
+    return this;
+  }
+
+   /**
+   * Get createdAtNot
+   * @return createdAtNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCreatedAtNot() {
+    return createdAtNot;
+  }
+
+
+  public void setCreatedAtNot(String createdAtNot) {
+    this.createdAtNot = createdAtNot;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput createdAtNotIn(List<String> createdAtNotIn) {
+    
+    this.createdAtNotIn = createdAtNotIn;
+    return this;
+  }
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput addCreatedAtNotInItem(String createdAtNotInItem) {
+    if (this.createdAtNotIn == null) {
+      this.createdAtNotIn = new ArrayList<String>();
+    }
+    this.createdAtNotIn.add(createdAtNotInItem);
+    return this;
+  }
+
+   /**
+   * Get createdAtNotIn
+   * @return createdAtNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getCreatedAtNotIn() {
+    return createdAtNotIn;
+  }
+
+
+  public void setCreatedAtNotIn(List<String> createdAtNotIn) {
+    this.createdAtNotIn = createdAtNotIn;
+  }
+
+
   public VirtualPrivateCloudEdgeGatewayWhereInput dataVolumeSize(Integer dataVolumeSize) {
     
     this.dataVolumeSize = dataVolumeSize;
@@ -1331,6 +1568,29 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
 
   public void setDescriptionStartsWith(String descriptionStartsWith) {
     this.descriptionStartsWith = descriptionStartsWith;
+  }
+
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput edgeGatewayGroup(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroup) {
+    
+    this.edgeGatewayGroup = edgeGatewayGroup;
+    return this;
+  }
+
+   /**
+   * Get edgeGatewayGroup
+   * @return edgeGatewayGroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudEdgeGatewayGroupWhereInput getEdgeGatewayGroup() {
+    return edgeGatewayGroup;
+  }
+
+
+  public void setEdgeGatewayGroup(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroup) {
+    this.edgeGatewayGroup = edgeGatewayGroup;
   }
 
 
@@ -3284,6 +3544,14 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
         Objects.equals(this.cpuNumberLte, virtualPrivateCloudEdgeGatewayWhereInput.cpuNumberLte) &&
         Objects.equals(this.cpuNumberNot, virtualPrivateCloudEdgeGatewayWhereInput.cpuNumberNot) &&
         Objects.equals(this.cpuNumberNotIn, virtualPrivateCloudEdgeGatewayWhereInput.cpuNumberNotIn) &&
+        Objects.equals(this.createdAt, virtualPrivateCloudEdgeGatewayWhereInput.createdAt) &&
+        Objects.equals(this.createdAtGt, virtualPrivateCloudEdgeGatewayWhereInput.createdAtGt) &&
+        Objects.equals(this.createdAtGte, virtualPrivateCloudEdgeGatewayWhereInput.createdAtGte) &&
+        Objects.equals(this.createdAtIn, virtualPrivateCloudEdgeGatewayWhereInput.createdAtIn) &&
+        Objects.equals(this.createdAtLt, virtualPrivateCloudEdgeGatewayWhereInput.createdAtLt) &&
+        Objects.equals(this.createdAtLte, virtualPrivateCloudEdgeGatewayWhereInput.createdAtLte) &&
+        Objects.equals(this.createdAtNot, virtualPrivateCloudEdgeGatewayWhereInput.createdAtNot) &&
+        Objects.equals(this.createdAtNotIn, virtualPrivateCloudEdgeGatewayWhereInput.createdAtNotIn) &&
         Objects.equals(this.dataVolumeSize, virtualPrivateCloudEdgeGatewayWhereInput.dataVolumeSize) &&
         Objects.equals(this.dataVolumeSizeGt, virtualPrivateCloudEdgeGatewayWhereInput.dataVolumeSizeGt) &&
         Objects.equals(this.dataVolumeSizeGte, virtualPrivateCloudEdgeGatewayWhereInput.dataVolumeSizeGte) &&
@@ -3306,6 +3574,7 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
         Objects.equals(this.descriptionNotIn, virtualPrivateCloudEdgeGatewayWhereInput.descriptionNotIn) &&
         Objects.equals(this.descriptionNotStartsWith, virtualPrivateCloudEdgeGatewayWhereInput.descriptionNotStartsWith) &&
         Objects.equals(this.descriptionStartsWith, virtualPrivateCloudEdgeGatewayWhereInput.descriptionStartsWith) &&
+        Objects.equals(this.edgeGatewayGroup, virtualPrivateCloudEdgeGatewayWhereInput.edgeGatewayGroup) &&
         Objects.equals(this.entityAsyncStatus, virtualPrivateCloudEdgeGatewayWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, virtualPrivateCloudEdgeGatewayWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, virtualPrivateCloudEdgeGatewayWhereInput.entityAsyncStatusNot) &&
@@ -3393,7 +3662,7 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cluster, cpuNumber, cpuNumberGt, cpuNumberGte, cpuNumberIn, cpuNumberLt, cpuNumberLte, cpuNumberNot, cpuNumberNotIn, dataVolumeSize, dataVolumeSizeGt, dataVolumeSizeGte, dataVolumeSizeIn, dataVolumeSizeLt, dataVolumeSizeLte, dataVolumeSizeNot, dataVolumeSizeNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, memorySize, memorySizeGt, memorySizeGte, memorySizeIn, memorySizeLt, memorySizeLte, memorySizeNot, memorySizeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, phase, phaseIn, phaseNot, phaseNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vdsesEvery, vdsesNone, vdsesSome, vmInstancesEvery, vmInstancesNone, vmInstancesSome, vpcService);
+    return Objects.hash(AND, NOT, OR, cluster, cpuNumber, cpuNumberGt, cpuNumberGte, cpuNumberIn, cpuNumberLt, cpuNumberLte, cpuNumberNot, cpuNumberNotIn, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, dataVolumeSize, dataVolumeSizeGt, dataVolumeSizeGte, dataVolumeSizeIn, dataVolumeSizeLt, dataVolumeSizeLte, dataVolumeSizeNot, dataVolumeSizeNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, edgeGatewayGroup, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, memorySize, memorySizeGt, memorySizeGte, memorySizeIn, memorySizeLt, memorySizeLte, memorySizeNot, memorySizeNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, phase, phaseIn, phaseNot, phaseNotIn, subnetMask, subnetMaskContains, subnetMaskEndsWith, subnetMaskGt, subnetMaskGte, subnetMaskIn, subnetMaskLt, subnetMaskLte, subnetMaskNot, subnetMaskNotContains, subnetMaskNotEndsWith, subnetMaskNotIn, subnetMaskNotStartsWith, subnetMaskStartsWith, vdsesEvery, vdsesNone, vdsesSome, vmInstancesEvery, vmInstancesNone, vmInstancesSome, vpcService);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3419,6 +3688,14 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
     sb.append("    cpuNumberLte: ").append(toIndentedString(cpuNumberLte)).append("\n");
     sb.append("    cpuNumberNot: ").append(toIndentedString(cpuNumberNot)).append("\n");
     sb.append("    cpuNumberNotIn: ").append(toIndentedString(cpuNumberNotIn)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
+    sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");
+    sb.append("    createdAtIn: ").append(toIndentedString(createdAtIn)).append("\n");
+    sb.append("    createdAtLt: ").append(toIndentedString(createdAtLt)).append("\n");
+    sb.append("    createdAtLte: ").append(toIndentedString(createdAtLte)).append("\n");
+    sb.append("    createdAtNot: ").append(toIndentedString(createdAtNot)).append("\n");
+    sb.append("    createdAtNotIn: ").append(toIndentedString(createdAtNotIn)).append("\n");
     sb.append("    dataVolumeSize: ").append(toIndentedString(dataVolumeSize)).append("\n");
     sb.append("    dataVolumeSizeGt: ").append(toIndentedString(dataVolumeSizeGt)).append("\n");
     sb.append("    dataVolumeSizeGte: ").append(toIndentedString(dataVolumeSizeGte)).append("\n");
@@ -3441,6 +3718,7 @@ public class VirtualPrivateCloudEdgeGatewayWhereInput {
     sb.append("    descriptionNotIn: ").append(toIndentedString(descriptionNotIn)).append("\n");
     sb.append("    descriptionNotStartsWith: ").append(toIndentedString(descriptionNotStartsWith)).append("\n");
     sb.append("    descriptionStartsWith: ").append(toIndentedString(descriptionStartsWith)).append("\n");
+    sb.append("    edgeGatewayGroup: ").append(toIndentedString(edgeGatewayGroup)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");

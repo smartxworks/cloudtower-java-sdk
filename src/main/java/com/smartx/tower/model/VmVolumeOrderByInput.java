@@ -80,6 +80,14 @@ public enum VmVolumeOrderByInput {
   
   UNIQUE_SIZE_DESC("unique_size_DESC"),
   
+  USED_SIZE_ASC("used_size_ASC"),
+  
+  USED_SIZE_DESC("used_size_DESC"),
+  
+  USED_SIZE_USAGE_ASC("used_size_usage_ASC"),
+  
+  USED_SIZE_USAGE_DESC("used_size_usage_DESC"),
+  
   VMVOLUMEORDERBYINPUT_UNSUPPORTED_ENUM("VMVOLUMEORDERBYINPUT_UNSUPPORTED_ENUM");
   private String value;
 

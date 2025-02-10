@@ -192,6 +192,14 @@ public enum VmOrderByInput {
   
   UNIQUE_SIZE_DESC("unique_size_DESC"),
   
+  USED_SIZE_ASC("used_size_ASC"),
+  
+  USED_SIZE_DESC("used_size_DESC"),
+  
+  USED_SIZE_USAGE_ASC("used_size_usage_ASC"),
+  
+  USED_SIZE_USAGE_DESC("used_size_usage_DESC"),
+  
   VCPU_ASC("vcpu_ASC"),
   
   VCPU_DESC("vcpu_DESC"),
