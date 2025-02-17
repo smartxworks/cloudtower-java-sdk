@@ -1,5 +1,37 @@
 # RELEASE NOTE
 
+## release 日期 2025-02-17
+
+v2.19.0 release (tower version 4.5.0)
+
+### breaking change
+
+- [TaskApi]: [updateTask]: description 字段由 string 更新为 TaskDescription
+
+### feature
+
+- [BackupPlanApi]: 新增 getBackupRestorePointMetadata API 用于获取备份恢复点元数据;
+- [NtpApi]: 新增 getNtpServiceURL API 用于获取 Ntp 服务 URL;
+- [ClusterApi]: 新增 getClusterStorageInfo API 用于获取集群存储信息;
+- [ObservabilityApi]: 新增 clearSystemServiceAlertNotificationConfig API 用于清除系统服务报警信息
+
+### optimize
+
+- [BackupPlanApi]: [createBackupPlan]: 在 incrementalPeriod 为 Weekly 时，校验 incrementalWeekdays 是否已输入;
+- 为以下资源新增返回字段
+  - [BackupPlan]: 新增 vms, phase, lastExecuteStatusMessage, lastManualExecuteStatusMessage, backupRestorePointCount, validSizeOfRestorePoint, backupTotalSize, logicalSize, backupDelayOption, deleteStrategy, backupPlanExecutions 和 backupRestorePoints 字段;
+  - [NestedVirtualPrivateCloudService]: 新增 internalCidr 和 tepIpPools 字段;
+  - [VirtualPrivateCloud]: 新增 vpcService 字段;
+  - [SecurityPolicy]: 新增 isBlocklist 字段;
+  - [ContentLibraryVmTemplate]: 新增 vmDisks, vmNics, clockOffset, cpu, cpuModel, firmware, ha, ioPolicy, localCreatedAt, maxBandwidth, maxBandwidthPolicy, maxIops, maxIopsPolicy, templateConfig, videoType, winOpt 和 zbsStorageInfo 字段;
+  - [VirtualPrivateCloudExternalSubnets]: 新增 edgeGateway 和 exclusive 字段;
+- [TaskApi]: [createTask], [updateTask]: 支持传入 startedAt 和 finishedAt 字段;
+
+### bugfix
+
+- [IscsiLunApi]: [copyIscsiLun]: 修复跨集群克隆 iscsi lun 失败;
+- [ObservabilityApi]: [disassociateSystemServiceFromObsService]: 修复解除关系错误时无法正确返回错误信息。
+
 ## release 日期 2024-10-14
 
 v2.18.0 release (tower version 4.4.0)

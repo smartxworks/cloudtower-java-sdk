@@ -16,6 +16,18 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(BackupPlanOrderByInput.Adapter.class)
 public enum BackupPlanOrderByInput {
   
+  BACKUP_DELAY_OPTION_ASC("backup_delay_option_ASC"),
+  
+  BACKUP_DELAY_OPTION_DESC("backup_delay_option_DESC"),
+  
+  BACKUP_RESTORE_POINT_COUNT_ASC("backup_restore_point_count_ASC"),
+  
+  BACKUP_RESTORE_POINT_COUNT_DESC("backup_restore_point_count_DESC"),
+  
+  BACKUP_TOTAL_SIZE_ASC("backup_total_size_ASC"),
+  
+  BACKUP_TOTAL_SIZE_DESC("backup_total_size_DESC"),
+  
   COMPRESSION_ASC("compression_ASC"),
   
   COMPRESSION_DESC("compression_DESC"),
@@ -27,6 +39,10 @@ public enum BackupPlanOrderByInput {
   CREATEDAT_ASC("createdAt_ASC"),
   
   CREATEDAT_DESC("createdAt_DESC"),
+  
+  DELETE_STRATEGY_ASC("delete_strategy_ASC"),
+  
+  DELETE_STRATEGY_DESC("delete_strategy_DESC"),
   
   DESCRIPTION_ASC("description_ASC"),
   
@@ -80,6 +96,10 @@ public enum BackupPlanOrderByInput {
   
   LAST_EXECUTE_STATUS_DESC("last_execute_status_DESC"),
   
+  LAST_EXECUTE_STATUS_MESSAGE_ASC("last_execute_status_message_ASC"),
+  
+  LAST_EXECUTE_STATUS_MESSAGE_DESC("last_execute_status_message_DESC"),
+  
   LAST_EXECUTE_SUCCESS_JOB_COUNT_ASC("last_execute_success_job_count_ASC"),
   
   LAST_EXECUTE_SUCCESS_JOB_COUNT_DESC("last_execute_success_job_count_DESC"),
@@ -96,6 +116,10 @@ public enum BackupPlanOrderByInput {
   
   LAST_MANUAL_EXECUTE_STATUS_DESC("last_manual_execute_status_DESC"),
   
+  LAST_MANUAL_EXECUTE_STATUS_MESSAGE_ASC("last_manual_execute_status_message_ASC"),
+  
+  LAST_MANUAL_EXECUTE_STATUS_MESSAGE_DESC("last_manual_execute_status_message_DESC"),
+  
   LAST_MANUAL_EXECUTE_SUCCESS_JOB_COUNT_ASC("last_manual_execute_success_job_count_ASC"),
   
   LAST_MANUAL_EXECUTE_SUCCESS_JOB_COUNT_DESC("last_manual_execute_success_job_count_DESC"),
@@ -108,6 +132,10 @@ public enum BackupPlanOrderByInput {
   
   LAST_MANUAL_EXECUTED_AT_DESC("last_manual_executed_at_DESC"),
   
+  LOGICAL_SIZE_ASC("logical_size_ASC"),
+  
+  LOGICAL_SIZE_DESC("logical_size_DESC"),
+  
   NAME_ASC("name_ASC"),
   
   NAME_DESC("name_DESC"),
@@ -115,6 +143,10 @@ public enum BackupPlanOrderByInput {
   NEXT_EXECUTE_TIME_ASC("next_execute_time_ASC"),
   
   NEXT_EXECUTE_TIME_DESC("next_execute_time_DESC"),
+  
+  PHASE_ASC("phase_ASC"),
+  
+  PHASE_DESC("phase_DESC"),
   
   PHYSICAL_SIZE_ASC("physical_size_ASC"),
   
@@ -131,6 +163,10 @@ public enum BackupPlanOrderByInput {
   VALID_SIZE_OF_BACKUP_OBJECT_ASC("valid_size_of_backup_object_ASC"),
   
   VALID_SIZE_OF_BACKUP_OBJECT_DESC("valid_size_of_backup_object_DESC"),
+  
+  VALID_SIZE_OF_RESTORE_POINT_ASC("valid_size_of_restore_point_ASC"),
+  
+  VALID_SIZE_OF_RESTORE_POINT_DESC("valid_size_of_restore_point_DESC"),
   
   WINDOW_END_ASC("window_end_ASC"),
   

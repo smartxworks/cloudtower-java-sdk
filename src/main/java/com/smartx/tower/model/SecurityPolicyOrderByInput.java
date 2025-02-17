@@ -36,6 +36,10 @@ public enum SecurityPolicyOrderByInput {
   
   INGRESS_DESC("ingress_DESC"),
   
+  IS_BLOCKLIST_ASC("is_blocklist_ASC"),
+  
+  IS_BLOCKLIST_DESC("is_blocklist_DESC"),
+  
   NAME_ASC("name_ASC"),
   
   NAME_DESC("name_DESC"),

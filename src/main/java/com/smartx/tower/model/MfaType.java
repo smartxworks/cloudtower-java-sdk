@@ -18,6 +18,8 @@ public enum MfaType {
   
   MAIL("Mail"),
   
+  SMS("Sms"),
+  
   MFATYPE_UNSUPPORTED_ENUM("MFATYPE_UNSUPPORTED_ENUM");
   private String value;
 

@@ -7,6 +7,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.TaskDescription;
 import com.smartx.tower.model.TaskStatus;
 import com.smartx.tower.model.TaskStepCreationParams;
 import com.smartx.tower.model.TaskType;
@@ -21,6 +22,14 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class TaskUpdateParamsData {
+  public static final String SERIALIZED_NAME_FINISHED_AT = "finished_at";
+  @SerializedName(SERIALIZED_NAME_FINISHED_AT)
+  private String finishedAt;
+
+  public static final String SERIALIZED_NAME_STARTED_AT = "started_at";
+  @SerializedName(SERIALIZED_NAME_STARTED_AT)
+  private String startedAt;
+
   public static final String SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT = "resource_rollback_retry_count";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ROLLBACK_RETRY_COUNT)
   private Integer resourceRollbackRetryCount;
@@ -91,10 +100,56 @@ public class TaskUpdateParamsData {
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
+  private TaskDescription description;
 
   public TaskUpdateParamsData() { 
   }
+
+  public TaskUpdateParamsData finishedAt(String finishedAt) {
+    
+    this.finishedAt = finishedAt;
+    return this;
+  }
+
+   /**
+   * Get finishedAt
+   * @return finishedAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getFinishedAt() {
+    return finishedAt;
+  }
+
+
+  public void setFinishedAt(String finishedAt) {
+    this.finishedAt = finishedAt;
+  }
+
+
+  public TaskUpdateParamsData startedAt(String startedAt) {
+    
+    this.startedAt = startedAt;
+    return this;
+  }
+
+   /**
+   * Get startedAt
+   * @return startedAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getStartedAt() {
+    return startedAt;
+  }
+
+
+  public void setStartedAt(String startedAt) {
+    this.startedAt = startedAt;
+  }
+
 
   public TaskUpdateParamsData resourceRollbackRetryCount(Integer resourceRollbackRetryCount) {
     
@@ -495,7 +550,7 @@ public class TaskUpdateParamsData {
   }
 
 
-  public TaskUpdateParamsData description(String description) {
+  public TaskUpdateParamsData description(TaskDescription description) {
     
     this.description = description;
     return this;
@@ -508,12 +563,12 @@ public class TaskUpdateParamsData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getDescription() {
+  public TaskDescription getDescription() {
     return description;
   }
 
 
-  public void setDescription(String description) {
+  public void setDescription(TaskDescription description) {
     this.description = description;
   }
 
@@ -527,7 +582,9 @@ public class TaskUpdateParamsData {
       return false;
     }
     TaskUpdateParamsData taskUpdateParamsData = (TaskUpdateParamsData) o;
-    return Objects.equals(this.resourceRollbackRetryCount, taskUpdateParamsData.resourceRollbackRetryCount) &&
+    return Objects.equals(this.finishedAt, taskUpdateParamsData.finishedAt) &&
+        Objects.equals(this.startedAt, taskUpdateParamsData.startedAt) &&
+        Objects.equals(this.resourceRollbackRetryCount, taskUpdateParamsData.resourceRollbackRetryCount) &&
         Objects.equals(this.resourceRollbackError, taskUpdateParamsData.resourceRollbackError) &&
         Objects.equals(this.resourceRollbacked, taskUpdateParamsData.resourceRollbacked) &&
         Objects.equals(this.steps, taskUpdateParamsData.steps) &&
@@ -549,13 +606,15 @@ public class TaskUpdateParamsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(resourceRollbackRetryCount, resourceRollbackError, resourceRollbacked, steps, errorMessage, errorCode, progress, status, snapshot, args, key, type, resourceId, clusterId, userId, resourceMutation, resourceType, description);
+    return Objects.hash(finishedAt, startedAt, resourceRollbackRetryCount, resourceRollbackError, resourceRollbacked, steps, errorMessage, errorCode, progress, status, snapshot, args, key, type, resourceId, clusterId, userId, resourceMutation, resourceType, description);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskUpdateParamsData {\n");
+    sb.append("    finishedAt: ").append(toIndentedString(finishedAt)).append("\n");
+    sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
     sb.append("    resourceRollbackRetryCount: ").append(toIndentedString(resourceRollbackRetryCount)).append("\n");
     sb.append("    resourceRollbackError: ").append(toIndentedString(resourceRollbackError)).append("\n");
     sb.append("    resourceRollbacked: ").append(toIndentedString(resourceRollbacked)).append("\n");

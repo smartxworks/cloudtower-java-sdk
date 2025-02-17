@@ -7,15 +7,21 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartx.tower.model.BackupPlanDelayOption;
+import com.smartx.tower.model.BackupPlanDeleteStrategy;
 import com.smartx.tower.model.BackupPlanExecutionStatus;
 import com.smartx.tower.model.BackupPlanKeepPolicy;
 import com.smartx.tower.model.BackupPlanPeriod;
+import com.smartx.tower.model.BackupPlanPhase;
 import com.smartx.tower.model.BackupPlanStatus;
 import com.smartx.tower.model.ConsistentType;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.NestedBackupPlanExecution;
 import com.smartx.tower.model.NestedBackupPlanTimePoint;
+import com.smartx.tower.model.NestedBackupRestorePoint;
 import com.smartx.tower.model.NestedBackupService;
 import com.smartx.tower.model.NestedBackupStoreRepository;
+import com.smartx.tower.model.NestedVm;
 import com.smartx.tower.model.WeekdayTypeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,6 +35,22 @@ import org.openapitools.jackson.nullable.JsonNullable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class BackupPlan {
+  public static final String SERIALIZED_NAME_BACKUP_DELAY_OPTION = "backup_delay_option";
+  @SerializedName(SERIALIZED_NAME_BACKUP_DELAY_OPTION)
+  private BackupPlanDelayOption backupDelayOption;
+
+  public static final String SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS = "backup_plan_executions";
+  @SerializedName(SERIALIZED_NAME_BACKUP_PLAN_EXECUTIONS)
+  private List<NestedBackupPlanExecution> backupPlanExecutions = null;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT = "backup_restore_point_count";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINT_COUNT)
+  private Integer backupRestorePointCount;
+
+  public static final String SERIALIZED_NAME_BACKUP_RESTORE_POINTS = "backup_restore_points";
+  @SerializedName(SERIALIZED_NAME_BACKUP_RESTORE_POINTS)
+  private List<NestedBackupRestorePoint> backupRestorePoints = null;
+
   public static final String SERIALIZED_NAME_BACKUP_SERVICE = "backup_service";
   @SerializedName(SERIALIZED_NAME_BACKUP_SERVICE)
   private NestedBackupService backupService;
@@ -36,6 +58,10 @@ public class BackupPlan {
   public static final String SERIALIZED_NAME_BACKUP_STORE_REPOSITORY = "backup_store_repository";
   @SerializedName(SERIALIZED_NAME_BACKUP_STORE_REPOSITORY)
   private NestedBackupStoreRepository backupStoreRepository;
+
+  public static final String SERIALIZED_NAME_BACKUP_TOTAL_SIZE = "backup_total_size";
+  @SerializedName(SERIALIZED_NAME_BACKUP_TOTAL_SIZE)
+  private Long backupTotalSize;
 
   public static final String SERIALIZED_NAME_COMPRESSION = "compression";
   @SerializedName(SERIALIZED_NAME_COMPRESSION)
@@ -48,6 +74,10 @@ public class BackupPlan {
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
+
+  public static final String SERIALIZED_NAME_DELETE_STRATEGY = "delete_strategy";
+  @SerializedName(SERIALIZED_NAME_DELETE_STRATEGY)
+  private BackupPlanDeleteStrategy deleteStrategy;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -105,6 +135,10 @@ public class BackupPlan {
   @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS)
   private BackupPlanExecutionStatus lastExecuteStatus;
 
+  public static final String SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE = "last_execute_status_message";
+  @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_STATUS_MESSAGE)
+  private String lastExecuteStatusMessage;
+
   public static final String SERIALIZED_NAME_LAST_EXECUTE_SUCCESS_JOB_COUNT = "last_execute_success_job_count";
   @SerializedName(SERIALIZED_NAME_LAST_EXECUTE_SUCCESS_JOB_COUNT)
   private Integer lastExecuteSuccessJobCount;
@@ -121,6 +155,10 @@ public class BackupPlan {
   @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS)
   private BackupPlanExecutionStatus lastManualExecuteStatus;
 
+  public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE = "last_manual_execute_status_message";
+  @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_STATUS_MESSAGE)
+  private String lastManualExecuteStatusMessage;
+
   public static final String SERIALIZED_NAME_LAST_MANUAL_EXECUTE_SUCCESS_JOB_COUNT = "last_manual_execute_success_job_count";
   @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTE_SUCCESS_JOB_COUNT)
   private Integer lastManualExecuteSuccessJobCount;
@@ -133,6 +171,10 @@ public class BackupPlan {
   @SerializedName(SERIALIZED_NAME_LAST_MANUAL_EXECUTED_AT)
   private String lastManualExecutedAt;
 
+  public static final String SERIALIZED_NAME_LOGICAL_SIZE = "logical_size";
+  @SerializedName(SERIALIZED_NAME_LOGICAL_SIZE)
+  private Long logicalSize;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -140,6 +182,10 @@ public class BackupPlan {
   public static final String SERIALIZED_NAME_NEXT_EXECUTE_TIME = "next_execute_time";
   @SerializedName(SERIALIZED_NAME_NEXT_EXECUTE_TIME)
   private String nextExecuteTime;
+
+  public static final String SERIALIZED_NAME_PHASE = "phase";
+  @SerializedName(SERIALIZED_NAME_PHASE)
+  private BackupPlanPhase phase;
 
   public static final String SERIALIZED_NAME_PHYSICAL_SIZE = "physical_size";
   @SerializedName(SERIALIZED_NAME_PHYSICAL_SIZE)
@@ -157,6 +203,14 @@ public class BackupPlan {
   @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_BACKUP_OBJECT)
   private Long validSizeOfBackupObject;
 
+  public static final String SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT = "valid_size_of_restore_point";
+  @SerializedName(SERIALIZED_NAME_VALID_SIZE_OF_RESTORE_POINT)
+  private Long validSizeOfRestorePoint;
+
+  public static final String SERIALIZED_NAME_VMS = "vms";
+  @SerializedName(SERIALIZED_NAME_VMS)
+  private List<NestedVm> vms = null;
+
   public static final String SERIALIZED_NAME_WINDOW_END = "window_end";
   @SerializedName(SERIALIZED_NAME_WINDOW_END)
   private String windowEnd;
@@ -167,6 +221,114 @@ public class BackupPlan {
 
   public BackupPlan() { 
   }
+
+  public BackupPlan backupDelayOption(BackupPlanDelayOption backupDelayOption) {
+    
+    this.backupDelayOption = backupDelayOption;
+    return this;
+  }
+
+   /**
+   * Get backupDelayOption
+   * @return backupDelayOption
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanDelayOption getBackupDelayOption() {
+    return backupDelayOption;
+  }
+
+
+  public void setBackupDelayOption(BackupPlanDelayOption backupDelayOption) {
+    this.backupDelayOption = backupDelayOption;
+  }
+
+
+  public BackupPlan backupPlanExecutions(List<NestedBackupPlanExecution> backupPlanExecutions) {
+    
+    this.backupPlanExecutions = backupPlanExecutions;
+    return this;
+  }
+
+  public BackupPlan addBackupPlanExecutionsItem(NestedBackupPlanExecution backupPlanExecutionsItem) {
+    if (this.backupPlanExecutions == null) {
+      this.backupPlanExecutions = new ArrayList<NestedBackupPlanExecution>();
+    }
+    this.backupPlanExecutions.add(backupPlanExecutionsItem);
+    return this;
+  }
+
+   /**
+   * Get backupPlanExecutions
+   * @return backupPlanExecutions
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedBackupPlanExecution> getBackupPlanExecutions() {
+    return backupPlanExecutions;
+  }
+
+
+  public void setBackupPlanExecutions(List<NestedBackupPlanExecution> backupPlanExecutions) {
+    this.backupPlanExecutions = backupPlanExecutions;
+  }
+
+
+  public BackupPlan backupRestorePointCount(Integer backupRestorePointCount) {
+    
+    this.backupRestorePointCount = backupRestorePointCount;
+    return this;
+  }
+
+   /**
+   * Get backupRestorePointCount
+   * @return backupRestorePointCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getBackupRestorePointCount() {
+    return backupRestorePointCount;
+  }
+
+
+  public void setBackupRestorePointCount(Integer backupRestorePointCount) {
+    this.backupRestorePointCount = backupRestorePointCount;
+  }
+
+
+  public BackupPlan backupRestorePoints(List<NestedBackupRestorePoint> backupRestorePoints) {
+    
+    this.backupRestorePoints = backupRestorePoints;
+    return this;
+  }
+
+  public BackupPlan addBackupRestorePointsItem(NestedBackupRestorePoint backupRestorePointsItem) {
+    if (this.backupRestorePoints == null) {
+      this.backupRestorePoints = new ArrayList<NestedBackupRestorePoint>();
+    }
+    this.backupRestorePoints.add(backupRestorePointsItem);
+    return this;
+  }
+
+   /**
+   * Get backupRestorePoints
+   * @return backupRestorePoints
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedBackupRestorePoint> getBackupRestorePoints() {
+    return backupRestorePoints;
+  }
+
+
+  public void setBackupRestorePoints(List<NestedBackupRestorePoint> backupRestorePoints) {
+    this.backupRestorePoints = backupRestorePoints;
+  }
+
 
   public BackupPlan backupService(NestedBackupService backupService) {
     
@@ -211,6 +373,29 @@ public class BackupPlan {
 
   public void setBackupStoreRepository(NestedBackupStoreRepository backupStoreRepository) {
     this.backupStoreRepository = backupStoreRepository;
+  }
+
+
+  public BackupPlan backupTotalSize(Long backupTotalSize) {
+    
+    this.backupTotalSize = backupTotalSize;
+    return this;
+  }
+
+   /**
+   * Get backupTotalSize
+   * @return backupTotalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getBackupTotalSize() {
+    return backupTotalSize;
+  }
+
+
+  public void setBackupTotalSize(Long backupTotalSize) {
+    this.backupTotalSize = backupTotalSize;
   }
 
 
@@ -280,6 +465,29 @@ public class BackupPlan {
 
   public void setCreatedAt(String createdAt) {
     this.createdAt = createdAt;
+  }
+
+
+  public BackupPlan deleteStrategy(BackupPlanDeleteStrategy deleteStrategy) {
+    
+    this.deleteStrategy = deleteStrategy;
+    return this;
+  }
+
+   /**
+   * Get deleteStrategy
+   * @return deleteStrategy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanDeleteStrategy getDeleteStrategy() {
+    return deleteStrategy;
+  }
+
+
+  public void setDeleteStrategy(BackupPlanDeleteStrategy deleteStrategy) {
+    this.deleteStrategy = deleteStrategy;
   }
 
 
@@ -618,6 +826,29 @@ public class BackupPlan {
   }
 
 
+  public BackupPlan lastExecuteStatusMessage(String lastExecuteStatusMessage) {
+    
+    this.lastExecuteStatusMessage = lastExecuteStatusMessage;
+    return this;
+  }
+
+   /**
+   * Get lastExecuteStatusMessage
+   * @return lastExecuteStatusMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastExecuteStatusMessage() {
+    return lastExecuteStatusMessage;
+  }
+
+
+  public void setLastExecuteStatusMessage(String lastExecuteStatusMessage) {
+    this.lastExecuteStatusMessage = lastExecuteStatusMessage;
+  }
+
+
   public BackupPlan lastExecuteSuccessJobCount(Integer lastExecuteSuccessJobCount) {
     
     this.lastExecuteSuccessJobCount = lastExecuteSuccessJobCount;
@@ -710,6 +941,29 @@ public class BackupPlan {
   }
 
 
+  public BackupPlan lastManualExecuteStatusMessage(String lastManualExecuteStatusMessage) {
+    
+    this.lastManualExecuteStatusMessage = lastManualExecuteStatusMessage;
+    return this;
+  }
+
+   /**
+   * Get lastManualExecuteStatusMessage
+   * @return lastManualExecuteStatusMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLastManualExecuteStatusMessage() {
+    return lastManualExecuteStatusMessage;
+  }
+
+
+  public void setLastManualExecuteStatusMessage(String lastManualExecuteStatusMessage) {
+    this.lastManualExecuteStatusMessage = lastManualExecuteStatusMessage;
+  }
+
+
   public BackupPlan lastManualExecuteSuccessJobCount(Integer lastManualExecuteSuccessJobCount) {
     
     this.lastManualExecuteSuccessJobCount = lastManualExecuteSuccessJobCount;
@@ -779,6 +1033,29 @@ public class BackupPlan {
   }
 
 
+  public BackupPlan logicalSize(Long logicalSize) {
+    
+    this.logicalSize = logicalSize;
+    return this;
+  }
+
+   /**
+   * Get logicalSize
+   * @return logicalSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getLogicalSize() {
+    return logicalSize;
+  }
+
+
+  public void setLogicalSize(Long logicalSize) {
+    this.logicalSize = logicalSize;
+  }
+
+
   public BackupPlan name(String name) {
     
     this.name = name;
@@ -822,6 +1099,29 @@ public class BackupPlan {
 
   public void setNextExecuteTime(String nextExecuteTime) {
     this.nextExecuteTime = nextExecuteTime;
+  }
+
+
+  public BackupPlan phase(BackupPlanPhase phase) {
+    
+    this.phase = phase;
+    return this;
+  }
+
+   /**
+   * Get phase
+   * @return phase
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public BackupPlanPhase getPhase() {
+    return phase;
+  }
+
+
+  public void setPhase(BackupPlanPhase phase) {
+    this.phase = phase;
   }
 
 
@@ -917,6 +1217,60 @@ public class BackupPlan {
   }
 
 
+  public BackupPlan validSizeOfRestorePoint(Long validSizeOfRestorePoint) {
+    
+    this.validSizeOfRestorePoint = validSizeOfRestorePoint;
+    return this;
+  }
+
+   /**
+   * Get validSizeOfRestorePoint
+   * @return validSizeOfRestorePoint
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getValidSizeOfRestorePoint() {
+    return validSizeOfRestorePoint;
+  }
+
+
+  public void setValidSizeOfRestorePoint(Long validSizeOfRestorePoint) {
+    this.validSizeOfRestorePoint = validSizeOfRestorePoint;
+  }
+
+
+  public BackupPlan vms(List<NestedVm> vms) {
+    
+    this.vms = vms;
+    return this;
+  }
+
+  public BackupPlan addVmsItem(NestedVm vmsItem) {
+    if (this.vms == null) {
+      this.vms = new ArrayList<NestedVm>();
+    }
+    this.vms.add(vmsItem);
+    return this;
+  }
+
+   /**
+   * Get vms
+   * @return vms
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<NestedVm> getVms() {
+    return vms;
+  }
+
+
+  public void setVms(List<NestedVm> vms) {
+    this.vms = vms;
+  }
+
+
   public BackupPlan windowEnd(String windowEnd) {
     
     this.windowEnd = windowEnd;
@@ -972,11 +1326,17 @@ public class BackupPlan {
       return false;
     }
     BackupPlan backupPlan = (BackupPlan) o;
-    return Objects.equals(this.backupService, backupPlan.backupService) &&
+    return Objects.equals(this.backupDelayOption, backupPlan.backupDelayOption) &&
+        Objects.equals(this.backupPlanExecutions, backupPlan.backupPlanExecutions) &&
+        Objects.equals(this.backupRestorePointCount, backupPlan.backupRestorePointCount) &&
+        Objects.equals(this.backupRestorePoints, backupPlan.backupRestorePoints) &&
+        Objects.equals(this.backupService, backupPlan.backupService) &&
         Objects.equals(this.backupStoreRepository, backupPlan.backupStoreRepository) &&
+        Objects.equals(this.backupTotalSize, backupPlan.backupTotalSize) &&
         Objects.equals(this.compression, backupPlan.compression) &&
         Objects.equals(this.compressionRatio, backupPlan.compressionRatio) &&
         Objects.equals(this.createdAt, backupPlan.createdAt) &&
+        Objects.equals(this.deleteStrategy, backupPlan.deleteStrategy) &&
         Objects.equals(this.description, backupPlan.description) &&
         Objects.equals(this.enableWindow, backupPlan.enableWindow) &&
         Objects.equals(this.entityAsyncStatus, backupPlan.entityAsyncStatus) &&
@@ -991,19 +1351,25 @@ public class BackupPlan {
         Objects.equals(this.keepPolicy, backupPlan.keepPolicy) &&
         Objects.equals(this.keepPolicyValue, backupPlan.keepPolicyValue) &&
         Objects.equals(this.lastExecuteStatus, backupPlan.lastExecuteStatus) &&
+        Objects.equals(this.lastExecuteStatusMessage, backupPlan.lastExecuteStatusMessage) &&
         Objects.equals(this.lastExecuteSuccessJobCount, backupPlan.lastExecuteSuccessJobCount) &&
         Objects.equals(this.lastExecuteTotalJobCount, backupPlan.lastExecuteTotalJobCount) &&
         Objects.equals(this.lastExecutedAt, backupPlan.lastExecutedAt) &&
         Objects.equals(this.lastManualExecuteStatus, backupPlan.lastManualExecuteStatus) &&
+        Objects.equals(this.lastManualExecuteStatusMessage, backupPlan.lastManualExecuteStatusMessage) &&
         Objects.equals(this.lastManualExecuteSuccessJobCount, backupPlan.lastManualExecuteSuccessJobCount) &&
         Objects.equals(this.lastManualExecuteTotalJobCount, backupPlan.lastManualExecuteTotalJobCount) &&
         Objects.equals(this.lastManualExecutedAt, backupPlan.lastManualExecutedAt) &&
+        Objects.equals(this.logicalSize, backupPlan.logicalSize) &&
         Objects.equals(this.name, backupPlan.name) &&
         Objects.equals(this.nextExecuteTime, backupPlan.nextExecuteTime) &&
+        Objects.equals(this.phase, backupPlan.phase) &&
         Objects.equals(this.physicalSize, backupPlan.physicalSize) &&
         Objects.equals(this.snapshotConsistentType, backupPlan.snapshotConsistentType) &&
         Objects.equals(this.status, backupPlan.status) &&
         Objects.equals(this.validSizeOfBackupObject, backupPlan.validSizeOfBackupObject) &&
+        Objects.equals(this.validSizeOfRestorePoint, backupPlan.validSizeOfRestorePoint) &&
+        Objects.equals(this.vms, backupPlan.vms) &&
         Objects.equals(this.windowEnd, backupPlan.windowEnd) &&
         Objects.equals(this.windowStart, backupPlan.windowStart);
   }
@@ -1014,7 +1380,7 @@ public class BackupPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(backupService, backupStoreRepository, compression, compressionRatio, createdAt, description, enableWindow, entityAsyncStatus, fullInterval, fullPeriod, fullTimePoint, id, incrementalInterval, incrementalPeriod, incrementalTimePoints, incrementalWeekdays, keepPolicy, keepPolicyValue, lastExecuteStatus, lastExecuteSuccessJobCount, lastExecuteTotalJobCount, lastExecutedAt, lastManualExecuteStatus, lastManualExecuteSuccessJobCount, lastManualExecuteTotalJobCount, lastManualExecutedAt, name, nextExecuteTime, physicalSize, snapshotConsistentType, status, validSizeOfBackupObject, windowEnd, windowStart);
+    return Objects.hash(backupDelayOption, backupPlanExecutions, backupRestorePointCount, backupRestorePoints, backupService, backupStoreRepository, backupTotalSize, compression, compressionRatio, createdAt, deleteStrategy, description, enableWindow, entityAsyncStatus, fullInterval, fullPeriod, fullTimePoint, id, incrementalInterval, incrementalPeriod, incrementalTimePoints, incrementalWeekdays, keepPolicy, keepPolicyValue, lastExecuteStatus, lastExecuteStatusMessage, lastExecuteSuccessJobCount, lastExecuteTotalJobCount, lastExecutedAt, lastManualExecuteStatus, lastManualExecuteStatusMessage, lastManualExecuteSuccessJobCount, lastManualExecuteTotalJobCount, lastManualExecutedAt, logicalSize, name, nextExecuteTime, phase, physicalSize, snapshotConsistentType, status, validSizeOfBackupObject, validSizeOfRestorePoint, vms, windowEnd, windowStart);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1028,11 +1394,17 @@ public class BackupPlan {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BackupPlan {\n");
+    sb.append("    backupDelayOption: ").append(toIndentedString(backupDelayOption)).append("\n");
+    sb.append("    backupPlanExecutions: ").append(toIndentedString(backupPlanExecutions)).append("\n");
+    sb.append("    backupRestorePointCount: ").append(toIndentedString(backupRestorePointCount)).append("\n");
+    sb.append("    backupRestorePoints: ").append(toIndentedString(backupRestorePoints)).append("\n");
     sb.append("    backupService: ").append(toIndentedString(backupService)).append("\n");
     sb.append("    backupStoreRepository: ").append(toIndentedString(backupStoreRepository)).append("\n");
+    sb.append("    backupTotalSize: ").append(toIndentedString(backupTotalSize)).append("\n");
     sb.append("    compression: ").append(toIndentedString(compression)).append("\n");
     sb.append("    compressionRatio: ").append(toIndentedString(compressionRatio)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    deleteStrategy: ").append(toIndentedString(deleteStrategy)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    enableWindow: ").append(toIndentedString(enableWindow)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
@@ -1047,19 +1419,25 @@ public class BackupPlan {
     sb.append("    keepPolicy: ").append(toIndentedString(keepPolicy)).append("\n");
     sb.append("    keepPolicyValue: ").append(toIndentedString(keepPolicyValue)).append("\n");
     sb.append("    lastExecuteStatus: ").append(toIndentedString(lastExecuteStatus)).append("\n");
+    sb.append("    lastExecuteStatusMessage: ").append(toIndentedString(lastExecuteStatusMessage)).append("\n");
     sb.append("    lastExecuteSuccessJobCount: ").append(toIndentedString(lastExecuteSuccessJobCount)).append("\n");
     sb.append("    lastExecuteTotalJobCount: ").append(toIndentedString(lastExecuteTotalJobCount)).append("\n");
     sb.append("    lastExecutedAt: ").append(toIndentedString(lastExecutedAt)).append("\n");
     sb.append("    lastManualExecuteStatus: ").append(toIndentedString(lastManualExecuteStatus)).append("\n");
+    sb.append("    lastManualExecuteStatusMessage: ").append(toIndentedString(lastManualExecuteStatusMessage)).append("\n");
     sb.append("    lastManualExecuteSuccessJobCount: ").append(toIndentedString(lastManualExecuteSuccessJobCount)).append("\n");
     sb.append("    lastManualExecuteTotalJobCount: ").append(toIndentedString(lastManualExecuteTotalJobCount)).append("\n");
     sb.append("    lastManualExecutedAt: ").append(toIndentedString(lastManualExecutedAt)).append("\n");
+    sb.append("    logicalSize: ").append(toIndentedString(logicalSize)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nextExecuteTime: ").append(toIndentedString(nextExecuteTime)).append("\n");
+    sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
     sb.append("    physicalSize: ").append(toIndentedString(physicalSize)).append("\n");
     sb.append("    snapshotConsistentType: ").append(toIndentedString(snapshotConsistentType)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    validSizeOfBackupObject: ").append(toIndentedString(validSizeOfBackupObject)).append("\n");
+    sb.append("    validSizeOfRestorePoint: ").append(toIndentedString(validSizeOfRestorePoint)).append("\n");
+    sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
     sb.append("    windowEnd: ").append(toIndentedString(windowEnd)).append("\n");
     sb.append("    windowStart: ").append(toIndentedString(windowStart)).append("\n");
     sb.append("}");

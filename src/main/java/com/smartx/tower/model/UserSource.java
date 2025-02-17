@@ -22,6 +22,8 @@ public enum UserSource {
   
   LOCAL("LOCAL"),
   
+  SSO("SSO"),
+  
   USERSOURCE_UNSUPPORTED_ENUM("USERSOURCE_UNSUPPORTED_ENUM");
   private String value;
 

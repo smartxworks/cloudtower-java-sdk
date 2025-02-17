@@ -9,6 +9,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedVirtualPrivateCloud;
+import com.smartx.tower.model.NestedVirtualPrivateCloudEdgeGateway;
 import com.smartx.tower.model.NestedVirtualPrivateCloudFloatingIp;
 import com.smartx.tower.model.NestedVirtualPrivateCloudNatGateway;
 import com.smartx.tower.model.NestedVirtualPrivateCloudRouterGateway;
@@ -33,9 +34,17 @@ public class VirtualPrivateCloudExternalSubnet {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+  public static final String SERIALIZED_NAME_EDGE_GATEWAY = "edge_gateway";
+  @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY)
+  private NestedVirtualPrivateCloudEdgeGateway edgeGateway;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
+
+  public static final String SERIALIZED_NAME_EXCLUSIVE = "exclusive";
+  @SerializedName(SERIALIZED_NAME_EXCLUSIVE)
+  private Boolean exclusive;
 
   public static final String SERIALIZED_NAME_FLOATING_IP_CIDR = "floating_ip_cidr";
   @SerializedName(SERIALIZED_NAME_FLOATING_IP_CIDR)
@@ -134,6 +143,29 @@ public class VirtualPrivateCloudExternalSubnet {
   }
 
 
+  public VirtualPrivateCloudExternalSubnet edgeGateway(NestedVirtualPrivateCloudEdgeGateway edgeGateway) {
+    
+    this.edgeGateway = edgeGateway;
+    return this;
+  }
+
+   /**
+   * Get edgeGateway
+   * @return edgeGateway
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NestedVirtualPrivateCloudEdgeGateway getEdgeGateway() {
+    return edgeGateway;
+  }
+
+
+  public void setEdgeGateway(NestedVirtualPrivateCloudEdgeGateway edgeGateway) {
+    this.edgeGateway = edgeGateway;
+  }
+
+
   public VirtualPrivateCloudExternalSubnet entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     
     this.entityAsyncStatus = entityAsyncStatus;
@@ -154,6 +186,29 @@ public class VirtualPrivateCloudExternalSubnet {
 
   public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     this.entityAsyncStatus = entityAsyncStatus;
+  }
+
+
+  public VirtualPrivateCloudExternalSubnet exclusive(Boolean exclusive) {
+    
+    this.exclusive = exclusive;
+    return this;
+  }
+
+   /**
+   * Get exclusive
+   * @return exclusive
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Boolean getExclusive() {
+    return exclusive;
+  }
+
+
+  public void setExclusive(Boolean exclusive) {
+    this.exclusive = exclusive;
   }
 
 
@@ -468,7 +523,9 @@ public class VirtualPrivateCloudExternalSubnet {
     VirtualPrivateCloudExternalSubnet virtualPrivateCloudExternalSubnet = (VirtualPrivateCloudExternalSubnet) o;
     return Objects.equals(this.cidr, virtualPrivateCloudExternalSubnet.cidr) &&
         Objects.equals(this.description, virtualPrivateCloudExternalSubnet.description) &&
+        Objects.equals(this.edgeGateway, virtualPrivateCloudExternalSubnet.edgeGateway) &&
         Objects.equals(this.entityAsyncStatus, virtualPrivateCloudExternalSubnet.entityAsyncStatus) &&
+        Objects.equals(this.exclusive, virtualPrivateCloudExternalSubnet.exclusive) &&
         Objects.equals(this.floatingIpCidr, virtualPrivateCloudExternalSubnet.floatingIpCidr) &&
         Objects.equals(this.floatingIps, virtualPrivateCloudExternalSubnet.floatingIps) &&
         Objects.equals(this.gateway, virtualPrivateCloudExternalSubnet.gateway) &&
@@ -489,7 +546,7 @@ public class VirtualPrivateCloudExternalSubnet {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cidr, description, entityAsyncStatus, floatingIpCidr, floatingIps, gateway, id, localId, name, natGatewayCidr, natGateways, routerGatewayCidr, routerGateways, vlan, vpc);
+    return Objects.hash(cidr, description, edgeGateway, entityAsyncStatus, exclusive, floatingIpCidr, floatingIps, gateway, id, localId, name, natGatewayCidr, natGateways, routerGatewayCidr, routerGateways, vlan, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -505,7 +562,9 @@ public class VirtualPrivateCloudExternalSubnet {
     sb.append("class VirtualPrivateCloudExternalSubnet {\n");
     sb.append("    cidr: ").append(toIndentedString(cidr)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    edgeGateway: ").append(toIndentedString(edgeGateway)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
+    sb.append("    exclusive: ").append(toIndentedString(exclusive)).append("\n");
     sb.append("    floatingIpCidr: ").append(toIndentedString(floatingIpCidr)).append("\n");
     sb.append("    floatingIps: ").append(toIndentedString(floatingIps)).append("\n");
     sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");

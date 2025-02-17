@@ -149,6 +149,14 @@ public class SecurityPolicyWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
+  public static final String SERIALIZED_NAME_IS_BLOCKLIST = "is_blocklist";
+  @SerializedName(SERIALIZED_NAME_IS_BLOCKLIST)
+  private Boolean isBlocklist;
+
+  public static final String SERIALIZED_NAME_IS_BLOCKLIST_NOT = "is_blocklist_not";
+  @SerializedName(SERIALIZED_NAME_IS_BLOCKLIST_NOT)
+  private Boolean isBlocklistNot;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -1016,6 +1024,52 @@ public class SecurityPolicyWhereInput {
   }
 
 
+  public SecurityPolicyWhereInput isBlocklist(Boolean isBlocklist) {
+    
+    this.isBlocklist = isBlocklist;
+    return this;
+  }
+
+   /**
+   * Get isBlocklist
+   * @return isBlocklist
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIsBlocklist() {
+    return isBlocklist;
+  }
+
+
+  public void setIsBlocklist(Boolean isBlocklist) {
+    this.isBlocklist = isBlocklist;
+  }
+
+
+  public SecurityPolicyWhereInput isBlocklistNot(Boolean isBlocklistNot) {
+    
+    this.isBlocklistNot = isBlocklistNot;
+    return this;
+  }
+
+   /**
+   * Get isBlocklistNot
+   * @return isBlocklistNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIsBlocklistNot() {
+    return isBlocklistNot;
+  }
+
+
+  public void setIsBlocklistNot(Boolean isBlocklistNot) {
+    this.isBlocklistNot = isBlocklistNot;
+  }
+
+
   public SecurityPolicyWhereInput name(String name) {
     
     this.name = name;
@@ -1503,6 +1557,8 @@ public class SecurityPolicyWhereInput {
         Objects.equals(this.idNotIn, securityPolicyWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, securityPolicyWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, securityPolicyWhereInput.idStartsWith) &&
+        Objects.equals(this.isBlocklist, securityPolicyWhereInput.isBlocklist) &&
+        Objects.equals(this.isBlocklistNot, securityPolicyWhereInput.isBlocklistNot) &&
         Objects.equals(this.name, securityPolicyWhereInput.name) &&
         Objects.equals(this.nameContains, securityPolicyWhereInput.nameContains) &&
         Objects.equals(this.nameEndsWith, securityPolicyWhereInput.nameEndsWith) &&
@@ -1529,7 +1585,7 @@ public class SecurityPolicyWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, policyMode, policyModeIn, policyModeNot, policyModeNotIn);
+    return Objects.hash(AND, NOT, OR, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, everouteCluster, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, isBlocklist, isBlocklistNot, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, policyMode, policyModeIn, policyModeNot, policyModeNotIn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1575,6 +1631,8 @@ public class SecurityPolicyWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+    sb.append("    isBlocklist: ").append(toIndentedString(isBlocklist)).append("\n");
+    sb.append("    isBlocklistNot: ").append(toIndentedString(isBlocklistNot)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameContains: ").append(toIndentedString(nameContains)).append("\n");
     sb.append("    nameEndsWith: ").append(toIndentedString(nameEndsWith)).append("\n");

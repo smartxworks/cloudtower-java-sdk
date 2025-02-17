@@ -32,6 +32,8 @@ public enum MetricUnit {
   
   RATIO("RATIO"),
   
+  STORAGE_BAND_WIDTH("STORAGE_BAND_WIDTH"),
+  
   TEMPERATURE("TEMPERATURE"),
   
   TIME("TIME"),

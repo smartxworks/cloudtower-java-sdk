@@ -47,6 +47,10 @@ public class SecurityPolicy {
   @SerializedName(SERIALIZED_NAME_INGRESS)
   private List<NestedNetworkPolicyRule> ingress = null;
 
+  public static final String SERIALIZED_NAME_IS_BLOCKLIST = "is_blocklist";
+  @SerializedName(SERIALIZED_NAME_IS_BLOCKLIST)
+  private Boolean isBlocklist;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -217,6 +221,29 @@ public class SecurityPolicy {
   }
 
 
+  public SecurityPolicy isBlocklist(Boolean isBlocklist) {
+    
+    this.isBlocklist = isBlocklist;
+    return this;
+  }
+
+   /**
+   * Get isBlocklist
+   * @return isBlocklist
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Boolean getIsBlocklist() {
+    return isBlocklist;
+  }
+
+
+  public void setIsBlocklist(Boolean isBlocklist) {
+    this.isBlocklist = isBlocklist;
+  }
+
+
   public SecurityPolicy name(String name) {
     
     this.name = name;
@@ -278,6 +305,7 @@ public class SecurityPolicy {
         Objects.equals(this.everouteCluster, securityPolicy.everouteCluster) &&
         Objects.equals(this.id, securityPolicy.id) &&
         Objects.equals(this.ingress, securityPolicy.ingress) &&
+        Objects.equals(this.isBlocklist, securityPolicy.isBlocklist) &&
         Objects.equals(this.name, securityPolicy.name) &&
         Objects.equals(this.policyMode, securityPolicy.policyMode);
   }
@@ -288,7 +316,7 @@ public class SecurityPolicy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyTo, description, egress, everouteCluster, id, ingress, name, policyMode);
+    return Objects.hash(applyTo, description, egress, everouteCluster, id, ingress, isBlocklist, name, policyMode);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -308,6 +336,7 @@ public class SecurityPolicy {
     sb.append("    everouteCluster: ").append(toIndentedString(everouteCluster)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    ingress: ").append(toIndentedString(ingress)).append("\n");
+    sb.append("    isBlocklist: ").append(toIndentedString(isBlocklist)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    policyMode: ").append(toIndentedString(policyMode)).append("\n");
     sb.append("}");

@@ -11,6 +11,10 @@ import com.smartx.tower.model.Architecture;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.LabelWhereInput;
+import com.smartx.tower.model.VmClockOffset;
+import com.smartx.tower.model.VmDiskIoPolicy;
+import com.smartx.tower.model.VmDiskIoRestrictType;
+import com.smartx.tower.model.VmFirmware;
 import com.smartx.tower.model.VmTemplateWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -52,6 +56,22 @@ public class ContentLibraryVmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_ARCHITECTURE_NOT_IN)
   private List<Architecture> architectureNotIn = null;
 
+  public static final String SERIALIZED_NAME_CLOCK_OFFSET = "clock_offset";
+  @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET)
+  private VmClockOffset clockOffset;
+
+  public static final String SERIALIZED_NAME_CLOCK_OFFSET_IN = "clock_offset_in";
+  @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET_IN)
+  private List<VmClockOffset> clockOffsetIn = null;
+
+  public static final String SERIALIZED_NAME_CLOCK_OFFSET_NOT = "clock_offset_not";
+  @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET_NOT)
+  private VmClockOffset clockOffsetNot;
+
+  public static final String SERIALIZED_NAME_CLOCK_OFFSET_NOT_IN = "clock_offset_not_in";
+  @SerializedName(SERIALIZED_NAME_CLOCK_OFFSET_NOT_IN)
+  private List<VmClockOffset> clockOffsetNotIn = null;
+
   public static final String SERIALIZED_NAME_CLOUD_INIT_SUPPORTED = "cloud_init_supported";
   @SerializedName(SERIALIZED_NAME_CLOUD_INIT_SUPPORTED)
   private Boolean cloudInitSupported;
@@ -71,6 +91,62 @@ public class ContentLibraryVmTemplateWhereInput {
   public static final String SERIALIZED_NAME_CLUSTERS_SOME = "clusters_some";
   @SerializedName(SERIALIZED_NAME_CLUSTERS_SOME)
   private ClusterWhereInput clustersSome;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL = "cpu_model";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL)
+  private String cpuModel;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_CONTAINS = "cpu_model_contains";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_CONTAINS)
+  private String cpuModelContains;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_ENDS_WITH = "cpu_model_ends_with";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_ENDS_WITH)
+  private String cpuModelEndsWith;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_GT = "cpu_model_gt";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_GT)
+  private String cpuModelGt;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_GTE = "cpu_model_gte";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_GTE)
+  private String cpuModelGte;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_IN = "cpu_model_in";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_IN)
+  private List<String> cpuModelIn = null;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_LT = "cpu_model_lt";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_LT)
+  private String cpuModelLt;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_LTE = "cpu_model_lte";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_LTE)
+  private String cpuModelLte;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_NOT = "cpu_model_not";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_NOT)
+  private String cpuModelNot;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_NOT_CONTAINS = "cpu_model_not_contains";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_NOT_CONTAINS)
+  private String cpuModelNotContains;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_NOT_ENDS_WITH = "cpu_model_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_NOT_ENDS_WITH)
+  private String cpuModelNotEndsWith;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_NOT_IN = "cpu_model_not_in";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_NOT_IN)
+  private List<String> cpuModelNotIn = null;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_NOT_STARTS_WITH = "cpu_model_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_NOT_STARTS_WITH)
+  private String cpuModelNotStartsWith;
+
+  public static final String SERIALIZED_NAME_CPU_MODEL_STARTS_WITH = "cpu_model_starts_with";
+  @SerializedName(SERIALIZED_NAME_CPU_MODEL_STARTS_WITH)
+  private String cpuModelStartsWith;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -176,6 +252,30 @@ public class ContentLibraryVmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
   private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
 
+  public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
+  @SerializedName(SERIALIZED_NAME_FIRMWARE)
+  private VmFirmware firmware;
+
+  public static final String SERIALIZED_NAME_FIRMWARE_IN = "firmware_in";
+  @SerializedName(SERIALIZED_NAME_FIRMWARE_IN)
+  private List<VmFirmware> firmwareIn = null;
+
+  public static final String SERIALIZED_NAME_FIRMWARE_NOT = "firmware_not";
+  @SerializedName(SERIALIZED_NAME_FIRMWARE_NOT)
+  private VmFirmware firmwareNot;
+
+  public static final String SERIALIZED_NAME_FIRMWARE_NOT_IN = "firmware_not_in";
+  @SerializedName(SERIALIZED_NAME_FIRMWARE_NOT_IN)
+  private List<VmFirmware> firmwareNotIn = null;
+
+  public static final String SERIALIZED_NAME_HA = "ha";
+  @SerializedName(SERIALIZED_NAME_HA)
+  private Boolean ha;
+
+  public static final String SERIALIZED_NAME_HA_NOT = "ha_not";
+  @SerializedName(SERIALIZED_NAME_HA_NOT)
+  private Boolean haNot;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -232,6 +332,22 @@ public class ContentLibraryVmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
   private String idStartsWith;
 
+  public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
+  @SerializedName(SERIALIZED_NAME_IO_POLICY)
+  private VmDiskIoPolicy ioPolicy;
+
+  public static final String SERIALIZED_NAME_IO_POLICY_IN = "io_policy_in";
+  @SerializedName(SERIALIZED_NAME_IO_POLICY_IN)
+  private List<VmDiskIoPolicy> ioPolicyIn = null;
+
+  public static final String SERIALIZED_NAME_IO_POLICY_NOT = "io_policy_not";
+  @SerializedName(SERIALIZED_NAME_IO_POLICY_NOT)
+  private VmDiskIoPolicy ioPolicyNot;
+
+  public static final String SERIALIZED_NAME_IO_POLICY_NOT_IN = "io_policy_not_in";
+  @SerializedName(SERIALIZED_NAME_IO_POLICY_NOT_IN)
+  private List<VmDiskIoPolicy> ioPolicyNotIn = null;
+
   public static final String SERIALIZED_NAME_LABELS_EVERY = "labels_every";
   @SerializedName(SERIALIZED_NAME_LABELS_EVERY)
   private LabelWhereInput labelsEvery;
@@ -243,6 +359,102 @@ public class ContentLibraryVmTemplateWhereInput {
   public static final String SERIALIZED_NAME_LABELS_SOME = "labels_some";
   @SerializedName(SERIALIZED_NAME_LABELS_SOME)
   private LabelWhereInput labelsSome;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
+  private Long maxBandwidth;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_GT = "max_bandwidth_gt";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_GT)
+  private Long maxBandwidthGt;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_GTE = "max_bandwidth_gte";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_GTE)
+  private Long maxBandwidthGte;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_IN = "max_bandwidth_in";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_IN)
+  private List<Long> maxBandwidthIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_LT = "max_bandwidth_lt";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_LT)
+  private Long maxBandwidthLt;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_LTE = "max_bandwidth_lte";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_LTE)
+  private Long maxBandwidthLte;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_NOT = "max_bandwidth_not";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_NOT)
+  private Long maxBandwidthNot;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_NOT_IN = "max_bandwidth_not_in";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_NOT_IN)
+  private List<Long> maxBandwidthNotIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
+  private VmDiskIoRestrictType maxBandwidthPolicy;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY_IN = "max_bandwidth_policy_in";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY_IN)
+  private List<VmDiskIoRestrictType> maxBandwidthPolicyIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY_NOT = "max_bandwidth_policy_not";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY_NOT)
+  private VmDiskIoRestrictType maxBandwidthPolicyNot;
+
+  public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY_NOT_IN = "max_bandwidth_policy_not_in";
+  @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY_NOT_IN)
+  private List<VmDiskIoRestrictType> maxBandwidthPolicyNotIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS)
+  private Integer maxIops;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_GT = "max_iops_gt";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_GT)
+  private Integer maxIopsGt;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_GTE = "max_iops_gte";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_GTE)
+  private Integer maxIopsGte;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_IN = "max_iops_in";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_IN)
+  private List<Integer> maxIopsIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_LT = "max_iops_lt";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_LT)
+  private Integer maxIopsLt;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_LTE = "max_iops_lte";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_LTE)
+  private Integer maxIopsLte;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_NOT = "max_iops_not";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT)
+  private Integer maxIopsNot;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_NOT_IN = "max_iops_not_in";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_NOT_IN)
+  private List<Integer> maxIopsNotIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
+  private VmDiskIoRestrictType maxIopsPolicy;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_POLICY_IN = "max_iops_policy_in";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY_IN)
+  private List<VmDiskIoRestrictType> maxIopsPolicyIn = null;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_POLICY_NOT = "max_iops_policy_not";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY_NOT)
+  private VmDiskIoRestrictType maxIopsPolicyNot;
+
+  public static final String SERIALIZED_NAME_MAX_IOPS_POLICY_NOT_IN = "max_iops_policy_not_in";
+  @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY_NOT_IN)
+  private List<VmDiskIoRestrictType> maxIopsPolicyNotIn = null;
 
   public static final String SERIALIZED_NAME_MEMORY = "memory";
   @SerializedName(SERIALIZED_NAME_MEMORY)
@@ -452,6 +664,62 @@ public class ContentLibraryVmTemplateWhereInput {
   @SerializedName(SERIALIZED_NAME_VCPU_NOT_IN)
   private List<Integer> vcpuNotIn = null;
 
+  public static final String SERIALIZED_NAME_VIDEO_TYPE = "video_type";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE)
+  private String videoType;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_CONTAINS = "video_type_contains";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_CONTAINS)
+  private String videoTypeContains;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_ENDS_WITH = "video_type_ends_with";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_ENDS_WITH)
+  private String videoTypeEndsWith;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_GT = "video_type_gt";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_GT)
+  private String videoTypeGt;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_GTE = "video_type_gte";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_GTE)
+  private String videoTypeGte;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_IN = "video_type_in";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_IN)
+  private List<String> videoTypeIn = null;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_LT = "video_type_lt";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_LT)
+  private String videoTypeLt;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_LTE = "video_type_lte";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_LTE)
+  private String videoTypeLte;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_NOT = "video_type_not";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_NOT)
+  private String videoTypeNot;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_NOT_CONTAINS = "video_type_not_contains";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_NOT_CONTAINS)
+  private String videoTypeNotContains;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_NOT_ENDS_WITH = "video_type_not_ends_with";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_NOT_ENDS_WITH)
+  private String videoTypeNotEndsWith;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_NOT_IN = "video_type_not_in";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_NOT_IN)
+  private List<String> videoTypeNotIn = null;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_NOT_STARTS_WITH = "video_type_not_starts_with";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_NOT_STARTS_WITH)
+  private String videoTypeNotStartsWith;
+
+  public static final String SERIALIZED_NAME_VIDEO_TYPE_STARTS_WITH = "video_type_starts_with";
+  @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_STARTS_WITH)
+  private String videoTypeStartsWith;
+
   public static final String SERIALIZED_NAME_VM_TEMPLATES_EVERY = "vm_templates_every";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES_EVERY)
   private VmTemplateWhereInput vmTemplatesEvery;
@@ -463,6 +731,14 @@ public class ContentLibraryVmTemplateWhereInput {
   public static final String SERIALIZED_NAME_VM_TEMPLATES_SOME = "vm_templates_some";
   @SerializedName(SERIALIZED_NAME_VM_TEMPLATES_SOME)
   private VmTemplateWhereInput vmTemplatesSome;
+
+  public static final String SERIALIZED_NAME_WIN_OPT = "win_opt";
+  @SerializedName(SERIALIZED_NAME_WIN_OPT)
+  private Boolean winOpt;
+
+  public static final String SERIALIZED_NAME_WIN_OPT_NOT = "win_opt_not";
+  @SerializedName(SERIALIZED_NAME_WIN_OPT_NOT)
+  private Boolean winOptNot;
 
   public ContentLibraryVmTemplateWhereInput() { 
   }
@@ -668,6 +944,114 @@ public class ContentLibraryVmTemplateWhereInput {
   }
 
 
+  public ContentLibraryVmTemplateWhereInput clockOffset(VmClockOffset clockOffset) {
+    
+    this.clockOffset = clockOffset;
+    return this;
+  }
+
+   /**
+   * Get clockOffset
+   * @return clockOffset
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmClockOffset getClockOffset() {
+    return clockOffset;
+  }
+
+
+  public void setClockOffset(VmClockOffset clockOffset) {
+    this.clockOffset = clockOffset;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput clockOffsetIn(List<VmClockOffset> clockOffsetIn) {
+    
+    this.clockOffsetIn = clockOffsetIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addClockOffsetInItem(VmClockOffset clockOffsetInItem) {
+    if (this.clockOffsetIn == null) {
+      this.clockOffsetIn = new ArrayList<VmClockOffset>();
+    }
+    this.clockOffsetIn.add(clockOffsetInItem);
+    return this;
+  }
+
+   /**
+   * Get clockOffsetIn
+   * @return clockOffsetIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmClockOffset> getClockOffsetIn() {
+    return clockOffsetIn;
+  }
+
+
+  public void setClockOffsetIn(List<VmClockOffset> clockOffsetIn) {
+    this.clockOffsetIn = clockOffsetIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput clockOffsetNot(VmClockOffset clockOffsetNot) {
+    
+    this.clockOffsetNot = clockOffsetNot;
+    return this;
+  }
+
+   /**
+   * Get clockOffsetNot
+   * @return clockOffsetNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmClockOffset getClockOffsetNot() {
+    return clockOffsetNot;
+  }
+
+
+  public void setClockOffsetNot(VmClockOffset clockOffsetNot) {
+    this.clockOffsetNot = clockOffsetNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput clockOffsetNotIn(List<VmClockOffset> clockOffsetNotIn) {
+    
+    this.clockOffsetNotIn = clockOffsetNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addClockOffsetNotInItem(VmClockOffset clockOffsetNotInItem) {
+    if (this.clockOffsetNotIn == null) {
+      this.clockOffsetNotIn = new ArrayList<VmClockOffset>();
+    }
+    this.clockOffsetNotIn.add(clockOffsetNotInItem);
+    return this;
+  }
+
+   /**
+   * Get clockOffsetNotIn
+   * @return clockOffsetNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmClockOffset> getClockOffsetNotIn() {
+    return clockOffsetNotIn;
+  }
+
+
+  public void setClockOffsetNotIn(List<VmClockOffset> clockOffsetNotIn) {
+    this.clockOffsetNotIn = clockOffsetNotIn;
+  }
+
+
   public ContentLibraryVmTemplateWhereInput cloudInitSupported(Boolean cloudInitSupported) {
     
     this.cloudInitSupported = cloudInitSupported;
@@ -780,6 +1164,344 @@ public class ContentLibraryVmTemplateWhereInput {
 
   public void setClustersSome(ClusterWhereInput clustersSome) {
     this.clustersSome = clustersSome;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModel(String cpuModel) {
+    
+    this.cpuModel = cpuModel;
+    return this;
+  }
+
+   /**
+   * Get cpuModel
+   * @return cpuModel
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModel() {
+    return cpuModel;
+  }
+
+
+  public void setCpuModel(String cpuModel) {
+    this.cpuModel = cpuModel;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelContains(String cpuModelContains) {
+    
+    this.cpuModelContains = cpuModelContains;
+    return this;
+  }
+
+   /**
+   * Get cpuModelContains
+   * @return cpuModelContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelContains() {
+    return cpuModelContains;
+  }
+
+
+  public void setCpuModelContains(String cpuModelContains) {
+    this.cpuModelContains = cpuModelContains;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelEndsWith(String cpuModelEndsWith) {
+    
+    this.cpuModelEndsWith = cpuModelEndsWith;
+    return this;
+  }
+
+   /**
+   * Get cpuModelEndsWith
+   * @return cpuModelEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelEndsWith() {
+    return cpuModelEndsWith;
+  }
+
+
+  public void setCpuModelEndsWith(String cpuModelEndsWith) {
+    this.cpuModelEndsWith = cpuModelEndsWith;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelGt(String cpuModelGt) {
+    
+    this.cpuModelGt = cpuModelGt;
+    return this;
+  }
+
+   /**
+   * Get cpuModelGt
+   * @return cpuModelGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelGt() {
+    return cpuModelGt;
+  }
+
+
+  public void setCpuModelGt(String cpuModelGt) {
+    this.cpuModelGt = cpuModelGt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelGte(String cpuModelGte) {
+    
+    this.cpuModelGte = cpuModelGte;
+    return this;
+  }
+
+   /**
+   * Get cpuModelGte
+   * @return cpuModelGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelGte() {
+    return cpuModelGte;
+  }
+
+
+  public void setCpuModelGte(String cpuModelGte) {
+    this.cpuModelGte = cpuModelGte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelIn(List<String> cpuModelIn) {
+    
+    this.cpuModelIn = cpuModelIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addCpuModelInItem(String cpuModelInItem) {
+    if (this.cpuModelIn == null) {
+      this.cpuModelIn = new ArrayList<String>();
+    }
+    this.cpuModelIn.add(cpuModelInItem);
+    return this;
+  }
+
+   /**
+   * Get cpuModelIn
+   * @return cpuModelIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getCpuModelIn() {
+    return cpuModelIn;
+  }
+
+
+  public void setCpuModelIn(List<String> cpuModelIn) {
+    this.cpuModelIn = cpuModelIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelLt(String cpuModelLt) {
+    
+    this.cpuModelLt = cpuModelLt;
+    return this;
+  }
+
+   /**
+   * Get cpuModelLt
+   * @return cpuModelLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelLt() {
+    return cpuModelLt;
+  }
+
+
+  public void setCpuModelLt(String cpuModelLt) {
+    this.cpuModelLt = cpuModelLt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelLte(String cpuModelLte) {
+    
+    this.cpuModelLte = cpuModelLte;
+    return this;
+  }
+
+   /**
+   * Get cpuModelLte
+   * @return cpuModelLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelLte() {
+    return cpuModelLte;
+  }
+
+
+  public void setCpuModelLte(String cpuModelLte) {
+    this.cpuModelLte = cpuModelLte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelNot(String cpuModelNot) {
+    
+    this.cpuModelNot = cpuModelNot;
+    return this;
+  }
+
+   /**
+   * Get cpuModelNot
+   * @return cpuModelNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelNot() {
+    return cpuModelNot;
+  }
+
+
+  public void setCpuModelNot(String cpuModelNot) {
+    this.cpuModelNot = cpuModelNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelNotContains(String cpuModelNotContains) {
+    
+    this.cpuModelNotContains = cpuModelNotContains;
+    return this;
+  }
+
+   /**
+   * Get cpuModelNotContains
+   * @return cpuModelNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelNotContains() {
+    return cpuModelNotContains;
+  }
+
+
+  public void setCpuModelNotContains(String cpuModelNotContains) {
+    this.cpuModelNotContains = cpuModelNotContains;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelNotEndsWith(String cpuModelNotEndsWith) {
+    
+    this.cpuModelNotEndsWith = cpuModelNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get cpuModelNotEndsWith
+   * @return cpuModelNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelNotEndsWith() {
+    return cpuModelNotEndsWith;
+  }
+
+
+  public void setCpuModelNotEndsWith(String cpuModelNotEndsWith) {
+    this.cpuModelNotEndsWith = cpuModelNotEndsWith;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelNotIn(List<String> cpuModelNotIn) {
+    
+    this.cpuModelNotIn = cpuModelNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addCpuModelNotInItem(String cpuModelNotInItem) {
+    if (this.cpuModelNotIn == null) {
+      this.cpuModelNotIn = new ArrayList<String>();
+    }
+    this.cpuModelNotIn.add(cpuModelNotInItem);
+    return this;
+  }
+
+   /**
+   * Get cpuModelNotIn
+   * @return cpuModelNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getCpuModelNotIn() {
+    return cpuModelNotIn;
+  }
+
+
+  public void setCpuModelNotIn(List<String> cpuModelNotIn) {
+    this.cpuModelNotIn = cpuModelNotIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelNotStartsWith(String cpuModelNotStartsWith) {
+    
+    this.cpuModelNotStartsWith = cpuModelNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get cpuModelNotStartsWith
+   * @return cpuModelNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelNotStartsWith() {
+    return cpuModelNotStartsWith;
+  }
+
+
+  public void setCpuModelNotStartsWith(String cpuModelNotStartsWith) {
+    this.cpuModelNotStartsWith = cpuModelNotStartsWith;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput cpuModelStartsWith(String cpuModelStartsWith) {
+    
+    this.cpuModelStartsWith = cpuModelStartsWith;
+    return this;
+  }
+
+   /**
+   * Get cpuModelStartsWith
+   * @return cpuModelStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCpuModelStartsWith() {
+    return cpuModelStartsWith;
+  }
+
+
+  public void setCpuModelStartsWith(String cpuModelStartsWith) {
+    this.cpuModelStartsWith = cpuModelStartsWith;
   }
 
 
@@ -1429,6 +2151,160 @@ public class ContentLibraryVmTemplateWhereInput {
   }
 
 
+  public ContentLibraryVmTemplateWhereInput firmware(VmFirmware firmware) {
+    
+    this.firmware = firmware;
+    return this;
+  }
+
+   /**
+   * Get firmware
+   * @return firmware
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmFirmware getFirmware() {
+    return firmware;
+  }
+
+
+  public void setFirmware(VmFirmware firmware) {
+    this.firmware = firmware;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput firmwareIn(List<VmFirmware> firmwareIn) {
+    
+    this.firmwareIn = firmwareIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addFirmwareInItem(VmFirmware firmwareInItem) {
+    if (this.firmwareIn == null) {
+      this.firmwareIn = new ArrayList<VmFirmware>();
+    }
+    this.firmwareIn.add(firmwareInItem);
+    return this;
+  }
+
+   /**
+   * Get firmwareIn
+   * @return firmwareIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmFirmware> getFirmwareIn() {
+    return firmwareIn;
+  }
+
+
+  public void setFirmwareIn(List<VmFirmware> firmwareIn) {
+    this.firmwareIn = firmwareIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput firmwareNot(VmFirmware firmwareNot) {
+    
+    this.firmwareNot = firmwareNot;
+    return this;
+  }
+
+   /**
+   * Get firmwareNot
+   * @return firmwareNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmFirmware getFirmwareNot() {
+    return firmwareNot;
+  }
+
+
+  public void setFirmwareNot(VmFirmware firmwareNot) {
+    this.firmwareNot = firmwareNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput firmwareNotIn(List<VmFirmware> firmwareNotIn) {
+    
+    this.firmwareNotIn = firmwareNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addFirmwareNotInItem(VmFirmware firmwareNotInItem) {
+    if (this.firmwareNotIn == null) {
+      this.firmwareNotIn = new ArrayList<VmFirmware>();
+    }
+    this.firmwareNotIn.add(firmwareNotInItem);
+    return this;
+  }
+
+   /**
+   * Get firmwareNotIn
+   * @return firmwareNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmFirmware> getFirmwareNotIn() {
+    return firmwareNotIn;
+  }
+
+
+  public void setFirmwareNotIn(List<VmFirmware> firmwareNotIn) {
+    this.firmwareNotIn = firmwareNotIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput ha(Boolean ha) {
+    
+    this.ha = ha;
+    return this;
+  }
+
+   /**
+   * Get ha
+   * @return ha
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getHa() {
+    return ha;
+  }
+
+
+  public void setHa(Boolean ha) {
+    this.ha = ha;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput haNot(Boolean haNot) {
+    
+    this.haNot = haNot;
+    return this;
+  }
+
+   /**
+   * Get haNot
+   * @return haNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getHaNot() {
+    return haNot;
+  }
+
+
+  public void setHaNot(Boolean haNot) {
+    this.haNot = haNot;
+  }
+
+
   public ContentLibraryVmTemplateWhereInput id(String id) {
     
     this.id = id;
@@ -1767,6 +2643,114 @@ public class ContentLibraryVmTemplateWhereInput {
   }
 
 
+  public ContentLibraryVmTemplateWhereInput ioPolicy(VmDiskIoPolicy ioPolicy) {
+    
+    this.ioPolicy = ioPolicy;
+    return this;
+  }
+
+   /**
+   * Get ioPolicy
+   * @return ioPolicy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmDiskIoPolicy getIoPolicy() {
+    return ioPolicy;
+  }
+
+
+  public void setIoPolicy(VmDiskIoPolicy ioPolicy) {
+    this.ioPolicy = ioPolicy;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput ioPolicyIn(List<VmDiskIoPolicy> ioPolicyIn) {
+    
+    this.ioPolicyIn = ioPolicyIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addIoPolicyInItem(VmDiskIoPolicy ioPolicyInItem) {
+    if (this.ioPolicyIn == null) {
+      this.ioPolicyIn = new ArrayList<VmDiskIoPolicy>();
+    }
+    this.ioPolicyIn.add(ioPolicyInItem);
+    return this;
+  }
+
+   /**
+   * Get ioPolicyIn
+   * @return ioPolicyIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskIoPolicy> getIoPolicyIn() {
+    return ioPolicyIn;
+  }
+
+
+  public void setIoPolicyIn(List<VmDiskIoPolicy> ioPolicyIn) {
+    this.ioPolicyIn = ioPolicyIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput ioPolicyNot(VmDiskIoPolicy ioPolicyNot) {
+    
+    this.ioPolicyNot = ioPolicyNot;
+    return this;
+  }
+
+   /**
+   * Get ioPolicyNot
+   * @return ioPolicyNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmDiskIoPolicy getIoPolicyNot() {
+    return ioPolicyNot;
+  }
+
+
+  public void setIoPolicyNot(VmDiskIoPolicy ioPolicyNot) {
+    this.ioPolicyNot = ioPolicyNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput ioPolicyNotIn(List<VmDiskIoPolicy> ioPolicyNotIn) {
+    
+    this.ioPolicyNotIn = ioPolicyNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addIoPolicyNotInItem(VmDiskIoPolicy ioPolicyNotInItem) {
+    if (this.ioPolicyNotIn == null) {
+      this.ioPolicyNotIn = new ArrayList<VmDiskIoPolicy>();
+    }
+    this.ioPolicyNotIn.add(ioPolicyNotInItem);
+    return this;
+  }
+
+   /**
+   * Get ioPolicyNotIn
+   * @return ioPolicyNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskIoPolicy> getIoPolicyNotIn() {
+    return ioPolicyNotIn;
+  }
+
+
+  public void setIoPolicyNotIn(List<VmDiskIoPolicy> ioPolicyNotIn) {
+    this.ioPolicyNotIn = ioPolicyNotIn;
+  }
+
+
   public ContentLibraryVmTemplateWhereInput labelsEvery(LabelWhereInput labelsEvery) {
     
     this.labelsEvery = labelsEvery;
@@ -1833,6 +2817,622 @@ public class ContentLibraryVmTemplateWhereInput {
 
   public void setLabelsSome(LabelWhereInput labelsSome) {
     this.labelsSome = labelsSome;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidth(Long maxBandwidth) {
+    
+    this.maxBandwidth = maxBandwidth;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidth
+   * @return maxBandwidth
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getMaxBandwidth() {
+    return maxBandwidth;
+  }
+
+
+  public void setMaxBandwidth(Long maxBandwidth) {
+    this.maxBandwidth = maxBandwidth;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthGt(Long maxBandwidthGt) {
+    
+    this.maxBandwidthGt = maxBandwidthGt;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthGt
+   * @return maxBandwidthGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getMaxBandwidthGt() {
+    return maxBandwidthGt;
+  }
+
+
+  public void setMaxBandwidthGt(Long maxBandwidthGt) {
+    this.maxBandwidthGt = maxBandwidthGt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthGte(Long maxBandwidthGte) {
+    
+    this.maxBandwidthGte = maxBandwidthGte;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthGte
+   * @return maxBandwidthGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getMaxBandwidthGte() {
+    return maxBandwidthGte;
+  }
+
+
+  public void setMaxBandwidthGte(Long maxBandwidthGte) {
+    this.maxBandwidthGte = maxBandwidthGte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthIn(List<Long> maxBandwidthIn) {
+    
+    this.maxBandwidthIn = maxBandwidthIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxBandwidthInItem(Long maxBandwidthInItem) {
+    if (this.maxBandwidthIn == null) {
+      this.maxBandwidthIn = new ArrayList<Long>();
+    }
+    this.maxBandwidthIn.add(maxBandwidthInItem);
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthIn
+   * @return maxBandwidthIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getMaxBandwidthIn() {
+    return maxBandwidthIn;
+  }
+
+
+  public void setMaxBandwidthIn(List<Long> maxBandwidthIn) {
+    this.maxBandwidthIn = maxBandwidthIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthLt(Long maxBandwidthLt) {
+    
+    this.maxBandwidthLt = maxBandwidthLt;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthLt
+   * @return maxBandwidthLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getMaxBandwidthLt() {
+    return maxBandwidthLt;
+  }
+
+
+  public void setMaxBandwidthLt(Long maxBandwidthLt) {
+    this.maxBandwidthLt = maxBandwidthLt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthLte(Long maxBandwidthLte) {
+    
+    this.maxBandwidthLte = maxBandwidthLte;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthLte
+   * @return maxBandwidthLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getMaxBandwidthLte() {
+    return maxBandwidthLte;
+  }
+
+
+  public void setMaxBandwidthLte(Long maxBandwidthLte) {
+    this.maxBandwidthLte = maxBandwidthLte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthNot(Long maxBandwidthNot) {
+    
+    this.maxBandwidthNot = maxBandwidthNot;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthNot
+   * @return maxBandwidthNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Long getMaxBandwidthNot() {
+    return maxBandwidthNot;
+  }
+
+
+  public void setMaxBandwidthNot(Long maxBandwidthNot) {
+    this.maxBandwidthNot = maxBandwidthNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthNotIn(List<Long> maxBandwidthNotIn) {
+    
+    this.maxBandwidthNotIn = maxBandwidthNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxBandwidthNotInItem(Long maxBandwidthNotInItem) {
+    if (this.maxBandwidthNotIn == null) {
+      this.maxBandwidthNotIn = new ArrayList<Long>();
+    }
+    this.maxBandwidthNotIn.add(maxBandwidthNotInItem);
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthNotIn
+   * @return maxBandwidthNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Long> getMaxBandwidthNotIn() {
+    return maxBandwidthNotIn;
+  }
+
+
+  public void setMaxBandwidthNotIn(List<Long> maxBandwidthNotIn) {
+    this.maxBandwidthNotIn = maxBandwidthNotIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
+    
+    this.maxBandwidthPolicy = maxBandwidthPolicy;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthPolicy
+   * @return maxBandwidthPolicy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmDiskIoRestrictType getMaxBandwidthPolicy() {
+    return maxBandwidthPolicy;
+  }
+
+
+  public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
+    this.maxBandwidthPolicy = maxBandwidthPolicy;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthPolicyIn(List<VmDiskIoRestrictType> maxBandwidthPolicyIn) {
+    
+    this.maxBandwidthPolicyIn = maxBandwidthPolicyIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxBandwidthPolicyInItem(VmDiskIoRestrictType maxBandwidthPolicyInItem) {
+    if (this.maxBandwidthPolicyIn == null) {
+      this.maxBandwidthPolicyIn = new ArrayList<VmDiskIoRestrictType>();
+    }
+    this.maxBandwidthPolicyIn.add(maxBandwidthPolicyInItem);
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthPolicyIn
+   * @return maxBandwidthPolicyIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskIoRestrictType> getMaxBandwidthPolicyIn() {
+    return maxBandwidthPolicyIn;
+  }
+
+
+  public void setMaxBandwidthPolicyIn(List<VmDiskIoRestrictType> maxBandwidthPolicyIn) {
+    this.maxBandwidthPolicyIn = maxBandwidthPolicyIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthPolicyNot(VmDiskIoRestrictType maxBandwidthPolicyNot) {
+    
+    this.maxBandwidthPolicyNot = maxBandwidthPolicyNot;
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthPolicyNot
+   * @return maxBandwidthPolicyNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmDiskIoRestrictType getMaxBandwidthPolicyNot() {
+    return maxBandwidthPolicyNot;
+  }
+
+
+  public void setMaxBandwidthPolicyNot(VmDiskIoRestrictType maxBandwidthPolicyNot) {
+    this.maxBandwidthPolicyNot = maxBandwidthPolicyNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxBandwidthPolicyNotIn(List<VmDiskIoRestrictType> maxBandwidthPolicyNotIn) {
+    
+    this.maxBandwidthPolicyNotIn = maxBandwidthPolicyNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxBandwidthPolicyNotInItem(VmDiskIoRestrictType maxBandwidthPolicyNotInItem) {
+    if (this.maxBandwidthPolicyNotIn == null) {
+      this.maxBandwidthPolicyNotIn = new ArrayList<VmDiskIoRestrictType>();
+    }
+    this.maxBandwidthPolicyNotIn.add(maxBandwidthPolicyNotInItem);
+    return this;
+  }
+
+   /**
+   * Get maxBandwidthPolicyNotIn
+   * @return maxBandwidthPolicyNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskIoRestrictType> getMaxBandwidthPolicyNotIn() {
+    return maxBandwidthPolicyNotIn;
+  }
+
+
+  public void setMaxBandwidthPolicyNotIn(List<VmDiskIoRestrictType> maxBandwidthPolicyNotIn) {
+    this.maxBandwidthPolicyNotIn = maxBandwidthPolicyNotIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIops(Integer maxIops) {
+    
+    this.maxIops = maxIops;
+    return this;
+  }
+
+   /**
+   * Get maxIops
+   * @return maxIops
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxIops() {
+    return maxIops;
+  }
+
+
+  public void setMaxIops(Integer maxIops) {
+    this.maxIops = maxIops;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsGt(Integer maxIopsGt) {
+    
+    this.maxIopsGt = maxIopsGt;
+    return this;
+  }
+
+   /**
+   * Get maxIopsGt
+   * @return maxIopsGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxIopsGt() {
+    return maxIopsGt;
+  }
+
+
+  public void setMaxIopsGt(Integer maxIopsGt) {
+    this.maxIopsGt = maxIopsGt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsGte(Integer maxIopsGte) {
+    
+    this.maxIopsGte = maxIopsGte;
+    return this;
+  }
+
+   /**
+   * Get maxIopsGte
+   * @return maxIopsGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxIopsGte() {
+    return maxIopsGte;
+  }
+
+
+  public void setMaxIopsGte(Integer maxIopsGte) {
+    this.maxIopsGte = maxIopsGte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsIn(List<Integer> maxIopsIn) {
+    
+    this.maxIopsIn = maxIopsIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxIopsInItem(Integer maxIopsInItem) {
+    if (this.maxIopsIn == null) {
+      this.maxIopsIn = new ArrayList<Integer>();
+    }
+    this.maxIopsIn.add(maxIopsInItem);
+    return this;
+  }
+
+   /**
+   * Get maxIopsIn
+   * @return maxIopsIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getMaxIopsIn() {
+    return maxIopsIn;
+  }
+
+
+  public void setMaxIopsIn(List<Integer> maxIopsIn) {
+    this.maxIopsIn = maxIopsIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsLt(Integer maxIopsLt) {
+    
+    this.maxIopsLt = maxIopsLt;
+    return this;
+  }
+
+   /**
+   * Get maxIopsLt
+   * @return maxIopsLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxIopsLt() {
+    return maxIopsLt;
+  }
+
+
+  public void setMaxIopsLt(Integer maxIopsLt) {
+    this.maxIopsLt = maxIopsLt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsLte(Integer maxIopsLte) {
+    
+    this.maxIopsLte = maxIopsLte;
+    return this;
+  }
+
+   /**
+   * Get maxIopsLte
+   * @return maxIopsLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxIopsLte() {
+    return maxIopsLte;
+  }
+
+
+  public void setMaxIopsLte(Integer maxIopsLte) {
+    this.maxIopsLte = maxIopsLte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsNot(Integer maxIopsNot) {
+    
+    this.maxIopsNot = maxIopsNot;
+    return this;
+  }
+
+   /**
+   * Get maxIopsNot
+   * @return maxIopsNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Integer getMaxIopsNot() {
+    return maxIopsNot;
+  }
+
+
+  public void setMaxIopsNot(Integer maxIopsNot) {
+    this.maxIopsNot = maxIopsNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsNotIn(List<Integer> maxIopsNotIn) {
+    
+    this.maxIopsNotIn = maxIopsNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxIopsNotInItem(Integer maxIopsNotInItem) {
+    if (this.maxIopsNotIn == null) {
+      this.maxIopsNotIn = new ArrayList<Integer>();
+    }
+    this.maxIopsNotIn.add(maxIopsNotInItem);
+    return this;
+  }
+
+   /**
+   * Get maxIopsNotIn
+   * @return maxIopsNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Integer> getMaxIopsNotIn() {
+    return maxIopsNotIn;
+  }
+
+
+  public void setMaxIopsNotIn(List<Integer> maxIopsNotIn) {
+    this.maxIopsNotIn = maxIopsNotIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    
+    this.maxIopsPolicy = maxIopsPolicy;
+    return this;
+  }
+
+   /**
+   * Get maxIopsPolicy
+   * @return maxIopsPolicy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmDiskIoRestrictType getMaxIopsPolicy() {
+    return maxIopsPolicy;
+  }
+
+
+  public void setMaxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+    this.maxIopsPolicy = maxIopsPolicy;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsPolicyIn(List<VmDiskIoRestrictType> maxIopsPolicyIn) {
+    
+    this.maxIopsPolicyIn = maxIopsPolicyIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxIopsPolicyInItem(VmDiskIoRestrictType maxIopsPolicyInItem) {
+    if (this.maxIopsPolicyIn == null) {
+      this.maxIopsPolicyIn = new ArrayList<VmDiskIoRestrictType>();
+    }
+    this.maxIopsPolicyIn.add(maxIopsPolicyInItem);
+    return this;
+  }
+
+   /**
+   * Get maxIopsPolicyIn
+   * @return maxIopsPolicyIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskIoRestrictType> getMaxIopsPolicyIn() {
+    return maxIopsPolicyIn;
+  }
+
+
+  public void setMaxIopsPolicyIn(List<VmDiskIoRestrictType> maxIopsPolicyIn) {
+    this.maxIopsPolicyIn = maxIopsPolicyIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsPolicyNot(VmDiskIoRestrictType maxIopsPolicyNot) {
+    
+    this.maxIopsPolicyNot = maxIopsPolicyNot;
+    return this;
+  }
+
+   /**
+   * Get maxIopsPolicyNot
+   * @return maxIopsPolicyNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VmDiskIoRestrictType getMaxIopsPolicyNot() {
+    return maxIopsPolicyNot;
+  }
+
+
+  public void setMaxIopsPolicyNot(VmDiskIoRestrictType maxIopsPolicyNot) {
+    this.maxIopsPolicyNot = maxIopsPolicyNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput maxIopsPolicyNotIn(List<VmDiskIoRestrictType> maxIopsPolicyNotIn) {
+    
+    this.maxIopsPolicyNotIn = maxIopsPolicyNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addMaxIopsPolicyNotInItem(VmDiskIoRestrictType maxIopsPolicyNotInItem) {
+    if (this.maxIopsPolicyNotIn == null) {
+      this.maxIopsPolicyNotIn = new ArrayList<VmDiskIoRestrictType>();
+    }
+    this.maxIopsPolicyNotIn.add(maxIopsPolicyNotInItem);
+    return this;
+  }
+
+   /**
+   * Get maxIopsPolicyNotIn
+   * @return maxIopsPolicyNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<VmDiskIoRestrictType> getMaxIopsPolicyNotIn() {
+    return maxIopsPolicyNotIn;
+  }
+
+
+  public void setMaxIopsPolicyNotIn(List<VmDiskIoRestrictType> maxIopsPolicyNotIn) {
+    this.maxIopsPolicyNotIn = maxIopsPolicyNotIn;
   }
 
 
@@ -3112,6 +4712,344 @@ public class ContentLibraryVmTemplateWhereInput {
   }
 
 
+  public ContentLibraryVmTemplateWhereInput videoType(String videoType) {
+    
+    this.videoType = videoType;
+    return this;
+  }
+
+   /**
+   * Get videoType
+   * @return videoType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoType() {
+    return videoType;
+  }
+
+
+  public void setVideoType(String videoType) {
+    this.videoType = videoType;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeContains(String videoTypeContains) {
+    
+    this.videoTypeContains = videoTypeContains;
+    return this;
+  }
+
+   /**
+   * Get videoTypeContains
+   * @return videoTypeContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeContains() {
+    return videoTypeContains;
+  }
+
+
+  public void setVideoTypeContains(String videoTypeContains) {
+    this.videoTypeContains = videoTypeContains;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeEndsWith(String videoTypeEndsWith) {
+    
+    this.videoTypeEndsWith = videoTypeEndsWith;
+    return this;
+  }
+
+   /**
+   * Get videoTypeEndsWith
+   * @return videoTypeEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeEndsWith() {
+    return videoTypeEndsWith;
+  }
+
+
+  public void setVideoTypeEndsWith(String videoTypeEndsWith) {
+    this.videoTypeEndsWith = videoTypeEndsWith;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeGt(String videoTypeGt) {
+    
+    this.videoTypeGt = videoTypeGt;
+    return this;
+  }
+
+   /**
+   * Get videoTypeGt
+   * @return videoTypeGt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeGt() {
+    return videoTypeGt;
+  }
+
+
+  public void setVideoTypeGt(String videoTypeGt) {
+    this.videoTypeGt = videoTypeGt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeGte(String videoTypeGte) {
+    
+    this.videoTypeGte = videoTypeGte;
+    return this;
+  }
+
+   /**
+   * Get videoTypeGte
+   * @return videoTypeGte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeGte() {
+    return videoTypeGte;
+  }
+
+
+  public void setVideoTypeGte(String videoTypeGte) {
+    this.videoTypeGte = videoTypeGte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeIn(List<String> videoTypeIn) {
+    
+    this.videoTypeIn = videoTypeIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addVideoTypeInItem(String videoTypeInItem) {
+    if (this.videoTypeIn == null) {
+      this.videoTypeIn = new ArrayList<String>();
+    }
+    this.videoTypeIn.add(videoTypeInItem);
+    return this;
+  }
+
+   /**
+   * Get videoTypeIn
+   * @return videoTypeIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getVideoTypeIn() {
+    return videoTypeIn;
+  }
+
+
+  public void setVideoTypeIn(List<String> videoTypeIn) {
+    this.videoTypeIn = videoTypeIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeLt(String videoTypeLt) {
+    
+    this.videoTypeLt = videoTypeLt;
+    return this;
+  }
+
+   /**
+   * Get videoTypeLt
+   * @return videoTypeLt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeLt() {
+    return videoTypeLt;
+  }
+
+
+  public void setVideoTypeLt(String videoTypeLt) {
+    this.videoTypeLt = videoTypeLt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeLte(String videoTypeLte) {
+    
+    this.videoTypeLte = videoTypeLte;
+    return this;
+  }
+
+   /**
+   * Get videoTypeLte
+   * @return videoTypeLte
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeLte() {
+    return videoTypeLte;
+  }
+
+
+  public void setVideoTypeLte(String videoTypeLte) {
+    this.videoTypeLte = videoTypeLte;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeNot(String videoTypeNot) {
+    
+    this.videoTypeNot = videoTypeNot;
+    return this;
+  }
+
+   /**
+   * Get videoTypeNot
+   * @return videoTypeNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeNot() {
+    return videoTypeNot;
+  }
+
+
+  public void setVideoTypeNot(String videoTypeNot) {
+    this.videoTypeNot = videoTypeNot;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeNotContains(String videoTypeNotContains) {
+    
+    this.videoTypeNotContains = videoTypeNotContains;
+    return this;
+  }
+
+   /**
+   * Get videoTypeNotContains
+   * @return videoTypeNotContains
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeNotContains() {
+    return videoTypeNotContains;
+  }
+
+
+  public void setVideoTypeNotContains(String videoTypeNotContains) {
+    this.videoTypeNotContains = videoTypeNotContains;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeNotEndsWith(String videoTypeNotEndsWith) {
+    
+    this.videoTypeNotEndsWith = videoTypeNotEndsWith;
+    return this;
+  }
+
+   /**
+   * Get videoTypeNotEndsWith
+   * @return videoTypeNotEndsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeNotEndsWith() {
+    return videoTypeNotEndsWith;
+  }
+
+
+  public void setVideoTypeNotEndsWith(String videoTypeNotEndsWith) {
+    this.videoTypeNotEndsWith = videoTypeNotEndsWith;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeNotIn(List<String> videoTypeNotIn) {
+    
+    this.videoTypeNotIn = videoTypeNotIn;
+    return this;
+  }
+
+  public ContentLibraryVmTemplateWhereInput addVideoTypeNotInItem(String videoTypeNotInItem) {
+    if (this.videoTypeNotIn == null) {
+      this.videoTypeNotIn = new ArrayList<String>();
+    }
+    this.videoTypeNotIn.add(videoTypeNotInItem);
+    return this;
+  }
+
+   /**
+   * Get videoTypeNotIn
+   * @return videoTypeNotIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getVideoTypeNotIn() {
+    return videoTypeNotIn;
+  }
+
+
+  public void setVideoTypeNotIn(List<String> videoTypeNotIn) {
+    this.videoTypeNotIn = videoTypeNotIn;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeNotStartsWith(String videoTypeNotStartsWith) {
+    
+    this.videoTypeNotStartsWith = videoTypeNotStartsWith;
+    return this;
+  }
+
+   /**
+   * Get videoTypeNotStartsWith
+   * @return videoTypeNotStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeNotStartsWith() {
+    return videoTypeNotStartsWith;
+  }
+
+
+  public void setVideoTypeNotStartsWith(String videoTypeNotStartsWith) {
+    this.videoTypeNotStartsWith = videoTypeNotStartsWith;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput videoTypeStartsWith(String videoTypeStartsWith) {
+    
+    this.videoTypeStartsWith = videoTypeStartsWith;
+    return this;
+  }
+
+   /**
+   * Get videoTypeStartsWith
+   * @return videoTypeStartsWith
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getVideoTypeStartsWith() {
+    return videoTypeStartsWith;
+  }
+
+
+  public void setVideoTypeStartsWith(String videoTypeStartsWith) {
+    this.videoTypeStartsWith = videoTypeStartsWith;
+  }
+
+
   public ContentLibraryVmTemplateWhereInput vmTemplatesEvery(VmTemplateWhereInput vmTemplatesEvery) {
     
     this.vmTemplatesEvery = vmTemplatesEvery;
@@ -3181,6 +5119,52 @@ public class ContentLibraryVmTemplateWhereInput {
   }
 
 
+  public ContentLibraryVmTemplateWhereInput winOpt(Boolean winOpt) {
+    
+    this.winOpt = winOpt;
+    return this;
+  }
+
+   /**
+   * Get winOpt
+   * @return winOpt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getWinOpt() {
+    return winOpt;
+  }
+
+
+  public void setWinOpt(Boolean winOpt) {
+    this.winOpt = winOpt;
+  }
+
+
+  public ContentLibraryVmTemplateWhereInput winOptNot(Boolean winOptNot) {
+    
+    this.winOptNot = winOptNot;
+    return this;
+  }
+
+   /**
+   * Get winOptNot
+   * @return winOptNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getWinOptNot() {
+    return winOptNot;
+  }
+
+
+  public void setWinOptNot(Boolean winOptNot) {
+    this.winOptNot = winOptNot;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -3197,11 +5181,29 @@ public class ContentLibraryVmTemplateWhereInput {
         Objects.equals(this.architectureIn, contentLibraryVmTemplateWhereInput.architectureIn) &&
         Objects.equals(this.architectureNot, contentLibraryVmTemplateWhereInput.architectureNot) &&
         Objects.equals(this.architectureNotIn, contentLibraryVmTemplateWhereInput.architectureNotIn) &&
+        Objects.equals(this.clockOffset, contentLibraryVmTemplateWhereInput.clockOffset) &&
+        Objects.equals(this.clockOffsetIn, contentLibraryVmTemplateWhereInput.clockOffsetIn) &&
+        Objects.equals(this.clockOffsetNot, contentLibraryVmTemplateWhereInput.clockOffsetNot) &&
+        Objects.equals(this.clockOffsetNotIn, contentLibraryVmTemplateWhereInput.clockOffsetNotIn) &&
         Objects.equals(this.cloudInitSupported, contentLibraryVmTemplateWhereInput.cloudInitSupported) &&
         Objects.equals(this.cloudInitSupportedNot, contentLibraryVmTemplateWhereInput.cloudInitSupportedNot) &&
         Objects.equals(this.clustersEvery, contentLibraryVmTemplateWhereInput.clustersEvery) &&
         Objects.equals(this.clustersNone, contentLibraryVmTemplateWhereInput.clustersNone) &&
         Objects.equals(this.clustersSome, contentLibraryVmTemplateWhereInput.clustersSome) &&
+        Objects.equals(this.cpuModel, contentLibraryVmTemplateWhereInput.cpuModel) &&
+        Objects.equals(this.cpuModelContains, contentLibraryVmTemplateWhereInput.cpuModelContains) &&
+        Objects.equals(this.cpuModelEndsWith, contentLibraryVmTemplateWhereInput.cpuModelEndsWith) &&
+        Objects.equals(this.cpuModelGt, contentLibraryVmTemplateWhereInput.cpuModelGt) &&
+        Objects.equals(this.cpuModelGte, contentLibraryVmTemplateWhereInput.cpuModelGte) &&
+        Objects.equals(this.cpuModelIn, contentLibraryVmTemplateWhereInput.cpuModelIn) &&
+        Objects.equals(this.cpuModelLt, contentLibraryVmTemplateWhereInput.cpuModelLt) &&
+        Objects.equals(this.cpuModelLte, contentLibraryVmTemplateWhereInput.cpuModelLte) &&
+        Objects.equals(this.cpuModelNot, contentLibraryVmTemplateWhereInput.cpuModelNot) &&
+        Objects.equals(this.cpuModelNotContains, contentLibraryVmTemplateWhereInput.cpuModelNotContains) &&
+        Objects.equals(this.cpuModelNotEndsWith, contentLibraryVmTemplateWhereInput.cpuModelNotEndsWith) &&
+        Objects.equals(this.cpuModelNotIn, contentLibraryVmTemplateWhereInput.cpuModelNotIn) &&
+        Objects.equals(this.cpuModelNotStartsWith, contentLibraryVmTemplateWhereInput.cpuModelNotStartsWith) &&
+        Objects.equals(this.cpuModelStartsWith, contentLibraryVmTemplateWhereInput.cpuModelStartsWith) &&
         Objects.equals(this.createdAt, contentLibraryVmTemplateWhereInput.createdAt) &&
         Objects.equals(this.createdAtGt, contentLibraryVmTemplateWhereInput.createdAtGt) &&
         Objects.equals(this.createdAtGte, contentLibraryVmTemplateWhereInput.createdAtGte) &&
@@ -3228,6 +5230,12 @@ public class ContentLibraryVmTemplateWhereInput {
         Objects.equals(this.entityAsyncStatusIn, contentLibraryVmTemplateWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, contentLibraryVmTemplateWhereInput.entityAsyncStatusNot) &&
         Objects.equals(this.entityAsyncStatusNotIn, contentLibraryVmTemplateWhereInput.entityAsyncStatusNotIn) &&
+        Objects.equals(this.firmware, contentLibraryVmTemplateWhereInput.firmware) &&
+        Objects.equals(this.firmwareIn, contentLibraryVmTemplateWhereInput.firmwareIn) &&
+        Objects.equals(this.firmwareNot, contentLibraryVmTemplateWhereInput.firmwareNot) &&
+        Objects.equals(this.firmwareNotIn, contentLibraryVmTemplateWhereInput.firmwareNotIn) &&
+        Objects.equals(this.ha, contentLibraryVmTemplateWhereInput.ha) &&
+        Objects.equals(this.haNot, contentLibraryVmTemplateWhereInput.haNot) &&
         Objects.equals(this.id, contentLibraryVmTemplateWhereInput.id) &&
         Objects.equals(this.idContains, contentLibraryVmTemplateWhereInput.idContains) &&
         Objects.equals(this.idEndsWith, contentLibraryVmTemplateWhereInput.idEndsWith) &&
@@ -3242,9 +5250,37 @@ public class ContentLibraryVmTemplateWhereInput {
         Objects.equals(this.idNotIn, contentLibraryVmTemplateWhereInput.idNotIn) &&
         Objects.equals(this.idNotStartsWith, contentLibraryVmTemplateWhereInput.idNotStartsWith) &&
         Objects.equals(this.idStartsWith, contentLibraryVmTemplateWhereInput.idStartsWith) &&
+        Objects.equals(this.ioPolicy, contentLibraryVmTemplateWhereInput.ioPolicy) &&
+        Objects.equals(this.ioPolicyIn, contentLibraryVmTemplateWhereInput.ioPolicyIn) &&
+        Objects.equals(this.ioPolicyNot, contentLibraryVmTemplateWhereInput.ioPolicyNot) &&
+        Objects.equals(this.ioPolicyNotIn, contentLibraryVmTemplateWhereInput.ioPolicyNotIn) &&
         Objects.equals(this.labelsEvery, contentLibraryVmTemplateWhereInput.labelsEvery) &&
         Objects.equals(this.labelsNone, contentLibraryVmTemplateWhereInput.labelsNone) &&
         Objects.equals(this.labelsSome, contentLibraryVmTemplateWhereInput.labelsSome) &&
+        Objects.equals(this.maxBandwidth, contentLibraryVmTemplateWhereInput.maxBandwidth) &&
+        Objects.equals(this.maxBandwidthGt, contentLibraryVmTemplateWhereInput.maxBandwidthGt) &&
+        Objects.equals(this.maxBandwidthGte, contentLibraryVmTemplateWhereInput.maxBandwidthGte) &&
+        Objects.equals(this.maxBandwidthIn, contentLibraryVmTemplateWhereInput.maxBandwidthIn) &&
+        Objects.equals(this.maxBandwidthLt, contentLibraryVmTemplateWhereInput.maxBandwidthLt) &&
+        Objects.equals(this.maxBandwidthLte, contentLibraryVmTemplateWhereInput.maxBandwidthLte) &&
+        Objects.equals(this.maxBandwidthNot, contentLibraryVmTemplateWhereInput.maxBandwidthNot) &&
+        Objects.equals(this.maxBandwidthNotIn, contentLibraryVmTemplateWhereInput.maxBandwidthNotIn) &&
+        Objects.equals(this.maxBandwidthPolicy, contentLibraryVmTemplateWhereInput.maxBandwidthPolicy) &&
+        Objects.equals(this.maxBandwidthPolicyIn, contentLibraryVmTemplateWhereInput.maxBandwidthPolicyIn) &&
+        Objects.equals(this.maxBandwidthPolicyNot, contentLibraryVmTemplateWhereInput.maxBandwidthPolicyNot) &&
+        Objects.equals(this.maxBandwidthPolicyNotIn, contentLibraryVmTemplateWhereInput.maxBandwidthPolicyNotIn) &&
+        Objects.equals(this.maxIops, contentLibraryVmTemplateWhereInput.maxIops) &&
+        Objects.equals(this.maxIopsGt, contentLibraryVmTemplateWhereInput.maxIopsGt) &&
+        Objects.equals(this.maxIopsGte, contentLibraryVmTemplateWhereInput.maxIopsGte) &&
+        Objects.equals(this.maxIopsIn, contentLibraryVmTemplateWhereInput.maxIopsIn) &&
+        Objects.equals(this.maxIopsLt, contentLibraryVmTemplateWhereInput.maxIopsLt) &&
+        Objects.equals(this.maxIopsLte, contentLibraryVmTemplateWhereInput.maxIopsLte) &&
+        Objects.equals(this.maxIopsNot, contentLibraryVmTemplateWhereInput.maxIopsNot) &&
+        Objects.equals(this.maxIopsNotIn, contentLibraryVmTemplateWhereInput.maxIopsNotIn) &&
+        Objects.equals(this.maxIopsPolicy, contentLibraryVmTemplateWhereInput.maxIopsPolicy) &&
+        Objects.equals(this.maxIopsPolicyIn, contentLibraryVmTemplateWhereInput.maxIopsPolicyIn) &&
+        Objects.equals(this.maxIopsPolicyNot, contentLibraryVmTemplateWhereInput.maxIopsPolicyNot) &&
+        Objects.equals(this.maxIopsPolicyNotIn, contentLibraryVmTemplateWhereInput.maxIopsPolicyNotIn) &&
         Objects.equals(this.memory, contentLibraryVmTemplateWhereInput.memory) &&
         Objects.equals(this.memoryGt, contentLibraryVmTemplateWhereInput.memoryGt) &&
         Objects.equals(this.memoryGte, contentLibraryVmTemplateWhereInput.memoryGte) &&
@@ -3297,9 +5333,25 @@ public class ContentLibraryVmTemplateWhereInput {
         Objects.equals(this.vcpuLte, contentLibraryVmTemplateWhereInput.vcpuLte) &&
         Objects.equals(this.vcpuNot, contentLibraryVmTemplateWhereInput.vcpuNot) &&
         Objects.equals(this.vcpuNotIn, contentLibraryVmTemplateWhereInput.vcpuNotIn) &&
+        Objects.equals(this.videoType, contentLibraryVmTemplateWhereInput.videoType) &&
+        Objects.equals(this.videoTypeContains, contentLibraryVmTemplateWhereInput.videoTypeContains) &&
+        Objects.equals(this.videoTypeEndsWith, contentLibraryVmTemplateWhereInput.videoTypeEndsWith) &&
+        Objects.equals(this.videoTypeGt, contentLibraryVmTemplateWhereInput.videoTypeGt) &&
+        Objects.equals(this.videoTypeGte, contentLibraryVmTemplateWhereInput.videoTypeGte) &&
+        Objects.equals(this.videoTypeIn, contentLibraryVmTemplateWhereInput.videoTypeIn) &&
+        Objects.equals(this.videoTypeLt, contentLibraryVmTemplateWhereInput.videoTypeLt) &&
+        Objects.equals(this.videoTypeLte, contentLibraryVmTemplateWhereInput.videoTypeLte) &&
+        Objects.equals(this.videoTypeNot, contentLibraryVmTemplateWhereInput.videoTypeNot) &&
+        Objects.equals(this.videoTypeNotContains, contentLibraryVmTemplateWhereInput.videoTypeNotContains) &&
+        Objects.equals(this.videoTypeNotEndsWith, contentLibraryVmTemplateWhereInput.videoTypeNotEndsWith) &&
+        Objects.equals(this.videoTypeNotIn, contentLibraryVmTemplateWhereInput.videoTypeNotIn) &&
+        Objects.equals(this.videoTypeNotStartsWith, contentLibraryVmTemplateWhereInput.videoTypeNotStartsWith) &&
+        Objects.equals(this.videoTypeStartsWith, contentLibraryVmTemplateWhereInput.videoTypeStartsWith) &&
         Objects.equals(this.vmTemplatesEvery, contentLibraryVmTemplateWhereInput.vmTemplatesEvery) &&
         Objects.equals(this.vmTemplatesNone, contentLibraryVmTemplateWhereInput.vmTemplatesNone) &&
-        Objects.equals(this.vmTemplatesSome, contentLibraryVmTemplateWhereInput.vmTemplatesSome);
+        Objects.equals(this.vmTemplatesSome, contentLibraryVmTemplateWhereInput.vmTemplatesSome) &&
+        Objects.equals(this.winOpt, contentLibraryVmTemplateWhereInput.winOpt) &&
+        Objects.equals(this.winOptNot, contentLibraryVmTemplateWhereInput.winOptNot);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3308,7 +5360,7 @@ public class ContentLibraryVmTemplateWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, architecture, architectureIn, architectureNot, architectureNotIn, cloudInitSupported, cloudInitSupportedNot, clustersEvery, clustersNone, clustersSome, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, labelsEvery, labelsNone, labelsSome, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome);
+    return Objects.hash(AND, NOT, OR, architecture, architectureIn, architectureNot, architectureNotIn, clockOffset, clockOffsetIn, clockOffsetNot, clockOffsetNotIn, cloudInitSupported, cloudInitSupportedNot, clustersEvery, clustersNone, clustersSome, cpuModel, cpuModelContains, cpuModelEndsWith, cpuModelGt, cpuModelGte, cpuModelIn, cpuModelLt, cpuModelLte, cpuModelNot, cpuModelNotContains, cpuModelNotEndsWith, cpuModelNotIn, cpuModelNotStartsWith, cpuModelStartsWith, createdAt, createdAtGt, createdAtGte, createdAtIn, createdAtLt, createdAtLte, createdAtNot, createdAtNotIn, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, firmware, firmwareIn, firmwareNot, firmwareNotIn, ha, haNot, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, ioPolicy, ioPolicyIn, ioPolicyNot, ioPolicyNotIn, labelsEvery, labelsNone, labelsSome, maxBandwidth, maxBandwidthGt, maxBandwidthGte, maxBandwidthIn, maxBandwidthLt, maxBandwidthLte, maxBandwidthNot, maxBandwidthNotIn, maxBandwidthPolicy, maxBandwidthPolicyIn, maxBandwidthPolicyNot, maxBandwidthPolicyNotIn, maxIops, maxIopsGt, maxIopsGte, maxIopsIn, maxIopsLt, maxIopsLte, maxIopsNot, maxIopsNotIn, maxIopsPolicy, maxIopsPolicyIn, maxIopsPolicyNot, maxIopsPolicyNotIn, memory, memoryGt, memoryGte, memoryIn, memoryLt, memoryLte, memoryNot, memoryNotIn, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, os, osContains, osEndsWith, osGt, osGte, osIn, osLt, osLte, osNot, osNotContains, osNotEndsWith, osNotIn, osNotStartsWith, osStartsWith, size, sizeGt, sizeGte, sizeIn, sizeLt, sizeLte, sizeNot, sizeNotIn, vcpu, vcpuGt, vcpuGte, vcpuIn, vcpuLt, vcpuLte, vcpuNot, vcpuNotIn, videoType, videoTypeContains, videoTypeEndsWith, videoTypeGt, videoTypeGte, videoTypeIn, videoTypeLt, videoTypeLte, videoTypeNot, videoTypeNotContains, videoTypeNotEndsWith, videoTypeNotIn, videoTypeNotStartsWith, videoTypeStartsWith, vmTemplatesEvery, vmTemplatesNone, vmTemplatesSome, winOpt, winOptNot);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3329,11 +5381,29 @@ public class ContentLibraryVmTemplateWhereInput {
     sb.append("    architectureIn: ").append(toIndentedString(architectureIn)).append("\n");
     sb.append("    architectureNot: ").append(toIndentedString(architectureNot)).append("\n");
     sb.append("    architectureNotIn: ").append(toIndentedString(architectureNotIn)).append("\n");
+    sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
+    sb.append("    clockOffsetIn: ").append(toIndentedString(clockOffsetIn)).append("\n");
+    sb.append("    clockOffsetNot: ").append(toIndentedString(clockOffsetNot)).append("\n");
+    sb.append("    clockOffsetNotIn: ").append(toIndentedString(clockOffsetNotIn)).append("\n");
     sb.append("    cloudInitSupported: ").append(toIndentedString(cloudInitSupported)).append("\n");
     sb.append("    cloudInitSupportedNot: ").append(toIndentedString(cloudInitSupportedNot)).append("\n");
     sb.append("    clustersEvery: ").append(toIndentedString(clustersEvery)).append("\n");
     sb.append("    clustersNone: ").append(toIndentedString(clustersNone)).append("\n");
     sb.append("    clustersSome: ").append(toIndentedString(clustersSome)).append("\n");
+    sb.append("    cpuModel: ").append(toIndentedString(cpuModel)).append("\n");
+    sb.append("    cpuModelContains: ").append(toIndentedString(cpuModelContains)).append("\n");
+    sb.append("    cpuModelEndsWith: ").append(toIndentedString(cpuModelEndsWith)).append("\n");
+    sb.append("    cpuModelGt: ").append(toIndentedString(cpuModelGt)).append("\n");
+    sb.append("    cpuModelGte: ").append(toIndentedString(cpuModelGte)).append("\n");
+    sb.append("    cpuModelIn: ").append(toIndentedString(cpuModelIn)).append("\n");
+    sb.append("    cpuModelLt: ").append(toIndentedString(cpuModelLt)).append("\n");
+    sb.append("    cpuModelLte: ").append(toIndentedString(cpuModelLte)).append("\n");
+    sb.append("    cpuModelNot: ").append(toIndentedString(cpuModelNot)).append("\n");
+    sb.append("    cpuModelNotContains: ").append(toIndentedString(cpuModelNotContains)).append("\n");
+    sb.append("    cpuModelNotEndsWith: ").append(toIndentedString(cpuModelNotEndsWith)).append("\n");
+    sb.append("    cpuModelNotIn: ").append(toIndentedString(cpuModelNotIn)).append("\n");
+    sb.append("    cpuModelNotStartsWith: ").append(toIndentedString(cpuModelNotStartsWith)).append("\n");
+    sb.append("    cpuModelStartsWith: ").append(toIndentedString(cpuModelStartsWith)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
     sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");
@@ -3360,6 +5430,12 @@ public class ContentLibraryVmTemplateWhereInput {
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
     sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
+    sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
+    sb.append("    firmwareIn: ").append(toIndentedString(firmwareIn)).append("\n");
+    sb.append("    firmwareNot: ").append(toIndentedString(firmwareNot)).append("\n");
+    sb.append("    firmwareNotIn: ").append(toIndentedString(firmwareNotIn)).append("\n");
+    sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+    sb.append("    haNot: ").append(toIndentedString(haNot)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
     sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");
@@ -3374,9 +5450,37 @@ public class ContentLibraryVmTemplateWhereInput {
     sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
     sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
     sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+    sb.append("    ioPolicy: ").append(toIndentedString(ioPolicy)).append("\n");
+    sb.append("    ioPolicyIn: ").append(toIndentedString(ioPolicyIn)).append("\n");
+    sb.append("    ioPolicyNot: ").append(toIndentedString(ioPolicyNot)).append("\n");
+    sb.append("    ioPolicyNotIn: ").append(toIndentedString(ioPolicyNotIn)).append("\n");
     sb.append("    labelsEvery: ").append(toIndentedString(labelsEvery)).append("\n");
     sb.append("    labelsNone: ").append(toIndentedString(labelsNone)).append("\n");
     sb.append("    labelsSome: ").append(toIndentedString(labelsSome)).append("\n");
+    sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
+    sb.append("    maxBandwidthGt: ").append(toIndentedString(maxBandwidthGt)).append("\n");
+    sb.append("    maxBandwidthGte: ").append(toIndentedString(maxBandwidthGte)).append("\n");
+    sb.append("    maxBandwidthIn: ").append(toIndentedString(maxBandwidthIn)).append("\n");
+    sb.append("    maxBandwidthLt: ").append(toIndentedString(maxBandwidthLt)).append("\n");
+    sb.append("    maxBandwidthLte: ").append(toIndentedString(maxBandwidthLte)).append("\n");
+    sb.append("    maxBandwidthNot: ").append(toIndentedString(maxBandwidthNot)).append("\n");
+    sb.append("    maxBandwidthNotIn: ").append(toIndentedString(maxBandwidthNotIn)).append("\n");
+    sb.append("    maxBandwidthPolicy: ").append(toIndentedString(maxBandwidthPolicy)).append("\n");
+    sb.append("    maxBandwidthPolicyIn: ").append(toIndentedString(maxBandwidthPolicyIn)).append("\n");
+    sb.append("    maxBandwidthPolicyNot: ").append(toIndentedString(maxBandwidthPolicyNot)).append("\n");
+    sb.append("    maxBandwidthPolicyNotIn: ").append(toIndentedString(maxBandwidthPolicyNotIn)).append("\n");
+    sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
+    sb.append("    maxIopsGt: ").append(toIndentedString(maxIopsGt)).append("\n");
+    sb.append("    maxIopsGte: ").append(toIndentedString(maxIopsGte)).append("\n");
+    sb.append("    maxIopsIn: ").append(toIndentedString(maxIopsIn)).append("\n");
+    sb.append("    maxIopsLt: ").append(toIndentedString(maxIopsLt)).append("\n");
+    sb.append("    maxIopsLte: ").append(toIndentedString(maxIopsLte)).append("\n");
+    sb.append("    maxIopsNot: ").append(toIndentedString(maxIopsNot)).append("\n");
+    sb.append("    maxIopsNotIn: ").append(toIndentedString(maxIopsNotIn)).append("\n");
+    sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
+    sb.append("    maxIopsPolicyIn: ").append(toIndentedString(maxIopsPolicyIn)).append("\n");
+    sb.append("    maxIopsPolicyNot: ").append(toIndentedString(maxIopsPolicyNot)).append("\n");
+    sb.append("    maxIopsPolicyNotIn: ").append(toIndentedString(maxIopsPolicyNotIn)).append("\n");
     sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
     sb.append("    memoryGt: ").append(toIndentedString(memoryGt)).append("\n");
     sb.append("    memoryGte: ").append(toIndentedString(memoryGte)).append("\n");
@@ -3429,9 +5533,25 @@ public class ContentLibraryVmTemplateWhereInput {
     sb.append("    vcpuLte: ").append(toIndentedString(vcpuLte)).append("\n");
     sb.append("    vcpuNot: ").append(toIndentedString(vcpuNot)).append("\n");
     sb.append("    vcpuNotIn: ").append(toIndentedString(vcpuNotIn)).append("\n");
+    sb.append("    videoType: ").append(toIndentedString(videoType)).append("\n");
+    sb.append("    videoTypeContains: ").append(toIndentedString(videoTypeContains)).append("\n");
+    sb.append("    videoTypeEndsWith: ").append(toIndentedString(videoTypeEndsWith)).append("\n");
+    sb.append("    videoTypeGt: ").append(toIndentedString(videoTypeGt)).append("\n");
+    sb.append("    videoTypeGte: ").append(toIndentedString(videoTypeGte)).append("\n");
+    sb.append("    videoTypeIn: ").append(toIndentedString(videoTypeIn)).append("\n");
+    sb.append("    videoTypeLt: ").append(toIndentedString(videoTypeLt)).append("\n");
+    sb.append("    videoTypeLte: ").append(toIndentedString(videoTypeLte)).append("\n");
+    sb.append("    videoTypeNot: ").append(toIndentedString(videoTypeNot)).append("\n");
+    sb.append("    videoTypeNotContains: ").append(toIndentedString(videoTypeNotContains)).append("\n");
+    sb.append("    videoTypeNotEndsWith: ").append(toIndentedString(videoTypeNotEndsWith)).append("\n");
+    sb.append("    videoTypeNotIn: ").append(toIndentedString(videoTypeNotIn)).append("\n");
+    sb.append("    videoTypeNotStartsWith: ").append(toIndentedString(videoTypeNotStartsWith)).append("\n");
+    sb.append("    videoTypeStartsWith: ").append(toIndentedString(videoTypeStartsWith)).append("\n");
     sb.append("    vmTemplatesEvery: ").append(toIndentedString(vmTemplatesEvery)).append("\n");
     sb.append("    vmTemplatesNone: ").append(toIndentedString(vmTemplatesNone)).append("\n");
     sb.append("    vmTemplatesSome: ").append(toIndentedString(vmTemplatesSome)).append("\n");
+    sb.append("    winOpt: ").append(toIndentedString(winOpt)).append("\n");
+    sb.append("    winOptNot: ").append(toIndentedString(winOptNot)).append("\n");
     sb.append("}");
     return sb.toString();
   }

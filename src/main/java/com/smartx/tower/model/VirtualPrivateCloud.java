@@ -12,6 +12,7 @@ import com.smartx.tower.model.NestedVirtualPrivateCloudIsolationPolicy;
 import com.smartx.tower.model.NestedVirtualPrivateCloudRouteTable;
 import com.smartx.tower.model.NestedVirtualPrivateCloudSecurityGroup;
 import com.smartx.tower.model.NestedVirtualPrivateCloudSecurityPolicy;
+import com.smartx.tower.model.NestedVirtualPrivateCloudService;
 import com.smartx.tower.model.NestedVirtualPrivateCloudSubnet;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -72,6 +73,10 @@ public class VirtualPrivateCloud {
   public static final String SERIALIZED_NAME_SUBNETS = "subnets";
   @SerializedName(SERIALIZED_NAME_SUBNETS)
   private List<NestedVirtualPrivateCloudSubnet> subnets = null;
+
+  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+  private NestedVirtualPrivateCloudService vpcService;
 
   public VirtualPrivateCloud() { 
   }
@@ -392,6 +397,29 @@ public class VirtualPrivateCloud {
   }
 
 
+  public VirtualPrivateCloud vpcService(NestedVirtualPrivateCloudService vpcService) {
+    
+    this.vpcService = vpcService;
+    return this;
+  }
+
+   /**
+   * Get vpcService
+   * @return vpcService
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public NestedVirtualPrivateCloudService getVpcService() {
+    return vpcService;
+  }
+
+
+  public void setVpcService(NestedVirtualPrivateCloudService vpcService) {
+    this.vpcService = vpcService;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -412,7 +440,8 @@ public class VirtualPrivateCloud {
         Objects.equals(this.routeTables, virtualPrivateCloud.routeTables) &&
         Objects.equals(this.securityGroups, virtualPrivateCloud.securityGroups) &&
         Objects.equals(this.securityPolicies, virtualPrivateCloud.securityPolicies) &&
-        Objects.equals(this.subnets, virtualPrivateCloud.subnets);
+        Objects.equals(this.subnets, virtualPrivateCloud.subnets) &&
+        Objects.equals(this.vpcService, virtualPrivateCloud.vpcService);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -421,7 +450,7 @@ public class VirtualPrivateCloud {
 
   @Override
   public int hashCode() {
-    return Objects.hash(associateExternalSubnetNum, description, entityAsyncStatus, id, isolationPolicies, localId, mtu, name, routeTables, securityGroups, securityPolicies, subnets);
+    return Objects.hash(associateExternalSubnetNum, description, entityAsyncStatus, id, isolationPolicies, localId, mtu, name, routeTables, securityGroups, securityPolicies, subnets, vpcService);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -447,6 +476,7 @@ public class VirtualPrivateCloud {
     sb.append("    securityGroups: ").append(toIndentedString(securityGroups)).append("\n");
     sb.append("    securityPolicies: ").append(toIndentedString(securityPolicies)).append("\n");
     sb.append("    subnets: ").append(toIndentedString(subnets)).append("\n");
+    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

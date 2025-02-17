@@ -199,8 +199,8 @@ public class VirtualPrivateCloudNatGateway {
    * Get externalSubnet
    * @return externalSubnet
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public NestedVirtualPrivateCloudExternalSubnet getExternalSubnet() {
     return externalSubnet;
