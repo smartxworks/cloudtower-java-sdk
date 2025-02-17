@@ -28,6 +28,10 @@ public enum VirtualPrivateCloudExternalSubnetOrderByInput {
   
   ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
   
+  EXCLUSIVE_ASC("exclusive_ASC"),
+  
+  EXCLUSIVE_DESC("exclusive_DESC"),
+  
   FLOATING_IP_CIDR_ASC("floating_ip_cidr_ASC"),
   
   FLOATING_IP_CIDR_DESC("floating_ip_cidr_DESC"),

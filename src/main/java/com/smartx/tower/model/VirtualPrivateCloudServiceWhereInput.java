@@ -11,6 +11,7 @@ import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.EverouteClusterPhase;
 import com.smartx.tower.model.EverouteClusterWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudClusterBindingWhereInput;
+import com.smartx.tower.model.VirtualPrivateCloudEdgeGatewayGroupWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudEdgeGatewayWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudExternalSubnetWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudWhereInput;
@@ -49,6 +50,18 @@ public class VirtualPrivateCloudServiceWhereInput {
   public static final String SERIALIZED_NAME_CLUSTER_BINDINGS_SOME = "cluster_bindings_some";
   @SerializedName(SERIALIZED_NAME_CLUSTER_BINDINGS_SOME)
   private VirtualPrivateCloudClusterBindingWhereInput clusterBindingsSome;
+
+  public static final String SERIALIZED_NAME_EDGE_GATEWAY_GROUPS_EVERY = "edge_gateway_groups_every";
+  @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY_GROUPS_EVERY)
+  private VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsEvery;
+
+  public static final String SERIALIZED_NAME_EDGE_GATEWAY_GROUPS_NONE = "edge_gateway_groups_none";
+  @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY_GROUPS_NONE)
+  private VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsNone;
+
+  public static final String SERIALIZED_NAME_EDGE_GATEWAY_GROUPS_SOME = "edge_gateway_groups_some";
+  @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY_GROUPS_SOME)
+  private VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsSome;
 
   public static final String SERIALIZED_NAME_EDGE_GATEWAYS_EVERY = "edge_gateways_every";
   @SerializedName(SERIALIZED_NAME_EDGE_GATEWAYS_EVERY)
@@ -396,6 +409,75 @@ public class VirtualPrivateCloudServiceWhereInput {
 
   public void setClusterBindingsSome(VirtualPrivateCloudClusterBindingWhereInput clusterBindingsSome) {
     this.clusterBindingsSome = clusterBindingsSome;
+  }
+
+
+  public VirtualPrivateCloudServiceWhereInput edgeGatewayGroupsEvery(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsEvery) {
+    
+    this.edgeGatewayGroupsEvery = edgeGatewayGroupsEvery;
+    return this;
+  }
+
+   /**
+   * Get edgeGatewayGroupsEvery
+   * @return edgeGatewayGroupsEvery
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudEdgeGatewayGroupWhereInput getEdgeGatewayGroupsEvery() {
+    return edgeGatewayGroupsEvery;
+  }
+
+
+  public void setEdgeGatewayGroupsEvery(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsEvery) {
+    this.edgeGatewayGroupsEvery = edgeGatewayGroupsEvery;
+  }
+
+
+  public VirtualPrivateCloudServiceWhereInput edgeGatewayGroupsNone(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsNone) {
+    
+    this.edgeGatewayGroupsNone = edgeGatewayGroupsNone;
+    return this;
+  }
+
+   /**
+   * Get edgeGatewayGroupsNone
+   * @return edgeGatewayGroupsNone
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudEdgeGatewayGroupWhereInput getEdgeGatewayGroupsNone() {
+    return edgeGatewayGroupsNone;
+  }
+
+
+  public void setEdgeGatewayGroupsNone(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsNone) {
+    this.edgeGatewayGroupsNone = edgeGatewayGroupsNone;
+  }
+
+
+  public VirtualPrivateCloudServiceWhereInput edgeGatewayGroupsSome(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsSome) {
+    
+    this.edgeGatewayGroupsSome = edgeGatewayGroupsSome;
+    return this;
+  }
+
+   /**
+   * Get edgeGatewayGroupsSome
+   * @return edgeGatewayGroupsSome
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudEdgeGatewayGroupWhereInput getEdgeGatewayGroupsSome() {
+    return edgeGatewayGroupsSome;
+  }
+
+
+  public void setEdgeGatewayGroupsSome(VirtualPrivateCloudEdgeGatewayGroupWhereInput edgeGatewayGroupsSome) {
+    this.edgeGatewayGroupsSome = edgeGatewayGroupsSome;
   }
 
 
@@ -1536,6 +1618,9 @@ public class VirtualPrivateCloudServiceWhereInput {
         Objects.equals(this.clusterBindingsEvery, virtualPrivateCloudServiceWhereInput.clusterBindingsEvery) &&
         Objects.equals(this.clusterBindingsNone, virtualPrivateCloudServiceWhereInput.clusterBindingsNone) &&
         Objects.equals(this.clusterBindingsSome, virtualPrivateCloudServiceWhereInput.clusterBindingsSome) &&
+        Objects.equals(this.edgeGatewayGroupsEvery, virtualPrivateCloudServiceWhereInput.edgeGatewayGroupsEvery) &&
+        Objects.equals(this.edgeGatewayGroupsNone, virtualPrivateCloudServiceWhereInput.edgeGatewayGroupsNone) &&
+        Objects.equals(this.edgeGatewayGroupsSome, virtualPrivateCloudServiceWhereInput.edgeGatewayGroupsSome) &&
         Objects.equals(this.edgeGatewaysEvery, virtualPrivateCloudServiceWhereInput.edgeGatewaysEvery) &&
         Objects.equals(this.edgeGatewaysNone, virtualPrivateCloudServiceWhereInput.edgeGatewaysNone) &&
         Objects.equals(this.edgeGatewaysSome, virtualPrivateCloudServiceWhereInput.edgeGatewaysSome) &&
@@ -1590,7 +1675,7 @@ public class VirtualPrivateCloudServiceWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, clusterBindingsEvery, clusterBindingsNone, clusterBindingsSome, edgeGatewaysEvery, edgeGatewaysNone, edgeGatewaysSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, everouteCluster, externalSubnetsEvery, externalSubnetsNone, externalSubnetsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internalCidr, internalCidrContains, internalCidrEndsWith, internalCidrGt, internalCidrGte, internalCidrIn, internalCidrLt, internalCidrLte, internalCidrNot, internalCidrNotContains, internalCidrNotEndsWith, internalCidrNotIn, internalCidrNotStartsWith, internalCidrStartsWith, phase, phaseIn, phaseNot, phaseNotIn, vpcsEvery, vpcsNone, vpcsSome);
+    return Objects.hash(AND, NOT, OR, clusterBindingsEvery, clusterBindingsNone, clusterBindingsSome, edgeGatewayGroupsEvery, edgeGatewayGroupsNone, edgeGatewayGroupsSome, edgeGatewaysEvery, edgeGatewaysNone, edgeGatewaysSome, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, everouteCluster, externalSubnetsEvery, externalSubnetsNone, externalSubnetsSome, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, internalCidr, internalCidrContains, internalCidrEndsWith, internalCidrGt, internalCidrGte, internalCidrIn, internalCidrLt, internalCidrLte, internalCidrNot, internalCidrNotContains, internalCidrNotEndsWith, internalCidrNotIn, internalCidrNotStartsWith, internalCidrStartsWith, phase, phaseIn, phaseNot, phaseNotIn, vpcsEvery, vpcsNone, vpcsSome);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1610,6 +1695,9 @@ public class VirtualPrivateCloudServiceWhereInput {
     sb.append("    clusterBindingsEvery: ").append(toIndentedString(clusterBindingsEvery)).append("\n");
     sb.append("    clusterBindingsNone: ").append(toIndentedString(clusterBindingsNone)).append("\n");
     sb.append("    clusterBindingsSome: ").append(toIndentedString(clusterBindingsSome)).append("\n");
+    sb.append("    edgeGatewayGroupsEvery: ").append(toIndentedString(edgeGatewayGroupsEvery)).append("\n");
+    sb.append("    edgeGatewayGroupsNone: ").append(toIndentedString(edgeGatewayGroupsNone)).append("\n");
+    sb.append("    edgeGatewayGroupsSome: ").append(toIndentedString(edgeGatewayGroupsSome)).append("\n");
     sb.append("    edgeGatewaysEvery: ").append(toIndentedString(edgeGatewaysEvery)).append("\n");
     sb.append("    edgeGatewaysNone: ").append(toIndentedString(edgeGatewaysNone)).append("\n");
     sb.append("    edgeGatewaysSome: ").append(toIndentedString(edgeGatewaysSome)).append("\n");

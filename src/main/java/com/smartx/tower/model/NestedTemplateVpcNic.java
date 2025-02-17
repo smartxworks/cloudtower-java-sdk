@@ -16,6 +16,10 @@ import java.io.IOException;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class NestedTemplateVpcNic {
+  public static final String SERIALIZED_NAME_USE_FLOATING_IP = "use_floating_ip";
+  @SerializedName(SERIALIZED_NAME_USE_FLOATING_IP)
+  private Boolean useFloatingIp;
+
   public static final String SERIALIZED_NAME_VPC_LOCAL_ID = "vpc_local_id";
   @SerializedName(SERIALIZED_NAME_VPC_LOCAL_ID)
   private String vpcLocalId;
@@ -26,6 +30,29 @@ public class NestedTemplateVpcNic {
 
   public NestedTemplateVpcNic() { 
   }
+
+  public NestedTemplateVpcNic useFloatingIp(Boolean useFloatingIp) {
+    
+    this.useFloatingIp = useFloatingIp;
+    return this;
+  }
+
+   /**
+   * Get useFloatingIp
+   * @return useFloatingIp
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Boolean getUseFloatingIp() {
+    return useFloatingIp;
+  }
+
+
+  public void setUseFloatingIp(Boolean useFloatingIp) {
+    this.useFloatingIp = useFloatingIp;
+  }
+
 
   public NestedTemplateVpcNic vpcLocalId(String vpcLocalId) {
     
@@ -82,19 +109,21 @@ public class NestedTemplateVpcNic {
       return false;
     }
     NestedTemplateVpcNic nestedTemplateVpcNic = (NestedTemplateVpcNic) o;
-    return Objects.equals(this.vpcLocalId, nestedTemplateVpcNic.vpcLocalId) &&
+    return Objects.equals(this.useFloatingIp, nestedTemplateVpcNic.useFloatingIp) &&
+        Objects.equals(this.vpcLocalId, nestedTemplateVpcNic.vpcLocalId) &&
         Objects.equals(this.vpcSubnetLocalId, nestedTemplateVpcNic.vpcSubnetLocalId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(vpcLocalId, vpcSubnetLocalId);
+    return Objects.hash(useFloatingIp, vpcLocalId, vpcSubnetLocalId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NestedTemplateVpcNic {\n");
+    sb.append("    useFloatingIp: ").append(toIndentedString(useFloatingIp)).append("\n");
     sb.append("    vpcLocalId: ").append(toIndentedString(vpcLocalId)).append("\n");
     sb.append("    vpcSubnetLocalId: ").append(toIndentedString(vpcSubnetLocalId)).append("\n");
     sb.append("}");

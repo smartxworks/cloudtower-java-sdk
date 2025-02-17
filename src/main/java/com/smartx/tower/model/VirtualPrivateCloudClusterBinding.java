@@ -10,6 +10,7 @@ import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.NestedCluster;
 import com.smartx.tower.model.NestedVds;
+import com.smartx.tower.model.NestedVirtualPrivateCloudService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -43,6 +44,10 @@ public class VirtualPrivateCloudClusterBinding {
   public static final String SERIALIZED_NAME_VLAN_ID = "vlan_id";
   @SerializedName(SERIALIZED_NAME_VLAN_ID)
   private Integer vlanId;
+
+  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+  private NestedVirtualPrivateCloudService vpcService;
 
   public VirtualPrivateCloudClusterBinding() { 
   }
@@ -185,6 +190,29 @@ public class VirtualPrivateCloudClusterBinding {
   }
 
 
+  public VirtualPrivateCloudClusterBinding vpcService(NestedVirtualPrivateCloudService vpcService) {
+    
+    this.vpcService = vpcService;
+    return this;
+  }
+
+   /**
+   * Get vpcService
+   * @return vpcService
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public NestedVirtualPrivateCloudService getVpcService() {
+    return vpcService;
+  }
+
+
+  public void setVpcService(NestedVirtualPrivateCloudService vpcService) {
+    this.vpcService = vpcService;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -199,7 +227,8 @@ public class VirtualPrivateCloudClusterBinding {
         Objects.equals(this.id, virtualPrivateCloudClusterBinding.id) &&
         Objects.equals(this.mtu, virtualPrivateCloudClusterBinding.mtu) &&
         Objects.equals(this.vds, virtualPrivateCloudClusterBinding.vds) &&
-        Objects.equals(this.vlanId, virtualPrivateCloudClusterBinding.vlanId);
+        Objects.equals(this.vlanId, virtualPrivateCloudClusterBinding.vlanId) &&
+        Objects.equals(this.vpcService, virtualPrivateCloudClusterBinding.vpcService);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -208,7 +237,7 @@ public class VirtualPrivateCloudClusterBinding {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cluster, entityAsyncStatus, id, mtu, vds, vlanId);
+    return Objects.hash(cluster, entityAsyncStatus, id, mtu, vds, vlanId, vpcService);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -228,6 +257,7 @@ public class VirtualPrivateCloudClusterBinding {
     sb.append("    mtu: ").append(toIndentedString(mtu)).append("\n");
     sb.append("    vds: ").append(toIndentedString(vds)).append("\n");
     sb.append("    vlanId: ").append(toIndentedString(vlanId)).append("\n");
+    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }

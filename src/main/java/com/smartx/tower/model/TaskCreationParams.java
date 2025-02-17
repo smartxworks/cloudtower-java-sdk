@@ -21,6 +21,14 @@ import java.util.List;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class TaskCreationParams {
+  public static final String SERIALIZED_NAME_FINISHED_AT = "finished_at";
+  @SerializedName(SERIALIZED_NAME_FINISHED_AT)
+  private String finishedAt;
+
+  public static final String SERIALIZED_NAME_STARTED_AT = "started_at";
+  @SerializedName(SERIALIZED_NAME_STARTED_AT)
+  private String startedAt;
+
   public static final String SERIALIZED_NAME_STEPS = "steps";
   @SerializedName(SERIALIZED_NAME_STEPS)
   private List<TaskStepCreationParams> steps = null;
@@ -67,6 +75,52 @@ public class TaskCreationParams {
 
   public TaskCreationParams() { 
   }
+
+  public TaskCreationParams finishedAt(String finishedAt) {
+    
+    this.finishedAt = finishedAt;
+    return this;
+  }
+
+   /**
+   * Get finishedAt
+   * @return finishedAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getFinishedAt() {
+    return finishedAt;
+  }
+
+
+  public void setFinishedAt(String finishedAt) {
+    this.finishedAt = finishedAt;
+  }
+
+
+  public TaskCreationParams startedAt(String startedAt) {
+    
+    this.startedAt = startedAt;
+    return this;
+  }
+
+   /**
+   * Get startedAt
+   * @return startedAt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getStartedAt() {
+    return startedAt;
+  }
+
+
+  public void setStartedAt(String startedAt) {
+    this.startedAt = startedAt;
+  }
+
 
   public TaskCreationParams steps(List<TaskStepCreationParams> steps) {
     
@@ -338,7 +392,9 @@ public class TaskCreationParams {
       return false;
     }
     TaskCreationParams taskCreationParams = (TaskCreationParams) o;
-    return Objects.equals(this.steps, taskCreationParams.steps) &&
+    return Objects.equals(this.finishedAt, taskCreationParams.finishedAt) &&
+        Objects.equals(this.startedAt, taskCreationParams.startedAt) &&
+        Objects.equals(this.steps, taskCreationParams.steps) &&
         Objects.equals(this.args, taskCreationParams.args) &&
         Objects.equals(this.key, taskCreationParams.key) &&
         Objects.equals(this.internal, taskCreationParams.internal) &&
@@ -353,13 +409,15 @@ public class TaskCreationParams {
 
   @Override
   public int hashCode() {
-    return Objects.hash(steps, args, key, internal, type, resourceId, clusterId, userId, description, resourceMutation, resourceType);
+    return Objects.hash(finishedAt, startedAt, steps, args, key, internal, type, resourceId, clusterId, userId, description, resourceMutation, resourceType);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskCreationParams {\n");
+    sb.append("    finishedAt: ").append(toIndentedString(finishedAt)).append("\n");
+    sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
     sb.append("    steps: ").append(toIndentedString(steps)).append("\n");
     sb.append("    args: ").append(toIndentedString(args)).append("\n");
     sb.append("    key: ").append(toIndentedString(key)).append("\n");

@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.EntityAsyncStatus;
+import com.smartx.tower.model.VirtualPrivateCloudEdgeGatewayWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudFloatingIpWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudNatGatewayWhereInput;
 import com.smartx.tower.model.VirtualPrivateCloudRouterGatewayWhereInput;
@@ -149,6 +150,10 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
   private String descriptionStartsWith;
 
+  public static final String SERIALIZED_NAME_EDGE_GATEWAY = "edge_gateway";
+  @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY)
+  private VirtualPrivateCloudEdgeGatewayWhereInput edgeGateway;
+
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
   private EntityAsyncStatus entityAsyncStatus;
@@ -164,6 +169,14 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN = "entityAsyncStatus_not_in";
   @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
   private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
+
+  public static final String SERIALIZED_NAME_EXCLUSIVE = "exclusive";
+  @SerializedName(SERIALIZED_NAME_EXCLUSIVE)
+  private Boolean exclusive;
+
+  public static final String SERIALIZED_NAME_EXCLUSIVE_NOT = "exclusive_not";
+  @SerializedName(SERIALIZED_NAME_EXCLUSIVE_NOT)
+  private Boolean exclusiveNot;
 
   public static final String SERIALIZED_NAME_FLOATING_IP_CIDR = "floating_ip_cidr";
   @SerializedName(SERIALIZED_NAME_FLOATING_IP_CIDR)
@@ -1373,6 +1386,29 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
   }
 
 
+  public VirtualPrivateCloudExternalSubnetWhereInput edgeGateway(VirtualPrivateCloudEdgeGatewayWhereInput edgeGateway) {
+    
+    this.edgeGateway = edgeGateway;
+    return this;
+  }
+
+   /**
+   * Get edgeGateway
+   * @return edgeGateway
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudEdgeGatewayWhereInput getEdgeGateway() {
+    return edgeGateway;
+  }
+
+
+  public void setEdgeGateway(VirtualPrivateCloudEdgeGatewayWhereInput edgeGateway) {
+    this.edgeGateway = edgeGateway;
+  }
+
+
   public VirtualPrivateCloudExternalSubnetWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
     
     this.entityAsyncStatus = entityAsyncStatus;
@@ -1478,6 +1514,52 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
 
   public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
     this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+  }
+
+
+  public VirtualPrivateCloudExternalSubnetWhereInput exclusive(Boolean exclusive) {
+    
+    this.exclusive = exclusive;
+    return this;
+  }
+
+   /**
+   * Get exclusive
+   * @return exclusive
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getExclusive() {
+    return exclusive;
+  }
+
+
+  public void setExclusive(Boolean exclusive) {
+    this.exclusive = exclusive;
+  }
+
+
+  public VirtualPrivateCloudExternalSubnetWhereInput exclusiveNot(Boolean exclusiveNot) {
+    
+    this.exclusiveNot = exclusiveNot;
+    return this;
+  }
+
+   /**
+   * Get exclusiveNot
+   * @return exclusiveNot
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getExclusiveNot() {
+    return exclusiveNot;
+  }
+
+
+  public void setExclusiveNot(Boolean exclusiveNot) {
+    this.exclusiveNot = exclusiveNot;
   }
 
 
@@ -4140,10 +4222,13 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
         Objects.equals(this.descriptionNotIn, virtualPrivateCloudExternalSubnetWhereInput.descriptionNotIn) &&
         Objects.equals(this.descriptionNotStartsWith, virtualPrivateCloudExternalSubnetWhereInput.descriptionNotStartsWith) &&
         Objects.equals(this.descriptionStartsWith, virtualPrivateCloudExternalSubnetWhereInput.descriptionStartsWith) &&
+        Objects.equals(this.edgeGateway, virtualPrivateCloudExternalSubnetWhereInput.edgeGateway) &&
         Objects.equals(this.entityAsyncStatus, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatus) &&
         Objects.equals(this.entityAsyncStatusIn, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatusIn) &&
         Objects.equals(this.entityAsyncStatusNot, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatusNot) &&
         Objects.equals(this.entityAsyncStatusNotIn, virtualPrivateCloudExternalSubnetWhereInput.entityAsyncStatusNotIn) &&
+        Objects.equals(this.exclusive, virtualPrivateCloudExternalSubnetWhereInput.exclusive) &&
+        Objects.equals(this.exclusiveNot, virtualPrivateCloudExternalSubnetWhereInput.exclusiveNot) &&
         Objects.equals(this.floatingIpCidr, virtualPrivateCloudExternalSubnetWhereInput.floatingIpCidr) &&
         Objects.equals(this.floatingIpCidrContains, virtualPrivateCloudExternalSubnetWhereInput.floatingIpCidrContains) &&
         Objects.equals(this.floatingIpCidrEndsWith, virtualPrivateCloudExternalSubnetWhereInput.floatingIpCidrEndsWith) &&
@@ -4261,7 +4346,7 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cidr, cidrContains, cidrEndsWith, cidrGt, cidrGte, cidrIn, cidrLt, cidrLte, cidrNot, cidrNotContains, cidrNotEndsWith, cidrNotIn, cidrNotStartsWith, cidrStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, floatingIpCidr, floatingIpCidrContains, floatingIpCidrEndsWith, floatingIpCidrGt, floatingIpCidrGte, floatingIpCidrIn, floatingIpCidrLt, floatingIpCidrLte, floatingIpCidrNot, floatingIpCidrNotContains, floatingIpCidrNotEndsWith, floatingIpCidrNotIn, floatingIpCidrNotStartsWith, floatingIpCidrStartsWith, floatingIpsEvery, floatingIpsNone, floatingIpsSome, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, natGatewayCidr, natGatewayCidrContains, natGatewayCidrEndsWith, natGatewayCidrGt, natGatewayCidrGte, natGatewayCidrIn, natGatewayCidrLt, natGatewayCidrLte, natGatewayCidrNot, natGatewayCidrNotContains, natGatewayCidrNotEndsWith, natGatewayCidrNotIn, natGatewayCidrNotStartsWith, natGatewayCidrStartsWith, natGatewaysEvery, natGatewaysNone, natGatewaysSome, routerGatewayCidr, routerGatewayCidrContains, routerGatewayCidrEndsWith, routerGatewayCidrGt, routerGatewayCidrGte, routerGatewayCidrIn, routerGatewayCidrLt, routerGatewayCidrLte, routerGatewayCidrNot, routerGatewayCidrNotContains, routerGatewayCidrNotEndsWith, routerGatewayCidrNotIn, routerGatewayCidrNotStartsWith, routerGatewayCidrStartsWith, routerGatewaysEvery, routerGatewaysNone, routerGatewaysSome, vlan, vpc);
+    return Objects.hash(AND, NOT, OR, cidr, cidrContains, cidrEndsWith, cidrGt, cidrGte, cidrIn, cidrLt, cidrLte, cidrNot, cidrNotContains, cidrNotEndsWith, cidrNotIn, cidrNotStartsWith, cidrStartsWith, description, descriptionContains, descriptionEndsWith, descriptionGt, descriptionGte, descriptionIn, descriptionLt, descriptionLte, descriptionNot, descriptionNotContains, descriptionNotEndsWith, descriptionNotIn, descriptionNotStartsWith, descriptionStartsWith, edgeGateway, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, exclusive, exclusiveNot, floatingIpCidr, floatingIpCidrContains, floatingIpCidrEndsWith, floatingIpCidrGt, floatingIpCidrGte, floatingIpCidrIn, floatingIpCidrLt, floatingIpCidrLte, floatingIpCidrNot, floatingIpCidrNotContains, floatingIpCidrNotEndsWith, floatingIpCidrNotIn, floatingIpCidrNotStartsWith, floatingIpCidrStartsWith, floatingIpsEvery, floatingIpsNone, floatingIpsSome, gateway, gatewayContains, gatewayEndsWith, gatewayGt, gatewayGte, gatewayIn, gatewayLt, gatewayLte, gatewayNot, gatewayNotContains, gatewayNotEndsWith, gatewayNotIn, gatewayNotStartsWith, gatewayStartsWith, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, localId, localIdContains, localIdEndsWith, localIdGt, localIdGte, localIdIn, localIdLt, localIdLte, localIdNot, localIdNotContains, localIdNotEndsWith, localIdNotIn, localIdNotStartsWith, localIdStartsWith, name, nameContains, nameEndsWith, nameGt, nameGte, nameIn, nameLt, nameLte, nameNot, nameNotContains, nameNotEndsWith, nameNotIn, nameNotStartsWith, nameStartsWith, natGatewayCidr, natGatewayCidrContains, natGatewayCidrEndsWith, natGatewayCidrGt, natGatewayCidrGte, natGatewayCidrIn, natGatewayCidrLt, natGatewayCidrLte, natGatewayCidrNot, natGatewayCidrNotContains, natGatewayCidrNotEndsWith, natGatewayCidrNotIn, natGatewayCidrNotStartsWith, natGatewayCidrStartsWith, natGatewaysEvery, natGatewaysNone, natGatewaysSome, routerGatewayCidr, routerGatewayCidrContains, routerGatewayCidrEndsWith, routerGatewayCidrGt, routerGatewayCidrGte, routerGatewayCidrIn, routerGatewayCidrLt, routerGatewayCidrLte, routerGatewayCidrNot, routerGatewayCidrNotContains, routerGatewayCidrNotEndsWith, routerGatewayCidrNotIn, routerGatewayCidrNotStartsWith, routerGatewayCidrStartsWith, routerGatewaysEvery, routerGatewaysNone, routerGatewaysSome, vlan, vpc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4306,10 +4391,13 @@ public class VirtualPrivateCloudExternalSubnetWhereInput {
     sb.append("    descriptionNotIn: ").append(toIndentedString(descriptionNotIn)).append("\n");
     sb.append("    descriptionNotStartsWith: ").append(toIndentedString(descriptionNotStartsWith)).append("\n");
     sb.append("    descriptionStartsWith: ").append(toIndentedString(descriptionStartsWith)).append("\n");
+    sb.append("    edgeGateway: ").append(toIndentedString(edgeGateway)).append("\n");
     sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
     sb.append("    entityAsyncStatusIn: ").append(toIndentedString(entityAsyncStatusIn)).append("\n");
     sb.append("    entityAsyncStatusNot: ").append(toIndentedString(entityAsyncStatusNot)).append("\n");
     sb.append("    entityAsyncStatusNotIn: ").append(toIndentedString(entityAsyncStatusNotIn)).append("\n");
+    sb.append("    exclusive: ").append(toIndentedString(exclusive)).append("\n");
+    sb.append("    exclusiveNot: ").append(toIndentedString(exclusiveNot)).append("\n");
     sb.append("    floatingIpCidr: ").append(toIndentedString(floatingIpCidr)).append("\n");
     sb.append("    floatingIpCidrContains: ").append(toIndentedString(floatingIpCidrContains)).append("\n");
     sb.append("    floatingIpCidrEndsWith: ").append(toIndentedString(floatingIpCidrEndsWith)).append("\n");

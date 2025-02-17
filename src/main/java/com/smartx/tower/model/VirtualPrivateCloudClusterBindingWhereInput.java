@@ -10,6 +10,7 @@ import com.google.gson.stream.JsonWriter;
 import com.smartx.tower.model.ClusterWhereInput;
 import com.smartx.tower.model.EntityAsyncStatus;
 import com.smartx.tower.model.VdsWhereInput;
+import com.smartx.tower.model.VirtualPrivateCloudServiceWhereInput;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -177,6 +178,10 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
   public static final String SERIALIZED_NAME_VLAN_ID_NOT_IN = "vlan_id_not_in";
   @SerializedName(SERIALIZED_NAME_VLAN_ID_NOT_IN)
   private List<Integer> vlanIdNotIn = null;
+
+  public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+  @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+  private VirtualPrivateCloudServiceWhereInput vpcService;
 
   public VirtualPrivateCloudClusterBindingWhereInput() { 
   }
@@ -1166,6 +1171,29 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
   }
 
 
+  public VirtualPrivateCloudClusterBindingWhereInput vpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
+    
+    this.vpcService = vpcService;
+    return this;
+  }
+
+   /**
+   * Get vpcService
+   * @return vpcService
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public VirtualPrivateCloudServiceWhereInput getVpcService() {
+    return vpcService;
+  }
+
+
+  public void setVpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
+    this.vpcService = vpcService;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1213,7 +1241,8 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
         Objects.equals(this.vlanIdLt, virtualPrivateCloudClusterBindingWhereInput.vlanIdLt) &&
         Objects.equals(this.vlanIdLte, virtualPrivateCloudClusterBindingWhereInput.vlanIdLte) &&
         Objects.equals(this.vlanIdNot, virtualPrivateCloudClusterBindingWhereInput.vlanIdNot) &&
-        Objects.equals(this.vlanIdNotIn, virtualPrivateCloudClusterBindingWhereInput.vlanIdNotIn);
+        Objects.equals(this.vlanIdNotIn, virtualPrivateCloudClusterBindingWhereInput.vlanIdNotIn) &&
+        Objects.equals(this.vpcService, virtualPrivateCloudClusterBindingWhereInput.vpcService);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1222,7 +1251,7 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
 
   @Override
   public int hashCode() {
-    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn);
+    return Objects.hash(AND, NOT, OR, cluster, entityAsyncStatus, entityAsyncStatusIn, entityAsyncStatusNot, entityAsyncStatusNotIn, id, idContains, idEndsWith, idGt, idGte, idIn, idLt, idLte, idNot, idNotContains, idNotEndsWith, idNotIn, idNotStartsWith, idStartsWith, mtu, mtuGt, mtuGte, mtuIn, mtuLt, mtuLte, mtuNot, mtuNotIn, vds, vlanId, vlanIdGt, vlanIdGte, vlanIdIn, vlanIdLt, vlanIdLte, vlanIdNot, vlanIdNotIn, vpcService);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1275,6 +1304,7 @@ public class VirtualPrivateCloudClusterBindingWhereInput {
     sb.append("    vlanIdLte: ").append(toIndentedString(vlanIdLte)).append("\n");
     sb.append("    vlanIdNot: ").append(toIndentedString(vlanIdNot)).append("\n");
     sb.append("    vlanIdNotIn: ").append(toIndentedString(vlanIdNotIn)).append("\n");
+    sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
     sb.append("}");
     return sb.toString();
   }
