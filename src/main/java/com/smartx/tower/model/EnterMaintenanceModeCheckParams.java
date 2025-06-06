@@ -1,88 +1,99 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.HostWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * EnterMaintenanceModeCheckParams
- */
+/** EnterMaintenanceModeCheckParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class EnterMaintenanceModeCheckParams {
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private HostWhereInput where;
+public class EnterMaintenanceModeCheckParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
-  public EnterMaintenanceModeCheckParams() { 
-  }
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private HostWhereInput where;
 
-  public EnterMaintenanceModeCheckParams where(HostWhereInput where) {
-    
-    this.where = where;
-    return this;
-  }
+    public EnterMaintenanceModeCheckParams() {}
 
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public EnterMaintenanceModeCheckParams where(HostWhereInput where) {
 
-  public HostWhereInput getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(HostWhereInput where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.where = where;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public HostWhereInput getWhere() {
+        return where;
     }
-    EnterMaintenanceModeCheckParams enterMaintenanceModeCheckParams = (EnterMaintenanceModeCheckParams) o;
-    return Objects.equals(this.where, enterMaintenanceModeCheckParams.where);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(where);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class EnterMaintenanceModeCheckParams {\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setWhere(HostWhereInput where) {
+        this.where = where;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public EnterMaintenanceModeCheckParams where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public EnterMaintenanceModeCheckParams where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        EnterMaintenanceModeCheckParams enterMaintenanceModeCheckParams =
+                (EnterMaintenanceModeCheckParams) o;
+        return Objects.equals(this.where, enterMaintenanceModeCheckParams.where);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(where);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class EnterMaintenanceModeCheckParams {\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

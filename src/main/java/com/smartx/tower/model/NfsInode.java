@@ -1,489 +1,793 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.NestedLabel;
-import com.smartx.tower.model.NestedNfsExport;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * NfsInode
- */
+/** NfsInode */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NfsInode {
-  public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
-  @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
-  private Long assignedSize;
+public class NfsInode extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ASSIGNED_SIZE = "assigned_size";
 
-  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
-  private EntityAsyncStatus entityAsyncStatus;
+    @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE)
+    private Long assignedSize;
 
-  public static final String SERIALIZED_NAME_FILE = "file";
-  @SerializedName(SERIALIZED_NAME_FILE)
-  private Boolean _file;
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+    private EntityAsyncStatus entityAsyncStatus;
 
-  public static final String SERIALIZED_NAME_LABELS = "labels";
-  @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<NestedLabel> labels = null;
+    public static final String SERIALIZED_NAME_FILE = "file";
 
-  public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
-  @SerializedName(SERIALIZED_NAME_LOCAL_ID)
-  private String localId;
+    @SerializedName(SERIALIZED_NAME_FILE)
+    private Boolean _file;
 
-  public static final String SERIALIZED_NAME_LOCAL_UPDATED_AT = "local_updated_at";
-  @SerializedName(SERIALIZED_NAME_LOCAL_UPDATED_AT)
-  private String localUpdatedAt;
+    public static final String SERIALIZED_NAME_ID = "id";
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    @SerializedName(SERIALIZED_NAME_ID)
+    private String id;
 
-  public static final String SERIALIZED_NAME_NFS_EXPORT = "nfs_export";
-  @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
-  private NestedNfsExport nfsExport;
+    public static final String SERIALIZED_NAME_LABELS = "labels";
 
-  public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
-  private String parentId;
+    @SerializedName(SERIALIZED_NAME_LABELS)
+    private List<NestedLabel> labels = null;
 
-  public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
-  @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
-  private Long sharedSize;
+    public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
 
-  public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
-  @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
-  private Integer snapshotNum;
+    @SerializedName(SERIALIZED_NAME_LOCAL_ID)
+    private String localId;
 
-  public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
-  private Double uniqueLogicalSize;
+    public static final String SERIALIZED_NAME_LOCAL_UPDATED_AT = "local_updated_at";
 
-  public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
-  @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
-  private Long uniqueSize;
+    @SerializedName(SERIALIZED_NAME_LOCAL_UPDATED_AT)
+    private String localUpdatedAt;
 
-  public NfsInode() { 
-  }
+    public static final String SERIALIZED_NAME_NAME = "name";
 
-  public NfsInode assignedSize(Long assignedSize) {
-    
-    this.assignedSize = assignedSize;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-   /**
-   * Get assignedSize
-   * @return assignedSize
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public static final String SERIALIZED_NAME_NFS_EXPORT = "nfs_export";
 
-  public Long getAssignedSize() {
-    return assignedSize;
-  }
+    @SerializedName(SERIALIZED_NAME_NFS_EXPORT)
+    private NestedNfsExport nfsExport;
 
+    public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
 
-  public void setAssignedSize(Long assignedSize) {
-    this.assignedSize = assignedSize;
-  }
+    @SerializedName(SERIALIZED_NAME_PARENT_ID)
+    private String parentId;
 
+    public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
 
-  public NfsInode entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
-    
-    this.entityAsyncStatus = entityAsyncStatus;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_SHARED_SIZE)
+    private Long sharedSize;
 
-   /**
-   * Get entityAsyncStatus
-   * @return entityAsyncStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public static final String SERIALIZED_NAME_SNAPSHOT_NUM = "snapshot_num";
 
-  public EntityAsyncStatus getEntityAsyncStatus() {
-    return entityAsyncStatus;
-  }
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
+    private Integer snapshotNum;
 
+    public static final String SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE = "unique_logical_size";
 
-  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
-    this.entityAsyncStatus = entityAsyncStatus;
-  }
+    @SerializedName(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE)
+    private Double uniqueLogicalSize;
 
+    public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
 
-  public NfsInode _file(Boolean _file) {
-    
-    this._file = _file;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
+    private Long uniqueSize;
 
-   /**
-   * Get _file
-   * @return _file
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NfsInode() {}
 
-  public Boolean getFile() {
-    return _file;
-  }
+    public NfsInode assignedSize(Long assignedSize) {
 
-
-  public void setFile(Boolean _file) {
-    this._file = _file;
-  }
-
-
-  public NfsInode id(String id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-  public NfsInode labels(List<NestedLabel> labels) {
-    
-    this.labels = labels;
-    return this;
-  }
-
-  public NfsInode addLabelsItem(NestedLabel labelsItem) {
-    if (this.labels == null) {
-      this.labels = new ArrayList<NestedLabel>();
+        this.assignedSize = assignedSize;
+        return this;
     }
-    this.labels.add(labelsItem);
-    return this;
-  }
 
-   /**
-   * Get labels
-   * @return labels
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NestedLabel> getLabels() {
-    return labels;
-  }
-
-
-  public void setLabels(List<NestedLabel> labels) {
-    this.labels = labels;
-  }
-
-
-  public NfsInode localId(String localId) {
-    
-    this.localId = localId;
-    return this;
-  }
-
-   /**
-   * Get localId
-   * @return localId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getLocalId() {
-    return localId;
-  }
-
-
-  public void setLocalId(String localId) {
-    this.localId = localId;
-  }
-
-
-  public NfsInode localUpdatedAt(String localUpdatedAt) {
-    
-    this.localUpdatedAt = localUpdatedAt;
-    return this;
-  }
-
-   /**
-   * Get localUpdatedAt
-   * @return localUpdatedAt
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getLocalUpdatedAt() {
-    return localUpdatedAt;
-  }
-
-
-  public void setLocalUpdatedAt(String localUpdatedAt) {
-    this.localUpdatedAt = localUpdatedAt;
-  }
-
-
-  public NfsInode name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  public NfsInode nfsExport(NestedNfsExport nfsExport) {
-    
-    this.nfsExport = nfsExport;
-    return this;
-  }
-
-   /**
-   * Get nfsExport
-   * @return nfsExport
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public NestedNfsExport getNfsExport() {
-    return nfsExport;
-  }
-
-
-  public void setNfsExport(NestedNfsExport nfsExport) {
-    this.nfsExport = nfsExport;
-  }
-
-
-  public NfsInode parentId(String parentId) {
-    
-    this.parentId = parentId;
-    return this;
-  }
-
-   /**
-   * Get parentId
-   * @return parentId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getParentId() {
-    return parentId;
-  }
-
-
-  public void setParentId(String parentId) {
-    this.parentId = parentId;
-  }
-
-
-  public NfsInode sharedSize(Long sharedSize) {
-    
-    this.sharedSize = sharedSize;
-    return this;
-  }
-
-   /**
-   * Get sharedSize
-   * @return sharedSize
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Long getSharedSize() {
-    return sharedSize;
-  }
-
-
-  public void setSharedSize(Long sharedSize) {
-    this.sharedSize = sharedSize;
-  }
-
-
-  public NfsInode snapshotNum(Integer snapshotNum) {
-    
-    this.snapshotNum = snapshotNum;
-    return this;
-  }
-
-   /**
-   * Get snapshotNum
-   * @return snapshotNum
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Integer getSnapshotNum() {
-    return snapshotNum;
-  }
-
-
-  public void setSnapshotNum(Integer snapshotNum) {
-    this.snapshotNum = snapshotNum;
-  }
-
-
-  public NfsInode uniqueLogicalSize(Double uniqueLogicalSize) {
-    
-    this.uniqueLogicalSize = uniqueLogicalSize;
-    return this;
-  }
-
-   /**
-   * Get uniqueLogicalSize
-   * @return uniqueLogicalSize
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Double getUniqueLogicalSize() {
-    return uniqueLogicalSize;
-  }
-
-
-  public void setUniqueLogicalSize(Double uniqueLogicalSize) {
-    this.uniqueLogicalSize = uniqueLogicalSize;
-  }
-
-
-  public NfsInode uniqueSize(Long uniqueSize) {
-    
-    this.uniqueSize = uniqueSize;
-    return this;
-  }
-
-   /**
-   * Get uniqueSize
-   * @return uniqueSize
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Long getUniqueSize() {
-    return uniqueSize;
-  }
-
-
-  public void setUniqueSize(Long uniqueSize) {
-    this.uniqueSize = uniqueSize;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Get assignedSize
+     *
+     * @return assignedSize
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Long getAssignedSize() {
+        return assignedSize;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setAssignedSize(Long assignedSize) {
+        this.assignedSize = assignedSize;
     }
-    NfsInode nfsInode = (NfsInode) o;
-    return Objects.equals(this.assignedSize, nfsInode.assignedSize) &&
-        Objects.equals(this.entityAsyncStatus, nfsInode.entityAsyncStatus) &&
-        Objects.equals(this._file, nfsInode._file) &&
-        Objects.equals(this.id, nfsInode.id) &&
-        Objects.equals(this.labels, nfsInode.labels) &&
-        Objects.equals(this.localId, nfsInode.localId) &&
-        Objects.equals(this.localUpdatedAt, nfsInode.localUpdatedAt) &&
-        Objects.equals(this.name, nfsInode.name) &&
-        Objects.equals(this.nfsExport, nfsInode.nfsExport) &&
-        Objects.equals(this.parentId, nfsInode.parentId) &&
-        Objects.equals(this.sharedSize, nfsInode.sharedSize) &&
-        Objects.equals(this.snapshotNum, nfsInode.snapshotNum) &&
-        Objects.equals(this.uniqueLogicalSize, nfsInode.uniqueLogicalSize) &&
-        Objects.equals(this.uniqueSize, nfsInode.uniqueSize);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(assignedSize, entityAsyncStatus, _file, id, labels, localId, localUpdatedAt, name, nfsExport, parentId, sharedSize, snapshotNum, uniqueLogicalSize, uniqueSize);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public NfsInode assignedSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ASSIGNED_SIZE);
+        return this;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NfsInode {\n");
-    sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
-    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
-    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
-    sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
-    sb.append("    localUpdatedAt: ").append(toIndentedString(localUpdatedAt)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    nfsExport: ").append(toIndentedString(nfsExport)).append("\n");
-    sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
-    sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
-    sb.append("    snapshotNum: ").append(toIndentedString(snapshotNum)).append("\n");
-    sb.append("    uniqueLogicalSize: ").append(toIndentedString(uniqueLogicalSize)).append("\n");
-    sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public NfsInode assignedSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ASSIGNED_SIZE);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setAssignedSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ASSIGNED_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ASSIGNED_SIZE);
+        }
+    }
+
+    public boolean getAssignedSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ASSIGNED_SIZE);
+    }
+
+    public NfsInode entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+
+        this.entityAsyncStatus = entityAsyncStatus;
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatus
+     *
+     * @return entityAsyncStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EntityAsyncStatus getEntityAsyncStatus() {
+        return entityAsyncStatus;
+    }
+
+    public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+        this.entityAsyncStatus = entityAsyncStatus;
+    }
+
+    public NfsInode entityAsyncStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public NfsInode entityAsyncStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public void setEntityAsyncStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        }
+    }
+
+    public boolean getEntityAsyncStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public NfsInode _file(Boolean _file) {
+
+        this._file = _file;
+        return this;
+    }
+
+    /**
+     * Get _file
+     *
+     * @return _file
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getFile() {
+        return _file;
+    }
+
+    public void setFile(Boolean _file) {
+        this._file = _file;
+    }
+
+    public NfsInode _file_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FILE);
+        return this;
+    }
+
+    public NfsInode _file_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FILE);
+        return this;
+    }
+
+    public void setFile_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FILE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FILE);
+        }
+    }
+
+    public boolean getFile_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FILE);
+    }
+
+    public NfsInode id(String id) {
+
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public NfsInode id_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public NfsInode id_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public void setId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ID);
+        }
+    }
+
+    public boolean getId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ID);
+    }
+
+    public NfsInode labels(List<NestedLabel> labels) {
+
+        this.labels = labels;
+        return this;
+    }
+
+    public NfsInode addLabelsItem(NestedLabel labelsItem) {
+        if (this.labels == null) {
+            this.labels = new ArrayList<NestedLabel>();
+        }
+        this.labels.add(labelsItem);
+        return this;
+    }
+
+    /**
+     * Get labels
+     *
+     * @return labels
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedLabel> getLabels() {
+        return labels;
+    }
+
+    public void setLabels(List<NestedLabel> labels) {
+        this.labels = labels;
+    }
+
+    public NfsInode labels_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LABELS);
+        return this;
+    }
+
+    public NfsInode labels_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LABELS);
+        return this;
+    }
+
+    public void setLabels_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LABELS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LABELS);
+        }
+    }
+
+    public boolean getLabels_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LABELS);
+    }
+
+    public NfsInode localId(String localId) {
+
+        this.localId = localId;
+        return this;
+    }
+
+    /**
+     * Get localId
+     *
+     * @return localId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getLocalId() {
+        return localId;
+    }
+
+    public void setLocalId(String localId) {
+        this.localId = localId;
+    }
+
+    public NfsInode localId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOCAL_ID);
+        return this;
+    }
+
+    public NfsInode localId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOCAL_ID);
+        return this;
+    }
+
+    public void setLocalId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOCAL_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOCAL_ID);
+        }
+    }
+
+    public boolean getLocalId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOCAL_ID);
+    }
+
+    public NfsInode localUpdatedAt(String localUpdatedAt) {
+
+        this.localUpdatedAt = localUpdatedAt;
+        return this;
+    }
+
+    /**
+     * Get localUpdatedAt
+     *
+     * @return localUpdatedAt
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getLocalUpdatedAt() {
+        return localUpdatedAt;
+    }
+
+    public void setLocalUpdatedAt(String localUpdatedAt) {
+        this.localUpdatedAt = localUpdatedAt;
+    }
+
+    public NfsInode localUpdatedAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOCAL_UPDATED_AT);
+        return this;
+    }
+
+    public NfsInode localUpdatedAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOCAL_UPDATED_AT);
+        return this;
+    }
+
+    public void setLocalUpdatedAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOCAL_UPDATED_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOCAL_UPDATED_AT);
+        }
+    }
+
+    public boolean getLocalUpdatedAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOCAL_UPDATED_AT);
+    }
+
+    public NfsInode name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public NfsInode name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public NfsInode name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    public NfsInode nfsExport(NestedNfsExport nfsExport) {
+
+        this.nfsExport = nfsExport;
+        return this;
+    }
+
+    /**
+     * Get nfsExport
+     *
+     * @return nfsExport
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedNfsExport getNfsExport() {
+        return nfsExport;
+    }
+
+    public void setNfsExport(NestedNfsExport nfsExport) {
+        this.nfsExport = nfsExport;
+    }
+
+    public NfsInode nfsExport_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NFS_EXPORT);
+        return this;
+    }
+
+    public NfsInode nfsExport_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NFS_EXPORT);
+        return this;
+    }
+
+    public void setNfsExport_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NFS_EXPORT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NFS_EXPORT);
+        }
+    }
+
+    public boolean getNfsExport_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NFS_EXPORT);
+    }
+
+    public NfsInode parentId(String parentId) {
+
+        this.parentId = parentId;
+        return this;
+    }
+
+    /**
+     * Get parentId
+     *
+     * @return parentId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    public NfsInode parentId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PARENT_ID);
+        return this;
+    }
+
+    public NfsInode parentId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PARENT_ID);
+        return this;
+    }
+
+    public void setParentId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PARENT_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PARENT_ID);
+        }
+    }
+
+    public boolean getParentId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PARENT_ID);
+    }
+
+    public NfsInode sharedSize(Long sharedSize) {
+
+        this.sharedSize = sharedSize;
+        return this;
+    }
+
+    /**
+     * Get sharedSize
+     *
+     * @return sharedSize
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Long getSharedSize() {
+        return sharedSize;
+    }
+
+    public void setSharedSize(Long sharedSize) {
+        this.sharedSize = sharedSize;
+    }
+
+    public NfsInode sharedSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SHARED_SIZE);
+        return this;
+    }
+
+    public NfsInode sharedSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SHARED_SIZE);
+        return this;
+    }
+
+    public void setSharedSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SHARED_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SHARED_SIZE);
+        }
+    }
+
+    public boolean getSharedSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SHARED_SIZE);
+    }
+
+    public NfsInode snapshotNum(Integer snapshotNum) {
+
+        this.snapshotNum = snapshotNum;
+        return this;
+    }
+
+    /**
+     * Get snapshotNum
+     *
+     * @return snapshotNum
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getSnapshotNum() {
+        return snapshotNum;
+    }
+
+    public void setSnapshotNum(Integer snapshotNum) {
+        this.snapshotNum = snapshotNum;
+    }
+
+    public NfsInode snapshotNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_NUM);
+        return this;
+    }
+
+    public NfsInode snapshotNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_NUM);
+        return this;
+    }
+
+    public void setSnapshotNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_NUM);
+        }
+    }
+
+    public boolean getSnapshotNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_NUM);
+    }
+
+    public NfsInode uniqueLogicalSize(Double uniqueLogicalSize) {
+
+        this.uniqueLogicalSize = uniqueLogicalSize;
+        return this;
+    }
+
+    /**
+     * Get uniqueLogicalSize
+     *
+     * @return uniqueLogicalSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getUniqueLogicalSize() {
+        return uniqueLogicalSize;
+    }
+
+    public void setUniqueLogicalSize(Double uniqueLogicalSize) {
+        this.uniqueLogicalSize = uniqueLogicalSize;
+    }
+
+    public NfsInode uniqueLogicalSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE);
+        return this;
+    }
+
+    public NfsInode uniqueLogicalSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE);
+        return this;
+    }
+
+    public void setUniqueLogicalSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE);
+        }
+    }
+
+    public boolean getUniqueLogicalSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UNIQUE_LOGICAL_SIZE);
+    }
+
+    public NfsInode uniqueSize(Long uniqueSize) {
+
+        this.uniqueSize = uniqueSize;
+        return this;
+    }
+
+    /**
+     * Get uniqueSize
+     *
+     * @return uniqueSize
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Long getUniqueSize() {
+        return uniqueSize;
+    }
+
+    public void setUniqueSize(Long uniqueSize) {
+        this.uniqueSize = uniqueSize;
+    }
+
+    public NfsInode uniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public NfsInode uniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UNIQUE_SIZE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NfsInode nfsInode = (NfsInode) o;
+        return Objects.equals(this.assignedSize, nfsInode.assignedSize)
+                && Objects.equals(this.entityAsyncStatus, nfsInode.entityAsyncStatus)
+                && Objects.equals(this._file, nfsInode._file)
+                && Objects.equals(this.id, nfsInode.id)
+                && Objects.equals(this.labels, nfsInode.labels)
+                && Objects.equals(this.localId, nfsInode.localId)
+                && Objects.equals(this.localUpdatedAt, nfsInode.localUpdatedAt)
+                && Objects.equals(this.name, nfsInode.name)
+                && Objects.equals(this.nfsExport, nfsInode.nfsExport)
+                && Objects.equals(this.parentId, nfsInode.parentId)
+                && Objects.equals(this.sharedSize, nfsInode.sharedSize)
+                && Objects.equals(this.snapshotNum, nfsInode.snapshotNum)
+                && Objects.equals(this.uniqueLogicalSize, nfsInode.uniqueLogicalSize)
+                && Objects.equals(this.uniqueSize, nfsInode.uniqueSize);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                assignedSize,
+                entityAsyncStatus,
+                _file,
+                id,
+                labels,
+                localId,
+                localUpdatedAt,
+                name,
+                nfsExport,
+                parentId,
+                sharedSize,
+                snapshotNum,
+                uniqueLogicalSize,
+                uniqueSize);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NfsInode {\n");
+        sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
+        sb.append("    entityAsyncStatus: ")
+                .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
+        sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
+        sb.append("    localUpdatedAt: ").append(toIndentedString(localUpdatedAt)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    nfsExport: ").append(toIndentedString(nfsExport)).append("\n");
+        sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
+        sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
+        sb.append("    snapshotNum: ").append(toIndentedString(snapshotNum)).append("\n");
+        sb.append("    uniqueLogicalSize: ")
+                .append(toIndentedString(uniqueLogicalSize))
+                .append("\n");
+        sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

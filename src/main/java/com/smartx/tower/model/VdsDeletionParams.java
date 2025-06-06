@@ -1,88 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VdsWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VdsDeletionParams
- */
+/** VdsDeletionParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VdsDeletionParams {
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private VdsWhereInput where;
+public class VdsDeletionParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
-  public VdsDeletionParams() { 
-  }
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private VdsWhereInput where;
 
-  public VdsDeletionParams where(VdsWhereInput where) {
-    
-    this.where = where;
-    return this;
-  }
+    public VdsDeletionParams() {}
 
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VdsDeletionParams where(VdsWhereInput where) {
 
-  public VdsWhereInput getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(VdsWhereInput where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.where = where;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public VdsWhereInput getWhere() {
+        return where;
     }
-    VdsDeletionParams vdsDeletionParams = (VdsDeletionParams) o;
-    return Objects.equals(this.where, vdsDeletionParams.where);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(where);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VdsDeletionParams {\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setWhere(VdsWhereInput where) {
+        this.where = where;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VdsDeletionParams where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public VdsDeletionParams where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VdsDeletionParams vdsDeletionParams = (VdsDeletionParams) o;
+        return Objects.equals(this.where, vdsDeletionParams.where);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(where);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VdsDeletionParams {\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

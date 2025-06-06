@@ -1,116 +1,153 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VirtualPrivateCloudSecurityPolicyApplyInput
- */
+/** VirtualPrivateCloudSecurityPolicyApplyInput */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VirtualPrivateCloudSecurityPolicyApplyInput {
-  public static final String SERIALIZED_NAME_SECURITY_GROUP_ID = "security_group_id";
-  @SerializedName(SERIALIZED_NAME_SECURITY_GROUP_ID)
-  private String securityGroupId;
+public class VirtualPrivateCloudSecurityPolicyApplyInput
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_SECURITY_GROUP_ID = "security_group_id";
 
-  public static final String SERIALIZED_NAME_COMMUNICABLE = "communicable";
-  @SerializedName(SERIALIZED_NAME_COMMUNICABLE)
-  private Boolean communicable;
+    @SerializedName(SERIALIZED_NAME_SECURITY_GROUP_ID)
+    private String securityGroupId;
 
-  public VirtualPrivateCloudSecurityPolicyApplyInput() { 
-  }
+    public static final String SERIALIZED_NAME_COMMUNICABLE = "communicable";
 
-  public VirtualPrivateCloudSecurityPolicyApplyInput securityGroupId(String securityGroupId) {
-    
-    this.securityGroupId = securityGroupId;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_COMMUNICABLE)
+    private Boolean communicable;
 
-   /**
-   * Get securityGroupId
-   * @return securityGroupId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VirtualPrivateCloudSecurityPolicyApplyInput() {}
 
-  public String getSecurityGroupId() {
-    return securityGroupId;
-  }
+    public VirtualPrivateCloudSecurityPolicyApplyInput securityGroupId(String securityGroupId) {
 
-
-  public void setSecurityGroupId(String securityGroupId) {
-    this.securityGroupId = securityGroupId;
-  }
-
-
-  public VirtualPrivateCloudSecurityPolicyApplyInput communicable(Boolean communicable) {
-    
-    this.communicable = communicable;
-    return this;
-  }
-
-   /**
-   * Get communicable
-   * @return communicable
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Boolean getCommunicable() {
-    return communicable;
-  }
-
-
-  public void setCommunicable(Boolean communicable) {
-    this.communicable = communicable;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.securityGroupId = securityGroupId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get securityGroupId
+     *
+     * @return securityGroupId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getSecurityGroupId() {
+        return securityGroupId;
     }
-    VirtualPrivateCloudSecurityPolicyApplyInput virtualPrivateCloudSecurityPolicyApplyInput = (VirtualPrivateCloudSecurityPolicyApplyInput) o;
-    return Objects.equals(this.securityGroupId, virtualPrivateCloudSecurityPolicyApplyInput.securityGroupId) &&
-        Objects.equals(this.communicable, virtualPrivateCloudSecurityPolicyApplyInput.communicable);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(securityGroupId, communicable);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VirtualPrivateCloudSecurityPolicyApplyInput {\n");
-    sb.append("    securityGroupId: ").append(toIndentedString(securityGroupId)).append("\n");
-    sb.append("    communicable: ").append(toIndentedString(communicable)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VirtualPrivateCloudSecurityPolicyApplyInput securityGroupId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SECURITY_GROUP_ID);
+        return this;
+    }
+
+    public VirtualPrivateCloudSecurityPolicyApplyInput securityGroupId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SECURITY_GROUP_ID);
+        return this;
+    }
+
+    public void setSecurityGroupId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SECURITY_GROUP_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SECURITY_GROUP_ID);
+        }
+    }
+
+    public boolean getSecurityGroupId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SECURITY_GROUP_ID);
+    }
+
+    public VirtualPrivateCloudSecurityPolicyApplyInput communicable(Boolean communicable) {
+
+        this.communicable = communicable;
+        return this;
+    }
+
+    /**
+     * Get communicable
+     *
+     * @return communicable
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getCommunicable() {
+        return communicable;
+    }
+
+    public void setCommunicable(Boolean communicable) {
+        this.communicable = communicable;
+    }
+
+    public VirtualPrivateCloudSecurityPolicyApplyInput communicable_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMUNICABLE);
+        return this;
+    }
+
+    public VirtualPrivateCloudSecurityPolicyApplyInput communicable_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMUNICABLE);
+        return this;
+    }
+
+    public void setCommunicable_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMUNICABLE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMUNICABLE);
+        }
+    }
+
+    public boolean getCommunicable_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMUNICABLE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VirtualPrivateCloudSecurityPolicyApplyInput virtualPrivateCloudSecurityPolicyApplyInput =
+                (VirtualPrivateCloudSecurityPolicyApplyInput) o;
+        return Objects.equals(
+                        this.securityGroupId,
+                        virtualPrivateCloudSecurityPolicyApplyInput.securityGroupId)
+                && Objects.equals(
+                        this.communicable,
+                        virtualPrivateCloudSecurityPolicyApplyInput.communicable);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(securityGroupId, communicable);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VirtualPrivateCloudSecurityPolicyApplyInput {\n");
+        sb.append("    securityGroupId: ").append(toIndentedString(securityGroupId)).append("\n");
+        sb.append("    communicable: ").append(toIndentedString(communicable)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

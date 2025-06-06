@@ -1,469 +1,748 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.EntityAsyncStatus;
-import com.smartx.tower.model.NestedCluster;
-import com.smartx.tower.model.NestedLabel;
-import com.smartx.tower.model.NestedNfsInode;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * NfsExport
- */
+/** NfsExport */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NfsExport {
-  public static final String SERIALIZED_NAME_CLUSTER = "cluster";
-  @SerializedName(SERIALIZED_NAME_CLUSTER)
-  private NestedCluster cluster;
+public class NfsExport extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_CLUSTER = "cluster";
 
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
+    @SerializedName(SERIALIZED_NAME_CLUSTER)
+    private NestedCluster cluster;
 
-  public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
-  private EntityAsyncStatus entityAsyncStatus;
+    public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
-  public static final String SERIALIZED_NAME_EXPORT_INODE_ID = "export_inode_id";
-  @SerializedName(SERIALIZED_NAME_EXPORT_INODE_ID)
-  private String exportInodeId;
+    @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+    private String description;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
-  public static final String SERIALIZED_NAME_INODES = "inodes";
-  @SerializedName(SERIALIZED_NAME_INODES)
-  private List<NestedNfsInode> inodes = null;
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+    private EntityAsyncStatus entityAsyncStatus;
 
-  public static final String SERIALIZED_NAME_INTERNAL = "internal";
-  @SerializedName(SERIALIZED_NAME_INTERNAL)
-  private Boolean internal;
+    public static final String SERIALIZED_NAME_EXPORT_INODE_ID = "export_inode_id";
 
-  public static final String SERIALIZED_NAME_IP_WHITELIST = "ip_whitelist";
-  @SerializedName(SERIALIZED_NAME_IP_WHITELIST)
-  private String ipWhitelist;
+    @SerializedName(SERIALIZED_NAME_EXPORT_INODE_ID)
+    private String exportInodeId;
 
-  public static final String SERIALIZED_NAME_LABELS = "labels";
-  @SerializedName(SERIALIZED_NAME_LABELS)
-  private List<NestedLabel> labels = null;
+    public static final String SERIALIZED_NAME_ID = "id";
 
-  public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
-  @SerializedName(SERIALIZED_NAME_LOCAL_ID)
-  private String localId;
+    @SerializedName(SERIALIZED_NAME_ID)
+    private String id;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    public static final String SERIALIZED_NAME_INODES = "inodes";
 
-  public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
-  @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
-  private Integer replicaNum;
+    @SerializedName(SERIALIZED_NAME_INODES)
+    private List<NestedNfsInode> inodes = null;
 
-  public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
-  @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
-  private Boolean thinProvision;
+    public static final String SERIALIZED_NAME_INTERNAL = "internal";
 
-  public NfsExport() { 
-  }
+    @SerializedName(SERIALIZED_NAME_INTERNAL)
+    private Boolean internal;
 
-  public NfsExport cluster(NestedCluster cluster) {
-    
-    this.cluster = cluster;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_IP_WHITELIST = "ip_whitelist";
 
-   /**
-   * Get cluster
-   * @return cluster
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    @SerializedName(SERIALIZED_NAME_IP_WHITELIST)
+    private String ipWhitelist;
 
-  public NestedCluster getCluster() {
-    return cluster;
-  }
+    public static final String SERIALIZED_NAME_LABELS = "labels";
 
+    @SerializedName(SERIALIZED_NAME_LABELS)
+    private List<NestedLabel> labels = null;
 
-  public void setCluster(NestedCluster cluster) {
-    this.cluster = cluster;
-  }
+    public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
 
+    @SerializedName(SERIALIZED_NAME_LOCAL_ID)
+    private String localId;
 
-  public NfsExport description(String description) {
-    
-    this.description = description;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_NAME = "name";
 
-   /**
-   * Get description
-   * @return description
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-  public String getDescription() {
-    return description;
-  }
+    public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
 
+    @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
+    private Integer replicaNum;
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
 
+    @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
+    private Boolean thinProvision;
 
-  public NfsExport entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
-    
-    this.entityAsyncStatus = entityAsyncStatus;
-    return this;
-  }
+    public NfsExport() {}
 
-   /**
-   * Get entityAsyncStatus
-   * @return entityAsyncStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public NfsExport cluster(NestedCluster cluster) {
 
-  public EntityAsyncStatus getEntityAsyncStatus() {
-    return entityAsyncStatus;
-  }
-
-
-  public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
-    this.entityAsyncStatus = entityAsyncStatus;
-  }
-
-
-  public NfsExport exportInodeId(String exportInodeId) {
-    
-    this.exportInodeId = exportInodeId;
-    return this;
-  }
-
-   /**
-   * Get exportInodeId
-   * @return exportInodeId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getExportInodeId() {
-    return exportInodeId;
-  }
-
-
-  public void setExportInodeId(String exportInodeId) {
-    this.exportInodeId = exportInodeId;
-  }
-
-
-  public NfsExport id(String id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-  public NfsExport inodes(List<NestedNfsInode> inodes) {
-    
-    this.inodes = inodes;
-    return this;
-  }
-
-  public NfsExport addInodesItem(NestedNfsInode inodesItem) {
-    if (this.inodes == null) {
-      this.inodes = new ArrayList<NestedNfsInode>();
+        this.cluster = cluster;
+        return this;
     }
-    this.inodes.add(inodesItem);
-    return this;
-  }
 
-   /**
-   * Get inodes
-   * @return inodes
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NestedNfsInode> getInodes() {
-    return inodes;
-  }
-
-
-  public void setInodes(List<NestedNfsInode> inodes) {
-    this.inodes = inodes;
-  }
-
-
-  public NfsExport internal(Boolean internal) {
-    
-    this.internal = internal;
-    return this;
-  }
-
-   /**
-   * Get internal
-   * @return internal
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Boolean getInternal() {
-    return internal;
-  }
-
-
-  public void setInternal(Boolean internal) {
-    this.internal = internal;
-  }
-
-
-  public NfsExport ipWhitelist(String ipWhitelist) {
-    
-    this.ipWhitelist = ipWhitelist;
-    return this;
-  }
-
-   /**
-   * Get ipWhitelist
-   * @return ipWhitelist
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getIpWhitelist() {
-    return ipWhitelist;
-  }
-
-
-  public void setIpWhitelist(String ipWhitelist) {
-    this.ipWhitelist = ipWhitelist;
-  }
-
-
-  public NfsExport labels(List<NestedLabel> labels) {
-    
-    this.labels = labels;
-    return this;
-  }
-
-  public NfsExport addLabelsItem(NestedLabel labelsItem) {
-    if (this.labels == null) {
-      this.labels = new ArrayList<NestedLabel>();
+    /**
+     * Get cluster
+     *
+     * @return cluster
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedCluster getCluster() {
+        return cluster;
     }
-    this.labels.add(labelsItem);
-    return this;
-  }
 
-   /**
-   * Get labels
-   * @return labels
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NestedLabel> getLabels() {
-    return labels;
-  }
-
-
-  public void setLabels(List<NestedLabel> labels) {
-    this.labels = labels;
-  }
-
-
-  public NfsExport localId(String localId) {
-    
-    this.localId = localId;
-    return this;
-  }
-
-   /**
-   * Get localId
-   * @return localId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getLocalId() {
-    return localId;
-  }
-
-
-  public void setLocalId(String localId) {
-    this.localId = localId;
-  }
-
-
-  public NfsExport name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  public NfsExport replicaNum(Integer replicaNum) {
-    
-    this.replicaNum = replicaNum;
-    return this;
-  }
-
-   /**
-   * Get replicaNum
-   * @return replicaNum
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Integer getReplicaNum() {
-    return replicaNum;
-  }
-
-
-  public void setReplicaNum(Integer replicaNum) {
-    this.replicaNum = replicaNum;
-  }
-
-
-  public NfsExport thinProvision(Boolean thinProvision) {
-    
-    this.thinProvision = thinProvision;
-    return this;
-  }
-
-   /**
-   * Get thinProvision
-   * @return thinProvision
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Boolean getThinProvision() {
-    return thinProvision;
-  }
-
-
-  public void setThinProvision(Boolean thinProvision) {
-    this.thinProvision = thinProvision;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public void setCluster(NestedCluster cluster) {
+        this.cluster = cluster;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public NfsExport cluster_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CLUSTER);
+        return this;
     }
-    NfsExport nfsExport = (NfsExport) o;
-    return Objects.equals(this.cluster, nfsExport.cluster) &&
-        Objects.equals(this.description, nfsExport.description) &&
-        Objects.equals(this.entityAsyncStatus, nfsExport.entityAsyncStatus) &&
-        Objects.equals(this.exportInodeId, nfsExport.exportInodeId) &&
-        Objects.equals(this.id, nfsExport.id) &&
-        Objects.equals(this.inodes, nfsExport.inodes) &&
-        Objects.equals(this.internal, nfsExport.internal) &&
-        Objects.equals(this.ipWhitelist, nfsExport.ipWhitelist) &&
-        Objects.equals(this.labels, nfsExport.labels) &&
-        Objects.equals(this.localId, nfsExport.localId) &&
-        Objects.equals(this.name, nfsExport.name) &&
-        Objects.equals(this.replicaNum, nfsExport.replicaNum) &&
-        Objects.equals(this.thinProvision, nfsExport.thinProvision);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(cluster, description, entityAsyncStatus, exportInodeId, id, inodes, internal, ipWhitelist, labels, localId, name, replicaNum, thinProvision);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public NfsExport cluster_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CLUSTER);
+        return this;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NfsExport {\n");
-    sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    entityAsyncStatus: ").append(toIndentedString(entityAsyncStatus)).append("\n");
-    sb.append("    exportInodeId: ").append(toIndentedString(exportInodeId)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    inodes: ").append(toIndentedString(inodes)).append("\n");
-    sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
-    sb.append("    ipWhitelist: ").append(toIndentedString(ipWhitelist)).append("\n");
-    sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
-    sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
-    sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setCluster_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CLUSTER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CLUSTER);
+        }
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public boolean getCluster_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER);
+    }
+
+    public NfsExport description(String description) {
+
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return description
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public NfsExport description_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DESCRIPTION);
+        return this;
+    }
+
+    public NfsExport description_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DESCRIPTION);
+        return this;
+    }
+
+    public void setDescription_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DESCRIPTION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DESCRIPTION);
+        }
+    }
+
+    public boolean getDescription_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
+    }
+
+    public NfsExport entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+
+        this.entityAsyncStatus = entityAsyncStatus;
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatus
+     *
+     * @return entityAsyncStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EntityAsyncStatus getEntityAsyncStatus() {
+        return entityAsyncStatus;
+    }
+
+    public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+        this.entityAsyncStatus = entityAsyncStatus;
+    }
+
+    public NfsExport entityAsyncStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public NfsExport entityAsyncStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public void setEntityAsyncStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        }
+    }
+
+    public boolean getEntityAsyncStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public NfsExport exportInodeId(String exportInodeId) {
+
+        this.exportInodeId = exportInodeId;
+        return this;
+    }
+
+    /**
+     * Get exportInodeId
+     *
+     * @return exportInodeId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getExportInodeId() {
+        return exportInodeId;
+    }
+
+    public void setExportInodeId(String exportInodeId) {
+        this.exportInodeId = exportInodeId;
+    }
+
+    public NfsExport exportInodeId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EXPORT_INODE_ID);
+        return this;
+    }
+
+    public NfsExport exportInodeId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EXPORT_INODE_ID);
+        return this;
+    }
+
+    public void setExportInodeId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EXPORT_INODE_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EXPORT_INODE_ID);
+        }
+    }
+
+    public boolean getExportInodeId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EXPORT_INODE_ID);
+    }
+
+    public NfsExport id(String id) {
+
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public NfsExport id_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public NfsExport id_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public void setId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ID);
+        }
+    }
+
+    public boolean getId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ID);
+    }
+
+    public NfsExport inodes(List<NestedNfsInode> inodes) {
+
+        this.inodes = inodes;
+        return this;
+    }
+
+    public NfsExport addInodesItem(NestedNfsInode inodesItem) {
+        if (this.inodes == null) {
+            this.inodes = new ArrayList<NestedNfsInode>();
+        }
+        this.inodes.add(inodesItem);
+        return this;
+    }
+
+    /**
+     * Get inodes
+     *
+     * @return inodes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedNfsInode> getInodes() {
+        return inodes;
+    }
+
+    public void setInodes(List<NestedNfsInode> inodes) {
+        this.inodes = inodes;
+    }
+
+    public NfsExport inodes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INODES);
+        return this;
+    }
+
+    public NfsExport inodes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INODES);
+        return this;
+    }
+
+    public void setInodes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INODES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INODES);
+        }
+    }
+
+    public boolean getInodes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INODES);
+    }
+
+    public NfsExport internal(Boolean internal) {
+
+        this.internal = internal;
+        return this;
+    }
+
+    /**
+     * Get internal
+     *
+     * @return internal
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getInternal() {
+        return internal;
+    }
+
+    public void setInternal(Boolean internal) {
+        this.internal = internal;
+    }
+
+    public NfsExport internal_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL);
+        return this;
+    }
+
+    public NfsExport internal_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL);
+        return this;
+    }
+
+    public void setInternal_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL);
+        }
+    }
+
+    public boolean getInternal_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL);
+    }
+
+    public NfsExport ipWhitelist(String ipWhitelist) {
+
+        this.ipWhitelist = ipWhitelist;
+        return this;
+    }
+
+    /**
+     * Get ipWhitelist
+     *
+     * @return ipWhitelist
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getIpWhitelist() {
+        return ipWhitelist;
+    }
+
+    public void setIpWhitelist(String ipWhitelist) {
+        this.ipWhitelist = ipWhitelist;
+    }
+
+    public NfsExport ipWhitelist_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IP_WHITELIST);
+        return this;
+    }
+
+    public NfsExport ipWhitelist_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IP_WHITELIST);
+        return this;
+    }
+
+    public void setIpWhitelist_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IP_WHITELIST);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IP_WHITELIST);
+        }
+    }
+
+    public boolean getIpWhitelist_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IP_WHITELIST);
+    }
+
+    public NfsExport labels(List<NestedLabel> labels) {
+
+        this.labels = labels;
+        return this;
+    }
+
+    public NfsExport addLabelsItem(NestedLabel labelsItem) {
+        if (this.labels == null) {
+            this.labels = new ArrayList<NestedLabel>();
+        }
+        this.labels.add(labelsItem);
+        return this;
+    }
+
+    /**
+     * Get labels
+     *
+     * @return labels
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedLabel> getLabels() {
+        return labels;
+    }
+
+    public void setLabels(List<NestedLabel> labels) {
+        this.labels = labels;
+    }
+
+    public NfsExport labels_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LABELS);
+        return this;
+    }
+
+    public NfsExport labels_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LABELS);
+        return this;
+    }
+
+    public void setLabels_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LABELS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LABELS);
+        }
+    }
+
+    public boolean getLabels_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LABELS);
+    }
+
+    public NfsExport localId(String localId) {
+
+        this.localId = localId;
+        return this;
+    }
+
+    /**
+     * Get localId
+     *
+     * @return localId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getLocalId() {
+        return localId;
+    }
+
+    public void setLocalId(String localId) {
+        this.localId = localId;
+    }
+
+    public NfsExport localId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOCAL_ID);
+        return this;
+    }
+
+    public NfsExport localId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOCAL_ID);
+        return this;
+    }
+
+    public void setLocalId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOCAL_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOCAL_ID);
+        }
+    }
+
+    public boolean getLocalId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOCAL_ID);
+    }
+
+    public NfsExport name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public NfsExport name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public NfsExport name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    public NfsExport replicaNum(Integer replicaNum) {
+
+        this.replicaNum = replicaNum;
+        return this;
+    }
+
+    /**
+     * Get replicaNum
+     *
+     * @return replicaNum
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getReplicaNum() {
+        return replicaNum;
+    }
+
+    public void setReplicaNum(Integer replicaNum) {
+        this.replicaNum = replicaNum;
+    }
+
+    public NfsExport replicaNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICA_NUM);
+        return this;
+    }
+
+    public NfsExport replicaNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICA_NUM);
+        return this;
+    }
+
+    public void setReplicaNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICA_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICA_NUM);
+        }
+    }
+
+    public boolean getReplicaNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM);
+    }
+
+    public NfsExport thinProvision(Boolean thinProvision) {
+
+        this.thinProvision = thinProvision;
+        return this;
+    }
+
+    /**
+     * Get thinProvision
+     *
+     * @return thinProvision
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getThinProvision() {
+        return thinProvision;
+    }
+
+    public void setThinProvision(Boolean thinProvision) {
+        this.thinProvision = thinProvision;
+    }
+
+    public NfsExport thinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public NfsExport thinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public void setThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        }
+    }
+
+    public boolean getThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_THIN_PROVISION);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NfsExport nfsExport = (NfsExport) o;
+        return Objects.equals(this.cluster, nfsExport.cluster)
+                && Objects.equals(this.description, nfsExport.description)
+                && Objects.equals(this.entityAsyncStatus, nfsExport.entityAsyncStatus)
+                && Objects.equals(this.exportInodeId, nfsExport.exportInodeId)
+                && Objects.equals(this.id, nfsExport.id)
+                && Objects.equals(this.inodes, nfsExport.inodes)
+                && Objects.equals(this.internal, nfsExport.internal)
+                && Objects.equals(this.ipWhitelist, nfsExport.ipWhitelist)
+                && Objects.equals(this.labels, nfsExport.labels)
+                && Objects.equals(this.localId, nfsExport.localId)
+                && Objects.equals(this.name, nfsExport.name)
+                && Objects.equals(this.replicaNum, nfsExport.replicaNum)
+                && Objects.equals(this.thinProvision, nfsExport.thinProvision);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                cluster,
+                description,
+                entityAsyncStatus,
+                exportInodeId,
+                id,
+                inodes,
+                internal,
+                ipWhitelist,
+                labels,
+                localId,
+                name,
+                replicaNum,
+                thinProvision);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NfsExport {\n");
+        sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    entityAsyncStatus: ")
+                .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    exportInodeId: ").append(toIndentedString(exportInodeId)).append("\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    inodes: ").append(toIndentedString(inodes)).append("\n");
+        sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
+        sb.append("    ipWhitelist: ").append(toIndentedString(ipWhitelist)).append("\n");
+        sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
+        sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
+        sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

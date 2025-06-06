@@ -1,18 +1,17 @@
 package com.smartx.tower;
 
+
 import java.util.List;
 import java.util.Map;
 
-/**
- * API response returned by API call.
- */
+/** API response returned by API call. */
 public class ApiResponse<T> {
-    final private int statusCode;
-    final private Map<String, List<String>> headers;
-    final private T data;
+    private final int statusCode;
+    private final Map<String, List<String>> headers;
+    private final T data;
 
     /**
-     * <p>Constructor for ApiResponse.</p>
+     * Constructor for ApiResponse.
      *
      * @param statusCode The status code of HTTP response
      * @param headers The headers of HTTP response
@@ -22,7 +21,7 @@ public class ApiResponse<T> {
     }
 
     /**
-     * <p>Constructor for ApiResponse.</p>
+     * Constructor for ApiResponse.
      *
      * @param statusCode The status code of HTTP response
      * @param headers The headers of HTTP response
@@ -35,7 +34,7 @@ public class ApiResponse<T> {
     }
 
     /**
-     * <p>Get the <code>status code</code>.</p>
+     * Get the <code>status code</code>.
      *
      * @return the status code
      */
@@ -44,16 +43,16 @@ public class ApiResponse<T> {
     }
 
     /**
-     * <p>Get the <code>headers</code>.</p>
+     * Get the <code>headers</code>.
      *
-     * @return a {@link java.util.Map} of headers 
+     * @return a {@link java.util.Map} of headers
      */
     public Map<String, List<String>> getHeaders() {
         return headers;
     }
 
     /**
-     * <p>Get the <code>data</code>.</p>
+     * Get the <code>data</code>.
      *
      * @return the data
      */

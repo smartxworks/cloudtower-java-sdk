@@ -1,65 +1,58 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets Bus
- */
+/** Gets or Sets Bus */
 @JsonAdapter(Bus.Adapter.class)
 public enum Bus {
-  
-  IDE("IDE"),
-  
-  SCSI("SCSI"),
-  
-  USB("USB"),
-  
-  VIRTIO("VIRTIO"),
-  
-  BUS_UNSUPPORTED_ENUM("BUS_UNSUPPORTED_ENUM");
-  private String value;
+    IDE("IDE"),
 
-  Bus(String value) {
-    this.value = value;
-  }
+    SCSI("SCSI"),
 
-  public String getValue() {
-    return value;
-  }
+    USB("USB"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    VIRTIO("VIRTIO"),
 
-  public static Bus fromValue(String value) {
-    for (Bus b : Bus.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    BUS_UNSUPPORTED_ENUM("BUS_UNSUPPORTED_ENUM");
+    private String value;
+
+    Bus(String value) {
+        this.value = value;
     }
-    return Bus.BUS_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<Bus> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final Bus enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public Bus read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return Bus.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static Bus fromValue(String value) {
+        for (Bus b : Bus.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return Bus.BUS_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<Bus> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final Bus enumeration) throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public Bus read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return Bus.fromValue(value);
+        }
+    }
 }
-

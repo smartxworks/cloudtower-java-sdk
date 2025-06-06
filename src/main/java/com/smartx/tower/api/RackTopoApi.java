@@ -1,21 +1,13 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetRackTopoesConnectionRequestBody;
 import com.smartx.tower.model.GetRackTopoesRequestBody;
 import com.smartx.tower.model.RackTopo;
@@ -25,7 +17,6 @@ import com.smartx.tower.model.RackTopoDeletionParams;
 import com.smartx.tower.model.RackTopoUpdationParams;
 import com.smartx.tower.model.WithTaskDeleteRackTopo;
 import com.smartx.tower.model.WithTaskRackTopo;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,29 +62,32 @@ public class RackTopoApi {
 
     /**
      * Build call for createRackTopo
-     * @param rackTopoCreationParams  (required)
+     *
+     * @param rackTopoCreationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createRackTopoCall(List<RackTopoCreationParams> rackTopoCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createRackTopoCall(
+            List<RackTopoCreationParams> rackTopoCreationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -110,129 +104,148 @@ public class RackTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createRackTopoValidateBeforeCall(List<RackTopoCreationParams> rackTopoCreationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createRackTopoValidateBeforeCall(
+            List<RackTopoCreationParams> rackTopoCreationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'rackTopoCreationParams' is set
         if (rackTopoCreationParams == null) {
-            throw new ApiException("Missing the required parameter 'rackTopoCreationParams' when calling createRackTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'rackTopoCreationParams' when calling"
+                            + " createRackTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = createRackTopoCall(rackTopoCreationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param rackTopoCreationParams  (required)
+     * @param rackTopoCreationParams (required)
      * @return List&lt;WithTaskRackTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskRackTopo> createRackTopo(List<RackTopoCreationParams> rackTopoCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskRackTopo>> localVarResp = createRackTopoWithHttpInfo(rackTopoCreationParams);
+    public List<WithTaskRackTopo> createRackTopo(
+            List<RackTopoCreationParams> rackTopoCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskRackTopo>> localVarResp =
+                createRackTopoWithHttpInfo(rackTopoCreationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param rackTopoCreationParams  (required)
+     * @param rackTopoCreationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskRackTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskRackTopo>> createRackTopoWithHttpInfo(List<RackTopoCreationParams> rackTopoCreationParams) throws ApiException {
+    public ApiResponse<List<WithTaskRackTopo>> createRackTopoWithHttpInfo(
+            List<RackTopoCreationParams> rackTopoCreationParams) throws ApiException {
         okhttp3.Call localVarCall = createRackTopoValidateBeforeCall(rackTopoCreationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param rackTopoCreationParams  (required)
+     * (asynchronously)
+     *
+     * @param rackTopoCreationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createRackTopoAsync(List<RackTopoCreationParams> rackTopoCreationParams, final ApiCallback<List<WithTaskRackTopo>> _callback) throws ApiException {
+    public okhttp3.Call createRackTopoAsync(
+            List<RackTopoCreationParams> rackTopoCreationParams,
+            final ApiCallback<List<WithTaskRackTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createRackTopoValidateBeforeCall(rackTopoCreationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                createRackTopoValidateBeforeCall(rackTopoCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteRackTopo
-     * @param rackTopoDeletionParams  (required)
+     *
+     * @param rackTopoDeletionParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteRackTopoCall(RackTopoDeletionParams rackTopoDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteRackTopoCall(
+            RackTopoDeletionParams rackTopoDeletionParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -249,129 +262,148 @@ public class RackTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteRackTopoValidateBeforeCall(RackTopoDeletionParams rackTopoDeletionParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteRackTopoValidateBeforeCall(
+            RackTopoDeletionParams rackTopoDeletionParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'rackTopoDeletionParams' is set
         if (rackTopoDeletionParams == null) {
-            throw new ApiException("Missing the required parameter 'rackTopoDeletionParams' when calling deleteRackTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'rackTopoDeletionParams' when calling"
+                            + " deleteRackTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = deleteRackTopoCall(rackTopoDeletionParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param rackTopoDeletionParams  (required)
+     * @param rackTopoDeletionParams (required)
      * @return List&lt;WithTaskDeleteRackTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteRackTopo> deleteRackTopo(RackTopoDeletionParams rackTopoDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteRackTopo>> localVarResp = deleteRackTopoWithHttpInfo(rackTopoDeletionParams);
+    public List<WithTaskDeleteRackTopo> deleteRackTopo(
+            RackTopoDeletionParams rackTopoDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteRackTopo>> localVarResp =
+                deleteRackTopoWithHttpInfo(rackTopoDeletionParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param rackTopoDeletionParams  (required)
+     * @param rackTopoDeletionParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteRackTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteRackTopo>> deleteRackTopoWithHttpInfo(RackTopoDeletionParams rackTopoDeletionParams) throws ApiException {
+    public ApiResponse<List<WithTaskDeleteRackTopo>> deleteRackTopoWithHttpInfo(
+            RackTopoDeletionParams rackTopoDeletionParams) throws ApiException {
         okhttp3.Call localVarCall = deleteRackTopoValidateBeforeCall(rackTopoDeletionParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteRackTopo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteRackTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param rackTopoDeletionParams  (required)
+     * (asynchronously)
+     *
+     * @param rackTopoDeletionParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteRackTopoAsync(RackTopoDeletionParams rackTopoDeletionParams, final ApiCallback<List<WithTaskDeleteRackTopo>> _callback) throws ApiException {
+    public okhttp3.Call deleteRackTopoAsync(
+            RackTopoDeletionParams rackTopoDeletionParams,
+            final ApiCallback<List<WithTaskDeleteRackTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteRackTopoValidateBeforeCall(rackTopoDeletionParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteRackTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteRackTopoValidateBeforeCall(rackTopoDeletionParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteRackTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getRackTopoes
-     * @param getRackTopoesRequestBody  (required)
+     *
+     * @param getRackTopoesRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getRackTopoesCall(GetRackTopoesRequestBody getRackTopoesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getRackTopoesCall(
+            GetRackTopoesRequestBody getRackTopoesRequestBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -388,129 +420,149 @@ public class RackTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getRackTopoesValidateBeforeCall(GetRackTopoesRequestBody getRackTopoesRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getRackTopoesValidateBeforeCall(
+            GetRackTopoesRequestBody getRackTopoesRequestBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getRackTopoesRequestBody' is set
         if (getRackTopoesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getRackTopoesRequestBody' when calling getRackTopoes(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getRackTopoesRequestBody' when calling"
+                            + " getRackTopoes(Async)");
         }
-        
 
         okhttp3.Call localVarCall = getRackTopoesCall(getRackTopoesRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getRackTopoesRequestBody  (required)
+     * @param getRackTopoesRequestBody (required)
      * @return List&lt;RackTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<RackTopo> getRackTopoes(GetRackTopoesRequestBody getRackTopoesRequestBody) throws ApiException {
-        ApiResponse<List<RackTopo>> localVarResp = getRackTopoesWithHttpInfo(getRackTopoesRequestBody);
+    public List<RackTopo> getRackTopoes(GetRackTopoesRequestBody getRackTopoesRequestBody)
+            throws ApiException {
+        ApiResponse<List<RackTopo>> localVarResp =
+                getRackTopoesWithHttpInfo(getRackTopoesRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getRackTopoesRequestBody  (required)
+     * @param getRackTopoesRequestBody (required)
      * @return ApiResponse&lt;List&lt;RackTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<RackTopo>> getRackTopoesWithHttpInfo(GetRackTopoesRequestBody getRackTopoesRequestBody) throws ApiException {
+    public ApiResponse<List<RackTopo>> getRackTopoesWithHttpInfo(
+            GetRackTopoesRequestBody getRackTopoesRequestBody) throws ApiException {
         okhttp3.Call localVarCall = getRackTopoesValidateBeforeCall(getRackTopoesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<RackTopo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<RackTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getRackTopoesRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getRackTopoesRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getRackTopoesAsync(GetRackTopoesRequestBody getRackTopoesRequestBody, final ApiCallback<List<RackTopo>> _callback) throws ApiException {
+    public okhttp3.Call getRackTopoesAsync(
+            GetRackTopoesRequestBody getRackTopoesRequestBody,
+            final ApiCallback<List<RackTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getRackTopoesValidateBeforeCall(getRackTopoesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<RackTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getRackTopoesValidateBeforeCall(getRackTopoesRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<RackTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getRackTopoesConnection
-     * @param getRackTopoesConnectionRequestBody  (required)
+     *
+     * @param getRackTopoesConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getRackTopoesConnectionCall(GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getRackTopoesConnectionCall(
+            GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -527,129 +579,154 @@ public class RackTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getRackTopoesConnectionValidateBeforeCall(GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getRackTopoesConnectionValidateBeforeCall(
+            GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getRackTopoesConnectionRequestBody' is set
         if (getRackTopoesConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getRackTopoesConnectionRequestBody' when calling getRackTopoesConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getRackTopoesConnectionRequestBody' when"
+                            + " calling getRackTopoesConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getRackTopoesConnectionCall(getRackTopoesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getRackTopoesConnectionCall(getRackTopoesConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getRackTopoesConnectionRequestBody  (required)
+     * @param getRackTopoesConnectionRequestBody (required)
      * @return RackTopoConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public RackTopoConnection getRackTopoesConnection(GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody) throws ApiException {
-        ApiResponse<RackTopoConnection> localVarResp = getRackTopoesConnectionWithHttpInfo(getRackTopoesConnectionRequestBody);
+    public RackTopoConnection getRackTopoesConnection(
+            GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<RackTopoConnection> localVarResp =
+                getRackTopoesConnectionWithHttpInfo(getRackTopoesConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getRackTopoesConnectionRequestBody  (required)
+     * @param getRackTopoesConnectionRequestBody (required)
      * @return ApiResponse&lt;RackTopoConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<RackTopoConnection> getRackTopoesConnectionWithHttpInfo(GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getRackTopoesConnectionValidateBeforeCall(getRackTopoesConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<RackTopoConnection>(){}.getType();
+    public ApiResponse<RackTopoConnection> getRackTopoesConnectionWithHttpInfo(
+            GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getRackTopoesConnectionValidateBeforeCall(getRackTopoesConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<RackTopoConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getRackTopoesConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getRackTopoesConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getRackTopoesConnectionAsync(GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody, final ApiCallback<RackTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getRackTopoesConnectionAsync(
+            GetRackTopoesConnectionRequestBody getRackTopoesConnectionRequestBody,
+            final ApiCallback<RackTopoConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getRackTopoesConnectionValidateBeforeCall(getRackTopoesConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<RackTopoConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getRackTopoesConnectionValidateBeforeCall(
+                        getRackTopoesConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<RackTopoConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateRackTopo
-     * @param rackTopoUpdationParams  (required)
+     *
+     * @param rackTopoUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateRackTopoCall(RackTopoUpdationParams rackTopoUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateRackTopoCall(
+            RackTopoUpdationParams rackTopoUpdationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -666,101 +743,117 @@ public class RackTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateRackTopoValidateBeforeCall(RackTopoUpdationParams rackTopoUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateRackTopoValidateBeforeCall(
+            RackTopoUpdationParams rackTopoUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'rackTopoUpdationParams' is set
         if (rackTopoUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'rackTopoUpdationParams' when calling updateRackTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'rackTopoUpdationParams' when calling"
+                            + " updateRackTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = updateRackTopoCall(rackTopoUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param rackTopoUpdationParams  (required)
+     * @param rackTopoUpdationParams (required)
      * @return List&lt;WithTaskRackTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskRackTopo> updateRackTopo(RackTopoUpdationParams rackTopoUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskRackTopo>> localVarResp = updateRackTopoWithHttpInfo(rackTopoUpdationParams);
+    public List<WithTaskRackTopo> updateRackTopo(RackTopoUpdationParams rackTopoUpdationParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskRackTopo>> localVarResp =
+                updateRackTopoWithHttpInfo(rackTopoUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param rackTopoUpdationParams  (required)
+     * @param rackTopoUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskRackTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskRackTopo>> updateRackTopoWithHttpInfo(RackTopoUpdationParams rackTopoUpdationParams) throws ApiException {
+    public ApiResponse<List<WithTaskRackTopo>> updateRackTopoWithHttpInfo(
+            RackTopoUpdationParams rackTopoUpdationParams) throws ApiException {
         okhttp3.Call localVarCall = updateRackTopoValidateBeforeCall(rackTopoUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param rackTopoUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param rackTopoUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateRackTopoAsync(RackTopoUpdationParams rackTopoUpdationParams, final ApiCallback<List<WithTaskRackTopo>> _callback) throws ApiException {
+    public okhttp3.Call updateRackTopoAsync(
+            RackTopoUpdationParams rackTopoUpdationParams,
+            final ApiCallback<List<WithTaskRackTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateRackTopoValidateBeforeCall(rackTopoUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateRackTopoValidateBeforeCall(rackTopoUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskRackTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

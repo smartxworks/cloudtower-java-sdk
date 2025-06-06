@@ -1,94 +1,105 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-/**
- * VmRemoveNicParamsData
- */
+/** VmRemoveNicParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmRemoveNicParamsData {
-  public static final String SERIALIZED_NAME_NIC_INDEX = "nic_index";
-  @SerializedName(SERIALIZED_NAME_NIC_INDEX)
-  private List<Integer> nicIndex = new ArrayList<Integer>();
+public class VmRemoveNicParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_NIC_INDEX = "nic_index";
 
-  public VmRemoveNicParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_NIC_INDEX)
+    private List<Integer> nicIndex = new ArrayList<Integer>();
 
-  public VmRemoveNicParamsData nicIndex(List<Integer> nicIndex) {
-    
-    this.nicIndex = nicIndex;
-    return this;
-  }
+    public VmRemoveNicParamsData() {}
 
-  public VmRemoveNicParamsData addNicIndexItem(Integer nicIndexItem) {
-    this.nicIndex.add(nicIndexItem);
-    return this;
-  }
+    public VmRemoveNicParamsData nicIndex(List<Integer> nicIndex) {
 
-   /**
-   * Get nicIndex
-   * @return nicIndex
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<Integer> getNicIndex() {
-    return nicIndex;
-  }
-
-
-  public void setNicIndex(List<Integer> nicIndex) {
-    this.nicIndex = nicIndex;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.nicIndex = nicIndex;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public VmRemoveNicParamsData addNicIndexItem(Integer nicIndexItem) {
+        this.nicIndex.add(nicIndexItem);
+        return this;
     }
-    VmRemoveNicParamsData vmRemoveNicParamsData = (VmRemoveNicParamsData) o;
-    return Objects.equals(this.nicIndex, vmRemoveNicParamsData.nicIndex);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(nicIndex);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmRemoveNicParamsData {\n");
-    sb.append("    nicIndex: ").append(toIndentedString(nicIndex)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get nicIndex
+     *
+     * @return nicIndex
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<Integer> getNicIndex() {
+        return nicIndex;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setNicIndex(List<Integer> nicIndex) {
+        this.nicIndex = nicIndex;
+    }
+
+    public VmRemoveNicParamsData nicIndex_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NIC_INDEX);
+        return this;
+    }
+
+    public VmRemoveNicParamsData nicIndex_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NIC_INDEX);
+        return this;
+    }
+
+    public void setNicIndex_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NIC_INDEX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NIC_INDEX);
+        }
+    }
+
+    public boolean getNicIndex_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NIC_INDEX);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmRemoveNicParamsData vmRemoveNicParamsData = (VmRemoveNicParamsData) o;
+        return Objects.equals(this.nicIndex, vmRemoveNicParamsData.nicIndex);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nicIndex);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmRemoveNicParamsData {\n");
+        sb.append("    nicIndex: ").append(toIndentedString(nicIndex)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

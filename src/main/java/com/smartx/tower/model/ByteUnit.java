@@ -1,69 +1,63 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets ByteUnit
- */
+/** Gets or Sets ByteUnit */
 @JsonAdapter(ByteUnit.Adapter.class)
 public enum ByteUnit {
-  
-  B("B"),
-  
-  KB("KB"),
-  
-  MB("MB"),
-  
-  GB("GB"),
-  
-  TB("TB"),
-  
-  PB("PB"),
-  
-  BYTEUNIT_UNSUPPORTED_ENUM("BYTEUNIT_UNSUPPORTED_ENUM");
-  private String value;
+    B("B"),
 
-  ByteUnit(String value) {
-    this.value = value;
-  }
+    KB("KB"),
 
-  public String getValue() {
-    return value;
-  }
+    MB("MB"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    GB("GB"),
 
-  public static ByteUnit fromValue(String value) {
-    for (ByteUnit b : ByteUnit.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    TB("TB"),
+
+    PB("PB"),
+
+    BYTEUNIT_UNSUPPORTED_ENUM("BYTEUNIT_UNSUPPORTED_ENUM");
+    private String value;
+
+    ByteUnit(String value) {
+        this.value = value;
     }
-    return ByteUnit.BYTEUNIT_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<ByteUnit> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final ByteUnit enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public ByteUnit read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return ByteUnit.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static ByteUnit fromValue(String value) {
+        for (ByteUnit b : ByteUnit.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return ByteUnit.BYTEUNIT_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<ByteUnit> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final ByteUnit enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public ByteUnit read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return ByteUnit.fromValue(value);
+        }
+    }
 }
-

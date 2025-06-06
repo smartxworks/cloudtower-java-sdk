@@ -1,116 +1,147 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * MetaLeader
- */
+/** MetaLeader */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class MetaLeader {
-  public static final String SERIALIZED_NAME_META_LEADER = "meta_leader";
-  @SerializedName(SERIALIZED_NAME_META_LEADER)
-  private String metaLeader;
+public class MetaLeader extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_META_LEADER = "meta_leader";
 
-  public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
-  @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
-  private String clusterId;
+    @SerializedName(SERIALIZED_NAME_META_LEADER)
+    private String metaLeader;
 
-  public MetaLeader() { 
-  }
+    public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
-  public MetaLeader metaLeader(String metaLeader) {
-    
-    this.metaLeader = metaLeader;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
+    private String clusterId;
 
-   /**
-   * Get metaLeader
-   * @return metaLeader
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public MetaLeader() {}
 
-  public String getMetaLeader() {
-    return metaLeader;
-  }
+    public MetaLeader metaLeader(String metaLeader) {
 
-
-  public void setMetaLeader(String metaLeader) {
-    this.metaLeader = metaLeader;
-  }
-
-
-  public MetaLeader clusterId(String clusterId) {
-    
-    this.clusterId = clusterId;
-    return this;
-  }
-
-   /**
-   * Get clusterId
-   * @return clusterId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getClusterId() {
-    return clusterId;
-  }
-
-
-  public void setClusterId(String clusterId) {
-    this.clusterId = clusterId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.metaLeader = metaLeader;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get metaLeader
+     *
+     * @return metaLeader
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getMetaLeader() {
+        return metaLeader;
     }
-    MetaLeader metaLeader = (MetaLeader) o;
-    return Objects.equals(this.metaLeader, metaLeader.metaLeader) &&
-        Objects.equals(this.clusterId, metaLeader.clusterId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(metaLeader, clusterId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class MetaLeader {\n");
-    sb.append("    metaLeader: ").append(toIndentedString(metaLeader)).append("\n");
-    sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setMetaLeader(String metaLeader) {
+        this.metaLeader = metaLeader;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public MetaLeader metaLeader_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_META_LEADER);
+        return this;
+    }
+
+    public MetaLeader metaLeader_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_META_LEADER);
+        return this;
+    }
+
+    public void setMetaLeader_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_META_LEADER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_META_LEADER);
+        }
+    }
+
+    public boolean getMetaLeader_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_META_LEADER);
+    }
+
+    public MetaLeader clusterId(String clusterId) {
+
+        this.clusterId = clusterId;
+        return this;
+    }
+
+    /**
+     * Get clusterId
+     *
+     * @return clusterId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getClusterId() {
+        return clusterId;
+    }
+
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+    }
+
+    public MetaLeader clusterId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public MetaLeader clusterId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public void setClusterId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        }
+    }
+
+    public boolean getClusterId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MetaLeader metaLeader = (MetaLeader) o;
+        return Objects.equals(this.metaLeader, metaLeader.metaLeader)
+                && Objects.equals(this.clusterId, metaLeader.clusterId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(metaLeader, clusterId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class MetaLeader {\n");
+        sb.append("    metaLeader: ").append(toIndentedString(metaLeader)).append("\n");
+        sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -1,65 +1,65 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets VirtualPrivateCloudNetworkPolicyRuleType
- */
+/** Gets or Sets VirtualPrivateCloudNetworkPolicyRuleType */
 @JsonAdapter(VirtualPrivateCloudNetworkPolicyRuleType.Adapter.class)
 public enum VirtualPrivateCloudNetworkPolicyRuleType {
-  
-  ALL("ALL"),
-  
-  IP_BLOCK("IP_BLOCK"),
-  
-  SECURITY_GROUP("SECURITY_GROUP"),
-  
-  SELECTOR("SELECTOR"),
-  
-  VIRTUALPRIVATECLOUDNETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM("VIRTUALPRIVATECLOUDNETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM");
-  private String value;
+    ALL("ALL"),
 
-  VirtualPrivateCloudNetworkPolicyRuleType(String value) {
-    this.value = value;
-  }
+    IP_BLOCK("IP_BLOCK"),
 
-  public String getValue() {
-    return value;
-  }
+    SECURITY_GROUP("SECURITY_GROUP"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    SELECTOR("SELECTOR"),
 
-  public static VirtualPrivateCloudNetworkPolicyRuleType fromValue(String value) {
-    for (VirtualPrivateCloudNetworkPolicyRuleType b : VirtualPrivateCloudNetworkPolicyRuleType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    VIRTUALPRIVATECLOUDNETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM(
+            "VIRTUALPRIVATECLOUDNETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM");
+    private String value;
+
+    VirtualPrivateCloudNetworkPolicyRuleType(String value) {
+        this.value = value;
     }
-    return VirtualPrivateCloudNetworkPolicyRuleType.VIRTUALPRIVATECLOUDNETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<VirtualPrivateCloudNetworkPolicyRuleType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final VirtualPrivateCloudNetworkPolicyRuleType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public VirtualPrivateCloudNetworkPolicyRuleType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return VirtualPrivateCloudNetworkPolicyRuleType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static VirtualPrivateCloudNetworkPolicyRuleType fromValue(String value) {
+        for (VirtualPrivateCloudNetworkPolicyRuleType b :
+                VirtualPrivateCloudNetworkPolicyRuleType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return VirtualPrivateCloudNetworkPolicyRuleType
+                .VIRTUALPRIVATECLOUDNETWORKPOLICYRULETYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<VirtualPrivateCloudNetworkPolicyRuleType> {
+        @Override
+        public void write(
+                final JsonWriter jsonWriter,
+                final VirtualPrivateCloudNetworkPolicyRuleType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public VirtualPrivateCloudNetworkPolicyRuleType read(final JsonReader jsonReader)
+                throws IOException {
+            String value = jsonReader.nextString();
+            return VirtualPrivateCloudNetworkPolicyRuleType.fromValue(value);
+        }
+    }
 }
-

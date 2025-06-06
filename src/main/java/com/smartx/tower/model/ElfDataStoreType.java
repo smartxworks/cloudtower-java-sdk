@@ -1,63 +1,57 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets ElfDataStoreType
- */
+/** Gets or Sets ElfDataStoreType */
 @JsonAdapter(ElfDataStoreType.Adapter.class)
 public enum ElfDataStoreType {
-  
-  ISCSI("ISCSI"),
-  
-  NFS("NFS"),
-  
-  NVME("NVMe"),
-  
-  ELFDATASTORETYPE_UNSUPPORTED_ENUM("ELFDATASTORETYPE_UNSUPPORTED_ENUM");
-  private String value;
+    ISCSI("ISCSI"),
 
-  ElfDataStoreType(String value) {
-    this.value = value;
-  }
+    NFS("NFS"),
 
-  public String getValue() {
-    return value;
-  }
+    NVME("NVMe"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    ELFDATASTORETYPE_UNSUPPORTED_ENUM("ELFDATASTORETYPE_UNSUPPORTED_ENUM");
+    private String value;
 
-  public static ElfDataStoreType fromValue(String value) {
-    for (ElfDataStoreType b : ElfDataStoreType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    ElfDataStoreType(String value) {
+        this.value = value;
     }
-    return ElfDataStoreType.ELFDATASTORETYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<ElfDataStoreType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final ElfDataStoreType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public ElfDataStoreType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return ElfDataStoreType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static ElfDataStoreType fromValue(String value) {
+        for (ElfDataStoreType b : ElfDataStoreType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return ElfDataStoreType.ELFDATASTORETYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<ElfDataStoreType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final ElfDataStoreType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public ElfDataStoreType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return ElfDataStoreType.fromValue(value);
+        }
+    }
 }
-

@@ -1,117 +1,148 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.SecurityPolicyApplyToInputTarget;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * SecurityPolicyApplyToInput
- */
+/** SecurityPolicyApplyToInput */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class SecurityPolicyApplyToInput {
-  public static final String SERIALIZED_NAME_COMMUNICABLE = "communicable";
-  @SerializedName(SERIALIZED_NAME_COMMUNICABLE)
-  private Boolean communicable;
+public class SecurityPolicyApplyToInput
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_COMMUNICABLE = "communicable";
 
-  public static final String SERIALIZED_NAME_TARGET = "target";
-  @SerializedName(SERIALIZED_NAME_TARGET)
-  private SecurityPolicyApplyToInputTarget target;
+    @SerializedName(SERIALIZED_NAME_COMMUNICABLE)
+    private Boolean communicable;
 
-  public SecurityPolicyApplyToInput() { 
-  }
+    public static final String SERIALIZED_NAME_TARGET = "target";
 
-  public SecurityPolicyApplyToInput communicable(Boolean communicable) {
-    
-    this.communicable = communicable;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_TARGET)
+    private SecurityPolicyApplyToInputTarget target;
 
-   /**
-   * Get communicable
-   * @return communicable
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public SecurityPolicyApplyToInput() {}
 
-  public Boolean getCommunicable() {
-    return communicable;
-  }
+    public SecurityPolicyApplyToInput communicable(Boolean communicable) {
 
-
-  public void setCommunicable(Boolean communicable) {
-    this.communicable = communicable;
-  }
-
-
-  public SecurityPolicyApplyToInput target(SecurityPolicyApplyToInputTarget target) {
-    
-    this.target = target;
-    return this;
-  }
-
-   /**
-   * Get target
-   * @return target
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public SecurityPolicyApplyToInputTarget getTarget() {
-    return target;
-  }
-
-
-  public void setTarget(SecurityPolicyApplyToInputTarget target) {
-    this.target = target;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.communicable = communicable;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get communicable
+     *
+     * @return communicable
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getCommunicable() {
+        return communicable;
     }
-    SecurityPolicyApplyToInput securityPolicyApplyToInput = (SecurityPolicyApplyToInput) o;
-    return Objects.equals(this.communicable, securityPolicyApplyToInput.communicable) &&
-        Objects.equals(this.target, securityPolicyApplyToInput.target);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(communicable, target);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SecurityPolicyApplyToInput {\n");
-    sb.append("    communicable: ").append(toIndentedString(communicable)).append("\n");
-    sb.append("    target: ").append(toIndentedString(target)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setCommunicable(Boolean communicable) {
+        this.communicable = communicable;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public SecurityPolicyApplyToInput communicable_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMUNICABLE);
+        return this;
+    }
+
+    public SecurityPolicyApplyToInput communicable_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMUNICABLE);
+        return this;
+    }
+
+    public void setCommunicable_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMUNICABLE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMUNICABLE);
+        }
+    }
+
+    public boolean getCommunicable_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMUNICABLE);
+    }
+
+    public SecurityPolicyApplyToInput target(SecurityPolicyApplyToInputTarget target) {
+
+        this.target = target;
+        return this;
+    }
+
+    /**
+     * Get target
+     *
+     * @return target
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public SecurityPolicyApplyToInputTarget getTarget() {
+        return target;
+    }
+
+    public void setTarget(SecurityPolicyApplyToInputTarget target) {
+        this.target = target;
+    }
+
+    public SecurityPolicyApplyToInput target_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TARGET);
+        return this;
+    }
+
+    public SecurityPolicyApplyToInput target_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TARGET);
+        return this;
+    }
+
+    public void setTarget_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TARGET);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TARGET);
+        }
+    }
+
+    public boolean getTarget_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TARGET);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SecurityPolicyApplyToInput securityPolicyApplyToInput = (SecurityPolicyApplyToInput) o;
+        return Objects.equals(this.communicable, securityPolicyApplyToInput.communicable)
+                && Objects.equals(this.target, securityPolicyApplyToInput.target);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(communicable, target);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class SecurityPolicyApplyToInput {\n");
+        sb.append("    communicable: ").append(toIndentedString(communicable)).append("\n");
+        sb.append("    target: ").append(toIndentedString(target)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

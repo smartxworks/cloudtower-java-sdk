@@ -1,61 +1,55 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets NvmfSubsystemPolicyType
- */
+/** Gets or Sets NvmfSubsystemPolicyType */
 @JsonAdapter(NvmfSubsystemPolicyType.Adapter.class)
 public enum NvmfSubsystemPolicyType {
-  
-  BALANCE("BALANCE"),
-  
-  INHERIT("INHERIT"),
-  
-  NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM("NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM");
-  private String value;
+    BALANCE("BALANCE"),
 
-  NvmfSubsystemPolicyType(String value) {
-    this.value = value;
-  }
+    INHERIT("INHERIT"),
 
-  public String getValue() {
-    return value;
-  }
+    NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM("NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM");
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static NvmfSubsystemPolicyType fromValue(String value) {
-    for (NvmfSubsystemPolicyType b : NvmfSubsystemPolicyType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    NvmfSubsystemPolicyType(String value) {
+        this.value = value;
     }
-    return NvmfSubsystemPolicyType.NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<NvmfSubsystemPolicyType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final NvmfSubsystemPolicyType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public NvmfSubsystemPolicyType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return NvmfSubsystemPolicyType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static NvmfSubsystemPolicyType fromValue(String value) {
+        for (NvmfSubsystemPolicyType b : NvmfSubsystemPolicyType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return NvmfSubsystemPolicyType.NVMFSUBSYSTEMPOLICYTYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<NvmfSubsystemPolicyType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final NvmfSubsystemPolicyType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public NvmfSubsystemPolicyType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return NvmfSubsystemPolicyType.fromValue(value);
+        }
+    }
 }
-

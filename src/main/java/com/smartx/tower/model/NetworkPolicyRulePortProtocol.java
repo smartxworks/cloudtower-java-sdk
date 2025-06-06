@@ -1,67 +1,63 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets NetworkPolicyRulePortProtocol
- */
+/** Gets or Sets NetworkPolicyRulePortProtocol */
 @JsonAdapter(NetworkPolicyRulePortProtocol.Adapter.class)
 public enum NetworkPolicyRulePortProtocol {
-  
-  ALG("ALG"),
-  
-  ICMP("ICMP"),
-  
-  IPIP("IPIP"),
-  
-  TCP("TCP"),
-  
-  UDP("UDP"),
-  
-  NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM("NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM");
-  private String value;
+    ALG("ALG"),
 
-  NetworkPolicyRulePortProtocol(String value) {
-    this.value = value;
-  }
+    ICMP("ICMP"),
 
-  public String getValue() {
-    return value;
-  }
+    IPIP("IPIP"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    TCP("TCP"),
 
-  public static NetworkPolicyRulePortProtocol fromValue(String value) {
-    for (NetworkPolicyRulePortProtocol b : NetworkPolicyRulePortProtocol.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    UDP("UDP"),
+
+    NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM(
+            "NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM");
+    private String value;
+
+    NetworkPolicyRulePortProtocol(String value) {
+        this.value = value;
     }
-    return NetworkPolicyRulePortProtocol.NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<NetworkPolicyRulePortProtocol> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final NetworkPolicyRulePortProtocol enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public NetworkPolicyRulePortProtocol read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return NetworkPolicyRulePortProtocol.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static NetworkPolicyRulePortProtocol fromValue(String value) {
+        for (NetworkPolicyRulePortProtocol b : NetworkPolicyRulePortProtocol.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return NetworkPolicyRulePortProtocol.NETWORKPOLICYRULEPORTPROTOCOL_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<NetworkPolicyRulePortProtocol> {
+        @Override
+        public void write(
+                final JsonWriter jsonWriter, final NetworkPolicyRulePortProtocol enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public NetworkPolicyRulePortProtocol read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return NetworkPolicyRulePortProtocol.fromValue(value);
+        }
+    }
 }
-

@@ -1,204 +1,298 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.BrickTopoWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * RackTopoUpdationParamsData
- */
+/** RackTopoUpdationParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class RackTopoUpdationParamsData {
-  public static final String SERIALIZED_NAME_BRICK_TOPOES = "brick_topoes";
-  @SerializedName(SERIALIZED_NAME_BRICK_TOPOES)
-  private BrickTopoWhereInput brickTopoes;
+public class RackTopoUpdationParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_BRICK_TOPOES = "brick_topoes";
 
-  public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
-  @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
-  private String clusterId;
+    @SerializedName(SERIALIZED_NAME_BRICK_TOPOES)
+    private BrickTopoWhereInput brickTopoes;
 
-  public static final String SERIALIZED_NAME_ZONE_TOPO_ID = "zone_topo_id";
-  @SerializedName(SERIALIZED_NAME_ZONE_TOPO_ID)
-  private String zoneTopoId;
+    public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
-  public static final String SERIALIZED_NAME_HEIGHT = "height";
-  @SerializedName(SERIALIZED_NAME_HEIGHT)
-  private Integer height;
+    @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
+    private String clusterId;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    public static final String SERIALIZED_NAME_ZONE_TOPO_ID = "zone_topo_id";
 
-  public RackTopoUpdationParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_ZONE_TOPO_ID)
+    private String zoneTopoId;
 
-  public RackTopoUpdationParamsData brickTopoes(BrickTopoWhereInput brickTopoes) {
-    
-    this.brickTopoes = brickTopoes;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_HEIGHT = "height";
 
-   /**
-   * Get brickTopoes
-   * @return brickTopoes
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_HEIGHT)
+    private Integer height;
 
-  public BrickTopoWhereInput getBrickTopoes() {
-    return brickTopoes;
-  }
+    public static final String SERIALIZED_NAME_NAME = "name";
 
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-  public void setBrickTopoes(BrickTopoWhereInput brickTopoes) {
-    this.brickTopoes = brickTopoes;
-  }
+    public RackTopoUpdationParamsData() {}
 
+    public RackTopoUpdationParamsData brickTopoes(BrickTopoWhereInput brickTopoes) {
 
-  public RackTopoUpdationParamsData clusterId(String clusterId) {
-    
-    this.clusterId = clusterId;
-    return this;
-  }
-
-   /**
-   * Get clusterId
-   * @return clusterId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getClusterId() {
-    return clusterId;
-  }
-
-
-  public void setClusterId(String clusterId) {
-    this.clusterId = clusterId;
-  }
-
-
-  public RackTopoUpdationParamsData zoneTopoId(String zoneTopoId) {
-    
-    this.zoneTopoId = zoneTopoId;
-    return this;
-  }
-
-   /**
-   * Get zoneTopoId
-   * @return zoneTopoId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getZoneTopoId() {
-    return zoneTopoId;
-  }
-
-
-  public void setZoneTopoId(String zoneTopoId) {
-    this.zoneTopoId = zoneTopoId;
-  }
-
-
-  public RackTopoUpdationParamsData height(Integer height) {
-    
-    this.height = height;
-    return this;
-  }
-
-   /**
-   * Get height
-   * @return height
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getHeight() {
-    return height;
-  }
-
-
-  public void setHeight(Integer height) {
-    this.height = height;
-  }
-
-
-  public RackTopoUpdationParamsData name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.brickTopoes = brickTopoes;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get brickTopoes
+     *
+     * @return brickTopoes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BrickTopoWhereInput getBrickTopoes() {
+        return brickTopoes;
     }
-    RackTopoUpdationParamsData rackTopoUpdationParamsData = (RackTopoUpdationParamsData) o;
-    return Objects.equals(this.brickTopoes, rackTopoUpdationParamsData.brickTopoes) &&
-        Objects.equals(this.clusterId, rackTopoUpdationParamsData.clusterId) &&
-        Objects.equals(this.zoneTopoId, rackTopoUpdationParamsData.zoneTopoId) &&
-        Objects.equals(this.height, rackTopoUpdationParamsData.height) &&
-        Objects.equals(this.name, rackTopoUpdationParamsData.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(brickTopoes, clusterId, zoneTopoId, height, name);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class RackTopoUpdationParamsData {\n");
-    sb.append("    brickTopoes: ").append(toIndentedString(brickTopoes)).append("\n");
-    sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
-    sb.append("    zoneTopoId: ").append(toIndentedString(zoneTopoId)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setBrickTopoes(BrickTopoWhereInput brickTopoes) {
+        this.brickTopoes = brickTopoes;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public RackTopoUpdationParamsData brickTopoes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BRICK_TOPOES);
+        return this;
+    }
+
+    public RackTopoUpdationParamsData brickTopoes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BRICK_TOPOES);
+        return this;
+    }
+
+    public void setBrickTopoes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BRICK_TOPOES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BRICK_TOPOES);
+        }
+    }
+
+    public boolean getBrickTopoes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BRICK_TOPOES);
+    }
+
+    public RackTopoUpdationParamsData clusterId(String clusterId) {
+
+        this.clusterId = clusterId;
+        return this;
+    }
+
+    /**
+     * Get clusterId
+     *
+     * @return clusterId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getClusterId() {
+        return clusterId;
+    }
+
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+    }
+
+    public RackTopoUpdationParamsData clusterId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public RackTopoUpdationParamsData clusterId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public void setClusterId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        }
+    }
+
+    public boolean getClusterId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER_ID);
+    }
+
+    public RackTopoUpdationParamsData zoneTopoId(String zoneTopoId) {
+
+        this.zoneTopoId = zoneTopoId;
+        return this;
+    }
+
+    /**
+     * Get zoneTopoId
+     *
+     * @return zoneTopoId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getZoneTopoId() {
+        return zoneTopoId;
+    }
+
+    public void setZoneTopoId(String zoneTopoId) {
+        this.zoneTopoId = zoneTopoId;
+    }
+
+    public RackTopoUpdationParamsData zoneTopoId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ZONE_TOPO_ID);
+        return this;
+    }
+
+    public RackTopoUpdationParamsData zoneTopoId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ZONE_TOPO_ID);
+        return this;
+    }
+
+    public void setZoneTopoId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ZONE_TOPO_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ZONE_TOPO_ID);
+        }
+    }
+
+    public boolean getZoneTopoId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ZONE_TOPO_ID);
+    }
+
+    public RackTopoUpdationParamsData height(Integer height) {
+
+        this.height = height;
+        return this;
+    }
+
+    /**
+     * Get height
+     *
+     * @return height
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getHeight() {
+        return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
+
+    public RackTopoUpdationParamsData height_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HEIGHT);
+        return this;
+    }
+
+    public RackTopoUpdationParamsData height_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HEIGHT);
+        return this;
+    }
+
+    public void setHeight_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HEIGHT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HEIGHT);
+        }
+    }
+
+    public boolean getHeight_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HEIGHT);
+    }
+
+    public RackTopoUpdationParamsData name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public RackTopoUpdationParamsData name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public RackTopoUpdationParamsData name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        RackTopoUpdationParamsData rackTopoUpdationParamsData = (RackTopoUpdationParamsData) o;
+        return Objects.equals(this.brickTopoes, rackTopoUpdationParamsData.brickTopoes)
+                && Objects.equals(this.clusterId, rackTopoUpdationParamsData.clusterId)
+                && Objects.equals(this.zoneTopoId, rackTopoUpdationParamsData.zoneTopoId)
+                && Objects.equals(this.height, rackTopoUpdationParamsData.height)
+                && Objects.equals(this.name, rackTopoUpdationParamsData.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brickTopoes, clusterId, zoneTopoId, height, name);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class RackTopoUpdationParamsData {\n");
+        sb.append("    brickTopoes: ").append(toIndentedString(brickTopoes)).append("\n");
+        sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
+        sb.append("    zoneTopoId: ").append(toIndentedString(zoneTopoId)).append("\n");
+        sb.append("    height: ").append(toIndentedString(height)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

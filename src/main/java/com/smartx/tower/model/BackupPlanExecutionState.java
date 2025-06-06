@@ -1,71 +1,65 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets BackupPlanExecutionState
- */
+/** Gets or Sets BackupPlanExecutionState */
 @JsonAdapter(BackupPlanExecutionState.Adapter.class)
 public enum BackupPlanExecutionState {
-  
-  FAILED("FAILED"),
-  
-  PARTLY_FAILED("PARTLY_FAILED"),
-  
-  PAUSED("PAUSED"),
-  
-  PAUSING("PAUSING"),
-  
-  RUNNING("RUNNING"),
-  
-  STARTING("STARTING"),
-  
-  SUCCEED("SUCCEED"),
-  
-  BACKUPPLANEXECUTIONSTATE_UNSUPPORTED_ENUM("BACKUPPLANEXECUTIONSTATE_UNSUPPORTED_ENUM");
-  private String value;
+    FAILED("FAILED"),
 
-  BackupPlanExecutionState(String value) {
-    this.value = value;
-  }
+    PARTLY_FAILED("PARTLY_FAILED"),
 
-  public String getValue() {
-    return value;
-  }
+    PAUSED("PAUSED"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    PAUSING("PAUSING"),
 
-  public static BackupPlanExecutionState fromValue(String value) {
-    for (BackupPlanExecutionState b : BackupPlanExecutionState.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    RUNNING("RUNNING"),
+
+    STARTING("STARTING"),
+
+    SUCCEED("SUCCEED"),
+
+    BACKUPPLANEXECUTIONSTATE_UNSUPPORTED_ENUM("BACKUPPLANEXECUTIONSTATE_UNSUPPORTED_ENUM");
+    private String value;
+
+    BackupPlanExecutionState(String value) {
+        this.value = value;
     }
-    return BackupPlanExecutionState.BACKUPPLANEXECUTIONSTATE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<BackupPlanExecutionState> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final BackupPlanExecutionState enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public BackupPlanExecutionState read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return BackupPlanExecutionState.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static BackupPlanExecutionState fromValue(String value) {
+        for (BackupPlanExecutionState b : BackupPlanExecutionState.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return BackupPlanExecutionState.BACKUPPLANEXECUTIONSTATE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<BackupPlanExecutionState> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final BackupPlanExecutionState enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public BackupPlanExecutionState read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return BackupPlanExecutionState.fromValue(value);
+        }
+    }
 }
-

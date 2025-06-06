@@ -1,87 +1,104 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * BackupRestorePointRestoreInPlaceParamsData
- */
+/** BackupRestorePointRestoreInPlaceParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class BackupRestorePointRestoreInPlaceParamsData {
-  public static final String SERIALIZED_NAME_STARTUP_AFTER_RESTORE = "startup_after_restore";
-  @SerializedName(SERIALIZED_NAME_STARTUP_AFTER_RESTORE)
-  private Boolean startupAfterRestore;
+public class BackupRestorePointRestoreInPlaceParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_STARTUP_AFTER_RESTORE = "startup_after_restore";
 
-  public BackupRestorePointRestoreInPlaceParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_STARTUP_AFTER_RESTORE)
+    private Boolean startupAfterRestore;
 
-  public BackupRestorePointRestoreInPlaceParamsData startupAfterRestore(Boolean startupAfterRestore) {
-    
-    this.startupAfterRestore = startupAfterRestore;
-    return this;
-  }
+    public BackupRestorePointRestoreInPlaceParamsData() {}
 
-   /**
-   * Get startupAfterRestore
-   * @return startupAfterRestore
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public BackupRestorePointRestoreInPlaceParamsData startupAfterRestore(
+            Boolean startupAfterRestore) {
 
-  public Boolean getStartupAfterRestore() {
-    return startupAfterRestore;
-  }
-
-
-  public void setStartupAfterRestore(Boolean startupAfterRestore) {
-    this.startupAfterRestore = startupAfterRestore;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.startupAfterRestore = startupAfterRestore;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get startupAfterRestore
+     *
+     * @return startupAfterRestore
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getStartupAfterRestore() {
+        return startupAfterRestore;
     }
-    BackupRestorePointRestoreInPlaceParamsData backupRestorePointRestoreInPlaceParamsData = (BackupRestorePointRestoreInPlaceParamsData) o;
-    return Objects.equals(this.startupAfterRestore, backupRestorePointRestoreInPlaceParamsData.startupAfterRestore);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(startupAfterRestore);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class BackupRestorePointRestoreInPlaceParamsData {\n");
-    sb.append("    startupAfterRestore: ").append(toIndentedString(startupAfterRestore)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setStartupAfterRestore(Boolean startupAfterRestore) {
+        this.startupAfterRestore = startupAfterRestore;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public BackupRestorePointRestoreInPlaceParamsData startupAfterRestore_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STARTUP_AFTER_RESTORE);
+        return this;
+    }
+
+    public BackupRestorePointRestoreInPlaceParamsData startupAfterRestore_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STARTUP_AFTER_RESTORE);
+        return this;
+    }
+
+    public void setStartupAfterRestore_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STARTUP_AFTER_RESTORE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STARTUP_AFTER_RESTORE);
+        }
+    }
+
+    public boolean getStartupAfterRestore_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STARTUP_AFTER_RESTORE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        BackupRestorePointRestoreInPlaceParamsData backupRestorePointRestoreInPlaceParamsData =
+                (BackupRestorePointRestoreInPlaceParamsData) o;
+        return Objects.equals(
+                this.startupAfterRestore,
+                backupRestorePointRestoreInPlaceParamsData.startupAfterRestore);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startupAfterRestore);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class BackupRestorePointRestoreInPlaceParamsData {\n");
+        sb.append("    startupAfterRestore: ")
+                .append(toIndentedString(startupAfterRestore))
+                .append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

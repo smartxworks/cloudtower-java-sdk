@@ -1,145 +1,198 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * CloudInitNetWorkRoute
- */
+/** CloudInitNetWorkRoute */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class CloudInitNetWorkRoute {
-  public static final String SERIALIZED_NAME_NETWORK = "network";
-  @SerializedName(SERIALIZED_NAME_NETWORK)
-  private String network;
+public class CloudInitNetWorkRoute
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_NETWORK = "network";
 
-  public static final String SERIALIZED_NAME_NETMASK = "netmask";
-  @SerializedName(SERIALIZED_NAME_NETMASK)
-  private String netmask;
+    @SerializedName(SERIALIZED_NAME_NETWORK)
+    private String network;
 
-  public static final String SERIALIZED_NAME_GATEWAY = "gateway";
-  @SerializedName(SERIALIZED_NAME_GATEWAY)
-  private String gateway;
+    public static final String SERIALIZED_NAME_NETMASK = "netmask";
 
-  public CloudInitNetWorkRoute() { 
-  }
+    @SerializedName(SERIALIZED_NAME_NETMASK)
+    private String netmask;
 
-  public CloudInitNetWorkRoute network(String network) {
-    
-    this.network = network;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_GATEWAY = "gateway";
 
-   /**
-   * Get network
-   * @return network
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    @SerializedName(SERIALIZED_NAME_GATEWAY)
+    private String gateway;
 
-  public String getNetwork() {
-    return network;
-  }
+    public CloudInitNetWorkRoute() {}
 
+    public CloudInitNetWorkRoute network(String network) {
 
-  public void setNetwork(String network) {
-    this.network = network;
-  }
-
-
-  public CloudInitNetWorkRoute netmask(String netmask) {
-    
-    this.netmask = netmask;
-    return this;
-  }
-
-   /**
-   * Get netmask
-   * @return netmask
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getNetmask() {
-    return netmask;
-  }
-
-
-  public void setNetmask(String netmask) {
-    this.netmask = netmask;
-  }
-
-
-  public CloudInitNetWorkRoute gateway(String gateway) {
-    
-    this.gateway = gateway;
-    return this;
-  }
-
-   /**
-   * Get gateway
-   * @return gateway
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getGateway() {
-    return gateway;
-  }
-
-
-  public void setGateway(String gateway) {
-    this.gateway = gateway;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.network = network;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get network
+     *
+     * @return network
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getNetwork() {
+        return network;
     }
-    CloudInitNetWorkRoute cloudInitNetWorkRoute = (CloudInitNetWorkRoute) o;
-    return Objects.equals(this.network, cloudInitNetWorkRoute.network) &&
-        Objects.equals(this.netmask, cloudInitNetWorkRoute.netmask) &&
-        Objects.equals(this.gateway, cloudInitNetWorkRoute.gateway);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(network, netmask, gateway);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CloudInitNetWorkRoute {\n");
-    sb.append("    network: ").append(toIndentedString(network)).append("\n");
-    sb.append("    netmask: ").append(toIndentedString(netmask)).append("\n");
-    sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setNetwork(String network) {
+        this.network = network;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public CloudInitNetWorkRoute network_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NETWORK);
+        return this;
+    }
+
+    public CloudInitNetWorkRoute network_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NETWORK);
+        return this;
+    }
+
+    public void setNetwork_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NETWORK);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NETWORK);
+        }
+    }
+
+    public boolean getNetwork_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NETWORK);
+    }
+
+    public CloudInitNetWorkRoute netmask(String netmask) {
+
+        this.netmask = netmask;
+        return this;
+    }
+
+    /**
+     * Get netmask
+     *
+     * @return netmask
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getNetmask() {
+        return netmask;
+    }
+
+    public void setNetmask(String netmask) {
+        this.netmask = netmask;
+    }
+
+    public CloudInitNetWorkRoute netmask_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NETMASK);
+        return this;
+    }
+
+    public CloudInitNetWorkRoute netmask_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NETMASK);
+        return this;
+    }
+
+    public void setNetmask_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NETMASK);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NETMASK);
+        }
+    }
+
+    public boolean getNetmask_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NETMASK);
+    }
+
+    public CloudInitNetWorkRoute gateway(String gateway) {
+
+        this.gateway = gateway;
+        return this;
+    }
+
+    /**
+     * Get gateway
+     *
+     * @return gateway
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getGateway() {
+        return gateway;
+    }
+
+    public void setGateway(String gateway) {
+        this.gateway = gateway;
+    }
+
+    public CloudInitNetWorkRoute gateway_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_GATEWAY);
+        return this;
+    }
+
+    public CloudInitNetWorkRoute gateway_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_GATEWAY);
+        return this;
+    }
+
+    public void setGateway_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_GATEWAY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_GATEWAY);
+        }
+    }
+
+    public boolean getGateway_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_GATEWAY);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CloudInitNetWorkRoute cloudInitNetWorkRoute = (CloudInitNetWorkRoute) o;
+        return Objects.equals(this.network, cloudInitNetWorkRoute.network)
+                && Objects.equals(this.netmask, cloudInitNetWorkRoute.netmask)
+                && Objects.equals(this.gateway, cloudInitNetWorkRoute.gateway);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(network, netmask, gateway);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CloudInitNetWorkRoute {\n");
+        sb.append("    network: ").append(toIndentedString(network)).append("\n");
+        sb.append("    netmask: ").append(toIndentedString(netmask)).append("\n");
+        sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

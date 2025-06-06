@@ -1,63 +1,57 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets MigrateType
- */
+/** Gets or Sets MigrateType */
 @JsonAdapter(MigrateType.Adapter.class)
 public enum MigrateType {
-  
-  COLD_MIGRATE("COLD_MIGRATE"),
-  
-  CUTOVER_MIGRATE("CUTOVER_MIGRATE"),
-  
-  LIVE_MIGRATE("LIVE_MIGRATE"),
-  
-  MIGRATETYPE_UNSUPPORTED_ENUM("MIGRATETYPE_UNSUPPORTED_ENUM");
-  private String value;
+    COLD_MIGRATE("COLD_MIGRATE"),
 
-  MigrateType(String value) {
-    this.value = value;
-  }
+    CUTOVER_MIGRATE("CUTOVER_MIGRATE"),
 
-  public String getValue() {
-    return value;
-  }
+    LIVE_MIGRATE("LIVE_MIGRATE"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    MIGRATETYPE_UNSUPPORTED_ENUM("MIGRATETYPE_UNSUPPORTED_ENUM");
+    private String value;
 
-  public static MigrateType fromValue(String value) {
-    for (MigrateType b : MigrateType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    MigrateType(String value) {
+        this.value = value;
     }
-    return MigrateType.MIGRATETYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<MigrateType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final MigrateType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public MigrateType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return MigrateType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static MigrateType fromValue(String value) {
+        for (MigrateType b : MigrateType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return MigrateType.MIGRATETYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<MigrateType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final MigrateType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public MigrateType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return MigrateType.fromValue(value);
+        }
+    }
 }
-

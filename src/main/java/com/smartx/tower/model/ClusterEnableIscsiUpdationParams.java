@@ -1,117 +1,149 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.ClusterWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * ClusterEnableIscsiUpdationParams
- */
+/** ClusterEnableIscsiUpdationParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class ClusterEnableIscsiUpdationParams {
-  public static final String SERIALIZED_NAME_ENABLE_ISCSI = "enable_iscsi";
-  @SerializedName(SERIALIZED_NAME_ENABLE_ISCSI)
-  private Boolean enableIscsi;
+public class ClusterEnableIscsiUpdationParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ENABLE_ISCSI = "enable_iscsi";
 
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private ClusterWhereInput where;
+    @SerializedName(SERIALIZED_NAME_ENABLE_ISCSI)
+    private Boolean enableIscsi;
 
-  public ClusterEnableIscsiUpdationParams() { 
-  }
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
-  public ClusterEnableIscsiUpdationParams enableIscsi(Boolean enableIscsi) {
-    
-    this.enableIscsi = enableIscsi;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private ClusterWhereInput where;
 
-   /**
-   * Get enableIscsi
-   * @return enableIscsi
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public ClusterEnableIscsiUpdationParams() {}
 
-  public Boolean getEnableIscsi() {
-    return enableIscsi;
-  }
+    public ClusterEnableIscsiUpdationParams enableIscsi(Boolean enableIscsi) {
 
-
-  public void setEnableIscsi(Boolean enableIscsi) {
-    this.enableIscsi = enableIscsi;
-  }
-
-
-  public ClusterEnableIscsiUpdationParams where(ClusterWhereInput where) {
-    
-    this.where = where;
-    return this;
-  }
-
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public ClusterWhereInput getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(ClusterWhereInput where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.enableIscsi = enableIscsi;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get enableIscsi
+     *
+     * @return enableIscsi
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getEnableIscsi() {
+        return enableIscsi;
     }
-    ClusterEnableIscsiUpdationParams clusterEnableIscsiUpdationParams = (ClusterEnableIscsiUpdationParams) o;
-    return Objects.equals(this.enableIscsi, clusterEnableIscsiUpdationParams.enableIscsi) &&
-        Objects.equals(this.where, clusterEnableIscsiUpdationParams.where);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(enableIscsi, where);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ClusterEnableIscsiUpdationParams {\n");
-    sb.append("    enableIscsi: ").append(toIndentedString(enableIscsi)).append("\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setEnableIscsi(Boolean enableIscsi) {
+        this.enableIscsi = enableIscsi;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ClusterEnableIscsiUpdationParams enableIscsi_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENABLE_ISCSI);
+        return this;
+    }
+
+    public ClusterEnableIscsiUpdationParams enableIscsi_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENABLE_ISCSI);
+        return this;
+    }
+
+    public void setEnableIscsi_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENABLE_ISCSI);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENABLE_ISCSI);
+        }
+    }
+
+    public boolean getEnableIscsi_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENABLE_ISCSI);
+    }
+
+    public ClusterEnableIscsiUpdationParams where(ClusterWhereInput where) {
+
+        this.where = where;
+        return this;
+    }
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public ClusterWhereInput getWhere() {
+        return where;
+    }
+
+    public void setWhere(ClusterWhereInput where) {
+        this.where = where;
+    }
+
+    public ClusterEnableIscsiUpdationParams where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public ClusterEnableIscsiUpdationParams where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ClusterEnableIscsiUpdationParams clusterEnableIscsiUpdationParams =
+                (ClusterEnableIscsiUpdationParams) o;
+        return Objects.equals(this.enableIscsi, clusterEnableIscsiUpdationParams.enableIscsi)
+                && Objects.equals(this.where, clusterEnableIscsiUpdationParams.where);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(enableIscsi, where);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ClusterEnableIscsiUpdationParams {\n");
+        sb.append("    enableIscsi: ").append(toIndentedString(enableIscsi)).append("\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -1,117 +1,148 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VmExportFileType;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VmExportParamsData
- */
+/** VmExportParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmExportParamsData {
-  public static final String SERIALIZED_NAME_KEEP_MAC = "keep_mac";
-  @SerializedName(SERIALIZED_NAME_KEEP_MAC)
-  private Boolean keepMac;
+public class VmExportParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_KEEP_MAC = "keep_mac";
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private VmExportFileType type;
+    @SerializedName(SERIALIZED_NAME_KEEP_MAC)
+    private Boolean keepMac;
 
-  public VmExportParamsData() { 
-  }
+    public static final String SERIALIZED_NAME_TYPE = "type";
 
-  public VmExportParamsData keepMac(Boolean keepMac) {
-    
-    this.keepMac = keepMac;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_TYPE)
+    private VmExportFileType type;
 
-   /**
-   * Get keepMac
-   * @return keepMac
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public VmExportParamsData() {}
 
-  public Boolean getKeepMac() {
-    return keepMac;
-  }
+    public VmExportParamsData keepMac(Boolean keepMac) {
 
-
-  public void setKeepMac(Boolean keepMac) {
-    this.keepMac = keepMac;
-  }
-
-
-  public VmExportParamsData type(VmExportFileType type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public VmExportFileType getType() {
-    return type;
-  }
-
-
-  public void setType(VmExportFileType type) {
-    this.type = type;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.keepMac = keepMac;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get keepMac
+     *
+     * @return keepMac
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getKeepMac() {
+        return keepMac;
     }
-    VmExportParamsData vmExportParamsData = (VmExportParamsData) o;
-    return Objects.equals(this.keepMac, vmExportParamsData.keepMac) &&
-        Objects.equals(this.type, vmExportParamsData.type);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(keepMac, type);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmExportParamsData {\n");
-    sb.append("    keepMac: ").append(toIndentedString(keepMac)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setKeepMac(Boolean keepMac) {
+        this.keepMac = keepMac;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VmExportParamsData keepMac_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_KEEP_MAC);
+        return this;
+    }
+
+    public VmExportParamsData keepMac_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_KEEP_MAC);
+        return this;
+    }
+
+    public void setKeepMac_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_KEEP_MAC);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_KEEP_MAC);
+        }
+    }
+
+    public boolean getKeepMac_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_KEEP_MAC);
+    }
+
+    public VmExportParamsData type(VmExportFileType type) {
+
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return type
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public VmExportFileType getType() {
+        return type;
+    }
+
+    public void setType(VmExportFileType type) {
+        this.type = type;
+    }
+
+    public VmExportParamsData type_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public VmExportParamsData type_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public void setType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        }
+    }
+
+    public boolean getType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TYPE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmExportParamsData vmExportParamsData = (VmExportParamsData) o;
+        return Objects.equals(this.keepMac, vmExportParamsData.keepMac)
+                && Objects.equals(this.type, vmExportParamsData.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(keepMac, type);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmExportParamsData {\n");
+        sb.append("    keepMac: ").append(toIndentedString(keepMac)).append("\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

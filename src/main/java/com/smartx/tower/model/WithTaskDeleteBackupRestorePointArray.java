@@ -1,136 +1,174 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.DeleteBackupRestorePoint;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * WithTaskDeleteBackupRestorePointArray
- */
+/** WithTaskDeleteBackupRestorePointArray */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class WithTaskDeleteBackupRestorePointArray {
-  public static final String SERIALIZED_NAME_TASK_ID = "task_id";
-  @SerializedName(SERIALIZED_NAME_TASK_ID)
-  private String taskId;
+public class WithTaskDeleteBackupRestorePointArray
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_TASK_ID = "task_id";
 
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private List<DeleteBackupRestorePoint> data = new ArrayList<DeleteBackupRestorePoint>();
+    @SerializedName(SERIALIZED_NAME_TASK_ID)
+    private String taskId;
 
-  public WithTaskDeleteBackupRestorePointArray() { 
-  }
+    public static final String SERIALIZED_NAME_DATA = "data";
 
-  public WithTaskDeleteBackupRestorePointArray taskId(String taskId) {
-    
-    this.taskId = taskId;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_DATA)
+    private List<DeleteBackupRestorePoint> data = new ArrayList<DeleteBackupRestorePoint>();
 
-   /**
-   * Get taskId
-   * @return taskId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public WithTaskDeleteBackupRestorePointArray() {}
 
-  public String getTaskId() {
-    return taskId;
-  }
+    public WithTaskDeleteBackupRestorePointArray taskId(String taskId) {
 
-
-  public void setTaskId(String taskId) {
-    this.taskId = taskId;
-  }
-
-
-  public WithTaskDeleteBackupRestorePointArray data(List<DeleteBackupRestorePoint> data) {
-    
-    this.data = data;
-    return this;
-  }
-
-  public WithTaskDeleteBackupRestorePointArray addDataItem(DeleteBackupRestorePoint dataItem) {
-    this.data.add(dataItem);
-    return this;
-  }
-
-   /**
-   * Get data
-   * @return data
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<DeleteBackupRestorePoint> getData() {
-    return data;
-  }
-
-
-  public void setData(List<DeleteBackupRestorePoint> data) {
-    this.data = data;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.taskId = taskId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get taskId
+     *
+     * @return taskId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getTaskId() {
+        return taskId;
     }
-    WithTaskDeleteBackupRestorePointArray withTaskDeleteBackupRestorePointArray = (WithTaskDeleteBackupRestorePointArray) o;
-    return Objects.equals(this.taskId, withTaskDeleteBackupRestorePointArray.taskId) &&
-        Objects.equals(this.data, withTaskDeleteBackupRestorePointArray.data);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(taskId, data);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class WithTaskDeleteBackupRestorePointArray {\n");
-    sb.append("    taskId: ").append(toIndentedString(taskId)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public WithTaskDeleteBackupRestorePointArray taskId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TASK_ID);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public WithTaskDeleteBackupRestorePointArray taskId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TASK_ID);
+        return this;
+    }
+
+    public void setTaskId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TASK_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TASK_ID);
+        }
+    }
+
+    public boolean getTaskId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TASK_ID);
+    }
+
+    public WithTaskDeleteBackupRestorePointArray data(List<DeleteBackupRestorePoint> data) {
+
+        this.data = data;
+        return this;
+    }
+
+    public WithTaskDeleteBackupRestorePointArray addDataItem(DeleteBackupRestorePoint dataItem) {
+        this.data.add(dataItem);
+        return this;
+    }
+
+    /**
+     * Get data
+     *
+     * @return data
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<DeleteBackupRestorePoint> getData() {
+        return data;
+    }
+
+    public void setData(List<DeleteBackupRestorePoint> data) {
+        this.data = data;
+    }
+
+    public WithTaskDeleteBackupRestorePointArray data_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA);
+        return this;
+    }
+
+    public WithTaskDeleteBackupRestorePointArray data_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA);
+        return this;
+    }
+
+    public void setData_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA);
+        }
+    }
+
+    public boolean getData_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        WithTaskDeleteBackupRestorePointArray withTaskDeleteBackupRestorePointArray =
+                (WithTaskDeleteBackupRestorePointArray) o;
+        return Objects.equals(this.taskId, withTaskDeleteBackupRestorePointArray.taskId)
+                && Objects.equals(this.data, withTaskDeleteBackupRestorePointArray.data);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(taskId, data);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class WithTaskDeleteBackupRestorePointArray {\n");
+        sb.append("    taskId: ").append(toIndentedString(taskId)).append("\n");
+        sb.append("    data: ").append(toIndentedString(data)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

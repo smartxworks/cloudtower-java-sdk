@@ -1,21 +1,13 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetNvmfSubsystemsConnectionRequestBody;
 import com.smartx.tower.model.GetNvmfSubsystemsRequestBody;
 import com.smartx.tower.model.NvmfSubsystem;
@@ -25,7 +17,6 @@ import com.smartx.tower.model.NvmfSubsystemDeletionParams;
 import com.smartx.tower.model.NvmfSubsystemUpdationParams;
 import com.smartx.tower.model.WithTaskDeleteNvmfSubsystem;
 import com.smartx.tower.model.WithTaskNvmfSubsystem;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,29 +62,33 @@ public class NvmfSubsystemApi {
 
     /**
      * Build call for createNvmfSubsystem
-     * @param nvmfSubsystemCreationParams  (required)
+     *
+     * @param nvmfSubsystemCreationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createNvmfSubsystemCall(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createNvmfSubsystemCall(
+            List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -110,129 +105,150 @@ public class NvmfSubsystemApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createNvmfSubsystemValidateBeforeCall(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createNvmfSubsystemValidateBeforeCall(
+            List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'nvmfSubsystemCreationParams' is set
         if (nvmfSubsystemCreationParams == null) {
-            throw new ApiException("Missing the required parameter 'nvmfSubsystemCreationParams' when calling createNvmfSubsystem(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'nvmfSubsystemCreationParams' when calling"
+                            + " createNvmfSubsystem(Async)");
         }
-        
 
         okhttp3.Call localVarCall = createNvmfSubsystemCall(nvmfSubsystemCreationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param nvmfSubsystemCreationParams  (required)
+     * @param nvmfSubsystemCreationParams (required)
      * @return List&lt;WithTaskNvmfSubsystem&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskNvmfSubsystem> createNvmfSubsystem(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp = createNvmfSubsystemWithHttpInfo(nvmfSubsystemCreationParams);
+    public List<WithTaskNvmfSubsystem> createNvmfSubsystem(
+            List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp =
+                createNvmfSubsystemWithHttpInfo(nvmfSubsystemCreationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param nvmfSubsystemCreationParams  (required)
+     * @param nvmfSubsystemCreationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfSubsystem&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskNvmfSubsystem>> createNvmfSubsystemWithHttpInfo(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
+    public ApiResponse<List<WithTaskNvmfSubsystem>> createNvmfSubsystemWithHttpInfo(
+            List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param nvmfSubsystemCreationParams  (required)
+     * (asynchronously)
+     *
+     * @param nvmfSubsystemCreationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createNvmfSubsystemAsync(List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams, final ApiCallback<List<WithTaskNvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call createNvmfSubsystemAsync(
+            List<NvmfSubsystemCreationParams> nvmfSubsystemCreationParams,
+            final ApiCallback<List<WithTaskNvmfSubsystem>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
+        okhttp3.Call localVarCall =
+                createNvmfSubsystemValidateBeforeCall(nvmfSubsystemCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteNvmfSubsystem
-     * @param nvmfSubsystemDeletionParams  (required)
+     *
+     * @param nvmfSubsystemDeletionParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteNvmfSubsystemCall(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteNvmfSubsystemCall(
+            NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -249,129 +265,149 @@ public class NvmfSubsystemApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteNvmfSubsystemValidateBeforeCall(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteNvmfSubsystemValidateBeforeCall(
+            NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'nvmfSubsystemDeletionParams' is set
         if (nvmfSubsystemDeletionParams == null) {
-            throw new ApiException("Missing the required parameter 'nvmfSubsystemDeletionParams' when calling deleteNvmfSubsystem(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'nvmfSubsystemDeletionParams' when calling"
+                            + " deleteNvmfSubsystem(Async)");
         }
-        
 
         okhttp3.Call localVarCall = deleteNvmfSubsystemCall(nvmfSubsystemDeletionParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param nvmfSubsystemDeletionParams  (required)
+     * @param nvmfSubsystemDeletionParams (required)
      * @return List&lt;WithTaskDeleteNvmfSubsystem&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteNvmfSubsystem> deleteNvmfSubsystem(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteNvmfSubsystem>> localVarResp = deleteNvmfSubsystemWithHttpInfo(nvmfSubsystemDeletionParams);
+    public List<WithTaskDeleteNvmfSubsystem> deleteNvmfSubsystem(
+            NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteNvmfSubsystem>> localVarResp =
+                deleteNvmfSubsystemWithHttpInfo(nvmfSubsystemDeletionParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param nvmfSubsystemDeletionParams  (required)
+     * @param nvmfSubsystemDeletionParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteNvmfSubsystem&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteNvmfSubsystem>> deleteNvmfSubsystemWithHttpInfo(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfSubsystem>>(){}.getType();
+    public ApiResponse<List<WithTaskDeleteNvmfSubsystem>> deleteNvmfSubsystemWithHttpInfo(
+            NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfSubsystem>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param nvmfSubsystemDeletionParams  (required)
+     * (asynchronously)
+     *
+     * @param nvmfSubsystemDeletionParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteNvmfSubsystemAsync(NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams, final ApiCallback<List<WithTaskDeleteNvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call deleteNvmfSubsystemAsync(
+            NvmfSubsystemDeletionParams nvmfSubsystemDeletionParams,
+            final ApiCallback<List<WithTaskDeleteNvmfSubsystem>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfSubsystem>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteNvmfSubsystemValidateBeforeCall(nvmfSubsystemDeletionParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteNvmfSubsystem>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNvmfSubsystems
-     * @param getNvmfSubsystemsRequestBody  (required)
+     *
+     * @param getNvmfSubsystemsRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getNvmfSubsystemsCall(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsCall(
+            GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -388,129 +424,150 @@ public class NvmfSubsystemApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNvmfSubsystemsValidateBeforeCall(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getNvmfSubsystemsValidateBeforeCall(
+            GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getNvmfSubsystemsRequestBody' is set
         if (getNvmfSubsystemsRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getNvmfSubsystemsRequestBody' when calling getNvmfSubsystems(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getNvmfSubsystemsRequestBody' when calling"
+                            + " getNvmfSubsystems(Async)");
         }
-        
 
         okhttp3.Call localVarCall = getNvmfSubsystemsCall(getNvmfSubsystemsRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getNvmfSubsystemsRequestBody  (required)
+     * @param getNvmfSubsystemsRequestBody (required)
      * @return List&lt;NvmfSubsystem&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<NvmfSubsystem> getNvmfSubsystems(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody) throws ApiException {
-        ApiResponse<List<NvmfSubsystem>> localVarResp = getNvmfSubsystemsWithHttpInfo(getNvmfSubsystemsRequestBody);
+    public List<NvmfSubsystem> getNvmfSubsystems(
+            GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody) throws ApiException {
+        ApiResponse<List<NvmfSubsystem>> localVarResp =
+                getNvmfSubsystemsWithHttpInfo(getNvmfSubsystemsRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getNvmfSubsystemsRequestBody  (required)
+     * @param getNvmfSubsystemsRequestBody (required)
      * @return ApiResponse&lt;List&lt;NvmfSubsystem&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<NvmfSubsystem>> getNvmfSubsystemsWithHttpInfo(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNvmfSubsystemsValidateBeforeCall(getNvmfSubsystemsRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<NvmfSubsystem>>(){}.getType();
+    public ApiResponse<List<NvmfSubsystem>> getNvmfSubsystemsWithHttpInfo(
+            GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getNvmfSubsystemsValidateBeforeCall(getNvmfSubsystemsRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<NvmfSubsystem>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getNvmfSubsystemsRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getNvmfSubsystemsRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getNvmfSubsystemsAsync(GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody, final ApiCallback<List<NvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsAsync(
+            GetNvmfSubsystemsRequestBody getNvmfSubsystemsRequestBody,
+            final ApiCallback<List<NvmfSubsystem>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsValidateBeforeCall(getNvmfSubsystemsRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<NvmfSubsystem>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getNvmfSubsystemsValidateBeforeCall(getNvmfSubsystemsRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<NvmfSubsystem>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getNvmfSubsystemsConnection
-     * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     *
+     * @param getNvmfSubsystemsConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getNvmfSubsystemsConnectionCall(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsConnectionCall(
+            GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -527,129 +584,155 @@ public class NvmfSubsystemApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getNvmfSubsystemsConnectionValidateBeforeCall(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getNvmfSubsystemsConnectionValidateBeforeCall(
+            GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getNvmfSubsystemsConnectionRequestBody' is set
         if (getNvmfSubsystemsConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getNvmfSubsystemsConnectionRequestBody' when calling getNvmfSubsystemsConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getNvmfSubsystemsConnectionRequestBody' when"
+                            + " calling getNvmfSubsystemsConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionCall(getNvmfSubsystemsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getNvmfSubsystemsConnectionCall(getNvmfSubsystemsConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * @param getNvmfSubsystemsConnectionRequestBody (required)
      * @return NvmfSubsystemConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public NvmfSubsystemConnection getNvmfSubsystemsConnection(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody) throws ApiException {
-        ApiResponse<NvmfSubsystemConnection> localVarResp = getNvmfSubsystemsConnectionWithHttpInfo(getNvmfSubsystemsConnectionRequestBody);
+    public NvmfSubsystemConnection getNvmfSubsystemsConnection(
+            GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<NvmfSubsystemConnection> localVarResp =
+                getNvmfSubsystemsConnectionWithHttpInfo(getNvmfSubsystemsConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * @param getNvmfSubsystemsConnectionRequestBody (required)
      * @return ApiResponse&lt;NvmfSubsystemConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<NvmfSubsystemConnection> getNvmfSubsystemsConnectionWithHttpInfo(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionValidateBeforeCall(getNvmfSubsystemsConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<NvmfSubsystemConnection>(){}.getType();
+    public ApiResponse<NvmfSubsystemConnection> getNvmfSubsystemsConnectionWithHttpInfo(
+            GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getNvmfSubsystemsConnectionValidateBeforeCall(
+                        getNvmfSubsystemsConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<NvmfSubsystemConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getNvmfSubsystemsConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getNvmfSubsystemsConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getNvmfSubsystemsConnectionAsync(GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody, final ApiCallback<NvmfSubsystemConnection> _callback) throws ApiException {
+    public okhttp3.Call getNvmfSubsystemsConnectionAsync(
+            GetNvmfSubsystemsConnectionRequestBody getNvmfSubsystemsConnectionRequestBody,
+            final ApiCallback<NvmfSubsystemConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getNvmfSubsystemsConnectionValidateBeforeCall(getNvmfSubsystemsConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<NvmfSubsystemConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getNvmfSubsystemsConnectionValidateBeforeCall(
+                        getNvmfSubsystemsConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<NvmfSubsystemConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateNvmfSubsystem
-     * @param nvmfSubsystemUpdationParams  (required)
+     *
+     * @param nvmfSubsystemUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateNvmfSubsystemCall(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateNvmfSubsystemCall(
+            NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -666,101 +749,118 @@ public class NvmfSubsystemApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateNvmfSubsystemValidateBeforeCall(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateNvmfSubsystemValidateBeforeCall(
+            NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'nvmfSubsystemUpdationParams' is set
         if (nvmfSubsystemUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'nvmfSubsystemUpdationParams' when calling updateNvmfSubsystem(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'nvmfSubsystemUpdationParams' when calling"
+                            + " updateNvmfSubsystem(Async)");
         }
-        
 
         okhttp3.Call localVarCall = updateNvmfSubsystemCall(nvmfSubsystemUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param nvmfSubsystemUpdationParams  (required)
+     * @param nvmfSubsystemUpdationParams (required)
      * @return List&lt;WithTaskNvmfSubsystem&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskNvmfSubsystem> updateNvmfSubsystem(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp = updateNvmfSubsystemWithHttpInfo(nvmfSubsystemUpdationParams);
+    public List<WithTaskNvmfSubsystem> updateNvmfSubsystem(
+            NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskNvmfSubsystem>> localVarResp =
+                updateNvmfSubsystemWithHttpInfo(nvmfSubsystemUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param nvmfSubsystemUpdationParams  (required)
+     * @param nvmfSubsystemUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskNvmfSubsystem&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskNvmfSubsystem>> updateNvmfSubsystemWithHttpInfo(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
+    public ApiResponse<List<WithTaskNvmfSubsystem>> updateNvmfSubsystemWithHttpInfo(
+            NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param nvmfSubsystemUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param nvmfSubsystemUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateNvmfSubsystemAsync(NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams, final ApiCallback<List<WithTaskNvmfSubsystem>> _callback) throws ApiException {
+    public okhttp3.Call updateNvmfSubsystemAsync(
+            NvmfSubsystemUpdationParams nvmfSubsystemUpdationParams,
+            final ApiCallback<List<WithTaskNvmfSubsystem>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateNvmfSubsystemValidateBeforeCall(nvmfSubsystemUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskNvmfSubsystem>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
