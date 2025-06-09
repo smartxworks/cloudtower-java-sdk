@@ -1,88 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NestedAggregateBrickTopo;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * BrickTopoConnection
- */
+/** BrickTopoConnection */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class BrickTopoConnection {
-  public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
-  @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private NestedAggregateBrickTopo aggregate;
+public class BrickTopoConnection
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
 
-  public BrickTopoConnection() { 
-  }
+    @SerializedName(SERIALIZED_NAME_AGGREGATE)
+    private NestedAggregateBrickTopo aggregate;
 
-  public BrickTopoConnection aggregate(NestedAggregateBrickTopo aggregate) {
-    
-    this.aggregate = aggregate;
-    return this;
-  }
+    public BrickTopoConnection() {}
 
-   /**
-   * Get aggregate
-   * @return aggregate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public BrickTopoConnection aggregate(NestedAggregateBrickTopo aggregate) {
 
-  public NestedAggregateBrickTopo getAggregate() {
-    return aggregate;
-  }
-
-
-  public void setAggregate(NestedAggregateBrickTopo aggregate) {
-    this.aggregate = aggregate;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.aggregate = aggregate;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get aggregate
+     *
+     * @return aggregate
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedAggregateBrickTopo getAggregate() {
+        return aggregate;
     }
-    BrickTopoConnection brickTopoConnection = (BrickTopoConnection) o;
-    return Objects.equals(this.aggregate, brickTopoConnection.aggregate);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(aggregate);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class BrickTopoConnection {\n");
-    sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setAggregate(NestedAggregateBrickTopo aggregate) {
+        this.aggregate = aggregate;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public BrickTopoConnection aggregate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public BrickTopoConnection aggregate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public void setAggregate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        }
+    }
+
+    public boolean getAggregate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_AGGREGATE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        BrickTopoConnection brickTopoConnection = (BrickTopoConnection) o;
+        return Objects.equals(this.aggregate, brickTopoConnection.aggregate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(aggregate);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class BrickTopoConnection {\n");
+        sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

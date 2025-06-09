@@ -1,63 +1,57 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets BackupServiceNetworkType
- */
+/** Gets or Sets BackupServiceNetworkType */
 @JsonAdapter(BackupServiceNetworkType.Adapter.class)
 public enum BackupServiceNetworkType {
-  
-  MANAGEMENT("MANAGEMENT"),
-  
-  NEW_NIC("NEW_NIC"),
-  
-  STORAGE("STORAGE"),
-  
-  BACKUPSERVICENETWORKTYPE_UNSUPPORTED_ENUM("BACKUPSERVICENETWORKTYPE_UNSUPPORTED_ENUM");
-  private String value;
+    MANAGEMENT("MANAGEMENT"),
 
-  BackupServiceNetworkType(String value) {
-    this.value = value;
-  }
+    NEW_NIC("NEW_NIC"),
 
-  public String getValue() {
-    return value;
-  }
+    STORAGE("STORAGE"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    BACKUPSERVICENETWORKTYPE_UNSUPPORTED_ENUM("BACKUPSERVICENETWORKTYPE_UNSUPPORTED_ENUM");
+    private String value;
 
-  public static BackupServiceNetworkType fromValue(String value) {
-    for (BackupServiceNetworkType b : BackupServiceNetworkType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    BackupServiceNetworkType(String value) {
+        this.value = value;
     }
-    return BackupServiceNetworkType.BACKUPSERVICENETWORKTYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<BackupServiceNetworkType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final BackupServiceNetworkType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public BackupServiceNetworkType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return BackupServiceNetworkType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static BackupServiceNetworkType fromValue(String value) {
+        for (BackupServiceNetworkType b : BackupServiceNetworkType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return BackupServiceNetworkType.BACKUPSERVICENETWORKTYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<BackupServiceNetworkType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final BackupServiceNetworkType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public BackupServiceNetworkType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return BackupServiceNetworkType.fromValue(value);
+        }
+    }
 }
-

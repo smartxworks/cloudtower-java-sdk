@@ -1,116 +1,148 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NestedConsistencyGroup
- */
+/** NestedConsistencyGroup */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NestedConsistencyGroup {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+public class NestedConsistencyGroup
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ID = "id";
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    @SerializedName(SERIALIZED_NAME_ID)
+    private String id;
 
-  public NestedConsistencyGroup() { 
-  }
+    public static final String SERIALIZED_NAME_NAME = "name";
 
-  public NestedConsistencyGroup id(String id) {
-    
-    this.id = id;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NestedConsistencyGroup() {}
 
-  public String getId() {
-    return id;
-  }
+    public NestedConsistencyGroup id(String id) {
 
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-  public NestedConsistencyGroup name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.id = id;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get id
+     *
+     * @return id
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getId() {
+        return id;
     }
-    NestedConsistencyGroup nestedConsistencyGroup = (NestedConsistencyGroup) o;
-    return Objects.equals(this.id, nestedConsistencyGroup.id) &&
-        Objects.equals(this.name, nestedConsistencyGroup.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NestedConsistencyGroup {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setId(String id) {
+        this.id = id;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NestedConsistencyGroup id_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public NestedConsistencyGroup id_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public void setId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ID);
+        }
+    }
+
+    public boolean getId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ID);
+    }
+
+    public NestedConsistencyGroup name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public NestedConsistencyGroup name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public NestedConsistencyGroup name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NestedConsistencyGroup nestedConsistencyGroup = (NestedConsistencyGroup) o;
+        return Objects.equals(this.id, nestedConsistencyGroup.id)
+                && Objects.equals(this.name, nestedConsistencyGroup.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NestedConsistencyGroup {\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -1,87 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VmAddFolderParamsData
- */
+/** VmAddFolderParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmAddFolderParamsData {
-  public static final String SERIALIZED_NAME_FOLDER_ID = "folder_id";
-  @SerializedName(SERIALIZED_NAME_FOLDER_ID)
-  private String folderId;
+public class VmAddFolderParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_FOLDER_ID = "folder_id";
 
-  public VmAddFolderParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_FOLDER_ID)
+    private String folderId;
 
-  public VmAddFolderParamsData folderId(String folderId) {
-    
-    this.folderId = folderId;
-    return this;
-  }
+    public VmAddFolderParamsData() {}
 
-   /**
-   * Get folderId
-   * @return folderId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VmAddFolderParamsData folderId(String folderId) {
 
-  public String getFolderId() {
-    return folderId;
-  }
-
-
-  public void setFolderId(String folderId) {
-    this.folderId = folderId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.folderId = folderId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get folderId
+     *
+     * @return folderId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getFolderId() {
+        return folderId;
     }
-    VmAddFolderParamsData vmAddFolderParamsData = (VmAddFolderParamsData) o;
-    return Objects.equals(this.folderId, vmAddFolderParamsData.folderId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(folderId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmAddFolderParamsData {\n");
-    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setFolderId(String folderId) {
+        this.folderId = folderId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VmAddFolderParamsData folderId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FOLDER_ID);
+        return this;
+    }
+
+    public VmAddFolderParamsData folderId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FOLDER_ID);
+        return this;
+    }
+
+    public void setFolderId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FOLDER_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FOLDER_ID);
+        }
+    }
+
+    public boolean getFolderId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FOLDER_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmAddFolderParamsData vmAddFolderParamsData = (VmAddFolderParamsData) o;
+        return Objects.equals(this.folderId, vmAddFolderParamsData.folderId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(folderId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmAddFolderParamsData {\n");
+        sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

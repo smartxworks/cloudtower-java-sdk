@@ -1,88 +1,100 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.BackupRestorePointWhereUniqueInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * GetBackupRestorePointMetadataRequestBody
- */
+/** GetBackupRestorePointMetadataRequestBody */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class GetBackupRestorePointMetadataRequestBody {
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private BackupRestorePointWhereUniqueInput where;
+public class GetBackupRestorePointMetadataRequestBody
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
-  public GetBackupRestorePointMetadataRequestBody() { 
-  }
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private BackupRestorePointWhereUniqueInput where;
 
-  public GetBackupRestorePointMetadataRequestBody where(BackupRestorePointWhereUniqueInput where) {
-    
-    this.where = where;
-    return this;
-  }
+    public GetBackupRestorePointMetadataRequestBody() {}
 
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public GetBackupRestorePointMetadataRequestBody where(
+            BackupRestorePointWhereUniqueInput where) {
 
-  public BackupRestorePointWhereUniqueInput getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(BackupRestorePointWhereUniqueInput where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.where = where;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public BackupRestorePointWhereUniqueInput getWhere() {
+        return where;
     }
-    GetBackupRestorePointMetadataRequestBody getBackupRestorePointMetadataRequestBody = (GetBackupRestorePointMetadataRequestBody) o;
-    return Objects.equals(this.where, getBackupRestorePointMetadataRequestBody.where);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(where);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GetBackupRestorePointMetadataRequestBody {\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setWhere(BackupRestorePointWhereUniqueInput where) {
+        this.where = where;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public GetBackupRestorePointMetadataRequestBody where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public GetBackupRestorePointMetadataRequestBody where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GetBackupRestorePointMetadataRequestBody getBackupRestorePointMetadataRequestBody =
+                (GetBackupRestorePointMetadataRequestBody) o;
+        return Objects.equals(this.where, getBackupRestorePointMetadataRequestBody.where);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(where);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GetBackupRestorePointMetadataRequestBody {\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

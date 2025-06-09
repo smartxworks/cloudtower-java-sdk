@@ -1,116 +1,148 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * UserAuditLogMessage
- */
+/** UserAuditLogMessage */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class UserAuditLogMessage {
-  public static final String SERIALIZED_NAME_EN_U_S = "en-US";
-  @SerializedName(SERIALIZED_NAME_EN_U_S)
-  private String enUS;
+public class UserAuditLogMessage
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_EN_U_S = "en-US";
 
-  public static final String SERIALIZED_NAME_ZH_C_N = "zh-CN";
-  @SerializedName(SERIALIZED_NAME_ZH_C_N)
-  private String zhCN;
+    @SerializedName(SERIALIZED_NAME_EN_U_S)
+    private String enUS;
 
-  public UserAuditLogMessage() { 
-  }
+    public static final String SERIALIZED_NAME_ZH_C_N = "zh-CN";
 
-  public UserAuditLogMessage enUS(String enUS) {
-    
-    this.enUS = enUS;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_ZH_C_N)
+    private String zhCN;
 
-   /**
-   * Get enUS
-   * @return enUS
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public UserAuditLogMessage() {}
 
-  public String getEnUS() {
-    return enUS;
-  }
+    public UserAuditLogMessage enUS(String enUS) {
 
-
-  public void setEnUS(String enUS) {
-    this.enUS = enUS;
-  }
-
-
-  public UserAuditLogMessage zhCN(String zhCN) {
-    
-    this.zhCN = zhCN;
-    return this;
-  }
-
-   /**
-   * Get zhCN
-   * @return zhCN
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getZhCN() {
-    return zhCN;
-  }
-
-
-  public void setZhCN(String zhCN) {
-    this.zhCN = zhCN;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.enUS = enUS;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get enUS
+     *
+     * @return enUS
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getEnUS() {
+        return enUS;
     }
-    UserAuditLogMessage userAuditLogMessage = (UserAuditLogMessage) o;
-    return Objects.equals(this.enUS, userAuditLogMessage.enUS) &&
-        Objects.equals(this.zhCN, userAuditLogMessage.zhCN);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(enUS, zhCN);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class UserAuditLogMessage {\n");
-    sb.append("    enUS: ").append(toIndentedString(enUS)).append("\n");
-    sb.append("    zhCN: ").append(toIndentedString(zhCN)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setEnUS(String enUS) {
+        this.enUS = enUS;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public UserAuditLogMessage enUS_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EN_U_S);
+        return this;
+    }
+
+    public UserAuditLogMessage enUS_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EN_U_S);
+        return this;
+    }
+
+    public void setEnUS_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EN_U_S);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EN_U_S);
+        }
+    }
+
+    public boolean getEnUS_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EN_U_S);
+    }
+
+    public UserAuditLogMessage zhCN(String zhCN) {
+
+        this.zhCN = zhCN;
+        return this;
+    }
+
+    /**
+     * Get zhCN
+     *
+     * @return zhCN
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getZhCN() {
+        return zhCN;
+    }
+
+    public void setZhCN(String zhCN) {
+        this.zhCN = zhCN;
+    }
+
+    public UserAuditLogMessage zhCN_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ZH_C_N);
+        return this;
+    }
+
+    public UserAuditLogMessage zhCN_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ZH_C_N);
+        return this;
+    }
+
+    public void setZhCN_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ZH_C_N);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ZH_C_N);
+        }
+    }
+
+    public boolean getZhCN_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ZH_C_N);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        UserAuditLogMessage userAuditLogMessage = (UserAuditLogMessage) o;
+        return Objects.equals(this.enUS, userAuditLogMessage.enUS)
+                && Objects.equals(this.zhCN, userAuditLogMessage.zhCN);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(enUS, zhCN);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class UserAuditLogMessage {\n");
+        sb.append("    enUS: ").append(toIndentedString(enUS)).append("\n");
+        sb.append("    zhCN: ").append(toIndentedString(zhCN)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

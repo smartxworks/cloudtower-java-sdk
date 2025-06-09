@@ -1,88 +1,97 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NestedAggregateDisk;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * DiskConnection
- */
+/** DiskConnection */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class DiskConnection {
-  public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
-  @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private NestedAggregateDisk aggregate;
+public class DiskConnection extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
 
-  public DiskConnection() { 
-  }
+    @SerializedName(SERIALIZED_NAME_AGGREGATE)
+    private NestedAggregateDisk aggregate;
 
-  public DiskConnection aggregate(NestedAggregateDisk aggregate) {
-    
-    this.aggregate = aggregate;
-    return this;
-  }
+    public DiskConnection() {}
 
-   /**
-   * Get aggregate
-   * @return aggregate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public DiskConnection aggregate(NestedAggregateDisk aggregate) {
 
-  public NestedAggregateDisk getAggregate() {
-    return aggregate;
-  }
-
-
-  public void setAggregate(NestedAggregateDisk aggregate) {
-    this.aggregate = aggregate;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.aggregate = aggregate;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get aggregate
+     *
+     * @return aggregate
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedAggregateDisk getAggregate() {
+        return aggregate;
     }
-    DiskConnection diskConnection = (DiskConnection) o;
-    return Objects.equals(this.aggregate, diskConnection.aggregate);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(aggregate);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class DiskConnection {\n");
-    sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setAggregate(NestedAggregateDisk aggregate) {
+        this.aggregate = aggregate;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public DiskConnection aggregate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public DiskConnection aggregate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public void setAggregate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        }
+    }
+
+    public boolean getAggregate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_AGGREGATE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        DiskConnection diskConnection = (DiskConnection) o;
+        return Objects.equals(this.aggregate, diskConnection.aggregate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(aggregate);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class DiskConnection {\n");
+        sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

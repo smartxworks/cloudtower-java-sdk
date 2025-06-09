@@ -1,32 +1,23 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
 import com.smartx.tower.model.BrickTopo;
 import com.smartx.tower.model.BrickTopoConnection;
 import com.smartx.tower.model.BrickTopoCreationParams;
 import com.smartx.tower.model.BrickTopoDeletionParams;
 import com.smartx.tower.model.BrickTopoMoveParams;
 import com.smartx.tower.model.BrickTopoUpdationParams;
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetBrickTopoesConnectionRequestBody;
 import com.smartx.tower.model.GetBrickTopoesRequestBody;
 import com.smartx.tower.model.WithTaskBrickTopo;
 import com.smartx.tower.model.WithTaskDeleteBrickTopo;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -72,29 +63,32 @@ public class BrickTopoApi {
 
     /**
      * Build call for createBrickTopo
-     * @param brickTopoCreationParams  (required)
+     *
+     * @param brickTopoCreationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createBrickTopoCall(List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createBrickTopoCall(
+            List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -111,129 +105,149 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createBrickTopoValidateBeforeCall(List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createBrickTopoValidateBeforeCall(
+            List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'brickTopoCreationParams' is set
         if (brickTopoCreationParams == null) {
-            throw new ApiException("Missing the required parameter 'brickTopoCreationParams' when calling createBrickTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'brickTopoCreationParams' when calling"
+                            + " createBrickTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = createBrickTopoCall(brickTopoCreationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoCreationParams  (required)
+     * @param brickTopoCreationParams (required)
      * @return List&lt;WithTaskBrickTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskBrickTopo> createBrickTopo(List<BrickTopoCreationParams> brickTopoCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskBrickTopo>> localVarResp = createBrickTopoWithHttpInfo(brickTopoCreationParams);
+    public List<WithTaskBrickTopo> createBrickTopo(
+            List<BrickTopoCreationParams> brickTopoCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskBrickTopo>> localVarResp =
+                createBrickTopoWithHttpInfo(brickTopoCreationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoCreationParams  (required)
+     * @param brickTopoCreationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskBrickTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskBrickTopo>> createBrickTopoWithHttpInfo(List<BrickTopoCreationParams> brickTopoCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createBrickTopoValidateBeforeCall(brickTopoCreationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
+    public ApiResponse<List<WithTaskBrickTopo>> createBrickTopoWithHttpInfo(
+            List<BrickTopoCreationParams> brickTopoCreationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                createBrickTopoValidateBeforeCall(brickTopoCreationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param brickTopoCreationParams  (required)
+     * (asynchronously)
+     *
+     * @param brickTopoCreationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createBrickTopoAsync(List<BrickTopoCreationParams> brickTopoCreationParams, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call createBrickTopoAsync(
+            List<BrickTopoCreationParams> brickTopoCreationParams,
+            final ApiCallback<List<WithTaskBrickTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createBrickTopoValidateBeforeCall(brickTopoCreationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                createBrickTopoValidateBeforeCall(brickTopoCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteBrickTopo
-     * @param brickTopoDeletionParams  (required)
+     *
+     * @param brickTopoDeletionParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteBrickTopoCall(BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteBrickTopoCall(
+            BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -250,129 +264,149 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteBrickTopoValidateBeforeCall(BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteBrickTopoValidateBeforeCall(
+            BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'brickTopoDeletionParams' is set
         if (brickTopoDeletionParams == null) {
-            throw new ApiException("Missing the required parameter 'brickTopoDeletionParams' when calling deleteBrickTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'brickTopoDeletionParams' when calling"
+                            + " deleteBrickTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = deleteBrickTopoCall(brickTopoDeletionParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoDeletionParams  (required)
+     * @param brickTopoDeletionParams (required)
      * @return List&lt;WithTaskDeleteBrickTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteBrickTopo> deleteBrickTopo(BrickTopoDeletionParams brickTopoDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteBrickTopo>> localVarResp = deleteBrickTopoWithHttpInfo(brickTopoDeletionParams);
+    public List<WithTaskDeleteBrickTopo> deleteBrickTopo(
+            BrickTopoDeletionParams brickTopoDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteBrickTopo>> localVarResp =
+                deleteBrickTopoWithHttpInfo(brickTopoDeletionParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoDeletionParams  (required)
+     * @param brickTopoDeletionParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteBrickTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteBrickTopo>> deleteBrickTopoWithHttpInfo(BrickTopoDeletionParams brickTopoDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteBrickTopo>>(){}.getType();
+    public ApiResponse<List<WithTaskDeleteBrickTopo>> deleteBrickTopoWithHttpInfo(
+            BrickTopoDeletionParams brickTopoDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteBrickTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param brickTopoDeletionParams  (required)
+     * (asynchronously)
+     *
+     * @param brickTopoDeletionParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteBrickTopoAsync(BrickTopoDeletionParams brickTopoDeletionParams, final ApiCallback<List<WithTaskDeleteBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call deleteBrickTopoAsync(
+            BrickTopoDeletionParams brickTopoDeletionParams,
+            final ApiCallback<List<WithTaskDeleteBrickTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteBrickTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteBrickTopoValidateBeforeCall(brickTopoDeletionParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteBrickTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getBrickTopoes
-     * @param getBrickTopoesRequestBody  (required)
+     *
+     * @param getBrickTopoesRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getBrickTopoesCall(GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesCall(
+            GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -389,129 +423,150 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBrickTopoesValidateBeforeCall(GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getBrickTopoesValidateBeforeCall(
+            GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getBrickTopoesRequestBody' is set
         if (getBrickTopoesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getBrickTopoesRequestBody' when calling getBrickTopoes(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getBrickTopoesRequestBody' when calling"
+                            + " getBrickTopoes(Async)");
         }
-        
 
         okhttp3.Call localVarCall = getBrickTopoesCall(getBrickTopoesRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getBrickTopoesRequestBody  (required)
+     * @param getBrickTopoesRequestBody (required)
      * @return List&lt;BrickTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<BrickTopo> getBrickTopoes(GetBrickTopoesRequestBody getBrickTopoesRequestBody) throws ApiException {
-        ApiResponse<List<BrickTopo>> localVarResp = getBrickTopoesWithHttpInfo(getBrickTopoesRequestBody);
+    public List<BrickTopo> getBrickTopoes(GetBrickTopoesRequestBody getBrickTopoesRequestBody)
+            throws ApiException {
+        ApiResponse<List<BrickTopo>> localVarResp =
+                getBrickTopoesWithHttpInfo(getBrickTopoesRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getBrickTopoesRequestBody  (required)
+     * @param getBrickTopoesRequestBody (required)
      * @return ApiResponse&lt;List&lt;BrickTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<BrickTopo>> getBrickTopoesWithHttpInfo(GetBrickTopoesRequestBody getBrickTopoesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<BrickTopo>>(){}.getType();
+    public ApiResponse<List<BrickTopo>> getBrickTopoesWithHttpInfo(
+            GetBrickTopoesRequestBody getBrickTopoesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<BrickTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getBrickTopoesRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getBrickTopoesRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getBrickTopoesAsync(GetBrickTopoesRequestBody getBrickTopoesRequestBody, final ApiCallback<List<BrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesAsync(
+            GetBrickTopoesRequestBody getBrickTopoesRequestBody,
+            final ApiCallback<List<BrickTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<BrickTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getBrickTopoesValidateBeforeCall(getBrickTopoesRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<BrickTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getBrickTopoesConnection
-     * @param getBrickTopoesConnectionRequestBody  (required)
+     *
+     * @param getBrickTopoesConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getBrickTopoesConnectionCall(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesConnectionCall(
+            GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -528,129 +583,155 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBrickTopoesConnectionValidateBeforeCall(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getBrickTopoesConnectionValidateBeforeCall(
+            GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getBrickTopoesConnectionRequestBody' is set
         if (getBrickTopoesConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getBrickTopoesConnectionRequestBody' when calling getBrickTopoesConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getBrickTopoesConnectionRequestBody' when"
+                            + " calling getBrickTopoesConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getBrickTopoesConnectionCall(getBrickTopoesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getBrickTopoesConnectionCall(getBrickTopoesConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getBrickTopoesConnectionRequestBody  (required)
+     * @param getBrickTopoesConnectionRequestBody (required)
      * @return BrickTopoConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public BrickTopoConnection getBrickTopoesConnection(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody) throws ApiException {
-        ApiResponse<BrickTopoConnection> localVarResp = getBrickTopoesConnectionWithHttpInfo(getBrickTopoesConnectionRequestBody);
+    public BrickTopoConnection getBrickTopoesConnection(
+            GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<BrickTopoConnection> localVarResp =
+                getBrickTopoesConnectionWithHttpInfo(getBrickTopoesConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getBrickTopoesConnectionRequestBody  (required)
+     * @param getBrickTopoesConnectionRequestBody (required)
      * @return ApiResponse&lt;BrickTopoConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<BrickTopoConnection> getBrickTopoesConnectionWithHttpInfo(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getBrickTopoesConnectionValidateBeforeCall(getBrickTopoesConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<BrickTopoConnection>(){}.getType();
+    public ApiResponse<BrickTopoConnection> getBrickTopoesConnectionWithHttpInfo(
+            GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getBrickTopoesConnectionValidateBeforeCall(
+                        getBrickTopoesConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<BrickTopoConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getBrickTopoesConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getBrickTopoesConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getBrickTopoesConnectionAsync(GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody, final ApiCallback<BrickTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getBrickTopoesConnectionAsync(
+            GetBrickTopoesConnectionRequestBody getBrickTopoesConnectionRequestBody,
+            final ApiCallback<BrickTopoConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getBrickTopoesConnectionValidateBeforeCall(getBrickTopoesConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<BrickTopoConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getBrickTopoesConnectionValidateBeforeCall(
+                        getBrickTopoesConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<BrickTopoConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for moveBrickTopo
-     * @param brickTopoMoveParams  (required)
+     *
+     * @param brickTopoMoveParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call moveBrickTopoCall(BrickTopoMoveParams brickTopoMoveParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call moveBrickTopoCall(
+            BrickTopoMoveParams brickTopoMoveParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -667,129 +748,147 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call moveBrickTopoValidateBeforeCall(BrickTopoMoveParams brickTopoMoveParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call moveBrickTopoValidateBeforeCall(
+            BrickTopoMoveParams brickTopoMoveParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'brickTopoMoveParams' is set
         if (brickTopoMoveParams == null) {
-            throw new ApiException("Missing the required parameter 'brickTopoMoveParams' when calling moveBrickTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'brickTopoMoveParams' when calling"
+                            + " moveBrickTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = moveBrickTopoCall(brickTopoMoveParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoMoveParams  (required)
+     * @param brickTopoMoveParams (required)
      * @return List&lt;WithTaskBrickTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskBrickTopo> moveBrickTopo(BrickTopoMoveParams brickTopoMoveParams) throws ApiException {
-        ApiResponse<List<WithTaskBrickTopo>> localVarResp = moveBrickTopoWithHttpInfo(brickTopoMoveParams);
+    public List<WithTaskBrickTopo> moveBrickTopo(BrickTopoMoveParams brickTopoMoveParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskBrickTopo>> localVarResp =
+                moveBrickTopoWithHttpInfo(brickTopoMoveParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoMoveParams  (required)
+     * @param brickTopoMoveParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskBrickTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskBrickTopo>> moveBrickTopoWithHttpInfo(BrickTopoMoveParams brickTopoMoveParams) throws ApiException {
+    public ApiResponse<List<WithTaskBrickTopo>> moveBrickTopoWithHttpInfo(
+            BrickTopoMoveParams brickTopoMoveParams) throws ApiException {
         okhttp3.Call localVarCall = moveBrickTopoValidateBeforeCall(brickTopoMoveParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param brickTopoMoveParams  (required)
+     * (asynchronously)
+     *
+     * @param brickTopoMoveParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call moveBrickTopoAsync(BrickTopoMoveParams brickTopoMoveParams, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call moveBrickTopoAsync(
+            BrickTopoMoveParams brickTopoMoveParams,
+            final ApiCallback<List<WithTaskBrickTopo>> _callback)
+            throws ApiException {
 
         okhttp3.Call localVarCall = moveBrickTopoValidateBeforeCall(brickTopoMoveParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateBrickTopo
-     * @param brickTopoUpdationParams  (required)
+     *
+     * @param brickTopoUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateBrickTopoCall(BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateBrickTopoCall(
+            BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -806,101 +905,118 @@ public class BrickTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateBrickTopoValidateBeforeCall(BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateBrickTopoValidateBeforeCall(
+            BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'brickTopoUpdationParams' is set
         if (brickTopoUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'brickTopoUpdationParams' when calling updateBrickTopo(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'brickTopoUpdationParams' when calling"
+                            + " updateBrickTopo(Async)");
         }
-        
 
         okhttp3.Call localVarCall = updateBrickTopoCall(brickTopoUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoUpdationParams  (required)
+     * @param brickTopoUpdationParams (required)
      * @return List&lt;WithTaskBrickTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskBrickTopo> updateBrickTopo(BrickTopoUpdationParams brickTopoUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskBrickTopo>> localVarResp = updateBrickTopoWithHttpInfo(brickTopoUpdationParams);
+    public List<WithTaskBrickTopo> updateBrickTopo(BrickTopoUpdationParams brickTopoUpdationParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskBrickTopo>> localVarResp =
+                updateBrickTopoWithHttpInfo(brickTopoUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param brickTopoUpdationParams  (required)
+     * @param brickTopoUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskBrickTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskBrickTopo>> updateBrickTopoWithHttpInfo(BrickTopoUpdationParams brickTopoUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
+    public ApiResponse<List<WithTaskBrickTopo>> updateBrickTopoWithHttpInfo(
+            BrickTopoUpdationParams brickTopoUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param brickTopoUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param brickTopoUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateBrickTopoAsync(BrickTopoUpdationParams brickTopoUpdationParams, final ApiCallback<List<WithTaskBrickTopo>> _callback) throws ApiException {
+    public okhttp3.Call updateBrickTopoAsync(
+            BrickTopoUpdationParams brickTopoUpdationParams,
+            final ApiCallback<List<WithTaskBrickTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateBrickTopoValidateBeforeCall(brickTopoUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskBrickTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

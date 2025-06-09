@@ -1,88 +1,100 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VdsCreationWithMigrateVlanParamsAllOfVlan;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VdsCreationWithMigrateVlanParamsAllOf
- */
+/** VdsCreationWithMigrateVlanParamsAllOf */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VdsCreationWithMigrateVlanParamsAllOf {
-  public static final String SERIALIZED_NAME_VLAN = "vlan";
-  @SerializedName(SERIALIZED_NAME_VLAN)
-  private VdsCreationWithMigrateVlanParamsAllOfVlan vlan;
+public class VdsCreationWithMigrateVlanParamsAllOf
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_VLAN = "vlan";
 
-  public VdsCreationWithMigrateVlanParamsAllOf() { 
-  }
+    @SerializedName(SERIALIZED_NAME_VLAN)
+    private VdsCreationWithMigrateVlanParamsAllOfVlan vlan;
 
-  public VdsCreationWithMigrateVlanParamsAllOf vlan(VdsCreationWithMigrateVlanParamsAllOfVlan vlan) {
-    
-    this.vlan = vlan;
-    return this;
-  }
+    public VdsCreationWithMigrateVlanParamsAllOf() {}
 
-   /**
-   * Get vlan
-   * @return vlan
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VdsCreationWithMigrateVlanParamsAllOf vlan(
+            VdsCreationWithMigrateVlanParamsAllOfVlan vlan) {
 
-  public VdsCreationWithMigrateVlanParamsAllOfVlan getVlan() {
-    return vlan;
-  }
-
-
-  public void setVlan(VdsCreationWithMigrateVlanParamsAllOfVlan vlan) {
-    this.vlan = vlan;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.vlan = vlan;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get vlan
+     *
+     * @return vlan
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public VdsCreationWithMigrateVlanParamsAllOfVlan getVlan() {
+        return vlan;
     }
-    VdsCreationWithMigrateVlanParamsAllOf vdsCreationWithMigrateVlanParamsAllOf = (VdsCreationWithMigrateVlanParamsAllOf) o;
-    return Objects.equals(this.vlan, vdsCreationWithMigrateVlanParamsAllOf.vlan);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(vlan);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VdsCreationWithMigrateVlanParamsAllOf {\n");
-    sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setVlan(VdsCreationWithMigrateVlanParamsAllOfVlan vlan) {
+        this.vlan = vlan;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VdsCreationWithMigrateVlanParamsAllOf vlan_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VLAN);
+        return this;
+    }
+
+    public VdsCreationWithMigrateVlanParamsAllOf vlan_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VLAN);
+        return this;
+    }
+
+    public void setVlan_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VLAN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VLAN);
+        }
+    }
+
+    public boolean getVlan_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VLAN);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VdsCreationWithMigrateVlanParamsAllOf vdsCreationWithMigrateVlanParamsAllOf =
+                (VdsCreationWithMigrateVlanParamsAllOf) o;
+        return Objects.equals(this.vlan, vdsCreationWithMigrateVlanParamsAllOf.vlan);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vlan);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VdsCreationWithMigrateVlanParamsAllOf {\n");
+        sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

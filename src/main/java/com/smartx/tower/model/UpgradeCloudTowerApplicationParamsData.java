@@ -1,87 +1,100 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * UpgradeCloudTowerApplicationParamsData
- */
+/** UpgradeCloudTowerApplicationParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class UpgradeCloudTowerApplicationParamsData {
-  public static final String SERIALIZED_NAME_TARGET_PACKAGE = "targetPackage";
-  @SerializedName(SERIALIZED_NAME_TARGET_PACKAGE)
-  private String targetPackage;
+public class UpgradeCloudTowerApplicationParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_TARGET_PACKAGE = "targetPackage";
 
-  public UpgradeCloudTowerApplicationParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_TARGET_PACKAGE)
+    private String targetPackage;
 
-  public UpgradeCloudTowerApplicationParamsData targetPackage(String targetPackage) {
-    
-    this.targetPackage = targetPackage;
-    return this;
-  }
+    public UpgradeCloudTowerApplicationParamsData() {}
 
-   /**
-   * Get targetPackage
-   * @return targetPackage
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public UpgradeCloudTowerApplicationParamsData targetPackage(String targetPackage) {
 
-  public String getTargetPackage() {
-    return targetPackage;
-  }
-
-
-  public void setTargetPackage(String targetPackage) {
-    this.targetPackage = targetPackage;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.targetPackage = targetPackage;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get targetPackage
+     *
+     * @return targetPackage
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getTargetPackage() {
+        return targetPackage;
     }
-    UpgradeCloudTowerApplicationParamsData upgradeCloudTowerApplicationParamsData = (UpgradeCloudTowerApplicationParamsData) o;
-    return Objects.equals(this.targetPackage, upgradeCloudTowerApplicationParamsData.targetPackage);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(targetPackage);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class UpgradeCloudTowerApplicationParamsData {\n");
-    sb.append("    targetPackage: ").append(toIndentedString(targetPackage)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setTargetPackage(String targetPackage) {
+        this.targetPackage = targetPackage;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public UpgradeCloudTowerApplicationParamsData targetPackage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TARGET_PACKAGE);
+        return this;
+    }
+
+    public UpgradeCloudTowerApplicationParamsData targetPackage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TARGET_PACKAGE);
+        return this;
+    }
+
+    public void setTargetPackage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TARGET_PACKAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TARGET_PACKAGE);
+        }
+    }
+
+    public boolean getTargetPackage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TARGET_PACKAGE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        UpgradeCloudTowerApplicationParamsData upgradeCloudTowerApplicationParamsData =
+                (UpgradeCloudTowerApplicationParamsData) o;
+        return Objects.equals(
+                this.targetPackage, upgradeCloudTowerApplicationParamsData.targetPackage);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(targetPackage);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class UpgradeCloudTowerApplicationParamsData {\n");
+        sb.append("    targetPackage: ").append(toIndentedString(targetPackage)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

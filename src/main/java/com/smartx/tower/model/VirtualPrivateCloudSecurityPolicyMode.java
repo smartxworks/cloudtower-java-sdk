@@ -1,61 +1,61 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets VirtualPrivateCloudSecurityPolicyMode
- */
+/** Gets or Sets VirtualPrivateCloudSecurityPolicyMode */
 @JsonAdapter(VirtualPrivateCloudSecurityPolicyMode.Adapter.class)
 public enum VirtualPrivateCloudSecurityPolicyMode {
-  
-  MONITOR("MONITOR"),
-  
-  WORK("WORK"),
-  
-  VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM("VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM");
-  private String value;
+    MONITOR("MONITOR"),
 
-  VirtualPrivateCloudSecurityPolicyMode(String value) {
-    this.value = value;
-  }
+    WORK("WORK"),
 
-  public String getValue() {
-    return value;
-  }
+    VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM(
+            "VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM");
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static VirtualPrivateCloudSecurityPolicyMode fromValue(String value) {
-    for (VirtualPrivateCloudSecurityPolicyMode b : VirtualPrivateCloudSecurityPolicyMode.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    VirtualPrivateCloudSecurityPolicyMode(String value) {
+        this.value = value;
     }
-    return VirtualPrivateCloudSecurityPolicyMode.VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<VirtualPrivateCloudSecurityPolicyMode> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final VirtualPrivateCloudSecurityPolicyMode enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public VirtualPrivateCloudSecurityPolicyMode read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return VirtualPrivateCloudSecurityPolicyMode.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static VirtualPrivateCloudSecurityPolicyMode fromValue(String value) {
+        for (VirtualPrivateCloudSecurityPolicyMode b :
+                VirtualPrivateCloudSecurityPolicyMode.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return VirtualPrivateCloudSecurityPolicyMode
+                .VIRTUALPRIVATECLOUDSECURITYPOLICYMODE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<VirtualPrivateCloudSecurityPolicyMode> {
+        @Override
+        public void write(
+                final JsonWriter jsonWriter,
+                final VirtualPrivateCloudSecurityPolicyMode enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public VirtualPrivateCloudSecurityPolicyMode read(final JsonReader jsonReader)
+                throws IOException {
+            String value = jsonReader.nextString();
+            return VirtualPrivateCloudSecurityPolicyMode.fromValue(value);
+        }
+    }
 }
-

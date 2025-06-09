@@ -1,116 +1,147 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * OvfCpu
- */
+/** OvfCpu */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class OvfCpu {
-  public static final String SERIALIZED_NAME_SOCKETS = "sockets";
-  @SerializedName(SERIALIZED_NAME_SOCKETS)
-  private Integer sockets;
+public class OvfCpu extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_SOCKETS = "sockets";
 
-  public static final String SERIALIZED_NAME_CORES = "cores";
-  @SerializedName(SERIALIZED_NAME_CORES)
-  private Integer cores;
+    @SerializedName(SERIALIZED_NAME_SOCKETS)
+    private Integer sockets;
 
-  public OvfCpu() { 
-  }
+    public static final String SERIALIZED_NAME_CORES = "cores";
 
-  public OvfCpu sockets(Integer sockets) {
-    
-    this.sockets = sockets;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_CORES)
+    private Integer cores;
 
-   /**
-   * Get sockets
-   * @return sockets
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public OvfCpu() {}
 
-  public Integer getSockets() {
-    return sockets;
-  }
+    public OvfCpu sockets(Integer sockets) {
 
-
-  public void setSockets(Integer sockets) {
-    this.sockets = sockets;
-  }
-
-
-  public OvfCpu cores(Integer cores) {
-    
-    this.cores = cores;
-    return this;
-  }
-
-   /**
-   * Get cores
-   * @return cores
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Integer getCores() {
-    return cores;
-  }
-
-
-  public void setCores(Integer cores) {
-    this.cores = cores;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.sockets = sockets;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get sockets
+     *
+     * @return sockets
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getSockets() {
+        return sockets;
     }
-    OvfCpu ovfCpu = (OvfCpu) o;
-    return Objects.equals(this.sockets, ovfCpu.sockets) &&
-        Objects.equals(this.cores, ovfCpu.cores);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(sockets, cores);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class OvfCpu {\n");
-    sb.append("    sockets: ").append(toIndentedString(sockets)).append("\n");
-    sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setSockets(Integer sockets) {
+        this.sockets = sockets;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public OvfCpu sockets_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SOCKETS);
+        return this;
+    }
+
+    public OvfCpu sockets_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SOCKETS);
+        return this;
+    }
+
+    public void setSockets_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SOCKETS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SOCKETS);
+        }
+    }
+
+    public boolean getSockets_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SOCKETS);
+    }
+
+    public OvfCpu cores(Integer cores) {
+
+        this.cores = cores;
+        return this;
+    }
+
+    /**
+     * Get cores
+     *
+     * @return cores
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getCores() {
+        return cores;
+    }
+
+    public void setCores(Integer cores) {
+        this.cores = cores;
+    }
+
+    public OvfCpu cores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CORES);
+        return this;
+    }
+
+    public OvfCpu cores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CORES);
+        return this;
+    }
+
+    public void setCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CORES);
+        }
+    }
+
+    public boolean getCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CORES);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        OvfCpu ovfCpu = (OvfCpu) o;
+        return Objects.equals(this.sockets, ovfCpu.sockets)
+                && Objects.equals(this.cores, ovfCpu.cores);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(sockets, cores);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class OvfCpu {\n");
+        sb.append("    sockets: ").append(toIndentedString(sockets)).append("\n");
+        sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

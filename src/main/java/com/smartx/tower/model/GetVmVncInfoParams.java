@@ -1,88 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VmWhereUniqueInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * GetVmVncInfoParams
- */
+/** GetVmVncInfoParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class GetVmVncInfoParams {
-  public static final String SERIALIZED_NAME_VM = "vm";
-  @SerializedName(SERIALIZED_NAME_VM)
-  private VmWhereUniqueInput vm;
+public class GetVmVncInfoParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_VM = "vm";
 
-  public GetVmVncInfoParams() { 
-  }
+    @SerializedName(SERIALIZED_NAME_VM)
+    private VmWhereUniqueInput vm;
 
-  public GetVmVncInfoParams vm(VmWhereUniqueInput vm) {
-    
-    this.vm = vm;
-    return this;
-  }
+    public GetVmVncInfoParams() {}
 
-   /**
-   * Get vm
-   * @return vm
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public GetVmVncInfoParams vm(VmWhereUniqueInput vm) {
 
-  public VmWhereUniqueInput getVm() {
-    return vm;
-  }
-
-
-  public void setVm(VmWhereUniqueInput vm) {
-    this.vm = vm;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.vm = vm;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get vm
+     *
+     * @return vm
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public VmWhereUniqueInput getVm() {
+        return vm;
     }
-    GetVmVncInfoParams getVmVncInfoParams = (GetVmVncInfoParams) o;
-    return Objects.equals(this.vm, getVmVncInfoParams.vm);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(vm);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GetVmVncInfoParams {\n");
-    sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setVm(VmWhereUniqueInput vm) {
+        this.vm = vm;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public GetVmVncInfoParams vm_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM);
+        return this;
+    }
+
+    public GetVmVncInfoParams vm_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM);
+        return this;
+    }
+
+    public void setVm_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM);
+        }
+    }
+
+    public boolean getVm_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GetVmVncInfoParams getVmVncInfoParams = (GetVmVncInfoParams) o;
+        return Objects.equals(this.vm, getVmVncInfoParams.vm);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vm);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GetVmVncInfoParams {\n");
+        sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -1,87 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NestedAggregateZone
- */
+/** NestedAggregateZone */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NestedAggregateZone {
-  public static final String SERIALIZED_NAME_COUNT = "count";
-  @SerializedName(SERIALIZED_NAME_COUNT)
-  private Integer count;
+public class NestedAggregateZone
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_COUNT = "count";
 
-  public NestedAggregateZone() { 
-  }
+    @SerializedName(SERIALIZED_NAME_COUNT)
+    private Integer count;
 
-  public NestedAggregateZone count(Integer count) {
-    
-    this.count = count;
-    return this;
-  }
+    public NestedAggregateZone() {}
 
-   /**
-   * Get count
-   * @return count
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NestedAggregateZone count(Integer count) {
 
-  public Integer getCount() {
-    return count;
-  }
-
-
-  public void setCount(Integer count) {
-    this.count = count;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.count = count;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get count
+     *
+     * @return count
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getCount() {
+        return count;
     }
-    NestedAggregateZone nestedAggregateZone = (NestedAggregateZone) o;
-    return Objects.equals(this.count, nestedAggregateZone.count);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(count);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NestedAggregateZone {\n");
-    sb.append("    count: ").append(toIndentedString(count)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setCount(Integer count) {
+        this.count = count;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NestedAggregateZone count_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COUNT);
+        return this;
+    }
+
+    public NestedAggregateZone count_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COUNT);
+        return this;
+    }
+
+    public void setCount_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COUNT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COUNT);
+        }
+    }
+
+    public boolean getCount_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COUNT);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NestedAggregateZone nestedAggregateZone = (NestedAggregateZone) o;
+        return Objects.equals(this.count, nestedAggregateZone.count);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(count);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NestedAggregateZone {\n");
+        sb.append("    count: ").append(toIndentedString(count)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

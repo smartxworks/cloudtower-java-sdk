@@ -1,117 +1,153 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.ProtectSnapshotStatus;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NestedSnapshotGroupVmDiskInfo
- */
+/** NestedSnapshotGroupVmDiskInfo */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NestedSnapshotGroupVmDiskInfo {
-  public static final String SERIALIZED_NAME_DISK_ID = "disk_id";
-  @SerializedName(SERIALIZED_NAME_DISK_ID)
-  private String diskId;
+public class NestedSnapshotGroupVmDiskInfo
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_DISK_ID = "disk_id";
 
-  public static final String SERIALIZED_NAME_DISK_SNAPSHOT_STATUS = "disk_snapshot_status";
-  @SerializedName(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS)
-  private ProtectSnapshotStatus diskSnapshotStatus;
+    @SerializedName(SERIALIZED_NAME_DISK_ID)
+    private String diskId;
 
-  public NestedSnapshotGroupVmDiskInfo() { 
-  }
+    public static final String SERIALIZED_NAME_DISK_SNAPSHOT_STATUS = "disk_snapshot_status";
 
-  public NestedSnapshotGroupVmDiskInfo diskId(String diskId) {
-    
-    this.diskId = diskId;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS)
+    private ProtectSnapshotStatus diskSnapshotStatus;
 
-   /**
-   * Get diskId
-   * @return diskId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NestedSnapshotGroupVmDiskInfo() {}
 
-  public String getDiskId() {
-    return diskId;
-  }
+    public NestedSnapshotGroupVmDiskInfo diskId(String diskId) {
 
-
-  public void setDiskId(String diskId) {
-    this.diskId = diskId;
-  }
-
-
-  public NestedSnapshotGroupVmDiskInfo diskSnapshotStatus(ProtectSnapshotStatus diskSnapshotStatus) {
-    
-    this.diskSnapshotStatus = diskSnapshotStatus;
-    return this;
-  }
-
-   /**
-   * Get diskSnapshotStatus
-   * @return diskSnapshotStatus
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public ProtectSnapshotStatus getDiskSnapshotStatus() {
-    return diskSnapshotStatus;
-  }
-
-
-  public void setDiskSnapshotStatus(ProtectSnapshotStatus diskSnapshotStatus) {
-    this.diskSnapshotStatus = diskSnapshotStatus;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.diskId = diskId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get diskId
+     *
+     * @return diskId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getDiskId() {
+        return diskId;
     }
-    NestedSnapshotGroupVmDiskInfo nestedSnapshotGroupVmDiskInfo = (NestedSnapshotGroupVmDiskInfo) o;
-    return Objects.equals(this.diskId, nestedSnapshotGroupVmDiskInfo.diskId) &&
-        Objects.equals(this.diskSnapshotStatus, nestedSnapshotGroupVmDiskInfo.diskSnapshotStatus);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(diskId, diskSnapshotStatus);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NestedSnapshotGroupVmDiskInfo {\n");
-    sb.append("    diskId: ").append(toIndentedString(diskId)).append("\n");
-    sb.append("    diskSnapshotStatus: ").append(toIndentedString(diskSnapshotStatus)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setDiskId(String diskId) {
+        this.diskId = diskId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NestedSnapshotGroupVmDiskInfo diskId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_ID);
+        return this;
+    }
+
+    public NestedSnapshotGroupVmDiskInfo diskId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_ID);
+        return this;
+    }
+
+    public void setDiskId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_ID);
+        }
+    }
+
+    public boolean getDiskId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_ID);
+    }
+
+    public NestedSnapshotGroupVmDiskInfo diskSnapshotStatus(
+            ProtectSnapshotStatus diskSnapshotStatus) {
+
+        this.diskSnapshotStatus = diskSnapshotStatus;
+        return this;
+    }
+
+    /**
+     * Get diskSnapshotStatus
+     *
+     * @return diskSnapshotStatus
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public ProtectSnapshotStatus getDiskSnapshotStatus() {
+        return diskSnapshotStatus;
+    }
+
+    public void setDiskSnapshotStatus(ProtectSnapshotStatus diskSnapshotStatus) {
+        this.diskSnapshotStatus = diskSnapshotStatus;
+    }
+
+    public NestedSnapshotGroupVmDiskInfo diskSnapshotStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS);
+        return this;
+    }
+
+    public NestedSnapshotGroupVmDiskInfo diskSnapshotStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS);
+        return this;
+    }
+
+    public void setDiskSnapshotStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS);
+        }
+    }
+
+    public boolean getDiskSnapshotStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_SNAPSHOT_STATUS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NestedSnapshotGroupVmDiskInfo nestedSnapshotGroupVmDiskInfo =
+                (NestedSnapshotGroupVmDiskInfo) o;
+        return Objects.equals(this.diskId, nestedSnapshotGroupVmDiskInfo.diskId)
+                && Objects.equals(
+                        this.diskSnapshotStatus, nestedSnapshotGroupVmDiskInfo.diskSnapshotStatus);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(diskId, diskSnapshotStatus);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NestedSnapshotGroupVmDiskInfo {\n");
+        sb.append("    diskId: ").append(toIndentedString(diskId)).append("\n");
+        sb.append("    diskSnapshotStatus: ")
+                .append(toIndentedString(diskSnapshotStatus))
+                .append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

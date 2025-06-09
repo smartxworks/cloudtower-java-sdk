@@ -1,116 +1,147 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NestedCpu
- */
+/** NestedCpu */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NestedCpu {
-  public static final String SERIALIZED_NAME_CORES = "cores";
-  @SerializedName(SERIALIZED_NAME_CORES)
-  private Integer cores;
+public class NestedCpu extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_CORES = "cores";
 
-  public static final String SERIALIZED_NAME_SOCKETS = "sockets";
-  @SerializedName(SERIALIZED_NAME_SOCKETS)
-  private Integer sockets;
+    @SerializedName(SERIALIZED_NAME_CORES)
+    private Integer cores;
 
-  public NestedCpu() { 
-  }
+    public static final String SERIALIZED_NAME_SOCKETS = "sockets";
 
-  public NestedCpu cores(Integer cores) {
-    
-    this.cores = cores;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_SOCKETS)
+    private Integer sockets;
 
-   /**
-   * Get cores
-   * @return cores
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NestedCpu() {}
 
-  public Integer getCores() {
-    return cores;
-  }
+    public NestedCpu cores(Integer cores) {
 
-
-  public void setCores(Integer cores) {
-    this.cores = cores;
-  }
-
-
-  public NestedCpu sockets(Integer sockets) {
-    
-    this.sockets = sockets;
-    return this;
-  }
-
-   /**
-   * Get sockets
-   * @return sockets
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Integer getSockets() {
-    return sockets;
-  }
-
-
-  public void setSockets(Integer sockets) {
-    this.sockets = sockets;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.cores = cores;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get cores
+     *
+     * @return cores
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getCores() {
+        return cores;
     }
-    NestedCpu nestedCpu = (NestedCpu) o;
-    return Objects.equals(this.cores, nestedCpu.cores) &&
-        Objects.equals(this.sockets, nestedCpu.sockets);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(cores, sockets);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NestedCpu {\n");
-    sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
-    sb.append("    sockets: ").append(toIndentedString(sockets)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setCores(Integer cores) {
+        this.cores = cores;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NestedCpu cores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CORES);
+        return this;
+    }
+
+    public NestedCpu cores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CORES);
+        return this;
+    }
+
+    public void setCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CORES);
+        }
+    }
+
+    public boolean getCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CORES);
+    }
+
+    public NestedCpu sockets(Integer sockets) {
+
+        this.sockets = sockets;
+        return this;
+    }
+
+    /**
+     * Get sockets
+     *
+     * @return sockets
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getSockets() {
+        return sockets;
+    }
+
+    public void setSockets(Integer sockets) {
+        this.sockets = sockets;
+    }
+
+    public NestedCpu sockets_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SOCKETS);
+        return this;
+    }
+
+    public NestedCpu sockets_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SOCKETS);
+        return this;
+    }
+
+    public void setSockets_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SOCKETS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SOCKETS);
+        }
+    }
+
+    public boolean getSockets_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SOCKETS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NestedCpu nestedCpu = (NestedCpu) o;
+        return Objects.equals(this.cores, nestedCpu.cores)
+                && Objects.equals(this.sockets, nestedCpu.sockets);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cores, sockets);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NestedCpu {\n");
+        sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
+        sb.append("    sockets: ").append(toIndentedString(sockets)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

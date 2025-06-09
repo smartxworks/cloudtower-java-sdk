@@ -1,117 +1,149 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.TaskWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * StopVmInCutoverMigrationParams
- */
+/** StopVmInCutoverMigrationParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class StopVmInCutoverMigrationParams {
-  public static final String SERIALIZED_NAME_FORCE = "force";
-  @SerializedName(SERIALIZED_NAME_FORCE)
-  private Boolean force;
+public class StopVmInCutoverMigrationParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_FORCE = "force";
 
-  public static final String SERIALIZED_NAME_TASKS = "tasks";
-  @SerializedName(SERIALIZED_NAME_TASKS)
-  private TaskWhereInput tasks;
+    @SerializedName(SERIALIZED_NAME_FORCE)
+    private Boolean force;
 
-  public StopVmInCutoverMigrationParams() { 
-  }
+    public static final String SERIALIZED_NAME_TASKS = "tasks";
 
-  public StopVmInCutoverMigrationParams force(Boolean force) {
-    
-    this.force = force;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_TASKS)
+    private TaskWhereInput tasks;
 
-   /**
-   * Get force
-   * @return force
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public StopVmInCutoverMigrationParams() {}
 
-  public Boolean getForce() {
-    return force;
-  }
+    public StopVmInCutoverMigrationParams force(Boolean force) {
 
-
-  public void setForce(Boolean force) {
-    this.force = force;
-  }
-
-
-  public StopVmInCutoverMigrationParams tasks(TaskWhereInput tasks) {
-    
-    this.tasks = tasks;
-    return this;
-  }
-
-   /**
-   * Get tasks
-   * @return tasks
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public TaskWhereInput getTasks() {
-    return tasks;
-  }
-
-
-  public void setTasks(TaskWhereInput tasks) {
-    this.tasks = tasks;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.force = force;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get force
+     *
+     * @return force
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getForce() {
+        return force;
     }
-    StopVmInCutoverMigrationParams stopVmInCutoverMigrationParams = (StopVmInCutoverMigrationParams) o;
-    return Objects.equals(this.force, stopVmInCutoverMigrationParams.force) &&
-        Objects.equals(this.tasks, stopVmInCutoverMigrationParams.tasks);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(force, tasks);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class StopVmInCutoverMigrationParams {\n");
-    sb.append("    force: ").append(toIndentedString(force)).append("\n");
-    sb.append("    tasks: ").append(toIndentedString(tasks)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setForce(Boolean force) {
+        this.force = force;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public StopVmInCutoverMigrationParams force_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FORCE);
+        return this;
+    }
+
+    public StopVmInCutoverMigrationParams force_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FORCE);
+        return this;
+    }
+
+    public void setForce_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FORCE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FORCE);
+        }
+    }
+
+    public boolean getForce_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FORCE);
+    }
+
+    public StopVmInCutoverMigrationParams tasks(TaskWhereInput tasks) {
+
+        this.tasks = tasks;
+        return this;
+    }
+
+    /**
+     * Get tasks
+     *
+     * @return tasks
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public TaskWhereInput getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(TaskWhereInput tasks) {
+        this.tasks = tasks;
+    }
+
+    public StopVmInCutoverMigrationParams tasks_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TASKS);
+        return this;
+    }
+
+    public StopVmInCutoverMigrationParams tasks_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TASKS);
+        return this;
+    }
+
+    public void setTasks_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TASKS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TASKS);
+        }
+    }
+
+    public boolean getTasks_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TASKS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        StopVmInCutoverMigrationParams stopVmInCutoverMigrationParams =
+                (StopVmInCutoverMigrationParams) o;
+        return Objects.equals(this.force, stopVmInCutoverMigrationParams.force)
+                && Objects.equals(this.tasks, stopVmInCutoverMigrationParams.tasks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(force, tasks);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class StopVmInCutoverMigrationParams {\n");
+        sb.append("    force: ").append(toIndentedString(force)).append("\n");
+        sb.append("    tasks: ").append(toIndentedString(tasks)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

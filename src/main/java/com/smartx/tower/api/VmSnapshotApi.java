@@ -1,21 +1,13 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetVmSnapshotsConnectionRequestBody;
 import com.smartx.tower.model.GetVmSnapshotsRequestBody;
 import com.smartx.tower.model.VmSnapshot;
@@ -24,7 +16,6 @@ import com.smartx.tower.model.VmSnapshotCreationParams;
 import com.smartx.tower.model.VmSnapshotDeletionParams;
 import com.smartx.tower.model.WithTaskDeleteVmSnapshot;
 import com.smartx.tower.model.WithTaskVmSnapshot;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -70,29 +61,32 @@ public class VmSnapshotApi {
 
     /**
      * Build call for createVmSnapshot
-     * @param vmSnapshotCreationParams  (required)
+     *
+     * @param vmSnapshotCreationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createVmSnapshotCall(VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVmSnapshotCall(
+            VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -109,129 +103,149 @@ public class VmSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVmSnapshotValidateBeforeCall(VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createVmSnapshotValidateBeforeCall(
+            VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'vmSnapshotCreationParams' is set
         if (vmSnapshotCreationParams == null) {
-            throw new ApiException("Missing the required parameter 'vmSnapshotCreationParams' when calling createVmSnapshot(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'vmSnapshotCreationParams' when calling"
+                            + " createVmSnapshot(Async)");
         }
-        
 
         okhttp3.Call localVarCall = createVmSnapshotCall(vmSnapshotCreationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param vmSnapshotCreationParams  (required)
+     * @param vmSnapshotCreationParams (required)
      * @return List&lt;WithTaskVmSnapshot&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskVmSnapshot> createVmSnapshot(VmSnapshotCreationParams vmSnapshotCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVmSnapshot>> localVarResp = createVmSnapshotWithHttpInfo(vmSnapshotCreationParams);
+    public List<WithTaskVmSnapshot> createVmSnapshot(
+            VmSnapshotCreationParams vmSnapshotCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskVmSnapshot>> localVarResp =
+                createVmSnapshotWithHttpInfo(vmSnapshotCreationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param vmSnapshotCreationParams  (required)
+     * @param vmSnapshotCreationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskVmSnapshot&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskVmSnapshot>> createVmSnapshotWithHttpInfo(VmSnapshotCreationParams vmSnapshotCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVmSnapshotValidateBeforeCall(vmSnapshotCreationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskVmSnapshot>>(){}.getType();
+    public ApiResponse<List<WithTaskVmSnapshot>> createVmSnapshotWithHttpInfo(
+            VmSnapshotCreationParams vmSnapshotCreationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                createVmSnapshotValidateBeforeCall(vmSnapshotCreationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVmSnapshot>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param vmSnapshotCreationParams  (required)
+     * (asynchronously)
+     *
+     * @param vmSnapshotCreationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createVmSnapshotAsync(VmSnapshotCreationParams vmSnapshotCreationParams, final ApiCallback<List<WithTaskVmSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call createVmSnapshotAsync(
+            VmSnapshotCreationParams vmSnapshotCreationParams,
+            final ApiCallback<List<WithTaskVmSnapshot>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createVmSnapshotValidateBeforeCall(vmSnapshotCreationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskVmSnapshot>>(){}.getType();
+        okhttp3.Call localVarCall =
+                createVmSnapshotValidateBeforeCall(vmSnapshotCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVmSnapshot>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVmSnapshot
-     * @param vmSnapshotDeletionParams  (required)
+     *
+     * @param vmSnapshotDeletionParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteVmSnapshotCall(VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVmSnapshotCall(
+            VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -248,129 +262,149 @@ public class VmSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVmSnapshotValidateBeforeCall(VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteVmSnapshotValidateBeforeCall(
+            VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'vmSnapshotDeletionParams' is set
         if (vmSnapshotDeletionParams == null) {
-            throw new ApiException("Missing the required parameter 'vmSnapshotDeletionParams' when calling deleteVmSnapshot(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'vmSnapshotDeletionParams' when calling"
+                            + " deleteVmSnapshot(Async)");
         }
-        
 
         okhttp3.Call localVarCall = deleteVmSnapshotCall(vmSnapshotDeletionParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param vmSnapshotDeletionParams  (required)
+     * @param vmSnapshotDeletionParams (required)
      * @return List&lt;WithTaskDeleteVmSnapshot&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteVmSnapshot> deleteVmSnapshot(VmSnapshotDeletionParams vmSnapshotDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVmSnapshot>> localVarResp = deleteVmSnapshotWithHttpInfo(vmSnapshotDeletionParams);
+    public List<WithTaskDeleteVmSnapshot> deleteVmSnapshot(
+            VmSnapshotDeletionParams vmSnapshotDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteVmSnapshot>> localVarResp =
+                deleteVmSnapshotWithHttpInfo(vmSnapshotDeletionParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param vmSnapshotDeletionParams  (required)
+     * @param vmSnapshotDeletionParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVmSnapshot&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteVmSnapshot>> deleteVmSnapshotWithHttpInfo(VmSnapshotDeletionParams vmSnapshotDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVmSnapshotValidateBeforeCall(vmSnapshotDeletionParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmSnapshot>>(){}.getType();
+    public ApiResponse<List<WithTaskDeleteVmSnapshot>> deleteVmSnapshotWithHttpInfo(
+            VmSnapshotDeletionParams vmSnapshotDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                deleteVmSnapshotValidateBeforeCall(vmSnapshotDeletionParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmSnapshot>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param vmSnapshotDeletionParams  (required)
+     * (asynchronously)
+     *
+     * @param vmSnapshotDeletionParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteVmSnapshotAsync(VmSnapshotDeletionParams vmSnapshotDeletionParams, final ApiCallback<List<WithTaskDeleteVmSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call deleteVmSnapshotAsync(
+            VmSnapshotDeletionParams vmSnapshotDeletionParams,
+            final ApiCallback<List<WithTaskDeleteVmSnapshot>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVmSnapshotValidateBeforeCall(vmSnapshotDeletionParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmSnapshot>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteVmSnapshotValidateBeforeCall(vmSnapshotDeletionParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVmSnapshot>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmSnapshots
-     * @param getVmSnapshotsRequestBody  (required)
+     *
+     * @param getVmSnapshotsRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVmSnapshotsCall(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsCall(
+            GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -387,129 +421,150 @@ public class VmSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmSnapshotsValidateBeforeCall(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getVmSnapshotsValidateBeforeCall(
+            GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getVmSnapshotsRequestBody' is set
         if (getVmSnapshotsRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getVmSnapshotsRequestBody' when calling getVmSnapshots(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getVmSnapshotsRequestBody' when calling"
+                            + " getVmSnapshots(Async)");
         }
-        
 
         okhttp3.Call localVarCall = getVmSnapshotsCall(getVmSnapshotsRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getVmSnapshotsRequestBody  (required)
+     * @param getVmSnapshotsRequestBody (required)
      * @return List&lt;VmSnapshot&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<VmSnapshot> getVmSnapshots(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody) throws ApiException {
-        ApiResponse<List<VmSnapshot>> localVarResp = getVmSnapshotsWithHttpInfo(getVmSnapshotsRequestBody);
+    public List<VmSnapshot> getVmSnapshots(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody)
+            throws ApiException {
+        ApiResponse<List<VmSnapshot>> localVarResp =
+                getVmSnapshotsWithHttpInfo(getVmSnapshotsRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getVmSnapshotsRequestBody  (required)
+     * @param getVmSnapshotsRequestBody (required)
      * @return ApiResponse&lt;List&lt;VmSnapshot&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<VmSnapshot>> getVmSnapshotsWithHttpInfo(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmSnapshotsValidateBeforeCall(getVmSnapshotsRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<VmSnapshot>>(){}.getType();
+    public ApiResponse<List<VmSnapshot>> getVmSnapshotsWithHttpInfo(
+            GetVmSnapshotsRequestBody getVmSnapshotsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getVmSnapshotsValidateBeforeCall(getVmSnapshotsRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<VmSnapshot>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getVmSnapshotsRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getVmSnapshotsRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVmSnapshotsAsync(GetVmSnapshotsRequestBody getVmSnapshotsRequestBody, final ApiCallback<List<VmSnapshot>> _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsAsync(
+            GetVmSnapshotsRequestBody getVmSnapshotsRequestBody,
+            final ApiCallback<List<VmSnapshot>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getVmSnapshotsValidateBeforeCall(getVmSnapshotsRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<VmSnapshot>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getVmSnapshotsValidateBeforeCall(getVmSnapshotsRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<VmSnapshot>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVmSnapshotsConnection
-     * @param getVmSnapshotsConnectionRequestBody  (required)
+     *
+     * @param getVmSnapshotsConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVmSnapshotsConnectionCall(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsConnectionCall(
+            GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -526,101 +581,124 @@ public class VmSnapshotApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVmSnapshotsConnectionValidateBeforeCall(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getVmSnapshotsConnectionValidateBeforeCall(
+            GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getVmSnapshotsConnectionRequestBody' is set
         if (getVmSnapshotsConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getVmSnapshotsConnectionRequestBody' when calling getVmSnapshotsConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getVmSnapshotsConnectionRequestBody' when"
+                            + " calling getVmSnapshotsConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getVmSnapshotsConnectionCall(getVmSnapshotsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getVmSnapshotsConnectionCall(getVmSnapshotsConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getVmSnapshotsConnectionRequestBody  (required)
+     * @param getVmSnapshotsConnectionRequestBody (required)
      * @return VmSnapshotConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public VmSnapshotConnection getVmSnapshotsConnection(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody) throws ApiException {
-        ApiResponse<VmSnapshotConnection> localVarResp = getVmSnapshotsConnectionWithHttpInfo(getVmSnapshotsConnectionRequestBody);
+    public VmSnapshotConnection getVmSnapshotsConnection(
+            GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<VmSnapshotConnection> localVarResp =
+                getVmSnapshotsConnectionWithHttpInfo(getVmSnapshotsConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getVmSnapshotsConnectionRequestBody  (required)
+     * @param getVmSnapshotsConnectionRequestBody (required)
      * @return ApiResponse&lt;VmSnapshotConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<VmSnapshotConnection> getVmSnapshotsConnectionWithHttpInfo(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVmSnapshotsConnectionValidateBeforeCall(getVmSnapshotsConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<VmSnapshotConnection>(){}.getType();
+    public ApiResponse<VmSnapshotConnection> getVmSnapshotsConnectionWithHttpInfo(
+            GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getVmSnapshotsConnectionValidateBeforeCall(
+                        getVmSnapshotsConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<VmSnapshotConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getVmSnapshotsConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getVmSnapshotsConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVmSnapshotsConnectionAsync(GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody, final ApiCallback<VmSnapshotConnection> _callback) throws ApiException {
+    public okhttp3.Call getVmSnapshotsConnectionAsync(
+            GetVmSnapshotsConnectionRequestBody getVmSnapshotsConnectionRequestBody,
+            final ApiCallback<VmSnapshotConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getVmSnapshotsConnectionValidateBeforeCall(getVmSnapshotsConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<VmSnapshotConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getVmSnapshotsConnectionValidateBeforeCall(
+                        getVmSnapshotsConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<VmSnapshotConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -1,146 +1,198 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.HostBatchCreateIpmiInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * HostUpdationParamsData
- */
+/** HostUpdationParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class HostUpdationParamsData {
-  public static final String SERIALIZED_NAME_IPMI = "ipmi";
-  @SerializedName(SERIALIZED_NAME_IPMI)
-  private HostBatchCreateIpmiInput ipmi;
+public class HostUpdationParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_IPMI = "ipmi";
 
-  public static final String SERIALIZED_NAME_SCVM_NAME = "scvm_name";
-  @SerializedName(SERIALIZED_NAME_SCVM_NAME)
-  private String scvmName;
+    @SerializedName(SERIALIZED_NAME_IPMI)
+    private HostBatchCreateIpmiInput ipmi;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    public static final String SERIALIZED_NAME_SCVM_NAME = "scvm_name";
 
-  public HostUpdationParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_SCVM_NAME)
+    private String scvmName;
 
-  public HostUpdationParamsData ipmi(HostBatchCreateIpmiInput ipmi) {
-    
-    this.ipmi = ipmi;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_NAME = "name";
 
-   /**
-   * Get ipmi
-   * @return ipmi
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-  public HostBatchCreateIpmiInput getIpmi() {
-    return ipmi;
-  }
+    public HostUpdationParamsData() {}
 
+    public HostUpdationParamsData ipmi(HostBatchCreateIpmiInput ipmi) {
 
-  public void setIpmi(HostBatchCreateIpmiInput ipmi) {
-    this.ipmi = ipmi;
-  }
-
-
-  public HostUpdationParamsData scvmName(String scvmName) {
-    
-    this.scvmName = scvmName;
-    return this;
-  }
-
-   /**
-   * Get scvmName
-   * @return scvmName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getScvmName() {
-    return scvmName;
-  }
-
-
-  public void setScvmName(String scvmName) {
-    this.scvmName = scvmName;
-  }
-
-
-  public HostUpdationParamsData name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.ipmi = ipmi;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get ipmi
+     *
+     * @return ipmi
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public HostBatchCreateIpmiInput getIpmi() {
+        return ipmi;
     }
-    HostUpdationParamsData hostUpdationParamsData = (HostUpdationParamsData) o;
-    return Objects.equals(this.ipmi, hostUpdationParamsData.ipmi) &&
-        Objects.equals(this.scvmName, hostUpdationParamsData.scvmName) &&
-        Objects.equals(this.name, hostUpdationParamsData.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(ipmi, scvmName, name);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class HostUpdationParamsData {\n");
-    sb.append("    ipmi: ").append(toIndentedString(ipmi)).append("\n");
-    sb.append("    scvmName: ").append(toIndentedString(scvmName)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setIpmi(HostBatchCreateIpmiInput ipmi) {
+        this.ipmi = ipmi;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public HostUpdationParamsData ipmi_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IPMI);
+        return this;
+    }
+
+    public HostUpdationParamsData ipmi_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IPMI);
+        return this;
+    }
+
+    public void setIpmi_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IPMI);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IPMI);
+        }
+    }
+
+    public boolean getIpmi_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IPMI);
+    }
+
+    public HostUpdationParamsData scvmName(String scvmName) {
+
+        this.scvmName = scvmName;
+        return this;
+    }
+
+    /**
+     * Get scvmName
+     *
+     * @return scvmName
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getScvmName() {
+        return scvmName;
+    }
+
+    public void setScvmName(String scvmName) {
+        this.scvmName = scvmName;
+    }
+
+    public HostUpdationParamsData scvmName_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SCVM_NAME);
+        return this;
+    }
+
+    public HostUpdationParamsData scvmName_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SCVM_NAME);
+        return this;
+    }
+
+    public void setScvmName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SCVM_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SCVM_NAME);
+        }
+    }
+
+    public boolean getScvmName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SCVM_NAME);
+    }
+
+    public HostUpdationParamsData name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public HostUpdationParamsData name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public HostUpdationParamsData name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        HostUpdationParamsData hostUpdationParamsData = (HostUpdationParamsData) o;
+        return Objects.equals(this.ipmi, hostUpdationParamsData.ipmi)
+                && Objects.equals(this.scvmName, hostUpdationParamsData.scvmName)
+                && Objects.equals(this.name, hostUpdationParamsData.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ipmi, scvmName, name);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class HostUpdationParamsData {\n");
+        sb.append("    ipmi: ").append(toIndentedString(ipmi)).append("\n");
+        sb.append("    scvmName: ").append(toIndentedString(scvmName)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

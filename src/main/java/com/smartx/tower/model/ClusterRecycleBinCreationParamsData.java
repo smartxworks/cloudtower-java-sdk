@@ -1,116 +1,149 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * ClusterRecycleBinCreationParamsData
- */
+/** ClusterRecycleBinCreationParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class ClusterRecycleBinCreationParamsData {
-  public static final String SERIALIZED_NAME_RETAIN = "retain";
-  @SerializedName(SERIALIZED_NAME_RETAIN)
-  private Integer retain;
+public class ClusterRecycleBinCreationParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_RETAIN = "retain";
 
-  public static final String SERIALIZED_NAME_ENABLED = "enabled";
-  @SerializedName(SERIALIZED_NAME_ENABLED)
-  private Boolean enabled;
+    @SerializedName(SERIALIZED_NAME_RETAIN)
+    private Integer retain;
 
-  public ClusterRecycleBinCreationParamsData() { 
-  }
+    public static final String SERIALIZED_NAME_ENABLED = "enabled";
 
-  public ClusterRecycleBinCreationParamsData retain(Integer retain) {
-    
-    this.retain = retain;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_ENABLED)
+    private Boolean enabled;
 
-   /**
-   * Get retain
-   * @return retain
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public ClusterRecycleBinCreationParamsData() {}
 
-  public Integer getRetain() {
-    return retain;
-  }
+    public ClusterRecycleBinCreationParamsData retain(Integer retain) {
 
-
-  public void setRetain(Integer retain) {
-    this.retain = retain;
-  }
-
-
-  public ClusterRecycleBinCreationParamsData enabled(Boolean enabled) {
-    
-    this.enabled = enabled;
-    return this;
-  }
-
-   /**
-   * Get enabled
-   * @return enabled
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Boolean getEnabled() {
-    return enabled;
-  }
-
-
-  public void setEnabled(Boolean enabled) {
-    this.enabled = enabled;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.retain = retain;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get retain
+     *
+     * @return retain
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Integer getRetain() {
+        return retain;
     }
-    ClusterRecycleBinCreationParamsData clusterRecycleBinCreationParamsData = (ClusterRecycleBinCreationParamsData) o;
-    return Objects.equals(this.retain, clusterRecycleBinCreationParamsData.retain) &&
-        Objects.equals(this.enabled, clusterRecycleBinCreationParamsData.enabled);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(retain, enabled);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ClusterRecycleBinCreationParamsData {\n");
-    sb.append("    retain: ").append(toIndentedString(retain)).append("\n");
-    sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setRetain(Integer retain) {
+        this.retain = retain;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ClusterRecycleBinCreationParamsData retain_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RETAIN);
+        return this;
+    }
+
+    public ClusterRecycleBinCreationParamsData retain_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RETAIN);
+        return this;
+    }
+
+    public void setRetain_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RETAIN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RETAIN);
+        }
+    }
+
+    public boolean getRetain_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RETAIN);
+    }
+
+    public ClusterRecycleBinCreationParamsData enabled(Boolean enabled) {
+
+        this.enabled = enabled;
+        return this;
+    }
+
+    /**
+     * Get enabled
+     *
+     * @return enabled
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public ClusterRecycleBinCreationParamsData enabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENABLED);
+        return this;
+    }
+
+    public ClusterRecycleBinCreationParamsData enabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENABLED);
+        return this;
+    }
+
+    public void setEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENABLED);
+        }
+    }
+
+    public boolean getEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENABLED);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ClusterRecycleBinCreationParamsData clusterRecycleBinCreationParamsData =
+                (ClusterRecycleBinCreationParamsData) o;
+        return Objects.equals(this.retain, clusterRecycleBinCreationParamsData.retain)
+                && Objects.equals(this.enabled, clusterRecycleBinCreationParamsData.enabled);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(retain, enabled);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ClusterRecycleBinCreationParamsData {\n");
+        sb.append("    retain: ").append(toIndentedString(retain)).append("\n");
+        sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

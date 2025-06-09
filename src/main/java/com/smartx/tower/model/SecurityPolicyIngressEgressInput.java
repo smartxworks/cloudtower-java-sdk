@@ -1,158 +1,267 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NetworkPolicyRulePortInput;
-import com.smartx.tower.model.SecurityPolicyFlowControlType;
-import com.smartx.tower.model.SecurityPolicyIngressEgressInputTarget;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-/**
- * SecurityPolicyIngressEgressInput
- */
+/** SecurityPolicyIngressEgressInput */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class SecurityPolicyIngressEgressInput {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private SecurityPolicyFlowControlType type;
+public class SecurityPolicyIngressEgressInput
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_SERVICE_IDS = "service_ids";
 
-  public static final String SERIALIZED_NAME_PORTS = "ports";
-  @SerializedName(SERIALIZED_NAME_PORTS)
-  private List<NetworkPolicyRulePortInput> ports = null;
+    @SerializedName(SERIALIZED_NAME_SERVICE_IDS)
+    private List<String> serviceIds = null;
 
-  public static final String SERIALIZED_NAME_TARGET = "target";
-  @SerializedName(SERIALIZED_NAME_TARGET)
-  private SecurityPolicyIngressEgressInputTarget target;
+    public static final String SERIALIZED_NAME_TYPE = "type";
 
-  public SecurityPolicyIngressEgressInput() { 
-  }
+    @SerializedName(SERIALIZED_NAME_TYPE)
+    private SecurityPolicyFlowControlType type;
 
-  public SecurityPolicyIngressEgressInput type(SecurityPolicyFlowControlType type) {
-    
-    this.type = type;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_PORTS = "ports";
 
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_PORTS)
+    private List<NetworkPolicyRulePortInput> ports = null;
 
-  public SecurityPolicyFlowControlType getType() {
-    return type;
-  }
+    public static final String SERIALIZED_NAME_TARGET = "target";
 
+    @SerializedName(SERIALIZED_NAME_TARGET)
+    private SecurityPolicyIngressEgressInputTarget target;
 
-  public void setType(SecurityPolicyFlowControlType type) {
-    this.type = type;
-  }
+    public SecurityPolicyIngressEgressInput() {}
 
+    public SecurityPolicyIngressEgressInput serviceIds(List<String> serviceIds) {
 
-  public SecurityPolicyIngressEgressInput ports(List<NetworkPolicyRulePortInput> ports) {
-    
-    this.ports = ports;
-    return this;
-  }
-
-  public SecurityPolicyIngressEgressInput addPortsItem(NetworkPolicyRulePortInput portsItem) {
-    if (this.ports == null) {
-      this.ports = new ArrayList<NetworkPolicyRulePortInput>();
+        this.serviceIds = serviceIds;
+        return this;
     }
-    this.ports.add(portsItem);
-    return this;
-  }
 
-   /**
-   * Get ports
-   * @return ports
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<NetworkPolicyRulePortInput> getPorts() {
-    return ports;
-  }
-
-
-  public void setPorts(List<NetworkPolicyRulePortInput> ports) {
-    this.ports = ports;
-  }
-
-
-  public SecurityPolicyIngressEgressInput target(SecurityPolicyIngressEgressInputTarget target) {
-    
-    this.target = target;
-    return this;
-  }
-
-   /**
-   * Get target
-   * @return target
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public SecurityPolicyIngressEgressInputTarget getTarget() {
-    return target;
-  }
-
-
-  public void setTarget(SecurityPolicyIngressEgressInputTarget target) {
-    this.target = target;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public SecurityPolicyIngressEgressInput addServiceIdsItem(String serviceIdsItem) {
+        if (this.serviceIds == null) {
+            this.serviceIds = new ArrayList<String>();
+        }
+        this.serviceIds.add(serviceIdsItem);
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get serviceIds
+     *
+     * @return serviceIds
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getServiceIds() {
+        return serviceIds;
     }
-    SecurityPolicyIngressEgressInput securityPolicyIngressEgressInput = (SecurityPolicyIngressEgressInput) o;
-    return Objects.equals(this.type, securityPolicyIngressEgressInput.type) &&
-        Objects.equals(this.ports, securityPolicyIngressEgressInput.ports) &&
-        Objects.equals(this.target, securityPolicyIngressEgressInput.target);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(type, ports, target);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SecurityPolicyIngressEgressInput {\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    ports: ").append(toIndentedString(ports)).append("\n");
-    sb.append("    target: ").append(toIndentedString(target)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setServiceIds(List<String> serviceIds) {
+        this.serviceIds = serviceIds;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public SecurityPolicyIngressEgressInput serviceIds_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SERVICE_IDS);
+        return this;
+    }
+
+    public SecurityPolicyIngressEgressInput serviceIds_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SERVICE_IDS);
+        return this;
+    }
+
+    public void setServiceIds_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SERVICE_IDS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SERVICE_IDS);
+        }
+    }
+
+    public boolean getServiceIds_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SERVICE_IDS);
+    }
+
+    public SecurityPolicyIngressEgressInput type(SecurityPolicyFlowControlType type) {
+
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return type
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SecurityPolicyFlowControlType getType() {
+        return type;
+    }
+
+    public void setType(SecurityPolicyFlowControlType type) {
+        this.type = type;
+    }
+
+    public SecurityPolicyIngressEgressInput type_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public SecurityPolicyIngressEgressInput type_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public void setType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        }
+    }
+
+    public boolean getType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TYPE);
+    }
+
+    public SecurityPolicyIngressEgressInput ports(List<NetworkPolicyRulePortInput> ports) {
+
+        this.ports = ports;
+        return this;
+    }
+
+    public SecurityPolicyIngressEgressInput addPortsItem(NetworkPolicyRulePortInput portsItem) {
+        if (this.ports == null) {
+            this.ports = new ArrayList<NetworkPolicyRulePortInput>();
+        }
+        this.ports.add(portsItem);
+        return this;
+    }
+
+    /**
+     * Get ports
+     *
+     * @return ports
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NetworkPolicyRulePortInput> getPorts() {
+        return ports;
+    }
+
+    public void setPorts(List<NetworkPolicyRulePortInput> ports) {
+        this.ports = ports;
+    }
+
+    public SecurityPolicyIngressEgressInput ports_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PORTS);
+        return this;
+    }
+
+    public SecurityPolicyIngressEgressInput ports_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PORTS);
+        return this;
+    }
+
+    public void setPorts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PORTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PORTS);
+        }
+    }
+
+    public boolean getPorts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PORTS);
+    }
+
+    public SecurityPolicyIngressEgressInput target(SecurityPolicyIngressEgressInputTarget target) {
+
+        this.target = target;
+        return this;
+    }
+
+    /**
+     * Get target
+     *
+     * @return target
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SecurityPolicyIngressEgressInputTarget getTarget() {
+        return target;
+    }
+
+    public void setTarget(SecurityPolicyIngressEgressInputTarget target) {
+        this.target = target;
+    }
+
+    public SecurityPolicyIngressEgressInput target_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TARGET);
+        return this;
+    }
+
+    public SecurityPolicyIngressEgressInput target_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TARGET);
+        return this;
+    }
+
+    public void setTarget_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TARGET);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TARGET);
+        }
+    }
+
+    public boolean getTarget_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TARGET);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SecurityPolicyIngressEgressInput securityPolicyIngressEgressInput =
+                (SecurityPolicyIngressEgressInput) o;
+        return Objects.equals(this.serviceIds, securityPolicyIngressEgressInput.serviceIds)
+                && Objects.equals(this.type, securityPolicyIngressEgressInput.type)
+                && Objects.equals(this.ports, securityPolicyIngressEgressInput.ports)
+                && Objects.equals(this.target, securityPolicyIngressEgressInput.target);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(serviceIds, type, ports, target);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class SecurityPolicyIngressEgressInput {\n");
+        sb.append("    serviceIds: ").append(toIndentedString(serviceIds)).append("\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("    ports: ").append(toIndentedString(ports)).append("\n");
+        sb.append("    target: ").append(toIndentedString(target)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-
